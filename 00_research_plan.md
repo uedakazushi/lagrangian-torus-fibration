@@ -1,5 +1,5 @@
 # 現行研究方針：一般型超曲面のLagrangian torus fibration
-更新：2026-11-20 / v1.6・現行研究方針 / 主稿改訂6
+更新：2026-11-20 / v1.7・現行研究方針 / 主稿改訂7
 
 ## 目標と現行資料
 曲面の大域的fibration・作用適合atlasと、三次元のclosed-curve local blocksを区別する。曲面側は2026-10-28第25版のソース一式を回収し、旧30頁稿と短いGitHub草稿から現行の三論文へ移行した。三次元側は継続用bundle第10版から局所稿第9版・全体稿第11稿を全文TeXで移行した。
@@ -56,6 +56,18 @@ Lagrangian主稿 `ke:actual-closed-corner` の同じ averaging–Moser flow と�
 
 固定ηの開正方形と全閉cornerは、それぞれ上記の局所定理で扱う。全曲面のambient shortcut、source・branch・coreのsingular fibersとの接着、既存の大域fibrationとの同定は残る。
 
+## 共通normal circleに適合する二段階平均
+
+主稿 `papers/sections/paper/ke_staged_neck_averaging.tex` が正本。自由な正則normal S¹を先に平均してη=A1ωとし、triple endで残る円を平均してκ=A2ηとする。単一primitive ω=dλとflow/domain bufferの下で、φ*ω=η、ψ*η=κ、Θ=φψについてΘ*λ=A2A1λ+dqとなる。第二flowはnormal circleと可換であるから、各actual torusはneckと同じactual action φρ1φ^−1を含む。μ∘ψ=A2μが厳密に成り立ち、全marked整数cycleのaction periodsを同じλから規格化できる（`ke:staged-neck-averaging`）。
+
+一段階構成、二段階構成、固定整数基底の変更は、共通domain/image bufferの下でHamiltonian isotopyにより比較できる（`ke:staged-hamiltonian-comparison`）。形式のpositive triangle上のpath homotopyとexact primitive transportを明示している。Exact endpoint mapであることだけからHamiltonian性を結論しない。旧bundleと同じfiber partitionとは主張しない。
+
+`ke:staged-closed-corner-gh` は、三重点の標準T²の任意の固定primitive subgroupを第一段に選び、actual closed-corner bundleと同じO(log R/R)の内在・protected-ambient GH評価を与える。Fiberの元の尺度のintrinsic径はO(1/R)。三重点内の定量的bufferは既存のfull-triple比較で検証済みである。
+
+関連KE主稿 `pair:prop:bundle-conic` / `pair:cor:global-primitive` / `pair:cor:actual-common-moment` により、source-freeな固定compact base上では一つの正則normal action、canonical primitive、円平均η_tの共通moment intervalが得られた。Fixed-end momentはperiod1の規約で±4π/(−log r²)を主項とし、r固定後t→0とする。これらからneck全体のnormal Moser flowの生存・bufferや各triple endとの同時一致は従わない。
+
+`ke:staged-reduced-extension` は、marked simple-saddle foliationと適合するreduced end germsの延長を仮定して、regular T²とsaddle S¹×figure-eightを持つneckを接着する。共通normal actionだけでは、別に固定したneckの第二periodやfiberそのものの一致を意味しない。Reduced leaves、内部marking、critical actionの条件も確認する。Sourceと既存の大域fibrationへの接着、全曲面のGH収束は未解決である。
+
 ## 相対接着で必要なcollar条件
 `ke:relative-fiber-preserving` は、torus飽和した開collar N上の元のphase toriが既にactual ω-Lagrangianなら、chain primitive β=Hω、H=K_1+A_1K_2によるMoser flowが各fiberを集合として保ち、p∘φ^−1=p on Nを満たすことを証明する。作用不変性は不要であり、centered chain primitiveでも同じ結論となる。各点を固定することとは異なる。点ごとの固定には、作用不変なcollarとcentered primitiveを用いる既存の `ke:relative-averaging` が使える。
 
@@ -83,7 +95,7 @@ Lagrangian主稿 `ke:actual-closed-corner` の同じ averaging–Moser flow と�
 
 ## 次の一手
 1. 三次元では管状disk bundleとactual focus blockの境界を区別し、normal facesとcomplementの接着を優先する。計算済みの\(H_*(K_c)\)と\(H_*(\mathcal V)\)を使って境界包含\(\partial\mathcal U\to\mathcal U,\mathcal V\)の具体的な整数homology・\(\pi_1\)写像、meridional torsionの像を求め、Maslov・作用周期・unipotent monodromy・Euler予算を同時に照合する。
-2. 曲面側では `ke:relative-fiber-preserving` を使えるactual neck collarを構成する。まず開overlap上でphase orbit partitionと既存のLagrangian fibersを一致させ、action periodsと定量的bufferを確認する。非定数unitを吸収する座標変更ではorbit partitionを再確認する。全閉cornerの内在・保護領域内のGH比較は証明済みであるが、source・branch・coreへの相対接着、異なるtriple chartsの接合、V_t外を通る大域no-shortcutは未解決。実際の基底長さ距離に対する(N)、(S)、(F)の大域検証はそれぞれ独立に行う。Source nodeのcritical valueには対応pair vertexへ近づく基底パラメータ化が必要であり得る（`ke:source-marking`）。
+2. 今回の曲面側の継続では、source-free neck全体のnormal Moser flowの生存と一様bufferを最優先にする。固定base上のprimitiveと共通moment intervalは得たため、KE側 `neck:lem:rank-one-circle` のresidual rank-one下界とactual bufferを調べる。三重点の指定subgroupと射影的neck actionのoverlapを比較し、複数endsのnormal action・reduced foliation・primitive markingsを同時に合わせる。`ke:staged-neck-averaging` と `ke:staged-reduced-extension` はその条件下で接着を与える。非定数unitによるfull orbit partitionの変化は整数基底変更と別に扱う。Source・branch・coreの接着、全X_tでの(N),(S),(F)とglobal no-shortcutは未解決。
 3. 五次整数接着の\(G_{5,14}\)中央matchingと二\(\{4,1,0\}\)・分母三の位置条件、\(G_{5,16}\)、\(G_{5,17}\)、三高Dの未解決を継続する。
 4. 旧曲面v4と現行v25の補題単位の照合を進める。版番号付き分割原稿は、参照する証明書と依存関係を確認するまで削除しない。
 
@@ -92,7 +104,7 @@ Lagrangian主稿 `ke:actual-closed-corner` の同じ averaging–Moser flow と�
 
 曲面移行時に4本の全文原稿をLuaLaTeXで組版し、v25の五主検算と五独立監査を再実行した。実行入口は `python3 verification/run_current_checks.py`。生成物はbuild/。外部査読・形式証明・全113 scripts再実行とは異なる。
 
-現行のKE比較部分では、全固定次数のglobal density下界、complete simplexのvolume squeeze、固定product balls上のSavin適用、dominant/facet漸近、exact rank-one Schwarz、clipped projectionによる全経路下界を点検した。Lagrangian側では同じMoser flowのC1評価、全閉cornerの内在・protected-ambient GH distortion、端点移動O(R^−2)、chain primitiveによるfiber保存を独立に読み直した。Averagingの符号、hexagonの逆写像、raw-depth誤差・微分評価、および固定simplexとmoving領域の尺度差も確認している。全曲面でのactual GH収束と既存大域fibrationとの一様適合性は未完成。現環境では `lualatex.fmt`・LuaTeX-ja等の基本資産がなく、LuaLaTeX組版の試行は本文処理前に停止した。回収時の組版成功と現行主稿改訂6の未組版を区別する。
+今回の追加では、二段階平均の符号、exact primitiveとmomentの輸送、全marked periods、positive triangle上のHamiltonian path、image buffer、指定subgroupでのC1/Gronwallとclosed-corner GHを独立に点検した。関連KE稿のexplicit normal coordinatesと固定endのSong/Rochon–Zhang適用も原典に照合した。現行のKE比較部分では、全固定次数のglobal density下界、complete simplexのvolume squeeze、固定product balls上のSavin適用、dominant/facet漸近、exact rank-one Schwarz、clipped projectionによる全経路下界を点検した。Lagrangian側では同じMoser flowのC1評価、全閉cornerの内在・protected-ambient GH distortion、端点移動O(R^−2)、chain primitiveによるfiber保存を独立に読み直した。Averagingの符号、hexagonの逆写像、raw-depth誤差・微分評価、および固定simplexとmoving領域の尺度差も確認している。全曲面でのactual GH収束と既存大域fibrationとの一様適合性は未完成。現環境では `lualatex.fmt`・LuaTeX-ja等の基本資産がなく、LuaLaTeX組版の試行は本文処理前に停止した。回収時の組版成功と現行主稿改訂7の未組版を区別する。
 
 ## 共通研究原則と保存許可（研究固有方針から独立）
 数学的重要性・新規性・理解の深化・応用可能性・正確性・実現可能性を総合し方針を見直す。証明済み・仮定付き・未完成・予想・計算観察、既知成果と新規性、草稿の証明と今回の独立監査を区別する。重要な先行研究は一次資料の仮定と参照箇所を確認する。日本語LuaLaTeXで十分な証明を保ち、有効な着想・反例・障害は現行ノートへ整理する。再現資産を保持し、旧版ZIP/ログの集積を避ける。研究の区切りには承諾なしで通常コミットを `main` へpushし、15–30分ごとに区切って保存する。force push・GitHub Actions追加/起動をしない。Library旧資料を削除せず、GitHub管理後の定常二重保存は行わない。対象repo保存後にresearch-hubの到達点・核心・次の一手・依存と再開先を更新し、数学検証・組版・push・hub反映を区別する。

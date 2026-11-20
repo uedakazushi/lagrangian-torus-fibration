@@ -1,0 +1,504 @@
+% !TeX root = ../../lagrangian-torus-fibration.tex
+% 2026-11-20 / v1.0: 共通 normal circle を保つ二段階平均と exact period matching．
+\section{共通の normal circle に適合する二段階平均}
+\label{ke:staged-neck-section}
+
+三重点の torus 平均を，neck 全体で共通に用いる normal circle の平均と，
+end collar 上の残る circle の平均に分ける．
+この順序によって，完成後の end tori が一つの actual Hamiltonian circle を含むことを
+厳密に保証できる．単一 primitive を用いると normal moment の加法定数と
+全 marked cycle の作用周期も同時に固定される．
+平均化と Moser 法そのものの先行研究は
+\cite[Section~3]{RuanHMinimal}を参照されたい．
+以下の二段階構成と定量的適用の包括的な新規性確認は未完了である．
+
+本節の円作用の周期はすべて $1$ とし，moment の符号は
+\[
+ \iota_V\omega=-d\mu
+\]
+に統一する．従って moment は一周の primitive 積分と同じ規格化である．
+周期 $2\pi$ の生成場による通常の action 座標を用いる場合は，
+生成場・moment・周期積分の規格化を同時に変更する．
+また，以下の flow は指定する内側領域から出発して共通の外側領域に留まると仮定する．
+作用・形式が一致する開集合を出る trajectory の一致は，局所的な ODE の一意性からは従わない．
+
+\subsection{一つの円の平均と primitive の正確な輸送}
+
+$U$ を複素曲面，$\omega=d\lambda$ を K\"ahler form とし，
+$\rho_s$ を $U$ 上の自由な正則円作用とする．
+生成場を $V$，平均と chain homotopy を
+\[
+ \mathcal A\xi=\int_0^1\rho_s^*\xi\,ds,\qquad
+ K\xi=\int_0^1(1-s)\rho_s^*(\iota_V\xi)\,ds
+\]
+と書く．Centered kernel $1/2-s$ に置き換えた場合も，
+以下の恒等式と結論は同じである．
+
+\begin{lemma}[円平均の exact Moser transport]
+\label{ke:circle-exact-transport}
+$\eta=\mathcal A\omega$，
+$\omega_s=(1-s)\eta+s\omega$，
+$\lambda_s=(1-s)\mathcal A\lambda+s\lambda$ とする．
+$\beta=K\omega$ および
+\[
+ \iota_{Y_s}\omega_s=\beta,\qquad \phi_0=\mathrm{id}
+\]
+による flow が全時刻で定義される $\rho$-飽和した内側領域を取る．この領域では
+\begin{equation}\label{ke:eq:circle-exact-transport}
+ \phi_s^*\omega_s=\eta,\qquad
+ \phi_s^*\lambda_s=\mathcal A\lambda+dq_s,
+ \quad
+ q_s=\int_0^s\phi_\tau^*
+       \bigl(\lambda_\tau(Y_\tau)-K\lambda\bigr)\,d\tau .
+\end{equation}
+$\mu=(\mathcal A\lambda)(V)$ は $\eta$ の Hamiltonian moment である．
+$\phi=\phi_1$ によって移した円作用
+$\widehat\rho_s=\phi\circ\rho_s\circ\phi^{-1}$ は actual $\omega$ に関して Hamiltonian で，
+その moment は
+\begin{equation}\label{ke:eq:circle-actual-moment}
+ \widehat\mu=\mu\circ\phi^{-1}.
+\end{equation}
+この moment の値は，対応する actual 円軌道上の $\lambda$ の一周積分に等しい．
+\end{lemma}
+\begin{proof}
+Cartan の公式と部分積分により
+\[
+ dK+Kd=\mathcal A-I.
+\]
+従って
+\[
+ d\beta=\eta-\omega,\qquad
+ \beta=\mathcal A\lambda-\lambda-d(K\lambda).
+\]
+正則作用による平均とその凸結合は K\"ahler form なので非退化である．
+Moser の微分式から最初の pullback identity を得る．
+Primitive については
+\[
+ \partial_s\lambda_s+\mathcal L_{Y_s}\lambda_s
+ =\lambda-\mathcal A\lambda+\beta
+     +d\bigl(\lambda_s(Y_s)\bigr)
+ =d\bigl(\lambda_s(Y_s)-K\lambda\bigr)
+\]
+であり，flow で引き戻して積分すれば
+\eqref{ke:eq:circle-exact-transport}の第二式となる．
+
+$\mathcal A\lambda$ は円作用に不変なので
+\[
+ \iota_V\eta=-d\bigl((\mathcal A\lambda)(V)\bigr)=-d\mu.
+\]
+これを $\phi$ で移すと\eqref{ke:eq:circle-actual-moment}を得る．
+周期 $1$ の軌道 $s\mapsto\rho_s(x)$ 上で
+$(\mathcal A\lambda)(V)=\mu(x)$ は一定である．
+Exact differential の周期は零なので，
+$\int_{\phi(\rho_\bullet(x))}\lambda=\mu(x)$ である．
+\end{proof}
+
+\subsection{残る円の平均と同一 normal moment}
+
+今度は $\rho_{1,s}$ を neck の領域 $U$ 全体に与えた normal 円作用とする．
+End の開領域 $E\subset U$ は $\rho_1$ に飽和しており，
+$E$ 上には $\rho_1$ と可換な自由な正則円作用 $\rho_2$ があり，
+両者で自由な $T^2$ 作用を生成すると仮定する．
+各平均と homotopy を $\mathcal A_j,K_j$ と書き，
+\[
+ \eta=\mathcal A_1\omega,\qquad
+ \kappa=\mathcal A_2\eta=\mathcal A_1\mathcal A_2\omega,\qquad
+ \lambda_1=\mathcal A_1\lambda,\qquad
+ \lambda_{12}=\mathcal A_2\lambda_1
+\]
+と置く．$\rho_2$ は $E$ のみに必要である．
+
+第一の Moser flow $\phi_s$ は補題\ref{ke:circle-exact-transport}を
+normal action に適用して $U$ 内に構成する．
+第二の flow $\psi_s$ は $E$ 内で
+\begin{equation}\label{ke:eq:residual-moser-path}
+ \eta_s=(1-s)\kappa+s\eta,\qquad
+ \beta_2=K_2\eta=\mathcal A_1K_2\omega,\qquad
+ \iota_{Z_s}\eta_s=\beta_2,\quad \psi_0=\mathrm{id}
+\end{equation}
+によって構成する．以下では $\psi_s$ の定義域を $T^2$ に飽和した内側領域に取り，
+$\psi_1$ の像が $\phi_s$ の共通定義域に含まれる buffer を課す．
+$\phi=\phi_1,\ \psi=\psi_1,\ \Theta=\phi\circ\psi$ と書く．
+
+\begin{theorem}[共通 normal circle と全作用周期を保つ二段階平均]
+\label{ke:staged-neck-averaging}
+上記の仮定の下で，$\psi_s$ は $\rho_1$ と可換であり，
+\[
+ \Theta^*\omega=\kappa,\qquad
+ \Theta^*\lambda=\lambda_{12}+dq
+\]
+となる一価関数 $q$ がある．元の各 $T^2$ 軌道 $\mathcal O$ に対して
+$\Theta(\mathcal O)$ は actual $\omega$-Lagrangian torus であり，
+neck 全体の同じ actual 円作用
+$\widehat\rho_1=\phi\rho_1\phi^{-1}$ の軌道で飽和している．
+
+Normal moment を
+$\mu=\lambda_1(V_1)$，
+$\widehat\mu=\mu\circ\phi^{-1}$ と規格化すると，
+\begin{equation}\label{ke:eq:staged-moment-identity}
+ \mu\circ\psi=\mathcal A_2\mu,\qquad
+ \widehat\mu\circ\Theta=\mathcal A_2\mu.
+\end{equation}
+より一般に，整数 cycle $b=(b_1,b_2)\in\ZZ^2$，
+$V_b=b_1V_1+b_2V_2$ に対し，
+元の軌道上のその一周を $\gamma_{b,x}$ とすると
+\begin{equation}\label{ke:eq:staged-period-identity}
+ \int_{\Theta(\gamma_{b,x})}\lambda
+ =\int_{\gamma_{b,x}}\lambda_{12}
+ =\lambda_{12}(V_b)(x).
+\end{equation}
+従って各 end で action の加法定数を独立に取り直す必要はない．
+\end{theorem}
+\begin{proof}
+$\eta,\kappa,\beta_2$ は $\rho_1$ に不変である．
+非退化形式に関する vector field の一意性から $Z_s$ は $\rho_1$-invariant であり，
+flow の一意性により $\psi_s$ は $\rho_1$ と可換である．
+補題\ref{ke:circle-exact-transport}を各段に用いると
+\[
+ \phi^*\omega=\eta,\quad \psi^*\eta=\kappa,\qquad
+ \phi^*\lambda=\lambda_1+dq_1,\quad
+ \psi^*\lambda_1=\lambda_{12}+dq_2.
+\]
+したがって $q=q_2+q_1\circ\psi$ とすれば所要の exact identity となる．
+$\lambda_{12}$ は全 $T^2$ に不変なので，可換な生成場に対して
+\[
+ \kappa(V_1,V_2)
+ =V_1\lambda_{12}(V_2)-V_2\lambda_{12}(V_1)
+     -\lambda_{12}([V_1,V_2])=0.
+\]
+実次元二の自由な軌道は $\kappa$-Lagrangian であり，
+$\Theta^*\omega=\kappa$ によりその像も Lagrangian である．
+さらに
+\[
+ \widehat\rho_{1,s}(\Theta x)
+ =\phi\rho_{1,s}\psi x
+ =\phi\psi\rho_{1,s}x
+ =\Theta\rho_{1,s}x
+\]
+なので，同じ actual normal circle が各 torus に含まれる．
+
+Moment の等式は加法定数まで直接計算する．
+$\iota_{V_1}\eta=-d\mu$ と可換性から
+\[
+ \beta_2(V_1)=K_2(d\mu)=\mathcal A_2\mu-\mu.
+\]
+$\mu_s=(1-s)\mathcal A_2\mu+s\mu$ と置けば
+$\iota_{V_1}\eta_s=-d\mu_s$ である．従って
+\[
+ \frac d{ds}(\mu_s\circ\psi_s)
+ =\bigl(\mu-\mathcal A_2\mu+d\mu_s(Z_s)\bigr)\circ\psi_s
+ =\bigl(\mu-\mathcal A_2\mu+\beta_2(V_1)\bigr)\circ\psi_s=0.
+\]
+初期値は $\mathcal A_2\mu$ なので
+\eqref{ke:eq:staged-moment-identity}を得る．
+最後に exact differential の閉 cycle 上の積分は零であり，
+$\lambda_{12}(V_b)$ は軌道上で一定なので
+\eqref{ke:eq:staged-period-identity}が従う．
+\end{proof}
+
+\begin{corollary}[同じ normal action を持つ開 overlap 上の一致]
+\label{ke:staged-normal-overlap}
+Neck と triple chart に同じ $\omega$ と同じ normal 円作用 $\rho_1$ を与え，
+同じ homotopy kernel を用いるとする．
+内側 overlap からの normal Moser trajectories と，
+residual stage の像からの trajectories が
+$\rho_1$ に飽和した共通の開 overlap に留まると仮定する．
+このとき両側の normal flow $\phi_s$ と actual normal action は一致する．
+Triple 側に定理\ref{ke:staged-neck-averaging}の tori を用いれば，
+それらは neck 側の同じ actual normal circle を含む．
+また primitive $\lambda$ と cycle markings も同じものを使えば，
+moment と作用周期は\eqref{ke:eq:staged-moment-identity}，
+\eqref{ke:eq:staged-period-identity}によって共通に規格化される．
+独立に固定した neck foliation の第二の周期や fiber 自体の一致には，
+さらに reduced leaves を同じものに選ぶ必要がある．
+\end{corollary}
+\begin{proof}
+共通 overlap では $\mathcal A_1\omega$ と $K_1\omega$ が一致する．
+従って normal Moser vector field も一致し，
+trajectory がその overlap に留まるという仮定の下で ODE の一意性を使える．
+残りは定理\ref{ke:staged-neck-averaging}による．
+\end{proof}
+
+\begin{lemma}[短い作用に対する二段階構成の変位]
+\label{ke:staged-displacement}
+Normal action に不変な Hermitian metric $h$ を $U$ に取り，
+$E$ 上では全 $T^2$ に不変とする．
+$ch\le g_\omega\le Ch$，
+$|V_1|_h\le e_1$ on $U$，
+$|V_2|_h\le e_2$ on $E$ と仮定する．
+上の二段階 flow を収める内在的 $h$-buffer があるなら，
+\begin{equation}\label{ke:eq:staged-displacement}
+ d_h(x,\Theta x)\le\frac{C}{2c}(e_1+e_2).
+\end{equation}
+各元の torus が内側領域に含まれる場合，その像の ambient diameter は
+\begin{equation}\label{ke:eq:staged-ambient-diameter}
+ \operatorname{diam}_{g_\omega}\Theta(\mathcal O)
+ \le\sqrt C(e_1+e_2)\left(\frac Cc+\frac12\right).
+\end{equation}
+Centered homotopies を用いれば各段の変位定数 $C/(2c)$ は $C/(4c)$ に改善できる．
+\end{lemma}
+\begin{proof}
+平均と凸結合は同じ二側比較を満たす．
+$|K_1\omega|_h\le Ce_1/2$，
+$|K_2\eta|_h\le Ce_2/2$ なので，各段の vector field の長さは
+$Ce_j/(2c)$ 以下である．二つの trajectory を順に結べば
+\eqref{ke:eq:staged-displacement}となる．
+元の同じ torus の二点は，各 circle を高々半周ずつ進むことで
+$h$-長さ $(e_1+e_2)/2$ 以下の経路で結べる．
+その経路の両端に Moser trajectories を付け，
+$g_\omega\le Ch$ を用いると\eqref{ke:eq:staged-ambient-diameter}を得る．
+Centered kernel の絶対値の積分は $1/4$ なので最後の主張も従う．
+\end{proof}
+
+\subsection{一段階平均との Hamiltonian 比較}
+
+二段階の endpoint map は，一段階の Moser map と一般に同一ではない．
+ただし exact primitive を共通に固定した場合には，次の比較ができる．
+
+\begin{proposition}[平均の順序と整数基底に関する Hamiltonian 比較]
+\label{ke:staged-hamiltonian-comparison}
+$E$ 上の同じ $T^2$ 作用と $\omega=d\lambda$ を用いる．
+一段階の homotopy $H=K_1+\mathcal A_1K_2$ による map を $\Phi$，
+上記の二段階 map を $\Theta$ とする．
+以下の path homotopy の全 flow と inverse compositions を収める共通 buffer があるなら，
+共通のより小さい開領域上で $\Phi^{-1}\Theta$ は
+$\kappa$ に関する Hamiltonian isotopy の endpoint である．
+従って $\Theta\Phi^{-1}$ は $\omega$ に関する Hamiltonian map である．
+
+同じ結論は，$T^2$ の任意の二つの固定した整数基底で作る一段階または
+二段階の平均の間にも成立する．
+Centered homotopies を用い，$\omega$ が全 $T^2$ に不変な飽和 collar がある場合，
+比較 isotopy はその collar を点ごとに固定できる．
+\end{proposition}
+\begin{proof}
+三角形 $0\le v\le u\le1$ 上で
+\[
+ \Omega_{u,v}=(1-u)\kappa+(u-v)\eta+v\omega,\qquad
+ \Lambda_{u,v}=(1-u)\lambda_{12}+(u-v)\lambda_1+v\lambda
+\]
+を定める．係数が非負で和が $1$ なので $\Omega_{u,v}$ は K\"ahler であり，
+$d\Lambda_{u,v}=\Omega_{u,v}$ である．
+$(0,0)$ から $(1,1)$ への対角 path は一段階構成，
+$(0,0)\to(1,0)\to(1,1)$ の二辺は二段階構成に対応する．
+二辺は各区間の端で stationary になるよう滑らかに parameter 化する．
+この path と対角 path の凸結合によって，両座標が単調な滑らかな path family
+$(u_r(s),v_r(s))$ を得る．
+
+$\beta_1=K_1\omega$，$\beta_2=K_2\eta$ とし，
+各 path 上の Moser primitive を
+\[
+ B_{r,s}=\dot u_r(s)\beta_2+\dot v_r(s)\beta_1
+\]
+とする．Homotopy identity より
+\begin{align*}
+ B_{r,s}
+ &=-\partial_s\Lambda_{u_r,v_r}
+       -d\bigl(\dot u_r K_2\lambda_1+\dot v_rK_1\lambda\bigr),\\
+ dB_{r,s}&=-\partial_s\Omega_{u_r,v_r}.
+\end{align*}
+補題\ref{ke:circle-exact-transport}と同じ微分計算により，
+各 endpoint map $F_r$ は
+\begin{equation}\label{ke:eq:staged-path-exactness}
+ F_r^*\omega=\kappa,\qquad F_r^*\lambda=\lambda_{12}+dQ_r
+\end{equation}
+を満たし，$Q_r$ は $r$ に滑らかである．
+両座標の総変化は各々 $1$ なので，補題\ref{ke:staged-displacement}の
+総変位の上界を全 $r$ に共通に使える．
+さらに $F_r(D_{\mathrm{small}})\subset F_0(D_{\mathrm{large}})$ を保証する
+image buffer を取ることが，相対写像の定義に必要である．
+
+$W_r=(\partial_rF_r)\circ F_r^{-1}$ と置く．
+\eqref{ke:eq:staged-path-exactness}を $r$ で微分すると
+\[
+ F_r^*(\iota_{W_r}\omega)
+ =d\bigl(\partial_rQ_r-F_r^*(\lambda(W_r))\bigr).
+\]
+従ってこの deformation は Hamiltonian であり，
+$F_0^{-1}F_r$ は $\kappa$-Hamiltonian isotopy となる．
+端点は $F_0=\Phi$，$F_1=\Theta$ である．
+
+整数基底を変えても全 Haar average $\mathcal A=\mathcal A_1\mathcal A_2$ は同じである．
+二つの homotopies $H,H'$ について
+\[
+ H\omega=\mathcal A\lambda-\lambda-d(H\lambda),\qquad
+ H'\omega=\mathcal A\lambda-\lambda-d(H'\lambda)
+\]
+なので，その差は exact である．
+同じ線形 path $(1-s)\kappa+s\omega$ に対して primitive を
+$(1-r)H\omega+rH'\omega$ と補間すれば，
+再び endpoint の exact identity と上の Hamiltonian 計算が成立する．
+二段階の場合は既に証明した比較を前後に組み合わせればよい．
+
+最後に，centered homotopy は invariant form を零に写す．
+指定 collar 上では $\beta_1=\beta_2=H\omega=H'\omega=0$ なので，
+すべての vector fields と endpoint maps はそこで零および恒等となる．
+従って比較 isotopy も同 collar を点ごとに固定する．
+\end{proof}
+
+\subsection{指定した normal subgroup を持つ actual closed corner}
+
+\begin{corollary}[二段階 closed-corner bundle と同じ GH 誤差]
+\label{ke:staged-closed-corner-gh}
+系\ref{ke:actual-closed-corner}の固定次数 $d\ge5$ の族と exact triple chart を用いる．
+その標準 $T^2$ の任意の固定した primitive normal subgroup $\alpha$ を選び，
+$\alpha,\beta$ が $\ZZ^2$ の整数基底になるよう $\beta$ を補う．
+$L=-\log|t|^2$，$R=\log L$ とし，
+第一段を $\alpha$，第二段を $\beta$ とする上記の二段階 map $\Theta_t$ を取る．
+十分小さい $t\ne0$ についてこの map は既存の softmax domain
+$\mathcal H_t=\mathcal U_t(H_{L,R})$ の開近傍に定義できる．
+\[
+ \mathcal W_{t,J}^{\mathrm{st}}=\Theta_t(\mathcal H_t),\qquad
+ \pi_{t,J}^{\mathrm{st}}=P_t\circ\Theta_t^{-1}
+\]
+とすると，その全 fibers は actual Lagrangian tori であり，
+同じ actual normal action
+$\widehat\rho_\alpha=\phi_t^\alpha\rho_\alpha(\phi_t^\alpha)^{-1}$ を含む．
+
+模型 $\gamma_t=g_L^{\mathrm{sf}}$ に対し
+\begin{equation}\label{ke:eq:staged-actual-metric}
+ (1-C/R)\gamma_t\le\Theta_t^*g_t\le(1+C/R)\gamma_t.
+\end{equation}
+$R^{-2}g_t$ による $\mathcal W_{t,J}^{\mathrm{st}}$ の内在距離，
+および $\mathcal V_t=\{\min\ell_a>R/2\}$ 内の全経路を許す距離のどちらについても
+\begin{equation}\label{ke:eq:staged-closed-distortion}
+ \sup_{x,y\in\mathcal W_{t,J}^{\mathrm{st}}}
+ \left|d_t(x,y)-d_J(\pi_{t,J}^{\mathrm{st}}x,\pi_{t,J}^{\mathrm{st}}y)\right|
+ \le C\frac{\log R}{R}.
+\end{equation}
+Fiber 自身の非正規化 intrinsic diameter は $O(R^{-1})$，
+正規化後は $O(R^{-2})$ である．
+Raw map と retraction に関する
+\eqref{ke:eq:actual-closed-corner-target}と同じ誤差評価も成立する．
+定数には固定した整数基底への依存を許す．
+
+この bundle は前節の bundle と同一の写像としては主張しない．
+両者は三重点の共通の開近傍上で actual $\omega_t$-Hamiltonian map により比較でき，
+その map は同じ softmax base label を持つ fibers を対応させる．
+\end{corollary}
+\begin{proof}
+補題\ref{ke:negative-exact}により三重点の actual form は exact である．
+$h=h_t$ を constrained cusp metric とする．
+外側領域 $\min\ell_a>R/2$ での全深部比較と模型の一様幾何から
+\[
+ ch\le\gamma_t\le Ch,\qquad
+ |\nabla^h\gamma_t|_h\le C,\qquad |g_t-\gamma_t|_h\le C/R,
+\]
+\[
+ |\omega_t|_h+|\nabla^h\omega_t|_h\le C,\qquad
+ |V_\alpha|_h+|\nabla^hV_\alpha|_h
+ +|V_\beta|_h+|\nabla^hV_\beta|_h
+ \le C/R.
+\]
+生成場の評価は\eqref{ke:eq:full-corner-generator-c1}の固定整数線形結合である．
+$h$ は全 torus に不変なので，$\eta_t,\kappa_t$ と両 convex paths も
+$h$ に関する同じ二側比較および一様 $C^1$ bounds を持つ．
+Isometry の pullback は $\nabla^h$ と可換であり，
+chain contraction の微分には
+$|\nabla^hV|_h|\omega|_h+|V|_h|\nabla^h\omega|_h$ だけが現れる．
+従って各段の primitive とその一階微分は $O(R^{-1})$ であり，
+非退化な Moser 方程式とその共変微分から
+\[
+ |Y_{t,s}|_h+|\nabla^hY_{t,s}|_h
+ \le C/R
+\]
+を得る．これは補題\ref{ke:open-cell-moser-c1}および
+\eqref{ke:eq:full-corner-moser-c1}と同じ計算である．
+
+Constrained cusp norm では各 $d\log\ell_a$ が一様有界である．
+従って $\min\ell_a>R$ からの二つの trajectories は，
+$R$ が大きければ $\min\ell_a>3R/4$ に留まり，
+$\min\ell_a>R/2$ との間の固定幅の buffer により全時刻で存在する．
+必要な inverse compositions と path homotopy にも，少し大きい内側領域を用いて
+同じ buffer を与えられる．
+
+各段で，$\nabla^h\gamma_t$ の上界と上記の $C^1$ 評価により
+$|\mathcal L_Y\gamma_t|_{\gamma_t}\le C/R$ であるから，
+Gronwall の評価と二つの flow の合成により
+$\Theta_t^*\gamma_t=(1+O(R^{-1}))\gamma_t$ を得る．
+Actual/model 比較を最後に引き戻せば
+\eqref{ke:eq:staged-actual-metric}となる．
+模型の全閉 corner の距離評価
+\eqref{ke:eq:closed-corner-model-input}と一様な正規化 diameter を使えば，
+内在距離について\eqref{ke:eq:staged-closed-distortion}が従う．
+
+保護領域内の距離には，系\ref{ke:closed-corner-protected-gh}と同じ
+clipped projection $\Psi$ を用いる．二つの trajectories の模型長さの和は $C/R$ 以下であり，
+\eqref{ke:eq:protected-pruning-length}から
+\[
+ d_J(\Psi(\Theta_tz),\Psi(z))\le C/R^2
+\]
+となる．保護領域全体の actual/model 下比較と，
+既に得た内在距離の上界を合わせれば同じ distortion bound となる．
+Fiber intrinsic diameter は，模型の phase torus の直径 $C/R$ と
+\eqref{ke:eq:staged-actual-metric}から従う．
+Raw map の評価は補題\ref{ke:raw-values}と
+補題\ref{ke:raw-lipschitz}を二つの短い trajectories に用いればよい．
+
+最後に，一段階・二段階および整数基底の変更に対して
+命題\ref{ke:staged-hamiltonian-comparison}を適用する．
+共通のソース形式は全 Haar average $\mathcal A\omega_t$ であり，
+同じ softmax torus の二つの像を対応させる actual Hamiltonian map を得る．
+\end{proof}
+
+\subsection{Reduced foliations による延長と残る幾何学的入力}
+
+\begin{corollary}[共通 moment strip 上の条件付き neck 延長]
+\label{ke:staged-reduced-extension}
+定理\ref{ke:staged-neck-averaging}の normal 平均後の
+$(U,\eta,\rho_1,\mu)$ において，共通の compact moment interval $I$ を取り，
+reduced surfaces が境界付き曲面 $P$ の滑らかな束として同定されているとする．
+さらに $P$ に，境界 coorientations と内部の embedded marking を固定した
+基準 marked Morse foliation $\mathcal F_0$ があり，
+境界近傍では radial，内部では simple saddles のみを持ち，
+一つの critical leaf に一つの saddle だけを含むと仮定する．
+各境界成分の互いに素な開 collar に，二段階構成から得た reduced circle foliations があり，
+基準の radial circles をそれらへ写す collar 同定を $I$ に滑らかに選べるとする．
+この同定は基準の collar 標識と coorientations に適合し，
+互いに素な少し広い collars に台を持つ $\Diff_0(P)$ の滑らかな族へ延長できると仮定する．
+このとき，それらの開 collar germs と一致する marked simple-saddle foliation family を
+$P$ 上へ延ばせる．その円持ち上げを $\phi$ で移すと，
+actual $\omega$-Lagrangian neck fibration が得られ，end では上記の staged tori と一致する．
+その regular fiber は $T^2$，simple-saddle fiber は $S^1\times\figeight$ である．
+\end{corollary}
+\begin{proof}
+仮定した $\Diff_0(P)$ の族により $\mathcal F_0$ を移す．
+得られる族は指定した開 end germs と一致し，
+内部の marked decomposition と一 critical-leaf 一 saddle の性質を保つ．
+補題\ref{neck:marked-interpolation}と同様に，parameter germs の追加の補間が必要なら
+collar 標識を固定した isotopies を用いる．
+各固定 $\mu$ の reduced surface では一次元葉は isotropic であり，
+その normal circle lift は Lagrangian である
+（補題\ref{neck:lift}の reduction の証明）．
+最後に $\phi^*\omega=\eta$ を用いて actual form へ移す．
+\end{proof}
+
+\begin{remark}[Actual neck への適用条件]
+\label{ke:staged-neck-scope}
+正則 normal action と K\"ahler 性から，
+moment は各 complexified normal orbit に沿って狭義単調になる．
+しかし，それだけでは全 base points に共通な moment interval や，
+退化 parameter に一様な flow buffer は得られない．
+系\ref{ke:staged-reduced-extension}では，これらの geometric identifications を仮定している．
+本研究の actual KE 族では，source を除いた固定 compact base 上の正則 normal model に対し，
+単一の global canonical primitive と共通 moment interval は
+関連 KE 主稿\cite[\texttt{pair:cor:global-primitive}，
+\texttt{pair:cor:actual-common-moment}]{KELocalCurrent}で検証される．
+前者は base の nowhere-vanishing holomorphic $1$-form $\tau$ に対する
+$\Omega=d\log v\wedge\tau$ と
+$\lambda_t=d^c\log(\omega_t^2/(\Omega\wedge\overline\Omega))$ を用い，
+$(\mathcal A_1\lambda_t)(V_1)$ が canonical normal moment と一致する．
+後者は固定した end radius の後で $t\to0$ とする評価である．
+従って，この actual 適用で残る条件は neck 全体の normal Moser flow の生存と buffer，
+triple の各 end における同一作用・reduced foliation の同時一致である．
+Critical actions の直線性を保つには，さらに節\ref{ng8:section}の
+relative area と marking の条件が必要である．
+
+系\ref{ke:staged-closed-corner-gh}は，三重点の標準 torus 内の任意の
+指定 primitive subgroup に適合できることを示す．
+別々に構成した neck action が，指定した開 collar でその subgroup と一致すること，
+一つの三重点に入る複数の neck でこの一致を同時に満たすこと，
+および source・branch・core の既存大域構成へ接着できることは含めない．
+非定数 holomorphic unit による orbit partition の変更も，
+単なる整数基底変更の Hamiltonian 比較では処理されない．
+全曲面の距離と singular fibers の一様な計量評価は引き続き別の入力である．
+\end{remark}

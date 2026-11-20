@@ -1,7 +1,25 @@
 # 研究ノートの入口
-更新：2026-11-20 / v1.6 / 主稿改訂6
+更新：2026-11-20 / v1.7 / 主稿改訂7
 
 詳細な現行ノートは `papers/research-notes.tex`（曲面第25版、65頁）に移行した。証明を短い要約で置き換えない。
+
+## 二段階平均によるnormal actionとperiodsの接続
+
+正本は主稿 `papers/sections/paper/ke_staged_neck_averaging.tex`。証明全文はここへ重複させない。`ke:circle-exact-transport` / `ke:staged-neck-averaging` は、ω=dλに対してnormal circleを先に平均し、残る円の平均をnormal-equivariantに行う。η=A1ω、κ=A2η、φ*ω=η、ψ*η=κなら、Θ=φψは
+\[
+ \Theta^*\lambda=A_2A_1\lambda+dq,\qquad
+ \mu\circ\psi=A_2\mu,\qquad
+ \widehat\rho_1=\phi\rho_1\phi^{-1}
+\]
+を満たし、全整数cycleのperiodsを同じprimitiveで規格化する。Periodは1、ι_Vω=−dμの規約。Normal actionが一致しても、別に指定したneck fibrationの第二periodやreduced leavesは自動的に一致しない。
+
+`ke:staged-hamiltonian-comparison` はpositive triangle (1−u)κ+(u−v)η+vω、0≤v≤u≤1内のpath homotopyを用いる。各endpointがprimitiveを同じ平均primitiveからexact差まで保つため、そのsmooth familyがHamiltonianとなる。共通domain bufferに加え、F_r(D_small)⊂F_0(D_large)というimage bufferが必要。Exact endpointだけを根拠にしない。`ke:staged-closed-corner-gh` は任意の固定primitive subgroupを第一段に選んでもO(log R/R)の局所GH率を保つ。旧bundleとの関係は、同じsoftmax labelsのfibersを対応させるHamiltonian mapである。
+
+関連KE主稿 `pair:prop:bundle-conic` は、射影的normal bundleでh=−F_d/G、x_i'=x_i h0/h、x_j'=x_jとしてexact uv=tを得る。局所overlapをcomplete C* automorphismとする不十分な議論を使わない。(u,v)↦(ue^u,ve^(−u))はuvとaxesを保つlocal mapだがbase-only乗数ではない、という例を覚えておく。新構成もfixed compact baseに限り、tripleへ動くbaseのtransition boundsを含まない。
+
+同稿 `pair:cor:global-primitive` / `pair:cor:actual-common-moment` は、source-free固定base B上で非消滅正則1-form τを選び、Ω=dlogv∧τからglobal λ_tを得る。Canonical normal momentはτの変更で変わらないが、residual periodsには同じprimitiveを使う。Song (arXiv:1706.01518, Lemmas 4.4–4.5)とRochon–Zhang (arXiv:1106.0873, Theorem 5.1)の固定end入力から、μ_tの端値は±4π/s_r+O(s_r^(−1−δ))+o_t(1)。rを固定後t→0とし、η_t=A1ω_tのreductionsの共通intervalを確保する。
+
+残るactual入力は、neck全体のnormal Moser flowの生存・一様buffer、triple endsでの同一正則作用とreduced foliationの同時一致、source/coreとの接着である。KE側 `neck:lem:rank-one-circle` はresidual rank-one下界とvolume上界だけでnormal circle長を抑えるが、その下界とactual bufferを証明する必要がある。固定residual境界の影響が消えないexact negative KE productの例があるため、normal深度だけからproduct asymptoticsを推論しない。
 
 ## 全深部三重点の actual semi-flat 比較
 任意の固定次数 d≥5 の一般位置全平面退化で、三重点の全深度比・全角度に一様な actual KE 比較を証明した。正確な座標 ζ0ζ1ζ2=t、ell_i=−log|ζ_i|²、L=−log|t|²、R=log L とし、k_Lをlogarithmic simplex上のcomplete toric KE form、その実計量をg_L^sfとする。十分大きい固定m1と各qのCqについて、m≥m1、min ell_i≥mで
@@ -189,7 +207,7 @@ d^c(AF-F)(\partial_{\theta_1})
 
 特にU=B×T²、Bは可縮なcorridor、N=N_-⊔N_+は両端のfull torus collarsとする。RestrictionはR²→R²⊕R²の対角写像なので、両端の二つのtorus period vectorsの一致が条件になる。その差は対応するS¹を運んだcylinder上のσ_sの積分である。これは指定したmarkingとaction originを保つ相対同定の条件であり、自由なbase relabellingを許すfibrationの存在障害と同一視しない。
 
-**着手方法。** Source-free neckでは、共通のnormal S¹を平均化してactual symplectic circle actionへ運び、その後triple collarで残る円作用を最初のS¹にequivariantに平均する構成を検討する。三つのendsの整合、momentの加法定数、reduced-circle foliations、critical action periods、sourceを含む接着は未完成である。既存の固定symplectic neck模型のtaming/cutoff評価をactual KE familyへ一様に移す入力を先に確認する。
+**着手方法。** 二段階平均とexact primitive transportは主稿 `ke:staged-neck-averaging` に証明した。Source-free固定base上のprimitiveと共通moment intervalも関連KE稿で確保した。次はactual familyでの全neck flow bufferと、複数endsの同一正則作用・reduced-circle foliationsを具体的に合わせる。Critical actionの直線性とsourceを含む接着は残り、既存の固定symplectic neck模型のtaming/cutoff評価をactual KE familyへ一様に移す証明はまだない。
 
 ## 複素次元2：先行研究・singular fibersの確定事項（2026-11-20）
 本研究の曲面X_d⊂P³, d≥5の一般SNC gluingと、全平面模型の明示的なsingular fiber型を区別する。主要な定理は papers/sections/paper/geometry_main_statements_v17.tex の main:global、nodeの線型monodromyは invariants_examples.tex、より詳しい先行比較は geometry_introduction_v25.tex。
@@ -281,6 +299,6 @@ H_4(\mathcal V)=\mathbb Z^{2g+1}.
 **境界包含H₁の新たな必要条件：** Focus基底長方形の境界を一周するloopをnormal coordinatesのsectionで持ち上げると、H₁(∂U)→H₁(U)のkernelの原始生成元を得る。Mayer–Vietoris列によってこのclassはH₁(V)=Zの原始生成元へ写る（tnc:focus-boundary-primitive）。従って補集合でこのloopを零homologousにする境界同定はできない。**次は** 境界包含のH₂・H₃・基本群の写像、vanishing-cycleとmeridional torsion、monodromy/Maslov/action periodsを照合してrelative fillingを構成する。大域fibrationは未完成。
 
 ## 検証
-主稿改訂6の局所解析では、固定product balls上のSavin適用と同率のSchauder評価、facet O((b/d_*)^(2/3))、active co-Gram、closed-corner pruningと有限gallery、Moser pullback比較、protected-ambientの経路領域と端点誤差、chain primitiveによるfiber保存を独立に読み直した。これは現行局所結果の証明点検であり、既存大域gluing全証明の独立監査、外部査読、形式証明とは異なる。LuaLaTeX基本資産不足により現行改訂は未組版。
+主稿改訂7の局所解析では、固定product balls上のSavin適用と同率のSchauder評価、facet O((b/d_*)^(2/3))、active co-Gram、closed-corner pruningと有限gallery、Moser pullback比較、protected-ambientの経路領域と端点誤差、chain primitiveによるfiber保存を独立に読み直した。これは現行局所結果の証明点検であり、既存大域gluing全証明の独立監査、外部査読、形式証明とは異なる。LuaLaTeX基本資産不足により現行改訂は未組版。
 
 移行時にWorkがv25の五主検算と五独立監査を再実行した。今回の新規トポロジー命題は原稿で論証し、次数ごとのEuler数とWang行列を独立検算したが、保存済み検算スクリプトの最新版全体は今回再実行していない。保存済みの旧verification/証明書全体を今回の実行結果とは扱わない。詳細はmigration.md。計算は解析的symplectic gluingや新規性の証明を代替しない。

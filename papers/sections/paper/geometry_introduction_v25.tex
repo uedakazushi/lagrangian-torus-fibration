@@ -576,6 +576,31 @@ Metric の torus 不変性は不要である．
 ただし actual neck との orbit partition の一致と quantitative buffer は未検証であり，
 この命題だけから既存の大域 fibration への接着を結論しない．
 
+同じ normal circle を持つ neck と triple collar を扱うため，
+定理\ref{ke:staged-neck-averaging}では normal average $\eta=A_1\omega$ を先に作り，
+その後に残る円を平均する．第一の map を $\phi$，第二を $\psi$ とすると，
+$\psi$ は normal circle と可換であるから，$\Theta=\phi\psi$ の各 torus は
+neck と共通の actual action $\phi\rho_1\phi^{-1}$ を含む．
+単一の primitive $\omega=d\lambda$ を固定すれば
+$\Theta^*\lambda=A_2A_1\lambda+dq$ であり，全整数 cycle の作用周期が一致する．
+命題\ref{ke:staged-hamiltonian-comparison}は，平均順序や整数基底の違いを，
+共通の buffer 上の Hamiltonian isotopy によって比較する．
+Exact symplectomorphism であることだけを Hamiltonian 性の根拠にはせず，
+primitive を exact 差まで保つ path homotopy を明示する．
+系\ref{ke:staged-closed-corner-gh}は，この構成にも
+$O((\log R_t)/R_t)$ の局所 GH 誤差を与える．
+従来の一段階 bundle と同一の fiber 分割を主張するものではない．
+
+Source-free な固定 compact base 上では，関連 KE 主稿\cite{KELocalCurrent}の
+\texttt{pair:prop:bundle-conic} が射影的 normal-bundle coordinates から一つの正則円作用を与え，
+\texttt{pair:cor:global-primitive} と \texttt{pair:cor:actual-common-moment} が
+global primitive と円平均後の共通 moment interval を与える．
+後者は固定 end での KE 収束と cusp 漸近を使い，moving ends や neck 内部の
+一様 tensor 比較を含まない．本稿の条件付き延長
+（系\ref{ke:staged-reduced-extension}）を actual neck 全体へ適用するためには，
+normal flow の生存・buffer，triple collar の同一作用，
+および reduced foliation germs の整合をさらに検証する必要がある．
+
 
 開いた二次元セルの固定 compact 部分では，さらに明示的な product model と局所 GH 極限を得る．
 関連 KE 原稿\cite{KELocalCurrent} の \texttt{simplex:cor:actual-dominant-product} は，

@@ -7,7 +7,9 @@
       "source": "common.tex",
       "destination": "papers/sections/common.tex",
       "source_sha256": "148e135a6ecaf15b9afe1a0f5b2c0e3a3be713e3765cb08bbcc64d112dd99dfc",
-      "sha256": "148e135a6ecaf15b9afe1a0f5b2c0e3a3be713e3765cb08bbcc64d112dd99dfc"
+      "sha256": "148e135a6ecaf15b9afe1a0f5b2c0e3a3be713e3765cb08bbcc64d112dd99dfc",
+      "bytes": 1866,
+      "current_blob_sha": "96280a991d2be6226c226045980a807c3cf347a5"
     },
     {
       "source": "paper/quintic_support_frontier_v15.tex",
@@ -37,7 +39,9 @@
       "source": "paper/petersen_periods.tex",
       "destination": "papers/sections/paper/petersen_periods.tex",
       "source_sha256": "4eeb23c8d101266aea55e656ae30599b36839ecf2acf06d7d4213c04145b4267",
-      "sha256": "4eeb23c8d101266aea55e656ae30599b36839ecf2acf06d7d4213c04145b4267"
+      "sha256": "4eeb23c8d101266aea55e656ae30599b36839ecf2acf06d7d4213c04145b4267",
+      "bytes": 24146,
+      "current_blob_sha": "c74dc097d3446676252c3fd2db152ddce83b02a7"
     },
     {
       "source": "paper/quintic_support_frontier_v14.tex",
@@ -49,7 +53,9 @@
       "source": "paper/k4_periods.tex",
       "destination": "papers/sections/paper/k4_periods.tex",
       "source_sha256": "b13e9bb195267dbd96185867d37c37cb2254915a41cb52471ccfcb0c5d667197",
-      "sha256": "b13e9bb195267dbd96185867d37c37cb2254915a41cb52471ccfcb0c5d667197"
+      "sha256": "b13e9bb195267dbd96185867d37c37cb2254915a41cb52471ccfcb0c5d667197",
+      "bytes": 6184,
+      "current_blob_sha": "f89950a758161ee1b25f724194867cfd16f4d3cf"
     },
     {
       "source": "paper/quintic_support_frontier_v16.tex",
@@ -61,7 +67,9 @@
       "source": "paper/neck_action_matching.tex",
       "destination": "papers/sections/paper/neck_action_matching.tex",
       "source_sha256": "b64abf6c6b6c5963a8544ffcf26b896427427b602d1c22ef1d0cd2b5b07b3fdd",
-      "sha256": "b64abf6c6b6c5963a8544ffcf26b896427427b602d1c22ef1d0cd2b5b07b3fdd"
+      "sha256": "b64abf6c6b6c5963a8544ffcf26b896427427b602d1c22ef1d0cd2b5b07b3fdd",
+      "bytes": 16856,
+      "current_blob_sha": "cd5edc57bd7cefaac54c8c54491ac0c784f81875"
     },
     {
       "source": "paper/g5_15_reduction_v21.tex",
@@ -133,7 +141,9 @@
       "source": "paper/neck_models.tex",
       "destination": "papers/sections/paper/neck_models.tex",
       "source_sha256": "e2ae7bb50132a93297efbd11a6b8e924712af976272d8c5fa8bc52158feda782",
-      "sha256": "e2ae7bb50132a93297efbd11a6b8e924712af976272d8c5fa8bc52158feda782"
+      "sha256": "e2ae7bb50132a93297efbd11a6b8e924712af976272d8c5fa8bc52158feda782",
+      "bytes": 10696,
+      "current_blob_sha": "c6165e9cb5bbcc27be62cef86a160aefa6a7ec88"
     },
     {
       "source": "paper/three_high_matching_v25.tex",
@@ -181,7 +191,9 @@
       "source": "paper/partition_topology.tex",
       "destination": "papers/sections/paper/partition_topology.tex",
       "source_sha256": "b29d58edd01333a6027cf816e3afe1c7d62d9b17cb9425f018d0393571b8a26e",
-      "sha256": "b29d58edd01333a6027cf816e3afe1c7d62d9b17cb9425f018d0393571b8a26e"
+      "sha256": "b29d58edd01333a6027cf816e3afe1c7d62d9b17cb9425f018d0393571b8a26e",
+      "bytes": 6135,
+      "current_blob_sha": "60329ff61b7417fecc6188a3efb0dcb765bab7ac"
     },
     {
       "source": "paper/cycle_node_sign_conditions_v13.tex",
@@ -193,7 +205,9 @@
       "source": "paper/mixed_global_obstruction.tex",
       "destination": "papers/sections/paper/mixed_global_obstruction.tex",
       "source_sha256": "6b593a78c3c46717f2505f0830576a0ee894190eff6a5a2be91f98539133aae2",
-      "sha256": "6b593a78c3c46717f2505f0830576a0ee894190eff6a5a2be91f98539133aae2"
+      "sha256": "6b593a78c3c46717f2505f0830576a0ee894190eff6a5a2be91f98539133aae2",
+      "bytes": 4872,
+      "current_blob_sha": "9c176f8b27b1441de6c3ea3d315a276a286e83b4"
     },
     {
       "source": "paper/high_d_proportional_reduction_v24.tex",
@@ -205,7 +219,9 @@
       "source": "paper/degree_partitions.tex",
       "destination": "papers/sections/paper/degree_partitions.tex",
       "source_sha256": "83239e054a9762e5be740ead16c54dd451bee0e923b60bcc4a94c40b039266fd",
-      "sha256": "83239e054a9762e5be740ead16c54dd451bee0e923b60bcc4a94c40b039266fd"
+      "sha256": "83239e054a9762e5be740ead16c54dd451bee0e923b60bcc4a94c40b039266fd",
+      "bytes": 19216,
+      "current_blob_sha": "67a9191255f7893f47bd91a66a4cab1c9bf312a5"
     },
     {
       "source": "paper/main_statements.tex",
@@ -283,7 +299,9 @@
       "source": "paper/mixed_all_denominator_obstruction.tex",
       "destination": "papers/sections/paper/mixed_all_denominator_obstruction.tex",
       "source_sha256": "322d4ae0d98945ee8c13e65be7c3811ff38e3272ae8101266bb3eedadea42b36",
-      "sha256": "322d4ae0d98945ee8c13e65be7c3811ff38e3272ae8101266bb3eedadea42b36"
+      "sha256": "322d4ae0d98945ee8c13e65be7c3811ff38e3272ae8101266bb3eedadea42b36",
+      "bytes": 4737,
+      "current_blob_sha": "70b320a3357e3e2f49b61157fb030b2e2e6f8cd4"
     },
     {
       "source": "paper/geometry_bibliography_v21.tex",
@@ -343,7 +361,9 @@
       "source": "paper/tropical_obstructions.tex",
       "destination": "papers/sections/paper/tropical_obstructions.tex",
       "source_sha256": "e66c19396086a5c497eec819d9b31000eeaac14a540b1375e0aa6fe962e0c345",
-      "sha256": "e66c19396086a5c497eec819d9b31000eeaac14a540b1375e0aa6fe962e0c345"
+      "sha256": "e66c19396086a5c497eec819d9b31000eeaac14a540b1375e0aa6fe962e0c345",
+      "bytes": 30724,
+      "current_blob_sha": "c699a155f22d2c050a0ab37c5446833f4a13732d"
     },
     {
       "source": "paper/geometry_bibliography_v24.tex",
@@ -367,9 +387,9 @@
       "source": "paper/geometry_bibliography_v25.tex",
       "destination": "papers/sections/paper/geometry_bibliography_v25.tex",
       "source_sha256": "31caa6116b46ace8c04ca0d86351d38506f7d3b12e835cf66b4bd21abde9ce73",
-      "sha256": "03e71b2f00cb606e289f586636ab18dbc02ee611fe1f0a16523579a9c86ce302",
-      "bytes": 19823,
-      "current_blob_sha": "f7184151e755cd51b448cc39a49d29c7b80ed222"
+      "sha256": "b63dc7a723e82c44c0048c7cf54f909887e42b03fa7cca636e4e6b7e0cb1fb8a",
+      "bytes": 19973,
+      "current_blob_sha": "30156fc87bc83b757ba1efe45fac989af66e319e"
     },
     {
       "source": "paper/quintic_monochromatic_support_v11.tex",
@@ -393,13 +413,17 @@
       "source": "paper/sextic_gluing.tex",
       "destination": "papers/sections/paper/sextic_gluing.tex",
       "source_sha256": "c052877d30a3cb8e3047a75c15776c62cf1c247a49db06ab63462c9591b2cefc",
-      "sha256": "c052877d30a3cb8e3047a75c15776c62cf1c247a49db06ab63462c9591b2cefc"
+      "sha256": "c052877d30a3cb8e3047a75c15776c62cf1c247a49db06ab63462c9591b2cefc",
+      "bytes": 9779,
+      "current_blob_sha": "9390430068f427a214ab5596f59f733884a11241"
     },
     {
       "source": "paper/relative_compactification.tex",
       "destination": "papers/sections/paper/relative_compactification.tex",
       "source_sha256": "b61e4876b86e3a630c6ee7e6ef41dcb2e7b7aee153a2f8f65efb6ba206cedf34",
-      "sha256": "b61e4876b86e3a630c6ee7e6ef41dcb2e7b7aee153a2f8f65efb6ba206cedf34"
+      "sha256": "b61e4876b86e3a630c6ee7e6ef41dcb2e7b7aee153a2f8f65efb6ba206cedf34",
+      "bytes": 39563,
+      "current_blob_sha": "39ce091da2e3ab3bcea9ef59aeb5088caa01962f"
     },
     {
       "source": "paper/book_all_negative_obstruction_current_v22.tex",
@@ -447,13 +471,17 @@
       "source": "paper/degeneration_polarization.tex",
       "destination": "papers/sections/paper/degeneration_polarization.tex",
       "source_sha256": "7bb6e5d6bfd93912dd1fe094d051830c10f96ac5ade1685fd2f0b3ff6bf2bc80",
-      "sha256": "7bb6e5d6bfd93912dd1fe094d051830c10f96ac5ade1685fd2f0b3ff6bf2bc80"
+      "sha256": "7bb6e5d6bfd93912dd1fe094d051830c10f96ac5ade1685fd2f0b3ff6bf2bc80",
+      "bytes": 8586,
+      "current_blob_sha": "c57cf062e78140426e6a580441109b9eb78b2e7d"
     },
     {
       "source": "paper/quintic_links.tex",
       "destination": "papers/sections/paper/quintic_links.tex",
       "source_sha256": "458370fb9123b7dbf9a20c36760f9bf9f429849938ae62d8cf57ca5f6faa4a24",
-      "sha256": "458370fb9123b7dbf9a20c36760f9bf9f429849938ae62d8cf57ca5f6faa4a24"
+      "sha256": "458370fb9123b7dbf9a20c36760f9bf9f429849938ae62d8cf57ca5f6faa4a24",
+      "bytes": 23663,
+      "current_blob_sha": "3ade1758cfbb31f26c80637066c6d5a54eaf4a23"
     },
     {
       "source": "paper/geometry_bibliography_v17.tex",
@@ -503,7 +531,9 @@
       "source": "paper/mixed_plane_periods.tex",
       "destination": "papers/sections/paper/mixed_plane_periods.tex",
       "source_sha256": "895c82589f0572fc0f5f9fc52a44a87ebab18ac29e42a819dc2b52d03af5056d",
-      "sha256": "895c82589f0572fc0f5f9fc52a44a87ebab18ac29e42a819dc2b52d03af5056d"
+      "sha256": "895c82589f0572fc0f5f9fc52a44a87ebab18ac29e42a819dc2b52d03af5056d",
+      "bytes": 8032,
+      "current_blob_sha": "34032e8deb8fadcb55bdf1317c3220d5787cd496"
     },
     {
       "source": "paper/r1_exceptional_leaf_v16.tex",
@@ -539,13 +569,17 @@
       "source": "paper/four_puncture_rigidity.tex",
       "destination": "papers/sections/paper/four_puncture_rigidity.tex",
       "source_sha256": "25918afc009a5583e8ac77260f97515ee4b868967e10669f9ca745b15de608aa",
-      "sha256": "25918afc009a5583e8ac77260f97515ee4b868967e10669f9ca745b15de608aa"
+      "sha256": "25918afc009a5583e8ac77260f97515ee4b868967e10669f9ca745b15de608aa",
+      "bytes": 8974,
+      "current_blob_sha": "93f3160a6396d9991fe25cc7a20d536aa308402c"
     },
     {
       "source": "paper/global_action_atlas.tex",
       "destination": "papers/sections/paper/global_action_atlas.tex",
       "source_sha256": "30da09df446c7346bee8ae4ca35c88e575a75d2239da6365d29c79e86431c2a4",
-      "sha256": "30da09df446c7346bee8ae4ca35c88e575a75d2239da6365d29c79e86431c2a4"
+      "sha256": "30da09df446c7346bee8ae4ca35c88e575a75d2239da6365d29c79e86431c2a4",
+      "bytes": 16724,
+      "current_blob_sha": "2f3449c5e134fb51faf1db0a69e1dbc337da9a39"
     },
     {
       "source": "paper/quintic_low_degree_support_v11.tex",
@@ -593,7 +627,9 @@
       "source": "paper/global_gluing.tex",
       "destination": "papers/sections/paper/global_gluing.tex",
       "source_sha256": "ebe047ed56f22a89939d52b0777f52aad974410ec00aa5fe3acaa06bb45eff54",
-      "sha256": "ebe047ed56f22a89939d52b0777f52aad974410ec00aa5fe3acaa06bb45eff54"
+      "sha256": "ebe047ed56f22a89939d52b0777f52aad974410ec00aa5fe3acaa06bb45eff54",
+      "bytes": 14714,
+      "current_blob_sha": "584ca6a3f8a65bd026173f7c6b1908136014492a"
     },
     {
       "source": "paper/geometry_introduction_v20.tex",
@@ -623,7 +659,9 @@
       "source": "paper/invariants_examples.tex",
       "destination": "papers/sections/paper/invariants_examples.tex",
       "source_sha256": "36b0e905311c4b3f873007d7c8c9e4c7e1ecba4d5e4f71b0478e59404aba9e9c",
-      "sha256": "36b0e905311c4b3f873007d7c8c9e4c7e1ecba4d5e4f71b0478e59404aba9e9c"
+      "sha256": "36b0e905311c4b3f873007d7c8c9e4c7e1ecba4d5e4f71b0478e59404aba9e9c",
+      "bytes": 6260,
+      "current_blob_sha": "c7192f3de176beb97890f1b6158ec5f8ace24666"
     },
     {
       "source": "paper/g5_15_negative_exception_obstruction_v23.tex",
@@ -635,7 +673,9 @@
       "source": "paper/quintic_gluing.tex",
       "destination": "papers/sections/paper/quintic_gluing.tex",
       "source_sha256": "af11011d1c15bba8fb08976e12cf7c575aa18c78ed4f6e05f22f341f65532955",
-      "sha256": "af11011d1c15bba8fb08976e12cf7c575aa18c78ed4f6e05f22f341f65532955"
+      "sha256": "af11011d1c15bba8fb08976e12cf7c575aa18c78ed4f6e05f22f341f65532955",
+      "bytes": 20475,
+      "current_blob_sha": "f5d2498f41e8d9f9243618203307a30b552833d3"
     },
     {
       "source": "paper/k4_global_obstruction_v17.tex",
@@ -749,7 +789,9 @@
       "source": "paper/geometry_main_statements_v17.tex",
       "destination": "papers/sections/paper/geometry_main_statements_v17.tex",
       "source_sha256": "bd48d50cdf22f35a99628dc55569daab637870d1671519df7a1e650cfe336272",
-      "sha256": "bd48d50cdf22f35a99628dc55569daab637870d1671519df7a1e650cfe336272"
+      "sha256": "bd48d50cdf22f35a99628dc55569daab637870d1671519df7a1e650cfe336272",
+      "bytes": 10937,
+      "current_blob_sha": "73b97051e4f6d7660fdc0b671cfd0db5867b1c0a"
     },
     {
       "source": "paper/book_low_triangle_finiteness_v19.tex",
@@ -803,9 +845,9 @@
       "source": "paper/geometry_introduction_v25.tex",
       "destination": "papers/sections/paper/geometry_introduction_v25.tex",
       "source_sha256": "383354c4d141117cd75eaed52fdfa7bbd3b5bbbf70ef5fdd85e7f3fd29ec447c",
-      "sha256": "126633f3418a40927fb5ebf7f44fce6a29b3bf598d067fdf3529f3c1078e631f",
-      "bytes": 45012,
-      "current_blob_sha": "017f6b38cf5de56131b5d5059cd5b469068dbdfa"
+      "sha256": "1ce8d9fbdd014aeca5cf5b87ef846840d22a4f8270eb876af154a81d1e4376d4",
+      "bytes": 46879,
+      "current_blob_sha": "3fae23d324193ba341903396f1e067065dd6384b"
     },
     {
       "source": "paper/quintic_support_frontier_v19.tex",
@@ -829,13 +871,17 @@
       "source": "paper/quadric_periods.tex",
       "destination": "papers/sections/paper/quadric_periods.tex",
       "source_sha256": "8076adb88b93e77111177e2e7e4898ea09b74b72c1050e6a28c57b88042d9be5",
-      "sha256": "8076adb88b93e77111177e2e7e4898ea09b74b72c1050e6a28c57b88042d9be5"
+      "sha256": "8076adb88b93e77111177e2e7e4898ea09b74b72c1050e6a28c57b88042d9be5",
+      "bytes": 16527,
+      "current_blob_sha": "3e81acf7f04701d07860cf134c54391aa6eebda9"
     },
     {
       "source": "paper/atlas_gluing.tex",
       "destination": "papers/sections/paper/atlas_gluing.tex",
       "source_sha256": "6ce6086a2a0291e314feb16d8c8b82303e69d0db1b06b663136d704254b70ec2",
-      "sha256": "6ce6086a2a0291e314feb16d8c8b82303e69d0db1b06b663136d704254b70ec2"
+      "sha256": "6ce6086a2a0291e314feb16d8c8b82303e69d0db1b06b663136d704254b70ec2",
+      "bytes": 15263,
+      "current_blob_sha": "65b338d3654303ee666997ccb5a07334b5ad82fe"
     },
     {
       "source": "paper/quintic_support_frontier_v18.tex",
@@ -3141,10 +3187,10 @@
       "source": "paper/general_type_surface_fibration_paper_ja_v25.tex",
       "destination": "papers/lagrangian-torus-fibration.tex",
       "source_sha256": "8a2c45f5900c0ed367311bdb78e3a83042c96f82601a5055e2975311a3ad2ba0",
-      "sha256": "3be85273b9857d0b074a8d30b777fd4ac5185f84cc40ca6c0fbb2facd729164e",
+      "sha256": "9a6068fc4eec682b84f472a648ac12f229652e0de5535d6240be1338192ec6be",
       "changes": "TeX input paths and input search paths only",
-      "bytes": 5055,
-      "current_blob_sha": "57fd346b4d55c8e5414b3b04f502609647d6b2ea"
+      "bytes": 5683,
+      "current_blob_sha": "bb2b71c24fbe328a218d2b462a55cc1360f96f10"
     },
     {
       "source": "paper_arithmetic/general_type_surface_quintic_arithmetic_paper_ja_v25.tex",
@@ -3320,9 +3366,9 @@
     "threefold_v11/threefold_fibration_note.tex": "papers/threefold-fibration.tex"
   },
   "audit_update_2026_11_20": {
-    "version": "v1.6",
-    "scope": "For every fixed degree d>=5: full deep-triple actual semi-flat comparison; exact rank-one Schwarz bound; dominant O(delta^2), facet O(epsilon^(2/3)), and active co-Gram estimates; closed-corner intrinsic and protected-ambient GH collapse with distortion O(log R/R), realized by the same actual Lagrangian torus bundle. Open-square tensor and GH errors improve to O(L^(-eta)). Chain averaging preserves an already Lagrangian orbit collar as a fiber partition. Global X_t distances, actual neck matching, relative gluing, and singular-fiber compatibility remain open; novelty is unconfirmed.",
-    "verification": "Primary-source inputs and new proofs independently read, including normalizations, domain barriers, fixed-ball perturbation regularity, all-path pruning, finite galleries, Moser pullback, and protected-ambient endpoint control. Recursive TeX inputs, labels/references, citation keys, environments, braces, and newly introduced macros checked. Revised PDFs are not compiled: lualatex.fmt and essential LuaTeX-ja assets are unavailable. No formal proof, comprehensive novelty audit, or fresh full audit of the pre-existing global constructions is claimed."
+    "version": "v1.7",
+    "scope": "For each fixed degree d>=5, retain full deep-triple tensor comparison and closed-corner intrinsic/protected-ambient GH collapse with O(log R/R) distortion. Add explicit projective normal-bundle coordinates on fixed source-free base domains, canonical global primitives and moments, and a uniform averaged moment interval from fixed-end convergence. Add exact staged circle averaging, all marked-period transport, Hamiltonian comparison of averaging paths and integer bases, and an adapted closed-corner bundle with the same GH rate. Distinguish bounded neck volume envelopes from tensor asymptotics; give a residual-boundary counterexample, a mixed-coefficient rank-one circle criterion, and conditional coupled-background and complete-product identification. Full-neck flow buffers, simultaneous triple-end action/reduced-foliation matching, sources and global GH remain open. Novelty is unconfirmed.",
+    "verification": "New proofs independently read, with primary-source checks of Song Definition 2.3 and Lemmas 4.4-4.5, Rochon-Zhang equations (5.5)-(5.6) and Theorem 5.1, Zhang Lemma 3.3, Mandel section 2.3, and the Laplacian maximum principle. Audited explicit inverse coordinates, period-one normalization, fixed-end limit order, staged exact transport, Hamiltonian path/image buffers, C1/Gronwall GH transfer, residual counterexample and determinant criterion. Recursive inputs, labels, references, citations, braces, environments and introduced macros checked; optional local-font input remains optional. Current revised PDFs have not been compiled because lualatex.fmt and LuaTeX-ja assets are unavailable. No formal verification, comprehensive novelty audit or fresh audit of all older global constructions is claimed."
   },
   "current_post_migration_sources": [
     {
@@ -3360,6 +3406,12 @@
       "sha256": "27b440503632dcb4b571e6de872d917fe07b4067a84ea03c275db0235a082ae5",
       "bytes": 17607,
       "current_blob_sha": "1e9b2261973a811b6ae171c10d738f06e02f0b18"
+    },
+    {
+      "destination": "papers/sections/paper/ke_staged_neck_averaging.tex",
+      "sha256": "0258c01e40dc26a71608b5a7d0a58cdaff176b5c61d510ca56bdb47122c93173",
+      "bytes": 24770,
+      "current_blob_sha": "1eb13ed429906877ecdfe9431c078b8c61b5d8cc"
     }
   ]
 }
