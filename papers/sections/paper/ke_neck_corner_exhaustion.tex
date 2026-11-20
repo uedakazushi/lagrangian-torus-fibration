@@ -1,0 +1,287 @@
+% !TeX root = ../../surface-lagrangian-torus-fibration.tex
+% 2026-11-21 / v1.0: Source-inclusive neck と triple end の遅い共通 exhaustion．
+\section{Source を含む neck と三重点 end の共通 exhaustion}
+\label{ke:neck-corner-exhaustion-section}
+
+固定残余基底の定理\ref{ke:projected-source-neck}と，
+moving arm の命題\ref{ke:arm-common-moment-strip}を接続する．
+選択の順序は，残余 compact 領域，normal cutoff，moment interval，
+最後に退化 parameter の閾値である．この順序によって，固定 compact の定理を
+未証明の moving-base 一様評価として用いることを避ける．
+以下で得るのは source と saddle を含む neck の end germs と，
+三重点 bundle の指定された深い normal strip との一致である．
+Core への延長や，全曲面を通る経路の距離比較は含まない．
+
+\subsection{残余基底と end 座標の区別}
+
+二重線 $D=D_{ij}$ と，節\ref{ke:neck-corner-transition-section}で固定した
+許容射影を用いる．三重点の集合を $Q\subset D$ とする．
+射影 Morse 変換の後の方程式は，束の局所 frame において
+\[
+ x'y'=t h_t(p),\qquad p\in D\setminus Q
+\]
+である．Neck の残余基底は元の $p\in D$ である．
+$h_t$ は束の section を frame で表示した関数であり，
+全基底上の一対一座標ではない．単純 source 近傍で $h_t'(p)\ne0$ のときに限り，
+$z=h_t(p)$ を局所座標として $x'y'=tz$ を使う．
+
+一つの三重点 $q_k$ の近傍では local base coordinate を $p_k$ とし，
+\eqref{ke:eq:arm-gauged-coordinates}の第三座標を
+\[
+ Z_{k,t}(p_k)=\Xi_{kk}(p_k)=C_D(p_k,t)^2/h_{k,t}(p_k)
+\]
+と書く．添字 $k$ は $h_t$ の当該局所 frame での表示も表す．
+\[
+ Z_{k,0}(p_k)=p_k/C_D(p_k,0)
+\]
+は $q_k$ で単純零点を持つ正則座標である．
+各固定 punctured annulus 上では $Z_{k,t}\to Z_{k,0}$ が全固定階で成り立つ．
+従って $t$ を十分小さくすれば，同じ annulus の少し小さい部分で
+$Z_{k,t}$ も一対一の正則座標である．これは $h_t$ を global coordinate とする主張ではない．
+
+Global neck の frame と各 end の frame の変換は，残余基底だけに依存する．
+補題\ref{ke:projected-source-normal-form}の臨界断面と恒等近傍の平方根は
+frame 変更に関して同変なので，normal circle は両表示で厳密に同じである．
+一つの三重点を無限遠とする base coordinate $p_g$ と束の frame を取れば，
+全ての compact exhaustion 上で $\Omega_N=d\log x'_g\wedge dp_g$ を使える．
+Local frame における同じ体積形式との差は base-only unit である．
+Canonical primitive の差は normal generator を消す閉形式なので，
+normal moment の加法定数は変わらない．
+第二 period については同じ結論を主張しない．
+
+\begin{lemma}[固定残余 compact 上で先に選べる normal cutoff]
+\label{ke:fixed-stage-source-neck}
+$P\Subset\operatorname{int}P^+\subset D\setminus Q$ を固定し，
+source は $P$ の内部に，$P^+\setminus\operatorname{int}P$ は source の外に置く．
+固定 frame で $r=e^{-n/2}$ とし，
+\[
+ U_{t,n}=\{p\in\operatorname{int}P^+,\ |x'_g|,|y'_g|<r\},
+ \qquad
+ K_{t,n}=\{p\in P,\ |x'_g|,|y'_g|\le r^2\}
+\]
+とする．$P,P^+$ に依存する定数 $C_P,\delta_P,c_P>0$ と $N_P$ があり，
+任意の固定した $n\ge N_P$ に対して，$|t|$ を十分小さくすれば次が成立する．
+Normal circle の長さは $C_P/n$ 以下，$K_{t,n}$ と外側の境界の actual buffer は
+$\delta_P$ 以上であり，内側の二つの normal cut の canonical moment は逆符号で
+絶対値が $c_P/n$ 以上である．
+従って $n$ をさらに大きくして $C_P/n\ll\delta_P$ とすれば，
+centered normal Moser map $\phi_{N,t}$ の source と像は共に $K_{t,n}$ を含む．
+その actual 変位は $C_P/n$ 以下である．
+十分小さい対称 interval を $(-c_P/n,c_P/n)$ 内に選ぶと，
+円作用の商は $(\mu_N,p)$ によりその interval と $P$ の積に位相同定される．
+\end{lemma}
+
+\begin{proof}
+定理\ref{ke:projected-source-neck}の証明を，$r$ を先に固定して適用する．
+固定された source-free 部分には定理\ref{ke:fixed-base-neck-moser}の比較を使い，
+source 近傍には系\ref{ke:source-short-circle}を使う．有限被覆により
+normal circle の上界の定数を一つの $C_P$ にできる．
+残余方向では $P^+\setminus P$ の固定幅に射影下界を使う．
+Normal 方向では $r^2\le|x'_g|\le r$ または対称な shell の成分極限と
+cusp 下界を使う．この shell の深度比は $2$ なので，$n$ を大きくした後にも
+固定された $P^+$ 上で正の下界 $\delta_P$ を選べる．
+同じ成分の fixed-shell canonical moment 評価は normal cuts 上で
+$c_P/n$ の符号付き下界を与える．
+これらは各固定 $n$ の後に $t$ を小さくする順序の評価である．
+
+系\ref{ke:short-circle-image-buffer}により，共通 source と像を持つ centered flow を得る．
+Source の固定点では生成場と chain primitive が零であり，flow は固定点を保つ．
+Moment の radial 単調性と source の二軸の記述は
+定理\ref{ke:projected-source-neck}と同じであり，商の位相同定を与える．
+この段階では $P$ を動かした定数の一様性を主張していない．
+\end{proof}
+
+\subsection{三つの尺度を分ける diagonal 選択}
+
+\begin{theorem}[Source-inclusive neck と全 end の開 collar の一致]
+\label{ke:neck-corner-diagonal-matching}
+固定二重線 $D$ 上に，source を相異なる regular leaves に置く
+marked simple-saddle foliation を取り，三重点の punctured ends では
+$|Z_{k,0}|=\mathrm{const}$ の円を葉とする．
+この foliation は，source と saddle を含む固定 compact 部分の外では radial とする．
+任意に遅い段階的な選択として，列
+\[
+ b_j\longrightarrow\infty,\qquad
+ n_j\longrightarrow\infty,\qquad
+ \iota_j>0,\qquad t_j\downarrow0
+\]
+を次の性質を満たすよう選べる．
+$t_{j+1}<|t|\le t_j$ のとき，$I_j=[-\iota_j,\iota_j]$ 上に
+source と simple saddles を含む actual $\omega_t$-Lagrangian neck があり，
+各 end の開 collar で三重点側の指定 normal-first torus bundle と
+fiber partition が厳密に一致する．Normal Moser map と canonical normal moment も一致する．
+Source の一重 pinched torus，saddle の $S^1\times\figeight$，
+および内部の marking は保持される．
+
+この一致 collar は，triple の射影座標で
+\[
+ b=-\log|Z_{k,t}(p_k)|^2\asymp b_j,
+ \qquad a,c\ge4n_j
+\]
+となる moment strip から構成する．$n_j/b_j$ は十分大きく選び，
+$b\asymp b_j$ で $a$ または $c$ が $b_j$ 程度しかない領域まで
+neck が覆うとは主張しない．
+法線円作用の Moser 変位は neck 全体で $1/j$ 以下にできる．
+また $m_t=b_j/64$ と取った三重点の cut は
+\[
+ m_t\to\infty,\qquad \log m_t=o(R_t)
+\]
+を満たすように選べるので，定理\ref{ke:slow-cut-closed-corner-gh}と両立する．
+この結論は時間 parameter に関する微分可能性を要求しない．
+\end{theorem}
+
+\begin{proof}
+\emph{残余領域を最初に固定する．}
+十分大きい $b_j\uparrow\infty$ を取り，各 end の
+$s_{k,0}=-\log|Z_{k,0}|^2$ を用いて
+\[
+ P_j=D\setminus\bigcup_k\{s_{k,0}>8b_j\},\qquad
+ P_j^+=D\setminus\bigcup_k\{s_{k,0}>16b_j\}
+\]
+とする．大きい $j$ では，source と saddle は全て両領域の固定内部にあり，
+残余 annuli $b_j/2<s_{k,0}<4b_j$ は互いに素である．
+これらは各段階では固定 compact 領域であり，
+補題\ref{ke:fixed-stage-source-neck}の定数を
+$C_j,\delta_j,c_j,N_j$ と書く．
+
+各 end の local frame，$C_D$，global neck の frame の間に現れる
+対数絶対値の差を，上の少し広い固定 annuli 上で $M_j$ 以下に抑える．
+$t$ に依存するものも，固定領域で $t=0$ の近傍へ制限して同じ上界に入れられる．
+従って local normal 深度と global frame の深度の差は $M_j$ 以下である．
+無限遠に置いた end の frame 変換にもこの bound を適用する．
+
+\emph{Normal cutoff を次に選ぶ．}
+$n_j$ は増加列とし，
+\[
+ n_j\ge N_j,\qquad n_j>4M_j,\qquad
+ n_j>100(1+2\sigma)b_j,\qquad
+ \frac{C_j}{n_j}<\min\left(\frac1j,\frac{\delta_j}{100}\right)
+\]
+を満たすよう選ぶ．必要なら最初の有限個の項は除く．
+$r_j=e^{-n_j/2}$ とし，global inner tube の深度は $2n_j$，
+outer tube の深度は $n_j$ となる．
+
+End では，命題\ref{ke:arm-common-moment-strip}と同じ canonical volume の計算を，
+固定比 $a=Kb$ の代わりに $a=4n_j$ で行う．
+Dominant-product 比較は $a/b$ に定数が依存しないので，
+$b_j/2<b<4b_j$ において
+\begin{equation}\label{ke:eq:exhaustion-normal-cut-moment}
+ \mu,\nu\big|_{a=4n_j}
+ =\frac{\pi}{n_j}
+  +O\left(\frac1{n_jb_j}
+         +\frac1{n_j}\left(\frac{n_j+b_j}{L_t}\right)^2\right)
+\end{equation}
+となり，$c=4n_j$ では主項の符号が逆になる．
+座標接続の指数誤差も $C/(n_jb_j)$ に吸収される．
+この計算では小さい triple primitive を使い，
+系\ref{ke:transition-normal-primitive}によって normal moment を global neck の
+primitive と厳密に同定する．
+
+\emph{Moment interval を選ぶ．}
+各 $j$ について
+\[
+ 0<\iota_j<\min\left\{\frac{c_j}{16n_j},\frac{\pi}{64n_j}\right\}
+\]
+とする．構成は目標 interval $I_j$ より広い $|\mu|<2\iota_j$ の上で行う．
+固定段階の global normal cuts と
+\eqref{ke:eq:exhaustion-normal-cut-moment}の四つの境界値の間に
+この広い interval が入るよう，後で $t$ の閾値を取る．
+Normal 単調性により，三重点側の $\nu$-level と $\mu$-level は全て
+$a,c>4n_j$ にある．Global neck 側では，source を含む全 $P_j$ 上で
+同じ interval の円，または $\mu=0$ の source 固定点を持つ．
+
+\emph{最後に $t_j$ を選ぶ．}
+各段階で有限個の要求を同時に満たす閾値を選ぶ．具体的には，固定 $P_j^+$ と
+$r_j$ に対する補題\ref{ke:fixed-stage-source-neck}の全評価，
+source 零点の内部への保持，frame と Morse 座標の共通性，
+$|t|\sup_{P_j^+}|h_t|<r_j^8$，および
+\eqref{ke:eq:exhaustion-normal-cut-moment}の誤差を $\pi/(4n_j)$ 以下にする条件を課す．
+さらに各固定 annulus 上で $Z_{k,t}/Z_{k,0}$ の正則対数が存在し，
+\[
+ (q_t,\theta_t)=
+ \left(\log\frac{-\log|Z_{k,t}|^2}{b_j},\arg Z_{k,t}\right)
+\]
+とその $t=0$ 版の $C^3$ 差が $b_j^{-2}$ 以下になるようにする．
+この微分は固定 annulus の座標での微分であり，各 $j$ を固定した後には
+$t\to0$ により実現できる．
+
+$t_j<t_{j-1}/2$ とし，さらに
+\[
+ R_t\ge j\bigl(1+\log(n_j+1)\bigr),\qquad
+ L_t>100n_j
+ \quad\text{for }0<|t|\le t_j
+\]
+を課す．固定段階の定数や $n_j$ に大きな増大があっても，
+これらは全て $t_j$ を小さくすることで満たせる．
+各評価は $0<|t|\le t_j$ 全体で成り立つので，
+$t_{j+1}<|t|\le t_j$ で第 $j$ 段階を使える．
+この選択から $\log m_t/R_t\le1/j$ が従う．
+
+\emph{全 flow の共通開領域を確保する．}
+内側の残余 annulus $b_j<b<2b_j$ を取り，外側を
+$b_j/2<b<4b_j$ とする．上の座標比較により，この外側 annulus は
+全て $P_j$ の内部にある．Normal 深度 $a,c>3n_j$ の部分は，
+global frame に移しても深度 $>3n_j-M_j>2n_j$ なので $K_{t,n_j}$ 内にある．
+また $n_j\gg b_j$ により，外側 annulus 全体で固定比の正則 plateau arm 内にある．
+
+$\nu$-level の全 torus は $a,c>4n_j$ にあり，第二段の $\psi_s$ の
+モデル長さと $C^1$ 誤差は $Cb_j^{-2}$ 以下である．
+同じ領域で normal generator の長さは $C/n_j$，模型との誤差は $C/b_j$ なので，
+centered normal Moser 場のモデル長さは $C/(n_jb_j)$ 以下である．
+正規化 log 深度と残余 $q$ の微分は一様に有界であるから，
+大きい $j$ では，第二段の全画像と，そこからの第一段の全 trajectories は
+$a,c>3n_j$ と外側残余 annulus の中に留まる．
+逆向きの flow と平均順序比較の小さい trajectories も，少し広い同じ margin に収められる．
+比較的 compact な飽和開近傍を取れば，
+全円 orbit，residual-stage の全画像，および normal-stage の全 trajectories を含む
+共通の開 plateau が得られる．
+
+Global neck と三重点側で同じ centered kernel を用いる．
+両側の bare normal circle は正則座標同定 $G$ により厳密に共役されるので，
+補題\ref{ke:normal-flow-naturality}から
+\[
+ \phi_{N,t,s}\circ G=G\circ\phi_{\alpha,t,s}
+\]
+がこの共通領域で成り立つ．Primitive の近似だけから flow の一致を推論していない．
+共通 canonical moment は上で確認したものである．
+
+\emph{Reduced 葉を合わせる．}
+命題\ref{ke:single-arm-reduced-graph}をより狭い $I_j$ に制限する．
+三重点 torus の第二段の像は，neck の同じ $\mu_N$-level の reduction 上で
+$(q_t,\theta_t)$ に関して $C^1$ 誤差 $O(b_j^{-2})$ の円 graph を与える．
+固定座標 $(q_0,\theta_0)$ への変更も上で $O(b_j^{-2})$ に抑えたので，
+これらの円は基準の radial 葉の小さい graph である．
+補題\ref{ke:reduced-collar-graph}を互いに素な広い annuli で用い，
+各 moment に滑らかに依存し，内部の source と saddle 近傍では恒等な
+foliation の変形を作る．無重みの moment 微分に一様な小ささは課さない．
+命題\ref{ke:moment-dependent-neck-foliation}によって，
+この葉層族を全 neck へ持ち上げられる．
+Source の $\mu=0$ を含む全商では $(\mu_N,p)$ の位相同定を用い，
+滑らかな reduction 座標を使うのは source-free な end のみである．
+
+系\ref{ke:corner-leaves-in-neck-reduction}により，選んだ end の torus は集合として
+\[
+ G\phi_\alpha\psi(T)=\phi_N G\psi(T)
+\]
+であり，変形した neck 葉の持ち上げと完全に一致する．
+三重点の三つの端に別々の normal-first 順序が必要な場合は，
+定理\ref{ke:relative-corner-patch}を使う．支持は互いに素な arm にあり，
+本証明で確保した共通 source/image の余裕の中に選べる．
+これで一つの corner bundle の指定された各 end strip と一致させられる．
+
+最後に，neck の終端を一致 annulus 内の一つの regular 葉で切り詰める．
+例えば基準座標で $q_0=\log(3/2)$ の円を用い，その moment-dependent な像を
+境界として取る．これは foliation に飽和した切断であり，
+その両側に一致する開 collar がある．内部の sources と saddles は変形の支持外にあるので，
+定理\ref{ke:projected-source-neck}の特異 fiber と marking はそのまま保持される．
+この切詰めにより，離れた部分で二つの bundle の偶然の交差があることを
+そのまま接着と呼ぶ必要もない．
+\end{proof}
+
+この議論は有限個の二重線について同時に行える．
+残余 cut を共通にし，必要な $n_j$ の最大値，moment 幅と $t_j$ の最小値を取ればよい．
+各三重点での三 arm の座標は既に一つの共通 chart に合わせている．
+ただし，これで得るのは指定された end strips の相対的一致である．
+残る浅い normal 領域，component core，および曲面全体を覆う domain の選択は別の課題である．
+Source を含む全 fiber の径や全曲面の no-shortcut も，
+局所 flow の小さい変位と区別して検証する必要がある．

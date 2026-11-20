@@ -1,5 +1,5 @@
 # 現行研究方針：一般型曲面のLagrangian torus fibration
-更新：2026-11-21 / v2.4（複素次元2専用、曲面主稿改訂15・五次整数接着第25稿）
+更新：2026-11-21 / v2.5（複素次元2専用、曲面主稿改訂16・五次整数接着第25稿）
 
 ## 現在の目標と優先順位
 **最優先目標P0：本研究の大域Lagrangian torus fibrationによって、負Kähler–Einstein計量の径の尺度でのGromov–Hausdorff極限を幾何学的に実現する。現時点では未解決である。** 以下の達成条件を満たすまで、Cloud Codexはこの目標に必要な証明・計算・文献確認・原稿整備を自律的に進める。具体的な実行手順は [AGENTS.md](AGENTS.md) と [Cloud Codexの再開手順](research/cloud-codex.md) に置く。
@@ -49,8 +49,10 @@ KE側の \((\mathrm{G})_d+(\mathrm{CP})_d+(\mathrm{PBE})_d\) を満たすこと�
 
 K1では固定残余基底の moving normal strip を解決した（`ke:fixed-base-neck-moser`）。次は固定残余compactの列を十分遅く動かし、各段階のnormal cutoffと共通moment intervalを三重点側の開collarに配置する。三重点は $m_t\to\infty,\ \log m_t=o(R_t)$ の任意の遅いcutでも局所GH評価を保つ（`ke:slow-cut-closed-corner-gh`）ので、cutを $R_t$ に固定する必要はない。固定比でnormal深度をresidual深度より大きく取れば、三armの座標接続と相対Hamiltonian補正を使える。Sourceのrescaling gate、moving collar全体の共通被覆、reduced葉と第二periodの整合は引き続き別に検証する。
 
+K1–K2の接続として、`ke:neck-corner-diagonal-matching` に残余compact→normal cutoff→moment区間→parameter閾値の順の対角選択を証明した。Source-inclusive neckと各tripleの指定deep stripが、全flowを含む共通開collarで同じfiber partitionを持つ。`ke:normal-flow-naturality` とmoment依存のreduced葉を用いる。現段階はend germの一致であり、全intersectionの整理、浅いnormal領域・coreを含む被覆、source/core/木全体の径と全域距離比較は残る。
+
 ## 原稿・ノートの正本と公表単位
-- `papers/surface-lagrangian-torus-fibration.tex`：このrepoの主たる公表用本文。相対SNC構成、次数分割、分岐底、作用適合atlasとKE–fibrationの大域実現問題（改訂15・154頁、2026-11-21に組版・変更箇所表示を確認）。
+- `papers/surface-lagrangian-torus-fibration.tex`：このrepoの主たる公表用本文。相対SNC構成、次数分割、分岐底、作用適合atlasとKE–fibrationの大域実現問題（現行改訂16。直近の組版確認は改訂15・154頁、追加節は組版待ち）。
 - `papers/quintic-integer-gluing.tex`：五次整数アフィン接着、高分母支持グラフの独立論文（第25稿、201頁の記録）。指定SNC cores・K5 graph・標準cones・marked puncturesを保つ候補が対象。必要支持3型26標識は**実現数ではない**。G5_14の中央matching、一般分母剛性、三高Dの同時非負性が未解決。
 - `papers/meridian-surgery.tex`：四pantsのmeridian局所置換と閉corner circuitsの障害（18頁の記録）。
 - `papers/research-notes.tex`：各種補題・証明素材のTeXノート（65頁の記録）。

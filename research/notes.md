@@ -1,5 +1,5 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-21 / v2.4
+更新：2026-11-21 / v2.5
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
@@ -37,6 +37,14 @@ Moser 流では軌道全体の最大速度を軌道平均エネルギーの平�
 固定残余基底上で両側の moving cut $m_t$ における canonical moment は符号が逆で絶対値が $m_t^{-1}$ と一様比較可能である（`ke:neck-deep-moment-strip`）。よって同じ actual Moser map の下で、深部に共通の縮小 moment interval を置ける。K1の局所的な成功後も、第二periodとreduced葉の同時整合、source・branch・coreの被覆、全曲面のshortcutとportalを別々に検証する。任意のMoser移送による定性的存在と、\(p_T\pi_t\) の距離歪み消失も区別する。
 
 大域距離を得る経路は二つある。KE側の未解決解析入力を実証して既存近似写像 \(\Phi_t\) と \(p_T\pi_t\) を一様に比較するか、同じ \(p_T\pi_t\) に対して全域の距離下界・liftによる上界を直接証明する。前者の条件付き定理を無条件の入力にせず、後者では基底上の人工計量をactual全空間の距離で置き換える根拠が必要である。
+
+## 共通の end collar での actual fiber の一致
+
+主稿のラベル `ke:normal-flow-naturality` が自然性の正本。全円軌道を含む共通plateauで同じcentered kernelを選ぶと、$G^*K_N\omega_N=K_\alpha G^*\omega_N$ であり、全trajectoryがそこに留まる限り $\phi_NG=G\phi_\alpha$ が厳密に成立する。Primitive $\lambda$ の一致を仮定せず、flowを決める $K\omega$ を比較する。Canonical normal momentの一致と合わせれば、corner torusはneckの同じmoment reduction上の円の全逆像として一致する。
+
+主稿 `ke:neck-corner-diagonal-matching` は、残余cut $b_j$ と固定compact $P_j\Subset P_j^+$、それらの定数を支配するnormal cutoff $n_j\gg b_j$、共通moment区間 $I_j$、最後に $t_j$ の順で選ぶ。三重点側の $a=4n_j$ と $c=4n_j$ におけるmomentはそれぞれ $\pm\pi/n_j$ と比較でき、$I_j$ を狭くして全levelをdeep normal stripへ収める。全circle orbit・第二段の像・第一段の全trajectoryを共通plateauとneckの内側tubeに含められる。得られるのはsource/saddleを含むneckのend germsと、cornerの指定deep stripの厳密なfiber一致であり、全cornerとの全intersectionやcoreを含む全曲面の被覆は未主張。
+
+Reduced graphに合わせて残余foliationをmomentに滑らかに依存させることは `ke:moment-dependent-neck-foliation` で許される。変更をsource・saddleの近傍とcollar外で恒等にすれば、閉pinched torusとsaddle fiberの型を保つ。固定 $t$ ごとの滑らかさでよく、無重みのmoment微分の一様な小ささは不要。残余基底は元の射影点 $p$ であり、$h_t(p)$ はsource近傍以外でglobal座標としない。Endのradial座標は $Z_{k,t}=C_D^2/h_{k,t}$ を使う。
 
 ## 二段階平均によるnormal actionとperiodsの接続
 

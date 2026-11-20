@@ -1,6 +1,6 @@
 {
   "date": "2026-11-21",
-  "version": "2.4",
+  "version": "2.5",
   "scope": "複素次元2の現行研究状態。旧三次元稿の組版・監査記録ではない。数学的な証明と、その再監査、組版、整数計算、GitHub保存、Cloudタスク起動を区別する。",
   "priority": "P0: actual負Kähler–Einstein形式での大域Lagrangian torus fibrationの射影 p_T∘π_t が、各固定 d≥5 の全曲面ambient距離に関する正規化GH近似を与えること。",
   "priority_status": "open",
@@ -14,7 +14,8 @@
       "三つの分離armでの全固定階の指数的座標比較・積保存補間・canonical normal momentの厳密な一致",
       "Centered平均の順序比較HamiltonianのO(m^-2)評価と、三端で指定したstaged bundleの相対統合",
       "単一moving armでの共通moment intervalと、固定momentでのactual reduced circle graphのC1評価",
-      "分岐基底とcubical候補のcell-like収縮"
+      "分岐基底とcubical候補のcell-like収縮",
+      "Centered normal Moser flowの自然性、moment依存の残余葉、および遅いexhaustionでのsource-inclusive neckとtriple deep stripのend germ一致"
     ],
     "not_proved": [
       "三重点へ動く残余exhaustionにおけるsource-inclusive neckとtripleの共通moment区間・共通開領域・全flowの同時被覆",
@@ -64,7 +65,8 @@
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false
-    }
+    },
+    "current_revision_pending_build": 16
   },
   "cloud_codex": {
     "repository_instructions_present": true,

@@ -1,5 +1,5 @@
 # Lagrangian torus fibrations on general-type surfaces
-2026-11-21 / v2.4 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
+2026-11-21 / v2.5 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
 
 **最優先目標は、本研究の大域Lagrangian torus fibrationが、負Kähler–Einstein計量のGromov–Hausdorff極限を幾何学的に実現すること。現時点では未解決である。** 対象は各固定次数 \(d\ge5\) の一般位置全平面退化 \(X_t\subset\mathbb P^3\)。**このリポジトリは複素次元2専用**。三次元の研究は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とする。
 
@@ -28,7 +28,7 @@ python3 scripts/research_check.py tex
 ## 論文と役割
 | 原稿 | 役割 | 組版の確認範囲 |
 | --- | --- | ---: |
-| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、局所KE収束と大域実現問題（改訂15） | 154頁・2026-11-21組版と変更箇所表示を確認 |
+| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、局所KE収束と大域実現問題（改訂16） | 直近の改訂15は154頁、改訂16の追加節は組版待ち |
 | [五次整数接着](papers/quintic-integer-gluing.tex) | 指定K5データの整数条件・高分母支持・未解決の大域接着 | 201頁 |
 | [Meridian surgery](papers/meridian-surgery.tex) | 閉corner circuitsの局所置換の障害 | 18頁 |
 | [TeX研究ノート](papers/research-notes.tex) | 証明素材・残る条件の整理 | 65頁 |
@@ -44,6 +44,8 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 - **三つの端の座標と作用：** 固定深度比で分離したarmで、射影neck座標との比の対数を全固定階で指数的に評価。積を保つsmooth補間で三端のnormal circlesを同時に合わせ、canonical normal periodの厳密な一致を示す。非正則な補間帯ではtame symplectic性を使う（`ke_neck_corner_transition.tex`）。
 - **一つのcorner bundleへの統合：** 平均順序を比較するHamiltonianを $O(m^{-2})$ で評価してcutoffし、各端のnormal-first構成を相対統合する。単一moving armでは共通moment intervalを両端の漸近から構成し、actual reduced葉が小さいgraphとなることを示す。Collar外を固定して延長できる（`ke_relative_corner_patch.tex`）。第二periodの一致は自動でない。
 - **遅いcutでも局所GH近似：** $m_t\to\infty,\ \log m_t=o(R_t)$ なら、内在・protected距離のdistortionは $C[m_t^{-1}+(\log(m_t+1)+\log R_t)/R_t]$。固定領域の列に合わせたstepwiseな対角選択にも使える（`ke:slow-cut-closed-corner-gh`）。
+
+改訂16では、同じcentered normal Moser flowの自然性とmoment依存のreduced foliationを明文化し、遅い残余exhaustionの下でsource-inclusive neckとtripleの指定deep stripのfiberが共通開collarで一致することを証明した（`ke:neck-corner-diagonal-matching`）。これはend germの接続であり、全cornerとの全intersectionや全曲面の被覆まで主張しない。
 
 **P0は未解決。** Source-inclusive neckと三重点の共通被覆・開overlapでの全体接着、coreへの相対接着、全曲面のshortcutとportal費用をさらに検証する。局所GH近似の標的は同一tripleの三枚のsquare自身であり、全曲面や全cubical複体の距離と同一視しない。先行研究の仮定と新規性の未確認点は主原稿序論と[研究ノート](research/notes.md)を参照。
 

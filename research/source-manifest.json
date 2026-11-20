@@ -1,6 +1,6 @@
 {
   "date": "2026-11-21",
-  "version": "2.4",
+  "version": "2.5",
   "scope": "GitHub mainだけから研究を再開するための現行主要ソース案内。完全なハッシュ台帳ではなく、実在するファイルの参照表。全ファイルの完全な一覧と現在のblob SHAはgit ls-filesおよびGitツリーを正本とする。",
   "primary_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
   "active_sources": [
@@ -103,6 +103,10 @@
     {
       "path": "papers/sections/paper/ke_relative_corner_patch.tex",
       "role": "平均順序のHamiltonian相対統合・単一armの共通moment区間とreduced graph"
+    },
+    {
+      "path": "papers/sections/paper/ke_neck_corner_exhaustion.tex",
+      "role": "遅い残余exhaustionによるsource-inclusive neckとtripleの共通開collar"
     }
   ],
   "source_roots": [

@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.1: 平均順序の相対化と単一 arm の reduced graph．
+% 2026-11-21 / v1.2: 平均順序の相対化，normal flow の自然性と moment 付き reduced 葉．
 \section{複数の三重点 end における平均順序の相対化}
 \label{ke:relative-corner-section}
 
@@ -542,3 +542,178 @@ Source-inclusive neck 側の interval と共通の開領域を選び，
 両側の normal trajectories をそこに収めることは別の接続課題である．
 ここでの単一 arm の証明に exterior の $(\mathrm{TC})_d$ や
 global $(\mathrm{CP})_d+(\mathrm{PBE})_d$ は用いていない．
+
+\subsection{座標同定に関する normal Moser flow の自然性}
+
+\begin{lemma}[共通の円作用に対する chain homotopy と flow の自然性]
+\label{ke:normal-flow-naturality}
+Physical neck 上の円作用を $\rho_N$，その閉 symplectic form を $\omega_N$ とする．
+新しい座標領域 $W$ は標準円作用 $\rho_\alpha$ に飽和しているとし，
+embedding $G:W\to N$ が，全ての $z\in W$ と $\theta\in\RR/\ZZ$ について
+\[
+ G\rho_{\alpha,\theta}(z)=\rho_{N,\theta}G(z)
+\]
+を満たすとする．$\omega_\alpha=G^*\omega_N$ と置き，両側で同じ
+centered kernel $1/2-\theta$ による $K_N,K_\alpha$ と円平均
+$\mathcal A_N,\mathcal A_\alpha$ を使う．このとき
+\begin{equation}\label{ke:eq:normal-homotopy-naturality}
+ G^*\mathcal A_N\omega_N=\mathcal A_\alpha\omega_\alpha,
+ \qquad G^*K_N\omega_N=K_\alpha\omega_\alpha.
+\end{equation}
+両側の normal Moser path
+$\Omega_{N,s}=(1-s)\mathcal A_N\omega_N+s\omega_N$ と
+$\Omega_{\alpha,s}=(1-s)\mathcal A_\alpha\omega_\alpha+s\omega_\alpha$
+が非退化なら，対応する Moser vector fields は $G$ で関係付けられる．
+従って共通の定義域からの全 trajectories が $W$ と $G(W)$ に留まる限り，
+\begin{equation}\label{ke:eq:normal-flow-conjugacy}
+ \phi_{N,s}\circ G=G\circ\phi_{\alpha,s}
+ \qquad(0\le s\le1)
+\end{equation}
+が成立する．この flow の一致には，二つの canonical primitive の一致を要しない．
+\end{lemma}
+\begin{proof}
+Equivariance を微分すると $dG(V_\alpha)=V_N\circ G$ である．
+従って任意の形式 $\xi$ に対して
+\[
+ G^*\rho_{N,\theta}^*\xi
+ =\rho_{\alpha,\theta}^*G^*\xi,\qquad
+ G^*\iota_{V_N}\xi=\iota_{V_\alpha}G^*\xi.
+\]
+同じ kernel を掛けて全円上で積分すれば
+\eqref{ke:eq:normal-homotopy-naturality}を得る．
+$G^*\Omega_{N,s}=\Omega_{\alpha,s}$ と非退化性により，
+$\iota_{Y_s}\Omega_s=K\omega$ の解も $G$ で関係付けられる．
+初期値は両側で $G(z)$ なので，ODE の一意性から
+\eqref{ke:eq:normal-flow-conjugacy}が従う．
+使っている primitive は形式 $\omega$ から直接作る $K\omega$ であり，
+$\omega=d\lambda$ の $\lambda$ の選択ではない．
+また，平均には全 circle orbit の情報が必要である．
+一点での作用生成場の一致や，共通領域から退出する trajectory に
+ODE の一致を適用することはしていない．
+\end{proof}
+
+本稿への適用では，$F$ を命題\ref{ke:three-arm-coordinate-interpolation}の
+写像，$G=F^{-1}$ とする．その内側 plateau における
+$\rho_N$ は，補題\ref{ke:projected-source-normal-form}の
+$(x',y')$ を逆向きに回す source-inclusive projected action である．
+全 circle orbit を含み，さらに二つの normal flow と必要な residual stage の
+像を収める開集合を plateau 内に取れば，上の補題をそのまま適用できる．
+固定した深度比と残余幅の余裕の下では，
+命題\ref{ke:quantitative-order-hamiltonian}と
+命題\ref{ke:single-arm-reduced-graph}の小変位が局所の滞在条件を与える．
+その開集合が global neck の定義域にも含まれることは，別に確認する．
+
+特に source-inclusive neck の構成にも同じ centered kernel を選ぶ．
+通常 kernel による既存の endpoint と同一だとは主張せず，許される構成の選択を
+両側でそろえるのである．Global bundle frame から局所 frame への変更は
+base-only であり，normal circle は変わらない．
+体積 frame の変更も残余基底の非零因子によるため，normal moment の規格化は変わらない．
+
+\begin{corollary}[同じ actual normal action 上の corner 葉]
+\label{ke:corner-leaves-in-neck-reduction}
+前補題の共通開領域で，$\eta_N=\mathcal A_N\omega_N$，
+$\eta_\alpha=\mathcal A_\alpha\omega_\alpha$ とする．
+Neck の商が共通 interval $I$ 上で $(\mu_N,p)$ によって
+$I\times P$ と同定されるとする．ここで使う end は source を含まず，
+その reduction は滑らかである．Corner 側には小さい primitive
+$\lambda_\alpha=G^*\lambda_\zeta$ を用い，
+$\mu_\alpha=(\mathcal A_\alpha\lambda_\alpha)(V_\alpha)$ とする．
+第二段を $\psi$ とし，
+\[
+ \psi^*\eta_\alpha=\kappa,\qquad
+ \mu_\alpha\circ\psi=\nu
+\]
+とする．全ての残余 stage の像およびその後の normal trajectories が
+前補題の共通領域に留まると仮定する．
+Canonical normal moment を系\ref{ke:transition-normal-primitive}で規格化すれば，
+\[
+ \mu_\alpha=\mu_N\circ G,\qquad
+ G\phi_\alpha\psi=\phi_NG\psi.
+\]
+従って $\nu=u$ 上の標準 torus $T$ に対し，$G\psi(T)$ は
+$\eta_N$ の同じ normal reduction 内の残余円
+$\gamma_{u,T}=p(G\psi(T))$ の全 normal-circle 逆像であり，
+actual corner torus は厳密に
+\begin{equation}\label{ke:eq:corner-neck-same-fiber}
+ G\phi_\alpha\psi(T)
+ =\phi_N\bigl((\mu_N,p)^{-1}(\{u\}\times\gamma_{u,T})\bigr)
+\end{equation}
+である．右辺の逆像は同じ neck moment strip 内で取る．
+\end{corollary}
+\begin{proof}
+Normal moment の等式は系\ref{ke:transition-normal-primitive}による．
+Global frame の base-only 因子も normal 円上の積分を変えない．
+Flow の共役式は前補題を $\psi(T)$ の各点に適用して得られる．
+$\psi$ は $\rho_\alpha$ と可換であり，$G$ はこの円を $\rho_N$ へ移すので，
+$G\psi(T)$ は全 normal-circle orbit で飽和している．
+また $\mu_N\circ G\psi=\nu$ なので同じ moment level に入る．
+Reduction の各 $(u,p)$ 上には一つの normal orbit があるため，
+残余円の全逆像との等式が成立する．
+これに同じ $\phi_N$ を適用すれば\eqref{ke:eq:corner-neck-same-fiber}となる．
+\end{proof}
+
+この残余円を読む座標は，元の $p$ の任意の radial coordinate ではない．
+新座標の残余成分は
+$Z_k=\Xi_{kk}(p)=C_D(p,t)^2/h_t(p)$ なので，
+命題\ref{ke:single-arm-reduced-graph}の座標は
+\[
+ q=\log\!\left(\frac{-\log|\Xi_{kk}(p)|^2}{b_0}\right),
+ \qquad \theta=\arg\Xi_{kk}(p)
+\]
+である．この局所正則座標で得た graph を neck の残余曲面へ戻す．
+
+\subsection{Moment に依存する残余 foliation の許容}
+
+\begin{lemma}[Collar での parameter 付き foliation の変更]
+\label{ke:moment-dependent-neck-foliation}
+定理\ref{ke:projected-source-neck}の円平均後の領域と共通 moment interval $I$ を取り，
+$(\mu_N,p)$ による商を $I\times P$ と同定する．
+Source のある $u=0$ での商同定は位相的なものであり，
+全 reduction が滑らかであるとは仮定しない．
+$\mathcal F_0$ を同定理の marked Morse foliation とする．
+固定 $t\ne0$ で $u\in I$ に滑らかに依存する diffeomorphisms
+$D_u\in\operatorname{Diff}_0(P)$ が与えられ，
+source と saddle の固定近傍，および指定した end collars の外では恒等とする．
+このとき $\mathcal F_u=(D_u)_*\mathcal F_0$ の葉を各 $\mu_N=u$ で
+持ち上げ，同じ normal Moser map $\phi_N$ で移すと，一つの actual
+Lagrangian neck fibration を得る．Regular torus，saddle fibre，
+一重 pinched torus の型は元の定理と同じである．
+退化 parameter に一様な無重みの $\partial_uD_u$ の評価は要求しない．
+
+特に命題\ref{ke:single-arm-reduced-graph}の graph が共通 $I$ と
+開 end collars 上に与えられれば，補題\ref{ke:reduced-collar-graph}の
+$D_u$ を用いて，系\ref{ke:corner-leaves-in-neck-reduction}の
+corner tori と同じ fibres を開 overlap 全体で得られる．
+\end{lemma}
+\begin{proof}
+$\mathcal F_0$ の葉空間への写像を $f_0:P\to T$ と書けば，
+円平均後の neck 写像は
+\[
+ x\longmapsto
+ \bigl(\mu_N(x),f_0(D_{\mu_N(x)}^{-1}(p(x)))\bigr)
+\]
+で定義される．これは連続で，regular 領域では滑らかである．
+各 fibre では $\mu_N=u$ を固定しているので，その接空間は
+$V_N$ と $\ker d\mu_N$ 内の葉方向で張られる．
+$\iota_{V_N}\eta_N=-d\mu_N$ により二次元の regular fibre は Lagrangian である．
+Parameter に関する微分は fibre の接空間には入らない．
+Regular 領域での写像の rank は，$d\mu_N$ と残余曲面上の
+非零の葉横断微分から $2$ である．
+
+各固定 $u$ で $D_u$ は diffeomorphism なので葉の連結性と marked graph を保つ．
+Source と saddle の近傍は全 $u$ で固定しているため，
+元の focus--focus germ と saddle の局所模型を変更しない．
+各 source は対応する一つの regular leaf 上に留まり，他の source と混ざらない．
+従って全特異 fibre の位相型と各 smooth stratum の isotropic 性も
+定理\ref{ke:projected-source-neck}と同じ証明で得られる．
+同じ $\phi_N$ による移送で actual form に戻す．
+
+最後の適用では，固定 $u$ の $C^1$ graph 誤差が小さいことから
+補題\ref{ke:reduced-collar-graph}が各 $D_u$ を構成する．
+Graph の $u$ 依存が滑らかなら $D_u$ も滑らかであり，
+collars の外を恒等にするので source と saddle の条件は保たれる．
+その開 collar 上で $\mathcal F_u$ の葉は $\gamma_{u,T}$ そのものとなるので，
+\eqref{ke:eq:corner-neck-same-fiber}により fibre 分割が厳密に一致する．
+ここでも指定された第二 period や critical action の値への独立な調整を
+自動的に行ったとは主張しない．
+\end{proof}
