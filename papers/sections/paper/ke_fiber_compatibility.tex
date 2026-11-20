@@ -1,0 +1,687 @@
+% !TeX root = ../../lagrangian-torus-fibration.tex
+% 2026-11-20: 現行の局所命題と条件付き KE 適用．
+\section{三重点の短い Lagrangian tori と KE 近似写像}
+\label{ke:fiber-compatibility}
+
+命題\ref{topo:ke-map-compatibility}の適合性誤差を小さくするためには，
+Lagrangian fibration を actual KE 計量に関して定量的に選ぶ必要がある．
+本節では三重点の自由なトーラス作用の領域について，
+短い averaging--Moser 変形により，領域全体に定義された Lagrangian torus fibration を構成する．
+さらに三枚の閉 square を同時に実現し，raw logarithmic depths との一様な適合性を示す．
+解析上の入力は，増大するトーラス飽和領域上の一様な二側 tensor comparison である．
+この入力は本稿の非 $\QQ$-factorial family について未検証であり，
+以下の actual KE 計量への適用では独立の仮定として保持する．
+
+トーラス平均と Moser 型変形による Lagrangian fibration の構成には，
+Ruan\cite[\S3, Proposition~3.1, Lemma~3.3, Theorem~3.1]{RuanHMinimal}
+という近い先行研究がある．同論文は toric potential の平均と
+Hamiltonian-gradient flow に続いて Hamiltonian-minimal 条件を扱う．
+以下は，$C^0$ の tensor comparison と短い作用生成場だけを用い，
+Lagrangian 性，変位，および ambient diameter に結論を限定した初等的な定量化である．
+この補助命題自体の新規性は確認していない．
+
+\subsection{正確な積座標と period の消滅}
+
+\begin{lemma}[三重点の unit の除去]\label{ke:unit-removal}
+固定 polydisc 上の族が
+\[
+ z_i z_j z_k=t\,U(z_i,z_j,z_k,t)
+\]
+で与えられ，$U$ が holomorphic unit であり，ある固定定数 $C_U$ に対して
+\[
+ C_U^{-1}\le |U|\le C_U,\qquad \|U\|_{C^1}\le C_U
+\]
+を満たすとする．固定量だけ近傍を縮小すると，$t$ に一様な holomorphic 座標変換
+\[
+ \zeta_i=z_i/U(z,t),\qquad \zeta_j=z_j,\qquad \zeta_k=z_k
+\]
+により族は
+\begin{equation}\label{ke:eq:exact-product}
+ \zeta_i\zeta_j\zeta_k=t
+\end{equation}
+となる．この座標変換の像は，$t$ に依存しない小 polydisc を含む．
+したがって，その中のトーラス飽和領域では
+\begin{equation}\label{ke:eq:phase-action}
+ (s_j,s_k)\cdot(\zeta_i,\zeta_j,\zeta_k)
+ =\bigl(e^{-2\pi\sqrt{-1}(s_j+s_k)}\zeta_i,
+        e^{2\pi\sqrt{-1}s_j}\zeta_j,
+        e^{2\pi\sqrt{-1}s_k}\zeta_k\bigr)
+\end{equation}
+が actual complex structure に対する正則な $\TT^2=(\RR/\ZZ)^2$ 作用を与える．
+\end{lemma}
+\begin{proof}
+逆写像を求める方程式は
+\[
+ z_i=\zeta_i U(z_i,\zeta_j,\zeta_k,t)
+\]
+である．元の polydisc に入る固定閉 disc $|z_i|\le r$ を取り，
+$|\zeta_i|C_U<\min(r/2,1/2)$ とする．右辺はこの disc を内部へ写し，
+$z_i$ に関する Lipschitz 定数は $1/2$ 未満である．
+縮小写像定理から一意な逆写像が得られ，Picard iteration の局所一様収束により
+全 parameter に holomorphic である．この選択は $t$ に一様にできる．
+積の式と作用の表示は直接計算で従う．
+\end{proof}
+
+以下では $t\ne0$ を固定したときの正確な積 chart を使う．
+\begin{equation}\label{ke:eq:depth-convention}
+ \ell_a=-\log|\zeta_a|^2,\qquad
+ L=-\log|t|^2,\qquad R=\log L,\qquad
+ \theta_a=\arg\zeta_a\quad(a\in J:=\{i,j,k\})
+\end{equation}
+と置くと，
+\[
+ \ell_i+\ell_j+\ell_k=L,\qquad
+ \theta_i+\theta_j+\theta_k=\arg t\pmod {2\pi}.
+\]
+対数座標の領域 $D\subset\{\sum_{a\in J}\ell_a=L\}$ 上の全 phase tori を
+$\mathcal U_t(D)$ と書き，対数射影を $p_t:\mathcal U_t(D)\to D$ とする．
+$\zeta_j,\zeta_k$ を独立座標に取ると $\mathcal U_t(D)\simeq D\times\TT^2$ である．
+
+\begin{lemma}[負 KE form の局所 exactness]\label{ke:negative-exact}
+正確な積 chart 上で $\operatorname{Ric}(\omega_t)=-\omega_t$ とする．
+このとき $\omega_t$ は同 chart 上で exact であり，すべての phase torus $T_\ell$ に対して
+\[
+ \int_{T_\ell}\omega_t=0
+\]
+が成り立つ．
+\end{lemma}
+\begin{proof}
+\[
+ \Omega_t=d\log\zeta_j\wedge d\log\zeta_k
+\]
+は chart 全体で一価な nowhere-vanishing holomorphic $2$-form である．
+$d^c=(\sqrt{-1}/2)(\bar\partial-\partial)$，従って $dd^c=\sqrt{-1}\partial\bar\partial$
+という規約を用いる．正の volume ratio
+\[
+ F_t=\frac{\omega_t^2}{\Omega_t\wedge\overline{\Omega_t}}
+\]
+に対して $\operatorname{Ric}(\omega_t)=-dd^c\log F_t$ なので
+$\omega_t=dd^c\log F_t$ である．従って exactness と period の消滅が従う．
+\end{proof}
+
+\subsection{短い作用生成場による定量的 averaging--Moser 法}
+
+\begin{theorem}[短い torus の同時 Lagrangian 化]
+\label{ke:short-torus-averaging}
+複素曲面の開集合 $\mathcal U\simeq D\times\TT^2$ 上に自由な正則 $\TT^2$ 作用があり，
+$p:\mathcal U\to D$ を軌道写像とする．各円作用を $\rho_{j,s}$，
+$s\in\RR/\ZZ$，周期 $1$ の生成ベクトル場を $V_j$ とする．
+$h$ はトーラス不変な $J$-Hermitian 計量，$\omega$ は Kähler form とし，
+その Riemannian metric $g=\omega(\,\cdot\,,J\,\cdot\,)$ が
+\begin{equation}\label{ke:eq:coarse-tensor-bound}
+ c h\le g\le C h\qquad(0<c\le C<\infty)
+\end{equation}
+を満たすとする．さらに
+\[
+ \int_{p^{-1}(b)}\omega=0\quad(b\in D),\qquad
+ e=\sum_{j=1}^2\sup_{\mathcal U}|V_j|_h<\infty
+\]
+と仮定し，$A=Ce/(2c)$ と置く．
+トーラス飽和した開集合 $\mathcal U'=D'\times\TT^2$ を取り，
+ある $\eta>0$ に対して，$\mathcal U$ の内在的 $h$-距離による閉 $(A+\eta)$-近傍が
+\begin{equation}\label{ke:eq:moser-buffer}
+ \overline{N_{A+\eta}^{h}(\mathcal U')}\Subset\mathcal U
+\end{equation}
+を満たすとする．このとき，$\phi_s:\mathcal U'\to\mathcal U$，$0\le s\le1$，
+$\phi_0=\id$ という滑らかな embeddings の族が存在し，$\phi=\phi_1$ は
+\begin{equation}\label{ke:eq:moser-displacement}
+ d_h(x,\phi_s(x))\le A
+\end{equation}
+を満たす．$W=\phi(\mathcal U')$ 上の写像
+\[
+ \pi_\omega=p\circ\phi^{-1}:W\longrightarrow D'
+\]
+は，すべての fibers が $\omega$-Lagrangian $T^2$ である滑らかな proper fibration である．
+さらに
+\begin{equation}\label{ke:eq:ambient-fiber-bound}
+ \sup_{b\in D'}\operatorname{diam}_{g,\mathrm{amb}}\pi_\omega^{-1}(b)
+ \le \sqrt C\,e\left(\frac Cc+\frac12\right).
+\end{equation}
+右辺の評価は周囲の領域内の経路によるものであり，$\mathcal U$ がより大きい
+Riemannian manifold に含まれる場合にはその ambient distance についても成立する．
+$h$ の Kähler 性，metric derivatives の一様評価，および小さい摂動という仮定は不要である．
+\end{theorem}
+\begin{proof}
+各円の平均作用素を
+\[
+ \mathcal A_j\xi=\int_0^1\rho_{j,s}^*\xi\dd s,
+ \qquad \mathcal A=\mathcal A_1\mathcal A_2,
+ \qquad \bar\omega=\mathcal A\omega
+\]
+とする．作用が正則なので平均 $\bar\omega$ も Kähler である．
+$h$ の不変性から，その計量 $\bar g$ も $ch\le\bar g\le Ch$ を満たす．
+各軌道上の $\bar\omega$ は定数係数の $2$-form である．
+平均は軌道上の積分を変えず，仮定よりその積分は零なので
+\begin{equation}\label{ke:eq:averaged-lagrangian}
+ \bar\omega|_{p^{-1}(b)}=0.
+\end{equation}
+
+短い primitive を明示するため，形式の次数を一つ下げる作用素
+\[
+ K_j\xi=\int_0^1(1-s)\rho_{j,s}^*(\iota_{V_j}\xi)\dd s
+\]
+を取る．Cartan の公式を積分すると
+\[
+ dK_j+K_jd=\mathcal A_j-I.
+\]
+従って $H=K_1+\mathcal A_1K_2$ は
+$dH+Hd=\mathcal A-I$ を満たす．$\beta=H\omega$ と置けば
+\begin{equation}\label{ke:eq:averaging-primitive}
+ d\beta=\bar\omega-\omega,
+ \qquad |\beta|_h\le \frac C2e.
+\end{equation}
+実際，$g\le Ch$ と $J$-Hermitian 性から
+$|\iota_{V_j}\omega|_h\le C|V_j|_h$ であり，
+$h$ に関する pullback と平均は norm を増やさない．
+係数 $1/2$ は $\int_0^1(1-s)\dd s=1/2$ に由来する．
+
+\[
+ \omega_s=(1-s)\bar\omega+s\omega,
+ \qquad \iota_{Y_s}\omega_s=\beta
+\]
+と置く．$\omega_s$ の計量は $ch$ 以上なので
+\[
+ |Y_s|_h\le c^{-1}|\beta|_h\le A.
+\]
+従って任意の初期点 $x\in\mathcal U'$ から出る解は，時刻 $1$ まで
+\eqref{ke:eq:moser-buffer} の相対コンパクト集合に留まる．
+滑らかな常微分方程式の継続定理により flow $\phi_s$ は全区間で定義され，
+一意性から各 $\phi_s$ は像への diffeomorphism である．また
+\[
+ \frac{d}{ds}\phi_s^*\omega_s
+ =\phi_s^*(-d\beta+d\iota_{Y_s}\omega_s)=0
+\]
+なので
+\begin{equation}\label{ke:eq:moser-pullback}
+ \phi^*\omega=\bar\omega.
+\end{equation}
+これと\eqref{ke:eq:averaged-lagrangian}により全 fibers が同時に Lagrangian になる．
+$p:\mathcal U'\to D'$ は compact fiber を持つ積射影なので proper であり，
+$\pi_\omega$ も proper である．
+
+不変計量 $h$ に関して元の torus 内の任意の二点は，
+各周期方向を $1/2$ 以下ずつ動く path により長さ $e/2$ 以下で結べる．
+$x,y$ が同じ元の torus に属するとき，
+$\phi(x)$ から $x$ へ逆向きの flow，$x$ から $y$ へ torus 内の path，
+$y$ から $\phi(y)$ へ flow を使えば，その $g$-長さは
+\[
+ 2\sqrt C A+\sqrt C e/2
+ =\sqrt C e(C/c+1/2)
+\]
+以下である．これで\eqref{ke:eq:ambient-fiber-bound}を得る．
+この証明は $d\phi$ の評価を使わないため，変形後の fiber の
+intrinsic diameter までは評価していない．
+\end{proof}
+
+\begin{remark}[小さい摂動がある場合と period obstruction]
+\label{ke:averaging-refinement}
+トーラス不変な閉 $2$-form $\omega_0$ があり，
+$|\omega-\omega_0|_h^{\mathrm{op}}\le\varepsilon$ なら，
+$\beta=H(\omega-\omega_0)$ を使って
+\[
+ |\beta|_h\le\varepsilon e/2,\qquad
+ |Y_s|_h\le\varepsilon e/(2c)
+\]
+と改善できる．$dd^c$-potential を事前に選ぶ必要はない．
+一方，period の消滅は本質的である．元の torus と isotopic な torus を
+$\omega$-Lagrangian にできるなら，閉形式の積分の不変性から元の period も零でなければならない．
+一般の Kähler form ではこの条件は自動的でないが，
+負 KE form の三重点 chart では補題\ref{ke:negative-exact}によって従う．
+\end{remark}
+
+\begin{remark}[不変な collar を固定する centered homotopy]
+\label{ke:relative-averaging}
+周期 $1$ の規約で
+\[
+ \widetilde K_j\xi
+ =\int_0^1(1/2-s)\rho_{j,s}^*(\iota_{V_j}\xi)\dd s
+\]
+と置いても，周期性と部分積分から
+$d\widetilde K_j+\widetilde K_jd=\mathcal A_j-I$ となる．
+$\widetilde H=\widetilde K_1+\mathcal A_1\widetilde K_2$ を使えば
+$|\widetilde H\omega|_h\le Ce/4$ であり，定理の変位評価は $Ce/(4c)$ に改善する．
+さらにトーラス飽和した開 collar $N\subset\mathcal U$ 上で $\omega$ が既に作用不変なら，
+$\int_0^1(1/2-s)\dd s=0$ より $\widetilde H\omega|_N=0$ である．
+従って対応する Moser field は $N$ 上で零であり，flow は同 collar を点ごとに固定する．
+これは不変 collar が与えられた場合の相対版である．
+Actual KE form に対して必要な overlap collar を作用不変に選べることは，
+本節では証明しておらず，大域接着への追加課題として残る．
+\end{remark}
+
+\subsection{閉 cubical corner の単一 hexagon による実現}
+
+$\mathcal C_d$ と $d_\square$ は系\ref{topo:KE-cubical-comparison}のものとする．
+三つのラベル $J=\{i,j,k\}$ に対して
+\[
+ \mathcal C_J=
+ \{w\in\mathcal C_d:\operatorname{supp}(w)\subset J\}
+\]
+と置く．これは $\max_{a\in J}w_a=1$ で与えられる三枚の閉 square の和である．
+
+\begin{proposition}[Softmax hexagon と全 phase torus]
+\label{ke:triple-hexagon}
+$m\ge1$，$L\ge6m$，$R=\log L$ とする．
+\begin{equation}\label{ke:eq:softmax}
+ \ell_a(w)=m+(L-3m)\frac{L^{w_a}}{\sum_{b\in J}L^{w_b}}
+ \qquad(a\in J)
+\end{equation}
+は $\mathcal C_J$ から凸六角形
+\begin{equation}\label{ke:eq:hexagon}
+ H_{L,m}=\left\{
+ \ell:\ \sum_{a\in J}\ell_a=L,\quad
+ r_a=\ell_a-m\ge0,\quad r_a\ge r_b/L\ (a,b\in J)
+ \right\}
+\end{equation}
+への同相写像である．全ての $r_a$ は実際には正であり，逆写像は
+\begin{equation}\label{ke:eq:softmax-inverse}
+ w_a=1+\frac1R\log\frac{r_a}{\max_{b\in J}r_b}
+\end{equation}
+で与えられる．各 square の内部では滑らかな diffeomorphism である．
+
+$m$ を固定 chart に入るよう十分大きく取ると，
+$|\zeta_a|=e^{-\ell_a(w)/2}$ で定まる phase tori は，
+$\mathcal C_J$ 全体上の一つの $T^2$-bundle
+\[
+ F_{t,m}:\mathcal C_J\times\TT^2\longrightarrow X_t
+\]
+を与える．この写像は全体で連続な embedding，各 square の内部で滑らかであり，
+multiple-max face 上では隣接 square から同じ torus が得られる．
+\end{proposition}
+\begin{proof}
+$s=L-3m>0$ と置く．Softmax の比は
+$r_a/r_b=L^{w_a-w_b}\in[L^{-1},L]$ なので像は\eqref{ke:eq:hexagon}に入る．
+逆に同六角形では $\sum r_a=s>0$ と比の条件から全ての $r_a$ が正であり，
+\eqref{ke:eq:softmax-inverse}は $0\le w_a\le1$，$\max w_a=1$ を満たす．
+これを\eqref{ke:eq:softmax}に代入すると元の $r_a$ を回復する．
+両写像は連続なので同相である．六角形であることは六つの線形比条件から従い，
+その頂点は $r$-座標で
+\[
+ \frac{s}{L+2}(L,1,1),\qquad
+ \frac{s}{2L+1}(L,L,1)
+\]
+の異なる順列，計六点である．
+
+$w_i=1$ の square 上で
+$\lambda_a=L^{w_a}/\sum_bL^{w_b}$ と置くと
+\[
+ \det\frac{\partial(\ell_j,\ell_k)}{\partial(w_j,w_k)}
+ =(L-3m)^2R^2\lambda_i\lambda_j\lambda_k>0.
+\]
+従って各 square 内で滑らかな diffeomorphism である．
+$\theta_j,\theta_k$ を自由に動かし，
+$\theta_i=\arg t-\theta_j-\theta_k$ とすれば全 phase torus を得る．
+\eqref{ke:eq:softmax}は square の選択によらないので共有 face でも定義が一致する．
+\end{proof}
+
+\begin{remark}
+$\mathcal C_J$ のセル分解における辺と頂点は，この局所 torus bundle の
+singular values ではない．$H_{L,m}$ は $\{\ell_a>m,\ \sum\ell_a=L\}$ に含まれ，
+上の bundle はその開集合上の滑らかな torus fibration の制限である．
+ここでの hexagon は対数深度を parameter に持ち，
+節\ref{glue:hexagon}で用いる symplectic moment-coordinate hexagon と同一視しない．
+\end{remark}
+
+\subsection{Raw depths の値と微分の一様評価}
+
+固定 Hermitian norms を持つ hyperplane sections を $L_a$ と書く．
+三重点 chart をさらに固定量だけ縮小すれば，active labels $a\in J$ について
+\begin{equation}\label{ke:eq:hermitian-factors}
+ s_{a,t}:=\|L_a\|^2=e^{-\ell_a}a_a(\zeta,t)
+\end{equation}
+と書ける．$a_a,a_a^{-1}$ とその固定座標での一次微分は一様有界である．
+Inactive labels $a\notin J$ では $s_{a,t}$ は正の定数で下から抑えられ，
+値と一次微分も一様有界とする．固定 $A_0$ を十分大きく選び，
+\begin{equation}\label{ke:eq:raw-depths}
+ \alpha_{a,t}=A_0-\log(s_{a,t}+|t|),
+ \qquad q_{a,t}=R^{-1}\log\alpha_{a,t}
+\end{equation}
+と置く．特に全 $\alpha_{a,t}$ は正の一様下界を持つ．
+この $q_t=(q_{a,t})$ は smooth raw map であり，Hermitian factors のため
+一般には phase torus 上で一定ではない．
+
+\begin{lemma}[全閉 corner 上の raw target 誤差]\label{ke:raw-values}
+固定定数 $m_*$ があり，$m\ge m_*$，$L\ge6m$ に対して
+\begin{equation}\label{ke:eq:raw-target-error}
+ \sup_{w\in\mathcal C_J,\,\vartheta\in\TT^2}
+ |q_t(F_{t,m}(w,\vartheta))-w|
+ \le\frac{C(1+\log(m+1))}{R}
+\end{equation}
+が成立する．右辺の定数は $m,L,w,\vartheta$ に依存しない．
+\end{lemma}
+\begin{proof}
+$\max w_a=1$ より $L\le\sum_aL^{w_a}\le3L$ であり，$L-3m\ge L/2$ なので
+\[
+ m+\frac16L^{w_a}\le\ell_a(w)\le m+L^{w_a}.
+\]
+従って
+\begin{equation}\label{ke:eq:softmax-log-error}
+ -\log6\le\log\ell_a-Rw_a\le\log(m+1).
+\end{equation}
+一方，$|t|=e^{-L/2}$ であることと\eqref{ke:eq:hermitian-factors}から
+\begin{equation}\label{ke:eq:capped-depth}
+ \alpha_{a,t}=\min(\ell_a,L/2)+A_0+O(1)
+\end{equation}
+が phase を含めて一様に成立する．$m\le\ell_a\le L$ なので，$m_*$ を十分大きく取れば
+$c_0\ell_a\le\alpha_{a,t}\le C_0\ell_a$ となる．
+これと\eqref{ke:eq:softmax-log-error}から active coordinates の評価を得る．
+Inactive coordinates は $q_{a,t}=O(R^{-1})$，$w_a=0$ なので，同じ評価に含まれる．
+\end{proof}
+
+値の比較には，$\mathcal C_d$ の固定近傍からの Lipschitz retraction
+\[
+ \Pi:N_\epsilon(\mathcal C_d)\longrightarrow(\mathcal C_d,d_\square),
+ \qquad \Pi|_{\mathcal C_d}=\id
+\]
+を固定し，$\Phi_t^{\mathrm{alg}}=\Pi\circ q_t$ と置く．
+有限 polyhedron の regular neighbourhood の piecewise linear retraction を用いればよく，
+以下ではその Lipschitz 定数だけを使う．
+右辺が十分小さく $q_t(F_{t,m})\subset N_\epsilon(\mathcal C_d)$ なら，
+\eqref{ke:eq:raw-target-error}から同じ右辺で
+\begin{equation}\label{ke:eq:algebraic-target-error}
+ d_\square\bigl(\Phi_t^{\mathrm{alg}}(F_{t,m}(w,\vartheta)),w\bigr)
+ \le\frac{C(1+\log(m+1))}{R}
+\end{equation}
+を得る．$\Pi$ 自体の微分は用いない．
+
+\begin{lemma}[Cusp 計量に関する raw Lipschitz 評価]
+\label{ke:raw-lipschitz}
+正確な積 chart 上でトーラス不変 Hermitian 計量
+\begin{equation}\label{ke:eq:cusp-model}
+ h_t=
+ \left.\sum_{a\in J}\frac{d\ell_a^2+4d\theta_a^2}{\ell_a^2}
+ \right|_{\sum\ell_a=L,\ \sum\theta_a=\arg t}
+\end{equation}
+を取る．$\ell_a\ge m_*$ の領域で
+\begin{equation}\label{ke:eq:raw-lipschitz}
+ \|dq_t\|_{h_t}\le C/R
+\end{equation}
+が成立する．また $\min_a\ell_a\ge m\ge m_*$ の phase torus $T_\ell$ 上では
+\begin{equation}\label{ke:eq:raw-torus-oscillation}
+ \operatorname{osc}_{T_\ell}q_t\le C/(mR).
+\end{equation}
+\end{lemma}
+\begin{proof}
+$h_t$ は $4\sum_a|d\zeta_a/\zeta_a|^2/\ell_a^2$ の制限なので $J$-Hermitian である．
+その定義から
+\[
+ |d\ell_a|_{h_t}\le\ell_a,
+ \qquad |d\zeta_a|_{h_t}\le C\ell_a e^{-\ell_a/2}\le C
+\]
+を得る．従って固定座標で一次微分が有界な $\log a_a$ について
+$|d\log a_a|_{h_t}\le C$ である．
+\eqref{ke:eq:raw-depths}を微分すると
+\[
+ d\alpha_{a,t}
+ =\frac{s_{a,t}}{s_{a,t}+|t|}(d\ell_a-d\log a_a)
+ \qquad(a\in J).
+\]
+$\alpha_{a,t}\asymp\ell_a$ と合わせて
+$|dq_{a,t}|_{h_t}\le C/R$ を得る．Inactive labels も，
+$\alpha_{a,t}$ の正の下界と固定座標での微分評価から同様である．
+
+周期 $1$ の生成場は
+\[
+ V_j=2\pi(\partial_{\theta_j}-\partial_{\theta_i}),
+ \qquad V_k=2\pi(\partial_{\theta_k}-\partial_{\theta_i})
+\]
+であり，
+\begin{equation}\label{ke:eq:circle-generator-norm}
+ |V_b|_{h_t}=4\pi\sqrt{\ell_i^{-2}+\ell_b^{-2}}
+ \le4\pi\sqrt2/m\qquad(b=j,k).
+\end{equation}
+したがって $T_\ell$ の intrinsic $h_t$-diameter は $4\pi\sqrt2/m$ 以下である．
+この torus 内の経路に\eqref{ke:eq:raw-lipschitz}を積分して
+\eqref{ke:eq:raw-torus-oscillation}を得る．
+\end{proof}
+
+\subsection{Moving triple domain 上の actual KE fibration}
+
+\begin{definition}[全 phase を含む moving tensor comparison]
+\label{ke:moving-comparison}
+$m=m_t\ge m_*$，$L_t\ge6m_t$ とし，
+\[
+ \mathcal U_t^{\mathrm{out}}=\mathcal U_t(\ell_a>m_t/2\ \text{for all }a\in J),
+ \qquad
+ \mathcal U_t^{\mathrm{in}}=\mathcal U_t(\ell_a>m_t\ \text{for all }a\in J)
+\]
+が固定された正確な積 chart に含まれるとする．
+Actual KE metric $g_t$ に対する本節の追加解析仮定は，
+\begin{equation}\label{ke:eq:moving-tensor-comparison}
+ c h_t\le g_t\le C h_t
+ \quad\text{on all of }\mathcal U_t^{\mathrm{out}}
+\end{equation}
+が $t$ に依存しない $0<c\le C<\infty$ で成立することである．
+この仮定は full phase torus と Moser flow の buffer を同時に含む．
+各点の小さな非飽和 quasi-coordinate chart 上の比較だけを，
+追加の検証なしに\eqref{ke:eq:moving-tensor-comparison}と同一視しない．
+\end{definition}
+
+\begin{theorem}[Moving triple domain の条件付き actual KE fibration]
+\label{ke:triple-moving-fibration}
+定義\ref{ke:moving-comparison}の設定で，$\operatorname{Ric}(\omega_t)=-\omega_t$，
+$g_t=\omega_t(\,\cdot\,,J\,\cdot\,)$ とし，
+\eqref{ke:eq:moving-tensor-comparison}を仮定する．
+$m_t$ が $c,C$ と固定 chart にのみ依存する定数以上なら，
+open set $W_t\subset\mathcal U_t^{\mathrm{out}}$ と滑らかな proper Lagrangian torus fibration
+\[
+ \pi_t^{\mathrm{loc}}:W_t\longrightarrow
+ D_{L_t,m_t}:=\{\ell_a>m_t,\ \sum_{a\in J}\ell_a=L_t\}
+\]
+が存在する．元の対数射影からこの fibration を得る embedding $\phi_t$ は
+\begin{equation}\label{ke:eq:triple-displacement}
+ \sup_{x\in\mathcal U_t^{\mathrm{in}}}d_{h_t}(x,\phi_t(x))
+ \le A_t:=\frac{8\pi\sqrt2 C}{c m_t},
+ \qquad \phi_t^*\omega_t=\bar\omega_t
+\end{equation}
+を満たす．ここで $\bar\omega_t$ は phase average である．
+さらに
+\begin{equation}\label{ke:eq:triple-domain-inclusions}
+ \mathcal U_t(\ell_a>2m_t\ \text{for all }a)
+ \subset W_t\subset\mathcal U_t^{\mathrm{out}}
+\end{equation}
+および
+\begin{equation}\label{ke:eq:triple-fiber-diameter}
+ \sup_{\ell\in D_{L_t,m_t}}
+ \operatorname{diam}_{g_t,\mathrm{amb}}
+ (\pi_t^{\mathrm{loc}})^{-1}(\ell)
+ \le\frac{16\pi\sqrt{2C}}{m_t}
+       \left(\frac Cc+\frac12\right)
+\end{equation}
+が成立する．Raw map については
+\begin{equation}\label{ke:eq:moser-preserves-raw}
+ \sup_{x\in\mathcal U_t^{\mathrm{in}}}
+ |q_t(\phi_t(x))-q_t(x)|\le\frac{C'}{m_tR_t}
+\end{equation}
+となる．ここで $C'$ は固定 Hermitian data と $c,C$ に依存する．
+\end{theorem}
+\begin{proof}
+補題\ref{ke:negative-exact}により全 phase periods は零である．
+外側領域では\eqref{ke:eq:circle-generator-norm}から
+\[
+ e_t=\sup|V_j|_{h_t}+\sup|V_k|_{h_t}
+ \le16\pi\sqrt2/m_t.
+\]
+また $|d\log\ell_a|_{h_t}\le1$ なので，内側領域から外側領域の境界までの
+$h_t$-距離は少なくとも $\log2$ である．$m_t$ を十分大きくして $A_t<\log2$ とする．
+閉 $(A_t+\eta)$-近傍が外側領域に相対コンパクトに含まれるよう
+$0<\eta<\log2-A_t$ を選べる．実際，その近傍では全 $\ell_a$ が
+$m_t e^{-(A_t+\eta)}>m_t/2$ 以上に保たれ，$\sum\ell_a=L_t$ であり，
+角変数は compact torus を動くだけである．
+従って定理\ref{ke:short-torus-averaging}が適用でき，
+\eqref{ke:eq:triple-displacement}と\eqref{ke:eq:triple-fiber-diameter}を得る．
+
+全 $\ell_a>2m_t$ の点から時刻 $1$ を初期時刻として Moser field を逆に積分すると，
+全長は $A_t<\log2$ 以下なので，全 $\ell_a>m_t$ の領域に留まる．
+逆向きの flow も相対コンパクトな集合内で存在し，その時刻 $0$ の点は
+$\mathcal U_t^{\mathrm{in}}$ に属する．これが\eqref{ke:eq:triple-domain-inclusions}の左の包含を与える．
+最後に Moser trajectory に補題\ref{ke:raw-lipschitz}を積分すれば
+\eqref{ke:eq:moser-preserves-raw}を得る．必要なら最初の $m_*$ を二倍して，
+外側領域にも同補題を適用できるようにしておく．
+\end{proof}
+
+\begin{corollary}[全閉 corner の actual Lagrangian tori と raw target]
+\label{ke:closed-corner-fibration}
+定理\ref{ke:triple-moving-fibration}の仮定の下で
+\[
+ F_{t,m_t}^{\mathrm{Lag}}(w,\vartheta)
+ =\phi_t(F_{t,m_t}(w,\vartheta))
+\]
+と置くと，$\mathcal C_J$ 全体上の $T^2$-bundle の全 fibers は
+$\omega_t$-Lagrangian であり，ambient $g_t$-diameter は一様に $O(m_t^{-1})$ である．
+\begin{equation}\label{ke:eq:lagrangian-target-error}
+ \sup_{w,\vartheta}
+ |q_t(F_{t,m_t}^{\mathrm{Lag}}(w,\vartheta))-w|
+ \le\frac{C(1+\log(m_t+1))}{R_t}
+      +\frac{C}{m_tR_t}.
+\end{equation}
+特に
+\begin{equation}\label{ke:eq:moving-depth-rate}
+ m_t\longrightarrow\infty,\qquad \log m_t=o(R_t)
+\end{equation}
+なら，raw target 誤差は全閉 corner 上で $o(1)$ であり，
+$\Phi_t^{\mathrm{alg}}$ に置き換えた $d_\square$-誤差も $o(1)$ である．
+$R_t^{-2}g_t$ に関する ambient fiber diameter は $O((m_tR_t)^{-1})$ となる．
+例えば $m_t=R_t$ なら，raw target 誤差は $O((\log R_t)/R_t)$，
+非正規化の ambient fiber diameter は $O(R_t^{-1})$ である．
+\end{corollary}
+\begin{proof}
+$H_{L_t,m_t}\subset D_{L_t,m_t}$ なので定理\ref{ke:triple-moving-fibration}を
+命題\ref{ke:triple-hexagon}の bundle に制限できる．
+補題\ref{ke:raw-values}と\eqref{ke:eq:moser-preserves-raw}を加えれば
+\eqref{ke:eq:lagrangian-target-error}を得る．
+\eqref{ke:eq:moving-depth-rate}では右辺が零へ収束するので，
+十分小さい $t$ では固定 retraction の定義域に入り，その Lipschitz 性を適用できる．
+計量の正規化は距離を $R_t$ で割るので最後の diameter 評価が従う．
+\end{proof}
+
+\begin{remark}[局所結論の論理的範囲]\label{ke:local-scope}
+この構成は三枚の閉 square の共通 face と support-drop face を含むが，
+異なる三重点 chart，neck，source との貼合せまでは与えない．
+特に本稿の大域的 fibration $\pi_t$ を $\pi_t^{\mathrm{loc}}$ に一致させる相対変形と，
+singular fibers を含む全域の一様評価は残る．
+\eqref{ke:eq:moving-tensor-comparison}も actual family について未検証である．
+本節の局所構成自体には $\mathrm{(PBE)}_d$ や sharp coefficient-one theorem を使わないが，
+これによって同解析仮定の検証や global GH convergence が済んだことにはならない．
+また $\operatorname{Im}(e^{-\sqrt{-1}\vartheta}\Omega_t)|_L=0$ という条件は課しておらず，
+special Lagrangian fibration は主張しない．
+Global な近似写像の distance distortion と本節型の適合性が全域で得られた場合に限り，
+命題\ref{topo:ke-map-compatibility}を用いて全 fibers の収縮へ進める．
+\end{remark}
+
+\subsection{固定 simplex の尺度と source critical values}
+
+\begin{proposition}[固定 simplex compactum は diameter scale の一点へ写る]
+\label{ke:fixed-simplex-scale}
+正確な積 chart の affine simplex 座標を $x_a=\ell_a/L$ とする．
+固定 $\eta>0$ に対し，全 $x_a\ge\eta$ の領域では
+\begin{equation}\label{ke:eq:fixed-simplex-raw}
+ q_{a,t}
+ =1+\frac{\log\min(x_a,1/2)}{R}
+      +O\!\left(\frac1{LR}\right)
+ \qquad(a\in J)
+\end{equation}
+が一様に成立し，
+\[
+ \Phi_t^{\mathrm{alg}}\longrightarrow v_J:=e_i+e_j+e_k
+\]
+となる．他方，\eqref{ke:eq:moving-depth-rate}の softmax family で
+\[
+ w_i=1,\qquad w_j,w_k\in[\eta,1-\eta]
+\]
+を実現すると，
+\[
+ x_j=L^{w_j-1}(1+o(1)),\qquad
+ x_k=L^{w_k-1}(1+o(1)),\qquad x_i\longrightarrow1
+\]
+となる．従って正の面積を持つ square の内部は，affine simplex の境界へ
+$t$ に依存して進む領域によって実現される．
+\end{proposition}
+\begin{proof}
+\eqref{ke:eq:capped-depth}に $\ell_a=Lx_a$ を代入すると
+$\alpha_{a,t}=L\min(x_a,1/2)+O(1)$ であり，$x_a\ge\eta$ から
+\eqref{ke:eq:fixed-simplex-raw}を得る．Inactive coordinates は $O(R^{-1})$ なので
+retraction 後も $v_J$ に一様収束する．
+一方，指定された square 内では
+\[
+ \sum_a L^{w_a}=L(1+o(1)),\qquad m_t/L^\eta\longrightarrow0.
+\]
+\eqref{ke:eq:softmax}より $\ell_j=L^{w_j}(1+o(1))$，
+$\ell_k=L^{w_k}(1+o(1))$，$\ell_i/L\to1$ となる．
+\end{proof}
+
+\begin{remark}
+Zhang\cite[Theorem~2.4]{ZhangNegativeKE}の semi-flat 近似を
+固定 affine simplex compacta 上で用いるだけでは，
+命題\ref{ke:fixed-simplex-scale}の moving 領域における一様比較は得られない．
+固定 compacta の $C^\infty_{\mathrm{loc}}$ 収束は，
+$x_j\asymp L^{w_j-1}$ という必要な速度で境界へ進む領域の誤差を指定しない．
+さらに同定理の total space の $\QQ$-factorial 仮定も，
+本稿の $xy=tz$ 型 source を持つ族では自動的に満たされない．
+したがって\eqref{ke:eq:moving-tensor-comparison}を既存の局所収束の直接の帰結とは扱わない．
+\end{remark}
+
+最後に source と nodal critical value の marking に関する必要条件を記す．
+これは metric comparison を用いず，raw map の値だけから従う．
+
+\begin{proposition}[Source core を通る fiber の marking 必要条件]
+\label{ke:source-marking}
+$D_{ij}$ 上の source の固定小近傍を取り，$xy=tz$ という局所形で
+\[
+ |x|+|y|\le C|t|^{1/2}
+\]
+を満たす actual source core を $S_{ij,t}$ とする．
+この近傍は他の components と交わらず，$L_i,L_j$ の norms は
+$|x|,|y|$ と一様比較可能であるとする．このとき
+\begin{equation}\label{ke:eq:source-target}
+ \sup_{x\in S_{ij,t}}
+ d_\square(\Phi_t^{\mathrm{alg}}(x),v_{ij})=O(R_t^{-1}),
+ \qquad v_{ij}=e_i+e_j.
+\end{equation}
+
+大域的写像 $\pi_t:X_t\to B_d(T)$ と値 $b_t\in B_d(T)$ が与えられ，
+\begin{equation}\label{ke:eq:source-fiber-incidence}
+ \pi_t^{-1}(b_t)\cap S_{ij,t}\ne\varnothing
+\end{equation}
+を仮定する．$p_T$ は系\ref{topo:KE-cubical-comparison}の写像とし，
+\[
+ \delta_t=\sup_{x\in X_t}
+ d_\square\bigl(\Phi_t^{\mathrm{alg}}(x),p_T\pi_t(x)\bigr)
+\]
+と置けば
+\begin{equation}\label{ke:eq:source-marking-bound}
+ d_\square(p_T(b_t),v_{ij})\le\delta_t+O(R_t^{-1}).
+\end{equation}
+特に $\delta_t\to0$ には $p_T(b_t)\to v_{ij}$ が必要である．
+$b_t=b$ が固定され $p_T(b)\ne v_{ij}$ なら
+\[
+ \liminf_{t\to0}\delta_t\ge d_\square(p_T(b),v_{ij})>0.
+\]
+\end{proposition}
+\begin{proof}
+Core では $\|L_i\|^2,\|L_j\|^2\le C|t|$ なので
+\[
+ \alpha_{i,t}=L_t/2+O(1),\qquad
+ \alpha_{j,t}=L_t/2+O(1).
+\]
+従って $q_{i,t}=q_{j,t}=1+O(R_t^{-1})$ である．
+他の labels では norms が一様に正なので $q_{a,t}=O(R_t^{-1})$ となり，
+固定 retraction の Lipschitz 性から\eqref{ke:eq:source-target}を得る．
+\eqref{ke:eq:source-fiber-incidence}を満たす点 $x_t$ を選び，
+\[
+ d_\square(p_T(b_t),v_{ij})
+ \le d_\square(p_T\pi_t(x_t),\Phi_t^{\mathrm{alg}}(x_t))
+      +d_\square(\Phi_t^{\mathrm{alg}}(x_t),v_{ij})
+\]
+と評価すれば残りの結論が従う．
+\end{proof}
+
+\begin{remark}
+命題\ref{ke:source-marking}は，指定された nodal fiber が実際の source core を通るという
+\eqref{ke:eq:source-fiber-incidence}を仮定した場合にだけ適用する．
+大域 Moser transport 後の fiber と物理的な source core の対応を，
+未検証のまま同命題に付け加えてはならない．
+この必要条件は fibration の存在障害ではなく，KE 適合性を目指す場合に
+critical values の $t$-依存の再parameter化が必要となり得ることを示す．
+また $\Phi_t^{\mathrm{alg}}$ と一様距離 $o(1)$ の別の近似写像を使う場合にも，
+\eqref{ke:eq:source-marking-bound}の右辺にその $o(1)$ を加えれば同じ必要条件が成立する．
+\end{remark}

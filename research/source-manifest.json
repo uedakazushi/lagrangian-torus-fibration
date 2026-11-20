@@ -367,9 +367,9 @@
       "source": "paper/geometry_bibliography_v25.tex",
       "destination": "papers/sections/paper/geometry_bibliography_v25.tex",
       "source_sha256": "31caa6116b46ace8c04ca0d86351d38506f7d3b12e835cf66b4bd21abde9ce73",
-      "sha256": "7cac4dbe4769a4851f689410557a95a6f9461112b77fde804fc2941917086d3a",
-      "bytes": 18397,
-      "current_blob_sha": "5a68ac59410ca03a1c054d7180cdff1cbb866dec"
+      "sha256": "221b23b2badeaa848a136a932314240681cd80fb54634ae5f3d0728508499b59",
+      "bytes": 19085,
+      "current_blob_sha": "a60f9675951a44749cda952758f358b2ed91137a"
     },
     {
       "source": "paper/quintic_monochromatic_support_v11.tex",
@@ -803,9 +803,9 @@
       "source": "paper/geometry_introduction_v25.tex",
       "destination": "papers/sections/paper/geometry_introduction_v25.tex",
       "source_sha256": "383354c4d141117cd75eaed52fdfa7bbd3b5bbbf70ef5fdd85e7f3fd29ec447c",
-      "sha256": "08e2652a6e20f99500668c1990521b399c8827b3e0922a48c87c89e2c4db9214",
-      "bytes": 39969,
-      "current_blob_sha": "7f86887988bcef3a671fb8a77d11d71b13dc1f79"
+      "sha256": "131d7c34d23c1646d156895aeb6c16cc37da4fb06ebb58489cf274b1c4f3a761",
+      "bytes": 42173,
+      "current_blob_sha": "ba75b78d858e7bed6bff090059acbafb2f46b3b5"
     },
     {
       "source": "paper/quintic_support_frontier_v19.tex",
@@ -3141,10 +3141,10 @@
       "source": "paper/general_type_surface_fibration_paper_ja_v25.tex",
       "destination": "papers/lagrangian-torus-fibration.tex",
       "source_sha256": "8a2c45f5900c0ed367311bdb78e3a83042c96f82601a5055e2975311a3ad2ba0",
-      "sha256": "f68f0e9c814523c268cdad656f5a11ff480c4c2433914df52f310fc59040b01a",
+      "sha256": "e4aa332093b952659eaf20e3bdf00c1677372d1d54d317e8664ed679ca6d11c8",
       "changes": "TeX input paths and input search paths only",
-      "bytes": 3555,
-      "current_blob_sha": "7cb3e79c58d1de952355475992c141ad9ebee480"
+      "bytes": 4001,
+      "current_blob_sha": "8b166ddff6bf6c591fa514f1aa9f55de6044afe9"
     },
     {
       "source": "paper_arithmetic/general_type_surface_quintic_arithmetic_paper_ja_v25.tex",
@@ -3338,6 +3338,12 @@
       "sha256": "9d89f3fd81652002f8285146d3cb4f5aea18b666b046b97b386b443b9ad5e8bc",
       "bytes": 6192,
       "current_blob_sha": "0c176ad367977d0ab8d56a2a7889e94081bf9eeb"
+    },
+    {
+      "destination": "papers/sections/paper/ke_fiber_compatibility.tex",
+      "sha256": "2972a97b53950eab264605afb76d6929bc3b0637e1f206104d1680c6d55da4b9",
+      "bytes": 31250,
+      "current_blob_sha": "f1511c76b9404a5209fbe95f48de8ece094a09a4"
     }
   ]
 }

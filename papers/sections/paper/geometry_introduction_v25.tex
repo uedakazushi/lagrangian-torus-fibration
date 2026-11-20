@@ -507,6 +507,18 @@ $\PP^2$ から $d-1$ 本の直線を除いた $d$ 個の完備 KE 曲面とな�
 Mandel\cite{MandelNegativeKE}の負 KE neck の構成も，
 我々の compact family との全域的な計量比較を自動的には与えない．
 
+局所 torus fibration により近い先行結果は，
+Ruan\cite[Proposition~3.1, Lemma~3.3, Theorem~3.1]{RuanHMinimal}である．
+同論文は homothetic toric potentials と一様 $C^\infty$ quasi-isometry の下で，
+potential の torus 平均，Hamiltonian-gradient flow，および陰関数定理を用い，
+固定された縮小 polytope 上に H-minimal Lagrangian torus fibration を構成する．
+Theorem~4.2 は simple toroidal canonical degeneration の最大退化点へ消える
+minimal Lagrangian torus を与える．従って平均化と Moser 法の組合せ自体を
+本稿の新規な方法とは扱わない．
+本稿の定理\ref{ke:short-torus-averaging}は，$C^0$ の tensor 比較と短い作用軌道だけから，
+変位と ambient fiber diameter を直接評価する弱い入力・弱い結論の定量化である．
+H-minimal 性，special Lagrangian 性，変形後の intrinsic fiber metric は結論しない．
+
 別研究\cite{KECubicalCurrent}の diameter-scale 候補は
 \[
  R_t=\log(-\log|t|^2),\qquad
@@ -525,6 +537,23 @@ KE 側の近似写像 $\Phi_t$ が
 \emph{ambient} 直径収縮と距離歪みの評価を導く初等的な比較原理である．
 解析仮定の証明や上の適合性評価を本稿が完成したとは扱わない．
 $d=5$ では $p_T$ は同相だが，$d\ge6$ では基底内の木の収縮も必要である．
+
+三重点の積座標では，三枚の cubical squares を一つの toric hexagon によって
+全閉領域上で同時に実現できる（命題\ref{ke:triple-hexagon}）．
+定理\ref{ke:triple-moving-fibration}は，
+$\ell_a=-\log|\zeta_a|^2>m_t/2$ の全 phase を含む領域で
+actual KE metric と cusp Hermitian model の一様 tensor 比較を仮定し，
+$\min\ell_a>m_t$ における Lagrangian fibration の
+ambient fiber diameter $O(m_t^{-1})$ と，
+raw logarithmic-depth map との誤差 $O((1+\log m_t)/R_t)$ を与える．
+例えば $m_t=R_t$ と選べる．この tensor 比較は，体積密度の上下界だけからは従わない．
+関連 KE 原稿\cite{KELocalCurrent}の
+\texttt{coarse:prop:density-counterexample} は，滑らかな負 KE 計量に限っても
+その一般的な推論が成立しないことを示す．
+固定された affine simplex の compact subset は径の尺度では一つの triple vertex に縮むので，
+既知の固定 compacta 上の局所収束だけで上の動く領域の仮定を埋めることもできない
+（命題\ref{ke:fixed-simplex-scale}）．
+残る課題は，この解析的比較と，異なる三重点・source・branch・core にわたる相対接着である．
 
 \subsection{他の tropical 構造との比較と残る問題}
 
