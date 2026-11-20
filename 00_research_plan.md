@@ -1,5 +1,5 @@
 # 現行研究方針：一般型曲面のLagrangian torus fibration
-更新：2026-11-21 / v2.3（複素次元2専用、曲面主稿改訂11・五次整数接着第25稿）
+更新：2026-11-21 / v2.3（複素次元2専用、曲面主稿改訂12・五次整数接着第25稿）
 
 ## 現在の目標と優先順位
 **最優先目標P0：本研究の大域Lagrangian torus fibrationによって、負Kähler–Einstein計量の径の尺度でのGromov–Hausdorff極限を幾何学的に実現する。現時点では未解決である。** 以下の達成条件を満たすまで、Cloud Codexはこの目標に必要な証明・計算・文献確認・原稿整備を自律的に進める。具体的な実行手順は [AGENTS.md](AGENTS.md) と [Cloud Codexの再開手順](research/cloud-codex.md) に置く。
@@ -41,7 +41,7 @@ KE側の \((\mathrm{G})_d+(\mathrm{CP})_d+(\mathrm{PBE})_d\) を満たすこと�
 | 課題 | 最初に行うこと | この課題の達成条件・現在の状態 |
 | --- | --- | --- |
 | K0：入力の監査 | `main:global`、`ke:global-realization` とKE依存表を読み、採用する族・木系・form・marked collarsを固定する。 | P0に実際に使う大域接着・外部定理の仮定と証明を照合。資料と入力の所在は整備済み、全証明の独立監査は未了。 |
-| K1：actual neckの短円とbuffer | `ke:short-circle-image-buffer` とKE側 `neck:lem:rank-one-circle` を接続する。Movingな作用不変領域 \(U_t\supset K_t\) を指定し、period-1生成場の上界 \(\varepsilon_t^{\rm circ}\) とactual境界距離 \(\delta_t\) を別々に評価する。 | \(\delta_t>(2c_w+1/2)\varepsilon_t^{\rm circ}\) と必要な誤差消失を全neckで証明し、sourceとMoser像の双方が同じ \(K_t\) を覆う。固定 source-free compact 基底の moving normal strip で、actual 二側比較・正の境界距離・短円 $O(m_t^{-1})$・共通 source/像を証明。Source・三重点へ動く残余 collar への拡張は未達。 |
+| K1：actual neckの短円とbuffer | `ke:short-circle-image-buffer` とKE側 `neck:lem:rank-one-circle` を接続する。Movingな作用不変領域 \(U_t\supset K_t\) を指定し、period-1生成場の上界 \(\varepsilon_t^{\rm circ}\) とactual境界距離 \(\delta_t\) を別々に評価する。 | \(\delta_t>(2c_w+1/2)\varepsilon_t^{\rm circ}\) と必要な誤差消失を全neckで証明し、sourceとMoser像の双方が同じ \(K_t\) を覆う。固定 source-free compact 基底の moving normal strip で、actual 二側比較・正の境界距離・短円 $O(m_t^{-1})$・共通 source/像を証明。Source 模型では中心を含む短円を証明。Source・三重点へ動く残余 collar 全体の buffer および作用整合は未達。 |
 | K2：複数endの同時整合 | `ke:staged-neck-averaging`、`ke:staged-reduced-extension`、`ke:relative-neck-matching` を使い、単一primitive・全marked action periods・reduced leaves・critical actions・overlapを合わせる。 | 実際の開collarsで同一fiber partitionを得るか、制御された相対同定を構成。Normal actionの一致だけでは未達。K1の局所結果に続けて進める。 |
 | K3：source・branch・coreの相対接着 | `global_gluing.tex` / `neck_models.tex` / `relative_compactification.tex` をactual KE形式と計量の下で監査する。特に \(xy=tz\) のsourceとcoreを覆う領域・接続路を指定する。 | 全域を覆う連結fiberの \(\pi_t\) と、特異fiberおよび木fiber全体の正規化ambient接続費用の消失。既存の定性的構成だけでは未達。K1と独立な局所解析も行う。 |
 | K4：全曲面の距離比較 | K1–K3と閉corner評価を用い、全曲面を通る経路の下界とsquare lift・portal connectorによる上界を別々に作る。 | \(f_t\) に対する全点対distortionを \(o(1)\) とする。基底側の(N),(S),(F)を使う場合もactual全空間への比較を証明し、局所保護領域外のshortcutを含める。現状未証明。 |
@@ -50,7 +50,7 @@ KE側の \((\mathrm{G})_d+(\mathrm{CP})_d+(\mathrm{PBE})_d\) を満たすこと�
 K1では固定残余基底の moving normal strip を解決した（`ke:fixed-base-neck-moser`）。次に必要なのは、三重点へ動く残余 collar で pair の束表示を保ちながら actual 短円・buffer を確保し、同じ normal action を K2 の開 overlap に持ち込むこと。Source 付近では固定射影座標の距離下界だけでは、$|x|\asymp|t|^{1/2}$ の rescaling gate の法線幅を評価できない。固定残余領域内では canonical moment の moving interval も確保した（`ke:neck-deep-moment-strip`）。
 
 ## 原稿・ノートの正本と公表単位
-- `papers/surface-lagrangian-torus-fibration.tex`：このrepoの主たる公表用本文。相対SNC構成、次数分割、分岐底、作用適合atlasとKE–fibrationの大域実現問題（現行改訂11・136頁、2026-11-21組版確認）。
+- `papers/surface-lagrangian-torus-fibration.tex`：このrepoの主たる公表用本文。相対SNC構成、次数分割、分岐底、作用適合atlasとKE–fibrationの大域実現問題（現行改訂12・137頁、2026-11-21組版確認）。
 - `papers/quintic-integer-gluing.tex`：五次整数アフィン接着、高分母支持グラフの独立論文（第25稿、201頁の記録）。指定SNC cores・K5 graph・標準cones・marked puncturesを保つ候補が対象。必要支持3型26標識は**実現数ではない**。G5_14の中央matching、一般分母剛性、三高Dの同時非負性が未解決。
 - `papers/meridian-surgery.tex`：四pantsのmeridian局所置換と閉corner circuitsの障害（18頁の記録）。
 - `papers/research-notes.tex`：各種補題・証明素材のTeXノート（65頁の記録）。

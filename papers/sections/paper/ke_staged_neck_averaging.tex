@@ -577,6 +577,56 @@ capped density と complete envelopes の比較を別途調べる必要がある
 複数 end を同時に接着するには，正則束作用と triple 作用との
 開 overlap 上での整合も必要である．
 
+\begin{corollary}[Central source を含む深部での短い円]
+\label{ke:source-short-circle}
+Source の固定正則座標 $xy=tz$ で，十分小さい固定 $r>0$ を取る．
+$\rho_a(x,y,z)=(e^{2\pi\sqrt{-1}a}x,e^{-2\pi\sqrt{-1}a}y,z)$ の
+周期 $1$ の生成場を $V_{\rm src}$ とする．
+$|x|,|y|,|z|\le r$ の範囲で，$L_t=-\log|t|^2$ として
+\[
+ |V_{\rm src}|_{g_t}
+ \le \frac{C}{\min\{-\log|x|^2,-\log|y|^2,L_t\}},
+\]
+ただし零の座標の深度は $+\infty$ とする．特に
+$|x|,|y|\le c|t|^{1/2}$ の central source で短さは $O(L_t^{-1})$ である．
+\end{corollary}
+
+\begin{proof}
+小さい固定 $c>0$ について，$x$-oriented 部分
+$|x|\ge c|t|^{1/2}$ を考える．$(x,z)$ を用いる annulus--disc extension
+$y=(t/x)z$ に対し，関連 KE 主稿
+\texttt{coarse:lem:pair-arm-density} の capped density 比較と
+\texttt{coarse:lem:complete-volume-upper} により $\varphi_t\le C$ を得る．
+実際，$r$ は extension の人工境界から固定幅を取って選び，
+$s_x=-\log|x|^2+O(1)\le L_t/2+O(1)$ なので，
+$\alpha_y\asymp L_t$，$\alpha_x\asymp s_x$ であり，
+capped density と product envelope は比較可能である．
+これには gate $|x|=c|t|^{1/2}$ 上も含まれる．
+補題\ref{ke:capped-projective-lower}を使うと
+$g_t\ge c' g_{\mathrm{FS}}$ が成立する．固定した ambient coordinate $z$ の
+微分は射影計量に対して有界なので，残余 rank-one 下界
+$p_z^*h_D\le C\omega_t$ が成り立つ．
+体積上界と \texttt{neck:lem:rank-one-circle} を使い，
+$x$ の角速度を持つ $V_{\rm src}$ の長さを $C/s_x$ 以下に抑える．
+$y$-oriented 部分も対称である．
+
+残る領域は $(x,y)$ で表した rescaled bidisc
+$\{|x|,|y|<c|t|^{1/2}\}$ である．$c^2<r$ とすれば
+その閉包は $|z|\le c^2$ で source chart 内に含まれる．
+境界では少なくとも一方の oriented 評価により
+$|V_{\rm src}|_{g_t}=O(L_t^{-1})$ である．
+$V_{\rm src}$ は正則ベクトル場
+$W=x\partial_x-y\partial_y$ の虚方向の実生成場であり，
+$|V_{\rm src}|_{g_t}^2$ は $|W|_{g_t}^2$ の固定倍である．
+正則ベクトル場の Bochner 恒等式
+$\Delta_{\omega_t}|W|^2=|\nabla^{1,0}W|^2-\operatorname{Ric}(W,\bar W)\ge0$
+と最大値原理で，同じ上界が bidisc 内部にも成り立つ．
+\end{proof}
+
+この系は source の円作用そのものを評価し，固定点での作用の退化を許す．
+移動する normal 境界までの actual buffer，pinched torus の相対模型との
+接着，および source 全体の直径評価は別に必要である．
+
 \subsection{残る円の平均と同一 normal moment}
 
 今度は $\rho_{1,s}$ を neck の領域 $U$ 全体に与えた normal 円作用とする．
