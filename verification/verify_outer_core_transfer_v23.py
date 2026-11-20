@@ -154,7 +154,7 @@ def fixed_candidates(a, p, j, eps):
 def run():
     here = Path(__file__).resolve().parent
     proof_name = 'outer_core_linear_transfer_v23.tex'
-    proof = next(p for p in [here/proof_name, here.parent/'paper'/proof_name] if p.is_file())
+    proof = next(p for p in [here/proof_name, here.parent/'papers/sections/paper'/proof_name] if p.is_file())
     examples = [fixed_candidates(*data) for data in [
         (7, -2, 1, -1), (31, 6, 4, -1), (9, 2, 4, -1),
         (7, -1, 6, 1), (5, -4, 1, 1), (7, 3, 3, 1)]]

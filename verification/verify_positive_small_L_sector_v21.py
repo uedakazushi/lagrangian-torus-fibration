@@ -136,7 +136,7 @@ regressions=[check_model(p) for p in [
     (6,6,3,11,14),(4,4,2,7,10),(2,2,1,3,6),(3,3,2,4,6)]]
 script=Path(__file__).resolve()
 proof=next(p for p in [script.with_name('positive_small_L_sector_v21.tex'),
-                       script.parent.parent/'paper/positive_small_L_sector_v21.tex'] if p.is_file())
+                       script.parent.parent/'papers/sections/paper/positive_small_L_sector_v21.tex'] if p.is_file())
 report=dict(version='v21',status='PASS',
     scope='All positive integer two-high models with T-S in {2,3}; no parity, node, clutching or denominator cutoff.',
     method='Exact sparse polynomial coefficient identities; explicit matrix regressions are separate.',

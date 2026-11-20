@@ -181,7 +181,7 @@ models = [exact_model('E positive; high-defect sum positive', 9, 11, 4, 4, 5, 2)
           exact_model('E negative; high-defect sum negative', 31, 7, 5, 10, 2, 3)]
 here = Path(__file__).resolve().parent
 source_candidates = [here/'quintic_minimal_low_entry_v12.tex',
-                     here.parent/'paper'/'quintic_minimal_low_entry_v12.tex']
+                     here.parent/'papers/sections/paper'/'quintic_minimal_low_entry_v12.tex']
 source = next((path for path in source_candidates if path.is_file()), None)
 if source is None:
     raise FileNotFoundError('quintic_minimal_low_entry_v12.tex')

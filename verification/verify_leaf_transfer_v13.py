@@ -130,7 +130,7 @@ def main():
 
     source_name='leaf_transfer_v13.tex'
     source=next((p for p in (HERE/source_name,HERE.parent/'geometry'/source_name,
-                              HERE.parent/'paper'/source_name) if p.exists()),None)
+                              HERE.parent/'papers/sections/paper'/source_name) if p.exists()),None)
     result={'status':'passed','scope':'Three unbounded candidate leaf-pair families, with signed-divisor continuation reducing to the positive family; no denominator cutoff or node requirement in the main result.',
             'source':None if source is None else {'file':source.name,'sha256':hashlib.sha256(source.read_bytes()).hexdigest()},
             'dependency':{'file':dep.name,'sha256':hashlib.sha256(dep.read_bytes()).hexdigest()},

@@ -151,7 +151,7 @@ for rr in (2, 3):
                      'sum_high_D': sum(defects[:2])})
 
 here = Path(__file__).resolve().parent
-source = here.parent/'paper'/'quintic_low_degree_support_v11.tex'
+source = here.parent/'papers/sections/paper'/'quintic_low_degree_support_v11.tex'
 result = {
     'version': 11,
     'passed': True,
