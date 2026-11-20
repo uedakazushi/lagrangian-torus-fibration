@@ -1,0 +1,163 @@
+% !TeX root = ../../surface-lagrangian-torus-fibration.tex
+% 2026-11-21 / v1.0: 大域 KE--Lagrangian 実現の未解決目標と達成条件．
+\section{負 KE 極限を実現する大域 fibration の問題}
+\label{ke:global-realization-section}
+
+本節では，本稿の Lagrangian fibration と負 Kähler--Einstein 計量の
+Gromov--Hausdorff 極限との関係を，大域的な未解決問題として定式化する．
+以下の問題は，後続の節で証明する三重点の局所収束とは区別する．
+特に，候補極限複体の位相的同定や人工的な基底計量の構成だけをもって，
+actual KE 計量に対する解決とはしない．
+
+\subsection{固定した退化族と計量の規格化}
+
+整数 $d\ge5$ を固定し，まず\eqref{deg:family}の全平面退化を考える．
+同じ問題は，一般位置の平面 $\{L_i=0\}$ と次数 $d$ の式 $F_d$ による
+\[
+ X_t=\left\{\prod_{i=1}^dL_i+tF_d=0\right\}\subset\PP^3
+\]
+についても定める．この場合は，$F_d$ が三重点で非零，二重線上での零点が
+相異なる単純零点であり，十分小さい $t\ne0$ に対して $X_t$ が滑らかであることを仮定する．
+族とその幾何学的補助データは固定し，以下で定数の次数一様性や族一様性は要求しない．
+
+$X_t$ 上の負 KE form とその実計量を $\omega_t,g_t$ と書き，
+\[
+ \operatorname{Ric}(\omega_t)=-\omega_t,\qquad
+ [\omega_t]=2\pi(d-4)H,\qquad
+ L_t=-\log|t|^2,\qquad R_t=\log L_t
+\]
+と規格化する．全曲面上の Riemannian distance を $d_{g_t}$ とし，
+\[
+ \bar g_t=R_t^{-2}g_t,\qquad \bar d_t=R_t^{-1}d_{g_t}
+\]
+を用いる．$\bar d_t$ は全 $X_t$ 内の経路を許した距離であり，
+三重点の内在距離や保護領域内の距離ではない．
+極限候補は系\ref{topo:KE-cubical-comparison}の
+\[
+ \mathcal C_d=
+ \{w\in[0,1]^d:\max_i w_i=1,\ |\operatorname{supp}(w)|\le3\}
+\]
+であり，unit Euclidean squares の貼合せによる全体の長さ距離 $d_\square$ を入れる．
+この規格化は，関連 KE 原稿\cite{KELocalCurrent,KECubicalCurrent}および
+定理\ref{ke:closed-corner-gh}の規格化と同じである．
+
+\subsection{大域的な幾何学的実現の達成条件}
+
+\begin{problem}[負 KE 極限の Lagrangian fibration による実現]
+\label{ke:global-realization}
+上の各固定次数と退化族について，実際の marked pants 分解で実現できる
+一つの木系 $T$ と，すべての十分小さい $t\ne0$ に対する
+\[
+ \pi_t:(X_t,\omega_t)\longrightarrow B_d(T)
+\]
+を，次の二条件を満たすように構成せよ．
+\begin{enumerate}
+\item $\pi_t$ は定義\ref{def:fibration}の大域 fibration である．
+すなわち全 $X_t$ を覆う連結 fiber の連続全射で，正則 fiber は
+\emph{actual form $\omega_t$ に関する} Lagrangian $T^2$ である．
+特異 fiber には定理\ref{main:global}の nodal，branch，core 模型と等方的 strata を用い，
+接着の際に whole fibers を失わない．
+\item 系\ref{topo:KE-cubical-comparison}の labelled map
+$p_T:B_d(T)\to\mathcal C_d$ に対し，$f_t=p_T\circ\pi_t$ と置くと，
+\begin{equation}\label{ke:eq:global-realization-distortion}
+ \varepsilon_t:=
+ \sup_{x,y\in X_t}
+ \left|R_t^{-1}d_{g_t}(x,y)
+              -d_\square(f_t(x),f_t(y))\right|
+ \longrightarrow0
+ \qquad(t\longrightarrow0)
+\end{equation}
+が成り立つ．
+\end{enumerate}
+木系の組合せ型と component labels は固定するが，nodal values，
+collar の位置，作用座標の表示，および基底の parameter 化には $t$ 依存を許す．
+任意に既定の $T$ や任意に固定した critical values に対する実現は，
+この問題の達成条件に含めない．
+\end{problem}
+
+問題\ref{ke:global-realization}は未解決である．
+$d=5$ を最初に解くことは自然な中間目標であるが，最終的な次数範囲は各固定 $d\ge5$ とする．
+また，正則部分の action--angle structure を超えて全基底に matroidal atlas があることや，
+special Lagrangian 性はこの問題の仮定にも結論にも加えない．
+
+$f_t$ は全射なので，\eqref{ke:eq:global-realization-distortion}が得られれば，
+その graph correspondence，または命題\ref{topo:ke-map-compatibility}により
+\begin{align*}
+ d_{\mathrm{GH}}\bigl((X_t,\bar d_t),(\mathcal C_d,d_\square)\bigr)
+ &\le\tfrac12\varepsilon_t,\\
+ \sup_{c\in\mathcal C_d}
+ \operatorname{diam}_{\bar d_t}f_t^{-1}(c)
+ &\le\varepsilon_t,\\
+ \sup_{b\in B_d(T)}
+ \operatorname{diam}_{\bar d_t}\pi_t^{-1}(b)
+ &\le\varepsilon_t
+\end{align*}
+を同時に得る．ここで直径は全空間の距離を制限した ambient diameter である．
+特異 fiber もこの上限に含み，元の尺度での収縮や fiber 内在直径の収縮までは要求しない．
+$d=5$ では $p_T$ は同相である．$d\ge6$ では，
+一つの $p_T$-fiber 上にある $\pi_t$-fibers の集合全体が縮むことが必要であり，
+各 torus の点ごとの収縮だけでは十分でない．
+
+\begin{remark}[径を一にする規格化との関係]
+\label{ke:global-realization-scale}
+$D_d=\operatorname{diam}(\mathcal C_d,d_\square)>0$ とする．
+\eqref{ke:eq:global-realization-distortion}と全射性から
+\[
+ \left|R_t^{-1}\operatorname{diam}(X_t,g_t)-D_d\right|
+ \le\varepsilon_t
+\]
+である．従って同問題が解ければ，径を一に規格化した計量の極限は
+$(\mathcal C_d,D_d^{-1}d_\square)$ となる．
+元の負 KE 尺度の極限，$R_t$ による規格化，および径一の規格化は区別する．
+\end{remark}
+
+\subsection{既存の構成からなお必要となる大域評価}
+\label{ke:global-realization-transfer}
+
+$[\omega_t]=2\pi(d-4)H$ は本稿の大域構成で扱う cohomology class の一つである．
+しかし，ある補助 form $\widehat\omega_t$ に対する fibration
+$\widehat\pi_t$ と，$h_t^*\omega_t=\widehat\omega_t$ を満たす Moser 同定があれば，
+$\pi_t=\widehat\pi_t\circ h_t^{-1}$ が Lagrangian となるという定性的事実だけでは，
+\eqref{ke:eq:global-realization-distortion}は従わない．
+この方法を使う場合にも，移された actual fibers と近似写像の一様な適合性を評価する必要がある．
+元の form と actual form の cohomology class の一致を，距離制御の代わりには用いない．
+
+距離の証明には，命題\ref{topo:ke-map-compatibility}による二段階の方法がある．
+独立に構成した全域写像 $\Phi_t:X_t\to\mathcal C_d$ に対して
+\[
+ a_t=\operatorname{dis}_{\bar d_t,d_\square}(\Phi_t)\longrightarrow0,
+ \qquad
+ b_t=\sup_{x\in X_t}d_\square(\Phi_t(x),p_T\pi_t(x))\longrightarrow0
+\]
+をそれぞれ証明すれば，$\varepsilon_t\le a_t+2b_t$ となる．
+関連 KE 原稿\cite{KECubicalCurrent}の大域 GH 定理は
+$\mathrm{(G)}_d+\mathrm{(CP)}_d+\mathrm{(PBE)}_d$ の下の条件付き結果である．
+この経路では，用いる全入力を対象族で検証することが $a_t\to0$ の証明に含まれる．
+条件付き GH 定理や未検証の tensor comparison を仮定したままで，
+問題\ref{ke:global-realization}を解決したとはしない．
+他方，特定の補助仮説が強すぎる場合は，
+actual $g_t$ に対する\eqref{ke:eq:global-realization-distortion}の両側評価を
+直接証明することでも目標を達成できる．
+
+局所的な解析入力と大域的な不足は次のように分かれる．
+全閉 triple corner の actual Lagrangian bundle と局所 GH 評価は
+系\ref{ke:actual-closed-corner}，定理\ref{ke:closed-corner-gh}，
+系\ref{ke:closed-corner-protected-gh}に置く．
+共通 normal circle を保つ二段階平均は定理\ref{ke:staged-neck-averaging}，
+短円からの actual flow buffer は補題\ref{ke:short-circle-actual-buffer}と
+系\ref{ke:short-circle-image-buffer}に置く．
+残るのは，これらの仮定を実際の全 neck で満たし，複数 ends の作用周期と
+reduced leaves を合わせ，source・branch・core を含む全域へ相対的に接着することである．
+さらに，局所保護領域の外を通る全曲面の shortcut と，
+異なる pieces を結ぶ短い接続路を制御しなければならない．
+命題\ref{topo:finite-portal-criterion}の抽象的な距離条件は，
+実際の計量に対するこの検証を置き換えない．
+
+Source の marking については命題\ref{ke:source-marking}も適用条件を持つ．
+指定した nodal fiber が actual source core と交わり，
+$\Phi_t$ が同命題の raw map と一様に $o(1)$ で近ければ，
+$b_t\to0$ のためには対応する critical value $b_{ij,t}$ が
+$p_T(b_{ij,t})\to e_i+e_j$ を満たす必要がある．
+問題\ref{ke:global-realization}で nodal markings の移動を許したのはこのためである．
+この incidence 自体や，異なる座標・Moser 同定による orbit partition の一致を，
+未検証のまま接着の仮定に加えてはならない．

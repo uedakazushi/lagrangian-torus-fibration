@@ -1,7 +1,23 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-21 / v2.0
+更新：2026-11-21 / v2.1
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
+
+## 最優先目標への接続と最初の未解決補題
+
+現在の目標は、主稿 `ke:global-realization` のactual KE–Lagrangian fibrationによる全曲面GH極限の実現である。対象・達成条件・K0–K5の着手順は [研究方針](../00_research_plan.md)、外部定理の正確なpath・label・確認commit・残る仮定は [KE依存表](ke-dependencies.md) を参照する。ここには証明を進めるための知識を残し、課題一覧を重複させない。
+
+第一の未解決入力は、source-freeな**moving neck領域** \(U_t\) に対するnormal circleの一様な短さとactual bufferである。各領域とその作用を先に指定し、period-1 generator \(V_t\) について
+\[
+ \varepsilon_t^{\mathrm{circ}}=\sup_{U_t}|V_t|_{g_t},\qquad
+ \delta_t=\operatorname{dist}_{g_t}(K_t,X_t\setminus U_t),\qquad
+ \delta_t>(2c_w+1/2)\varepsilon_t^{\mathrm{circ}}
+\]
+を確認する。\(K_t\) はcompactな作用飽和集合とする。この不等式は `ke:short-circle-image-buffer` のforward/backwardの像を含む条件であり、normal depthの大きさだけから距離bufferが従うと仮定しない。残余方向rank-one下界とvolume上界から短円上界を得る方法はKE側 `neck:lem:rank-one-circle` にある。求める補題の正確な領域・residual下界・境界距離を同時に書くことが最初の着手である。元の尺度で \(\varepsilon_t^{\mathrm{circ}}\to0\) を得るのは有用な十分条件だが、P0に最終的に必要なのは正規化後の誤差消失であり、より弱い十分な評価があれば採用できる。
+
+固定compact base上の共通moment intervalは、このmoving領域の一様性をまだ含まない。K1の局所的な成功後も、第二periodとreduced葉の同時整合、source・branch・coreの被覆、全曲面のshortcutとportalを別々に検証する。任意のMoser移送による定性的存在と、\(p_T\pi_t\) の距離歪み消失も区別する。
+
+大域距離を得る経路は二つある。KE側の未解決解析入力を実証して既存近似写像 \(\Phi_t\) と \(p_T\pi_t\) を一様に比較するか、同じ \(p_T\pi_t\) に対して全域の距離下界・liftによる上界を直接証明する。前者の条件付き定理を無条件の入力にせず、後者では基底上の人工計量をactual全空間の距離で置き換える根拠が必要である。
 
 ## 二段階平均によるnormal actionとperiodsの接続
 
@@ -34,7 +50,7 @@
 
 固定toric模型の存在・完備性にはZhang (2015), §2.1, Theorem 2.1 / Proposition 2.2を用いる（退化族のTheorem 2.4とQ-factorial仮定は使わない）。ψ_L=log L−Σlog ell_iに対してψ_L−(log3)/2≤φ_L≤ψ_L、V_L/3≤k_L²≤V_Lを内外にずらした障壁で証明する。Complete模型から三つの半平面へのYau Schwarz lemma、determinant比較、内部正則性により一様cusp geometryを得る。凸性からfacet shiftのlog-density差をO(1/min ell)とし、actual計量を内外のsimplex KE metricsでvolume比較する。Savinの小摂動定理でtensor・全高階誤差へ移る。Actual metric bufferや(TC)/(PBE)を前提としない。
 
-Actual側の大域入力は `coarse:cor:degree-d-volume-lower`。Adjunction residueでcanonical densityを固定し、backgroundによるHermitian frame errorの吸収と各正のcap方向のminorから六型のdeterminant下界を証明する。Sourceでは元のplane coordinatesを保つexact xy=tzとrescalingにより二つのcap係数≥c_d/Lを使う。Compact minimum原理からactual volume下界を得る。今回この依存部分も再点検して明示化した。
+Actual側の大域入力は `coarse:cor:degree-d-volume-lower`。Adjunction residueでcanonical densityを固定し、backgroundによるHermitian frame errorの吸収と各正のcap方向のminorから六型のdeterminant下界を証明する。Sourceでは元のplane coordinatesを保つexact xy=tzとrescalingにより二つのcap係数≥c_d/Lを使う。Compact minimum原理からactual volume下界を得る。この依存部分の証明と適用条件はKE側の原稿に明示されている。現行整備ではその所在と仮定を確認し、全証明の独立再監査は行っていない。
 
 
 ## Complete simplex模型の境界での鋭い比較
@@ -107,7 +123,7 @@ KE研究の `papers/cubical-gh-limit.tex` では $R_t=\log(-\log|t|^2)$、$\math
 
 望ましい写像は $f_t=p_T\circ\pi_t:X_t\to B_d(T)\to\mathcal C_d$。五次では $p_T$ は同相、六次以上では基底内の木も収縮する。**空間としてのGH収束**と**指定したLagrangian fibrationによる実現**を区別する。
 
-主稿 `base_topology.tex` の `topo:ke-map-compatibility` に、$\operatorname{dis}(\Phi_t)\le a_t$ と $\sup_xd_\square(\Phi_t(x),p_T\pi_t(x))\le b_t$ から $\operatorname{dis}(p_T\pi_t)\le a_t+2b_t$ を得る比較命題と証明を置いた。Ambient fiber diametersは同じ量以下、GH距離はその半分以下である。一般的新規性は主張しない。証明を今回三角不等式で点検したことと、actual $a_t,b_t\to0$ が未証明であることを区別する。
+主稿 `base_topology.tex` の `topo:ke-map-compatibility` に、$\operatorname{dis}(\Phi_t)\le a_t$ と $\sup_xd_\square(\Phi_t(x),p_T\pi_t(x))\le b_t$ から $\operatorname{dis}(p_T\pi_t)\le a_t+2b_t$ を得る比較命題と証明を置いた。Ambient fiber diametersは同じ量以下、GH距離はその半分以下である。一般的新規性は主張しない。この初等比較の証明の点検と、actual $a_t,b_t\to0$ が未証明であることを区別する。
 
 **具体的な次の課題：** 全phaseのmoving triple比較と閉cornerの内在・保護領域内のGH同定を入力として、actual neck collarのorbit partition、action periods、定量的bufferを一致させる。`ke:relative-fiber-preserving` を適用できる開overlapを構成し、sourceのpinched torus、branchのS¹×figure-eight、coreへ相対的に接着する。必要なのは全特異領域を含む一様評価と大域no-shortcutであり、regular fibersの点ごとの収縮では不足する。Action-affine structureだけからcanonicalなRiemannian基底計量は決まらない。
 
@@ -119,14 +135,14 @@ KE研究の `papers/cubical-gh-limit.tex` では $R_t=\log(-\log|t|^2)$、$\math
 - `ke:triple-hexagon`：$\zeta_i\zeta_j\zeta_k=t$ の三つのsquareを一つのhexagonとして全phase torusで実現し、raw-depth mapとの誤差を $O((1+\log m_t)/R_t)$ に抑える。
 - `ke:triple-moving-fibration`：全phaseを含む moving domain $\min\ell_a>m_t/2$ 上の一様tensor比較を追加仮定すれば、actual負KE形式に対する局所fibrationが得られ、そのambient fiber diameterは元の尺度でも $O(m_t^{-1})$。$m_t=R_t\to\infty$ とできる。負KE equationにより局所canonical trivialization上で形式がexactとなるのでperiod条件は満たされる。
 
-これらは条件と証明を今回点検した局所結果である。Averaging–Moserの基本方法はRuan, arXiv:math/0309177v2, §3に先行し、一般的新規性は未確認。H-minimal/special Lagrangian性、大域接着、singular fibersの計量評価は結論しない。
+これらは原稿に条件と証明を保持する局所結果である。Averaging–Moserの基本方法はRuan, arXiv:math/0309177v2, §3に先行し、一般的新規性は未確認。H-minimal/special Lagrangian性、大域接着、singular fibersの計量評価は結論しない。
 
 **解析入力の区別：** 関連KE主稿の `coarse:prop:density-counterexample` により、負KE計量であってもbounded volume densityから一様tensor比較は導けない。五次coarse metric packageには独立な $(\mathrm{TC})_5$ が必要であり、その無条件な検証は未完成である。これは対象compact familyの反例ではない。全深部三重点のfull-orbit moving tensor比較は全固定d≥5で検証した。Source等を含むexterior全体への拡張は未解決である。
 
 ### Averaging–Moserの先行研究
 W.-D. Ruan, *H-minimal Lagrangian fibrations in Kähler manifolds and minimal Lagrangian vanishing tori in Kähler–Einstein manifolds*, arXiv:math/0309177v2, https://arxiv.org/abs/math/0309177v2 。§3 Proposition 3.1はpotentialのtorus平均、Lemma 3.3はHamiltonian-gradient flowを扱い、Theorem 3.1はhomothetic toric potentialと一様 $C^\infty$ quasi-isometryの下でH-minimal fibrationを構成する。Theorem 4.2はsimple toroidal canonical degenerationの最大退化点へ消えるminimal torusの存在を示す。
 
-今回の補題はperiod-zero、$C^0$ tensor比較、短い生成場だけを用いてprimitiveとambient diameterを直接評価する。Ruanの高階幾何とH-minimal性の結論は求めない。既存方法の定量化として位置付け、新規性は未確認。ZhangのTheorem 2.6の個別generalized special Lagrangian torusの存在とも、全域のsingular fibrationとも区別する。
+本研究の補題はperiod-zero、$C^0$ tensor比較、短い生成場だけを用いてprimitiveとambient diameterを直接評価する。Ruanの高階幾何とH-minimal性の結論は求めない。既存方法の定量化として位置付け、新規性は未確認。ZhangのTheorem 2.6の個別generalized special Lagrangian torusの存在とも、全域のsingular fibrationとも区別する。
 
 ### 固定領域と移動領域の区別・相対接着への入口
 主稿 `ke:fixed-simplex-scale` の計算により、固定simplex compactaは径の尺度のtriple vertexしか見ない。関連KE研究ノートの「固定領域の収束から径の尺度へ移る際の障害」に、固定compacta上ではcusp metricと完全一致し、全体で一様に粗比較できるにもかかわらず、正規化した区間長が $1$ から $3/2$ に変わる一次元例を証明付きで収録した。KE反例ではなく、sharp moving estimatesの必要性を示す例である。
@@ -223,7 +239,7 @@ d^c(AF-F)(\partial_{\theta_1})
 本研究の曲面X_d⊂P³, d≥5の一般SNC gluingと、全平面模型の明示的なsingular fiber型を区別する。主要な定理は papers/sections/paper/geometry_main_statements_v17.tex の main:global、nodeの線型monodromyは invariants_examples.tex、より詳しい先行比較は geometry_introduction_v25.tex。
 
 **一次資料の比較：**
-- I. Smith, *Torus fibrations on symplectic four-manifolds*, Turkish J. Math. **25** (2001), 69–96, https://journals.tubitak.gov.tr/math/vol25/iss1/4/ 。Homologically essential Lagrangian toriとtame singularitiesという追加条件下での閉四次元多様体の制限定理。今回の分岐・core特異ファイバーへの直接適用は、tamenessとregular torusのhomology classの検証なしにしない。
+- I. Smith, *Torus fibrations on symplectic four-manifolds*, Turkish J. Math. **25** (2001), 69–96, https://journals.tubitak.gov.tr/math/vol25/iss1/4/ 。Homologically essential Lagrangian toriとtame singularitiesという追加条件下での閉四次元多様体の制限定理。本研究の分岐・core特異ファイバーへの直接適用は、tamenessとregular torusのhomology classの検証なしにしない。
 - G. Mikhalkin, *Decomposition into pairs-of-pants for complex algebraic hypersurfaces*, Topology **43** (2004), 1035–1065, DOI 10.1016/j.top.2003.11.006、Theorem 1。任意次数・次元のstratified topological torus fibrationは既知。各maximal cellで少なくとも一つのLagrangian torusを与えるが全regular torusがLagrangianとはいわない。
 - N. C. Leung and M. Symington, *Almost toric symplectic four-manifolds*, J. Symplectic Geom. **8** (2010), 143–187, DOI 10.4310/JSG.2010.v8.n2.a2、**Theorem 2.1**, Table 1。閉almost toric 4-foldの全空間を分類し、一般型曲面X_dは含まれない。通常のalmost toricはsmooth surface base、ellipticと孤立focus singularitiesが許される。本研究はbranched baseとlog-Weinstein coreを許し、仮定が異なる。
 - J. D. Evans and M. Mauri, *Constructing local models for Lagrangian torus fibrations*, Ann. Henri Lebesgue **4** (2021), 537–570, DOI 10.5802/ahl.80、§3.1。P²から一般位置4直線を除く4-dimensional pair of pantsのLagrangian fibrationを構成し、cone over K₄のbranch/coreモデルを与える。曲面の「core singular fiberの局所模型」の直接的先行結果。
@@ -242,14 +258,15 @@ Leung–Wan (JDG **83** (2009))の一般型での漸近special性はMikhalkinが
 \[
 d\binom{d-3}{2}+d\binom d2=d(d^2-4d+6)=c_2(X_d).
 \]
-**Singular fiberは一般にsmooth embedded Lagrangianではなく、各smooth stratumがisotropicなstratified fiber**として定義している。Core skeletonも一般のdで一つの固定したpants型ではない。この基本的なlocal topology、個数、Euler数の証明は原稿に既存、今回の作業は出典・適用範囲との照合であり、幾何学的gluing証明全体の独立監査ではない。
+**Singular fiberは一般にsmooth embedded Lagrangianではなく、各smooth stratumがisotropicなstratified fiber**として定義している。Core skeletonも一般のdで一つの固定したpants型ではない。この基本的なlocal topology、個数、Euler数の証明と先行研究との範囲比較は原稿に保持する。幾何学的gluing証明全体の独立監査はなお必要である。
 
 
-## 曲面：現在の核心
+## 五次整数接着：保持する独立課題
 全pair productsが狭義正の四ray整数データの正weightsはmatchingと同値。G5_14両単位枝の{5,0,0}を排除し、{4,1,0}に限定したと原稿は記録する。必要支持はG5_14、G5_16、G5_17の3型26標識。存在・幾何的非同型類の個数とは異なる。三高Dの一般同時非負性と一般分母剛性は残る。
+これらはP0の全域GH実現に必要な場合以外は後順位とする。証明・計算資産は維持し、独立した分類の未完了をKE研究の停止理由にしない。
 
 
-## KE退化との分岐基底の位相的比較（新たに証明）
+## KE退化との分岐基底の位相的比較
 曲面基底 \(B_d(T)\) の三価木 \(T_{ij}\) を収縮する既存の \(q:B_d(T)\to\operatorname{Sk}_2\Delta^{d-1}\) と、KE候補 \(\mathcal C_d\) の正規化同相の逆を合成すると、**labelを保ち点逆像が可縮な** \(p_T:B_d(T)\to\mathcal C_d\) を得る。一般次数の厳密な証明は `papers/sections/paper/base_topology.tex` の `topo:KE-cubical-comparison`。\(d=5\) では同相、\(d\ge6\) では両者は同相ではない（辺の局所分岐次数が異なる）。KEのGH極限や作用アフィン計量との一致は主張しない。
 
 整数鎖複体の主張を検査するため、\(d=5,\dots,8\) の \(B_d(T)\) と \(\operatorname{Sk}_2\Delta^{d-1}\) の \(\partial_1,\partial_2\) の階数を独立に計算して、\(b_1=0\)、\(b_2=\binom{d-1}{3}\) と一致した。再現コードは `verification/verify_ke_base_topology.py`。これは有限体 \(\mathbb F_{1000003}\) 上の有限検算であり、整数係数の一般定理の証明は本文のexplicit chain contractionが担当する。
@@ -269,4 +286,6 @@ $p_T:B_d(T)\to\mathcal C_d$ に補助piecewise Euclidean metric $h$ を固定し
 $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木系はちょうど六つであり、$S_6$ はこの集合に推移的に作用する。固定した一系の安定化群は位数 $6!/6=120$、指数6。従ってその一系の選択は座標置換の全 $S_6$ 対称性を保たない。KE候補 $\mathcal C_6$ は自然に $S_6$ 対称なので、Petersen分岐基底とのラベル付き比較を対称に行うには六つの木系全体を管理する必要がある。証明は base_topology.tex の topo:petersen-symmetry、全15 perfect matchingsと六one-factorizationsの有限列挙・安定化群位数は別に確認した。これは任意の別構成やラベル忘却後のシンプレクティックな対称性の不存在ではない。
 
 ## 検証状態
-組版記録、既存の整数計算の証明書、今回の証明の再監査は異なる。曲面主稿改訂8の130頁、整数接着201頁、meridian18頁は分割前の記録であり、分離後の再組版を意味しない。計算の入口は `verification/run_current_checks.py`。局所KEの証明と全曲面actual GH適合性も区別する。
+2026-11-21 / v2.1では、目標P0の量化・規格化・actual/ambient距離・外部仮定の整合を別担当が点検し、依存定理の所在を確認した。全解析証明と大域接着証明の独立再監査を完了したものではない。主稿改訂9をLuaLaTeXで132頁に組版し、引用・参照、PDF/SyncTeX、変更箇所の表示を確認した。重複ラベル・欠落字形・overfull警告はない。構成検査と実行環境検査も通過した。
+
+既存整数計算の証明書は保持するが、この整備では整数検算suiteを再実行していない。整数接着201頁・meridian18頁・TeXノート65頁は従来の組版記録であり、現行での再組版とは区別する。局所KE原稿の証明、全曲面actual GH適合性の未解決、有限計算、形式証明、組版、GitHubへの保存はそれぞれ別の状態として扱う。実行の入口は `scripts/research_check.py`。
