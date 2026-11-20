@@ -12,8 +12,8 @@
 - `papers/threefold-blocks.tex`：原版166頁の局所稿第9版。所定X_d⊂P⁴にdegree d−2、genus (d−3)(d−4)/2のnormal-trivial closed symplectic curveとactual local T³ blockを構成したとする。Normal faces、complement、大域boundary-free fibrationは未構成。
 - `papers/threefold-fibration.tex`：原版187頁の全体稿第11稿。
 
-## 今回の横断検証
-主稿 `papers/lagrangian-torus-fibration.tex` から参照される `papers/sections/paper/base_topology.tex` に、\(\mathcal C_d\) との明示的なcell-like homotopy equivalenceと \(d\ge6\) の非同相性を証明した。独立に \(d=5,\dots,8\) の鎖複体の階数を有理数体で確認し、有限体での回帰コードも `verification/verify_ke_base_topology.py` に保存した。この結果は位相・整数ホモロジーに関するもので、fibrationそのものの存在やKE距離との同定を新たに証明したわけではない。
+## 独立に確認した幾何・位相
+主原稿が読み込むbase_topology.texでB_d(T)からKE候補C_dへのcell-like homotopy equivalenceとd≥6での非同相性を証明し、さらに任意の固定Tについて人工的な区分的長さ距離d_epsilonのGH収束を誤差O(epsilon)で証明した（topo:metric-collapse）。これは実際の作用計量やKE計量の収束ではない。d=5,6,7,8の鎖階数は独立に有理数体上で検算し、有限体の回帰コードもverification/verify_ke_base_topology.pyに保管した。三次元のtrivial_normal_curve.texでは、normal-trivialな閉symplectic曲線のdegree eとgenus gに2g-2=(d-5)eが必要で、d偶数ならe偶数という制約と、三価Reeb graphのsaddle数が(d-5)eとなることを証明した（tnc:degree-genus-parity）。これらはnormal faces/complementの大域Lagrangian接着を完成させるものではない。メトリック収縮の一般的な先行研究に対する新規性は未確認。
 
 ## 次の一手
 1. G5_14の中央matchingと二{4,1,0}・分母三の位置を同時に課す。G5_16のnode5、G5_17全matchingも別に扱う。
