@@ -5,7 +5,7 @@ Mod 1000003 for d=5..8; numerical regression only, not a proof of
 the all-d theorem, metric convergence or symplectic constructions.
 Python standard library only.
 """
-from itertools import combinations
+from itertools import combinations, permutations
 from math import comb
 
 P = 1000003
@@ -82,6 +82,49 @@ def simplex_2_skeleton(d):
     return len(edges) - r1 - r2, len(triangles) - r2
 
 
+
+def check_petersen_factorizations():
+    """Exact finite enumeration of the six labelled K6 one-factorizations."""
+    vertices = tuple(range(6))
+    complete_edges = frozenset(combinations(vertices, 2))
+
+    def matchings(v):
+        if not v:
+            yield frozenset()
+            return
+        a, *remaining = v
+        for b in remaining:
+            for rest in matchings([x for x in remaining if x != b]):
+                yield rest | frozenset({tuple(sorted((a, b)))})
+
+    perfect = sorted(set(matchings(list(vertices))), key=lambda m: sorted(m))
+    assert len(perfect) == 15
+    factorizations = []
+    for choice in combinations(range(15), 5):
+        blocks = frozenset(perfect[i] for i in choice)
+        if frozenset().union(*blocks) == complete_edges:
+            factorizations.append(blocks)
+    assert len(factorizations) == 6
+    reference = factorizations[0]
+
+    def relabel(permutation, system):
+        return frozenset(
+            frozenset(tuple(sorted((permutation[a], permutation[b])))
+                      for a, b in block)
+            for block in system
+        )
+
+    orbit = {relabel(permutation, reference)
+             for permutation in permutations(vertices)}
+    assert orbit == set(factorizations)
+    stabilizer_order = sum(
+        relabel(permutation, reference) == reference
+        for permutation in permutations(vertices)
+    )
+    assert stabilizer_order == 120
+    print("K6: 15 matchings, 6 one-factorizations, one S6 orbit, "
+          "stabilizer order 120 PASS")
+
 def main():
     for d in range(5, 9):
         e, f, b1, b2 = lagrangian_base(d)
@@ -94,7 +137,9 @@ def main():
         assert v_c - e_c + f_c == 1 + comb(d - 1, 3)
         print(f"d={d}: B=(V={d}, E={e}, F={f}, b1={b1}, b2={b2}), "
               f"C=(V={v_c}, E={e_c}, F={f_c}, b1={h1}, b2={h2}) PASS")
-    print("Finite mod-p checks passed; general proof is in the manuscripts.")
+    check_petersen_factorizations()
+    print("Finite mod-p checks and exact K6 enumeration passed; "
+          "general proof and metric collapse are in the manuscripts.")
 
 
 if __name__ == "__main__":
