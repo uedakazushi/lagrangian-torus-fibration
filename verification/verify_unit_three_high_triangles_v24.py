@@ -230,7 +230,7 @@ def main(proof,output):
 if __name__=='__main__':
     here=Path(__file__).resolve().parent
     default=here/'unit_three_high_triangle_reduction_v24.tex'
-    if not default.is_file():default=here.parent/'paper'/default.name
+    if not default.is_file():default=here.parent/'papers/sections/paper'/default.name
     parser=argparse.ArgumentParser()
     parser.add_argument('--proof',type=Path,default=default)
     parser.add_argument('--output',type=Path,default=here/'unit_three_high_triangles_verification_v24.json')
