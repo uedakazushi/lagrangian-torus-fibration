@@ -92,6 +92,7 @@ Lagrangian主稿 `ke:actual-closed-corner` の同じ averaging–Moser flow と�
 4. 有効な旧補題・証明書の依存関係は保持し、元資料の未検証部分を無理に削除しない。
 
 ## 保存・再現と前回までの検証の範囲
+現行のTeX分割節と検証スクリプトは `papers/sections/` を直接参照し、旧ルートsymlinkに依存しない。静的な構成検査は `python3 verification/verify_repository_layout.py`、現行の五主検算・五独立監査は `python3 verification/run_current_checks.py`。旧JSONやmanifestの相対パス・記録時点のSHA-256は出典情報として保持し、パス正規化後の現行実行パスと区別する。
 組版はrepo直下の `latexmk papers/surface-lagrangian-torus-fibration.tex`、整数接着は `latexmk papers/quintic-integer-gluing.tex`。LuaLaTeXとLuaTeX-ja／TikZ／日本語フォントが必要、PDFとSyncTeXはbuild/へ出力しGitで追跡しない。現行検証の入口は `python3 verification/run_current_checks.py`。過去の曲面主稿の組版・整数監査記録を、本日の分割時に再実行した証拠と混同しない。元の計算コード、入力、証明書は保存し、必要な範囲で再実行する。形式証明・外部査読・包括的新規性の確認は未実施。
 
 ## 共通研究原則と保存許可（研究固有方針から独立）

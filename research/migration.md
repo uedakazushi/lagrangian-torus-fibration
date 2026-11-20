@@ -6,7 +6,7 @@
 
 第25版の4本の現行TeX（幾何、整数接着、meridian置換、研究ノート）をpapers/直下の全文主原稿にし、移行時にはinput先と探索パスを変更した。その後の基底の位相比較と研究再開先の修正があるため、`source-manifest.json` では `source_sha256`（元資料）と `sha256`（現行）を分ける。必要な分割ソースと過去の検証器・証明書が参照する証明をpapers/sections/へ保持した。ソース対応とhashはsource-manifest.json。原稿・証明のバイト一致と、主原稿のinputパス変換を区別する。
 
-証明書の相対パスを保つため、ルートpaper/、paper_arithmetic/、paper_surgery/、notes/は分割原稿ディレクトリへのsymlinkである。実体の重複はない。移行前の旧TeXのうち、現行原稿と保存した検証器・証明書から参照されない6断片は持ち込まなかった。元資料は手元にも残している。
+現行の検算コードは `papers/sections/paper/`、`papers/sections/paper_arithmetic/`、`papers/sections/paper_surgery/`、`papers/sections/notes/` を直接参照する。互換性用のルートsymlink四つは不要になったため撤去した。保存済みの旧監査JSONや `source-manifest.json` の `source` 欄には当時の `paper/` 等の相対パスとSHA-256が残るが、これは出典記録であり、現行実行パスではない。旧監査スクリプトで記録済みコードSHA-256を比較するときは、参照文字列のみを元へ戻した内容のハッシュを `verification/audits/_legacy_provenance.py` で照合する。数学的処理の変更を許容するものではない。移行前の旧TeXのうち、現行原稿と保存した検証器・証明書から参照されない6断片は持ち込まなかった。元資料は手元にも残している。
 
 
 ## 照合と未了事項

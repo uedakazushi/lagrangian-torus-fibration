@@ -31,3 +31,6 @@
 
 ## 複素次元3の正本との区別
 三次元のfocus block・補集合の位相・全域存在問題は `https://github.com/uedakazushi/threefold-lagrangian-torus-fibration` を正本とする。曲面の主原稿、五次整数接着、KE適合は本repoで管理する。相互の結果は定理番号・適用仮定を明示して引用し、正本を二重化しない。
+
+## 参照パスの現行運用
+TeXの分割節と検証用proofは `papers/sections/{paper,paper_arithmetic,paper_surgery,notes}/` に置き、ルートsymlinkに依存しない。検算コードの参照を変えるときは `verification/run_current_checks.py` と `verification/verify_repository_layout.py` を照合する。旧検証JSON中の相対パス・SHA-256は歴史的な出典記録であり書換えない。ハッシュ確認は元コードとのパスだけの差を検証して数学的変更を許さない。現行のGitHub正本・hub更新義務は従前どおり。

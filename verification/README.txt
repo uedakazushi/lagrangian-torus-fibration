@@ -11,10 +11,10 @@ audits/には追加の実行可能監査24本を含む。
   verify_four_ray_matching_v25.py
     四行・五pairから第六pair残余を再構成し、P4を正値恒等式で無上界排除。
     weights無しのmatching/triangle分類、正weights iff matching。全64符号graph。
-  verify_g514_five_node_v25.py --proof paper/g514_five_node_exclusion_v25.tex
+  verify_g514_five_node_v25.py --proof papers/sections/paper/g514_five_node_exclusion_v25.tex
     G5_14の五node単位枝を全尺度で排除。七局所型・LM=8,20の全36正因子。
     恒等零二型も元pairの整除障害を確認。有限パラメータscanによる証明ではない。
-  verify_g514_central_matching_v25.py --proof paper/g514_central_matching_v25.tex
+  verify_g514_central_matching_v25.py --proof papers/sections/paper/g514_central_matching_v25.tex
     G5_14の中央matchingを{01,23}に固定。16標識配置→4正規形、全node0配置。
     G5_14全体の存在・不存在は主張しない。G5_16へ二単位枝の議論を移さない。
   verify_high_d_axis_endpoints_v25.py --s-cap 400
@@ -164,3 +164,8 @@ audits/には追加の実行可能監査24本を含む。
   audit_local_signs_and_unit_triangles_v24.py
   audit_two_leaf_global_v16.py
   audit_two_leaf_unit_finiteness_v16.py
+
+現行の原稿参照ディレクトリは `papers/sections/` 以下のみ。ルートに互換性symlinkは置かない。
+`python3 verification/verify_repository_layout.py` はPython構文・TeX入力・主検算proofパスとsymlink不在を静的に確認する。
+`python3 verification/run_current_checks.py` は第25版の五主検算と五独立監査を実行する。静的検査だけで数学的な計算再実行と報告しない。
+既存JSONの旧 `paper/`/`notes/` パスとSHA-256は歴史的証明書の内容として保持し、現行ソースSHAとは区別する。
