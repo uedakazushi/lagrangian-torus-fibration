@@ -169,6 +169,46 @@ $H_2(Y,Y\setminus\{x\};\ZZ)$ の階数で区別できる．
 自由な辺がないこと，双対複体とホモトピー同値であること，双対複体と同相であることは
 区別しなければならない．また，この議論自体は integral-affine atlas を構成しない．
 
+\begin{corollary}[KE 退化の cubical candidate への位相的射]
+\label{topo:KE-cubical-comparison}
+$d\ge5$ に対し，別の研究で用いる有限立方体複体
+\[
+ \mathcal C_d=
+ \left\{w\in[0,1]^d:\max_i w_i=1,\ 
+             |\operatorname{supp}(w)|\le3\right\}
+\]
+を標準 square の貼合せで定める．正規化
+\[
+ \rho_d:\mathcal C_d\longrightarrow S_d,\qquad
+ w\longmapsto\frac{w}{\sum_iw_i}
+\]
+は同相であり，
+\[
+ p_T=\rho_d^{-1}\circ q:B(T)\longrightarrow\mathcal C_d
+\]
+は全ての点逆像が可縮な連続全射で，整数ホモロジーの同型を誘導する
+ホモトピー同値である．$d=5$ では $p_T$ は同相，
+$d\ge6$ では同相でない．
+\end{corollary}
+\begin{proof}
+$\sum_iw_i\ge1$ であり，$S_d$ の各点 $x$ は
+$x/\max_i x_i\in\mathcal C_d$ を一意に定めるので $\rho_d$ は同相である．
+したがって $p_T$ の点逆像は $q$ の点逆像と一致し，
+定理\ref{topo:sdr} の鎖ホモトピーとホモトピー同値がそのまま適用できる．
+同相性の区別は命題\ref{topo:nonhomeomorphic}から従う．
+\end{proof}
+
+\begin{remark}[比較の射程]
+この corollary は候補極限複体と Lagrangian 分岐基底の
+\emph{labelled topology} の比較である．
+$q$ は一般に距離を保存せず，$p_T$ から
+KE 計量の GH 収束，action-compatible integral-affine atlas，
+あるいは special Lagrangian 構造は導けない．
+$d\ge6$ の非同相性は，両基底をそのまま同じ位相空間として
+同一視することに対する具体的な障害である．
+\end{remark}
+
+
 \section{六次の場合の同時 Petersen 化}\label{topo:petersen-section}
 
 $d=6$ のとき，各 $T_{ij}$ は四つの葉を二組に分けるだけで定まり，
