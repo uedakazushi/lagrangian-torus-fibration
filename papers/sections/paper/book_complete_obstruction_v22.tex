@@ -1,0 +1,198 @@
+% v22: exact small-L rigidity closes the remaining book sectors.
+% This section uses the v21 two-sector reduction and its existing certificate.
+\section{小さい \texorpdfstring{$L$}{L} の正枝の剛性と book 支持の完全排除}
+\label{bc22:section}
+
+定理~\ref{bs21:two-sectors} の二つの残余 sector は，いずれも存在しない．
+鍵は，正枝の $F>0$ 側における reverse data の成長下界が，
+整数尺度の条件を使うと等式に強まることである．
+この追加の議論には探索範囲の拡大を要しない．
+
+\begin{lemma}[小さい $L$ の正枝の厳密な reverse data]
+\label{bc22:positive-rigidity}
+正の整数二高局所模型で $L\in\{3,4\}$，$F>0$ とする．
+正枝の記号
+\[
+ \delta=L-1,\quad d=\delta-1,\quad h=S-r,\quad
+ \alpha=\frac{sh}{r},\quad \beta=\frac{z(h+d)}{r+1},\quad
+ F=(2r+1)h-r^2d
+\]
+を用いると，次が成り立つ：
+\begin{equation}\label{bc22:rigidity}
+ \begin{array}{c|ccc}
+ L & r&S&T\\\hline
+ 3&2R&3R&3R+2\quad(R\in\mathbb Z_{>0})\\
+ 4&r&2r&2r+3
+ \end{array}
+\end{equation}
+この結論は book に組み込まれることや低 $D$ の相殺を仮定しない．
+\end{lemma}
+
+\begin{proof}
+整数行列から $\alpha,\beta$ は正の整数であり，
+$0<h<rd$ である．式~\eqref{ps21:two-identities} により
+\[
+ F\alpha\beta=(\beta-\alpha-1)h(h+d).
+\]
+従って $E_+=F/[h(h+d)]>0$ と置くと
+\begin{equation}\label{bc22:scale-bound}
+ E_+\alpha=1-\frac{\alpha+1}{\beta}<1,
+ \qquad
+ E_+\alpha=\frac{r(2\alpha-ds)+\alpha}{h+d}.
+\end{equation}
+第二式には $r\alpha=sh$ を使った．
+
+$L=3$，すなわち $d=1$ とする．
+もし $h\le(r-1)/2$ なら $F\le-(r+1)/2<0$ なので，
+$h$ の整数性から $h\ge r/2$ である．
+従って $n=2\alpha-s=s(2h-r)/r$ は非負整数である．
+$n\ge1$ なら，$h\le r-1$ と式~\eqref{bc22:scale-bound} により
+\[
+ E_+\alpha=\frac{rn+\alpha}{h+1}
+ \ge\frac{r+1}{r}>1,
+\]
+矛盾する．従って $n=0$，$h=r/2$ であり，
+$r=2R$，$S=r+h=3R$，$T=S+2=3R+2$ を得る．
+
+$L=4$，すなわち $d=2$ とする．
+$h\le r-1$ なら $F\le-r-1<0$ なので $h\ge r$ である．
+従って $n=\alpha-s=s(h-r)/r$ は非負整数である．
+$n\ge1$ なら $h\le2r-1$ から
+\[
+ E_+\alpha=\frac{2rn+\alpha}{h+2}
+ \ge\frac{2r+1}{2r+1}=1,
+\]
+再び矛盾する．従って $h=r$，$S=2r$，$T=2r+3$ である．
+\end{proof}
+
+\begin{lemma}[負枝の厳密な reverse data]
+\label{bc22:negative-rigidity}
+負枝を $S=T=w$，$r=w+H$ と書き，
+\[
+ E=1-\frac{w^2}{H(H+1)}
+\]
+と置く．正の整数局所模型では $E\ne0$ であり，
+\begin{equation}\label{bc22:negative-rigidity-data}
+ \begin{array}{c|ccc}
+  &H&r&E\\\hline
+  E>0&w&2w&1/(w+1)\\
+  E<0&w-1&2w-1&-1/(w-1)
+ \end{array}
+\end{equation}
+に限られる．この結論も低辺の接合を仮定しない．
+\end{lemma}
+
+\begin{proof}
+連続する平方数の間に $H^2<H(H+1)<(H+1)^2$ があるので，
+$H(H+1)=w^2$ は不可能であり，$E\ne0$ である．
+式~\eqref{bn21:factorization} で用いた正整数
+\[
+ c=\frac{sH}{w+H}\ge2,\qquad
+ e=\frac{z(H+1)}{w+H+1}\ge1
+\]
+は $Ece=e-c+1$ を満たす．
+
+$E>0$ なら $H\ge w$ であり，$Ec=1-(c-1)/e<1$ である．
+$H>w$ と仮定すると
+\[
+ u=s-c=\frac{cw}{H}\in\mathbb Z_{>0},\qquad u\le c-1.
+\]
+従って
+\[
+ Ec=c-\frac{u^2}{c}\frac{H}{H+1}
+ >c-\frac{u^2}{c}
+ \ge2-\frac1c>1
+\]
+となり，矛盾する．従って $H=w$ である．
+
+$E<0$ なら $H\le w-1$ であり，$(-E)e=(c-e-1)/c<1$ である．
+$H\le w-2$ と仮定すると
+\[
+ v=z-e=\frac{ew}{H+1}\in\mathbb Z_{>0},\qquad v\ge e+1.
+\]
+従って
+\[
+ (-E)e=\frac{v^2}{e}\frac{H+1}{H}-e
+ >\frac{v^2}{e}-e
+ \ge2+\frac1e>1,
+\]
+再び矛盾する．従って $H=w-1$ である．
+それぞれ $r=w+H$ と $E$ を計算すれば表示式を得る．
+\end{proof}
+
+\begin{proposition}[型 I の解析的排除]
+\label{bc22:type-I}
+定理~\ref{bs21:two-sectors} の型 I は存在しない．
+より具体的には，型 I の reverse data と正の整数尺度だけで
+$w\le18$ が必要になる．
+\end{proposition}
+
+\begin{proof}
+この型では二つの正枝で $L=3$，$F>0$ なので，
+補題~\ref{bc22:positive-rigidity} により
+$T_i=(3r_i+4)/2$ である．
+式~\eqref{bs21:I-offsets} は
+\[
+ T_1=r_N+t_1,\qquad T_2=r_1+t_2,\qquad w=r_2+t_N,
+ \qquad t_1,t_2\in\{1,2\},\quad t_N\in\{-1,0,1,2\}
+\]
+となる．$r_1,r_2$ を消去すると
+\begin{equation}\label{bc22:type-I-line}
+ 4r_N=9w+\kappa,\qquad
+ \kappa=20-4t_1-6t_2-9t_N,\qquad -18\le\kappa\le19.
+\end{equation}
+この型の負枝は $H\ge w$ を満たすので $E>0$ であり，
+補題~\ref{bc22:negative-rigidity} により $H=w$，$r_N=2w$ である．
+式~\eqref{bc22:type-I-line} に代入すると $w=-\kappa\le18$ が必要となるが，
+定理~\ref{bs21:two-sectors} は $w\ge135$ を与えている．
+\end{proof}
+
+\begin{proposition}[型 II の解析的排除]
+\label{bc22:type-II}
+定理~\ref{bs21:two-sectors} の型 II は存在しない．
+この型の最初の低辺は，負枝の $r_N$ が同時に偶数と奇数であることを強制する．
+\end{proposition}
+
+\begin{proof}
+$P_1$ は $L=4$，$F_1>0$ なので
+補題~\ref{bc22:positive-rigidity} から $T_1=2r_1+3$ である．
+辺 $N^+\to P_1^+$ の offset は
+式~\eqref{bs21:II-offsets} により $t_1=2$ に固定されるので
+\begin{equation}\label{bc22:II-first}
+ r_N=2r_1+1.
+\end{equation}
+一方，負枝は $H\ge w$，従って $E>0$ を満たすので，
+補題~\ref{bc22:negative-rigidity} が $r_N=2w$ を与える．
+式~\eqref{bc22:II-first} と合わせると $2w=2r_1+1$ となり，
+整数性に反する．この矛盾自体は $w\ge135$ を必要としない．
+\end{proof}
+
+\begin{theorem}[Book 支持の完全排除]
+\label{bc22:book-obstruction}
+標準 $K_5$ 分岐配置における book 支持
+\[
+ G_{5,13}=\{01,02,03,04,12,13,14\}
+\]
+では，二価 cores $2,3,4$ の低三角形が，正の整数局所 charts，
+奇数高分母，低辺の非負 node および総和五，対向低 $D$ の相殺を
+同時に満たすことはない．
+従ってこの支持は，同じ局所条件を要求する標準構成から排除される．
+\end{theorem}
+
+\begin{proof}
+定理~\ref{bs21:two-sectors} が全ての仮想的な低三角形を
+型 I または型 II に帰着する．
+命題~\ref{bc22:type-I} と命題~\ref{bc22:type-II} が両者を排除する．
+\end{proof}
+
+\paragraph{証明書の範囲．}
+第21版の有限復元は，そこで解析的に導かれた $w\le134$ の範囲を
+全尺度について検証している．本節はその既存の定理を用い，
+$w\ge135$ の残余二 sector を整数性と恒等式だけで排除する．
+新しい \nolinkurl{verify_book_complete_obstruction_v22.py} は，
+正負両枝の剛性に用いた恒等式，十六個の node offset，
+局所全尺度表示の row 和と pair 方程式，
+型 II の強制式を標準ライブラリの厳密有理数演算で確認する．
+これを新たな大きな $w$ の探索に置き換えてはいない．
+また結論はここで指定した標準配置・整数局所条件に対するものであり，
+一般型曲面の任意の Lagrangian torus fibration の不存在を主張するものではない．

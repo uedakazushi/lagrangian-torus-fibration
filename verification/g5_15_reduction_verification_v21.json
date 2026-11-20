@@ -1,0 +1,2123 @@
+{
+  "status": "PASS",
+  "theorem_label": "g51521:reduction",
+  "support": {
+    "high_edges": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "12",
+      "13",
+      "14",
+      "34"
+    ],
+    "low_edges": [
+      "23",
+      "24"
+    ],
+    "bivalent_core": 2
+  },
+  "assumptions": [
+    "positive integral local charts",
+    "all denominators odd",
+    "marked integer clutching",
+    "each node triple nonnegative with total five",
+    "opposite D coefficients cancel"
+  ],
+  "scope": "Only the stated full G5_15 support. No argument is applied merely to a contained subgraph.",
+  "no_denominator_cutoff": true,
+  "ordinary": {
+    "status": "complete necessary reduction, not an exclusion",
+    "reverse_triples": [
+      [
+        2,
+        3,
+        5
+      ],
+      [
+        4,
+        2,
+        2
+      ],
+      [
+        5,
+        3,
+        3
+      ],
+      [
+        6,
+        3,
+        3
+      ]
+    ],
+    "centers": [
+      {
+        "parameters": [
+          2,
+          2,
+          6,
+          3,
+          5
+        ],
+        "order": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "q": [
+          7,
+          31,
+          1,
+          1
+        ],
+        "P": [
+          [
+            0,
+            -8,
+            3,
+            -2
+          ],
+          [
+            -27,
+            0,
+            -10,
+            6
+          ],
+          [
+            2,
+            -3,
+            0,
+            0
+          ],
+          [
+            -3,
+            5,
+            -3,
+            0
+          ]
+        ],
+        "D": [
+          21,
+          -25,
+          9,
+          -5
+        ]
+      },
+      {
+        "parameters": [
+          4,
+          4,
+          5,
+          2,
+          2
+        ],
+        "order": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "q": [
+          9,
+          11,
+          1,
+          1
+        ],
+        "P": [
+          [
+            0,
+            -7,
+            2,
+            -4
+          ],
+          [
+            -14,
+            0,
+            -2,
+            5
+          ],
+          [
+            4,
+            -5,
+            0,
+            0
+          ],
+          [
+            -2,
+            2,
+            -1,
+            0
+          ]
+        ],
+        "D": [
+          3,
+          -1,
+          0,
+          -2
+        ]
+      },
+      {
+        "parameters": [
+          5,
+          10,
+          2,
+          3,
+          3
+        ],
+        "order": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "q": [
+          31,
+          7,
+          1,
+          1
+        ],
+        "P": [
+          [
+            0,
+            -27,
+            6,
+            -10
+          ],
+          [
+            -8,
+            0,
+            -1,
+            2
+          ],
+          [
+            5,
+            -6,
+            0,
+            0
+          ],
+          [
+            -3,
+            3,
+            -1,
+            0
+          ]
+        ],
+        "D": [
+          -25,
+          23,
+          -5,
+          7
+        ]
+      },
+      {
+        "parameters": [
+          6,
+          6,
+          14,
+          3,
+          3
+        ],
+        "order": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "q": [
+          19,
+          43,
+          1,
+          1
+        ],
+        "P": [
+          [
+            0,
+            -16,
+            3,
+            -6
+          ],
+          [
+            -51,
+            0,
+            -6,
+            14
+          ],
+          [
+            6,
+            -7,
+            0,
+            0
+          ],
+          [
+            -3,
+            3,
+            -1,
+            0
+          ]
+        ],
+        "D": [
+          29,
+          -23,
+          3,
+          -9
+        ]
+      }
+    ],
+    "factor_data": [
+      {
+        "reverse": [
+          2,
+          3,
+          5
+        ],
+        "coefficients": [
+          1,
+          3,
+          -4,
+          6
+        ],
+        "factor_constant": -18,
+        "scale_cells": [
+          [
+            2,
+            0,
+            6,
+            0
+          ]
+        ]
+      },
+      {
+        "reverse": [
+          4,
+          2,
+          2
+        ],
+        "coefficients": [
+          -2,
+          -10,
+          12,
+          20
+        ],
+        "factor_constant": -80,
+        "scale_cells": [
+          [
+            4,
+            0,
+            5,
+            0
+          ]
+        ]
+      },
+      {
+        "reverse": [
+          5,
+          3,
+          3
+        ],
+        "coefficients": [
+          3,
+          -12,
+          15,
+          30
+        ],
+        "factor_constant": -270,
+        "scale_cells": [
+          [
+            10,
+            0,
+            2,
+            0
+          ]
+        ]
+      },
+      {
+        "reverse": [
+          6,
+          3,
+          3
+        ],
+        "coefficients": [
+          -3,
+          -21,
+          24,
+          42
+        ],
+        "factor_constant": -378,
+        "scale_cells": [
+          [
+            6,
+            0,
+            14,
+            0
+          ]
+        ]
+      }
+    ],
+    "cells_before_parity": 18,
+    "parity_exclusions": [
+      {
+        "center": 2,
+        "nodes23": [
+          0,
+          3,
+          2
+        ],
+        "nodes24": [
+          4,
+          0,
+          1
+        ],
+        "low_row3": [
+          -3,
+          3,
+          -1
+        ],
+        "low_row4": [
+          -1,
+          -1,
+          1
+        ],
+        "low_D3": 0,
+        "low_D4": 2,
+        "common_reverse_magnitude": 1,
+        "certificate": {
+          "kind": "odd_low_D_required",
+          "cores": [
+            3,
+            4
+          ],
+          "reason": "All three low-row entries are odd. Odd denominators make all low-column entries even, hence low D is odd."
+        }
+      },
+      {
+        "center": 2,
+        "nodes23": [
+          1,
+          2,
+          2
+        ],
+        "nodes24": [
+          4,
+          0,
+          1
+        ],
+        "low_row3": [
+          -4,
+          4,
+          -1
+        ],
+        "low_row4": [
+          -1,
+          -1,
+          1
+        ],
+        "low_D3": 0,
+        "low_D4": 2,
+        "common_reverse_magnitude": 1,
+        "certificate": {
+          "kind": "odd_low_D_required",
+          "cores": [
+            4
+          ],
+          "reason": "All three low-row entries are odd. Odd denominators make all low-column entries even, hence low D is odd."
+        }
+      },
+      {
+        "center": 2,
+        "nodes23": [
+          2,
+          1,
+          2
+        ],
+        "nodes24": [
+          4,
+          0,
+          1
+        ],
+        "low_row3": [
+          -5,
+          5,
+          -1
+        ],
+        "low_row4": [
+          -1,
+          -1,
+          1
+        ],
+        "low_D3": 0,
+        "low_D4": 2,
+        "common_reverse_magnitude": 1,
+        "certificate": {
+          "kind": "odd_low_D_required",
+          "cores": [
+            3,
+            4
+          ],
+          "reason": "All three low-row entries are odd. Odd denominators make all low-column entries even, hence low D is odd."
+        }
+      },
+      {
+        "center": 2,
+        "nodes23": [
+          3,
+          0,
+          2
+        ],
+        "nodes24": [
+          4,
+          0,
+          1
+        ],
+        "low_row3": [
+          -6,
+          6,
+          -1
+        ],
+        "low_row4": [
+          -1,
+          -1,
+          1
+        ],
+        "low_D3": 0,
+        "low_D4": 2,
+        "common_reverse_magnitude": 1,
+        "certificate": {
+          "kind": "odd_low_D_required",
+          "cores": [
+            4
+          ],
+          "reason": "All three low-row entries are odd. Odd denominators make all low-column entries even, hence low D is odd."
+        }
+      }
+    ],
+    "remaining_cells": [
+      {
+        "center": 1,
+        "nodes23": [
+          0,
+          0,
+          5
+        ],
+        "nodes24": [
+          5,
+          0,
+          0
+        ],
+        "low_row3": [
+          -1,
+          4,
+          -4
+        ],
+        "low_row4": [
+          -1,
+          -4,
+          4
+        ],
+        "low_D3": -9,
+        "low_D4": 5,
+        "common_reverse_magnitude": 4
+      },
+      {
+        "center": 1,
+        "nodes23": [
+          0,
+          5,
+          0
+        ],
+        "nodes24": [
+          0,
+          0,
+          5
+        ],
+        "low_row3": [
+          -1,
+          -1,
+          1
+        ],
+        "low_row4": [
+          4,
+          -4,
+          -1
+        ],
+        "low_D3": -9,
+        "low_D4": 5,
+        "common_reverse_magnitude": 1
+      },
+      {
+        "center": 2,
+        "nodes23": [
+          0,
+          2,
+          3
+        ],
+        "nodes24": [
+          4,
+          1,
+          0
+        ],
+        "low_row3": [
+          -3,
+          4,
+          -2
+        ],
+        "low_row4": [
+          -1,
+          -2,
+          2
+        ],
+        "low_D3": 0,
+        "low_D4": 2,
+        "common_reverse_magnitude": 2
+      },
+      {
+        "center": 2,
+        "nodes23": [
+          0,
+          2,
+          3
+        ],
+        "nodes24": [
+          5,
+          0,
+          0
+        ],
+        "low_row3": [
+          -3,
+          4,
+          -2
+        ],
+        "low_row4": [
+          -2,
+          -1,
+          2
+        ],
+        "low_D3": 0,
+        "low_D4": 2,
+        "common_reverse_magnitude": 2
+      },
+      {
+        "center": 2,
+        "nodes23": [
+          1,
+          1,
+          3
+        ],
+        "nodes24": [
+          4,
+          1,
+          0
+        ],
+        "low_row3": [
+          -4,
+          5,
+          -2
+        ],
+        "low_row4": [
+          -1,
+          -2,
+          2
+        ],
+        "low_D3": 0,
+        "low_D4": 2,
+        "common_reverse_magnitude": 2
+      },
+      {
+        "center": 2,
+        "nodes23": [
+          1,
+          1,
+          3
+        ],
+        "nodes24": [
+          5,
+          0,
+          0
+        ],
+        "low_row3": [
+          -4,
+          5,
+          -2
+        ],
+        "low_row4": [
+          -2,
+          -1,
+          2
+        ],
+        "low_D3": 0,
+        "low_D4": 2,
+        "common_reverse_magnitude": 2
+      },
+      {
+        "center": 2,
+        "nodes23": [
+          2,
+          0,
+          3
+        ],
+        "nodes24": [
+          4,
+          1,
+          0
+        ],
+        "low_row3": [
+          -5,
+          6,
+          -2
+        ],
+        "low_row4": [
+          -1,
+          -2,
+          2
+        ],
+        "low_D3": 0,
+        "low_D4": 2,
+        "common_reverse_magnitude": 2
+      },
+      {
+        "center": 2,
+        "nodes23": [
+          2,
+          0,
+          3
+        ],
+        "nodes24": [
+          5,
+          0,
+          0
+        ],
+        "low_row3": [
+          -5,
+          6,
+          -2
+        ],
+        "low_row4": [
+          -2,
+          -1,
+          2
+        ],
+        "low_D3": 0,
+        "low_D4": 2,
+        "common_reverse_magnitude": 2
+      },
+      {
+        "center": 3,
+        "nodes23": [
+          0,
+          2,
+          3
+        ],
+        "nodes24": [
+          5,
+          0,
+          0
+        ],
+        "low_row3": [
+          -4,
+          5,
+          -2
+        ],
+        "low_row4": [
+          -1,
+          -2,
+          2
+        ],
+        "low_D3": 5,
+        "low_D4": -7,
+        "common_reverse_magnitude": 2
+      },
+      {
+        "center": 3,
+        "nodes23": [
+          1,
+          1,
+          3
+        ],
+        "nodes24": [
+          5,
+          0,
+          0
+        ],
+        "low_row3": [
+          -5,
+          6,
+          -2
+        ],
+        "low_row4": [
+          -1,
+          -2,
+          2
+        ],
+        "low_D3": 5,
+        "low_D4": -7,
+        "common_reverse_magnitude": 2
+      },
+      {
+        "center": 3,
+        "nodes23": [
+          2,
+          0,
+          3
+        ],
+        "nodes24": [
+          5,
+          0,
+          0
+        ],
+        "low_row3": [
+          -6,
+          7,
+          -2
+        ],
+        "low_row4": [
+          -1,
+          -2,
+          2
+        ],
+        "low_D3": 5,
+        "low_D4": -7,
+        "common_reverse_magnitude": 2
+      },
+      {
+        "center": 4,
+        "nodes23": [
+          0,
+          2,
+          3
+        ],
+        "nodes24": [
+          5,
+          0,
+          0
+        ],
+        "low_row3": [
+          -5,
+          6,
+          -2
+        ],
+        "low_row4": [
+          -1,
+          -2,
+          2
+        ],
+        "low_D3": -3,
+        "low_D4": 9,
+        "common_reverse_magnitude": 2
+      },
+      {
+        "center": 4,
+        "nodes23": [
+          1,
+          1,
+          3
+        ],
+        "nodes24": [
+          5,
+          0,
+          0
+        ],
+        "low_row3": [
+          -6,
+          7,
+          -2
+        ],
+        "low_row4": [
+          -1,
+          -2,
+          2
+        ],
+        "low_D3": -3,
+        "low_D4": 9,
+        "common_reverse_magnitude": 2
+      },
+      {
+        "center": 4,
+        "nodes23": [
+          2,
+          0,
+          3
+        ],
+        "nodes24": [
+          5,
+          0,
+          0
+        ],
+        "low_row3": [
+          -7,
+          8,
+          -2
+        ],
+        "low_row4": [
+          -1,
+          -2,
+          2
+        ],
+        "low_D3": -3,
+        "low_D4": 9,
+        "common_reverse_magnitude": 2
+      }
+    ],
+    "denominator_scope": "q34 is not bounded; odd q34 and m | (q34-1) are required."
+  },
+  "positive_exception": {
+    "status": "unbounded exclusion proved",
+    "reverse_range": [
+      [
+        1,
+        2,
+        5
+      ],
+      [
+        1,
+        2,
+        6
+      ],
+      [
+        1,
+        2,
+        7
+      ],
+      [
+        1,
+        3,
+        7
+      ],
+      [
+        1,
+        3,
+        8
+      ],
+      [
+        1,
+        3,
+        9
+      ],
+      [
+        1,
+        3,
+        10
+      ],
+      [
+        1,
+        3,
+        11
+      ],
+      [
+        1,
+        3,
+        12
+      ],
+      [
+        1,
+        3,
+        13
+      ],
+      [
+        2,
+        3,
+        5
+      ],
+      [
+        2,
+        3,
+        6
+      ]
+    ],
+    "scale_catalog_including_all_half_lines": [
+      {
+        "reverse": [
+          1,
+          2,
+          5
+        ],
+        "scale_cell": [
+          1,
+          0,
+          2,
+          0
+        ],
+        "parameter_scope": "all integers t>=0 before imposing s<=z",
+        "matrix_identity_check": {
+          "all_row_identity_coefficients_zero": true,
+          "all_pair_identity_coefficients_zero": true,
+          "parameter_scope": "every integer t>=0"
+        },
+        "intersection_s_le_z": [
+          0
+        ]
+      },
+      {
+        "reverse": [
+          1,
+          2,
+          5
+        ],
+        "scale_cell": [
+          2,
+          0,
+          6,
+          0
+        ],
+        "parameter_scope": "all integers t>=0 before imposing s<=z",
+        "matrix_identity_check": {
+          "all_row_identity_coefficients_zero": true,
+          "all_pair_identity_coefficients_zero": true,
+          "parameter_scope": "every integer t>=0"
+        },
+        "intersection_s_le_z": [
+          0
+        ]
+      },
+      {
+        "reverse": [
+          1,
+          2,
+          6
+        ],
+        "scale_cell": [
+          1,
+          8,
+          1,
+          4
+        ],
+        "parameter_scope": "all integers t>=0 before imposing s<=z",
+        "matrix_identity_check": {
+          "all_row_identity_coefficients_zero": true,
+          "all_pair_identity_coefficients_zero": true,
+          "parameter_scope": "every integer t>=0"
+        },
+        "intersection_s_le_z": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      {
+        "reverse": [
+          1,
+          2,
+          6
+        ],
+        "scale_cell": [
+          3,
+          8,
+          2,
+          4
+        ],
+        "parameter_scope": "all integers t>=0 before imposing s<=z",
+        "matrix_identity_check": {
+          "all_row_identity_coefficients_zero": true,
+          "all_pair_identity_coefficients_zero": true,
+          "parameter_scope": "every integer t>=0"
+        },
+        "intersection_s_le_z": {
+          "lower": 0,
+          "upper": -1
+        }
+      },
+      {
+        "reverse": [
+          1,
+          2,
+          6
+        ],
+        "scale_cell": [
+          5,
+          8,
+          3,
+          4
+        ],
+        "parameter_scope": "all integers t>=0 before imposing s<=z",
+        "matrix_identity_check": {
+          "all_row_identity_coefficients_zero": true,
+          "all_pair_identity_coefficients_zero": true,
+          "parameter_scope": "every integer t>=0"
+        },
+        "intersection_s_le_z": {
+          "lower": 0,
+          "upper": -1
+        }
+      },
+      {
+        "reverse": [
+          1,
+          2,
+          6
+        ],
+        "scale_cell": [
+          7,
+          8,
+          4,
+          4
+        ],
+        "parameter_scope": "all integers t>=0 before imposing s<=z",
+        "matrix_identity_check": {
+          "all_row_identity_coefficients_zero": true,
+          "all_pair_identity_coefficients_zero": true,
+          "parameter_scope": "every integer t>=0"
+        },
+        "intersection_s_le_z": {
+          "lower": 0,
+          "upper": -1
+        }
+      },
+      {
+        "reverse": [
+          1,
+          3,
+          8
+        ],
+        "scale_cell": [
+          2,
+          0,
+          5,
+          0
+        ],
+        "parameter_scope": "all integers t>=0 before imposing s<=z",
+        "matrix_identity_check": {
+          "all_row_identity_coefficients_zero": true,
+          "all_pair_identity_coefficients_zero": true,
+          "parameter_scope": "every integer t>=0"
+        },
+        "intersection_s_le_z": [
+          0
+        ]
+      },
+      {
+        "reverse": [
+          1,
+          3,
+          9
+        ],
+        "scale_cell": [
+          2,
+          0,
+          2,
+          0
+        ],
+        "parameter_scope": "all integers t>=0 before imposing s<=z",
+        "matrix_identity_check": {
+          "all_row_identity_coefficients_zero": true,
+          "all_pair_identity_coefficients_zero": true,
+          "parameter_scope": "every integer t>=0"
+        },
+        "intersection_s_le_z": [
+          0
+        ]
+      },
+      {
+        "reverse": [
+          1,
+          3,
+          9
+        ],
+        "scale_cell": [
+          4,
+          0,
+          6,
+          0
+        ],
+        "parameter_scope": "all integers t>=0 before imposing s<=z",
+        "matrix_identity_check": {
+          "all_row_identity_coefficients_zero": true,
+          "all_pair_identity_coefficients_zero": true,
+          "parameter_scope": "every integer t>=0"
+        },
+        "intersection_s_le_z": [
+          0
+        ]
+      },
+      {
+        "reverse": [
+          1,
+          3,
+          9
+        ],
+        "scale_cell": [
+          6,
+          0,
+          26,
+          0
+        ],
+        "parameter_scope": "all integers t>=0 before imposing s<=z",
+        "matrix_identity_check": {
+          "all_row_identity_coefficients_zero": true,
+          "all_pair_identity_coefficients_zero": true,
+          "parameter_scope": "every integer t>=0"
+        },
+        "intersection_s_le_z": [
+          0
+        ]
+      },
+      {
+        "reverse": [
+          1,
+          3,
+          11
+        ],
+        "scale_cell": [
+          8,
+          0,
+          2,
+          0
+        ],
+        "parameter_scope": "all integers t>=0 before imposing s<=z",
+        "matrix_identity_check": {
+          "all_row_identity_coefficients_zero": true,
+          "all_pair_identity_coefficients_zero": true,
+          "parameter_scope": "every integer t>=0"
+        },
+        "intersection_s_le_z": []
+      },
+      {
+        "reverse": [
+          1,
+          3,
+          12
+        ],
+        "scale_cell": [
+          4,
+          0,
+          1,
+          0
+        ],
+        "parameter_scope": "all integers t>=0 before imposing s<=z",
+        "matrix_identity_check": {
+          "all_row_identity_coefficients_zero": true,
+          "all_pair_identity_coefficients_zero": true,
+          "parameter_scope": "every integer t>=0"
+        },
+        "intersection_s_le_z": []
+      },
+      {
+        "reverse": [
+          2,
+          3,
+          5
+        ],
+        "scale_cell": [
+          2,
+          0,
+          6,
+          0
+        ],
+        "parameter_scope": "all integers t>=0 before imposing s<=z",
+        "matrix_identity_check": {
+          "all_row_identity_coefficients_zero": true,
+          "all_pair_identity_coefficients_zero": true,
+          "parameter_scope": "every integer t>=0"
+        },
+        "intersection_s_le_z": [
+          0
+        ]
+      },
+      {
+        "reverse": [
+          2,
+          3,
+          6
+        ],
+        "scale_cell": [
+          2,
+          12,
+          1,
+          0
+        ],
+        "parameter_scope": "all integers t>=0 before imposing s<=z",
+        "matrix_identity_check": {
+          "all_row_identity_coefficients_zero": true,
+          "all_pair_identity_coefficients_zero": true,
+          "parameter_scope": "every integer t>=0"
+        },
+        "intersection_s_le_z": {
+          "lower": 0,
+          "upper": -1
+        }
+      },
+      {
+        "reverse": [
+          2,
+          3,
+          6
+        ],
+        "scale_cell": [
+          4,
+          12,
+          1,
+          0
+        ],
+        "parameter_scope": "all integers t>=0 before imposing s<=z",
+        "matrix_identity_check": {
+          "all_row_identity_coefficients_zero": true,
+          "all_pair_identity_coefficients_zero": true,
+          "parameter_scope": "every integer t>=0"
+        },
+        "intersection_s_le_z": {
+          "lower": 0,
+          "upper": -1
+        }
+      },
+      {
+        "reverse": [
+          2,
+          3,
+          6
+        ],
+        "scale_cell": [
+          6,
+          12,
+          1,
+          0
+        ],
+        "parameter_scope": "all integers t>=0 before imposing s<=z",
+        "matrix_identity_check": {
+          "all_row_identity_coefficients_zero": true,
+          "all_pair_identity_coefficients_zero": true,
+          "parameter_scope": "every integer t>=0"
+        },
+        "intersection_s_le_z": {
+          "lower": 0,
+          "upper": -1
+        }
+      },
+      {
+        "reverse": [
+          2,
+          3,
+          6
+        ],
+        "scale_cell": [
+          8,
+          12,
+          1,
+          0
+        ],
+        "parameter_scope": "all integers t>=0 before imposing s<=z",
+        "matrix_identity_check": {
+          "all_row_identity_coefficients_zero": true,
+          "all_pair_identity_coefficients_zero": true,
+          "parameter_scope": "every integer t>=0"
+        },
+        "intersection_s_le_z": {
+          "lower": 0,
+          "upper": -1
+        }
+      },
+      {
+        "reverse": [
+          2,
+          3,
+          6
+        ],
+        "scale_cell": [
+          10,
+          12,
+          1,
+          0
+        ],
+        "parameter_scope": "all integers t>=0 before imposing s<=z",
+        "matrix_identity_check": {
+          "all_row_identity_coefficients_zero": true,
+          "all_pair_identity_coefficients_zero": true,
+          "parameter_scope": "every integer t>=0"
+        },
+        "intersection_s_le_z": {
+          "lower": 0,
+          "upper": -1
+        }
+      },
+      {
+        "reverse": [
+          2,
+          3,
+          6
+        ],
+        "scale_cell": [
+          12,
+          12,
+          1,
+          0
+        ],
+        "parameter_scope": "all integers t>=0 before imposing s<=z",
+        "matrix_identity_check": {
+          "all_row_identity_coefficients_zero": true,
+          "all_pair_identity_coefficients_zero": true,
+          "parameter_scope": "every integer t>=0"
+        },
+        "intersection_s_le_z": {
+          "lower": 0,
+          "upper": -1
+        }
+      }
+    ],
+    "mathematical_scale_constraint": "s<=z follows from low D at core4 and odd high denominators; no numerical scale cutoff.",
+    "centers_after_scale_constraint": [
+      {
+        "parameters": [
+          1,
+          1,
+          1,
+          2,
+          6
+        ],
+        "order": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "q": [
+          3,
+          7,
+          1,
+          1
+        ],
+        "P": [
+          [
+            0,
+            -4,
+            2,
+            -1
+          ],
+          [
+            -5,
+            0,
+            -3,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -2,
+            6,
+            -5,
+            0
+          ]
+        ],
+        "D": [
+          3,
+          -7,
+          5,
+          -1
+        ]
+      },
+      {
+        "parameters": [
+          1,
+          1,
+          2,
+          2,
+          5
+        ],
+        "order": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "q": [
+          3,
+          11,
+          1,
+          1
+        ],
+        "P": [
+          [
+            0,
+            -4,
+            2,
+            -1
+          ],
+          [
+            -8,
+            0,
+            -5,
+            2
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -2,
+            5,
+            -4,
+            0
+          ]
+        ],
+        "D": [
+          6,
+          -10,
+          6,
+          -2
+        ]
+      },
+      {
+        "parameters": [
+          1,
+          2,
+          2,
+          3,
+          9
+        ],
+        "order": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "q": [
+          7,
+          19,
+          1,
+          1
+        ],
+        "P": [
+          [
+            0,
+            -11,
+            6,
+            -2
+          ],
+          [
+            -12,
+            0,
+            -9,
+            2
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -3,
+            9,
+            -7,
+            0
+          ]
+        ],
+        "D": [
+          7,
+          -15,
+          9,
+          -1
+        ]
+      },
+      {
+        "parameters": [
+          1,
+          2,
+          5,
+          3,
+          8
+        ],
+        "order": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "q": [
+          7,
+          41,
+          1,
+          1
+        ],
+        "P": [
+          [
+            0,
+            -11,
+            6,
+            -2
+          ],
+          [
+            -26,
+            0,
+            -20,
+            5
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -3,
+            8,
+            -6,
+            0
+          ]
+        ],
+        "D": [
+          21,
+          -36,
+          19,
+          -4
+        ]
+      },
+      {
+        "parameters": [
+          1,
+          2,
+          6,
+          2,
+          5
+        ],
+        "order": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "q": [
+          5,
+          31,
+          1,
+          1
+        ],
+        "P": [
+          [
+            0,
+            -7,
+            4,
+            -2
+          ],
+          [
+            -22,
+            0,
+            -15,
+            6
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -2,
+            5,
+            -4,
+            0
+          ]
+        ],
+        "D": [
+          18,
+          -27,
+          14,
+          -5
+        ]
+      },
+      {
+        "parameters": [
+          1,
+          4,
+          6,
+          3,
+          9
+        ],
+        "order": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "q": [
+          13,
+          55,
+          1,
+          1
+        ],
+        "P": [
+          [
+            0,
+            -21,
+            12,
+            -4
+          ],
+          [
+            -34,
+            0,
+            -27,
+            6
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -3,
+            9,
+            -7,
+            0
+          ]
+        ],
+        "D": [
+          23,
+          -41,
+          21,
+          -3
+        ]
+      },
+      {
+        "parameters": [
+          1,
+          6,
+          26,
+          3,
+          9
+        ],
+        "order": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "q": [
+          19,
+          235,
+          1,
+          1
+        ],
+        "P": [
+          [
+            0,
+            -31,
+            18,
+            -6
+          ],
+          [
+            -144,
+            0,
+            -117,
+            26
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -3,
+            9,
+            -7,
+            0
+          ]
+        ],
+        "D": [
+          127,
+          -211,
+          105,
+          -21
+        ]
+      },
+      {
+        "parameters": [
+          2,
+          2,
+          6,
+          3,
+          5
+        ],
+        "order": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "q": [
+          7,
+          31,
+          1,
+          1
+        ],
+        "P": [
+          [
+            0,
+            -8,
+            3,
+            -2
+          ],
+          [
+            -27,
+            0,
+            -10,
+            6
+          ],
+          [
+            2,
+            -3,
+            0,
+            0
+          ],
+          [
+            -3,
+            5,
+            -3,
+            0
+          ]
+        ],
+        "D": [
+          21,
+          -25,
+          9,
+          -5
+        ]
+      }
+    ],
+    "complete_final_certificates": [
+      {
+        "parameters": [
+          1,
+          1,
+          1,
+          2,
+          6
+        ],
+        "nodes23": [
+          1,
+          4,
+          0
+        ],
+        "nodes24": [
+          4,
+          1,
+          0
+        ],
+        "low_row3": [
+          -1,
+          -1,
+          1
+        ],
+        "low_row4": [
+          -1,
+          -6,
+          6
+        ],
+        "q34": 7,
+        "D_C": 5,
+        "D_D": -1,
+        "certificate": {
+          "kind": "two_odd_denominators_at_core3",
+          "required_sum": "q03-1 + q13-1 = q34-D_C >= 4",
+          "actual_q34_minus_D_C": 2
+        }
+      },
+      {
+        "parameters": [
+          1,
+          1,
+          1,
+          2,
+          6
+        ],
+        "nodes23": [
+          1,
+          4,
+          0
+        ],
+        "nodes24": [
+          5,
+          0,
+          0
+        ],
+        "low_row3": [
+          -1,
+          -1,
+          1
+        ],
+        "low_row4": [
+          -2,
+          -5,
+          6
+        ],
+        "q34": 7,
+        "D_C": 5,
+        "D_D": -1,
+        "certificate": {
+          "kind": "two_odd_denominators_at_core3",
+          "required_sum": "q03-1 + q13-1 = q34-D_C >= 4",
+          "actual_q34_minus_D_C": 2
+        }
+      },
+      {
+        "parameters": [
+          1,
+          1,
+          2,
+          2,
+          5
+        ],
+        "nodes23": [
+          1,
+          4,
+          0
+        ],
+        "nodes24": [
+          4,
+          0,
+          1
+        ],
+        "low_row3": [
+          -1,
+          -1,
+          1
+        ],
+        "low_row4": [
+          -1,
+          -4,
+          4
+        ],
+        "q34": 5,
+        "D_C": 6,
+        "D_D": -2,
+        "certificate": {
+          "kind": "two_odd_denominators_at_core3",
+          "required_sum": "q03-1 + q13-1 = q34-D_C >= 4",
+          "actual_q34_minus_D_C": -1
+        }
+      },
+      {
+        "parameters": [
+          1,
+          2,
+          2,
+          3,
+          9
+        ],
+        "nodes23": [
+          1,
+          4,
+          0
+        ],
+        "nodes24": [
+          5,
+          0,
+          0
+        ],
+        "low_row3": [
+          -1,
+          -1,
+          1
+        ],
+        "low_row4": [
+          -1,
+          -8,
+          8
+        ],
+        "q34": 9,
+        "D_C": 9,
+        "D_D": -1,
+        "certificate": {
+          "kind": "two_odd_denominators_at_core3",
+          "required_sum": "q03-1 + q13-1 = q34-D_C >= 4",
+          "actual_q34_minus_D_C": 0
+        }
+      },
+      {
+        "parameters": [
+          1,
+          2,
+          6,
+          2,
+          5
+        ],
+        "nodes23": [
+          1,
+          4,
+          0
+        ],
+        "nodes24": [
+          4,
+          0,
+          1
+        ],
+        "low_row3": [
+          -1,
+          -1,
+          1
+        ],
+        "low_row4": [
+          -1,
+          -4,
+          4
+        ],
+        "q34": 5,
+        "D_C": 14,
+        "D_D": -5,
+        "certificate": {
+          "kind": "two_odd_denominators_at_core3",
+          "required_sum": "q03-1 + q13-1 = q34-D_C >= 4",
+          "actual_q34_minus_D_C": -9
+        }
+      },
+      {
+        "parameters": [
+          1,
+          4,
+          6,
+          3,
+          9
+        ],
+        "nodes23": [
+          1,
+          4,
+          0
+        ],
+        "nodes24": [
+          5,
+          0,
+          0
+        ],
+        "low_row3": [
+          -1,
+          -1,
+          1
+        ],
+        "low_row4": [
+          -1,
+          -8,
+          8
+        ],
+        "q34": 9,
+        "D_C": 21,
+        "D_D": -3,
+        "certificate": {
+          "kind": "two_odd_denominators_at_core3",
+          "required_sum": "q03-1 + q13-1 = q34-D_C >= 4",
+          "actual_q34_minus_D_C": -12
+        }
+      },
+      {
+        "parameters": [
+          1,
+          6,
+          26,
+          3,
+          9
+        ],
+        "nodes23": [
+          1,
+          4,
+          0
+        ],
+        "nodes24": [
+          5,
+          0,
+          0
+        ],
+        "low_row3": [
+          -1,
+          -1,
+          1
+        ],
+        "low_row4": [
+          -1,
+          -8,
+          8
+        ],
+        "q34": 9,
+        "D_C": 105,
+        "D_D": -21,
+        "certificate": {
+          "kind": "two_odd_denominators_at_core3",
+          "required_sum": "q03-1 + q13-1 = q34-D_C >= 4",
+          "actual_q34_minus_D_C": -96
+        }
+      },
+      {
+        "parameters": [
+          2,
+          2,
+          6,
+          3,
+          5
+        ],
+        "nodes23": [
+          0,
+          5,
+          0
+        ],
+        "nodes24": [
+          5,
+          0,
+          0
+        ],
+        "low_row3": [
+          -1,
+          -1,
+          1
+        ],
+        "low_row4": [
+          -1,
+          -4,
+          4
+        ],
+        "q34": 5,
+        "D_C": 9,
+        "D_D": -5,
+        "certificate": {
+          "kind": "two_odd_denominators_at_core3",
+          "required_sum": "q03-1 + q13-1 = q34-D_C >= 4",
+          "actual_q34_minus_D_C": -4
+        }
+      }
+    ],
+    "final_survivors": 0
+  },
+  "negative_exception": {
+    "status": "open; completely reduced to two templates",
+    "shared_denominators": [
+      3,
+      5
+    ],
+    "template_A": {
+      "q34": 3,
+      "u": -1,
+      "v": -2,
+      "branch": "negative only: S=T=w, r=w+H",
+      "nodes23": "(a,3-a,2), 0<=a<=3",
+      "nodes24": "(b,1-b,4), 0<=b<=1",
+      "low_row3": "(-j,j,-1), j=r+a-1",
+      "low_row4": "(k+1,-k,-2), k=w-b"
+    },
+    "template_B": {
+      "q34": [
+        3,
+        5
+      ],
+      "u": "-(q34-1)",
+      "v": -1,
+      "branch": "L=1 negative branch or L=3 positive branch",
+      "nodes23": "(a,5-q34-a,q34), 0<=a<=5-q34",
+      "nodes24": "(b,3-L-b,L+2), 0<=b<=3-L",
+      "low_row3": "(-j,j+q34-2,-(q34-1)), j=r+a-1>=1",
+      "low_row4": "(k,-k,-1), k=S+1-b>=1"
+    },
+    "central_branch_constraints": {
+      "negative": "S=T=w>=2, r=w+H, w*w < 2*H*(H+1) < 4*w*w",
+      "positive": "T=S+2 and r<S<2*r"
+    }
+  },
+  "corollary": "If q34>=7, the central two-high core is one of the four ordinary models. Its two high denominators are at most 43 in the canonical orientation.",
+  "not_claimed": [
+    "G5_15 exclusion",
+    "a global arithmetic lift",
+    "a Lagrangian torus fibration existence or nonexistence result beyond the arithmetic setting"
+  ],
+  "proof_file": "paper/g5_15_reduction_v21.tex",
+  "proof_sha256": "0b9be523ca08544eafa35ba4ce8e660feba573297808fbd8c04c31df03449fef",
+  "script_sha256": "254a6f76ef7a25676b14cffe63dc6412b4c1f479a8d8ba4ca18cf7e599da7b2a"
+}

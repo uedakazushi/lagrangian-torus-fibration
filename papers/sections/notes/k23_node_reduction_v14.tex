@@ -1,0 +1,147 @@
+% v14 research-note module: necessary conditions for the remaining K_{2,3}.
+\subsection{\texorpdfstring{$K_{2,3}$}{K2,3} support の三つの二高分母 core と node 条件}
+\label{kn14:section}
+
+高分母 support が $K_{2,3}$ である場合を考える．二つの三価頂点を $a,b$，
+三つの二価頂点を $i\in\mathbb Z/3$ と書く．この候補の排除はまだ得られていないが，
+三つの二高分母 core について次の必要条件を分母上限なしに課すことができる．
+以下では正の整数 charts，整数 marked clutching と node 非負性を仮定する．
+対向 $D$ の相殺は用いない．
+
+\begin{proposition}[$K_{2,3}$ の向きと低低 entry の制限]
+\label{kn14:reduction}
+三つの二価 core は，必要に応じて cyclic に標識すると
+\[
+ p^i_{i+1,a}=\alpha_i>0,\quad p^i_{i-1,a}=-\beta_i<0,
+ \qquad
+ p^i_{i+1,b}=-\gamma_i<0,\quad p^i_{i-1,b}=\delta_i>0
+\]
+という reverse entries を持つ．各 core の二つの低 rays の間の entries を
+\[
+ u_i=p^i_{i+1,i-1},\qquad v_i=p^i_{i-1,i+1}
+\]
+とすると，$u_i,v_i\leq0$，$u_iv_i=0$ であり，
+\[
+ u_i=\gamma_i-\alpha_i-1,\qquad
+ v_i=\beta_i-\delta_i-1,\qquad
+ L_i=-(u_i+v_i)\in\{1,3,4\}.
+\]
+さらに，三つの $L_i$ のうち少なくとも一つは一である．
+従って，少なくとも一つの二価 core は，canonical 補助変数の負の枝に属する．
+\end{proposition}
+
+\begin{proof}
+各二高分母 core では，二つの低 rays の一方だけが高 ray $a$ に正の reverse entry を持つ．
+これを三つの二価 vertices の間の矢印で表す．低分母 edge $ij$ の puncture $a$ の node 数は
+\[
+ 1-p^i_{ja}-p^j_{ia}\geq0
+\]
+なので，互いに相手へ向かう正の矢印は存在しない．各頂点の outdegree が一であるため，
+三つの矢印は directed three-cycle を作る．高 ray $b$ への符号は全て逆である．
+これで表示した cyclic 標識が得られる．
+
+低 rays の row sums が $-1$ であることから $u_i,v_i$ の式を得る．
+二高分母の符号定理と低低 entry の二分により，$u_i,v_i$ の一方は零，他方は負であり，
+$L_i$ は一または三以上の整数である．
+低 edge $i,i+1$ の三つの node 数は
+\begin{equation}\label{kn14:three-nodes}
+ \left(1-\alpha_i+\beta_{i+1},\quad
+       1+\gamma_i-\delta_{i+1},\quad
+       1-u_i-v_{i+1}\right)
+\end{equation}
+となる．その和は五であり，各成分は零以上五以下である．
+各 $L_i$ は第三成分のどれかに負の entry の絶対値として現れ，もう一方の寄与も非負なので，
+$1+L_i\leq5$ となる．従って $L_i\in\{1,3,4\}$ である．
+
+core $i$ の canonical な高 ray $A$ が $a$ に対応するときを $\sigma_i=+$，
+$b$ に対応するときを $\sigma_i=-$ とする．canonical data を $r_i,S_i,T_i$ と書けば
+\[
+\begin{array}{c|rrrr|rr}
+\sigma_i&\alpha_i&\beta_i&\gamma_i&\delta_i&u_i&v_i\\\hline
+ +&r_i&S_i&r_i+1&T_i&0&-L_i\\
+ -&T_i&r_i+1&S_i&r_i&-L_i&0
+\end{array}
+\qquad L_i=T_i-S_i+1.
+\]
+従って $j=i+1$ の辺における node 数は次の表で与えられる．
+\begin{center}
+\small
+\begin{tabular}{c|ccc}
+ $(\sigma_i,\sigma_j)$&puncture $a$&puncture $b$&残る二価頂点\\\hline
+ $(+,+)$&$1-r_i+S_j$&$2+r_i-T_j$&$1+L_j$\\
+ $(+,-)$&$2-r_i+r_j$&$2+r_i-r_j$&$1$\\
+ $(-,+)$&$1-T_i+S_j$&$1+S_i-T_j$&$1+L_i+L_j$\\
+ $(-,-)$&$2-T_i+r_j$&$1+S_i-r_j$&$1+L_i$
+\end{tabular}
+\end{center}
+
+$\sigma_i$ が一定でないなら，cyclic な順序に $(-,+)$ の辺がある．
+その第三の node 数が五以下であることから $L_i+L_j\leq4$ となり，
+\[
+ (L_i,L_j)\in\{(1,1),(1,3),(3,1)\}
+\]
+に限られる．特に少なくとも一つは一である．
+
+$\sigma_i$ が全て正であり，全て $L_i\geq3$ だと仮定する．
+各 core は正の枝なので $S_i\geq r_i+1$ と $r_iT_i>(r_i+1)S_i$ により
+$T_i\geq r_i+3$ である．表の puncture $b$ の列を三辺で足すと
+\[
+ \sum_i(2+r_i-T_{i+1})
+ =6+\sum_i(r_i-T_i)\leq-3
+\]
+となって非負性に反する．全て負の場合にも，puncture $a$ の列を足せば同じ矛盾を得る．
+\end{proof}
+
+表から得られる条件は，三つの二価 core の node 配分を比較する条件であり，
+二つの三高分母中心 core の存在や，そこへの整数 clutching，対向 $D$ の相殺を保証しない．
+次には $L_i\in\{1,3,4\}$ と少なくとも一つの負の枝を保持し，
+中心の三高分母条件を同時に課す．この帰着は，分母を一定値以下に限った探索ではない．
+
+\paragraph{低分母側の係数相殺を加えるための表示．}
+canonical な二高分母行列から，低 rays の係数は
+\[
+ D_C=-1-x+y-(S-T-1)=y-x-S+T,
+ \qquad D_D=-1+s-z=s-z-1
+\]
+となる．$\sigma_i=+$ では $(D^i_{i+1},D^i_{i-1})=(D_C,D_D)$，
+$\sigma_i=-$ では $(D^i_{i+1},D^i_{i-1})=(D_D,D_C)$ である．
+従って次に課す三つの低辺の条件は
+\[
+ D^i_{i+1}+D^{i+1}_i=0\qquad(i\in\mathbb Z/3)
+\]
+であり，node の非負性とは別の条件である．
+
+\paragraph{全て $L_i=1$ の場合を残す理由．}
+$\sigma_i$ が一定で，全て $L_i=1$ なら不可能である．
+実際，負の枝の正整数補助変数を $c,e$ とすると $Ece=e-c+1$ である．
+$H=r-S=1$ は $E=1-S^2/2\leq-1$ と $c(1+Ee)=e+1$ に反するため，
+$r\geq S+2$ である．
+$\sigma_i=+$ が一定なら puncture $a$，負が一定なら puncture $b$ の node 数を足すと
+$3+\sum_i(S_i-r_i)\leq-3$ となる．
+
+しかし，割当が混在する場合には，三つの二価 core 間の低辺の node 条件だけから
+全て $L_i=1$ の場合を排除してはならない．具体的に $i=0,1,2$ の順に
+$\sigma=(+,+,-)$ とし，canonical 模型を
+\[
+\begin{array}{c|rrrrr|rr|rr}
+i&r&s&z&S&T&a_i&b_i&D_C&D_D\\\hline
+0&4&4&5&2&2&9&11&0&-2\\
+1&5&10&2&3&3&31&7&-5&7\\
+2&5&10&2&3&3&31&7&-5&7
+\end{array}
+\]
+とする．ここで $a_i,b_i$ は各 core の canonical 分母であり，
+$\sigma=-$ の最後の core では中心 $a,b$ への分母は逆順の $(7,31)$ となる．
+三模型はいずれも整数行和・pair products と正の標準 weights を満たす．
+三つの低辺の node 数は，punctures $(a,b,\text{残る二価頂点})$ の順に
+\[
+ (0,3,2),\qquad(2,2,1),\qquad(0,2,3)
+\]
+となり，いずれも非負で全数は五である．一方，同じ cyclic 順序での対向低係数の和は
+\[
+ 7,\qquad -10,\qquad 5
+\]
+であり，相殺しない．従ってこれは大域配置の例ではない．
+二つの中心 core も構成していないため，中心を含む全ての node 条件への反例とは扱わない．
+この例は，三低辺の node 条件を係数相殺に置き換えたり，そこから全負の枝を排除したりする
+誤った帰着を避けるための局所資料である．

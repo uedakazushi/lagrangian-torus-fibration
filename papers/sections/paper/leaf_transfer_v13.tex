@@ -1,0 +1,190 @@
+% v13: complete numerical leaf-to-degree-two transfer, with the continuation
+% along the second edge imposed.  No nonnegative-node hypothesis is used.
+
+\section{葉から二価 core を経由する係数の伝播}
+\label{lt13:section}
+
+命題~\ref{pe12:leaf-escalation} は，葉から二価 core へ進むと分母が増大することを示した．
+次に，その二価 core のもう一方の高 branch を実際に第三の core へ接続する条件を用いる．
+これにより，分母だけでなく係数 $D$ の値まで決まり，木の中心に向かう定量的な障害が得られる．
+
+\begin{lemma}[負の補助変数の差は $-1$ にならない]
+\label{lt13:no-negative-unit-gap}
+正の二高分母標準形で $\alpha,\beta<0$ とする．このとき $\alpha-\beta=-1$ は不可能である．
+\end{lemma}
+
+\begin{proof}
+$\alpha=-u$，$\beta=-v$ と置く．補題~\ref{ml12:dichotomy} により
+$w=S=T$，$H=r-w\geq1$ と書ける．式~\eqref{ml12:E-equation} は
+\[
+ \left(1-\frac{w^2}{H(H+1)}\right)uv=v-u+1
+\]
+を与える．$H^2<H(H+1)<(H+1)^2$ なので左辺の括弧は零ではない．
+$u=v+1$ なら右辺が零となり，$u,v>0$ に反する．
+\end{proof}
+
+\begin{proposition}[葉に接続した二高分母模型の三つの数値型]
+\label{lt13:three-types}
+高分母 support において，vertex $i$ の次数が一，その隣接 vertex $j$ の次数が二であるとする．
+$j$ のもう一つの高隣接 vertex を $k$ とし，$q_{ij}=a>1$，$q_{jk}=b>1$ と書く．
+正の局所 charts，辺 $ij$ の整数 marked clutching，および同辺の対向 $D$ の相殺を仮定する．
+この段階では辺 $jk$ の clutching を仮定しない．
+
+core $j$ の canonical な高 ray $A$ は必ず $ji$ に対応する．
+canonical データと高係数は，次の三つの数値型のいずれかになる：
+\begin{align*}
+\textnormal{I}\quad
+ &a=h(h+1)+1,\qquad b=(h+1)(h+2)+1,\qquad h\geq1,\\
+ &(r,s,z,S,T)=\bigl(h,1,1,h(h+1),(h+1)(h+2)\bigr),\\
+ &(D_A,D_B)=(a,-b);\tag{I}\label{lt13:type-I}\\[1mm]
+\textnormal{II}\quad
+ &a=2t+1,\qquad b=6t+1,\qquad t\geq1,\\
+ &(r,s,z,S,T)=(1,1,1,2t,6t),\\
+ &(D_A,D_B)=(3t,1-8t);\tag{II}\label{lt13:type-II}\\[1mm]
+\textnormal{III}\quad
+ &a=6t+1,\qquad b=20t-1,\qquad t\geq1,\\
+ &(r,s,z,S,T)=(1,2,2,3t,10t-1),\\
+ &(D_A,D_B)=(7t,3-18t).\tag{III}\label{lt13:type-III}
+\end{align*}
+型 I の $h=1$ と型 II の $t=1$ は同じ数値型 $(a,b)=(3,7)$ である．
+この表は共有辺の条件から従う必要条件であり，任意の標識付き接着や大域 atlas の存在を主張しない．
+node 数の非負性は用いない．
+\end{proposition}
+
+\begin{proof}
+葉 $i$ の高 ray の outgoing entries は，命題~\ref{qh9:isolated-local} より
+\[
+ (-m,-(h+1),h),\qquad m=a-1=t h(h+1),\qquad h,t\geq1
+\]
+である．そのうち label $k$ へ向かう entry を $x$ とし，core $j$ で $ji$ から $jk$，
+$jk$ から $ji$ へ向かう entries をそれぞれ $-\mu,-\nu$ と書く．
+命題~\ref{pe12:leaf-escalation} の証明により
+\[
+ \mu=ca+x,\qquad \nu=ca+\frac{m}{x},\qquad
+ b=c^2a+c\left(x+\frac{m}{x}\right)+1,
+ \quad c=\begin{cases}1,&x>0,\\2,&x<0.\end{cases}
+\]
+
+\paragraph{二つの共通 punctures における entries．}
+core $j$ の高 ray $ji$ から二つの低 rays へ向かう entries は一正一負である．
+補題~\ref{ls11:low-puncture} と，二高分母側の負の entry が $-m$ にはならないという
+補題~\ref{cc12:proper-negative} を用いると，それらの正負の値は
+\[
+\begin{array}{c|rr}
+ \text{葉側の }x&\text{core }j\text{ 側の正の entry}&\text{同じ row の負の entry}\\\hline
+ h&h+1&-1\\
+ -m&h+1&-h\\
+ -(h+1)&m&-h
+\end{array}
+\]
+に限られる．第一行では，葉側の二つの負の entries のうち $-m$ が二高分母側の $-1$ と接着する．
+残る二行で共通 punctures の符号を逆同士に合わせれば，表は直ちに従う．
+同符号同士に合わせる場合には，葉側の正の entry $h$ が $m$ の真約数なので $h=1$ が必要である．
+さらに負の組は葉側の $-m$ と二高分母側の $-1$ でなければならない．
+$x=-m$ の行ではこれが $m=h+1=2$ を要求し，$x=-(h+1)$ の行では $-h=-1$ となる．
+従って同符号の場合も同じ表に含まれる．
+
+\paragraph{$x=h$ の場合．}
+core $j$ で葉に向かう高 ray が canonical な $B$ だったと仮定すると，
+その正負の entries は $z=h+1$，$-y=-1$ である．
+もう一方の高分母 $b$ に対して
+\[
+ \alpha=\nu-b=-(h+1),\qquad \beta=y-z=-h
+\]
+となり，補題~\ref{lt13:no-negative-unit-gap} に反する．
+従って葉に向かう ray が $A$ である．表から $s=1$，canonical な正の entry は $h+1$ なので
+\[
+ r=t h,\quad S=t h(h+1),\quad
+ b-1=(h+1)\{t(h+1)+1\}.
+\]
+また $\nu=b-y+z$ と $y=(b-1)/(r+1)$ から
+\[
+ z=\frac{t(h+1)}{t h+1}
+   =1+\frac{t-1}{t h+1}.
+\]
+右辺は $[1,2)$ に属するため，整数性から $t=1$，$z=1$ となり，型 I を得る．
+
+\paragraph{$x=-m$ の場合．}
+この場合は $b=2a+1$，$\mu=a+1$，$\nu=2a-1$ である．
+葉に向かう ray が $B$ なら $\alpha=\nu-b=-2$，$\beta=h-(h+1)=-1$ なので，
+再び補題~\ref{lt13:no-negative-unit-gap} に反する．
+従って $A$ であり，表から
+\[
+ r=t h,\quad s=h,\quad S=t(h+1),\quad
+ z=\frac{2t h^2}{t h+1}=2h-\frac{2h}{t h+1}
+\]
+となる．整数性は $t h+1\mid2h$ を要求する．$t h+1>h$ なので $t h+1=2h$，
+従って $(2-t)h=1$，すなわち $h=t=1$ である．これは型 I の $h=1$ に含まれる．
+
+\paragraph{$x=-(h+1)$ の場合．}
+表の正の entry は最大約数 $m$ なので，補題~\ref{cf13:full-entry} により葉に向かう ray は $A$ である．
+従って $r=1$，$s=h$ となる．ここでは
+\[
+ \nu=2a-t h,\qquad b=4a-2(h+1+t h)+1
+\]
+であるから，$y=(b-1)/2$ と $\nu=b-y+z$ より $z=h$ を得る．
+さらに
+\[
+ T=\frac{b-1}{h}=2t(2h+1)-2+\frac2h
+\]
+の整数性から $h\mid2$，すなわち $h=1,2$ だけが残る．
+$h=1$ が型 II，$h=2$ が型 III である．
+
+最後に，標準形の係数公式
+$D_A=-a+B-r+S$，$D_B=-b+A+r+1-T$ に各データを代入すると，表示した $D$ を得る．
+以上は符号，整除性，row sums と共有辺 $ij$ の $D$ の相殺だけを用いている．
+\end{proof}
+
+\begin{theorem}[第三の core へ接続したときの完全な係数伝播]
+\label{lt13:exact-transfer}
+命題~\ref{lt13:three-types} の設定で，辺 $jk$ の marked puncture にも整数 clutching を仮定する．
+このとき，ある整数 $h\geq1$ に対して
+\[
+ a=h(h+1)+1,\qquad b=(h+1)(h+2)+1,
+\]
+であり，特に $b-a=2(h+1)$ および $\gcd(a,b)=1$ が成立する．
+core $j$ の係数は
+\[
+ D^j_i=a,\qquad D^j_k=-b
+\]
+となる．さらに core $k$ の ray $kj$ から低 ray $ki$ への entry は
+\[
+ p^k_{ji}=-(h+1),\qquad p^k_{ij}=-(h+2)
+\]
+に強制される．core $k$ の高分母次数や node 数の非負性は仮定しない．
+\end{theorem}
+
+\begin{proof}
+$i$ は高分母 support の葉なので $q_{ki}=1$ である．
+$u=p^k_{ji}$ と置くと，pair product と辺 $jk$ の puncture $i$ の clutching により
+\begin{equation}\label{lt13:continuation-congruence}
+ u\mid b-1,\qquad 0<|u|\leq b-1,\qquad u\equiv\nu\pmod b
+\end{equation}
+を得る．三つの型のいずれでも $0<\nu<b$ なので，可能な整数は $u=\nu$ または $u=\nu-b$ だけである．
+
+型 II では $\nu=3t+2$，$b=6t+1$ である．
+$u=3t+2$ が $6t$ を割れば $3t+2\mid4$ となって不可能である．
+$u=-(3t-1)$ が $6t$ を割る場合には $3t-1\mid2$ なので $t=1$ となる．
+これは型 I の $h=1$ と同じ数値型である．
+
+型 III では $\nu=10t+2$，$b=20t-1$ である．
+$u=10t+2$ の整除性は $10t+2\mid6$ を，$u=-(10t-3)$ の整除性は
+$10t-3\mid4$ を要求する．いずれも $t\geq1$ では不可能なので，型 III は全て排除される．
+
+従って型 I だけが残り，その係数は既に $(a,-b)$ である．
+この場合 $\nu=(h+1)^2+1$，$b-1=(h+1)(h+2)$ である．
+$u=\nu$ の整除性は $\nu\mid h$ を要求するが，$\nu>h$ なので不可能である．
+従って $u=\nu-b=-(h+1)$ である．その reverse entry は
+$(b-1)/u=-(h+2)$ となる．
+また $a$ は奇数で，$a\equiv1\pmod{h+1}$ だから
+\[
+ \gcd(a,b)=\gcd\bigl(a,2(h+1)\bigr)=1
+\]
+である．
+\end{proof}
+
+この結論は残る数値型を指定するものであり，葉側の entry $x$ の符号を指定するものではない．
+特に $(a,b)=(3,7)$ は，前命題の型 I と型 II の両方の導出に現れる．
+型 III では $D_B=3-18t>-b$ であり，局所的な不等式 $D_B\leq-b$ そのものは偽である．
+この型を除くのは，第三の core への整数 clutching である．
+一般の二高分母模型に係数の大きさの伝播を拡張したり，第三の core の条件を省略したりしてはならない．

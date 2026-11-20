@@ -1,0 +1,113 @@
+{
+  "version": "v13",
+  "passed": true,
+  "polynomial_identities": 41,
+  "identity_names": [
+    "determinant in positive signed variables",
+    "singular divisor identity",
+    "A=0 implication for B",
+    "C=1 third-row coefficient",
+    "beta=-1 slice determinant",
+    "beta=-1 slice Cramer numerator 0",
+    "beta=-1 slice Cramer numerator 1",
+    "beta=-1 slice Cramer numerator 2",
+    "T integrality numerator",
+    "U integrality numerator",
+    "family row 0",
+    "family row 1",
+    "family row 2",
+    "family row 3",
+    "family pair 0,1",
+    "family pair 0,2",
+    "family pair 0,3",
+    "family pair 1,2",
+    "family pair 1,3",
+    "family pair 2,3",
+    "family Schur entry 0,0",
+    "family Schur entry 0,1",
+    "family Schur entry 0,2",
+    "family Schur entry 1,0",
+    "family Schur entry 1,1",
+    "family Schur entry 1,2",
+    "family Schur entry 2,0",
+    "family Schur entry 2,1",
+    "family Schur entry 2,2",
+    "family positive low defect formula",
+    "family defect 0",
+    "family defect 1",
+    "family defect 2",
+    "family defect 3",
+    "family total defect",
+    "family determinant",
+    "family even q_a-1 factorization",
+    "family even q_b-1 factorization",
+    "family even q_c-1 factorization",
+    "positive reverse AB area numerator",
+    "positive reverse C0 area numerator"
+  ],
+  "family_parameters": "positive integers d,e with de>=2",
+  "classification_scope": "The additional matching sign hypothesis and t=1,beta=-1,k=0 slice only.",
+  "explicit_example": {
+    "q": [
+      19,
+      7,
+      7,
+      1
+    ],
+    "p": [
+      [
+        0,
+        12,
+        -22,
+        -9
+      ],
+      [
+        11,
+        0,
+        -12,
+        -6
+      ],
+      [
+        -6,
+        -4,
+        0,
+        3
+      ],
+      [
+        -2,
+        -1,
+        2,
+        0
+      ]
+    ],
+    "D": [
+      -22,
+      -14,
+      25,
+      11
+    ],
+    "weights": [
+      "19",
+      "265/22",
+      "13/6",
+      "1"
+    ],
+    "positive_edge_area_gaps": [
+      "1/22",
+      "1/14",
+      "1/6",
+      "1/14"
+    ]
+  },
+  "inherited_catalog_ids_of_example": [
+    513,
+    514
+  ],
+  "limitations": [
+    "No arbitrary three-high all-positive exclusion is asserted.",
+    "No general matching-sign theorem is asserted.",
+    "The explicit example is not new; the note records a complete unbounded parameter slice.",
+    "No classification of all singular Schur systems is asserted."
+  ],
+  "script_sha256": "5a124abb994cedb32eec9e21b7a8ab5e6a6a87b6e5933590d86eff1e5f5c1d56"
+}

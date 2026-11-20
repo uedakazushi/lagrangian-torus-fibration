@@ -1,0 +1,104 @@
+{
+  "version": "v17",
+  "passed": true,
+  "review_type": "Independent mathematical source review, not an automated theorem prover or external peer review",
+  "scope": "Notation, assumptions, directions, algebraic equivalences, scope of support claims, and compatibility with retained body modules. Bibliographic primary-source verification is handled separately by the literature review owner.",
+  "reviewed_source_sha256": {
+    "v17_work/local_completion/arithmetic_setup_v17.tex": "644af7eeaa78602e8082acf95677998c431f1c43660e7cf3812158d0d74d6175",
+    "v17_work/local_completion/arithmetic_introduction_v17.tex": "e7d9f2ddef60f4e9380fe7edcb2dfa2093f2c8fd61dceae401804428f47652fb",
+    "v17_work/local_completion/three_high_fixed_low_completion_v17.tex": "ba733676386c7c0ace7cc873b79323cd460a04591455b0c951c59af2b1b3433a",
+    "deliverables/general_type_surface_fibration_v16/paper/quintic_local_high_q.tex": "db7ae0d43abe66ff828652fbb6fc1707f69ac91d85ca189e5c5a9a73c39275e0",
+    "deliverables/general_type_surface_fibration_v16/paper/quintic_local_structure.tex": "e6ac5af1336f6378e9a16c0ad96c4ebca177b9b0cdc6bd963c45bb6ec11259c9",
+    "deliverables/general_type_surface_fibration_v16/paper/quintic_prime_support.tex": "5dbc33dcdae29d96d8c914a27e12c44fa3b92264578ade7a0a25894688321c4a",
+    "deliverables/general_type_surface_fibration_v16/paper/quintic_dense_prime_support_v11.tex": "fdbb670c736ea8d25036fb891a961c1e316dfd34c51f121dbad71379d43bca53",
+    "deliverables/general_type_surface_fibration_v16/paper/quintic_monochromatic_support_v11.tex": "cefbde021161cff47eedd601736eac1fb667ca9647b573b301a3cf81da342ae7",
+    "deliverables/general_type_surface_fibration_v16/paper/quintic_finite_exclusion.tex": "dc898c3cee98a4bc22c0af39e41d24c2a0468ee4ebb87666402f5a3f22c30a8f",
+    "deliverables/general_type_surface_fibration_v16/paper/common_low_node_bound_v16.tex": "78114487ce9d9f9259c0f6dbcb90e945e89693f825bf0eddef4260caf4d71029",
+    "deliverables/general_type_surface_fibration_v16/paper/quintic_gluing.tex": "af11011d1c15bba8fb08976e12cf7c575aa18c78ed4f6e05f22f341f65532955",
+    "deliverables/general_type_surface_fibration_v16/paper/k4_periods.tex": "b13e9bb195267dbd96185867d37c37cb2254915a41cb52471ccfcb0c5d667197"
+  },
+  "checks": [
+    {
+      "id": "action_transpose",
+      "passed": true,
+      "finding": "The face action matrix is minus the transpose of diag(q)+P on the pair: off-diagonals (-p_kj,-p_jk). It matches q9:four-line-action-matrix, and its determinant is q_j*q_k-p_jk*p_kj=1."
+    },
+    {
+      "id": "row_and_column_conventions",
+      "passed": true,
+      "finding": "Outgoing row sums equal -q_j; D_j uses the incoming column sum. Thus A*1=0 and sum_j D_j=0. The introduction uses exactly these conventions."
+    },
+    {
+      "id": "primitive_and_odd",
+      "passed": true,
+      "finding": "Pair products imply gcd(q_j,p_jk)=1. If q_j were even, all three outgoing entries would be odd, contradicting its even row sum. No separate odd-denominator assumption is omitted."
+    },
+    {
+      "id": "positive_weights",
+      "passed": true,
+      "finding": "B_jk=w_k-w_j*p_jk/q_j is identical to q9:four-line-basin-positive. Its outgoing row sum is W. Positive directed cycles have gain product strictly less than one, matching kl10:cycle-positive; no numerical or non-strict substitute occurs."
+    },
+    {
+      "id": "marked_clutching_sign",
+      "passed": true,
+      "finding": "Using alpha_prime=-alpha and beta_prime=beta+(n-1)*alpha, slope agreement gives p/q=-p_prime/q-(n-1), hence n=1-(p+p_prime)/q. This agrees with ar17:clutching and ar17:node."
+    },
+    {
+      "id": "node_budget",
+      "passed": true,
+      "finding": "The two outgoing row sums are -q each, so the three n values sum to 3-(-2q)/q=5. Nonnegativity implies each n<=5. Integrality follows from marked clutching."
+    },
+    {
+      "id": "D_opposition",
+      "passed": true,
+      "finding": "D^i_j=-q_ij-sum_k p^i_kj matches both the v16 prime-support and hub conventions. Reversing the normal direction is encoded by D^i_j+D^j_i=0."
+    },
+    {
+      "id": "admissible_axiom_coverage",
+      "passed": true,
+      "finding": "Shared positive integer q, integer local matrices, outgoing row sums, pair products, positive local weights, all marked clutching congruences, all node inequalities, and all D oppositions are included. All downstream graph/number-theoretic obstructions use subsets of these axioms. Zero diagonal is explicitly stated both in the preceding local-data definition and in ar17:admissible after the review."
+    },
+    {
+      "id": "necessary_vs_geometric_sufficient",
+      "passed": true,
+      "finding": "The setup explicitly reserves actual shared areas and finite-parameter action intercepts for geometric realization. Omitting them from the necessary arithmetic system does not invalidate any nonexistence result. It also avoids imposing an ambient linear form on all complement H1 classes."
+    },
+    {
+      "id": "main_graph_theorem",
+      "passed": true,
+      "finding": "The 11 unlabelled and 356 labelled candidates match the independent full 1024-graph certificate. Connectedness on all five vertices, triangle existence, at least six edges, and b1>=2 are consistent. At least two distinct high q values uses uh11:monochromatic-component, which is explicitly cited."
+    },
+    {
+      "id": "exact_K4_scope",
+      "passed": true,
+      "finding": "The introduction now explicitly distinguishes exact K4 support from five-vertex supports containing K4, and says that K4 plus a leaf remains a candidate. This matches the frontier and the exact graph filter."
+    },
+    {
+      "id": "local_completion_scope",
+      "passed": true,
+      "finding": "Fixing both low row and low column determines q and leaves a true quadratic after selecting a same-sign pair. The at-most-two labelled completions are consistent with fc17; the varying-column singular family is not ruled out."
+    },
+    {
+      "id": "older_result_summaries",
+      "passed": true,
+      "finding": "The one-high and two-high sign statements, unbounded partners at 7/13, the singular 3-high family, dense prime support K221 for ell=5, seven-denominator gcd dividing 5, and the explicit q<=101 finite result agree with the cited existing body modules."
+    }
+  ],
+  "blocking_issues": [],
+  "nonblocking_recommendations": [
+    {
+      "location": "ar17:admissible",
+      "proposal": "Repeat that the five local matrices have zero diagonal; this is already present in the local-data setup.",
+      "status": "Implemented by the source owner and independently rechecked."
+    },
+    {
+      "location": "Introduction, immediately after the 11/356 graph-count paragraph",
+      "proposal": "Explicitly say that exact K4 support is excluded while five-vertex supports containing K4, such as G5_12=K4+leaf, remain candidates.",
+      "status": "Implemented by the source owner and independently rechecked."
+    }
+  ],
+  "source_files_modified_by_reviewer": false,
+  "external_peer_review": false,
+  "proof_assistant_formalization": false,
+  "outstanding_recommendations": []
+}

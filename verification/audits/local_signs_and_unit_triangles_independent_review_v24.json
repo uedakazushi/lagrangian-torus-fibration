@@ -1,0 +1,1863 @@
+{
+  "version": "v24",
+  "status": "PASS",
+  "reviewer": "highd_proportional_v24",
+  "scope": "Independent full read-through of both proofs, exact complete negative-triangle divisor enumeration, all-negative witness factor, graph and cycle checks. Opposite-family numerical cases are regression only.",
+  "producer_code_imported_or_executed": false,
+  "negative_signed_cases": 96,
+  "negative_solution_rows": [
+    [
+      1,
+      2,
+      -1,
+      -3,
+      2,
+      1,
+      3,
+      3
+    ],
+    [
+      1,
+      2,
+      -2,
+      -1,
+      2,
+      1,
+      3,
+      3
+    ],
+    [
+      1,
+      3,
+      -2,
+      -1,
+      2,
+      2,
+      3,
+      7
+    ],
+    [
+      2,
+      1,
+      -1,
+      -2,
+      1,
+      2,
+      3,
+      3
+    ],
+    [
+      2,
+      1,
+      -3,
+      -1,
+      1,
+      2,
+      3,
+      3
+    ],
+    [
+      2,
+      2,
+      -1,
+      -2,
+      3,
+      1,
+      7,
+      3
+    ],
+    [
+      2,
+      2,
+      -1,
+      -2,
+      2,
+      2,
+      5,
+      5
+    ],
+    [
+      2,
+      2,
+      -2,
+      -1,
+      2,
+      2,
+      5,
+      5
+    ],
+    [
+      2,
+      2,
+      -2,
+      -1,
+      1,
+      3,
+      3,
+      7
+    ],
+    [
+      3,
+      1,
+      -1,
+      -2,
+      2,
+      2,
+      7,
+      3
+    ]
+  ],
+  "all_negative_case_certificates": [
+    {
+      "s": 1,
+      "s_prime": 1,
+      "A": 1,
+      "B": 1,
+      "coefficients": [
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "factor_product": 2,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "A": 1,
+      "B": 2,
+      "coefficients": [
+        -1,
+        -1,
+        0,
+        2
+      ],
+      "factor_product": 2,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "A": 1,
+      "B": 3,
+      "coefficients": [
+        -1,
+        -1,
+        1,
+        3
+      ],
+      "factor_product": 2,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "A": 1,
+      "B": 4,
+      "coefficients": [
+        -1,
+        -1,
+        2,
+        4
+      ],
+      "factor_product": 2,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "A": 2,
+      "B": 1,
+      "coefficients": [
+        -1,
+        0,
+        -1,
+        2
+      ],
+      "factor_product": 2,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "A": 2,
+      "B": 2,
+      "coefficients": [
+        0,
+        1,
+        1,
+        4
+      ],
+      "factor_product": 1,
+      "method": "positive affine expression",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "A": 2,
+      "B": 3,
+      "coefficients": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "factor_product": 0,
+      "method": "two positive factors cannot multiply to zero",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "A": 2,
+      "B": 4,
+      "coefficients": [
+        2,
+        3,
+        5,
+        8
+      ],
+      "factor_product": -1,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "A": 3,
+      "B": 1,
+      "coefficients": [
+        -1,
+        1,
+        -1,
+        3
+      ],
+      "factor_product": 2,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "A": 3,
+      "B": 2,
+      "coefficients": [
+        1,
+        3,
+        2,
+        6
+      ],
+      "factor_product": 0,
+      "method": "two positive factors cannot multiply to zero",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "A": 3,
+      "B": 3,
+      "coefficients": [
+        3,
+        5,
+        5,
+        9
+      ],
+      "factor_product": -2,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "A": 3,
+      "B": 4,
+      "coefficients": [
+        5,
+        7,
+        8,
+        12
+      ],
+      "factor_product": -4,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "A": 4,
+      "B": 1,
+      "coefficients": [
+        -1,
+        2,
+        -1,
+        4
+      ],
+      "factor_product": 2,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "A": 4,
+      "B": 2,
+      "coefficients": [
+        2,
+        5,
+        3,
+        8
+      ],
+      "factor_product": -1,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "A": 4,
+      "B": 3,
+      "coefficients": [
+        5,
+        8,
+        7,
+        12
+      ],
+      "factor_product": -4,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "A": 4,
+      "B": 4,
+      "coefficients": [
+        8,
+        11,
+        11,
+        16
+      ],
+      "factor_product": -7,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "A": 1,
+      "B": 1,
+      "coefficients": [
+        -2,
+        -1,
+        -1,
+        1
+      ],
+      "factor_product": 3,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "A": 1,
+      "B": 2,
+      "coefficients": [
+        -2,
+        -1,
+        1,
+        2
+      ],
+      "factor_product": 3,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "A": 1,
+      "B": 3,
+      "coefficients": [
+        -2,
+        -1,
+        3,
+        3
+      ],
+      "factor_product": 3,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": [
+        [
+          1,
+          2,
+          -1,
+          -3,
+          2,
+          1,
+          3,
+          3
+        ]
+      ]
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "A": 1,
+      "B": 4,
+      "coefficients": [
+        -2,
+        -1,
+        5,
+        4
+      ],
+      "factor_product": 3,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "A": 2,
+      "B": 1,
+      "coefficients": [
+        -1,
+        0,
+        0,
+        2
+      ],
+      "factor_product": 2,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": [
+        [
+          1,
+          2,
+          -2,
+          -1,
+          2,
+          1,
+          3,
+          3
+        ]
+      ]
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "A": 2,
+      "B": 2,
+      "coefficients": [
+        1,
+        1,
+        4,
+        4
+      ],
+      "factor_product": 0,
+      "method": "two positive factors cannot multiply to zero",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "A": 2,
+      "B": 3,
+      "coefficients": [
+        3,
+        2,
+        8,
+        6
+      ],
+      "factor_product": -2,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "A": 2,
+      "B": 4,
+      "coefficients": [
+        5,
+        3,
+        12,
+        8
+      ],
+      "factor_product": -4,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "A": 3,
+      "B": 1,
+      "coefficients": [
+        0,
+        1,
+        1,
+        3
+      ],
+      "factor_product": 1,
+      "method": "positive affine expression",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "A": 3,
+      "B": 2,
+      "coefficients": [
+        4,
+        3,
+        7,
+        6
+      ],
+      "factor_product": -3,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "A": 3,
+      "B": 3,
+      "coefficients": [
+        8,
+        5,
+        13,
+        9
+      ],
+      "factor_product": -7,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "A": 3,
+      "B": 4,
+      "coefficients": [
+        12,
+        7,
+        19,
+        12
+      ],
+      "factor_product": -11,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "A": 4,
+      "B": 1,
+      "coefficients": [
+        1,
+        2,
+        2,
+        4
+      ],
+      "factor_product": 0,
+      "method": "two positive factors cannot multiply to zero",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "A": 4,
+      "B": 2,
+      "coefficients": [
+        7,
+        5,
+        10,
+        8
+      ],
+      "factor_product": -6,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "A": 4,
+      "B": 3,
+      "coefficients": [
+        13,
+        8,
+        18,
+        12
+      ],
+      "factor_product": -12,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "A": 4,
+      "B": 4,
+      "coefficients": [
+        19,
+        11,
+        26,
+        16
+      ],
+      "factor_product": -18,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "A": 1,
+      "B": 1,
+      "coefficients": [
+        -3,
+        -1,
+        -1,
+        1
+      ],
+      "factor_product": 4,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "A": 1,
+      "B": 2,
+      "coefficients": [
+        -3,
+        -1,
+        2,
+        2
+      ],
+      "factor_product": 4,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "A": 1,
+      "B": 3,
+      "coefficients": [
+        -3,
+        -1,
+        5,
+        3
+      ],
+      "factor_product": 4,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "A": 1,
+      "B": 4,
+      "coefficients": [
+        -3,
+        -1,
+        8,
+        4
+      ],
+      "factor_product": 4,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "A": 2,
+      "B": 1,
+      "coefficients": [
+        -1,
+        0,
+        1,
+        2
+      ],
+      "factor_product": 2,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": [
+        [
+          1,
+          3,
+          -2,
+          -1,
+          2,
+          2,
+          3,
+          7
+        ]
+      ]
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "A": 2,
+      "B": 2,
+      "coefficients": [
+        2,
+        1,
+        7,
+        4
+      ],
+      "factor_product": -1,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "A": 2,
+      "B": 3,
+      "coefficients": [
+        5,
+        2,
+        13,
+        6
+      ],
+      "factor_product": -4,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "A": 2,
+      "B": 4,
+      "coefficients": [
+        8,
+        3,
+        19,
+        8
+      ],
+      "factor_product": -7,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "A": 3,
+      "B": 1,
+      "coefficients": [
+        1,
+        1,
+        3,
+        3
+      ],
+      "factor_product": 0,
+      "method": "two positive factors cannot multiply to zero",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "A": 3,
+      "B": 2,
+      "coefficients": [
+        7,
+        3,
+        12,
+        6
+      ],
+      "factor_product": -6,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "A": 3,
+      "B": 3,
+      "coefficients": [
+        13,
+        5,
+        21,
+        9
+      ],
+      "factor_product": -12,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "A": 3,
+      "B": 4,
+      "coefficients": [
+        19,
+        7,
+        30,
+        12
+      ],
+      "factor_product": -18,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "A": 4,
+      "B": 1,
+      "coefficients": [
+        3,
+        2,
+        5,
+        4
+      ],
+      "factor_product": -2,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "A": 4,
+      "B": 2,
+      "coefficients": [
+        12,
+        5,
+        17,
+        8
+      ],
+      "factor_product": -11,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "A": 4,
+      "B": 3,
+      "coefficients": [
+        21,
+        8,
+        29,
+        12
+      ],
+      "factor_product": -20,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "A": 4,
+      "B": 4,
+      "coefficients": [
+        30,
+        11,
+        41,
+        16
+      ],
+      "factor_product": -29,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "A": 1,
+      "B": 1,
+      "coefficients": [
+        -2,
+        -1,
+        -1,
+        1
+      ],
+      "factor_product": 3,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "A": 1,
+      "B": 2,
+      "coefficients": [
+        -1,
+        0,
+        0,
+        2
+      ],
+      "factor_product": 2,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": [
+        [
+          2,
+          1,
+          -1,
+          -2,
+          1,
+          2,
+          3,
+          3
+        ]
+      ]
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "A": 1,
+      "B": 3,
+      "coefficients": [
+        0,
+        1,
+        1,
+        3
+      ],
+      "factor_product": 1,
+      "method": "positive affine expression",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "A": 1,
+      "B": 4,
+      "coefficients": [
+        1,
+        2,
+        2,
+        4
+      ],
+      "factor_product": 0,
+      "method": "two positive factors cannot multiply to zero",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "A": 2,
+      "B": 1,
+      "coefficients": [
+        -2,
+        1,
+        -1,
+        2
+      ],
+      "factor_product": 3,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "A": 2,
+      "B": 2,
+      "coefficients": [
+        1,
+        4,
+        1,
+        4
+      ],
+      "factor_product": 0,
+      "method": "two positive factors cannot multiply to zero",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "A": 2,
+      "B": 3,
+      "coefficients": [
+        4,
+        7,
+        3,
+        6
+      ],
+      "factor_product": -3,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "A": 2,
+      "B": 4,
+      "coefficients": [
+        7,
+        10,
+        5,
+        8
+      ],
+      "factor_product": -6,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "A": 3,
+      "B": 1,
+      "coefficients": [
+        -2,
+        3,
+        -1,
+        3
+      ],
+      "factor_product": 3,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": [
+        [
+          2,
+          1,
+          -3,
+          -1,
+          1,
+          2,
+          3,
+          3
+        ]
+      ]
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "A": 3,
+      "B": 2,
+      "coefficients": [
+        3,
+        8,
+        2,
+        6
+      ],
+      "factor_product": -2,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "A": 3,
+      "B": 3,
+      "coefficients": [
+        8,
+        13,
+        5,
+        9
+      ],
+      "factor_product": -7,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "A": 3,
+      "B": 4,
+      "coefficients": [
+        13,
+        18,
+        8,
+        12
+      ],
+      "factor_product": -12,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "A": 4,
+      "B": 1,
+      "coefficients": [
+        -2,
+        5,
+        -1,
+        4
+      ],
+      "factor_product": 3,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "A": 4,
+      "B": 2,
+      "coefficients": [
+        5,
+        12,
+        3,
+        8
+      ],
+      "factor_product": -4,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "A": 4,
+      "B": 3,
+      "coefficients": [
+        12,
+        19,
+        7,
+        12
+      ],
+      "factor_product": -11,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "A": 4,
+      "B": 4,
+      "coefficients": [
+        19,
+        26,
+        11,
+        16
+      ],
+      "factor_product": -18,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "A": 1,
+      "B": 1,
+      "coefficients": [
+        -3,
+        -1,
+        -1,
+        1
+      ],
+      "factor_product": 4,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "A": 1,
+      "B": 2,
+      "coefficients": [
+        -1,
+        0,
+        1,
+        2
+      ],
+      "factor_product": 2,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": [
+        [
+          2,
+          2,
+          -1,
+          -2,
+          3,
+          1,
+          7,
+          3
+        ],
+        [
+          2,
+          2,
+          -1,
+          -2,
+          2,
+          2,
+          5,
+          5
+        ]
+      ]
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "A": 1,
+      "B": 3,
+      "coefficients": [
+        1,
+        1,
+        3,
+        3
+      ],
+      "factor_product": 0,
+      "method": "two positive factors cannot multiply to zero",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "A": 1,
+      "B": 4,
+      "coefficients": [
+        3,
+        2,
+        5,
+        4
+      ],
+      "factor_product": -2,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "A": 2,
+      "B": 1,
+      "coefficients": [
+        -1,
+        1,
+        0,
+        2
+      ],
+      "factor_product": 2,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": [
+        [
+          2,
+          2,
+          -2,
+          -1,
+          2,
+          2,
+          5,
+          5
+        ],
+        [
+          2,
+          2,
+          -2,
+          -1,
+          1,
+          3,
+          3,
+          7
+        ]
+      ]
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "A": 2,
+      "B": 2,
+      "coefficients": [
+        5,
+        4,
+        4,
+        4
+      ],
+      "factor_product": -4,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "A": 2,
+      "B": 3,
+      "coefficients": [
+        11,
+        7,
+        8,
+        6
+      ],
+      "factor_product": -10,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "A": 2,
+      "B": 4,
+      "coefficients": [
+        17,
+        10,
+        12,
+        8
+      ],
+      "factor_product": -16,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "A": 3,
+      "B": 1,
+      "coefficients": [
+        1,
+        3,
+        1,
+        3
+      ],
+      "factor_product": 0,
+      "method": "two positive factors cannot multiply to zero",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "A": 3,
+      "B": 2,
+      "coefficients": [
+        11,
+        8,
+        7,
+        6
+      ],
+      "factor_product": -10,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "A": 3,
+      "B": 3,
+      "coefficients": [
+        21,
+        13,
+        13,
+        9
+      ],
+      "factor_product": -20,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "A": 3,
+      "B": 4,
+      "coefficients": [
+        31,
+        18,
+        19,
+        12
+      ],
+      "factor_product": -30,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "A": 4,
+      "B": 1,
+      "coefficients": [
+        3,
+        5,
+        2,
+        4
+      ],
+      "factor_product": -2,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "A": 4,
+      "B": 2,
+      "coefficients": [
+        17,
+        12,
+        10,
+        8
+      ],
+      "factor_product": -16,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "A": 4,
+      "B": 3,
+      "coefficients": [
+        31,
+        19,
+        18,
+        12
+      ],
+      "factor_product": -30,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "A": 4,
+      "B": 4,
+      "coefficients": [
+        45,
+        26,
+        26,
+        16
+      ],
+      "factor_product": -44,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "A": 1,
+      "B": 1,
+      "coefficients": [
+        -3,
+        -1,
+        -1,
+        1
+      ],
+      "factor_product": 4,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "A": 1,
+      "B": 2,
+      "coefficients": [
+        -1,
+        1,
+        0,
+        2
+      ],
+      "factor_product": 2,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": [
+        [
+          3,
+          1,
+          -1,
+          -2,
+          2,
+          2,
+          7,
+          3
+        ]
+      ]
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "A": 1,
+      "B": 3,
+      "coefficients": [
+        1,
+        3,
+        1,
+        3
+      ],
+      "factor_product": 0,
+      "method": "two positive factors cannot multiply to zero",
+      "solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "A": 1,
+      "B": 4,
+      "coefficients": [
+        3,
+        5,
+        2,
+        4
+      ],
+      "factor_product": -2,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "A": 2,
+      "B": 1,
+      "coefficients": [
+        -3,
+        2,
+        -1,
+        2
+      ],
+      "factor_product": 4,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "A": 2,
+      "B": 2,
+      "coefficients": [
+        2,
+        7,
+        1,
+        4
+      ],
+      "factor_product": -1,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "A": 2,
+      "B": 3,
+      "coefficients": [
+        7,
+        12,
+        3,
+        6
+      ],
+      "factor_product": -6,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "A": 2,
+      "B": 4,
+      "coefficients": [
+        12,
+        17,
+        5,
+        8
+      ],
+      "factor_product": -11,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "A": 3,
+      "B": 1,
+      "coefficients": [
+        -3,
+        5,
+        -1,
+        3
+      ],
+      "factor_product": 4,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "A": 3,
+      "B": 2,
+      "coefficients": [
+        5,
+        13,
+        2,
+        6
+      ],
+      "factor_product": -4,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "A": 3,
+      "B": 3,
+      "coefficients": [
+        13,
+        21,
+        5,
+        9
+      ],
+      "factor_product": -12,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "A": 3,
+      "B": 4,
+      "coefficients": [
+        21,
+        29,
+        8,
+        12
+      ],
+      "factor_product": -20,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "A": 4,
+      "B": 1,
+      "coefficients": [
+        -3,
+        8,
+        -1,
+        4
+      ],
+      "factor_product": 4,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "A": 4,
+      "B": 2,
+      "coefficients": [
+        8,
+        19,
+        3,
+        8
+      ],
+      "factor_product": -7,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "A": 4,
+      "B": 3,
+      "coefficients": [
+        19,
+        30,
+        7,
+        12
+      ],
+      "factor_product": -18,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "A": 4,
+      "B": 4,
+      "coefficients": [
+        30,
+        41,
+        11,
+        16
+      ],
+      "factor_product": -29,
+      "method": "all signed divisors of d*e-c*f",
+      "solutions": []
+    }
+  ],
+  "opposite_family_regression": {
+    "parameter_boxes": {
+      "u": [
+        1,
+        12
+      ],
+      "U": [
+        1,
+        24
+      ],
+      "T": [
+        1,
+        24
+      ]
+    },
+    "exact_odd_denominator_cases": 393984,
+    "matching_solutions": 601,
+    "role": "bounded regression only; the infinite families were independently checked by hand in the accompanying review"
+  },
+  "all_negative_witness": {
+    "cleared_identity": "AC*((-2-2K/A)*(-1-2K/C)-8)=2*(3A+K)*(A+K), C=-K-A",
+    "coefficients": [
+      [
+        [
+          0,
+          2
+        ],
+        2
+      ],
+      [
+        [
+          1,
+          1
+        ],
+        8
+      ],
+      [
+        [
+          2,
+          0
+        ],
+        6
+      ]
+    ],
+    "K_mod_3": 1,
+    "zero_C_branch_excluded": true,
+    "nonintegral_A_branch_excluded": true
+  },
+  "four_ray": {
+    "all_64_graphs_classified": true,
+    "degree_sequence_counts": {
+      "(1, 1, 1, 1)": 3,
+      "(1, 1, 2, 2)": 12,
+      "(2, 2, 2, 2)": 3
+    },
+    "all_eight_outgoing_maps": [
+      {
+        "successors": [
+          1,
+          0,
+          0
+        ],
+        "cycle": [
+          0,
+          1
+        ],
+        "telescoping_balance": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "successors": [
+          1,
+          0,
+          1
+        ],
+        "cycle": [
+          0,
+          1
+        ],
+        "telescoping_balance": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "successors": [
+          1,
+          2,
+          0
+        ],
+        "cycle": [
+          0,
+          1,
+          2
+        ],
+        "telescoping_balance": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "successors": [
+          1,
+          2,
+          1
+        ],
+        "cycle": [
+          1,
+          2
+        ],
+        "telescoping_balance": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "successors": [
+          2,
+          0,
+          0
+        ],
+        "cycle": [
+          0,
+          2
+        ],
+        "telescoping_balance": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "successors": [
+          2,
+          0,
+          1
+        ],
+        "cycle": [
+          0,
+          2,
+          1
+        ],
+        "telescoping_balance": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "successors": [
+          2,
+          2,
+          0
+        ],
+        "cycle": [
+          0,
+          2
+        ],
+        "telescoping_balance": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "successors": [
+          2,
+          2,
+          1
+        ],
+        "cycle": [
+          2,
+          1
+        ],
+        "telescoping_balance": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "independent_gap_fixture": [
+      "26",
+      "-25"
+    ],
+    "proof_review": "Integer gap sum=1; directed selection contradicts strict basin cycle condition. Degree<=2, no isolated vertex leaves 2K2/P4/C4; C4 violates one negative pair product. Forest converse by positive rational intervals."
+  },
+  "source_sha256": {
+    "unit_three_high_triangle_reduction_v24.tex": "0665d10c71fe1e52b2ba2339ae57399cc10bfe0f550351e58f83da86cf947a3b",
+    "verify_unit_three_high_triangles_v24.py": "4eba673d14e9ef6f760525659cfa87baeb52ce47e457548231888c148e205d8c",
+    "four_ray_positive_graph_v24.tex": "6c04d5f300f48ac0880cc0e1263148f95173a24d9fe44c744a69f81d52bac682",
+    "verify_four_ray_positive_graph_v24.py": "9e0660ae7266fbad9140758eca40c42fe1b15d5351fce75397b4abdda50aa5df"
+  },
+  "review_script_sha256": "358146f8aadd88c51103bb66461c9afa7b5595fb5945eeec9c47f77f2fcf2f13",
+  "mathematical_issues": [],
+  "external_peer_review": false,
+  "proof_assistant_formalization": false
+}

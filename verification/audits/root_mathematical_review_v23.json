@@ -1,0 +1,24 @@
+{
+  "version": "v23",
+  "status": "PASS",
+  "reviewer": "root",
+  "source_sha256": {
+    "paper/outer_core_linear_transfer_v23.tex": "df3cd4f3d7016cd2f0aa6f17f1a9f10d42525afc2b6758a5032f47a8423fa244",
+    "paper/g5_15_ordinary_outer_pair_obstruction_v23.tex": "aecd0ec96a5bda535f5c46f450797d10f3c75ef5894b53c7a4df2865295e54b6",
+    "paper/g5_15_negative_exception_obstruction_v23.tex": "7fdceb509ca0e07b7919c4f86533d2ea96a7bab8be3490fadb4a887eb35d7eef",
+    "paper/high_d_asymmetry_lattice_obstruction_v23.tex": "c00463573011530bdd4ad6bd7c6baed77a6273f82bd3e57aba0b4dc7b3ca3e8a",
+    "paper/quintic_support_frontier_v23.tex": "4464ca16c4542431b7740c0e68122f80d0bf4da965aaeeb19311343f8c395f51",
+    "paper/global_primitive_denominators_v23.tex": "1dc41a28da58b75e8d8d1f6726e4ee717337f050dc3db26382d50576b8f059b1",
+    "notes/notes_high_d_asymmetry_v23.tex": "b3d7664db6c608981559d34715b581796728a3cd5057ffcf6d25f0bb65cd4ebf"
+  },
+  "external_peer_review": false,
+  "proof_assistant_formalization": false,
+  "editorial_binding_update": {
+    "reviewer": "root",
+    "file": "paper/quintic_support_frontier_v23.tex",
+    "before_sha256": "7c795da6726898424d75fdd2be9d29aba25ecb21b8bbe9810b921bfbdce2159a",
+    "after_sha256": "4464ca16c4542431b7740c0e68122f80d0bf4da965aaeeb19311343f8c395f51",
+    "correction": "In the adjacent-unit-branches proof, minimum degree is at least three, not necessarily exactly three. The formal theorem and candidate table were already correct. The entire module was re-read after this precision correction; all deductions and graph counts are unchanged.",
+    "primary_frontier_verification_rerun": "PASS"
+  }
+}

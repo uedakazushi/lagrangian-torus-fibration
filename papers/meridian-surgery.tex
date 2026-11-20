@@ -1,0 +1,34 @@
+\documentclass[11pt,a4paper]{article}
+\makeatletter\def\input@path{{sections/paper_surgery/}{sections/paper/}}\makeatother
+\input{sections/common.tex}
+\fancyhead[L]{\small Meridian blow-ups and four-dimensional pants}
+\fancyhead[R]{\small v25}
+\hypersetup{pdftitle={直線配置の meridian blow-up と四次元 pants 置換の障害},pdfauthor={}}
+\title{直線配置の meridian blow-up と\\四次元 pants 置換の障害\\[0.5em]
+\large Homotopy 型、整数交点格子、境界 JSJ と handle 模型}
+\author{}
+\date{2026年10月28日\quad 第25稿}
+\begin{document}
+\maketitle
+\begin{abstract}
+一般位置の直線配置の smooth boundary points を blow up し、
+元の直線の strict transforms のみを除いた affine surface を調べる。
+少なくとも一本を未変更で残す場合に、meridian attachments による homotopy 型、
+整数交点格子、境界 homology と peripheral kernel を計算し、
+基本群が $\ZZ^3$ の場合には二次 homotopy 群の deck action も記述する。
+同じ直線上の複数の blow-ups は、交点格子に負の $A$ 型 root lattice、境界 homology に torsion を生む。
+五直線の一つの点を blow up する模型は、$T^3$ の二次骨格と三個の $S^2$ の wedge に homotopy 同値で、
+Euler 数は $4$、境界の reduced JSJ graph は $K_5$ である。
+全 Seifert facets を貼った標準四次元 pants に、閉じた corner boundary components だけを介して
+regular torus bundles を付加する構成について、境界 Seifert bases の complexity による二分定理を示す。
+これにより、上の模型を四 pants に置き換える surgery は、この範囲では smooth な段階で不可能となる。
+さらに同じ affine surface を三つの hyperbolas の補集合として表示し、
+generic projection による $(1,6,9)$ 個の $0,1,2$-handles と infinity braid を記述する。
+open corner chains への接続や circle collapse を含む一般の pants 分解、および相対 symplectic surgery の実現は対象外である。
+\end{abstract}
+\tableofcontents
+\input{sections/paper_surgery/introduction.tex}
+\input{sections/paper_surgery/core_surgery.tex}
+\input{sections/paper_surgery/core_completion.tex}
+\input{sections/paper_surgery/bibliography.tex}
+\end{document}

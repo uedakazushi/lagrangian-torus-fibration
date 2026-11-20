@@ -1,0 +1,370 @@
+{
+  "version": "v24",
+  "status": "PASS",
+  "coefficient_identity_count": 23,
+  "coefficient_identities": [
+    {
+      "name": "axis_original_residual",
+      "status": "PASS",
+      "left_monomials": 20,
+      "right_monomials": 20
+    },
+    {
+      "name": "axis_linear_elimination",
+      "status": "PASS",
+      "left_monomials": 13,
+      "right_monomials": 13
+    },
+    {
+      "name": "axis_remainder_three",
+      "status": "PASS",
+      "left_monomials": 6,
+      "right_monomials": 6
+    },
+    {
+      "name": "axis_integer_divisor",
+      "status": "PASS",
+      "left_monomials": 7,
+      "right_monomials": 7
+    },
+    {
+      "name": "axis_z1_gap",
+      "status": "PASS",
+      "left_monomials": 1,
+      "right_monomials": 1
+    },
+    {
+      "name": "axis_elimination_after_common_root",
+      "status": "PASS",
+      "left_monomials": 46,
+      "right_monomials": 46
+    },
+    {
+      "name": "degenerate_a_zero",
+      "status": "PASS",
+      "left_monomials": 2,
+      "right_monomials": 2
+    },
+    {
+      "name": "degenerate_ell",
+      "status": "PASS",
+      "left_monomials": 2,
+      "right_monomials": 2
+    },
+    {
+      "name": "degenerate_R_one",
+      "status": "PASS",
+      "left_monomials": 2,
+      "right_monomials": 2
+    },
+    {
+      "name": "degenerate_S",
+      "status": "PASS",
+      "left_monomials": 6,
+      "right_monomials": 6
+    },
+    {
+      "name": "degenerate_original_residual",
+      "status": "PASS",
+      "left_monomials": 22,
+      "right_monomials": 22
+    },
+    {
+      "name": "degenerate_scale_polynomial",
+      "status": "PASS",
+      "left_monomials": 8,
+      "right_monomials": 8
+    },
+    {
+      "name": "degenerate_Q_mod_D",
+      "status": "PASS",
+      "left_monomials": 12,
+      "right_monomials": 12
+    },
+    {
+      "name": "degenerate_residual_mod_D",
+      "status": "PASS",
+      "left_monomials": 16,
+      "right_monomials": 16
+    },
+    {
+      "name": "degenerate_offset_equation",
+      "status": "PASS",
+      "left_monomials": 8,
+      "right_monomials": 8
+    },
+    {
+      "name": "Sylvester_resultant_linear",
+      "status": "PASS",
+      "left_monomials": 3,
+      "right_monomials": 3
+    },
+    {
+      "name": "Sylvester_resultant_quadratic",
+      "status": "PASS",
+      "left_monomials": 5,
+      "right_monomials": 5
+    },
+    {
+      "name": "Sylvester_resultant_cubic",
+      "status": "PASS",
+      "left_monomials": 7,
+      "right_monomials": 7
+    },
+    {
+      "name": "cofactor_upper_gap",
+      "status": "PASS",
+      "left_monomials": 6,
+      "right_monomials": 6
+    },
+    {
+      "name": "kappa_quadratic",
+      "status": "PASS",
+      "left_monomials": 11,
+      "right_monomials": 11
+    },
+    {
+      "name": "discriminant_between_squares",
+      "status": "PASS",
+      "left_monomials": 17,
+      "right_monomials": 17
+    },
+    {
+      "name": "positive_W_shift",
+      "status": "PASS",
+      "left_monomials": 8,
+      "right_monomials": 8
+    },
+    {
+      "name": "positive_square_gap_shift",
+      "status": "PASS",
+      "left_monomials": 9,
+      "right_monomials": 9
+    }
+  ],
+  "positive_coefficient_certificate": {
+    "shift": "v=s-4>=0",
+    "W_coefficients_ascending": [
+      609,
+      6324,
+      8934,
+      5652,
+      1967,
+      394,
+      43,
+      2,
+      0
+    ],
+    "gap_coefficients_ascending": [
+      26135,
+      42152,
+      34636,
+      19704,
+      8134,
+      2316,
+      422,
+      44,
+      2
+    ],
+    "all_nonnegative": true,
+    "both_constants_positive": true
+  },
+  "complete_unbounded_exclusions": [
+    "delta=1,x=0",
+    "a=0,x=0,R0=1"
+  ],
+  "combined_with_v23": "All delta=1 excluded; all a=0 models finitely reconstructible after fixing s.",
+  "exceptional_divisor_bound": "D | (s^2-s+1)((s-1)^4+3)",
+  "degenerate_b_bound": "2 <= b <= 1+s^2(s-1)^2 for s>=3",
+  "fixed_s_reconstructions": [
+    {
+      "s": 3,
+      "models": [],
+      "proved_b_upper": 37,
+      "quadratics": 46,
+      "integer_F_roots": 0,
+      "integral_reconstructions": 0,
+      "nonnegative_integer_y": 0,
+      "scope": "All remaining integers and denominators for this fixed s on a=0; s itself unbounded."
+    },
+    {
+      "s": 4,
+      "models": [],
+      "proved_b_upper": 145,
+      "quadratics": 151,
+      "integer_F_roots": 0,
+      "integral_reconstructions": 0,
+      "nonnegative_integer_y": 0,
+      "scope": "All remaining integers and denominators for this fixed s on a=0; s itself unbounded."
+    },
+    {
+      "s": 5,
+      "models": [],
+      "proved_b_upper": 401,
+      "quadratics": 323,
+      "integer_F_roots": 1,
+      "integral_reconstructions": 0,
+      "nonnegative_integer_y": 0,
+      "scope": "All remaining integers and denominators for this fixed s on a=0; s itself unbounded."
+    }
+  ],
+  "regressions": [
+    {
+      "name": "positive_scale_degenerate_false_candidate_requires_original_residual",
+      "data": {
+        "parameters": [
+          3,
+          138,
+          0,
+          0,
+          4,
+          16
+        ],
+        "scales": [
+          54,
+          84,
+          141
+        ],
+        "q": [
+          163,
+          11593,
+          19741,
+          1
+        ],
+        "pair_residuals": [
+          5658,
+          5658,
+          0,
+          5658,
+          0,
+          0
+        ],
+        "original_residual": 5658,
+        "D": [
+          0,
+          0,
+          4,
+          -4
+        ],
+        "sign_factors": [
+          8031,
+          236,
+          8140,
+          11745,
+          396,
+          19486
+        ],
+        "a": 0,
+        "single_congruence": true,
+        "model": false
+      }
+    },
+    {
+      "name": "genuine_mixed_D_model_not_in_excluded_hypotheses",
+      "data": {
+        "parameters": [
+          1,
+          2,
+          -1,
+          1,
+          3,
+          2
+        ],
+        "scales": [
+          4,
+          5,
+          11
+        ],
+        "q": [
+          5,
+          11,
+          23,
+          1
+        ],
+        "pair_residuals": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "original_residual": 0,
+        "D": [
+          -1,
+          1,
+          3,
+          -3
+        ],
+        "sign_factors": [
+          18,
+          3,
+          19,
+          9,
+          6,
+          28
+        ],
+        "a": 1,
+        "single_congruence": true,
+        "model": true,
+        "P": [
+          [
+            0,
+            18,
+            -19,
+            -4
+          ],
+          [
+            3,
+            0,
+            -9,
+            -5
+          ],
+          [
+            -6,
+            -28,
+            0,
+            11
+          ],
+          [
+            -1,
+            -2,
+            2,
+            0
+          ]
+        ],
+        "weights": [
+          5,
+          "109/6",
+          "45/22",
+          1
+        ],
+        "basin_gaps": [
+          "1/6",
+          "463/22",
+          5,
+          "1/22",
+          "186/11",
+          "611/66",
+          "1400/253",
+          "31357/1518",
+          "1/46",
+          6,
+          "121/6",
+          "1/22"
+        ]
+      }
+    }
+  ],
+  "old_144_low_row_scan_rerun": false,
+  "earlier_verifier_imported": false,
+  "bounded_regression_not_used_as_unbounded_proof": true,
+  "general_nonnegative_D_nonexistence_claim": false,
+  "general_degenerate_nonexistence_claim": false,
+  "source_sha256": "41320a21c34e9c74c5cfba2f47140bfc30765ceb01106094dbcb2c36592e0877",
+  "proof_file": "/workspace/scratch/d5d942d05d31/deliverables/general_type_surface_fibration_v24/paper/high_d_axis_and_degenerate_obstruction_v24.tex",
+  "proof_sha256": "0dc5d9a8647e341d1579a5a6139be7977a2490a2eec51df06d4e57c6eca97bdc",
+  "dependencies": "Python standard library only",
+  "external_peer_review": false,
+  "proof_assistant_formalization": false
+}

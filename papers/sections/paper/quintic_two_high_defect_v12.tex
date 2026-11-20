@@ -1,0 +1,220 @@
+% v12 staging module; do not edit the immutable v11 bundle.
+% Inputs: the standard two-high factorization (kl10:two-high-parametrization)
+% and its positivity/sign theorem (ls11:two-high-signs).
+
+\section{異なる二高分母に対する負の係数}
+\label{td12:section}
+
+二つの高分母が異なる場合，その二頂点の係数 $D$ の和は正にもなり得る．
+しかし，二つの係数がともに非負になることはない．
+以下では分母の上限を置かず，実際には奇数性も用いずに，この局所的な障害を証明する．
+
+\begin{lemma}[標準形に残る低分母間 entry の負性]
+\label{td12:low-entry}
+正の局所 weights を持つ二高分母標準形において
+\[
+ u=-s<0,\qquad v=z>0,\qquad
+ S=\frac{a-1}{s},\qquad T=\frac{b-1}{z}
+\]
+と置く．このとき $S\leq T$ であり，残る低分母間 entry
+$d=S-T-1$ は負である．
+\end{lemma}
+
+\begin{proof}
+標準形の整数条件から $r,s,z,S,T$ は正の整数であり，
+$r\mid a-1$，$r+1\mid b-1$ である．
+$d\geq0$，従って $S\geq T+1$ と仮定する．
+\[
+ R=r(r+1),\qquad
+ K=(r+1)^2S-r^2T-R=(2r+1)S+r^2d-r>0
+\]
+と置く．高分母間の pair-product 条件に $a=sS+1$，$b=zT+1$ を代入すると
+\begin{equation}\label{td12:low-entry-product}
+ 0=R+s(r+1)(S-r)+zr(r+1-T)+szK
+\end{equation}
+となる．$S\geq r$，$T\leq r+1$ なら右辺の全項は非負で，$R>0$ である．
+$T>r+1$ なら第二項は正であり，
+\[
+ K-r(T-r-1)=(r+1)\{(r+1)S-rT\}>0
+\]
+から第三項と第四項の和も正となる．
+残る $S<r$ の場合には $T<S<r$ で第三項は正である．
+整除性 $r+1\mid zT$ より $zT\geq r+1$ であり，
+\[
+ K-T(r-S)=(r+1)\{(r+1)S-rT-r\}+ST>0
+\]
+なので $zK>(r+1)(r-S)$ となり，第二項と第四項の和も正である．
+最後の括弧内は $S\geq T+1$ により $T+1$ 以上である．
+全場合で式~\eqref{td12:low-entry-product} と矛盾する．
+\end{proof}
+
+\begin{corollary}[二高分母の明示的な正 weights]
+\label{td12:explicit-weights}
+二高分母標準形の整数条件と $u=-s<0<v=z$ が成立するとき，
+\[
+ (w_A,w_B,w_C,w_D)
+ =\left(a,b,\frac{a-1}{r}+\frac1{2r},z+\frac1{2T}\right)
+\]
+は正の有理 weights を与える．
+\end{corollary}
+
+\begin{proof}
+定理~\ref{ls11:two-high-signs} と補題~\ref{td12:low-entry} により，
+正の numerators は $A\leftrightarrow C$ と $B\leftrightarrow D$ の四つだけである．
+$B_{ij}=w_j-w_i p_{ij}/q_i$ と書くと，表示した weights に対して
+\[
+ B_{AC}=\frac1{2r},\qquad B_{CA}=\frac12,\qquad
+ B_{BD}=\frac1{2T},\qquad B_{DB}=\frac12.
+\]
+他の numerators は非正であり，それぞれの basin も正となる．
+\end{proof}
+
+\begin{theorem}[二高分母の少なくとも一方の係数は負]
+\label{td12:one-negative}
+分母 $(a,b,1,1)$，$a,b>1$，を持つ整数局所模型が正の weights を持つとする．
+二つの高分母頂点の係数を $D_A,D_B$ とすると
+\[
+ \min(D_A,D_B)<0.
+\]
+この結果は $a=b$ を仮定せず，分母の上限，分母の奇数性，
+puncture の clutching，node 個数のいずれも用いない．
+\end{theorem}
+
+\begin{proof}
+定理~\ref{ls11:two-high-signs} と標準形により，頂点を適切に標識すると
+\[
+ P=\begin{pmatrix}
+ 0&-A&x&-s\\
+ -B&0&-y&z\\
+ r&-r-1&0&0\\
+ -S&T&S-T-1&0
+ \end{pmatrix},
+\quad
+ x=\frac{a-1}{r},\quad y=\frac{b-1}{r+1},
+\]
+\[
+ a=sS+1,\quad b=zT+1,\quad
+ A=a+x-s>0,\quad B=b-y+z>0,\quad AB=ab-1
+\]
+と書ける．補題~\ref{td12:low-entry} により $S\leq T$ である．
+次の整数を導入する：
+\begin{equation}\label{td12:auxiliaries}
+ h=S-r,\qquad k=T-r-1,\qquad
+ \alpha=x-s=\frac{sh}{r},\qquad
+ \beta=y-z=\frac{zk}{r+1}.
+\end{equation}
+$A=a+\alpha$，$B=b-\beta$ なので pair product は
+\begin{equation}\label{td12:pair-alpha}
+ a\beta-b\alpha+\alpha\beta=1
+\end{equation}
+となる．$\alpha=0$ または $\beta=0$ は $a,b>1$ と整数性に反する．
+$\alpha>0>\beta$ なら式~\eqref{td12:pair-alpha} の左辺は負である．
+$\alpha<0<\beta$ なら同左辺は
+$A\beta-b\alpha\geq A+b>1$ となる．
+従って $\alpha,\beta,h,k$ はすべて非零で同符号である．
+
+\[
+ M=rs+1,\qquad N=(r+1)z+1,\qquad
+ \delta=\alpha-\beta,\qquad L=M-N+r\delta
+\]
+と置く．式~\eqref{td12:auxiliaries} と~\eqref{td12:pair-alpha} から
+\begin{equation}\label{td12:bezout}
+ a=M+r\alpha,\qquad b=N+(r+1)\beta,\qquad
+ M\beta-N\alpha=1
+\end{equation}
+であり，特に $\gcd(\alpha,\beta)=1$ である．また
+\begin{equation}\label{td12:defect-identities}
+ \alpha L=1+a\delta,\qquad
+ D_A=h-L,\qquad D_B=L+\delta-k,
+ \qquad D_A+D_B=h-k+\delta.
+\end{equation}
+以下の三場合で結論を示す．
+
+\paragraph{第一の場合：$\delta<0$．}
+整数性と $a>1$ より $1+a\delta<0$ である．
+$\alpha>0$ なら $L<0$ であり，$k>0$ より $D_B=L+\delta-k<0$ となる．
+$\alpha<0$ なら $L>0$ であり，$h<0$ より $D_A=h-L<0$ となる．
+
+\paragraph{第二の場合：$\delta\geq0$，$\alpha,\beta>0$．}
+両方の係数が非負と仮定する．式~\eqref{td12:defect-identities} より
+\[
+ \delta\geq k-h,\qquad \alpha h\geq1+a\delta.
+\]
+式~\eqref{td12:bezout} を用いると
+\begin{equation}\label{td12:sign-ratio}
+ \alpha\beta
+ \left(\frac{r^2}{h}-\frac{(r+1)^2}{k}\right)=\delta+1>0
+\end{equation}
+なので
+\[
+ k-h>\frac{(2r+1)h}{r^2}>\frac hr.
+\]
+一方，$a=s(r+h)+1$ と $\alpha=sh/r$ から
+\[
+ \delta<\frac{\alpha h}{a}
+ <\frac{h^2}{r(r+h)}<\frac hr.
+\]
+従って $\delta\geq k-h>h/r>\delta$ となり矛盾する．
+この議論は $\delta=0$ も含む．
+
+\paragraph{第三の場合：$\delta\geq0$，$\alpha,\beta<0$．}
+\[
+ \alpha=-c,\quad\beta=-e,\quad h=-H,\quad k=-K
+\]
+と書く．$1\leq c\leq e$，$1\leq H\leq r-1$，$1\leq K\leq r$ であり，
+$S\leq T$ は $K\leq H+1$ と同値である．
+式~\eqref{td12:sign-ratio} は
+\[
+ Ece=e-c+1,\qquad
+ E=\frac{(r+1)^2}{K}-\frac{r^2}{H}>0
+\]
+となる．右辺が $e$ 以下なので $Ec\leq1$ である．
+もし $K\leq H$ なら
+\[
+ E\geq\frac{2r+1}{H}>2
+\]
+となり矛盾する．従って $K=H+1$ である．
+\[
+ w=S=T=r-H\geq1
+\]
+と置くと
+\begin{equation}\label{td12:negative-reduction}
+ E=1-\frac{w^2}{H(H+1)}\in(0,1),\qquad
+ E=\frac{\delta+1}{c(c+\delta)},\quad \delta=e-c.
+\end{equation}
+$c=1$ なら $E=1$ となるので $c\geq2$ である．
+また $\delta=0$ なら $c=e$ と $\gcd(c,e)=1$ より $c=1$ なので，$\delta\geq1$ である．
+
+$\alpha L=1+a\delta$ より $U=-L=(1+a\delta)/c>0$ と書ける．
+$s=rc/H$，$r=H+w$，$a=sw+1$ を代入すると
+\[
+ U=w\delta+\frac{w^2\delta}{H}+\frac{\delta+1}{c},\qquad
+ D_B=H+1+\delta-U.
+\]
+式~\eqref{td12:negative-reduction} と $c\geq2$ から $E<1/2$ である．
+$\delta\geq2$ なら
+\[
+ D_B=(H+1)(1-\delta+\delta E)
+       +\delta(1-w)-\frac{\delta+1}{c}<0,
+\]
+なぜなら $1-\delta+\delta E<1-\delta/2\leq0$，$w\geq1$ だからである．
+
+残る $\delta=1$ では
+\[
+ D_B=1-w+\frac{2(H-c)}{c(c+1)}.
+\]
+$H<c$ なら直ちに $D_B<0$ である．$H\geq c\geq2$ なら
+\[
+ D_B\leq\frac{H+1}{3}-w<0.
+\]
+最後の厳密な不等式は
+\[
+ w^2=H(H+1)\left(1-\frac2{c(c+1)}\right)
+ \geq\frac23H(H+1)>\frac{(H+1)^2}{9}
+\]
+から従う．これで全場合が尽くされ，結論を得る．
+\end{proof}
+
+第三の場合の証明は，その枝が必ず $S=T$，従って $d=-1$ に属することも示す．
+ただし本定理は，高分母二頂点の和が負であるとは主張しない．
+異なる分母ではその和が正になる既知の正局所模型とも整合する．

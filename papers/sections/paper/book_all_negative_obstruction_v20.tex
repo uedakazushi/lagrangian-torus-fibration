@@ -1,0 +1,147 @@
+% v20: complete all-negative branch obstruction for the book low triangle.
+% Depends on bk19:canonical, bk19:triangle, bk19:finite-offset, bk19:H-bound.
+\section{Book の全負枝低三角形の排除}
+\label{bk20:negative-section}
+
+前節の固定 core 有限完成を用いるだけでは，固定 core 自身が動く無限集合を
+排除したことにはならない．本節では，全ての二価 cores が負の枝に属する場合に，
+低 node の比較から reverse parameters の一様上界を導く．
+scale と高分母には探索上限を置かず，非零の因子積から全て復元する．
+
+\begin{theorem}[全負枝の book 低三角形は存在しない]
+\label{bk20:no-all-negative}
+Book support $G_{5,13}$ の三つの二価 cores が，全て負の枝
+$S_i=T_i=w_i<r_i$ に属すると仮定する．
+正の整数局所 charts，奇数高分母，三本の低辺の非負 node，
+および対向低 $D$ の相殺を同時に満たす低三角形は存在しない．
+高中心 cores $0,1$ の完成に関する条件は不要である．
+\end{theorem}
+
+\begin{proof}
+有向低三角形の順に二価 cores を $i=1,2,3$ と呼び，添字を三を法として読む．
+これは高中心 $0,1$ の実際の標識とは別の巡回添字である．
+$H_i=r_i-w_i$ と置くと，式~\eqref{bk19:H-bound} により
+\begin{equation}\label{bk20:negative-range}
+ w_i\ge2,\quad H_i\ge2,\qquad
+ \frac{w_i^2}{2}<H_i(H_i+1)<2w_i^2
+\end{equation}
+である．補題~\ref{bk19:triangle} により canonical 高 ray の向き
+$\sigma_i$ は一定ではない．高中心の交換は有向低三角形の向きを反転し，
+全ての $\sigma_i$ を交換する．従って，必要なら高中心を交換し巡回添字を選び直すと
+\[
+ (\sigma_1,\sigma_2,\sigma_3)=(+,+,-)
+\]
+としてよい．
+
+全て $L_i=1$ なので，命題~\ref{bk19:offsets} の有限 offset は
+\begin{equation}\label{bk20:negative-offsets}
+ w_2=r_1+t_2,\qquad r_3=r_2+t_3,\qquad w_1=w_3+t_1,
+\end{equation}
+\[
+ -1\le t_2\le2,\qquad -2\le t_3\le2,\qquad -1\le t_1\le1
+\]
+となる．ここで node 条件は三つの高分母そのものを使わず，reverse entries のみを使う．
+
+\paragraph{第一段階：証明による一様上界．}
+式~\eqref{bk20:negative-range} より
+\[
+ H+\frac12>\frac{w}{\sqrt2}>\frac7{10}w,
+ \qquad H<\sqrt2w<\frac{10}{7}w
+\]
+なので
+\begin{equation}\label{bk20:r-bounds}
+ \frac{17}{10}w-\frac12<r<\frac{17}{7}w
+\end{equation}
+を得る．式~\eqref{bk20:negative-offsets} と合わせると
+\[
+ w_2>\frac{17}{10}w_1-\frac32,
+\]
+\[
+ r_3>\frac{17}{10}w_2-\frac52
+      >\frac{289}{100}w_1-\frac{101}{20},
+ \qquad
+ r_3<\frac{17}{7}w_3\le\frac{17}{7}(w_1+1).
+\]
+従って
+\begin{equation}\label{bk20:proved-bound}
+ \frac{323}{700}w_1<\frac{1047}{140},\qquad
+ w_1<\frac{5235}{323}<17.
+\end{equation}
+整数性から $w_1\le16$，$w_3\le17$ であり，
+$w_2=r_1+t_2<\frac{17}{7}\cdot16+2<41$ から $w_2\le40$ である．
+これらは全て仮定から導いた上界である．
+
+\paragraph{第二段階：固定 reverse data の全 scale．}
+負枝の canonical 表示で
+\[
+ c=\frac{sH}{r},\qquad e=\frac{z(H+1)}{r+1},\qquad
+ E=1-\frac{w^2}{H(H+1)}=\frac MN
+\]
+と置き，$M,N$ を互いに素，$N>0$ とする．
+式~\eqref{ml12:E-equation} と式~\eqref{kb15:E-bounds} は
+\[
+ Ece=e-c+1,\qquad c\ge2,\ e\ge1,\quad -1<E<\frac12,\quad E\ne0
+\]
+を与える．従って
+\begin{equation}\label{bk20:complete-factorization}
+ (N-Mc)(N+Me)=N(N-M)>0.
+\end{equation}
+両因子は正である．実際，$Ec=1-(c-1)/e<1$ と
+$c(1+Ee)=e+1>0$ を用いればよい．
+よって $d$ を $N(N-M)$ の全ての正の約数として
+\[
+ c=\frac{N-d}{M},\qquad
+ e=\frac{N(N-M)/d-N}{M},\qquad
+ s=\frac{rc}{H},\qquad z=\frac{(r+1)e}{H+1}
+\]
+を復元し，正整数性と奇数分母 $sw+1,zw+1$ を確認すれば，全ての scale が得られる．
+式~\eqref{bk20:complete-factorization} の右辺は非零なので，共鳴直線の見落としはない．
+$s,z$ または高分母に上限を加えていない．
+
+\paragraph{第三段階：残る有限データの厳密検査．}
+$2\le w_1\le16$，式~\eqref{bk20:negative-range}，および
+式~\eqref{bk20:negative-offsets} を満たす reverse data は九十一型である．
+第二段階の全 scale 復元が三つの cores 全てで空でないものは二十五型であり，
+scale を展開した三模型の組は六十四個となる．
+その全てで，最初の低辺の $D$ 相殺が既に破れる．
+
+次の表は，第一 core の canonical $(r,s,z,S,T)$ ごとに，
+可能な第二 core との残差 $D_C^{(1)}+D_D^{(2)}$ をまとめたものである．
+異なる第一・第二 core の組は二十六組であり，表のいずれの集合にも零はない．
+\begin{center}
+\small
+\begin{tabular}{ll}
+第一 core の canonical parameters & 第一低辺の $D$ 残差の全値\\
+\hline
+$(4,4,5,2,2)$ & $-20,-9,-4,4,7,16$\\
+$(5,10,2,3,3)$ & $-40,-25,-9,-1,11,24$\\
+$(6,6,14,3,3)$ & $-32,32$\\
+$(7,7,2,4,4)$ & $-57,-20,-9,3,12,43$\\
+$(7,21,4,4,4)$ & $-64,-27,-16,-4,5,36$\\
+\end{tabular}
+\end{center}
+
+この有限検査は \nolinkurl{verify_book_all_negative_v20.py} に実装し，
+九十一型の reverse data と全 scale，六十四個の node と $D$ 証明書を
+\nolinkurl{book_all_negative_verification_v20.json} に保存した．
+行和，pair products，明示的な正 weights，三つの node の非負性と総数五は
+元の行列から再計算している．
+数学的に導いた有限集合上の整数演算であり，有限範囲の探索結果から
+無上界の結論へ外挿する段階は含まれない．
+以上で全負枝を排除した．
+\end{proof}
+
+\begin{corollary}[Book には正負両枝が必要]
+\label{bk20:mixed-necessary}
+仮定を満たす book 低三角形が存在するなら，三つの二価 cores の中に
+正の枝と負の枝がともに現れる．従って負の枝は一個または二個である．
+\end{corollary}
+
+\begin{proof}
+全正枝は補題~\ref{bk19:triangle}，全負枝は
+定理~\ref{bk20:no-all-negative} により排除される．
+\end{proof}
+
+この系は book support 全体の排除ではない．
+正負混合の低三角形，高中心 cores の完成，および残る支持の一般分母剛性は
+引き続き別の問題である．

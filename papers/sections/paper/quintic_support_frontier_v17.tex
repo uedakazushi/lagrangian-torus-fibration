@@ -1,0 +1,76 @@
+% Current v17 support consequences. All graph counts are necessary candidates.
+\subsection{全五頂点への伝播と，残る十一型}
+\label{sf17:section}
+
+\begin{corollary}[三角形の必要性]
+\label{sf17:triangle-required}
+正の局所整数 charts，marked puncture の整数 clutching，対向 $D$ の相殺，
+および node 非負性を満たす，五次の標準 $K_5$ branch graph を考える．
+高分母 support $H=\{ij:q_{ij}>1\}$ が非空なら，$H$ は三角形を含む．
+従って $H$ が triangle-free なら，全ての分母は一である．
+\end{corollary}
+
+\begin{proof}
+系~\ref{fo13:remaining-support} により，辺を持つ成分は一つで，
+四または五頂点を使い，閉路を含む．$H$ に三角形がないと仮定する．
+五角形を含む場合，その対角線はどれも三角形を作るので，
+$H=C_5$ となり，系~\ref{cf13:degree-two-rigidity} に反する．
+従って四角形を含む．その二本の対角線も加えられない．
+第五頂点から四角形への高辺が二本以上あれば，その行先は隣接できないので，
+ちょうど二本で，行先は対向する二頂点である．
+可能な形は $C_4$，葉辺付き $C_4$，$K_{2,3}$ に尽くされるが，
+それぞれ系~\ref{cf13:degree-two-rigidity}，
+定理~\ref{cp14:no-pendant-square}，定理~\ref{kb15:no-K23} に反する．
+\end{proof}
+
+\begin{corollary}[残る十一型と，全五頂点の連結性]
+\label{sf17:remaining-support}
+前系の仮定の下で，高分母 support $H$ が非空なら，
+$H$ は五頂点全てを使う連結 graph である．
+その第一 Betti 数は二以上であり，少なくとも六辺を持つ．
+最大次数は三以上で，孤立頂点は存在しない．
+同値な形で，一つの core の四分母が全て一なら，全ての core の全分母が一となる．
+
+ここまでの graph 障害を通過する型は，標識を忘れると十一，
+$K_5$ の標識を保つと三百五十六である．
+これらは必要条件を通過した候補の個数であり，
+整数 charts の同時接着や幾何的実現の存在を主張しない．
+\end{corollary}
+
+\begin{proof}
+辺を持つ成分は一つであることは系~\ref{fo13:remaining-support} による．
+系~\ref{kg17:low-core-propagation} により，非空の場合に孤立頂点はない．
+従って全五頂点が一つの連結成分に属する．
+
+閉路を含むので第一 Betti 数は一以上である．
+それが一なら，前系によって唯一の閉路は三角形となる．
+三角形に長さ二の道を付ける場合，または同じ頂点に二本の葉辺を付ける場合は，
+三角形の二頂点が二価のままなので
+定理~\ref{tn14:no-degree-two-triangle} に反する．
+残る，異なる二頂点に葉辺を一本ずつ付けた形も
+定理~\ref{tg16:no-two-leaf-triangle} により排除された．
+従って第一 Betti 数は二以上であり，辺数は少なくとも六である．
+五頂点で六辺以上を持つので最大次数は三以上である．
+
+個数は $K_5$ の全 $2^{10}=1024$ 部分 graph に対する完全な有限検算で得られる．
+既存の十二型・三百六十一標識から，
+定理~\ref{kg17:no-K4} により $G_{4,3}=K_4$ の五標識を除くと，
+十一型・三百五十六標識となる．
+$K_4$ の使用頂点は五頂点から四つを選ぶので，除く標識数は $\binom54=5$ とも確認できる．
+全 graph の列挙，同型判定，旧識別子の保持，各代表の自己同型群の検算は
+\nolinkurl{verify_support_agenda_v17.py} と
+\nolinkurl{support_agenda_verification_v17.json} に保存した．
+この列挙は分母や行列 entry の有界探索ではない．
+\end{proof}
+
+局所的には，二価 core の二つの高分母近傍の間が低辺なら，
+系~\ref{kb15:negative-closes-triangle} によりその core は正の枝に属する．
+さらに任意の高辺と共通低 puncture に対して，
+通常接着なら補題~\ref{cl16:ordinary-bound} の reverse bound $|u|\le4$ が成立する．
+これら二つの局所的な制約には，対向 $D$ の相殺は不要である．
+
+ここで除いたのは，support 全体が四使用頂点上の $K_4$ である場合である．
+$K_4$ を部分 graph として含み，第五頂点にも高辺を持つ型に対して，
+定理~\ref{kg17:no-K4} をそのまま適用することはできない．
+例えば $G_{5,12}$ は $K_4$ に一本の葉辺を加えた型であり，
+その第五 core は一高分母となるため，引き続き候補に含める．

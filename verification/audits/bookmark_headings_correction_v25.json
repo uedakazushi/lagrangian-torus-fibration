@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "mathematical_content_changed": false,
+  "changes": [
+    {
+      "file": "paper/high_d_axis_endpoints_v25.tex",
+      "before_sha256": "a51cc0093fad793666bb1cba36429dd551e6fe177cdcafd4ce3912816eddf794",
+      "after_sha256": "ed070bc442907ba197d9b39300814f6566e6fff5d703c1c8db512fdb078a7bc9",
+      "change": "Only PDF bookmark-safe math headings; printed mathematical content unchanged."
+    },
+    {
+      "file": "paper/degenerate_divisor_reduction_v25.tex",
+      "before_sha256": "ccc3ddce25fcbca186ca5be24edfe2aa5ddababf6571639fa1a3afdc1aa7526d",
+      "after_sha256": "e0e74acc2ccbbdff298ea78c9ae6a0efa209eafdcabf6dd15b87ac1a565134fd",
+      "change": "Only PDF bookmark-safe math headings; printed mathematical content unchanged."
+    },
+    {
+      "file": "paper/g514_five_node_exclusion_v25.tex",
+      "before_sha256": "880f14170dd8df5c55a3199719ae72ac5a30f03ec5e80a4c7c698ce37888d906",
+      "after_sha256": "a9762909df0ecf7518813604f408c1b6c157d65b4ef39bde5fb2dd92210dc627",
+      "change": "Only PDF bookmark-safe math headings; printed mathematical content unchanged."
+    },
+    {
+      "file": "paper/g514_central_matching_v25.tex",
+      "before_sha256": "5aa7206fded1ac1d450d865ad254458bcc53612971e159c0a46fbcb2cad8734b",
+      "after_sha256": "fe56c191468280d389265fa7f5a5214b306b17bda1e3eeb6b46128b1891f94da",
+      "change": "Only PDF bookmark-safe math headings; printed mathematical content unchanged."
+    },
+    {
+      "file": "notes/notes_axis_endpoints_v25.tex",
+      "before_sha256": "ccd1e0aa7ed49f8e409471271bb9668896dca90061886586f48870b4b4fe5002",
+      "after_sha256": "11bed5d498484fd7b3d40ea8afb3e0ed64574a3b9f30fe6319d2cd70833f4e93",
+      "change": "Only PDF bookmark-safe math headings; printed mathematical content unchanged."
+    },
+    {
+      "file": "notes/notes_g514_five_node_v25.tex",
+      "before_sha256": "00fcb084928d8fb84a11e82828b7a00864684e6e9b959fb90094d27fa8630d76",
+      "after_sha256": "0264f2e3ba41fb9989529bfdb585f87e9b0d2ea271c4ca058d1b94201730eb32",
+      "change": "Only PDF bookmark-safe math headings; printed mathematical content unchanged."
+    }
+  ]
+}

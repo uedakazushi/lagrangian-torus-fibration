@@ -1,0 +1,590 @@
+% Current arithmetic introduction, v25. Prior literature and stable ar17 labels retained.
+\section{序論}
+\label{ar17:introduction}
+
+一般型曲面の Lagrangian torus fibration を退化から構成するとき，
+局所の作用周期が整数格子を定めることに加え，その格子を異なる成分の間で接続する必要がある．
+本稿は，五つの平面へ退化する五次曲面に現れる標準 $K_5$ branch graph と，
+五つの四直線 $K_4$ cores を固定し，この整数接着問題を扱う．
+局所の行和と pair products，正の basin weights，marked punctures の整数 clutching，
+有限な node 予算を同時に追うことで，高分母 support を三つの五頂点 graph 型へ帰着する．
+
+局所正値性の出発点は，三高・四高に共通する四ray整数データの全符号分類である．
+全ての pair product が正なら，整数の行和と pair equations だけで，正符号 graph は
+完全 matching または三角形と孤立頂点に限られる．
+道 $P_4$ は元の残る pair 残余を正値恒等式に変形して排除する．
+三角形型には gain が一以上の閉路があるので，正の weights が存在することは
+完全 matching 型であることと同値となる．
+
+大域の支持障害には，二高分母の正負枝の整数剛性と全尺度分類，
+および外側 core の一つの pair による尺度の線形復元を用いる．
+これらは book 型と，低辺の補 graph が $P_3$ となる $G_{5,15}$ を完全に排除する．
+従って非空高分母支持は三型・二十六標識，最小次数三以上，三点連結に限られる．
+同じ core に二本の単位枝が接すれば全分母が一となり，高分母全体の最大公約数も一となる．
+
+残る支持型に単位枝があるとき，その両端はともに三高 core である．
+三角形の必要条件を完全に解くと，その node 配分は
+$\{5,0,0\}$ または $\{4,1,0\}$ に限られ，隣接高分母の少なくとも一つが三または五となる．
+対向低係数の相殺は，少なくとも一つの外側 core に正の pair を要求する．
+二本の単位枝を同時に使うと，$G_{5,14}$ の $\{5,0,0\}$ 配分は全尺度で排除され，
+両単位枝はともに $\{4,1,0\}$ に限られる．
+この制約は，残る接着問題を node の位置，小分母の位置，局所符号の整合から調べる入口となる．
+
+三高係数の同時非負性については，非対称量 $\delta=sD_b-tD_a$ と
+尺度の整数格子を用いる．$\delta=\pm1$ は全域で排除され，比例領域 $\delta=0$ は
+二つの高係数が零の軸へ縮む．その零軸では二整数を固定した真の四次式による有限復元を得る．
+端点 $n=0,z$ では，整数根の位置をさらに制限して低行の一整数 $s$ だけで有限復元する．
+尺度残余の退化面でも固定 $s$ による有限復元があり，元残余の積表示から
+互いに素な領域の排除と，$x\ge1$ に対する固定 $b$ の有限復元を得る．
+固定した入力ごとの完全性を，入力自体への一様上界や一般不存在とは区別する．
+残る三型の大域接着，一般分母剛性，三高係数の一般の非対称問題は未解決である．
+
+\subsection{整数データと中心となる結果}
+
+cores を $V=\{0,1,2,3,4\}$ で標識し，共有 branch $ij$ の分母を
+$q_{ij}=q_{ji}>0$，core $i$ の rays $j,k$ の間の整数係数を $p^i_{jk}$ とする．
+局所の基本方程式は
+\[
+ \sum_{k\ne i,j}p^i_{jk}=-q_{ij},\qquad
+ p^i_{jk}p^i_{kj}=q_{ij}q_{ik}-1.
+\]
+さらに正の実数 $w^i_j$ が存在し，
+\[
+ w^i_k-\frac{p^i_{jk}}{q_{ij}}w^i_j>0
+\]
+となることを要求する．この不等式は puncture basins の正面積に対応する．
+共有 branch では
+\[
+ q_{ij}\mid p^i_{jk}+p^j_{ik},\qquad
+ n_{ij;k}=1-\frac{p^i_{jk}+p^j_{ik}}{q_{ij}}\in\ZZ_{\ge0},
+\]
+\[
+ D^i_j+D^j_i=0,\qquad
+ D^i_j=-q_{ij}-\sum_{k\ne i,j}p^i_{kj}
+\]
+を課す．正確な定義は節~\ref{ar17:setup}に置く．
+局所方程式は分母の奇数性を含意し，両端の row sums から各 branch の node 総数は五となる．
+$q_{ij}>1$ の辺からなる graph を高分母 support $H$ と呼ぶ．
+
+\begin{theorem}[四ray整数データの符号と正値性]
+\label{ar24:four-ray-positive}\label{ar18:main-matching}
+四つの正整数 $q_j$ と整数 $p_{jk}$ が
+\[
+ \sum_{k\ne j}p_{jk}=-q_j,\qquad p_{jk}p_{kj}=q_jq_k-1>0
+\]
+を満たすとする．正の pair からなる無向 graph $G^+$ は
+$2K_2$ または $K_3\sqcup K_1$ に限られる．
+正の basin weights が存在すること，$G^+$ が孤立頂点を持たないこと，
+$G^+=2K_2$ であることは同値である．
+三高の場合には，weights を仮定しない三角形型は低 ray を含む．
+\end{theorem}
+
+定理~\ref{fh25:no-path}，\ref{fh25:all-signs} と系~\ref{fh25:matching} がこれを示す．
+孤立頂点からは，各行の二整数の和が一となる gap を作る．
+非正の gap を選ぶと gain 一以上の有向閉路を得るが，pair product は長さ二を禁じるため，
+残る三頂点は三角形を作る．孤立頂点がなければ，負の行和により候補は
+$2K_2,P_4,C_4$ であり，$C_4$ は負の補辺の pair product で排除される．
+$P_4$ では五つの pair と四行を解いた後，第六 pair の残余を
+非負項の和へ変形し，狭義正の一項によって矛盾を得る．
+この排除は低分母一を使わず，三高・四高を同時に扱う．
+完全 matching の各辺では，非空の有理開区間から weight 比を独立に選べる．
+
+正値性を仮定しない三角形型は実在する
+（注意~\ref{mh18:positivity-essential}）．従って整数の行和・pair equations と
+正 weights の役割を区別する．整数 clutching，node 配分，対向 $D$ 相殺は
+この局所分類の仮定に含まれない．
+
+\begin{theorem}[高分母 support の三型への帰着]
+\label{ar17:main-support}
+定義~\ref{ar17:admissible}の五次の算術的接着データを考える．
+$H\ne\varnothing$ なら，$H$ は五頂点全てを使う三点連結 graph であり，
+最小次数三以上，少なくとも八辺を持ち，$b_1(H)\ge4$ となる．
+補 graph は高々二辺の matching であり，残る必要候補は
+$G_{5,14},G_{5,16},G_{5,17}$ の三型，標識を保って二十六個である．
+高分母全体の最大公約数は一である．
+一つの core に接する二本の枝が単位分母なら，全分母が一となる．
+三本以上の相異なる枝が単位分母である場合にも同じ結論が成り立つ．
+\end{theorem}
+
+この定理は，本稿の graph 障害を合わせた結論である
+（系~\ref{sf23:remaining-support}，\ref{gp23:primitive}）．
+三型という数は整数接着データや幾何的 atlas の存在数ではなく，
+証明した必要条件を通過する support の数を表す．
+本稿の対象は指定した cores，標準 cones，marked punctures を保つ整数 atlas の接着であり，
+一般型曲面上の任意の Lagrangian torus fibration の分類ではない．
+
+\begin{theorem}[単位枝の node 配分と小分母]
+\label{ar24:unit-edge-boundary}
+五次の算術的接着データにおいて，単位枝 $ij$ の両端がともに正の三高 core であるとする．
+三つの方向に割り当てる node 数の多重集合は $\{5,0,0\}$ または $\{4,1,0\}$ に限られる．
+最大 node の位置 $c$ は，両端の低 row がともに負となる唯一の第三 core である．
+\begin{enumerate}
+\item $n_{ij;c}=5$ なら，$(q_{ic},q_{jc})$ は $(3,7),(5,5),(7,3)$ のいずれかである．
+この core の pair $ij$ は負，他の二つの外側 pair は正となる．
+\item $n_{ij;c}=4$ なら $\min(q_{ic},q_{jc})=3$ である．
+この core の pair が負なら両分母は三である．
+\item いずれの場合も，三つの外側 cores の少なくとも一つで pair $ij$ は正である．
+\end{enumerate}
+さらに $G_{5,14}$ では五node配分自体が排除され，二つの単位枝の配分はともに
+$\{4,1,0\}$ となる．$G_{5,16}$ の五node配分までを排除したわけではない．
+\end{theorem}
+
+定理~\ref{ut24:unit-edge-boundary}，命題~\ref{ut24:five-node-positive}，
+\ref{ut24:positive-witness} と系~\ref{ut24:g514-five-node} がこの主張を与える．
+二つの低 row の正位置は node 非負性によって異なる．共通負位置の絶対値を $s,s'$ とすると
+$n_{ij;c}=1+s+s'\le5$ であり，第三 core の pair を整数として解くと $s=s'=1$ が除かれる．
+反対符号位置も四つの通常尺度族と全ての小例外へ分類できる．
+五nodeの場合は対向低 $D$ の相殺が二つの column 差を一に固定する．
+三つの外側 pair が全て負と仮定した場合にも，完全表は一方の低データを
+\[
+ \text{row}=(-2,-1,2),\qquad \text{column}=(-1,-2,2r),\qquad r\ge1
+\]
+に強制する．その局所完成方程式は
+$(3A+6r+1)(A+6r+1)=0$ となり，整数性または非零 entry の条件に反する．
+$G_{5,14}$ の五node排除は定理~\ref{ug25:no-five} による．
+第二単位枝と matching の伝播により一つの core の二高分母を $(3,3)$ または $(3,7)$ に固定し，
+正 pair の全因子 $LM=8,20$ を調べる．残る低 column の線形式が恒等零になる二場合も，
+元の逆 entry の非整数性によって排除する．
+さらに定理~\ref{cm25:central} は，単位枝を $01,23$ としたとき，
+唯一の四高 core $4$ の正 matching が $\{01,23\}$ に限られることを示す．
+交差する二 matching は四つの正規符号配置へ帰着し，元の clutching と行和が
+分母による一の整除または零 entry を強制するため排除される．
+小分母の出現は，全分母の一様上界や残る支持型の排除を意味しない．
+
+\subsection{matching 性が大域の接着に与える制約}
+
+三高分母 core の低 row の符号が定まることにより，その row を隣接する core の
+node 数から復元する方法が有効になる．二高分母の標準形と共通低 puncture の比較も合わせ，
+次の三型を排除する：
+\[
+ \begin{split}
+ G_{5,5}&=\{01,02,03,12,14,34\},\\
+ G_{5,10}&=\{01,02,03,12,13,24,34\},\\
+ G_{5,12}&=K_4\text{ に一本の葉辺を加えた graph}.
+ \end{split}
+\]
+$G_{5,5}$ は三角形と四角形が一辺を共有する house graph である
+（定理~\ref{hs18:no-house}）．この型では二価 cores の比較と二本の低辺の $D$ 相殺だけで十分であり，
+三高分母の完全 matching 定理そのものは必要としない．
+$G_{5,10}$ の排除では，唯一の二価 core の標準形を，
+共通低 puncture における通常接着と正負の例外接着に分ける
+（定理~\ref{gten18:no-support}）．
+通常型は一つの中央模型に強制されるが，その反対 corner の signed divisor が存在しない．
+正例外型は $D$ 相殺と奇分母の parity に反する．
+負例外型では，固定分母十三の無限共鳴族を全て残したまま，
+node 予算と三本の辺の $D$ 相殺から矛盾を導く．
+この無限族を全て残して扱うことが，局所整数模型の分類から大域の接着障害へ進む際の要点となる．
+
+$G_{5,12}$ では，第五 core が一高分母の葉となるため，
+全低分母 hub の $K_4$ 証明をそのまま適用することはできない．
+一高分母標準形の自由度を保ち，隣接する三高分母 cores の matching 性と
+共有 punctures の整数条件を用いて排除する
+（定理~\ref{lh18:no-K4-leaf}）．
+この結果は support 全体が $K_4$ と一本の葉辺からなる場合に関するものであり，
+$K_4$ を部分 graph として含む全ての support を禁止する主張ではない．
+
+これらに先立つ四使用頂点 $K_4$ の排除では，全低分母の第五 core を hub とし，
+その node 条件と $D$ 相殺を通常辺上の正の流れへ書き換える
+（定理~\ref{kg17:no-K4}）．
+二例外は大きい負 reverse の位置に応じた場合分けで排除される．
+四例外は，node 予算によって符号が安定する無限領域を有限個の型へまとめ，
+残る六候補を判別式 $-47$ の局所二次式で排除する．
+この $K_4$ 証明自体は，一般の三高分母 matching 性を使わずに成立する．
+各証明で用いる局所方程式と大域条件を分けることで，
+他の support に再利用できる部分を明確にする．
+
+\subsection{葉と二つの三価頂点を持つ七高辺型の排除}
+
+葉を持つ六高辺型 $G_{5,7}$ と $G_{5,9}$ は，それぞれ三価，四価の頂点に一葉を持つ．
+両型とも葉の完全標準形を用いるが，隣接 core の高次数が異なるため，
+$K_4$ 一葉型の matching 条件をそのまま流用することはできない．
+定理~\ref{g719:no-G5-7} では，葉の分母 $Q$ に $Q\le21$ を証明し，
+全自由整数の partner 条件から得る $212$ 型を，中心辺の $D$ 相殺で排除する．
+定理~\ref{dl19:no-G5-9} では，三高 core の全配置に対して $Q\le13$ を証明する．
+自由整数の全半直線十八型を canonical 第二高分母三の矛盾で除き，
+残る点九百八型からの $2596$ 個の $D$ 線形系を厳密に排除する．
+各自由分母は正整数変数による等差数列のままであり，
+有理解の不整合または $3a+3b=-6$，$a,b\ge1$ という符号矛盾で全族を除く．
+これにより，高分母支持の葉は全て排除される．
+
+葉を持たない七高辺型のうち
+\[
+ G_{5,11}=\{01,02,03,04,12,13,24\}
+\]
+も排除される（定理~\ref{g51120:no-support}）．
+二つの二価 cores の標準形を四つの向きに分け，
+三高 cores の matching 性と node 予算から reverse data に
+$r\le9,S\le7,T\le13$ を証明する．
+これは分母と scale を一律に打ち切る条件ではない．
+双一次式の二種類の退化を保って全 scale を因数分解し，
+九十個の点型と，七十八個の剰余類付き全半直線型を得る．
+node 条件・低行の符号と共通低 puncture の接着型が残す $1395$ 配置のうち，
+$1309$ 配置は分母の等式に反し，残りは低辺の $D$ 残差が奇数または非零定数となる．
+最後の表は，交換と剰余類による重複を除くと十組の模型へ圧縮できる．
+七・十三の共鳴を含む全無限族を残した上での排除である．
+
+\subsection{二高分母の整数剛性と book の完全排除}
+
+Book 型 $G_{5,13}$ の三つの二価 cores の間には低辺の三角形がある．
+固定 core の全相手を復元する方法，低 $D$ の非零周期，正負枝の node 制約により，
+全正・全負・二負枝を除き，一負枝と二正枝の二つの sector へ帰着できる
+（定理~\ref{bs21:two-sectors}）．この帰着は，先に解析的に導いた $w\le134$ の範囲を
+全尺度で検証する有限証明書を含む．残る二 sector では負枝の $w\ge135$ が必要である．
+
+この残余を閉じる局所整数剛性は，book の接合そのものには依存しない．
+負枝を $S=T=w$，$r=w+H$ と書くと，正の整数尺度の条件は
+\[
+ H=w-1\quad\hbox{または}\quad H=w
+\]
+を強制する．例えば $E=1-w^2/[H(H+1)]>0$ の側では
+$c=sH/(w+H)\in\ZZ_{\ge2}$ と $Ec<1$ を得る．
+$H>w$ なら $s-c=cw/H$ は $1$ 以上 $c-1$ 以下の整数であり，
+$Ec>2-1/c>1$ となるので矛盾する．負の $E$ 側も対称な議論で決まる．
+
+正枝では $L=3$ または四，$F>0$ とすると
+\[
+ (r,S,T)=(2R,3R,3R+2)\quad(L=3),\qquad
+ (S,T)=(2r,2r+3)\quad(L=4)
+\]
+に限られる．これは尺度方程式の $0<E_+\alpha<1$ と，その分子に現れる整数の
+非負性から従う（補題~\ref{bc22:positive-rigidity}）．
+正枝の $F<0$ 側も同様に剛性を持ち，$L=3$ では
+$(r,S,T)=(2R-1,3R-2,3R)$，$L=4$ では $(S,T)=(2r-1,2r+2)$ となる．
+$F=0$ は整除性により不可能である．
+これにより $L=1,3,4$ の全模型を六つの尺度族へ分類する
+（命題~\ref{rs22:positive-scales}，\ref{rs22:negative-F-scales}，\ref{rs22:negative-scales}）．
+分母七・十三の共鳴自由尺度を含み，全族で奇数高分母は自動成立する．
+
+Book の残余型 I では $H=w$ と node offset から
+$w=-\kappa\le18$ となり，$w\ge135$ に反する．
+型 II では負枝の $r_N=2w$ が偶数である一方，正枝の $L=4$ と node 条件は
+$r_N=2r_1+1$ を要求する．従って型 II も存在しない．
+定理~\ref{bc22:book-obstruction} が book 全体を排除し，
+系~\ref{sf22:three-unit-branches} が三本の単位分母からの伝播を与える．
+この二 sector の排除には，追加の有限探索や四高中心二 core の復元を要しない．
+
+\subsection{二価 core を一つ持つ \texorpdfstring{$G_{5,15}$}{G5,15} の完全排除}
+
+八高辺型 $G_{5,15}$ の低辺を $23,24$ とし，二高 core を $2$，三高 cores を $3,4$ とする．
+共有高辺 $34$ の共通低 puncture の比較は，通常型，正例外型，負例外型の三択を与える．
+定理~\ref{g51521:reduction} は，正例外型を排除し，通常型を四中心・十四配置へ，
+負例外型を共有分母 $Q=3,5$ の二つの template へ完全に還元する．
+この段階だけでは未知尺度はなお無限に動き得る．
+
+補題~\ref{oc23:linear-transfer} は，低辺の両端から外側 core に入る一つの pair を使う．
+既知の分母 $a$，entry $p$，隣接低 entry $\varepsilon j$ と尺度 $S$ に対して
+\[
+ \{(au-p)(jv-\varepsilon)-aj\}S=a-1-(au-p)v,
+ \qquad u,v\in\{-4,-3,-2,-1,0,1\}
+\]
+を得る．係数が非零なら尺度は各 node 組で高々一つであり，
+係数と定数がともに零になる場合も整数整除で完全に分類する．
+通常型では $a-1>j$ により共鳴がなく，十四配置の全尺度は六つの小さい表に限られる．
+唯一残る候補は元の行和と二つの pair が要求する
+$HK=62,(H+1)M=14,M+N=6$ に反する
+（定理~\ref{g51523:no-ordinary}）．
+
+負例外では，外側 pair は隣接低 columns を中心尺度の定数シフトに制限する．
+小さい境界と共鳴を全て保持した後，四つの中心族で尺度変数 $\ell$ が奇数，$t$ が偶数となる．
+共有高 row の二つの変数は node による定数差を持つため，元の二つの局所二次式の
+resultant が必要条件になる．四十個の resultant は，三つの無限領域における
+全係数の符号と四つの境界点で排除される．唯一の零評価は正の column 条件に反する
+（定理~\ref{ne23:no-negative-exception}）．
+先頭係数で割らずに resultant の必要性を証明しているので，一次退化も取りこぼさない．
+これは明示的な有限個の整数多項式の全係数による証明であり，分母探索範囲の外挿ではない．
+通常型・正例外・負例外を合わせて $G_{5,15}$ は全て除かれ，
+残る高分母支持の最小次数は三以上になる．
+
+\subsection{幾何的な先行研究と本稿の範囲}
+
+複素超曲面の高次元 pairs-of-pants による分解と，多面体的な底上の torus fibers は，
+Mikhalkin\cite[Theorems~1 and~1$'$]{Mikhalkin}によって研究された．
+Leung--Wan\cite{LeungWan}は一般型超曲面の退化に tropical geometry を用い，
+正則最高次形式の Calabi--Yau 型開部分への集中と，対応する fibers の
+漸近的な special Lagrangian 性を調べた．
+Zhang\cite[Theorem~1.1]{Zhang}は，次数 $d\ge5$ の超曲面に微分同相な四次元多様体を，
+$d(d-4)^2$ 個の四次元 pair-of-pants と K3 surfaces の部分集合に分解する結果を与えた．
+これらは一般型における分解と fibration の幾何的な背景を与える．
+本稿が固定する五つの四直線 cores の整数分母配置は，それらの分解に追加する問題である．
+
+Evans--Mauri\cite{EM}は contact link と Liouville cone を通じて
+局所 Lagrangian torus fibrations を構成し，条件付きの SNC divisor 近傍の模型を与えた．
+本稿の四直線 core の解釈はこの方法を背景とする．
+また Fernández de Bobadilla--Pełka\cite[Theorem~6.14]{FernandezBobadillaPelka}は，
+与えられた Kähler form の exact modification を用いて A'Campo space の境界で
+torus fibrations を構成し，symplectic connection によって近傍 fibers の
+codimension-zero 部分へ運ぶ一般的方法を与えた．
+maximal Calabi--Yau degenerations では，generic region の torus fibration と
+体積充填・漸近的な幾何の結果を得ている
+\cite[Theorems~1.1--1.2]{FernandezBobadillaPelka}．
+本稿で問うのは，こうした幾何的構成と整合する特定の標準整数 cone charts の接着であり，
+それぞれの存在定理だけから本稿の分母の剛性は従わない．
+SNC 境界に沿う相対構成，作用切片を含む neck の接続，
+曲面全体の fibration の存在は伴論文\cite{SurfaceGeometry}で扱う．
+
+標準 $K_4$ cone を用いることは，その link の抽象 graph を指定することより強い．
+整数 fan は一様 matroid $U_{3,4}$ の Bergman fan であり，
+線形 tropicalization，matroid，hyperplane arrangement の関係は
+Feichtner--Sturmfels\cite{FeichtnerSturmfels}，
+Ardila--Klivans\cite{ArdilaKlivans}で体系的に扱われている．
+本稿では，さらに face 上の作用微分から来る格子との同定を課す．
+tropical atlas の重なりを ambient 整数アフィン写像の制限として定める条件は，
+Shaw\cite[Definition~3.1]{ShawSurfaces}，
+Jell--Rau--Shaw\cite[Definitions~2.1 and~5.1]{JellRauShaw}に明示されている．
+この条件と，torus cycles の作用微分との適合性を同時に要求する点が，
+本稿の整数 clutching の出発点である．
+
+Cartwright\cite[Definitions~2.5 and~2.8]{CartwrightComplexes}の tropical complex は，
+dual complex に交点数のデータを加え，局所交叉行列を用いて
+線形関数と divisor theory を定める．
+Gross--Siebert\cite{GrossSiebert}は，特異点を持つ実アフィン幾何と
+追加の接着データから Calabi--Yau 退化を再構成する．
+本稿の $p,q$ は実際の作用周期の格子から定まるので，
+これらとの比較には交点数，アフィン層，特異集合，作用切片の対応を指定する必要がある．
+本稿の整数条件が各理論の仮定を満たすことを示さずに，
+それらの存在定理や有限性を分母へ適用することはしない．
+
+\subsection{principal minors，cycle gains，整数性}
+
+一つの core の行列を $A=\operatorname{diag}(q_j)+P$ と書けば，
+\[
+ A\mathbf1=0,\qquad \det A_{\{j,k\}}=1\quad(j\ne k)
+\]
+となる．非対称行列の principal-minor assignment と
+principal minors 間の多項式関係は古典的な問題である．
+Lin--Sturmfels\cite{LinSturmfels}は $4\times4$ 行列の関係式を求め，
+同論文 Proposition~4 では集合分割による principal minors と cycle-sums の相互変換を与えた．
+本稿の三角形の cycle products の消去や Schur 補行列も，
+この一般的な代数的枠組みの中に位置付けられる．
+本稿で追加して追跡するのは，固定した kernel vector $\mathbf1$，
+個々の entry の整数性と整除性，strict basin inequalities，
+および異なる五行列の marked punctures での整合である．
+
+正の weights の存在判定は，既知の cycle-gain 条件の特殊化である．
+$p_{jk}>0$ の有向辺に gain $p_{jk}/q_j$ を与えると，
+$w_k>(p_{jk}/q_j)w_j$ が全て同時に成立することは，
+全ての directed cycles の gain が一未満であることと同値になる．
+max-times algebra では，これは maximum cycle geometric mean，
+Kleene star，subeigenvector の理論で説明できる
+\cite[\S2, Theorem~2.2 and Proposition~2.5]{SergeevSchneiderButkovic}．
+strict な場合は，十分小さい $\varepsilon>0$ を取り，全ての gains を共通因子 $1+\varepsilon$ で拡大しても
+cycle 条件を保てるため，通常の非 strict な subeigenvector 条件から回収できる．
+本稿ではこの判定を初等的に示し，有理 weights と整数積による厳密検算に用いる．
+
+一方，cycle 条件そのものは正符号 graph を matching に限定しない．
+道上の gain inequalities や，十分小さい gains を持つ三角形には
+正の weights が存在し得る．
+定理~\ref{ar18:main-matching}の内容は，これらに
+row sums と全ての pair products を整数として同時に課すと，
+三高・四高のいずれでも完全 matching だけが残るという点にある．
+本稿の四ray判定では，孤立頂点から作る二つの整数 $g_{ij}$ の和が一であることを使い，
+少なくとも一つが非正となることから禁じられた閉路を作る．
+道型を排除する正値恒等式では，二つの正整数積が一以上になることも使う．
+この整数の間隙を実係数の一般的な principal-minor relation や
+数値的な tolerance に置き換えることはできない．
+既存の一般理論との関係をこのように区別し，本稿の各整数結果は明記した条件から直接証明する．
+
+関連する整数行列の理論として，
+Corrales--Valencia\cite[\S\S2--3]{CorralesValencia}の graph 上の arithmetical structures がある．
+同理論は非正の非対角成分を持つ $Z$-matrices，$M$-matrices を用い，
+固定した graph に対する有限性を扱う．
+本稿の $A\mathbf1=0$ は形式上似た条件であるが，
+高分母の局所行列には正の非対角成分が必要となる
+（補題~\ref{lit10:nonpositive-q1}）．
+従ってその有限性を，ここでの分母の一様上界として用いることはできない．
+
+determinant 一の整数式は frieze patterns にも現れる．
+Cuntz--Holm\cite[\S\S2--3 and~7]{CuntzHolmFriezes}は，
+零を許す tame integral friezes の quiddity cycles の表示と，
+離散集合上の零を持たない固定高さの friezes の有限性を与えた．
+Cuntz--Holm--Pagano\cite{CuntzHolmPagano}は代数的数の環上での有限性を研究した．
+frieze では隣接 minors の条件に加え，境界行，周期性，quiddity cycle の積条件を課す．
+本稿の六つの face determinants からそれらの構造への写像は与えていないため，
+同じ unimodular な式を持つことだけから分類や有限性を適用しない．
+
+\subsection{局所の無限族，完全復元，残る問題}
+
+局所には，任意の奇数 $q>1$ に対して分母 $(q,1,1,1)$ の正の chart が存在する
+（系~\ref{q9:local-all-odd}）．
+二高分母の全整数行列には signed-divisor 表示があり，
+正値性は二本の高低 pairing の符号を決める
+（命題~\ref{kl10:two-high-parametrization}，定理~\ref{ls11:two-high-signs}）．
+固定した一方の奇分母に対する partner の集合は，七と十三の共鳴を除けば有限であるが，
+この二つでは明示的な無限族が残る（定理~\ref{fp12:partner-structure}）．
+従って，局所整数性から分母全体の有限性を結論することはできない．
+
+三高分母についても，matching 性は全行列の有限性を意味しない．
+matching 型から得られる Schur 三元一次系は特異になり得る．
+実際，階数二の系から
+\[
+ (q_a,q_b,q_c,q_0)
+ =(409+600n,\ 3493+5100n,\ 1303+1904n,\ 1),
+ \qquad n\in\ZZ_{\ge0}
+\]
+という正の整数局所族が得られる（定理~\ref{sh14:singular-family}）．
+matching 定理により，この Schur 表示と $\beta\le-1$ の結果
+（定理~\ref{sm14:beta-negative}）は全ての正の三高分母模型へ適用できる．
+三つの高 $D$ が全て非負なら，$b=-\beta$ として
+\[
+ d=-D_0\ge1,\qquad \alpha\ge k\ge b+1\ge3,
+ \qquad \Delta\ge(-B)(-B-1)>0
+\]
+が必要である（定理~\ref{hd20:nonsingular}）．
+全 $D$ 零の場合は Cramer 恒等式と整数ベクトルの norm の整除性で排除し，
+二つの境界 $k=b-1,b$ は元の線形系の正値性から除く．
+従って，全ての特異 Schur 系をこの同時非負性の問題から外せる．
+特異な正整数局所模型自体の存在は，この帰着と両立する．
+
+残る非特異領域については，高係数を
+$(x,y,z)=(D_a,D_b,D_c)\ge0$，$x+y+z=d\ge1$ と指定し，低 row の二つの負成分の大きさを $s,t$，
+$u=s+t-1$ とする．命題~\ref{hd21:reconstruction} は新しい必要条件 $x\le s-1$ を与え，
+三尺度 $S,T,U$ の整数性を
+\[
+ F=b-1+ux+sz,\qquad m=F^2+F+1,\qquad m\mid FE-J
+\]
+という一つの合同条件にまとめる．ここで $E,J$ は固定した五整数 $(s,t,x,y,z)$ だけで定まる
+整数である（式~\eqref{hd21:fixed-data}）．
+この合同条件に，$\alpha\ge k\ge b+1$ と元の一つの pair-product 方程式，
+および尺度・entry の正値性を加えると，
+三高係数が全て非負である正の整数模型の必要十分な復元判定になる．
+正の有理 weights も明示的に構成できる．
+
+さらに定理~\ref{hd21:norm-bound} は，$N=E^2+EJ+J^2$ に対して
+\[
+ 3\le m\le N,\qquad m\mid N
+\]
+を証明する．基礎となるのは，尺度の整数差を用いる正定値二次形式の恒等式であり，
+$N=0$ となる二つの候補も元の pair-product 方程式で排除する．
+従って $(s,t,x,y,z)$ を固定すれば $b$ の全範囲を有限に復元できる．
+さらに本稿では $K=sT-b>0$ の分子を上から評価し，
+\[
+ F\le st+(2u+1)(s-x)-2
+\]
+を導く．従って $s,t$ を固定すれば $x,b,z$ は明示的な有限範囲に入る．
+残る元の pair 残余式は $y$ の二次式であり，二次係数が消える場合も一次係数が
+厳密に負となるため，恒等零にはならない．これにより固定 $(s,t)$ ごとの完全有限復元を得る．
+さらに $s=t,x=y$ の対称領域は無上界で排除できる．
+この場合は $E+J=0$ と尺度の整数性から $E/m$ が整数となり，
+三尺度の正値性が $E=J=0$ を強制して既知の零ノルム排除に反する．
+尺度の整数性を $n=\ell-U\in\ZZ$ として取り出す．
+ここで $B=b-1$，$h=s-x$，$j=t-y$，$\ell=u+z$，$\delta=sy-tx$ と置くと
+\[
+ S=j-(F+1)n-\ell\delta,\qquad
+ T=h+Fn+\ell\delta,\qquad U=\ell-n
+\]
+となる．$n$ は格子変数であって node の個数ではない．
+この表示と元の pair-product 残余から，次の排除と有限復元を得る．
+
+\begin{theorem}[非対称量の排除，比例領域と退化面の有限復元]
+\label{ar24:high-D-reductions}
+三高係数が同時に非負である正の canonical 整数模型を考え，直前の記号を用いる．
+\begin{enumerate}
+\item $\delta=-1$ および $\delta=1$ は起こらない．
+\item $\delta=0$ なら $x=y=0$，$z\ge1$，$s<t$，$0\le n\le z$ である．
+$s,z$ を固定したとき，各 $n=0,\ldots,z$ の候補 $b$ は真の四次式の整数根となる．
+従って原方程式を戻す前の候補数は高々 $4(z+1)$ である．
+\item 退化係数 $a=u(s-x)-(b-1)(F+1)$ が零なら，$s\ge3$ であり，
+\[
+ 2\le b\le1+s^2(s-1)^2
+\]
+が成り立つ．$s$ だけを固定して全ての残りの整数を有限に復元できる．
+\end{enumerate}
+いずれも分母や残りの尺度に探索上限を仮定しない．
+\end{theorem}
+
+第一項は定理~\ref{hd23:main} と定理~\ref{ax24:positive-axis} による．
+正側の境界 $x=0$ では $s=y=1$ となるが，元の pair 残余と尺度差方程式を合わせると，
+正整数の整除性とその大きさの比較が矛盾する．
+差方程式だけで元の残余が零になると仮定してはならない．
+
+第二項は定理~\ref{hp24:main} と系~\ref{hp24:finite-axis} による．
+$x>0$ の比例領域では尺度の正値性が $n=0$ を強制し，
+元の残余の厳密な係数符号と整数の間隙から矛盾を導く．
+残る零軸では $0\le n\le z$ を証明した上で，$b$ の四次式を得る．
+その先頭係数は $n^2-zn-1<0$ であり，恒等零への退化はない．
+さらに
+\[
+ C_n=n\bigl((sz)^2-3sz+3\bigr)+(s^2-1)z-3s+1
+\]
+と置くと，模型に対して $C_n>0$ であり，
+\[
+ b+1\mid C_n,\qquad
+ b+1\le C_n\le s^2z^3-3sz^2+(s^2+2)z-3s+1
+\]
+という明示的な約数上界も得られる
+（補題~\ref{hp24:divisor-bound}）．零の余りを持つ二つの共鳴は，
+それぞれ既知の対称排除と判別式九十三の平方障害によって除かれる．
+
+第三項は定理~\ref{ax24:degenerate-R1} と系~\ref{ax24:degenerate-finite} による．
+退化面で残る $x=0,R_0=b^2-sT=1$ の例外枝を，resultant の約数条件と
+連続する二平方の間隔で排除する．残る枝では元の残余から
+\[
+ b-1\mid(s-x)(s-1)(R_0-1)
+\]
+が従い，上の一変数の明示上界を得る．
+候補ごとの残余は $y$ の真の一次式となるため，その復元も有限である．
+端点については，定理~\ref{hpe25:main} が
+\[
+ n=0:\quad s\ge3,\ s<b<3s/2,\ 1\le z<s/2,
+\]
+\[
+ n=z:\quad s\ge2,\ 1\le z\le s,\ 1\le C_z/(b+1)\le s-1
+\]
+を与える．前者は元残余の符号による三つの領域排除，後者は正の整数商を変数とする
+モニック四次式の単調性と隣接整数間の根の位置による．
+両端点は固定 $s$ だけで完全に有限化される．
+
+退化面では，定理~\ref{dg25:product} の正整数 $M,L$ により
+$M(t-y)=tT$，$hM=(b-1)L$ となる．$h\ge b$ なら $1\le L\le b-1$ なので
+$\gcd(h,b-1)\ge2$ が必要である．この条件は $x\ge1$ の退化面全体に適用でき，
+系~\ref{dg25:fixed-b} は固定 $b$ から全残りの整数を有限復元する．
+
+これらの結果は比例零軸や退化面全体の不存在を結論せず，
+$s,z$ または $s$ 自体の一様上界も与えていない．
+
+別の有限性として，低 ray の行と列を両方固定すれば，
+三高分母の全整数 completion は高々二つとなる
+（命題~\ref{fc17:at-most-two}）．
+同符号の low-row entries を選ぶと，二次係数が消えない一変数二次式が得られ，
+その整数根と整除条件から全行列を復元できる．
+同じ固定データに対する二つの正の標識付き completion も存在する
+（注意~\ref{fc17:sharp}）．
+ここでは低 column を動かす自由度を残していないため，上の無限族と矛盾しない．
+また二つの標識付き解が，幾何学的に非同値な二つの charts を与えると主張するものではない．
+
+大域の解析には素数ごとの合同条件も併用できる．
+$\ell\mid q_{ij}$ の辺からなる素数 support $G_\ell$ は，
+任意の奇素数 $\ell$ に対して $K_4$ と book $B_3$ を含まず，$G_3$ は matching となる
+（定理~\ref{ps10:forbidden}）．
+七辺以上の素数 support は $\ell=5$，$G_5=K_{2,2,1}$ の場合に限られ，
+任意の七つの分母の gcd は五を割る
+（定理~\ref{ps11:dense}，系~\ref{ps11:dense-gcd}）．
+これらは高分母 support $H$ と異なる graph に対する制約であり，
+その剰余解の存在は整数 lifting や atlas の存在を保証しない．
+
+証明中の有限計算では，先に方程式から有限範囲または有限個の無限型代表を導く．
+node 予算から得られる有限な場合分け，符号が安定する全無限領域，
+および明示的な共鳴族の不等式による排除を区別して記述する．
+全分母が百一以下なら全て一となる検算
+（定理~\ref{ex10:bounded-exclusion}）は，指定した分母範囲についての結果である．
+これを，本稿の上限を仮定しない graph 障害と混同しない．
+
+中心的な未解決問題は，残る三型のいずれかが
+異なる高分母を混在させた算術的接着データを持つかどうかである．
+一般の五次分母剛性，すなわち全ての分母が一に強制されるかという問題も未解決である．
+二つの互いに素な低辺を持つ $G_{5,14}$ では，両低辺に強制される $\{4,1,0\}$ 配分，
+隣接分母三，固定された中央 matching を同時に合わせる必要がある．
+$G_{5,16}$ の唯一の単位枝には一般の二配分 $\{5,0,0\},\{4,1,0\}$ と小分母の制約が適用されるが，
+五node配分の排除までは得ていない．$G_{5,17}$ は単位枝を持たない．
+四高 core でも完全 matching に限定し，元の行和・pair products と大域接着を同時に調べる．
+高分母全体の原始性と，二本の単位枝があるときの任意七分母の互いに素性は，
+素数 support の合同条件を整数 lifting へ適用する追加の必要条件となる
+（系~\ref{gp23:primitive}，\ref{gp23:two-units}）．
+三高同時非負性では，$\delta=0$ の零軸，$|\delta|\ge2$ の領域，
+および退化面の一整数有限復元から一般的な構造へ進む問題が残る．
+
+今後は，これらの還元を matching 性，Schur 表示，素数 support と組み合わせ，
+残る無限領域に対する構造定理または整数接着の構成を求める必要がある．
+整数候補が得られた場合には，局所の実面積と作用切片を同時に整合させる幾何的な課題が残る．
+本稿の結果は，その実現可能性を調べるための局所符号分類，
+特定の入力に対する完全な整数復元，および標準五次模型に対する厳密な必要条件を与える．

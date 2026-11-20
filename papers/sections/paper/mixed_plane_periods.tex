@@ -1,0 +1,137 @@
+% v8 supplementary section. Existing bibliography: EM.
+% Insert after quadric_periods.tex; uses quad:framing and per:chart-definition.
+\subsection{二直線と conic の \texorpdfstring{$K_4$}{K4} core}
+\label{mixper:section}
+
+五次の分割 $(1,1,1,2)$ に現れる plane core の境界は，四直線ではなく，
+二本の直線と一本の conic である．この場合にも，非零 critical periods を選ぶことで
+個別の core に作用座標を与えられる．
+
+\begin{proposition}[Mixed plane core の作用座標]\label{mixper:realization}
+$L_X,L_Y\subset\PP^2$ を相異なる直線，$C\subset\PP^2$ を smooth conic とし，
+$L_X\cup L_Y\cup C$ が三重交点のない SNC divisor であるとする．
+正の weights $u_X,u_Y,u_C$ と Kähler form
+\[
+ [\omega]=2\pi(u_X[L_X]+u_Y[L_Y]+u_C[C])
+\]
+を固定する．$C$ の crossed quartet と，それぞれの直線の三葉 graph に対応する
+marked relative isotopy classes を指定する．
+その中で代表を選べば，定理~\ref{snc:main} による core に，
+定義~\ref{per:chart-definition} の作用座標に適合する標準 $K_4$ cone chart を構成できる．
+六つの face maps は unimodular で，branch denominators は全て一である．
+\end{proposition}
+
+\begin{proof}
+link の頂点を，二直線に対応する $X,Y$ と，conic の二 saddles に対応する $U,V$ とする．
+五つの crossing edges は $XY,XU,XV,YU,YV$，内部 annulus edge は $UV$ である．
+crossed quartet なので，$U,V$ はそれぞれ $L_X\cap C,L_Y\cap C$ の一点ずつに接する．
+標準格子は $N_4=\ZZ^4/\ZZ(1,1,1,1)$，rays は
+$r_X,r_Y,r_U,r_V$ とする．
+
+$W=u_X+u_Y+2u_C$ と置くと，二直線の面積は $2\pi W$，
+conic の面積は $4\pi W$ である．crossing germs の準備後に foliation の代表を選ぶ．
+各 puncture basin の面積を $2\pi$ で割った値を次のように指定する．
+\[
+\begin{array}{c|ccc}
+ \text{component}&\multicolumn{3}{c}{\text{basin targets}}\\\hline
+ L_X&Y:u_Y+u_X&U:u_C&V:u_C\\
+ L_Y&X:u_X&U:u_C+u_Y&V:u_C
+\end{array}
+\]
+conic では
+\[
+ U\to X:u_X+u_C,\quad U\to Y:u_Y,\quad
+ V\to X:u_X+u_C,\quad V\to Y:u_Y+u_C
+\]
+とする．二直線では三つの target の和が $W$ であり，conic では四つの和が
+$2u_X+2u_Y+3u_C=2W-u_C$ となる．従って conic の内部 annulus の面積は $2\pi u_C$ である．
+全ての領域の面積は正なので，三 basin および四 basin の relative Moser の議論により，
+十分小さい crossing disks を固定して実現できる．
+
+これを有向 crossing graph で表すと
+\begin{equation}\label{mixper:orientation}
+ X\longrightarrow Y,\quad Y\longrightarrow U,\quad
+ U\longrightarrow X,\quad V\longrightarrow X,\quad V\longrightarrow Y
+\end{equation}
+となる．矢印の始点側の critical slope が $-1$，終点側が零である．
+これは一般式 $h=(u_{\mathrm{other}}-\operatorname{area}(D)/(2\pi))/u_{\mathrm{own}}$ による．
+graph-period correction は fiber tangent を消す basic form によるため，この作用計算を変えない．
+各 vertex $v$ の common normal meridian を $\alpha_v$ とすれば，
+branch ray parameter を $s=-I_{\alpha_v}>0$ と取れる．
+
+crossing face $vw$ の基底を，対応する二成分の正の meridians $(\mu_v,\mu_w)$ とする．
+$\epsilon_{vw}$ を $v\to w$ が選ばれた場合に一，それ以外に零と置いて
+\[
+ \begin{pmatrix}I_{\mu_v}\\I_{\mu_w}\end{pmatrix}
+ =\begin{pmatrix}-1&\epsilon_{wv}\\\epsilon_{vw}&-1\end{pmatrix}
+   \begin{pmatrix}x\\y\end{pmatrix},\qquad
+ F=xr_v+yr_w
+\]
+とする．\eqref{mixper:orientation} では各 crossing にちょうど一つの向きがあるため，
+五つの determinant は全て一である．
+
+conic の normal meridian を $\alpha_C$，$U$ 側の二つの puncture cycles の和を
+内部 torus に運んだものを $\beta_U$，$V$ 側のものを $\beta_V$ とする．
+normal Euler 数は $C^2=4$ なので，補題~\ref{quad:framing} の clutching 計算で二を四に置き換えると，
+実際の annular torus 上で
+\[
+ \beta_U=-4\alpha_C-\beta_V
+\]
+となる．$(\alpha_C,\beta_U)$ は整数基底である．
+$U$ 側の二つの critical slopes の和は $-1$，$V$ 側は $-2$ なので，
+この基底における両端の action directions は $(-1,1)$ と $(-1,2)$ である．
+従って内部 face の map は
+\[
+ \begin{pmatrix}I_{\alpha_C}\\I_{\beta_U}\end{pmatrix}
+ =\begin{pmatrix}-1&-1\\1&2\end{pmatrix}
+   \begin{pmatrix}x\\y\end{pmatrix},\qquad
+ F=xr_U+yr_V
+\]
+で与えられ，determinant は $-1$ である．
+
+正値性は全 face で確認できる．crossing の選択された側の arm では partial slope が
+$h>-1$，反対側では $h>0$ なので，inverse matrix の二係数は正である．
+transition caps と product crossing では二つの meridian actions を負に保つように normal radius を縮める．
+conic の内部 annulus では $I_{\beta_U}/I_{\alpha_C}$ が $-1$ から $-2$ へ厳密単調に変わり，
+$x=-2I_{\alpha_C}-I_{\beta_U}>0$，$y=I_{\alpha_C}+I_{\beta_U}>0$ となる．
+
+三つの incident faces は各 vertex $v$ に沿って $F=-I_{\alpha_v}r_v$ に一致する．
+全 endpoint directions の normal component が $-1$ なので，branch lattice は飽和している．
+標準 $K_4$ fan の全 cones はそれぞれの rank-two span で unimodular であり，
+上の六つの action matrices も unimodular である．
+Liouville homogeneity と contact-link 上の projective action ratio の厳密単調性により，
+各 face の map は所期の cone sector を一度だけ被覆する\cite[Remarks 2.11--2.12]{EM}．
+compact link を用いて core を含む近傍へ貼り合わせれば，主張した chart を得る．
+\end{proof}
+
+\begin{remark}[四つの最小整数 recipes]\label{mixper:four}
+各直線で一つの basin をその直線の weight 分だけ拡大し，conic では四 basins 中三つを
+それぞれ $u_C$ 分だけ拡大する方法には $3^2\cdot4=36$ 個の marked choices がある．
+そのうち全 face を unimodular にするものは正確に四つである．
+実際，選んだ half-edges の総数が crossing edges の数五に等しいので，
+重複を避けるには全 crossing をちょうど一回選ぶ必要がある．
+$XY$ を $X\to Y$ と向けた場合，$X$ の唯一の選択はそれで尽くされ，
+$U\to X,V\to X$ が強制される．$Y$ は $Y\to U$ または $Y\to V$ の二択となる．
+$Y\to X$ の場合も二択で，合計四つである．
+内部 action matrix は $\left(\begin{smallmatrix}-1&-1\\m&m+1\end{smallmatrix}\right)$，
+$m\in\{1,2\}$ となるので，全て同じ証明で chart を与える．
+この有限個数は限定した面積 recipe を数えている．
+\end{remark}
+
+\begin{corollary}[Mixed quintic の各 core の個別実現]\label{mixper:individual}
+五次の分割 $(1,1,1,2)$ で全 core links を matroidal にする四つの標識付き quartet systems の各々について，
+一つの core ずつ考えれば，全ての core が作用座標に適合する標準 fan chart を持つように，
+marked foliations の代表を選べる．
+三つの plane cores は $K_4$，quadric core は $K_{3,3}$ である．
+\end{corollary}
+
+\begin{proof}
+三つの plane cores に命題~\ref{mixper:realization}，quadric core に定理~\ref{quad:realization} を適用する．
+\end{proof}
+
+この系は，異なる core のために選んだ代表や面積指定を共有 actual curves 上で同時に一致させるとは述べていない．
+既存の branch graph と標準 coarse cones を保った大域 atlas への接続は，
+後の定理~\ref{hd9:mixed-no-go} により任意の denominators に対して不可能である．
+branch graph や core，cone の格子を変更する場合は別の問題として残る．
+この大域障害にも，本節の個別構成にも，全 branch blocks の周期を
+ambient linear forms に延長する条件は課していない．

@@ -1,0 +1,98 @@
+% v13: the forest obstruction uses quantitative leaf transfer, not an
+% unproved sign assertion for an arbitrary three-high local model.
+\subsection{高分母 support の木成分は存在しない}
+\label{fo13:section}
+
+本項の議論では，三高分母模型の全ての高係数が正となり得るかという
+一般の局所問題を解く必要はない．葉に接する辺が要求する係数の
+\emph{大きさ}と，分母一の row が与える整数上界を比較する．
+
+\begin{lemma}[三高分母の係数和の上界]\label{fo13:center-bound}
+分母が $(a,b,c,1)$，$a,b,c>1$ である整数局所模型において，
+row sums と pair equations が成立すると仮定する．
+このとき
+\begin{equation}\label{fo13:center-inequality}
+ D_a+D_b+D_c
+ \leq a+b+c-\min\{a,b,c\}-2.
+\end{equation}
+正の weights，node の条件，高分母間の numerators の符号は仮定しない．
+特に高分母が奇数なら，右辺は $a+b+c-5$ 以下である．
+\end{lemma}
+
+\begin{proof}
+分母一の頂点を $0$ とし，$r_i=p_{0i}$，$x_i=p_{i0}$ と置く．
+row sum と pair equations は
+\[
+ \sum_{i=a,b,c}r_i=-1,\qquad r_ix_i=q_i-1>0
+\]
+を与える．従って，ある $j$ について $r_j<0$，従って $x_j\leq-1$ である．
+他の二つの添字については，$x_i$ が正なら $q_i-1$ の正の約数であり，
+負なら同じ上界が自明に成り立つため，いずれも $x_i\leq q_i-1$ である．
+全ての $D$ の和は零なので
+\[
+ D_a+D_b+D_c=-D_0=1+x_a+x_b+x_c
+ \leq\sum_{i\ne j}q_i-2
+ \leq a+b+c-\min\{a,b,c\}-2.
+\]
+これで示された．
+\end{proof}
+
+\begin{theorem}[木成分の排除]\label{fo13:no-tree}
+全平面五次の既存の $K_5$ branch graph と標準 $K_4$ cones を保ち，
+正の局所 charts，marked puncture の整数 clutching，
+および高辺の対向端における $D$ の相殺が成立するとする．
+高分母 support $H=\{ij:q_{ij}>1\}$ は，辺を持つ木の連結成分を持たない．
+従って，$H$ が forest なら全ての分母は一である．
+この結論に node 数の非負性は不要である．
+\end{theorem}
+
+\begin{proof}
+木の連結成分は高々五頂点を持つ．全ての次数が二以下なら path なので，
+定理~\ref{pc12:no-path} によって排除される．
+残る形は，三本の葉を持つ star $K_{1,3}$，四本の葉を持つ star $K_{1,4}$，
+または $K_{1,3}$ の一辺を一度だけ細分した五頂点の木である．
+
+葉の唯一の高分母を $q$ とする．命題~\ref{qh9:isolated-local} によれば，
+ある正整数 $h,t$ により $q-1=t h(h+1)$ かつ
+\[
+ D_{\mathrm{leaf}}=-(q-1)-t\leq-q.
+\]
+従って，その反対側の端では $D\geq q$ が必要である．
+$K_{1,3}$ の中心における三つの分母を $a,b,c$ とすれば，
+三つの葉が $D_a+D_b+D_c\geq a+b+c$ を要求する．
+これは補題~\ref{fo13:center-bound} に反する．
+$K_{1,4}$ では四つの係数全てが正となり，その和が零であることに反する．
+
+最後に細分された star を考える．長さ二の枝を，葉 $i$，二価頂点 $j$，
+三価中心 $k$ の順に書く．$j$ でのもう一方の高辺 $jk$ は実際に $k$ へ接着するので，
+継続する葉辺の係数移送定理~\ref{lt13:exact-transfer} を適用できる．
+従って $jk$ の $j$ 側の係数は $-q_{jk}$ 以下であり，
+$k$ 側では $q_{jk}$ 以上である．残る二つの枝も葉に直結するので，
+中心の三つの高係数はいずれも対応する分母以上となる．
+再び補題~\ref{fo13:center-bound} に矛盾する．
+\end{proof}
+
+\begin{remark}[局所符号問題との区別]\label{fo13:scope}
+定理~\ref{fo13:no-tree} は，一般の整数三高分母模型について
+$D_a,D_b,D_c>0$ が不可能であるとは述べない．
+三つ全ての正性の排除は，独立した局所問題として残る．
+ここで用いたのは，葉とその接着条件が強制する
+$D_i\geq q_i$ という，より強い下界である．
+また，結論は木の\emph{連結成分}に関するものであり，
+cycle を含む成分の内部にある木の部分 graph や pendant tree を全て排除するものではない．
+\end{remark}
+
+\begin{corollary}[未排除の support の大域的な形]\label{fo13:remaining-support}
+定理~\ref{fo13:no-tree} の仮定に node 数の非負性を加える．
+$H$ が空でなければ，辺を持つ連結成分はちょうど一つであり，
+その成分は四または五頂点を持ち，cycle を含み，最大次数は三以上である．
+\end{corollary}
+
+\begin{proof}
+辺を持つ成分は木ではないので，cycle を含む．
+三頂点のそのような成分は $C_3$ だけだが，
+定理~\ref{ls11:no-triangle-component} により排除される．
+従ってその成分は四頂点以上を使い，$K_5$ 内に二つは存在しない．
+最大次数が二以下なら $C_4$ または $C_5$ となるが，
+系~\ref{cf13:degree-two-rigidity} に反する．
+\end{proof}

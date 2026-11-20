@@ -1,0 +1,178 @@
+% v13: the constant-pairing C4 obstruction no longer uses D opposition.
+% The new tau=1 argument uses the fifth core and the unique S=T=2 model.
+
+\subsection{四角形成分の同符号 pairing の排除}
+\label{cq12:section}
+
+\begin{lemma}[二つの reverse divisors が二である最小 entry の模型]
+\label{cq13:reverse-two}
+正の二高分母標準形で $S=T=2$ なら，canonical な整数データは
+\[
+ (r,s,z,S,T)=(4,4,5,2,2),\qquad (a,b)=(9,11)
+\]
+に限られる．
+\end{lemma}
+
+\begin{proof}
+$d=S-T-1=-1$ なので，補題~\ref{ml12:dichotomy} より
+$\alpha=-u$，$\beta=-v$，$H=r-2\geq1$ と書ける．ここで $u,v$ は正の整数である．
+式~\eqref{ml12:E-equation} と式~\eqref{ml12:s-z} は
+\[
+ Euv=v-u+1,\qquad E=1-\frac4{H(H+1)},\qquad
+ s=u\frac{H+2}{H},\quad z=v\frac{H+3}{H+1}
+\]
+を与える．$H=1$ なら $E=-1$ で，最初の式は $u(1-v)=v+1$ となる．
+左辺は非正，右辺は正なので不可能である．
+$H\geq2$ では $0<E<1$ である．$u=1$ なら $E=1$ となるため $u\geq2$ であり，
+\[
+ Eu=1-\frac{u-1}{v}<1
+\]
+となる．$H\geq3$ なら $E\geq2/3$ なので $Eu\geq4/3$ となって矛盾する．
+従って $H=2$，$E=1/3$，$u=2$，$v=3$ である．
+表示式から $r=4$，$s=4$，$z=5$，$(a,b)=(sS+1,zT+1)=(9,11)$ を得る．
+このデータが標準形の各条件を満たすことは直接確認できる．
+\end{proof}
+
+\begin{theorem}[四角形成分に残る pairing]\label{cq12:no-constant-pairing}
+\label{cq13:no-constant-pairing}
+高分母 support の連結成分が $C_4$ であり，その vertices を
+$i\in\mathbb Z/4$，残る第五の label を $*$ とする．
+正の局所 charts，marked puncture の整数 clutching，
+および全ての node 数の非負性を仮定する．
+\[
+ \varepsilon_i=\operatorname{sign}(p^i_{i+1,*})
+\]
+が全て同じであることは不可能である．
+従って命題~\ref{cn12:cycle-signs} の二つの型のうち，残る可能性は
+$\varepsilon_i=-\varepsilon_{i+1}$ という交互型だけである．
+ここで node 数の上限五は，別の仮定ではなく両端の row sums と非負性から従う．
+\end{theorem}
+
+\begin{proof}
+cycle の向きを逆にすると全 $\varepsilon_i$ の符号が反転するので，
+全て $+1$ としてよい．$q_i=q_{i,i+1}>1$ とする．
+core $i$ の高分母二 rays 間の entries を
+\[
+ p^i_{i-1,i+1}=-A_i,\qquad
+ p^i_{i+1,i-1}=-B_i,
+ \qquad A_iB_i=q_{i-1}q_i-1
+\]
+と書く．全ての $A_i,B_i$ は正である．
+
+\paragraph{固定向きの低低 entry と reverse divisors．}
+共通 puncture $*$ では $\lambda_{i,i+1}=0$ である．
+その reverse numerators の絶対値を $c_i$ とすると，補題~\ref{cn12:reverse-bound} より
+$1\leq c_i\leq4$ である．
+core $i$ の低 ray $i*$ から二本の高 rays へ向かう entries は，順に
+\[
+ p^i_{*,i-1}=-c_{i-1},\qquad p^i_{*,i+1}=c_i.
+\]
+もう一つの低 ray $i,i+2$ から高 rays への entries を
+\[
+ p^i_{i+2,i-1}=\ell_i>0,\qquad
+ p^i_{i+2,i+1}=-k_i<0
+\]
+と書く．固定向きの低低 entries は
+\[
+ d_i=p^i_{*,i+2}\leq0,\qquad e_i=p^i_{i+2,*}\leq0
+\]
+であり，ちょうど一方が零，他方が負である．
+特に $d_i$ は canonical な非零 entry と同じとは限らない．
+低 ray $i*$ の row sum から
+\begin{equation}\label{cq12:fixed-row}
+ c_i-c_{i-1}+d_i=-1,
+ \qquad \sum_i d_i=-4
+\end{equation}
+を得る．
+
+\paragraph{mixed node による二つの型の伝播．}
+$ij=(i,i+1)$ の，第三 label $i+2$ に向かう mixed puncture の両端の outgoing entries は
+\[
+ -\frac{q_i-1}{k_i},\qquad -A_{i+1}
+\]
+であり，両者とも負である．従ってその node 数は二以上の整数である．
+これを $1+\tau_i$ と書く．共通 puncture の node 数は一であり，もう一つの mixed puncture の node 数も一以上なので
+\[
+ \tau_i\in\{1,2\}.
+\]
+全数五を用いて，二つの mixed clutching 式は
+\begin{equation}\label{cq12:tau-equations}
+ A_{i+1}=\tau_iq_i-\frac{q_i-1}{k_i},\qquad
+ B_i=(2-\tau_i)q_i+\frac{q_i-1}{\ell_{i+1}}
+\end{equation}
+となる．各表示分数は一以上 $q_i-1$ 以下の整数なので，
+\[
+ \begin{array}{c|cc}
+  & A_{i+1} & B_i\\ \hline
+ \tau_i=1 & <q_i & >q_i\\
+ \tau_i=2 & >q_i & <q_i
+ \end{array}
+\]
+である．一方 $A_iB_i=q_{i-1}q_i-1$ と整数性により，
+$A_i<q_{i-1}$ と $B_i>q_i$ は同値であり，逆向きの厳密な不等式も同値である．
+従って $\tau_{i-1}=\tau_i$ であり，四つの $\tau_i$ は同じ値となる．
+
+\paragraph{全て $\tau_i=1$ の場合．}
+$d_i<0$ の core を考える．このとき $e_i=0$ なので，二高分母の canonical 表示の低 ray $C$ は $i,i+2$，
+低 ray $D$ は $i*$ である．$C$ の正の entry は $i,i-1$ に向かうので，
+canonical な高 ray $A$ は $i,i-1$，$B$ は $i,i+1$ となる．
+canonical 補助変数は
+\[
+ \alpha=A_i-q_{i-1}<0,\qquad
+ \beta=q_i-B_i<0
+\]
+である．補題~\ref{ml12:dichotomy} より，その非零低低 entry $d_i$ は $-1$ である．
+従って全ての $d_i$ は零または $-1$ であり，\eqref{cq12:fixed-row} から四つとも $-1$ となる．
+同じ式から $c_i=c$ は一定である．この場合の canonical な低 rays は全て
+$C=i+2$，$D=*$ であり，$S=T=c$ となる．
+補題~\ref{cc12:proper-negative} の結論 $S\geq2$ により $c\geq2$ である．
+以下では分母の下降や $D$ の相殺を使わず，第五の core $*$ の node 条件を用いる．
+
+core $*$ における，ray $*i$ から ray $*j$ への entry を $v_{ij}=p^*_{ij}$ と書く．
+これらの ray の分母は全て一なので
+\[
+ \sum_{j\ne i}v_{ij}=-1,\qquad v_{ij}v_{ji}=0.
+\]
+低 edge $i*$ の puncture $i+1$ では，core $i$ 側の entry は $c$ である．
+従って node 非負性は
+\[
+ 1-c-v_{i,i+1}\geq0,\qquad v_{i,i+1}\leq1-c<0
+\]
+を与える．添字を一つ戻して pair product を使えば $v_{i,i-1}=0$ であり，row sum から
+\[
+ v_{i,i+2}=-1-v_{i,i+1}\geq c-2
+\]
+となる．$c\geq3$ なら $v_{i,i+2}$ と $v_{i+2,i}$ がともに正となり，
+その積が零であることに反する．従って $c=2$ である．
+
+補題~\ref{cq13:reverse-two} により，各 core の canonical 高分母は $(a,b)=(9,11)$ である．
+ここでは $A=i-1$，$B=i+1$ なので，すべての $i$ に対して
+$q_{i-1}=9$，$q_i=11$ を要求する．同じ共有 edge の分母が両方の値を持つことになり矛盾する．
+
+\paragraph{全て $\tau_i=2$ の場合．}
+同じ標識の説明により，$d_i<0$ の core では canonical な
+$\alpha=A_i-q_{i-1}$，$\beta=q_i-B_i$ がともに正である．
+従って $d_i\leq-3$ である．
+四つの和が $-4$ なので，ちょうど一つが $-4$，他の三つが零である．
+添字を移して $d_0=-4$ とすれば，\eqref{cq12:fixed-row} と $1\leq c_i\leq4$ から
+\[
+ (c_0,c_1,c_2,c_3)=(4,3,2,1)
+\]
+となる．
+core $3$ では $d_3=0$ なので，canonical な低 ray $C$ は $3*$ であり，
+その正の entry は高 ray $3,0$ に向かう．従って canonical な高 ray $A$ は $3,0$ で，
+標準形の整数 $r$ は $c_3=1$ である．
+ところが $r=1$ の標準形では
+\[
+ A=a+\frac{a-1}{r}-s=a+(a-1)-s\geq a,
+ \qquad s\mid a-1,\quad s>0.
+\]
+これは $\tau_3=2$ から得る $B_3<q_3$ に反する．
+ここでは canonical な $A$ が $B_3$，$a$ が $q_3$ に対応する．
+両場合が排除され，結論を得る．
+\end{proof}
+
+交互型の四角形成分については，本定理は不存在を結論しない．
+同符号型の排除には node 非負性と各 branch の全 node 数五を使っており，
+node 条件を外した整数 clutching だけの障害へ読み替えない．
+一方で，この改訂された証明では対向端の $D$ の相殺を一切用いていない．

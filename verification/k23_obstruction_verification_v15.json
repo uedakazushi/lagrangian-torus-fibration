@@ -1,0 +1,506 @@
+{
+  "version": "v15",
+  "passed": true,
+  "scope": "A negative two-high branch requires a high edge between its high neighbors; K2,3 high support is impossible.",
+  "assumptions": [
+    "standard quintic K5 branch graph",
+    "positive integer local charts",
+    "integer marked-puncture clutching",
+    "nonnegative node counts"
+  ],
+  "neighbor_high_support_degrees_restricted": false,
+  "D_opposition_used_in_new_theorems": false,
+  "denominator_or_entry_cutoff": null,
+  "q3_degenerate_low_core_classification_used": false,
+  "polynomial_identity_count": 40,
+  "polynomial_identities": [
+    "pair product gives Ece=e-c+1 after clearing H(H+1)",
+    "negative E rearrangement",
+    "positive E upper-bound rearrangement",
+    "c=1 would imply E=1",
+    "e=1 gives cE=2-c",
+    "H(H+1) lies above H squared",
+    "H(H+1) lies below (H+1) squared",
+    "w=1 gives E>=1/2 after clearing 2N",
+    "X=-c satisfies the clutching residue",
+    "X=a-c satisfies the clutching residue",
+    "Y=e satisfies the clutching residue",
+    "Y=e-b satisfies the clutching residue",
+    "a-c is strictly above half of a-1",
+    "a-c is a proper candidate divisor",
+    "b-e is strictly above half of b-1",
+    "b-e is a proper candidate divisor when e>=2",
+    "reverse entry sum is E-1 after clearing H(H+1)",
+    "exceptional node after clearing H",
+    "rw/H exceeds 2w when w>H",
+    "++ low-edge node at puncture 0",
+    "++ low-edge node at puncture 1",
+    "++ low-edge node at puncture 2",
+    "++ three low-edge nodes total five",
+    "+- low-edge node at puncture 0",
+    "+- low-edge node at puncture 1",
+    "+- low-edge node at puncture 2",
+    "+- three low-edge nodes total five",
+    "-+ low-edge node at puncture 0",
+    "-+ low-edge node at puncture 1",
+    "-+ low-edge node at puncture 2",
+    "-+ three low-edge nodes total five",
+    "-- low-edge node at puncture 0",
+    "-- low-edge node at puncture 1",
+    "-- low-edge node at puncture 2",
+    "-- three low-edge nodes total five",
+    "positive branch forces T>=r+3",
+    "mixed minus-plus positive branches exceed five nodes",
+    "constant plus assignment node sum",
+    "constant minus assignment node sum",
+    "either constant assignment has negative node sum"
+  ],
+  "proof_case_exhaustion": [
+    {
+      "case": "X=a-c",
+      "reason": "Strictly between (a-1)/2 and a-1, hence not a divisor."
+    },
+    {
+      "case": "X=-c, Y=e",
+      "reason": "The integer reverse-entry sum equals E-1, but -1<E<1/2 and E is nonzero."
+    },
+    {
+      "case": "X=-c, Y=e-b, e>=2",
+      "reason": "The magnitude b-e is strictly between (b-1)/2 and b-1."
+    },
+    {
+      "case": "X=-c, Y=1-b, e=1",
+      "reason": "The low-edge node is 2+rw/H>6, while every node is at most five."
+    }
+  ],
+  "directed_cycles": [
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      2,
+      0,
+      1
+    ]
+  ],
+  "canonical_assignment_cases": [
+    {
+      "signs": [
+        "+",
+        "+",
+        "+"
+      ],
+      "minus_plus_pairs": [],
+      "exclusion": "The sum of three center-puncture nodes is at most minus three."
+    },
+    {
+      "signs": [
+        "+",
+        "+",
+        "-"
+      ],
+      "minus_plus_pairs": [
+        [
+          2,
+          0
+        ]
+      ],
+      "exclusion": "A listed minus-plus pair has third node at least seven."
+    },
+    {
+      "signs": [
+        "+",
+        "-",
+        "+"
+      ],
+      "minus_plus_pairs": [
+        [
+          1,
+          2
+        ]
+      ],
+      "exclusion": "A listed minus-plus pair has third node at least seven."
+    },
+    {
+      "signs": [
+        "+",
+        "-",
+        "-"
+      ],
+      "minus_plus_pairs": [
+        [
+          2,
+          0
+        ]
+      ],
+      "exclusion": "A listed minus-plus pair has third node at least seven."
+    },
+    {
+      "signs": [
+        "-",
+        "+",
+        "+"
+      ],
+      "minus_plus_pairs": [
+        [
+          0,
+          1
+        ]
+      ],
+      "exclusion": "A listed minus-plus pair has third node at least seven."
+    },
+    {
+      "signs": [
+        "-",
+        "+",
+        "-"
+      ],
+      "minus_plus_pairs": [
+        [
+          0,
+          1
+        ]
+      ],
+      "exclusion": "A listed minus-plus pair has third node at least seven."
+    },
+    {
+      "signs": [
+        "-",
+        "-",
+        "+"
+      ],
+      "minus_plus_pairs": [
+        [
+          1,
+          2
+        ]
+      ],
+      "exclusion": "A listed minus-plus pair has third node at least seven."
+    },
+    {
+      "signs": [
+        "-",
+        "-",
+        "-"
+      ],
+      "minus_plus_pairs": [],
+      "exclusion": "The sum of three center-puncture nodes is at most minus three."
+    }
+  ],
+  "graph_count_update_from_v14_using_only_this_new_theorem": {
+    "scope": "Necessary support candidates, not atlas or geometric existence counts; the v14 baseline includes earlier D-dependent exclusions.",
+    "labelled_before": 461,
+    "unlabelled_before": 15,
+    "labelled_after": 451,
+    "unlabelled_after": 14,
+    "newly_excluded_shape_id": "G5_6",
+    "newly_excluded_name": "K2,3",
+    "all_1024_support_filter_counts": {
+      "empty_support": 1,
+      "tree_component": 300,
+      "pure_cycle_component": 37,
+      "triangle_with_two_degree_two_vertices": 165,
+      "remaining": 451,
+      "C4_with_pendant_edge": 60,
+      "K2_3": 10
+    },
+    "newly_excluded_canonical_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "all_ten_excluded_labelled_supports": [
+      [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    ]
+  },
+  "limitations": [
+    "The inequalities, signed-divisor exhaustiveness, and use of nonnegative nodes are proved in the companion TeX; this script audits identities and finite combinatorics.",
+    "No bounded denominator or entry search is performed or used as a proof.",
+    "The graph count is the effect of this theorem alone relative to v14; independent v15 theorems may further reduce it.",
+    "This is a nonexistence theorem within the specified quintic branch-graph model, not an unrestricted classification of all Lagrangian fibrations on general-type surfaces."
+  ],
+  "source_sha256": "af6f818c4d051de96f19077c9c0e563dcf9dee7969c7a6f28d3817a7376a5e41",
+  "script_sha256": "f64da0d3b22d26de53560545ae33a2980609f5eda498c7194cc23f19c04487e7"
+}

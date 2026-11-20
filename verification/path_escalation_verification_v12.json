@@ -1,0 +1,93 @@
+{
+  "version": 12,
+  "status": "passed",
+  "check_count": 10,
+  "checks": [
+    "complete common-puncture sign pairing",
+    "complete common-puncture sign pairing",
+    "complete common-puncture sign pairing",
+    "complete common-puncture sign pairing",
+    "complete common-puncture sign pairing",
+    "complete common-puncture sign pairing",
+    "full determinant elimination for either sign of x",
+    "full determinant elimination for either sign of x",
+    "negative-x lower bound b-(2a+1)=2(s-1)(S-1)",
+    "positive-x strict increase"
+  ],
+  "scope": "Unbounded symbolic leaf-escalation identities and all sign pairings; no node positivity or node budget is used.",
+  "sign_table": [
+    {
+      "sign_x": 1,
+      "leaf": [
+        -1,
+        -1
+      ],
+      "middle": [
+        -1,
+        1
+      ],
+      "Lambda": -1
+    },
+    {
+      "sign_x": 1,
+      "leaf": [
+        -1,
+        -1
+      ],
+      "middle": [
+        1,
+        -1
+      ],
+      "Lambda": -1
+    },
+    {
+      "sign_x": -1,
+      "leaf": [
+        -1,
+        1
+      ],
+      "middle": [
+        -1,
+        1
+      ],
+      "Lambda": 0
+    },
+    {
+      "sign_x": -1,
+      "leaf": [
+        1,
+        -1
+      ],
+      "middle": [
+        -1,
+        1
+      ],
+      "Lambda": 0
+    },
+    {
+      "sign_x": -1,
+      "leaf": [
+        -1,
+        1
+      ],
+      "middle": [
+        1,
+        -1
+      ],
+      "Lambda": 0
+    },
+    {
+      "sign_x": -1,
+      "leaf": [
+        1,
+        -1
+      ],
+      "middle": [
+        1,
+        -1
+      ],
+      "Lambda": 0
+    }
+  ],
+  "script_sha256": "41838b77c2034a75cc60cb2aa58423f828086fc70919706a218b1b765dc52270"
+}

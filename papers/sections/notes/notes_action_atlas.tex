@@ -1,0 +1,309 @@
+% Independent notes section. No references to public-paper theorem numbers.
+% Existing bibliography keys only: EM, DMT, IKM, VuNgoc.
+\section{作用適合 atlas：共有曲線の接着と次に使う整数条件}
+
+\subsection{現在の到達点と適用範囲}
+
+一つの core の作用適合 cone chart は，各正則 face の作用格子を fan の格子に同定し，
+branch lattice を飽和させる．大域 atlas では，さらに各 transition と逆写像が
+\emph{ambient integer affine map の制限}であることを要求する．
+face ごとの unimodularity だけでは，この追加条件は従わない．
+$H_1(T^2;\ZZ)$ は作用の\emph{余接線}格子で，fan の $N$ は接線格子である．
+focus--focus values は faces の内部に残し，その有限集合を除いた底に atlas を与える．
+punctured neighborhoods では実際の作用 monodromy を用いる\cite{VuNgoc}．
+
+現在の比例曲率 SNC compactification の cores と branch graph，標準 coarse cones を保ち，
+追加の branch singularities を入れない範囲では，分母を制限せずに大域作用適合 matroidal atlas が得られる
+次数分割は\emph{全平面の五次と六次だけ}である．
+五次には対称な標識付き四周期 recipes が六つ，六次には Petersen systems が六つある．
+どちらも $K_6$ の one-factorizations と対応するが，
+この有限個数を非同型な atlases の個数と解釈しない．
+七次以上の全分割と六次の混合分割には局所 link 障害があり，
+五次の $(1,1,3)$，$(1,2,2)$ は同時 link 条件で，$(1,1,1,2)$ は四 puncture の分母剛性と大域係数で排除される．
+core の置換や追加の branch singularities を許す全 fibrations の分類ではない．
+
+\subsection{全平面の五次・六次：共通の weights と node 配分}
+
+小解消の順序を $0<\cdots<d-1$ とし，作用積分の単位を
+$I_\gamma=(2\pi)^{-1}\int_\gamma\lambda$ とする．
+補助 vertical class $[\Omega]=aH+\sum_i\beta_i[D_i]$ に対し
+\begin{equation*}
+ b_i=\frac{\beta_i}{2\pi},\qquad
+ c=\frac{a}{2\pi(d-1)},\qquad
+ R_i=(d-1)c+\sum_jb_j-db_i,\qquad
+ w_{i,j}=c+b_j-b_i
+\end{equation*}
+と置く．row sum は $\sum_{j\ne i}w_{i,j}=R_i$ である．
+$i<j$ の共有曲線では $\delta_{ij}=b_j-b_i>0$，
+$R_i-R_j=d\delta_{ij}$ であり，$i$ 側の $d$ 回の blow-up 後の実面積は $2\pi R_j$ になる．
+全 weights が正となる条件は $\max b-\min b<c$ で，surgery 用の十分小さい vertical ray では満たせる．
+これは選んだ residue recipe の条件であり，全 Kähler cone の条件ではない．
+
+五次では labels を $\mathbb F_5$ とし，
+$f_i(j)=(i+j)/2=3(i+j)$，
+$\epsilon_{ij;k}=\mathbf1_{\{k=f_i(j)\}}$ と取る．
+同じ値が $f_j(i)$ からも得られる．puncture $k$ の blow-down basin と node 数は
+\[
+ B^0_{i;jk}=w_{i,k}+\epsilon_{ij;k}w_{i,j},\qquad
+ n_{ij;k}=1+2\epsilon_{ij;k},
+\]
+\[
+ B^0_{i;jk}-n_{ij;k}\delta_{ij}
+ =w_{j,k}+\epsilon_{ij;k}w_{j,i}>0.
+\]
+各 curve の三 basins への配分は $(3,1,1)$ であり，
+各 triple の三つの pairs のうち selected pair は一つだけなので，各 triangle に五 nodes が入る．
+
+六次では，両側で同じ quartet を用い，四つの external basins に各一 node，
+内部 annulus に二 nodes を置く．共有面積の等式は
+\[
+ w_{i,k}-\delta_{ij}=w_{j,k}\quad(k\ne i,j),\qquad
+ w_{i,j}-2\delta_{ij}=w_{j,i}.
+\]
+これらの面積条件と row sums を固定すると，五次・六次とも上の $w_{i,j}$ が唯一の解である．
+固定された blow-up points は，marked isotopy によって指定領域の相異なる regular leaves に置き，
+その小近傍を固定した density と relative Moser で実面積を合わせる．
+
+\begin{center}
+\begin{tabular}{c|c|c|c|c}
+次数&曲線上の nodes&triangles&bigons&全 nodes\\\hline
+5&$(3,1,1)$&$10\times5$&なし&50\\
+6&$(1,1,1,1;2)$&$20\times3$&$15\times2$&90
+\end{tabular}
+\end{center}
+全 branch の正規化された affine length は
+$w_{i,j}+w_{j,i}=2c=a/(\pi(d-1))$ である．六次では各 pair の二本の branch が同じ長さを持つ．
+
+\paragraph{Cycle framing と star transitions.}
+共通 neck の normal cycle を $\alpha$ とすれば反対側は $\alpha'=-\alpha$ である．
+一つの blow-up は $x=zu$ により puncture lift に $+\alpha$ を加え，
+一つの triple end $uvw=t$ は $-\alpha$ を加える．従って一 basin の実際の torus 内で
+\[
+ \beta'_k=\beta_k+(n_{ij;k}-1)\alpha.
+\]
+五次の face transition は，branch/transverse coordinates において
+\[
+ (s,t)\longmapsto(-s+\theta_kt,t),\qquad
+ \theta_k=\mathbf1_{\{f_i(k)=j\}}+\mathbf1_{\{f_j(k)=i\}},
+ \quad\sum_k\theta_k=2.
+\]
+この和が $K_4$ の ray relation を保ち，三枚の面は一つの $\operatorname{GL}(3,\ZZ)$ map で貼れる．
+六次の external cycles は両端で同じである．quartet の一方 $K$ を囲む cycle を $\beta$ とすると，
+$A$ branch で $\beta'=\beta$，$B$ branch で $\beta'=\beta+2\alpha$ となる．
+内部 face に二 nodes があるため，二式を一つの monodromy-free trivialization の式として扱わない．
+各 branch の outward matching cycle を使えば，Petersen star の transition は
+\[
+ r_v\mapsto-r'_v,\quad r_x\mapsto r'_x,\quad r_y\mapsto r'_y,
+ \quad r_z\mapsto r'_z-2r'_v.
+\]
+$r_x+r_y+r_z=r_v$ が保存され，star の飽和 rank-three 基底で determinant は $-1$ である．
+
+\subsection{有限 \texorpdfstring{$t$}{t} の neck 接着を再利用する条件}
+
+中央曲線の面積一致だけを，有限 $t\ne0$ の作用切片の一致へ読み替えない．
+使うのは，actual neck の全空間の tube 上の一つの primitive と，固定 moment 上の輸送である．
+tube は punctured curve へ retract して $H^2=0$ となる．circle 平均した primitive は，
+中央の固定集合によって $\lambda_{\rm neck}(V)=\mu$ と正規化される．
+各 toric end の第二 reference action は
+$R_\ell(\mu)=\nu_\ell|_{\rm cut}+c_\ell^{\rm ref}$ で，定数は両側と全 $t$ に共通である．
+各 reference circle から regular circle までの reduced annulus $A$ では
+\[
+ J_{\beta_\ell}-R_\ell(\mu)=\frac1{2\pi}\int_A\omega_{t,\mu}.
+\]
+framing の変更は整数倍の $\mu$ を加える．critical value は regular annuli の exhaustion で取る．
+中央の $\mu=0$ では framing 項が消え，共通 reference actions と strict double curve 上の
+実際の critical-region areas が定数項を決める．従って共有面積の一致と cycle shear による勾配の一致から，
+両成分の critical action germs は同じ affine functions になる．
+それを有限 $t$ へ保つ段階には，次の固定切断面での輸送を使う．
+
+固定した $\mu=\delta>0$ と $\mu=-\delta<0$ の open buffers を先に選び，
+horizontal transport $\mathcal P_t$ を行う．同じ primitive に関して
+\[
+ \mathcal P_t^*(\lambda_{\rm neck}|_{X_t})
+ -\lambda_{\rm neck}|_{D_i}=\dd G_t
+\]
+なので，closed transported cycles の作用は切片まで保存される．
+$\mu=0,t=0$ を通る輸送や，$\delta\to0$ に一様な輸送は使わない．
+boundary reference actions と固定 winding に Stokes を適用すると，
+全 reduced area は $2\pi\sum_\ell\pm(R_\ell(\mu)+m_\ell\mu)$，$m_\ell\in\ZZ$ という affine function になる．
+
+再利用する十分条件は，両端の open germs が同じ marked Reeb tree を持ち，
+共通 framing と reference actions で
+$J^{\rm crit}_{\beta_\ell}=c_\ell+p_\ell\mu$，$p_\ell\in\ZZ$，が一致することである．
+この式が指定する各 critical region の target area $a_h(\mu)$ には
+\[
+ \sum_h a_h(\mu)=\int_C\omega_{t,\mu},\qquad
+ a_h(\mu)>\int_{D_h\cap K}\omega_{t,\mu}
+\]
+を要求する．$K$ には保存する caps と collars 全体を含める．
+端で一致する marked interpolation に，parameter に相対的な density--Moser を施すと，
+実際の reduced forms の下でこれらの面積を持つ family が得られる．
+circle lift は Lagrangian であり，critical actions は全 interval で上の affine functions のままである．
+同じ marked graph だけでは measured data の一致は保証されない\cite{DMT,IKM}．
+追加の compact parameters を使うときは，初期 interpolation と region identifications も滑らかに与える．
+Liouville cone を用いる局所構成の基礎は \cite{EM} にあるが，
+固定された二つの end systems を無条件に同一視する主張ではない．
+
+\subsection{法円作用の tropical divisor と core ごとの総和}
+
+三価 star の relation $u_1+u_2+u_3=\kappa v$ と common normal action $h$ に対し
+\[
+ \mathfrak d(h)=\sum_{a=1}^3\dd h_a(u_a)-\kappa\dd h(v)
+\]
+を使う．これは単位 facet weights に対する tropical principal divisor の係数であり，
+公式と lift 非依存性は Allermann--Rau\cite[Definition 3.4, Remark 3.5]{AllermannRau}にある．
+各 core の別々の normal actions を一つの大域関数と同一視しない．
+本構成で使うのは，ambient affine transitions で係数が保存され，
+同じ neck の逆向き normal circles に対応する二端では相殺するという条件である．
+
+primitive ray parameter $s$ において
+\[
+ I_{\alpha_v}=-q_vs,\qquad I_{\mu_w}=-p_{v\to w}s,
+ \qquad q_v>0,\quad p_{v\to w}\in\ZZ
+\]
+と書く．三 arm cycles の numerators とその和が $q_v$ と互いに素であるため，$q_v$ は奇数である．
+現在の positive sectors における crossing determinant と basin area は
+\[
+ q_vq_w-p_{v\to w}p_{w\to v}=1,
+ \qquad B_{v\to w}=w_w-w_v\frac{p_{v\to w}}{q_v}>0.
+\]
+一 core の全 vertices の分岐係数は
+\[
+ \sum_v\mathfrak d_v
+ =\sum_v\bigl(\kappa_v-\deg_{\rm int}(v)\bigr)q_v
+   -\sum_{v\to w\,\mathrm{crossing}}p_{v\to w}.
+\]
+各 vertex の incoming numerators を，総和を取った後に outgoing の添字へ入れ替えた式である．
+三 puncture の component は basins が全曲線を尽くすため，自己交点を $e$ とすると
+$\sum p=-e q$ となる．
+
+\subsection{共有する四 puncture 曲線の分母剛性}
+
+再利用する条件は，actual neck の両端で同じ marked $2+2$ Reeb tree を使い，
+二本の branch の primitive action lattices を保ち，追加の branch singularities を入れないことである．
+両端で比例曲率 collars と Liouville cone の作用正規化を用いる．
+正 normal circles は $\alpha^+=-\alpha^-$ なので，共有 branch の分母は両端で同じ $q_A,q_B$ となる．
+
+自己交点を $e^\pm$，各端の二つずつの puncture numerators の和を $P_A^\pm,P_B^\pm$ とする．
+内部 annulus の両 rays の正の格子 index を $m^\pm$ とすれば，actual framing
+$\beta_A+\beta_B=-e\alpha$ と面積の正値性から
+\[
+ e^\pm q_Aq_B+q_BP_A^\pm+q_AP_B^\pm=m^\pm,
+ \qquad
+ \frac{\operatorname{area}(E^\pm)}{2\pi w^\pm}
+ =\frac{m^\pm}{q_Aq_B}>0.
+\]
+actual torus cycles の整数 clutching は
+\[
+ \beta_\ell^+=\beta_\ell^-+k_\ell\alpha^-,\qquad k_\ell\in\ZZ,
+ \qquad
+ \frac{p_\ell^-+p_\ell^+}{q_{s(\ell)}}=-k_\ell.
+\]
+従って両側の annulus equations の和は
+\[
+ \frac{m^-+m^+}{q_Aq_B}
+ =e^-+e^+-\sum_{\ell=1}^4k_\ell\in\ZZ.
+\]
+これが再利用すべき整除条件
+\[
+ \boxed{q_Aq_B\mid m^-+m^+}
+\]
+である．両 cones が unimodular なら $m^-=m^+=1$ なので，奇数性から $q_A=q_B=1$ となる．
+証明は作用の微分だけを比較し，加法定数，node 数の非負性，全 node budget に依存しない．
+puncture の degree-one markings と normal circle を保つことが必要である．
+
+ordered resolution の meridian nodes では $k_\ell=n_\ell-1$ である．
+単純 node の整数 shear は \cite[\S4.3, equation (4.10)]{SymingtonFour}の convention と対応する．
+従って外側四 basins の node 総数は
+\[
+ N_{\rm ext}=4+e^-+e^+-\frac{m^-+m^+}{q_Aq_B}.
+\]
+unimodular な仮想接着に必要な数は次の通りである．mixed の大域 atlas は後述の係数で排除される．
+\begin{center}
+\begin{tabular}{c|c|c|c|c}
+共有曲線&$(e^-,e^+)$&全 nodes&external 合計&internal annulus\\\hline
+mixed plane--quadric&$(4,2)$&10&8&2\\
+全平面 sextic&$(1,1)$&6&4&2
+\end{tabular}
+\end{center}
+個々の external basin への配分まで一意とは述べない．
+六次では全十五共有曲線に適用できるため，三十 branches の全分母は一に強制される．
+
+\paragraph{高分母を許すための変更.}
+cone index を緩めても $m^-+m^+\ge q_Aq_B$ が必要である．
+例えば $(q_A,q_B)=(1,3)$ に二つの index-one annuli を合わせることはできないが，
+indices $(1,2)$ はこの整除条件だけは満たす．後者は geometric chart の存在を意味しない．
+Reeb tree の変更，複数 cones への展開，orbifold lattice，追加 branch singularities を許すなら，
+その変更を明示して actual integral cycles の比較から条件を立て直す．
+
+\subsection{Mixed quintic の任意分母に対する障害}
+
+$(1,1,1,2)$ の各 core は個別には chart を持つ．限定した正の面積 recipes では，
+quadric の $K_{3,3}$ が $40/64$，二直線と conic の $K_4$ が $4/36$ で実現する．
+しかし三本の conic necks に四 puncture 剛性を適用すると，六本の plane--quadric branches の分母は一となる．
+三本の plane--plane branches の分母は任意のままでよい．
+
+mixed plane の line contribution は $\kappa=-1,e=1$ によって
+$-q-\sum p=0$ と消える．conic の二端では $q_A=q_B=1$，
+$P_A+P_B=1-4=-3$ なので，plane core の総和は $-4-(-3)=-1$ となる．
+quadric の各 component は $\kappa=0,e=2$，$P'_A+P'_B=-1$ なので，寄与は $-2-(-1)=-1$ である．
+全四 cores の総和は
+\[
+ 3(-1)+3(-1)=-6
+\]
+となり，九本の branches の対向端での相殺と矛盾する．
+従って現在の cores，branch graph，標準 coarse cones を保つ限り，任意分母で大域 atlas は存在しない．
+
+孤立した annulus の整数解は接着の解ではない．例えば $q_A=1,q_B=3$ で
+$e^-=4,(P_A^-,P_B^-)=(-1,-8)$ と
+$e^+=2,(P_A^+,P_B^+)=(0,-5)$ は各々の index-one 式を満たすが，
+外側 node 総数は $28/3$ となり，整数 clutching に反する．
+この例は，局所の係数の符号を変えられることだけでは大域障害を回避できないことを示す．
+
+\subsection{全平面五次へ進むための局所奇数分母模型}
+
+四直線の $K_4$ core には三 puncture の曲線だけがあり，四 puncture 剛性は適用できない．
+正の weights $w_i$ と整数 $q_i>0,p_{ij}$ が
+\[
+ \sum_{j\ne i}p_{ij}=-q_i,\quad q_iq_j-p_{ij}p_{ji}=1,
+ \quad B_{ij}=w_j-w_i p_{ij}/q_i>0
+\]
+を満たせば，これらは局所 chart の十分条件となる．
+basin areas を相対 Moser で実現し，crossing face の作用行列
+\[
+ \begin{pmatrix}-q_i&-p_{ji}\\-p_{ij}&-q_j\end{pmatrix}
+\]
+を使う．各 collar と cap で正の sector を保つことが必要であり，行列式だけを確認して終えない．
+
+任意の $h\ge1$ に対して $q=2h+1$ とし，
+\[
+ (q_A,q_B,q_C,q_D)=(q,1,1,1),\qquad
+ (w_A,w_B,w_C,w_D)=\left(q,h,1,1+\frac1{4h}\right),
+\]
+\[
+ (p_{ij})=
+ \begin{pmatrix}
+ 0&-2h&-2&1\\
+ -1&0&0&0\\
+ -h&h-1&0&0\\
+ 2h&0&-q&0
+ \end{pmatrix}
+\]
+とすれば，六つの determinants は一で全 basin areas が正となる．
+各 component の normalized area は $W=3h+3+1/(4h)$ であり，共通の正の倍率は自由である．
+各 branch の係数は $(-3h,h,2h+2,-2)$ である．
+これは一つの core の幾何学的な存在族であり，五つの cores を接着した atlas ではない．
+
+\paragraph{高分母が一本だけ孤立する配置は除外する.}
+一般に一つの $K_4$ core の分母が $(q,1,1,1)$，$q>1$ で basin areas が全て正なら，
+高分母 vertex の outgoing numerators は順序を除き
+\[
+ (-(q-1),-(b+1),b),\qquad b\mid q-1,\quad b+1\mid q-1.
+\]
+$q-1=t b(b+1)$ と書くと，その分岐係数は
+$-t(b(b+1)+1)<0$ である．三 numerators が全て負という候補は，
+残る三つの $q=1$ vertices に正の directed cycle を強制し，basin positivity に反する．
+従って全平面五次の $K_5$ branch graph で，$q>1$ の部分 graph は一本の edge だけからなる
+連結成分を持てない．一般の leaf を排除したわけではない．
+隣接する複数の高分母 branches については，次節の局所表示，素数 support，
+第三 corner 条件を合わせて，端ごとの係数相殺と actual basin areas を調べる．

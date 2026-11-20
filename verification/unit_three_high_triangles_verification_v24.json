@@ -1,0 +1,2023 @@
+{
+  "version": "v24",
+  "status": "PASS",
+  "scope": "Triangle necessary conditions across a unit edge joining two positive three-high cores; not a completed global model.",
+  "polynomial_identity_count": 23,
+  "polynomial_identities": [
+    {
+      "name": "both_negative_expansion",
+      "all_coefficients_zero": true
+    },
+    {
+      "name": "division_free_bilinear_factorization",
+      "all_coefficients_zero": true
+    },
+    {
+      "name": "both_negative_positive_10",
+      "all_coefficients_zero": true
+    },
+    {
+      "name": "both_negative_A1_s1",
+      "all_coefficients_zero": true
+    },
+    {
+      "name": "both_negative_A1_s2_B2",
+      "all_coefficients_zero": true
+    },
+    {
+      "name": "both_negative_A1_s3_B2",
+      "all_coefficients_zero": true
+    },
+    {
+      "name": "opposite_negative_expansion",
+      "all_coefficients_zero": true
+    },
+    {
+      "name": "opposite_positive_11",
+      "all_coefficients_zero": true
+    },
+    {
+      "name": "opposite_negative_11",
+      "all_coefficients_zero": true
+    },
+    {
+      "name": "opposite_A0",
+      "all_coefficients_zero": true
+    },
+    {
+      "name": "opposite_j1_B1",
+      "all_coefficients_zero": true
+    },
+    {
+      "name": "ordinary_P0",
+      "all_coefficients_zero": true
+    },
+    {
+      "name": "ordinary_P1",
+      "all_coefficients_zero": true
+    },
+    {
+      "name": "ordinary_N1",
+      "all_coefficients_zero": true
+    },
+    {
+      "name": "ordinary_N2",
+      "all_coefficients_zero": true
+    },
+    {
+      "name": "exception_E0",
+      "all_coefficients_zero": true
+    },
+    {
+      "name": "exception_E1",
+      "all_coefficients_zero": true
+    },
+    {
+      "name": "exception_E2",
+      "all_coefficients_zero": true
+    },
+    {
+      "name": "exception_E3_k2",
+      "all_coefficients_zero": true
+    },
+    {
+      "name": "exception_E3_k4",
+      "all_coefficients_zero": true
+    },
+    {
+      "name": "negative_position_positive_family_1",
+      "all_coefficients_zero": true
+    },
+    {
+      "name": "negative_position_positive_family_2",
+      "all_coefficients_zero": true
+    },
+    {
+      "name": "all_external_negative_local_obstruction",
+      "all_coefficients_zero": true
+    }
+  ],
+  "complete_negative_sign_cases": 96,
+  "complete_negative_sign_results": [
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 1,
+      "minus_beta": 1,
+      "coefficients": [
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "factor_constant": 2,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 1,
+      "minus_beta": 2,
+      "coefficients": [
+        -1,
+        -1,
+        0,
+        2
+      ],
+      "factor_constant": 2,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 1,
+      "minus_beta": 3,
+      "coefficients": [
+        -1,
+        -1,
+        1,
+        3
+      ],
+      "factor_constant": 2,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 1,
+      "minus_beta": 4,
+      "coefficients": [
+        -1,
+        -1,
+        2,
+        4
+      ],
+      "factor_constant": 2,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 2,
+      "minus_beta": 1,
+      "coefficients": [
+        -1,
+        0,
+        -1,
+        2
+      ],
+      "factor_constant": 2,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 2,
+      "minus_beta": 2,
+      "coefficients": [
+        0,
+        1,
+        1,
+        4
+      ],
+      "factor_constant": 1,
+      "method": "nonnegative linear coefficients, positive constant",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 2,
+      "minus_beta": 3,
+      "coefficients": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "factor_constant": 0,
+      "method": "zero factor product; both possible lines violate positivity or odd denominators",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 2,
+      "minus_beta": 4,
+      "coefficients": [
+        2,
+        3,
+        5,
+        8
+      ],
+      "factor_constant": -1,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 3,
+      "minus_beta": 1,
+      "coefficients": [
+        -1,
+        1,
+        -1,
+        3
+      ],
+      "factor_constant": 2,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 3,
+      "minus_beta": 2,
+      "coefficients": [
+        1,
+        3,
+        2,
+        6
+      ],
+      "factor_constant": 0,
+      "method": "zero factor product; both possible lines violate positivity or odd denominators",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 3,
+      "minus_beta": 3,
+      "coefficients": [
+        3,
+        5,
+        5,
+        9
+      ],
+      "factor_constant": -2,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 3,
+      "minus_beta": 4,
+      "coefficients": [
+        5,
+        7,
+        8,
+        12
+      ],
+      "factor_constant": -4,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 4,
+      "minus_beta": 1,
+      "coefficients": [
+        -1,
+        2,
+        -1,
+        4
+      ],
+      "factor_constant": 2,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 4,
+      "minus_beta": 2,
+      "coefficients": [
+        2,
+        5,
+        3,
+        8
+      ],
+      "factor_constant": -1,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 4,
+      "minus_beta": 3,
+      "coefficients": [
+        5,
+        8,
+        7,
+        12
+      ],
+      "factor_constant": -4,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 4,
+      "minus_beta": 4,
+      "coefficients": [
+        8,
+        11,
+        11,
+        16
+      ],
+      "factor_constant": -7,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 1,
+      "minus_beta": 1,
+      "coefficients": [
+        -2,
+        -1,
+        -1,
+        1
+      ],
+      "factor_constant": 3,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 1,
+      "minus_beta": 2,
+      "coefficients": [
+        -2,
+        -1,
+        1,
+        2
+      ],
+      "factor_constant": 3,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 1,
+      "minus_beta": 3,
+      "coefficients": [
+        -2,
+        -1,
+        3,
+        3
+      ],
+      "factor_constant": 3,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": [
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 1,
+      "minus_beta": 4,
+      "coefficients": [
+        -2,
+        -1,
+        5,
+        4
+      ],
+      "factor_constant": 3,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 2,
+      "minus_beta": 1,
+      "coefficients": [
+        -1,
+        0,
+        0,
+        2
+      ],
+      "factor_constant": 2,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": [
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 2,
+      "minus_beta": 2,
+      "coefficients": [
+        1,
+        1,
+        4,
+        4
+      ],
+      "factor_constant": 0,
+      "method": "zero factor product; both possible lines violate positivity or odd denominators",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 2,
+      "minus_beta": 3,
+      "coefficients": [
+        3,
+        2,
+        8,
+        6
+      ],
+      "factor_constant": -2,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 2,
+      "minus_beta": 4,
+      "coefficients": [
+        5,
+        3,
+        12,
+        8
+      ],
+      "factor_constant": -4,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 3,
+      "minus_beta": 1,
+      "coefficients": [
+        0,
+        1,
+        1,
+        3
+      ],
+      "factor_constant": 1,
+      "method": "nonnegative linear coefficients, positive constant",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 3,
+      "minus_beta": 2,
+      "coefficients": [
+        4,
+        3,
+        7,
+        6
+      ],
+      "factor_constant": -3,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 3,
+      "minus_beta": 3,
+      "coefficients": [
+        8,
+        5,
+        13,
+        9
+      ],
+      "factor_constant": -7,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 3,
+      "minus_beta": 4,
+      "coefficients": [
+        12,
+        7,
+        19,
+        12
+      ],
+      "factor_constant": -11,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 4,
+      "minus_beta": 1,
+      "coefficients": [
+        1,
+        2,
+        2,
+        4
+      ],
+      "factor_constant": 0,
+      "method": "zero factor product; both possible lines violate positivity or odd denominators",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 4,
+      "minus_beta": 2,
+      "coefficients": [
+        7,
+        5,
+        10,
+        8
+      ],
+      "factor_constant": -6,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 4,
+      "minus_beta": 3,
+      "coefficients": [
+        13,
+        8,
+        18,
+        12
+      ],
+      "factor_constant": -12,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 4,
+      "minus_beta": 4,
+      "coefficients": [
+        19,
+        11,
+        26,
+        16
+      ],
+      "factor_constant": -18,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 1,
+      "minus_beta": 1,
+      "coefficients": [
+        -2,
+        -1,
+        -1,
+        1
+      ],
+      "factor_constant": 3,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 1,
+      "minus_beta": 2,
+      "coefficients": [
+        -1,
+        0,
+        0,
+        2
+      ],
+      "factor_constant": 2,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": [
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 1,
+      "minus_beta": 3,
+      "coefficients": [
+        0,
+        1,
+        1,
+        3
+      ],
+      "factor_constant": 1,
+      "method": "nonnegative linear coefficients, positive constant",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 1,
+      "minus_beta": 4,
+      "coefficients": [
+        1,
+        2,
+        2,
+        4
+      ],
+      "factor_constant": 0,
+      "method": "zero factor product; both possible lines violate positivity or odd denominators",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 2,
+      "minus_beta": 1,
+      "coefficients": [
+        -2,
+        1,
+        -1,
+        2
+      ],
+      "factor_constant": 3,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 2,
+      "minus_beta": 2,
+      "coefficients": [
+        1,
+        4,
+        1,
+        4
+      ],
+      "factor_constant": 0,
+      "method": "zero factor product; both possible lines violate positivity or odd denominators",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 2,
+      "minus_beta": 3,
+      "coefficients": [
+        4,
+        7,
+        3,
+        6
+      ],
+      "factor_constant": -3,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 2,
+      "minus_beta": 4,
+      "coefficients": [
+        7,
+        10,
+        5,
+        8
+      ],
+      "factor_constant": -6,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 3,
+      "minus_beta": 1,
+      "coefficients": [
+        -2,
+        3,
+        -1,
+        3
+      ],
+      "factor_constant": 3,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": [
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 3,
+      "minus_beta": 2,
+      "coefficients": [
+        3,
+        8,
+        2,
+        6
+      ],
+      "factor_constant": -2,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 3,
+      "minus_beta": 3,
+      "coefficients": [
+        8,
+        13,
+        5,
+        9
+      ],
+      "factor_constant": -7,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 3,
+      "minus_beta": 4,
+      "coefficients": [
+        13,
+        18,
+        8,
+        12
+      ],
+      "factor_constant": -12,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 4,
+      "minus_beta": 1,
+      "coefficients": [
+        -2,
+        5,
+        -1,
+        4
+      ],
+      "factor_constant": 3,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 4,
+      "minus_beta": 2,
+      "coefficients": [
+        5,
+        12,
+        3,
+        8
+      ],
+      "factor_constant": -4,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 4,
+      "minus_beta": 3,
+      "coefficients": [
+        12,
+        19,
+        7,
+        12
+      ],
+      "factor_constant": -11,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 4,
+      "minus_beta": 4,
+      "coefficients": [
+        19,
+        26,
+        11,
+        16
+      ],
+      "factor_constant": -18,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 1,
+      "minus_beta": 1,
+      "coefficients": [
+        -3,
+        -1,
+        -1,
+        1
+      ],
+      "factor_constant": 4,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 1,
+      "minus_beta": 2,
+      "coefficients": [
+        -3,
+        -1,
+        2,
+        2
+      ],
+      "factor_constant": 4,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 1,
+      "minus_beta": 3,
+      "coefficients": [
+        -3,
+        -1,
+        5,
+        3
+      ],
+      "factor_constant": 4,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 1,
+      "minus_beta": 4,
+      "coefficients": [
+        -3,
+        -1,
+        8,
+        4
+      ],
+      "factor_constant": 4,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 2,
+      "minus_beta": 1,
+      "coefficients": [
+        -1,
+        0,
+        1,
+        2
+      ],
+      "factor_constant": 2,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": [
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 2,
+      "minus_beta": 2,
+      "coefficients": [
+        2,
+        1,
+        7,
+        4
+      ],
+      "factor_constant": -1,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 2,
+      "minus_beta": 3,
+      "coefficients": [
+        5,
+        2,
+        13,
+        6
+      ],
+      "factor_constant": -4,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 2,
+      "minus_beta": 4,
+      "coefficients": [
+        8,
+        3,
+        19,
+        8
+      ],
+      "factor_constant": -7,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 3,
+      "minus_beta": 1,
+      "coefficients": [
+        1,
+        1,
+        3,
+        3
+      ],
+      "factor_constant": 0,
+      "method": "zero factor product; both possible lines violate positivity or odd denominators",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 3,
+      "minus_beta": 2,
+      "coefficients": [
+        7,
+        3,
+        12,
+        6
+      ],
+      "factor_constant": -6,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 3,
+      "minus_beta": 3,
+      "coefficients": [
+        13,
+        5,
+        21,
+        9
+      ],
+      "factor_constant": -12,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 3,
+      "minus_beta": 4,
+      "coefficients": [
+        19,
+        7,
+        30,
+        12
+      ],
+      "factor_constant": -18,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 4,
+      "minus_beta": 1,
+      "coefficients": [
+        3,
+        2,
+        5,
+        4
+      ],
+      "factor_constant": -2,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 4,
+      "minus_beta": 2,
+      "coefficients": [
+        12,
+        5,
+        17,
+        8
+      ],
+      "factor_constant": -11,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 4,
+      "minus_beta": 3,
+      "coefficients": [
+        21,
+        8,
+        29,
+        12
+      ],
+      "factor_constant": -20,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 4,
+      "minus_beta": 4,
+      "coefficients": [
+        30,
+        11,
+        41,
+        16
+      ],
+      "factor_constant": -29,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 1,
+      "minus_beta": 1,
+      "coefficients": [
+        -3,
+        -1,
+        -1,
+        1
+      ],
+      "factor_constant": 4,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 1,
+      "minus_beta": 2,
+      "coefficients": [
+        -1,
+        1,
+        0,
+        2
+      ],
+      "factor_constant": 2,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": [
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 1,
+      "minus_beta": 3,
+      "coefficients": [
+        1,
+        3,
+        1,
+        3
+      ],
+      "factor_constant": 0,
+      "method": "zero factor product; both possible lines violate positivity or odd denominators",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 1,
+      "minus_beta": 4,
+      "coefficients": [
+        3,
+        5,
+        2,
+        4
+      ],
+      "factor_constant": -2,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 2,
+      "minus_beta": 1,
+      "coefficients": [
+        -3,
+        2,
+        -1,
+        2
+      ],
+      "factor_constant": 4,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 2,
+      "minus_beta": 2,
+      "coefficients": [
+        2,
+        7,
+        1,
+        4
+      ],
+      "factor_constant": -1,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 2,
+      "minus_beta": 3,
+      "coefficients": [
+        7,
+        12,
+        3,
+        6
+      ],
+      "factor_constant": -6,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 2,
+      "minus_beta": 4,
+      "coefficients": [
+        12,
+        17,
+        5,
+        8
+      ],
+      "factor_constant": -11,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 3,
+      "minus_beta": 1,
+      "coefficients": [
+        -3,
+        5,
+        -1,
+        3
+      ],
+      "factor_constant": 4,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 3,
+      "minus_beta": 2,
+      "coefficients": [
+        5,
+        13,
+        2,
+        6
+      ],
+      "factor_constant": -4,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 3,
+      "minus_beta": 3,
+      "coefficients": [
+        13,
+        21,
+        5,
+        9
+      ],
+      "factor_constant": -12,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 3,
+      "minus_beta": 4,
+      "coefficients": [
+        21,
+        29,
+        8,
+        12
+      ],
+      "factor_constant": -20,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 4,
+      "minus_beta": 1,
+      "coefficients": [
+        -3,
+        8,
+        -1,
+        4
+      ],
+      "factor_constant": 4,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 4,
+      "minus_beta": 2,
+      "coefficients": [
+        8,
+        19,
+        3,
+        8
+      ],
+      "factor_constant": -7,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 4,
+      "minus_beta": 3,
+      "coefficients": [
+        19,
+        30,
+        7,
+        12
+      ],
+      "factor_constant": -18,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 4,
+      "minus_beta": 4,
+      "coefficients": [
+        30,
+        41,
+        11,
+        16
+      ],
+      "factor_constant": -29,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 1,
+      "minus_beta": 1,
+      "coefficients": [
+        -3,
+        -1,
+        -1,
+        1
+      ],
+      "factor_constant": 4,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 1,
+      "minus_beta": 2,
+      "coefficients": [
+        -1,
+        0,
+        1,
+        2
+      ],
+      "factor_constant": 2,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ]
+      ]
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 1,
+      "minus_beta": 3,
+      "coefficients": [
+        1,
+        1,
+        3,
+        3
+      ],
+      "factor_constant": 0,
+      "method": "zero factor product; both possible lines violate positivity or odd denominators",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 1,
+      "minus_beta": 4,
+      "coefficients": [
+        3,
+        2,
+        5,
+        4
+      ],
+      "factor_constant": -2,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 2,
+      "minus_beta": 1,
+      "coefficients": [
+        -1,
+        1,
+        0,
+        2
+      ],
+      "factor_constant": 2,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 2,
+      "minus_beta": 2,
+      "coefficients": [
+        5,
+        4,
+        4,
+        4
+      ],
+      "factor_constant": -4,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 2,
+      "minus_beta": 3,
+      "coefficients": [
+        11,
+        7,
+        8,
+        6
+      ],
+      "factor_constant": -10,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 2,
+      "minus_beta": 4,
+      "coefficients": [
+        17,
+        10,
+        12,
+        8
+      ],
+      "factor_constant": -16,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 3,
+      "minus_beta": 1,
+      "coefficients": [
+        1,
+        3,
+        1,
+        3
+      ],
+      "factor_constant": 0,
+      "method": "zero factor product; both possible lines violate positivity or odd denominators",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 3,
+      "minus_beta": 2,
+      "coefficients": [
+        11,
+        8,
+        7,
+        6
+      ],
+      "factor_constant": -10,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 3,
+      "minus_beta": 3,
+      "coefficients": [
+        21,
+        13,
+        13,
+        9
+      ],
+      "factor_constant": -20,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 3,
+      "minus_beta": 4,
+      "coefficients": [
+        31,
+        18,
+        19,
+        12
+      ],
+      "factor_constant": -30,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 4,
+      "minus_beta": 1,
+      "coefficients": [
+        3,
+        5,
+        2,
+        4
+      ],
+      "factor_constant": -2,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 4,
+      "minus_beta": 2,
+      "coefficients": [
+        17,
+        12,
+        10,
+        8
+      ],
+      "factor_constant": -16,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 4,
+      "minus_beta": 3,
+      "coefficients": [
+        31,
+        19,
+        18,
+        12
+      ],
+      "factor_constant": -30,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 4,
+      "minus_beta": 4,
+      "coefficients": [
+        45,
+        26,
+        26,
+        16
+      ],
+      "factor_constant": -44,
+      "method": "all signed divisors of the nonzero exact factor product",
+      "all_positive_odd_denominator_solutions": []
+    }
+  ],
+  "negative_sign_exact_points": [
+    {
+      "s": 1,
+      "s_prime": 2,
+      "alpha": -1,
+      "beta": -3,
+      "S": 2,
+      "T": 1,
+      "q": [
+        3,
+        3
+      ]
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "alpha": -2,
+      "beta": -1,
+      "S": 2,
+      "T": 1,
+      "q": [
+        3,
+        3
+      ]
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "alpha": -1,
+      "beta": -2,
+      "S": 1,
+      "T": 2,
+      "q": [
+        3,
+        3
+      ]
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "alpha": -3,
+      "beta": -1,
+      "S": 1,
+      "T": 2,
+      "q": [
+        3,
+        3
+      ]
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "alpha": -2,
+      "beta": -1,
+      "S": 2,
+      "T": 2,
+      "q": [
+        3,
+        7
+      ]
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "alpha": -1,
+      "beta": -2,
+      "S": 2,
+      "T": 2,
+      "q": [
+        7,
+        3
+      ]
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "alpha": -1,
+      "beta": -2,
+      "S": 3,
+      "T": 1,
+      "q": [
+        7,
+        3
+      ]
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "alpha": -1,
+      "beta": -2,
+      "S": 2,
+      "T": 2,
+      "q": [
+        5,
+        5
+      ]
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "alpha": -2,
+      "beta": -1,
+      "S": 1,
+      "T": 3,
+      "q": [
+        3,
+        7
+      ]
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "alpha": -2,
+      "beta": -1,
+      "S": 2,
+      "T": 2,
+      "q": [
+        5,
+        5
+      ]
+    }
+  ],
+  "negative_sign_point_count": 10,
+  "complete_positive_sign_cases": 24,
+  "complete_positive_sign_results": [
+    {
+      "s": 1,
+      "s_prime": 1,
+      "alpha": 0,
+      "beta": 0,
+      "classification": "strictly negative residual"
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "alpha": 0,
+      "beta": 1,
+      "classification": "forced S=s_prime gives even high denominator"
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "alpha": 1,
+      "beta": 0,
+      "classification": "forced T=s gives even high denominator"
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "alpha": 1,
+      "beta": 1,
+      "classification": "strictly positive residual"
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "alpha": 0,
+      "beta": 0,
+      "classification": "strictly negative residual"
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "alpha": 0,
+      "beta": 1,
+      "classification": "S=2, T arbitrary positive"
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "alpha": 1,
+      "beta": 0,
+      "classification": "strictly negative residual"
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "alpha": 1,
+      "beta": 1,
+      "classification": "strictly positive residual"
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "alpha": 0,
+      "beta": 0,
+      "classification": "strictly negative residual"
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "alpha": 0,
+      "beta": 1,
+      "classification": "strictly negative residual"
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "alpha": 1,
+      "beta": 0,
+      "classification": "S arbitrary positive, T=2"
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "alpha": 1,
+      "beta": 1,
+      "classification": "strictly positive residual"
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "alpha": 0,
+      "beta": 0,
+      "classification": "strictly negative residual"
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "alpha": 0,
+      "beta": 1,
+      "classification": "forced S=s_prime gives even high denominator"
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "alpha": 1,
+      "beta": 0,
+      "classification": "strictly negative residual"
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "alpha": 1,
+      "beta": 1,
+      "classification": "strictly positive residual"
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "alpha": 0,
+      "beta": 0,
+      "classification": "strictly negative residual"
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "alpha": 0,
+      "beta": 1,
+      "classification": "strictly negative residual"
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "alpha": 1,
+      "beta": 0,
+      "classification": "forced T=s gives even high denominator"
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "alpha": 1,
+      "beta": 1,
+      "classification": "strictly positive residual"
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "alpha": 0,
+      "beta": 0,
+      "classification": "strictly negative residual"
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "alpha": 0,
+      "beta": 1,
+      "classification": "strictly negative residual"
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "alpha": 1,
+      "beta": 0,
+      "classification": "strictly negative residual"
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "alpha": 1,
+      "beta": 1,
+      "classification": "strictly positive residual"
+    }
+  ],
+  "positive_sign_unbounded_families": 2,
+  "opposite_sign_unbounded_classification": "Four ordinary families and four types of small exceptions, proved by integer/sign arguments in the TeX source.",
+  "bounded_regression": {
+    "u_range": [
+      1,
+      24
+    ],
+    "U_T_range": [
+      1,
+      20
+    ],
+    "node_range": [
+      0,
+      2
+    ],
+    "tested_odd_denominator_tuples": 554400,
+    "solutions": 967,
+    "family_counts": {
+      "P0": 218,
+      "P1": 240,
+      "N1": 240,
+      "N2": 228,
+      "E0": 10,
+      "E1": 10,
+      "E2": 1,
+      "E3": 20
+    },
+    "purpose": "Regression only; not an unbounded completeness proof."
+  },
+  "unit_node_patterns": [
+    [
+      5,
+      0,
+      0
+    ],
+    [
+      4,
+      1,
+      0
+    ]
+  ],
+  "unit_node_records": [
+    {
+      "s": 1,
+      "s_prime": 2,
+      "nodes": [
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "nodes": [
+        1,
+        0,
+        4
+      ]
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "nodes": [
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "nodes": [
+        1,
+        0,
+        4
+      ]
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "nodes": [
+        0,
+        0,
+        5
+      ]
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "nodes": [
+        0,
+        0,
+        5
+      ]
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "nodes": [
+        0,
+        0,
+        5
+      ]
+    }
+  ],
+  "five_node_adjacent_denominator_pairs": [
+    [
+      3,
+      7
+    ],
+    [
+      5,
+      5
+    ],
+    [
+      7,
+      3
+    ]
+  ],
+  "four_node_minimum_adjacent_denominator": 3,
+  "five_node_opposite_low_D_forces_two_positive_external_pairs": true,
+  "at_least_one_positive_external_pair_for_any_unit_edge": true,
+  "all_external_negative_case_forces_low_row": [
+    -2,
+    -1,
+    2
+  ],
+  "all_external_negative_case_forces_low_column": "(-1,-2,2r), r>=1",
+  "all_external_negative_obstruction": "(3A+6r+1)(A+6r+1)=0; first root nonintegral modulo3, second makes another required nonzero entry vanish",
+  "G5_14_five_node_cannot_be_at_four_high_core": true,
+  "no_arbitrary_cutoff_in_complete_tables": true,
+  "old_verifier_imports": false,
+  "external_peer_review": false,
+  "proof_assistant_formalization": false,
+  "source_sha256": "4eba673d14e9ef6f760525659cfa87baeb52ce47e457548231888c148e205d8c",
+  "proof_file": "unit_three_high_triangle_reduction_v24.tex",
+  "proof_sha256": "0665d10c71fe1e52b2ba2339ae57399cc10bfe0f550351e58f83da86cf947a3b"
+}

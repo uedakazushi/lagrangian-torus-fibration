@@ -1,0 +1,227 @@
+{
+  "status": "PASS",
+  "reviewed_claim": "Finite necessary-and-sufficient reconstruction of all nonnegative-three-high-D integer models after fixing only the positive low-row integers s,t.",
+  "imports_primary_verifier": false,
+  "finite_parameter_scan": false,
+  "arithmetic": "integer sparse polynomial coefficient comparison",
+  "number_of_identities": 25,
+  "identities": [
+    {
+      "name": "E affine separation",
+      "expanded_left_terms": 13,
+      "expanded_right_terms": 13,
+      "residual_coefficients": []
+    },
+    {
+      "name": "J affine separation",
+      "expanded_left_terms": 13,
+      "expanded_right_terms": 13,
+      "residual_coefficients": []
+    },
+    {
+      "name": "nT=n0+a*y",
+      "expanded_left_terms": 36,
+      "expanded_right_terms": 36,
+      "residual_coefficients": []
+    },
+    {
+      "name": "nS=nS0+c*y",
+      "expanded_left_terms": 83,
+      "expanded_right_terms": 83,
+      "residual_coefficients": []
+    },
+    {
+      "name": "c=B*m+F*a",
+      "expanded_left_terms": 25,
+      "expanded_right_terms": 25,
+      "residual_coefficients": []
+    },
+    {
+      "name": "nU=nS+nT+m*(d-1)",
+      "expanded_left_terms": 80,
+      "expanded_right_terms": 80,
+      "residual_coefficients": []
+    },
+    {
+      "name": "Q0=s*n0-b*m",
+      "expanded_left_terms": 52,
+      "expanded_right_terms": 52,
+      "residual_coefficients": []
+    },
+    {
+      "name": "m*K=Q0+s*a*y",
+      "expanded_left_terms": 64,
+      "expanded_right_terms": 64,
+      "residual_coefficients": []
+    },
+    {
+      "name": "Q1-Q0 nonnegative gap",
+      "expanded_left_terms": 9,
+      "expanded_right_terms": 9,
+      "residual_coefficients": []
+    },
+    {
+      "name": "Q2-Q1 nonnegative gap",
+      "expanded_left_terms": 45,
+      "expanded_right_terms": 45,
+      "residual_coefficients": []
+    },
+    {
+      "name": "a upper bound at F=M+1",
+      "expanded_left_terms": 4,
+      "expanded_right_terms": 4,
+      "residual_coefficients": []
+    },
+    {
+      "name": "final strict negative upper bound",
+      "expanded_left_terms": 7,
+      "expanded_right_terms": 7,
+      "residual_coefficients": []
+    },
+    {
+      "name": "alpha=alpha0+u*y",
+      "expanded_left_terms": 9,
+      "expanded_right_terms": 9,
+      "residual_coefficients": []
+    },
+    {
+      "name": "linear coefficient=a*L-C",
+      "expanded_left_terms": 89,
+      "expanded_right_terms": 89,
+      "residual_coefficients": []
+    },
+    {
+      "name": "L positive factorization",
+      "expanded_left_terms": 13,
+      "expanded_right_terms": 13,
+      "residual_coefficients": []
+    },
+    {
+      "name": "C positive factorization",
+      "expanded_left_terms": 24,
+      "expanded_right_terms": 24,
+      "residual_coefficients": []
+    },
+    {
+      "name": "quadratic equals original first residual times m",
+      "expanded_left_terms": 265,
+      "expanded_right_terms": 265,
+      "residual_coefficients": []
+    },
+    {
+      "name": "original residual 2 equals residual 1",
+      "expanded_left_terms": 265,
+      "expanded_right_terms": 265,
+      "residual_coefficients": []
+    },
+    {
+      "name": "original residual 3 equals residual 1",
+      "expanded_left_terms": 265,
+      "expanded_right_terms": 265,
+      "residual_coefficients": []
+    },
+    {
+      "name": "single congruence gives integral T numerator",
+      "expanded_left_terms": 51,
+      "expanded_right_terms": 51,
+      "residual_coefficients": []
+    },
+    {
+      "name": "symmetric sector E+J identity",
+      "expanded_left_terms": 12,
+      "expanded_right_terms": 12,
+      "residual_coefficients": []
+    },
+    {
+      "name": "coprimality identity for m and F+1",
+      "expanded_left_terms": 1,
+      "expanded_right_terms": 1,
+      "residual_coefficients": []
+    },
+    {
+      "name": "symmetric sector F lower bound identity",
+      "expanded_left_terms": 2,
+      "expanded_right_terms": 2,
+      "residual_coefficients": []
+    },
+    {
+      "name": "S numerator after E+J=0",
+      "expanded_left_terms": 12,
+      "expanded_right_terms": 12,
+      "residual_coefficients": []
+    },
+    {
+      "name": "T numerator after E+J=0",
+      "expanded_left_terms": 59,
+      "expanded_right_terms": 59,
+      "residual_coefficients": []
+    }
+  ],
+  "required_hypotheses": [
+    "s,t>=1",
+    "0<=x<=s-1",
+    "h=s-x>=1",
+    "y,z>=0",
+    "B=b-1>=1",
+    "F=B+(s+t-1)*x+s*z",
+    "K=s*T-b>0"
+  ],
+  "bound_logic": [
+    "Assume F>=M+1 where M=s*t+(2*u+1)*h-2.",
+    "Then a<=-s*t-(u+1)*h<0; y>=0 gives 0<m*K<=Q0.",
+    "Q1-Q0 and Q2-Q1 are nonnegative under these hypotheses.",
+    "Q2<=-F+s*h-3<=-s*t-(s+2*t-1)*h-2<0, a contradiction."
+  ],
+  "nonzero_polynomial_logic": [
+    "s*u>0 and L,C>0.",
+    "a!=0 gives nonzero quadratic coefficient s*u*a.",
+    "a=0 gives strictly negative linear coefficient -C.",
+    "a<=0 makes the polynomial strictly decreasing for Y>=0."
+  ],
+  "sufficiency_gates": [
+    "d=x+y+z>=1",
+    "alpha>=k>=b+1",
+    "m divides F*E-J",
+    "S,T,U>0",
+    "all six canonical sign factors strictly positive",
+    "original residual r1=0, equivalently the new quadratic equals zero"
+  ],
+  "symmetric_sector_obstruction": {
+    "hypotheses": [
+      "s=t",
+      "x=y"
+    ],
+    "steps": [
+      "E+J=0 and m divides (F+1)*E imply m divides E.",
+      "Write n=E/m in Z. Then S=h+(F+1)*n and T=h-F*n.",
+      "F=B+h+s*(d-1)>=h+1, so positivity forces n=0.",
+      "E=J=0 is excluded by the existing v21 zero-norm classification."
+    ],
+    "conclusion": "No model in the entire symmetric sector, with no bound on s,t."
+  },
+  "affine_degenerate_fixture": {
+    "parameters": {
+      "s": 2,
+      "t": 1,
+      "x": 0,
+      "y": 0,
+      "z": 1,
+      "B": 1
+    },
+    "values": {
+      "a": 0,
+      "F": 3,
+      "m": 13,
+      "L": 15,
+      "C": 12,
+      "C0": -11,
+      "C1": -12
+    },
+    "residual_polynomial": "-12*y-11"
+  },
+  "reviewed_proof_file": "high_d_fixed_low_row_finiteness_v22.tex",
+  "reviewed_proof_sha256": "93f03f7462b3de63f88a708196bb0c56e473c0a7876f017fbfcc5353122c0949",
+  "reviewed_primary_verifier_sha256": "7efc0ef9c356bb1cfbff9efe4daf48c98df590145c889e80ebbb75719e7fea14",
+  "scope": "No conclusion of general nonexistence; s,t remain unbounded.",
+  "source_sha256": "7cfb57cd61fb580747c8ac244e145f3d0429f550dbb5fa9fdca4688a90eed89f"
+}

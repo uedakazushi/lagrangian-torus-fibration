@@ -1,0 +1,213 @@
+\subsection{複数の meridian blow-up：homotopy 型と整数交点格子}
+\label{cs7:meridian-section}
+
+一つの node を取り込む場合の比較を、同じ成分上の複数の blow-up にも使える形にする。
+この節の計算は実際の blow-up complement に対するものであり、任意の focus--focus
+fiber の取り込みをこの模型で表せるという主張ではない。
+
+$m\geq4$ 本の一般位置の直線 $L_1,\ldots,L_m\subset\PP^2$ を固定する。
+$L_i$ の double points を避けた相異なる $r_i\geq0$ 点を blow up し、
+得られる曲面を $M_{\boldsymbol r}$、直線の strict transforms の union を
+$D_{\boldsymbol r}$、その補集合を $U_{\boldsymbol r}$ とする。
+exceptional divisors は $D_{\boldsymbol r}$ に含めない。
+\[
+ r=\sum_i r_i,\qquad s=\#\{i:r_i>0\},\qquad
+ n=m-1,\qquad k=m-1-s
+\]
+と書き、以下では $s<m$、すなわち少なくとも一本の直線を blow up しないと仮定する。
+$T^k_{(2)}$ は標準積 CW 構造の $2$-skeleton を表し、$k\leq2$ では $T^k$ 自身とする。
+
+\begin{proposition}[meridian attachments の homotopy 型]
+\label{cs7:homotopy}
+上の仮定の下で、
+\begin{equation}\label{cs7:wedge}
+ U_{\boldsymbol r}\simeq
+ T^k_{(2)}\vee\bigvee^{\,t}S^2,
+ \qquad
+ t=\binom{m-1}{2}-\binom{k}{2}+r-s.
+\end{equation}
+従って
+\[
+ \pi_1(U_{\boldsymbol r})=\ZZ^k,\qquad
+ b_2(U_{\boldsymbol r})=\binom{m-1}{2}+r-s.
+\]
+特に命題~\ref{cs6:invariants} の $U$ では
+\begin{equation}\label{cs7:sextic-wedge}
+ U\simeq T^3_{(2)}\vee S^2\vee S^2\vee S^2.
+\end{equation}
+$R=\ZZ[x_1^{\pm1},x_2^{\pm1},x_3^{\pm1}]$ とすると、その deck action を含めて
+\begin{equation}\label{cs7:sextic-pi2}
+ \pi_2(U)\cong R^4
+\end{equation}
+である。
+\end{proposition}
+
+\begin{proof}
+各 exceptional divisor の $U_{\boldsymbol r}$ 内の部分は $\mathbb A^1$ であり、
+これらは互いに交わらない。命題~\ref{cs6:invariants} と同じ tubular-neighborhood
+pushout を各部分に適用すると、$U_{\boldsymbol r}$ は $W_m$ に $r_i$ 個ずつ
+$L_i$ の meridian を attaching loop とする $2$-cells を付けた空間と homotopy 同値である。
+これは相異なる点での blow-up であることを使い、infinitely near points は含めない。
+
+blow up していない直線を infinity に選ぶと、残る $m-1$ 本の affine meridians は
+Hattori の $T^{m-1}_{(2)}$ 模型の標準 generators に対応する。
+ここでは単に cohomology ring を用いるのでなく、arrangement complement から
+$(\CC^*)^{m-1}$ への defining-linear-functions map と整合する skeleton 模型を用いる。
+この標識は Hattori~\cite[\S2, equation~(2.5), Proposition~(2.16)(2), pp.~207--213;
+\S4, Lemma~(4.2), pp.~217--219]{Hattori} の構成に含まれる。
+特に Proposition~(2.16)(2) は torus への inclusion との homotopy 可換性を保証し、
+\S4 の local trivialization は各 labeled coordinate hyperplane を保存する。
+一般位置 arrangement の skeleton 型の解説と meridian の cohomological marking については
+Papadima--Suciu~\cite[\S\S1.1, 4.3; proof of Theorem~4.8(4)]{PapadimaSuciu}
+も参照されたい。
+
+この標準模型は一つの $0$-cell、$n$ 個の $1$-cells、および
+$[x_i,x_j]$ を attaching words とする $\binom n2$ 個の $2$-cells を持つ。
+殺す $s$ 個の generator について、それぞれ一本の circle と新しい一枚の disk を
+合わせた contractible subcomplex を collapse する。
+残る $k$ 個の generators の間の commutator cells は $T^k_{(2)}$ を与える。
+殺した generator を含む commutator の attaching loop は null-homotopic となり、
+それぞれ一つの $S^2$ を与える。同じ meridian に沿う二枚目以降の新しい cells も
+同様に $S^2$ を与える。この数は $\binom n2-\binom k2+r-s$ である。
+collapse した subcomplex は contractible な CW subcomplex なので、この操作は
+homotopy 同値を与える。
+
+$k=3$ のとき、$T^3$ の universal cover の cellular complex は
+$x_1-1,x_2-1,x_3-1$ の Koszul complex である。
+その最後の differential
+\[
+ d_3:R\longrightarrow R^3,\qquad
+ 1\longmapsto (x_3-1)e_{12}-(x_2-1)e_{13}+(x_1-1)e_{23}
+\]
+は単射であり、$\ker d_2=\operatorname{im}d_3\cong R$ である。
+universal cover で追加の各 $S^2$ は自由 $R$ summand を一つずつ与える。
+$m=5,r=s=1$ では $t=3$ なので \eqref{cs7:sextic-pi2} が従う。
+\end{proof}
+
+\begin{proposition}[整数交点格子と境界の torsion]
+\label{cs7:lattice}
+$K_{\boldsymbol r}\subset U_{\boldsymbol r}$ を divisor neighborhood の補集合として得られる
+compact core、$Y_{\boldsymbol r}=\partial K_{\boldsymbol r}$ とする。
+$H_2(K_{\boldsymbol r};\ZZ)$ の絶対 intersection lattice は
+\begin{equation}\label{cs7:intersection}
+ 0^{\binom{m-1}{2}}\ \oplus\!
+ \bigoplus_{i:r_i>0}(-A_{r_i-1}),
+\end{equation}
+である。$A_0=0$ とし、$A_q$ は対角 $2$、隣接成分 $-1$ の標準 root lattice とする。
+特に
+\[
+ \sigma(K_{\boldsymbol r})=-(r-s).
+\]
+境界は plumbing matrix $J_m-\operatorname{diag}(r_1,\ldots,r_m)$ を持ち、
+\begin{equation}\label{cs7:boundary-h1}
+ H_1(Y_{\boldsymbol r};\ZZ)\cong
+ \ZZ^{\binom{m-1}{2}+m-1-s}
+ \oplus\bigoplus_{i:r_i>0}\ZZ/r_i\ZZ.
+\end{equation}
+その reduced JSJ graph は $K_m$ である。
+境界包含は $H_1(Y_{\boldsymbol r})\to H_1(K_{\boldsymbol r})=\ZZ^k$ の全射を誘導し、
+その kernel は
+\[
+ \ZZ^{\binom{m-1}{2}}\oplus\bigoplus_{i:r_i>0}\ZZ/r_i\ZZ
+\]
+に同型である。この抽象群の同型だけでは、境界内の具体的な peripheral subgroup は定まらない。
+\end{proposition}
+
+\begin{proof}
+exceptional classes を $E_{i,a}$ と書けば
+\[
+ [D_i]=H-\sum_{a=1}^{r_i}E_{i,a}.
+\]
+pair $(M_{\boldsymbol r},U_{\boldsymbol r})$ の exact sequence と divisor に対する
+duality により
+\[
+ \operatorname{im}\bigl(H_2(U_{\boldsymbol r})\to H_2(M_{\boldsymbol r})\bigr)
+ =\ker\!\left(H_2(M_{\boldsymbol r})\xrightarrow{(\,\cdot D_i\,)_{i=1}^m}\ZZ^m\right).
+\]
+ここで $H_2(M_{\boldsymbol r},U_{\boldsymbol r})\cong H^2(D_{\boldsymbol r})\cong\ZZ^m$ である。
+blow up していない成分との交点が零なので、kernel の $H$ coefficient は零である。
+残る条件は各 $i$ について $\sum_a b_{i,a}=0$ となる。
+従って kernel は
+\[
+ \bigoplus_{i:r_i>0}
+ \left\{\sum_a b_{i,a}E_{i,a}:\sum_a b_{i,a}=0\right\},
+\]
+すなわち $\bigoplus_i(-A_{r_i-1})$ である。
+この自由群への全射は整数加群として split し、補集合内の交点数は compactification
+内の交点数と一致する。命題~\ref{cs7:homotopy} の $b_2$ から radical の rank は
+$\binom{m-1}{2}$ となり、\eqref{cs7:intersection} を得る。
+
+plumbing graph の各 edge は以前と同じ double point に対応し、各 diagonal weight は
+$1-r_i$ である。よって matrix は表示されたものになる。
+blow up していない一つの row を選ぶと、その relation は $\sum_i\mu_i=0$ である。
+他の rows からこの row を引くと、残る relations は $r_i\mu_i=0$ となる。
+未変更成分の meridian を一つ消去すれば
+\[
+ \operatorname{coker}Q\cong\ZZ^{m-1-s}\oplus\bigoplus_{r_i>0}\ZZ/r_i\ZZ.
+\]
+plumbing の exact sequence は、これに
+$H_1(K_m;\ZZ)\cong\ZZ^{\binom{m-1}{2}}$ を加える。
+後者は自由群なので sequence は群として split する。
+
+各 Seifert piece の base は $(m-1)$ 穴 sphere で、その Euler 数は $3-m<0$ である。
+隣接する normal-circle slopes の交点数は $1$ のままである。
+従って命題~\ref{cs6:boundary} と同じ incompressibility と slope の議論により、
+全ての plumbing tori が reduced JSJ system をなす。
+最後の kernel の記述は、pair $(K_{\boldsymbol r},Y_{\boldsymbol r})$ の exact sequence
+と $H^3(K_{\boldsymbol r})=0$ による全射、およびその自由群 $\ZZ^k$ への splitting から従う。
+\end{proof}
+
+\begin{remark}[Stein model の contact 不変量]
+\label{cs7:contact}
+この補集合は affine で、canonical line bundle は自明である。
+実際、$N\gg0$ に対して $NH-\sum E_{i,\ell}$ は ample であり、
+blow up した成分に係数 $1$、残る成分に正の整数係数を配分すれば、
+この class は $D_{\boldsymbol r}$ を support とする ample divisor で表される。
+また、未変更成分 $D_j=H$ を一つ選ぶと
+\[
+ K_{M_{\boldsymbol r}}=-\sum_{i:r_i>0}D_i+(s-3)D_j
+\]
+である。対応する Stein contact boundary には
+\[
+ c_1(\xi)=0,\qquad
+ d_3(\xi)=\frac{-2\bigl(\binom{m-2}{2}+r\bigr)+3(r-s)}4
+\]
+が成り立つ\cite[Definition~4.2, Theorem~4.5]{Gompf}。
+これも contactomorphism の十分条件ではない。
+\end{remark}
+
+\begin{corollary}[canonical pants 数に合わせる meridian 模型]
+\label{cs7:canonical-budget}
+$m\geq5$ とし、$P=(m-3)^2$ 個の標準四次元 pants と同じ Euler 数を持つように
+$r=\binom{m-3}{2}$ 個の上記 blow-ups を行う。
+さらに $\pi_1(U_{\boldsymbol r})=\ZZ^3$ を要求すると
+\[
+ s=m-4,\qquad
+ U_{\boldsymbol r}\simeq T^3_{(2)}\vee\bigvee^{P-1}S^2,
+ \qquad\pi_2(U_{\boldsymbol r})\cong\ZZ[\ZZ^3]^P,
+\]
+\begin{equation}\label{cs7:signature-budget}
+ \sigma(K_{\boldsymbol r})=-\binom{m-4}{2}.
+\end{equation}
+$m\geq6$ なら、この compact core は disjoint full-face tree assembly の
+$P$ 個の pants とは diffeomorphic でない。
+\end{corollary}
+
+\begin{proof}
+命題~\ref{cs7:homotopy} より $m-1-s=3$ であり、同命題に $r,s$ を代入すると
+wedge 数は $P-1$ となる。signature は
+$r-s=\binom{m-4}{2}$ から従う。
+
+full-face tree assembly について、face の $H_1$ からそれぞれの pants の $H_1$ への
+写像は同型である。従って Mayer--Vietoris sequence を tree に沿って反復すると、
+assembly の $H_2$ は各 pants に含まれる $H_2$ classes で生成される。
+標準 pants の絶対交点形式は零であり、異なる pants に含まれる cycles は各 piece の
+内部へ移せば互いに交わらない。よって assembly の絶対交点形式も零である。
+$m\geq6$ では \eqref{cs7:signature-budget} は負なので矛盾する。
+\end{proof}
+
+例えば $m=6$、$(r_1,r_2)=(2,1)$ では $P=9$、
+$U\simeq T^3_{(2)}\vee8S^2$ であるが、交点格子には $-A_1$ が現れ、
+$H_1(Y)=\ZZ^{13}\oplus\ZZ/2\ZZ$ となる。
+同じ homotopy 型の候補を比較しても、境界と交点格子は別に検査する必要がある。
+これらの位相計算だけから Weinstein equivalence や exact symplectic surgery は従わない。

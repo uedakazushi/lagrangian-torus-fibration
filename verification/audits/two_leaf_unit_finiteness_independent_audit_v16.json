@@ -1,0 +1,77 @@
+{
+  "version": "v16",
+  "status": "PASS",
+  "passed": true,
+  "external_peer_review": false,
+  "audit_kind": "Independent proof audit and independent middle reconstruction for the non-B representation finite reduction",
+  "scope": "z=1, r<=4, crossed two-leaf middle; leaf4 ray2 admits C or D. The B-only case and center completion must still be handled separately.",
+  "corrected_findings": [
+    {
+      "finding": "F_r(1) was printed as 3r+3 in the first draft",
+      "correction": "2r+3",
+      "conclusion_affected": false,
+      "resolved": true
+    }
+  ],
+  "checks": [
+    {
+      "claim": "E bound and complete C/D leaf4 case split",
+      "result": "PASS",
+      "detail": "All four choices of the two remaining low labels were substituted in the full one-high matrix, retaining c,d and cd=0. The nonfree cases give E=-H, E=H+1, or H-3<=E<=H+2 with H<=5; the remaining cases give kappa in {2,5,8,10}."
+    },
+    {
+      "claim": "F nonzero and s<=9",
+      "result": "PASS",
+      "detail": "F_r(1)=2r+3 (corrected typo), values s=2..6 and the s>=7 sign are correct. The strict bound y<(r+2)S/r^2 gives E<(4+4/r-s)S/r, excluding s>=10 when E>=-2."
+    },
+    {
+      "claim": "Small S complete resonance handling",
+      "result": "PASS",
+      "detail": "The only (r,S) pairs are (1,2),(1,3),(2,3). Direct division gives y=4-2/(s+1), y=7-5/(s+1), and y=2 respectively; the latter has positive even s. For s>=8 both leaves are D, h<=3, c3>0,c4<0,d3=d4=0, the other center is B and the other leaf C. Their opposing D coefficients are both positive."
+    },
+    {
+      "claim": "Free E identity and h,t bounds",
+      "result": "PASS",
+      "detail": "Independently eliminated y from T=t(h^2+h+1)+1+beta+E+kappa and the middle pair relation. The resulting identity agrees. Its upper bounds give t<=6; alpha<=0 gives h<=8, alpha=1,t>=2 gives h<=7, and alpha=t=1 gives (K,h)=(2,4),(3,12)."
+    },
+    {
+      "claim": "Independent middle candidate generation",
+      "result": "PASS",
+      "detail": "No primary checker or v15 reconstruction helper was imported. Rational formulas and explicit positive weights reconstruct the same 31 middle models and all 66 witness multiplicities."
+    },
+    {
+      "claim": "Stored 52 low patches satisfy original equations",
+      "result": "PASS",
+      "detail": "Read the JSON matrices directly and checked row sums, pair products, D definitions, positive simple-cycle inequalities, all three low-edge node triples, D opposition, and matrix-level uniqueness."
+    },
+    {
+      "claim": "Complete leaf generation dependency",
+      "result": "PASS with retained scope",
+      "detail": "The v15 fixed-middle reconstruction helper is byte-identical to its previously independently audited version, including B exceptional leaves and q=3 matrix deduplication. This audit independently rechecks the 52 stored patches but does not claim a second independent derivation of every missing leaf candidate."
+    }
+  ],
+  "independent_middle_count": 31,
+  "independent_witness_count": 66,
+  "independent_witness_branch_counts": {
+    "small_S": 5,
+    "bounded_E": 15,
+    "free_E_leaf3_C": 40,
+    "free_E_leaf3_B": 6
+  },
+  "stored_low_patches_checked": 52,
+  "primary_checker_imported": false,
+  "fixed_middle_helper_imported": false,
+  "source_snapshot": {
+    "two_leaf_unit_finiteness_v16.tex": "c1d0d6b45cd8fe189285ea3f736fe668e4a3e8d9b4b472199ce1e7a146a54e92",
+    "verify_two_leaf_unit_finiteness_v16.py": "eff9d9e3e7a8167faf9d9314d24cbc62132e378f77a31ab816e64f80002895f4",
+    "two_leaf_unit_finiteness_certificate_v16.json": "a0bc7d8201f1bf79b4752e1dfa2caf5a63becab8faf9ff2100a29dc1e70589ff",
+    "exact_fixed_middle_completion_v15.py": "cfb3110fe99ccc9d1d7e90bb402638078e6ebeac0f104f8429b60cdc4bdc78c8",
+    "fixed_middle_completion_independent_audit_v15.json": "5bdb1e860c68f1bbe032c54a459260b3347e911e05a3a87505bf2484eacfd52c"
+  },
+  "audit_script_sha256": "5106bca390702d9ba0f590865423c42a4bfa9d8a01146683abe773fb787351ed",
+  "limitations": [
+    "This is internal mathematical checking, not external peer review or proof-assistant formalization.",
+    "The B-only leaf case is outside this theorem.",
+    "Surviving low patches are not full five-core arithmetic atlases."
+  ]
+}

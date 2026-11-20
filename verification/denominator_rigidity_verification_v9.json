@@ -1,0 +1,231 @@
+{
+  "version": 9,
+  "passed": true,
+  "exact_checks": 78,
+  "scope": "Coefficientwise polynomial identities, parity over Z/2, exact node-budget arithmetic, arbitrary-line-denominator mixed defect calculation, and a complete symbolic positive four-line local family for every odd q>=3.",
+  "universal_rigidity_certificate": "q_A q_B (4 + e_i + e_j - N_ext) = m_i + m_j; with m_i=m_j=1 and odd positive q_A,q_B, both denominators equal 1.",
+  "weaker_input": "Integer puncture clutching alone suffices; neither nonnegative node counts nor the total node budget is needed for rigidity.",
+  "symbolic_variables": [
+    "q_A",
+    "q_B",
+    "e_i",
+    "e_j",
+    "m_i",
+    "m_j",
+    "P_A",
+    "P_B",
+    "Pprime_A",
+    "Pprime_B",
+    "N_ext"
+  ],
+  "mixed_defects": {
+    "each_mixed_plane": -1,
+    "each_quadric_component": -1,
+    "global_total": -6,
+    "line_denominators": "arbitrary positive integers"
+  },
+  "node_budgets": [
+    {
+      "model": "mixed_plane_quadric",
+      "e_left": 4,
+      "e_right": 2,
+      "total_meridian_nodes": 10,
+      "external_nodes": 8,
+      "internal_annulus_nodes": 2,
+      "qualification": "Necessary allocation under hypothetical gluing; the mixed global atlas is obstructed."
+    },
+    {
+      "model": "all_plane_sextic",
+      "e_left": 1,
+      "e_right": 1,
+      "total_meridian_nodes": 6,
+      "external_nodes": 4,
+      "internal_annulus_nodes": 2,
+      "qualification": "Necessary allocation for the stated sextic construction; a global denominator-one atlas has been constructed."
+    }
+  ],
+  "isolated_annulus_arithmetic_example": {
+    "q_A": 1,
+    "q_B": 3,
+    "plane_P": [
+      -1,
+      -8
+    ],
+    "quadric_P": [
+      0,
+      -5
+    ],
+    "external_sum": "28/3",
+    "global_compatibility": false
+  },
+  "local_four_line_odd_denominator_family": {
+    "parameter": "integer h>=1; q=2h+1",
+    "q_vector": [
+      "2h+1",
+      "1",
+      "1",
+      "1"
+    ],
+    "weights": [
+      "2h+1",
+      "h",
+      "1",
+      "1+1/(4h)"
+    ],
+    "outgoing_numerators": [
+      [
+        "0",
+        "-2h",
+        "-2",
+        "1"
+      ],
+      [
+        "-1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "-h",
+        "h-1",
+        "0",
+        "0"
+      ],
+      [
+        "2h",
+        "0",
+        "-(2h+1)",
+        "0"
+      ]
+    ],
+    "normalized_basin_areas": [
+      [
+        "-",
+        "3h",
+        "3",
+        "1/(4h)"
+      ],
+      [
+        "3h+1",
+        "-",
+        "1",
+        "1+1/(4h)"
+      ],
+      [
+        "3h+1",
+        "1",
+        "-",
+        "1+1/(4h)"
+      ],
+      [
+        "1/2",
+        "h",
+        "2h+5/2+1/(4h)",
+        "-"
+      ]
+    ],
+    "component_area": "3h+3+1/(4h)",
+    "branch_divisor_coefficients": [
+      "-3h",
+      "h",
+      "2h+2",
+      "-2"
+    ],
+    "method": "All identities are compared as polynomials after multiplying weights and basin areas by 4h. Positive coefficients prove positivity for every h>=1. A polynomial Bezout identity proves primitive high-ray actions.",
+    "scope": "Geometric local-chart realization requires the separate relative-Moser argument; no global quintic atlas is claimed."
+  },
+  "isolated_high_branch_lemma": {
+    "normal_form": "(-(q-1),-(b+1),b), with b and b+1 dividing q-1",
+    "parameter": "q-1=t*b*(b+1)",
+    "coefficient": "-t*(b*(b+1)+1)<0",
+    "global_consequence": "The higher-denominator support graph of a quintic atlas has no connected component consisting of a single edge.",
+    "qualification": "The written sign/positive-cycle proof supplies the normal form; the script checks its polynomial coefficient formulas."
+  },
+  "limitations": [
+    "The script does not establish the geometric cycle framings, primitive action lattices, positivity of sectors, or constancy of the branch invariant.",
+    "The full denominator obstruction and all-degree classification require the geometric proofs and inherited link obstructions in the paper.",
+    "The isolated annulus example is not a complete local core chart or a global atlas.",
+    "Changing cones, lattices, Reeb trees, or introducing branch singularities requires a new geometric analysis."
+  ],
+  "certificates": [
+    "oriented_annular_determinant",
+    "paired_annulus_polynomial_certificate",
+    "integer_clutching_only_certificate",
+    "three_unit_arm_parity_-1_-1_-1",
+    "three_unit_arm_parity_-1_-1_1",
+    "three_unit_arm_parity_-1_1_-1",
+    "three_unit_arm_parity_-1_1_1",
+    "three_unit_arm_parity_1_-1_-1",
+    "three_unit_arm_parity_1_-1_1",
+    "three_unit_arm_parity_1_1_-1",
+    "three_unit_arm_parity_1_1_1",
+    "only_odd_positive_divisor_of_two",
+    "positive_product_one_has_two_unit_factors",
+    "line_contribution_arbitrary_denominator",
+    "mixed_plane_minus_one_with_arbitrary_line_denominators",
+    "quadric_component_minus_one",
+    "mixed_global_minus_six",
+    "mixed_plane_quadric_external_budget",
+    "mixed_plane_quadric_internal_budget",
+    "all_plane_sextic_external_budget",
+    "all_plane_sextic_internal_budget",
+    "local_euler_four_annulus_candidate",
+    "local_euler_two_annulus_candidate",
+    "local_candidate_fractional_external_budget",
+    "local_candidate_no_integer_clutching",
+    "local_candidate_positive_plane_defect",
+    "cone_index_scope_example",
+    "k4_family_row_sum_0",
+    "k4_family_positive_scaled_weight_0",
+    "k4_family_basin_identity_0_1",
+    "k4_family_positive_scaled_basin_0_1",
+    "k4_family_basin_identity_0_2",
+    "k4_family_positive_scaled_basin_0_2",
+    "k4_family_basin_identity_0_3",
+    "k4_family_positive_scaled_basin_0_3",
+    "k4_family_full_component_area_0",
+    "k4_family_row_sum_1",
+    "k4_family_positive_scaled_weight_1",
+    "k4_family_basin_identity_1_0",
+    "k4_family_positive_scaled_basin_1_0",
+    "k4_family_basin_identity_1_2",
+    "k4_family_positive_scaled_basin_1_2",
+    "k4_family_basin_identity_1_3",
+    "k4_family_positive_scaled_basin_1_3",
+    "k4_family_full_component_area_1",
+    "k4_family_row_sum_2",
+    "k4_family_positive_scaled_weight_2",
+    "k4_family_basin_identity_2_0",
+    "k4_family_positive_scaled_basin_2_0",
+    "k4_family_basin_identity_2_1",
+    "k4_family_positive_scaled_basin_2_1",
+    "k4_family_basin_identity_2_3",
+    "k4_family_positive_scaled_basin_2_3",
+    "k4_family_full_component_area_2",
+    "k4_family_row_sum_3",
+    "k4_family_positive_scaled_weight_3",
+    "k4_family_basin_identity_3_0",
+    "k4_family_positive_scaled_basin_3_0",
+    "k4_family_basin_identity_3_1",
+    "k4_family_positive_scaled_basin_3_1",
+    "k4_family_basin_identity_3_2",
+    "k4_family_positive_scaled_basin_3_2",
+    "k4_family_full_component_area_3",
+    "k4_family_crossing_unimodularity_0_1",
+    "k4_family_crossing_unimodularity_0_2",
+    "k4_family_crossing_unimodularity_0_3",
+    "k4_family_crossing_unimodularity_1_2",
+    "k4_family_crossing_unimodularity_1_3",
+    "k4_family_crossing_unimodularity_2_3",
+    "k4_family_branch_divisor_coefficient_0",
+    "k4_family_branch_divisor_coefficient_1",
+    "k4_family_branch_divisor_coefficient_2",
+    "k4_family_branch_divisor_coefficient_3",
+    "k4_family_total_branch_divisor_coefficient",
+    "k4_family_scaled_total_area",
+    "k4_family_primitive_high_ray_Bezout",
+    "isolated_high_incoming_sum",
+    "isolated_high_negative_defect_formula"
+  ],
+  "script_sha256": "202cb74ff81994512cb58af8c18f7e77b00c5a802cc65c70c910a589b8f3c9f7"
+}

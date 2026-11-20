@@ -1,0 +1,222 @@
+{
+  "version": "v18",
+  "status": "PASS",
+  "theorem_scope": "All positive integer three-high local charts with q0=1; no denominator cutoff, global clutching, D cancellation, or node conditions.",
+  "proof": "The TeX proof eliminates paths by coefficient signs and positive triangles by an integer-gap identity. The finite regression grid is not the proof.",
+  "polynomial_identities": [
+    "universal path residual",
+    "P3_low_endpoint leading",
+    "P3_low_endpoint constant factor",
+    "P3_low_endpoint middle component",
+    "P4_low_internal leading",
+    "P4_low_internal constant factor",
+    "P4_low_internal middle component",
+    "triangle pair12 residual",
+    "triangle pair13 residual",
+    "triangle pair23 residual",
+    "triangle integer-gap certificate"
+  ],
+  "identity_count": 11,
+  "path_sign_certificates": [
+    {
+      "type": "P3_low_endpoint",
+      "coefficient_sign": -1,
+      "shifted_positive_polynomials": {
+        "leading": {
+          "monomials": 6,
+          "minimum_nonzero_coefficient": 1,
+          "constant_coefficient": 0,
+          "all_nonzero_coefficients_positive": true
+        },
+        "constant_factor": {
+          "monomials": 12,
+          "minimum_nonzero_coefficient": 1,
+          "constant_coefficient": 2,
+          "all_nonzero_coefficients_positive": true
+        },
+        "middle_component": {
+          "monomials": 40,
+          "minimum_nonzero_coefficient": 1,
+          "constant_coefficient": 6,
+          "all_nonzero_coefficients_positive": true
+        }
+      }
+    },
+    {
+      "type": "P4_low_internal",
+      "coefficient_sign": 1,
+      "shifted_positive_polynomials": {
+        "leading": {
+          "monomials": 7,
+          "minimum_nonzero_coefficient": 1,
+          "constant_coefficient": 2,
+          "all_nonzero_coefficients_positive": true
+        },
+        "constant_factor": {
+          "monomials": 12,
+          "minimum_nonzero_coefficient": 1,
+          "constant_coefficient": 6,
+          "all_nonzero_coefficients_positive": true
+        },
+        "middle_component": {
+          "monomials": 40,
+          "minimum_nonzero_coefficient": 1,
+          "constant_coefficient": 12,
+          "all_nonzero_coefficients_positive": true
+        }
+      }
+    }
+  ],
+  "triangle_integer_gap": {
+    "alpha_beta_nonnegative": "Strict positive three-cycle inequalities and integrality.",
+    "A_gt_1_b_gt_0": "Second, then first pair equations.",
+    "U_gt_T": "(A-1)U >= CS >= bS = AT+alpha beta >= AT.",
+    "delta_ge_1": "U,T are integers.",
+    "contradiction": "Left side A[s(1-delta)-k beta] <=0; right side bsU+bk(s+t)+Ct beta >0."
+  },
+  "nonpositive_triangle": {
+    "q": [
+      1,
+      5,
+      19,
+      31
+    ],
+    "P": [
+      [
+        0,
+        1,
+        1,
+        -3
+      ],
+      [
+        4,
+        0,
+        2,
+        -11
+      ],
+      [
+        18,
+        47,
+        0,
+        -84
+      ],
+      [
+        -10,
+        -14,
+        -7,
+        0
+      ]
+    ],
+    "cycle": [
+      0,
+      2,
+      1
+    ],
+    "gain": [
+      188,
+      95
+    ]
+  },
+  "regression_grid": {
+    "inputs": 31536,
+    "integer_charts": 154,
+    "counts": {
+      "matching_positive": 98,
+      "triangle_nonpositive": 56
+    },
+    "representatives": {
+      "matching_positive": {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -4,
+          -2,
+          1
+        ],
+        "q": [
+          1,
+          5,
+          5,
+          3
+        ],
+        "P": [
+          [
+            0,
+            -1,
+            -2,
+            2
+          ],
+          [
+            -4,
+            0,
+            6,
+            -7
+          ],
+          [
+            -2,
+            4,
+            0,
+            -7
+          ],
+          [
+            1,
+            -2,
+            -2,
+            0
+          ]
+        ]
+      },
+      "triangle_nonpositive": {
+        "r": [
+          1,
+          2,
+          -4
+        ],
+        "x": [
+          2,
+          2,
+          -3
+        ],
+        "q": [
+          1,
+          3,
+          5,
+          13
+        ],
+        "P": [
+          [
+            0,
+            1,
+            2,
+            -4
+          ],
+          [
+            2,
+            0,
+            14,
+            -19
+          ],
+          [
+            2,
+            1,
+            0,
+            -8
+          ],
+          [
+            -3,
+            -2,
+            -8,
+            0
+          ]
+        ]
+      }
+    },
+    "scope": "s,t=1..5, |x_i|=1..12, even r_i*x_i only; not a denominator classification."
+  },
+  "source_sha256": "5aa8073709f953d9e25baa3519b1e3d060667d2c65428c16e32b6b8dffa02819",
+  "helper_sha256": "946503cd9f5c202645ef4d97cd08e9f4fa920fee18095c96770c684d7173b835",
+  "verifier_sha256": "899af515dc4602262e134ee4eb81e32df7787d0531e0ca5df989601b65881753"
+}

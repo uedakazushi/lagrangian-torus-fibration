@@ -1,0 +1,191 @@
+\subsection{四例外の場合の有限型帰着と全排除}
+\label{kf17:section}
+
+\begin{lemma}[例外 reverse の行ごとの有限型]
+\label{kf17:finite-row-types}
+$K_4$ の六辺のうち四辺が例外辺であるとする．通常二辺を固定し，
+それぞれの reverse $u$ を $\{-4,-3,-2,-1,1,2,3,4\}$ から選ぶ．
+各例外辺の符号と単位 reverse の端を指定すれば，残る reverse の絶対値は
+各行独立の線形方程式で決まる．
+その全解は有限個の確定値と，ある正の偶数 $h$ に対する
+\begin{equation}\label{kf17:free-row}
+ m_1=h+\max(\delta,0),\qquad
+ m_2=h+\max(-\delta,0),\qquad \delta\in2\ZZ
+\end{equation}
+の組で表せる．この自由な組は異なる二本の例外辺の大きい reverse が
+同じ頂点で反対符号になる場合に限られる．
+
+hub の row/pair 条件，四つの低辺の node 条件と $D$ 相殺に関しては，
+各 $h$ を $2$，$4$，または全偶数 $h\ge6$ の三型に分ければ十分である．
+第三型は $h=6$ で代表させてよく，これは分母の探索上限ではない．
+\end{lemma}
+
+\begin{proof}
+各例外辺には絶対値一の reverse と，正の偶数 $m=q-1$ の reverse が一つずつある．
+$m$ が現れるのは，その大きい端に対応する $R$ の一行だけである．
+頂点 $i$ での大きい端の集合を $B_i$ と書くと，行和は
+\begin{equation}\label{kf17:row-equation}
+ \sum_{j\in B_i}\varepsilon_{ij}m_{ij}
+ =c_i:=-1-\sum_{j\notin B_i}R_{ij},
+ \qquad m_{ij}\in2\ZZ_{>0}
+\end{equation}
+となる．右辺には，既に選んだ通常 reverse と単位 reverse しか含まれない．
+
+$|B_i|=3$ なら，その頂点は通常辺にも単位端にも接しないため $c_i=-1$ であり，
+左辺の偶数性に反する．$|B_i|=0$ なら $c_i=0$ が必要である．
+$|B_i|=1$ なら $m=\varepsilon c_i$ が正の偶数であることが必要十分である．
+$|B_i|=2$ で符号が同じなら，二つの正偶数の和が固定されるので全解は有限である．
+符号が異なるなら，$m_1-m_2=\delta$ を解いたものが
+式~\eqref{kf17:free-row} である．各例外辺の大きい端は一つしかないため，
+異なる行の自由変数の間に未処理の同一視はない．
+
+残る無限部分 $h\ge6$ を考える．どちらの大きい reverse も絶対値六以上である．
+対応する hub entry は
+\[
+ V_{ij}=1-R_{ij}-N_{ij},\qquad0\le N_{ij}\le5
+\]
+だから，正の大きい reverse なら厳密に負，負の大きい reverse なら厳密に正である．
+従って $V_{ij}V_{ji}=0$ は，単位端の $V$ が零であることと同値であり，
+その node は正例外なら零，負例外なら二に固定される．
+この条件は $h\ge6$ の値に依存しない．
+
+$R$ の行和は全 $h$ で $-1$ であるから，node の行和五を課した後の
+$V$ の行和も全 $h$ で $-1$ となる．また例外辺は
+式~\eqref{kh16:divergence} の左辺に寄与しない．
+通常辺の流れは $N$ だけから決まるため，四つの $D$ 相殺も $h$ に依存しない．
+よって無限部分は各行で $h=6$ とした代表と，ここで課す hub 条件について完全に同値である．
+\end{proof}
+
+\begin{proposition}[四例外で残る hub の全候補]
+\label{kf17:complete-hub-list}
+四例外の場合，通常二辺が端点を共有しない配置は存在しない．
+通常二辺が端点を共有する場合，標識を取り直して $01,02$ を通常辺とすると，
+hub の row/pair 条件，四つの低辺の node 条件と $D$ 相殺を満たす候補は六個である．
+これらは $1,2$ の交換の下で，次の三型に尽くされる．
+全ての自由な組は有限型 $h=2$ に属し，無限型 $h\ge6$ は残らない．
+\[
+\begin{split}
+ R^{(1)}&=\begin{pmatrix}
+ 0&-4&1&2\\4&0&-4&-1\\-1&-1&0&1\\1&-4&2&0
+ \end{pmatrix},\qquad
+ R^{(2)}=\begin{pmatrix}
+ 0&-4&2&1\\4&0&-4&-1\\-2&-1&0&2\\2&-4&1&0
+ \end{pmatrix},\\[.4em]
+ R^{(3)}&=\begin{pmatrix}
+ 0&-1&4&-4\\1&0&2&-4\\-4&1&0&2\\-1&-1&1&0
+ \end{pmatrix}.
+\end{split}
+\]
+対応する node 行列と分母は
+\[
+ N^{(1)}=N^{(2)}=\begin{pmatrix}
+ 0&5&0&0\\0&0&0&5\\3&2&0&0\\0&5&0&0
+ \end{pmatrix},\qquad
+ N^{(3)}=\begin{pmatrix}
+ 0&5&0&0\\0&0&0&5\\5&0&0&0\\2&3&0&0
+ \end{pmatrix},
+\]
+\[
+\begin{array}{c|rrrrrr}
+ \text{型}&q_{01}&q_{02}&q_{03}&q_{12}&q_{13}&q_{23}\\\hline
+ 1&13&5&3&5&5&3\\
+ 2&13&7&3&5&5&3\\
+ 3&3&5&5&3&5&3
+\end{array}
+\]
+である．$V$ は $V_{ij}=1-R_{ij}-N_{ij}$ で復元される．
+ここで数えるのは hub の必要条件を満たすデータであり，
+高 core の局所 chart が存在するという主張は含まない．
+\end{proposition}
+
+\begin{proof}
+二本の通常辺は，標識交換後，$\{01,23\}$ または $\{01,02\}$ である．
+通常 reverse の全 $8^2$ choices，四例外の大きい端の全 $2^4$ choices，
+符号の全 $2^4$ choices を取り，補題~\ref{kf17:finite-row-types} の行方程式を解く．
+同符号の正偶数分割は全て取り，異符号の自由変数は $h=2,4,6$ の三型で代表させる．
+行和を満たす $R$ の有限型は，端点を共有しない場合に百十二，
+共有する場合に二百四となる．そのうち無限部分を代表するものはそれぞれ三十二，八十二である．
+
+各 $R$ に対し，三つの非負整数の和が五となる二十一通りの全 node 行を用い，
+四行の全組に $V_{ij}V_{ji}=0$ を課す．通常辺は forest なので，
+流れは $d_i=\sum_jN_{ji}-5$ から一意に決まる．
+通常辺を小さい標識から大きい標識への向きで記すと，
+$\{01,23\}$ の場合は
+\[
+ F_{01}=d_0,\quad F_{23}=d_2,\qquad d_0+d_1=d_2+d_3=0,
+\]
+$\{01,02\}$ の場合は
+\[
+ F_{01}=-d_1,\quad F_{02}=-d_2,\qquad d_0+d_1+d_2=d_3=0
+\]
+が必要十分である．各通常辺では
+\begin{equation}\label{kf17:recover-q}
+ X_{ij}=F_{ij}-R_{ij},\qquad
+ q_{ij}=1+R_{ij}(F_{ij}-R_{ij})
+\end{equation}
+が奇数かつ三以上でなければならない．例外辺の分母は
+$q_{ij}=1+R_{ij}R_{ji}$ である．全検査の個数は次のとおりである．
+\[
+\begin{array}{c|rr}
+ &\text{端点非共有}&\text{端点共有}\\\hline
+ R\text{ の有限型}&112&204\\
+ \text{うち無限部分の代表}&32&82\\
+ \text{hub pair を満たす }(R,N)&3552&4922\\
+ \text{forest 成分の流れが釣り合う }(R,N)&320&558\\
+ \text{正の奇分母を持つ候補}&0&6\\
+ \text{うち無限部分の代表}&0&0
+\end{array}
+\]
+六個は上に表示した三型とその $1,2$ 交換である．
+\nolinkurl{verify_k4_four_exceptions_v17.py} は有限型を全て生成し，
+元の行和，hub pair，node，四辺の $D$ 相殺を整数演算で再検査する．
+全 $R$ 型と各検査段階の候補数，六候補の全行列を
+\nolinkurl{k4_four_exceptions_verification_v17.json} に保存する．
+無限型の置換の完全性は前補題によって証明されており，
+分母十三という上界は残った候補の結果であって探索の仮定ではない．
+\end{proof}
+
+\begin{lemma}[残存候補に共通する実数局所障害]
+\label{kf17:negative-discriminant}
+低 ray を一つ持つ三高分母 core で，高 rays を $a,b,c$ とし，
+\[
+ (q_a,q_b,q_c)=(5,3,3),\qquad
+ (p_{4a},p_{4b},p_{4c})=(-4,1,2),\qquad
+ (p_{a4},p_{b4},p_{c4})=(-1,2,1)
+\]
+を指定する．これを満たす局所行列は，整数の条件を外しても存在しない．
+\end{lemma}
+
+\begin{proof}
+三つの高 rows で高高 entries の和はそれぞれ $-4,-5,-4$ である．
+$A=p_{ab}$ と置くと pair products と行和から
+\[
+ p_{ba}=\frac{14}{A},\quad
+ p_{ac}=-4-A,\quad
+ p_{ca}=\frac{14}{-4-A},\quad
+ p_{bc}=-5-\frac{14}{A},\quad
+ p_{cb}=-4-\frac{14}{-4-A}
+\]
+となる．ここで $A\ne0,-4$ である．残る pair product
+$p_{bc}p_{cb}=3\cdot3-1=8$ は，分母を払うと
+\[
+ (-5A-14)(4A+2)=8A(-4-A),
+ \qquad 6A^2+17A+14=0
+\]
+を与える．判別式は $17^2-4\cdot6\cdot14=-47<0$ なので実数解も存在しない．
+\end{proof}
+
+\begin{theorem}[四例外の $K_4$ は不可能]
+\label{kf17:no-four-exceptions}
+五次の標準 $K_5$ branch graph で，高分母 support が $K_4$ となる配置において，
+四本の高辺が例外接着となることはない．
+この排除には，分母の上限，三高分母 chart の一般分類，正の weights，
+または高辺における $D$ 相殺を用いない．
+\end{theorem}
+
+\begin{proof}
+命題~\ref{kf17:complete-hub-list} の第一・第二型では core $3$，
+第三型では core $1$ において，ray 標識を取り直すと
+補題~\ref{kf17:negative-discriminant} の低 row と column が現れる．
+$1,2$ を交換した三候補も同じである．従って全ての hub 候補が排除される．
+\end{proof}

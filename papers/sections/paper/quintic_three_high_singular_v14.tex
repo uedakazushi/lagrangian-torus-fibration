@@ -1,0 +1,170 @@
+% v14: complete matching-slice classification with a genuinely singular Schur system.
+\section{三高分母の線形表示と特異な整数局所族}
+\label{sh14:section}
+
+二高分母の理論だけでは，三価以上の core を含む高分母 support を扱いきれない．
+ここでは三高分母のうち，正の numerators の辺が完全マッチングとなる型を取り出す．
+この型では pair equations を三元一次方程式へ帰着できるが，
+その係数行列が可逆であるとは限らない．後半では，階数二の系から得られる
+正の整数局所模型の無限族を与え，指定した slice の全解を決定する．
+
+\subsection{完全マッチング型の表示}
+\label{sh14:matching-setup}
+
+分母を $(q_a,q_b,q_c,q_0)$，$q_a,q_b,q_c>1$，$q_0=1$ とし，
+正の辺が $ab$ と $c0$ であることを仮定する．これはこの節での追加仮定であり，
+任意の三高分母模型に対する結論ではない．
+正整数 $s,t,S,T,U$ と $u=s+t-1$ を用いて
+\[
+ (p_{0a},p_{0b},p_{0c})=(-s,-t,u),\qquad
+ (p_{a0},p_{b0},p_{c0})=(-S,-T,U)
+\]
+と書く．pair products により
+\[
+ q_a=1+sS,\qquad q_b=1+tT,\qquad q_c=1+uU.
+\]
+$a,b$ を必要に応じて交換すれば，ある整数 $k\geq0$ に対し
+$p_{ca}=-(sU-k)$，$p_{cb}=-(tU+k+1)$ とできる．
+実際，それらの絶対値から $sU,tU$ をそれぞれ引いた二つの整数の和は一なので，
+少なくとも一方は非正である．
+さらに整数 $\alpha,\beta$ を導入すると，row sums を満たす行列は
+\begin{equation}\label{sh14:matching-P}
+ P=\begin{pmatrix}
+ 0&tS+\alpha&-(uS+\alpha+1)&-S\\
+ sT+\beta&0&-(uT+\beta+1)&-T\\
+ -(sU-k)&-(tU+k+1)&0&U\\
+ -s&-t&u&0
+ \end{pmatrix}
+\end{equation}
+となる．この表示では
+\[
+ H=tS+\alpha,\quad K=sT+\beta,\quad
+ L=uS+\alpha+1,\quad N=uT+\beta+1,\quad
+ M=sU-k,\quad O=tU+k+1
+\]
+が全て正であることも保持する．
+
+\begin{proposition}[三つの pair equations の線形化]
+\label{sh14:linear-reduction}
+\[
+ \mathcal A=s\alpha-t,\qquad
+ \mathcal B=t\beta-s,\qquad
+ \mathcal C=s+(s+t-1)k
+\]
+と置く．行列~\eqref{sh14:matching-P} が残る三つの pair equations を満たすことは
+\begin{equation}\label{sh14:matching-linear}
+ \begin{pmatrix}
+  \mathcal B&\mathcal A&0\\
+  -\mathcal C&0&\mathcal A+1\\
+  0&\mathcal C-1&\mathcal B+1
+ \end{pmatrix}
+ \begin{pmatrix}S\\T\\U\end{pmatrix}
+ =\begin{pmatrix}
+ -\alpha\beta\\k(\alpha+1)\\-(\beta+1)(k+1)
+ \end{pmatrix}
+\end{equation}
+と同値である．このとき正の weights は
+\begin{equation}\label{sh14:matching-weights}
+ w=\left(q_a,\ H+\frac1{2K},\ u+\frac1{2U},\ 1\right)
+\end{equation}
+で与えられる．分岐係数は $d=U+1-S-T=-D_0$ として
+\begin{equation}\label{sh14:matching-D}
+ D_a=sd-\beta-k-1,\qquad
+ D_b=td-\alpha+k,\qquad
+ D_c=\alpha+\beta+1-ud
+\end{equation}
+となる．
+\end{proposition}
+
+\begin{proof}
+$HK=q_aq_b-1$，$LM=q_aq_c-1$，$NO=q_bq_c-1$ を展開し，
+$ST,SU,TU$ の項をそれぞれ相殺すると，式~\eqref{sh14:matching-linear} の三行を得る．
+Schur 補行列として見るなら，$\operatorname{diag}(q)+P$ の低分母 diagonal entry 一を pivot とすると
+\[
+ B=\begin{pmatrix}
+ 1&\alpha&-\alpha-1\\
+ \beta&1&-\beta-1\\
+ k&-k-1&1
+ \end{pmatrix}
+\]
+が残る．その diagonal entries は一，row sums は零である．
+正の辺に対応する四つの basin gaps は，式~\eqref{sh14:matching-weights} に対して
+\[
+ \frac1{2K},\qquad \frac1{2q_b},\qquad
+ \frac1{2U},\qquad \frac1{2q_c}
+\]
+となる．他の entries は負なので，全ての basin areas は正である．
+最後に $D_i=-q_i-\sum_{j\ne i}p_{ji}$ に代入すると係数公式を得る．
+\end{proof}
+
+この Schur 帰着は二次 principal minors を一に指定した非対称整数行列の問題である．
+一般の principal-minor relations と cycle sums の関係は Lin--Sturmfels\cite[\S2, Proposition~4]{LinSturmfels}に従う．
+ここで必要な row sums，正の weights，整数性の条件は，その一般的な関係式に加えて課す条件である．
+
+\subsection{階数二の系から生じる全解}
+
+\begin{theorem}[特異な三高分母 Schur 系の整数無限族]
+\label{sh14:singular-family}
+式~\eqref{sh14:matching-P} において
+\[
+ (s,t,\alpha,\beta,k)=(3,12,12,-4,1)
+\]
+と固定する．正の整数 $S,T,U$ を持つ全ての解は
+\begin{equation}\label{sh14:singular-parameters}
+ S=136+200n,\qquad T=291+425n,\qquad U=93+136n,
+ \qquad n\in\mathbb Z_{\geq0}
+\end{equation}
+で尽くされる．その分母は
+\begin{equation}\label{sh14:singular-q}
+ (q_a,q_b,q_c,q_0)
+ =(409+600n,\ 3493+5100n,\ 1303+1904n,\ 1)
+\end{equation}
+であり，三つの高分母は全て奇数である．
+全ての模型は正の weights を持ち，対応する線形系の係数行列は階数二である．
+分岐係数は
+\begin{align*}
+ D_a&=-997-1467n,&D_b&=-4007-5868n,\\
+ D_c&=4671+6846n,&D_0&=333+489n.
+\end{align*}
+\end{theorem}
+
+\begin{proof}
+$u=14$，$(\mathcal A,\mathcal B,\mathcal C)=(24,-51,17)$ なので，線形系は
+\begin{equation}\label{sh14:rank-two-system}
+ \begin{pmatrix}
+ -51&24&0\\
+ -17&0&25\\
+ 0&16&-50
+ \end{pmatrix}
+ \begin{pmatrix}S\\T\\U\end{pmatrix}
+ =\begin{pmatrix}48\\13\\6\end{pmatrix}
+\end{equation}
+となる．第一行は第二行の三倍と第三行の $3/2$ 倍の和であり，右辺も同じ関係を満たす．
+また左上の二次 minor は $408\ne0$ であるから，係数行列の階数はちょうど二である．
+後二行を解くと
+\[
+ S=\frac{25U-13}{17},\qquad T=\frac{25U+3}{8}.
+\]
+整数性は $U\equiv8\pmod{17}$ および $U\equiv5\pmod8$ と同値であり，
+従って $U=93+136n$ となる．$U>0$ は $n\geq0$ と同値であり，
+この範囲では $S,T$ も正なので，式~\eqref{sh14:singular-parameters} が全解である．
+
+実際の行列は
+\[
+ P=\begin{pmatrix}
+ 0&1644+2400n&-1917-2800n&-136-200n\\
+ 869+1275n&0&-4071-5950n&-291-425n\\
+ -278-408n&-1118-1632n&0&93+136n\\
+ -3&-12&14&0
+ \end{pmatrix}.
+\]
+表示した符号は全ての $n\geq0$ で保たれる．
+前命題により pair equations と正値性が従い，row sums は構成から成立する．
+分母と係数の式は直接代入で得られる．
+\end{proof}
+
+この族は，特異な線形系を捨てて Cramer の公式だけで三高分母を分類することができないことを示す．
+同時に，これは固定した五つの補助整数に対する完全な slice の分類であり，
+全ての特異系や全ての三高分母模型の分類ではない．
+この族では二つの高係数が負であるから，全ての高係数が正となる例でもない．
+また，局所模型の存在から五つの core の同時接着や大域 atlas の存在は結論しない．

@@ -1,0 +1,1197 @@
+{
+  "version": 12,
+  "status": "passed",
+  "check_count": 201,
+  "checks": [
+    "C4 node positivity versus opposite pairing signs",
+    "C4 lambda formula",
+    "C4 node positivity versus opposite pairing signs",
+    "C4 node positivity versus opposite pairing signs",
+    "C4 node positivity versus opposite pairing signs",
+    "C4 node positivity versus opposite pairing signs",
+    "C4 node positivity versus opposite pairing signs",
+    "C4 lambda formula",
+    "C4 node positivity versus opposite pairing signs",
+    "C4 node positivity versus opposite pairing signs",
+    "C4 node positivity versus opposite pairing signs",
+    "C4 node positivity versus opposite pairing signs",
+    "C4 node positivity versus opposite pairing signs",
+    "C4 lambda formula",
+    "C4 node positivity versus opposite pairing signs",
+    "C4 node positivity versus opposite pairing signs",
+    "C4 node positivity versus opposite pairing signs",
+    "C4 node positivity versus opposite pairing signs",
+    "C4 node positivity versus opposite pairing signs",
+    "C4 lambda formula",
+    "four labelled C4 pairing patterns",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 lambda formula",
+    "C5 complete lambda multiplicities",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 lambda formula",
+    "C5 complete lambda multiplicities",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 lambda formula",
+    "C5 complete lambda multiplicities",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 lambda formula",
+    "C5 complete lambda multiplicities",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 lambda formula",
+    "C5 complete lambda multiplicities",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 lambda formula",
+    "C5 complete lambda multiplicities",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 lambda formula",
+    "C5 complete lambda multiplicities",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 lambda formula",
+    "C5 complete lambda multiplicities",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 lambda formula",
+    "C5 complete lambda multiplicities",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 lambda formula",
+    "C5 complete lambda multiplicities",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 lambda formula",
+    "C5 complete lambda multiplicities",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 node positivity versus adjacent positive vertices",
+    "C5 node positivity versus adjacent positive vertices",
+    "complete eleven labelled C5 sign patterns",
+    "complete lambda-zero reverse-divisor node table",
+    "complete lambda-negative node table",
+    "complete lambda-negative node table",
+    "complete lambda-negative node table",
+    "complete lambda-negative node table",
+    "complete lambda-negative node table",
+    "complete lambda-negative node table",
+    "complete lambda-negative node table",
+    "complete lambda-negative node table",
+    "complete lambda-negative node table",
+    "complete lambda-negative node table",
+    "complete lambda-negative node table",
+    "complete lambda-negative node table",
+    "complete lambda-negative node table",
+    "complete lambda-negative node table",
+    "complete lambda-negative node table",
+    "complete lambda-negative node table",
+    "complete lambda-negative node table",
+    "complete lambda-negative node table",
+    "complete lambda-negative node table",
+    "complete lambda-negative node table",
+    "symbolic lambda-positive table, independent of q",
+    "symbolic lambda-positive table, independent of q",
+    "symbolic lambda-positive table, independent of q",
+    "symbolic lambda-positive table, independent of q",
+    "symbolic lambda-positive table, independent of q",
+    "symbolic lambda-positive table, independent of q",
+    "exact mixed tau equations relative to q",
+    "exact mixed tau equations relative to q",
+    "two propagated tau types only",
+    "tau=1 forces four nonzero minimal entries",
+    "tau=2 forces one -4 and three zero fixed-direction entries",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "tau=2 exact reverse sequence after the -4 entry",
+    "canonical outside C has r=1 at last core",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "tau=2 exact reverse sequence after the -4 entry",
+    "canonical outside C has r=1 at last core",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "tau=2 exact reverse sequence after the -4 entry",
+    "canonical outside C has r=1 at last core",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "tau=2 exact reverse sequence after the -4 entry",
+    "canonical outside C has r=1 at last core",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "C4 exact reverse-divisor telescoping",
+    "all four rotations of the final contradiction",
+    "node table retains the separately proved local exclusion L=2",
+    "lambda-negative table retains the local dichotomy"
+  ],
+  "scope": "Proof-derived finite sign/node cases and exact linear identities for the C4 constant-pairing obstruction; alternating C4 and all C5 components are not excluded by this verifier.",
+  "C4_sign_patterns": [
+    {
+      "epsilon": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "lambda": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "epsilon": [
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "lambda": [
+        -1,
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "epsilon": [
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "lambda": [
+        1,
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "epsilon": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "lambda": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "C5_sign_patterns": [
+    {
+      "epsilon": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "lambda": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "counts": [
+        5,
+        0,
+        0
+      ]
+    },
+    {
+      "epsilon": [
+        -1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "lambda": [
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "counts": [
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "epsilon": [
+        -1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "lambda": [
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "counts": [
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "epsilon": [
+        -1,
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "lambda": [
+        1,
+        1,
+        0,
+        -1,
+        0
+      ],
+      "counts": [
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "epsilon": [
+        -1,
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "lambda": [
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "counts": [
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "epsilon": [
+        -1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "lambda": [
+        1,
+        0,
+        -1,
+        0,
+        1
+      ],
+      "counts": [
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "epsilon": [
+        -1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "lambda": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "counts": [
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "epsilon": [
+        -1,
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "lambda": [
+        0,
+        -1,
+        0,
+        1,
+        1
+      ],
+      "counts": [
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "epsilon": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "lambda": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "counts": [
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "epsilon": [
+        1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "lambda": [
+        0,
+        1,
+        1,
+        0,
+        -1
+      ],
+      "counts": [
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "epsilon": [
+        1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "lambda": [
+        -1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "counts": [
+        2,
+        2,
+        1
+      ]
+    }
+  ],
+  "lambda_zero_node_table": [
+    [
+      -4,
+      3,
+      [
+        1,
+        5,
+        0
+      ]
+    ],
+    [
+      -4,
+      4,
+      [
+        1,
+        5,
+        1
+      ]
+    ],
+    [
+      -4,
+      5,
+      [
+        1,
+        5,
+        2
+      ]
+    ],
+    [
+      -4,
+      6,
+      [
+        1,
+        5,
+        3
+      ]
+    ],
+    [
+      -4,
+      7,
+      [
+        1,
+        5,
+        4
+      ]
+    ],
+    [
+      -4,
+      8,
+      [
+        1,
+        5,
+        5
+      ]
+    ],
+    [
+      -3,
+      2,
+      [
+        1,
+        4,
+        0
+      ]
+    ],
+    [
+      -3,
+      3,
+      [
+        1,
+        4,
+        1
+      ]
+    ],
+    [
+      -3,
+      4,
+      [
+        1,
+        4,
+        2
+      ]
+    ],
+    [
+      -3,
+      5,
+      [
+        1,
+        4,
+        3
+      ]
+    ],
+    [
+      -3,
+      6,
+      [
+        1,
+        4,
+        4
+      ]
+    ],
+    [
+      -3,
+      7,
+      [
+        1,
+        4,
+        5
+      ]
+    ],
+    [
+      -2,
+      1,
+      [
+        1,
+        3,
+        0
+      ]
+    ],
+    [
+      -2,
+      2,
+      [
+        1,
+        3,
+        1
+      ]
+    ],
+    [
+      -2,
+      3,
+      [
+        1,
+        3,
+        2
+      ]
+    ],
+    [
+      -2,
+      4,
+      [
+        1,
+        3,
+        3
+      ]
+    ],
+    [
+      -2,
+      5,
+      [
+        1,
+        3,
+        4
+      ]
+    ],
+    [
+      -2,
+      6,
+      [
+        1,
+        3,
+        5
+      ]
+    ],
+    [
+      -1,
+      1,
+      [
+        1,
+        2,
+        1
+      ]
+    ],
+    [
+      -1,
+      2,
+      [
+        1,
+        2,
+        2
+      ]
+    ],
+    [
+      -1,
+      3,
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    [
+      -1,
+      4,
+      [
+        1,
+        2,
+        4
+      ]
+    ],
+    [
+      -1,
+      5,
+      [
+        1,
+        2,
+        5
+      ]
+    ],
+    [
+      1,
+      1,
+      [
+        1,
+        0,
+        3
+      ]
+    ],
+    [
+      1,
+      2,
+      [
+        1,
+        0,
+        4
+      ]
+    ],
+    [
+      1,
+      3,
+      [
+        1,
+        0,
+        5
+      ]
+    ]
+  ],
+  "lambda_negative_node_table": [
+    {
+      "q": 3,
+      "L": 1,
+      "reverse": [
+        -2,
+        -1
+      ],
+      "nodes": [
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "q": 3,
+      "L": 1,
+      "reverse": [
+        -1,
+        -2
+      ],
+      "nodes": [
+        2,
+        2,
+        4
+      ]
+    },
+    {
+      "q": 3,
+      "L": 2,
+      "reverse": [
+        -2,
+        -1
+      ],
+      "nodes": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "q": 3,
+      "L": 2,
+      "reverse": [
+        -1,
+        -2
+      ],
+      "nodes": [
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "q": 3,
+      "L": 3,
+      "reverse": [
+        -2,
+        -1
+      ],
+      "nodes": [
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "q": 5,
+      "L": 1,
+      "reverse": [
+        -4,
+        -1
+      ],
+      "nodes": [
+        2,
+        5,
+        3
+      ]
+    },
+    {
+      "q": 5,
+      "L": 2,
+      "reverse": [
+        -4,
+        -1
+      ],
+      "nodes": [
+        2,
+        5,
+        4
+      ]
+    },
+    {
+      "q": 5,
+      "L": 3,
+      "reverse": [
+        -4,
+        -1
+      ],
+      "nodes": [
+        2,
+        5,
+        5
+      ]
+    }
+  ],
+  "additional_local_necessary_condition": "L in {1} union integers >=3; the node table is not sufficient for a local chart.",
+  "lambda_zero_after_local_filter": [
+    [
+      -4,
+      3,
+      [
+        1,
+        5,
+        0
+      ]
+    ],
+    [
+      -4,
+      4,
+      [
+        1,
+        5,
+        1
+      ]
+    ],
+    [
+      -4,
+      5,
+      [
+        1,
+        5,
+        2
+      ]
+    ],
+    [
+      -4,
+      6,
+      [
+        1,
+        5,
+        3
+      ]
+    ],
+    [
+      -4,
+      7,
+      [
+        1,
+        5,
+        4
+      ]
+    ],
+    [
+      -4,
+      8,
+      [
+        1,
+        5,
+        5
+      ]
+    ],
+    [
+      -3,
+      3,
+      [
+        1,
+        4,
+        1
+      ]
+    ],
+    [
+      -3,
+      4,
+      [
+        1,
+        4,
+        2
+      ]
+    ],
+    [
+      -3,
+      5,
+      [
+        1,
+        4,
+        3
+      ]
+    ],
+    [
+      -3,
+      6,
+      [
+        1,
+        4,
+        4
+      ]
+    ],
+    [
+      -3,
+      7,
+      [
+        1,
+        4,
+        5
+      ]
+    ],
+    [
+      -2,
+      1,
+      [
+        1,
+        3,
+        0
+      ]
+    ],
+    [
+      -2,
+      3,
+      [
+        1,
+        3,
+        2
+      ]
+    ],
+    [
+      -2,
+      4,
+      [
+        1,
+        3,
+        3
+      ]
+    ],
+    [
+      -2,
+      5,
+      [
+        1,
+        3,
+        4
+      ]
+    ],
+    [
+      -2,
+      6,
+      [
+        1,
+        3,
+        5
+      ]
+    ],
+    [
+      -1,
+      1,
+      [
+        1,
+        2,
+        1
+      ]
+    ],
+    [
+      -1,
+      3,
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    [
+      -1,
+      4,
+      [
+        1,
+        2,
+        4
+      ]
+    ],
+    [
+      -1,
+      5,
+      [
+        1,
+        2,
+        5
+      ]
+    ],
+    [
+      1,
+      1,
+      [
+        1,
+        0,
+        3
+      ]
+    ],
+    [
+      1,
+      3,
+      [
+        1,
+        0,
+        5
+      ]
+    ]
+  ],
+  "lambda_negative_after_local_filter": [
+    {
+      "q": 3,
+      "L": 1,
+      "reverse": [
+        -2,
+        -1
+      ],
+      "nodes": [
+        2,
+        3,
+        3
+      ]
+    },
+    {
+      "q": 3,
+      "L": 1,
+      "reverse": [
+        -1,
+        -2
+      ],
+      "nodes": [
+        2,
+        2,
+        4
+      ]
+    },
+    {
+      "q": 3,
+      "L": 3,
+      "reverse": [
+        -2,
+        -1
+      ],
+      "nodes": [
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "q": 5,
+      "L": 1,
+      "reverse": [
+        -4,
+        -1
+      ],
+      "nodes": [
+        2,
+        5,
+        3
+      ]
+    },
+    {
+      "q": 5,
+      "L": 3,
+      "reverse": [
+        -4,
+        -1
+      ],
+      "nodes": [
+        2,
+        5,
+        5
+      ]
+    }
+  ],
+  "mixed_tau_table": [
+    {
+      "tau": 1,
+      "A_minus_q": [
+        0,
+        -1,
+        0
+      ],
+      "B_minus_q": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "tau": 2,
+      "A_minus_q": [
+        1,
+        -1,
+        0
+      ],
+      "B_minus_q": [
+        -1,
+        0,
+        1
+      ]
+    }
+  ],
+  "C4_tau2_reverse_patterns": [
+    {
+      "c": [
+        1,
+        4,
+        3,
+        2
+      ],
+      "d": [
+        0,
+        -4,
+        0,
+        0
+      ]
+    },
+    {
+      "c": [
+        2,
+        1,
+        4,
+        3
+      ],
+      "d": [
+        0,
+        0,
+        -4,
+        0
+      ]
+    },
+    {
+      "c": [
+        3,
+        2,
+        1,
+        4
+      ],
+      "d": [
+        0,
+        0,
+        0,
+        -4
+      ]
+    },
+    {
+      "c": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "d": [
+        -4,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "script_sha256": "238cb26cb9d0f9f654e7c03dc0e1ff5171926bb585e4e87a0ecbe7c2b2cc124e"
+}

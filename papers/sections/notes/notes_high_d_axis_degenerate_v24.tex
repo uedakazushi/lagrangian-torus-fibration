@@ -1,0 +1,104 @@
+\subsection{三高非負係数：正側軸の解決と退化面の有限復元}
+\label{notes:ax24}
+
+\paragraph{現在の射程}
+
+\nolinkurl{high_d_axis_and_degenerate_obstruction_v24.tex} により，
+三高係数が全て非負である canonical 整数模型の $\delta=1$ は全て排除された．
+以前の $x\ge1$ の証明に，$x=0$ の正側軸の整除性障害を加えたものである．
+$\delta=-1$ も既に全排除されている．
+また，退化面 $a=uh-(b-1)(F+1)=0$ の例外枝 $x=0,R_0=1$ は全排除された．
+退化面の残りには，低行の一整数 $s$ だけを固定した完全有限復元がある．
+退化面全体の不存在や，三高同時非負性の一般不存在は結論していない．
+
+\paragraph{正側軸で再利用できる小約数の矛盾}
+
+$\delta=1,x=0$ から $s=y=1$，$p=-n\ge1$，$z\ge2$ となる．
+$B=b-1$，$F=B+z$，$m=F^2+F+1$ とし，
+\[
+ \begin{gathered}
+ C=F+2,\qquad R=t-B(p+z+1),\\
+ N=b^2+bz+z^2,\qquad K=(z+1)F+1,\\
+ Q=(z-1)(t-1)-mp+F(z+2)
+ \end{gathered}
+\]
+と置く．核心は，元の pair 残余を保持した二恒等式
+\[
+ \mathfrak r=(t+1)Q+tR-BC,\qquad BQ=mR+BCK-Nt
+\]
+である．$Q=\mathfrak r=0$ なら $tR=BC$，$R>0$，
+$k_*=R^2/B\in\mathbb Z_{>0}$ となり，
+\[
+ C=k_*+R(p+z+1),\qquad mk_*=C(N-RK)
+\]
+を得る．前式は $R\le B$，$k_*\le R$，$C\ge5k_*$ を与え，
+後式と $m\equiv3\pmod C$ は $C\mid3k_*$ を与えるので矛盾する．
+一般の非対称領域でも，元残余を乗法式にしてから差方程式を消去し，
+大きい正整数がそれより小さい正整数を割る形を探すことが有望である．
+
+\paragraph{退化例外で再利用できる resultant と平方間隔}
+
+$a=0,x=0,R_0=1$ では $s\mid b-1$ となる．
+$b-1=s\kappa$，$F=sL$，$K_0=s^2-s+1$，
+$w=L+1-\kappa K_0$ と書くと
+\[
+ w\ge1,\quad D=s(w+\kappa)+1,\quad
+ sLw-s\kappa^2+s-2\kappa=0,
+ \quad \mathfrak r=\kappa[t(sw-1)-Dy].
+\]
+元残余の整数性を含む消去により
+\[
+ D\mid C_s=(s^2-s+1)((s-1)^4+3)
+\]
+を得る．これは整数多項式
+\[
+ \begin{aligned}
+ A_s(X)&=s^2K_0X^2+s(s-1)^2X-(s^2+s+1),\\
+ G_s(X)&=s^2(s-1)X^2-sX-s+1
+ \end{aligned}
+\]
+と $(sX+2)G_s(X)$ の resultant による．
+$\operatorname{Res}(A_s,G_s)=-s^6((s-1)^4+3)$ であり，
+$\gcd(D,s)=1$ を使う．
+
+$r=\kappa-K_0w$ の式
+\[
+ \kappa(sr+2)=s(w^2-w+1)
+\]
+により $r\ge1$，$w\ge K_0+1$ が従う．したがって $C_s/D<s$ であり，
+$C_s/D\equiv4\pmod s$ と合わせて，小さい $s$ を除くと $D=C_s/4$ に限られる．
+この最後の候補の復元二次式は，判別式の十六倍が連続する二平方の間に入るため除かれる．
+平方間隔は $v=s-4\ge0$ の全係数が非負で定数項が正となる二多項式で証明している．
+有界な $s$ の計算による外挿ではない．
+
+\paragraph{退化面全体の一整数固定復元}
+
+退化面では $s=1,2$ は解がない．$s\ge3$ を固定したとき，
+\[
+ 0\le x\le s-1,\quad h=s-x,\quad
+ 1\le R_0\le h(s-1)+1
+\]
+を取り，$x=0,R_0=1$ は除く．
+$x\ge1$ なら $b\le\lfloor(s-1)/x\rfloor$，$x=0$ なら
+\[
+ b-1\mid s(s-1)(R_0-1),\qquad b\le1+s^2(s-1)^2
+\]
+である．各組では
+\[
+ R_0F^2+(R_0-b[h(s-1)+1]+sh)F+R_0-b^2+sh=0
+\]
+から $F$ の全正整数根を取り，
+\[
+ u=\frac{(b-1)(F+1)}h,\quad \ell=\frac{bF}s,\quad
+ t=u-s+1,\quad z=\ell-u,\quad T=\frac{b^2-R_0}s
+\]
+を復元する．元残余は $y$ の厳密負の傾きを持つ一次式なので $y$ は高々一個である．
+整数性，正尺度，六符号，単一合同，全元残余を最後まで検査する．
+
+\nolinkurl{verify_high_d_axis_degenerate_v24.py} の
+\texttt{--fixed-s 3 4 5} などで，指定した $s$ における全退化模型を復元できる．
+$t$，$D$，分母に別の cutoff はない．$s$ 自体への一様上界は得ていない．
+既存の低行二整数固定の復元器と用途を区別する．
+
+次は $|\delta|\ge2$ の格子幅，および $a=0$ の残る $x\ge1$ または $R_0\ge2$ の領域を扱う．
+正側軸や退化 $x=0,R_0=1$ の専用探索は再開する必要がない．

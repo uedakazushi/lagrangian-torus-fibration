@@ -1,0 +1,587 @@
+{
+  "version": 25,
+  "status": "PASS",
+  "audit_target": "degenerate_divisor_reduction_v25",
+  "primary_verifier_imported": false,
+  "dependencies": "Python standard library only",
+  "coefficient_identity_count": 9,
+  "coefficient_identities": [
+    {
+      "name": "independent_hM_minus_BL_equals_Ra",
+      "status": "PASS",
+      "difference_terms": 0,
+      "left_terms": 10,
+      "right_terms": 10
+    },
+    {
+      "name": "independent_FL_identity",
+      "status": "PASS",
+      "difference_terms": 0,
+      "left_terms": 10,
+      "right_terms": 10
+    },
+    {
+      "name": "independent_positive_M_identity",
+      "status": "PASS",
+      "difference_terms": 0,
+      "left_terms": 18,
+      "right_terms": 18
+    },
+    {
+      "name": "independent_original_pair_identity",
+      "status": "PASS",
+      "difference_terms": 0,
+      "left_terms": 35,
+      "right_terms": 35
+    },
+    {
+      "name": "quadratic_in_F_from_Q",
+      "status": "PASS",
+      "difference_terms": 0,
+      "left_terms": 10,
+      "right_terms": 10
+    },
+    {
+      "name": "prior_scale_equation_coefficient",
+      "status": "PASS",
+      "difference_terms": 0,
+      "left_terms": 4,
+      "right_terms": 4
+    },
+    {
+      "name": "h_ge_b_elementary_gap",
+      "status": "PASS",
+      "difference_terms": 0,
+      "left_terms": 4,
+      "right_terms": 4
+    },
+    {
+      "name": "canonical_a_equals_s_ell_minus_bF",
+      "status": "PASS",
+      "difference_terms": 0,
+      "left_terms": 6,
+      "right_terms": 6
+    },
+    {
+      "name": "canonical_s_minus_bx_relation",
+      "status": "PASS",
+      "difference_terms": 0,
+      "left_terms": 6,
+      "right_terms": 6
+    }
+  ],
+  "positive_C_certificate": {
+    "name": "C_positive_for_s_t_at_least_1_b_at_least_2_F_at_least_1",
+    "variables": [
+      "s_minus_1",
+      "unused",
+      "b_minus_2",
+      "F_minus_1",
+      "t_minus_1",
+      "unused",
+      "unused",
+      "unused"
+    ],
+    "all_nonzero_coefficients_positive": true,
+    "constant": 5,
+    "full_coefficients": [
+      {
+        "exponents": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "coefficient": 5
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "coefficient": 6
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "coefficient": 1
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "coefficient": 2
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "coefficient": 4
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "coefficient": 5
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "coefficient": 1
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "coefficient": 1
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          2,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "coefficient": 1
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "coefficient": 3
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "coefficient": 1
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "coefficient": 1
+      }
+    ]
+  },
+  "mathematical_scope_and_completeness_audit": [
+    "Prior canonical identities give a=s*ell-b*F=u*(s-b*x)-B*(b+s*z).",
+    "a=0 implies s-b*x>0; x>=1 implies s>=b+1 and x< s/b.",
+    "The prior scale equation proves R=b^2-sT>=1 independently of the pair residual.",
+    "C>0 and mM-C=uQ+(FA-s)a imply M>0; hM=BL implies L>0.",
+    "The original pair residual r=M(t-y)-tT=0 implies 1<=j<=t and M>=T.",
+    "h>=b and s>=h imply T<b^2/s<=h, hence FL=bF+s(T-h) gives 1<=L<=b-1.",
+    "h divides BL implies h/gcd(h,B) divides L; gcd=1 is impossible when h>=b.",
+    "M=BL/h<=B^2/h<B implies M<=b-2, and thus 1<=T<=b-2.",
+    "x<=floor((s-1)/b) and s>=b+1 imply x<=s-b and h>=b.",
+    "R>=1 and T>=1 give s<=b^2-1; thus fixed b has finite s,x,T,L.",
+    "F=s(h-T)/(b-L) has positive denominator since L<=b-1; u,ell,t,z are then unique.",
+    "The required L definition and geometric equalities recover both a=0 and Q=0.",
+    "M divides tT gives the unique y=t-tT/M; final original equations and signs ensure sufficiency."
+  ],
+  "independent_fixed_b_method": "Solve Q=0 as a quadratic in F with the broader old T range; no gcd or L pruning.",
+  "finite_comparison_only": true,
+  "independent_reconstructions": [
+    {
+      "counts": {
+        "b": 2,
+        "s_x_pairs": 1,
+        "s_x_T": 1,
+        "square_discriminants": 0,
+        "positive_integer_F_roots": 0,
+        "integer_u": 0,
+        "integer_ell": 0,
+        "canonical_geometry_candidates": 0
+      },
+      "positive_integer_F_roots": [],
+      "geometry_candidates_requiring_full_pair_checks": []
+    },
+    {
+      "counts": {
+        "b": 3,
+        "s_x_pairs": 7,
+        "s_x_T": 8,
+        "square_discriminants": 1,
+        "positive_integer_F_roots": 1,
+        "integer_u": 0,
+        "integer_ell": 0,
+        "canonical_geometry_candidates": 0
+      },
+      "positive_integer_F_roots": [
+        {
+          "b": 3,
+          "s": 4,
+          "x": 1,
+          "T": 1,
+          "F": 1,
+          "u": "4/3"
+        }
+      ],
+      "geometry_candidates_requiring_full_pair_checks": []
+    },
+    {
+      "counts": {
+        "b": 4,
+        "s_x_pairs": 21,
+        "s_x_T": 25,
+        "square_discriminants": 1,
+        "positive_integer_F_roots": 1,
+        "integer_u": 0,
+        "integer_ell": 0,
+        "canonical_geometry_candidates": 0
+      },
+      "positive_integer_F_roots": [
+        {
+          "b": 4,
+          "s": 6,
+          "x": 1,
+          "T": 1,
+          "F": 6,
+          "u": "21/5"
+        }
+      ],
+      "geometry_candidates_requiring_full_pair_checks": []
+    },
+    {
+      "counts": {
+        "b": 5,
+        "s_x_pairs": 46,
+        "s_x_T": 59,
+        "square_discriminants": 0,
+        "positive_integer_F_roots": 0,
+        "integer_u": 0,
+        "integer_ell": 0,
+        "canonical_geometry_candidates": 0
+      },
+      "positive_integer_F_roots": [],
+      "geometry_candidates_requiring_full_pair_checks": []
+    },
+    {
+      "counts": {
+        "b": 6,
+        "s_x_pairs": 85,
+        "s_x_T": 109,
+        "square_discriminants": 1,
+        "positive_integer_F_roots": 1,
+        "integer_u": 0,
+        "integer_ell": 0,
+        "canonical_geometry_candidates": 0
+      },
+      "positive_integer_F_roots": [
+        {
+          "b": 6,
+          "s": 7,
+          "x": 1,
+          "T": 2,
+          "F": 7,
+          "u": "20/3"
+        }
+      ],
+      "geometry_candidates_requiring_full_pair_checks": []
+    },
+    {
+      "counts": {
+        "b": 7,
+        "s_x_pairs": 141,
+        "s_x_T": 190,
+        "square_discriminants": 0,
+        "positive_integer_F_roots": 0,
+        "integer_u": 0,
+        "integer_ell": 0,
+        "canonical_geometry_candidates": 0
+      },
+      "positive_integer_F_roots": [],
+      "geometry_candidates_requiring_full_pair_checks": []
+    },
+    {
+      "counts": {
+        "b": 8,
+        "s_x_pairs": 217,
+        "s_x_T": 294,
+        "square_discriminants": 0,
+        "positive_integer_F_roots": 0,
+        "integer_u": 0,
+        "integer_ell": 0,
+        "canonical_geometry_candidates": 0
+      },
+      "positive_integer_F_roots": [],
+      "geometry_candidates_requiring_full_pair_checks": []
+    },
+    {
+      "counts": {
+        "b": 9,
+        "s_x_pairs": 316,
+        "s_x_T": 438,
+        "square_discriminants": 0,
+        "positive_integer_F_roots": 0,
+        "integer_u": 0,
+        "integer_ell": 0,
+        "canonical_geometry_candidates": 0
+      },
+      "positive_integer_F_roots": [],
+      "geometry_candidates_requiring_full_pair_checks": []
+    },
+    {
+      "counts": {
+        "b": 10,
+        "s_x_pairs": 441,
+        "s_x_T": 616,
+        "square_discriminants": 0,
+        "positive_integer_F_roots": 0,
+        "integer_u": 0,
+        "integer_ell": 0,
+        "canonical_geometry_candidates": 0
+      },
+      "positive_integer_F_roots": [],
+      "geometry_candidates_requiring_full_pair_checks": []
+    },
+    {
+      "counts": {
+        "b": 11,
+        "s_x_pairs": 595,
+        "s_x_T": 848,
+        "square_discriminants": 0,
+        "positive_integer_F_roots": 0,
+        "integer_u": 0,
+        "integer_ell": 0,
+        "canonical_geometry_candidates": 0
+      },
+      "positive_integer_F_roots": [],
+      "geometry_candidates_requiring_full_pair_checks": []
+    },
+    {
+      "counts": {
+        "b": 12,
+        "s_x_pairs": 781,
+        "s_x_T": 1109,
+        "square_discriminants": 0,
+        "positive_integer_F_roots": 0,
+        "integer_u": 0,
+        "integer_ell": 0,
+        "canonical_geometry_candidates": 0
+      },
+      "positive_integer_F_roots": [],
+      "geometry_candidates_requiring_full_pair_checks": []
+    },
+    {
+      "counts": {
+        "b": 13,
+        "s_x_pairs": 1002,
+        "s_x_T": 1449,
+        "square_discriminants": 0,
+        "positive_integer_F_roots": 0,
+        "integer_u": 0,
+        "integer_ell": 0,
+        "canonical_geometry_candidates": 0
+      },
+      "positive_integer_F_roots": [],
+      "geometry_candidates_requiring_full_pair_checks": []
+    },
+    {
+      "counts": {
+        "b": 14,
+        "s_x_pairs": 1261,
+        "s_x_T": 1828,
+        "square_discriminants": 0,
+        "positive_integer_F_roots": 0,
+        "integer_u": 0,
+        "integer_ell": 0,
+        "canonical_geometry_candidates": 0
+      },
+      "positive_integer_F_roots": [],
+      "geometry_candidates_requiring_full_pair_checks": []
+    },
+    {
+      "counts": {
+        "b": 15,
+        "s_x_pairs": 1561,
+        "s_x_T": 2280,
+        "square_discriminants": 0,
+        "positive_integer_F_roots": 0,
+        "integer_u": 0,
+        "integer_ell": 0,
+        "canonical_geometry_candidates": 0
+      },
+      "positive_integer_F_roots": [],
+      "geometry_candidates_requiring_full_pair_checks": []
+    },
+    {
+      "counts": {
+        "b": 16,
+        "s_x_pairs": 1905,
+        "s_x_T": 2795,
+        "square_discriminants": 0,
+        "positive_integer_F_roots": 0,
+        "integer_u": 0,
+        "integer_ell": 0,
+        "canonical_geometry_candidates": 0
+      },
+      "positive_integer_F_roots": [],
+      "geometry_candidates_requiring_full_pair_checks": []
+    },
+    {
+      "counts": {
+        "b": 17,
+        "s_x_pairs": 2296,
+        "s_x_T": 3398,
+        "square_discriminants": 0,
+        "positive_integer_F_roots": 0,
+        "integer_u": 0,
+        "integer_ell": 0,
+        "canonical_geometry_candidates": 0
+      },
+      "positive_integer_F_roots": [],
+      "geometry_candidates_requiring_full_pair_checks": []
+    },
+    {
+      "counts": {
+        "b": 18,
+        "s_x_pairs": 2737,
+        "s_x_T": 4049,
+        "square_discriminants": 0,
+        "positive_integer_F_roots": 0,
+        "integer_u": 0,
+        "integer_ell": 0,
+        "canonical_geometry_candidates": 0
+      },
+      "positive_integer_F_roots": [],
+      "geometry_candidates_requiring_full_pair_checks": []
+    },
+    {
+      "counts": {
+        "b": 19,
+        "s_x_pairs": 3231,
+        "s_x_T": 4822,
+        "square_discriminants": 0,
+        "positive_integer_F_roots": 0,
+        "integer_u": 0,
+        "integer_ell": 0,
+        "canonical_geometry_candidates": 0
+      },
+      "positive_integer_F_roots": [],
+      "geometry_candidates_requiring_full_pair_checks": []
+    },
+    {
+      "counts": {
+        "b": 20,
+        "s_x_pairs": 3781,
+        "s_x_T": 5643,
+        "square_discriminants": 0,
+        "positive_integer_F_roots": 0,
+        "integer_u": 0,
+        "integer_ell": 0,
+        "canonical_geometry_candidates": 0
+      },
+      "positive_integer_F_roots": [],
+      "geometry_candidates_requiring_full_pair_checks": []
+    }
+  ],
+  "negative_fixture": {
+    "parameters": [
+      3,
+      138,
+      0,
+      0,
+      4,
+      16
+    ],
+    "scales": [
+      54,
+      84,
+      141
+    ],
+    "M": 125,
+    "L": 25,
+    "original_pair_residual": 5658,
+    "difference_equations_and_scale_integrality_pass": true,
+    "original_pair_rejects": true
+  },
+  "issues_found": [],
+  "source_file": "/workspace/scratch/d5d942d05d31/deliverables/general_type_surface_fibration_v25/verification/audits/audit_degenerate_divisor_v25.py",
+  "source_sha256": "a1c9af26bfdfe37acb4e1efc1165b49f2b842a05ec91a0f6e433147d5d183aa3",
+  "proof_file": "/workspace/scratch/d5d942d05d31/deliverables/general_type_surface_fibration_v25/paper/degenerate_divisor_reduction_v25.tex",
+  "proof_sha256": "e0e74acc2ccbbdff298ea78c9ae6a0efa209eafdcabf6dd15b87ac1a565134fd",
+  "primary_results_file": "/workspace/scratch/d5d942d05d31/deliverables/general_type_surface_fibration_v25/verification/degenerate_divisor_verification_v25.json",
+  "primary_results_sha256": "1d13e2018fcdb1db9a03ec66eff3467f5cfe2e118e82eaa11007b6806dbc8025",
+  "external_peer_review": false,
+  "proof_assistant_formalization": false
+}

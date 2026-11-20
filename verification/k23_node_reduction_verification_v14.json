@@ -1,0 +1,1937 @@
+{
+  "version": "v14",
+  "passed": true,
+  "scope": "Necessary node constraints for K2,3 high support; no complete K2,3 exclusion or geometric existence is claimed.",
+  "denominator_bound": null,
+  "D_opposition_used": false,
+  "directed_cycle_choices": [
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      2,
+      0,
+      1
+    ]
+  ],
+  "polynomial_identity_count": 23,
+  "polynomial_identities": [
+    "three low-edge node counts sum to five",
+    "++: node 0",
+    "++: node 1",
+    "++: node 2",
+    "++: total node count",
+    "+-: node 0",
+    "+-: node 1",
+    "+-: node 2",
+    "+-: total node count",
+    "-+: node 0",
+    "-+: node 1",
+    "-+: node 2",
+    "-+: total node count",
+    "--: node 0",
+    "--: node 1",
+    "--: node 2",
+    "--: total node count",
+    "positive branch rejects T<=r+2",
+    "constant A-assignment center-node sum",
+    "uniform positive-branch node sum is negative",
+    "canonical low coefficient C",
+    "canonical low coefficient D",
+    "constant assignment all-negative node sum"
+  ],
+  "each_low_low_magnitude": [
+    1,
+    3,
+    4
+  ],
+  "at_least_one_negative_branch": true,
+  "constant_assignment_all_negative_branch_impossible": true,
+  "mixed_assignment_minus_plus_pairs": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      3,
+      1
+    ]
+  ],
+  "finite_scalar_assignments_remaining": [
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "+"
+      ],
+      "L": [
+        1,
+        1,
+        3
+      ],
+      "third_nodes": [
+        2,
+        4,
+        2
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "+"
+      ],
+      "L": [
+        1,
+        1,
+        4
+      ],
+      "third_nodes": [
+        2,
+        5,
+        2
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "+"
+      ],
+      "L": [
+        1,
+        3,
+        1
+      ],
+      "third_nodes": [
+        4,
+        2,
+        2
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "+"
+      ],
+      "L": [
+        1,
+        3,
+        3
+      ],
+      "third_nodes": [
+        4,
+        4,
+        2
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "+"
+      ],
+      "L": [
+        1,
+        3,
+        4
+      ],
+      "third_nodes": [
+        4,
+        5,
+        2
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "+"
+      ],
+      "L": [
+        1,
+        4,
+        1
+      ],
+      "third_nodes": [
+        5,
+        2,
+        2
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "+"
+      ],
+      "L": [
+        1,
+        4,
+        3
+      ],
+      "third_nodes": [
+        5,
+        4,
+        2
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "+"
+      ],
+      "L": [
+        1,
+        4,
+        4
+      ],
+      "third_nodes": [
+        5,
+        5,
+        2
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "+"
+      ],
+      "L": [
+        3,
+        1,
+        1
+      ],
+      "third_nodes": [
+        2,
+        2,
+        4
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "+"
+      ],
+      "L": [
+        3,
+        1,
+        3
+      ],
+      "third_nodes": [
+        2,
+        4,
+        4
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "+"
+      ],
+      "L": [
+        3,
+        1,
+        4
+      ],
+      "third_nodes": [
+        2,
+        5,
+        4
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "+"
+      ],
+      "L": [
+        3,
+        3,
+        1
+      ],
+      "third_nodes": [
+        4,
+        2,
+        4
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "+"
+      ],
+      "L": [
+        3,
+        4,
+        1
+      ],
+      "third_nodes": [
+        5,
+        2,
+        4
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "+"
+      ],
+      "L": [
+        4,
+        1,
+        1
+      ],
+      "third_nodes": [
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "+"
+      ],
+      "L": [
+        4,
+        1,
+        3
+      ],
+      "third_nodes": [
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "+"
+      ],
+      "L": [
+        4,
+        1,
+        4
+      ],
+      "third_nodes": [
+        2,
+        5,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "+"
+      ],
+      "L": [
+        4,
+        3,
+        1
+      ],
+      "third_nodes": [
+        4,
+        2,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "+"
+      ],
+      "L": [
+        4,
+        4,
+        1
+      ],
+      "third_nodes": [
+        5,
+        2,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "-"
+      ],
+      "L": [
+        1,
+        1,
+        1
+      ],
+      "third_nodes": [
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "-"
+      ],
+      "L": [
+        1,
+        1,
+        3
+      ],
+      "third_nodes": [
+        2,
+        1,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "-"
+      ],
+      "L": [
+        1,
+        3,
+        1
+      ],
+      "third_nodes": [
+        4,
+        1,
+        3
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "-"
+      ],
+      "L": [
+        1,
+        3,
+        3
+      ],
+      "third_nodes": [
+        4,
+        1,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "-"
+      ],
+      "L": [
+        1,
+        4,
+        1
+      ],
+      "third_nodes": [
+        5,
+        1,
+        3
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "-"
+      ],
+      "L": [
+        1,
+        4,
+        3
+      ],
+      "third_nodes": [
+        5,
+        1,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "-"
+      ],
+      "L": [
+        3,
+        1,
+        1
+      ],
+      "third_nodes": [
+        2,
+        1,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "-"
+      ],
+      "L": [
+        3,
+        3,
+        1
+      ],
+      "third_nodes": [
+        4,
+        1,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "+",
+        "-"
+      ],
+      "L": [
+        3,
+        4,
+        1
+      ],
+      "third_nodes": [
+        5,
+        1,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "-",
+        "+"
+      ],
+      "L": [
+        1,
+        1,
+        1
+      ],
+      "third_nodes": [
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "-",
+        "+"
+      ],
+      "L": [
+        1,
+        1,
+        3
+      ],
+      "third_nodes": [
+        1,
+        5,
+        2
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "-",
+        "+"
+      ],
+      "L": [
+        1,
+        3,
+        1
+      ],
+      "third_nodes": [
+        1,
+        5,
+        2
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "-",
+        "+"
+      ],
+      "L": [
+        3,
+        1,
+        1
+      ],
+      "third_nodes": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "-",
+        "+"
+      ],
+      "L": [
+        3,
+        1,
+        3
+      ],
+      "third_nodes": [
+        1,
+        5,
+        4
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "-",
+        "+"
+      ],
+      "L": [
+        3,
+        3,
+        1
+      ],
+      "third_nodes": [
+        1,
+        5,
+        4
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "-",
+        "+"
+      ],
+      "L": [
+        4,
+        1,
+        1
+      ],
+      "third_nodes": [
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "-",
+        "+"
+      ],
+      "L": [
+        4,
+        1,
+        3
+      ],
+      "third_nodes": [
+        1,
+        5,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "-",
+        "+"
+      ],
+      "L": [
+        4,
+        3,
+        1
+      ],
+      "third_nodes": [
+        1,
+        5,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "-",
+        "-"
+      ],
+      "L": [
+        1,
+        1,
+        1
+      ],
+      "third_nodes": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "-",
+        "-"
+      ],
+      "L": [
+        1,
+        1,
+        3
+      ],
+      "third_nodes": [
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "-",
+        "-"
+      ],
+      "L": [
+        1,
+        3,
+        1
+      ],
+      "third_nodes": [
+        1,
+        4,
+        3
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "-",
+        "-"
+      ],
+      "L": [
+        1,
+        3,
+        3
+      ],
+      "third_nodes": [
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "-",
+        "-"
+      ],
+      "L": [
+        1,
+        4,
+        1
+      ],
+      "third_nodes": [
+        1,
+        5,
+        3
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "-",
+        "-"
+      ],
+      "L": [
+        1,
+        4,
+        3
+      ],
+      "third_nodes": [
+        1,
+        5,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "-",
+        "-"
+      ],
+      "L": [
+        3,
+        1,
+        1
+      ],
+      "third_nodes": [
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "-",
+        "-"
+      ],
+      "L": [
+        3,
+        3,
+        1
+      ],
+      "third_nodes": [
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "+",
+        "-",
+        "-"
+      ],
+      "L": [
+        3,
+        4,
+        1
+      ],
+      "third_nodes": [
+        1,
+        5,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "+",
+        "+"
+      ],
+      "L": [
+        1,
+        1,
+        1
+      ],
+      "third_nodes": [
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "+",
+        "+"
+      ],
+      "L": [
+        1,
+        1,
+        3
+      ],
+      "third_nodes": [
+        3,
+        4,
+        1
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "+",
+        "+"
+      ],
+      "L": [
+        1,
+        1,
+        4
+      ],
+      "third_nodes": [
+        3,
+        5,
+        1
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "+",
+        "+"
+      ],
+      "L": [
+        1,
+        3,
+        1
+      ],
+      "third_nodes": [
+        5,
+        2,
+        1
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "+",
+        "+"
+      ],
+      "L": [
+        1,
+        3,
+        3
+      ],
+      "third_nodes": [
+        5,
+        4,
+        1
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "+",
+        "+"
+      ],
+      "L": [
+        1,
+        3,
+        4
+      ],
+      "third_nodes": [
+        5,
+        5,
+        1
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "+",
+        "+"
+      ],
+      "L": [
+        3,
+        1,
+        1
+      ],
+      "third_nodes": [
+        5,
+        2,
+        1
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "+",
+        "+"
+      ],
+      "L": [
+        3,
+        1,
+        3
+      ],
+      "third_nodes": [
+        5,
+        4,
+        1
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "+",
+        "+"
+      ],
+      "L": [
+        3,
+        1,
+        4
+      ],
+      "third_nodes": [
+        5,
+        5,
+        1
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "+",
+        "-"
+      ],
+      "L": [
+        1,
+        1,
+        1
+      ],
+      "third_nodes": [
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "+",
+        "-"
+      ],
+      "L": [
+        1,
+        1,
+        3
+      ],
+      "third_nodes": [
+        3,
+        1,
+        4
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "+",
+        "-"
+      ],
+      "L": [
+        1,
+        1,
+        4
+      ],
+      "third_nodes": [
+        3,
+        1,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "+",
+        "-"
+      ],
+      "L": [
+        1,
+        3,
+        1
+      ],
+      "third_nodes": [
+        5,
+        1,
+        2
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "+",
+        "-"
+      ],
+      "L": [
+        1,
+        3,
+        3
+      ],
+      "third_nodes": [
+        5,
+        1,
+        4
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "+",
+        "-"
+      ],
+      "L": [
+        1,
+        3,
+        4
+      ],
+      "third_nodes": [
+        5,
+        1,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "+",
+        "-"
+      ],
+      "L": [
+        3,
+        1,
+        1
+      ],
+      "third_nodes": [
+        5,
+        1,
+        2
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "+",
+        "-"
+      ],
+      "L": [
+        3,
+        1,
+        3
+      ],
+      "third_nodes": [
+        5,
+        1,
+        4
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "+",
+        "-"
+      ],
+      "L": [
+        3,
+        1,
+        4
+      ],
+      "third_nodes": [
+        5,
+        1,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "+"
+      ],
+      "L": [
+        1,
+        1,
+        1
+      ],
+      "third_nodes": [
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "+"
+      ],
+      "L": [
+        1,
+        1,
+        3
+      ],
+      "third_nodes": [
+        2,
+        5,
+        1
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "+"
+      ],
+      "L": [
+        1,
+        3,
+        1
+      ],
+      "third_nodes": [
+        2,
+        5,
+        1
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "+"
+      ],
+      "L": [
+        3,
+        1,
+        1
+      ],
+      "third_nodes": [
+        4,
+        3,
+        1
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "+"
+      ],
+      "L": [
+        3,
+        1,
+        3
+      ],
+      "third_nodes": [
+        4,
+        5,
+        1
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "+"
+      ],
+      "L": [
+        3,
+        3,
+        1
+      ],
+      "third_nodes": [
+        4,
+        5,
+        1
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "+"
+      ],
+      "L": [
+        4,
+        1,
+        1
+      ],
+      "third_nodes": [
+        5,
+        3,
+        1
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "+"
+      ],
+      "L": [
+        4,
+        1,
+        3
+      ],
+      "third_nodes": [
+        5,
+        5,
+        1
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "+"
+      ],
+      "L": [
+        4,
+        3,
+        1
+      ],
+      "third_nodes": [
+        5,
+        5,
+        1
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "-"
+      ],
+      "L": [
+        1,
+        1,
+        3
+      ],
+      "third_nodes": [
+        2,
+        2,
+        4
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "-"
+      ],
+      "L": [
+        1,
+        1,
+        4
+      ],
+      "third_nodes": [
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "-"
+      ],
+      "L": [
+        1,
+        3,
+        1
+      ],
+      "third_nodes": [
+        2,
+        4,
+        2
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "-"
+      ],
+      "L": [
+        1,
+        3,
+        3
+      ],
+      "third_nodes": [
+        2,
+        4,
+        4
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "-"
+      ],
+      "L": [
+        1,
+        3,
+        4
+      ],
+      "third_nodes": [
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "-"
+      ],
+      "L": [
+        1,
+        4,
+        1
+      ],
+      "third_nodes": [
+        2,
+        5,
+        2
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "-"
+      ],
+      "L": [
+        1,
+        4,
+        3
+      ],
+      "third_nodes": [
+        2,
+        5,
+        4
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "-"
+      ],
+      "L": [
+        1,
+        4,
+        4
+      ],
+      "third_nodes": [
+        2,
+        5,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "-"
+      ],
+      "L": [
+        3,
+        1,
+        1
+      ],
+      "third_nodes": [
+        4,
+        2,
+        2
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "-"
+      ],
+      "L": [
+        3,
+        1,
+        3
+      ],
+      "third_nodes": [
+        4,
+        2,
+        4
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "-"
+      ],
+      "L": [
+        3,
+        1,
+        4
+      ],
+      "third_nodes": [
+        4,
+        2,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "-"
+      ],
+      "L": [
+        3,
+        3,
+        1
+      ],
+      "third_nodes": [
+        4,
+        4,
+        2
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "-"
+      ],
+      "L": [
+        3,
+        4,
+        1
+      ],
+      "third_nodes": [
+        4,
+        5,
+        2
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "-"
+      ],
+      "L": [
+        4,
+        1,
+        1
+      ],
+      "third_nodes": [
+        5,
+        2,
+        2
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "-"
+      ],
+      "L": [
+        4,
+        1,
+        3
+      ],
+      "third_nodes": [
+        5,
+        2,
+        4
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "-"
+      ],
+      "L": [
+        4,
+        1,
+        4
+      ],
+      "third_nodes": [
+        5,
+        2,
+        5
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "-"
+      ],
+      "L": [
+        4,
+        3,
+        1
+      ],
+      "third_nodes": [
+        5,
+        4,
+        2
+      ]
+    },
+    {
+      "A_assignments": [
+        "-",
+        "-",
+        "-"
+      ],
+      "L": [
+        4,
+        4,
+        1
+      ],
+      "third_nodes": [
+        5,
+        5,
+        2
+      ]
+    }
+  ],
+  "finite_scalar_assignment_count": 90,
+  "count_caveat": "The 90 assignments satisfy only the displayed discrete necessary conditions; they are not integer local models or atlas isomorphism classes.",
+  "all_negative_mixed_assignment_counterconfiguration": {
+    "scope": "Three positive integer two-high local charts satisfying the node tests on the three edges between the degree-two vertices only. The center cores are not constructed; this is not a global node-compatible or D-compatible configuration.",
+    "models": [
+      {
+        "canonical_model": {
+          "a": 9,
+          "b": 11,
+          "r": 4,
+          "s": 4,
+          "z": 5,
+          "S": 2,
+          "T": 2,
+          "d": -1,
+          "q": [
+            9,
+            11,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -7,
+              2,
+              -4
+            ],
+            [
+              -14,
+              0,
+              -2,
+              5
+            ],
+            [
+              4,
+              -5,
+              0,
+              0
+            ],
+            [
+              -2,
+              2,
+              -1,
+              0
+            ]
+          ],
+          "D": [
+            3,
+            -1,
+            0,
+            -2
+          ],
+          "weights": [
+            "9",
+            "11",
+            "17/8",
+            "21/4"
+          ]
+        },
+        "A_assignment": "+",
+        "labels": [
+          "a",
+          "b",
+          "1",
+          "2"
+        ],
+        "P": {
+          "a": {
+            "a": 0,
+            "b": -7,
+            "1": 2,
+            "2": -4
+          },
+          "b": {
+            "a": -14,
+            "b": 0,
+            "1": -2,
+            "2": 5
+          },
+          "1": {
+            "a": 4,
+            "b": -5,
+            "1": 0,
+            "2": 0
+          },
+          "2": {
+            "a": -2,
+            "b": 2,
+            "1": -1,
+            "2": 0
+          }
+        },
+        "q": {
+          "a": 9,
+          "b": 11,
+          "1": 1,
+          "2": 1
+        },
+        "D": {
+          "a": 3,
+          "b": -1,
+          "1": 0,
+          "2": -2
+        }
+      },
+      {
+        "canonical_model": {
+          "a": 31,
+          "b": 7,
+          "r": 5,
+          "s": 10,
+          "z": 2,
+          "S": 3,
+          "T": 3,
+          "d": -1,
+          "q": [
+            31,
+            7,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -27,
+              6,
+              -10
+            ],
+            [
+              -8,
+              0,
+              -1,
+              2
+            ],
+            [
+              5,
+              -6,
+              0,
+              0
+            ],
+            [
+              -3,
+              3,
+              -1,
+              0
+            ]
+          ],
+          "D": [
+            -25,
+            23,
+            -5,
+            7
+          ],
+          "weights": [
+            "31",
+            "7",
+            "61/10",
+            "13/6"
+          ]
+        },
+        "A_assignment": "+",
+        "labels": [
+          "a",
+          "b",
+          "2",
+          "0"
+        ],
+        "P": {
+          "a": {
+            "a": 0,
+            "b": -27,
+            "2": 6,
+            "0": -10
+          },
+          "b": {
+            "a": -8,
+            "b": 0,
+            "2": -1,
+            "0": 2
+          },
+          "2": {
+            "a": 5,
+            "b": -6,
+            "2": 0,
+            "0": 0
+          },
+          "0": {
+            "a": -3,
+            "b": 3,
+            "2": -1,
+            "0": 0
+          }
+        },
+        "q": {
+          "a": 31,
+          "b": 7,
+          "2": 1,
+          "0": 1
+        },
+        "D": {
+          "a": -25,
+          "b": 23,
+          "2": -5,
+          "0": 7
+        }
+      },
+      {
+        "canonical_model": {
+          "a": 31,
+          "b": 7,
+          "r": 5,
+          "s": 10,
+          "z": 2,
+          "S": 3,
+          "T": 3,
+          "d": -1,
+          "q": [
+            31,
+            7,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -27,
+              6,
+              -10
+            ],
+            [
+              -8,
+              0,
+              -1,
+              2
+            ],
+            [
+              5,
+              -6,
+              0,
+              0
+            ],
+            [
+              -3,
+              3,
+              -1,
+              0
+            ]
+          ],
+          "D": [
+            -25,
+            23,
+            -5,
+            7
+          ],
+          "weights": [
+            "31",
+            "7",
+            "61/10",
+            "13/6"
+          ]
+        },
+        "A_assignment": "-",
+        "labels": [
+          "b",
+          "a",
+          "1",
+          "0"
+        ],
+        "P": {
+          "b": {
+            "b": 0,
+            "a": -27,
+            "1": 6,
+            "0": -10
+          },
+          "a": {
+            "b": -8,
+            "a": 0,
+            "1": -1,
+            "0": 2
+          },
+          "1": {
+            "b": 5,
+            "a": -6,
+            "1": 0,
+            "0": 0
+          },
+          "0": {
+            "b": -3,
+            "a": 3,
+            "1": -1,
+            "0": 0
+          }
+        },
+        "q": {
+          "b": 31,
+          "a": 7,
+          "1": 1,
+          "0": 1
+        },
+        "D": {
+          "b": -25,
+          "a": 23,
+          "1": -5,
+          "0": 7
+        }
+      }
+    ],
+    "low_edge_node_triples": [
+      [
+        0,
+        3,
+        2
+      ],
+      [
+        2,
+        2,
+        1
+      ],
+      [
+        0,
+        2,
+        3
+      ]
+    ],
+    "low_edge_D_sums": [
+      7,
+      -10,
+      5
+    ],
+    "D_opposition_satisfied": false
+  },
+  "script_sha256": "2b86c9ebd72326c278e2475c5f69fa374d6e011c157a5e371d38ededd41ac5a3",
+  "source_sha256": "160c20b49b18669e6f410800b78be4f277819067d5f77b55e6ea3422fb957311",
+  "dependency": {
+    "file": "verify_fixed_denominator_partners_v12.py",
+    "sha256": "20c2d4ac4a242ca89a61e7c973b8e673b5574eee985ecdd0e6bfd8240644ccae"
+  }
+}

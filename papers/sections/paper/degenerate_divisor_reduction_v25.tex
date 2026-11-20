@@ -1,0 +1,147 @@
+% v25. Exact factorization of the original degenerate pair residual.
+\section{退化面の積表示と互いに素な領域の排除}
+\label{dg25:section}
+
+三高係数が同時に非負である canonical 整数模型の記号
+\eqref{hd23:data} を用いる．退化面 $a=uh-B(F+1)=0$ では，
+元の pair 残余を単なる一次式として解く以上に，正整数の積として扱える．
+これは $x\ge1$ の残余に対する新しい互いに素な場合の障害と，
+Schur 整数 $b$ だけを固定した有限復元を与える．
+退化面全体の不存在は結論しない．
+
+\subsection{元の残余の正整数積への変換}
+
+\begin{theorem}[退化面の積表示]
+\label{dg25:product}
+$a=0$ とし，
+\begin{equation}\label{dg25:data}
+ \begin{gathered}
+ A=B(s-1)-1=Bs-b,\quad R=b^2-sT,\qquad
+ L=(F+1)R-hA,\quad M=uR-BA
+ \end{gathered}
+\end{equation}
+と置く．このとき $L,M$ は正整数であり，
+\begin{equation}\label{dg25:identities}
+ hM=BL,\qquad FL=bF+s(T-h),\qquad
+ \mathfrak r=M(t-y)-tT.
+\end{equation}
+従って元の pair 方程式 $\mathfrak r=0$ は
+\begin{equation}\label{dg25:positive-product}
+ Mj=tT,\qquad j=t-y\in\{1,\ldots,t\}
+\end{equation}
+を要求する．特に $y<t$，$M\ge T$，$M\mid tT$ である．
+\end{theorem}
+
+\begin{proof}
+既知の退化関係より $s\ell=bF$ であり，
+$K_0=h(s-1)+1$ と置いたとき
+\[
+ R(F^2+F+1)=(bK_0-sh)F+b^2-sh.
+\]
+ここで $bK_0-sh=hA+b$ である．従って
+\begin{equation}\label{dg25:Q}
+ Q:=R(F^2+F+1)-(hA+b)F-b^2+sh=0.
+\end{equation}
+定義から $hM-BL=Ra=0$ であり，$R=b^2-sT$ を用いると
+$FL-bF-s(T-h)=Q=0$ となる．
+
+$M$ の正値性は恒等式として確認できる．$m=F^2+F+1$，
+\[
+ C=F\{b(t-1)+s\}+b^2t+bs-b>0
+\]
+と置けば，$t=u-s+1$ を使った直接展開により
+\begin{equation}\label{dg25:positive-M}
+ mM-C=uQ+(FA-s)a
+\end{equation}
+である．ゆえに $M=C/m>0$ であり，$hM=BL$ と $h,B>0$ から $L>0$ でもある．
+
+退化面上では $T$ は $y$ に依存せず，
+\[
+ S=FT-B(t-y)-\ell,\quad
+ \alpha=F+tz+uy,\quad z=\ell-u
+\]
+である．これらを元の残余に代入すると，より一般の恒等式
+\begin{equation}\label{dg25:original-identity}
+ -(s+tb)S+(s\alpha-t)T-\alpha b
+ =M(t-y)-tT+(s\ell-bF)(tT+1)
+\end{equation}
+を得る．$s\ell=bF$ により主張の残余式になる．
+模型ではその残余が零であり $M,t,T>0$ なので $j>0$ である．
+$y\ge0$ より $j\le t$，従って $M=tT/j\ge T$ となる．
+\end{proof}
+
+差方程式だけから式~\eqref{dg25:positive-product} を結論してはいけない．
+最後に $\mathfrak r=0$ を用いることが不可欠である．
+一般の三高模型に $j>0$ を仮定するのも正しくない．ここでは退化面上で証明した．
+
+\begin{corollary}[互いに素な領域の無上界排除]
+\label{dg25:coprime}
+同じ退化模型で $h\ge b$ なら，
+\begin{equation}\label{dg25:small-L}
+ 1\le L\le b-1,\qquad
+ g:=\gcd(h,b-1)\ge2,\qquad
+ \frac hg\le b-1,\qquad
+ T\le M\le b-2
+\end{equation}
+である．従って $h\ge b$ かつ $\gcd(h,b-1)=1$ の領域は存在しない．
+特に $x\ge1$ の全ての退化模型にこの結論が適用される．
+\end{corollary}
+
+\begin{proof}
+退化面の既知の範囲は $R\ge1$ である．従って
+$T=(b^2-R)/s<b^2/s\le h$ となる．最後は $s\ge h\ge b$ による．
+式~\eqref{dg25:identities} から $L<b$ であり，正整数性と合わせて最初の範囲を得る．
+$h\mid BL$ は $h/g\mid L$ と同値だから，$h/g\le b-1$ である．
+$h\ge b$ の下では $g=1$ は不可能である．
+さらに $M=BL/h\le B^2/h<B$ なので，整数性から $M\le b-2$ を得る．
+
+$x\ge1$ の場合には，退化関係 $s-bx>0$ から $s\ge b+1$ と
+$x\le(s-1)/b$ が従う．
+\[
+ s-b-\frac{s-1}{b}=\frac{(b-1)(s-b-1)}b\ge0
+\]
+なので $x\le s-b$，従って $h=s-x\ge b$ である．
+\end{proof}
+
+\subsection{正の第一係数を持つ退化面の固定 \texorpdfstring{$b$}{b} 復元}
+
+\begin{corollary}[固定 $b$ に対する完全有限手順]
+\label{dg25:fixed-b}
+$a=0,x\ge1$ の三高非負係数模型は $b\ge3$ を満たす．
+固定した $b$ ごとに，次の有限手順で全て復元できる．
+\begin{enumerate}
+ \item $s=b+1,\ldots,b^2-1$，$x=1,\ldots,\lfloor(s-1)/b\rfloor$ を取り，
+ $h=s-x$，$B=b-1$，$A=Bs-b$，$g=\gcd(h,B)$ とする．
+ \item $T=1,\ldots,\min\{b-2,\lfloor(b^2-1)/s\rfloor\}$ と，
+ $h/g$ の正倍数 $L\le B$ を取る．$R=b^2-sT$，$M=BL/h$ とし，$M\ge T$ を検査する．
+ \item
+ \[
+ F=\frac{s(h-T)}{b-L},\quad u=\frac{B(F+1)}h,\quad
+ \ell=\frac{bF}s,\quad t=u-s+1,\quad z=\ell-u
+ \]
+ が整数で，$t\ge1,z\ge0$，$F=B+ux+sz$，
+ $L=(F+1)R-hA$ を満たすものを残す．
+ \item $M\mid tT$ を検査し，$y=t-tT/M\ge0$ とする．
+ 元の尺度復元~\eqref{hd23:reconstruction} で $S,T,U$ を計算し，
+ 三尺度の正整数性，$d\ge1$，$\alpha\ge k\ge b+1$，六つの符号条件，
+ 全ての行和・pair products と指定 $D$ を確認する．
+ \item 通過した模型に完全 matching の有理正 weights を与える．
+\end{enumerate}
+この手順では $b$ 自体に上界を証明していない．$x=0$ の全退化面には
+系~\ref{ax24:degenerate-finite} の固定 $s$ 手順を使う．
+\end{corollary}
+
+\begin{proof}
+$b\ge3$ は $1\le T\le b-2$ から従う．$s\ge b+1$ は前の証明による．
+$R\ge1,T\ge1$ より $s\le b^2-1$ である．
+残りの全範囲と復元式は前定理と前系から従い，$b-L>0$ なので零分母はない．
+従って全ての所望の模型が列挙される．
+最後に元の全方程式と正値性を検査するため，逆向きの十分性も明白である．
+これは必要条件だけを満たす整数を模型と認定する手順ではない．
+\end{proof}
+
+\paragraph{検算の射程．}
+\nolinkurl{verify_degenerate_divisor_v25.py} は式~\eqref{dg25:positive-M}，
+\eqref{dg25:original-identity} と二つの積恒等式を整数多項式として係数ごとに検査する．
+\texttt{--fixed-b b} は上の証明された有限範囲を全て処理し，任意の分母や $t,z,y$ の
+探索上限を追加しない．有限個の $b$ に対する実行結果を，退化面全体の不存在へ外挿しない．

@@ -1,0 +1,1034 @@
+{
+  "version": "v17",
+  "passed": true,
+  "audit_kind": "Independent node-first, variable-elimination reconstruction of all four-exception K4 hub data",
+  "arbitrary_denominator_cutoff": null,
+  "unbounded_variables_truncated": false,
+  "primary_enumerator_imported": false,
+  "node_row_allocations": 21,
+  "ordinary_flow_bounds": "Derived exactly from node divergences and the forest; |R|<=4 is a proved bound.",
+  "exception_variable_elimination": "Positive unit endpoint must have N=0. Negative unit endpoint N=2 leaves any positive even M; otherwise M=N_big-1 must be 2 or 4. Each free M enters only its big-end row. Mixed signs permit every even residual and are recorded as unbounded; same-sign rows use complete positive compositions.",
+  "external_peer_review": false,
+  "proof_assistant_formalization": false,
+  "primary_comparison_performed_after_independent_reconstruction": {
+    "disjoint": {
+      "all_R_N_V_q_X_entries_identical": true,
+      "candidates": 0
+    },
+    "adjacent": {
+      "all_R_N_V_q_X_entries_identical": true,
+      "candidates": 6
+    }
+  },
+  "compared_primary_json_sha256": "a558546688d8b174b7b9471896a72ff495747c7aa77e3180f19e9f38940752dc",
+  "audit_script_sha256": "e55c17d573e34c52f5409fcce8f60fc55e870f0ff6011b11aecbad8609bda617",
+  "results": {
+    "disjoint": {
+      "ordinary_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "counts": {
+        "node_matrices": 194481,
+        "forest_component_balance": 25779,
+        "ordinary_data_with_exception_options": 852,
+        "exception_orientation_sign_trials": 5952
+      },
+      "unbounded_surviving_families": 0,
+      "survivors": []
+    },
+    "adjacent": {
+      "ordinary_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "counts": {
+        "node_matrices": 194481,
+        "forest_component_balance": 28665,
+        "ordinary_data_with_exception_options": 1036,
+        "exception_orientation_sign_trials": 6492
+      },
+      "unbounded_surviving_families": 0,
+      "survivors": [
+        {
+          "R": [
+            [
+              0,
+              1,
+              -4,
+              2
+            ],
+            [
+              -1,
+              0,
+              -1,
+              1
+            ],
+            [
+              4,
+              -4,
+              0,
+              -1
+            ],
+            [
+              1,
+              2,
+              -4,
+              0
+            ]
+          ],
+          "N": [
+            [
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              3,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              5,
+              0
+            ]
+          ],
+          "V": [
+            [
+              0,
+              0,
+              0,
+              -1
+            ],
+            [
+              -1,
+              0,
+              0,
+              0
+            ],
+            [
+              -3,
+              5,
+              0,
+              -3
+            ],
+            [
+              0,
+              -1,
+              0,
+              0
+            ]
+          ],
+          "Q": [
+            [
+              1,
+              5,
+              13,
+              3
+            ],
+            [
+              5,
+              1,
+              5,
+              3
+            ],
+            [
+              13,
+              5,
+              1,
+              5
+            ],
+            [
+              3,
+              3,
+              5,
+              1
+            ]
+          ],
+          "X": [
+            [
+              0,
+              4,
+              -3,
+              1
+            ],
+            [
+              -4,
+              0,
+              -4,
+              2
+            ],
+            [
+              3,
+              -1,
+              0,
+              -4
+            ],
+            [
+              2,
+              1,
+              -1,
+              0
+            ]
+          ],
+          "real_local_obstruction": {
+            "core": 3,
+            "ray_order": [
+              2,
+              0,
+              1
+            ],
+            "q": [
+              5,
+              3,
+              3
+            ],
+            "R": [
+              -4,
+              1,
+              2
+            ],
+            "X": [
+              -1,
+              2,
+              1
+            ],
+            "primitive_polynomial": [
+              6,
+              17,
+              14
+            ],
+            "discriminant": -47
+          }
+        },
+        {
+          "R": [
+            [
+              0,
+              2,
+              -4,
+              1
+            ],
+            [
+              -2,
+              0,
+              -1,
+              2
+            ],
+            [
+              4,
+              -4,
+              0,
+              -1
+            ],
+            [
+              2,
+              1,
+              -4,
+              0
+            ]
+          ],
+          "N": [
+            [
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              3,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              5,
+              0
+            ]
+          ],
+          "V": [
+            [
+              0,
+              -1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              -1
+            ],
+            [
+              -3,
+              5,
+              0,
+              -3
+            ],
+            [
+              -1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "Q": [
+            [
+              1,
+              7,
+              13,
+              3
+            ],
+            [
+              7,
+              1,
+              5,
+              3
+            ],
+            [
+              13,
+              5,
+              1,
+              5
+            ],
+            [
+              3,
+              3,
+              5,
+              1
+            ]
+          ],
+          "X": [
+            [
+              0,
+              3,
+              -3,
+              2
+            ],
+            [
+              -3,
+              0,
+              -4,
+              1
+            ],
+            [
+              3,
+              -1,
+              0,
+              -4
+            ],
+            [
+              1,
+              2,
+              -1,
+              0
+            ]
+          ],
+          "real_local_obstruction": {
+            "core": 3,
+            "ray_order": [
+              2,
+              1,
+              0
+            ],
+            "q": [
+              5,
+              3,
+              3
+            ],
+            "R": [
+              -4,
+              1,
+              2
+            ],
+            "X": [
+              -1,
+              2,
+              1
+            ],
+            "primitive_polynomial": [
+              6,
+              17,
+              14
+            ],
+            "discriminant": -47
+          }
+        },
+        {
+          "R": [
+            [
+              0,
+              4,
+              -1,
+              -4
+            ],
+            [
+              -4,
+              0,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              0,
+              -4
+            ],
+            [
+              -1,
+              1,
+              -1,
+              0
+            ]
+          ],
+          "N": [
+            [
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              5,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              2,
+              0,
+              3,
+              0
+            ]
+          ],
+          "V": [
+            [
+              0,
+              -3,
+              -3,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              -1
+            ],
+            [
+              0,
+              -1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              -1,
+              0
+            ]
+          ],
+          "Q": [
+            [
+              1,
+              5,
+              3,
+              5
+            ],
+            [
+              5,
+              1,
+              3,
+              3
+            ],
+            [
+              3,
+              3,
+              1,
+              5
+            ],
+            [
+              5,
+              3,
+              5,
+              1
+            ]
+          ],
+          "X": [
+            [
+              0,
+              1,
+              -2,
+              -1
+            ],
+            [
+              -1,
+              0,
+              2,
+              1
+            ],
+            [
+              2,
+              1,
+              0,
+              -1
+            ],
+            [
+              -4,
+              2,
+              -4,
+              0
+            ]
+          ],
+          "real_local_obstruction": {
+            "core": 1,
+            "ray_order": [
+              0,
+              2,
+              3
+            ],
+            "q": [
+              5,
+              3,
+              3
+            ],
+            "R": [
+              -4,
+              1,
+              2
+            ],
+            "X": [
+              -1,
+              2,
+              1
+            ],
+            "primitive_polynomial": [
+              6,
+              17,
+              14
+            ],
+            "discriminant": -47
+          }
+        },
+        {
+          "R": [
+            [
+              0,
+              -4,
+              1,
+              2
+            ],
+            [
+              4,
+              0,
+              -4,
+              -1
+            ],
+            [
+              -1,
+              -1,
+              0,
+              1
+            ],
+            [
+              1,
+              -4,
+              2,
+              0
+            ]
+          ],
+          "N": [
+            [
+              0,
+              5,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              3,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              5,
+              0,
+              0
+            ]
+          ],
+          "V": [
+            [
+              0,
+              0,
+              0,
+              -1
+            ],
+            [
+              -3,
+              0,
+              5,
+              -3
+            ],
+            [
+              -1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              -1,
+              0
+            ]
+          ],
+          "Q": [
+            [
+              1,
+              13,
+              5,
+              3
+            ],
+            [
+              13,
+              1,
+              5,
+              5
+            ],
+            [
+              5,
+              5,
+              1,
+              3
+            ],
+            [
+              3,
+              5,
+              3,
+              1
+            ]
+          ],
+          "X": [
+            [
+              0,
+              -3,
+              4,
+              1
+            ],
+            [
+              3,
+              0,
+              -1,
+              -4
+            ],
+            [
+              -4,
+              -4,
+              0,
+              2
+            ],
+            [
+              2,
+              -1,
+              1,
+              0
+            ]
+          ],
+          "real_local_obstruction": {
+            "core": 3,
+            "ray_order": [
+              1,
+              0,
+              2
+            ],
+            "q": [
+              5,
+              3,
+              3
+            ],
+            "R": [
+              -4,
+              1,
+              2
+            ],
+            "X": [
+              -1,
+              2,
+              1
+            ],
+            "primitive_polynomial": [
+              6,
+              17,
+              14
+            ],
+            "discriminant": -47
+          }
+        },
+        {
+          "R": [
+            [
+              0,
+              -4,
+              2,
+              1
+            ],
+            [
+              4,
+              0,
+              -4,
+              -1
+            ],
+            [
+              -2,
+              -1,
+              0,
+              2
+            ],
+            [
+              2,
+              -4,
+              1,
+              0
+            ]
+          ],
+          "N": [
+            [
+              0,
+              5,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              3,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              5,
+              0,
+              0
+            ]
+          ],
+          "V": [
+            [
+              0,
+              0,
+              -1,
+              0
+            ],
+            [
+              -3,
+              0,
+              5,
+              -3
+            ],
+            [
+              0,
+              0,
+              0,
+              -1
+            ],
+            [
+              -1,
+              0,
+              0,
+              0
+            ]
+          ],
+          "Q": [
+            [
+              1,
+              13,
+              7,
+              3
+            ],
+            [
+              13,
+              1,
+              5,
+              5
+            ],
+            [
+              7,
+              5,
+              1,
+              3
+            ],
+            [
+              3,
+              5,
+              3,
+              1
+            ]
+          ],
+          "X": [
+            [
+              0,
+              -3,
+              3,
+              2
+            ],
+            [
+              3,
+              0,
+              -1,
+              -4
+            ],
+            [
+              -3,
+              -4,
+              0,
+              1
+            ],
+            [
+              1,
+              -1,
+              2,
+              0
+            ]
+          ],
+          "real_local_obstruction": {
+            "core": 3,
+            "ray_order": [
+              1,
+              2,
+              0
+            ],
+            "q": [
+              5,
+              3,
+              3
+            ],
+            "R": [
+              -4,
+              1,
+              2
+            ],
+            "X": [
+              -1,
+              2,
+              1
+            ],
+            "primitive_polynomial": [
+              6,
+              17,
+              14
+            ],
+            "discriminant": -47
+          }
+        },
+        {
+          "R": [
+            [
+              0,
+              -1,
+              4,
+              -4
+            ],
+            [
+              1,
+              0,
+              2,
+              -4
+            ],
+            [
+              -4,
+              1,
+              0,
+              2
+            ],
+            [
+              -1,
+              -1,
+              1,
+              0
+            ]
+          ],
+          "N": [
+            [
+              0,
+              5,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              5,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              3,
+              0,
+              0
+            ]
+          ],
+          "V": [
+            [
+              0,
+              -3,
+              -3,
+              5
+            ],
+            [
+              0,
+              0,
+              -1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              -1
+            ],
+            [
+              0,
+              -1,
+              0,
+              0
+            ]
+          ],
+          "Q": [
+            [
+              1,
+              3,
+              5,
+              5
+            ],
+            [
+              3,
+              1,
+              3,
+              5
+            ],
+            [
+              5,
+              3,
+              1,
+              3
+            ],
+            [
+              5,
+              5,
+              3,
+              1
+            ]
+          ],
+          "X": [
+            [
+              0,
+              -2,
+              1,
+              -1
+            ],
+            [
+              2,
+              0,
+              1,
+              -1
+            ],
+            [
+              -1,
+              2,
+              0,
+              1
+            ],
+            [
+              -4,
+              -4,
+              2,
+              0
+            ]
+          ],
+          "real_local_obstruction": {
+            "core": 1,
+            "ray_order": [
+              3,
+              0,
+              2
+            ],
+            "q": [
+              5,
+              3,
+              3
+            ],
+            "R": [
+              -4,
+              1,
+              2
+            ],
+            "X": [
+              -1,
+              2,
+              1
+            ],
+            "primitive_polynomial": [
+              6,
+              17,
+              14
+            ],
+            "discriminant": -47
+          }
+        }
+      ]
+    }
+  }
+}

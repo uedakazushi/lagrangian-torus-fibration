@@ -1,0 +1,331 @@
+% v23: unbounded asymmetric lattice obstructions. All proofs are exact.
+\section{三高非負係数模型の非対称格子障害}
+\label{hd23:section}
+
+低行を固定した有限復元の後に残った二整数 $(s,t)$ 自体には，依然として一様上限を得ていない．
+本節は探索範囲を拡大せず，尺度の整数性を一つの格子変数として取り出す．
+これにより，完全対称の場合に加えて，以下の四領域を無上界で除外する．
+特に，非対称量 $sy-tx$ の符号を入れ替えたときに証明は同一ではなく，
+正側では元の pair-product 残余そのものが必要になる．
+
+\subsection{記号と格子表示}
+
+前節までと同じ canonical 表示を用いる．必要な入力と記号を全て再掲する：
+\begin{equation}\label{hd23:data}
+ \begin{gathered}
+ s,t\ge1,\quad u=s+t-1,\quad b\ge2,\quad B=b-1,\\
+ x=D_a\ge0,\quad y=D_b\ge0,\quad z=D_c\ge0,
+ \quad d=x+y+z\ge1,\\
+ h=s-x\ge1,\quad j=t-y,\quad \ell=u+z,\\
+ \lambda=ux+sz,\quad \mu=uy+tz,\quad F=B+\lambda,
+ \quad m=F^2+F+1,\\
+ E=\mu h-\ell-j,\quad J=h+\ell-\lambda j,\\
+ \alpha=ud+B+z,\qquad k=sd+B-x.
+ \end{gathered}
+\end{equation}
+これらは整数であり，$j$ の非負性は仮定しない．
+対象とする模型の三尺度 $S,T,U$ は正整数であり，
+\begin{equation}\label{hd23:reconstruction}
+ \begin{gathered}
+ S=h+\frac{FE-J}{m},\qquad
+ T=j+\frac{E+(F+1)J}{m},\qquad U=S+T+d-1,\\
+ E=(F+1)(S-h)+(T-j),\qquad
+ J=-(S-h)+F(T-j)
+ \end{gathered}
+\end{equation}
+を満たす．さらに $sT-b>0$ を含む六つの符号条件と
+\begin{equation}\label{hd23:original-residual}
+ \mathfrak r:=-(s+tb)S+(s\alpha-t)T-\alpha b=0
+\end{equation}
+が必要である．後者は元の第一 pair-product 方程式であり，
+三つの残余の差が零であるという条件だけからは従わない．
+
+\begin{lemma}[非対称量と一つの整数格子変数]
+\label{hd23:lattice}
+\[
+ \delta=sy-tx,\qquad n=\ell-U\in\mathbb Z
+\]
+と置く．$n$ は本節の格子変数であり，node の個数ではない．このとき
+\begin{equation}\label{hd23:lattice-form}
+ \boxed{\quad
+ S=j-(F+1)n-\ell\delta,\qquad
+ T=h+Fn+\ell\delta,\qquad U=\ell-n.
+ \quad}
+\end{equation}
+また
+\begin{equation}\label{hd23:F-delta}
+ F+\delta=B+h+s(d-1),\qquad
+ E+J=\ell\delta+h-j,\qquad \ell=h+j+d-1.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+$\mu h-\lambda j=\ell(sy-tx)$ を展開すれば第二の恒等式を得る．
+式~\eqref{hd23:reconstruction} から
+\[
+ E+J=F\bigl((S-h)+(T-j)\bigr)+(T-j)
+       =-Fn+(T-j)
+\]
+である．これを $E+J=\ell\delta+h-j$ と比較して $T$ を求め，
+$S+T=h+j-n$ を使えば $S$ も得られる．
+$F+\delta=B+sd-x$ なので最初の恒等式も従う．
+尺度の整数性，またはそれと同値な単一合同 $m\mid FE-J$ を
+使って $n\in\mathbb Z$ としていることが重要である．
+\end{proof}
+
+\begin{theorem}[四つの無上界排除領域]
+\label{hd23:main}
+三高係数が同時に非負である正の canonical 整数模型では，
+次のいずれも起こらない：
+\begin{enumerate}
+ \item $\delta=0$ かつ $s\ge t$；
+ \item $\delta=-1$；
+ \item $\delta=1$ かつ $x\ge1$；
+ \item $a:=uh-B(F+1)=0$ かつ $s\le2$．
+\end{enumerate}
+各主張に，分母，$D$，$s,t,b$ の探索上限を課していない．
+ただし，例えば $s=t$ だけを仮定した全領域や，$\delta=1,x=0$ は
+この定理の排除対象に含めていない．
+\end{theorem}
+
+\subsection{比例する高係数と低行の一方向の順序}
+
+\begin{proof}[定理~\ref{hd23:main} の第一項]
+$sy=tx$ から $j=th/s>0$ である．$s\ge t$ なら $h\ge j\ge1$ となる．
+式~\eqref{hd23:F-delta} は $F\ge h+1$ を与える．
+式~\eqref{hd23:lattice-form} で $n\le-1$ なら $T\le h-F<0$，
+$n\ge1$ なら $S\le j-F-1<0$ である．従って
+\[
+ n=0,\qquad S=j,\quad T=h,\quad U=\ell.
+\]
+$\delta=0$ の下では $\lambda=h+s(d-1)$，$\mu h=\lambda j$ である．
+式~\eqref{hd23:reconstruction} の $E$ を計算すると，必要条件は
+\begin{equation}\label{hd23:delta-zero-equation}
+ 0=(d-1)(sh-1)+h(h-3)+(b+1)(h-j)
+\end{equation}
+となる．
+
+$h\ge4$ なら右辺は正である．$h=3$ なら全項が非負なので，
+$d=1$ かつ $j=h=3$ が必要である．$h=2$ では，$j=1$ なら最後の項が
+三以上となって矛盾する．$j=2$ なら $(d-1)(2s-1)=2$ が必要だが，
+$s\ge2$ より左辺は零または三以上である．
+$h=1$ では $j=1$ であり，$(d-1)(s-1)=2$ が必要である．
+
+残った場合は全て $h=j$ なので，$sy=tx$ と $h,j>0$ から $s=t$，$x=y$ も従う．
+$h=3,d=1$ は $(s,t,x,y,z)=(3,3,0,0,1)$ だけである．
+$h=1$ では $x=y=s-1$，$d\ge2(s-1)$ である．
+$(d-1)(s-1)=2$ の候補のうちこの不等式を満たすものは
+$(s,t,x,y,z)=(2,2,1,1,1)$ だけである．
+
+第一候補では $S=T=3$，$\alpha=b+5$ であり，式~\eqref{hd23:original-residual} は
+$27-b(b+5)=0$ を要求する．$3(3+5)<27<4(4+5)$ と単調性により，整数解はない．
+第二候補では $S=T=1$，$\alpha=b+9$ であり，残余は
+$14-b(b+9)<0$ となる．これで両候補も排除された．
+\end{proof}
+
+\subsection{非対称量が負の一の場合}
+
+\begin{proof}[定理~\ref{hd23:main} の第二項]
+$\delta=-1$ なら $tx=sy+1$ なので $x\ge1$，$s\ge2$ である．
+また $x<s$ より $y<t$，従って $j>0$ である．
+$\ell=h+j+d-1\ge h+j>h$ なので，式~\eqref{hd23:lattice-form} の
+$T=h+Fn-\ell>0$ は $n\ge1$ を強制する．
+そのとき $S>0$ は $F+1<j+\ell$ を要求する．
+もし $x\ge2$ なら
+\[
+ F+1-j-\ell
+ =B+u(x-1)+(s-1)z+1-t+y
+ \ge B+s+y>0,
+\]
+となって矛盾する．従って $x=1$，$t=sy+1$ である．
+
+$g=B+(s-1)z\ge1$ と置くと $F=\ell+g$ である．
+$n\ge2$ なら
+\[
+ S\le j-2(F+1)+\ell=j-\ell-2g-2<0
+\]
+となるため，$n=1$ であり，
+\[
+ S=j-g-1,\qquad T=s-1+g,\qquad U=\ell-1.
+\]
+この三尺度を $E=(F+1)(S-h)+(T-j)$ に代入する．左辺から右辺を引くと
+\begin{equation}\label{hd23:delta-minus-positive}
+ \begin{aligned}
+ Q_-={}&\bigl((s-1)(s-2)+(b-2)+s(s-1)z\bigr)y\\
+ &+s^2+(b-2)(b+2s-1)\\
+ &+\bigl((2s-1)b+2s^2-3s-1\bigr)z+s(s-1)z^2.
+ \end{aligned}
+\end{equation}
+$s\ge2,b\ge2,y,z\ge0$ である．各項は非負であり，$s^2>0$ なので
+$Q_->0$ である．これは必要な差方程式 $Q_-=0$ に反する．
+この領域は元の残余式を課す前に除外される．
+\end{proof}
+
+\subsection{非対称量が正の一の場合}
+
+\begin{proof}[定理~\ref{hd23:main} の第三項]
+$\delta=1$，$x\ge1$ と仮定する．$\ell\ge u\ge t$，$j\le t$ なので，
+$n\ge0$ なら $S=j-(F+1)n-\ell\le0$ となる．
+従って $p=-n\ge1$ として
+\[
+ S=j+(F+1)p-\ell,\qquad T=h-Fp+\ell
+\]
+と書ける．$T>0$ は $F<h+\ell$ を要求する．もし $x\ge2$ なら
+\[
+ F-h-\ell=B+(u+1)x-s-u+(s-1)z\ge B+t+1>0
+\]
+で矛盾する．ゆえに $x=1$，$t=sy-1$，特に $s\ge2,y\ge1$ である．
+
+再び $g=B+(s-1)z$ と置くと $F=\ell+g$ であり，$F>h=s-1$ である．
+$p\ge2$ なら $T\le h-2F+\ell<0$ なので $p=1$ である．
+従って $T=s-1-g>0$ は
+\[
+ z=0,\qquad \nu:=s-b\ge1
+\]
+を強制する．尺度と補助量は
+\begin{equation}\label{hd23:delta-plus-data}
+ \begin{gathered}
+ s=b+\nu,\quad t=sy-1,\quad
+ S=(s-1)y+b-1,\quad T=\nu,\quad U=s+t,\\
+ d=1+y,\qquad \alpha=u(1+y)+b-1
+ \end{gathered}
+\end{equation}
+となる．ここまで元の残余式はまだ使っていない．
+
+$E=(F+1)(S-h)+(T-j)$ の左辺と右辺の差は
+\begin{equation}\label{hd23:delta-plus-Q}
+ Q_+=\nu^2+2b\nu-4\nu-b+2
+       -\bigl(b^2-\nu(\nu-1)\bigr)y
+\end{equation}
+であり，模型では $Q_+=0$ が必要である．一方，元の残余
+$\mathfrak r$ には次の整数係数恒等式がある：
+\begin{equation}\label{hd23:delta-plus-residual}
+ y\mathfrak r=\bigl(sy(y+1)+1\bigr)Q_++N_+,
+\end{equation}
+ただし
+\begin{equation}\label{hd23:N-positive}
+ \begin{aligned}
+ N_+={}&b\nu(y^3+y^2-2)+b(y+1)+\nu^2(y^3-1)\\
+       &+\nu(\nu-1)y^2+\nu y+4\nu-2.
+ \end{aligned}
+\end{equation}
+$y\ge1$，$\nu\ge1$，$b\ge2$ により $N_+>0$ である．
+従って $Q_+=0$ と $\mathfrak r=0$ は両立しない．
+式~\eqref{hd23:delta-plus-residual} は元の残余を保持することで得た障害であり，
+差方程式だけの候補を模型と取り違えていない．
+\end{proof}
+
+\subsection{二次係数の退化面と整数尺度の平方障害}
+
+\begin{lemma}[退化面における有界整数]
+\label{hd23:degenerate-integer}
+$a=uh-B(F+1)=0$ とする．このとき
+\begin{equation}\label{hd23:degenerate-relations}
+ s\ell=bF,\qquad u(s-bx)=B(b+sz),\qquad s-bx>0.
+\end{equation}
+さらに $K_0=h(s-1)+1$ と置くと，整数
+\[
+ R_0=b^2-sT
+\]
+は
+\begin{equation}\label{hd23:degenerate-bound}
+ 1\le R_0\le K_0,\qquad
+ R_0m=(bK_0-sh)F+b^2-sh
+\end{equation}
+を満たす．この補題は元の残余 $\mathfrak r=0$ を使わない．
+\end{lemma}
+
+\begin{proof}
+一般の恒等式
+\[
+ a=s\ell-bF=u(s-bx)-B(b+sz)
+\]
+が式~\eqref{hd23:degenerate-relations} を与える．
+式~\eqref{hd23:reconstruction} を展開し，$B(F+1)=uh$ を使うと
+\[
+ \begin{aligned}
+ mT&=B(F+1)j+(F+1)h+F\ell+\mu h\\
+   &=\ell(ht+F)+(F+1)h
+ \end{aligned}
+\]
+となる．$s\ell=bF$ と $ht=B(F+1)-sh+h$ により
+\[
+ m(b^2-sT)=(bK_0-sh)F+b^2-sh
+\]
+を得る．$A_0=bK_0-sh$ と書くと
+\[
+ A_0-B=h(Bs-b)+1\ge0.
+\]
+$s=1$ では $h=1$ により等号であり，$s\ge2$ では $Bs-b\ge0$ である．
+$BF=uh-B\ge sh-B$ も成り立つので，
+\[
+ A_0F+b^2-sh\ge BF+b^2-sh\ge b^2-B>0.
+\]
+従って $R_0>0$ である．
+
+$w=F-B\ge0$ とすれば，直接の展開により
+\begin{equation}\label{hd23:degenerate-upper-gap}
+ \begin{aligned}
+ &(K_0+1)m-\bigl(A_0F+b^2-sh\bigr)\\
+ &\quad=(K_0+1)w^2+
+ \bigl((b-1)K_0+2b-1+sh\bigr)w+K_0+1+b(sh-1)>0.
+ \end{aligned}
+\end{equation}
+$R_0$ の整数性から $1\le R_0\le K_0$ が従う．
+\end{proof}
+
+\begin{proof}[定理~\ref{hd23:main} の第四項]
+$s-bx>0$ と $b\ge2$ により，$s\le2$ なら $x=0$ である．従って $h=s$，
+$F=b-1+sz$ となる．
+
+$s=1$ では $K_0=1$ なので $R_0=1$ であり，式~\eqref{hd23:degenerate-bound} は
+\[
+ F^2+(2-b)F+2-b^2=0
+\]
+となる．その判別式 $D=5b^2-4b-4$ は平方数でなければならない．
+$D=q^2$ と仮定すると
+\[
+ (5b-2)^2-5q^2=24.
+\]
+法三では二つの平方の和が零となるため，$5b-2$ と $q$ はともに三で割り切れる．
+すると左辺は九で割り切れるが右辺は割り切れず，矛盾する．
+
+$s=2$ では $K_0=3$ なので $R_0\in\{1,2,3\}$ である．
+式~\eqref{hd23:degenerate-bound} は
+\[
+ R_0F^2+(R_0-3b+4)F+R_0-b^2+4=0
+\]
+となる．各 $R_0$ における判別式は，順に
+\[
+ D_1=13b^2-30b+5,\quad
+ D_2=17b^2-36b-12,\quad
+ D_3=21b^2-42b-35.
+\]
+$D_1$ が平方数なら，法五の $D_1\equiv3b^2$ により $5\mid b$ と
+平方根の五整除性が必要だが，その場合 $D_1\equiv5\pmod{25}$ となって不可能である．
+$D_2$ が平方数なら，法三の $D_2\equiv2b^2$ により $3\mid b$ と平方根の
+三整除性が必要だが，$D_2\equiv6\pmod9$ となる．
+最後に $D_3=7\bigl(3(b-1)^2-8\bigr)$ である．平方数なら括弧内も七で
+割り切れ，$(b-1)^2\equiv5\pmod7$ を要求するが，五は法七の平方剰余ではない．
+従って全ての場合が排除された．
+\end{proof}
+
+\subsection{保持する必要十分条件と未解決範囲}
+
+新しい障害は第22版の有限復元への必要条件として追加できる．
+残る候補では引き続き $\alpha\ge k\ge b+1$，$m\mid FE-J$，正整数尺度，
+六つの符号条件，および元の残余 $\mathfrak r=0$ を全て確認する．
+通過後の $q,P$ と正の weights の構成は第21版の必要十分復元をそのまま用いる．
+本節の格子表示だけを十分条件としない．
+
+$\delta=1,x=0$ なら $sy=1$ より $s=y=1$ である．
+これは第三項とは別の残余であり，本節で全域排除したとはしない．
+$\delta=0,s<t$，$|\delta|\ge2$，および一般の $a=0,s\ge3$ も残る．
+したがって三高同時非負模型の一般不存在は依然として未解決である．
+
+標準 Python の
+\nolinkurl{verify_high_d_asymmetry_v23.py}
+は本節の恒等式を多項式の係数として再計算し，
+四つの平方障害を法 $9,25,9,49$ の完全な剰余類集合で独立に確認する．
+これらの剰余類検査は探索上限ではなく，全整数を覆う合同式の検証である．
+既存の $144$ 低行の完全復元を繰り返すことは，新定理の証明にも検算にも必要ない．

@@ -1,0 +1,416 @@
+{
+  "version": 11,
+  "status": "passed",
+  "proof_scope": "Exact algebraic certificates for the unbounded equal-two-high-denominator inequality; the text supplies the general order and integer arguments.",
+  "check_count": 88,
+  "checks": [
+    "original conic equals the high-high determinant equation",
+    "K identity after setting delta=s-z",
+    "integer G equals R(e+1)/(sz) on the conic",
+    "Jsz=delta(delta-1)R",
+    "tJ=(delta-1)H",
+    "reciprocal identity used to exclude nonpositive delta",
+    "full unbounded polynomial elimination R^2 L-R M-N=0",
+    "positive coefficient certificate: J=1, delta>=3",
+    "positive coefficient certificate: J=2, delta>=4",
+    "positive coefficient certificate: J=3, delta>=9",
+    "negative derivative of J=3 L at G=1 for delta>=9",
+    "J=3 exact upper bound G<=5 when delta=5",
+    "J=3 exact upper bound G<=2 when delta=6",
+    "J=3 exact upper bound G<=1 when delta=7",
+    "J=3 exact upper bound G<=1 when delta=8",
+    "complete finite residual list after integer t",
+    "independent residual quadratic delta=5,G=3",
+    "nonsquare discriminant delta=5,G=3",
+    "independent residual quadratic delta=6,G=1",
+    "nonsquare discriminant delta=6,G=1",
+    "independent residual quadratic delta=6,G=2",
+    "nonsquare discriminant delta=6,G=2",
+    "independent residual quadratic delta=7,G=1",
+    "nonsquare discriminant delta=7,G=1",
+    "sample conic r=1,t=6,s=4,z=1",
+    "sample all sign conclusions r=1,t=6,s=4,z=1",
+    "sample G,J identities r=1,t=6,s=4,z=1",
+    "sample small-J conclusion r=1,t=6,s=4,z=1",
+    "sample conic r=2,t=1,s=2,z=1",
+    "sample all sign conclusions r=2,t=1,s=2,z=1",
+    "sample G,J identities r=2,t=1,s=2,z=1",
+    "sample small-J conclusion r=2,t=1,s=2,z=1",
+    "sample conic r=2,t=5,s=6,z=3",
+    "sample all sign conclusions r=2,t=5,s=6,z=3",
+    "sample G,J identities r=2,t=5,s=6,z=3",
+    "sample small-J conclusion r=2,t=5,s=6,z=3",
+    "sample conic r=3,t=1,s=3,z=2",
+    "sample all sign conclusions r=3,t=1,s=3,z=2",
+    "sample G,J identities r=3,t=1,s=3,z=2",
+    "sample small-J conclusion r=3,t=1,s=3,z=2",
+    "sample conic r=9,t=2,s=6,z=5",
+    "sample all sign conclusions r=9,t=2,s=6,z=5",
+    "sample G,J identities r=9,t=2,s=6,z=5",
+    "sample small-J conclusion r=9,t=2,s=6,z=5",
+    "sample conic r=15,t=3,s=9,z=8",
+    "sample all sign conclusions r=15,t=3,s=9,z=8",
+    "sample G,J identities r=15,t=3,s=9,z=8",
+    "sample small-J conclusion r=15,t=3,s=9,z=8",
+    "sample conic r=21,t=4,s=12,z=11",
+    "sample all sign conclusions r=21,t=4,s=12,z=11",
+    "sample G,J identities r=21,t=4,s=12,z=11",
+    "sample small-J conclusion r=21,t=4,s=12,z=11",
+    "sample conic r=27,t=5,s=15,z=14",
+    "sample all sign conclusions r=27,t=5,s=15,z=14",
+    "sample G,J identities r=27,t=5,s=15,z=14",
+    "sample small-J conclusion r=27,t=5,s=15,z=14",
+    "sample conic r=33,t=6,s=18,z=17",
+    "sample all sign conclusions r=33,t=6,s=18,z=17",
+    "sample G,J identities r=33,t=6,s=18,z=17",
+    "sample small-J conclusion r=33,t=6,s=18,z=17",
+    "sample conic r=39,t=7,s=21,z=20",
+    "sample all sign conclusions r=39,t=7,s=21,z=20",
+    "sample G,J identities r=39,t=7,s=21,z=20",
+    "sample small-J conclusion r=39,t=7,s=21,z=20",
+    "sample conic r=45,t=8,s=24,z=23",
+    "sample all sign conclusions r=45,t=8,s=24,z=23",
+    "sample G,J identities r=45,t=8,s=24,z=23",
+    "sample small-J conclusion r=45,t=8,s=24,z=23",
+    "sample conic r=51,t=9,s=27,z=26",
+    "sample all sign conclusions r=51,t=9,s=27,z=26",
+    "sample G,J identities r=51,t=9,s=27,z=26",
+    "sample small-J conclusion r=51,t=9,s=27,z=26",
+    "sample conic r=57,t=10,s=30,z=29",
+    "sample all sign conclusions r=57,t=10,s=30,z=29",
+    "sample G,J identities r=57,t=10,s=30,z=29",
+    "sample small-J conclusion r=57,t=10,s=30,z=29",
+    "sample conic r=63,t=11,s=33,z=32",
+    "sample all sign conclusions r=63,t=11,s=33,z=32",
+    "sample G,J identities r=63,t=11,s=33,z=32",
+    "sample small-J conclusion r=63,t=11,s=33,z=32",
+    "sample conic r=69,t=12,s=36,z=35",
+    "sample all sign conclusions r=69,t=12,s=36,z=35",
+    "sample G,J identities r=69,t=12,s=36,z=35",
+    "sample small-J conclusion r=69,t=12,s=36,z=35",
+    "sample conic r=75,t=13,s=39,z=38",
+    "sample all sign conclusions r=75,t=13,s=39,z=38",
+    "sample G,J identities r=75,t=13,s=39,z=38",
+    "sample small-J conclusion r=75,t=13,s=39,z=38"
+  ],
+  "sign_boundaries": [
+    {
+      "case": "J=1, delta>=3",
+      "coefficients_in_delta_minus_lower_bound": [
+        53,
+        73,
+        27,
+        3
+      ]
+    },
+    {
+      "case": "J=2, delta>=4",
+      "coefficients_in_delta_minus_lower_bound": [
+        40,
+        78,
+        24,
+        2
+      ]
+    },
+    {
+      "case": "J=3, delta>=9",
+      "coefficients_in_delta_minus_lower_bound": [
+        45,
+        135,
+        23,
+        1
+      ]
+    }
+  ],
+  "bounded_J3_cases": [
+    {
+      "delta": 5,
+      "G_upper": 5,
+      "L_at_first_excluded_G": -84,
+      "integer_t_candidates": [
+        3
+      ]
+    },
+    {
+      "delta": 6,
+      "G_upper": 2,
+      "L_at_first_excluded_G": -108,
+      "integer_t_candidates": [
+        1,
+        2
+      ]
+    },
+    {
+      "delta": 7,
+      "G_upper": 1,
+      "L_at_first_excluded_G": -132,
+      "integer_t_candidates": [
+        1
+      ]
+    },
+    {
+      "delta": 8,
+      "G_upper": 1,
+      "L_at_first_excluded_G": -508,
+      "integer_t_candidates": []
+    }
+  ],
+  "residual_quadratics": [
+    {
+      "delta": 5,
+      "G": 3,
+      "coefficients_in_R": [
+        77,
+        -912,
+        -225
+      ],
+      "discriminant": 901044,
+      "strict_square_bounds": [
+        949,
+        950
+      ]
+    },
+    {
+      "delta": 6,
+      "G": 1,
+      "coefficients_in_R": [
+        20,
+        -67,
+        -16
+      ],
+      "discriminant": 5769,
+      "strict_square_bounds": [
+        75,
+        76
+      ]
+    },
+    {
+      "delta": 6,
+      "G": 2,
+      "coefficients_in_R": [
+        12,
+        -223,
+        -52
+      ],
+      "discriminant": 52225,
+      "strict_square_bounds": [
+        228,
+        229
+      ]
+    },
+    {
+      "delta": 7,
+      "G": 1,
+      "coefficients_in_R": [
+        47,
+        -284,
+        -63
+      ],
+      "discriminant": 92500,
+      "strict_square_bounds": [
+        304,
+        305
+      ]
+    }
+  ],
+  "supplementary_sample": {
+    "scope": "All positive divisor solutions for 1<=r<=80 and 1<=t<=40; not used to infer the unbounded result.",
+    "parameter_pairs": 3200,
+    "solution_count": 16,
+    "solutions": [
+      {
+        "r": 1,
+        "t": 6,
+        "m": 12,
+        "s": 4,
+        "z": 1,
+        "delta": 3,
+        "H": 9,
+        "G": 2,
+        "J": 3,
+        "eta": 5
+      },
+      {
+        "r": 2,
+        "t": 1,
+        "m": 6,
+        "s": 2,
+        "z": 1,
+        "delta": 1,
+        "H": 3,
+        "G": 3,
+        "J": 0,
+        "eta": 2
+      },
+      {
+        "r": 2,
+        "t": 5,
+        "m": 30,
+        "s": 6,
+        "z": 3,
+        "delta": 3,
+        "H": 5,
+        "G": 1,
+        "J": 2,
+        "eta": 2
+      },
+      {
+        "r": 3,
+        "t": 1,
+        "m": 12,
+        "s": 3,
+        "z": 2,
+        "delta": 1,
+        "H": 2,
+        "G": 2,
+        "J": 0,
+        "eta": 1
+      },
+      {
+        "r": 9,
+        "t": 2,
+        "m": 180,
+        "s": 6,
+        "z": 5,
+        "delta": 1,
+        "H": 6,
+        "G": 6,
+        "J": 0,
+        "eta": 4
+      },
+      {
+        "r": 15,
+        "t": 3,
+        "m": 720,
+        "s": 9,
+        "z": 8,
+        "delta": 1,
+        "H": 10,
+        "G": 10,
+        "J": 0,
+        "eta": 7
+      },
+      {
+        "r": 21,
+        "t": 4,
+        "m": 1848,
+        "s": 12,
+        "z": 11,
+        "delta": 1,
+        "H": 14,
+        "G": 14,
+        "J": 0,
+        "eta": 10
+      },
+      {
+        "r": 27,
+        "t": 5,
+        "m": 3780,
+        "s": 15,
+        "z": 14,
+        "delta": 1,
+        "H": 18,
+        "G": 18,
+        "J": 0,
+        "eta": 13
+      },
+      {
+        "r": 33,
+        "t": 6,
+        "m": 6732,
+        "s": 18,
+        "z": 17,
+        "delta": 1,
+        "H": 22,
+        "G": 22,
+        "J": 0,
+        "eta": 16
+      },
+      {
+        "r": 39,
+        "t": 7,
+        "m": 10920,
+        "s": 21,
+        "z": 20,
+        "delta": 1,
+        "H": 26,
+        "G": 26,
+        "J": 0,
+        "eta": 19
+      },
+      {
+        "r": 45,
+        "t": 8,
+        "m": 16560,
+        "s": 24,
+        "z": 23,
+        "delta": 1,
+        "H": 30,
+        "G": 30,
+        "J": 0,
+        "eta": 22
+      },
+      {
+        "r": 51,
+        "t": 9,
+        "m": 23868,
+        "s": 27,
+        "z": 26,
+        "delta": 1,
+        "H": 34,
+        "G": 34,
+        "J": 0,
+        "eta": 25
+      },
+      {
+        "r": 57,
+        "t": 10,
+        "m": 33060,
+        "s": 30,
+        "z": 29,
+        "delta": 1,
+        "H": 38,
+        "G": 38,
+        "J": 0,
+        "eta": 28
+      },
+      {
+        "r": 63,
+        "t": 11,
+        "m": 44352,
+        "s": 33,
+        "z": 32,
+        "delta": 1,
+        "H": 42,
+        "G": 42,
+        "J": 0,
+        "eta": 31
+      },
+      {
+        "r": 69,
+        "t": 12,
+        "m": 57960,
+        "s": 36,
+        "z": 35,
+        "delta": 1,
+        "H": 46,
+        "G": 46,
+        "J": 0,
+        "eta": 34
+      },
+      {
+        "r": 75,
+        "t": 13,
+        "m": 74100,
+        "s": 39,
+        "z": 38,
+        "delta": 1,
+        "H": 50,
+        "G": 50,
+        "J": 0,
+        "eta": 37
+      }
+    ]
+  },
+  "script_sha256": "35d9317c0414b320e302444c5f4d008ed8f82ca7f695777b0665a30de1560d36"
+}

@@ -1,0 +1,183 @@
+% v16. Complete treatment of the ray-2=B leaf at r=1,z=1.
+
+\subsection{\texorpdfstring{$r=1$}{r=1} における例外的な \texorpdfstring{$B$}{B} 型葉の完全な有限化}
+\label{rb16:section}
+
+二葉三角形の交差標識を取り，$r=z=1$ とする．
+葉 $4$ で ray $2$ が一高分母標準形の $B$ になる場合は，
+この一辺だけを見ても葉の分母を抑えられない．
+以下では，他方の葉と低三角形の条件を同時に使ってこの例外を尽くす．
+
+\begin{proposition}[$B$ 型葉を持つ低三角形の完全表]
+\label{rb16:complete-list}
+交差した正の二高分母 core $2$ で $r=z=1$ とし，
+葉 $4$ の ray $2$ が一高分母標準形の $B$ であるとする．
+三つの低辺 $23,24,34$ の node 条件と $D$ の相殺を全て満たすなら，
+中央 parameters $(s,S,T)$ は
+\[
+ (4,3,12),\quad(4,8,36),\quad(7,4,18),\quad(15,12,64)
+\]
+のいずれかである．標識付き行列の組として，低三角形はそれぞれ
+三，二，一，一個，合計七個である．
+\end{proposition}
+
+\begin{proof}
+$y=T/2$ とすると中央の pair equation は
+\[
+ 3sS-(s+1)y=2s-2
+\]
+となる．従って，ある正整数 $k$ によって
+\begin{equation}\label{rb16:middle-param}
+ (s+1)k=3S-4,\qquad y=sk+2,\qquad T=2sk+4
+\end{equation}
+と書ける．また $S\ge2$，$T>2S$ なので，偶数性から $T\ge2S+2$ である．
+低辺 $23$ の三つの node 区間は
+\begin{equation}\label{rb16:leaf3-row}
+ p^3_{20}\in[S-4,S+1],\quad
+ p^3_{21}\in[-T-4,1-T],\quad
+ p^3_{24}\in[T-S-3,T-S+2]
+\end{equation}
+を与える．後二者はそれぞれ厳密に負，厳密に正である．
+
+葉 $3$ で ray $2=B$ は不可能である．ray $2=C$ なら
+$p^3_{20}=-th$ より $S\le3$ であり，後二者の符号から $c\ne0,d=0$ となる．
+係数相殺 $D^3_2=2-s$ は $h=2-s$，従って $s=h=1$ を与える．
+式~\eqref{rb16:middle-param} によって唯一の中央模型
+$(s,S,T)=(1,2,6)$ が残る．これを後の有限計算に含める．
+
+従って残る場合は葉 $3$ の ray $2=D$ である．
+式~\eqref{rb16:leaf3-row} の後二者の一つはその $d$ なので $d\ne0,c=0$ であり，
+係数相殺から
+\begin{equation}\label{rb16:h-def}
+ h=s-3\ge1,\quad u=th,\quad v=t(h+1),\quad
+ (h+4)k=3S-4,\quad T=2(h+3)k+4
+\end{equation}
+を得る．以下の二つの割当を尽くせばよい．
+
+\smallskip\noindent
+\textbf{I．葉 $3$ の ray $4=C$，ray $1=B$．}
+この場合 $d>0$ である．低辺 $34$ の puncture $1$ において，
+葉 $4$ の ray $3=D$ とすると $u-1+v_4>1$ となるので不可能である．
+従って葉 $4$ の ray $3=C$，ray $0=D$ であり，その parameters を
+$h_4,t_4,c_4,d_4$，$u_4=t_4h_4$ とする．同じ低辺の node 条件から
+\[
+ c_4-u\in[-4,1],\qquad u-1-u_4\in[-4,1].
+\]
+$c_4=0$ なら直ちに $u\le4$ である．
+$c_4\ne0$ なら $d_4=0$ なので，係数相殺が $h_4=d-h$ を与える．
+$d\ge T-S-3$，$h_4\le u_4\le u+3$ より
+\[
+ T\le S+h(t+1)+6.
+\]
+一方，$v\le S+1$ より $3t(h+1)\le(h+4)k+7$ である．
+これらを式~\eqref{rb16:h-def} に代入すると
+\begin{equation}\label{rb16:caseI-bound}
+ (4h^2+15h+14)k\le3h^2+20h+10
+\end{equation}
+となる．$k\ge1$ から $(h-1)(h-4)\le0$，従って $1\le h\le4$ である．
+この四値では右辺は左辺の $k$ の係数の二倍より小さいので $k=1$ である．
+$3S=h+8$ の整数性から $(h,S)=(1,3)$ または $(4,4)$ に限られ，
+$v\le S+1$ からそれぞれ $t\le2$ または $t=1$ である．
+従ってこの場合にも $th\le4$ となる．
+以上により場合 I の候補は
+\begin{equation}\label{rb16:caseI-finite}
+ 1\le h\le4,\quad 1\le t\le\lfloor4/h\rfloor,\quad
+ t(h+1)-1\le S\le t(h+1)+4
+\end{equation}
+という証明由来の有限集合に入る．
+
+\smallskip\noindent
+\textbf{II．葉 $3$ の ray $4=B$，ray $1=C$．}
+この場合 $d<0$ であり，葉 $3$ の row $4$ は
+$p^3_{40}=-1,p^3_{41}=p^3_{42}=0$ である．
+従って低辺 $34$ の puncture $1$ は再び葉 $4$ の ray $3=D$ を排除し，
+ray $3=C$，ray $0=D$ を強制する．node 条件は
+\[
+ 1\le u_4=t_4h_4\le4,\qquad u_4-2\le c_4\le2
+\]
+を与える．$m_4=t_4h_4(h_4+1)$ として
+\[
+ C_4=m_4+t_4+h_4+c_4+2
+\]
+と置く．$u_4=1,2,3,4$ の全約数表示を取ると，$C_4$ の最大値は
+それぞれ $8,13,20,29$ である．特に $C_4\le29$ となる．
+
+ここで
+\[
+ \alpha=S-t(h+1)\in[-1,4],\qquad \beta=T+d\in[-4,1]
+\]
+と置く．低辺 $24,34$ の $D$ 相殺を加減すると
+\begin{equation}\label{rb16:caseII-balance}
+ th+\alpha(h+1)+k+2=C_4+\beta\le30
+\end{equation}
+を得る．実際，$E=-D^2_4=(s+1)S-3y$ とすると
+$E+T=t(h^2+h+1)+C_4+\beta$ であり，
+$E+T=(h+1)S+k+2$ を代入すればよい．
+従って $\alpha\ge0$ なら $th\le27$，
+$\alpha=-1,t\ge2$ なら $h(t-1)\le28$ である．
+残る $\alpha=-1,t=1$ では $S=h$ なので
+\[
+ k=3-\frac{16}{h+4}.
+\]
+正整数性により $h+4=8$ または $16$，すなわち $h=4,12$ だけが残る．
+これで場合 II も分母上限を仮定せず有限化された．
+
+式~\eqref{rb16:caseI-finite} と場合 II の三つの有限集合に，
+式~\eqref{rb16:middle-param}，$S\ge2$，$sS$ の偶数性を課す．
+先の例外 $(1,2,6)$ も含めて，中央模型は三十三個となる．
+それぞれに対し，葉 $3$ は補題~\ref{tl15:finite-leaves} の
+$C/D$ 復元式と同じ node 区間・係数相殺から全て復元する．
+固定した葉 $3$ に続く $B$ 型葉 $4$ も有限に復元できる．
+実際，$E=-D^2_4,F=-D^3_4,N=p^3_{42}$，$L(H)=H(H+1)+1$ と置く．
+葉 $4$ の ray $3=C$ で $d_4=0$ なら $H=F\ge1$ が固定され，
+$-4\le t_4(H+1)^2-E+N\le1$ が $t_4$ を有限化する．
+同じ ray 割当で $c_4=0$ なら $t_4L(H)+H+1=E+F$ が全候補を有限化する．
+ray $3=D$ で $c_4=0$ なら $H=-1-F\ge1$ が固定され，
+$-4\le t_4H^2-E+N\le1$ を用いる．
+同じ割当で $d_4=0$ なら $t_4L(H)-H=E+F$ と
+$t_4L(H)-H\ge H^2+1$ を用いる．
+残る自由係数は $D^4_2=E$ によって一意に決まる．
+この四場合は $c_4d_4=0$ を尽くし，両係数の符号にも制限を置かない．
+元の三つの低辺の条件を再検査した結果は次の完全表である．
+\[
+\begin{array}{rrr|r|l}
+ s&S&T&\#\text{行列組}&(q_{03},q_{14})\\\hline
+ 4&3&12&3&(3,3),(5,3),(5,3)\\
+ 4&8&36&2&(9,7),(9,5)\\
+ 7&4&18&1&(21,3)\\
+ 15&12&64&1&(157,3)
+\end{array}
+\]
+同じ分母対 $(5,3)$ を持つ二組は，葉 $3$ の標識付き行列が異なる．
+\nolinkurl{verify_r1_B_leaf_v16.py} は全生成範囲と棄却理由，
+三十三模型，七組の全行列を記録し，row sums と pair products も再検査する．
+\end{proof}
+
+\begin{proposition}[$B$ 型葉の中心への延長障害]
+\label{rb16:no-B-extension}
+命題~\ref{rb16:complete-list} の七組は全て，中心 core $0$ へ延長できない．
+この段階の矛盾には，未知分母 $q_{01}$，中心での $D$ 相殺，
+または三高分母 core の一般分類は不要である．
+\end{proposition}
+
+\begin{proof}
+$a=q_{02}=sS+1$，$Q=q_{03}$ とし，葉 $3$ の parameter を $h=s-3$ とする．
+中心 $0$ の rays $2,3$ に関する pair equation と node 条件は
+\begin{equation}\label{rb16:center-pair}
+ \{a(1-n)+s\}\{Q(1-m)-h\}=aQ-1,
+ \qquad n,m\in\{0,1,2,3,4,5\}
+\end{equation}
+を要求する．ここで $n=n_{02;3}$，$m=n_{03;2}$ である．
+七組に現れる $(a,Q,h)$ を代入すると，
+$(a,Q)=(13,3),(13,5),(29,21),(181,157)$ では全三十六組に解がない．
+$(a,Q,h)=(33,9,1)$ の場合だけ $(n,m)=(0,0)$ が残る．
+
+この最後の場合には，二つの葉 $4$ の行列で
+$p^4_{02}=18$ または $16$ である．一方，高辺 $02$ の共通低 puncture $4$ では
+$p^2_{04}=a-1=32$ なので，符号付き約数の分類から
+\[
+ (p^0_{24},p^0_{42})=(1,32)\quad\text{または}\quad(-32,-1)
+\]
+しかない．どちらも $p^0_{42}+p^4_{02}\in[-4,1]$ に反する．
+以上で全七組を排除した．
+\end{proof}

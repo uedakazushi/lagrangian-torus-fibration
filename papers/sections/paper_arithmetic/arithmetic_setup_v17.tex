@@ -1,0 +1,182 @@
+% Standalone arithmetic setup for the third paper, v17.
+% SurfaceGeometry is the companion geometric manuscript (root supplies its entry).
+\section{標準五次模型と整数データ}
+\label{ar17:setup}
+
+\subsection{五つの cores と四直線の作用座標}
+
+五つの一般位置の平面の和へ退化する五次曲面を考え，成分を
+$V=\{0,1,2,3,4\}$ で標識する．各成分の blow-down 上の境界は
+一般位置の四直線であり，その局所模型を \emph{core} と呼ぶ．
+core $i$ の四つの境界直線，従って四つの branch rays は
+$V\setminus\{i\}$ で標識される．共有二重曲線 $C_{ij}$ に対応する
+branch を $ij$ と記すと，大域 branch graph は $K_5$ である．
+その branch の三つの punctures は $k\in V\setminus\{i,j\}$ に対応する．
+順序付き小解消では，この二重曲線の一方の側に五つの blow-up patches がある．
+これらの幾何的な準備，SNC 境界に沿う相対構成，および実際の smoothing との比較は
+伴論文\cite{SurfaceGeometry}で扱う．以下の整数問題は，これらの構成を再実行せずに定義できる．
+
+一つの四直線 core では標識を $0,1,2,3$ と取り直すことがある．
+標準 fan の ambient tangent lattice を
+\[
+ N_4=\ZZ^4/\ZZ(1,1,1,1),\qquad r_j=[e_j]
+\]
+とする．$\sum_jr_j=0$ であり，fan は四本の rays $\RR_{\ge0}r_j$ と
+六つの二次元 cones $\RR_{\ge0}r_j+\RR_{\ge0}r_k$，$j<k$，からなる．
+これは一様 matroid $U_{3,4}$ の Bergman fan の標準的な粗い fan 構造で，link は $K_4$ である
+\cite{FeichtnerSturmfels,ArdilaKlivans}．
+
+\begin{definition}[作用座標に適合する cone chart]
+\label{per:chart-definition}
+Liouville cone 型 torus fibration の底の core 頂点を $o$ とする．
+標準 $K_4$ fan の原点近傍への，strata を保つ同相写像 $F$ を考える．
+正則 face $e$ の torus fiber $T_e$ に対して
+$L_e=H_1(T_e;\ZZ)$ と置く．作用一形式 $\dd I_\gamma$ は $L_e$ を整数余接線格子に同定する．
+各 face 上で $F$ が作用座標の整数線形変換であり，その微分が
+\[
+ L_e^*=\operatorname{Hom}(L_e,\ZZ)
+ \longrightarrow N_4\cap\operatorname{span}_{\RR}F(e)
+\]
+の格子同型となり，さらに各 branch ray の接線格子が全 incident faces で飽和しているとき，
+$F$ を\emph{作用適合 cone chart} と呼ぶ．core の像は原点に正規化する．
+\end{definition}
+
+この定義で同定するのは fan の整数接線格子と $L_e^*$ である．
+補集合の全ての一次ホモロジー類に ambient linear function を割り当てる追加条件は課さない．
+大域の作用適合 atlas では，重なりの変換は ambient 整数アフィン変換の制限であり，
+共有 branch に追加の特異点を入れずに接続するものを対象とする．
+単に各 face 上の格子を別々に同定する条件とは区別する．
+
+\subsection{局所の行和，pair products，面積正値性}
+
+一つの core の四つの branch denominators を $q_j\in\ZZ_{>0}$ とし，
+$P=(p_{jk})$ を対角成分零の整数行列とする．
+本稿の符号では，crossing face $jk$ 上の作用座標は
+\begin{equation}\label{ar17:action-matrix}
+ \begin{pmatrix}I_{\mu_j}\\ I_{\mu_k}\end{pmatrix}
+ =\begin{pmatrix}-q_j&-p_{kj}\\-p_{jk}&-q_k\end{pmatrix}
+   \begin{pmatrix}t_j\\t_k\end{pmatrix},\qquad
+ F=t_jr_j+t_kr_k.
+\end{equation}
+ここで $\mu_j,\mu_k$ は正の meridians であり，作用積分の単位は $1/(2\pi)$ とする．
+ray $j$ 上の normal action は $-q_jt_j$ なので，$q_j$ は
+primitive branch 座標に対する normal action の整数係数の絶対値である．
+
+\begin{definition}[局所整数データと正値性]
+\label{ar17:local-data}
+局所整数データとは，全ての $j\ne k$ について
+\begin{align}
+ \sum_{k\ne j}p_{jk}&=-q_j,\label{ar17:local-row}\\
+ p_{jk}p_{kj}&=q_jq_k-1\label{ar17:local-pair}
+\end{align}
+を満たす $(q,P)$ である．さらに，正実数 $w_j$ が存在して
+\begin{equation}\label{ar17:local-positive}
+ B_{jk}:=w_k-\frac{p_{jk}}{q_j}w_j>0\qquad(j\ne k)
+\end{equation}
+となるとき，このデータを\emph{正}と呼ぶ．
+$q_j=1$ の ray を低分母，$q_j>1$ の ray を高分母と呼ぶ．
+\end{definition}
+
+式~\eqref{ar17:local-row} は三つの punctures の period relation，
+式~\eqref{ar17:local-pair} は作用行列~\eqref{ar17:action-matrix} の determinant 一を表す．
+後者から $\gcd(q_j,p_{jk})=1$ も従う．
+また，もし $q_j$ が偶数なら三つの $p_{jk}$ が全て奇数となり，
+その和が $-q_j$ に等しいことと矛盾する．従って局所整数データの分母は自動的に奇数である．
+
+$W=\sum_jw_j$ と置くと，行和から $\sum_{k\ne j}B_{jk}=W$ となる．
+幾何的には $2\pi B_{jk}$ は直線 $j$ の $k$-puncture basin の面積であり，
+三つの basins が面積 $2\pi W$ の全直線を尽くす．
+命題~\ref{q9:four-line-criterion} は，この整数条件と正値性から，
+指定した marked Morse foliation の相対 isotopy class 内で実際の局所 chart を得ることを示す．
+正の weights の存在は，$p_{jk}>0$ のときだけ有向辺 $j\to k$ を置き，
+全ての simple directed cycles $C$ に対し
+\begin{equation}\label{ar17:positive-cycles}
+ \prod_{(j\to k)\in C}p_{jk}<\prod_{j\in C}q_j
+\end{equation}
+を要求することと同値である（補題~\ref{kl10:cycle-positive}）．
+四頂点なので長さ二，三，四だけを検査すればよく，成立する場合には weights を有理数に取れる．
+
+局所の normal-action 分岐係数を
+\begin{equation}\label{ar17:D-local}
+ D_j=-q_j-\sum_{k\ne j}p_{kj}
+\end{equation}
+と定める．これは標準 branch star の relation
+$\sum_{k\ne j}r_k=-r_j$ に対し，normal action の transverse slopes の和を取った係数である．
+行和を全て足すと
+\begin{equation}\label{ar17:D-sum}
+ \sum_jD_j=0
+\end{equation}
+が従う．文中の $\mathfrak d_j$ と $D_j$ は，この同じ正規化の係数を表す．
+
+\subsection{五つの core 間の整数 clutching と node 条件}
+
+大域標識 $V$ に戻る．共有 branch の分母は両端で共通の
+$q_{ij}=q_{ji}\in\ZZ_{>0}$ とする．core $i$ の行列成分を
+$p^i_{jk}$，$j,k\in V\setminus\{i\}$，$j\ne k$，と書く．
+局所の条件は，その core において $q_j=q_{ij}$ とした
+式~\eqref{ar17:local-row}--\eqref{ar17:local-positive} である．
+特に，core $i$ の ray $ij$ における係数は
+\begin{equation}\label{ar17:D-global}
+ D^i_j=-q_{ij}-\sum_{k\in V\setminus\{i,j\}}p^i_{kj}
+\end{equation}
+となる．
+
+共有 puncture $ijk$ の整数 clutching は
+\begin{equation}\label{ar17:clutching}
+ q_{ij}\mid p^i_{jk}+p^j_{ik}
+\end{equation}
+を要求する．node 数は，この整数を用いて
+\begin{equation}\label{ar17:node}
+ n_{ij;k}=n_{ji;k}
+ :=1-\frac{p^i_{jk}+p^j_{ik}}{q_{ij}}
+ \in\ZZ_{\ge0}
+\end{equation}
+と定める．この式は marked puncture における normal framing の比較から来る．
+両端の三つの row entries の和がそれぞれ $-q_{ij}$ であるため，
+\begin{equation}\label{ar17:node-budget}
+ \sum_{k\in V\setminus\{i,j\}}n_{ij;k}=5,
+ \qquad 0\le n_{ij;k}\le5
+\end{equation}
+が従う．五という総数を，三つの node 数から独立の自由変数として扱わない．
+さらに，共有 branch の対向端で normal action の向きが逆になることから
+\begin{equation}\label{ar17:D-opposition}
+ D^i_j+D^j_i=0
+\end{equation}
+を課す．
+
+\begin{definition}[五次の算術的接着データ]
+\label{ar17:admissible}
+$K_5$ の十辺上の正整数 $q_{ij}$ と，対角成分が零の五つの整数行列 $P^i$ が，
+各 core の行和，pair products，正値性，および全共有辺の
+整数 clutching，node 非負性，対向 $D$ 相殺を満たすとき，
+\emph{五次の算術的接着データ}と呼ぶ．
+その\emph{高分母 support} は，頂点集合 $V$ と辺集合
+\begin{equation}\label{ar17:high-support}
+ E(H)=\{\{i,j\}:q_{ij}>1\}
+\end{equation}
+を持つ単純 graph $H\subset K_5$ とする．
+support の使用頂点とは少なくとも一本の高辺に接する頂点であり，
+core $i$ の高分母次数は $\deg_H(i)$ である．
+\end{definition}
+
+定理ごとに，この定義のどの部分を使うかを明記する．
+例えば素数 support の合同障害は行和・pair products・整数 clutching だけを使い，
+いくつかの小さい support の障害は正値性や対向 $D$ 相殺を必要としない．
+一方，幾何的な大域 atlas を構成する際は，局所 weights による実面積と
+有限 smoothing parameter における作用切片の一致も必要になる．
+定義~\ref{ar17:admissible} は大域 atlas に対する必要な算術条件をまとめたものであり，
+これらの実条件まで含む十分条件ではない．
+
+\subsection{三つの異なる有向・無向 graph}
+
+support $H$ の vertices は五つの cores である．これに対し，
+式~\eqref{ar17:positive-cycles} の有向 graph の vertices は
+一つの core に属する四つの rays であり，別の graph である．
+さらに奇素数 $\ell$ に対して
+\[
+ E(G_\ell)=\{\{i,j\}:\ell\mid q_{ij}\}
+\]
+と定める素数 support は，$H$ の部分 graph である．
+高分母の辺が同じ素因数を共有するとは限らないので，
+$G_\ell$ に対する禁止部分 graph の結果を $H$ にそのまま移すことはできない．
+以下ではこの三者を区別して局所正値性，合同障害，大域接着を組み合わせる．

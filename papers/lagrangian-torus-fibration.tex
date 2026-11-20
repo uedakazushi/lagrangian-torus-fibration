@@ -1,86 +1,53 @@
-% LuaLaTeX, run "latexmk" in repository root
-\documentclass[a4paper,11pt]{ltjsarticle}
-\usepackage[margin=27mm]{geometry}
-\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
-\usepackage[unicode,colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
-\theoremstyle{plain}
-\newtheorem{proposition}{命題}[section]
-\newtheorem{lemma}[proposition]{補題}
-\theoremstyle{definition}
-\newtheorem{definition}[proposition]{定義}
-\newtheorem{conjecture}[proposition]{予想}
-\theoremstyle{remark}
-\newtheorem{remark}[proposition]{注意}
-\newcommand{\PP}{\mathbb P}
-\newcommand{\RR}{\mathbb R}
-\newcommand{\CC}{\mathbb C}
-\newcommand{\T}{\mathbb T}
-\DeclareMathOperator{\Ric}{Ric}
-\title{一般型曲面のLagrangian torus fibration\\相対接着・分岐底空間・整数ホモロジー}
+\documentclass[11pt,a4paper]{article}
+\makeatletter\def\input@path{{sections/paper/}{sections/paper/}}\makeatother
+\input{sections/common.tex}
+\hypersetup{pdftitle={一般型射影曲面のLagrangian torus fibrationと作用適合matroidal atlas},pdfauthor={}}
+\title{一般型射影曲面の\\Lagrangian torus fibrationと\\作用適合matroidal atlas\\[0.5em]\large 相対SNC構成、次数分割と分岐底空間、大域作用座標の接着}
 \author{}
-\date{2026年11月20日 / GitHub移行用再構成草稿 v0.1}
+\date{2026年10月28日\quad 第25稿}
 \begin{document}
 \maketitle
-
 \begin{abstract}
-滑らかな一般型超曲面$X_d\subset\PP^3$に対し、特定のKähler class上で
-branched baseを持つLagrangian torus fibrationを作る問題を考える。
-2026年10月27日付の30頁原PDF（第5稿）はrelative compactification、
-Liouville collars、divisor-preserving Moser同定、baseの整数ホモロジーを扱う。
-本ファイルはその論理構造を整理した再構成草稿であり、
-原PDFの全証明を忠実に転記したものではない。
+次数 $d\ge5$ の滑らかな射影曲面 $X_d\subset\PP^3$ に対し，hyperplane Kähler class を保つ
+Lagrangian torus fibration を構成する．底空間は自由な辺のないコンパクトな三価分岐二次元複体であり，
+正則 fiber は $T^2$，分岐 fiber は $S^1\times(S^1\vee S^1)$ である．
+任意 genus の SNC divisor に対する有限相対 compactification を与え，
+$k\ge3$ の任意の次数分割 $d=\sum e_i$ から，$k$ 個の cores と
+$d\sum_{i<j}e_i e_j$ 個の nodes を持つ fibration を得る．
+その底空間の整数位相と，順序付き小解消における vertical Kähler slice も記述する．
+五次・六次の全平面分割では，focus affine singularities を許す大域作用適合 matroidal atlas を構成する．
+共有曲線の critical areas と normal framing を同時に合わせ，単一の neck primitive と
+parameter に相対的な Moser 法により，有限の平滑化 parameter でも作用の加法定数と直線性を保つ．
+五次では各 triangle に五つ，六次では各 triangle に三つ・各 bigon に二つの nodes が入り，
+全 branch の正規化された長さは $a/(\pi(d-1))$ となる．
+混合五次分割 $(1,1,1,2)$ では，各々の $K_4$ および $K_{3,3}$ core に作用適合 chart があるが，
+四 puncture neck の分母剛性と法円作用の分岐係数の総和により，任意の branch denominators を許しても大域接続は存在しない．
+三価 matroidal links の分類と合わせ，現在の比例曲率 SNC cores と branch graph を保ち，
+追加の branch singularities を入れない範囲で作用適合 matroidal atlas が可能な次数分割は，
+全平面の五次と六次に限られる．六次では全分母が一に強制される．
+さらに局所作用周期の条件と，標準 algebraic filling との相違を記述する．
 \end{abstract}
-\section{一般型曲面と偏極}
-\begin{proposition}
-滑らかな次数$d$の超曲面$X_d\subset\PP^3$について
-\[
- K_{X_d}\simeq\mathcal O_{X_d}(d-4)
-\]
-である。特に$d\ge5$では$K_{X_d}$はampleである。
-\end{proposition}
-\begin{proof}
-adjunction formulaにより
-$K_{X_d}=(K_{\PP^3}+X_d)|_{X_d}=
-\mathcal O_{\PP^3}(d-4)|_{X_d}$。
-$d-4>0$ならhyperplane classの正倍はampleである。
-\end{proof}
-\section{基底の分岐とfibers}
-原PDFの構成は通常の閉曲面ではない自由辺なしの
-compact branched two-complex $B_d$を基底とする。
-regular fiberは$\T^2$、branch edgeでは
-$S^1\times(S^1\vee S^1)$という特異fibre modelを用いる。
-\begin{definition}
-$X$のsymplectic form $\omega$に関し、
-$f:X\to B$のregular locusでfiber $F$が
-$\dim_\RR F=\frac12\dim_\RR X$かつ$\omega|_F=0$なら、
-そのregular fibersをLagrangianと呼ぶ。
-\end{definition}
-\section{相対構成の検証単位}
-原PDFで中心となる接着の入力は次の四段階である。
-\begin{enumerate}
-\item pants decomposition上で、boundary fibersまで管理したlocal modelを構成する。
-\item 指定Morse foliationを保つfinite-volume Liouville collarをとる。
-\item divisorを保つMoser identificationにより指定Kähler classと整合させる。
-\item positive normal momentで切ったregion上のequivariant symplectic
-transportを行い、fiberwise Lagrangian条件とbranching dataを照合する。
-\end{enumerate}
-これらは互いに独立の局所技法だが、境界での相対条件を同時に満たすことが
-global theoremの鍵である。原PDF v5はその構成を与えたと主張するが、
-本移行稿では各接着補題を完全な形で再掲しておらず、今回独立に監査していない。
-\section{基底の位相と比較}
-原稿は各marked pants treeに対して、base $B_d$から
-単体の2-skeletonへのhomotopy equivalenceと整数係数のchain homotopy、
-$H_2(B_d;\mathbb Z)$のbasisを与える。
-具体的なchain matricesの忠実な再現には原PDFと旧source ZIPの再照合が必要である。
-局所正則部分のintegral-affine structureはLagrangian fibrationの
-action coordinatesから得られるが、branch/coreを含むstrict tropical atlas、
-special Lagrangian性は証明したと主張しない。
-\section{公表までの最優先事項}
-第一にPDF v5の全補題とその証明を正規のLuaLaTeXソースとして移す。
-第二にMoser deformationが保持するKähler classの許容領域と
-boundary moment mapsを厳密に確認する。
-第三にbranch edgeからcoreへ移るmonodromyとintegral homology
-の全接着を独立に監査する。
-これはKE degenerationから自動的に従うものではない。
-
+\tableofcontents
+\input{sections/paper/geometry_introduction_v25.tex}
+\input{sections/paper/geometry_main_statements_v17.tex}
+\input{sections/paper/degeneration_polarization.tex}
+\input{sections/paper/relative_compactification.tex}
+\input{sections/paper/neck_models.tex}
+\input{sections/paper/global_gluing.tex}
+\input{sections/paper/base_topology.tex}
+\input{sections/paper/degree_partitions.tex}
+\input{sections/paper/partition_topology.tex}
+\input{sections/paper/tropical_obstructions.tex}
+\input{sections/paper/petersen_periods.tex}
+\input{sections/paper/quadric_periods.tex}
+\input{sections/paper/mixed_plane_periods.tex}
+\input{sections/paper/atlas_gluing.tex}
+\input{sections/paper/neck_action_matching.tex}
+\input{sections/paper/quintic_gluing.tex}
+\input{sections/paper/sextic_gluing.tex}
+\input{sections/paper/global_action_atlas.tex}
+\input{sections/paper/mixed_global_obstruction.tex}
+\input{sections/paper/mixed_all_denominator_obstruction.tex}
+\input{sections/paper/invariants_examples.tex}
+\input{sections/paper/geometry_bibliography_v25.tex}
 \end{document}

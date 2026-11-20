@@ -1,0 +1,1672 @@
+{
+  "version": "v14",
+  "passed": true,
+  "polynomial_identities": 26,
+  "identity_names": [
+    "beta-nonnegative elimination",
+    "beta-nonnegative strict numerator",
+    "negative determinant upper-bound difference",
+    "beta=-1 arbitrary-k first equation",
+    "beta=-1 arbitrary-k second equation",
+    "beta=-1 arbitrary-k third equation",
+    "beta=-1 strict T upper bound",
+    "beta=-1 determinant lower bound",
+    "beta=-1 k-zero denominator",
+    "boundary first equation",
+    "boundary second equation",
+    "boundary third equation",
+    "boundary first divisor certificate",
+    "boundary second divisor certificate",
+    "boundary S>U numerator",
+    "boundary scaled row 0",
+    "boundary scaled row 1",
+    "boundary scaled row 2",
+    "boundary scaled row 3",
+    "boundary scaled pair 0,1",
+    "boundary scaled pair 0,2",
+    "boundary scaled pair 0,3",
+    "boundary scaled pair 1,2",
+    "boundary scaled pair 1,3",
+    "boundary scaled pair 2,3",
+    "P3 low-center inequality"
+  ],
+  "labelled_graphs_checked": 64,
+  "remaining_labelled_graphs": [
+    {
+      "mask": 9,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "degrees": [
+        1,
+        2,
+        1,
+        0
+      ],
+      "type": "P3_low_endpoint"
+    },
+    {
+      "mask": 10,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "degrees": [
+        1,
+        1,
+        2,
+        0
+      ],
+      "type": "P3_low_endpoint"
+    },
+    {
+      "mask": 11,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "degrees": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "type": "triangle_containing_low"
+    },
+    {
+      "mask": 12,
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "degrees": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "type": "perfect_matching"
+    },
+    {
+      "mask": 13,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "degrees": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "type": "P4_low_internal"
+    },
+    {
+      "mask": 14,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "degrees": [
+        2,
+        1,
+        2,
+        1
+      ],
+      "type": "P4_low_internal"
+    },
+    {
+      "mask": 17,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "degrees": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "type": "P3_low_endpoint"
+    },
+    {
+      "mask": 18,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "degrees": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "type": "perfect_matching"
+    },
+    {
+      "mask": 19,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "degrees": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "type": "P4_low_internal"
+    },
+    {
+      "mask": 20,
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "degrees": [
+        1,
+        1,
+        0,
+        2
+      ],
+      "type": "P3_low_endpoint"
+    },
+    {
+      "mask": 21,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "degrees": [
+        2,
+        2,
+        0,
+        2
+      ],
+      "type": "triangle_containing_low"
+    },
+    {
+      "mask": 22,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "degrees": [
+        2,
+        1,
+        1,
+        2
+      ],
+      "type": "P4_low_internal"
+    },
+    {
+      "mask": 33,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "degrees": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "type": "perfect_matching"
+    },
+    {
+      "mask": 34,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "degrees": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "type": "P3_low_endpoint"
+    },
+    {
+      "mask": 35,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "degrees": [
+        2,
+        1,
+        2,
+        1
+      ],
+      "type": "P4_low_internal"
+    },
+    {
+      "mask": 36,
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "degrees": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "type": "P3_low_endpoint"
+    },
+    {
+      "mask": 37,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "degrees": [
+        2,
+        1,
+        1,
+        2
+      ],
+      "type": "P4_low_internal"
+    },
+    {
+      "mask": 38,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "degrees": [
+        2,
+        0,
+        2,
+        2
+      ],
+      "type": "triangle_containing_low"
+    }
+  ],
+  "remaining_types": {
+    "P3_low_endpoint": 6,
+    "triangle_containing_low": 3,
+    "perfect_matching": 3,
+    "P4_low_internal": 6
+  },
+  "excluded_graph_counts": {
+    "low row integer sum": 8,
+    "two isolated vertices": 3,
+    "P3 low-center strict inequality": 3,
+    "negative row sum": 23,
+    "negative low neighbor cannot have two positive entries": 9
+  },
+  "complete_fixed_boundary_fibers": [
+    {
+      "s": 2,
+      "t": 1,
+      "K0": 4,
+      "divisor_integer": 4,
+      "all_trials": [
+        {
+          "G": 1,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 2,
+          "alpha": 3,
+          "S_T_U": [
+            "9",
+            "6",
+            "3"
+          ],
+          "accepted": true
+        },
+        {
+          "G": 4,
+          "alpha": 4,
+          "S_T_U": [
+            "8",
+            "4",
+            "2"
+          ],
+          "accepted": true
+        }
+      ],
+      "all_integer_models": [
+        {
+          "q": [
+            19,
+            7,
+            7,
+            1
+          ],
+          "p": [
+            [
+              0,
+              12,
+              -22,
+              -9
+            ],
+            [
+              11,
+              0,
+              -12,
+              -6
+            ],
+            [
+              -6,
+              -4,
+              0,
+              3
+            ],
+            [
+              -2,
+              -1,
+              2,
+              0
+            ]
+          ],
+          "D": [
+            -22,
+            -14,
+            25,
+            11
+          ],
+          "weights": [
+            "19",
+            "265/22",
+            "13/6",
+            "1"
+          ],
+          "odd_denominators": true,
+          "alpha": 3,
+          "G": 2,
+          "S_T_U": [
+            9,
+            6,
+            3
+          ]
+        },
+        {
+          "q": [
+            17,
+            5,
+            5,
+            1
+          ],
+          "p": [
+            [
+              0,
+              12,
+              -21,
+              -8
+            ],
+            [
+              7,
+              0,
+              -8,
+              -4
+            ],
+            [
+              -4,
+              -3,
+              0,
+              2
+            ],
+            [
+              -2,
+              -1,
+              2,
+              0
+            ]
+          ],
+          "D": [
+            -18,
+            -13,
+            22,
+            9
+          ],
+          "weights": [
+            "17",
+            "169/14",
+            "9/4",
+            "1"
+          ],
+          "odd_denominators": true,
+          "alpha": 4,
+          "G": 4,
+          "S_T_U": [
+            8,
+            4,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "s": 2,
+      "t": 5,
+      "K0": 32,
+      "divisor_integer": 32,
+      "all_trials": [
+        {
+          "G": 1,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 2,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 4,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 8,
+          "alpha": 4,
+          "S_T_U": [
+            "2",
+            "6",
+            "1"
+          ],
+          "accepted": true
+        },
+        {
+          "G": 16,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 32,
+          "rejected": "alpha not integral"
+        }
+      ],
+      "all_integer_models": [
+        {
+          "q": [
+            5,
+            31,
+            7,
+            1
+          ],
+          "p": [
+            [
+              0,
+              14,
+              -17,
+              -2
+            ],
+            [
+              11,
+              0,
+              -36,
+              -6
+            ],
+            [
+              -2,
+              -6,
+              0,
+              1
+            ],
+            [
+              -2,
+              -5,
+              6,
+              0
+            ]
+          ],
+          "D": [
+            -12,
+            -34,
+            40,
+            6
+          ],
+          "weights": [
+            "5",
+            "309/22",
+            "13/2",
+            "1"
+          ],
+          "odd_denominators": true,
+          "alpha": 4,
+          "G": 8,
+          "S_T_U": [
+            2,
+            6,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "s": 3,
+      "t": 4,
+      "K0": 30,
+      "divisor_integer": 60,
+      "all_trials": [
+        {
+          "G": 1,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 2,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 3,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 4,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 5,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 6,
+          "alpha": 3,
+          "S_T_U": [
+            "6",
+            "9",
+            "3"
+          ],
+          "accepted": true
+        },
+        {
+          "G": 10,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 12,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 15,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 20,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 30,
+          "alpha": 5,
+          "S_T_U": [
+            "4",
+            "3",
+            "1"
+          ],
+          "accepted": true
+        },
+        {
+          "G": 60,
+          "rejected": "alpha not integral"
+        }
+      ],
+      "all_integer_models": [
+        {
+          "q": [
+            19,
+            37,
+            19,
+            1
+          ],
+          "p": [
+            [
+              0,
+              27,
+              -40,
+              -6
+            ],
+            [
+              26,
+              0,
+              -54,
+              -9
+            ],
+            [
+              -9,
+              -13,
+              0,
+              3
+            ],
+            [
+              -3,
+              -4,
+              6,
+              0
+            ]
+          ],
+          "D": [
+            -33,
+            -47,
+            69,
+            11
+          ],
+          "weights": [
+            "19",
+            "1405/52",
+            "37/6",
+            "1"
+          ],
+          "odd_denominators": true,
+          "alpha": 3,
+          "G": 6,
+          "S_T_U": [
+            6,
+            9,
+            3
+          ]
+        },
+        {
+          "q": [
+            13,
+            13,
+            7,
+            1
+          ],
+          "p": [
+            [
+              0,
+              21,
+              -30,
+              -4
+            ],
+            [
+              8,
+              0,
+              -18,
+              -3
+            ],
+            [
+              -3,
+              -5,
+              0,
+              1
+            ],
+            [
+              -3,
+              -4,
+              6,
+              0
+            ]
+          ],
+          "D": [
+            -15,
+            -25,
+            35,
+            5
+          ],
+          "weights": [
+            "13",
+            "337/16",
+            "13/2",
+            "1"
+          ],
+          "odd_denominators": true,
+          "alpha": 5,
+          "G": 30,
+          "S_T_U": [
+            4,
+            3,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "s": 4,
+      "t": 3,
+      "K0": 30,
+      "divisor_integer": 90,
+      "all_trials": [
+        {
+          "G": 1,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 2,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 3,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 5,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 6,
+          "alpha": 3,
+          "S_T_U": [
+            "15",
+            "12",
+            "6"
+          ],
+          "accepted": true
+        },
+        {
+          "G": 9,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 10,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 15,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 18,
+          "alpha": 4,
+          "S_T_U": [
+            "28/3",
+            "16/3",
+            "8/3"
+          ],
+          "rejected": "reverse entry not integral"
+        },
+        {
+          "G": 30,
+          "alpha": 5,
+          "S_T_U": [
+            "9",
+            "4",
+            "2"
+          ],
+          "accepted": true
+        },
+        {
+          "G": 45,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 90,
+          "alpha": 10,
+          "S_T_U": [
+            "38/3",
+            "8/3",
+            "4/3"
+          ],
+          "rejected": "reverse entry not integral"
+        }
+      ],
+      "all_integer_models": [
+        {
+          "q": [
+            61,
+            37,
+            37,
+            1
+          ],
+          "p": [
+            [
+              0,
+              48,
+              -94,
+              -15
+            ],
+            [
+              47,
+              0,
+              -72,
+              -12
+            ],
+            [
+              -24,
+              -19,
+              0,
+              6
+            ],
+            [
+              -4,
+              -3,
+              6,
+              0
+            ]
+          ],
+          "D": [
+            -80,
+            -63,
+            123,
+            20
+          ],
+          "weights": [
+            "61",
+            "4513/94",
+            "73/12",
+            "1"
+          ],
+          "odd_denominators": true,
+          "alpha": 3,
+          "G": 6,
+          "S_T_U": [
+            15,
+            12,
+            6
+          ]
+        },
+        {
+          "q": [
+            37,
+            13,
+            13,
+            1
+          ],
+          "p": [
+            [
+              0,
+              32,
+              -60,
+              -9
+            ],
+            [
+              15,
+              0,
+              -24,
+              -4
+            ],
+            [
+              -8,
+              -7,
+              0,
+              2
+            ],
+            [
+              -4,
+              -3,
+              6,
+              0
+            ]
+          ],
+          "D": [
+            -40,
+            -35,
+            65,
+            10
+          ],
+          "weights": [
+            "37",
+            "961/30",
+            "25/4",
+            "1"
+          ],
+          "odd_denominators": true,
+          "alpha": 5,
+          "G": 30,
+          "S_T_U": [
+            9,
+            4,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "s": 4,
+      "t": 9,
+      "K0": 120,
+      "divisor_integer": 360,
+      "all_trials": [
+        {
+          "G": 1,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 2,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 3,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 4,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 5,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 6,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 8,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 9,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 10,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 12,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 15,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 18,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 20,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 24,
+          "alpha": 4,
+          "S_T_U": [
+            "4",
+            "8",
+            "2"
+          ],
+          "accepted": true
+        },
+        {
+          "G": 30,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 36,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 40,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 45,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 60,
+          "alpha": 5,
+          "S_T_U": [
+            "3",
+            "4",
+            "1"
+          ],
+          "accepted": true
+        },
+        {
+          "G": 72,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 90,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 120,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 180,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 360,
+          "rejected": "alpha not integral"
+        }
+      ],
+      "all_integer_models": [
+        {
+          "q": [
+            17,
+            73,
+            25,
+            1
+          ],
+          "p": [
+            [
+              0,
+              40,
+              -53,
+              -4
+            ],
+            [
+              31,
+              0,
+              -96,
+              -8
+            ],
+            [
+              -8,
+              -19,
+              0,
+              2
+            ],
+            [
+              -4,
+              -9,
+              12,
+              0
+            ]
+          ],
+          "D": [
+            -36,
+            -85,
+            112,
+            9
+          ],
+          "weights": [
+            "17",
+            "2481/62",
+            "49/4",
+            "1"
+          ],
+          "odd_denominators": true,
+          "alpha": 4,
+          "G": 24,
+          "S_T_U": [
+            4,
+            8,
+            2
+          ]
+        },
+        {
+          "q": [
+            13,
+            37,
+            13,
+            1
+          ],
+          "p": [
+            [
+              0,
+              32,
+              -42,
+              -3
+            ],
+            [
+              15,
+              0,
+              -48,
+              -4
+            ],
+            [
+              -4,
+              -10,
+              0,
+              1
+            ],
+            [
+              -4,
+              -9,
+              12,
+              0
+            ]
+          ],
+          "D": [
+            -20,
+            -50,
+            65,
+            5
+          ],
+          "weights": [
+            "13",
+            "961/30",
+            "25/2",
+            "1"
+          ],
+          "odd_denominators": true,
+          "alpha": 5,
+          "G": 60,
+          "S_T_U": [
+            3,
+            4,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "s": 5,
+      "t": 6,
+      "K0": 80,
+      "divisor_integer": 160,
+      "all_trials": [
+        {
+          "G": 1,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 2,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 4,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 5,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 8,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 10,
+          "alpha": 3,
+          "S_T_U": [
+            "12",
+            "15",
+            "6"
+          ],
+          "accepted": true
+        },
+        {
+          "G": 16,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 20,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 32,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 40,
+          "alpha": 4,
+          "S_T_U": [
+            "6",
+            "5",
+            "2"
+          ],
+          "accepted": true
+        },
+        {
+          "G": 80,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 160,
+          "alpha": 8,
+          "S_T_U": [
+            "7",
+            "5/2",
+            "1"
+          ],
+          "rejected": "reverse entry not integral"
+        }
+      ],
+      "all_integer_models": [
+        {
+          "q": [
+            61,
+            91,
+            61,
+            1
+          ],
+          "p": [
+            [
+              0,
+              75,
+              -124,
+              -12
+            ],
+            [
+              74,
+              0,
+              -150,
+              -15
+            ],
+            [
+              -30,
+              -37,
+              0,
+              6
+            ],
+            [
+              -5,
+              -6,
+              10,
+              0
+            ]
+          ],
+          "D": [
+            -100,
+            -123,
+            203,
+            20
+          ],
+          "weights": [
+            "61",
+            "11101/148",
+            "121/12",
+            "1"
+          ],
+          "odd_denominators": true,
+          "alpha": 3,
+          "G": 10,
+          "S_T_U": [
+            12,
+            15,
+            6
+          ]
+        },
+        {
+          "q": [
+            31,
+            31,
+            21,
+            1
+          ],
+          "p": [
+            [
+              0,
+              40,
+              -65,
+              -6
+            ],
+            [
+              24,
+              0,
+              -50,
+              -5
+            ],
+            [
+              -10,
+              -13,
+              0,
+              2
+            ],
+            [
+              -5,
+              -6,
+              10,
+              0
+            ]
+          ],
+          "D": [
+            -40,
+            -52,
+            84,
+            8
+          ],
+          "weights": [
+            "31",
+            "1921/48",
+            "41/4",
+            "1"
+          ],
+          "odd_denominators": true,
+          "alpha": 4,
+          "G": 40,
+          "S_T_U": [
+            6,
+            5,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "s": 6,
+      "t": 5,
+      "K0": 80,
+      "divisor_integer": 400,
+      "all_trials": [
+        {
+          "G": 1,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 2,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 4,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 5,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 8,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 10,
+          "alpha": 3,
+          "S_T_U": [
+            "21",
+            "18",
+            "9"
+          ],
+          "accepted": true
+        },
+        {
+          "G": 16,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 20,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 25,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 40,
+          "alpha": 4,
+          "S_T_U": [
+            "10",
+            "6",
+            "3"
+          ],
+          "accepted": true
+        },
+        {
+          "G": 50,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 80,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 100,
+          "alpha": 6,
+          "S_T_U": [
+            "48/5",
+            "18/5",
+            "9/5"
+          ],
+          "rejected": "reverse entry not integral"
+        },
+        {
+          "G": 200,
+          "rejected": "alpha not integral"
+        },
+        {
+          "G": 400,
+          "alpha": 16,
+          "S_T_U": [
+            "92/5",
+            "12/5",
+            "6/5"
+          ],
+          "rejected": "reverse entry not integral"
+        }
+      ],
+      "all_integer_models": [
+        {
+          "q": [
+            127,
+            91,
+            91,
+            1
+          ],
+          "p": [
+            [
+              0,
+              108,
+              -214,
+              -21
+            ],
+            [
+              107,
+              0,
+              -180,
+              -18
+            ],
+            [
+              -54,
+              -46,
+              0,
+              9
+            ],
+            [
+              -6,
+              -5,
+              10,
+              0
+            ]
+          ],
+          "D": [
+            -174,
+            -148,
+            293,
+            29
+          ],
+          "weights": [
+            "127",
+            "23113/214",
+            "181/18",
+            "1"
+          ],
+          "odd_denominators": true,
+          "alpha": 3,
+          "G": 10,
+          "S_T_U": [
+            21,
+            18,
+            9
+          ]
+        },
+        {
+          "q": [
+            61,
+            31,
+            31,
+            1
+          ],
+          "p": [
+            [
+              0,
+              54,
+              -105,
+              -10
+            ],
+            [
+              35,
+              0,
+              -60,
+              -6
+            ],
+            [
+              -18,
+              -16,
+              0,
+              3
+            ],
+            [
+              -6,
+              -5,
+              10,
+              0
+            ]
+          ],
+          "D": [
+            -72,
+            -64,
+            124,
+            12
+          ],
+          "weights": [
+            "61",
+            "3781/70",
+            "61/6",
+            "1"
+          ],
+          "odd_denominators": true,
+          "alpha": 4,
+          "G": 40,
+          "S_T_U": [
+            10,
+            6,
+            3
+          ]
+        }
+      ]
+    }
+  ],
+  "exact_boundary_models": 13,
+  "source_sha256": "2132cb178505b17bf60dbd9a147712d3b267ae96e468a3dfbae027e44268e6cc",
+  "script_sha256": "0cd5a244ab9d0fd9d914e8f21ccf30e7984966eb893a5a40a919f1a18a6ae0fd",
+  "limitations": [
+    "Four sign types are necessary cases, not existence claims.",
+    "Beta bounds and boundary classification assume the positive perfect-matching type.",
+    "The general perfect-matching theorem and all-high-D sign problem remain open.",
+    "The seven selected (s,t) fibers illustrate the complete divisor procedure; they are not all boundary models."
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "status": "PASS",
+  "review_scope": "internal independent mathematical review and exact original-equation audit",
+  "external_refereeing": false,
+  "proof_assistant_formalization": false,
+  "denominator_cutoff": null,
+  "polynomial_identity_count": 37,
+  "polynomial_identities": [
+    "R0 physical node04;1",
+    "R0 physical node04;2",
+    "R0 physical node04;3",
+    "R1 physical node14;0",
+    "R1 physical node14;2",
+    "R1 physical node14;3",
+    "D4 low0 from original column",
+    "D4 low1 from original column",
+    "ordinary high-high pair factor",
+    "positive exception D04 sum",
+    "positive exception q delta relation",
+    "positive exception D14 sum",
+    "negative beta1 elimination",
+    "resonance original row2",
+    "resonance original row3",
+    "resonance original row0",
+    "resonance original row1",
+    "resonance original pair23",
+    "resonance original pair20",
+    "resonance original pair21",
+    "resonance original pair30",
+    "resonance original pair31",
+    "resonance original pair01",
+    "resonance original D4_2",
+    "resonance original D4_3",
+    "resonance original D4_0",
+    "resonance original D4_1",
+    "negative exception D14",
+    "negative exception D04",
+    "core2 node24;0 reconstruction",
+    "core2 node24;1 reconstruction",
+    "core2 node24;3=2",
+    "M lower bound numerator",
+    "N lower bound numerator",
+    "D24 opposition original columns",
+    "terminal strict lower estimate",
+    "terminal gap alpha>=2"
+  ],
+  "ordinary_node_cases_complete_derived_ranges": [
+    {
+      "branch": "R01 positive",
+      "rST": [
+        2,
+        3,
+        5
+      ],
+      "node04": [
+        0,
+        0,
+        5
+      ],
+      "node14": [
+        5,
+        0,
+        0
+      ],
+      "R0": [
+        1,
+        -1,
+        -1
+      ],
+      "R1": [
+        -1,
+        4,
+        -4
+      ]
+    },
+    {
+      "branch": "R01 negative",
+      "rST": [
+        2,
+        3,
+        5
+      ],
+      "node04": [
+        5,
+        0,
+        0
+      ],
+      "node14": [
+        0,
+        5,
+        0
+      ],
+      "R0": [
+        -4,
+        -1,
+        4
+      ],
+      "R1": [
+        4,
+        -1,
+        -4
+      ]
+    }
+  ],
+  "ordinary_p342_signed_divisors_of30": [
+    -30,
+    -15,
+    -10,
+    -6,
+    -5,
+    -3,
+    -2,
+    -1,
+    1,
+    2,
+    3,
+    5,
+    6,
+    10,
+    15,
+    30
+  ],
+  "ordinary_p342_residue27_mod31_matches": [],
+  "negative_resonance_nu_cases": [
+    {
+      "nu0": 0,
+      "nu1": 3,
+      "p240_coeff_constant": [
+        8,
+        1
+      ],
+      "p241_coeff_constant": [
+        -21,
+        -2
+      ],
+      "both_negative_for_all_alpha_ge2": false
+    },
+    {
+      "nu0": 1,
+      "nu1": 2,
+      "p240_coeff_constant": [
+        -4,
+        0
+      ],
+      "p241_coeff_constant": [
+        -9,
+        -1
+      ],
+      "both_negative_for_all_alpha_ge2": true
+    },
+    {
+      "nu0": 2,
+      "nu1": 1,
+      "p240_coeff_constant": [
+        -16,
+        -1
+      ],
+      "p241_coeff_constant": [
+        3,
+        0
+      ],
+      "both_negative_for_all_alpha_ge2": false
+    },
+    {
+      "nu0": 3,
+      "nu1": 0,
+      "p240_coeff_constant": [
+        -28,
+        -2
+      ],
+      "p241_coeff_constant": [
+        15,
+        1
+      ],
+      "both_negative_for_all_alpha_ge2": false
+    }
+  ],
+  "analytical_review": [
+    "Both graph automorphisms used for canonical order preserve H.",
+    "Matching gives one positive and two negative nonzero low-row entries at cores0,1,2.",
+    "Ordinary cases force r2,S3,T5 without D opposition; the derived divisor equation has u1,v2 only.",
+    "Positive exception: D04 gives x-y>0, D14 gives s-z<=1; positive branch gives s-z>=1; the forced low column creates an odd/even contradiction.",
+    "Negative exception retains q01=3 or5 and all positive alpha; no initial alpha cutoff is used.",
+    "For alpha,beta>1, normal signed-divisor choices make E integral with abs(E)<1, hence E0, impossible by gcd(r,2r+1)=1.",
+    "For alpha1,beta>1, integrality forces beta2,E0, also impossible; beta1 remains.",
+    "Beta1,E1 and z>=2 force h1,z2,r3,S4,T6, leaving the entire fixed13 resonance.",
+    "U,V are positive even integers from original pairs and odd denominators; alpha is therefore even>=2.",
+    "All final node and D equations were checked in physical labels, including D4_2=12-12alpha and M+N=24alpha+1.",
+    "Strict estimates M>3q02,N>q12 hold by positive original-pair residuals and contradict the exact D sum for every alpha>=2."
+  ],
+  "source_hashes": {
+    "g5_10_obstruction_v18.tex": "06dcf4f9fbb01b37e21533feb7d589ad60375047da0e3377a3bae41cd53b518e",
+    "audit_g5_10_original_equations_v18.py": "61d8bff8857c86ee13a1d92c35c5e4e3bcec36c0f1e3bca1ce21f07eed7f86b6"
+  }
+}

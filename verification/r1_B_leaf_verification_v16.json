@@ -1,0 +1,9754 @@
+{
+  "version": "v16",
+  "passed": true,
+  "script_sha256": "25ef03564c5f0fc18698787a883604f19775a0d7eea88ecfe97e5834bd5bff88",
+  "source_sha256": {
+    "r1_exceptional_leaf_v16.tex": "1a4eb11675aa74bd0c1c04494d7816a605561f75480781e95e1f06bedb42296e"
+  },
+  "research_helper": {
+    "file": "research/exact_fixed_middle_completion_v15.py",
+    "sha256": "cfb3110fe99ccc9d1d7e90bb402638078e6ebeac0f104f8429b60cdc4bdc78c8"
+  },
+  "scope": "Complete exclusion of the ray2=B leaf4 branch at r=z=1 after the crossed positive-branch reduction.",
+  "denominator_cutoff": null,
+  "unknown_q01_enumerated": false,
+  "proof_derived_parameter_trials": [
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 1,
+      "t": 1,
+      "S": 1,
+      "alpha": null,
+      "rejected": "S<2"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 1,
+      "t": 1,
+      "S": 2,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 1,
+      "t": 1,
+      "S": 3,
+      "alpha": null,
+      "s": 4,
+      "k": 1,
+      "T": 12,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 1,
+      "t": 1,
+      "S": 4,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 1,
+      "t": 1,
+      "S": 5,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 1,
+      "t": 1,
+      "S": 6,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 1,
+      "t": 2,
+      "S": 3,
+      "alpha": null,
+      "s": 4,
+      "k": 1,
+      "T": 12,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 1,
+      "t": 2,
+      "S": 4,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 1,
+      "t": 2,
+      "S": 5,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 1,
+      "t": 2,
+      "S": 6,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 1,
+      "t": 2,
+      "S": 7,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 1,
+      "t": 2,
+      "S": 8,
+      "alpha": null,
+      "s": 4,
+      "k": 4,
+      "T": 36,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 1,
+      "t": 3,
+      "S": 5,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 1,
+      "t": 3,
+      "S": 6,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 1,
+      "t": 3,
+      "S": 7,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 1,
+      "t": 3,
+      "S": 8,
+      "alpha": null,
+      "s": 4,
+      "k": 4,
+      "T": 36,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 1,
+      "t": 3,
+      "S": 9,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 1,
+      "t": 3,
+      "S": 10,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 1,
+      "t": 4,
+      "S": 7,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 1,
+      "t": 4,
+      "S": 8,
+      "alpha": null,
+      "s": 4,
+      "k": 4,
+      "T": 36,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 1,
+      "t": 4,
+      "S": 9,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 1,
+      "t": 4,
+      "S": 10,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 1,
+      "t": 4,
+      "S": 11,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 1,
+      "t": 4,
+      "S": 12,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 2,
+      "t": 1,
+      "S": 2,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 2,
+      "t": 1,
+      "S": 3,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 2,
+      "t": 1,
+      "S": 4,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 2,
+      "t": 1,
+      "S": 5,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 2,
+      "t": 1,
+      "S": 6,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 2,
+      "t": 1,
+      "S": 7,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 2,
+      "t": 2,
+      "S": 5,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 2,
+      "t": 2,
+      "S": 6,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 2,
+      "t": 2,
+      "S": 7,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 2,
+      "t": 2,
+      "S": 8,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 2,
+      "t": 2,
+      "S": 9,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 2,
+      "t": 2,
+      "S": 10,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 3,
+      "t": 1,
+      "S": 3,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 3,
+      "t": 1,
+      "S": 4,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 3,
+      "t": 1,
+      "S": 5,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 3,
+      "t": 1,
+      "S": 6,
+      "alpha": null,
+      "s": 6,
+      "k": 2,
+      "T": 28,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 3,
+      "t": 1,
+      "S": 7,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 3,
+      "t": 1,
+      "S": 8,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 4,
+      "t": 1,
+      "S": 4,
+      "alpha": null,
+      "s": 7,
+      "k": 1,
+      "T": 18,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 4,
+      "t": 1,
+      "S": 5,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 4,
+      "t": 1,
+      "S": 6,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 4,
+      "t": 1,
+      "S": 7,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 4,
+      "t": 1,
+      "S": 8,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=C",
+      "h": 4,
+      "t": 1,
+      "S": 9,
+      "alpha": null,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 1,
+      "S": 2,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 1,
+      "S": 3,
+      "alpha": 1,
+      "s": 4,
+      "k": 1,
+      "T": 12,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 1,
+      "S": 4,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 1,
+      "S": 5,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 1,
+      "S": 6,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 2,
+      "S": 4,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 2,
+      "S": 5,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 2,
+      "S": 6,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 2,
+      "S": 7,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 2,
+      "S": 8,
+      "alpha": 4,
+      "s": 4,
+      "k": 4,
+      "T": 36,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 3,
+      "S": 6,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 3,
+      "S": 7,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 3,
+      "S": 8,
+      "alpha": 2,
+      "s": 4,
+      "k": 4,
+      "T": 36,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 3,
+      "S": 9,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 3,
+      "S": 10,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 4,
+      "S": 8,
+      "alpha": 0,
+      "s": 4,
+      "k": 4,
+      "T": 36,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 4,
+      "S": 9,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 4,
+      "S": 10,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 4,
+      "S": 11,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 4,
+      "S": 12,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 5,
+      "S": 10,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 5,
+      "S": 11,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 5,
+      "S": 12,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 5,
+      "S": 13,
+      "alpha": 3,
+      "s": 4,
+      "k": 7,
+      "T": 60,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 5,
+      "S": 14,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 6,
+      "S": 12,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 6,
+      "S": 13,
+      "alpha": 1,
+      "s": 4,
+      "k": 7,
+      "T": 60,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 6,
+      "S": 14,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 6,
+      "S": 15,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 6,
+      "S": 16,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 7,
+      "S": 14,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 7,
+      "S": 15,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 7,
+      "S": 16,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 7,
+      "S": 17,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 7,
+      "S": 18,
+      "alpha": 4,
+      "s": 4,
+      "k": 10,
+      "T": 84,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 8,
+      "S": 16,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 8,
+      "S": 17,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 8,
+      "S": 18,
+      "alpha": 2,
+      "s": 4,
+      "k": 10,
+      "T": 84,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 8,
+      "S": 19,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 8,
+      "S": 20,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 9,
+      "S": 18,
+      "alpha": 0,
+      "s": 4,
+      "k": 10,
+      "T": 84,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 9,
+      "S": 19,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 9,
+      "S": 20,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 9,
+      "S": 21,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 9,
+      "S": 22,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 10,
+      "S": 20,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 10,
+      "S": 21,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 10,
+      "S": 22,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 10,
+      "S": 23,
+      "alpha": 3,
+      "s": 4,
+      "k": 13,
+      "T": 108,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 10,
+      "S": 24,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 11,
+      "S": 22,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 11,
+      "S": 23,
+      "alpha": 1,
+      "s": 4,
+      "k": 13,
+      "T": 108,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 11,
+      "S": 24,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 11,
+      "S": 25,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 11,
+      "S": 26,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 12,
+      "S": 24,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 12,
+      "S": 25,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 12,
+      "S": 26,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 12,
+      "S": 27,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 12,
+      "S": 28,
+      "alpha": 4,
+      "s": 4,
+      "k": 16,
+      "T": 132,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 13,
+      "S": 26,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 13,
+      "S": 27,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 13,
+      "S": 28,
+      "alpha": 2,
+      "s": 4,
+      "k": 16,
+      "T": 132,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 13,
+      "S": 29,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 13,
+      "S": 30,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 14,
+      "S": 28,
+      "alpha": 0,
+      "s": 4,
+      "k": 16,
+      "T": 132,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 14,
+      "S": 29,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 14,
+      "S": 30,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 14,
+      "S": 31,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 14,
+      "S": 32,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 15,
+      "S": 30,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 15,
+      "S": 31,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 15,
+      "S": 32,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 15,
+      "S": 33,
+      "alpha": 3,
+      "s": 4,
+      "k": 19,
+      "T": 156,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 15,
+      "S": 34,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 16,
+      "S": 32,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 16,
+      "S": 33,
+      "alpha": 1,
+      "s": 4,
+      "k": 19,
+      "T": 156,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 16,
+      "S": 34,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 16,
+      "S": 35,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 16,
+      "S": 36,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 17,
+      "S": 34,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 17,
+      "S": 35,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 17,
+      "S": 36,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 17,
+      "S": 37,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 17,
+      "S": 38,
+      "alpha": 4,
+      "s": 4,
+      "k": 22,
+      "T": 180,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 18,
+      "S": 36,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 18,
+      "S": 37,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 18,
+      "S": 38,
+      "alpha": 2,
+      "s": 4,
+      "k": 22,
+      "T": 180,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 18,
+      "S": 39,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 18,
+      "S": 40,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 19,
+      "S": 38,
+      "alpha": 0,
+      "s": 4,
+      "k": 22,
+      "T": 180,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 19,
+      "S": 39,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 19,
+      "S": 40,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 19,
+      "S": 41,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 19,
+      "S": 42,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 20,
+      "S": 40,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 20,
+      "S": 41,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 20,
+      "S": 42,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 20,
+      "S": 43,
+      "alpha": 3,
+      "s": 4,
+      "k": 25,
+      "T": 204,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 20,
+      "S": 44,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 21,
+      "S": 42,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 21,
+      "S": 43,
+      "alpha": 1,
+      "s": 4,
+      "k": 25,
+      "T": 204,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 21,
+      "S": 44,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 21,
+      "S": 45,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 21,
+      "S": 46,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 22,
+      "S": 44,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 22,
+      "S": 45,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 22,
+      "S": 46,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 22,
+      "S": 47,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 22,
+      "S": 48,
+      "alpha": 4,
+      "s": 4,
+      "k": 28,
+      "T": 228,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 23,
+      "S": 46,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 23,
+      "S": 47,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 23,
+      "S": 48,
+      "alpha": 2,
+      "s": 4,
+      "k": 28,
+      "T": 228,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 23,
+      "S": 49,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 23,
+      "S": 50,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 24,
+      "S": 48,
+      "alpha": 0,
+      "s": 4,
+      "k": 28,
+      "T": 228,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 24,
+      "S": 49,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 24,
+      "S": 50,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 24,
+      "S": 51,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 24,
+      "S": 52,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 25,
+      "S": 50,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 25,
+      "S": 51,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 25,
+      "S": 52,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 25,
+      "S": 53,
+      "alpha": 3,
+      "s": 4,
+      "k": 31,
+      "T": 252,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 25,
+      "S": 54,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 26,
+      "S": 52,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 26,
+      "S": 53,
+      "alpha": 1,
+      "s": 4,
+      "k": 31,
+      "T": 252,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 26,
+      "S": 54,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 26,
+      "S": 55,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 26,
+      "S": 56,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 27,
+      "S": 54,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 27,
+      "S": 55,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 27,
+      "S": 56,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 27,
+      "S": 57,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 1,
+      "t": 27,
+      "S": 58,
+      "alpha": 4,
+      "s": 4,
+      "k": 34,
+      "T": 276,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 1,
+      "S": 3,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 1,
+      "S": 4,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 1,
+      "S": 5,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 1,
+      "S": 6,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 1,
+      "S": 7,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 2,
+      "S": 6,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 2,
+      "S": 7,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 2,
+      "S": 8,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 2,
+      "S": 9,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 2,
+      "S": 10,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 3,
+      "S": 9,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 3,
+      "S": 10,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 3,
+      "S": 11,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 3,
+      "S": 12,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 3,
+      "S": 13,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 4,
+      "S": 12,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 4,
+      "S": 13,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 4,
+      "S": 14,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 4,
+      "S": 15,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 4,
+      "S": 16,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 5,
+      "S": 15,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 5,
+      "S": 16,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 5,
+      "S": 17,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 5,
+      "S": 18,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 5,
+      "S": 19,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 6,
+      "S": 18,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 6,
+      "S": 19,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 6,
+      "S": 20,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 6,
+      "S": 21,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 6,
+      "S": 22,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 7,
+      "S": 21,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 7,
+      "S": 22,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 7,
+      "S": 23,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 7,
+      "S": 24,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 7,
+      "S": 25,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 8,
+      "S": 24,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 8,
+      "S": 25,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 8,
+      "S": 26,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 8,
+      "S": 27,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 8,
+      "S": 28,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 9,
+      "S": 27,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 9,
+      "S": 28,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 9,
+      "S": 29,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 9,
+      "S": 30,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 9,
+      "S": 31,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 10,
+      "S": 30,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 10,
+      "S": 31,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 10,
+      "S": 32,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 10,
+      "S": 33,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 10,
+      "S": 34,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 11,
+      "S": 33,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 11,
+      "S": 34,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 11,
+      "S": 35,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 11,
+      "S": 36,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 11,
+      "S": 37,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 12,
+      "S": 36,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 12,
+      "S": 37,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 12,
+      "S": 38,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 12,
+      "S": 39,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 12,
+      "S": 40,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 13,
+      "S": 39,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 13,
+      "S": 40,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 13,
+      "S": 41,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 13,
+      "S": 42,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 2,
+      "t": 13,
+      "S": 43,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 1,
+      "S": 4,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 1,
+      "S": 5,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 1,
+      "S": 6,
+      "alpha": 2,
+      "s": 6,
+      "k": 2,
+      "T": 28,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 1,
+      "S": 7,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 1,
+      "S": 8,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 2,
+      "S": 8,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 2,
+      "S": 9,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 2,
+      "S": 10,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 2,
+      "S": 11,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 2,
+      "S": 12,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 3,
+      "S": 12,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 3,
+      "S": 13,
+      "alpha": 1,
+      "s": 6,
+      "k": 5,
+      "T": 64,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 3,
+      "S": 14,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 3,
+      "S": 15,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 3,
+      "S": 16,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 4,
+      "S": 16,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 4,
+      "S": 17,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 4,
+      "S": 18,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 4,
+      "S": 19,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 4,
+      "S": 20,
+      "alpha": 4,
+      "s": 6,
+      "k": 8,
+      "T": 100,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 5,
+      "S": 20,
+      "alpha": 0,
+      "s": 6,
+      "k": 8,
+      "T": 100,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 5,
+      "S": 21,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 5,
+      "S": 22,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 5,
+      "S": 23,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 5,
+      "S": 24,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 6,
+      "S": 24,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 6,
+      "S": 25,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 6,
+      "S": 26,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 6,
+      "S": 27,
+      "alpha": 3,
+      "s": 6,
+      "k": 11,
+      "T": 136,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 6,
+      "S": 28,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 7,
+      "S": 28,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 7,
+      "S": 29,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 7,
+      "S": 30,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 7,
+      "S": 31,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 7,
+      "S": 32,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 8,
+      "S": 32,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 8,
+      "S": 33,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 8,
+      "S": 34,
+      "alpha": 2,
+      "s": 6,
+      "k": 14,
+      "T": 172,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 8,
+      "S": 35,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 8,
+      "S": 36,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 9,
+      "S": 36,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 9,
+      "S": 37,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 9,
+      "S": 38,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 9,
+      "S": 39,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 3,
+      "t": 9,
+      "S": 40,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 1,
+      "S": 5,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 1,
+      "S": 6,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 1,
+      "S": 7,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 1,
+      "S": 8,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 1,
+      "S": 9,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 2,
+      "S": 10,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 2,
+      "S": 11,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 2,
+      "S": 12,
+      "alpha": 2,
+      "s": 7,
+      "k": 4,
+      "T": 60,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 2,
+      "S": 13,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 2,
+      "S": 14,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 3,
+      "S": 15,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 3,
+      "S": 16,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 3,
+      "S": 17,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 3,
+      "S": 18,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 3,
+      "S": 19,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 4,
+      "S": 20,
+      "alpha": 0,
+      "s": 7,
+      "k": 7,
+      "T": 102,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 4,
+      "S": 21,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 4,
+      "S": 22,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 4,
+      "S": 23,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 4,
+      "S": 24,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 5,
+      "S": 25,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 5,
+      "S": 26,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 5,
+      "S": 27,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 5,
+      "S": 28,
+      "alpha": 3,
+      "s": 7,
+      "k": 10,
+      "T": 144,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 5,
+      "S": 29,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 6,
+      "S": 30,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 6,
+      "S": 31,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 6,
+      "S": 32,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 6,
+      "S": 33,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 4,
+      "t": 6,
+      "S": 34,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 5,
+      "t": 1,
+      "S": 6,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 5,
+      "t": 1,
+      "S": 7,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 5,
+      "t": 1,
+      "S": 8,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 5,
+      "t": 1,
+      "S": 9,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 5,
+      "t": 1,
+      "S": 10,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 5,
+      "t": 2,
+      "S": 12,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 5,
+      "t": 2,
+      "S": 13,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 5,
+      "t": 2,
+      "S": 14,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 5,
+      "t": 2,
+      "S": 15,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 5,
+      "t": 2,
+      "S": 16,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 5,
+      "t": 3,
+      "S": 18,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 5,
+      "t": 3,
+      "S": 19,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 5,
+      "t": 3,
+      "S": 20,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 5,
+      "t": 3,
+      "S": 21,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 5,
+      "t": 3,
+      "S": 22,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 5,
+      "t": 4,
+      "S": 24,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 5,
+      "t": 4,
+      "S": 25,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 5,
+      "t": 4,
+      "S": 26,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 5,
+      "t": 4,
+      "S": 27,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 5,
+      "t": 4,
+      "S": 28,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 5,
+      "t": 5,
+      "S": 30,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 5,
+      "t": 5,
+      "S": 31,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 5,
+      "t": 5,
+      "S": 32,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 5,
+      "t": 5,
+      "S": 33,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 5,
+      "t": 5,
+      "S": 34,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 6,
+      "t": 1,
+      "S": 7,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 6,
+      "t": 1,
+      "S": 8,
+      "alpha": 1,
+      "s": 9,
+      "k": 2,
+      "T": 40,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 6,
+      "t": 1,
+      "S": 9,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 6,
+      "t": 1,
+      "S": 10,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 6,
+      "t": 1,
+      "S": 11,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 6,
+      "t": 2,
+      "S": 14,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 6,
+      "t": 2,
+      "S": 15,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 6,
+      "t": 2,
+      "S": 16,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 6,
+      "t": 2,
+      "S": 17,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 6,
+      "t": 2,
+      "S": 18,
+      "alpha": 4,
+      "s": 9,
+      "k": 5,
+      "T": 94,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 6,
+      "t": 3,
+      "S": 21,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 6,
+      "t": 3,
+      "S": 22,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 6,
+      "t": 3,
+      "S": 23,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 6,
+      "t": 3,
+      "S": 24,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 6,
+      "t": 3,
+      "S": 25,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 6,
+      "t": 4,
+      "S": 28,
+      "alpha": 0,
+      "s": 9,
+      "k": 8,
+      "T": 148,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 6,
+      "t": 4,
+      "S": 29,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 6,
+      "t": 4,
+      "S": 30,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 6,
+      "t": 4,
+      "S": 31,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 6,
+      "t": 4,
+      "S": 32,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 7,
+      "t": 1,
+      "S": 8,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 7,
+      "t": 1,
+      "S": 9,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 7,
+      "t": 1,
+      "S": 10,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 7,
+      "t": 1,
+      "S": 11,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 7,
+      "t": 1,
+      "S": 12,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 7,
+      "t": 2,
+      "S": 16,
+      "alpha": 0,
+      "s": 10,
+      "k": 4,
+      "T": 84,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 7,
+      "t": 2,
+      "S": 17,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 7,
+      "t": 2,
+      "S": 18,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 7,
+      "t": 2,
+      "S": 19,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 7,
+      "t": 2,
+      "S": 20,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 7,
+      "t": 3,
+      "S": 24,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 7,
+      "t": 3,
+      "S": 25,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 7,
+      "t": 3,
+      "S": 26,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 7,
+      "t": 3,
+      "S": 27,
+      "alpha": 3,
+      "s": 10,
+      "k": 7,
+      "T": 144,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 7,
+      "t": 3,
+      "S": 28,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 8,
+      "t": 1,
+      "S": 9,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 8,
+      "t": 1,
+      "S": 10,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 8,
+      "t": 1,
+      "S": 11,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 8,
+      "t": 1,
+      "S": 12,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 8,
+      "t": 1,
+      "S": 13,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 8,
+      "t": 2,
+      "S": 18,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 8,
+      "t": 2,
+      "S": 19,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 8,
+      "t": 2,
+      "S": 20,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 8,
+      "t": 2,
+      "S": 21,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 8,
+      "t": 2,
+      "S": 22,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 8,
+      "t": 3,
+      "S": 27,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 8,
+      "t": 3,
+      "S": 28,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 8,
+      "t": 3,
+      "S": 29,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 8,
+      "t": 3,
+      "S": 30,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 8,
+      "t": 3,
+      "S": 31,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 9,
+      "t": 1,
+      "S": 10,
+      "alpha": 0,
+      "s": 12,
+      "k": 2,
+      "T": 52,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 9,
+      "t": 1,
+      "S": 11,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 9,
+      "t": 1,
+      "S": 12,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 9,
+      "t": 1,
+      "S": 13,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 9,
+      "t": 1,
+      "S": 14,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 9,
+      "t": 2,
+      "S": 20,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 9,
+      "t": 2,
+      "S": 21,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 9,
+      "t": 2,
+      "S": 22,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 9,
+      "t": 2,
+      "S": 23,
+      "alpha": 3,
+      "s": 12,
+      "k": 5,
+      "T": 124,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 9,
+      "t": 2,
+      "S": 24,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 9,
+      "t": 3,
+      "S": 30,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 9,
+      "t": 3,
+      "S": 31,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 9,
+      "t": 3,
+      "S": 32,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 9,
+      "t": 3,
+      "S": 33,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 9,
+      "t": 3,
+      "S": 34,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 10,
+      "t": 1,
+      "S": 11,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 10,
+      "t": 1,
+      "S": 12,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 10,
+      "t": 1,
+      "S": 13,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 10,
+      "t": 1,
+      "S": 14,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 10,
+      "t": 1,
+      "S": 15,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 10,
+      "t": 2,
+      "S": 22,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 10,
+      "t": 2,
+      "S": 23,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 10,
+      "t": 2,
+      "S": 24,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 10,
+      "t": 2,
+      "S": 25,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 10,
+      "t": 2,
+      "S": 26,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 11,
+      "t": 1,
+      "S": 12,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 11,
+      "t": 1,
+      "S": 13,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 11,
+      "t": 1,
+      "S": 14,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 11,
+      "t": 1,
+      "S": 15,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 11,
+      "t": 1,
+      "S": 16,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 11,
+      "t": 2,
+      "S": 24,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 11,
+      "t": 2,
+      "S": 25,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 11,
+      "t": 2,
+      "S": 26,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 11,
+      "t": 2,
+      "S": 27,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 11,
+      "t": 2,
+      "S": 28,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 12,
+      "t": 1,
+      "S": 13,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 12,
+      "t": 1,
+      "S": 14,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 12,
+      "t": 1,
+      "S": 15,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 12,
+      "t": 1,
+      "S": 16,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 12,
+      "t": 1,
+      "S": 17,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 12,
+      "t": 2,
+      "S": 26,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 12,
+      "t": 2,
+      "S": 27,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 12,
+      "t": 2,
+      "S": 28,
+      "alpha": 2,
+      "s": 15,
+      "k": 5,
+      "T": 154,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 12,
+      "t": 2,
+      "S": 29,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 12,
+      "t": 2,
+      "S": 30,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 13,
+      "t": 1,
+      "S": 14,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 13,
+      "t": 1,
+      "S": 15,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 13,
+      "t": 1,
+      "S": 16,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 13,
+      "t": 1,
+      "S": 17,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 13,
+      "t": 1,
+      "S": 18,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 13,
+      "t": 2,
+      "S": 28,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 13,
+      "t": 2,
+      "S": 29,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 13,
+      "t": 2,
+      "S": 30,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 13,
+      "t": 2,
+      "S": 31,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 13,
+      "t": 2,
+      "S": 32,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 14,
+      "t": 1,
+      "S": 15,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 14,
+      "t": 1,
+      "S": 16,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 14,
+      "t": 1,
+      "S": 17,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 14,
+      "t": 1,
+      "S": 18,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 14,
+      "t": 1,
+      "S": 19,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 15,
+      "t": 1,
+      "S": 16,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 15,
+      "t": 1,
+      "S": 17,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 15,
+      "t": 1,
+      "S": 18,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 15,
+      "t": 1,
+      "S": 19,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 15,
+      "t": 1,
+      "S": 20,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 16,
+      "t": 1,
+      "S": 17,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 16,
+      "t": 1,
+      "S": 18,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 16,
+      "t": 1,
+      "S": 19,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 16,
+      "t": 1,
+      "S": 20,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 16,
+      "t": 1,
+      "S": 21,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 17,
+      "t": 1,
+      "S": 18,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 17,
+      "t": 1,
+      "S": 19,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 17,
+      "t": 1,
+      "S": 20,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 17,
+      "t": 1,
+      "S": 21,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 17,
+      "t": 1,
+      "S": 22,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 18,
+      "t": 1,
+      "S": 19,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 18,
+      "t": 1,
+      "S": 20,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 18,
+      "t": 1,
+      "S": 21,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 18,
+      "t": 1,
+      "S": 22,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 18,
+      "t": 1,
+      "S": 23,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 19,
+      "t": 1,
+      "S": 20,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 19,
+      "t": 1,
+      "S": 21,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 19,
+      "t": 1,
+      "S": 22,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 19,
+      "t": 1,
+      "S": 23,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 19,
+      "t": 1,
+      "S": 24,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 20,
+      "t": 1,
+      "S": 21,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 20,
+      "t": 1,
+      "S": 22,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 20,
+      "t": 1,
+      "S": 23,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 20,
+      "t": 1,
+      "S": 24,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 20,
+      "t": 1,
+      "S": 25,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 21,
+      "t": 1,
+      "S": 22,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 21,
+      "t": 1,
+      "S": 23,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 21,
+      "t": 1,
+      "S": 24,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 21,
+      "t": 1,
+      "S": 25,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 21,
+      "t": 1,
+      "S": 26,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 22,
+      "t": 1,
+      "S": 23,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 22,
+      "t": 1,
+      "S": 24,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 22,
+      "t": 1,
+      "S": 25,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 22,
+      "t": 1,
+      "S": 26,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 22,
+      "t": 1,
+      "S": 27,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 23,
+      "t": 1,
+      "S": 24,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 23,
+      "t": 1,
+      "S": 25,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 23,
+      "t": 1,
+      "S": 26,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 23,
+      "t": 1,
+      "S": 27,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 23,
+      "t": 1,
+      "S": 28,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 24,
+      "t": 1,
+      "S": 25,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 24,
+      "t": 1,
+      "S": 26,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 24,
+      "t": 1,
+      "S": 27,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 24,
+      "t": 1,
+      "S": 28,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 24,
+      "t": 1,
+      "S": 29,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 25,
+      "t": 1,
+      "S": 26,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 25,
+      "t": 1,
+      "S": 27,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 25,
+      "t": 1,
+      "S": 28,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 25,
+      "t": 1,
+      "S": 29,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 25,
+      "t": 1,
+      "S": 30,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 26,
+      "t": 1,
+      "S": 27,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 26,
+      "t": 1,
+      "S": 28,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 26,
+      "t": 1,
+      "S": 29,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 26,
+      "t": 1,
+      "S": 30,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 26,
+      "t": 1,
+      "S": 31,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 27,
+      "t": 1,
+      "S": 28,
+      "alpha": 0,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 27,
+      "t": 1,
+      "S": 29,
+      "alpha": 1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 27,
+      "t": 1,
+      "S": 30,
+      "alpha": 2,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 27,
+      "t": 1,
+      "S": 31,
+      "alpha": 3,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha>=0",
+      "h": 27,
+      "t": 1,
+      "S": 32,
+      "alpha": 4,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 2,
+      "S": 3,
+      "alpha": -1,
+      "s": 4,
+      "k": 1,
+      "T": 12,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 3,
+      "S": 5,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 4,
+      "S": 7,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 5,
+      "S": 9,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 6,
+      "S": 11,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 7,
+      "S": 13,
+      "alpha": -1,
+      "s": 4,
+      "k": 7,
+      "T": 60,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 8,
+      "S": 15,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 9,
+      "S": 17,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 10,
+      "S": 19,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 11,
+      "S": 21,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 12,
+      "S": 23,
+      "alpha": -1,
+      "s": 4,
+      "k": 13,
+      "T": 108,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 13,
+      "S": 25,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 14,
+      "S": 27,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 15,
+      "S": 29,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 16,
+      "S": 31,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 17,
+      "S": 33,
+      "alpha": -1,
+      "s": 4,
+      "k": 19,
+      "T": 156,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 18,
+      "S": 35,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 19,
+      "S": 37,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 20,
+      "S": 39,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 21,
+      "S": 41,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 22,
+      "S": 43,
+      "alpha": -1,
+      "s": 4,
+      "k": 25,
+      "T": 204,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 23,
+      "S": 45,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 24,
+      "S": 47,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 25,
+      "S": 49,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 26,
+      "S": 51,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 27,
+      "S": 53,
+      "alpha": -1,
+      "s": 4,
+      "k": 31,
+      "T": 252,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 28,
+      "S": 55,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 1,
+      "t": 29,
+      "S": 57,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 2,
+      "t": 2,
+      "S": 5,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 2,
+      "t": 3,
+      "S": 8,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 2,
+      "t": 4,
+      "S": 11,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 2,
+      "t": 5,
+      "S": 14,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 2,
+      "t": 6,
+      "S": 17,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 2,
+      "t": 7,
+      "S": 20,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 2,
+      "t": 8,
+      "S": 23,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 2,
+      "t": 9,
+      "S": 26,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 2,
+      "t": 10,
+      "S": 29,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 2,
+      "t": 11,
+      "S": 32,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 2,
+      "t": 12,
+      "S": 35,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 2,
+      "t": 13,
+      "S": 38,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 2,
+      "t": 14,
+      "S": 41,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 2,
+      "t": 15,
+      "S": 44,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 3,
+      "t": 2,
+      "S": 7,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 3,
+      "t": 3,
+      "S": 11,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 3,
+      "t": 4,
+      "S": 15,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 3,
+      "t": 5,
+      "S": 19,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 3,
+      "t": 6,
+      "S": 23,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 3,
+      "t": 7,
+      "S": 27,
+      "alpha": -1,
+      "s": 6,
+      "k": 11,
+      "T": 136,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 3,
+      "t": 8,
+      "S": 31,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 3,
+      "t": 9,
+      "S": 35,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 3,
+      "t": 10,
+      "S": 39,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 4,
+      "t": 2,
+      "S": 9,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 4,
+      "t": 3,
+      "S": 14,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 4,
+      "t": 4,
+      "S": 19,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 4,
+      "t": 5,
+      "S": 24,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 4,
+      "t": 6,
+      "S": 29,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 4,
+      "t": 7,
+      "S": 34,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 4,
+      "t": 8,
+      "S": 39,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 5,
+      "t": 2,
+      "S": 11,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 5,
+      "t": 3,
+      "S": 17,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 5,
+      "t": 4,
+      "S": 23,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 5,
+      "t": 5,
+      "S": 29,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 5,
+      "t": 6,
+      "S": 35,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 6,
+      "t": 2,
+      "S": 13,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 6,
+      "t": 3,
+      "S": 20,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 6,
+      "t": 4,
+      "S": 27,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 6,
+      "t": 5,
+      "S": 34,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 7,
+      "t": 2,
+      "S": 15,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 7,
+      "t": 3,
+      "S": 23,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 7,
+      "t": 4,
+      "S": 31,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 7,
+      "t": 5,
+      "S": 39,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 8,
+      "t": 2,
+      "S": 17,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 8,
+      "t": 3,
+      "S": 26,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 8,
+      "t": 4,
+      "S": 35,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 9,
+      "t": 2,
+      "S": 19,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 9,
+      "t": 3,
+      "S": 29,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 9,
+      "t": 4,
+      "S": 39,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 10,
+      "t": 2,
+      "S": 21,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 10,
+      "t": 3,
+      "S": 32,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 11,
+      "t": 2,
+      "S": 23,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 11,
+      "t": 3,
+      "S": 35,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 12,
+      "t": 2,
+      "S": 25,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 12,
+      "t": 3,
+      "S": 38,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 13,
+      "t": 2,
+      "S": 27,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 13,
+      "t": 3,
+      "S": 41,
+      "alpha": -1,
+      "s": 16,
+      "k": 7,
+      "T": 228,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 14,
+      "t": 2,
+      "S": 29,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 14,
+      "t": 3,
+      "S": 44,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 15,
+      "t": 2,
+      "S": 31,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 16,
+      "t": 2,
+      "S": 33,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 17,
+      "t": 2,
+      "S": 35,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 18,
+      "t": 2,
+      "S": 37,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 19,
+      "t": 2,
+      "S": 39,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 20,
+      "t": 2,
+      "S": 41,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 21,
+      "t": 2,
+      "S": 43,
+      "alpha": -1,
+      "s": 24,
+      "k": 5,
+      "T": 244,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 22,
+      "t": 2,
+      "S": 45,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 23,
+      "t": 2,
+      "S": 47,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 24,
+      "t": 2,
+      "S": 49,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 25,
+      "t": 2,
+      "S": 51,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 26,
+      "t": 2,
+      "S": 53,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 27,
+      "t": 2,
+      "S": 55,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t>=2",
+      "h": 28,
+      "t": 2,
+      "S": 57,
+      "alpha": -1,
+      "rejected": "k is not integral"
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t=1",
+      "h": 4,
+      "t": 1,
+      "S": 4,
+      "alpha": -1,
+      "s": 7,
+      "k": 1,
+      "T": 18,
+      "accepted": true
+    },
+    {
+      "branch": "leaf3 ray4=B; alpha=-1,t=1",
+      "h": 12,
+      "t": 1,
+      "S": 12,
+      "alpha": -1,
+      "s": 15,
+      "k": 2,
+      "T": 64,
+      "accepted": true
+    }
+  ],
+  "accepted_witnesses": 62,
+  "complete_middle_models": 33,
+  "C4_maxima": [
+    {
+      "u4": 1,
+      "choices": [
+        {
+          "h": 1,
+          "t": 1,
+          "c": -1,
+          "C4": 5
+        },
+        {
+          "h": 1,
+          "t": 1,
+          "c": 0,
+          "C4": 6
+        },
+        {
+          "h": 1,
+          "t": 1,
+          "c": 1,
+          "C4": 7
+        },
+        {
+          "h": 1,
+          "t": 1,
+          "c": 2,
+          "C4": 8
+        }
+      ],
+      "maximum": 8
+    },
+    {
+      "u4": 2,
+      "choices": [
+        {
+          "h": 1,
+          "t": 2,
+          "c": 0,
+          "C4": 9
+        },
+        {
+          "h": 1,
+          "t": 2,
+          "c": 1,
+          "C4": 10
+        },
+        {
+          "h": 1,
+          "t": 2,
+          "c": 2,
+          "C4": 11
+        },
+        {
+          "h": 2,
+          "t": 1,
+          "c": 0,
+          "C4": 11
+        },
+        {
+          "h": 2,
+          "t": 1,
+          "c": 1,
+          "C4": 12
+        },
+        {
+          "h": 2,
+          "t": 1,
+          "c": 2,
+          "C4": 13
+        }
+      ],
+      "maximum": 13
+    },
+    {
+      "u4": 3,
+      "choices": [
+        {
+          "h": 1,
+          "t": 3,
+          "c": 1,
+          "C4": 13
+        },
+        {
+          "h": 1,
+          "t": 3,
+          "c": 2,
+          "C4": 14
+        },
+        {
+          "h": 3,
+          "t": 1,
+          "c": 1,
+          "C4": 19
+        },
+        {
+          "h": 3,
+          "t": 1,
+          "c": 2,
+          "C4": 20
+        }
+      ],
+      "maximum": 20
+    },
+    {
+      "u4": 4,
+      "choices": [
+        {
+          "h": 1,
+          "t": 4,
+          "c": 2,
+          "C4": 17
+        },
+        {
+          "h": 2,
+          "t": 2,
+          "c": 2,
+          "C4": 20
+        },
+        {
+          "h": 4,
+          "t": 1,
+          "c": 2,
+          "C4": 29
+        }
+      ],
+      "maximum": 29
+    }
+  ],
+  "case_I_boundary": [
+    {
+      "h": 1,
+      "k": 1,
+      "S": 3,
+      "t": [
+        1,
+        2
+      ]
+    },
+    {
+      "h": 4,
+      "k": 1,
+      "S": 4,
+      "t": [
+        1
+      ]
+    }
+  ],
+  "middle_models": [
+    {
+      "parameters": {
+        "r": 1,
+        "s": 1,
+        "z": 1,
+        "S": 2,
+        "T": 6
+      },
+      "middle": {
+        "a": 3,
+        "b": 7,
+        "p": [
+          [
+            0,
+            -4,
+            2,
+            -1
+          ],
+          [
+            -5,
+            0,
+            -3,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -2,
+            6,
+            -5,
+            0
+          ]
+        ],
+        "D": [
+          3,
+          -7,
+          5,
+          -1
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 1,
+          "z": 1,
+          "S": 2,
+          "T": 6
+        }
+      },
+      "leaf3_count": 6,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "middle": {
+        "a": 13,
+        "b": 13,
+        "p": [
+          [
+            0,
+            -21,
+            12,
+            -4
+          ],
+          [
+            -8,
+            0,
+            -6,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -3,
+            12,
+            -10,
+            0
+          ]
+        ],
+        "D": [
+          -3,
+          -2,
+          3,
+          2
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 4,
+          "z": 1,
+          "S": 3,
+          "T": 12
+        }
+      },
+      "leaf3_count": 16,
+      "low_triangle_count": 3,
+      "low_triangles": [
+        {
+          "leaf3": {
+            "q": 3,
+            "p": {
+              "0": {
+                "0": 0,
+                "4": -2,
+                "1": -2,
+                "2": 1
+              },
+              "4": {
+                "0": -1,
+                "4": 0,
+                "1": 0,
+                "2": 0
+              },
+              "1": {
+                "0": -1,
+                "4": 0,
+                "1": 0,
+                "2": 0
+              },
+              "2": {
+                "0": 2,
+                "4": 9,
+                "1": -12,
+                "2": 0
+              }
+            },
+            "D": {
+              "0": -3,
+              "4": -8,
+              "1": 13,
+              "2": -2
+            },
+            "h": 1,
+            "t": 1,
+            "c": 0,
+            "d": -12,
+            "order": [
+              0,
+              4,
+              1,
+              2
+            ]
+          },
+          "leaf4": {
+            "q": 3,
+            "p": {
+              "1": {
+                "1": 0,
+                "2": -2,
+                "3": -2,
+                "0": 1
+              },
+              "2": {
+                "1": -1,
+                "2": 0,
+                "3": 0,
+                "0": 0
+              },
+              "3": {
+                "1": -1,
+                "2": 0,
+                "3": 0,
+                "0": 0
+              },
+              "0": {
+                "1": 2,
+                "2": 4,
+                "3": -7,
+                "0": 0
+              }
+            },
+            "D": {
+              "1": -3,
+              "2": -3,
+              "3": 8,
+              "0": -2
+            },
+            "h": 1,
+            "t": 1,
+            "c": 0,
+            "d": -7,
+            "order": [
+              1,
+              2,
+              3,
+              0
+            ]
+          }
+        },
+        {
+          "leaf3": {
+            "q": 5,
+            "p": {
+              "0": {
+                "0": 0,
+                "1": -4,
+                "4": -2,
+                "2": 1
+              },
+              "1": {
+                "0": -1,
+                "1": 0,
+                "4": 0,
+                "2": 0
+              },
+              "4": {
+                "0": -2,
+                "1": 1,
+                "4": 0,
+                "2": 0
+              },
+              "2": {
+                "0": 4,
+                "1": -14,
+                "4": 9,
+                "2": 0
+              }
+            },
+            "D": {
+              "0": -6,
+              "1": 16,
+              "4": -8,
+              "2": -2
+            },
+            "h": 1,
+            "t": 2,
+            "c": 0,
+            "d": 9,
+            "order": [
+              0,
+              1,
+              4,
+              2
+            ]
+          },
+          "leaf4": {
+            "q": 3,
+            "p": {
+              "1": {
+                "1": 0,
+                "2": -2,
+                "3": -2,
+                "0": 1
+              },
+              "2": {
+                "1": -1,
+                "2": 0,
+                "3": 0,
+                "0": 0
+              },
+              "3": {
+                "1": -1,
+                "2": 0,
+                "3": 0,
+                "0": 0
+              },
+              "0": {
+                "1": 2,
+                "2": 4,
+                "3": -7,
+                "0": 0
+              }
+            },
+            "D": {
+              "1": -3,
+              "2": -3,
+              "3": 8,
+              "0": -2
+            },
+            "h": 1,
+            "t": 1,
+            "c": 0,
+            "d": -7,
+            "order": [
+              1,
+              2,
+              3,
+              0
+            ]
+          }
+        },
+        {
+          "leaf3": {
+            "q": 5,
+            "p": {
+              "0": {
+                "0": 0,
+                "4": -4,
+                "1": -2,
+                "2": 1
+              },
+              "4": {
+                "0": -1,
+                "4": 0,
+                "1": 0,
+                "2": 0
+              },
+              "1": {
+                "0": -2,
+                "4": 1,
+                "1": 0,
+                "2": 0
+              },
+              "2": {
+                "0": 4,
+                "4": 10,
+                "1": -15,
+                "2": 0
+              }
+            },
+            "D": {
+              "0": -6,
+              "4": -8,
+              "1": 16,
+              "2": -2
+            },
+            "h": 1,
+            "t": 2,
+            "c": 0,
+            "d": -15,
+            "order": [
+              0,
+              4,
+              1,
+              2
+            ]
+          },
+          "leaf4": {
+            "q": 3,
+            "p": {
+              "1": {
+                "1": 0,
+                "2": -2,
+                "3": -2,
+                "0": 1
+              },
+              "2": {
+                "1": -1,
+                "2": 0,
+                "3": 0,
+                "0": 0
+              },
+              "3": {
+                "1": -1,
+                "2": 0,
+                "3": 0,
+                "0": 0
+              },
+              "0": {
+                "1": 2,
+                "2": 4,
+                "3": -7,
+                "0": 0
+              }
+            },
+            "D": {
+              "1": -3,
+              "2": -3,
+              "3": 8,
+              "0": -2
+            },
+            "h": 1,
+            "t": 1,
+            "c": 0,
+            "d": -7,
+            "order": [
+              1,
+              2,
+              3,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 8,
+        "T": 36
+      },
+      "middle": {
+        "a": 33,
+        "b": 37,
+        "p": [
+          [
+            0,
+            -61,
+            32,
+            -4
+          ],
+          [
+            -20,
+            0,
+            -18,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -8,
+            36,
+            -29,
+            0
+          ]
+        ],
+        "D": [
+          -6,
+          -10,
+          14,
+          2
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 4,
+          "z": 1,
+          "S": 8,
+          "T": 36
+        }
+      },
+      "leaf3_count": 18,
+      "low_triangle_count": 2,
+      "low_triangles": [
+        {
+          "leaf3": {
+            "q": 9,
+            "p": {
+              "0": {
+                "0": 0,
+                "4": -8,
+                "1": -2,
+                "2": 1
+              },
+              "4": {
+                "0": -1,
+                "4": 0,
+                "1": 0,
+                "2": 0
+              },
+              "1": {
+                "0": -4,
+                "4": 3,
+                "1": 0,
+                "2": 0
+              },
+              "2": {
+                "0": 8,
+                "4": 28,
+                "1": -37,
+                "2": 0
+              }
+            },
+            "D": {
+              "0": -12,
+              "4": -24,
+              "1": 38,
+              "2": -2
+            },
+            "h": 1,
+            "t": 4,
+            "c": 0,
+            "d": -37,
+            "order": [
+              0,
+              4,
+              1,
+              2
+            ]
+          },
+          "leaf4": {
+            "q": 7,
+            "p": {
+              "1": {
+                "1": 0,
+                "2": -6,
+                "3": -3,
+                "0": 2
+              },
+              "2": {
+                "1": -1,
+                "2": 0,
+                "3": 0,
+                "0": 0
+              },
+              "3": {
+                "1": -2,
+                "2": 1,
+                "3": 0,
+                "0": 0
+              },
+              "0": {
+                "1": 3,
+                "2": 18,
+                "3": -22,
+                "0": 0
+              }
+            },
+            "D": {
+              "1": -7,
+              "2": -14,
+              "3": 24,
+              "0": -3
+            },
+            "h": 2,
+            "t": 1,
+            "c": 0,
+            "d": -22,
+            "order": [
+              1,
+              2,
+              3,
+              0
+            ]
+          }
+        },
+        {
+          "leaf3": {
+            "q": 9,
+            "p": {
+              "0": {
+                "0": 0,
+                "4": -8,
+                "1": -2,
+                "2": 1
+              },
+              "4": {
+                "0": -1,
+                "4": 0,
+                "1": 0,
+                "2": 0
+              },
+              "1": {
+                "0": -4,
+                "4": 3,
+                "1": 0,
+                "2": 0
+              },
+              "2": {
+                "0": 8,
+                "4": 26,
+                "1": -35,
+                "2": 0
+              }
+            },
+            "D": {
+              "0": -12,
+              "4": -22,
+              "1": 36,
+              "2": -2
+            },
+            "h": 1,
+            "t": 4,
+            "c": 0,
+            "d": -35,
+            "order": [
+              0,
+              4,
+              1,
+              2
+            ]
+          },
+          "leaf4": {
+            "q": 5,
+            "p": {
+              "1": {
+                "1": 0,
+                "2": -4,
+                "3": -2,
+                "0": 1
+              },
+              "2": {
+                "1": -1,
+                "2": 0,
+                "3": 0,
+                "0": 0
+              },
+              "3": {
+                "1": -2,
+                "2": 1,
+                "3": 0,
+                "0": 0
+              },
+              "0": {
+                "1": 4,
+                "2": 16,
+                "3": -21,
+                "0": 0
+              }
+            },
+            "D": {
+              "1": -6,
+              "2": -14,
+              "3": 22,
+              "0": -2
+            },
+            "h": 1,
+            "t": 2,
+            "c": 0,
+            "d": -21,
+            "order": [
+              1,
+              2,
+              3,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 13,
+        "T": 60
+      },
+      "middle": {
+        "a": 53,
+        "b": 61,
+        "p": [
+          [
+            0,
+            -101,
+            52,
+            -4
+          ],
+          [
+            -32,
+            0,
+            -30,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -13,
+            60,
+            -48,
+            0
+          ]
+        ],
+        "D": [
+          -9,
+          -18,
+          25,
+          2
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 4,
+          "z": 1,
+          "S": 13,
+          "T": 60
+        }
+      },
+      "leaf3_count": 24,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 18,
+        "T": 84
+      },
+      "middle": {
+        "a": 73,
+        "b": 85,
+        "p": [
+          [
+            0,
+            -141,
+            72,
+            -4
+          ],
+          [
+            -44,
+            0,
+            -42,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -18,
+            84,
+            -67,
+            0
+          ]
+        ],
+        "D": [
+          -12,
+          -26,
+          36,
+          2
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 4,
+          "z": 1,
+          "S": 18,
+          "T": 84
+        }
+      },
+      "leaf3_count": 18,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 23,
+        "T": 108
+      },
+      "middle": {
+        "a": 93,
+        "b": 109,
+        "p": [
+          [
+            0,
+            -181,
+            92,
+            -4
+          ],
+          [
+            -56,
+            0,
+            -54,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -23,
+            108,
+            -86,
+            0
+          ]
+        ],
+        "D": [
+          -15,
+          -34,
+          47,
+          2
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 4,
+          "z": 1,
+          "S": 23,
+          "T": 108
+        }
+      },
+      "leaf3_count": 24,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 28,
+        "T": 132
+      },
+      "middle": {
+        "a": 113,
+        "b": 133,
+        "p": [
+          [
+            0,
+            -221,
+            112,
+            -4
+          ],
+          [
+            -68,
+            0,
+            -66,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -28,
+            132,
+            -105,
+            0
+          ]
+        ],
+        "D": [
+          -18,
+          -42,
+          58,
+          2
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 4,
+          "z": 1,
+          "S": 28,
+          "T": 132
+        }
+      },
+      "leaf3_count": 18,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 33,
+        "T": 156
+      },
+      "middle": {
+        "a": 133,
+        "b": 157,
+        "p": [
+          [
+            0,
+            -261,
+            132,
+            -4
+          ],
+          [
+            -80,
+            0,
+            -78,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -33,
+            156,
+            -124,
+            0
+          ]
+        ],
+        "D": [
+          -21,
+          -50,
+          69,
+          2
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 4,
+          "z": 1,
+          "S": 33,
+          "T": 156
+        }
+      },
+      "leaf3_count": 24,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 38,
+        "T": 180
+      },
+      "middle": {
+        "a": 153,
+        "b": 181,
+        "p": [
+          [
+            0,
+            -301,
+            152,
+            -4
+          ],
+          [
+            -92,
+            0,
+            -90,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -38,
+            180,
+            -143,
+            0
+          ]
+        ],
+        "D": [
+          -24,
+          -58,
+          80,
+          2
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 4,
+          "z": 1,
+          "S": 38,
+          "T": 180
+        }
+      },
+      "leaf3_count": 18,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 43,
+        "T": 204
+      },
+      "middle": {
+        "a": 173,
+        "b": 205,
+        "p": [
+          [
+            0,
+            -341,
+            172,
+            -4
+          ],
+          [
+            -104,
+            0,
+            -102,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -43,
+            204,
+            -162,
+            0
+          ]
+        ],
+        "D": [
+          -27,
+          -66,
+          91,
+          2
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 4,
+          "z": 1,
+          "S": 43,
+          "T": 204
+        }
+      },
+      "leaf3_count": 24,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 48,
+        "T": 228
+      },
+      "middle": {
+        "a": 193,
+        "b": 229,
+        "p": [
+          [
+            0,
+            -381,
+            192,
+            -4
+          ],
+          [
+            -116,
+            0,
+            -114,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -48,
+            228,
+            -181,
+            0
+          ]
+        ],
+        "D": [
+          -30,
+          -74,
+          102,
+          2
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 4,
+          "z": 1,
+          "S": 48,
+          "T": 228
+        }
+      },
+      "leaf3_count": 18,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 53,
+        "T": 252
+      },
+      "middle": {
+        "a": 213,
+        "b": 253,
+        "p": [
+          [
+            0,
+            -421,
+            212,
+            -4
+          ],
+          [
+            -128,
+            0,
+            -126,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -53,
+            252,
+            -200,
+            0
+          ]
+        ],
+        "D": [
+          -33,
+          -82,
+          113,
+          2
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 4,
+          "z": 1,
+          "S": 53,
+          "T": 252
+        }
+      },
+      "leaf3_count": 24,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 58,
+        "T": 276
+      },
+      "middle": {
+        "a": 233,
+        "b": 277,
+        "p": [
+          [
+            0,
+            -461,
+            232,
+            -4
+          ],
+          [
+            -140,
+            0,
+            -138,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -58,
+            276,
+            -219,
+            0
+          ]
+        ],
+        "D": [
+          -36,
+          -90,
+          124,
+          2
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 4,
+          "z": 1,
+          "S": 58,
+          "T": 276
+        }
+      },
+      "leaf3_count": 18,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 6,
+        "z": 1,
+        "S": 6,
+        "T": 28
+      },
+      "middle": {
+        "a": 37,
+        "b": 29,
+        "p": [
+          [
+            0,
+            -67,
+            36,
+            -6
+          ],
+          [
+            -16,
+            0,
+            -14,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -6,
+            28,
+            -23,
+            0
+          ]
+        ],
+        "D": [
+          -16,
+          12,
+          0,
+          4
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 6,
+          "z": 1,
+          "S": 6,
+          "T": 28
+        }
+      },
+      "leaf3_count": 6,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 6,
+        "z": 1,
+        "S": 13,
+        "T": 64
+      },
+      "middle": {
+        "a": 79,
+        "b": 65,
+        "p": [
+          [
+            0,
+            -151,
+            78,
+            -6
+          ],
+          [
+            -34,
+            0,
+            -32,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -13,
+            64,
+            -52,
+            0
+          ]
+        ],
+        "D": [
+          -33,
+          24,
+          5,
+          4
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 6,
+          "z": 1,
+          "S": 13,
+          "T": 64
+        }
+      },
+      "leaf3_count": 8,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 6,
+        "z": 1,
+        "S": 20,
+        "T": 100
+      },
+      "middle": {
+        "a": 121,
+        "b": 101,
+        "p": [
+          [
+            0,
+            -235,
+            120,
+            -6
+          ],
+          [
+            -52,
+            0,
+            -50,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -20,
+            100,
+            -81,
+            0
+          ]
+        ],
+        "D": [
+          -50,
+          36,
+          10,
+          4
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 6,
+          "z": 1,
+          "S": 20,
+          "T": 100
+        }
+      },
+      "leaf3_count": 12,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 6,
+        "z": 1,
+        "S": 27,
+        "T": 136
+      },
+      "middle": {
+        "a": 163,
+        "b": 137,
+        "p": [
+          [
+            0,
+            -319,
+            162,
+            -6
+          ],
+          [
+            -70,
+            0,
+            -68,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -27,
+            136,
+            -110,
+            0
+          ]
+        ],
+        "D": [
+          -67,
+          48,
+          15,
+          4
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 6,
+          "z": 1,
+          "S": 27,
+          "T": 136
+        }
+      },
+      "leaf3_count": 16,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 6,
+        "z": 1,
+        "S": 34,
+        "T": 172
+      },
+      "middle": {
+        "a": 205,
+        "b": 173,
+        "p": [
+          [
+            0,
+            -403,
+            204,
+            -6
+          ],
+          [
+            -88,
+            0,
+            -86,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -34,
+            172,
+            -139,
+            0
+          ]
+        ],
+        "D": [
+          -84,
+          60,
+          20,
+          4
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 6,
+          "z": 1,
+          "S": 34,
+          "T": 172
+        }
+      },
+      "leaf3_count": 6,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 7,
+        "z": 1,
+        "S": 4,
+        "T": 18
+      },
+      "middle": {
+        "a": 29,
+        "b": 19,
+        "p": [
+          [
+            0,
+            -50,
+            28,
+            -7
+          ],
+          [
+            -11,
+            0,
+            -9,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -4,
+            18,
+            -15,
+            0
+          ]
+        ],
+        "D": [
+          -15,
+          15,
+          -5,
+          5
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 7,
+          "z": 1,
+          "S": 4,
+          "T": 18
+        }
+      },
+      "leaf3_count": 12,
+      "low_triangle_count": 1,
+      "low_triangles": [
+        {
+          "leaf3": {
+            "q": 21,
+            "p": {
+              "0": {
+                "0": 0,
+                "4": -20,
+                "1": -5,
+                "2": 4
+              },
+              "4": {
+                "0": -1,
+                "4": 0,
+                "1": 0,
+                "2": 0
+              },
+              "1": {
+                "0": -4,
+                "4": 3,
+                "1": 0,
+                "2": 0
+              },
+              "2": {
+                "0": 5,
+                "4": 16,
+                "1": -22,
+                "2": 0
+              }
+            },
+            "D": {
+              "0": -21,
+              "4": 0,
+              "1": 26,
+              "2": -5
+            },
+            "h": 4,
+            "t": 1,
+            "c": 0,
+            "d": -22,
+            "order": [
+              0,
+              4,
+              1,
+              2
+            ]
+          },
+          "leaf4": {
+            "q": 3,
+            "p": {
+              "1": {
+                "1": 0,
+                "2": -2,
+                "3": -2,
+                "0": 1
+              },
+              "2": {
+                "1": -1,
+                "2": 0,
+                "3": 0,
+                "0": 0
+              },
+              "3": {
+                "1": -1,
+                "2": 0,
+                "3": 0,
+                "0": 0
+              },
+              "0": {
+                "1": 2,
+                "2": -4,
+                "3": 1,
+                "0": 0
+              }
+            },
+            "D": {
+              "1": -3,
+              "2": 5,
+              "3": 0,
+              "0": -2
+            },
+            "h": 1,
+            "t": 1,
+            "c": 0,
+            "d": 1,
+            "order": [
+              1,
+              2,
+              3,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 7,
+        "z": 1,
+        "S": 12,
+        "T": 60
+      },
+      "middle": {
+        "a": 85,
+        "b": 61,
+        "p": [
+          [
+            0,
+            -162,
+            84,
+            -7
+          ],
+          [
+            -32,
+            0,
+            -30,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -12,
+            60,
+            -49,
+            0
+          ]
+        ],
+        "D": [
+          -42,
+          43,
+          -6,
+          5
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 7,
+          "z": 1,
+          "S": 12,
+          "T": 60
+        }
+      },
+      "leaf3_count": 6,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 7,
+        "z": 1,
+        "S": 20,
+        "T": 102
+      },
+      "middle": {
+        "a": 141,
+        "b": 103,
+        "p": [
+          [
+            0,
+            -274,
+            140,
+            -7
+          ],
+          [
+            -53,
+            0,
+            -51,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -20,
+            102,
+            -83,
+            0
+          ]
+        ],
+        "D": [
+          -69,
+          71,
+          -7,
+          5
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 7,
+          "z": 1,
+          "S": 20,
+          "T": 102
+        }
+      },
+      "leaf3_count": 10,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 7,
+        "z": 1,
+        "S": 28,
+        "T": 144
+      },
+      "middle": {
+        "a": 197,
+        "b": 145,
+        "p": [
+          [
+            0,
+            -386,
+            196,
+            -7
+          ],
+          [
+            -74,
+            0,
+            -72,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -28,
+            144,
+            -117,
+            0
+          ]
+        ],
+        "D": [
+          -96,
+          99,
+          -8,
+          5
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 7,
+          "z": 1,
+          "S": 28,
+          "T": 144
+        }
+      },
+      "leaf3_count": 4,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 9,
+        "z": 1,
+        "S": 8,
+        "T": 40
+      },
+      "middle": {
+        "a": 73,
+        "b": 41,
+        "p": [
+          [
+            0,
+            -136,
+            72,
+            -9
+          ],
+          [
+            -22,
+            0,
+            -20,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -8,
+            40,
+            -33,
+            0
+          ]
+        ],
+        "D": [
+          -44,
+          57,
+          -20,
+          7
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 9,
+          "z": 1,
+          "S": 8,
+          "T": 40
+        }
+      },
+      "leaf3_count": 8,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 9,
+        "z": 1,
+        "S": 18,
+        "T": 94
+      },
+      "middle": {
+        "a": 163,
+        "b": 95,
+        "p": [
+          [
+            0,
+            -316,
+            162,
+            -9
+          ],
+          [
+            -49,
+            0,
+            -47,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -18,
+            94,
+            -77,
+            0
+          ]
+        ],
+        "D": [
+          -97,
+          129,
+          -39,
+          7
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 9,
+          "z": 1,
+          "S": 18,
+          "T": 94
+        }
+      },
+      "leaf3_count": 2,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 9,
+        "z": 1,
+        "S": 28,
+        "T": 148
+      },
+      "middle": {
+        "a": 253,
+        "b": 149,
+        "p": [
+          [
+            0,
+            -496,
+            252,
+            -9
+          ],
+          [
+            -76,
+            0,
+            -74,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -28,
+            148,
+            -121,
+            0
+          ]
+        ],
+        "D": [
+          -150,
+          201,
+          -58,
+          7
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 9,
+          "z": 1,
+          "S": 28,
+          "T": 148
+        }
+      },
+      "leaf3_count": 10,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 10,
+        "z": 1,
+        "S": 16,
+        "T": 84
+      },
+      "middle": {
+        "a": 161,
+        "b": 85,
+        "p": [
+          [
+            0,
+            -311,
+            160,
+            -10
+          ],
+          [
+            -44,
+            0,
+            -42,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -16,
+            84,
+            -69,
+            0
+          ]
+        ],
+        "D": [
+          -102,
+          144,
+          -50,
+          8
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 10,
+          "z": 1,
+          "S": 16,
+          "T": 84
+        }
+      },
+      "leaf3_count": 10,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 10,
+        "z": 1,
+        "S": 27,
+        "T": 144
+      },
+      "middle": {
+        "a": 271,
+        "b": 145,
+        "p": [
+          [
+            0,
+            -531,
+            270,
+            -10
+          ],
+          [
+            -74,
+            0,
+            -72,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -27,
+            144,
+            -118,
+            0
+          ]
+        ],
+        "D": [
+          -171,
+          244,
+          -81,
+          8
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 10,
+          "z": 1,
+          "S": 27,
+          "T": 144
+        }
+      },
+      "leaf3_count": 4,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 12,
+        "z": 1,
+        "S": 10,
+        "T": 52
+      },
+      "middle": {
+        "a": 121,
+        "b": 53,
+        "p": [
+          [
+            0,
+            -229,
+            120,
+            -12
+          ],
+          [
+            -28,
+            0,
+            -26,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -10,
+            52,
+            -43,
+            0
+          ]
+        ],
+        "D": [
+          -84,
+          126,
+          -52,
+          10
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 12,
+          "z": 1,
+          "S": 10,
+          "T": 52
+        }
+      },
+      "leaf3_count": 10,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 12,
+        "z": 1,
+        "S": 23,
+        "T": 124
+      },
+      "middle": {
+        "a": 277,
+        "b": 125,
+        "p": [
+          [
+            0,
+            -541,
+            276,
+            -12
+          ],
+          [
+            -64,
+            0,
+            -62,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -23,
+            124,
+            -102,
+            0
+          ]
+        ],
+        "D": [
+          -191,
+          294,
+          -113,
+          10
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 12,
+          "z": 1,
+          "S": 23,
+          "T": 124
+        }
+      },
+      "leaf3_count": 4,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 15,
+        "z": 1,
+        "S": 12,
+        "T": 64
+      },
+      "middle": {
+        "a": 181,
+        "b": 65,
+        "p": [
+          [
+            0,
+            -346,
+            180,
+            -15
+          ],
+          [
+            -34,
+            0,
+            -32,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -12,
+            64,
+            -53,
+            0
+          ]
+        ],
+        "D": [
+          -136,
+          219,
+          -96,
+          13
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 15,
+          "z": 1,
+          "S": 12,
+          "T": 64
+        }
+      },
+      "leaf3_count": 12,
+      "low_triangle_count": 1,
+      "low_triangles": [
+        {
+          "leaf3": {
+            "q": 157,
+            "p": {
+              "0": {
+                "0": 0,
+                "4": -156,
+                "1": -13,
+                "2": 12
+              },
+              "4": {
+                "0": -1,
+                "4": 0,
+                "1": 0,
+                "2": 0
+              },
+              "1": {
+                "0": -12,
+                "4": 11,
+                "1": 0,
+                "2": 0
+              },
+              "2": {
+                "0": 13,
+                "4": 53,
+                "1": -67,
+                "2": 0
+              }
+            },
+            "D": {
+              "0": -157,
+              "4": 91,
+              "1": 79,
+              "2": -13
+            },
+            "h": 12,
+            "t": 1,
+            "c": 0,
+            "d": -67,
+            "order": [
+              0,
+              4,
+              1,
+              2
+            ]
+          },
+          "leaf4": {
+            "q": 3,
+            "p": {
+              "1": {
+                "1": 0,
+                "2": -2,
+                "3": -2,
+                "0": 1
+              },
+              "2": {
+                "1": -1,
+                "2": 0,
+                "3": 0,
+                "0": 0
+              },
+              "3": {
+                "1": -1,
+                "2": 0,
+                "3": 0,
+                "0": 0
+              },
+              "0": {
+                "1": 2,
+                "2": -95,
+                "3": 92,
+                "0": 0
+              }
+            },
+            "D": {
+              "1": -3,
+              "2": 96,
+              "3": -91,
+              "0": -2
+            },
+            "h": 1,
+            "t": 1,
+            "c": 0,
+            "d": 92,
+            "order": [
+              1,
+              2,
+              3,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 15,
+        "z": 1,
+        "S": 28,
+        "T": 154
+      },
+      "middle": {
+        "a": 421,
+        "b": 155,
+        "p": [
+          [
+            0,
+            -826,
+            420,
+            -15
+          ],
+          [
+            -79,
+            0,
+            -77,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -28,
+            154,
+            -127,
+            0
+          ]
+        ],
+        "D": [
+          -315,
+          519,
+          -217,
+          13
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 15,
+          "z": 1,
+          "S": 28,
+          "T": 154
+        }
+      },
+      "leaf3_count": 6,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 16,
+        "z": 1,
+        "S": 41,
+        "T": 228
+      },
+      "middle": {
+        "a": 657,
+        "b": 229,
+        "p": [
+          [
+            0,
+            -1297,
+            656,
+            -16
+          ],
+          [
+            -116,
+            0,
+            -114,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -41,
+            228,
+            -188,
+            0
+          ]
+        ],
+        "D": [
+          -501,
+          842,
+          -355,
+          14
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 16,
+          "z": 1,
+          "S": 41,
+          "T": 228
+        }
+      },
+      "leaf3_count": 12,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 24,
+        "z": 1,
+        "S": 43,
+        "T": 244
+      },
+      "middle": {
+        "a": 1033,
+        "b": 245,
+        "p": [
+          [
+            0,
+            -2041,
+            1032,
+            -24
+          ],
+          [
+            -124,
+            0,
+            -122,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -43,
+            244,
+            -202,
+            0
+          ]
+        ],
+        "D": [
+          -867,
+          1554,
+          -709,
+          22
+        ],
+        "parameters": {
+          "r": 1,
+          "s": 24,
+          "z": 1,
+          "S": 43,
+          "T": 244
+        }
+      },
+      "leaf3_count": 12,
+      "low_triangle_count": 0,
+      "low_triangles": []
+    }
+  ],
+  "surviving_low_triangle_models": [
+    [
+      4,
+      3,
+      12,
+      3
+    ],
+    [
+      4,
+      8,
+      36,
+      2
+    ],
+    [
+      7,
+      4,
+      18,
+      1
+    ],
+    [
+      15,
+      12,
+      64,
+      1
+    ]
+  ],
+  "surviving_low_triangles": 7,
+  "center0_exclusions": [
+    {
+      "s": 4,
+      "S": 3,
+      "T": 12,
+      "a": 13,
+      "Q": 3,
+      "h": 1,
+      "q14": 3,
+      "node_pairs": [
+        {
+          "n": 0,
+          "m": 0,
+          "p23": 17,
+          "p32": 2,
+          "product": 34
+        },
+        {
+          "n": 0,
+          "m": 1,
+          "p23": 17,
+          "p32": -1,
+          "product": -17
+        },
+        {
+          "n": 0,
+          "m": 2,
+          "p23": 17,
+          "p32": -4,
+          "product": -68
+        },
+        {
+          "n": 0,
+          "m": 3,
+          "p23": 17,
+          "p32": -7,
+          "product": -119
+        },
+        {
+          "n": 0,
+          "m": 4,
+          "p23": 17,
+          "p32": -10,
+          "product": -170
+        },
+        {
+          "n": 0,
+          "m": 5,
+          "p23": 17,
+          "p32": -13,
+          "product": -221
+        },
+        {
+          "n": 1,
+          "m": 0,
+          "p23": 4,
+          "p32": 2,
+          "product": 8
+        },
+        {
+          "n": 1,
+          "m": 1,
+          "p23": 4,
+          "p32": -1,
+          "product": -4
+        },
+        {
+          "n": 1,
+          "m": 2,
+          "p23": 4,
+          "p32": -4,
+          "product": -16
+        },
+        {
+          "n": 1,
+          "m": 3,
+          "p23": 4,
+          "p32": -7,
+          "product": -28
+        },
+        {
+          "n": 1,
+          "m": 4,
+          "p23": 4,
+          "p32": -10,
+          "product": -40
+        },
+        {
+          "n": 1,
+          "m": 5,
+          "p23": 4,
+          "p32": -13,
+          "product": -52
+        },
+        {
+          "n": 2,
+          "m": 0,
+          "p23": -9,
+          "p32": 2,
+          "product": -18
+        },
+        {
+          "n": 2,
+          "m": 1,
+          "p23": -9,
+          "p32": -1,
+          "product": 9
+        },
+        {
+          "n": 2,
+          "m": 2,
+          "p23": -9,
+          "p32": -4,
+          "product": 36
+        },
+        {
+          "n": 2,
+          "m": 3,
+          "p23": -9,
+          "p32": -7,
+          "product": 63
+        },
+        {
+          "n": 2,
+          "m": 4,
+          "p23": -9,
+          "p32": -10,
+          "product": 90
+        },
+        {
+          "n": 2,
+          "m": 5,
+          "p23": -9,
+          "p32": -13,
+          "product": 117
+        },
+        {
+          "n": 3,
+          "m": 0,
+          "p23": -22,
+          "p32": 2,
+          "product": -44
+        },
+        {
+          "n": 3,
+          "m": 1,
+          "p23": -22,
+          "p32": -1,
+          "product": 22
+        },
+        {
+          "n": 3,
+          "m": 2,
+          "p23": -22,
+          "p32": -4,
+          "product": 88
+        },
+        {
+          "n": 3,
+          "m": 3,
+          "p23": -22,
+          "p32": -7,
+          "product": 154
+        },
+        {
+          "n": 3,
+          "m": 4,
+          "p23": -22,
+          "p32": -10,
+          "product": 220
+        },
+        {
+          "n": 3,
+          "m": 5,
+          "p23": -22,
+          "p32": -13,
+          "product": 286
+        },
+        {
+          "n": 4,
+          "m": 0,
+          "p23": -35,
+          "p32": 2,
+          "product": -70
+        },
+        {
+          "n": 4,
+          "m": 1,
+          "p23": -35,
+          "p32": -1,
+          "product": 35
+        },
+        {
+          "n": 4,
+          "m": 2,
+          "p23": -35,
+          "p32": -4,
+          "product": 140
+        },
+        {
+          "n": 4,
+          "m": 3,
+          "p23": -35,
+          "p32": -7,
+          "product": 245
+        },
+        {
+          "n": 4,
+          "m": 4,
+          "p23": -35,
+          "p32": -10,
+          "product": 350
+        },
+        {
+          "n": 4,
+          "m": 5,
+          "p23": -35,
+          "p32": -13,
+          "product": 455
+        },
+        {
+          "n": 5,
+          "m": 0,
+          "p23": -48,
+          "p32": 2,
+          "product": -96
+        },
+        {
+          "n": 5,
+          "m": 1,
+          "p23": -48,
+          "p32": -1,
+          "product": 48
+        },
+        {
+          "n": 5,
+          "m": 2,
+          "p23": -48,
+          "p32": -4,
+          "product": 192
+        },
+        {
+          "n": 5,
+          "m": 3,
+          "p23": -48,
+          "p32": -7,
+          "product": 336
+        },
+        {
+          "n": 5,
+          "m": 4,
+          "p23": -48,
+          "p32": -10,
+          "product": 480
+        },
+        {
+          "n": 5,
+          "m": 5,
+          "p23": -48,
+          "p32": -13,
+          "product": 624
+        }
+      ],
+      "node_pair_solutions": [],
+      "exclusion": "No center0 pair solution for known rays2,3"
+    },
+    {
+      "s": 4,
+      "S": 3,
+      "T": 12,
+      "a": 13,
+      "Q": 5,
+      "h": 1,
+      "q14": 3,
+      "node_pairs": [
+        {
+          "n": 0,
+          "m": 0,
+          "p23": 17,
+          "p32": 4,
+          "product": 68
+        },
+        {
+          "n": 0,
+          "m": 1,
+          "p23": 17,
+          "p32": -1,
+          "product": -17
+        },
+        {
+          "n": 0,
+          "m": 2,
+          "p23": 17,
+          "p32": -6,
+          "product": -102
+        },
+        {
+          "n": 0,
+          "m": 3,
+          "p23": 17,
+          "p32": -11,
+          "product": -187
+        },
+        {
+          "n": 0,
+          "m": 4,
+          "p23": 17,
+          "p32": -16,
+          "product": -272
+        },
+        {
+          "n": 0,
+          "m": 5,
+          "p23": 17,
+          "p32": -21,
+          "product": -357
+        },
+        {
+          "n": 1,
+          "m": 0,
+          "p23": 4,
+          "p32": 4,
+          "product": 16
+        },
+        {
+          "n": 1,
+          "m": 1,
+          "p23": 4,
+          "p32": -1,
+          "product": -4
+        },
+        {
+          "n": 1,
+          "m": 2,
+          "p23": 4,
+          "p32": -6,
+          "product": -24
+        },
+        {
+          "n": 1,
+          "m": 3,
+          "p23": 4,
+          "p32": -11,
+          "product": -44
+        },
+        {
+          "n": 1,
+          "m": 4,
+          "p23": 4,
+          "p32": -16,
+          "product": -64
+        },
+        {
+          "n": 1,
+          "m": 5,
+          "p23": 4,
+          "p32": -21,
+          "product": -84
+        },
+        {
+          "n": 2,
+          "m": 0,
+          "p23": -9,
+          "p32": 4,
+          "product": -36
+        },
+        {
+          "n": 2,
+          "m": 1,
+          "p23": -9,
+          "p32": -1,
+          "product": 9
+        },
+        {
+          "n": 2,
+          "m": 2,
+          "p23": -9,
+          "p32": -6,
+          "product": 54
+        },
+        {
+          "n": 2,
+          "m": 3,
+          "p23": -9,
+          "p32": -11,
+          "product": 99
+        },
+        {
+          "n": 2,
+          "m": 4,
+          "p23": -9,
+          "p32": -16,
+          "product": 144
+        },
+        {
+          "n": 2,
+          "m": 5,
+          "p23": -9,
+          "p32": -21,
+          "product": 189
+        },
+        {
+          "n": 3,
+          "m": 0,
+          "p23": -22,
+          "p32": 4,
+          "product": -88
+        },
+        {
+          "n": 3,
+          "m": 1,
+          "p23": -22,
+          "p32": -1,
+          "product": 22
+        },
+        {
+          "n": 3,
+          "m": 2,
+          "p23": -22,
+          "p32": -6,
+          "product": 132
+        },
+        {
+          "n": 3,
+          "m": 3,
+          "p23": -22,
+          "p32": -11,
+          "product": 242
+        },
+        {
+          "n": 3,
+          "m": 4,
+          "p23": -22,
+          "p32": -16,
+          "product": 352
+        },
+        {
+          "n": 3,
+          "m": 5,
+          "p23": -22,
+          "p32": -21,
+          "product": 462
+        },
+        {
+          "n": 4,
+          "m": 0,
+          "p23": -35,
+          "p32": 4,
+          "product": -140
+        },
+        {
+          "n": 4,
+          "m": 1,
+          "p23": -35,
+          "p32": -1,
+          "product": 35
+        },
+        {
+          "n": 4,
+          "m": 2,
+          "p23": -35,
+          "p32": -6,
+          "product": 210
+        },
+        {
+          "n": 4,
+          "m": 3,
+          "p23": -35,
+          "p32": -11,
+          "product": 385
+        },
+        {
+          "n": 4,
+          "m": 4,
+          "p23": -35,
+          "p32": -16,
+          "product": 560
+        },
+        {
+          "n": 4,
+          "m": 5,
+          "p23": -35,
+          "p32": -21,
+          "product": 735
+        },
+        {
+          "n": 5,
+          "m": 0,
+          "p23": -48,
+          "p32": 4,
+          "product": -192
+        },
+        {
+          "n": 5,
+          "m": 1,
+          "p23": -48,
+          "p32": -1,
+          "product": 48
+        },
+        {
+          "n": 5,
+          "m": 2,
+          "p23": -48,
+          "p32": -6,
+          "product": 288
+        },
+        {
+          "n": 5,
+          "m": 3,
+          "p23": -48,
+          "p32": -11,
+          "product": 528
+        },
+        {
+          "n": 5,
+          "m": 4,
+          "p23": -48,
+          "p32": -16,
+          "product": 768
+        },
+        {
+          "n": 5,
+          "m": 5,
+          "p23": -48,
+          "p32": -21,
+          "product": 1008
+        }
+      ],
+      "node_pair_solutions": [],
+      "exclusion": "No center0 pair solution for known rays2,3"
+    },
+    {
+      "s": 4,
+      "S": 3,
+      "T": 12,
+      "a": 13,
+      "Q": 5,
+      "h": 1,
+      "q14": 3,
+      "node_pairs": [
+        {
+          "n": 0,
+          "m": 0,
+          "p23": 17,
+          "p32": 4,
+          "product": 68
+        },
+        {
+          "n": 0,
+          "m": 1,
+          "p23": 17,
+          "p32": -1,
+          "product": -17
+        },
+        {
+          "n": 0,
+          "m": 2,
+          "p23": 17,
+          "p32": -6,
+          "product": -102
+        },
+        {
+          "n": 0,
+          "m": 3,
+          "p23": 17,
+          "p32": -11,
+          "product": -187
+        },
+        {
+          "n": 0,
+          "m": 4,
+          "p23": 17,
+          "p32": -16,
+          "product": -272
+        },
+        {
+          "n": 0,
+          "m": 5,
+          "p23": 17,
+          "p32": -21,
+          "product": -357
+        },
+        {
+          "n": 1,
+          "m": 0,
+          "p23": 4,
+          "p32": 4,
+          "product": 16
+        },
+        {
+          "n": 1,
+          "m": 1,
+          "p23": 4,
+          "p32": -1,
+          "product": -4
+        },
+        {
+          "n": 1,
+          "m": 2,
+          "p23": 4,
+          "p32": -6,
+          "product": -24
+        },
+        {
+          "n": 1,
+          "m": 3,
+          "p23": 4,
+          "p32": -11,
+          "product": -44
+        },
+        {
+          "n": 1,
+          "m": 4,
+          "p23": 4,
+          "p32": -16,
+          "product": -64
+        },
+        {
+          "n": 1,
+          "m": 5,
+          "p23": 4,
+          "p32": -21,
+          "product": -84
+        },
+        {
+          "n": 2,
+          "m": 0,
+          "p23": -9,
+          "p32": 4,
+          "product": -36
+        },
+        {
+          "n": 2,
+          "m": 1,
+          "p23": -9,
+          "p32": -1,
+          "product": 9
+        },
+        {
+          "n": 2,
+          "m": 2,
+          "p23": -9,
+          "p32": -6,
+          "product": 54
+        },
+        {
+          "n": 2,
+          "m": 3,
+          "p23": -9,
+          "p32": -11,
+          "product": 99
+        },
+        {
+          "n": 2,
+          "m": 4,
+          "p23": -9,
+          "p32": -16,
+          "product": 144
+        },
+        {
+          "n": 2,
+          "m": 5,
+          "p23": -9,
+          "p32": -21,
+          "product": 189
+        },
+        {
+          "n": 3,
+          "m": 0,
+          "p23": -22,
+          "p32": 4,
+          "product": -88
+        },
+        {
+          "n": 3,
+          "m": 1,
+          "p23": -22,
+          "p32": -1,
+          "product": 22
+        },
+        {
+          "n": 3,
+          "m": 2,
+          "p23": -22,
+          "p32": -6,
+          "product": 132
+        },
+        {
+          "n": 3,
+          "m": 3,
+          "p23": -22,
+          "p32": -11,
+          "product": 242
+        },
+        {
+          "n": 3,
+          "m": 4,
+          "p23": -22,
+          "p32": -16,
+          "product": 352
+        },
+        {
+          "n": 3,
+          "m": 5,
+          "p23": -22,
+          "p32": -21,
+          "product": 462
+        },
+        {
+          "n": 4,
+          "m": 0,
+          "p23": -35,
+          "p32": 4,
+          "product": -140
+        },
+        {
+          "n": 4,
+          "m": 1,
+          "p23": -35,
+          "p32": -1,
+          "product": 35
+        },
+        {
+          "n": 4,
+          "m": 2,
+          "p23": -35,
+          "p32": -6,
+          "product": 210
+        },
+        {
+          "n": 4,
+          "m": 3,
+          "p23": -35,
+          "p32": -11,
+          "product": 385
+        },
+        {
+          "n": 4,
+          "m": 4,
+          "p23": -35,
+          "p32": -16,
+          "product": 560
+        },
+        {
+          "n": 4,
+          "m": 5,
+          "p23": -35,
+          "p32": -21,
+          "product": 735
+        },
+        {
+          "n": 5,
+          "m": 0,
+          "p23": -48,
+          "p32": 4,
+          "product": -192
+        },
+        {
+          "n": 5,
+          "m": 1,
+          "p23": -48,
+          "p32": -1,
+          "product": 48
+        },
+        {
+          "n": 5,
+          "m": 2,
+          "p23": -48,
+          "p32": -6,
+          "product": 288
+        },
+        {
+          "n": 5,
+          "m": 3,
+          "p23": -48,
+          "p32": -11,
+          "product": 528
+        },
+        {
+          "n": 5,
+          "m": 4,
+          "p23": -48,
+          "p32": -16,
+          "product": 768
+        },
+        {
+          "n": 5,
+          "m": 5,
+          "p23": -48,
+          "p32": -21,
+          "product": 1008
+        }
+      ],
+      "node_pair_solutions": [],
+      "exclusion": "No center0 pair solution for known rays2,3"
+    },
+    {
+      "s": 4,
+      "S": 8,
+      "T": 36,
+      "a": 33,
+      "Q": 9,
+      "h": 1,
+      "q14": 7,
+      "node_pairs": [
+        {
+          "n": 0,
+          "m": 0,
+          "p23": 37,
+          "p32": 8,
+          "product": 296
+        },
+        {
+          "n": 0,
+          "m": 1,
+          "p23": 37,
+          "p32": -1,
+          "product": -37
+        },
+        {
+          "n": 0,
+          "m": 2,
+          "p23": 37,
+          "p32": -10,
+          "product": -370
+        },
+        {
+          "n": 0,
+          "m": 3,
+          "p23": 37,
+          "p32": -19,
+          "product": -703
+        },
+        {
+          "n": 0,
+          "m": 4,
+          "p23": 37,
+          "p32": -28,
+          "product": -1036
+        },
+        {
+          "n": 0,
+          "m": 5,
+          "p23": 37,
+          "p32": -37,
+          "product": -1369
+        },
+        {
+          "n": 1,
+          "m": 0,
+          "p23": 4,
+          "p32": 8,
+          "product": 32
+        },
+        {
+          "n": 1,
+          "m": 1,
+          "p23": 4,
+          "p32": -1,
+          "product": -4
+        },
+        {
+          "n": 1,
+          "m": 2,
+          "p23": 4,
+          "p32": -10,
+          "product": -40
+        },
+        {
+          "n": 1,
+          "m": 3,
+          "p23": 4,
+          "p32": -19,
+          "product": -76
+        },
+        {
+          "n": 1,
+          "m": 4,
+          "p23": 4,
+          "p32": -28,
+          "product": -112
+        },
+        {
+          "n": 1,
+          "m": 5,
+          "p23": 4,
+          "p32": -37,
+          "product": -148
+        },
+        {
+          "n": 2,
+          "m": 0,
+          "p23": -29,
+          "p32": 8,
+          "product": -232
+        },
+        {
+          "n": 2,
+          "m": 1,
+          "p23": -29,
+          "p32": -1,
+          "product": 29
+        },
+        {
+          "n": 2,
+          "m": 2,
+          "p23": -29,
+          "p32": -10,
+          "product": 290
+        },
+        {
+          "n": 2,
+          "m": 3,
+          "p23": -29,
+          "p32": -19,
+          "product": 551
+        },
+        {
+          "n": 2,
+          "m": 4,
+          "p23": -29,
+          "p32": -28,
+          "product": 812
+        },
+        {
+          "n": 2,
+          "m": 5,
+          "p23": -29,
+          "p32": -37,
+          "product": 1073
+        },
+        {
+          "n": 3,
+          "m": 0,
+          "p23": -62,
+          "p32": 8,
+          "product": -496
+        },
+        {
+          "n": 3,
+          "m": 1,
+          "p23": -62,
+          "p32": -1,
+          "product": 62
+        },
+        {
+          "n": 3,
+          "m": 2,
+          "p23": -62,
+          "p32": -10,
+          "product": 620
+        },
+        {
+          "n": 3,
+          "m": 3,
+          "p23": -62,
+          "p32": -19,
+          "product": 1178
+        },
+        {
+          "n": 3,
+          "m": 4,
+          "p23": -62,
+          "p32": -28,
+          "product": 1736
+        },
+        {
+          "n": 3,
+          "m": 5,
+          "p23": -62,
+          "p32": -37,
+          "product": 2294
+        },
+        {
+          "n": 4,
+          "m": 0,
+          "p23": -95,
+          "p32": 8,
+          "product": -760
+        },
+        {
+          "n": 4,
+          "m": 1,
+          "p23": -95,
+          "p32": -1,
+          "product": 95
+        },
+        {
+          "n": 4,
+          "m": 2,
+          "p23": -95,
+          "p32": -10,
+          "product": 950
+        },
+        {
+          "n": 4,
+          "m": 3,
+          "p23": -95,
+          "p32": -19,
+          "product": 1805
+        },
+        {
+          "n": 4,
+          "m": 4,
+          "p23": -95,
+          "p32": -28,
+          "product": 2660
+        },
+        {
+          "n": 4,
+          "m": 5,
+          "p23": -95,
+          "p32": -37,
+          "product": 3515
+        },
+        {
+          "n": 5,
+          "m": 0,
+          "p23": -128,
+          "p32": 8,
+          "product": -1024
+        },
+        {
+          "n": 5,
+          "m": 1,
+          "p23": -128,
+          "p32": -1,
+          "product": 128
+        },
+        {
+          "n": 5,
+          "m": 2,
+          "p23": -128,
+          "p32": -10,
+          "product": 1280
+        },
+        {
+          "n": 5,
+          "m": 3,
+          "p23": -128,
+          "p32": -19,
+          "product": 2432
+        },
+        {
+          "n": 5,
+          "m": 4,
+          "p23": -128,
+          "p32": -28,
+          "product": 3584
+        },
+        {
+          "n": 5,
+          "m": 5,
+          "p23": -128,
+          "p32": -37,
+          "product": 4736
+        }
+      ],
+      "node_pair_solutions": [
+        {
+          "n": 0,
+          "m": 0,
+          "p23": 37,
+          "p32": 8,
+          "product": 296
+        }
+      ],
+      "final_p4_02": 18,
+      "forced_p0_42": [
+        32,
+        -1
+      ],
+      "low04_puncture2_sums": [
+        50,
+        17
+      ],
+      "exclusion": "Both signed-divisor choices violate low-edge 04 node interval"
+    },
+    {
+      "s": 4,
+      "S": 8,
+      "T": 36,
+      "a": 33,
+      "Q": 9,
+      "h": 1,
+      "q14": 5,
+      "node_pairs": [
+        {
+          "n": 0,
+          "m": 0,
+          "p23": 37,
+          "p32": 8,
+          "product": 296
+        },
+        {
+          "n": 0,
+          "m": 1,
+          "p23": 37,
+          "p32": -1,
+          "product": -37
+        },
+        {
+          "n": 0,
+          "m": 2,
+          "p23": 37,
+          "p32": -10,
+          "product": -370
+        },
+        {
+          "n": 0,
+          "m": 3,
+          "p23": 37,
+          "p32": -19,
+          "product": -703
+        },
+        {
+          "n": 0,
+          "m": 4,
+          "p23": 37,
+          "p32": -28,
+          "product": -1036
+        },
+        {
+          "n": 0,
+          "m": 5,
+          "p23": 37,
+          "p32": -37,
+          "product": -1369
+        },
+        {
+          "n": 1,
+          "m": 0,
+          "p23": 4,
+          "p32": 8,
+          "product": 32
+        },
+        {
+          "n": 1,
+          "m": 1,
+          "p23": 4,
+          "p32": -1,
+          "product": -4
+        },
+        {
+          "n": 1,
+          "m": 2,
+          "p23": 4,
+          "p32": -10,
+          "product": -40
+        },
+        {
+          "n": 1,
+          "m": 3,
+          "p23": 4,
+          "p32": -19,
+          "product": -76
+        },
+        {
+          "n": 1,
+          "m": 4,
+          "p23": 4,
+          "p32": -28,
+          "product": -112
+        },
+        {
+          "n": 1,
+          "m": 5,
+          "p23": 4,
+          "p32": -37,
+          "product": -148
+        },
+        {
+          "n": 2,
+          "m": 0,
+          "p23": -29,
+          "p32": 8,
+          "product": -232
+        },
+        {
+          "n": 2,
+          "m": 1,
+          "p23": -29,
+          "p32": -1,
+          "product": 29
+        },
+        {
+          "n": 2,
+          "m": 2,
+          "p23": -29,
+          "p32": -10,
+          "product": 290
+        },
+        {
+          "n": 2,
+          "m": 3,
+          "p23": -29,
+          "p32": -19,
+          "product": 551
+        },
+        {
+          "n": 2,
+          "m": 4,
+          "p23": -29,
+          "p32": -28,
+          "product": 812
+        },
+        {
+          "n": 2,
+          "m": 5,
+          "p23": -29,
+          "p32": -37,
+          "product": 1073
+        },
+        {
+          "n": 3,
+          "m": 0,
+          "p23": -62,
+          "p32": 8,
+          "product": -496
+        },
+        {
+          "n": 3,
+          "m": 1,
+          "p23": -62,
+          "p32": -1,
+          "product": 62
+        },
+        {
+          "n": 3,
+          "m": 2,
+          "p23": -62,
+          "p32": -10,
+          "product": 620
+        },
+        {
+          "n": 3,
+          "m": 3,
+          "p23": -62,
+          "p32": -19,
+          "product": 1178
+        },
+        {
+          "n": 3,
+          "m": 4,
+          "p23": -62,
+          "p32": -28,
+          "product": 1736
+        },
+        {
+          "n": 3,
+          "m": 5,
+          "p23": -62,
+          "p32": -37,
+          "product": 2294
+        },
+        {
+          "n": 4,
+          "m": 0,
+          "p23": -95,
+          "p32": 8,
+          "product": -760
+        },
+        {
+          "n": 4,
+          "m": 1,
+          "p23": -95,
+          "p32": -1,
+          "product": 95
+        },
+        {
+          "n": 4,
+          "m": 2,
+          "p23": -95,
+          "p32": -10,
+          "product": 950
+        },
+        {
+          "n": 4,
+          "m": 3,
+          "p23": -95,
+          "p32": -19,
+          "product": 1805
+        },
+        {
+          "n": 4,
+          "m": 4,
+          "p23": -95,
+          "p32": -28,
+          "product": 2660
+        },
+        {
+          "n": 4,
+          "m": 5,
+          "p23": -95,
+          "p32": -37,
+          "product": 3515
+        },
+        {
+          "n": 5,
+          "m": 0,
+          "p23": -128,
+          "p32": 8,
+          "product": -1024
+        },
+        {
+          "n": 5,
+          "m": 1,
+          "p23": -128,
+          "p32": -1,
+          "product": 128
+        },
+        {
+          "n": 5,
+          "m": 2,
+          "p23": -128,
+          "p32": -10,
+          "product": 1280
+        },
+        {
+          "n": 5,
+          "m": 3,
+          "p23": -128,
+          "p32": -19,
+          "product": 2432
+        },
+        {
+          "n": 5,
+          "m": 4,
+          "p23": -128,
+          "p32": -28,
+          "product": 3584
+        },
+        {
+          "n": 5,
+          "m": 5,
+          "p23": -128,
+          "p32": -37,
+          "product": 4736
+        }
+      ],
+      "node_pair_solutions": [
+        {
+          "n": 0,
+          "m": 0,
+          "p23": 37,
+          "p32": 8,
+          "product": 296
+        }
+      ],
+      "final_p4_02": 16,
+      "forced_p0_42": [
+        32,
+        -1
+      ],
+      "low04_puncture2_sums": [
+        48,
+        15
+      ],
+      "exclusion": "Both signed-divisor choices violate low-edge 04 node interval"
+    },
+    {
+      "s": 7,
+      "S": 4,
+      "T": 18,
+      "a": 29,
+      "Q": 21,
+      "h": 4,
+      "q14": 3,
+      "node_pairs": [
+        {
+          "n": 0,
+          "m": 0,
+          "p23": 36,
+          "p32": 17,
+          "product": 612
+        },
+        {
+          "n": 0,
+          "m": 1,
+          "p23": 36,
+          "p32": -4,
+          "product": -144
+        },
+        {
+          "n": 0,
+          "m": 2,
+          "p23": 36,
+          "p32": -25,
+          "product": -900
+        },
+        {
+          "n": 0,
+          "m": 3,
+          "p23": 36,
+          "p32": -46,
+          "product": -1656
+        },
+        {
+          "n": 0,
+          "m": 4,
+          "p23": 36,
+          "p32": -67,
+          "product": -2412
+        },
+        {
+          "n": 0,
+          "m": 5,
+          "p23": 36,
+          "p32": -88,
+          "product": -3168
+        },
+        {
+          "n": 1,
+          "m": 0,
+          "p23": 7,
+          "p32": 17,
+          "product": 119
+        },
+        {
+          "n": 1,
+          "m": 1,
+          "p23": 7,
+          "p32": -4,
+          "product": -28
+        },
+        {
+          "n": 1,
+          "m": 2,
+          "p23": 7,
+          "p32": -25,
+          "product": -175
+        },
+        {
+          "n": 1,
+          "m": 3,
+          "p23": 7,
+          "p32": -46,
+          "product": -322
+        },
+        {
+          "n": 1,
+          "m": 4,
+          "p23": 7,
+          "p32": -67,
+          "product": -469
+        },
+        {
+          "n": 1,
+          "m": 5,
+          "p23": 7,
+          "p32": -88,
+          "product": -616
+        },
+        {
+          "n": 2,
+          "m": 0,
+          "p23": -22,
+          "p32": 17,
+          "product": -374
+        },
+        {
+          "n": 2,
+          "m": 1,
+          "p23": -22,
+          "p32": -4,
+          "product": 88
+        },
+        {
+          "n": 2,
+          "m": 2,
+          "p23": -22,
+          "p32": -25,
+          "product": 550
+        },
+        {
+          "n": 2,
+          "m": 3,
+          "p23": -22,
+          "p32": -46,
+          "product": 1012
+        },
+        {
+          "n": 2,
+          "m": 4,
+          "p23": -22,
+          "p32": -67,
+          "product": 1474
+        },
+        {
+          "n": 2,
+          "m": 5,
+          "p23": -22,
+          "p32": -88,
+          "product": 1936
+        },
+        {
+          "n": 3,
+          "m": 0,
+          "p23": -51,
+          "p32": 17,
+          "product": -867
+        },
+        {
+          "n": 3,
+          "m": 1,
+          "p23": -51,
+          "p32": -4,
+          "product": 204
+        },
+        {
+          "n": 3,
+          "m": 2,
+          "p23": -51,
+          "p32": -25,
+          "product": 1275
+        },
+        {
+          "n": 3,
+          "m": 3,
+          "p23": -51,
+          "p32": -46,
+          "product": 2346
+        },
+        {
+          "n": 3,
+          "m": 4,
+          "p23": -51,
+          "p32": -67,
+          "product": 3417
+        },
+        {
+          "n": 3,
+          "m": 5,
+          "p23": -51,
+          "p32": -88,
+          "product": 4488
+        },
+        {
+          "n": 4,
+          "m": 0,
+          "p23": -80,
+          "p32": 17,
+          "product": -1360
+        },
+        {
+          "n": 4,
+          "m": 1,
+          "p23": -80,
+          "p32": -4,
+          "product": 320
+        },
+        {
+          "n": 4,
+          "m": 2,
+          "p23": -80,
+          "p32": -25,
+          "product": 2000
+        },
+        {
+          "n": 4,
+          "m": 3,
+          "p23": -80,
+          "p32": -46,
+          "product": 3680
+        },
+        {
+          "n": 4,
+          "m": 4,
+          "p23": -80,
+          "p32": -67,
+          "product": 5360
+        },
+        {
+          "n": 4,
+          "m": 5,
+          "p23": -80,
+          "p32": -88,
+          "product": 7040
+        },
+        {
+          "n": 5,
+          "m": 0,
+          "p23": -109,
+          "p32": 17,
+          "product": -1853
+        },
+        {
+          "n": 5,
+          "m": 1,
+          "p23": -109,
+          "p32": -4,
+          "product": 436
+        },
+        {
+          "n": 5,
+          "m": 2,
+          "p23": -109,
+          "p32": -25,
+          "product": 2725
+        },
+        {
+          "n": 5,
+          "m": 3,
+          "p23": -109,
+          "p32": -46,
+          "product": 5014
+        },
+        {
+          "n": 5,
+          "m": 4,
+          "p23": -109,
+          "p32": -67,
+          "product": 7303
+        },
+        {
+          "n": 5,
+          "m": 5,
+          "p23": -109,
+          "p32": -88,
+          "product": 9592
+        }
+      ],
+      "node_pair_solutions": [],
+      "exclusion": "No center0 pair solution for known rays2,3"
+    },
+    {
+      "s": 15,
+      "S": 12,
+      "T": 64,
+      "a": 181,
+      "Q": 157,
+      "h": 12,
+      "q14": 3,
+      "node_pairs": [
+        {
+          "n": 0,
+          "m": 0,
+          "p23": 196,
+          "p32": 145,
+          "product": 28420
+        },
+        {
+          "n": 0,
+          "m": 1,
+          "p23": 196,
+          "p32": -12,
+          "product": -2352
+        },
+        {
+          "n": 0,
+          "m": 2,
+          "p23": 196,
+          "p32": -169,
+          "product": -33124
+        },
+        {
+          "n": 0,
+          "m": 3,
+          "p23": 196,
+          "p32": -326,
+          "product": -63896
+        },
+        {
+          "n": 0,
+          "m": 4,
+          "p23": 196,
+          "p32": -483,
+          "product": -94668
+        },
+        {
+          "n": 0,
+          "m": 5,
+          "p23": 196,
+          "p32": -640,
+          "product": -125440
+        },
+        {
+          "n": 1,
+          "m": 0,
+          "p23": 15,
+          "p32": 145,
+          "product": 2175
+        },
+        {
+          "n": 1,
+          "m": 1,
+          "p23": 15,
+          "p32": -12,
+          "product": -180
+        },
+        {
+          "n": 1,
+          "m": 2,
+          "p23": 15,
+          "p32": -169,
+          "product": -2535
+        },
+        {
+          "n": 1,
+          "m": 3,
+          "p23": 15,
+          "p32": -326,
+          "product": -4890
+        },
+        {
+          "n": 1,
+          "m": 4,
+          "p23": 15,
+          "p32": -483,
+          "product": -7245
+        },
+        {
+          "n": 1,
+          "m": 5,
+          "p23": 15,
+          "p32": -640,
+          "product": -9600
+        },
+        {
+          "n": 2,
+          "m": 0,
+          "p23": -166,
+          "p32": 145,
+          "product": -24070
+        },
+        {
+          "n": 2,
+          "m": 1,
+          "p23": -166,
+          "p32": -12,
+          "product": 1992
+        },
+        {
+          "n": 2,
+          "m": 2,
+          "p23": -166,
+          "p32": -169,
+          "product": 28054
+        },
+        {
+          "n": 2,
+          "m": 3,
+          "p23": -166,
+          "p32": -326,
+          "product": 54116
+        },
+        {
+          "n": 2,
+          "m": 4,
+          "p23": -166,
+          "p32": -483,
+          "product": 80178
+        },
+        {
+          "n": 2,
+          "m": 5,
+          "p23": -166,
+          "p32": -640,
+          "product": 106240
+        },
+        {
+          "n": 3,
+          "m": 0,
+          "p23": -347,
+          "p32": 145,
+          "product": -50315
+        },
+        {
+          "n": 3,
+          "m": 1,
+          "p23": -347,
+          "p32": -12,
+          "product": 4164
+        },
+        {
+          "n": 3,
+          "m": 2,
+          "p23": -347,
+          "p32": -169,
+          "product": 58643
+        },
+        {
+          "n": 3,
+          "m": 3,
+          "p23": -347,
+          "p32": -326,
+          "product": 113122
+        },
+        {
+          "n": 3,
+          "m": 4,
+          "p23": -347,
+          "p32": -483,
+          "product": 167601
+        },
+        {
+          "n": 3,
+          "m": 5,
+          "p23": -347,
+          "p32": -640,
+          "product": 222080
+        },
+        {
+          "n": 4,
+          "m": 0,
+          "p23": -528,
+          "p32": 145,
+          "product": -76560
+        },
+        {
+          "n": 4,
+          "m": 1,
+          "p23": -528,
+          "p32": -12,
+          "product": 6336
+        },
+        {
+          "n": 4,
+          "m": 2,
+          "p23": -528,
+          "p32": -169,
+          "product": 89232
+        },
+        {
+          "n": 4,
+          "m": 3,
+          "p23": -528,
+          "p32": -326,
+          "product": 172128
+        },
+        {
+          "n": 4,
+          "m": 4,
+          "p23": -528,
+          "p32": -483,
+          "product": 255024
+        },
+        {
+          "n": 4,
+          "m": 5,
+          "p23": -528,
+          "p32": -640,
+          "product": 337920
+        },
+        {
+          "n": 5,
+          "m": 0,
+          "p23": -709,
+          "p32": 145,
+          "product": -102805
+        },
+        {
+          "n": 5,
+          "m": 1,
+          "p23": -709,
+          "p32": -12,
+          "product": 8508
+        },
+        {
+          "n": 5,
+          "m": 2,
+          "p23": -709,
+          "p32": -169,
+          "product": 119821
+        },
+        {
+          "n": 5,
+          "m": 3,
+          "p23": -709,
+          "p32": -326,
+          "product": 231134
+        },
+        {
+          "n": 5,
+          "m": 4,
+          "p23": -709,
+          "p32": -483,
+          "product": 342447
+        },
+        {
+          "n": 5,
+          "m": 5,
+          "p23": -709,
+          "p32": -640,
+          "product": 453760
+        }
+      ],
+      "node_pair_solutions": [],
+      "exclusion": "No center0 pair solution for known rays2,3"
+    }
+  ],
+  "center0_survivors": 0,
+  "center_D_or_unknown_row_used": false,
+  "completeness_basis": [
+    "Leaf3 ray2=C forces the single middle (s,S,T)=(1,2,6).",
+    "Leaf3 ray2=D forces h=s-3 and c=0.",
+    "Leaf3 ray4=C forces th<=4 by the two-case inequality in the TeX proof.",
+    "Leaf3 ray4=B gives the exact balance th+alpha(h+1)+k+2=C4+beta<=30.",
+    "The only unbounded-looking alpha=-1,t=1 case reduces to h+4 dividing16, hence h=4,12.",
+    "The fixed-middle helper retains every signed c,d choice and all B/C label duplications; matrix pairs are deduplicated after reconstruction."
+  ],
+  "external_peer_review": false
+}

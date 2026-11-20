@@ -1,0 +1,467 @@
+{
+  "version": 12,
+  "status": "passed",
+  "check_count": 108,
+  "checks": [
+    "maximal-negative equation from the original pair product",
+    "first lower bound, T>=1",
+    "second lower bound, x>=1",
+    "strict positivity for r>=3, using r-3>=0",
+    "positive coefficient in the x>=1 bound",
+    "right side is strictly negative for r>=3",
+    "r=2, x>=2 lower bound",
+    "r=2, x>=2 strict nonzero residual",
+    "last maximal-negative branch gives z(5T-6)=0",
+    "5T=6 has no integer solution",
+    "r=1 obstruction is a nonzero residue 1 modulo a>1",
+    "r=z=1 factorization from original determinant",
+    "D_A from its incoming column sum",
+    "D_B from its incoming column sum",
+    "b>a implies D_B<=-s",
+    "s=1 implies b=3a-2",
+    "s=2 would require 3 to divide 6a+2",
+    "a>=b and s>=3 imply D_A<0 by an explicit nonpositive remainder",
+    "a=b also has D_B<0 for s>=3",
+    "C4 no-negative-common-puncture forces constant pairing",
+    "C4 no-negative-common-puncture forces constant pairing",
+    "C4 no-negative-common-puncture forces constant pairing",
+    "C4 no-negative-common-puncture forces constant pairing",
+    "C4 no-negative-common-puncture forces constant pairing",
+    "C4 no-negative-common-puncture forces constant pairing",
+    "C4 no-negative-common-puncture forces constant pairing",
+    "C4 no-negative-common-puncture forces constant pairing",
+    "C4 no-negative-common-puncture forces constant pairing",
+    "C4 no-negative-common-puncture forces constant pairing",
+    "C4 no-negative-common-puncture forces constant pairing",
+    "C4 no-negative-common-puncture forces constant pairing",
+    "C4 no-negative-common-puncture forces constant pairing",
+    "C4 no-negative-common-puncture forces constant pairing",
+    "C4 no-negative-common-puncture forces constant pairing",
+    "C4 no-negative-common-puncture forces constant pairing",
+    "exactly two constant labelled C4 patterns",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 two preliminary lambda types",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 two preliminary lambda types",
+    "excluding all-positive common punctures leaves one plus",
+    "zero lambdas lie on the two edges at the plus vertex",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 two preliminary lambda types",
+    "excluding all-positive common punctures leaves one plus",
+    "zero lambdas lie on the two edges at the plus vertex",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 two preliminary lambda types",
+    "excluding all-positive common punctures leaves one plus",
+    "zero lambdas lie on the two edges at the plus vertex",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 two preliminary lambda types",
+    "excluding all-positive common punctures leaves one plus",
+    "zero lambdas lie on the two edges at the plus vertex",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 two preliminary lambda types",
+    "excluding all-positive common punctures leaves one plus",
+    "zero lambdas lie on the two edges at the plus vertex",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 exact adjacency/distance-two sign intersection",
+    "C5 exact adjacency/distance-two sign intersection",
+    "six preliminary and five final labelled C5 sign patterns",
+    "five full entries force exactly one at each core",
+    "five full entries force exactly one at each core",
+    "the two possible full-entry incidence orientations",
+    "illustrative local integrality",
+    "illustrative local row sums",
+    "illustrative six exact determinants",
+    "illustrative exact positive basins",
+    "illustrative maximum denominator has negative coefficient, including equality",
+    "illustrative local integrality",
+    "illustrative local row sums",
+    "illustrative six exact determinants",
+    "illustrative exact positive basins",
+    "illustrative maximum denominator has negative coefficient, including equality",
+    "illustrative local integrality",
+    "illustrative local row sums",
+    "illustrative six exact determinants",
+    "illustrative exact positive basins",
+    "illustrative maximum denominator has negative coefficient, including equality",
+    "illustrative local integrality",
+    "illustrative local row sums",
+    "illustrative six exact determinants",
+    "illustrative exact positive basins",
+    "illustrative maximum denominator has negative coefficient, including equality"
+  ],
+  "scope": "Exact polynomial identities, proof-derived finite sign and incidence cases, and illustrative exact local models. No high-denominator cutoff is used. The quantified inequalities and prior theorems are documented in the TeX proof.",
+  "dependencies": [
+    "standard positive two-high normal form",
+    "td12:low-entry (S<=T)",
+    "cq12:no-constant-pairing",
+    "path and triangle component obstructions"
+  ],
+  "local_lemma_requires": "positive integral local model only; no parity, clutching, D cancellation or node condition",
+  "C4_requires": "positive local charts, integer marked clutching, opposing D cancellation, nonnegative nodes",
+  "C5_all_positive_common_exclusion_requires": "positive local charts, odd high denominators, integer marked clutching, opposing D cancellation; no node condition",
+  "remaining_C5_type": [
+    3,
+    2,
+    0
+  ],
+  "C4_patterns_before_constant_pairing_obstruction": [
+    [
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "C5_preliminary_patterns": [
+    {
+      "epsilon": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "lambda": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "counts": [
+        5,
+        0,
+        0
+      ]
+    },
+    {
+      "epsilon": [
+        -1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "lambda": [
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "counts": [
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "epsilon": [
+        -1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "lambda": [
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "counts": [
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "epsilon": [
+        -1,
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "lambda": [
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "counts": [
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "epsilon": [
+        -1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "lambda": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "counts": [
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "epsilon": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "lambda": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "counts": [
+        3,
+        2,
+        0
+      ]
+    }
+  ],
+  "C5_final_patterns": [
+    {
+      "epsilon": [
+        -1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "lambda": [
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "counts": [
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "epsilon": [
+        -1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "lambda": [
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "counts": [
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "epsilon": [
+        -1,
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "lambda": [
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "counts": [
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "epsilon": [
+        -1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "lambda": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "counts": [
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "epsilon": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "lambda": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "counts": [
+        3,
+        2,
+        0
+      ]
+    }
+  ],
+  "full_endpoint_assignments": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "exact_examples": [
+    {
+      "a": 3,
+      "b": 7,
+      "s": 1,
+      "D": [
+        "3",
+        "-7",
+        "5",
+        "-1"
+      ],
+      "weights": [
+        "3",
+        "7",
+        "5/2",
+        "13/12"
+      ]
+    },
+    {
+      "a": 5,
+      "b": 13,
+      "s": 1,
+      "D": [
+        "6",
+        "-15",
+        "10",
+        "-1"
+      ],
+      "weights": [
+        "5",
+        "13",
+        "9/2",
+        "25/24"
+      ]
+    },
+    {
+      "a": 13,
+      "b": 13,
+      "s": 4,
+      "D": [
+        "-3",
+        "-2",
+        "3",
+        "2"
+      ],
+      "weights": [
+        "13",
+        "13",
+        "25/2",
+        "25/24"
+      ]
+    },
+    {
+      "a": 29,
+      "b": 19,
+      "s": 7,
+      "D": [
+        "-15",
+        "15",
+        "-5",
+        "5"
+      ],
+      "weights": [
+        "29",
+        "19",
+        "57/2",
+        "37/36"
+      ]
+    }
+  ],
+  "script_sha256": "d0189e294266f319ed11bec79559c0ce9db9d7e092f8127319e51011625497d3",
+  "source_sha256": "9b4d5c227c06b0fdc9c15100a2cceba0e43324085a7664d34909c3a3dcfd1e0d"
+}

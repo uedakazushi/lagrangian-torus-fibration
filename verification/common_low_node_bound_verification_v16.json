@@ -1,0 +1,312 @@
+{
+  "version": "v16",
+  "passed": true,
+  "script_sha256": "c17572b476126bdeac12006b2809d65bd4851e8a2182a867b6b76d41e7729134",
+  "source_sha256": {
+    "common_low_node_bound_v16.tex": "78114487ce9d9f9259c0f6dbcb90e945e89693f825bf0eddef4260caf4d71029"
+  },
+  "identities": [
+    "low-pair factorization",
+    "positive-branch T lower bound",
+    "forced high-edge zero-node numerator",
+    "forced low-edge zero-node count",
+    "ordinary high-edge one-node count",
+    "ordinary low-edge node count"
+  ],
+  "polynomial_identity_count": 6,
+  "complete_node_count_pairs": 36,
+  "root_records": [
+    {
+      "n_ik_j": 0,
+      "n_jk_i": 0,
+      "all_nonzero_integer_roots": [
+        -1,
+        1
+      ]
+    },
+    {
+      "n_ik_j": 0,
+      "n_jk_i": 1,
+      "all_nonzero_integer_roots": [
+        1
+      ]
+    },
+    {
+      "n_ik_j": 0,
+      "n_jk_i": 2,
+      "all_nonzero_integer_roots": [
+        1
+      ]
+    },
+    {
+      "n_ik_j": 0,
+      "n_jk_i": 3,
+      "all_nonzero_integer_roots": [
+        1,
+        2
+      ]
+    },
+    {
+      "n_ik_j": 0,
+      "n_jk_i": 4,
+      "all_nonzero_integer_roots": [
+        1,
+        3
+      ]
+    },
+    {
+      "n_ik_j": 0,
+      "n_jk_i": 5,
+      "all_nonzero_integer_roots": [
+        1,
+        4
+      ]
+    },
+    {
+      "n_ik_j": 1,
+      "n_jk_i": 0,
+      "all_nonzero_integer_roots": [
+        -1
+      ]
+    },
+    {
+      "n_ik_j": 1,
+      "n_jk_i": 1,
+      "all_nonzero_integer_roots": []
+    },
+    {
+      "n_ik_j": 1,
+      "n_jk_i": 2,
+      "all_nonzero_integer_roots": [
+        1
+      ]
+    },
+    {
+      "n_ik_j": 1,
+      "n_jk_i": 3,
+      "all_nonzero_integer_roots": [
+        2
+      ]
+    },
+    {
+      "n_ik_j": 1,
+      "n_jk_i": 4,
+      "all_nonzero_integer_roots": [
+        3
+      ]
+    },
+    {
+      "n_ik_j": 1,
+      "n_jk_i": 5,
+      "all_nonzero_integer_roots": [
+        4
+      ]
+    },
+    {
+      "n_ik_j": 2,
+      "n_jk_i": 0,
+      "all_nonzero_integer_roots": [
+        -1
+      ]
+    },
+    {
+      "n_ik_j": 2,
+      "n_jk_i": 1,
+      "all_nonzero_integer_roots": [
+        -1
+      ]
+    },
+    {
+      "n_ik_j": 2,
+      "n_jk_i": 2,
+      "all_nonzero_integer_roots": [
+        -1,
+        1
+      ]
+    },
+    {
+      "n_ik_j": 2,
+      "n_jk_i": 3,
+      "all_nonzero_integer_roots": [
+        -1,
+        2
+      ]
+    },
+    {
+      "n_ik_j": 2,
+      "n_jk_i": 4,
+      "all_nonzero_integer_roots": [
+        -1,
+        3
+      ]
+    },
+    {
+      "n_ik_j": 2,
+      "n_jk_i": 5,
+      "all_nonzero_integer_roots": [
+        -1,
+        4
+      ]
+    },
+    {
+      "n_ik_j": 3,
+      "n_jk_i": 0,
+      "all_nonzero_integer_roots": [
+        -2,
+        -1
+      ]
+    },
+    {
+      "n_ik_j": 3,
+      "n_jk_i": 1,
+      "all_nonzero_integer_roots": [
+        -2
+      ]
+    },
+    {
+      "n_ik_j": 3,
+      "n_jk_i": 2,
+      "all_nonzero_integer_roots": [
+        -2,
+        1
+      ]
+    },
+    {
+      "n_ik_j": 3,
+      "n_jk_i": 3,
+      "all_nonzero_integer_roots": [
+        -2,
+        2
+      ]
+    },
+    {
+      "n_ik_j": 3,
+      "n_jk_i": 4,
+      "all_nonzero_integer_roots": [
+        -2,
+        3
+      ]
+    },
+    {
+      "n_ik_j": 3,
+      "n_jk_i": 5,
+      "all_nonzero_integer_roots": [
+        -2,
+        4
+      ]
+    },
+    {
+      "n_ik_j": 4,
+      "n_jk_i": 0,
+      "all_nonzero_integer_roots": [
+        -3,
+        -1
+      ]
+    },
+    {
+      "n_ik_j": 4,
+      "n_jk_i": 1,
+      "all_nonzero_integer_roots": [
+        -3
+      ]
+    },
+    {
+      "n_ik_j": 4,
+      "n_jk_i": 2,
+      "all_nonzero_integer_roots": [
+        -3,
+        1
+      ]
+    },
+    {
+      "n_ik_j": 4,
+      "n_jk_i": 3,
+      "all_nonzero_integer_roots": [
+        -3,
+        2
+      ]
+    },
+    {
+      "n_ik_j": 4,
+      "n_jk_i": 4,
+      "all_nonzero_integer_roots": [
+        -3,
+        3
+      ]
+    },
+    {
+      "n_ik_j": 4,
+      "n_jk_i": 5,
+      "all_nonzero_integer_roots": [
+        -3,
+        4
+      ]
+    },
+    {
+      "n_ik_j": 5,
+      "n_jk_i": 0,
+      "all_nonzero_integer_roots": [
+        -4,
+        -1
+      ]
+    },
+    {
+      "n_ik_j": 5,
+      "n_jk_i": 1,
+      "all_nonzero_integer_roots": [
+        -4
+      ]
+    },
+    {
+      "n_ik_j": 5,
+      "n_jk_i": 2,
+      "all_nonzero_integer_roots": [
+        -4,
+        1
+      ]
+    },
+    {
+      "n_ik_j": 5,
+      "n_jk_i": 3,
+      "all_nonzero_integer_roots": [
+        -4,
+        2
+      ]
+    },
+    {
+      "n_ik_j": 5,
+      "n_jk_i": 4,
+      "all_nonzero_integer_roots": [
+        -4,
+        3
+      ]
+    },
+    {
+      "n_ik_j": 5,
+      "n_jk_i": 5,
+      "all_nonzero_integer_roots": [
+        -4,
+        4
+      ]
+    }
+  ],
+  "nonzero_roots": [
+    -4,
+    -3,
+    -2,
+    -1,
+    1,
+    2,
+    3,
+    4
+  ],
+  "denominator_cutoff": null,
+  "finite_calculation_scope": "All possible two node counts under the proven budget five, with the low-pair polynomial solved by factorization; not a search over denominator parameters.",
+  "general_proof_scope": {
+    "ordinary_common_low_reverse_bound": "All integer cores of unrestricted high degree, q_ij>1, q_ik=q_jk=1, ordinary opposite-sign marked clutching, nonnegative node counts of total five.",
+    "D_opposition_used_in_general_lemma": false,
+    "positive_branch_T_lower_bound": "All positive integers r,S,T with S>r and rT>(r+1)S have T>=5.",
+    "two_leaf_application": "After the established crossed positive-branch reduction, all z>1 and all r>4 are impossible; z=1 and 1<=r<=4, with the forced entries and nodes in the theorem.",
+    "whole_support_exclusion_claim": false
+  }
+}

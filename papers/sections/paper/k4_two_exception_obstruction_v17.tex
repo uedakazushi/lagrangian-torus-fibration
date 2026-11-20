@@ -1,0 +1,106 @@
+% v17: two exceptional K4 edges are impossible already at the low hub.
+\subsection{二本の例外辺の全排除}
+\label{kt17:section}
+
+\begin{theorem}[二例外の低 hub 障害]
+\label{kt17:no-two-exceptions}
+定義~\ref{kh16:notation} の $K_4$ 型において，例外辺がちょうど二本となることはない．
+この排除は各 core の整数行和，高辺の奇数分母と共通低 puncture での整数 clutching，
+hub の低低 pair products，および hub に接する四辺の node 条件と対向 $D$ 相殺だけを用いる．
+正の weights，三高分母 core の一般分類，高辺上の $D$ 相殺，分母の探索上限は不要である．
+\end{theorem}
+
+\begin{proof}
+式~\eqref{kh16:exception-balance} により，例外辺は正負一本ずつである．
+正例外の分母を $P+1$，負例外の分母を $M+1$ とすると，
+\[
+ P\ge2,\qquad M=P+4\ge6,
+ \qquad P,M\in2\ZZ.
+\]
+負例外辺の大きい reverse $-M$ を持つ端を $v$ とする．
+各 node は五以下なので，この辺の $v$ からの hub entry は
+\[
+ V_{vj}=1+M-N_{vj}\ge M-4\ge2.
+\]
+従って $V_{jv}=0$ である．また，通常辺の $R_{v\ell}>1$ に対しても
+$V_{v\ell}=1-R_{v\ell}-N_{v\ell}<0$ なので，$V_{\ell v}=0$ となる．
+以下では hub への対向 $D$ 相殺を
+\begin{equation}\label{kt17:hub-D}
+ \sum_{j\ne v}X_{vj}+\sum_{j\ne v}V_{jv}=-2
+\end{equation}
+の形で用いる．
+
+\emph{正例外辺が $v$ に接しない場合．}
+残る二辺は通常辺で，その reverse を $u,w$ とすると
+\[
+ u+w=M-1\ge5,\qquad 1\le |u|,|w|\le4.
+\]
+従って $u,w>0$ であり，一に等しいものは高々一つである．
+$u,w\ge2$ なら，$v$ の hub 列はすべて零であり，
+$X$ の和は $-1$ と二つの正整数の和なので一以上となる．
+これは式~\eqref{kt17:hub-D} に反する．
+
+一方が一なら，それを $u=1$ とする．その通常辺の $X$ は $q-1$ であり，
+奇数 $q>1$ により二以上である．もう一方の $X$ は一以上であり，
+負例外の $X$ は $-1$ だから，$\sum_jX_{vj}\ge2$ となる．
+零とは限らない hub 列成分は $u=1$ の辺からのものだけで，
+\[
+ V_{\ell v}=1-(-1)-N_{\ell v}\ge-3.
+\]
+従って式~\eqref{kt17:hub-D} の左辺は $-1$ 以上であり，やはり矛盾する．
+
+\emph{正例外辺も $v$ で大きい reverse $P$ を持つ場合．}
+第三の辺は通常辺で，行和はその reverse を $3$ と定める．
+正例外辺，負例外辺，通常辺のすべてで $v$ の hub 列成分が零となる．
+しかし $X$ の和は
+\[
+ 1-1+\frac{q-1}{3}>0
+\]
+であり，式~\eqref{kt17:hub-D} に反する．
+
+\emph{正例外辺が $v$ で単位 reverse $1$ を持つ場合．}
+第三の通常辺の reverse は $M-2$ である．通常辺の上界四から
+$M=6,P=2$ となり，その reverse は $4$ である．
+標識を $v=0$，正例外 $01$，負例外 $02$ と選ぶと
+\[
+ R_{01}=1,\quad R_{10}=2,\quad
+ R_{02}=-6,\quad R_{20}=-1,\quad
+ R_{03}=4,\quad R_{30}=-4.
+\]
+$V_{03}<0$ と $V_{02}>0$ から，それぞれ
+\begin{equation}\label{kt17:forced-nodes}
+ V_{30}=V_{20}=0,\qquad N_{30}=5,\qquad N_{20}=2
+\end{equation}
+を得る．一方，$R$ の第 $1$ 行の和は $-1$ なので
+$R_{12}+R_{13}=-3$ である．少なくとも一方，例えば $R_{1j}$ は $-2$ 以下である．
+辺 $1j$ は通常辺なので $R_{j1}\ge2$，従って $V_{j1}<0$ から $V_{1j}=0$ であり，
+\[
+ N_{1j}=1-R_{1j}\ge3,\qquad N_{10}\le2.
+\]
+式~\eqref{kt17:forced-nodes} と合わせると
+\[
+ d_0=N_{10}+N_{20}+N_{30}-5=N_{10}+2\le4.
+\]
+ところが頂点 $0$ に接する通常辺は $03$ だけなので，
+式~\eqref{kh16:divergence} は
+\[
+ d_0=W_{03}=4+\frac{q_{03}-1}{4}\ge5
+\]
+を要求する．最後の不等式は $(q_{03}-1)/4$ が正整数であることによる．
+以上で正例外辺の全ての位置と向きを尽くした．
+\end{proof}
+
+この証明は命題~\ref{kh16:two-exceptions} の二つの分母対を先に列挙する必要もない．
+全低 hub に接する条件だけが矛盾するので，残る高高 entries や
+通常閉路の circulation をどのように選んでも延長できない．
+独立の有限点検として，正例外を $R_{01}=1,R_{10}=P$ に固定した全 reverse 行列と
+全 node 配分を \nolinkurl{verify_k4_two_exceptions_v17.py} で復元する．
+既知の $P=2,4$ に対して行和を満たす reverse 行列は五十八個，
+hub の低低 pair products まで通過する組は九百五十四個である．
+その各組には通常辺だけを外向きに持つ頂点 $i$ があり，
+\[
+ d_i<\sum_{i\to j}\ell(|R_{ij}|),\qquad
+ \ell(u)=\begin{cases}u+2,&u\text{ が奇数},\\u+1,&u\text{ が偶数}\end{cases}
+\]
+となる．右辺は奇数分母の通常 flow の下界なので，この有限点検も全組を棄却する．
+一般の排除は上の三場合の証明によっており，有限点検はその補助である．

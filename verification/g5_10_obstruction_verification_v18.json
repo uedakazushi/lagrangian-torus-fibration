@@ -1,0 +1,301 @@
+{
+  "version": "v18",
+  "status": "PASS",
+  "theorem": "gten18:no-support",
+  "scope": "G5_10 exact high support; positive integer local charts, clutching, nonnegative nodes and opposing D",
+  "quantification": "All denominators; no denominator or matrix-entry cutoff",
+  "matching_dependency": "mh18:matching",
+  "ordinary_proof_derived_bounds": {
+    "r_max": 2,
+    "S_max": 3,
+    "delta_max": 3
+  },
+  "ordinary_node_cases": [
+    {
+      "r": 2,
+      "S": 3,
+      "T": 5,
+      "n04": [
+        0,
+        0,
+        5
+      ],
+      "n14": [
+        5,
+        0,
+        0
+      ],
+      "R0": [
+        1,
+        -1,
+        -1
+      ],
+      "R1": [
+        -1,
+        4,
+        -4
+      ]
+    },
+    {
+      "r": 2,
+      "S": 3,
+      "T": 5,
+      "n04": [
+        5,
+        0,
+        0
+      ],
+      "n14": [
+        0,
+        5,
+        0
+      ],
+      "R0": [
+        -4,
+        -1,
+        4
+      ],
+      "R1": [
+        4,
+        -1,
+        -4
+      ]
+    }
+  ],
+  "ordinary_factor_solutions_u_v": [
+    [
+      1,
+      2
+    ]
+  ],
+  "ordinary_model": {
+    "r": 2,
+    "s": 2,
+    "z": 6,
+    "S": 3,
+    "T": 5,
+    "a": 7,
+    "b": 31,
+    "B": 27
+  },
+  "signed_divisors_of_30": [
+    -30,
+    -15,
+    -10,
+    -6,
+    -5,
+    -3,
+    -2,
+    -1,
+    1,
+    2,
+    3,
+    5,
+    6,
+    10,
+    15,
+    30
+  ],
+  "signed_divisors_30_congruent_27_mod31": [],
+  "positive_exception": "D04,D14 force s-z=1 and q12+q13=q01+2, contradicting odd denominators",
+  "negative_exception_profiles": [
+    {
+      "q01": 3,
+      "n04": [
+        3,
+        0,
+        2
+      ],
+      "R0": [
+        -2,
+        -2,
+        3
+      ]
+    },
+    {
+      "q01": 3,
+      "n04": [
+        3,
+        1,
+        1
+      ],
+      "R0": [
+        -2,
+        -3,
+        4
+      ]
+    },
+    {
+      "q01": 3,
+      "n04": [
+        3,
+        2,
+        0
+      ],
+      "R0": [
+        -2,
+        -4,
+        5
+      ]
+    },
+    {
+      "q01": 5,
+      "n04": [
+        5,
+        0,
+        0
+      ],
+      "R0": [
+        -4,
+        -2,
+        5
+      ]
+    }
+  ],
+  "negative_family": "r3,S4,T6,z2,s3alpha,a12alpha+1,b13; all alpha>=1 symbolically checked",
+  "negative_alpha_parity": [
+    {
+      "q01": 3,
+      "alpha_mod2": 0,
+      "compatible_with_U_V_even": true
+    },
+    {
+      "q01": 3,
+      "alpha_mod2": 1,
+      "compatible_with_U_V_even": false
+    },
+    {
+      "q01": 5,
+      "alpha_mod2": 0,
+      "compatible_with_U_V_even": true
+    },
+    {
+      "q01": 5,
+      "alpha_mod2": 1,
+      "compatible_with_U_V_even": false
+    }
+  ],
+  "negative_edge24_node_cases": [
+    {
+      "nodes": [
+        0,
+        3,
+        2
+      ],
+      "signs_p40_p41": [
+        1,
+        -1
+      ],
+      "both_negative": false
+    },
+    {
+      "nodes": [
+        1,
+        2,
+        2
+      ],
+      "signs_p40_p41": [
+        -1,
+        -1
+      ],
+      "both_negative": true
+    },
+    {
+      "nodes": [
+        2,
+        1,
+        2
+      ],
+      "signs_p40_p41": [
+        -1,
+        1
+      ],
+      "both_negative": false
+    },
+    {
+      "nodes": [
+        3,
+        0,
+        2
+      ],
+      "signs_p40_p41": [
+        -1,
+        1
+      ],
+      "both_negative": false
+    }
+  ],
+  "final_inequality_certificate": "24alpha+1=M+N>3q02+q12>=39alpha-20=(24alpha+1)+15(alpha-2)+9; contradiction for alpha>=2",
+  "polynomial_identities": [
+    "Ordinary pair factorization",
+    "Difference-two E equation from the original pair equation",
+    "E=0 Euclidean obstruction",
+    "beta=1 and E=1 factorization",
+    "Resonance row 0 in order (2,3,0,1)",
+    "Resonance row 1 in order (2,3,0,1)",
+    "Resonance row 2 in order (2,3,0,1)",
+    "Resonance row 3 in order (2,3,0,1)",
+    "Resonance pair 0,1",
+    "Resonance pair 0,2",
+    "Resonance pair 0,3",
+    "Resonance pair 1,2",
+    "Resonance pair 1,3",
+    "Resonance pair 2,3",
+    "Resonance D at ray 2",
+    "Resonance D at ray 3",
+    "Resonance D at ray 0",
+    "Resonance D at ray 1",
+    "D14 opposition gives U-V=3alpha+q-5",
+    "D04 opposition gives u-v=4alpha-5",
+    "D24 opposition gives M+N=24alpha+1",
+    "Strict lower bound for M",
+    "Strict lower bound for N",
+    "Final strict separation for all alpha>=2"
+  ],
+  "polynomial_identity_count": 24,
+  "large_z_exclusion_positive_coefficients": [
+    {
+      "monomial": [],
+      "coefficient": 6
+    },
+    {
+      "monomial": [
+        "t"
+      ],
+      "coefficient": 2
+    },
+    {
+      "monomial": [
+        "t",
+        "w"
+      ],
+      "coefficient": 4
+    },
+    {
+      "monomial": [
+        "t",
+        "w",
+        "w"
+      ],
+      "coefficient": 1
+    },
+    {
+      "monomial": [
+        "w"
+      ],
+      "coefficient": 8
+    },
+    {
+      "monomial": [
+        "w",
+        "w"
+      ],
+      "coefficient": 2
+    }
+  ],
+  "limitations": "Finite checks verify the algebra and proof-derived cases; the full mathematical proof is in TeX and depends on the stated matching theorem.",
+  "source_sha256": {
+    "g5_10_obstruction_v18.tex": "06dcf4f9fbb01b37e21533feb7d589ad60375047da0e3377a3bae41cd53b518e",
+    "verify_g5_10_obstruction_v18.py": "342d2bcc79f143c0c7fda56d622b0858a83bcd2f503f83f54a941fe47dc48f15"
+  }
+}

@@ -1,0 +1,156 @@
+\section{\texorpdfstring{$G_{5,14}$}{G5,14} の中央 core の matching の固定}
+\label{cm25:section}
+
+本節では定理~\ref{ug25:no-five} の後に残る二つの $\{4,1,0\}$ 配分を
+符号レベルで同時に接着する．単位枝を $01,23$，唯一の四高 core を $4$ とする．
+core $i\in\{0,1,2,3\}$ の低行の唯一の正位置を $f_i$ と書く．
+たとえば $f_0=2$ は $p^0_{12}>0$ を意味する．
+元の条件は \eqref{ug25:local}--\eqref{ug25:budget-D} のままである．
+
+\begin{lemma}\label{cm25:negative-common}
+単位枝の共通負位置の外側 pair が負なら，node 零の位置の外側 pair は正である．
+その位置の正低行側分母は少なくとも七である．
+\end{lemma}
+\begin{proof}
+共通負位置の node は四で，両隣接高分母は三，低 column の絶対値の和は三である．
+各反対符号位置で「正側 column 引く負側 column の絶対値」を $\delta_0,\delta_1$ と書く．
+対向低 $D$ は $\delta_0+\delta_1=1$ を与える．
+node 零で外側 pair が負ならその小例外は $\delta_0=0$ である．
+node 一で外側 pair が正の場合には正通常族により
+$\delta_1=1-J\le0$ となり矛盾する．
+従って node 一の pair も負となるが，これは全三外側 pair が負になるため，
+命題~\ref{ut24:positive-witness} に反する．
+node 零で外側 pair が正なら \eqref{ug25:positive-zero} により分母は
+$vV+1$，$v,V\ge2$ は異なる偶奇なので少なくとも七である．
+\end{proof}
+
+\begin{lemma}[外側正 pair が共通負位置だけの場合]\label{cm25:one-positive}
+ある単位枝 $ij$ の外側 pair が共通負位置 $c$ だけで正とする．
+node 零の位置を $a$，node 一の位置を $b$ とし，
+node 零位置の低行が正である端点を $i$ とする．
+列順 $(a,b,c)$ において，局所必要条件は
+\begin{equation}\label{cm25:one-positive-normal}
+ \begin{array}{c|c|c}
+ &\text{低 row}&\text{低 column}\\\hline
+ i&(2,-1,-2)&(2r,-k,-R)\\
+ j&(-1,1,-1)&(-2r,2h,-2)
+ \end{array}
+ \quad
+ R=2h-k>0,\quad r,h\ge1,\quad k\in\{2,4\}
+\end{equation}
+に限られる．従って
+\begin{equation}\label{cm25:one-positive-q}
+ (q_{ia},q_{ja},q_{ib},q_{jb},q_{ic},q_{jc})
+ =(4r+1,2r+1,k+1,2h+1,2R+1,3).
+\end{equation}
+外側 cores での clutching entries は
+\begin{align}
+ (p^a_{ij},p^a_{ji})&=(-2r,-4r-3),\label{cm25:E0}\\
+ (p^b_{ij},p^b_{ji})&=(-1,-2h(k+1)-k).\label{cm25:E3}
+\end{align}
+\end{lemma}
+
+\begin{proof}
+node 零の pair は負なので，反対符号の完全表から両低行は $2,-1$，
+両低 column は $2r,-2r$ である．共通負位置の低行を $-s,-s'$ とすれば
+$s+s'=3$ であり，行和から残りの低行は $-(3-s),3-s$ となる．
+共通負 pair が正なので，低 column の絶対値は
+$(s,s',S,T)=(1,2,2,R)$ または $(2,1,R,2)$ である．
+対向低 $D$ により node 一位置の column 差は $R>0$ となる．
+
+前者では node 一位置の正低行は二で，負通常族から負 column の絶対値は一である．
+core $i$ の低 row/column は $(2,-2,-1),(2r,-1,-2)$ となる．
+これは補題~\ref{ug25:factor-test} の $A_1$ 型であり，全正因子表と
+$(6B+2)/6$ の整除障害により整数 core に完成しない．
+後者では node 一位置の正低行は一である．
+負例外表のうち正の column 差を持てるものは
+$(U,J)=(2h,k)$，$k\in\{2,4\}$ の族だけであり，差は $R=2h-k$ である．
+これが \eqref{cm25:one-positive-normal} を与える．
+node 零族の $(\alpha,\beta)=(0,-3)$ を元の clutching に代入すると
+\eqref{cm25:E0} を得る．node 一族では正低行側が $j$ で，
+その係数は $(-k,-1)$ なので，添字を戻すと \eqref{cm25:E3} となる．
+\end{proof}
+
+\begin{theorem}[中央 core の正 pair の強制]\label{cm25:central}
+$G_{5,14}$ の標準五次接着では，core $4$ の二つの pair $01,23$ が
+ともに負になることはない．従って四 ray matching 定理の下で，
+core $4$ の正 matching は必ず $\{01,23\}$ である．
+交差する二つの matching $\{02,13\},\{03,12\}$ は起こらない．
+\end{theorem}
+
+\begin{proof}
+core $4$ の pair $01,23$ がともに負と仮定する．
+各単位枝には外側正 pair が少なくとも一つある．
+三高 matching により，単位枝 $01$ の外側 core $2,3$ における正 pair は
+それぞれ $f_2=4,f_3=4$ と同値であり，$f_2,f_3$ が同時に四になることは
+単位枝 $23$ の node 非負性に反する．従ってちょうど一方が四である．
+同様に $f_0,f_1$ のちょうど一方が四である．
+各単位枝の端点を交換して
+\begin{equation}\label{cm25:four-sign-cases}
+ f_1=f_3=4,\qquad (f_0,f_2)\in\{(3,0),(3,1),(2,1),(2,0)\}
+\end{equation}
+とできる．この四配置で全て尽くされる．
+
+\paragraph{三つの非相互配置．}
+$(2,1)$ は二つの単位枝を交換すると $(3,0)$ になるので，
+$f_0=3,f_2\in\{0,1\}$ としてよい．
+単位枝 $01$ の共通負位置は $2$ であり，そこの外側 pair は負である．
+従って $q_{02}=q_{12}=3$ である．唯一の外側正 pair は core $3$ にあるため，
+補題~\ref{cm25:negative-common} より node 零位置は $3$ であり，
+core $0$ が正低行側なので $q_{03}\ge7$ である．
+
+$f_2=0$ なら，単位枝 $23$ の共通負位置 $1$ は外側正 pair である．
+従って位置 $0$ の node は零または一で，そこの外側 pair は負である．
+反対符号表における正低行側分母は $q_{02}=3$ である．
+node 零の例外は正側分母 $4r+1\ge5$ なので不可能であり，
+node 一の通常負族と三種類の例外はいずれも負側分母 $q_{03}\le5$ を与える．
+これは $q_{03}\ge7$ に反する．
+$f_2=1$ なら，単位枝 $23$ の共通負位置は $0$ で外側 pair も負である．
+その node は四なので $q_{02}=q_{03}=3$ となり，再び矛盾する．
+
+\paragraph{相互配置 $(f_0,f_2)=(2,0)$．}
+この場合，単位枝 $01,23$ の唯一の外側正 pair はそれぞれ共通負位置 $3,1$ にある．
+両方に補題~\ref{cm25:one-positive} を適用する．
+単位枝 $01$ の node 零位置は $2$ または $4$，
+単位枝 $23$ の node 零位置は $0$ または $4$ である．
+共通高分母 $q_{13}$ は，前者ではそれぞれ $3$ または $2R+1\ge5$，
+後者ではそれぞれ $3$ または $2R'+1\ge5$ となる．
+従って混合選択は不可能であり，二つの場合だけが残る．
+
+両 node 零位置が $2,0$ なら，単位枝 $01$ の正規形は $i=0,j=1,a=2,b=4,c=3$，
+単位枝 $23$ の正規形は $i=2,j=3,a=0,b=4,c=1$ である．
+$q_{02}=4r+1=4r'+1$ より $r=r'$．
+式~\eqref{cm25:E0} と第二正規形の低 column により，core $2$ の ray $0$ の行は
+\[
+ p^2_{01}=-2r,\qquad p^2_{03}=2r,\qquad
+ p^2_{04}=-q_{02}.
+\]
+元の pair equation
+$p^2_{04}p^2_{40}=q_{02}q_{24}-1$ は
+$q_{02}\mid1$ を要求し，$q_{02}>1$ に反する．
+
+両 node 零位置が $4$ なら，正規形はそれぞれ
+$(i,j,a,b,c)=(1,0,4,2,3)$ と $(3,2,4,0,1)$ である．
+共通負位置の分母三から
+\[
+ q_{12}=k+1=3,\qquad q_{03}=k'+1=3,
+ \qquad k=k'=2.
+\]
+第一正規形の \eqref{cm25:E3} は $p^2_{10}=-1$ を与える．
+第二正規形の低 column は $p^2_{13}=-2$ を与える．
+従って core $2$ の ray $1$ の行和は
+\[
+ -1-2+p^2_{14}=-q_{12}=-3,
+\]
+すなわち $p^2_{14}=0$ を強制する．
+しかし $p^2_{14}p^2_{41}=q_{12}q_{24}-1>0$ であり矛盾する．
+これで四符号配置と全 node 零選択が排除された．
+
+四高 core の正 graph が完全マッチングであることを使うと，
+$\{01,23\}$ 以外の二 matching は pair $01,23$ がともに負なので既に排除されている．
+\end{proof}
+
+この結論は中央 matching の二通りを除く構造還元である．
+整合する中央 matching $\{01,23\}$ を持つ $G_{5,14}$ 全体の存在・非存在は未解決である．
+\nolinkurl{verify_g514_central_matching_v25.py} は全符号配置の有限網羅，
+正規形の原 clutching/pair 恒等式，二つの最終行和障害を独立に確認する．

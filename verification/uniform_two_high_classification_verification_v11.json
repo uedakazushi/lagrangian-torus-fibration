@@ -1,0 +1,292 @@
+{
+  "version": 11,
+  "status": "passed",
+  "check_count": 36,
+  "checks": [
+    "LK identity from the two exact squares",
+    "L after H=4t-2+k",
+    "numerator in the integer K formula",
+    "positive-coefficient exclusion for every t>=1,k>=3",
+    "k=2 ratio strictly between one and two",
+    "k=1 permits t=1 only",
+    "symbolic divisibility of both s and z for every t",
+    "infinite family conic identity",
+    "infinite family reciprocal difference",
+    "infinite family row sum 0",
+    "infinite family crossing determinant 0,1",
+    "infinite family crossing determinant 0,2",
+    "infinite family crossing determinant 0,3",
+    "infinite family row sum 1",
+    "infinite family crossing determinant 1,2",
+    "infinite family crossing determinant 1,3",
+    "infinite family row sum 2",
+    "infinite family crossing determinant 2,3",
+    "infinite family row sum 3",
+    "infinite family defect 0",
+    "infinite family defect 1",
+    "infinite family defect 2",
+    "infinite family defect 3",
+    "delta=2,J=1 begins below zero",
+    "delta=3,J=2 requires G=1",
+    "delta=3,J=2 residual factor (R-6)(4R+1)",
+    "sporadic data q=7",
+    "sporadic rows and determinants q=7",
+    "explicit positive rational weights q=7",
+    "sporadic data q=13",
+    "sporadic rows and determinants q=13",
+    "explicit positive rational weights q=13",
+    "sporadic data q=31",
+    "sporadic rows and determinants q=31",
+    "explicit positive rational weights q=31",
+    "all sample solutions agree with the complete classification"
+  ],
+  "scope": "Exact identities for the unbounded classification, finite residual algebra, and explicit positive weights. The parameter box is supplementary only.",
+  "sporadic_models": [
+    {
+      "r": 2,
+      "t": 1,
+      "s": 2,
+      "z": 1,
+      "q": 7,
+      "P": [
+        [
+          0,
+          -8,
+          3,
+          -2
+        ],
+        [
+          -6,
+          0,
+          -2,
+          1
+        ],
+        [
+          2,
+          -3,
+          0,
+          0
+        ],
+        [
+          -3,
+          6,
+          -4,
+          0
+        ]
+      ],
+      "weights": [
+        "7",
+        "7",
+        "13/4",
+        "13/12"
+      ],
+      "D": [
+        0,
+        -2,
+        2,
+        0
+      ]
+    },
+    {
+      "r": 1,
+      "t": 6,
+      "s": 4,
+      "z": 1,
+      "q": 13,
+      "P": [
+        [
+          0,
+          -21,
+          12,
+          -4
+        ],
+        [
+          -8,
+          0,
+          -6,
+          1
+        ],
+        [
+          1,
+          -2,
+          0,
+          0
+        ],
+        [
+          -3,
+          12,
+          -10,
+          0
+        ]
+      ],
+      "weights": [
+        "13",
+        "13",
+        "25/2",
+        "25/24"
+      ],
+      "D": [
+        -3,
+        -2,
+        3,
+        2
+      ]
+    },
+    {
+      "r": 2,
+      "t": 5,
+      "s": 6,
+      "z": 3,
+      "q": 31,
+      "P": [
+        [
+          0,
+          -40,
+          15,
+          -6
+        ],
+        [
+          -24,
+          0,
+          -10,
+          3
+        ],
+        [
+          2,
+          -3,
+          0,
+          0
+        ],
+        [
+          -5,
+          10,
+          -6,
+          0
+        ]
+      ],
+      "weights": [
+        "31",
+        "31",
+        "61/4",
+        "61/20"
+      ],
+      "D": [
+        -4,
+        2,
+        0,
+        2
+      ]
+    }
+  ],
+  "sample_parameter_box": {
+    "r": [
+      1,
+      80
+    ],
+    "t": [
+      1,
+      40
+    ]
+  },
+  "sample_solution_count": 16,
+  "sample_solutions": [
+    [
+      1,
+      6,
+      4,
+      1
+    ],
+    [
+      2,
+      1,
+      2,
+      1
+    ],
+    [
+      2,
+      5,
+      6,
+      3
+    ],
+    [
+      3,
+      1,
+      3,
+      2
+    ],
+    [
+      9,
+      2,
+      6,
+      5
+    ],
+    [
+      15,
+      3,
+      9,
+      8
+    ],
+    [
+      21,
+      4,
+      12,
+      11
+    ],
+    [
+      27,
+      5,
+      15,
+      14
+    ],
+    [
+      33,
+      6,
+      18,
+      17
+    ],
+    [
+      39,
+      7,
+      21,
+      20
+    ],
+    [
+      45,
+      8,
+      24,
+      23
+    ],
+    [
+      51,
+      9,
+      27,
+      26
+    ],
+    [
+      57,
+      10,
+      30,
+      29
+    ],
+    [
+      63,
+      11,
+      33,
+      32
+    ],
+    [
+      69,
+      12,
+      36,
+      35
+    ],
+    [
+      75,
+      13,
+      39,
+      38
+    ]
+  ],
+  "script_sha256": "c00a23817f575ace4993e796c3c4be9eb402cf4c4ffb4a1e32d0f3dada4514ac",
+  "polynomial_dependency_sha256": "35d9317c0414b320e302444c5f4d008ed8f82ca7f695777b0665a30de1560d36"
+}

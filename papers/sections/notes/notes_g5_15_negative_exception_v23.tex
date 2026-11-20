@@ -1,0 +1,60 @@
+\subsection{負例外は全排除済み：再利用する外側 pair と resultant}
+\label{notes:negative-exception-v23}
+
+第23版で $G_{5,15}$ の負例外 $Q=3,5$ の二 template は全尺度で排除された．
+通常型・正例外の排除と合わせて $G_{5,15}$ 全体が解決し，現行支持は三型・二十六標識となる．
+この型の大きい尺度や小共有分母を再探索する必要はない．
+指定した標準 $K_5$ 接着の障害であり，任意の torus fibration の不存在には拡張しない．
+
+\paragraph{未完成の第三 core を先に使う．}
+低辺の両端を完成してから外側 core を調べる順序は，無限尺度を余計に残す場合がある．
+外側 core の一つの pair equation と二つの node だけを先に課せる．
+中心の分母 $a$，entry $p$，隣接低成分 $\varepsilon j,\varepsilon A$ に対して
+\[
+ E=au-p,\quad -4\le u,v\le1,\qquad
+ A\{E(jv-\varepsilon)-aj\}=a-1-Ev
+\]
+である．共鳴は係数と定数の両方が零になる条件から完全に分類する．
+分母 $q=1+jA$ に対する $q\{E(jv-\varepsilon)-aj\}=-\varepsilon E-j$ も再利用できる．
+
+\paragraph{今回の定数シフト．}
+中心を $(r,s,z,S,T,x,y)$ とし，$J$ の低 column を $(-A_J,B_J,-1)$，
+$K$ のそれを $(-A_K,B_K,-(Q-1))$ とする．全有効候補は
+\[
+\begin{array}{c|c|ccc|ccc}
+&Q&j&A_J&B_J&k&A_K&B_K\\\hline
+N_\pm&3&r+\varepsilon&x+\varepsilon&y+\varepsilon&w+\eta&z+\eta&s+\eta\\
+P_\pm&5&r-1&x-1&y+1&S+1&z-1&s+1
+\end{array}
+\]
+へ落ちた．$\varepsilon,\eta=\pm1$，$P$ は正 $L=3$ の枝である．
+奇数分母は全族で $\ell$ 奇数・$t$ 偶数を強制する．
+これは元の局所族の parity が自動であることとは別であり，接着後の新しい三高分母へ課した条件である．
+十三の共鳴 $\ell=0$ は自由な $t$ を全て保持した後，隣接高分母六として排除される．
+七の正 $L=4$ 共鳴は，この template の node 条件 $L+2\le5$ に入らない．
+
+\paragraph{再利用できる単位 reverse column の残余式．}
+一般に低 row が $(-j,j+m-1,-m)$，低 column が $(-A,B,-1)$，共有分母が $Q=m+1$ なら，
+共有高 row は $(X,-X-m,-1)$ である．元の残余は $v=j-X$ を用いて
+\[
+ [X(X+m)-Qv(v-1)]AB+XvA+(X+m)(1-v)B+X(X+m)=0
+\]
+となる．$D_{\rm low}=A-B$ なので，既知の隣接 $D$ を直接入れられる．
+この式自体は $Q=3,5$ に限らない．ただし必要な整除性・正値性を捨てて十分条件にしてはならない．
+
+\paragraph{二つの二次式を同時に消す方法．}
+共有高 node の整数 $n=0,1,2,3$ は $X-Y=Q+1-Qn$ を与える．
+二つの元残余を $f=aX^2+bX+c$，$g=dX^2+eX+f_0$ とすると，
+共通根には $(af_0-cd)^2-(ae-bd)(bf_0-ce)=0$ が必要である．
+これは先頭係数で割らない整数恒等式なので，一次退化も保たれる．
+今回の四十場合は，三つの全無限領域と四つの端点に分けた係数符号証明で排除した．
+唯一の零 resultant は $N_-,\varepsilon=\eta=-1,n=2,\ell=1,t=2$ で，$B_J=0$ となる．
+resultant の零を局所模型の存在と取り違えない．
+
+\paragraph{復元資料．}
+公開証明は \nolinkurl{g5_15_negative_exception_obstruction_v23.tex}，
+全係数証明は \nolinkurl{verify_g5_15_negative_exception_v23.py} と対応する JSON にある．
+検算は標準ライブラリのみで，外側 node の千三百六十八個の記号的場合分け，
+四十 resultant，百二十の全係数符号，四端点での百六十値を確認する．
+元の正整数族の任意 cutoff を設けた検算ではない．
+残る支持へこの手順を移す際は，低辺・中心の種類・外側 node 範囲を改めて導く．

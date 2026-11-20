@@ -1,0 +1,111 @@
+\subsection{四直線の \texorpdfstring{$K_4$}{K4} core と有向四角形}
+\label{per:k4-section}
+
+三 punctures の場合にも，critical basin の面積を選ぶことで作用座標を整合させられる．
+ここでは標準 tropical plane の格子
+\[
+ N_4=\ZZ^4/\ZZ(1,1,1,1),\qquad r_i=[e_i]
+\]
+を用いる．$\sum_i r_i=0$ であり，六つの二次元 cones は
+$\RR_{\geq0}r_i+\RR_{\geq0}r_j$ $(i<j)$ である．
+これは $\mathcal B(U_{3,4})$ の標準 fan で，その link は $K_4$ である．
+
+\begin{proposition}[四直線 core の作用座標]
+\label{per:k4-realization}
+$W_4=\PP^2\setminus\bigcup_{i=1}^4L_i$ を一般位置の四直線の補集合とし，
+$\omega$ を $[\omega]=2\pi\sum_iw_i[L_i]$，$w_i>0$ を満たす Kähler form とする．
+各 $L_i$ の三 punctures 上で指定した marked Morse foliation の相対 isotopy class の中で
+代表を選び，定理~\ref{snc:main} の相対構成による core に，
+定義~\ref{per:chart-definition} の作用座標に適合する $K_4$ cone chart を構成できる．
+branch denominator は全て $1$ である．
+
+さらに，四頂点の有向 cycle $f$ を一つ選ぶと，この chart は整数格子同型
+\begin{equation}\label{per:k4-lattice-map}
+ \Phi:H_1(W_4;\ZZ)\longrightarrow N_4^*,\qquad
+ \Phi(\mu_i)=e^*_{f^{-1}(i)}-e^*_i
+\end{equation}
+と整合するように取れる．ここで $\mu_i$ は正の meridian であり，
+右辺は $\ZZ^4$ 上の係数和が零の linear form として $N_4$ に降りる．
+整合性とは，各 regular face 上の torus cycle の作用積分が，
+その image に対応する linear function の chart への pullback になることである．
+\end{proposition}
+
+\begin{proof}
+crossing germs を準備した後の divisor 面積形式を用いる．
+$L_i$ の一つの saddle の critical leaf は，球面を三つの puncture basins に分ける．
+basin は external Reeb edge に沿う regular puncture disks の増大極限で定め，
+その境界が一つの単純 loop であることを要求しない．
+三つの面積の和は $2\pi W$，$W=\sum_jw_j$ である．
+basin $D_{i;j}$ の面積を
+\begin{equation}\label{per:k4-basin}
+ \frac{\operatorname{area}(D_{i;j})}{2\pi}
+ =w_j+w_i\,\mathbf1_{\{j=f(i)\}}\qquad(j\ne i)
+\end{equation}
+と指定する．これらは全て正で，和は $W$ に等しい．
+補題~\ref{per:lobe-areas} の density と相対 Moser の証明を
+三つの basins に適用すれば，十分小さい crossing disks を固定し，
+指定された相対 isotopy class の中でこの面積を実現できる．
+ここには内部 annulus がなく，三領域だけで全体の面積を尽くす．
+
+puncture-compatible framing による Stokes の公式から，critical slope は
+\[
+ h_{ij}=\frac{w_j-\operatorname{area}(D_{i;j})/(2\pi)}{w_i}
+       =-\mathbf1_{\{j=f(i)\}}.
+\]
+従って $i$ の ray 上では，$s=-I_{\mu_i}>0$ として
+\begin{equation}\label{per:k4-critical-actions}
+ I_{\mu_i}=-s,\qquad
+ I_{\mu_j}=s\,\mathbf1_{\{j=f(i)\}}.
+\end{equation}
+graph-period correction は fiber tangent を消すので，この計算を変えない．
+
+crossing face $ij$ の整数 torus basis は $(\mu_i,\mu_j)$ である．
+$\epsilon_{ij}=\mathbf1_{\{j=f(i)\}}$ と書き，
+\begin{equation}\label{per:k4-face-map}
+ \begin{pmatrix}I_{\mu_i}\\ I_{\mu_j}\end{pmatrix}
+ =A_{ij}\begin{pmatrix}t_i\\ t_j\end{pmatrix},\qquad
+ A_{ij}=\begin{pmatrix}-1&\epsilon_{ji}\\
+                         \epsilon_{ij}&-1\end{pmatrix},
+ \qquad F=t_ir_i+t_jr_j
+\end{equation}
+で chart を定める．有向四角形には二辺 cycle がないので
+$\det A_{ij}=1-\epsilon_{ij}\epsilon_{ji}=1$ である．
+\eqref{per:k4-critical-actions} により，両端ではそれぞれ $F=sr_i$，$F=sr_j$ となる．
+
+sector 内部で $t_i,t_j>0$ であることも確認する．
+$i\to j$ が選択辺なら $t_i=-I_{\mu_i}$，
+$t_j=-I_{\mu_i}-I_{\mu_j}$ である．$L_i$ 側の arm では，
+partial basin area を用いた slope は $h_{ij}>-1$ なので
+$t_j=-I_{\mu_i}(1+h_{ij})>0$ となる．$L_j$ 側では $h_{ji}>0$ なので，
+やはり両係数は正である．いずれの向きも選択されない辺では
+$F=-I_{\mu_i}r_i-I_{\mu_j}r_j$ で，両側の slopes は正である．
+transition caps では radial coordinate を $I<w_j/2$ とし，normal moment $m_i$ を縮めれば
+$I-w_j+m_i A(I)<0$ となる．product crossings でも二つの normal moments を
+対応する weights より小さく取る．従って caps と corner の丸めを通じても上記の正値性を保つ．
+
+作用座標は各 regular face で局所座標であり，Liouville flow はそれらを同じ倍率で変える．
+従って contact-link edge 上の projective action ratio は，二つの端の rays の間で
+厳密単調である．各 sector map は所期の fan sector の原点近傍への同相を与え，
+\eqref{per:k4-critical-actions} によって隣接 sectors と貼り合う．
+compact な link での一様な零極限が core への連続性を与える．
+$A_{ij}$ は unimodular であり，$r_i,r_j$ もそれぞれの saturated rank-two lattice の
+基底なので，face lattices と branch lattices は定義通り整合する．
+
+最後に
+\[
+ H_1(W_4;\ZZ)=\ZZ^4/\ZZ(\mu_1+\mu_2+\mu_3+\mu_4)
+\]
+である\cite{Hattori,PapadimaSuciu}．
+\eqref{per:k4-lattice-map} の四つの image の和は零であり，有向四角形の
+連続する座標の差は係数和零の整数格子全体を生成する．
+またその kernel は，cycle 全体で一定な係数の vectors，すなわち対角格子だけである．
+従って $\Phi$ は整数格子同型である．
+その $r_i,r_j$ 上の評価行列は正確に $A_{ij}$ なので，
+\eqref{per:k4-face-map} は主張した linear-period 整合性を与える．
+\end{proof}
+
+この命題は一つの四直線 core に関する局所構成であり，
+曲面全体の face transitions を含む atlas には，後の定理~\ref{ga8:global} の接着を用いる．
+Evans--Mauri の contact-link と cone construction \cite{EM} に，
+ここでは選んだ basin areas と作用格子の明示的な同定を加えている．
+

@@ -1,0 +1,279 @@
+% v22. Exact finite reconstruction after fixing only the two entries of the low row.
+% No denominator cutoff, parity, clutching, or node-count hypothesis is used.
+\section{低行を固定した三高非負係数模型の有限性}
+\label{hd22:section}
+
+前節の復元は五整数 $(s,t,x,y,z)$ ごとに $b$ の全範囲を有限化した．
+ここでは正の entry $sT-b$ と，残していた元の pair-product 方程式を併用する．
+これにより，低行 $(-s,-t,s+t-1,0)$ の二整数 $(s,t)$ だけを固定した段階で，
+三高係数が同時に非負である全整数模型の候補が有限となる．
+特に，$D_b=y$ と $D_c=z$ に外から上限を与える必要はない．
+低行自体の二変数には依然として上限を得ておらず，一般不存在とは区別する．
+
+\subsection{一つの正 entry が与える一様上限}
+
+第21版の記号を用い，とくに
+\[
+ u=s+t-1,\quad x=D_a,\quad y=D_b,\quad z=D_c,\quad h=s-x
+\]
+とする．定理~\ref{hd20:nonsingular}と命題~\ref{hd21:reconstruction}から，
+問題の全ての模型では
+\[
+ s,t\ge1,\quad 0\le x\le s-1,\quad y,z\ge0,\quad
+ d=x+y+z\ge1,\quad b\ge2
+\]
+である．次の補助記号を追加する：
+\begin{equation}\label{hd22:basic}
+ \begin{gathered}
+ B=b-1\ge1,\qquad \lambda=ux+sz,\qquad F=B+\lambda,\qquad
+ m=F^2+F+1,\\
+ a=uh-B(F+1),\qquad
+ n_0=(F+1)(Bt+h)+F(u+z)+htz.
+ \end{gathered}
+\end{equation}
+本節の $B=b-1$ は正整数であり，前節の scalar $-s-tb$ とは異なる．
+後者を用いる箇所では $H=s+tb$ と書く．
+
+\begin{lemma}[第二尺度の係数分離]
+\label{hd22:T-affine}
+第21版の復元尺度は，$s,t,x,z,b$ を固定すると
+\begin{equation}\label{hd22:T-affine-eq}
+ mT=n_0+ay
+\end{equation}
+を満たす．さらに $K=sT-b$ と置けば
+\begin{equation}\label{hd22:K-numerator}
+ mK=Q_0+say,
+\end{equation}
+ただし
+\begin{equation}\label{hd22:Q0}
+ \begin{aligned}
+ Q_0={}&-BF^2+
+ \bigl(B(st-2)+(2u+1)h-1\bigr)F\\
+ &+B(tx-1)+h(s-utx)-1
+ \end{aligned}
+\end{equation}
+である．
+\end{lemma}
+
+\begin{proof}
+復元に用いた量を $y$ に関して分離すると
+\[
+ \begin{aligned}
+ E&=E_0+(uh+1)y,& E_0&=thz-u-z-t,\\
+ J&=J_0+\lambda y,& J_0&=h+u+z-\lambda t.
+ \end{aligned}
+\]
+$mT=m(t-y)+E+(F+1)J$ の $y$ の係数は
+\[
+ -m+uh+1+(F+1)\lambda=uh-B(F+1)=a
+\]
+である．定数項を整理すると $n_0$ となる．
+次に $mK=sn_0-bm+say$ とし，$sz=F-B-ux$ と $h=s-x$ を代入すれば
+$sn_0-bm=Q_0$ を得る．これらは整数係数多項式の恒等式である．
+\end{proof}
+
+\begin{theorem}[低行ごとの $F$ 上限]
+\label{hd22:F-bound}
+三高係数が同時に非負である正の整数模型は
+\begin{equation}\label{hd22:M-bound}
+ F\le M(s,t,x):=st+(2u+1)(s-x)-2
+\end{equation}
+を満たす．従って
+\begin{equation}\label{hd22:bz-bound}
+ 1\le b-1+sz\le M(s,t,x)-ux.
+\end{equation}
+右端が一未満なら，その $(s,t,x)$ に候補はない．
+この上限には $y=D_b$ が現れない．
+\end{theorem}
+
+\begin{proof}
+$F\ge M+1$ と仮定する．$B\ge1$ だから
+\[
+ a=uh-B(F+1)\le uh-(F+1)
+ \le -st-(u+1)h<0.
+\]
+$y\ge0$ より，補題~\ref{hd22:T-affine}は $mK\le Q_0$ を与える．
+一方，模型の符号条件は $K=sT-b>0$ である．
+この二つを矛盾させるため，
+\[
+ \begin{aligned}
+ Q_1={}&-BF^2+
+ \bigl(B(st-1)+(2u+1)h-1\bigr)F
+ -B(B+1)+sh-1,\\
+ Q_2={}&-F^2+MF+sh-3
+ \end{aligned}
+\]
+と置く．直接の恒等式
+\begin{align}
+ Q_1-Q_0&=B\bigl((s-1)x+sz\bigr)+uhtx\ge0,
+ \label{hd22:bound-gap1}\\
+ Q_2-Q_1&=(B-1)\bigl(F(F-st+1)+B+2\bigr)\ge0
+ \label{hd22:bound-gap2}
+\end{align}
+を用いる．第二式の不等号は，$F\ge M+1>st-1$ と $B\ge1$ による．
+従って
+\[
+ \begin{aligned}
+ 0<mK&\le Q_0\le Q_1\le Q_2\\
+ &\le -F+sh-3\\
+ &\le -st-(s+2t-1)h-2<0,
+ \end{aligned}
+\]
+となる．最後の行は $F\ge M+1$ と $2u+1-s=s+2t-1$ を用いた．
+矛盾と $F$ の整数性により $F\le M$ であり，式~\eqref{hd22:bz-bound} は
+$F=b-1+ux+sz$ から従う．
+\end{proof}
+
+この証明は $T$ の整数性を使わず，$K>0$ と $y\ge0$ を直接使っている．
+ただし $h\ge1$，$b\ge2$ などの入力範囲は，前節までの整数模型の帰着から
+受け取っている．従って正の実数模型一般に対する不存在は導かれない．
+
+\subsection{残った係数に関する二次方程式}
+
+固定した $s,t,x,z,b$ に対して，以下は全て整数である：
+\begin{equation}\label{hd22:quadratic-data}
+ \begin{gathered}
+ \alpha_0=F+tz,\quad H=s+tb,\quad A_0=s\alpha_0-t,\\
+ E_0=thz-u-z-t,\quad J_0=h+u+z-\lambda t,\\
+ n_{S,0}=mh+FE_0-J_0,\quad c=Fuh+B,\\
+ L=(2s-1)F+tb+2stz+s-2t,\\
+ C=F\bigl(b(t-1)+s\bigr)+b^2t+bs-b,\\
+ C_0=-Hn_{S,0}+A_0n_0-b\alpha_0m.
+ \end{gathered}
+\end{equation}
+ここで $L>0$，$C>0$ である．実際，
+$L=(2s-1)F+t(b-2)+2stz+s$，
+$C=F\bigl(b(t-1)+s\bigr)+b(bt+s-1)$ と書ける．
+
+\begin{proposition}[恒等零とならない残余多項式]
+\label{hd22:residual-quadratic}
+復元尺度を元の第一 pair-product 方程式へ代入した残余を
+\[
+ r=(-s-tb)S+(s\alpha-t)T-\alpha b
+\]
+とする．このとき $\alpha=\alpha_0+uy$ であり，
+\begin{equation}\label{hd22:quadratic}
+ mr=\mathcal R(y),\qquad
+ \mathcal R(Y)=su\,aY^2+(aL-C)Y+C_0.
+\end{equation}
+$a\ne0$ なら二次式であり，$a=0$ なら傾き $-C<0$ の一次式である．
+従って，どの固定五組 $(s,t,x,z,b)$ に対しても $\mathcal R$ は恒等零ではなく，
+その非負整数根は高々二個である．
+$a\le0$ の場合は $Y\ge0$ で狭義単調減少なので，高々一個である．
+\end{proposition}
+
+\begin{proof}
+前補題の計算と同様に
+\[
+ mS=n_{S,0}+cy,\qquad mT=n_0+ay,\qquad
+ c=Bm+Fa
+\]
+である．従って分母 $m$ を払った元の残余は
+\[
+ -H(n_{S,0}+cy)+(A_0+suy)(n_0+ay)
+ -b(\alpha_0+uy)m.
+\]
+二次係数は $sua$，定数項は $C_0$ である．一次係数についての恒等式
+\begin{equation}\label{hd22:linear-coefficient}
+ -Hc+A_0a+sun_0-bum=aL-C
+\end{equation}
+が式~\eqref{hd22:quadratic} を与える．
+これは $F=B+ux+sz$，$u=s+t-1$，$h=s-x$ による直接展開で確かめられる．
+特に $a=0$ の場合にも一次係数が負なので，一次式まで消えて恒等零となる
+例外は存在しない．$a<0$ なら二次係数も一次係数も負であり，
+$a=0$ の場合と合わせて最後の主張も従う．
+\end{proof}
+
+\begin{theorem}[二整数を固定した有限・必要十分復元]
+\label{hd22:fixed-row-finite}
+低行の正整数 $(s,t)$ を固定する．三高係数が全て非負である canonical 整数模型は，
+次の有限手順で漏れなく復元される：
+\begin{enumerate}
+ \item $x=0,\ldots,s-1$ を取り，$M=st+(2u+1)(s-x)-2$ とする．
+ \item $z\ge0$，$b\ge2$ のうち $b-1+sz\le M-ux$ を満たすものを全て取る．
+ \item 式~\eqref{hd22:quadratic} の非負整数根 $y$ を全て取る．
+ 各五組に高々二個であり，$a\le0$ なら高々一個である．
+ \item $d=x+y+z\ge1$，$\alpha\ge k\ge b+1$ を検査する．
+ 第21版の単一合同条件 $m\mid FE-J$ を検査し，
+ 式~\eqref{hd21:scales} で $S,T,U$ を復元する．
+ \item $S,T,U>0$ と式~\eqref{hd21:sign-factors} の六つの正値性を検査する．
+ 通過した候補から式~\eqref{hd21:canonical} と~\eqref{hd21:weights} を用いて
+ $q,P,w$ を構成する．
+\end{enumerate}
+最後に残るものは正確に所望の模型であり，別の存在判定は必要ない．
+特に，固定 $(s,t)$ に対して $x,y,z,b,S,T,U$ の全範囲が有限化される．
+\end{theorem}
+
+\begin{proof}
+全ての模型が最初の三段階に現れることは，
+$h\ge1$，定理~\ref{hd22:F-bound}，命題~\ref{hd22:residual-quadratic} による．
+第二段階の集合は明示的に有限である．例えば $M-ux\ge1$ の場合，
+\[
+ 0\le z\le\left\lfloor\frac{M-ux-1}{s}\right\rfloor,
+ \qquad 2\le b\le M-ux-sz+1
+\]
+と列挙すればよい．
+第三段階は恒等零でない一次または二次式の整数根を求めるだけである．
+一次式では割り切れを調べ，二次式では判別式が非負の平方数であることと，
+二つの二次公式の分子が $2sua$ で割り切れることを調べる．
+浮動小数点近似も外からの $y$ 上限も不要である．
+
+必要性は既に得られている．十分性では，第21版の復元が
+三つの元の pair-product 残余を等しくすることに注意する．
+ここでは $\mathcal R(y)=0$ も検査しているので，第一残余そのものが零となり，
+三つ全てが零である．単一合同条件は三尺度の整数性を与え，
+正値性検査は canonical な符号を保証する．
+命題~\ref{hd21:reconstruction} の十分性から，
+全 row sums，六つの pair products，指定した $D=(x,y,z,-d)$，
+および正の weights が従う．
+\end{proof}
+
+\begin{remark}[有限化の範囲と計算の意味]
+\label{hd22:scope}
+本定理に分母上限，奇偶条件，clutching，node 配分，対向する $D$ の相殺条件はない．
+固定しているのは低行の二整数 $(s,t)$ だけである．
+したがって，有限範囲の $(s,t)$ について本手順を実行した結果は，
+その低行の範囲で全ての高係数・全ての分母を尽くした判定となる．
+ただし $(s,t)$ が範囲外の模型を除外せず，
+三高非負係数模型の一般不存在も，その存在も，本節では結論しない．
+\end{remark}
+
+\subsection{対称な低行・高係数に対する無上界の排除}
+
+\begin{proposition}[対称 sector の不存在]
+\label{hd22:symmetric-sector}
+三高係数が全て非負である正の整数模型において，
+$s=t$ と $x=y$ は同時には成立しない．
+この主張に $s,x,z,b$ の上限はない．
+\end{proposition}
+
+\begin{proof}
+$s=t$，$x=y$ と仮定する．$h=j$ であり，
+式~\eqref{hd21:zero-norm-identity} は $E+J=0$ を与える．
+単一合同条件は $m\mid(F+1)E$ となる．
+$m-F(F+1)=1$ だから $\gcd(m,F+1)=1$ であり，$n=E/m$ は整数である．
+復元式は
+\[
+ S=h+(F+1)n,\qquad T=h-Fn
+\]
+となる．一方 $d=2x+z\ge1$ であり，
+\[
+ F=b-1+sd-x=b-1+h+s(d-1)\ge h+1.
+\]
+$n\ge1$ なら $T<0$，$n\le-1$ なら $S<0$ なので，
+$S,T>0$ は $n=0$ を強制する．従って $E=J=0$ であるが，
+これは定理~\ref{hd21:norm-bound}の零ノルム候補の排除に反する．
+\end{proof}
+
+検証器 \nolinkurl{verify_high_d_low_row_finiteness_v22.py} は，
+上限証明の二つの差，残余二次式，退化時にも非零となる一次係数，
+および復元後の三つの元の残余の一致を，整数係数多項式として係数ごとに確認する．
+付属の計算結果では，指定した $(s,t)$ の範囲だけを有限に区切り，
+各低行に対する $x,y,z,b$ は本定理の全範囲を処理している．
+具体的には $1\le s,t\le12$ の $144$ 低行について，
+$(s,t,x,z,b)$ の候補 $2{,}004{,}015$ 組を処理した．
+そのうち $219$ 組は $a=0$ の一次式であり，恒等零の例外として捨てていない．
+非負整数残余根は計六個で，全て $x=y=z=0$，従って $d=0$ であり対象外だった．
+この低行の範囲では三高非負係数模型は存在しない．
+この結論は，定理の有限化を用いた当該低行範囲についての厳密計算結果である．
+$s$ または $t$ が十二を超える場合の一般結論へは外挿しない．

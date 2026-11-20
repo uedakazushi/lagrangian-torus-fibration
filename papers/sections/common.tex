@@ -1,0 +1,50 @@
+% LuaLaTeX. The optional font file is only a local build convenience.
+\usepackage{luatexja-fontspec}
+\IfFileExists{../local-fonts.tex}{\input{../local-fonts.tex}}{}
+\usepackage[margin=24mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,tabularx,array,longtable,enumitem}
+\usepackage{xcolor,tikz}
+\usetikzlibrary{arrows.meta,calc,positioning}
+\usepackage{microtype}
+\usepackage[unicode,colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small General type surfaces and Lagrangian fibrations}
+\fancyhead[R]{\small v25}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0.25em}
+\setlength{\emergencystretch}{2em}
+\setlist{leftmargin=1.8em,itemsep=0.2em,topsep=0.3em}
+\theoremstyle{plain}
+\newtheorem{theorem}{定理}[section]
+\newtheorem{proposition}[theorem]{命題}
+\newtheorem{lemma}[theorem]{補題}
+\newtheorem{corollary}[theorem]{系}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{定義}
+\newtheorem{remark}[theorem]{注意}
+\newtheorem{problem}[theorem]{問題}
+\newtheorem{example}[theorem]{例}
+\renewcommand{\proofname}{証明}
+\renewcommand{\refname}{参考文献}
+\renewcommand{\contentsname}{目次}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\TT}{\mathbb T}
+\newcommand{\cX}{\mathcal X}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\figeight}{(S^1\vee S^1)}
+\newcommand{\Bl}{\operatorname{Bl}}
+\newcommand{\Cone}{\operatorname{Cone}}
+\newcommand{\Sk}{\operatorname{Skel}}
+\newcommand{\PD}{\operatorname{PD}}
+\newcommand{\Diff}{\operatorname{Diff}}
+\newcommand{\id}{\operatorname{id}}

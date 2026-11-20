@@ -1,0 +1,258 @@
+% v10: independently audited modular consequences of the local equations
+% and puncture clutching.  The modular results use no basin positivity or
+% bounded search.  The last geometric corollary also uses qh9:isolated-edge.
+
+\section{素数 support に対する五次の合同障害}
+\label{ps10:section}
+
+全平面五次の五つの cores の標識集合を $V=\{0,1,2,3,4\}$ とする．
+共有 branch $ij$ の分母を $q_{ij}=q_{ji}$，core $i$ の branch $ij$ における
+puncture $ijk$ の numerator を $p^i_{jk}$ と書く．
+以下では $q_{ij}$ が正の奇整数で，$p^i_{jk}\in\ZZ$ が，相異なる $i,j,k$ に対し
+\begin{align}
+ \sum_{k\in V\setminus\{i,j\}}p^i_{jk}&=-q_{ij},
+       \label{ps10:row}\\
+ p^i_{jk}p^i_{kj}&=q_{ij}q_{ik}-1,
+       \label{ps10:det}\\
+ q_{ij}&\mid p^i_{jk}+p^j_{ik}
+       \label{ps10:clutch}
+\end{align}
+を満たすと仮定する．最初の二式は局所の三 puncture period relation と
+crossing unimodularity，第三式は共有 puncture cycles の整数 clutching から来る．
+以下の合同障害はこの三条件だけを用い，basin 面積の正値性は用いない．
+後の系~\ref{ps10:all-high-divisible-three} では，さらに既存の幾何的接着障害を用いる．
+
+奇素数 $\ell$ ごとに，頂点集合 $V$ 上の単純 graph
+\[
+ E(G_\ell)=\bigl\{\{i,j\}:\ell\mid q_{ij}\bigr\}
+\]
+を定める．部分 graph を含むという表現は induced であることを要求しない．
+以下の合同計算はすべて $\mathbf F_\ell$ 内で行う．
+$ij\in E(G_\ell)$ なら，\eqref{ps10:det} により，すべての $k\ne i,j$ で
+\begin{equation}\label{ps10:unit}
+ p^i_{jk}\ne0,
+ \qquad p^i_{kj}=-(p^i_{jk})^{-1}
+\end{equation}
+となることを繰り返し用いる．
+
+\begin{lemma}[三角形の符号]\label{ps10:triangle}
+$i,j,k$ が $G_\ell$ の三角形をなすなら，ある
+$\varepsilon\in\{1,-1\}\subset\mathbf F_\ell$ に対し
+\[
+ p^i_{jk}=p^j_{ki}=p^k_{ij}=\varepsilon,
+ \qquad
+ p^i_{kj}=p^j_{ik}=p^k_{ji}=-\varepsilon
+\]
+である．特に，この三角形に属する各 numerator の二乗は一である．
+\end{lemma}
+
+\begin{proof}
+$x=p^i_{jk}\ne0$ と置く．core $i$ の determinant と，辺 $ij,ik$ の
+clutching を順に用いると
+\[
+ p^i_{kj}=-x^{-1},\qquad p^j_{ik}=-x,\qquad p^k_{ij}=x^{-1}
+\]
+を得る．core $j$ では $p^j_{ki}=x^{-1}$ であり，辺 $jk$ の clutching は
+$p^k_{ji}=-x^{-1}$ を与える．core $k$ の determinant より
+$-x^{-2}=-1$，すなわち $x^2=1$ となる．
+$\ell$ は奇素数なので $x=\varepsilon=\pm1$ であり，表示した六式を得る．
+\end{proof}
+
+\begin{theorem}[素数 support の禁止配置]\label{ps10:forbidden}
+\eqref{ps10:row}--\eqref{ps10:clutch} の下で，次が成り立つ．
+\begin{enumerate}
+\item 任意の奇素数 $\ell$ に対し，$G_\ell$ は $K_4$ を含まない．
+\item $G_3$ は matching，すなわち最大次数が一以下の graph である．
+\item 任意の奇素数 $\ell$ に対し，$G_\ell$ は book $B_3$ を含まない．
+  ここで $B_3$ は一つの辺 $ij$ と，その両端に接続する三つの相異なる
+  vertices $k,l,m$ からなる七辺の graph である．
+\item $G_\ell$ が $K_1\vee P_4$ を含むなら，$\ell=5$ である．
+  ここで $K_1\vee P_4$ は，path $a-b-c-d$ の四 vertices すべてに
+  一つの vertex $o$ を接続した七辺の graph を表す．
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+まず $K_4$ の vertices を $i,j,k,l$，残る vertex を $m$ とする．
+core $i$ で，row $j$ の entries $p^i_{jk},p^i_{jl}$ は
+補題~\ref{ps10:triangle} により $\pm1$ である．
+これらが逆符号なら，row sum より $p^i_{jm}=0$ となり，
+\eqref{ps10:unit} に反する．従って二つは同じ符号 $s_j$ を持つ．
+同様に rows $k,l$ の二つの内部 entries も，各々同じ符号 $s_k,s_l$ を持つ．
+各 pair の determinant は
+\[
+ s_js_k=s_js_l=s_ks_l=-1
+\]
+を要求するが，三つの $\pm1$ が互いに逆符号となることはできない．
+これが第一項である．
+
+第二項では $\ell=3$ とし，ある core に接する二本以上の edges が
+$G_3$ に属すると仮定する．この core の四つの局所 branch labels を
+$0,1,2,3$ と書き直し，$q_0=q_1=0$ in $\mathbf F_3$ としてよい．
+rows $0,1$ の三つの entries はそれぞれ全て非零であり，row sum は零である．
+$\mathbf F_3$ で三つの $\pm1$ の和が零であるためには，全てが同じ符号でなければならない．
+従ってある $\sigma,\tau\in\{1,-1\}$ に対し
+\[
+ p_{01}=p_{02}=p_{03}=\sigma,
+ \qquad p_{10}=p_{12}=p_{13}=\tau.
+\]
+pair $01$ の determinant は $\sigma\tau=-1$ を与えるので，$\tau=-\sigma$ である．
+残る $j=2,3$ について，pairs $0j,1j$ の determinants より
+\[
+ p_{j0}=-\sigma,\qquad p_{j1}=\sigma.
+\]
+これらは各 row で打ち消し合うため，$p_{23}=-q_2$，$p_{32}=-q_3$ となる．
+しかし pair $23$ の determinant は
+\[
+ q_2q_3=p_{23}p_{32}=q_2q_3-1
+\]
+を要求し，矛盾する．$q_2,q_3$ の剰余には追加条件を課していない．
+従って一つの core に三で割れる分母は高々一つであり，$G_3$ は matching である．
+この項では clutching 条件も面積正値性も使っていない．
+
+第三項の $B_3$ があれば，core $i$ の row $j$ は三つの三角形 $ijk,ijl,ijm$ により
+全 entries が $\pm1$ となる．その和が零であることから $\ell=3$ が必要である．
+しかし $i$ は $G_3$ で次数四を持ち，第二項に反する．
+
+最後に $K_1\vee P_4$ を仮定し，core $o$ の添字 $o$ を省略する．
+三角形の補題から
+\[
+ p_{ab}=s,\qquad p_{bc}=t,\qquad p_{cd}=u,
+ \qquad s,t,u\in\{1,-1\}
+\]
+と書ける．この core の四分母は全て零であり，すべての非対角 entries が非零である．
+row $b$ より $p_{bd}=s-t\ne0$ なので，$t=-s$，$p_{bd}=2s$ となる．
+row $c$ より $p_{ca}=t-u=-s-u\ne0$ なので，$u=s$，$p_{ca}=-2s$ となる．
+determinant と row $a$ を用いると
+\[
+ p_{ac}=\frac{s}{2},\qquad p_{ad}=-\frac{3s}{2}.
+\]
+$p_{ad}\ne0$ より $\ell\ne3$ である．従って row $d$ は
+\[
+ p_{da}+p_{db}+p_{dc}
+   =\frac{2s}{3}-\frac{s}{2}-s
+   =-\frac{5s}{6}=0
+\]
+となり，$\ell=5$ が従う．
+\end{proof}
+
+\begin{proposition}[$K_{2,2,1}$ と残る二分母]\label{ps10:k221}
+$G_\ell$ が parts $\{a,b\},\{c,d\},\{o\}$ の $K_{2,2,1}$ を含むなら，
+$\ell=5$ であり，$G_5$ はこの $K_{2,2,1}$ に等しい．
+さらに，ある $s\in\{1,-1\}\subset\mathbf F_5$ に対し
+\begin{equation}\label{ps10:k221-residues}
+ q_{ab}\equiv-s,\qquad q_{cd}\equiv s\pmod5.
+\end{equation}
+特に $q_{ab}+q_{cd}\equiv0$ および $q_{ab}^2\equiv q_{cd}^2\equiv1\pmod5$ である．
+\end{proposition}
+
+\begin{proof}
+$K_{2,2,1}$ は $K_1\vee P_4$ を含むので，定理~\ref{ps10:forbidden} より
+$\ell=5$ である．辺 $ab$ または $cd$ を加えると $K_4$ が生じるため，
+$q_{ab},q_{cd}$ は五で割れず，support graph はちょうど $K_{2,2,1}$ となる．
+
+まず core $o$ を考える．各 row の反対 part への二 entries は $\pm1$ であり，
+残る一 entry が非零であるため，その二つは同符号である．
+cross-part determinants から，part $\{a,b\}$ の二 rows は同じ符号 $s$，
+part $\{c,d\}$ の二 rows は逆符号 $-s$ を持つ．
+row sums より
+\[
+ p^o_{ab}=p^o_{ba}=-2s,
+ \qquad p^o_{ac}=p^o_{ad}=p^o_{bc}=p^o_{bd}=s,
+ \qquad p^o_{cd}=p^o_{dc}=2s.
+\]
+
+次に core $a$ を考える．辺 $ao$ の clutching と local determinants より
+\[
+ p^a_{ob}=2s,\qquad p^a_{oc}=p^a_{od}=-s,
+ \qquad p^a_{bo}=2s,\qquad p^a_{co}=p^a_{do}=s
+\]
+となる．ここでは $-1/2=2$ in $\mathbf F_5$ を用いた．
+$p^a_{cd}=s x$ と書くと，$x\ne0$ であり，rows $c,d$ と determinants は
+\[
+ p^a_{cb}=-s(1+x),\qquad
+ p^a_{db}=s(-1+x^{-1}),\qquad
+ p^a_{bc}=\frac{s}{1+x},\qquad
+ p^a_{bd}=\frac{s}{1-x^{-1}}
+\]
+を与える．最初の二 entries が非零なので $x\ne\pm1$，従って $x=\pm2$ である．
+row $b$ の和は
+\[
+ -q_{ab}
+ =s\left(2+\frac1{1+x}+\frac1{1-x^{-1}}\right)
+ =\begin{cases}s&x=2,\\0&x=-2.\end{cases}
+\]
+$q_{ab}\not\equiv0$ なので $x=2$ であり，$q_{ab}\equiv-s$ となる．
+二つの parts を交換すると $s$ は $-s$ に変わるので，同じ議論から
+$q_{cd}\equiv s$ を得る．
+\end{proof}
+
+\begin{corollary}[予備的な edge 数評価と共通因子]\label{ps10:counts-gcd}
+\eqref{ps10:row}--\eqref{ps10:clutch} の下で
+\[
+ |E(G_\ell)|\le
+ \begin{cases}
+ 2&\ell=3,\\
+ 8&\ell=5,\\
+ 7&\ell\ne3,5
+ \end{cases}
+\]
+である．また，任意の四元部分集合 $S\subset V$ に対し
+\begin{equation}\label{ps10:gcd}
+ \gcd\{q_{ij}:i,j\in S,\ i<j\}=1.
+\end{equation}
+従って，全十本の共有 branches が同じ分母 $q>1$ を持つ配置は存在しない．
+\end{corollary}
+
+\begin{proof}
+$G_3$ は五 vertices 上の matching なので，edge 数は二以下である．
+五 vertices 上の $K_4$-free graph は八 edges 以下である．
+実際，九 edges 以上なら欠ける edge は高々一本なので $K_4$ を含む．
+八 edges の場合，欠ける二 edges が共通 vertex を持つと，残る四 vertices が
+$K_4$ をなす．従って欠ける二 edges は disjoint であり，元の graph は
+$K_{2,2,1}$ に等しい．この場合は命題~\ref{ps10:k221} により $\ell=5$ である．
+これが三つの edge bounds を与える．
+
+\eqref{ps10:gcd} の左辺が一より大きければ，その奇素因数 $\ell$ に対し
+$S$ が $G_\ell$ 内の $K_4$ をなす．これは定理~\ref{ps10:forbidden} に反する．
+全分母が同じ $q$ なら，任意の四元部分集合の gcd も $q$ なので最後の結論を得る．
+\end{proof}
+
+\begin{corollary}[全高分母が三で割れる場合]\label{ps10:all-high-divisible-three}
+本稿の全平面五次の SNC core models，標準 $K_4$ cones，既存の branch graph を用い，
+追加の branch singularities を入れない大域作用適合 atlas を考える．
+すべての共有 branch に対して
+\[
+ q_{ij}>1\quad\Longrightarrow\quad 3\mid q_{ij}
+\]
+が成り立つなら，すべての $q_{ij}$ は一である．
+同値に，高分母を持つ大域 atlas には，三で割れない高分母も必要である．
+\end{corollary}
+
+\begin{proof}
+高分母 branches だけからなる support graph を $H$ とする．
+仮定の下では $H=G_3$ であり，定理~\ref{ps10:forbidden} により $H$ は matching である．
+$H$ が非空なら，その各 edge は単独で一つの連結成分をなす．
+これは系~\ref{qh9:isolated-edge} に反する．
+具体的には，その両端の core は分母 pattern $(q,1,1,1)$ を持ち，
+実際の atlas の正の basin areas により，命題~\ref{qh9:isolated-local} が両端の
+normal-action 分岐係数をともに負とする．
+同じ neck の対向 normal circles から必要な係数の相殺は成立し得ない．
+従って $H$ は空である．
+\end{proof}
+
+\begin{remark}[七辺の場合の残る graph]\label{ps10:seven-edge-shape}
+$\ell\ne3,5$ で $|E(G_\ell)|=7$ なら，complement は $P_3\sqcup K_2$ に限られる．
+同値に，$G_\ell$ は $K_{2,3}$ の三点側に一本の edge を加えた graph である．
+実際，五 vertices 上の三辺 graph は，isolated vertices を省いて
+$K_3,K_{1,3},P_4,P_3\sqcup K_2$ のいずれかである．
+前の三つの complements は，順に $B_3$，$K_4$ を含む graph，$K_1\vee P_4$ なので排除される．
+この段階の必要条件は，残る七辺 graph の実現可能性を主張しない．
+次節の定理~\ref{ps11:dense} では，五つの cores の式を用いて七辺ちょうどの場合を全て排除する．
+\end{remark}
+
+以上は素数ごとの普遍的な合同障害であり，分母の大きさを制限した探索の結論ではない．
+一方，異なる素因数を持つ分母の配置や，許された support graphs の整数 lifting，
+basin areas と有限 neck の同時接着は，これらの必要条件だけでは決まらない．
+特に，系~\ref{ps10:all-high-divisible-three} の追加仮定を外した任意の分母配置について，
+全平面五次のすべての分母が一であることまでは結論しない．

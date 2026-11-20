@@ -1,0 +1,67 @@
+% v12: an unbounded leaf-to-degree-two denominator escalation, using neither
+% node positivity nor a finite node budget.
+
+\subsection{葉から二価頂点へ進むときの分母の増大}
+\label{pe12:section}
+
+\begin{proposition}[葉に隣接する二価頂点]\label{pe12:leaf-escalation}
+全平面五次の高分母 support の辺 $ij$ において，$i$ の次数は一，$j$ の次数は二であるとする．
+$j$ のもう一つの高分母の隣接頂点を $k$，
+$q_{ij}=a>1$，$q_{jk}=b>1$ と書く．
+正の局所 charts，marked puncture の整数 clutching，対向端の $D$ の相殺が成立するなら
+\[
+ b>a.
+\]
+より正確には，$i$ の chart における $ij$ から $ik$ への numerator を $x$ とすると，
+$x$ は $a-1$ の非零 signed divisor であり，
+\begin{equation}\label{pe12:exact-escalation}
+ b=c^2a+c\left(x+\frac{a-1}{x}\right)+1,
+ \qquad
+ c=\begin{cases}1,&x>0,\\2,&x<0.\end{cases}
+\end{equation}
+node 数の非負性や全 node budget は仮定しない．
+\end{proposition}
+
+\begin{proof}
+残る二つの labels を $l,m$ とする．$il,im,jl,jm$ の分母は全て一である．
+$i$ の一高分母 row は一正二負である一方，$j$ の二高分母 row は
+$jk$ へ負，$jl,jm$ へ一正一負である．
+$j$ における $ij\to jk$ と $jk\to ij$ の entries をそれぞれ
+$-\alpha,-\beta$ と書くと，$\alpha,\beta>0$ かつ
+\[
+ \alpha\beta=ab-1
+\]
+である．
+
+$l,m$ の二つの共通 low-low punctures における，両端の outgoing numerators の総和を $\Lambda a$ と書く．
+低低 puncture の clutching 補題により，符号が逆の一組は和零，
+同符号の一組は和 $a$ または $-a$ である．
+$x>0$ なら $i$ の残る二 entries は両方負なので，$\Lambda=-1$ である．
+$x<0$ なら両端で一正一負となり，同符号同士を合わせても逆符号同士を合わせても
+二組の総和は零なので，$\Lambda=0$ である．
+同じ補題により，これら二つの punctures における incoming numerators の総和も $\Lambda a$ である．
+
+両端の outgoing row sums を加えると
+\[
+ -\alpha+x+\Lambda a=-2a.
+\]
+また対向端の $D$ の相殺は
+\[
+ -2a+\beta-\frac{a-1}{x}-\Lambda a=0
+\]
+を与える．従って $c=2+\Lambda$ と置けば
+\[
+ \alpha=ca+x,\qquad \beta=ca+\frac{a-1}{x}.
+\]
+この二式を $\alpha\beta=ab-1$ に代入して $a>0$ で割ると
+\eqref{pe12:exact-escalation} を得る．
+
+$x>0$ なら $c=1$ なので $b-a=x+(a-1)/x+1>0$ である．
+$x=-s<0$ なら $s>0$，$S=(a-1)/s>0$ と置けて
+\[
+ b=4a-2(s+S)+1,
+ \qquad b-(2a+1)=2(s-1)(S-1)\geq0.
+\]
+この場合も $b\geq2a+1>a$ である．
+\end{proof}
+

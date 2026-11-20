@@ -1,0 +1,138 @@
+% v13: complete C5 obstruction.  No D-opposition hypothesis is used.
+% Uses standard positive two-high charts, integer marked clutching,
+% odd high denominators, and nonnegative node counts.
+
+\subsection{五角形成分の完全排除：三本の共通 puncture と低分母 edge}
+\label{cf13:section}
+
+前節で残った五角形の符号型は，例外 core の分母を列挙することなく排除できる．
+要点は，共通 puncture の三本の連続する正の接着係数が，離れた低分母 edge の
+node 数を負にすることである．この議論では対向端の $D$ の相殺を使わない．
+
+\begin{lemma}[正の最大約数と canonical な高 ray]
+\label{cf13:full-entry}
+正の二高分母標準形で，高 ray の分母を $q$ とする．
+その ray から低 ray へ向かう正の entry が $q-1$ なら，その高 ray は
+canonical な $A$ であり，$r=1$ である．
+各 core にはこのような高 ray が高々一つしかない．
+また，二つの高 rays の正の低分母 entries がともに一となることはない．
+\end{lemma}
+
+\begin{proof}
+canonical な正の entries は $x=(a-1)/r$ と $z=(b-1)/T$ である．
+補題~\ref{td12:low-entry} と補題~\ref{cc12:proper-negative} から
+$T\geq S\geq2$ なので，$B$ 側の $z$ は $b-1$ ではない．
+$A$ 側では $x=a-1$ と $r=1$ が同値である．
+さらに $x=z=1$ なら canonical 補助変数が
+$\alpha=1-s\leq0$，$\beta=y-1\geq0$ となり，
+両者が非零で同符号であることに反する．
+\end{proof}
+
+\begin{lemma}[五角形で連続する四つの負の pairing は不可能]
+\label{cf13:four-negative}
+高分母 support が $C_5$ であり，vertices を $i\in\mathbb Z/5$ と標識する．
+正の局所 charts，marked puncture の整数 clutching，node 数の非負性を仮定する．
+$q_i=q_{i,i+1}$，$\varepsilon_i=\operatorname{sign}(p^i_{i+1,i+2})$ と置く．
+このとき
+\[
+ \varepsilon_1=\varepsilon_2=\varepsilon_3=\varepsilon_4=-1
+\]
+は不可能である．$\varepsilon_0$ の値や対向端の $D$ の相殺は仮定しない．
+\end{lemma}
+
+\begin{proof}
+三価 branch の飽和条件から各 $q_i$ は奇数で，$q_i\geq3$ である．
+仮定した符号から，共通 low-low punctures の係数は
+$\lambda_1=\lambda_2=\lambda_3=1$ となる．
+これらの高 edge の両端で，共通 puncture への正の entries は
+それぞれ $q_i-1$ の約数で，その和は $q_i$ である．
+従って二つの値は $\{1,q_i-1\}$ である．
+実際，両方が真約数なら和は $q_i-1$ 以下となり，両方が $q_i-1$ なら
+$q_i\geq3$ に反する．以下，値 $q_i-1$ を持つ端をその edge の最大約数端と呼ぶ．
+
+core $2,3$ では両方の高 rays がこの三辺のいずれかに属する．
+その二つの正の低分母 entries は一または最大約数である．
+補題~\ref{cf13:full-entry} より，最大約数端は各 core にちょうど一つあり，
+それが canonical な $A$ に対応する．
+辺 $23$ の最大約数端は一方にしかないため，core $2,3$ の $A$ は
+ともに前の高 ray であるか，ともに次の高 ray であるかの二通りとなる．
+以下の表では $A,B,C,D$ を，その ray のもう一方の vertex label で表す．
+$C$ から $D$ への canonical entry は常に零である．
+
+\paragraph{両方が前の高 ray である場合．}
+辺 $12$ の最大約数端は core $2$，辺 $23$ では core $3$ である．
+従って辺 $34$ では core $3$ の正の entry は一，core $4$ が最大約数端となる．
+$\varepsilon_4=-1$ なので，使用する三つの canonical 標識は
+\[
+\begin{array}{c|rrrr}
+\text{core}&A&B&C&D\\ \hline
+2&1&3&4&0\\
+3&2&4&0&1\\
+4&3&0&1&2
+\end{array}
+\]
+である．特に $p^4_{12}=0$ となる．
+一方，辺 $12$ の core $1$ 側の共通 puncture $4$ への entry は一なので，
+\[
+ p^1_{24}=1,\qquad p^1_{42}=q_1-1
+\]
+である．後式は pair product $p^1_{24}p^1_{42}=q_{12}q_{14}-1$ から従う．
+低分母 edge $14$ の puncture $2$ では $q_{14}=1$ だから，node 式より
+\begin{equation}\label{cf13:negative-node-forward}
+ n_{14;2}=1-p^1_{42}-p^4_{12}=2-q_1<0.
+\end{equation}
+これは node 非負性に反する．
+
+\paragraph{両方が次の高 ray である場合．}
+辺 $12$ の最大約数端は core $1$，辺 $23$ では core $2$，辺 $34$ では core $3$ となる．
+canonical 標識は
+\[
+\begin{array}{c|rrrr}
+\text{core}&A&B&C&D\\ \hline
+1&2&0&4&3\\
+2&3&1&0&4\\
+3&4&2&1&0
+\end{array}
+\]
+である．従って $p^1_{43}=0$ であり，辺 $34$ の core $4$ 側は一の端なので
+$p^4_{31}=1$，$p^4_{13}=q_3-1$ となる．
+同じ低分母 edge $14$ の puncture $3$ で
+\begin{equation}\label{cf13:negative-node-backward}
+ n_{14;3}=1-p^1_{43}-p^4_{13}=2-q_3<0
+\end{equation}
+となり，やはり矛盾する．これで両場合が排除された．
+\end{proof}
+
+\begin{theorem}[五角形成分の完全排除]
+\label{cf13:no-C5}
+五成分 plane degeneration の正の局所 charts に対し，marked puncture の整数 clutching
+および全ての node 数の非負性を仮定する．
+このとき高分母 support の連結成分は $C_5$ ではあり得ない．
+この結果は分母の上界も，対向端の $D$ の相殺も必要としない．
+\end{theorem}
+
+\begin{proof}
+系~\ref{cc12:C5-two-types} の証明は $D$ の相殺を使わず，
+正の pairing の vertex が高々一つであることを示している．
+正の vertex があるならそれを $0$ と標識し，ないなら任意の vertex を $0$ とする．
+残る四つの $\varepsilon_i$ は全て $-1$ なので，補題~\ref{cf13:four-negative} に反する．
+\end{proof}
+
+\begin{corollary}[五次の次数二以下の分母剛性]
+\label{cf13:degree-two-rigidity}
+正の局所 charts，marked puncture の整数 clutching，対向端の $D$ の相殺，
+node 非負性を仮定する．高分母 support $H$ の最大次数が二以下なら $H$ は空であり，
+全ての branch denominators は一である．
+同値に，高分母 edge が存在すれば，少なくとも一つの core は三本以上の高分母 rays を持つ．
+\end{corollary}
+
+\begin{proof}
+最大次数二以下の辺を持つ連結成分は道または閉路である．
+道成分，三角形成分，四角形成分は既に排除されており，
+五頂点の support に残る五角形成分は定理~\ref{cf13:no-C5} により排除される．
+\end{proof}
+
+五角形の新しい障害では，三本の高 edges に沿う接着から低 edge $14$ 上の
+個別の node 数を計算した．node 全数五や各 node 数の上限五を別に用いてはいない．
+また，これは標準 $K_4$ cones と現在の branch graph を保った charts に対する障害であり，
+core surgery や追加の branch singularities を許した全ての fibrations の分類ではない．

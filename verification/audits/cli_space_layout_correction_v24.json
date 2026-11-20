@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "changes": [
+    {
+      "file": "paper/high_d_proportional_reduction_v24.tex",
+      "before_sha256": "ef70a01a770a0907ff6bed7ecb71d85910d1acbf13c0677c02744c7a854e7932",
+      "after_sha256": "769f97916c5c0ca7a3227c798dbc92cd97920ac574f6aecf97f1eaf4e3155d66",
+      "formatting_only_replacements": 1
+    },
+    {
+      "file": "notes/notes_high_d_proportional_v24.tex",
+      "before_sha256": "9a6315619662fd9fc942ee18ad133e5800c9d00f32441f6d2f83c19e355a1464",
+      "after_sha256": "e5e48d2a63114263be47fb8ba18e492887822efc6b447efe2843dcc2dc3aa472",
+      "formatting_only_replacements": 1
+    },
+    {
+      "file": "notes/general_type_surface_fibration_research_notes_ja_v24.tex",
+      "before_sha256": "c67d40f7664bb119c61180e1597b7bfc8c819f7fcbd9c681135b284b68b60bc1",
+      "after_sha256": "1ab8bf844b7f1c8c7c490edf022adfa4d564d9740a6e25da683da34859bbd72e",
+      "formatting_only_replacements": 4
+    }
+  ],
+  "mathematical_content_changed": false
+}

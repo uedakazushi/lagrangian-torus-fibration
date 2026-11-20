@@ -1,0 +1,179 @@
+\subsection{四rayの道型を排除する正値恒等式}
+\label{fh25:section}
+
+本節では，三高・四高に共通する整数局所模型の符号を完全に決定する．
+全ての pair products が非零である四ray core について，
+これまで必要候補として残していた道型 $P_4$ は実際には存在しない．
+この排除自体は正の basin weights を仮定せず，低分母一の ray も必要としない．
+
+\begin{theorem}[整数四ray模型における道型の非存在]
+\label{fh25:no-path}
+正整数 $q_1,q_2,q_3,q_4$ と整数 $p_{ij}$ が
+\begin{equation}
+ \sum_{j\ne i}p_{ij}=-q_i,\qquad
+ p_{ij}p_{ji}=q_iq_j-1>0
+ \label{fh25:raw-equations}
+\end{equation}
+を満たすとする．$p_{ij}>0$ である pair を辺とする無向グラフ $G^+$ は，
+道 $P_4$ ではあり得ない．
+\end{theorem}
+
+\begin{proof}
+道を $1-2-3-4$ と標識すると，$p_{ii}=0$ を補った行列は
+\begin{equation}
+ P=\begin{pmatrix}
+  0&a&-d&-e\\
+  A&0&b&-f\\
+  -D&B&0&c\\
+  -E&-F&C&0
+ \end{pmatrix},
+ \qquad a,A,b,B,c,C,d,D,e,E,f,F\in\mathbb Z_{>0}
+ \label{fh25:path-matrix}
+\end{equation}
+と書ける．ここで大文字と小文字は独立な entries である．
+行和と六つの pair equations はそれぞれ
+\begin{gather}
+ e=q_1+a-d,\quad f=q_2+A+b,\quad
+ D=q_3+B+c,\quad E=q_4+C-F,
+ \label{fh25:rows}\\
+ aA=q_1q_2-1,\quad bB=q_2q_3-1,\quad cC=q_3q_4-1,
+ \label{fh25:positive-pairs}\\
+ dD=q_1q_3-1,\quad eE=q_1q_4-1,\quad fF=q_2q_4-1
+ \label{fh25:negative-pairs}
+\end{gather}
+である．次の量を定める．
+\begin{gather}
+ q=q_3,\quad t=q_1,\quad s=bB+1,\quad r=cC+1,
+ \quad L=B+c,\quad D=L+q,\label{fh25:abbreviations}\\
+ h=ab-1\ge0,\qquad K=BC-1\ge0.
+ \label{fh25:integer-inequalities}
+\end{gather}
+最後の二つの不等式こそ，この証明で正の整数 entries を使う箇所である．
+正の pair equations から $q_2=s/q$，$q_4=r/q$ を得る．さらに
+\begin{align}
+ T&=(a+t)s+qh=aqf,\label{fh25:T}\\
+ U&=tL+aD+1=De,\label{fh25:U}\\
+ V&=ts(r+Cq)+q\{aCs+h(r+Cq)+aq\}=qTE
+ \label{fh25:V}
+\end{align}
+が成り立つ．実際，最初の等式は
+\[
+ aqf=aq\left(\frac{s}{q}+\frac{ts/q-1}{a}+b\right)
+      =(a+t)s+q(ab-1)
+\]
+であり，第二は $De=D(t+a)-(tq-1)$ である．第三については
+\[
+ F=\frac{q_2q_4-1}{f}=\frac{a(sr-q^2)}{qT},\qquad
+ qTE=(r+Cq)T-a(sr-q^2)
+\]
+を展開すればよい．全ての分母 $a,q,D,T$ は正である．
+
+残る pair equation $eE=tq_4-1$ は
+\begin{equation}
+ \mathcal P:=UV-DT(tr-q)=0
+ \label{fh25:obstruction}
+\end{equation}
+を要求する．一方，恒等式
+\begin{equation}
+ L(r+Cq)-Dr=q(BC-1)=qK
+ \label{fh25:key-identity}
+\end{equation}
+を用いて $t$ の次数別に整理すると
+\begin{align}
+ \mathcal P
+ ={}&qsK\,t^2\notag\\
+ &+\bigl\{aqCs(L+D)+q^2hK+aLq^2+s(r+Cq)+Dsq\bigr\}t\notag\\
+ &+(aD+1)q\bigl\{aCs+h(r+Cq)+aq\bigr\}
+       +Dq(as+qh).
+ \label{fh25:positive-certificate}
+\end{align}
+右辺は非負の項の和であり，例えば $s(r+Cq)t$ は狭義正である．
+従って $\mathcal P>0$ で，\eqref{fh25:obstruction} と矛盾する．
+これはパラメータの上界を置かない恒等式による排除である．
+\end{proof}
+
+\begin{remark}[排除に必要な離散性]
+\label{fh25:real-scope}
+証明の正値部分は $q,t,a,b,c,B,C>0$ と $ab\ge1$, $BC\ge1$ の下で成立する．
+従って全ての変数が整数であることよりも弱い仮定で道型は排除される．
+しかし任意の正の実数 entries から $ab\ge1$ と $BC\ge1$ は従わないので，
+整数性を外して無条件の実数非存在を主張してはならない．
+また $q_i=1$ の有無は証明に用いていない．
+三高と四高の両方に同じ証明を適用できるが，二つの低 ray が作る
+$q_iq_j-1=0$ の pair は定理の仮定の外にある．
+\end{remark}
+
+\begin{theorem}[正 weights を仮定しない全符号分類]
+\label{fh25:all-signs}
+\eqref{fh25:raw-equations} を満たす整数 data の正符号グラフは，
+完全マッチング $2K_2$ または三角形と孤立頂点 $K_3\sqcup K_1$ である．
+後者では，正三角形のある向きの gain は一以上である．
+三高の場合，その三角形は分母一の ray を含む．
+\end{theorem}
+
+\begin{proof}
+孤立頂点 $h$ がある場合から考える．残る三頂点に対して
+$c_i=-p_{hi}\in\mathbb Z_{>0}$ と置くと，$\sum_{i\ne h}c_i=q_h$ である．
+異なる $i,j\ne h$ に対し，整数 $g_{ij}=q_i c_j-c_i p_{ij}$ を定める．
+行和と pair equations によって
+\[
+ \sum_{j\ne i,h}g_{ij}
+ =q_i(q_h-c_i)-c_i(-q_i-p_{ih})
+ =q_iq_h+c_i p_{ih}=1
+\]
+となる．左辺は二つの整数の和なので，各 $i$ に対して $g_{ij}\le0$ となる
+$j$ を一つ選べる．選んだ辺は $p_{ij}>0$ であり，
+\[
+ \frac{p_{ij}}{q_i}\ge\frac{c_j}{c_i}
+\]
+を満たす．三頂点上で各頂点から一本の辺を選んだ有向グラフには閉路があり，
+その gain は一以上である．長さ二の閉路の gain は
+$(q_iq_j-1)/(q_iq_j)<1$ なので，選ばれた閉路の長さは三でなければならない．
+従って残る三頂点の全 pair は正であり，$G^+=K_3\sqcup K_1$ である．
+
+孤立頂点がない場合，行和が負なので全ての次数は一または二である．
+四頂点上の候補は $2K_2$, $P_4$, $C_4$ となる．
+定理~\ref{fh25:no-path} は $P_4$ を排除する．
+$C_4$ の補グラフは二本の負の辺からなる．その一辺 $ij$ について，
+両端の残る二 entries は正であるから $-p_{ij}>q_i$，$-p_{ji}>q_j$ となり，
+$p_{ij}p_{ji}=q_iq_j-1$ に反する．従って $G^+=2K_2$ である．
+
+最後に，三高で分母一の ray が孤立すると，その行の三つの負の整数 entries
+の和が $-1$ となる必要があり，不可能である．従って三角形は分母一の ray を含む．
+\end{proof}
+
+\begin{corollary}[三高・四高の統一された完全マッチング判定]
+\label{fh25:matching}
+\eqref{fh25:raw-equations} を仮定する．次の三条件は同値である．
+\begin{enumerate}
+ \item 正の basin weights，すなわち全ての $i\ne j$ に対して
+ $w_j-(p_{ij}/q_i)w_i>0$ を満たす $w_i>0$ が存在する．
+ \item $G^+$ は孤立頂点を持たない．
+ \item $G^+$ は完全マッチング $2K_2$ である．
+\end{enumerate}
+第三条件の下では正の有理 basin weights が存在する．
+特に，三高でのみ利用できた低分母一に依存する道型排除は，
+本定理によって四高と共通の一つの恒等式に置き換えられる．
+\end{corollary}
+
+\begin{proof}
+正 weights があれば，正の有向閉路に沿って basin 不等式を掛けることにより，
+その gain は一より小さい．従って定理~\ref{fh25:all-signs} の三角形型は
+第一条件と両立しない．これで第一条件から第二条件を得る．
+第二条件から第三条件も同定理の全符号分類から従う．
+
+第三条件の下では，マッチングの各辺 $ij$ ごとに一方の weight を一とし，
+\[
+ \frac{p_{ij}}{q_i}<\frac{w_j}{w_i}<\frac{q_j}{p_{ji}}
+\]
+を満たす正の有理数を選ぶ．区間は pair product によって非空である．
+辺は互いに独立であり，負の entries の basin 不等式は正の weights から
+自動的に従う．これで第三条件から第一条件を得る．
+\end{proof}
+
+\begin{remark}[大域問題との区別]
+この結果は四ray core の局所的な符号と正値性の判定である．
+完全マッチング型であることだけから，整数 clutching，node 配分，
+対向 $D$ 相殺，あるいは閉じた整数 affine atlas の存在は従わない．
+四高の残る研究対象は，$P_4$ の探索ではなく完全マッチング型の大域整合性である．
+\end{remark}

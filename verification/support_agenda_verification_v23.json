@@ -1,0 +1,6219 @@
+{
+  "version": "v23",
+  "status": "PASS",
+  "labelled_K5_graphs_checked": 1024,
+  "labelled_nonempty_supports_remaining": 26,
+  "unlabelled_shapes_remaining": 3,
+  "shapes": [
+    {
+      "shape_id": "G5_14",
+      "representative_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "automorphism_order": 8,
+      "labelled_count": 15
+    },
+    {
+      "shape_id": "G5_16",
+      "representative_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "automorphism_order": 12,
+      "labelled_count": 10
+    },
+    {
+      "shape_id": "G5_17",
+      "representative_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "automorphism_order": 120,
+      "labelled_count": 1
+    }
+  ],
+  "all_26_remaining_labelled_supports": [
+    {
+      "mask": 495,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "degrees": [
+        4,
+        3,
+        3,
+        3,
+        3
+      ],
+      "low_edges": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "first_betti_number": 4,
+      "connected_after_any_at_most_two_vertex_deletions": true
+    },
+    {
+      "mask": 509,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "degrees": [
+        3,
+        4,
+        3,
+        3,
+        3
+      ],
+      "low_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "first_betti_number": 4,
+      "connected_after_any_at_most_two_vertex_deletions": true
+    },
+    {
+      "mask": 510,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "degrees": [
+        3,
+        3,
+        4,
+        3,
+        3
+      ],
+      "low_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "first_betti_number": 4,
+      "connected_after_any_at_most_two_vertex_deletions": true
+    },
+    {
+      "mask": 511,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_16",
+      "degrees": [
+        4,
+        4,
+        4,
+        3,
+        3
+      ],
+      "low_edges": [
+        [
+          3,
+          4
+        ]
+      ],
+      "first_betti_number": 5,
+      "connected_after_any_at_most_two_vertex_deletions": true
+    },
+    {
+      "mask": 735,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "degrees": [
+        4,
+        3,
+        3,
+        3,
+        3
+      ],
+      "low_edges": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "first_betti_number": 4,
+      "connected_after_any_at_most_two_vertex_deletions": true
+    },
+    {
+      "mask": 763,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "degrees": [
+        3,
+        4,
+        3,
+        3,
+        3
+      ],
+      "low_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "first_betti_number": 4,
+      "connected_after_any_at_most_two_vertex_deletions": true
+    },
+    {
+      "mask": 766,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "degrees": [
+        3,
+        3,
+        3,
+        4,
+        3
+      ],
+      "low_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "first_betti_number": 4,
+      "connected_after_any_at_most_two_vertex_deletions": true
+    },
+    {
+      "mask": 767,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_16",
+      "degrees": [
+        4,
+        4,
+        3,
+        4,
+        3
+      ],
+      "low_edges": [
+        [
+          2,
+          4
+        ]
+      ],
+      "first_betti_number": 5,
+      "connected_after_any_at_most_two_vertex_deletions": true
+    },
+    {
+      "mask": 831,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "degrees": [
+        4,
+        3,
+        3,
+        3,
+        3
+      ],
+      "low_edges": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "first_betti_number": 4,
+      "connected_after_any_at_most_two_vertex_deletions": true
+    },
+    {
+      "mask": 887,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "degrees": [
+        3,
+        4,
+        3,
+        3,
+        3
+      ],
+      "low_edges": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "first_betti_number": 4,
+      "connected_after_any_at_most_two_vertex_deletions": true
+    },
+    {
+      "mask": 894,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        4
+      ],
+      "low_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "first_betti_number": 4,
+      "connected_after_any_at_most_two_vertex_deletions": true
+    },
+    {
+      "mask": 895,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_16",
+      "degrees": [
+        4,
+        4,
+        3,
+        3,
+        4
+      ],
+      "low_edges": [
+        [
+          2,
+          3
+        ]
+      ],
+      "first_betti_number": 5,
+      "connected_after_any_at_most_two_vertex_deletions": true
+    },
+    {
+      "mask": 955,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "degrees": [
+        3,
+        3,
+        4,
+        3,
+        3
+      ],
+      "low_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "first_betti_number": 4,
+      "connected_after_any_at_most_two_vertex_deletions": true
+    },
+    {
+      "mask": 957,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "degrees": [
+        3,
+        3,
+        3,
+        4,
+        3
+      ],
+      "low_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "first_betti_number": 4,
+      "connected_after_any_at_most_two_vertex_deletions": true
+    },
+    {
+      "mask": 959,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_16",
+      "degrees": [
+        4,
+        3,
+        4,
+        4,
+        3
+      ],
+      "low_edges": [
+        [
+          1,
+          4
+        ]
+      ],
+      "first_betti_number": 5,
+      "connected_after_any_at_most_two_vertex_deletions": true
+    },
+    {
+      "mask": 983,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "degrees": [
+        3,
+        3,
+        4,
+        3,
+        3
+      ],
+      "low_edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "first_betti_number": 4,
+      "connected_after_any_at_most_two_vertex_deletions": true
+    },
+    {
+      "mask": 989,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        4
+      ],
+      "low_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "first_betti_number": 4,
+      "connected_after_any_at_most_two_vertex_deletions": true
+    },
+    {
+      "mask": 991,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_16",
+      "degrees": [
+        4,
+        3,
+        4,
+        3,
+        4
+      ],
+      "low_edges": [
+        [
+          1,
+          3
+        ]
+      ],
+      "first_betti_number": 5,
+      "connected_after_any_at_most_two_vertex_deletions": true
+    },
+    {
+      "mask": 999,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "degrees": [
+        3,
+        3,
+        3,
+        4,
+        3
+      ],
+      "low_edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "first_betti_number": 4,
+      "connected_after_any_at_most_two_vertex_deletions": true
+    },
+    {
+      "mask": 1003,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        4
+      ],
+      "low_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "first_betti_number": 4,
+      "connected_after_any_at_most_two_vertex_deletions": true
+    },
+    {
+      "mask": 1007,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_16",
+      "degrees": [
+        4,
+        3,
+        3,
+        4,
+        4
+      ],
+      "low_edges": [
+        [
+          1,
+          2
+        ]
+      ],
+      "first_betti_number": 5,
+      "connected_after_any_at_most_two_vertex_deletions": true
+    },
+    {
+      "mask": 1015,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_16",
+      "degrees": [
+        3,
+        4,
+        4,
+        4,
+        3
+      ],
+      "low_edges": [
+        [
+          0,
+          4
+        ]
+      ],
+      "first_betti_number": 5,
+      "connected_after_any_at_most_two_vertex_deletions": true
+    },
+    {
+      "mask": 1019,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_16",
+      "degrees": [
+        3,
+        4,
+        4,
+        3,
+        4
+      ],
+      "low_edges": [
+        [
+          0,
+          3
+        ]
+      ],
+      "first_betti_number": 5,
+      "connected_after_any_at_most_two_vertex_deletions": true
+    },
+    {
+      "mask": 1021,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_16",
+      "degrees": [
+        3,
+        4,
+        3,
+        4,
+        4
+      ],
+      "low_edges": [
+        [
+          0,
+          2
+        ]
+      ],
+      "first_betti_number": 5,
+      "connected_after_any_at_most_two_vertex_deletions": true
+    },
+    {
+      "mask": 1022,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_16",
+      "degrees": [
+        3,
+        3,
+        4,
+        4,
+        4
+      ],
+      "low_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "first_betti_number": 5,
+      "connected_after_any_at_most_two_vertex_deletions": true
+    },
+    {
+      "mask": 1023,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_17",
+      "degrees": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "low_edges": [],
+      "first_betti_number": 6,
+      "connected_after_any_at_most_two_vertex_deletions": true
+    }
+  ],
+  "all_30_newly_excluded_labelled_supports": [
+    {
+      "mask": 255,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        4,
+        4,
+        3,
+        3,
+        2
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 383,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        4,
+        4,
+        3,
+        2,
+        3
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 447,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        4,
+        3,
+        4,
+        3,
+        2
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 479,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        4,
+        3,
+        4,
+        2,
+        3
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 503,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        3,
+        4,
+        4,
+        3,
+        2
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 507,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        3,
+        4,
+        4,
+        2,
+        3
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 639,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        4,
+        4,
+        2,
+        3,
+        3
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 703,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        4,
+        3,
+        3,
+        4,
+        2
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 751,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        4,
+        3,
+        2,
+        4,
+        3
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 759,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        3,
+        4,
+        3,
+        4,
+        2
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 765,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        3,
+        4,
+        2,
+        4,
+        3
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 863,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        4,
+        3,
+        3,
+        2,
+        4
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 879,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        4,
+        3,
+        2,
+        3,
+        4
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 891,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        3,
+        4,
+        3,
+        2,
+        4
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 893,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        3,
+        4,
+        2,
+        3,
+        4
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 927,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        4,
+        2,
+        4,
+        3,
+        3
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 943,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        4,
+        2,
+        3,
+        4,
+        3
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 951,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        3,
+        3,
+        4,
+        4,
+        2
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 958,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        3,
+        2,
+        4,
+        4,
+        3
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 975,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        4,
+        2,
+        3,
+        3,
+        4
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 987,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        3,
+        3,
+        4,
+        2,
+        4
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 990,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        3,
+        2,
+        4,
+        3,
+        4
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 1005,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        3,
+        3,
+        2,
+        4,
+        4
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 1006,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        3,
+        2,
+        3,
+        4,
+        4
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 1011,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        2,
+        4,
+        4,
+        3,
+        3
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 1013,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        2,
+        4,
+        3,
+        4,
+        3
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 1014,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        2,
+        3,
+        4,
+        4,
+        3
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 1017,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        2,
+        4,
+        3,
+        3,
+        4
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 1018,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        2,
+        3,
+        4,
+        3,
+        4
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "mask": 1020,
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "degrees": [
+        2,
+        3,
+        3,
+        4,
+        4
+      ],
+      "first_betti_number": 4,
+      "low_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "low_complement_type": "P3",
+      "connected_after_each_vertex_deletion": true
+    }
+  ],
+  "structural_corollaries": {
+    "minimum_degree": 3,
+    "minimum_high_edges": 8,
+    "minimum_first_betti_number": 4,
+    "all_five_vertices_active": true,
+    "three_vertex_connected": true,
+    "vertex_deletion_checks": 416,
+    "unit_denominator_edges_form_matching_if_high_support_nonempty": true,
+    "two_unit_branches_at_one_core_force_all_unit": true,
+    "one_core_with_at_most_two_high_rays_forces_all_unit": true,
+    "three_unit_branches_force_all_unit": true
+  },
+  "primitive_denominator_corollaries": {
+    "all_labelled_dense_patterns": 30,
+    "records": [
+      {
+        "missing_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "sign": -1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            1
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            4
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            0
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          0,
+          1
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "sign": 1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            4
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            1
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            0
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          2,
+          3
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "sign": -1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            1
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            4
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            0
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          0,
+          1
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "sign": 1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            4
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            1
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            0
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          2,
+          4
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "sign": -1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            1
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            4
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          0,
+          1
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "sign": 1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            4
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            1
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          3,
+          4
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "sign": -1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            1
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            4
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            0
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          0,
+          2
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "sign": 1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            4
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            1
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            0
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          1,
+          3
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "sign": -1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            1
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            4
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            0
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          0,
+          2
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "sign": 1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            4
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            1
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            0
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          1,
+          4
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "sign": -1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            1
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            4
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          0,
+          2
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "sign": 1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            4
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            1
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          3,
+          4
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "sign": -1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            1
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            4
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            0
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          0,
+          3
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "sign": 1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            4
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            1
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            0
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          1,
+          2
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "sign": -1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            1
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            4
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            0
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          0,
+          3
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "sign": 1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            4
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            1
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            0
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          1,
+          4
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "sign": -1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            1
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            4
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            0
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          0,
+          3
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "sign": 1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            4
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            1
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            0
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          2,
+          4
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "sign": -1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            1
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            4
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            0
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          0,
+          4
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "sign": 1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            4
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            1
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            0
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          1,
+          2
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "sign": -1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            1
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            4
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            0
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          0,
+          4
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "sign": 1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            4
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            1
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            0
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          1,
+          3
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "sign": -1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            1
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            4
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            0
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          0,
+          4
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "sign": 1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            4
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            1
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            0
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          2,
+          3
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "sign": -1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            1
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            4
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          1,
+          2
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "sign": 1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            4
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            1
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          3,
+          4
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "sign": -1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            1
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            4
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            0
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          1,
+          3
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "sign": 1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            4
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            1
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            0
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          2,
+          4
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "sign": -1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            1
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            4
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            0
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          1,
+          4
+        ],
+        "other_edge_residue_mod_10": 9
+      },
+      {
+        "missing_edges": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "sign": 1,
+        "residues": [
+          [
+            [
+              0,
+              1
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              3
+            ],
+            0
+          ],
+          [
+            [
+              1,
+              4
+            ],
+            4
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            1
+          ],
+          [
+            [
+              2,
+              4
+            ],
+            0
+          ],
+          [
+            [
+              3,
+              4
+            ],
+            0
+          ]
+        ],
+        "unique_possible_actual_unit_edge": [
+          2,
+          3
+        ],
+        "other_edge_residue_mod_10": 9
+      }
+    ],
+    "two_actual_unit_denominators_impossible": true,
+    "one_actual_unit_forces_disjoint_other_nonmultiple_q_congruent_9_mod_10": true,
+    "all_high_denominators_gcd_one_uses_unbounded_dense_prime_theorem": true,
+    "any_seven_gcd_one_with_two_units_uses_unbounded_dense_prime_theorem": true,
+    "finite_prime_search_used": false,
+    "integral_lifting_claim": false
+  },
+  "arithmetic_obstructions_applied_not_proved_by_graph_enumeration": true,
+  "existence_claim": false,
+  "no_denominator_or_entry_cutoff": true,
+  "previous_certificate": {
+    "file": "support_agenda_verification_v22.json",
+    "sha256": "6b18532f954b10e275fa7a7c2adca7b5b0c4574c87942206eb40d2b0f11025cb"
+  },
+  "proof_sha256": "4464ca16c4542431b7740c0e68122f80d0bf4da965aaeeb19311343f8c395f51",
+  "proof_source_sha256": {
+    "quintic_support_frontier_v23.tex": "4464ca16c4542431b7740c0e68122f80d0bf4da965aaeeb19311343f8c395f51",
+    "g5_15_ordinary_outer_pair_obstruction_v23.tex": "aecd0ec96a5bda535f5c46f450797d10f3c75ef5894b53c7a4df2865295e54b6",
+    "g5_15_negative_exception_obstruction_v23.tex": "7fdceb509ca0e07b7919c4f86533d2ea96a7bab8be3490fadb4a887eb35d7eef",
+    "global_primitive_denominators_v23.tex": "1dc41a28da58b75e8d8d1f6726e4ee717337f050dc3db26382d50576b8f059b1",
+    "g5_15_reduction_v21.tex": "0b9be523ca08544eafa35ba4ce8e660feba573297808fbd8c04c31df03449fef",
+    "book_complete_obstruction_v22.tex": "f8dce7a0ee6732a628ab8cf9182d49f362eae6113e988606ee334e801f12ed4c",
+    "quintic_dense_prime_support_v11.tex": "fdbb670c736ea8d25036fb891a961c1e316dfd34c51f121dbad71379d43bca53"
+  },
+  "source_sha256": "fdba778b932effcf326cd8c292e59a29c67b81987661eeda86bb17246dc7c347",
+  "empty_graph_status": "All unit denominators; not excluded."
+}

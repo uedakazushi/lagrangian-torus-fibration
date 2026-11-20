@@ -1,0 +1,487 @@
+\section{Introduction}
+
+滑らかな射影曲面を Lagrangian torus の族として記述する問題では，
+正則部分の action coordinates と，退化に現れる divisor の組合せ論を
+大域的に結び付ける必要がある．
+本稿では，正の重み付き SNC divisor を持つ射影曲面の有限相対 compactification を構成し，
+それを一般型超曲面の退化へ適用する．
+曲線成分には任意の genus を許し，divisor 上の marked Morse 葉層，
+core 近傍の primitive，交点の product germs を同時に制御する．
+この相対構成から，次数 $d\geq5$ の滑らかな超曲面
+$X_d\subset\PP^3$ に対し，hyperplane class の正の倍数 $aH$ に属する
+任意の Kähler form の下で，全正則 fibers が Lagrangian $T^2$ となる fibration を得る．
+さらに，$d=e_1+\cdots+e_k$ という次数分割を選ぶことで，core の個数と型，
+node 数，および底空間の homotopy type を変更できる．
+五次・六次の全平面分割では，focus affine singularities を残した大域作用適合 matroidal atlas まで構成する．
+また混合五次分割では，個別の core charts の存在と，任意の branch denominators を許した大域接続の不可能性を示す．
+全平面五次で任意の奇数分母を許す局所 chart の整数構造と，
+共有 branch に沿う大域的な算術制約は，companion 論文
+\cite{QuinticArithmetic}で扱う．
+
+基底は，自由な辺を持たないコンパクトな分岐二次元複体である．
+「境界がない」とはこの自由辺の不存在を意味し，分岐辺の内点には三枚の sheets が接する．
+その fiber は $S^1\times(S^1\vee S^1)$ であり，
+core 頂点の fiber は affine complement の logarithmic Weinstein skeleton である．
+正則な底空間には action--angle theorem による integral affine structure がある．
+core と分岐辺を含めた matroidal charts の存在，その action lattice との整合，
+および既知の algebraic filling との同定は，それぞれ追加の問題として扱う．
+
+この設定は almost toric geometry の射程とも整合する．
+Leung--Symington の閉 almost toric 四次元多様体の分類
+\cite[Theorem 2.6, Table 1]{LeungSymington}は，通常の曲面を基底とし，
+elliptic および focus--focus singularities を持つ fibrations を対象とする．
+基底の境界がない場合には K3，Enriques 曲面，torus bundles が現れる．
+adjunction により $K_{X_d}=(d-4)H$ を持つ一般型超曲面については，
+本稿で許す branch と core の singularities が構成の本質を担う．
+action--angle coordinates，nodal trade，almost toric geometry の基本事項は
+Evans の講義録\cite{Evans}に従う．
+
+\subsection{Hypersurface の pants 分解と一般型曲面}
+
+代数的 hypersurface の大域的な torus fibration を考える上で，
+Mikhalkin の pair-of-pants 分解\cite{Mikhalkin}は基本的な出発点である．
+同論文の Theorems 1 および $1'$ は，tropical polyhedral complex への
+stratified fibration と，高次元の pair of pants による分解を与える．
+基底の homotopy type は幾何種数に等しい個数の球面の wedge である．
+そこでの symplectic な結論は，各最大次元 cell に少なくとも一つ
+Lagrangian fiber が存在するというものである．
+全ての regular fibers の Lagrangian 性を得るためには，
+接着に用いる form と local fibrations の整合をさらに示す必要がある．
+
+一般型 hypersurface の Calabi--Yau 的な部分領域は，
+Leung--Wan\cite{LeungWan}によって研究されている．
+同論文は holomorphic volume forms を局在させる分解を構成し，
+Mikhalkin の構成で既に Lagrangian である fibers について
+asymptotically special となる性質を示す．
+一般型における SYZ 的構造を調べる動機として，
+この解析的な結果と，全 regular fibers を Lagrangian にする存在問題の両方が重要である．
+
+Zhang\cite[Theorem 1.1]{Zhang}は，次数 $d$ の超曲面と微分同相な四次元多様体を，
+$d(d-4)^2$ 個の四次元 pants と K3 に由来する領域などに分解している．
+その境界には，torus と $S^1\times(S^1\vee S^1)$ を fibers とする graph への
+fibration が構成される．同論文の Introduction には，
+五次曲面の五平面退化から五個の pants を得る記述もある．
+本稿の五次の場合は，この既存の幾何学的構図を踏まえている．
+一方，torus に対する積分 $\int_T\omega=0$ と，
+各 tangent space 上での条件 $\omega|_T=0$ は異なるため，
+本稿では後者を各 piece とその overlaps で直接確認する．
+
+Golla--Martelli\cite{GollaMartelli}は，四次元多様体の pants 分解を
+微分位相的な構成法として展開し，corner を含む貼合せと mapping-class data を記述している．
+本稿でも，分岐底空間の cells と boundary faces の構造を理解する際にこの記述を用いる．
+symplectic な構成では，これに fixed collars と実際の action periods の整合が加わる．
+境界を固定した core の置換を検討する際には，corner に追加の torus 領域を置く操作が
+基本群と boundary topology を変え得ることも考慮する必要がある．
+
+\subsection{SNC divisor の有限相対 compactification}
+
+Evans--Mauri\cite{EM}は，contact link 上の Lagrangian fibration を
+Liouville flow によって completion 上へ延長する方法を与えた．
+一般位置の四直線を $\PP^2$ から除いた四次元 pants に対しては，
+$K_4$ の cone を基底とし，torus，$S^1\times(S^1\vee S^1)$，
+core skeleton を fibers とする模型を構成している
+\cite[Lemmas 2.16, 2.22; \S3.1]{EM}．
+同論文は一般型曲面への応用も明示的に動機として挙げている．
+また Remark 2.23 は，曲線上の Lagrangian leaves が一次元であるため，
+circle-bundle lift に必要な curvature の vanishing condition が自動的であることを指摘する．
+この点に genus 零の制約はなく，本稿の positive-genus 構成も同じ lifting principle を用いる．
+
+本稿の相対問題では，completion の内部への cone extension に加え，
+所定の divisor における有限時刻の circle collapse を制御する．
+Lemma 2.16 の completion は contact form の正の関数倍を許すため，
+固定した finite collar，normal moment，divisor 上の foliation，
+core 近傍の primitive を同時に指定するには追加の構成が必要である．
+SNC symplectic neighborhoods とその relative regularizations には
+Tehrani--McLean--Zinger\cite[Definitions 2.11--2.12, Theorem 2.13]{TMZ}を用いる．
+正の weighted divisor に適合する primitive の存在は
+Borman--Sheridan--Varolgunes\cite[Proposition 2.10]{BSV}に関係し，
+normal directions の対称化は Pascaleff\cite[\S4.2]{Pascaleff}の構成と関係する．
+Kähler class の実数係数の表示から global logarithmic potential を作る段階では，
+compact Kähler manifold の $\dd\dd^c$-lemma\cite[\S5]{DGMS}を用いる．
+
+具体的には，$M$ を射影曲面，$D=\bigcup_aD_a$ を三重交点のない SNC divisor とし，
+各 $D_a$ が少なくとも二つの intersection points を持つとする．
+$D_a$ の genus，self-intersection，同じ二成分の複数交点には制限を加えず，
+\[
+ [\omega]=2\pi\sum_a w_a[D_a],\qquad w_a>0
+\]
+を仮定する．
+定理\ref{snc:main}は，同じ class の Kähler representative $\omega'$ に対し，
+$D$ を outer graph の逆像とする closed-cone fibration を与える．
+各 punctured component 上には，あらかじめ指定した無 extrema の
+marked Morse foliation を用いる．
+full saddle leaves と finite endpoint を保ち，
+交点の product germs および有限個の divisor-compatible flat patches も指定できる．
+個々の divisor components の ampleness や $H^1(M;\RR)=0$ は仮定しない．
+
+positive genus における period の制御には，connection holonomy の自由度を用いる．
+固定 residues を持つ二つの collar primitives の差は，
+plumbing の homology exact sequence により $H^1(D;\RR)$ に由来する．
+これは dual graph の periods のほかに，各 $D_a$ の $2g_a$ 個の periods を含む．
+crossing disks で零の closed one-form $\eta_a$ により normal connection を変え，
+対応する coupling forms を Moser map $\Phi_s$ で固定すると，
+\[
+ [\Phi_s^*\lambda_{a,s}-\lambda_{a,0}]
+       =-s w_a[\eta_a]
+\]
+となる（補題\ref{snc:holonomy}）．
+これで component periods を消し，残る dual-graph periods を basic forms で補正する．
+この Moser 操作は auxiliary normal-bundle charts を変えるものであり，
+actual collar 上の Kähler form $\omega'$ は固定される．
+最後に bounded primitive の cutoff を用いて，
+core 近傍の primitive germ を保ったまま end の model と接続する．
+fixed holonomy を追加要求する場合の period 制約は，
+この選択可能な holonomy を用いる定理とは分けて記述する．
+
+固定した元の form が交点で nonorthogonal な場合には，
+commuting normal-circle actions の product model をそのまま要求できない．
+これは\cite[Proposition 2.5]{BSV}の orthogonality 条件であり，
+本稿では Kähler class 内の明示的な potential deformation によって product germs を作る．
+さらに global residues と core の primitive germ の関係を記述し，
+collar の area balance だけから global exactness を推論しない．
+$\PP^1\times\PP^1$ の toric boundary，
+二点で交わる二本の $(1,1)$ curves，
+九点で交わる二本の smooth plane cubics は，
+nonample components，multiple intersections，positive genus をそれぞれ検査する例になる．
+
+\subsection{実際の退化族上での接着}
+
+Fernández de Bobadilla--Pełka\cite[Proposition 5.6, Theorem 6.14]{FBP}は，
+Kähler SNC 退化の近傍で ivy-like な Lagrangian torus fibrations を構成し，
+一般型を含む広い範囲の退化を扱う．
+曲線 stratum 上の Morse saddle から branch が生じる点は本稿にも共通する．
+同論文が大域的に構成するのは，maximal および submaximal strata に対応する，
+nearby fiber の境界・角を持つ余次元零の部分領域である．
+component の内部に対応する残余領域を埋めることは追加の問題であり，
+同論文の Example 5.8 もこの差を説明している．
+本稿では，この残余領域に core を含む finite compactification を入れ，
+double-curve necks および triple-point models と有限の overlaps 上で接着する．
+
+central fiber から symplectic parallel transport で fibration を移す考え方には，
+Ruan の Calabi--Yau hypersurface の構成\cite{Ruan}がある．
+Ruan の五次は $\PP^4$ 内の Calabi--Yau 三次元多様体であり，
+本稿の $\PP^3$ 内の一般型五次曲面とは異なる次元の問題を扱う．
+また Mak--Matessi--Ruddat--Zharkov の共同研究について，
+Ruddat の二〇二六年六月の講演概要\cite{RuddatAnnouncement2026}では，
+reflexive polytope に対応する toric Fano manifold 内の compact Calabi--Yau hypersurface 上で，
+余次元二の discriminant を持つ Lagrangian torus fibration の構成が発表されている．
+概要は Evans--Mauri の方法に従う Liouville flow と帰納的な mixed local models を挙げる．
+これは関連する大域的構成の動向として引用し，本稿での比較は公表概要の射程にとどめる．
+本稿の一般型曲面の SNC cores と整数分母の問題には，指定した局所模型の接着条件が加わる．
+
+四次曲面における transport と moment 保存の記述は
+Evans\cite[Chapter 6]{EvansNotes}にも詳しい．
+Chakravarthy--Groman\cite[Theorem 1.6]{CGK3}は，
+symplectic Kulikov model の component 上の almost toric fibrations を
+nearby K3 へ接着する大域定理を証明している．
+その component hypotheses には anticanonical cycles が含まれるため，
+多数の punctures と saddles を持つ本稿の曲線 strata には別の collar 構成が必要になる．
+同論文の改訂版 Lemma 2.13 が扱うのは，必要な cylinders を潰した
+central fiber の商への transport の連続性である．
+本稿では smooth strata 内の compact saturated subsets を運び，
+double curves と triple points の中心部分を正確な $xy=t$，$uvw=t$ の models で覆う．
+
+位相型と linear monodromy だけでは symplectic gluing は決まらない．
+曲面上の Morse systems には weighted または measured Reeb graph の情報があり
+\cite{DMT,IKM}，compact focus--focus fiber の近傍には
+semi-global invariant がある\cite[Theorem 2.1]{VuNgoc}．
+そこで，本稿は actual family 上の同じ Hamiltonian circle action と
+normal moment $\mu$ を用い，reduced surface 上の functions $h_\mu$ を
+marked foliation に相対的に補間する．
+$\{\mu,h_\mu\}=0$ によって Lagrangian 性を保ち，
+既に構成した nodal fiber はその compact fiber 全体と近傍を transport する．
+この方法は測度や period の不変量を無視するものではなく，
+同じ実際の form 上で leaves と action differentials が一致するように作るものである．
+circle-invariant nodal fibrations の reduction による記述には
+Groman--Varolgunes\cite[\S7.3]{GV}を用いる．
+
+component 上の局所点 blow-up には，
+Chakravarthy--Groman\cite[Theorem 1.1]{CGblowup}の almost toric comparison と，
+Fleming\cite[Proposition 4.6, Construction 4.7]{Fleming}の Kähler blow-up を用いる．
+これらは regular elliptic-boundary patches 内で適用し，
+core と crossing germs を固定する．
+その後の divisor-relative Moser と normal-circle conjugacy は，
+曲線の genus に依存しない．
+positive genus の場合も，同じ実際の marked curve 上の isotopies を用い，
+normal-bundle の degree の一致に加えて line-bundle の smoothing relation を保持する．
+
+\subsection{次数分割，偏極，底空間の整数位相}
+
+まず平面退化の場合，定理\ref{main:global}は $d$ 個の cores，
+$d\binom d2$ 個の nodal fibers，
+$\binom d2(d-4)$ 本の branch edges を持つ fibration を構成する．
+$d=5$ の底空間は四単体の二次骨格である．
+一般の $d$ では，同じ実際の double curves 上の marked pants trees から
+有限複体 $B_d(T)$ を作り，
+\[
+ B_d(T)\simeq\bigvee^{\binom{d-1}{3}}S^2
+\]
+への整数鎖ホモトピーと $H_2$ の具体的な基底を与える．
+球面の wedge という型は Mikhalkin の結果と整合するが，
+ここでは指定された branch edges，bigons，triangles に対する鎖データを記述する．
+
+任意の順序付き分割 $d=e_1+\cdots+e_k$，$k\geq3$ に対しても，
+一般の smooth hypersurfaces $S_i=\{F_i=0\}$ を用い，
+$\prod_iF_i+tG_d=0$ を順序付き小解消することができる．
+定理\ref{part:global}は，この退化から $k$ 個の cores を持つ fibration を与える．
+第 $i$ core は
+$S_i\setminus\bigcup_{j\ne i}(S_i\cap S_j)$ の logarithmic skeleton に由来し，
+node 総数は $d\sum_{i<j}e_i e_j$，
+branch edge 数は $(d-4)\sum_{i<j}e_i e_j$ である．
+定理\ref{part:homotopy}はその底空間について
+\[
+ B_{\mathbf e}(T)\simeq
+ \bigvee^{\,p_g(X_d)-\sum_i p_g(S_i)}S^2
+\]
+を示し，Reeb graphs の cycles，同じ triple-point type の複数交点，
+および tetrahedron boundaries から整数基底を構成する．
+例えば次数六の分割 $(2,2,2)$ と $(1,1,4)$ は，
+同じ symplectic 曲面上に $b_2(B)=10$ と $9$ の底空間を与える．
+従って，core の選択は底空間の homotopy type にも反映される．
+
+偏極の範囲はこの自由度とは別に正確に記述できる．
+小解消の vertical class を
+$\xi=aH+\sum_i\beta_i[D_i]$ とし，
+$\delta_\ell=\beta_{\ell+1}-\beta_\ell$，
+$E_\ell=e_1+\cdots+e_\ell$ と置く．
+定理\ref{part:cone}は，その Kähler slice が
+\[
+ \delta_\ell>0\quad(1\leq\ell<k),\qquad
+ \sum_{\ell=1}^{k-1}E_\ell\delta_\ell<a
+\]
+という sharp な開単体であることを示す．
+平面分割では $E_\ell=\ell$ となり，定理\ref{pol:cone}を回収する．
+この slice 全域の記述には Bézout と Nakai--Moishezon を用いる．
+大域 fibration の局所 blow-up construction に使うのは，
+一様な patches を確保した後の十分小さい ray である．
+
+\subsection{core の topology と matroidal charts}
+
+core の homotopy type と embedded Liouville skeleton の同定は別の問題である．
+Hattori\cite{Hattori}は一般位置の hyperplane complement の homotopy type を決定し，
+関連する arrangement の記述は Papadima--Suciu\cite[\S1.1]{PapadimaSuciu}にもある．
+Ruddat--Sibilla--Treumann--Zaslow\cite{RSTZ}の combinatorial skeleton は，
+Zhou\cite{Zhou}によって，適切な exact symplectic structure の
+Liouville skeleton として実現されている．
+本稿では，指定された compactification の collar を保つことが必要なため，
+実際の logarithmic potential から得られる skeleton を用いる．
+特定の RSTZ model との相対同定は追加条件として残る．
+Matessi\cite{MatessiPants,Matessi}の Lagrangian pants は半次元の部分多様体を作る構成であり，
+symplectic pants 全体の torus fibration とは区別される．
+Abouzaid--Auroux--Katzarkov\cite{AAK}の対象も，
+hypersurface に付随する toric blow-up や conic bundle であり，
+compact hypersurface 自身への本稿の gluing theorem は別途必要である．
+
+一般型曲面内の部分的な almost toric geometry にも先行研究がある．
+Evans--Urz\'ua\cite{EvansUrzua}は，symplectic form を変形した一般型曲面で，
+rational homology balls の非有界な列の symplectic embeddings を構成した．
+Brendel--Hauber--Schmitz\cite{BHS}は，$B_{dpq}$ の skeleton 近傍からの
+partial embeddings によって移される小さい Lagrangian tori を
+ambient symplectomorphism に関して区別し，一般型の五次曲面や
+simply connected Godeaux surface にも，適切な symplectic form の下で応用している．
+ここでは displacement energy germ が重要な不変量である．
+本稿が指定する K\"ahler class，compact な底の全体，core と neck の同時接着は
+別途確認する条件であり，局所 torus の非同値性から fibration 全体の非同値性を推論しない．
+この区別は，構成後の torus fibers や atlas の同値性を研究する際にも維持する．
+
+matroidal charts との比較には，Bergman complex の位相を使う．
+Ardila--Klivans\cite{ArdilaKlivans}は lattice of flats による subdivision と
+phylogenetic-tree spaces との関係を示し，
+Feichtner--Sturmfels\cite[Theorem 4.1]{FeichtnerSturmfels}は
+nested-set complexes による unimodular triangulation を与えた．
+Petersen graph と $K_{3,3}$ は後者の Examples 1.1--1.2 に既に現れる．
+Shaw\cite[\S2.4]{Shaw}の matroidal fans は，
+本稿で比較する smooth tropical local models の範疇を与える．
+これらの既知の模型を含め，定理\ref{trop:cubic-classification}では，
+二価点を除いたリンクが三価である rank-three matroidal fans を分類する．
+連結 matroid から現れるのは
+$K_4,K_{3,3},\mathrm{Petersen},\mathrm{Heawood}$ であり，
+非連結 matroids と Euclidean factors を含めてもリンクの第一 Betti 数は八以下である．
+体上での realizability はこの上界の仮定ではない．
+
+曲線配置の tropicalization を matroid の外側で扱う比較対象として，
+Aksnes\cite[Theorem 4.15]{Aksnes}は，平面内の transverse very affine arrangement の
+補集合を arroid fan によって記述する．
+本稿の Reeb 展開を施した contact link と，divisorial tropicalization の support が
+同相であるとは限らない．また，この結果から actual action periods の一致は従わない．
+従って，matroidal charts の障害の後に比較する，より広い fan の範疇として区別する．
+
+一方，平面退化の各 core link は
+$b_1=\binom{d-2}{2}$ を持つ．
+従って $d\geq7$ では，その core の局所位相だけで matroidal chart を排除できる
+（定理\ref{trop:degree-classification}）．
+次数分割の場合も
+\[
+ b_1(\Gamma_i)=1+\frac{e_i(d-e_i)(d-4)}2
+\]
+であり，同じ障害が全ての partitions に及ぶ
+（命題\ref{trop:partition-obstruction}）．
+六次では，全ての core が matroidal な局所位相を持つ候補は全平面退化に限られる．
+その全 core links が Petersen となる labelled split systems は正確に六個で，
+$K_6$ の one-factorizations と対応する（定理\ref{topo:petersen}）．
+
+五次では Betti 数だけの判定をさらに精密化する。
+divisor の各 punctured component の内部 Reeb graph は、core link の誘導部分グラフになる。
+この block と個々の triple-point labels を保持すると、$(1,1,3)$ と $(1,2,2)$ の
+全 core の同時 matroidal 化は不可能である一方、$(1,1,1,2)$ では四つの標識付き
+abstract graph systems が存在する（定理\ref{q5:classification}）。
+その条件は三つの quartet splits の parity で記述できる。
+Reeb graph の実現には good orientation が必要であり、
+Michalak\cite[Definition 2.2, Theorem 5.6]{MichalakReeb}の実現問題との関係を明示した上で、
+本稿で使う境界付き曲面には saddle pants と cylinders による直接の構成を与える。
+従って有限グラフの個数を、embedded marked isotopy classes の個数とは同一視しない。
+
+
+\subsection{局所作用座標から大域 atlas へ}
+
+Petersen link が得られても，標準 fan の格子と実際の作用格子を合わせる必要がある．
+critical slopes の rationality，annular area の Farey 条件，branch lattice の saturation は，
+そのための局所的な条件である（命題~\ref{trop:farey-condition}，\ref{trop:branch-denominator}）．
+固定 annular area は $\operatorname{area}/(2\pi w)=1/m$，$m$ は正の奇整数，という
+離散条件を持つ（命題~\ref{per:odd-reciprocal}）．
+一方，marked isotopy class 内で foliation の代表を選べるなら，五直線補集合で各 critical
+basin の面積を $2\pi w_b$ にし，内部 annulus の面積を $2\pi w_a$ にできる．
+これにより十五面全ての作用格子が標準 Petersen fan の格子と一致する
+（定理~\ref{per:local-realization}）．
+これは Evans--Mauri の Liouville cone construction\cite{EM}と，標準 tropical lattice
+\cite{GKM}を，実際の作用積分によって接続する構成である．
+四直線の $K_4$ core については，有向四周期に沿う basin areas を用い，六面の作用座標と
+$H_1(W_4;\ZZ)\cong N_4^*$ の整数同型を与える（命題~\ref{per:k4-realization}）．
+Petersen の全 meridians に一つの ambient-linear extension を要求すると半整数の障害があるが，
+この追加条件は一つの core の作用適合 chart の存在とは異なる．
+
+大域 atlas では，さらに chart transitions を検査する必要がある．
+Shaw\cite[Definition~3.1]{ShawSurfaces}，Jell--Rau--Shaw
+\cite[Definitions~2.1, 3.1, 5.1]{JellRauShaw}，L\'opez de Medrano--Rinc\'on--Shaw
+\cite[Definitions~2.2--2.4]{LRSChern}の枠組みでは，transitions は ambient integer affine maps
+の制限である．face ごとの unimodularity と branch saturation だけでは足りない．
+本稿は三価 star の唯一の線形関係を用いて延長条件を記述し，両 chart で同じ Hamiltonian
+circle の作用が ambient-affine ならその条件が成立することを示す
+（補題~\ref{atl:branch-extension}，命題~\ref{atl:common-hamiltonian}）．
+focus--focus points では作用格子の monodromy が非自明である\cite[Remark~3.1]{VuNgoc}ため，
+atlas はその有限集合を除いた底空間に与え，除いた点には実際の focus affine singularities を残す．
+
+Evans--Mauri の Proposition~6.13 と Theorem~6.15 は，one-dimensional strata に沿う
+log Calabi--Yau 仮定の下で toric neighborhoods と大域 monodromy を比較する\cite{EM}．
+本稿の三穴・四穴 sphere とその saddle branches には，critical actions を直線に保つ別の接着が必要である．
+このため，actual neck の全空間上で一つの primitive を取り，三重点の toric reference actions
+と両側の作用の加法定数を同時に固定する．
+固定した正負の normal moments における symplectic transport はこの primitive を exact 差まで保つ．
+境界作用に対する Stokes の公式から reduced total area の affine 性を得て，
+critical basins と内部 annuli の面積を指定する parameter に相対的な Moser construction を行う．
+これにより有限 $t\ne0$ でも critical action functions を直線に保てる
+（系~\ref{ng8:central-criterion}）．
+measured Reeb graphs\cite{DMT,IKM}との関係では，既に固定した二つの systems を
+無条件に同一視するのではなく，同じ actual reduced forms 上で必要な critical-area data を実現している．
+
+この接着を用いると，五次と六次の全平面退化で大域 atlas を得る
+（定理~\ref{ga8:global}）．$b_i=\beta_i/(2\pi)$ とし，
+\[
+ c=\frac{a}{2\pi(d-1)},\qquad w_{i,j}=c+b_j-b_i
+\]
+という weights を選ぶ．五次では $f_i(j)=(i+j)/2\bmod5$ の対称な四周期系を用い，
+各共有曲線の五つの blow-up points を三つの basins へ $(3,1,1)$ と配分する．
+六次では各曲線の四 basins へ一つずつ，内部 annulus へ二つを配分する．
+面積変化と normal framing の変化が同じ整数条件を与え，両端の affine actions が一致する．
+五次の各 triangle には五つの nodes，六次の各 triangle と bigon にはそれぞれ三つと二つの nodes が入る．
+全 branch lengths は $a/(\pi(d-1))$ となる．
+五次の対称な標識付き recipes と六次の Petersen systems はそれぞれ六個あるが，
+この数を非同型な大域 atlases の個数とは同一視しない．
+
+\subsection{混合分割での局所存在と大域障害}
+
+分割 $(1,1,1,2)$ では，quadric の三本の $(1,1)$ curves の補集合に
+$K_{3,3}$ chart を構成する（定理~\ref{quad:realization}）．
+標準 $K_{3,3}$ fan が二つの tropical lines の積であることは，parallel connection に対する
+Shaw--Werner\cite[Theorem~7.2]{ShawWerner}の記述に従う．
+ここで必要な追加の計算は，自己交点二の actual normal framing と非零 critical periods である．
+各 component の一つの basin をその weight 分だけ広げると，内部 annulus の面積比が一となり，
+九面の作用行列は全て unimodular となる．
+二直線と conic を境界に持つ三つの plane cores にも，同様に非零 periods を用いた
+$K_4$ charts がある（命題~\ref{mixper:realization}）．
+従って，四つの標識付き quartet systems の全てで，各 core を個別に実現できる．
+
+分岐における作用の不整合は，tropical divisor の言葉で表せる．
+単位 facet weights を持つ三価 star の primitive transverse lifts を
+$u_1,u_2,u_3$，分岐方向を $v$ とし，
+$u_1+u_2+u_3=\kappa v$ と書くと，sheet ごとに整数アフィンな作用関数 $h$ の係数は
+\[
+ \mathfrak d(h)=\sum_{a=1}^3\dd h_a(u_a)-\kappa\dd h(v)
+\]
+となる．これは Allermann--Rau の tropical principal divisor の係数そのものである
+\cite[Definition~3.4, Remark~3.5]{AllermannRau}．
+同文献の abstract cycles に対する構成
+\cite[Definition~6.1, Construction~6.4]{AllermannRau}と整合するが，
+本稿では各 divisor component に固有の normal action を用いるため，
+全 core の係数を初めから一つの大域 principal divisor と解釈しない．
+共有 neck の normal circles が互いに逆向きであることから，
+対応する二端の係数が相殺するという必要条件を直接用いる．
+
+分母の自由度を除くのは，局所 fan の分類だけではなく，
+共有する四 puncture 曲線の annulus と nodal framing の整合性である．
+一つの focus node が与える integral shear は almost toric geometry の標準的な事実である
+\cite[\S4.3, equation~(4.10)]{SymingtonFour}．
+本稿では，両側の annulus の unimodularity と四 punctures の整数 cycle shears を同時に用い，
+$q_Aq_B\mid2$ を導く（命題~\ref{q9:rigidity}）．SNC の node budget を合わせると，
+二端の分母 $q_A,q_B$ に対して内部 annulus の node 数が
+\[
+ n_{\rm int}=\frac{2}{q_Aq_B}
+\]
+に等しいことを示す．三価 branch の saturation により分母は奇数であるから，
+node 数の整数性は $q_A=q_B=1$ および $n_{\rm int}=2$ を強制する．
+この量子化条件を混合五次の三本の conic necks に適用すると，
+高分母を許した場合にも core coefficients の総和は $-6$ となる．
+従って現在の SNC cores と branch graph を保つ範囲では，
+混合五次の大域作用適合 matroidal atlas は分母の選択によらず存在しない．
+これは regular curves と annuli の周囲の議論であり，
+focus values 自体に matroidal chart を延長する主張ではない．
+
+三本の plane--plane branches の分母を任意のまま残しても，line components の寄与は相殺される．
+各 mixed plane core の係数総和は $-1$，quadric core は $-3$ なので，全体は $-6$ となり，
+対向端の相殺条件に反する（定理~\ref{hd9:mixed-no-go}）．
+これと位相障害を合わせると，現在の比例曲率 SNC 構成で cores と branch graph を保つ
+大域作用適合 matroidal atlas が可能な次数分割は，分母を制限せずに，全平面の五次と六次に限られる
+（系~\ref{hd9:classification}）．
+
+同じ四 puncture の剛性は，六次の全三十 branches の分母が一であり，
+十五 bigons の各々に二 nodes が入ることも強制する．これは一つの weight recipe に依存しない．
+一方，四直線の局所 $K_4$ core では，正の basin areas と六つの unimodular action matrices を
+同時に指定することで，任意の奇数 $q\ge3$ に対して分母 $(q,1,1,1)$ を持つ chart を得る
+（\cite{QuinticArithmetic}）．この例は，局所の奇数分母条件と，実際の共有 neck に沿う
+大域的な剛性との違いを具体的に示す．
+
+\subsection{他の tropical 構造との比較と残る問題}
+
+Cartwright の tropical complex は，退化の dual complex に intersection numbers を加えて，
+線形関数の層を指定する構造である\cite[Definitions~2.5, 2.8; Construction~3.2]{CartwrightComplexes}．
+作用周期から作る本稿の atlas と同一視することはできない．
+実際，ordered small resolution の最初の component における local intersection matrix は，
+全平面の場合 $J_{d-1}-dI$ で負定値となり，tropical complex の local positivity condition を満たさない
+（命題~\ref{atl:cartwright-distinction}）．
+同論文 Remark~3.4 も，Gross--Siebert 型の affine structure との特異集合の違いを区別している．
+本稿でも，focus points を残した atlas に compact smooth tropical manifolds の大域定理を
+追加の検証なしに適用しない．
+
+また，標準 fan の chart と特定の algebraic filling との同定は別の条件である．
+Kapranov\cite[Theorem~4.3.3]{KapranovChow}の blow-up 記述によれば，
+$\overline M_{0,5}$ の boundary は十本の $(-1)$-curves の Petersen 配置である．
+五直線 complement の模型は common-circle determinants と boundary homology によって，
+この標準 $M_{0,5}$ filling と区別される
+（命題~\ref{trop:divisor-recovery}，系~\ref{trop:not-standard-M05}）．
+二つの boundary の $b_1$ はそれぞれ十と十一である．
+従って作用適合 Petersen chart の存在から，その filling の置換を結論してはいけない．
+
+全平面五次の高分母 chart の同時接着とその支持 graph の問題は，
+companion 論文\cite{QuinticArithmetic}で，整数データの必要条件と
+幾何学的な実現条件を区別して検討する．そこでは非空の高分母支持が葉を持たず，
+最小次数二以上の六つの五頂点 graph 型に限られることを示すが，
+残る整数接着の存在・一般の分母剛性は未解決である．
+本稿の構成に続く幾何的な問題として，atlases の同値関係と変形空間，
+および core を替える相対 surgery が残る．
+四 puncture の内部 cones の格子 index を $m^-,m^+$ に緩める場合も，
+$q_Aq_B\mid(m^-+m^+)$ という必要条件が残る．
+一般次数における非 matroidal links を，より広い tropical models で扱う可能性も残る．
+hyperplane class 以外の Kähler classes，special Lagrangian 条件，canonical metric の collapse は，
+本稿の存在定理から独立した課題として扱う．
+Gross--Siebert\cite{GrossSiebert}の affine geometry からの退化再構成との比較にも，
+本稿で得た実際の作用周期に加えて，必要な追加データを明示する必要がある．

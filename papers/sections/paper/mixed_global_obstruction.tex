@@ -1,0 +1,83 @@
+\section{法円作用の分岐係数と共有 annulus の分母剛性}
+\label{mg8:section}
+
+個々の core に作用座標を構成できても，その charts を大域 atlas に接続できるとは限らない．
+法円作用の三枚の sheets における微分と，四 puncture neck の両端の annular periods を比較する．
+これにより，混合五次では分母によらない大域障害が，六次では分母の剛性が得られる．
+ここでは法円作用そのものが ambient-affine であるとは仮定しない．
+
+\subsection{法円作用の分岐係数}
+
+三価 branch の saturated star lattice を
+\[
+ u_1+u_2+u_3=\kappa v
+\]
+と表示する．$v$ は branch の primitive tangent，$u_a$ は各 sheet に向かう
+primitive transverse lifts である．共通 Hamiltonian circle の作用関数 $h$ は，
+各 sheet で整数アフィンであり，branch 上で連続である．
+各 sheet におけるその線形部分を $\dd h_a$ とし，branch tangent での共通値を
+$\dd h(v)$ と書く．次の整数を定める．
+\begin{equation}\label{mg8:defect}
+ \mathfrak d(h)=\sum_{a=1}^3\dd h_a(u_a)-\kappa\dd h(v).
+\end{equation}
+これは作用関数の加法定数を用いない．
+
+% A short optional remark to place immediately after the definition of D(h).
+\begin{remark}[Tropical divisor としての分岐係数]
+\label{div9:interpretation}
+係数 $\mathfrak d(h)$ は新しい一般的な tropical divisor の定義ではない．
+三つの maximal cones の重みを一とし，その primitive normal vectors の lifts を
+$u_a$ とすれば，Allermann--Rau の係数公式
+\cite[Definition~3.4]{AllermannRau}は本稿の式に一致する．
+lift の選択によらないことも同文献の Remark~3.5 に含まれる．
+本稿で必要なのは，この既知の係数を normal circle の作用に適用し，
+実際の SNC compactification の self-intersections と annular areas から
+core ごとの総和を計算し，対向する normal circles の符号と比較することである．
+
+各 core の頂点で用いる normal actions は異なる circle generators に由来する．
+従って，それらの全係数の和を一つの大域関数の principal divisor の degree と
+同一視することはできない．本稿の相殺は，branch ごとに二つの normal actions が
+定数を除いて互いに負となることから導く．この議論は nodes を横断せず，
+focus punctures を持つ底に対して compact tropical manifold の交点定理を
+無条件に適用することもない．
+\end{remark}
+
+
+\begin{lemma}[分岐係数の不変性]\label{mg8:invariance}
+整数 $\mathfrak d(h)$ は，$u_a$ の lift，$v$ の向き，sheet の順序によらない．
+ambient integer affine transition によっても保存される．
+従って，追加の branch singularities のない連結な開 branch に沿って一定である．
+対向する二つの core の正の normal circles が同じ neck で互いに逆である場合には，
+その両端で計算した係数は
+\begin{equation}\label{mg8:end-cancellation}
+ \mathfrak d_i(h_i)+\mathfrak d_j(h_j)=0
+\end{equation}
+を満たす．
+\end{lemma}
+
+\begin{proof}
+$u_a$ を $u_a+m_av$ に替えると，$\kappa$ は $\kappa+\sum_a m_a$ に替わる．
+\eqref{mg8:defect} の二項の変化は等しいので打ち消し合う．
+$v$ の向きを逆にすれば $\kappa$ と $\dd h(v)$ の符号が同時に変わる．
+sheet の置換にも明らかに不変である．
+
+一つの ambient transition の線形部分を $T$ とする．
+分岐方向を合わせ，transverse lifts を $T$ で運べば，
+$\dd h_a(u_a)$ と relation の両方が保存される．
+任意の lifts との差は前段により無関係である．
+action cycle は各正則 sheet で平行であるから，その作用微分は整数アフィン座標で定数である．
+従って係数は各 chart の中で一定であり，overlap の不変性から開 branch 全体で一定となる．
+
+最後に，二つの core で取る正の normal circles は $\alpha_j=-\alpha_i$ である．
+従って neck 上の二つの Hamiltonians は定数を除き $h_j=-h_i$ となる．
+\eqref{mg8:defect} は $\dd h$ に線形なので，\eqref{mg8:end-cancellation} を得る．
+特に，$T v_i=-v_j$，$T u_{i,a}=u_{j,\sigma(a)}+m_av_j$ と書く場合は，
+$\sum_a m_a=-\kappa_i-\kappa_j$ を用いて同じ等式を直接検算できる．
+\end{proof}
+
+この係数が零であることは，共通 $h$ がその star で一つの ambient affine function に
+延長するための条件である．しかし以下の障害は，各係数が零であることを要求せず，
+対向する二端の相殺だけを使う．従って命題~\ref{quad:strong-obstruction} より強い比較になる．
+
+
+\input{four_puncture_rigidity.tex}

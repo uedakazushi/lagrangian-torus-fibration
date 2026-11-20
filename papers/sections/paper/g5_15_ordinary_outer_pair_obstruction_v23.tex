@@ -1,0 +1,201 @@
+% v23. Complete ordinary G5_15 obstruction; no scale/denominator cutoff.
+\section{外側の pair 方程式による通常型 \texorpdfstring{$G_{5,15}$}{G5,15} の完全排除}
+\label{g51523:ordinary-section}
+
+この節では，前節までと同じ標準五次整数接着の仮定を用いる．
+特に各辺の node 総数は五であり，局所行和，pair equations，正の basin weights，
+奇数分母，marked clutching および対向 $D$ の相殺を課す．
+支持を $K_5-\{23,24\}=G_{5,15}$ とする．
+通常型とは，共有高辺 $34$ の共通低 puncture $2$ において
+$p^3_{24}+p^4_{23}=0$ となる分岐である．
+
+\begin{theorem}[通常型の無上界排除]
+\label{g51523:no-ordinary}
+上記の仮定の下で，$G_{5,15}$ の通常型は存在しない．
+この結論には，共有分母 $Q=q_{34}$，他の分母，行列成分，尺度のいずれにも上界を仮定しない．
+\end{theorem}
+
+証明では，四高 cores $0,1$ を完成させる必要はない．
+それぞれにおける一つの pair equation を，隣接する二辺の clutching と組み合わせる．
+これにより，既知の四中心模型に付く正 reverse 側の二尺度を有限表へ還元する．
+共有高 $D$ の非共鳴性や固定共有分母の二次復元を追加の仮定として用いないため，
+すでに処理した共鳴枝や $T=1$ 境界もこの証明に含まれる．
+
+\subsection{低辺に接する外側三角形の一次式}
+
+\begin{lemma}[外側 pair による尺度の有限化]
+\label{g51523:outer-pair}
+core $2$ と core $p\in\{3,4\}$ の辺が低く，外側 core $i\in\{0,1\}$ との二辺が高いとする．
+\[
+ q_{2i}=a>1,\qquad p^2_{ip}=c,\qquad
+ p^p_{2i}=-j,\qquad p^p_{i2}=-\sigma,
+ \qquad j,\sigma\in\mathbb Z_{>0}
+\]
+と置く．低--高 pair により $q_{ip}=q=1+j\sigma$ である．
+node 変数
+\[
+ u=1-n_{2i;p},\qquad v=1-n_{ip;2},\qquad
+ u,v\in\{-4,-3,-2,-1,0,1\}
+\]
+と $E=au-c$ を用いると，外側 core $i$ の二 rays $2,p$ の pair equation は
+\begin{equation}\label{g51523:outer-linear}
+ \bigl\{E(jv+1)-aj\bigr\}\sigma=a-1-Ev
+\end{equation}
+に同値である．
+特に $a-1>j$ なら，この一次式が $\sigma$ について恒等的に零となることはない．
+したがって全候補は上記三十六組の $(u,v)$ から有限に復元できる．
+さらに各候補は
+\begin{equation}\label{g51523:outer-divisor}
+ q\bigl\{jEv+E-aj\bigr\}=E-j\ne0,
+ \qquad q\mid E-j,
+ \qquad q\le\max_{-4\le u\le1}|au-c-j|
+\end{equation}
+を満たす．
+\end{lemma}
+
+\begin{proof}
+二辺の clutching をそれぞれ punctures $p,2$ で読むと
+\[
+ p^i_{2p}=a u-c=E,\qquad
+ p^i_{p2}=qv+\sigma
+\]
+である．core $i$ の pair equation は
+\begin{equation}\label{g51523:outer-original}
+ E(qv+\sigma)=aq-1
+\end{equation}
+となる．$q=1+j\sigma$ を代入すれば
+式~\eqref{g51523:outer-linear} を得る．
+
+一次係数と定数がともに零なら
+\[
+ E(jv+1)=aj,\qquad Ev=a-1.
+\]
+後者の $j$ 倍を前者から引いて $E=j$ を得る．
+よって $v=(a-1)/j>1$ となり node 範囲に反する．
+一次係数のみが零の場合は不整合であり，これも除外する．
+非零の一次係数で割る場合は，得られる値が正整数で，$1+j\sigma$ が奇数であることを確認する．
+
+最後に，式~\eqref{g51523:outer-linear} の係数を $A$，右辺を $B$ とすれば
+$jB+A=E-j$ であるから，$(j\sigma+1)A=E-j$ を得る．
+$E-j=0$ なら $A=0$，さらに $B=A\sigma=0$ となり，すでに排除した共鳴に戻る．
+従って $E-j\ne0$ であり，式~\eqref{g51523:outer-divisor} が従う．
+\end{proof}
+
+この補題は外側 core の完全復元を仮定しない．
+node 総数から得られる各変数の範囲だけを用い，異なる node 変数の残りの整合を課していない．
+したがって表に残る値は必要候補であり，外側 core の存在を意味しない．
+また $a-1\le j$ の別の局所問題では共鳴を再検討する必要がある．
+補題の仮定を外して一般の自由尺度を除いてはならない．
+
+\subsection{十四配置を尽くす六つの正側データ}
+
+通常型の四中心および十四の低 row 配置は
+表~\ref{g51521:center-table}，\ref{g51521:ordinary-row-table} で完全に定まっている．
+共有高 ray への低 row 成分が正となる側を core $p$ とし，そのデータを
+\[
+ R^p=(-j_0,-j_1,m),\qquad
+ (p^p_{02},p^p_{12},p^p_{\bar p2})=(-S,-T,U),
+ \qquad S,T,U>0
+\]
+と書く．ここで $\bar p$ は $\{3,4\}\setminus\{p\}$ の元である．
+低係数 $D^p_2=d$ により
+\begin{equation}\label{g51523:positive-column}
+ U=S+T-d-1,\qquad Q=q_{34}=1+mU
+\end{equation}
+である．外側補題に必要な中心データだけをまとめると，次の六行になる．
+二つの負成分の交換を含めており，Schur パラメータの向きは選んでいない．
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{c|c|c|r|c|c|r}
+中心&$p$&$R^p$&$d$&$(q_{20},q_{21})$&$(p^2_{0p},p^2_{1p})$&配置数\\\hline
+$M_1$&4&$(-1,-4,4)$&5&$(7,31)$&$(-2,6)$&1\\
+$M_1$&3&$(-1,-1,1)$&$-9$&$(7,31)$&$(3,-10)$&1\\
+$M_2$&4&$(-1,-2,2)$&2&$(9,11)$&$(-4,5)$&3\\
+$M_2$&4&$(-2,-1,2)$&2&$(9,11)$&$(-4,5)$&3\\
+$M_3$&4&$(-1,-2,2)$&$-7$&$(31,7)$&$(-10,2)$&3\\
+$M_4$&4&$(-1,-2,2)$&9&$(19,43)$&$(-6,14)$&3
+\end{tabular}
+\caption{外側 pair に必要な正側データ．配置数の和は十四である．}
+\label{g51523:positive-profiles}
+\end{table}
+
+全ての入力で $a\ge7$，$j\le4$ なので $a-1>j$ が成り立つ．
+従って外側 pair の恒等共鳴はない．
+正整数尺度と奇数分母を課して式~\eqref{g51523:outer-linear} を評価すると，
+表~\ref{g51523:scale-table} を得る．各要素 $(\sigma;u,v)$ は尺度とその node 変数を表す．
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{c|c|c|c}
+中心，正側 row&$i=0$：$(S;u,v)$&$i=1$：$(T;u,v)$&帰結\\\hline
+$M_1$, $(-1,-4,4)$&$(2;-1,-2)$&$(5;1,1)$&$U=1$\\
+$M_1$, $(-1,-1,1)$&$(2;1,1)$&$\varnothing$&不整合\\
+$M_2$, $(-1,-2,2)$&$(2;1,0)$&$(1;-1,-1)$&$U=0$\\
+$M_2$, $(-2,-1,2)$&$\varnothing$&$(4;1,1)$&不整合\\
+$M_3$, $(-1,-2,2)$&$\varnothing$&$(1;1,1)$&不整合\\
+$M_4$, $(-1,-2,2)$&$\varnothing$&$(13;1,1)$&不整合
+\end{tabular}
+\caption{外側二 core の各一つの pair equation が許す全尺度候補．}
+\label{g51523:scale-table}
+\end{table}
+
+この有限表は次の手順で手計算でも確認できる．
+各行・各外側標識について $a,c,j$ を表~\ref{g51523:positive-profiles} から読み，
+$u=-4,-3,-2,-1,0,1$ のそれぞれに対し $E=au-c$ とする．
+$E=0$ は式~\eqref{g51523:outer-original} で不可能である．
+$E=j$ は補題の共鳴議論で不可能である．それ以外では，
+\[
+ q\mid |E-j|,\quad q\ge3\text{ は奇数},\quad q\equiv1\pmod j,
+ \qquad \sigma=(q-1)/j
+\]
+を列挙し，
+\begin{equation}\label{g51523:node-from-divisor}
+ v=\frac{(E-j)/q-E+aj}{jE}
+ \in\{-4,-3,-2,-1,0,1\}
+\end{equation}
+を確認すればよい．例えば最初の行の $i=0$ では $E=7u+2$ であり，
+残るのは $u=-1$，$E=-5$，$q=3$，$\sigma=2$，$v=-2$ だけである．
+同じ手順を全ての入力に適用した結果が表であり，分母や尺度の任意の cutoff は使っていない．
+
+\subsection{最後の一点の矛盾と証明の完了}
+
+表の第二，第四，第五，第六行は一方の候補集合が空である．
+第三行は式~\eqref{g51523:positive-column} により $U=0$ となり，高分母 $Q>1$ に反する．
+残る第一行は
+\[
+ R^4=(-1,-4,4),\qquad (-S,-T,U)=(-2,-5,1),\qquad
+ (q_{40},q_{41},q_{43})=(3,21,5)
+\]
+に限られる．
+
+三高 matching 定理により，高 rays を $(a,b,c)=(0,1,3)$ とした core $4$ では
+\[
+ p^4_{ab}=H>0,\quad p^4_{ba}=K>0,\quad
+ p^4_{ac}=-(H+1),\quad p^4_{ca}=-M,\quad p^4_{cb}=-N,
+ \qquad M,N>0
+\]
+である．$p^4_{ac}=-(H+1)$ は ray $a$ の元の行和から従う．
+二つの元の pair equations と ray $c$ の元の行和は
+\begin{equation}\label{g51523:last-point}
+ HK=62,\qquad (H+1)M=14,\qquad M+N=6
+\end{equation}
+を与える．$H$ は $62$ の正約数なので $H\in\{1,2,31,62\}$ である．
+$H+1\mid14$ を満たすのは $H=1$ だけであり，そのとき $M=7$ となる．
+これは $M,N>0$ と $M+N=6$ に反する．
+全六行，従って全十四配置が排除され，定理~\ref{g51523:no-ordinary} が証明された．
+
+\paragraph{結論の量化と検算．}
+本定理は，五つの固定した $(\text{low row},D_0)$ に対する\emph{孤立した三高局所模型}を
+全て分類したという主張ではない．既知の中心へ接着し，さらに外側 cores の必要 pair equations を
+満たす通常型配置を全て排除するものである．
+四高 core の完成や正 weights の新たな仮定を付け加えずに，その必要条件だけで矛盾した．
+定理~\ref{g51521:reduction} と合わせると，この段階で残る $G_{5,15}$ は
+共有分母 $Q=3,5$ の負例外 template に限られる．
+
+検証器 \nolinkurl{verify_g5_15_ordinary_outer_pair_v23.py} は標準ライブラリのみを用い，
+四中心の元の行和・pair・$D$，全 node triples から得る十四配置，二種類の独立した有限表計算，
+最後の一点の整除矛盾を再確認する．
+直接の三十六 node 列挙と，式~\eqref{g51523:outer-divisor} の全約数列挙の結果を照合する．
+旧版の探索器は import せず，$Q$ の scan も実施しない．
+これは証明を補助する厳密算術検算であり，証明支援系での形式化や外部査読ではない．

@@ -1,0 +1,126 @@
+{
+  "version": "v13",
+  "status": "passed",
+  "exact_assertion_count": 61,
+  "denominator_bound": null,
+  "D_opposition_used": false,
+  "scope": "Exact certificate for the fifth-core c=2 reduction and the unique S=T=2 canonical model; tau propagation/tau=2 use the written prior proof.",
+  "unique_canonical_model": {
+    "r_s_z_S_T": [
+      4,
+      4,
+      5,
+      2,
+      2
+    ],
+    "q": [
+      9,
+      11,
+      1,
+      1
+    ],
+    "P": [
+      [
+        0,
+        -7,
+        2,
+        -4
+      ],
+      [
+        -14,
+        0,
+        -2,
+        5
+      ],
+      [
+        4,
+        -5,
+        0,
+        0
+      ],
+      [
+        -2,
+        2,
+        -1,
+        0
+      ]
+    ],
+    "weights": [
+      "9",
+      "11",
+      "17/8",
+      "21/4"
+    ]
+  },
+  "H_ge_3_polynomial": [
+    0,
+    7,
+    1
+  ],
+  "c_ge_3_product_lower_bound": [
+    1,
+    2,
+    1
+  ],
+  "fifth_core_at_c2": [
+    [
+      0,
+      -1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      -1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      -1
+    ],
+    [
+      -1,
+      0,
+      0,
+      0
+    ]
+  ],
+  "shared_edge_contradictions": [
+    {
+      "edge": [
+        0,
+        1
+      ],
+      "value_from_left": 11,
+      "value_from_right": 9
+    },
+    {
+      "edge": [
+        1,
+        2
+      ],
+      "value_from_left": 11,
+      "value_from_right": 9
+    },
+    {
+      "edge": [
+        2,
+        3
+      ],
+      "value_from_left": 11,
+      "value_from_right": 9
+    },
+    {
+      "edge": [
+        3,
+        0
+      ],
+      "value_from_left": 11,
+      "value_from_right": 9
+    }
+  ],
+  "proof_source_sha256": "bd5273737d6ac02e37ec7bad33550a9f3662a4f369332d6474669b734ed68ff0"
+}

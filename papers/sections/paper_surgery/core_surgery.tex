@@ -1,0 +1,441 @@
+\section{直線配置の meridian blow-up と全 face 置換の障害}
+\label{cs6:section}
+
+境界における一つの非 toric blow-up から得られる具体的な filling を固定し、
+\emph{四つの標準 pants を、互いに離した Seifert face 全体だけで貼る置換は不可能}
+であることを、基本群と境界の JSJ graph によって示す。
+後の定理~\ref{cs7:complexitydichotomy} と系~\ref{cs7:fourpantsnogo}では、
+閉じた corner circuit に regular torus bundles を加える場合まで障害を拡張する。
+open corner chains への接続などを許す一般の置換は、なお別の問題である。
+したがって、以下は一般の core subdivision の否定ではなく、
+実現に必要な追加構造を特定する結果である。
+
+\subsection{一つの node を取り込む具体的なモデル}
+
+$L_1,\ldots,L_5\subset\mathbb P^2$ を三重点を持たない五直線とし、
+$p\in L_1\setminus\bigcup_{j>1}L_j$ とする。
+以下では
+\[
+ M=\operatorname{Bl}_p\mathbb P^2,\qquad
+ D'_1=H-E,\qquad D'_j=H\ (2\leq j\leq5),\qquad
+ D'=\bigcup_{j=1}^5D'_j,\qquad U=M\setminus D'
+\]
+と書く。$H$ は直線類の引き戻し、$E$ は例外曲線である。
+$K\subset U$ は十分大きな compact Stein core、$Y=\partial K$ はその正の境界とする。
+$Y$ の向きは divisor neighborhood の境界 $\partial N(D')$ と逆である。
+
+このモデルを実際の Lagrangian fibration に適用するには、取り込む node が
+$L_1$ 上の非 toric blow-up に対応し、その vanishing circle が $L_1$ の meridian に
+対応することを確認する必要がある。
+almost toric blow-up と通常の symplectic blow-up の対応については
+Chakravarthy--Groman~\cite[Theorem~1.1, Lemma~3.7]{CGblowup} を参照する。
+任意の位置・任意の vanishing cycle を持つ focus--focus fiber を
+Euler 数だけでこのモデルと同一視することはしない。
+
+\begin{proposition}[一つの meridian を殺す filling]
+\label{cs6:invariants}
+上の $U$ に対して、次が成り立つ。
+\[
+ \pi_1(U)\cong\mathbb Z^3,\qquad
+ H_1(U;\mathbb Z)\cong\mathbb Z^3,\qquad
+ H_2(U;\mathbb Z)\cong\mathbb Z^6,\qquad
+ H_k(U;\mathbb Z)=0\quad(k>2).
+\]
+compact core $K$ の絶対 intersection form は零であり、
+$\chi(K)=4$、$\sigma(K)=0$ である。
+さらに、$W_5=\mathbb P^2\setminus\bigcup_{i=1}^5L_i$ とすると、
+\begin{equation}
+ U\simeq W_5\cup_{\mu_1}D^2,
+ \label{cs6:cellattachment}
+\end{equation}
+ここで $\mu_1$ は $L_1$ の正の meridian である。
+\end{proposition}
+
+\begin{proof}
+$E^\circ=E\setminus D'\cong\mathbb A^1$ であり、
+$U\setminus E^\circ\cong W_5$ である。
+$E^\circ$ の法束は可縮な基底上の複素直線束なので自明である。
+その tubular neighborhood は可縮で、例外曲線を除いた部分は $S^1$ に homotopy 同値である。
+この neighborhood と $U\setminus E^\circ$ による homotopy pushout は
+\eqref{cs6:cellattachment} を与える。
+局所座標を $L_1=\{x=0\}$、$p=(0,0)$ とし、blow-up chart を
+$x=s,y=st$ とすれば、$E^\circ$ の normal circle は $s$ の meridian であり、
+blow-down 後は $\mu_1$ になる。
+
+一般位置の五直線 complement の基本群は
+\[
+ \pi_1(W_5)=\langle\mu_1,\ldots,\mu_5\mid
+ [\mu_i,\mu_j]=1,\ \mu_1\cdots\mu_5=1\rangle
+ \cong\mathbb Z^4
+\]
+である。一般位置 arrangement の homotopy 型は Hattori~\cite{Hattori} による。
+従って一つの primitive meridian を殺すと $\pi_1(U)=\mathbb Z^3$ になる。
+
+$M\cong\mathbb F_1$ 上で $D'=5H-E$ は ample である。
+例えば $H=E+F$ と書けば $D'=4E+5F$ であり、
+Hirzebruch 曲面上の正性条件を満たす。
+従って $U$ は smooth affine surface で、有限な二次元 CW complex の homotopy 型を持つ。
+五つの rational curve と十個の node から
+$\chi(D')=10-10=0$、一方 $\chi(M)=4$ なので $\chi(U)=4$ である。
+二次元 CW complex の $H_2$ は自由群であることから $H_2(U)=\mathbb Z^6$ が従う。
+
+$H_2(K)\to H_2(M)$ の像は全ての $D'_i$ と直交する。
+$[D'_1]=H-E$ と $[D'_2]=H$ は $H_2(M)$ を張るので、この像は零である。
+$K$ 内の二次元 cycle の交点数は $M$ 内でも同じであるから、絶対 intersection form は零になる。
+\end{proof}
+
+\begin{remark}[cohomology ring に残る情報]
+\label{cs6:cup}
+\eqref{cs6:cellattachment} の relative homology sequence では
+$H_2(U,W_5)\to H_1(W_5)$ が primitive な $\mu_1$ を送る単射である。
+従って $H_2(W_5)\to H_2(U)$ は同型で、$H^1(U)$ は
+$H^1(W_5)$ のうち $\mu_1$ を消す rank~$3$ 部分格子である。
+$W_5$ の cohomology ring が rank~$4$ exterior algebra の次数 $2$ までの切断であることから、
+\[
+ \bigwedge^2 H^1(U;\mathbb Z)\longrightarrow H^2(U;\mathbb Z)
+\]
+は primitive な rank~$3$ の像を持つ。
+残りの rank~$3$ の二次 cohomology は一次 cohomology の積では生成されない。
+この ring 計算だけでは homotopy 型は決まらない。次では marked cellular model から wedge decomposition 自体を証明する。
+\end{remark}
+
+\input{meridian_topology.tex}
+
+\subsection{境界 plumbing、peripheral kernel、contact plane field}
+
+\begin{proposition}[固定すべき境界]
+\label{cs6:boundary}
+$\partial N(D')=-Y$ の plumbing graph は、頂点の self-intersection weight が
+$(0,1,1,1,1)$ である完全 graph $K_5$ である。その plumbing matrix は
+\[
+ Q=J_5-\operatorname{diag}(1,0,0,0,0)
+ =\begin{pmatrix}
+ 0&1&1&1&1\\
+ 1&1&1&1&1\\
+ 1&1&1&1&1\\
+ 1&1&1&1&1\\
+ 1&1&1&1&1
+ \end{pmatrix}.
+\]
+この matrix は rank~$2$、Smith normal form は
+$\operatorname{diag}(1,1,0,0,0)$ であり、
+\begin{equation}
+ H_1(Y;\mathbb Z)\cong\mathbb Z^9.
+ \label{cs6:h1boundary}
+\end{equation}
+さらに $Y$ の reduced JSJ graph は $K_5$ そのものである。
+\end{proposition}
+
+ここでの $K_5$ は三次元境界の Seifert pieces の隣接 graph である。
+Lagrangian fibration の二次元基底で core vertex の link として現れる graph とは、
+異なる不変量である。
+
+\begin{proof}
+五つの strict transform は以前と同じ十個の transverse double point で交わり、
+blow-up した成分だけ self-intersection が $1$ から $0$ に下がる。
+これは表示された plumbing を与える。
+$Q$ の第二行から第一行を引くと第一座標だけが残り、
+残りは最後の四座標の和だけになるので、rank と Smith form が得られる。
+
+$N=N(D')$ は五つの二次元 sphere を $K_5$ に従って貼った空間へ retract する。
+従って $H_2(N)=\mathbb Z^5$、$H_1(N)=\mathbb Z^6$、$H_3(N)=0$ である。
+Poincar\'e--Lefschetz duality と pair $(N,\partial N)$ の exact sequence により
+\[
+ 0\longrightarrow\operatorname{coker}Q
+ \longrightarrow H_1(Y;\mathbb Z)
+ \longrightarrow H_1(K_5;\mathbb Z)\longrightarrow0
+\]
+が得られる。両端は $\mathbb Z^3$ と $\mathbb Z^6$ なので
+\eqref{cs6:h1boundary} が従う。
+
+各 Seifert piece は $S^1\times\Sigma_{0,4}$ である。
+ここで $\Sigma_{0,4}$ は四穴 sphere であり、$\chi(\Sigma_{0,4})=-2$ である。
+各境界 torus はこの piece に incompressible である。
+plumbing gluing は一方の circle fiber と他方の circle fiber を交点数 $\pm1$ の
+二つの slope に送るため、隣接する Seifert fibrations は接続しない。
+また、base Euler 数が負なので Seifert fibration の曖昧さを生む
+$T^2\times I$、solid torus、twisted $I$-bundle の例外は生じない。
+従って十個の plumbing tori は reduced JSJ system である。
+この判定は Neumann~\cite[\S5, pp.~321--322]{Neumann} の reduced graph criteria
+にも直接一致する。projective line arrangement の graph-manifold の記述については
+Cohen--Suciu~\cite[\S2.5]{CohenSuciu} も参照されたい。
+\end{proof}
+
+\begin{corollary}[peripheral homology の必要条件]
+\label{cs6:peripheral}
+境界包含 $i:Y\hookrightarrow K$ には exact sequence
+\begin{equation}
+ 0\longrightarrow\mathbb Z^6
+ \longrightarrow H_1(Y;\mathbb Z)
+ \xrightarrow{i_*}\mathbb Z^3\longrightarrow0
+ \label{cs6:peripheralsequence}
+\end{equation}
+がある。境界を固定した diffeomorphism による置換は、
+境界多様体の同型だけでなく、この rank~$6$ の peripheral kernel を保存しなければならない。
+\end{corollary}
+
+\begin{proof}
+$H_2(K)\to H_2(K,Y)$ は intersection map であり、命題~\ref{cs6:invariants} により零である。
+$H_2(K,Y)\cong H^2(K)=\mathbb Z^6$、
+$H_1(K,Y)\cong H^3(K)=0$ を pair の exact sequence に代入すればよい。
+\end{proof}
+
+plumbing fiber meridian を $\mu_i$ とすると、$H_1(Y)$ では
+\[
+ \mu_1=0,\qquad\mu_2+\mu_3+\mu_4+\mu_5=0.
+\]
+これら meridian が張る $\operatorname{coker}Q\cong\mathbb Z^3$ は
+$i_*$ により $H_1(K)$ へ同型に写る。
+ただし $\mu_1=0$ は homology の主張であり、boundary fundamental group で
+対応する Seifert fiber が自明になるという主張ではない。
+
+\begin{proposition}[contact plane field と log canonical 数]
+\label{cs6:contact}
+$U$ の canonical line bundle は代数的に自明である。
+ample divisor exhaustion から得られる Stein core の contact boundary $(Y,\xi)$ は
+\[
+ c_1(\xi)=0,\qquad
+ \theta(\xi)=-8,\qquad d_3(\xi)=-2
+\]
+を満たす。ここで $d_3=\theta/4$ の規約を用いる。
+一方、選んだ compactification の log canonical square は
+\[
+ (K_M+D')^2=(2H)^2=4.
+\]
+\end{proposition}
+
+\begin{proof}
+$K_M=-3H+E=-D'_1-D'_2-D'_3$ であり、右辺は全て取り除いた divisor 上に支持される。
+従って $K_U\cong\mathcal O_U$ である。
+Stein boundary 上で $c_1(\xi)$ は $c_1(TU)$ の制限であるから零である。
+Gompf の invariant の定義と不変性
+\cite[Definition~4.2, Theorem~4.5]{Gompf} により
+\[
+ \theta(\xi)=c_1(TK)^2-2\chi(K)-3\sigma(K)=0-8-0=-8.
+\]
+$K_M+D'=(-3H+E)+(5H-E)=2H$ から最後の等式を得る。
+\end{proof}
+
+四直線 pants の log canonical square は $1$ なので、四つの pants はこの数とも整合する。
+しかし log canonical square は固定境界の diffeomorphism 型や contact 型を決定しない。
+ここでは、比較する log pair を明示しないまま log canonical square の加法性を仮定していない。
+同様に $c_1(\xi)$ と $d_3(\xi)$ の一致は contactomorphism の十分条件ではない。
+
+\subsection{全 Seifert face だけを貼る案に対する no-go}
+
+$P$ を四直線の小さい neighborhood を $\mathbb P^2$ から取り除いた標準 compact pants とする。
+その境界は四つの $S^1\times\Sigma_{0,3}$ と六つの corner tori を持ち、
+boundary graph は $K_4$ である。
+この記述と必要な section の選び方は
+Golla--Martelli~\cite[\S4.2]{GollaMartelli} にある。
+
+\begin{definition}[disjoint full-face assembly]
+\label{cs6:assemblydef}
+有限個の $P$ の互いに素なコピーを用意する。
+各 boundary JSJ torus に小さい torus collar を置き、
+四つの Seifert pieces を少し縮めて、その閉包が互いに離れた
+$F\cong S^1\times\Sigma_{0,3}$ になるようにする。
+これらの $F$ を高々一回ずつ、向きを逆にする diffeomorphism で二つずつ貼る。
+残りの torus collars は外側境界に残し、角だけを丸める。
+この操作以外の torus filling、handle attachment、corner 上の多重同一視、
+二次元 nerve cell に対応する充填を行わないものを
+\emph{disjoint full-face assembly} と呼ぶ。
+
+各 pants を頂点、貼った face の対を辺とする graph を $\Gamma$ とする。
+$\Gamma$ の loops と multiple edges は許す。
+face collars が互いに離れているという条件により、全空間はこの graph 上の
+通常の graph of spaces であり、隠れた triple intersection や nerve の二次元 cell を持たない。
+\end{definition}
+
+\begin{lemma}[assembly の基本群]
+\label{cs6:assemblypi}
+連結な disjoint full-face assembly $A$ に対して、
+\[
+ \pi_1(A)\cong\mathbb Z^3\rtimes_\rho F_g,
+ \qquad g=b_1(\Gamma),\qquad
+ \rho:F_g\longrightarrow\operatorname{GL}(3,\mathbb Z)
+\]
+となる。特に $\pi_1(A)\cong\mathbb Z^3$ ならば $\Gamma$ は tree である。
+\end{lemma}
+
+\begin{proof}
+各標準 face の包含について
+\[
+ \pi_1(F)=\mathbb Z\times F_2\longrightarrow\pi_1(P)=\mathbb Z^3
+\]
+は可換化であり、$H_1(F)\to H_1(P)$ は整数格子の同型である。
+実際、face の normal circle と、base pants の二つの boundary loops を取れば、
+これらは四直線 meridian のうち三つの独立なものを、
+normal meridian の整数倍を加えただけの形で与える。
+従って行列式は $\pm1$ である。
+
+van Kampen の表示では、各 edge group の commutator subgroup が両端で零になる。
+face 間の diffeomorphism はこの commutator subgroup を保存するので、
+同じ表示を、vertex group と edge group が全て $\mathbb Z^3$ で、
+全ての edge map が同型である graph of groups として書ける。
+maximal tree の辺を使って全 vertex group を一つの $\mathbb Z^3$ に同定すれば、
+残りの $g$ 個の stable letters がその格子に automorphism として作用する。
+これが表示された semidirect product である。
+
+$g\geq2$ なら $F_g$ への商が非可換なので $\pi_1(A)$ は $\mathbb Z^3$ ではない。
+$g=1$ でも、作用が非自明なら群が非可換で、作用が自明なら群は $\mathbb Z^4$ になる。
+従って目標群が $\mathbb Z^3$ なら $g=0$ である。
+\end{proof}
+
+\begin{lemma}[tree assembly の境界 graph は planar]
+\label{cs6:planar}
+$\Gamma$ が tree である disjoint full-face assembly の境界は graph manifold であり、
+その reduced JSJ graph は planar である。
+\end{lemma}
+
+\begin{proof}
+初めに各 pants の boundary graph は planar な $K_4$ である。
+異なる二つの連結成分の face を一対貼る操作は、それぞれの boundary graph から
+対応する trivalent vertex を除き、三つずつの half-edge を対にする
+\emph{3-edge vertex-sum} である。
+三つの端点の任意の対応は、円周の順序を保つか逆にする写像で実現できる。
+二つの sphere から小さい円板を除き、その境界をこの対応で貼れば再び sphere になるので、
+この graph 操作は planarity を保つ。
+$\Gamma$ が tree なら、葉から順にこの操作を繰り返して全境界 graph を得る。
+
+この段階の vertex pieces は全て $S^1\times\Sigma_{0,3}$ である。
+これらは irreducible で boundary-incompressible であり、
+境界 tori に沿う貼合せはこの性質と貼合せ tori の incompressibility を保つ。
+隣接する piece の fiber slopes が一致する torus があれば、その torus を取り除いて
+二つの Seifert pieces を一つに合わせる。
+base Euler 数は加法的で負のままなので、Seifert fibration の exceptional な非一意性は生じない。
+base が貼合せにより非 orientable になった場合も、この負の Euler 数による一意性は同じである。
+異なる fiber slopes を持つ tori だけが残った段階で reduced JSJ system となる。
+graph 上ではこれらの操作は edge contraction と、同一 piece 内での loop の除去であり、
+いずれも planar graph を planar graph に保つ。
+\end{proof}
+
+\begin{theorem}[全 face だけによる四 pants 置換の不可能性]
+\label{cs6:nogo}
+上で定義した $K$ は、disjoint full-face assembly と diffeomorphic ではない。
+従って、一つの smooth boundary blow-up による
+$W_5$-core と一つの node を、四つの標準 pants だけの
+disjoint full-face assembly に置き換える fixed-boundary smooth surgery は存在しない。
+特にこの範囲の exact symplectic surgery も存在しない。
+\end{theorem}
+
+\begin{proof}
+$K\cong A$ と仮定すると、命題~\ref{cs6:invariants} と補題~\ref{cs6:assemblypi} により
+gluing graph は tree である。
+従って補題~\ref{cs6:planar} により $\partial A$ の reduced JSJ graph は planar である。
+しかし命題~\ref{cs6:boundary} により $\partial K$ の reduced JSJ graph は非 planar な $K_5$ である。
+JSJ decomposition の一意性に矛盾する。
+なお、全 face の Euler 数が零なので $\chi(A)$ は pants の個数に等しく、
+目標が $K$ ならその個数は自動的に四つになる。
+\end{proof}
+
+\begin{remark}[この定理が除外しない操作]
+\label{cs6:nogoscope}
+一般の tropical pants decomposition では、corner tori の周囲に regular torus 領域を加えて
+二次元 cell を充填したり、circle collapse を行ったりする。
+その場合、全空間は定義~\ref{cs6:assemblydef} の graph of spaces ではなく、
+追加の二次元関係が基本群を変える。
+従って補題~\ref{cs6:assemblypi} をそのまま適用できない。
+Golla--Martelli の任意有限表示群の構成もこの広い設定であり、上の定理と矛盾しない。
+四つの pants と Euler 数零の領域を用いる一般の置換は、依然として検討すべき問題である。
+\end{remark}
+
+\subsection{relative mapping class と monodromy の検査項目}
+
+Golla--Martelli~\cite[Proposition~4.3]{GollaMartelli} の記述は、
+corner を含めた貼合せを次に試す際の具体的な必要条件を与える。
+section と fiber の基底を固定した face gluing の三つの境界行列は
+\[
+ L_j=\begin{pmatrix}\epsilon&k_j\\0&\epsilon'\end{pmatrix},
+ \qquad \epsilon,\epsilon'\in\{1,-1\},\qquad k_1+k_2+k_3=0
+\]
+を満たさなければならない。
+さらに、各 disk face の周囲には、vertex での基底変更行列 $J_j$ を含めて
+\[
+ J_nL_n\cdots J_1L_1=I
+\]
+が必要である。
+これらは「三つの torus に別々に都合のよい行列を割り当てる」操作が
+一つの $S^1\times\Sigma_{0,3}$ の diffeomorphism から来るための制約である。
+face が disk でない場合は、境界 monodromy が内部へ延長することと、
+その延長自体の選択がさらに必要になる
+\cite[Remark~4.9]{GollaMartelli}。
+これらの topological 条件に加え、Lagrangian fibration の surgery では
+実際の symplectic collar、period lattice、action primitive の相対的一致が必要である。
+
+五直線モデルからは、補助的な braid monodromy の検査も得られる。
+以下は deleted divisor の monodromy であり、focus--focus monodromy と混同しない。
+
+\begin{proposition}[ruling に付随する boundary braid]
+\label{cs6:braid}
+$p$ をさらに一般に選ぶと、projection from $p$ は
+\[
+ U\cong\bigl(\mathbb A^1_t\times\mathbb P^1_y\bigr)
+ \setminus\bigcup_{i=2}^5\{y=a_it+b_i\}
+\]
+と書ける。$a_i$ は相異なり、六つの pairwise collision parameters は相異なる。
+affine fiber chart $\mathbb A^1_y$ における四つの punctures の boundary braid は
+\[
+ \beta_1\cdots\beta_6=\Delta_4^2=(\sigma_1\sigma_2\sigma_3)^4\in B_4,
+\]
+各 $\beta_j$ は二点の正の full twist の共役である。
+factorization は distinguished paths の変更で Hurwitz move と simultaneous conjugation を受ける。
+\end{proposition}
+
+\begin{proof}
+$p=[0:0:1]$、$L_1=\{X=0\}$ と取る。
+projection parameter を $t=Y/X$、fiber coordinate を $y=Z/X$ とすれば、
+残り四直線は $y=a_it+b_i$ であり、例外曲線は $y=\infty$ の section になる。
+三重点がないので $a_i$ は相異なる。
+$p$ を有限個の追加の位置から避ければ、異なる pair の collision values も相異なる。
+
+一つの collision value の周囲では、二つの punctures の差が
+非零定数倍の $t-t_0$ である。正の一周でその差は一回回転するので、
+local braid は正の full twist になる。
+十分大きい $|t|=R$ 上では $b_i$ を零へ縮めても punctures は衝突しない。
+従って boundary braid は四点 $a_it$ の同時の正の一回転、すなわち $\Delta_4^2$ である。
+\end{proof}
+
+この ruling は非 proper な submersion であり、collision は取り除いた divisor 上で起こる。
+従ってここで「六つの critical values」は interior Lefschetz singularities の数を意味しない。
+ruling と affine fiber chart を保持する置換なら上の factorization を合わせる必要があるが、
+任意の smooth surgery に ruling の保存を要求しているわけではない。
+
+\subsection{very affine realization に対する障害}
+
+\begin{proposition}[例外 affine line と unit map]
+\label{cs6:veryaffine}
+$U$ は very affine ではない。
+より強く、任意の algebraic morphism $U\to(\mathbb C^*)^N$ は
+$E^\circ\cong\mathbb A^1$ 上で定数になる。
+unit group は
+\[
+ \mathcal O(U)^*/\mathbb C^*\cong
+ \{(c_1,\ldots,c_5)\in\mathbb Z^5:
+ c_1=0,\ c_2+c_3+c_4+c_5=0\}\cong\mathbb Z^3
+\]
+である。
+\end{proposition}
+
+\begin{proof}
+invertible regular function を $\mathbb A^1$ に制限すると、
+零点を持たない多項式なので定数である。
+torus への morphism の全座標がこの性質を持つため、$E^\circ$ を分離できない。
+unit group の式は divisor exact sequence から得られる。
+すなわち $M$ 上の rational function が $U$ 上で unit であることは、
+その divisor が $D'_1,\ldots,D'_5$ 上に支持されることと同値であり、
+\[
+ \sum_i c_i[D'_i]
+ =\Bigl(\sum_i c_i\Bigr)H-c_1E=0
+\]
+が必要十分である。
+\end{proof}
+
+この計算により、固定した複素曲面 $U$ を一つの algebraic torus 内の smooth hypersurface
+としてそのまま Newton polytope で subdivision する方法は使えない。
+これは別の複素構造への変形、symplectic decomposition、部分領域の very affine chart、
+または non-toric な追加 chart を用いる構成の否定ではない。
+$U$ は四直線 complement に対し、五本目の直線との交わりを divisor、$p$ を center とする
+affine modification として記述できる。
+この操作の代数的枠組みは Kaliman--Zaidenberg~\cite[\S\S1--3]{KalimanZaidenberg} にある。
+

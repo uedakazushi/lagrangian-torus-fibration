@@ -1,0 +1,205 @@
+\section{実際の成分への移植と大域接着}\label{sec:gluing}
+
+\subsection{divisorに相対的な二つの同定}
+成分側のsymplectic modelを実際の中心成分へ移す際、全空間の退化写像を保存するgermまで作る必要はない。
+まず成分上でdivisorとnormal circle actionを合わせ、その後でdivisorから離れた領域を運ぶ。
+このために用いる二つの補題を記す。
+
+\begin{lemma}[交点近傍を固定するMoser同定]\label{glue:pair-moser}
+$M$をcompact symplectic 4多様体、$D=\bigcup C_j$をdouble crossingsのみの固定divisorとする。
+$\omega_s$はcohomology classが一定のsymplectic pathで、各$C_j$は全$s$でsymplecticであるとする。
+さらに、全ての交点の固定された互いに素なball近傍で$\omega_s$は$s$に依存しないとする。
+このとき、各labelled $C_j$を保存し、より小さい交点近傍では恒等なisotopy $\phi_s$で
+$\phi_s^*\omega_s=\omega_0$を満たすものがある。
+\end{lemma}
+\begin{proof}
+$\mathrm d\alpha_s=\partial_s\omega_s$を滑らかに選ぶ。
+交点ball上では$\alpha_s$は閉じているので、局所primitiveの微分をcutoffして引き、より小さいballで$\alpha_s=0$とする。
+その外では各曲線は互いに素である。
+$N_s=(TC_j)^{\omega_s}$に沿い
+\[
+F_s|_{C_j}=0,\qquad \mathrm dF_s|_{N_s}=-\alpha_s|_{N_s}
+\]
+というfirst jetを指定してtubeへ延長する。交点の小近傍では$F_s=0$とする。
+$\beta_s=\alpha_s+\mathrm dF_s$として$\iota_{Y_s}\omega_s=-\beta_s$を解くと、$Y_s$は各$C_j$に接し、交点近傍で0である。
+compactnessとMoserの公式から結論を得る。
+\end{proof}
+
+\begin{lemma}[normal circle actionの相対共役]\label{glue:circle}
+compact symplectic curve $C\subset(M,\omega)$を点ごとに固定し、normal weightが$+1$である二つのHamiltonian circle action germsを考える。
+指定したcrossing disksの近傍では作用が一致すると仮定する。
+そのとき$C$の任意に小さい近傍に支持された大域Hamiltonian diffeomorphismにより、さらに小さいcollar上で両作用を共役できる。
+より小さいcrossing neighborhoodsでは恒等にできる。
+\end{lemma}
+\begin{proof}
+normal bundleの二つのlinear actionsはcompatible complex structures $J_0,J_1$を与える。
+$\operatorname{Sp}(2,\RR)/U(1)$のcontractibilityを用い、identityからのsymplectic bundle mapsのpath $A_s$を、終点で両作用をintertwineし、crossing disksでは恒等となるように選ぶ。
+余分な$U(1)$ gauge transformationは導入しない。
+equivariant symplectic tubular-neighborhood theoremにより、$C$を固定しnormal derivativeが$A_1$であるsymplectic germ $\eta$を得る\cite{DHJH}。
+この相対形では、tubular mapsをcrossing近傍で一致させ、差のprimitiveをnormal radial homotopyと平均化で構成する。
+
+$A_s$のinfinitesimal generatorをfiberwise quadratic Hamiltonianで実現する。
+そのflowを$\eta$から除けば、$C$上のfull first jetがidentityのsymplectic germが残る。
+diagonalのWeinstein chartでそのgraphはclosed 1-form $\sigma$のgraphとなる。
+十分小さいtubeでは$C^1$-smallにでき、$\sigma$は$C$上で0である。
+tubeは$C$へretractするので$\sigma$はexactであり、$s\sigma$のgraphsからHamiltonian isotopyを得る。
+Hamiltonianを$C$上で0に正規化し、crossing近傍では恒等とする。
+これらのHamiltoniansを少し大きいtube内でcutoffすれば、より小さいtube上で元のgermと一致する大域mapを得る。
+同種のrelative first-jet argumentは\cite[Lemma 3.7]{CGblowup}にも用いられる。
+\end{proof}
+
+\subsection{nodal blow-upを含む実際の成分}
+各$D_i$のblow-downである$\PP^2$上に、系\ref{comp:finite}のfibrationを置く。
+crossing product germsは、前節で固定した全空間の形式の制限と同じに取る。
+各$q_{ijr}$を相異なるregular boundary leavesに乗せ、有限個の互いに素なregular elliptic-boundary patchesを選ぶ。
+各点のholomorphic座標でboundary lineを一方の座標軸とし、Kähler potentialのlogarithmic cutoffによりflat ballを作る。
+この変更のsupportはcoreと全critical leavesから離せる。
+ballはdivisor-compatible、すなわち少し大きいballまで延び、その中でdivisorが複素座標平面の像となる。
+
+十分小さい$\eps$を選び、$q_{ijr}$で面積$(j-i)\eps$のKähler blow-upを行う。
+これは指定された実際の複素blow-upであり、局所patch外の形式を変えずに行える\cite{Fleming}。
+classは
+\[
+[\omega_i^{\rm mod}]=a_iH_i-\sum_{j>i,r}(j-i)\eps E_{ij,r}
+\]
+となる。
+各patchのaffine-convexな領域にChakravarthy--Gromanの相対比較定理を適用する\cite[Theorem 1.1]{CGblowup}。
+得られるsymplectomorphismはpatch外で恒等であり、divisor-compatibleなballの場合にはstrict boundary divisorも保存する。
+従って実際のKähler blow-up上に、一個ずつfocus--focus fiberを持つfibrationを移せる。
+これは\emph{局所的な}almost toric patchでの適用であり、全てのboundary linesの和をanticanonical divisorとする仮定は要らない。
+
+同じ複素曲面$D_i$上で$\omega_i^{\rm mod}$とinitial Kähler restrictionを凸結合する。
+同じclassを持ち、crossing product germsは固定される。
+さらに前節のexact $J$-tame pathを制限して、実際の最終形式$\Omega_i$へ進む。
+全てのboundary curvesはこのpath中でsymplecticである。
+補題\ref{glue:pair-moser}でlabelled divisorを保つ同定を得た後、補題\ref{glue:circle}でactual neckのnormal actionと一致させる。
+成分側で必要なら作用を反転し、weightを$+1$、momentを$\rho=\pm\mu$として比較する。
+momentはdivisor上で0に正規化するので、共役後の加法定数も一致する。
+supportを薄いdivisor collarに取れば、coreと全compact nodal fibersを避けられる。
+
+\begin{proposition}\label{glue:components}
+以上により実際の$(D_i,\Omega_i)$上に、一個のcore fiberと$d(d-i)$個のnodal fibersを持つfibrationが得られる。
+boundary近傍ではactual neckのnormal circle actionを含み、crossing近傍ではactual toric leavesと一致する。
+各$C_{ij}$上のreduced葉層は、先に指定したembedded marked decompositionの$\Diff_0(P_{ij}\operatorname{ rel\ collars})$-orbitに属する。
+\end{proposition}
+\begin{proof}
+fiberの数と型はconstructionおよび局所比較定理から従う。
+marked条件については、divisor-relative Moserが交点disksを固定するisotopyであり、circle conjugacyはdivisorを点ごとに固定することを使う。
+局所blow-upの変更はregular annulus内に支持される。
+そこで生じるannular twistsは葉層のstabilizerとして吸収できる。
+従って同じ実際の曲線上のrelative isotopy classは変わらない。
+\end{proof}
+
+\subsection{正のnormal momentで切断した領域の輸送}
+\begin{lemma}\label{glue:transport}
+$K\Subset U\Subset D_i^{\circ}$をcompact buffer付きで選ぶ。$K$はcornerを持ってよい。
+十分小さい$t$に対して、その近傍からactual $X_t$へのsymplectic embedding $\mathcal P_t$が存在する。
+collarの全空間内近傍で$f,\Omega$を保つHamiltonian torus actionがあれば、より小さいcollar上で$\mathcal P_t$はequivariantで、全空間上で正規化したmomentsを保つ。
+\end{lemma}
+\begin{proof}
+$D_i^{\circ}$では$f$はsubmersionであり、$\mathcal V=\ker\mathrm df$は$J$-invariantである。
+$J$-tamingから$\Omega|_{\mathcal V}$は非退化なので
+$\mathcal H=\mathcal V^\Omega$はsymplectic connectionを与える。
+path $s\mapsto st$のhorizontal liftを流す。
+compact buffer上のvector fieldは一様に$O(|t|)$であり、一様に小さい$t$でflowが存在する。
+$\mathrm d\Omega=0$とvertical distributionのintegrabilityにより、flowはfiberwise symplectic formsを保つ。
+
+作用が$f,\Omega$を保つ領域ではhorizontal distributionが不変なのでequivarianceを得る。
+horizontal liftを$W$、vertical action generatorを$V_a$とすれば
+\[
+W\mu_a=-\Omega(V_a,W)=0.
+\]
+従ってmomentは加法定数も含めて保存される。
+これは標準的なequivariant symplectic transportの構成である\cite{EvansNotes}。
+\end{proof}
+
+各成分を、normal momentsが正の小定数以上となる領域で切断する。
+全coreと全compact nodal fibersを含むcompact saturated region $K_i$と、その少し大きいbufferを選ぶ。
+nodeのcritical pointだけを残すのではなく、pinched torus全体とその飽和近傍を$K_i$に入れる。
+補題\ref{glue:transport}で、$K_i$上のfibrationをactual $X_t$へ移す。
+境界のreduced foliationsは、同じHamiltonian neckの上の滑らかなparameter germsとなる。
+補題\ref{neck:marked-interpolation}により、それらを同じ$\Omega$上で接続する。
+$\{\mu,h_\mu\}=0$なので全体のLagrangian性が保たれる。
+三重点の端ではradial circlesを保ち、同じtoric leavesとなる。
+
+\subsection{三重点での飽和した切断}\label{glue:hexagon}
+product chart $uvw=t$における正のradial actionsを$q_u,q_v,q_w$とし、
+\[
+m_1=q_v-q_u,\qquad m_2=q_w-q_u
+\]
+をmoment coordinatesとする。
+固定crossing chartのaction radiusより十分小さい$L>0$と、$0<\delta<L/3$を選ぶ。
+三つのcomponent corner regionsを
+\[
+\begin{array}{ll}
+U_u:&m_1,m_2\ge\delta,\quad m_1+m_2\ge L,\\
+U_v:&-m_1,m_2-m_1\ge\delta,\quad m_2-2m_1\ge L,\\
+U_w:&-m_2,m_1-m_2\ge\delta,\quad m_1-2m_2\ge L
+\end{array}
+\]
+とし、三つのneck endsを
+\[
+\begin{array}{ll}
+N_{uv}:&|m_1|\le\delta,\quad m_2-\frac12m_1\ge L-\frac32\delta,\\
+N_{uw}:&|m_2|\le\delta,\quad m_1-\frac12m_2\ge L-\frac32\delta,\\
+N_{vw}:&|m_1-m_2|\le\delta,\quad-\frac12(m_1+m_2)\ge L-\frac32\delta
+\end{array}
+\]
+とする。残るcentral regionは六つの上側半平面
+\begin{align*}
+m_1+m_2&\le L,&m_2-2m_1&\le L,&m_1-2m_2&\le L,\\
+m_2-\tfrac12m_1&\le L-\tfrac32\delta,&
+m_1-\tfrac12m_2&\le L-\tfrac32\delta,&
+-\tfrac12(m_1+m_2)&\le L-\tfrac32\delta
+\end{align*}
+で定義される六角形$H$である。
+三つの長辺はcomponents、三つの短辺はnecksへ接続する。
+例えば$m_1=\delta$および$-\delta$で$N_{uv}$の下端はそれぞれ$m_2=L-\delta$および$L-2\delta$となり、$U_u,U_v$と一致する。
+他の界面も同じ計算で確認できる。
+最小の$q$の添字、および残る二つとの差が$\delta$以上かどうかで場合分けすると、七領域がmoment planeを内部互いに素に分割することが分かる。
+
+nearby fiberでは$q_uq_vq_w=c|t|^2>0$である。
+固定した$(m_1,m_2)$に対し、三つの差と積は正の$(q_u,q_v,q_w)$を一意に定める。
+従ってmoment fiberは一つの$T^2$ orbitである。
+$H$では$q_{\max}-q_{\min}\le L$であり、$q_{\min}\le(c|t|^2)^{1/3}$なので、まず$L$、次に$t$を小さくすれば$H$とbufferはactual chartに入る。
+全interfaceはaffine moment cutsだから、whole torus fibersのunionである。
+equivariant transportは同じmomentsを保つので、component側のtorusもこの唯一のorbitへ移る。
+
+\subsection{大域性と元のKähler formへの復帰}
+\begin{proof}[定理\ref{main:global}の存在部分の証明]
+前段までの構成は、成分のcore、double-curve necks、triple blocksの有限個のpiecesをactual $X_t$の中に与える。
+最初に固定したbuffersによって、それらの全空間内のopen neighborhoodsは中心fiber全体を覆う。
+$f$はproperなので、十分小さい全ての$t$で$X_t$も覆う。
+実際、そうでなければ$t_\nu\to0$と被覆の外の$x_\nu\in X_{t_\nu}$を取り、propernessで中心fiberの点へ収束させると、その点を含むopen neighborhoodに反する。
+
+最終的な切断を、成分ではnormal moment domains、necksではmoment intervalsとreduced Reeb domains、三重点では前項のmoment cutsで行う。
+全interfaceは飽和しており、open overlap上で葉層が一致する。
+従ってpiecesの連結fiberを同一のfiberとして貼り合わせることができる。
+基底piecesはclosed facesに沿って有限個貼り合わされ、Hausdorffな有限2複体を与える。
+全空間がcompactであるためquotient mapはproperである。
+新しい特異fiberや余分な連結成分は生じない。
+component core、simple saddle lifts、およびnodal surgeriesから得た特異strataは、各段階のsymplectomorphismとtransportによりisotropicのままである。
+
+actual glued baseのcellsは次のように読み取れる。
+各componentのcoreは頂点$v_i$となり、$T_{ij}$の内部頂点$p$に対応するsaddleのtrackは、$v_i$と$v_j$を結ぶbranch edgeとなる。
+内部辺$pq$のregular cylinderは二本のbranch edgesの間のbigonを与える。
+葉$k$に接するsectorは三重点$ijk$へ向かう。
+三つのcomponent sectorsと三つのneck stripsの間を前項のtoric hexagonで埋めると、境界が$ij,jk,ik$の三つの指定branch edgesである一枚のdiskを得る。
+これは三角形cellである。
+従って得られた基底は、次節のcellularな$B_d(T)$と同相である。
+この有限正則CW表示により、前段のclosed-face gluingのHausdorff性も具体的に確認できる。
+各$i<j$で$d$個のnodal surgeriesがあるから、node総数は$d\binom d2$である。
+全てのexact modificationは元の$J$をtameするfixed-class pathで行ったので、compact $X_t$上のMoser同定によって、最後のfibrationを最初のKähler formへ移せる。
+
+最後に、次数$d$の滑らかな射影超曲面のparameter spaceは連結である。
+二つの点をdiscriminantを避ける滑らかなpathで結び、Fubini--Study formsの制限を用いる。
+Ehresmann trivializationの下でhyperplane classは一定なので、Moserにより各fiberはclass $aH$を保ってsymplectomorphicである。
+同一の複素曲面上の二つのKähler formsが同じclassを持つ場合は、その凸結合にMoserを適用する。
+従って構成を任意の$(X_d,\omega)$へ移せる。
+\end{proof}
+
+\begin{remark}
+この証明は、symplectic transportを$t=0$の二重曲線そのものまで連続に延長する定理を用いていない。
+必要なのはsmooth stratum内の固定compact subsetsからのtransportだけである。
+三重点と二重曲線の中心近傍は、それぞれ独立に正確な$uvw=t$と$xy=t$のchartsで扱う。
+\end{remark}

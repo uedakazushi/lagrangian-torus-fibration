@@ -1,0 +1,369 @@
+{
+  "version": "v25",
+  "status": "PASS",
+  "theorem": "In G5_14 central pairs 01 and 23 cannot both be negative; under four-ray matching, the central matching must be {01,23}.",
+  "scope": "Structural reduction only; G5_14 with the aligned central matching remains unresolved.",
+  "proof_dependencies": [
+    "G5_14 five-node exclusion",
+    "three-high matching",
+    "complete unit-edge triangle classification",
+    "at least one positive external pair",
+    "four-ray matching only for the final matching conclusion"
+  ],
+  "polynomial_identity_count": 14,
+  "polynomial_identities": [
+    "first_low_row",
+    "second_low_row",
+    "opposite_low_D_after_R_equals_2h_minus_k",
+    "node_zero_E0_first_clutching",
+    "node_zero_E0_second_clutching",
+    "node_zero_external_original_pair",
+    "node_one_E3_negative_endpoint_clutching",
+    "node_one_E3_positive_endpoint_clutching",
+    "node_one_external_original_pair",
+    "first_mutual_case_q02_scale_difference",
+    "first_mutual_case_forced_row_entry",
+    "first_mutual_case_original_pair_remainder",
+    "second_mutual_case_zero_entry",
+    "second_mutual_case_nonzero_pair_target"
+  ],
+  "all_sign_configurations_before_normalization": [
+    {
+      "original_low_positive_positions": [
+        2,
+        4,
+        0,
+        4
+      ],
+      "normalized_low_positive_positions": [
+        2,
+        4,
+        0,
+        4
+      ]
+    },
+    {
+      "original_low_positive_positions": [
+        2,
+        4,
+        1,
+        4
+      ],
+      "normalized_low_positive_positions": [
+        2,
+        4,
+        1,
+        4
+      ]
+    },
+    {
+      "original_low_positive_positions": [
+        2,
+        4,
+        4,
+        0
+      ],
+      "normalized_low_positive_positions": [
+        3,
+        4,
+        0,
+        4
+      ]
+    },
+    {
+      "original_low_positive_positions": [
+        2,
+        4,
+        4,
+        1
+      ],
+      "normalized_low_positive_positions": [
+        3,
+        4,
+        1,
+        4
+      ]
+    },
+    {
+      "original_low_positive_positions": [
+        3,
+        4,
+        0,
+        4
+      ],
+      "normalized_low_positive_positions": [
+        3,
+        4,
+        0,
+        4
+      ]
+    },
+    {
+      "original_low_positive_positions": [
+        3,
+        4,
+        1,
+        4
+      ],
+      "normalized_low_positive_positions": [
+        3,
+        4,
+        1,
+        4
+      ]
+    },
+    {
+      "original_low_positive_positions": [
+        3,
+        4,
+        4,
+        0
+      ],
+      "normalized_low_positive_positions": [
+        2,
+        4,
+        0,
+        4
+      ]
+    },
+    {
+      "original_low_positive_positions": [
+        3,
+        4,
+        4,
+        1
+      ],
+      "normalized_low_positive_positions": [
+        2,
+        4,
+        1,
+        4
+      ]
+    },
+    {
+      "original_low_positive_positions": [
+        4,
+        2,
+        0,
+        4
+      ],
+      "normalized_low_positive_positions": [
+        2,
+        4,
+        1,
+        4
+      ]
+    },
+    {
+      "original_low_positive_positions": [
+        4,
+        2,
+        1,
+        4
+      ],
+      "normalized_low_positive_positions": [
+        2,
+        4,
+        0,
+        4
+      ]
+    },
+    {
+      "original_low_positive_positions": [
+        4,
+        2,
+        4,
+        0
+      ],
+      "normalized_low_positive_positions": [
+        3,
+        4,
+        1,
+        4
+      ]
+    },
+    {
+      "original_low_positive_positions": [
+        4,
+        2,
+        4,
+        1
+      ],
+      "normalized_low_positive_positions": [
+        3,
+        4,
+        0,
+        4
+      ]
+    },
+    {
+      "original_low_positive_positions": [
+        4,
+        3,
+        0,
+        4
+      ],
+      "normalized_low_positive_positions": [
+        3,
+        4,
+        1,
+        4
+      ]
+    },
+    {
+      "original_low_positive_positions": [
+        4,
+        3,
+        1,
+        4
+      ],
+      "normalized_low_positive_positions": [
+        3,
+        4,
+        0,
+        4
+      ]
+    },
+    {
+      "original_low_positive_positions": [
+        4,
+        3,
+        4,
+        0
+      ],
+      "normalized_low_positive_positions": [
+        2,
+        4,
+        1,
+        4
+      ]
+    },
+    {
+      "original_low_positive_positions": [
+        4,
+        3,
+        4,
+        1
+      ],
+      "normalized_low_positive_positions": [
+        2,
+        4,
+        0,
+        4
+      ]
+    }
+  ],
+  "sign_configurations_before_normalization": 16,
+  "normalized_sign_configurations": [
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      0
+    ]
+  ],
+  "mutual_configuration_node_zero_choices": [
+    {
+      "unit01_node_zero": "other_unit_endpoint",
+      "unit23_node_zero": "other_unit_endpoint",
+      "obstruction": "row_forces_minus_q02_and_pair_remainder_minus_one"
+    },
+    {
+      "unit01_node_zero": "other_unit_endpoint",
+      "unit23_node_zero": "central_4",
+      "obstruction": "mixed_q13_impossible"
+    },
+    {
+      "unit01_node_zero": "central_4",
+      "unit23_node_zero": "other_unit_endpoint",
+      "obstruction": "mixed_q13_impossible"
+    },
+    {
+      "unit01_node_zero": "central_4",
+      "unit23_node_zero": "central_4",
+      "obstruction": "row_forces_zero_with_positive_pair_product"
+    }
+  ],
+  "positive_side_q_three_negative_pair_families": [
+    {
+      "family": "N1",
+      "v": 2,
+      "V": 1,
+      "J": 1,
+      "other_q": 3
+    },
+    {
+      "family": "E1",
+      "v": 1,
+      "V": 2,
+      "J": 2,
+      "other_q": 3
+    },
+    {
+      "family": "E2",
+      "v": 2,
+      "V": 1,
+      "J": 1,
+      "other_q": 3
+    },
+    {
+      "family": "E3",
+      "v": 1,
+      "V": 2,
+      "J": 2,
+      "other_q": 3
+    },
+    {
+      "family": "E3",
+      "v": 1,
+      "V": 2,
+      "J": 4,
+      "other_q": 5
+    }
+  ],
+  "unbounded_normal_form": {
+    "low_rows": [
+      [
+        2,
+        -1,
+        -2
+      ],
+      [
+        -1,
+        1,
+        -1
+      ]
+    ],
+    "low_columns": [
+      [
+        "2r",
+        "-k",
+        "-R"
+      ],
+      [
+        "-2r",
+        "2h",
+        -2
+      ]
+    ],
+    "conditions": "r,h >=1; k in {2,4}; R=2h-k>0"
+  },
+  "no_denominator_or_scale_cutoff": true,
+  "old_verifier_imports": false,
+  "stdlib_only": true,
+  "proof_assistant_formalization": false,
+  "proof_file": "g514_central_matching_v25.tex",
+  "proof_sha256": "fe56c191468280d389265fa7f5a5214b306b17bda1e3eeb6b46128b1891f94da",
+  "verifier_file": "verify_g514_central_matching_v25.py",
+  "verifier_sha256": "cf6b7242092e0ab520b71f14c1a1dc467dca0b8d8ea748692a9f1bf578e203a4"
+}

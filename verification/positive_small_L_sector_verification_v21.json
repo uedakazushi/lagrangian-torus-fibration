@@ -1,0 +1,538 @@
+{
+  "version": "v21",
+  "status": "PASS",
+  "scope": "All positive integer two-high models with T-S in {2,3}; no parity, node, clutching or denominator cutoff.",
+  "method": "Exact sparse polynomial coefficient identities; explicit matrix regressions are separate.",
+  "polynomial_identities": 12,
+  "identity_names": [
+    "original_high_pair_equation",
+    "reverse_sign_equation_coefficient",
+    "reverse_slope_gap",
+    "Bezout_after_auxiliary_substitution",
+    "positive_F_growth_identity",
+    "j_squared_inequality",
+    "negative_F_E_lower_bound",
+    "denominator_difference",
+    "negative_F_growth_bound",
+    "d1_floor_bound_odd",
+    "d1_floor_bound_even",
+    "d2_floor_bound"
+  ],
+  "script_sha256": "bf6ef55819839c79d5194837bba85724bbf64c08776c56c833ae8e189b8c8852",
+  "proof_file": "positive_small_L_sector_v21.tex",
+  "proof_sha256": "4d58aeef23da03b70651e6c37455e93beac1a8b88152c90b1871d60335c32e6e",
+  "conclusions": {
+    "positive_F": [
+      "s<=z",
+      "D_D<0<D_C",
+      "a<b"
+    ],
+    "negative_F": [
+      "D_D>=0",
+      "h<=floor((r-1)/2) if delta=2",
+      "h<=r-1 if delta=3",
+      "a>b except the two equal-denominator base points"
+    ],
+    "nonpositive_D_C": [
+      "F<0",
+      "a>b",
+      "T<=floor((3r+3)/2) if delta=2",
+      "T<=2r+2 if delta=3"
+    ],
+    "book_nonzero_cycle": "The three denominators to high vertex 0 are either all smaller or all larger than the corresponding denominators to high vertex 1."
+  },
+  "matrix_regressions": [
+    {
+      "parameters": [
+        1,
+        1,
+        2,
+        2,
+        5
+      ],
+      "q": [
+        3,
+        11,
+        1,
+        1
+      ],
+      "P": [
+        [
+          0,
+          -4,
+          2,
+          -1
+        ],
+        [
+          -8,
+          0,
+          -5,
+          2
+        ],
+        [
+          1,
+          -2,
+          0,
+          0
+        ],
+        [
+          -2,
+          5,
+          -4,
+          0
+        ]
+      ],
+      "D": [
+        6,
+        -10,
+        6,
+        -2
+      ],
+      "F": 1,
+      "alpha": 1,
+      "beta": 3,
+      "weights": [
+        "3",
+        "11",
+        "5/2",
+        "21/10"
+      ],
+      "basin_gaps": [
+        "15",
+        "1/2",
+        "31/10",
+        "11",
+        "15/2",
+        "1/10",
+        "1/2",
+        "16",
+        "21/10",
+        "36/5",
+        "1/2",
+        "109/10"
+      ]
+    },
+    {
+      "parameters": [
+        2,
+        2,
+        6,
+        3,
+        5
+      ],
+      "q": [
+        7,
+        31,
+        1,
+        1
+      ],
+      "P": [
+        [
+          0,
+          -8,
+          3,
+          -2
+        ],
+        [
+          -27,
+          0,
+          -10,
+          6
+        ],
+        [
+          2,
+          -3,
+          0,
+          0
+        ],
+        [
+          -3,
+          5,
+          -3,
+          0
+        ]
+      ],
+      "D": [
+        21,
+        -25,
+        9,
+        -5
+      ],
+      "F": 1,
+      "alpha": 1,
+      "beta": 4,
+      "weights": [
+        "7",
+        "31",
+        "13/4",
+        "61/10"
+      ],
+      "basin_gaps": [
+        "39",
+        "1/4",
+        "81/10",
+        "34",
+        "53/4",
+        "1/10",
+        "1/2",
+        "163/4",
+        "61/10",
+        "253/10",
+        "1/2",
+        "431/20"
+      ]
+    },
+    {
+      "parameters": [
+        5,
+        10,
+        3,
+        9,
+        12
+      ],
+      "q": [
+        91,
+        37,
+        1,
+        1
+      ],
+      "P": [
+        [
+          0,
+          -99,
+          18,
+          -10
+        ],
+        [
+          -34,
+          0,
+          -6,
+          3
+        ],
+        [
+          5,
+          -6,
+          0,
+          0
+        ],
+        [
+          -9,
+          12,
+          -4,
+          0
+        ]
+      ],
+      "D": [
+        -53,
+        56,
+        -9,
+        6
+      ],
+      "F": -6,
+      "alpha": 8,
+      "beta": 3,
+      "weights": [
+        "91",
+        "37",
+        "181/10",
+        "73/24"
+      ],
+      "basin_gaps": [
+        "136",
+        "1/10",
+        "313/24",
+        "125",
+        "241/10",
+        "1/24",
+        "1/2",
+        "728/5",
+        "73/24",
+        "947/8",
+        "1/2",
+        "454/15"
+      ]
+    },
+    {
+      "parameters": [
+        6,
+        6,
+        3,
+        11,
+        14
+      ],
+      "q": [
+        67,
+        43,
+        1,
+        1
+      ],
+      "P": [
+        [
+          0,
+          -72,
+          11,
+          -6
+        ],
+        [
+          -40,
+          0,
+          -6,
+          3
+        ],
+        [
+          6,
+          -7,
+          0,
+          0
+        ],
+        [
+          -11,
+          14,
+          -4,
+          0
+        ]
+      ],
+      "D": [
+        -22,
+        22,
+        -2,
+        2
+      ],
+      "F": -7,
+      "alpha": 5,
+      "beta": 3,
+      "weights": [
+        "67",
+        "43",
+        "133/12",
+        "85/28"
+      ],
+      "basin_gaps": [
+        "115",
+        "1/12",
+        "253/28",
+        "107",
+        "205/12",
+        "1/28",
+        "1/2",
+        "1447/12",
+        "85/28",
+        "2811/28",
+        "1/2",
+        "1951/84"
+      ]
+    },
+    {
+      "parameters": [
+        4,
+        4,
+        2,
+        7,
+        10
+      ],
+      "q": [
+        29,
+        21,
+        1,
+        1
+      ],
+      "P": [
+        [
+          0,
+          -32,
+          7,
+          -4
+        ],
+        [
+          -19,
+          0,
+          -4,
+          2
+        ],
+        [
+          4,
+          -5,
+          0,
+          0
+        ],
+        [
+          -7,
+          10,
+          -4,
+          0
+        ]
+      ],
+      "D": [
+        -7,
+        6,
+        0,
+        1
+      ],
+      "F": -5,
+      "alpha": 3,
+      "beta": 2,
+      "weights": [
+        "29",
+        "21",
+        "57/8",
+        "41/20"
+      ],
+      "basin_gaps": [
+        "53",
+        "1/8",
+        "121/20",
+        "48",
+        "89/8",
+        "1/20",
+        "1/2",
+        "453/8",
+        "41/20",
+        "867/20",
+        "1/2",
+        "613/40"
+      ]
+    },
+    {
+      "parameters": [
+        2,
+        2,
+        1,
+        3,
+        6
+      ],
+      "q": [
+        7,
+        7,
+        1,
+        1
+      ],
+      "P": [
+        [
+          0,
+          -8,
+          3,
+          -2
+        ],
+        [
+          -6,
+          0,
+          -2,
+          1
+        ],
+        [
+          2,
+          -3,
+          0,
+          0
+        ],
+        [
+          -3,
+          6,
+          -4,
+          0
+        ]
+      ],
+      "D": [
+        0,
+        -2,
+        2,
+        0
+      ],
+      "F": -3,
+      "alpha": 1,
+      "beta": 1,
+      "weights": [
+        "7",
+        "7",
+        "13/4",
+        "13/12"
+      ],
+      "basin_gaps": [
+        "15",
+        "1/4",
+        "37/12",
+        "13",
+        "21/4",
+        "1/12",
+        "1/2",
+        "67/4",
+        "13/12",
+        "41/4",
+        "1/2",
+        "91/12"
+      ]
+    },
+    {
+      "parameters": [
+        3,
+        3,
+        2,
+        4,
+        6
+      ],
+      "q": [
+        13,
+        13,
+        1,
+        1
+      ],
+      "P": [
+        [
+          0,
+          -14,
+          4,
+          -3
+        ],
+        [
+          -12,
+          0,
+          -3,
+          2
+        ],
+        [
+          3,
+          -4,
+          0,
+          0
+        ],
+        [
+          -4,
+          6,
+          -3,
+          0
+        ]
+      ],
+      "D": [
+        0,
+        -1,
+        1,
+        0
+      ],
+      "F": -2,
+      "alpha": 1,
+      "beta": 1,
+      "weights": [
+        "13",
+        "13",
+        "25/6",
+        "25/12"
+      ],
+      "basin_gaps": [
+        "27",
+        "1/6",
+        "61/12",
+        "25",
+        "43/6",
+        "1/12",
+        "1/2",
+        "89/3",
+        "25/12",
+        "64/3",
+        "1/2",
+        "125/12"
+      ]
+    }
+  ],
+  "external_peer_review": false,
+  "proof_assistant_formalization": false
+}

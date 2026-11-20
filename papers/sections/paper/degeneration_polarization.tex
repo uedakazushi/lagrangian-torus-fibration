@@ -1,0 +1,186 @@
+\section{明示的な平面退化と偏極}\label{sec:degeneration}
+
+\subsection{係数を固定した退化}
+整数$s=1,\ldots,2d$に対して
+\[
+M_s=x_0+s x_1+s^2x_2+s^3x_3
+\]
+とし、小さい円板$\Delta\subset\CC$上で
+\begin{equation}\label{deg:family}
+\cX_d=\left\{\prod_{i=1}^{d}M_i+t\prod_{r=d+1}^{2d}M_r=0\right\}
+\subset\PP^3\times\Delta
+\end{equation}
+を考える。$P_i=\{M_i=0\}$、$C_{ij}=P_i\cap P_j$、$F_d=\prod_{r=d+1}^{2d}M_r$と書く。
+任意の四つの係数行列の行はVandermonde determinantを持つので独立である。
+従って$2d$枚の平面には四重交点がなく、三枚は一点で横断的に交わる。
+
+\begin{proposition}\label{deg:nodes}
+中心fiber近傍の全空間$\cX_d$の特異点は、
+\[
+q_{ijr}=[-ijr:ij+ir+jr:-(i+j+r):1],
+\quad 1\le i<j\le d<r\le2d,
+\]
+という$d\binom d2$個のordinary double pointsだけである。
+各点の局所式は$xy=tz$であり、元の三重点から離れている。
+円板を縮めれば全ての非零fiberは滑らかな次数$d$の曲面である。
+\end{proposition}
+\begin{proof}
+三枚$M_i,M_j,M_k$の交点は
+\[
+p_{ijk}=[-ijk:ij+ik+jk:-(i+j+k):1]
+\]
+である。これは$M_s(p_{ijk})=(s-i)(s-j)(s-k)$から従う。
+同じ式より、$F_d|_{C_{ij}}$の零点は上記の$q_{ijr}$であり、相異なる単純零点である。
+零点が一致するなら四枚の異なる平面が共通点を持つことになる。
+元の三重点では全ての補助平面の式が非零である。
+
+一成分だけに属する中心fiberの点では全空間は滑らかである。
+二重曲線上で$F_d\ne0$なら、単元を吸収して$f=xy$となる。
+三重点では$t$について解けるため、全空間は滑らかで$f=uvw$となる。
+単純零点の近傍では$F_d$を曲線方向の座標に取り、式を$xy=tz$にできる。
+その勾配を調べると全空間の特異点は原点だけであり、非零fiberは滑らかである。
+中心fiberはコンパクトなので、この局所的な記述から、一様に小さい全ての$t\ne0$について結論を得る。
+\end{proof}
+
+\subsection{順序付き小解消}
+中心のWeil divisorsを$P_1,\ldots,P_d$の順にblow upする。
+ordinary double point $xy=tz$で$(x,t)$をblow upすると、二つのchartは
+\[
+x=tX,\ z=Xy,
+\qquad\text{および}\qquad
+t=xT,\ y=Tz
+\]
+となる。前者の座標は$(t,X,y)$、後者の座標は$(x,T,z)$であり、全空間は滑らかである。
+後者で$f=xT$となることから、中心fiberはreduced normal crossingsを保つ。
+三重点近傍では中心成分のidealはCartierなので操作は恒等である。
+この操作は大域的なblow-upの列であるためprojectiveである。
+
+得られる$f:\widetilde{\cX}_d\to\Delta$の中心成分は
+\begin{equation}\label{deg:components}
+D_i\simeq\Bl_{d(d-i)}\PP^2.
+\end{equation}
+各$i<j$で、$C_{ij}$上の$d$点は$D_i$側でblow upされる。
+exceptional curvesを$E_{ij,r}$、hyperplane pullbackを$H_i$とすると
+\begin{equation}\label{deg:double-classes}
+[C_{ij}]_{D_i}=H_i-\sum_{r=d+1}^{2d}E_{ij,r},\qquad
+[C_{ij}]_{D_j}=H_j\qquad(i<j).
+\end{equation}
+従ってnormal degreesは$1-d$と$1$であり、三重点の数$d-2$と合わせて
+\[
+(1-d)+1+(d-2)=0
+\]
+というtriple-point relationを満たす。
+
+\subsection{vertical Kähler classの必要十分条件}
+$\sum_iD_i$は$f$の零因子なので、cohomologyでは$\sum_i[D_i]=0$である。
+従って$\beta_i$を全て同じだけずらしても
+$\xi=aH+\sum_i\beta_i[D_i]$は変わらない。
+$S=\sum_i\beta_i$、$a_i=a+S-d\beta_i$と書く。
+$[D_i]|_{D_i}=-\sum_{j\ne i}[C_{ij}]$を使うと
+\begin{equation}\label{pol:restriction}
+\xi_i:=\xi|_{D_i}
+=a_iH_i-\sum_{j>i}\sum_{r=d+1}^{2d}(\beta_j-\beta_i)E_{ij,r}
+\end{equation}
+を得る。同じ二重曲線の面積は
+\begin{equation}\label{pol:area-match}
+\xi_i\cdot C_{ij}=a_i-d(\beta_j-\beta_i)=a_j
+=\xi_j\cdot C_{ij}\qquad(i<j)
+\end{equation}
+であり、自動的に一致する。
+
+\begin{theorem}\label{pol:cone}
+$a>0$を固定する。$\xi$が、円板を十分縮めた全空間上でKähler classとして実現できるための必要十分条件は
+\begin{equation}\label{pol:inequalities}
+\beta_1<\cdots<\beta_d,
+\qquad A:=a_d=a+S-d\beta_d>0
+\end{equation}
+である。特に定理\ref{main:cone}が成り立つ。
+\end{theorem}
+\begin{proof}
+必要性はexceptional curveの面積$\beta_j-\beta_i$と、
+$D_d\simeq\PP^2$上の直線の面積$a_d$が正であることから従う。
+
+十分性を示す。$D_i$上の既約曲線は、exceptional curveか、平面既約曲線のstrict transformである。
+exceptional curveの面積は正である。
+boundary lineのstrict transformの面積は式\eqref{pol:area-match}であり、$a_j\ge A>0$である。
+それ以外の次数$m$の平面既約曲線$C$については、各blown-up line上の重複度の和がBézoutにより$m$以下であるから
+\begin{align*}
+\xi_i\cdot\widetilde C
+&\ge\left(a_i-\sum_{j>i}(\beta_j-\beta_i)\right)m\\
+&=\left(a-\sum_{j<i}(\beta_i-\beta_j)\right)m
+\ge A m>0.
+\end{align*}
+最後の不等式では$\beta_i\le\beta_d$を使った。
+
+平方の正値性も一様に示せる。
+$u_i=\beta_d-\beta_i\ge0$と置くと$a_i=A+du_i$であり、
+\begin{align*}
+\xi_i^2
+&=(A+du_i)^2-d\sum_{j>i}(\beta_j-\beta_i)^2\\
+&\ge(A+du_i)^2-d(d-i)u_i^2\\
+&=A^2+2dAu_i+diu_i^2>0.
+\end{align*}
+有理classについてはNakai--Moishezon\cite[Chapter V, Theorem 1.10]{Hartshorne}により、分母を払ったline bundleは各$D_i$上でampleである。
+中心fiberの各既約成分からの有限全射を用いたamplenessの降下により、中心fiber全体でもampleである。
+amplenessの開性により、底を縮めるとrelatively ampleになる。
+そのHermitian metricの曲率に底からの十分正の形式を加えれば、全空間のKähler representativeを得る。
+これらのamplenessの標準事実は\cite{StacksAmpleness}を参照されたい。
+
+実classの場合、$\gamma_i=\beta_i/a$として$\xi/a=H+\sum_i\gamma_i[D_i]$に正規化する。
+$a=1$に正規化した条件は有理係数のstrict linear inequalitiesで定義される開集合である。
+与えられた$\gamma$を、その開集合内の有限個の有理点の凸包の内部に含めることができる。
+共通に縮めた円板上で、対応するKähler formsの凸結合を取り、最後に$a$倍する。
+\end{proof}
+
+$\delta_k=\beta_{k+1}-\beta_k$により
+\[
+A=a-\sum_{j<d}(\beta_d-\beta_j)
+=a-\sum_{k=1}^{d-1}k\delta_k.
+\]
+従って定理の領域は主定理で述べた開単体である。
+同じ表示は、どの不等式の等号でKähler性を失うかも示す。
+$\delta_k=0$なら$C_{k,k+1}$上の$d$個のexceptional curvesの面積が0となり、
+$A=0$なら最後の成分$D_d$上の直線の面積が0になる。
+この記述は境界での特定のalgebraic contractionの存在までを主張するものではない。
+
+\begin{corollary}\label{pol:volume}
+上記の任意の重みに対して
+\[
+\sum_{i=1}^d\xi_i^2=da^2,
+\qquad \xi|_{X_t}=aH\quad(t\ne0).
+\]
+\end{corollary}
+\begin{proof}
+恒等式
+\[
+\sum_i(S-d\beta_i)^2=d\sum_{i<j}(\beta_j-\beta_i)^2,
+\qquad\sum_i(S-d\beta_i)=0
+\]
+を式\eqref{pol:restriction}へ代入する。
+非零fiber上では各vertical divisorのline bundleが自明である。
+\end{proof}
+
+\subsection{surgeryのための小さいray}
+大域構成には$\beta_i=(i-d)\eps$を取る。
+条件は$0<\eps<a/\binom d2$であり、
+\[
+a_i=a+d\left(\frac{d+1}{2}-i\right)\eps,
+\qquad \operatorname{area}(E_{ij,r})=(j-i)\eps.
+\]
+局所patchを先に確保してから$\eps$を小さくするため、次の一様なrepresentativeを用いる。
+整数class
+\[
+\mathcal A=d^2H+\sum_{i=1}^d(i-d)[D_i]
+\]
+は定理\ref{pol:cone}により相対的にampleである。
+そのKähler representativeを$\Omega_{\mathcal A}$とし、
+\[
+\Omega_\eps^K=(a-d^2\eps)\pi^*\omega_{\rm FS}
++\eps\Omega_{\mathcal A}+f^*\omega_\Delta,
+\qquad 0<\eps<a/d^2
+\]
+を取る。ここで$[\omega_{\rm FS}]=H$である。
+$\eps\to0$で、exceptional locusから離れた成分の接方向と、固定された三重点近傍では一様な正値性が残る。
+blow-down $\PP^2$側のclassも$a_iH_i\to aH_i$なので、有限個のflat ballsとregular elliptic-boundary patchesの許容量を一様に正にできる。
+全ての$(j-i)\eps$をこの許容量より小さくしてから、normal collars、最後に$|t|$を選ぶ。
+\emph{全空間の全方向で$\eps\to0$における非退化性が一様であるという仮定は用いない。}

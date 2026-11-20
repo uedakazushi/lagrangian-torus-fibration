@@ -1,0 +1,732 @@
+{
+  "version": "v13",
+  "status": "passed",
+  "exact_assertion_count": 91,
+  "pairing_patterns_checked": 32,
+  "patterns_surviving_prior_sign_lemmas": 6,
+  "propagation_assignments_checked": 4,
+  "negative_node_certificates": 2,
+  "denominator_bound": null,
+  "D_opposition_used": false,
+  "scope": "Finite combinatorial and polynomial certificate for the written general C5 proof; not a bounded-denominator search.",
+  "patterns": [
+    {
+      "epsilon": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "positive_vertices": [],
+      "adjacent_positive_forbidden_by_clutching": false,
+      "distance_two_positive_forbidden_by_nodes": false,
+      "survives_sign_tests": true,
+      "normalizing_rotation": 0,
+      "lambda_after_rotation": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "epsilon": [
+        -1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "positive_vertices": [
+        4
+      ],
+      "adjacent_positive_forbidden_by_clutching": false,
+      "distance_two_positive_forbidden_by_nodes": false,
+      "survives_sign_tests": true,
+      "normalizing_rotation": 4,
+      "lambda_after_rotation": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "epsilon": [
+        -1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "positive_vertices": [
+        3
+      ],
+      "adjacent_positive_forbidden_by_clutching": false,
+      "distance_two_positive_forbidden_by_nodes": false,
+      "survives_sign_tests": true,
+      "normalizing_rotation": 3,
+      "lambda_after_rotation": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "epsilon": [
+        -1,
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "positive_vertices": [
+        3,
+        4
+      ],
+      "adjacent_positive_forbidden_by_clutching": true,
+      "distance_two_positive_forbidden_by_nodes": false,
+      "survives_sign_tests": false
+    },
+    {
+      "epsilon": [
+        -1,
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "positive_vertices": [
+        2
+      ],
+      "adjacent_positive_forbidden_by_clutching": false,
+      "distance_two_positive_forbidden_by_nodes": false,
+      "survives_sign_tests": true,
+      "normalizing_rotation": 2,
+      "lambda_after_rotation": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "epsilon": [
+        -1,
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "positive_vertices": [
+        2,
+        4
+      ],
+      "adjacent_positive_forbidden_by_clutching": false,
+      "distance_two_positive_forbidden_by_nodes": true,
+      "survives_sign_tests": false
+    },
+    {
+      "epsilon": [
+        -1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "positive_vertices": [
+        2,
+        3
+      ],
+      "adjacent_positive_forbidden_by_clutching": true,
+      "distance_two_positive_forbidden_by_nodes": false,
+      "survives_sign_tests": false
+    },
+    {
+      "epsilon": [
+        -1,
+        -1,
+        1,
+        1,
+        1
+      ],
+      "positive_vertices": [
+        2,
+        3,
+        4
+      ],
+      "adjacent_positive_forbidden_by_clutching": true,
+      "distance_two_positive_forbidden_by_nodes": true,
+      "survives_sign_tests": false
+    },
+    {
+      "epsilon": [
+        -1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "positive_vertices": [
+        1
+      ],
+      "adjacent_positive_forbidden_by_clutching": false,
+      "distance_two_positive_forbidden_by_nodes": false,
+      "survives_sign_tests": true,
+      "normalizing_rotation": 1,
+      "lambda_after_rotation": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "epsilon": [
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "positive_vertices": [
+        1,
+        4
+      ],
+      "adjacent_positive_forbidden_by_clutching": false,
+      "distance_two_positive_forbidden_by_nodes": true,
+      "survives_sign_tests": false
+    },
+    {
+      "epsilon": [
+        -1,
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "positive_vertices": [
+        1,
+        3
+      ],
+      "adjacent_positive_forbidden_by_clutching": false,
+      "distance_two_positive_forbidden_by_nodes": true,
+      "survives_sign_tests": false
+    },
+    {
+      "epsilon": [
+        -1,
+        1,
+        -1,
+        1,
+        1
+      ],
+      "positive_vertices": [
+        1,
+        3,
+        4
+      ],
+      "adjacent_positive_forbidden_by_clutching": true,
+      "distance_two_positive_forbidden_by_nodes": true,
+      "survives_sign_tests": false
+    },
+    {
+      "epsilon": [
+        -1,
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "positive_vertices": [
+        1,
+        2
+      ],
+      "adjacent_positive_forbidden_by_clutching": true,
+      "distance_two_positive_forbidden_by_nodes": false,
+      "survives_sign_tests": false
+    },
+    {
+      "epsilon": [
+        -1,
+        1,
+        1,
+        -1,
+        1
+      ],
+      "positive_vertices": [
+        1,
+        2,
+        4
+      ],
+      "adjacent_positive_forbidden_by_clutching": true,
+      "distance_two_positive_forbidden_by_nodes": true,
+      "survives_sign_tests": false
+    },
+    {
+      "epsilon": [
+        -1,
+        1,
+        1,
+        1,
+        -1
+      ],
+      "positive_vertices": [
+        1,
+        2,
+        3
+      ],
+      "adjacent_positive_forbidden_by_clutching": true,
+      "distance_two_positive_forbidden_by_nodes": true,
+      "survives_sign_tests": false
+    },
+    {
+      "epsilon": [
+        -1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "positive_vertices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "adjacent_positive_forbidden_by_clutching": true,
+      "distance_two_positive_forbidden_by_nodes": true,
+      "survives_sign_tests": false
+    },
+    {
+      "epsilon": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "positive_vertices": [
+        0
+      ],
+      "adjacent_positive_forbidden_by_clutching": false,
+      "distance_two_positive_forbidden_by_nodes": false,
+      "survives_sign_tests": true,
+      "normalizing_rotation": 0,
+      "lambda_after_rotation": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "epsilon": [
+        1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "positive_vertices": [
+        0,
+        4
+      ],
+      "adjacent_positive_forbidden_by_clutching": true,
+      "distance_two_positive_forbidden_by_nodes": false,
+      "survives_sign_tests": false
+    },
+    {
+      "epsilon": [
+        1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "positive_vertices": [
+        0,
+        3
+      ],
+      "adjacent_positive_forbidden_by_clutching": false,
+      "distance_two_positive_forbidden_by_nodes": true,
+      "survives_sign_tests": false
+    },
+    {
+      "epsilon": [
+        1,
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "positive_vertices": [
+        0,
+        3,
+        4
+      ],
+      "adjacent_positive_forbidden_by_clutching": true,
+      "distance_two_positive_forbidden_by_nodes": true,
+      "survives_sign_tests": false
+    },
+    {
+      "epsilon": [
+        1,
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "positive_vertices": [
+        0,
+        2
+      ],
+      "adjacent_positive_forbidden_by_clutching": false,
+      "distance_two_positive_forbidden_by_nodes": true,
+      "survives_sign_tests": false
+    },
+    {
+      "epsilon": [
+        1,
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "positive_vertices": [
+        0,
+        2,
+        4
+      ],
+      "adjacent_positive_forbidden_by_clutching": true,
+      "distance_two_positive_forbidden_by_nodes": true,
+      "survives_sign_tests": false
+    },
+    {
+      "epsilon": [
+        1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "positive_vertices": [
+        0,
+        2,
+        3
+      ],
+      "adjacent_positive_forbidden_by_clutching": true,
+      "distance_two_positive_forbidden_by_nodes": true,
+      "survives_sign_tests": false
+    },
+    {
+      "epsilon": [
+        1,
+        -1,
+        1,
+        1,
+        1
+      ],
+      "positive_vertices": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "adjacent_positive_forbidden_by_clutching": true,
+      "distance_two_positive_forbidden_by_nodes": true,
+      "survives_sign_tests": false
+    },
+    {
+      "epsilon": [
+        1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "positive_vertices": [
+        0,
+        1
+      ],
+      "adjacent_positive_forbidden_by_clutching": true,
+      "distance_two_positive_forbidden_by_nodes": false,
+      "survives_sign_tests": false
+    },
+    {
+      "epsilon": [
+        1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "positive_vertices": [
+        0,
+        1,
+        4
+      ],
+      "adjacent_positive_forbidden_by_clutching": true,
+      "distance_two_positive_forbidden_by_nodes": true,
+      "survives_sign_tests": false
+    },
+    {
+      "epsilon": [
+        1,
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "positive_vertices": [
+        0,
+        1,
+        3
+      ],
+      "adjacent_positive_forbidden_by_clutching": true,
+      "distance_two_positive_forbidden_by_nodes": true,
+      "survives_sign_tests": false
+    },
+    {
+      "epsilon": [
+        1,
+        1,
+        -1,
+        1,
+        1
+      ],
+      "positive_vertices": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "adjacent_positive_forbidden_by_clutching": true,
+      "distance_two_positive_forbidden_by_nodes": true,
+      "survives_sign_tests": false
+    },
+    {
+      "epsilon": [
+        1,
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "positive_vertices": [
+        0,
+        1,
+        2
+      ],
+      "adjacent_positive_forbidden_by_clutching": true,
+      "distance_two_positive_forbidden_by_nodes": true,
+      "survives_sign_tests": false
+    },
+    {
+      "epsilon": [
+        1,
+        1,
+        1,
+        -1,
+        1
+      ],
+      "positive_vertices": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "adjacent_positive_forbidden_by_clutching": true,
+      "distance_two_positive_forbidden_by_nodes": true,
+      "survives_sign_tests": false
+    },
+    {
+      "epsilon": [
+        1,
+        1,
+        1,
+        1,
+        -1
+      ],
+      "positive_vertices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "adjacent_positive_forbidden_by_clutching": true,
+      "distance_two_positive_forbidden_by_nodes": true,
+      "survives_sign_tests": false
+    },
+    {
+      "epsilon": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "positive_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "adjacent_positive_forbidden_by_clutching": true,
+      "distance_two_positive_forbidden_by_nodes": true,
+      "survives_sign_tests": false
+    }
+  ],
+  "propagation": [
+    {
+      "core2_A": "previous",
+      "core3_A": "previous",
+      "edge23_full_end_count": 1,
+      "compatible": true
+    },
+    {
+      "core2_A": "previous",
+      "core3_A": "next",
+      "edge23_full_end_count": 0,
+      "compatible": false
+    },
+    {
+      "core2_A": "next",
+      "core3_A": "previous",
+      "edge23_full_end_count": 2,
+      "compatible": false
+    },
+    {
+      "core2_A": "next",
+      "core3_A": "next",
+      "edge23_full_end_count": 1,
+      "compatible": true
+    }
+  ],
+  "cases": [
+    {
+      "direction": "previous",
+      "cores": [
+        2,
+        3,
+        4
+      ],
+      "canonical_table_ABCD": [
+        [
+          1,
+          3,
+          4,
+          0
+        ],
+        [
+          2,
+          4,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          1,
+          2
+        ]
+      ],
+      "unit_entry": {
+        "core": 1,
+        "row": 2,
+        "column": 4
+      },
+      "reverse_entry": {
+        "core": 1,
+        "row": 4,
+        "column": 2
+      },
+      "zero_entry": {
+        "core": 4,
+        "row": 1,
+        "column": 2
+      },
+      "contradiction_edge": [
+        1,
+        4
+      ],
+      "puncture": 2,
+      "denominator_index": 1,
+      "node_polynomial_in_q": [
+        2,
+        -1
+      ],
+      "negative_polynomial_in_k": [
+        -1,
+        -2
+      ]
+    },
+    {
+      "direction": "next",
+      "cores": [
+        1,
+        2,
+        3
+      ],
+      "canonical_table_ABCD": [
+        [
+          2,
+          0,
+          4,
+          3
+        ],
+        [
+          3,
+          1,
+          0,
+          4
+        ],
+        [
+          4,
+          2,
+          1,
+          0
+        ]
+      ],
+      "unit_entry": {
+        "core": 4,
+        "row": 3,
+        "column": 1
+      },
+      "reverse_entry": {
+        "core": 4,
+        "row": 1,
+        "column": 3
+      },
+      "zero_entry": {
+        "core": 1,
+        "row": 4,
+        "column": 3
+      },
+      "contradiction_edge": [
+        1,
+        4
+      ],
+      "puncture": 3,
+      "denominator_index": 3,
+      "node_polynomial_in_q": [
+        2,
+        -1
+      ],
+      "negative_polynomial_in_k": [
+        -1,
+        -2
+      ]
+    }
+  ],
+  "proof_source_sha256": "b5c90a05d6bdfe85467b6d5a0db2938f0ef5de68a81de1e4399d2b0e1c0be78a"
+}

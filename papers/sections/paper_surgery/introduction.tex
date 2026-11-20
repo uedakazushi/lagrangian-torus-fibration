@@ -1,0 +1,201 @@
+\section{Introduction}
+\label{cs8:introduction}
+
+一般型曲面の退化から得られる Lagrangian torus fibration では、
+直線配置の補集合が singular core の局所模型として現れる。
+この core を標準的な四次元 pair of pants に分割できれば、
+底空間と singular fibers の記述をより小さい局所模型へ還元できる。
+しかし、Euler 数を合わせるだけでは、元の領域を固定した境界の下で置き換えたことにはならない。
+本稿は、boundary meridian に沿う blow-up で得られる具体的な affine surface を対象に、
+その homotopy 型、整数交点格子、三次元境界、peripheral data を計算する。
+さらに、全 Seifert facets の貼合せに閉じた corner circuit の regular torus 充填を加える
+明示的な構成範囲について、四 pants 置換の不可能性を示す。
+対象の代数的表示と smooth handle 模型も与え、残る相対 surgery の比較を具体化する。
+
+以下で標準四次元 pants とは、一般位置の四直線を除いた
+$\PP^2$ の補集合の compact core をいう。
+これは四つの $S^1\times\Sigma_{0,3}$ 型 Seifert facets と六つの corner tori を持つ。
+$\Sigma_{0,q}$ は $q$ 個の境界成分を持つ genus 零の曲面である。
+用いる直線は全て相異なり、三重点を持たない。
+blow-up の中心は直線の smooth points にある相異なる点に限り、
+exceptional curves は取り除かず、元の直線の strict transforms のみを除く。
+この最後の選択が、meridian を殺す cell attachment と境界の変化を生む。
+
+\subsection{先行研究と固定境界の問題}
+
+Mikhalkin\cite[Theorems~1 and~$1'$]{Mikhalkin}は、複素代数 hypersurface の
+pair-of-pants 分解と tropical な底空間への stratified fibration を構成した。
+一般型の四次元多様体については、Zhang\cite[Theorem~1.1]{Zhang}が、
+次数 $d$ の滑らかな hypersurface と微分同相な多様体を
+$d(d-4)^2$ 個の四次元 pants と K3 に由来する領域などに分解している。
+これらの大域分解は、本稿の局所問題を考える背景となる。
+一方、特定の compact core の boundary marking を保ち、
+指定された pants 数でその filling を置き換える問題には、
+個々の領域に対する追加の位相的条件がある。
+
+Golla--Martelli\cite{GollaMartelli}は、四次元多様体の pants 分解を
+微分位相的な構成法として展開した。
+その \S4.2 は標準 pants の四 facets と六 corner tori を記述し、
+Proposition~4.3 は face gluing matrices と disk face 周囲の monodromy 条件を与える。
+Remark~4.9 では、non-disk face 上の regular torus bundle への延長と、
+その選択が扱われている。
+本稿の no-go はこの全構成法を対象とするものではない。
+full facets を互いに離した collars で貼り、追加の regular torus 領域が
+閉じた corner boundary components にだけ付く場合を正確に定義する。
+open corner chains への接続、facet の一部分を用いる貼合せ、
+circle collapse を含むより一般の構成は、この範囲の外にある。
+
+symplectic な動機として、Evans--Mauri\cite[Lemmas~2.16, 2.22; \S3.1]{EM}は、
+contact link の fibration を Liouville flow で延長する局所構成を与え、
+四直線補集合について $K_4$ の cone を底空間とする模型を記述した。
+boundary 上の非 toric blow-up と almost toric modification の対応には、
+Chakravarthy--Groman\cite[Theorem~1.1, Lemma~3.7]{CGblowup}の比較結果がある。
+本稿が計算するのは、取り込む vanishing circle が指定した直線の meridian に一致する
+boundary blow-up の filling である。
+任意の focus--focus fiber をこの algebraic model と同一視する仮定は置かない。
+
+境界の判定には、Neumann\cite[\S5, pp.~321--322]{Neumann}の plumbing calculus と、
+Cohen--Suciu\cite[\S2.5]{CohenSuciu}の line-arrangement boundary の graph-manifold 記述を用いる。
+ここでの JSJ graph は三次元境界の Seifert pieces の隣接関係を表す。
+Lagrangian fibration の二次元基底で core vertex の link として現れる graph とは、
+異なるデータである。
+contact plane field については Gompf\cite[Definition~4.2, Theorem~4.5]{Gompf}の
+不変量を計算するが、その値だけから contactomorphism を結論しない。
+
+\subsection{Meridian attachments の homotopy 型と整数格子}
+
+$m\geq4$ 本の直線のうち、$L_i$ 上で $r_i\geq0$ 回 blow up した曲面を
+$M_{\boldsymbol r}$、strict transforms の union を $D_{\boldsymbol r}$ とし、
+$U_{\boldsymbol r}=M_{\boldsymbol r}\setminus D_{\boldsymbol r}$ と置く。
+$r=\sum_i r_i$、$s=\#\{i:r_i>0\}$ とし、少なくとも一本は未変更、すなわち $s<m$ と仮定する。
+各 exceptional affine line の tubular neighborhood によって、
+$U_{\boldsymbol r}$ は元の直線補集合に meridian を attaching loops とする
+$r$ 枚の二次元 cells を付けた空間と homotopy 同値になる。
+
+一般位置の hyperplane complement の torus skeleton 模型は Hattori\cite{Hattori}による。
+本稿で必要なのは abstract な homotopy 型に加え、各 meridian の標識である。
+Hattori の defining-linear-functions map、Proposition~(2.16)(2)、
+および \S4 の標識を保つ trivialization を用いると、
+blow up していない直線を infinity に選んだ後の affine meridians を
+標準 torus generators に対応させられる。
+この関係は Papadima--Suciu\cite[\S\S1.1, 4.3; proof of Theorem~4.8(4)]{PapadimaSuciu}
+の arrangement complements の記述とも整合する。
+命題~\ref{cs7:homotopy}では、この marked cellular model に cells を付け、
+\[
+ U_{\boldsymbol r}\simeq
+ T^k_{(2)}\vee\bigvee^{\,\binom{m-1}{2}-\binom{k}{2}+r-s}S^2,
+ \qquad k=m-1-s
+\]
+を得る。$T^k_{(2)}$ は標準積 CW 構造の二次骨格である。
+特に $\pi_1(U_{\boldsymbol r})=\ZZ^k$ であり、$k=3$ では
+universal cover の Koszul complex から $\pi_2$ の deck-module 構造も求まる。
+
+同じ homotopy 型を持つ候補の区別には、境界と intersection lattice が必要になる。
+命題~\ref{cs7:lattice}では compact core の絶対交点格子と boundary homology を
+\[
+ 0^{\binom{m-1}{2}}\oplus\bigoplus_{r_i>0}(-A_{r_i-1}),
+ \qquad
+ H_1(Y_{\boldsymbol r};\ZZ)
+ \cong\ZZ^{\binom{m-1}{2}+k}
+       \oplus\bigoplus_{r_i>0}\ZZ/r_i\ZZ
+\]
+と計算する。$A_q$ は標準 root lattice であり、$A_0=0$ とする。
+boundary の reduced JSJ graph は $K_m$ のままである。
+blow-up 数を canonical な pants 数 $(m-3)^2$ と整合させ、さらに基本群を $\ZZ^3$ にすると、
+signature は $-\binom{m-4}{2}$ になる。
+従って $m\geq6$ では、絶対交点形式が零である full-face tree assembly と区別できる
+（系~\ref{cs7:canonical-budget}）。
+
+中心となる五直線の例は、$p\in L_1$ を double points の外に選んだ
+\[
+ U=\operatorname{Bl}_p\PP^2\setminus\bigcup_{i=1}^5L_i'
+\]
+である。ここでは
+\[
+ U\simeq T^3_{(2)}\vee3S^2,
+ \qquad \pi_2(U)\cong\ZZ[\ZZ^3]^4,
+ \qquad \chi(U)=4
+\]
+となる。compact Stein core の絶対交点形式は零であり、
+boundary は $H_1(Y;\ZZ)=\ZZ^9$、reduced JSJ graph $K_5$ を持つ。
+包含 $H_1(Y)\to H_1(U)=\ZZ^3$ の kernel は rank 六であり、
+固定境界の置換ではこの具体的な peripheral subgroup も追う必要がある。
+また $K_U$ は自明で、Stein boundary の contact plane field は
+$c_1=0$、$d_3=-2$ を満たす。
+これらは置換に必要な比較データであり、置換の存在を保証する条件ではない。
+
+\subsection{閉じた corner circuits を充填しても残る障害}
+
+四 pants の Euler 数は $4$ なので、上の $U$ と一致する。
+選んだ compactification の log canonical square $(K_M+D')^2$ も $4$ であり、
+四つの標準 pants に対する値の和と一致する。
+それでも full Seifert faces だけを貼る案は実現しない。
+各 facet の $H_1$ が pants の $H_1\cong\ZZ^3$ に整数同型で写ることから、
+連結な full-face assembly の基本群は
+$\ZZ^3\rtimes F_{b_1(\Gamma)}$ となる。
+目標の基本群は $\ZZ^3$ なので facet gluing graph $\Gamma$ は tree に限られる。
+tree 状の貼合せは boundary graph の planar な $3$-edge vertex-sum であり、
+reduced JSJ graph $K_5$ を生まない（定理~\ref{cs6:nogo}）。
+
+disk face を regular $T^2\times D^2$ で充填すると基本群に新しい関係が加わるため、
+この基本群の議論だけでは充填後の空間を扱えない。
+そこで定義~\ref{cs7:completiondef}では、閉じた corner circuit の全 boundary component に、
+compact surface 上の任意の regular $T^2$-bundle を付加してよいものとする。
+surface の境界成分数、bundle の monodromy、および許される Chern class を制限しない。
+最終空間とその boundary は連結とし、外側に negative-base Seifert pieces を残す。
+
+この構成の boundary に対し
+$\mathcal C(Y)=\sum_V-\chi_{\mathrm{orb}}(B_V)$ と置く。
+$p$ 個の pants と $e$ 対の facet gluing から
+$\chi(X)=p$、$\mathcal C(Y)=4p-2e$ が従う。
+closed corner circuit は $\Gamma$ 上の即時 backtracking を持たない closed walk に射影されるので、
+tree component には regular torus region を付ける場所がない。
+これを用いる定理~\ref{cs7:complexitydichotomy}は、
+\[
+ \begin{aligned}
+ &\mathcal C(Y)=2\chi(X)+2
+   &&\text{かつ reduced JSJ graph が planar},\\
+ \text{または}\quad
+ &\mathcal C(Y)\leq2\chi(X)
+ \end{aligned}
+\]
+という二分を与える。
+五直線の $U$ は $\mathcal C(Y)=10=2\chi(U)+2$ と非 planar な $K_5$ を持つため、
+この拡張した範囲でも四 pants 置換は不可能である（系~\ref{cs7:fourpantsnogo}）。
+証明は充填後の基本群を仮定しないので、disk relations を増やすだけでは障害を回避できない。
+
+\subsection{Affine modification と具体的な handle 模型}
+
+同じ $U$ は三つの affine hyperbolas の補集合として
+\[
+ U\cong\CC^2_{t,z}\setminus
+       \bigcup_{i=1}^3\{1-z(A_it+B_i)=0\}
+\]
+と表示できる（命題~\ref{cs7:hyperbola}）。
+写像 $(t,z)\mapsto(tz,z)$ は、Kaliman--Zaidenberg\cite[\S\S1--3]{KalimanZaidenberg}の
+affine modification の具体例である。
+例外 affine line $\{z=0\}$ 上で全ての invertible regular functions が定数になるため、
+$U$ は very affine ではない。
+従って固定したこの複素曲面を一つの algebraic torus に埋め込んで
+Newton polytope を細分する方法を、そのまま適用することはできない。
+他の複素構造、部分的な charts、または symplectic な分解は、この計算では排除しない。
+
+generic な linear projection $u=t+cz$ は、取り除く curve 上で degree 六の finite map となり、
+六つの simple branch values と三つの node values を持つ。
+Sugawara\cite[Proposition~3.1, Theorems~3.7 and~4.1]{Sugawara}は、
+plane algebraic curve complements の generic projection から smooth handle decomposition と
+braid に基づく framed Kirby diagram を作る方法を与えている。
+本稿ではこの方法を上の明示的な equations に適用し、
+$0,1,2$-handles の個数が $(1,6,9)$ である模型を得る。
+また実係数の具体例について九つの exceptional values を全て書き、
+六本 strand の infinity braid を、三点ずつの clusters の full twists を用いて
+$T_6T_-^{-2}T_+^{-1}$ と計算する。
+
+ここでの braid は deleted curve の projection に付随するものであり、
+九つの exceptional values は interior focus--focus fibers の数ではない。
+また smooth handle 数は、指定した contact boundary に適合する
+relative Weinstein handle presentation を与えたことを意味しない。
+残る比較は、distinguished paths に沿う braid transport と attaching framings を明示し、
+より広い pants 構成の boundary slopes と peripheral kernel に照合することである。
+本稿の位相的障害はその候補の範囲を絞るが、
+contact collar、action primitive、period lattice を合わせる相対 symplectic surgery は別に必要となる。

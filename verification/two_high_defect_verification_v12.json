@@ -1,0 +1,474 @@
+{
+  "version": 12,
+  "passed": true,
+  "method": "Exact polynomial coefficient comparison and Fraction arithmetic. No denominator cutoff or enumeration is used.",
+  "general_theorem": "Every positive integer local model with q=(a,b,1,1), a,b>1, has min(D_A,D_B)<0.",
+  "stronger_negative_branch": "For alpha>=beta<0 the standard form has S=T and D_B<0.",
+  "polynomial_identity_count": 30,
+  "polynomial_identities": [
+    "low-low entry pair-product identity",
+    "K rewritten with d=S-T-1",
+    "low-entry branch T>r+1 comparison",
+    "low-entry branch S<r comparison",
+    "strict low-entry comparison from S>=T+1",
+    "pair product becomes the Bezout identity",
+    "alpha L minus a delta is the Bezout residual",
+    "beta(L+delta) minus b delta is the Bezout residual",
+    "B-a equals -L",
+    "A-b equals L+delta",
+    "sum of high defects",
+    "sign-ratio identity after clearing r(r+1)",
+    "positive branch ratio strictness",
+    "positive branch first rational gap numerator",
+    "positive branch second rational gap numerator",
+    "negative-branch comparison K<=H",
+    "negative-branch reduction K=H+1, r=H+w",
+    "negative-branch coprime determinant factor at delta zero",
+    "E<1/2 has a uniformly positive numerator for c>=2",
+    "negative-branch U after clearing Hc",
+    "negative-branch D_B using E after clearing Hc",
+    "delta>=2 coefficient strictness decomposition",
+    "delta=1 final defect after clearing c(c+1)",
+    "delta=1 upper bound gap for H>=c>=2",
+    "delta=1 square lower bound for c>=2",
+    "delta=1 final strict square comparison",
+    "A to C basin margin after clearing 2r",
+    "C to A basin margin after clearing 2",
+    "B to D basin margin after clearing 2T",
+    "D to B basin margin after clearing 2"
+  ],
+  "exact_regression_models": [
+    {
+      "name": "positive alpha, delta negative",
+      "q": [
+        3,
+        7,
+        1,
+        1
+      ],
+      "p": [
+        [
+          0,
+          -4,
+          2,
+          -1
+        ],
+        [
+          -5,
+          0,
+          -3,
+          1
+        ],
+        [
+          1,
+          -2,
+          0,
+          0
+        ],
+        [
+          -2,
+          6,
+          -5,
+          0
+        ]
+      ],
+      "D": [
+        3,
+        -7,
+        5,
+        -1
+      ],
+      "r": 1,
+      "s": 1,
+      "z": 1,
+      "S": 2,
+      "T": 6,
+      "alpha": 1,
+      "beta": 2,
+      "delta": -1,
+      "weights": [
+        "3",
+        "7",
+        "5/2",
+        "13/12"
+      ],
+      "basins": [
+        [
+          null,
+          "11",
+          "1/2",
+          "25/12"
+        ],
+        [
+          "8",
+          null,
+          "11/2",
+          "1/12"
+        ],
+        [
+          "1/2",
+          "12",
+          null,
+          "13/12"
+        ],
+        [
+          "31/6",
+          "1/2",
+          "95/12",
+          null
+        ]
+      ]
+    },
+    {
+      "name": "positive alpha, delta zero; zero high coefficient",
+      "q": [
+        7,
+        7,
+        1,
+        1
+      ],
+      "p": [
+        [
+          0,
+          -8,
+          3,
+          -2
+        ],
+        [
+          -6,
+          0,
+          -2,
+          1
+        ],
+        [
+          2,
+          -3,
+          0,
+          0
+        ],
+        [
+          -3,
+          6,
+          -4,
+          0
+        ]
+      ],
+      "D": [
+        0,
+        -2,
+        2,
+        0
+      ],
+      "r": 2,
+      "s": 2,
+      "z": 1,
+      "S": 3,
+      "T": 6,
+      "alpha": 1,
+      "beta": 1,
+      "delta": 0,
+      "weights": [
+        "7",
+        "7",
+        "13/4",
+        "13/12"
+      ],
+      "basins": [
+        [
+          null,
+          "15",
+          "1/4",
+          "37/12"
+        ],
+        [
+          "13",
+          null,
+          "21/4",
+          "1/12"
+        ],
+        [
+          "1/2",
+          "67/4",
+          null,
+          "13/12"
+        ],
+        [
+          "41/4",
+          "1/2",
+          "91/12",
+          null
+        ]
+      ]
+    },
+    {
+      "name": "positive alpha, delta positive; D_A negative",
+      "q": [
+        31,
+        31,
+        1,
+        1
+      ],
+      "p": [
+        [
+          0,
+          -40,
+          15,
+          -6
+        ],
+        [
+          -24,
+          0,
+          -10,
+          3
+        ],
+        [
+          2,
+          -3,
+          0,
+          0
+        ],
+        [
+          -5,
+          10,
+          -6,
+          0
+        ]
+      ],
+      "D": [
+        -4,
+        2,
+        0,
+        2
+      ],
+      "r": 2,
+      "s": 6,
+      "z": 3,
+      "S": 5,
+      "T": 10,
+      "alpha": 9,
+      "beta": 7,
+      "delta": 2,
+      "weights": [
+        "31",
+        "31",
+        "61/4",
+        "61/20"
+      ],
+      "basins": [
+        [
+          null,
+          "71",
+          "1/4",
+          "181/20"
+        ],
+        [
+          "55",
+          null,
+          "101/4",
+          "1/20"
+        ],
+        [
+          "1/2",
+          "307/4",
+          null,
+          "61/20"
+        ],
+        [
+          "185/4",
+          "1/2",
+          "671/20",
+          null
+        ]
+      ]
+    },
+    {
+      "name": "negative alpha, delta one; positive high-coefficient sum",
+      "q": [
+        9,
+        11,
+        1,
+        1
+      ],
+      "p": [
+        [
+          0,
+          -7,
+          2,
+          -4
+        ],
+        [
+          -14,
+          0,
+          -2,
+          5
+        ],
+        [
+          4,
+          -5,
+          0,
+          0
+        ],
+        [
+          -2,
+          2,
+          -1,
+          0
+        ]
+      ],
+      "D": [
+        3,
+        -1,
+        0,
+        -2
+      ],
+      "r": 4,
+      "s": 4,
+      "z": 5,
+      "S": 2,
+      "T": 2,
+      "alpha": -2,
+      "beta": -3,
+      "delta": 1,
+      "weights": [
+        "9",
+        "11",
+        "17/8",
+        "21/4"
+      ],
+      "basins": [
+        [
+          null,
+          "18",
+          "1/8",
+          "37/4"
+        ],
+        [
+          "23",
+          null,
+          "33/8",
+          "1/4"
+        ],
+        [
+          "1/2",
+          "173/8",
+          null,
+          "21/4"
+        ],
+        [
+          "39/2",
+          "1/2",
+          "59/8",
+          null
+        ]
+      ]
+    },
+    {
+      "name": "largest denominator can have positive coefficient",
+      "q": [
+        19,
+        17,
+        1,
+        1
+      ],
+      "p": [
+        [
+          0,
+          -23,
+          6,
+          -2
+        ],
+        [
+          -14,
+          0,
+          -4,
+          1
+        ],
+        [
+          3,
+          -4,
+          0,
+          0
+        ],
+        [
+          -9,
+          16,
+          -8,
+          0
+        ]
+      ],
+      "D": [
+        1,
+        -6,
+        5,
+        0
+      ],
+      "r": 3,
+      "s": 2,
+      "z": 1,
+      "S": 9,
+      "T": 16,
+      "alpha": 4,
+      "beta": 3,
+      "delta": 1,
+      "weights": [
+        "19",
+        "17",
+        "37/6",
+        "33/32"
+      ],
+      "basins": [
+        [
+          null,
+          "40",
+          "1/6",
+          "97/32"
+        ],
+        [
+          "33",
+          null,
+          "61/6",
+          "1/32"
+        ],
+        [
+          "1/2",
+          "125/3",
+          null,
+          "33/32"
+        ],
+        [
+          "905/32",
+          "1/2",
+          "173/12",
+          null
+        ]
+      ]
+    }
+  ],
+  "proof_dependencies": [
+    "Standard two-high numerator factorization.",
+    "The general positivity/sign theorem u<0<v.",
+    "Positive integer a,b>1 and all standard-form integrality constraints."
+  ],
+  "proved_in_source": [
+    "The low-low entry d=S-T-1 is negative.",
+    "The displayed rational weights have positive basin areas.",
+    "Alpha,beta,h,k are nonzero and have the same sign.",
+    "The three sign/order cases are exhaustive, with unbounded inequalities in each."
+  ],
+  "not_required": [
+    "a=b",
+    "odd denominators",
+    "a denominator bound",
+    "integer puncture clutching",
+    "node nonnegativity",
+    "a node budget",
+    "opposing-end defect cancellation"
+  ],
+  "limitations": [
+    "The script checks algebra, not the logical completeness of the written proof.",
+    "A negative minimum does not imply that the sum of the two high coefficients is negative.",
+    "The local theorem alone does not resolve arbitrary global high-denominator atlases."
+  ],
+  "source_sha256": "c4b5ef1b979af4da27760a968ad0da215ea8bd8f0b66d80e0b4a1c2b97e76951",
+  "script_sha256": "eaccf3d0303ee2aa7624fd23059accbd341a9c56f107bb7a5db00d92d6207d85"
+}

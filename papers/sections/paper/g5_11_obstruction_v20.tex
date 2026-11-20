@@ -1,0 +1,395 @@
+% v20. Complete G5_11 obstruction.  No denominator or scale cutoff.
+\section{\texorpdfstring{$G_{5,11}$}{G5,11} 型の無上界排除}
+\label{g51120:section}
+
+\begin{theorem}[二つの三価頂点を持つ七高辺型の障害]
+\label{g51120:no-support}
+五次の算術的接着データの高分母 support は
+\[
+ H=G_{5,11}=\{01,02,03,04,12,13,24\}
+\]
+と同型ではあり得ない．分母の上限は仮定しない．
+正の整数局所 charts，marked clutching，非負 node，対向 $D$ の相殺を用いる．
+\end{theorem}
+
+この graph では $3,4$ が二価，$1,2$ が三価，$0$ が四価である．
+低辺は $14,34,23$ であり，$0$ は二つの二価頂点の共通高近傍である．
+証明では最初に二価 cores の reverse data を数学的に有限化する．
+その後，分母と scale の全無限族を保持した厳密な整数演算で排除する．
+
+\subsection{四つの向きと単位 entry の禁止}
+
+二価 core の canonical order $(A,B,C,D)$ では
+\begin{equation}\label{g51120:canonical}
+ P=\begin{pmatrix}
+ 0&-U&x&-s\\
+ -V&0&-y&z\\
+ r&-r-1&0&0\\
+ -S&T&-L&0
+ \end{pmatrix},
+\end{equation}
+\[
+ \begin{gathered}
+ a=sS+1,\quad b=zT+1,\quad x=sS/r,\quad y=zT/(r+1),
+ \\
+ U=a+x-s,\quad V=b-y+z,\quad L=T-S+1.
+ \end{gathered}
+\]
+全ての $r,s,z,S,T,x,y$ は正整数で，$a,b$ は奇数，$UV=ab-1$ である．
+既知の二分補題により，正の枝は
+\begin{equation}\label{g51120:positive}
+ S>r,\qquad rT>(r+1)S,\qquad L\ge3,
+\end{equation}
+負の枝は
+\begin{equation}\label{g51120:negative}
+ S=T=w\ge2,\quad r=w+H,\quad
+ \frac{w^2}{2}<H(H+1)<2w^2
+\end{equation}
+を満たす．特に $S\ge2$ である．正の枝では $T\ge5$
+（補題~\ref{cl16:T-five}）である．
+
+\begin{lemma}[正の単位 entry の一つの禁止]\label{g51120:no-x-one}
+式~\eqref{g51120:canonical} では $x=1$ は起こらない．
+\end{lemma}
+\begin{proof}
+正の枝では $x=sS/r>1$ である．負の枝で $x=1$ と仮定すると
+$r=sS$，$s\ge2$，$T=S$ である．高高 pair equation を代入して整理すると
+\[
+ z\{(-s^2+3s-1)S+2-s\}+(2-s)(sS+1)=0
+\]
+を得る．$s=2$ では左辺は $zS>0$，$s\ge3$ では両項が負であり，
+どちらも不可能である．
+\end{proof}
+
+二価 core を $i\in\{3,4\}$，もう一方を $j$，
+$i$ 固有の高近傍を $h$，残る三価頂点を $k$ と書く．
+すなわち $(i,j,h,k)=(3,4,1,2)$ または $(4,3,2,1)$ である．
+canonical 標識の四通りを次表で固定する．最後の欄は ray $j$ の行を
+列 $(0,h,k)$ の順で記したものである．
+\begin{center}\small
+\begin{tabular}{ccccccl}
+型&$A$&$B$&$C$&$D$& &$(p^i_{j0},p^i_{jh},p^i_{jk})$\\\hline
+I&$0$&$h$&$j$&$k$&&$(r,-r-1,0)$\\
+II&$h$&$0$&$j$&$k$&&$(-r-1,r,0)$\\
+III&$0$&$h$&$k$&$j$&&$(-S,T,-L)$\\
+IV&$h$&$0$&$k$&$j$&&$(T,-S,-L)$
+\end{tabular}
+\end{center}
+
+共有高辺 $ih$ の共通低 puncture $j$ で
+\[
+ u=p^i_{jh},\qquad v=p^h_{ji}
+\]
+と置く．補題~\ref{ls11:low-puncture} を reverse entries に書き換えると
+\begin{equation}\label{g51120:partner}
+ v=-u,\qquad \{u,v\}=\{1,q_{ih}-1\},\qquad
+ \{u,v\}=\{-1,-(q_{ih}-1)\}
+\end{equation}
+の三択である．通常型 $v=-u$ では $|u|\le4$
+（補題~\ref{cl16:ordinary-bound}）である．また $u<0$ なら，
+相手の二価 core $j$ における $p^j_{ih}$ が低低 entry で非正なので
+\[
+ 1-u-p^j_{ih}=n_{ij;h}\le5
+\]
+から例外型も含めて $|u|\le4$ となる．
+
+\subsection{正の枝の III 型を先に排除する}
+
+\begin{lemma}\label{g51120:no-positive-III}
+二つの二価 cores のいずれも，正の枝の III 型には属さない．
+\end{lemma}
+\begin{proof}
+対称性により core $3$ が正の III 型であるとする．このとき $u=T\ge5$ である．
+低辺 $34$ の puncture $1$ の node 非負性から
+$p^4_{31}\le1-T<0$ であり，core $4$ では $D=3,C=1$ となる．
+従って $p^4_{13}=0$ であり，低辺 $14$ の node を用いると
+\[
+ v=p^1_{43}=1-n_{14;3}\le1.
+\]
+通常型は $T>4$ に反するので，式~\eqref{g51120:partner} は
+$v=1$，$q_{13}=T+1$ を強制する．従って $z=1$，$n_{14;3}=0$ である．
+
+三高 matching 定理~\ref{mh18:matching} より，core $1$ の低 row の残り二成分は負である．
+core $4$ の $C=1$ の行は，高 rays に $r',-r'-1$ を持つ．
+後者に対応する node は少なくとも $r'+3$ なので，総数五から $r'\le2$ を得る．
+$S'\ge2$ より core $4$ は正の枝である．
+
+もし core $4$ が IV 型なら，低辺 $34$ の puncture $2$ の node は
+$1+L+S'\ge6$ となり不可能である．従って core $4$ も III 型である．
+puncture $0$ の node は $1+S+S'\le5$ なので $S=S'=2$，$r=r'=1$ となる．
+残る二つの node は $T'-T,T-T'$ であり，$T=T'$ である．
+同じ議論を反対側に適用すると $z'=1$ である．
+
+$r=1,S=2,z=1$ の pair equation は
+\[
+ s(8-T)=T-4
+\]
+である．$T>4$ と $y=T/2\in\ZZ$ より $T$ は六以上の偶数なので，
+$T=6,s=1$ に限られる．両 core は
+\[
+ (r,s,z,S,T)=(1,1,1,2,6),\qquad (a,b)=(3,7)
+\]
+となる．core $4$ の ray $1=C$ の係数は $D^4_1=5$ である．
+core $1$ の低 row は，matching と node 総数五から
+\[
+ (p^1_{40},p^1_{42},p^1_{43})=(-1,-1,1)
+\]
+に強制される．pair equations による低 column の和から
+$D^1_4=q_{01}+q_{12}-9$ を得るので，辺 $14$ の $D$ 相殺は
+$q_{01}+q_{12}=4$ を要求する．両分母は三以上なので矛盾する．
+\end{proof}
+
+\subsection{全 reverse data に対する証明された有限上界}
+
+\begin{proposition}\label{g51120:reverse-bounds}
+残る二価 cores の canonical reverse data は全て
+\begin{equation}\label{g51120:box}
+ 1\le r\le9,\qquad 2\le S\le7,\qquad S\le T\le13
+\end{equation}
+を満たす．さらに I 型では $r\le3$，II 型では $r\le4$，
+IV 型では $S\le4$ であり，III 型は負の枝に限られる．
+この上界は分母 $a,b$ または scales $s,z$ の上限を意味しない．
+\end{proposition}
+
+\begin{proof}
+I 型は $u=-r-1<0$ なので $r\le3$ である．
+補題~\ref{tn14:small-negative-branch} により，この範囲に負の枝はない．
+正の枝では $y=zT/(r+1)>1$ なので，$u$ の負例外型は起こらず，
+必ず $v=r+1$ の通常型である．
+
+II 型で $r>4$ なら通常型は不可能であり，正例外型は
+$v=1,q_{ih}=r+1$ を要求する．これは $x=1$ に反する．従って $r\le4$ である．
+III 型は負の枝だけが残る．その $u=T=w$ が四より大きい場合も
+正例外型が $q_{ih}=T+1$，すなわち $z=1$ を要求するが，
+$y=T/(r+1)<1$ となって不可能である．従って $w\le4$ である．
+IV 型では $u=-S$ なので $S\le4$ である．
+以上から，どの型でも負の枝なら $w\le4$ であり，
+式~\eqref{g51120:negative} は $H\le5$，$r=w+H\le9$ を与える．
+以下では正の枝だけを調べる．
+
+\paragraph{IV 型．}
+相手が I または IV 型なら，両者の ray $34$ の行が高 ray $0$ に正成分を持ち，
+$n_{34;0}<0$ となる．相手が II 型なら
+$n_{34;0}=r'+2-T\ge0$ なので $T\le6$ である．
+相手が III 型なら，既に負の枝で $S'=T'\le4$ であるから，
+$n_{34;0}=1+S'-T\ge0$ により $T\le5$ である．
+従って IV 型は $r<S\le4,T\le6$ を満たす．
+
+\paragraph{I 型の相手と上界．}
+相手が I または IV 型なら，やはり puncture $0$ の node が負になる．
+相手が III 型なら，I 型の低低 entry が零であるため，
+相手固有の高 puncture の node が $1-T'<0$ となる．
+従って相手は II 型であり，その同じ node が $1-r'\ge0$ を与えるので $r'=1$ である．
+
+core $3$ を I 型，core $4$ を II 型とする．core $1$ の低 row の成分
+$v=p^1_{43}=r+1$ は正なので，残る二成分は負である．
+core $4$ の ray $1=D$ における逆向き成分は $T',-S',-L'$ であり，
+必要な node は
+\[
+ n_{14;3}=L'-r,\qquad n_{14;2}\ge S'+2.
+\]
+従って $S'+L'\le r+3$，すなわち $T'\le r+2\le5$ である．
+正の枝の $T'\ge5$ と $r'=1$ を合わせると
+\[
+ r=3,\qquad (r',S',T')=(1,2,5)
+\]
+を得る．この相手の pair equation と整数性は
+\[
+ (s'-3)(z'+2)=-8,\qquad z'\in2\ZZ_{>0}
+\]
+であり，$(s',z')=(1,2),(2,6)$ に限られる．従って $q_{24}=3$ または $5$ である．
+
+辺 $24$ の共通低 puncture $3$ では，相手の reverse が $r'=1$ なので，
+$R=p^2_{34}$ は $-1$ または $q_{24}-1$ である．後者なら matching により
+$p^2_{30}<0$ なので，辺 $23$ の node を $m$ と書くと
+\[
+ m_0\ge S+2,\qquad m_4=L+2-q_{24}.
+\]
+その総数五から $T\le q_{24}\le5$ を得るが，$r=3,S>3$ では $T\ge6$ であり矛盾する．
+従って $R=-1$，$m_4=L+2\le5$ である．正の枝の $L\ge3$ より
+$L=3$，$3<S<6$ となる．従って $(S,T)=(4,6),(5,7)$ だけが残る．
+
+\paragraph{II 型と II 型．}
+両者の共通高 ray $0$ への成分は $-r-1,-r'-1$ なので
+$n_{34;0}=r+r'+3\le5$，従って $r=r'=1$ である．両者は正の枝に属する．
+辺 $13$ の通常型は $p^1_{43}=-1$ を要求するが，
+このとき $n_{14;3}=L'+2\le5$ なので $L'=3$ となる．
+これは $r'=1$，$S'>1$，$r'(T'-S')>S'$ と両立しない．
+従って両方の共通 punctures は正例外型である．matching と node 総数から
+\[
+ T'\le q_{13}\le T'-S'+3,\qquad
+ T\le q_{24}\le T-S+3
+\]
+となり，$S,S'\le3$ が従う．
+$r=1$ の pair equation は
+\[
+ z(s+1)T=(4S-2)sz+2(S-1)s+2z+2
+\]
+であり，$z\ge1$ から
+\[
+ T\le\frac{(6S-4)s+4}{s+1}<6S-4\le14
+\]
+を得る．従って $T\le13$ である．
+
+\paragraph{II 型と IV 型．}
+II 型の相手が III 型なら，その固有高 puncture の node は $1-T'<0$ である．
+I 型との組は既に扱ったので，残るのは IV 型との組だけである．
+core $3$ を正の II 型，core $4$ を IV 型とする．$S'\le4$ は既知である．
+辺 $24$ の共通低 puncture $3$ では，core $4$ の reverse は $-S'<-1$ なので
+$R=p^2_{34}$ は $S'$ または $-1$ に限られる．
+通常の $R=S'>0$ なら，matching は $p^2_{31}<0$ を要求し，
+\[
+ m_1\ge S+2,\qquad m_4=L+1-S'
+\]
+から $T\le S'+1\le5$ を得る．負例外の $R=-1$ なら
+$m_4=L+2\le5$ であり，正の枝より $L=3$ となる．
+従って $r<S<2r\le8$，$S\le7,T\le9$ である．
+これで四つの向きの全てと全ての相手の組を尽くし，主張が従う．
+\end{proof}
+
+\subsection{全 scale の点・半直線表示}
+
+$h=S-r$，$\delta=T-S$ と置くと，高高 pair equation は
+\begin{equation}\label{g51120:bilinear}
+ Fsz+As+Bz+C=0
+\end{equation}
+に等しい．ただし
+\[
+ F=(2r+1)h-r^2(\delta-1),\quad A=h(r+1),\quad
+ B=-r(h+\delta-1),\quad C=r(r+1).
+\]
+本節では $L\le4$ を仮定できないため，$F=0$ の場合も保持する．
+$F\ne0$ なら
+\begin{equation}\label{g51120:factor}
+ (Fs+B)(Fz+A)=K,\qquad K=AB-FC
+\end{equation}
+である．$K\ne0$ ならその全 signed divisors を列挙すればよい．
+$K=0$ なら $Fs+B=0$ または $Fz+A=0$ の全直線を残す．
+$F=0$ では式~\eqref{g51120:bilinear} 自体が整数一次式になる．
+負の枝の $F=0$ は $2r+1\mid r^2$ を要求するので起こらず，
+この場合は $A>0,B<0$ であり，正の整数解を全等差半直線として表示できる．
+
+各直線上で
+\[
+ r\mid sS,\qquad r+1\mid zT,\qquad
+ sS\equiv zT\equiv0\pmod2
+\]
+を課す．例えば parameter を $2r(r+1)$ を法として分ければ全整数解を尽くす．
+正値性で始点をずらすと，各族は
+\begin{equation}\label{g51120:halfline}
+ (s,z)=(s_0,z_0)+t(d_s,d_z),\qquad t\in\ZZ_{\ge0}
+\end{equation}
+となる．どの半直線も途中で打ち切らない．
+
+命題~\ref{g51120:reverse-bounds} の範囲で，全ての点と半直線を作ると，
+一つの二価 core あたり次の表になる．
+\begin{center}\small
+\begin{tabular}{crrr}
+向き&点型&全半直線型&合計\\\hline
+I&27&30&57\\
+II&31&30&61\\
+III&8&0&8\\
+IV&24&18&42\\\hline
+合計&90&78&168
+\end{tabular}
+\end{center}
+これは整除・偶奇の剰余類による分割も含む表示数であり，幾何的模型の個数ではない．
+無限族を持つ reverse triples は，次の四つだけである：
+\begin{center}\small
+\begin{tabular}{ccccl}
+$r$&$S$&$T$&場合&全正整数 scale の表示\\\hline
+1&2&6&$F=0$&$s=2z-1$, $z\ge1$\\
+2&6&12&$F=0$&$s=3a-2$, $z=2a-1$, $a\ge1$\\
+2&3&6&$K=0$&$s=2a$, $z=1$, $a\ge1$\\
+3&4&6&$K=0$&$s=3a$, $z=2$, $a\ge1$
+\end{tabular}
+\end{center}
+後二つは固定分母七・十三の共鳴族である．前二つの affine 族も残すことが必要である．
+
+\subsection{低行の整数接着と最後の parity 障害}
+
+各二価 core の族を一つずつ選び，まず低辺 $34$ の三つの node
+\[
+ n_{34;k}=1-p^3_{4k}-p^4_{3k},\qquad k=0,1,2
+\]
+が非負であるものを残す．これらは reverse data だけで定まり，
+scale の自由 parameter には依存しない．この段階の型対は $3592$ 個である．
+
+低辺 $14,23$ の node 分配をそれぞれ
+\[
+ (n_0,n_2,n_3),\qquad(m_0,m_1,m_4)
+\]
+とし，非負整数で各和が五である全二十一通りを使う．
+三高 cores $1,2$ の唯一の低 row は
+\begin{equation}\label{g51120:low-rows}
+ R^1_k=1-n_k-p^4_{1k}\quad(k=0,2,3),\qquad
+ R^2_k=1-m_k-p^3_{2k}\quad(k=0,1,4)
+\end{equation}
+である．全成分が非零で，正成分がちょうど一つであるものだけを残す．
+さらに $(p^3_{41},R^1_3)$ と $(p^4_{32},R^2_4)$ に
+式~\eqref{g51120:partner} の三択を課すと，$1395$ 配置が残る．
+
+通常型は分母に新しい式を課さない．例外型では，二つの reverse entries の和の絶対値が
+共有高分母 $q_{13}$ または $q_{24}$ に等しい．各分母は式~\eqref{g51120:halfline} の
+parameter に関して一次式であり，この条件は正確な整数の等式として処理する．
+定数の不一致で $759$ 配置，parameter が整数にならないことで $550$ 配置が消え，
+合計 $1309$ 配置が排除される．残る $86$ 配置では，それぞれの parameter は
+一つに固定されるか，全ての非負整数を動くままである．
+
+最後に，低辺 $34$ の対向係数を足す．canonical な低 rays の係数は
+\[
+ D_C=T-S+y-x,\qquad D_D=s-z-1
+\]
+なので，その残差 $D^3_4+D^4_3$ は残る自由 parameters に関する一次式である．
+全配置の結果は次表のとおりであり，零になるものはない．
+\begin{center}\small
+\begin{tabular}{crl}
+向きの組&配置数&$D^3_4+D^4_3$ の障害\\\hline
+I--II または II--I&32&全自由 parameters に対して奇数\\
+II--II&5&四配置で $8$，一配置で $28$\\
+II--IV または IV--II&40&全自由 parameters に対して奇数\\
+III--III&9&常に $-4$\\\hline
+合計&86&全配置で相殺不可能
+\end{tabular}
+\end{center}
+
+最後の表は，node 配分と scale の剰余類表示の重複を除くと，
+$3\leftrightarrow4$ の交換を除いて十組の canonical models へ圧縮できる．
+五つ組を $(r,s,z,S,T)$ の順とし，
+\[
+ \begin{gathered}
+ F_a=(3,3a,2,4,6)\quad(a\ge1),\\
+ A=(1,1,2,2,5),\quad B=(1,2,6,2,5),\quad C=(1,3,2,2,6),\\
+ E=(2,2,6,3,5),\quad N_0=(4,4,5,2,2),\\
+ N_1=(7,7,2,4,4),\quad N_2=(7,21,4,4,4),\\
+ N_3=(8,6,9,4,4),\quad N_4=(8,8,27,4,4)
+ \end{gathered}
+\]
+と書くと，残差は次のようになる．
+\begin{center}\small
+\begin{tabular}{ccl}
+一方の向き・模型&他方の向き・模型&$D^3_4+D^4_3$\\\hline
+I, $F_a$&II, $A$&$11-4a$\\
+I, $F_a$&II, $B$&$19-4a$\\
+II, $F_a$&IV, $A$&$3-4a$\\
+II, $B$&II, $B$&$28$\\
+II, $C$&II, $C$&$8$\\
+II, $E$&IV, $N_1$&$13$\\
+II, $E$&IV, $N_2$&$25$\\
+II, $E$&IV, $N_3$&$5$\\
+II, $E$&IV, $N_4$&$-11$\\
+III, $N_0$&III, $N_0$&$-4$
+\end{tabular}
+\end{center}
+従って，残る唯一の無限族 $F_a$ についても，全正整数 $a$ に対して矛盾が成立する．
+
+この有限表は，証明から得た reverse 上界と signed-divisor の完全因数分解によるものである．
+分母や半直線 parameter の数値上限は使用していない．
+\nolinkurl{verify_g5_11_obstruction_v20.py} は，全 $168$ 型の affine 行列と
+全 $1395$ 配置を生成し，元の行和と pair products を parameter の多項式恒等式として確認する．
+結果 JSON には，各 node 行，二つの低 rows，例外型の要求分母，parameter の全範囲，
+および最後の奇数残差または非零定数を保存する．
+別実装は主生成器を import せず，canonical データからこれらを再構成できる．
+
+補題~\ref{g51120:no-positive-III} と最後の完全表により，四つの向きの全てが排除される．
+従って定理~\ref{g51120:no-support} が従う．

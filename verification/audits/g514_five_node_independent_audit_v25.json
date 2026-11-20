@@ -1,0 +1,820 @@
+{
+  "version": "v25",
+  "status": "PASS",
+  "auditor": "independent four-high agent; no primary verifier imported",
+  "scope": "Independent exact audit of all seven node-five normal forms, original low rows/columns/unit nodes/D, and all 36 complete divisor cases in the fixed-core obstruction. The preceding unit-position classification and second-branch sign deductions were also reviewed analytically.",
+  "normal_forms_regenerated": [
+    {
+      "case": "A1",
+      "normal_tuple": [
+        3,
+        1,
+        2,
+        2,
+        3,
+        2,
+        1
+      ],
+      "q02_q03_q12_q13": [
+        7,
+        7,
+        3,
+        3
+      ],
+      "m_n_v_a_b": [
+        3,
+        3,
+        2,
+        2,
+        1
+      ],
+      "unit_nodes": [
+        0,
+        0,
+        5
+      ],
+      "low_rows_columns_pairs_and_D_checked": true
+    },
+    {
+      "case": "A2",
+      "normal_tuple": [
+        2,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1
+      ],
+      "q02_q03_q12_q13": [
+        7,
+        7,
+        3,
+        3
+      ],
+      "m_n_v_a_b": [
+        3,
+        3,
+        2,
+        1,
+        2
+      ],
+      "unit_nodes": [
+        0,
+        0,
+        5
+      ],
+      "low_rows_columns_pairs_and_D_checked": true
+    },
+    {
+      "case": "A3",
+      "normal_tuple": [
+        2,
+        2,
+        3,
+        1,
+        3,
+        2,
+        2
+      ],
+      "q02_q03_q12_q13": [
+        7,
+        7,
+        3,
+        3
+      ],
+      "m_n_v_a_b": [
+        3,
+        3,
+        3,
+        2,
+        2
+      ],
+      "unit_nodes": [
+        0,
+        0,
+        5
+      ],
+      "low_rows_columns_pairs_and_D_checked": true
+    },
+    {
+      "case": "B1",
+      "normal_tuple": [
+        1,
+        3,
+        2,
+        2,
+        2,
+        3,
+        2
+      ],
+      "q02_q03_q12_q13": [
+        3,
+        7,
+        7,
+        3
+      ],
+      "m_n_v_a_b": [
+        3,
+        7,
+        3,
+        1,
+        5
+      ],
+      "unit_nodes": [
+        0,
+        0,
+        5
+      ],
+      "low_rows_columns_pairs_and_D_checked": true
+    },
+    {
+      "case": "B2",
+      "normal_tuple": [
+        1,
+        3,
+        2,
+        2,
+        3,
+        2,
+        3
+      ],
+      "q02_q03_q12_q13": [
+        3,
+        7,
+        7,
+        3
+      ],
+      "m_n_v_a_b": [
+        3,
+        7,
+        4,
+        2,
+        5
+      ],
+      "unit_nodes": [
+        0,
+        0,
+        5
+      ],
+      "low_rows_columns_pairs_and_D_checked": true
+    },
+    {
+      "case": "B3",
+      "normal_tuple": [
+        2,
+        2,
+        1,
+        3,
+        2,
+        3,
+        1
+      ],
+      "q02_q03_q12_q13": [
+        3,
+        7,
+        7,
+        3
+      ],
+      "m_n_v_a_b": [
+        3,
+        7,
+        2,
+        1,
+        4
+      ],
+      "unit_nodes": [
+        0,
+        0,
+        5
+      ],
+      "low_rows_columns_pairs_and_D_checked": true
+    },
+    {
+      "case": "B4",
+      "normal_tuple": [
+        2,
+        2,
+        1,
+        3,
+        3,
+        2,
+        2
+      ],
+      "q02_q03_q12_q13": [
+        3,
+        7,
+        7,
+        3
+      ],
+      "m_n_v_a_b": [
+        3,
+        7,
+        3,
+        2,
+        4
+      ],
+      "unit_nodes": [
+        0,
+        0,
+        5
+      ],
+      "low_rows_columns_pairs_and_D_checked": true
+    }
+  ],
+  "complete_forced_factor_sets": {
+    "8": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "20": [
+      1,
+      2,
+      4,
+      5,
+      10,
+      20
+    ]
+  },
+  "factor_case_count": 36,
+  "raw_pair_polynomial_identity_count": 216,
+  "raw_row_polynomial_identity_count_before_last_row": 108,
+  "exclusion_counts": {
+    "no_positive_integer_B": 32,
+    "nonintegral_reverse_entry_for_every_integer_B": 2,
+    "nonzero_constant_row_residual": 2
+  },
+  "factor_cases": [
+    {
+      "case": "A1",
+      "L": 1,
+      "M": 8,
+      "C": -9,
+      "E": -3,
+      "reverse_entry_denominators": [
+        3,
+        9
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "-1/3",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "A1",
+      "L": 2,
+      "M": 4,
+      "C": -6,
+      "E": -2,
+      "reverse_entry_denominators": [
+        4,
+        5
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "-1/3",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "A1",
+      "L": 4,
+      "M": 2,
+      "C": 0,
+      "E": 0,
+      "reverse_entry_denominators": [
+        6,
+        3
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "reason": "nonintegral_reverse_entry_for_every_integer_B",
+      "offending_entries": [
+        {
+          "column": 1,
+          "B_coefficient": "-1",
+          "constant": "-1/3"
+        },
+        {
+          "column": 2,
+          "B_coefficient": "-2",
+          "constant": "-2/3"
+        }
+      ]
+    },
+    {
+      "case": "A1",
+      "L": 8,
+      "M": 1,
+      "C": 12,
+      "E": 4,
+      "reverse_entry_denominators": [
+        10,
+        2
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "-1/3",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "A2",
+      "L": 1,
+      "M": 8,
+      "C": 12,
+      "E": 4,
+      "reverse_entry_denominators": [
+        2,
+        10
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "-1/3",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "A2",
+      "L": 2,
+      "M": 4,
+      "C": 0,
+      "E": 0,
+      "reverse_entry_denominators": [
+        3,
+        6
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "reason": "nonintegral_reverse_entry_for_every_integer_B",
+      "offending_entries": [
+        {
+          "column": 1,
+          "B_coefficient": "-2",
+          "constant": "-2/3"
+        },
+        {
+          "column": 2,
+          "B_coefficient": "-1",
+          "constant": "-1/3"
+        }
+      ]
+    },
+    {
+      "case": "A2",
+      "L": 4,
+      "M": 2,
+      "C": -6,
+      "E": -2,
+      "reverse_entry_denominators": [
+        5,
+        4
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "-1/3",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "A2",
+      "L": 8,
+      "M": 1,
+      "C": -9,
+      "E": -3,
+      "reverse_entry_denominators": [
+        9,
+        3
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "-1/3",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "A3",
+      "L": 1,
+      "M": 8,
+      "C": -3,
+      "E": -4,
+      "reverse_entry_denominators": [
+        3,
+        10
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "-4/3",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "A3",
+      "L": 2,
+      "M": 4,
+      "C": -6,
+      "E": -4,
+      "reverse_entry_denominators": [
+        4,
+        6
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "-2/3",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "A3",
+      "L": 4,
+      "M": 2,
+      "C": -6,
+      "E": -4,
+      "reverse_entry_denominators": [
+        6,
+        4
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "-2/3",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "A3",
+      "L": 8,
+      "M": 1,
+      "C": -3,
+      "E": -4,
+      "reverse_entry_denominators": [
+        10,
+        3
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "-4/3",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "B1",
+      "L": 1,
+      "M": 20,
+      "C": 67,
+      "E": 12,
+      "reverse_entry_denominators": [
+        2,
+        25
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "-12/67",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "B1",
+      "L": 2,
+      "M": 10,
+      "C": 18,
+      "E": 3,
+      "reverse_entry_denominators": [
+        3,
+        15
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "-1/6",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "B1",
+      "L": 4,
+      "M": 5,
+      "C": -5,
+      "E": 0,
+      "reverse_entry_denominators": [
+        5,
+        10
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "0",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "B1",
+      "L": 5,
+      "M": 4,
+      "C": -9,
+      "E": 0,
+      "reverse_entry_denominators": [
+        6,
+        9
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "0",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "B1",
+      "L": 10,
+      "M": 2,
+      "C": -14,
+      "E": 3,
+      "reverse_entry_denominators": [
+        11,
+        7
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "3/14",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "B1",
+      "L": 20,
+      "M": 1,
+      "C": -9,
+      "E": 12,
+      "reverse_entry_denominators": [
+        21,
+        6
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "4/3",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "B2",
+      "L": 1,
+      "M": 20,
+      "C": 9,
+      "E": -7,
+      "reverse_entry_denominators": [
+        3,
+        25
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "7/9",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "B2",
+      "L": 2,
+      "M": 10,
+      "C": -8,
+      "E": -6,
+      "reverse_entry_denominators": [
+        4,
+        15
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "-3/4",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "B2",
+      "L": 4,
+      "M": 5,
+      "C": -12,
+      "E": -4,
+      "reverse_entry_denominators": [
+        6,
+        10
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "-1/3",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "B2",
+      "L": 5,
+      "M": 4,
+      "C": -11,
+      "E": -3,
+      "reverse_entry_denominators": [
+        7,
+        9
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "-3/11",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "B2",
+      "L": 10,
+      "M": 2,
+      "C": 0,
+      "E": 2,
+      "reverse_entry_denominators": [
+        12,
+        7
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "reason": "nonzero_constant_row_residual"
+    },
+    {
+      "case": "B2",
+      "L": 20,
+      "M": 1,
+      "C": 28,
+      "E": 12,
+      "reverse_entry_denominators": [
+        22,
+        6
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "-3/7",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "B3",
+      "L": 1,
+      "M": 20,
+      "C": 28,
+      "E": 12,
+      "reverse_entry_denominators": [
+        2,
+        24
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "-3/7",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "B3",
+      "L": 2,
+      "M": 10,
+      "C": 0,
+      "E": 4,
+      "reverse_entry_denominators": [
+        3,
+        14
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "reason": "nonzero_constant_row_residual"
+    },
+    {
+      "case": "B3",
+      "L": 4,
+      "M": 5,
+      "C": -11,
+      "E": 3,
+      "reverse_entry_denominators": [
+        5,
+        9
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "3/11",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "B3",
+      "L": 5,
+      "M": 4,
+      "C": -12,
+      "E": 4,
+      "reverse_entry_denominators": [
+        6,
+        8
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "1/3",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "B3",
+      "L": 10,
+      "M": 2,
+      "C": -8,
+      "E": 12,
+      "reverse_entry_denominators": [
+        11,
+        6
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "3/2",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "B3",
+      "L": 20,
+      "M": 1,
+      "C": 9,
+      "E": 31,
+      "reverse_entry_denominators": [
+        21,
+        5
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "-31/9",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "B4",
+      "L": 1,
+      "M": 20,
+      "C": -9,
+      "E": -6,
+      "reverse_entry_denominators": [
+        3,
+        24
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "-2/3",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "B4",
+      "L": 2,
+      "M": 10,
+      "C": -14,
+      "E": -4,
+      "reverse_entry_denominators": [
+        4,
+        14
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "-2/7",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "B4",
+      "L": 4,
+      "M": 5,
+      "C": -9,
+      "E": 0,
+      "reverse_entry_denominators": [
+        6,
+        9
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "0",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "B4",
+      "L": 5,
+      "M": 4,
+      "C": -5,
+      "E": 2,
+      "reverse_entry_denominators": [
+        7,
+        8
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "2/5",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "B4",
+      "L": 10,
+      "M": 2,
+      "C": 18,
+      "E": 12,
+      "reverse_entry_denominators": [
+        12,
+        6
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "-2/3",
+      "reason": "no_positive_integer_B"
+    },
+    {
+      "case": "B4",
+      "L": 20,
+      "M": 1,
+      "C": 67,
+      "E": 32,
+      "reverse_entry_denominators": [
+        22,
+        5
+      ],
+      "all_six_original_pairs_verified": true,
+      "three_original_rows_verified": true,
+      "candidate_B": "-32/67",
+      "reason": "no_positive_integer_B"
+    }
+  ],
+  "all_paper_table_entries_matched": true,
+  "identically_zero_cases_excluded_by_original_integrality": true,
+  "denominator_cutoff_or_parameter_sampling_used": false,
+  "global_G514_nonexistence_claim": false,
+  "external_peer_review": false,
+  "proof_assistant_formalization": false,
+  "proof_file": "g514_five_node_exclusion_v25.tex",
+  "proof_sha256": "a9762909df0ecf7518813604f408c1b6c157d65b4ef39bde5fb2dd92210dc627",
+  "audit_script_sha256": "0e5af3d147bfad9d951d14e4900335c0a009ad36b13c2a18d4922297bbe43d5b"
+}

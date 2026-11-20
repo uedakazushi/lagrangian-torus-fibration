@@ -1,0 +1,165 @@
+\section{未完成の外側 core による尺度の線形復元}
+\label{oc23:section}
+
+一つの低辺の両端だけを先に完成しようとすると，その二つの局所模型には
+無限個の尺度が残り得る．しかし第三の core について，四本の rays の全行列を
+完成する前でも，一つの pair-product 方程式を課すことができる．
+本節はこの必要条件を線形の形に書き，共鳴する全ての場合を明示する．
+以下の $a,j,p,S$ は前節の canonical 変数とは独立に定める．
+
+\begin{lemma}[第三 core の単一 pair による復元]
+\label{oc23:linear-transfer}
+三つの異なる cores を $i,j_0,k$ とし，$q_{ij_0}=1$，$q_{ik}=a>1$ とする．
+core $i$ の entry を $p=p^i_{k j_0}$ と置く．
+core $j_0$ の低 row と反対 column の対応する二成分を
+\[
+ p^{j_0}_{ik}=\varepsilon\,j,\qquad
+ p^{j_0}_{ki}=\varepsilon\,S,
+ \qquad \varepsilon\in\{1,-1\},\quad j,S\in\mathbb Z_{>0}
+\]
+と書くと，$q_{j_0k}=jS+1$ である．
+二つの node に対して
+\[
+ u=1-n_{ik;j_0},\qquad v=1-n_{j_0k;i},
+ \qquad -4\le u,v\le1
+\]
+と置き，$E=au-p$ とする．
+core $k$ の rays $i,j_0$ の pair-product 方程式は，厳密に
+\begin{equation}\label{oc23:linear-equation}
+ \bigl(E(jv-\varepsilon)-aj\bigr)S=a-1-Ev
+\end{equation}
+と同値である．特に左辺の係数が非零なら，$S$ の候補は高々一つである．
+左辺の係数を $A$ とし，$q=jS+1$ と置くと，さらに
+\begin{equation}\label{oc23:denominator-divisor}
+ qA=-\varepsilon E-j
+\end{equation}
+が成り立つ．従って非共鳴の解では $q\mid-\varepsilon E-j$ であり，
+$q\le|\varepsilon E+j|$ である．
+\end{lemma}
+
+\begin{proof}
+二つの clutching 方程式は
+\[
+ p^k_{ij_0}=au-p=E,\qquad
+ p^k_{j_0i}=(jS+1)v-\varepsilon S
+\]
+を与える．これらの積を $a(jS+1)-1$ に等しく置き，$S$ で整理すれば
+式~\eqref{oc23:linear-equation} を得る．各 node は非負であり，各辺の総数は五なので，
+$u,v\in\{-4,-3,-2,-1,0,1\}$ である．
+他の rays に関する core $k$ の entries や，その正の weights を先に決める必要はない．
+式~\eqref{oc23:linear-equation} の右辺を $B$ とすると，
+$A+jB=-\varepsilon E-j$ である．$AS=B$ を用いれば
+式~\eqref{oc23:denominator-divisor} も得られる．
+\end{proof}
+
+\begin{proposition}[全共鳴の分類]
+\label{oc23:resonances}
+前補題において，$a$ は三以上の奇数，$p$ は $a-1$ の非零の signed divisor とする．
+式~\eqref{oc23:linear-equation} の係数と定数がともに零となるのは，
+次の表のいずれかの場合に限り，逆に表の全ての場合には両者が零となる．
+\begin{center}\small
+\begin{tabular}{c|c|c|c|c|l}
+ $\varepsilon$&$j$&$p$&$u$&$v$&条件\\\hline
+ $-1$&$a-1$&$1$&$1$&$1$&---\\
+ $-1$&$a-1$&$-(a-1)$&$0$&$1$&---\\
+ $+1$&$(a-1)/h$&$(a-1)/h$&$0$&$-h$&$h\mid a-1,\ 1\le h\le4$\\
+ $+1$&$a-1$&$-1$&$-1$&$-1$&---\\
+ $+1$&$1$&$-(a-1)$&$-1$&$-(a-1)$&$a\in\{3,5\}$
+\end{tabular}
+\end{center}
+これは単一 pair 条件の共鳴であり，局所模型や接着全体の存在を意味しない．
+\end{proposition}
+
+\begin{proof}
+定数が零である条件は $Ev=a-1$ である．これを係数が零である条件へ代入すると
+\[
+ -\varepsilon E=j,\qquad
+ E=-\varepsilon j,\qquad
+ jv=-\varepsilon(a-1)
+\]
+を得る．逆も直接成り立つ．また $p\mid a-1$ から
+$1\le |p|\le a-1$ である．
+
+$\varepsilon=-1$ では $v>0$ なので $v=1$，$j=a-1$ である．
+$p=au-j$ と上記の絶対値上限から，$u=1,p=1$ または
+$u=0,p=-(a-1)$ だけが残る．
+
+$\varepsilon=+1$ では $v=-h$，$1\le h\le4$，$jh=a-1$ と書ける．
+$p=au+j$ と $1\le j\le a-1$，$|p|\le a-1$ より，$u=0$ または $u=-1$ である．
+$u=0$ は表の第三行を与える．$u=-1$ では $p=j-a$ なので
+\[
+ a-j\mid a-1\quad\Longleftrightarrow\quad a-j\mid j-1.
+\]
+$h=1$ なら $a-j=1$ であり，第四行を得る．
+$h\ge2$ なら $a-j=(h-1)j+1>j-1\ge0$ であるから，$j=1$ が必要である．
+このとき $a=h+1$ は三以上の奇数で，$h\le4$ なので $a=3,5$ に限られる．
+これが第五行である．全表示を代入すれば逆向きも確認できる．
+\end{proof}
+
+\begin{corollary}[非共鳴時の有限尺度候補]
+\label{oc23:finite-scale}
+固定した $(a,p,j,\varepsilon)$ が前命題のどの共鳴にも当たらないなら，
+式~\eqref{oc23:linear-equation} と node 条件を満たす正整数尺度 $S$ の候補は
+高々三十六個であり，分母の上限を仮定せずに全て求められる．
+\end{corollary}
+
+\begin{proof}
+$(u,v)$ の三十六通りを取り，係数が零で定数が非零なら除く．
+係数が非零なら，定数を係数で割った値が正整数である場合だけを残す．
+共鳴は仮定によってない．異なる node の組が同じ尺度を与える場合は重複を除いてよい．
+\end{proof}
+
+実際の接着では，さらに $jS+1$ の奇数性，他の pair equations，row sums，
+全 node 配分，対向 $D$，正の weights を課す必要がある．
+この補題は，その前段階で尺度の無限自由度を切るための必要条件である．
+特に，一つの低辺の両側がともに完成しても，第三 core の pair を満たさなければ
+大域の atlas には延長できない．
+
+\begin{corollary}[低辺を横切る分母比較と残る共鳴]
+\label{oc23:denominator-comparison}
+前命題の設定で，さらに低辺 $ij_0$ 自身の puncture $k$ における
+非負 node 条件を課す．非共鳴の解では
+\[
+ q_{j_0k}\le6q_{ik}+2
+\]
+である．$q_{ik}=a\ge7$ の場合，残る共鳴は次の二族だけである：
+\[
+\begin{array}{c|c|c|c|c|c}
+ \varepsilon&p&j&u&v&n_{ij_0;k}\\\hline
+ -1&1&a-1&1&1&1\\
+ +1&-1&a-1&-1&-1&1
+\end{array}
+\]
+いずれも $q_{j_0k}=1+(a-1)S$ であり，単一 pair と三つの表示された
+node 条件は $S>0$ 全体で成り立つ．他の局所・大域条件は引き続き必要である．
+$a=3,5$ には，この二族に加えて
+\[
+\begin{array}{c|c|c|c|c|c|c}
+ a&\varepsilon&p&j&u&v&n_{ij_0;k}\\\hline
+ 3&-1&-2&2&0&1&4\\
+ 3&+1&-2&1&-1&-2&1\\
+ 5&+1&-4&1&-1&-4&1
+\end{array}
+\]
+の三場合だけが追加される．
+\end{corollary}
+
+\begin{proof}
+core $i$ の反対 entry は $r=(a-1)/p$ である．
+低辺の clutching は，$w=1-n_{ij_0;k}\in[-4,1]$ により
+\[
+ r+\varepsilon j=w
+\]
+と書ける．従って $j\le|r|+4\le a+3$ である．
+非共鳴の解では式~\eqref{oc23:denominator-divisor} と $|u|\le4$ を使い，
+\[
+ q\le|\varepsilon(au-p)+j|
+ \le4a+(a-1)+(a+3)=6a+2
+\]
+を得る．
+
+共鳴表の第三行では $r=h$，$\varepsilon j=j$ だから $w=h+j\ge2$ となり除かれる．
+第二行では $w=-a$ なので $a=3$ だけが残る．
+第一行と第四行では $w=0$，第五行でも $w=0$ であり，表示した全表を得る．
+各場合を元の三つの clutching と単一 pair へ代入すれば，逆向きも成り立つ．
+\end{proof}

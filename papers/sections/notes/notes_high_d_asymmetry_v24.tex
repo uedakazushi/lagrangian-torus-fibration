@@ -1,0 +1,97 @@
+% v24 current lattice summary; proofs remain in their original modules.
+\subsection{三高同時非負性：非対称格子の再利用と現在の残余}
+\label{notes:hd24}\label{notes:hd23}
+
+\paragraph{現行の結論と，旧証明から使う式．}
+
+固定低行 $(s,t)$ ごとの全係数有限復元を保ち，
+\[
+ \delta=sy-tx,\qquad a=uh-(b-1)(F+1)
+\]
+で領域を分ける．第23版の証明
+\nolinkurl{high_d_asymmetry_lattice_obstruction_v23.tex} は
+$\delta=0,s\ge t$，$\delta=-1$，$\delta=1,x\ge1$，$a=0,s\le2$ を排除する．
+本版の後続二節により $\delta=1,x=0$ と比例領域 $x>0$ も排除された．
+従って主に残るのは $|\delta|\ge2$ と，比例零軸
+$x=y=0,z\ge1,s<t,0\le n\le z$ である．
+退化面 $a=0$ は $x=0,R_0=1$ の排除により固定 $s$ で完全有限復元できる．
+三高同時非負性全体の不存在，残る固定整数への一様上界は結論していない．
+
+再利用する核は，$n=\ell-U\in\mathbb Z$ に対する
+\[
+ S=j-(F+1)n-\ell\delta,\qquad
+ T=h+Fn+\ell\delta,
+ \qquad F+\delta=b-1+h+s(d-1)
+\]
+である．$n$ は node 配分ではなく尺度の格子変数であり，$j$ の非負性は仮定しない．
+$\delta=-1$ では正値性が $x=1,n=1,t=sy+1$ を強制し，
+残る差方程式が正係数表示を持つ．
+$\delta=1,x\ge1$ では $x=1,n=-1,z=0,t=sy-1$ を強制するが，
+差方程式だけでは矛盾せず，元残余を併用して
+\[
+ y\mathfrak r=\bigl(sy(y+1)+1\bigr)Q_++N_+,
+ \qquad N_+>0
+\]
+を得る．この二方向の違いは $|\delta|\ge2$ でも保持する．
+
+\paragraph{元の pair 残余を落とせない回帰例．}
+
+\[
+ (s,t,x,y,z,b)=(5,4,1,1,0,3)
+\]
+は $\delta=1$ であり，復元尺度は $(S,T,U)=(6,2,9)$，
+$\alpha=18,k=11$，$q=(31,9,73,1)$ となる．
+単一合同と六符号を満たすが，三つの元の高--高 pair 残余は全て $16$ である．
+また $(s,t,x,y,z,b)=(3,6,1,2,0,3)$ は
+$\delta=0,s<t$，$(S,T,U)=(4,2,8)$ だが，元残余は $-18$ である．
+どちらも模型ではない．後者は本版で排除した比例領域 $x>0$ に属し，
+元残余を保持する必要を今後も示す．
+
+退化面でも同じ区別が必要である．
+\[
+ (s,t,x,y,z,b)=(3,138,0,0,4,16)
+\]
+では $F=27,m=757$，$(S,T,U)=(54,84,141)$，$R_0=4$ となり，
+単一合同と六符号は成立する．元残余は $5658$ であり模型ではない．
+$a=0$ だけで正整数尺度が全て不可能になるわけではない．
+
+\paragraph{退化面で引き続き使う小さい整数．}
+
+$a=0$ では
+\[
+ s\ell=bF,\qquad uh=(b-1)(F+1),\qquad
+ u(s-bx)=(b-1)(b+sz)>0
+\]
+となる．$K_0=h(s-1)+1$，$R_0=b^2-sT$ と置くと
+\begin{equation}\label{notes:hd23-degenerate-quadratic}
+ \begin{gathered}
+ 1\le R_0\le K_0,\\
+ R_0F^2+(R_0-bK_0+sh)F+R_0-b^2+sh=0
+ \end{gathered}
+\end{equation}
+であり，元残余を戻すと
+\begin{equation}\label{notes:hd23-extra-divisibility}
+ b-1\mid h(s-1)(R_0-1)
+\end{equation}
+も従う．後続の固定 $s$ 復元ではこの二式を組み合わせる．
+$x=0,R_0=1$ のとき余りが零になる例外は，本版の無上界証明で除外済みである．
+旧来の必要合同だけを満たす候補を再び残さない．
+
+\paragraph{一般の非対称量へ移す格子幅．}
+
+$\delta$ の絶対値を単に切って列挙するのでなく，
+格子正値性が $x,n$ をどう制限するかを元残余とともに調べる．
+負側 $\delta=-k$，$k\ge2$，$s\ge k$ では，$j>0,n\ge1$ と $S>0$ から
+\[
+ u(x-k)+(s-k)z<t-(b-1)-1
+\]
+を得るので，$x\le k$ が必要である．
+正側 $\delta=k$，$k\ge2$，$s\ge k$ でも，$n\le-1$ と $T>0$ が $x\le k$ を与える．
+これは必要条件であり，この幅に入る模型の存在も一般不存在も主張しない．
+$s<k$ は別に扱い，canonical な向きを変える標識交換で省略しない．
+
+旧 \nolinkurl{verify_high_d_asymmetry_v23.py} の恒等式・平方剰余・元残余の検算は
+内容不変で再利用する．解決済みの正側軸を復元する旧 \texttt{--axis b z} と，
+次節以降の未解決部分の完全復元器は固定データが異なる．
+比例零軸の四次式と約数条件，退化面の固定 $s$ 復元を現在の入口とする．
+一般不存在を予断せず，反例や無限族が現れればその構造の記述へ計画を変更する．

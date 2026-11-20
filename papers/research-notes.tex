@@ -1,0 +1,819 @@
+\documentclass[11pt,a4paper]{article}
+\makeatletter\def\input@path{{sections/notes/}{sections/paper/}}\makeatother
+\input{sections/common.tex}
+\hypersetup{pdftitle={一般型曲面のLagrangian torus fibration研究ノート第25稿},pdfauthor={}}
+\title{一般型曲面のLagrangian torus fibration\\研究ノート 第25稿\\[0.5em]\large 四rayの完全符号分類と二単位枝の整合、\\三高非負係数の端点・退化面}
+\author{}
+\date{2026年10月28日}
+\begin{document}
+\maketitle
+\noindent
+研究再開時には、bundle直下の\texttt{00\_CONTINUATION\_POLICY\_ja.txt}を必ず先に読む。
+本ノートは、再利用する補題の量化、今後役立つ計算、避けるべき推論、および具体的な次の問題をまとめる。
+公開用論文の証明を履歴として複製せず、現在の研究に必要な形で改訂する。
+\tableofcontents
+
+\section{現在の到達点と、残っている問題}
+
+対象は滑らかな$X_d\subset\PP^3$、$d\ge5$、Kähler form $[\omega]=aH$である。
+fibrationは連結なfibersを持つproper continuous mapで、底は自由な辺のない有限分岐2複体、正則fiberはLagrangian $T^2$である。
+開分岐辺のfiberは$S^1\times\figeight$である。
+通常の閉曲面を底とするalmost toric fibrationとは設定が異なり、後者にはLeung--Symingtonの分類が適用される\cite{LeungSymington}。
+以下の五次の分母障害では，全平面SNC cores，標準$K_4$ cones，$K_5$ branch graphを保ち，
+追加のbranch singularitiesを入れない作用適合atlasを対象とする．
+
+\begin{center}
+\begin{tabularx}{\linewidth}{@{}p{.27\linewidth}X@{}}
+\toprule
+主題 & 現在使える結論と制限\\
+\midrule
+相対SNC構成 & 成分のgenusを制限しない。正のweighted Kähler表示、各成分$n_a\ge2$、指定marked Morse葉層を仮定。normal holonomyは構成中に選べる。\\
+次数分割 & $d=\sum_i e_i$、$k\ge3$の任意分割で、$k$ cores、$d\sum_{i<j}e_i e_j$ nodesを構成。全正則fiberがLagrangian。\\
+Kähler slice & 指定vertical affine sliceをweighted sharp simplexとして決定。surgeryに使うのは十分小さいray。\\
+整数位相 & 正genusのReeb cyclesと複数三重点を含む整数SDRおよび$H_2$基底。$b_2(B)=p_g(d)-\sum_i p_g(e_i)$。\\
+matroidal障害 & 三価リンクの$b_1\le8$。$d\ge7$では全ての次数分割のcoreに局所位相障害。\\
+五次・六次 & 全平面分割で大域作用適合atlasを構成。mixed五次は任意分母でも接続不可。六次は全分母一・各bigon二nodesに強制。\\
+五次の高分母 & 必要支持は三型・二十六標識、最小次数三以上、三点連結。高分母全体の最大公約数は一。$G_{5,14}$ の両単位枝は node 配分 $\{4,1,0\}$，中央の四高 core の正 matching も固定される。$G_{5,16}$ では五node配分も残る。三型の接着と一般分母剛性は未解決。\\
+$K_4$の接着 & 二・四・六例外を全排除。二例外はhubの流れで矛盾し、四例外の全六候補は判別式$-47$の局所障害で矛盾する。一つの全低coreがあれば全分母一。\\
+三高・四高の正値性 & 全 pair が非零の整数四ray core の正符号は $2K_2$ または $K_3\sqcup K_1$。正 weights の存在は完全 matching と同値。道型 $P_4$ は全排除。\\
+三高非負係数 & 固定 $(s,t)$ から全係数を有限復元。$\delta=\pm1$ は全排除。$\delta=0$ は $x=y=0,s<t,0\le n\le z$ の零軸に限られ、固定 $(s,z)$ で有限復元し，端点は固定 $s$ だけで有限。退化面は固定 $s$，その $x\ge1$ は固定 $b$ でも有限。$h\ge b$ かつ $\gcd(h,b-1)=1$ を排除。一般不存在は未解決。\\
+core置換 & meridian模型のhomotopy型・交点格子・境界を計算。閉じたcorner circuitsにregular torus bundlesを加える四pants置換も不可能。open corridors等は残る。\\
+解析的課題 & special Lagrangian性、canonical Kähler--Einstein collapse、任意Kähler classへの拡張は未解決。\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+coreは適切に選んだlogarithmic Weinstein skeletonのsymplectic imageである。
+Evans--Mauriの弱いstratificationを用い、Whitney条件や特定のRSTZ skeletonを指定していない\cite{EM,RSTZ,Zhou}。
+曲面についての結論を、そのまま$\PP^4$の一般型三次元超曲面に移してはいけない。
+
+\section{任意genusのSNC compactificationを再利用するためのデータ}
+
+\subsection{仮定と、固定するものの順序}
+
+$M$をsmooth connected projective surface、$D=\bigcup_{a=1}^rD_a$をsmooth componentsからなるreduced SNC divisorとする。
+三重交点はなく、異なる二成分の複数交点は許す。
+$g_a=g(D_a)$、$n_a=\#(D_a\cap\bigcup_{b\ne a}D_b)\ge2$とし、
+\[
+ [\omega]=2\pi\sum_aw_a[D_a],\qquad w_a>0
+\]
+を仮定する。
+各punctured componentには、境界でradial、内部に$2g_a+n_a-2$個のsimple saddlesだけを持つmarked Morse葉層を指定する。
+
+定理が保つのは、$D_a$上の実際のmarked foliation、crossing product germs、指定したflat disks、および構成途中で選んだcore近傍のprimitive germである。
+\emph{normal connectionと正のradiusにおけるcollarのliftは、period correctionの後に選ぶ。}
+固定済みの全collar fibrationやholonomyまで保存する追加条件は含まない。
+この量化がpositive genusで決定的である。
+
+個々の$D_a$がample、$D_a^2>0$、intersection matrixが可逆、$H^1(M)=0$である必要はない。
+正のweighted classがKählerであることから$D$の連結性が従い、正の有理重みへの近似から同じsupportのample divisorが得られるので$M\setminus D$はaffineである。
+global logarithmic potentialはweighted curvatureの和と$\dd\dd^c$-lemmaで作る\cite[Lemma (5.11), Remark (5.14)]{DGMS}。
+normal crossingのsymplectic regularizationは\cite{TMZ}の枠組みと整合するが、固定複素構造でのKähler flatteningは公開稿のpotentialによる局所議論を使う。
+
+\subsection{normal couplingと全critical leafの保存}
+
+circleの周期は$2\pi$、$\iota_{X_H}\omega=-\dd H$、
+$\dd^c\log|z|^2=\dd\theta$とする。
+punctured portion $P_a\subset D_a$上で
+\[
+ \Omega_a=\omega_a+\dd(\mu_a\alpha_a),\qquad
+ \lambda_a=(\mu_a-w_a)\alpha_a+\beta_a,\qquad
+ \dd\beta_a=\omega_a+w_a\kappa_a
+\]
+と書く。
+$\kappa_a=-\omega_a/w_a$、$\beta_a=0$を選ぶと
+\[
+ Z\mu_a=\mu_a-w_a,\qquad Z^{\rm horizontal}=0
+\]
+であり、figure-eight全体と全regular leavesが保存される。
+曲線におけるLagrangian liftのcurvature条件にgenus制限がないことは、既に
+Evans--MauriのRemark 2.23に明示されている\cite{EM}。
+再利用する追加部分は、finite end、指定foliation、全periods、core germの相対的制御である。
+
+面積とnormal degreeの関係は
+\[
+ \operatorname{area}(D_a)
+ =2\pi\left(w_aD_a^2+\sum_{p\in D_a\cap D_b,\ b\ne a}w_b\right),
+\]
+\[
+ \int_{D_a}\kappa_a
+ =\frac{2\pi\sum_{p\in D_a\cap D_b}w_b-\operatorname{area}(D_a)}{w_a}
+ =-2\pi D_a^2.
+\]
+従って負のself-intersectionや複数交点も同じ計算で扱える。
+
+\subsection{全periodsを消すholonomy補正}
+
+$G$をdual multigraph、$Q$をintersection matrix、$S=\partial N(D)$とすると、
+整数係数で
+\[
+0\longrightarrow\operatorname{coker}Q
+\longrightarrow H_1(S;\ZZ)\longrightarrow H_1(D;\ZZ)\longrightarrow0,
+\]
+\[
+0\longrightarrow\bigoplus_aH_1(D_a;\ZZ)
+\longrightarrow H_1(D;\ZZ)\longrightarrow H_1(G;\ZZ)\longrightarrow0.
+\]
+torsionを含むmeridian relationsは第一列に保持される。
+
+component上のclosed form $\eta_a$をcrossingとflat disksの近傍で零に選び、
+\[
+ \alpha_{a,s}=\alpha_a+s\pi^*\eta_a
+\]
+とする。
+$\iota_{Y_s}\Omega_{a,s}=-\mu_a\pi^*\eta_a$で定めるMoser flowはzero sectionとnormal first jetを固定し、$\mu_a$を保存する。
+すると
+\[
+ [\Phi_s^*\lambda_{a,s}-\lambda_{a,0}]
+ =-s\,w_a[\pi^*\eta_a].
+\]
+従って各$D_a$の$2g_a$個のperiodsを全て制御できる。
+$\Omega_{a,s}$は補助modelであり、引き戻し後は$\Omega_{a,0}$に戻るので、actual Kähler formをこの操作で変更しない。
+残る$H^1(G)$のperiodsはcap arms上のbasic formsで消す。
+
+これを省いてbasic Reeb formsだけで補正すると、正genusでは一般に不足する。
+\[
+ \dim H^1(D)=2\sum_ag_a+e-r+1,\qquad
+ \dim H^1(\Gamma)=\sum_ag_a+e-r+1.
+\]
+holonomyを固定する場合には$\sum_ag_a$次元の不足が残り得る。
+「positive genusは障害である」と無条件に結論するのも、「graph periodsだけで十分」とするのも誤りである。
+
+meridian residuesを合わせた後の差はbounded exact form $\dd f$にできる。
+\[
+ \lambda=\lambda_0+\dd(\chi(\psi_0)f)
+\]
+というcutoffでは、$Z\psi_0$に$\chi'$の項が現れず、endでの
+$O(\rho^{-2})$の正項が$O(\rho^{-1})$の補正を支配する。
+このためcore primitive germとnonescaping setを保持できる。
+
+\subsection{finite endpointの式}
+
+transition capでは
+\[
+ \lambda=(\mu-w_a)\dd\theta_a+
+ (I-w_b+\mu A_{ab}(I))\dd\theta,
+\]
+\[
+ A_{ab}=0\ \text{near crossing},\qquad
+ A_{ab}=(w_b-I)/w_a\ \text{near }P_a.
+\]
+ここで
+\[
+ ZI=\frac{I-w_b+w_aA_{ab}(I)}{1+\mu A'_{ab}(I)}
+\]
+であり、$ZI=I-w_b$と書いてはいけない。
+$I\in[a,b]$、$a>0$、$|ZI|\le C$、$\mu_0\le\varepsilon<w_a/2$なら
+\[
+ T_a=\log\frac{w_a}{w_a-\mu_0}\le\frac{2\varepsilon}{w_a},
+ \qquad |I(t)-I_0|\le\frac{2C\varepsilon}{w_a}.
+\]
+$\varepsilon<a w_a/(4C)$で別divisorへの先着を排除できる。
+ここで$|ZI|\le C$はbufferを付けた拡大intervalで取り、上側bufferからも出ないように$\varepsilon$を縮める。
+$C=0$ならこの制約は不要である。以下のendpoint微分は$\mu_0$一定のlink上で用いる。
+到達値と単調性は
+\[
+ I_{\rm end}=\frac{w_aI_0-\mu_0w_b+w_a\mu_0A_{ab}(I_0)}{w_a-\mu_0},
+ \quad
+ \frac{\partial I_{\rm end}}{\partial I_0}
+ =\frac{w_a(1+\mu_0A'_{ab}(I_0))}{w_a-\mu_0}>0.
+\]
+二到達時刻の最小値を使うのは、二つのactual normal momentsを持つproduct crossing領域だけである。
+
+\subsection{使いやすい試験例と追加条件}
+
+$\PP^1\times\PP^1$のtoric boundaryはvalence二、個々には非ampleであり、linkは円周となる。
+二つのsmooth $(1,1)$ curvesなら二交点を持ち、
+\[
+ Q=\begin{pmatrix}2&2\\2&2\end{pmatrix},\quad
+ H_1(S;\ZZ)=\ZZ^2\oplus\ZZ/2,\quad \chi(\Sigma)=2.
+\]
+これを追加の解析なしに「二つのfocus points」と同定してはいけない。
+二つのsmooth plane cubicsが九点で交わる例では
+\[
+ g_1=g_2=1,\quad b_1(\Gamma)=10,\quad |V_3(\Gamma)|=18,\quad
+ \chi(\Sigma)=12.
+\]
+この例は、両成分がpositive genusを持つ場合のperiod補正を調べる具体的な試験例となる。
+
+$n_a\ge2$は、境界でconstantな実数値Morse functionに内部extremaを持たせないという今回のモデルに必要な仮定であり、一般の葉層に関する不存在定理ではない。
+また固定$\omega$で非直交に交わる$D$に、commuting toric normal rotationsを要求することはできない。
+定理は同じKähler classの$\omega'$を作る。
+元の$\omega$へglobal Moserで戻すときは、$D$自体もisotopyにより移り、元の$D$を集合として保存するとは限らない。
+
+重みを変える問題では、同じ$\omega$のprimitive間のresidue difference $w'-w$が可能であるためには
+$\sum_a(w'_a-w_a)[D_a]=0$が必要である。
+core primitive germを同じまま保つ追加条件の下では、今回のretractionの議論により各重みも固定される。
+cohomology上の自由度とcore相対の自由度を分ける。
+
+\section{次数分割：構成と整数位相の共通書式}
+
+$d=e_1+\cdots+e_k$、$k\ge3$とし、一般のdegree $e_i$ hypersurfaces $S_i=\{F_i=0\}$とdegree $d$ polynomial $G$を用いて
+\[
+ \prod_iF_i+tG=0
+\]
+を考える。
+$S_2=\sum_{i<j}e_ie_j$、$S_3=\sum_{i<j<\ell}e_ie_je_\ell$と略記する。
+各$C_{ij}$は実際の同じmarked curveとして両側で扱う。
+\[
+ g_{ij}=1+\frac{e_ie_j(e_i+e_j-4)}2,\qquad
+ n_{ij}=e_ie_j(d-e_i-e_j)\ge d-2,
+\]
+\[
+ v_{ij}=2g_{ij}+n_{ij}-2=e_ie_j(d-4),\qquad
+ a_{ij}=3g_{ij}+n_{ij}-3.
+\]
+順序付き小解消は
+\[
+ D_i=\operatorname{Bl}_{d e_i\sum_{j>i}e_j}S_i,\qquad
+ N_{\rm node}=dS_2.
+\]
+
+\subsection{Picard群とHamiltonian neck}
+
+$i<j$、$Q_{ij}=C_{ij}\cap\{G=0\}$とすると
+\[
+ N_{C_{ij}/D_i}=\mathcal O_{C_{ij}}(e_j)(-Q_{ij})
+ =\mathcal O_{C_{ij}}(e_j-d),\qquad
+ N_{C_{ij}/D_j}=\mathcal O_{C_{ij}}(e_i).
+\]
+triple-point divisor $T_{ij}^{\rm div}$のline bundleは
+$\mathcal O_{C_{ij}}(d-e_i-e_j)$なので
+\[
+ N_{C_{ij}/D_i}\otimes N_{C_{ij}/D_j}
+ \otimes\mathcal O_{C_{ij}}(T_{ij}^{\rm div})\simeq\mathcal O_{C_{ij}}.
+\]
+positive genusではdegreeの和が零だけではPicard群の同定を与えない。
+ここでは実際の$F_i,G$がline-bundle同定を供給する。
+
+punctured curveはSteinで$H^2=0$だからholomorphic normal bundlesを自明化できる。
+Stein tubular neighborhood上の実際のequationのunitを吸収して$xy=t$を得る。
+normal rotationsを平均化した$\Omega$について$\iota_V\Omega$はclosedで、zero sectionへの制限が零である。
+tubeがzero sectionへretractすることからexactとなり、Hamiltonian momentが存在する。
+genus自体はこの手順を妨げない。
+
+\subsection{weighted Kähler simplex}
+
+\[
+ \xi=aH+\sum_i\beta_i[D_i],\quad
+ S=\sum_i e_i\beta_i,\quad a_i=a+S-d\beta_i,\quad
+ E_\ell=\sum_{i\le\ell}e_i.
+\]
+\[
+ \xi_i=a_iH_i-\sum_{j>i,p}(\beta_j-\beta_i)E_{ij,p}.
+\]
+sharp条件は
+\[
+ \beta_1<\cdots<\beta_k,\qquad A=a_k>0,
+\]
+すなわち
+\[
+ \delta_\ell=\beta_{\ell+1}-\beta_\ell>0,\qquad
+ \sum_{\ell=1}^{k-1}E_\ell\delta_\ell<a.
+\]
+\[
+ \xi_i\cdot C_{ij}=e_ie_j a_j=\xi_j\cdot C_{ij}\quad(i<j),
+ \qquad \sum_i\xi_i^2=da^2.
+\]
+非boundary curveについてBézoutから$\xi_i\cdot\widetilde C\ge A(H_i\cdot C)>0$となる。
+実classは$\xi/a$に正規化した後、有理点の凸結合を使う。
+symplectic surgeryには$\beta_i=(i-k)\varepsilon$の十分小さいrayだけを使う。
+
+\subsection{底空間とcoreの数値}
+
+\[
+ \#C_0=k,\quad \#C_1=(d-4)S_2,\quad
+ \#C_2=\sum_{i<j}(3g_{ij}+n_{ij}-3)+S_3,
+\]
+\[
+ \chi(\Sigma_i)=e_i(d^2-4d+6-S_2),\qquad
+ \sum_i\chi(\Sigma_i)+dS_2=d(d^2-4d+6).
+\]
+内部Reeb graphでspanning treeを選ぶと、整数SDRのtargetは
+\[
+ C_*(\Sk_2\Delta^{k-1};\ZZ)
+ \oplus\ZZ^{\,\sum_{i<j}g_{ij}+\sum_{i<j<\ell}(e_ie_je_\ell-1)}[2].
+\]
+extra generatorsは、non-tree内部辺のcycleと、同じ三成分の異なるtriple pointsのtriangle差である。
+したがって
+\[
+ B_{\boldsymbol e}\simeq
+ \bigvee^{p_g(d)-\sum_i p_g(e_i)}S^2,\qquad
+ p_g(e)=\frac{(e-1)(e-2)(e-3)}6\quad(e\ge1).
+\]
+公開稿には符号付きpath chains $D(p)$による$q,s,H$、整数基底、全恒等式の証明がある。
+
+\begin{center}
+\begin{tabular}{@{}cclrr@{}}
+\toprule
+$d$ & 分割 & coreのEuler数 & nodes & $b_2(B)$\\
+\midrule
+5 & $(1,2,2)$ & $(3,6,6)$ & 40 & 4\\
+6 & $(2,2,2)$ & $(12,12,12)$ & 72 & 10\\
+6 & $(1,1,4)$ & $(9,9,36)$ & 54 & 9\\
+7 & $(1,2,4)$ & $(13,26,52)$ & 98 & 19\\
+\bottomrule
+\end{tabular}
+\end{center}
+同じ六次曲面でも、分割を変えると底空間のhomotopy typeを変えられる。
+これはcore数だけを変える操作より強い区別である。
+
+\section{matroidal core links：位相分類と作用座標}
+
+\subsection{全次数に対する障害と五次の同時分類}
+
+simple connected rank-three matroid の三価リンクは、二価点を除くと
+\[
+\begin{array}{c|c|c|c}
+|E|&M&\text{link}&b_1\\\hline
+4&U_{3,4}&K_4&3\\
+5&M(K_4-e)&K_{3,3}&4\\
+6&M(K_4)&\text{Petersen}&6\\
+7&F_7&\text{Heawood}&8
+\end{array}
+\]
+だけである。非連結 matroids と Euclidean factors も含めた上界は $b_1\le8$。
+Fano の体上の realizability は要求しない。nested graph の
+$2t_i+s_i=|E|-1$、$t_i+s_i\le3$ が $|E|\le7$ を与える。
+既知の $K_{3,3}$ と Petersen の例および nested-set triangulation は
+Feichtner--Sturmfels\cite{FeichtnerSturmfels}に基づく。
+
+次数分割の第 $i$ core では
+\[
+ b_1(\Gamma_i)=1+\frac{e_i(d-e_i)(d-4)}2\ge\binom{d-2}{2}.
+\]
+$d\ge7$ では、どの分割・marked Reeb graphs を用いても全 core が非 matroidal である。
+$d=6$ でも非線形成分は排除され、全平面退化の六つの同時 Petersen 系だけが候補として残る。
+六個という数は $K_6$ の one-factorizations の数である。
+これらは現在の core を保つ場合の障害であり、core surgery を許す一般の fibration を排除しない。
+
+五次の全 core の同時 matroidal 化は、次のように決まる。
+\[
+\begin{array}{c|c|c}
+\text{分割}&\text{全 core の同時実現}&\text{同時に可能な最大 core 数}\\\hline
+(1,1,3)&\text{不可}&2\\
+(1,2,2)&\text{不可}&2\\
+(1,1,1,2)&\text{可：四つの標識付き抽象系}&4\\
+(1,1,1,1,1)&\text{可：一つの抽象系}&5
+\end{array}
+\]
+再利用する構造は、divisor component の内部 Reeb graph $H_a$ が core link の
+\emph{連結な誘導部分グラフ}になることである。
+\[
+ |V(H_a)|=2g_a+n_a-2,\qquad b_1(H_a)=g_a,
+ \qquad n_a=3|V(H_a)|-2|E(H_a)|.
+\]
+simple target の girth が $\ell$ で $g_a>0$ なら、$2g_a+n_a-2\ge\ell$ が必要である。
+$(1,1,3)$ の genus-one・三 punctures の block は triangle または多重辺を含み、
+三次成分の $K_{3,3}$ を妨げる。両 plane cores を $K_4$ にすると cubic link は triangular prism になる。
+
+$(1,2,2)$ では、四つの共通 triple labels 上の二つの quartet splits を
+$\sigma_{AB},\sigma_{AC}$、elliptic four-cycle の bipartition を $\tau$ とすると、
+\[
+ \Gamma_A=K_4\Longleftrightarrow\sigma_{AB}\ne\sigma_{AC},\qquad
+ \Gamma_B=K_{3,3}\Longleftrightarrow\sigma_{AB}=\tau,
+ \quad\Gamma_C=K_{3,3}\Longleftrightarrow\sigma_{AC}=\tau.
+\]
+これが同時実現を妨げる。ただし任意の二 core は同時に実現できる。
+
+$(1,1,1,2)$ では三つの plane--quadric quartets がそれぞれ二つの triple-point pairs を
+横断して分ける必要がある。その二択を $\varepsilon_A,\varepsilon_B,\varepsilon_C\in\ZZ/2$ とすると、
+quadric link が $K_{3,3}$ となる条件は
+\[
+ \varepsilon_A+\varepsilon_B+\varepsilon_C=1\pmod2.
+\]
+偶数なら triangular prism。三点集合ではなく、各 double curve 上の個々の triple points を保持する。
+四個という数は finite graph systems の数であり、embedded marked isotopy classes の数ではない。
+Morse 実現には good orientation が必要\cite{MichalakReeb}で、公開稿では必要な小 graph に
+明示的な高さ関数を与え、actual curves 上へ移している。
+
+\subsection{五直線 Petersen core の作用座標}
+
+五直線 $L_a$、$a\in\ZZ/5$ に正の weights $w_a$ を与え、
+$[\omega]=2\pi\sum_aw_a[L_a]$ とする。
+各 $L_a$ の quartet を $\{a-1,a+1\}\mid\{a-2,a+2\}$ とすれば Petersen link を得る。
+その二 saddle vertices を $A_a,B_a$ とする。
+
+各 puncture $L_a\cap L_b$ に接する外側 Reeb-edge 領域の面積を $2\pi w_b$ にする。
+四つの領域の面積の和は全体より $2\pi w_a$ 小さいので、内部 annulus $E_a$ は
+\[
+ \operatorname{area}(E_a)=2\pi w_a
+\]
+を持つ。この面積指定は、crossing disks を固定して正の density を調整し、
+相対 Moser isotopy で foliation の代表を動かすことにより、指定した marked isotopy class 内で実現できる。
+固定した actual critical leaves を点ごとに保って面積を変える主張ではない。
+
+proportional-curvature collar の puncture framing では
+\[
+ h_{a;b}=\frac{w_b-\operatorname{area}(D_{a;b})/(2\pi)}{w_a}=0.
+\]
+従って critical ray 上で tangential meridian の action は零、normal action は負となる。
+cycle を $\mu_a$、action を $I_{\mu_a}$ と書き、radial moment と区別する。
+crossing face $vw$ で $v\in L_a,w\in L_b$ なら
+\[
+ F=-I_{\mu_a}r_v-I_{\mu_b}r_w.
+\]
+内部 matching face では
+\[
+ \beta_a=\mu_{a-1}+\mu_{a+1}
+       =-\mu_a-(\mu_{a-2}+\mu_{a+2}),
+\]
+\[
+ F=(-I_{\mu_a}-I_{\beta_a})r_{A_a}+I_{\beta_a}r_{B_a}.
+\]
+後者の basis change は determinant $-1$。両端で $I_{\beta_a}=0,-I_{\mu_a}$ となり、
+全ての branch で $F=-I_{\mu_a}r_v$ に一致する。
+十五面の unimodularity、$q=1$ の saturated branch lattice、
+Liouville homogeneity と作用比の単調性から、core 近傍全体の標準 Petersen chart を得る。
+contact link からの cone construction は Evans--Mauri\cite{EM}に基づく。
+
+重要な論証上の区別は、$\lambda$ が全空間で closed でないことである。
+global homology relation に直接 $\int\lambda$ を適用してはいけない。
+上の framing relation は、実際の annular torus の $H_1$ で先に確認する。
+この torus の $H_1\to H_1(W_5)$ は injective なので、meridian relation をその確認に使える。
+その後に、Lagrangian torus 上で closed な $\lambda$ を積分する。
+
+この局所存在を、後述の共有面積・framing・finite-$t$ neck接着と組み合わせると、
+六つの全coreを通る大域atlasが得られる。
+$M_{0,5}$ filling への置換でもない。五直線側の common-circle determinant は五辺で $0$、十辺で $1$、
+標準 $\overline M_{0,5}$ 側では十五辺全てで $1$ であり、boundary $H_1$ の rank も $10$ と $11$ で異なる。
+
+\subsection{固定 period の算術と ambient extension}
+
+固定 annulus が一つの unimodular face となり、両端の branch lattices が saturated なら、
+\[
+ \frac{\operatorname{area}(E)}{2\pi w}=\frac1{qq'}=\frac1m,
+ \quad q,q'\text{ は互いに素な奇数},\quad m\text{ は正の奇数}.
+\]
+これは同一 torus basis での Farey determinant $\pm1$ と branch の奇数分母条件を合わせたものである。
+逆に一つの edge と二つの branch の算術条件には、任意の奇数 $m$ で解がある。
+これは geometric periods の同時実現ではない。
+unit $p\bmod q$ を二つの units の和にする分解数は
+\[
+ \prod_{\ell^e\parallel q}\ell^{e-1}(\ell-2),
+\]
+また互いに素な ordered denominator factorizations は $2^{\omega(m)}$ 個である。
+
+ambient fan lattice は $N=\ZZ^{E(K_4)}/\ZZ\mathbf1$、rank 五である。
+正則 torus の $H_1$ は action \emph{cotangent} lattice であり、face ごとに dualization が必要である。
+一つの branch block では rank-three integral cotangent extension を作れる。
+しかし全 meridians の relation $\sum_a\mu_a=0$ を保つ
+\[
+ H_1(W_5;\ZZ)\longrightarrow N^*
+\]
+を同時に要求すると、前項で構成した chart には存在しない。
+未定値は五周期方程式 $x_{a-2}+x_{a+2}=1$ により全て $1/2$ に強制される。
+rational extension は一意で、その五つの fractional classes は $(\ZZ/2)^4$ を生成する。
+それらを含む最小 cotangent overlattice の index は $16$ である。
+これは追加した global ambient-linear 条件への障害であり、構成済みの facewise chart を否定しない。
+rank 四と五の比較だけでも導けない。
+
+\subsection{四直線 \texorpdfstring{$K_4$}{K4} core と五次の共有ラベル}
+
+四直線補集合では $N_4=\ZZ^4/\ZZ\mathbf1$ とし、四つの labels の有向四周期 $f$ を選ぶ。
+$L_i$ の三つの basins に
+\[
+ \frac{\operatorname{area}(D_{i;j})}{2\pi}
+ =w_j+w_i\mathbf1_{\{j=f(i)\}}\qquad(j\ne i)
+\]
+を割り当てる。全て正で、和は $\sum_jw_j$ である。
+相対 Moser により実現でき、critical slope は $h_{ij}=-\epsilon_{ij}$、
+$\epsilon_{ij}=\mathbf1_{\{j=f(i)\}}$ となる。
+各 crossing face で
+\[
+ \begin{pmatrix}I_{\mu_i}\\I_{\mu_j}\end{pmatrix}
+ =\begin{pmatrix}-1&\epsilon_{ji}\\\epsilon_{ij}&-1\end{pmatrix}
+   \begin{pmatrix}t_i\\t_j\end{pmatrix},
+ \qquad F=t_ir_i+t_jr_j
+\]
+とする。四周期には二辺 cycle がないので、六面全ての determinant は $1$。
+branch denominator も $1$ となり、一つの $K_4$ core の作用適合 chart を得る。
+Evans--Mauri の既存の $K_4$ fibration\cite{EM}に、basin 面積と作用格子の明示式を加えた構成である。
+さらに
+\[
+ \Phi:H_1(W_4;\ZZ)\xrightarrow{\sim}N_4^*,\qquad
+ \Phi(\mu_i)=e^*_{f^{-1}(i)}-e_i^*
+\]
+は整数同型で、上の作用積分と整合する。四周期の incidence map の kernel が対角格子、
+image が係数和零の整数格子であることが理由である。
+Petersen chart で残る ambient extension の半整数障害は、この $K_4$ chart には生じない。
+
+五次の全平面分割の五 core labels を $\ZZ/5$ とする。第 $i$ core で
+\[
+ f_i(j)=\frac{i+j}{2}=3(i+j)\pmod5,\qquad j\ne i
+\]
+と取れば、$j-i$ 上では乗法 $3$ が働くので各 $f_i$ は四周期となる。
+しかも $f_i(j)=f_j(i)\ne i,j$ である。
+従って共有曲線 $C_{ij}$ の両側で、追加面積を割り当てる basin の triple-point label が一致する。
+この共有ラベル系に、後述の canonical weights と $(3,1,1)$ の nodal allocation を組み合わせる。
+標識付き対称な四周期系は六つあり、$K_6$ の one-factorizations と対応する。
+抽象的な $K_4$ graph system 一個という数とは、数えているデータが異なる。
+
+\input{sections/notes/notes_action_atlas.tex}
+\input{sections/notes/notes_quintic_denominators_v25.tex}
+
+\section{core と meridian nodes を取り込む局所置換}
+
+\subsection{meridian blow-ups の再利用できる全データ}
+
+$m\ge4$ 本の一般位置直線の $i$ 番目の成分上で、相異なる smooth points を $r_i$ 個 blow up し、
+直線の strict transforms だけを除いた補集合を $U_{\boldsymbol r}$ とする。
+$r=\sum r_i$、$s=\#\{r_i>0\}<m$、$k=m-1-s$ と書く。
+infinitely near points や任意の vanishing cycles はこの模型に含めない。
+Hattori の meridian 標識と整合する模型\cite{Hattori,PapadimaSuciu}に disk を付けると
+\[
+ U_{\boldsymbol r}\simeq(T^k)^{(2)}\vee\bigvee^tS^2,
+ \qquad t=\binom{m-1}{2}-\binom{k}{2}+r-s.
+\]
+\[
+ \pi_1=\ZZ^k,\quad b_2=\binom{m-1}{2}+r-s,\quad
+ \chi=\binom{m-2}{2}+r.
+\]
+compact core の intersection lattice、signature、boundary は
+\[
+ Q_{\mathrm{abs}}=0^{\binom{m-1}{2}}\oplus\bigoplus_{r_i>0}(-A_{r_i-1}),
+ \qquad \sigma=-(r-s),
+\]
+\[
+ Q_{\mathrm{plumbing}}=J_m-\operatorname{diag}(r_i),\qquad
+ H_1(Y)=\ZZ^{\binom{m-1}{2}+k}\oplus\bigoplus_{r_i>0}\ZZ/r_i.
+\]
+reduced JSJ graph は $K_m$。境界包含の kernel は抽象群として
+$\ZZ^{\binom{m-1}{2}}\oplus\bigoplus\ZZ/r_i$ であり、具体的な peripheral subgroup の保存は別に必要である。
+untouched line があるため ample divisor の support を作れ、$U_{\boldsymbol r}$ は affine となる。
+canonical bundle は自明で、対応する Stein boundary では
+\[
+ c_1(\xi)=0,\qquad d_3(\xi)=\frac{-2\chi+3(r-s)}4
+\]
+である\cite{Gompf}。
+
+六次の一 core と一つの指定 meridian node の模型は $m=5,r=s=1$ で、
+\[
+ U\simeq(T^3)^{(2)}\vee3S^2,\qquad
+ \pi_2(U)=\ZZ[\ZZ^3]^4,
+\]
+\[
+ H_1(Y)=\ZZ^9,\quad Q_{\mathrm{abs}}=0,\quad
+ \chi=4,\quad d_3=-2,\quad \text{JSJ graph}=K_5.
+\]
+同じ homotopy 型だけでは、この boundary を復元できない。
+
+一般の canonical pants budget $P=(m-3)^2$ を目標にするなら、必要 node 数は
+$r=\binom{m-3}{2}$。さらに $\pi_1=\ZZ^3$ を要求すれば $s=m-4$ となり、
+\[
+ U\simeq(T^3)^{(2)}\vee(P-1)S^2,\quad
+ \pi_2(U)=\ZZ[\ZZ^3]^P,\quad
+ \sigma=-\binom{m-4}{2}.
+\]
+full-face tree assembly の intersection form は零なので、$m\ge6$ ではこれだけでも置換できない。
+元の次数は $d=m+1$ である。
+
+\subsection{閉じた corner circuits の充填まで含む no-go}
+
+標準四次元 pants の互いに離した full Seifert facets を対で貼る。
+その結果の\emph{閉じた} corner circuits に、compact surfaces 上の任意の regular $T^2$-bundles を加えることまで許す。
+disk filling、非自明な monodromy、非 disk base も含むが、open corner chains へは付けず、circle collapse や singular fibers は加えない。
+external boundary は連結で negative-base Seifert pieces を持つとする。
+Golla--Martelli\cite[Proposition 4.3, Remark 4.9]{GollaMartelli}の一般の構成全体とは区別する。
+
+pants 数を $p$、facet pairs の数を $e$、その graph を $\Gamma$ とし、
+\[
+ \mathcal C(Y)=\sum_{\text{JSJ pieces}}-\chi_{\rm orb}(\text{base})
+\]
+とする。この class では
+\[
+ \chi(X)=p,\qquad\mathcal C(Y)=4p-2e.
+\]
+tree component には closed corner circuit がないので、regular fillers により他 component と接続できない。
+従って連結 $X$ は、
+\[
+ \Gamma\text{ tree},\quad\mathcal C=2\chi+2,
+ \quad\text{reduced JSJ graph は planar}
+\]
+または
+\[
+ \text{全 components が cycle を持つ},\quad\mathcal C\le2\chi
+\]
+のいずれかとなる。対象 $U$ は $\chi=4,\mathcal C=10$、JSJ graph $K_5$ なので不可能である。
+この証明は完成後の基本群を仮定せず、disk relations を加えても回避できない。
+
+多直線の boundary は $\mathcal C=m(m-3)$ である。
+$p=(m-3)^2$ の場合、facet pairs は $e=3(m-3)(m-4)/2$ に強制され、
+$\Gamma$ が連結なら $g=b_1(\Gamma)=\binom{m-4}{2}$。
+disk-only completion では $\Gamma$ は連結である。
+完成後の $\pi_1=\ZZ^3$ に対して、$g>0$ なら disk 数 $q\ge\max\{1,g-3\}$。
+vertex の meridian $\ZZ^3$ が完成後も同型に残る\emph{追加条件}を置けば $q\ge g$。
+この survival 条件を省いて $q\ge g$ と主張してはいけない。
+
+次の候補には open torus corridors、partial-facet gluing、circle collapse など、上の定義外の操作が必要である。
+一般の relative pants surgery の不存在は証明していない。
+
+\subsection{具体的な affine chart と Kirby 比較の入力}
+
+一つの一般位置模型を
+\[
+ U\cong\CC^2_{t,z}\setminus
+ \{(1-tz)(1-(2t+1)z)(1-(3t+4)z)=0\}
+\]
+と取れる。$E^\circ=\{z=0\}\cong\mathbb A^1$。
+$(t,z)\mapsto(tz,z)$ は、三 affine lines の補集合への affine modification である\cite{KalimanZaidenberg}。
+全 algebraic units は $E^\circ$ 上で定数なので、$U$ は very affine ではない。
+
+deleted curve 上の $u=t+3z$ は finite degree-six projection である。
+三 node values は $-4,-7/2,-18/5$、六 simple branch values は
+\[
+ \pm2\sqrt3,\quad-\tfrac12\pm\sqrt6,\quad-\tfrac{10}{3},\quad\tfrac23.
+\]
+全て相異なる。reference fiber を $u=4$ とし、distinguished paths に沿って
+三 quadratic equations の roots を運べば attaching braids を決められる。
+Sugawara\cite[Proposition 3.1, Theorems 3.7 and 4.1]{Sugawara}により smooth handles の数は
+$(h_0,h_1,h_2)=(1,6,9)$ となる。Weinstein attaching data の同定は未完了である。
+
+大円上の roots は原点近くの三点 cluster と $u/3$ 近くの三点 cluster に分かれる。
+その full twists を $T_-,T_+$、六本全体を $T_6$ とすると
+\[
+ \beta_\infty=T_6T_-^{-2}T_+^{-1},\qquad
+ \text{exponent sum}=12.
+\]
+これは roots の大半径 isotopy による等式で、pairwise linking だけから推論していない。
+以前の非 proper ruling における四 strand braid $\Delta_4^2$ とは、projection と fiber chart が異なる。
+六 branch values と三 curve nodes を、九つの interior focus--focus fibers と解釈してはいけない。
+
+次はこの equation と paths から\emph{framed} Kirby diagram を作り、
+open torus corridor を含む pants 側の diagram と、peripheral kernel、五つの Seifert slopes、
+contact collar、actual periods を比較する。smooth handle 数の一致だけで surgery を認定しない。
+
+
+\section{相対gluingで再採用してはいけない近道}
+
+\subsection{実際のmarked curveと、同じHamiltonian moment}
+
+両側で同じactual marked surfaceを用いる。
+abstract labelled Reeb graphだけではpure mapping classを決められない。
+crossing charts、embedded marked foliations、regular flat patchesを先に選び、
+局所許容量を確保してからblow-up size、normal collar、$|t|$を順に小さくする。
+
+\emph{同じactual $\Omega$と同じHamiltonian $\mu$}の上で$h_\mu$を補間する場合、
+$\{\mu,h_\mu\}=0$でLagrangian性が得られる。
+reduced diffeomorphismがarea-preservingである必要はない。
+独立に固定された二つのintegrable systemsをsymplectically同定する問題では、
+measured Reeb graphやfocus--focus semi-global invariantsが必要である\cite{DMT,IKM,VuNgoc}。
+compact nodal fiber全体とそのbufferを飽和truncationに含め、actual transportする。
+
+\subsection{解消後のopen component全体はexactとは限らない}
+
+明示的平面退化
+\[
+ M_s=x_0+s x_1+s^2x_2+s^3x_3,\qquad
+ \prod_{i=1}^dM_i+t\prod_{r=d+1}^{2d}M_r=0
+\]
+では
+\[
+ p_{ijk}=[-ijk:ij+ik+jk:-(i+j+k):1].
+\]
+最初の成分内の補助直線のstrict transform
+\[
+ Q_r=H_1-\sum_{j=2}^dE_{1j,r}
+\]
+はboundaryを避けるcompact curveで、$\int_{Q_r}\omega=a>0$である。
+したがって解消後の$D_1^\circ$全体にLiouville primitiveは存在しない。
+exact coreとnodal patchesを分ける必要がある。
+
+\subsection{成分上のgermを全smoothingへ延ばすこと}
+
+標準複素平面のHamiltonian
+$H(z)=-\frac13\operatorname{Im}(z^3)$のtime-one mapは
+$g(z)=z+\bar z^{\,2}+O(|z|^3)$で、原点とfirst derivativeを固定する。
+仮に$F=(X,Y)$が$XY=xy$を保つ$C^2$ germで
+$F(x,0)=(g(x),0)$なら
+\[
+ \partial_yY(x,0)=\frac{x}{g(x)}
+ =1-\frac{\bar x^{\,2}}x+O(|x|^2).
+\]
+一次項$-re^{-3\sqrt{-1}\theta}$は実線形写像の一次項ではないので、
+$\partial_yY$は原点で微分可能でない。
+normal first jetの一致だけで全$xy=t$ germへの延長を結論できない。
+actual annular transportがこの問題を避ける。
+
+\section{次に着手する具体的問題}
+
+算術側の現在の入口は \S\ref{ns25:support-agenda} にまとめた．
+次の焦点は $G_{5,14}$ の二つの $\{4,1,0\}$ と固定された中央 matching の大域整合である．
+四高 $P_4$ と $G_{5,14}$ の五node sector は解決済みなので再探索しない．
+$G_{5,16}$ では五node sector が残り，$G_{5,17}$ には単位枝の議論を直接使えない．
+三高係数では，比例零軸の端点の一般整数根問題，内部 $0<n<z$，
+退化面の $h\ge b$ における非互いに素な領域，一般 $|\delta|\ge2$ を区別する．
+退化面で $x\ge1$ なら必ず $h\ge b$ であるが，$x=0,h<b$ にはこの互いに素な場合の障害を適用せず，
+既存の固定 $s$ 復元を保持する．
+新しい完全有限手順は定理に基づく固定入力ごとの判定に使い，入力上限を増やすだけの探索は優先しない．
+反例が現れれば全原式と正 weights を確認し，一般不存在を固定目標とせず構造記述へ転換する．
+
+密な $G_5=K_{2,2,1}$ の二つの合同模型も，整数 lifting の出発点として残る．
+少なくとも二本の五進付値一を保ち，正整数性，clutching，node 配分を同時に課す．
+分母上限の数値を増やすだけの探索は優先しない．
+候補が残れば，五つの cores の actual weights と basin areas，integer framings を合わせ，
+最後に有限の平滑化 parameter の作用切片と ambient star transitions を確認する．
+合同模型や必要条件の存在を，global atlas の存在と同一視しない．
+
+幾何的な方向として、構成した五次・六次 atlas の変形と不変量を調べる。
+六つの標識付き recipes または graph systems が、標識を忘れたときにどのように同値になるかを調べる。
+integer affine holonomy、translation data、focus invariants を別々に記録する。
+底とfibrationの同値性を調べる不変量と、個々のtorusの埋込みを区別する不変量を分ける。
+後者には displacement energy germ を候補として用いる。
+$t$、vertical polarization、foliation の選択を変えたときに何が不変かを調べる価値がある。
+focus punctures を持つ atlas に適用できる tropical homology や affine sheaf の定式化を先に確認し、
+compact smooth tropical manifold の定理を無条件に使わない。
+Evans--Urz\'uaのrational homology ballsの埋込み\cite{EvansUrzua}と，
+Brendel--Hauber--Schmitzのsmall toriおよびdisplacement energy germ\cite{BHS}は，
+局所模型からambient symplectic manifold内のtoriを比較するための資料となる．
+適切なsymplectic formに対する存在と，本研究で指定したKähler formでの実現は別に確認する．
+個々のtorusの非同値性だけで，底全体のatlasやfibrationの非同値性を結論しない．
+Cartwright の ordered weak tropical complex では最初の component の intersection matrix が負定値なので、
+今回の action atlas の構造と同一視できない。
+
+局所置換の方向として、open torus corridor を含む具体的な四 pants 置換を調べる。
+三 hyperbola equations と finite projection から framed Kirby diagram を作り、pants 側と比較する。
+$\pi_2=\ZZ[\ZZ^3]^4$、零交点形式、$K_5$ JSJ boundary と peripheral kernel を同時に追う。
+closed-circuit regular completions は任意 monodromy を含めて排除済みである。
+その候補を繰り返さず、変更する open corner attachment を先に明示する。
+証明は独立した公開稿「直線配置の meridian blow-up と四次元 pants 置換の障害」にまとめた。
+
+一般 SNC 相対定理を別の actual degeneration へ適用する方向も残る。
+normal line bundles の同型、component cores、同時 corner transport を検査する。
+matroidal 性を緩める場合、Aksnes の arroid fans\cite{Aksnes}は
+transverse very affine plane arrangements の比較対象になるが、Reeb 展開や actual periods の同定は追加問題である。
+三次元では Stein curve tube が高次元 strata に替わるため、曲面の証明をそのまま使わない。
+
+この順位は暫定的である。面白さとインパクトを最大化するよう、その時点の状況と先行研究を踏まえて
+研究計画を柔軟に変更する。研究ノートと公開用論文は必要に応じて大幅に改訂し、
+ノートには将来の研究に役立つ内容だけを残す。
+公開用論文はトータルの価値を最大化するよう、必要に応じてさらに分割または再編する。
+本版では公開稿を三篇に分けた。第一篇は相対SNC構成・大域作用atlas・底の位相、第二篇は五次の局所整数理論と大域接着障害、第三篇は固定境界の局所置換を扱う。各篇は独立して読める導入と必要な定義を持つ。
+
+\section{一次文献の射程と検算}
+
+Mikhalkinのpants decompositionはglobalなstratified fibrationを与えるが、
+各最大cellに少なくとも一つのLagrangian fiberという量化を、全正則fiberへ拡張して読まない\cite{Mikhalkin}。
+FBPのivy-like fibrationは大きな部分領域の構成であり、全component coreのfillingは追加の問題である\cite{FBP}。
+CG K3のtransport定理はKulikov/almost toricの仮定を持ち、改訂Lemma 2.13の極限先は必要なcylindersを潰した商である\cite{CGK3}。
+構成・幾何稿のIntroductionでは、これらとfinite SNC構成・大域作用atlasの関係を詳しく引用する。算術稿ではmax algebra、principal minors、arithmetical structures、friezesとの相違を一次文献に基づいて整理する。
+別稿ではarrangement topology・plumbing・pants assembly・affine modification・handle constructionの先行研究を独立に位置づける。
+法円作用の分岐係数はAllermann--Rauの既知のtropical divisor公式であり，新しい内容はSNCでの計算と対向端比較である\cite{AllermannRau}。
+正のweightsの閉路判定は既知のmax-times理論に位置づける\cite{SergeevSchneiderButkovic}．
+非対角成分の符号が自由であるため，通常のarithmetical structuresの有限性\cite{CorralesValencia}を分母の上限へ流用しない．
+
+今後追跡する発表として，Mak--Matessi--Ruddat--Zharkov による compact Calabi--Yau
+hypersurfaces の大域 fibration の講演概要がある\cite{RuddatAnnouncement2026}．
+Liouville flow を用いる混合局所模型の帰納的構成が述べられており，
+一般型への相対接着との比較に役立つ可能性がある．
+加えて Zharkov の2026年4月15日の講演概要は，
+phase/ober-tropical hypersurfaces と soft-cell models を pants の観点から比較する
+\cite{ZharkovSoftCells2026}．ページ掲載日は4月8日であり，講演日と区別する．
+今回確認したこれらの一次資料は講演概要である．
+完成論文の証明を確認したことや，正式 preprint が存在しないことは意味しない．
+正確な仮定と相対性の範囲を引き続き調べ，幾何稿の Introduction と構成の位置付けを改訂する．
+
+\input{sections/notes/notes_fiber_invariants_literature_v24.tex}
+
+\subsection{現在の問題に直結する検算への入口}
+
+\begin{itemize}
+\item \nolinkurl{verify_four_ray_matching_v25.py}：原四行・五 pair の有理式から第六 pair の正値恒等式を検査し，全六十四符号 graph を分類する．
+\item \nolinkurl{verify_g514_five_node_v25.py}：七局所型，三十六全正因子，恒等零線形式の整除障害を確認する．
+\item \nolinkurl{verify_g514_central_matching_v25.py}：中央交差 matching の四正規形と全 node 零配置，元 clutching と行和の矛盾を確認する．
+\item \nolinkurl{verify_high_d_axis_endpoints_v25.py}：比例零軸の端点の全係数証明と，固定 $s$ の全有限復元を行う．
+\item \nolinkurl{verify_degenerate_divisor_v25.py}：退化面の元残余の積表示，正値性，固定 $b$ の有限復元を確認する．
+\item \nolinkurl{verify_unit_three_high_triangles_v24.py} と \nolinkurl{verify_outer_core_transfer_v23.py}：残る単位枝の全三角表と共鳴を保持する．
+\item \nolinkurl{verify_support_agenda_v23.py}：全 $1024$ graph，三型・二十六標識を確認する現行支持証明書である．
+\end{itemize}
+
+完全復元器の固定データを混同しない．
+\nolinkurl{research/exact_three_high_completion_v17.py} は固定低 row/column，
+\nolinkurl{verify_high_d_low_row_finiteness_v22.py} \texttt{--fixed s t} は固定低 row の二整数，
+\nolinkurl{verify_high_d_axis_degenerate_v24.py} \texttt{--fixed-s s} は退化面の固定 $s$，
+\nolinkurl{verify_high_d_proportional_v24.py} \texttt{--axis s z} は比例零軸の固定 $(s,z)$ を扱う．
+新しい \nolinkurl{verify_high_d_axis_endpoints_v25.py} の \texttt{--s-cap N} は比例零軸の両端点を，
+\nolinkurl{verify_degenerate_divisor_v25.py} の \texttt{--fixed-b b} は退化面 $x\ge1$ を扱う．
+それぞれ残りの係数・分母には任意の探索上限を置かない．
+旧 \nolinkurl{verify_high_d_asymmetry_v23.py} \texttt{--axis b z} の対象は本版で排除済みであり，
+現在の残余軸を調べる復元器ではない．
+Book と $G_{5,15}$ の専用検算は証明依存の再現性資料として保持する．
+
+旧検算の source・結果・監査を内容不変で保持し，新しい五主検算を追加する．
+現行の支持 graph 証明書は引き続き
+\nolinkurl{support_agenda_verification_v23.json} であり，候補は三型・二十六標識のままである．
+旧四型・五十六標識は $G_{5,15}$ 排除前の中間段階である．
+検算と追加監査の一覧，実行範囲，source と証明の hash は
+\nolinkurl{verification/README.txt} と各結果に記録する．
+内部の独立点検を外部査読や proof assistant による形式化と表現しない．
+
+全 $q\le101$ の排除は有界完全検算である．
+無上界の支持障害，固定 $(s,t)$ の全係数復元，特定例，有限回帰とは量化を区別する．
+異なる証明書の重複した候補数を加算しない．
+一般命題の証明は公開稿に置き，コードは整数性・恒等式・有限型分解を検査する．
+整数係数を全て記録した非負多項式の符号証明と，有界な変数探索を混同しない．
+有限検算は Moser，analytic gluing，Lagrangian fibration の存在証明の代用ではない．
+
+\input{sections/notes/notes_bibliography_v25.tex}
+\end{document}
+

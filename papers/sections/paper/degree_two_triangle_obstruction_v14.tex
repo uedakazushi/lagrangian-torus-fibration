@@ -1,0 +1,132 @@
+% v14. A node obstruction for a triangle with two degree-two vertices.
+% No opposing-D cancellation and no denominator cutoff are used.
+
+\section{二つの二価頂点を持つ高分母三角形の障害}
+\label{tn14:section}
+
+三角形成分の排除は，三つの core が全て二高分母である場合の結果であった．
+ここでは，そのうち二つだけが二高分母である場合を扱う．
+残る頂点には追加の高分母 branches が接続していてよい．
+個別の node 条件を用いる代わりに，対向する $D$ の相殺は必要としない．
+
+二高分母の canonical 表示で，高 rays を $A,B$，低 rays を $C,D$ とする．
+高 ray へ向かう二つの低 rays からの reverse numerators は
+\[
+ \begin{array}{c|cc}
+  &C&D\\\hline
+  A&r&-S\\
+  B&-(r+1)&T
+ \end{array}
+\]
+である．既知の正値性と整数条件により $r\geq1$，$S\geq2$，$T\geq S$ であり，
+$r=S$ は起こらない．補題~\ref{ml12:dichotomy} により，
+$S>r$ なら $rT>(r+1)S$，$S<r$ なら $T=S$ である．
+
+\begin{lemma}[小さい reverse numerators と負の枝]
+\label{tn14:small-negative-branch}
+正の二高分母整数標準形で $2\leq S<r\leq4$ とする．
+このとき唯一の可能性は
+\[
+ (r,s,z,S,T)=(4,4,5,2,2),\qquad (a,b)=(9,11)
+\]
+である．
+\end{lemma}
+
+\begin{proof}
+$H=r-S$，$\alpha=-u$，$\beta=-v$ と置くと $u,v$ は正整数であり，
+式~\eqref{ml12:E-equation} は
+\begin{equation}\label{tn14:negative-equation}
+ \left(1-\frac{S^2}{H(H+1)}\right)uv=v-u+1
+\end{equation}
+を与える．候補 $(r,S)$ は $(3,2),(4,2),(4,3)$ の三つである．
+$(3,2)$ では $u(1-v)=v+1$，$(4,3)$ では
+$u(1-7v/2)=v+1$ となるが，いずれも左辺は非正，右辺は正なので不可能である．
+
+$(4,2)$ では $T=S=2$，$u=s/2$，$v=3z/5$ である．
+残る numerator の整数性 $4\mid2s$，$5\mid2z$ から
+$s=2u$，$z=5\ell$，$v=3\ell$，$\ell\geq1$ と書ける．
+式~\eqref{tn14:negative-equation} は
+\[
+ u\ell=3\ell-u+1,
+ \qquad (3-u)(\ell+1)=2
+\]
+となる．$\ell+1\geq2$ なので $\ell=1$，$u=2$，従って $s=4,z=5$ である．
+分母は $a=sS+1=9$，$b=zT+1=11$ となる．
+このデータは元の row sums，pair products を満たし，標準形の正の weights を持つ．
+\end{proof}
+
+\begin{lemma}[両 reverse numerators が四以下の高 ray]
+\label{tn14:small-reverse-ray}
+正の二高分母整数標準形で，一つの高 ray に向かう二つの低 rays からの
+reverse numerators の絶対値がともに四以下であるとする．
+その高 ray は必ず canonical な $A$ である．
+\end{lemma}
+
+\begin{proof}
+$B$ だとすると $r+1\leq4$，$T\leq4$ であり，従って $r\leq3$，$S\leq4$ である．
+$S>r$ なら $S\geq\max(2,r+1)$ と $rT>(r+1)S$ により，
+$r=1,2,3$ のどの場合も $T\geq5$ となって矛盾する．
+$S<r$ なら $2\leq S<r\leq3$ なので $(r,S)=(3,2)$ だが，
+補題~\ref{tn14:small-negative-branch} によって不可能である．
+\end{proof}
+
+\begin{theorem}[二つの二価頂点を持つ三角形の不存在]
+\label{tn14:no-degree-two-triangle}
+五次の標準 $K_5$ branch graph 上で，正の局所整数 charts，marked puncture の整数 clutching，
+および全ての node 数の非負性を仮定する．
+高分母 support $H$ は，三角形のうち二つの頂点が $H$ において次数二であるような部分 graph を含まない．
+残る三角形頂点の次数や，その先の接続は制限しない．
+分母の上限と対向端の $D$ の相殺は，いずれも仮定しない．
+\end{theorem}
+
+\begin{proof}
+次数二の頂点を $i,j$，両者のもう一つの高隣接頂点を $k$ とし，
+残る二つの labels を $\ell,m$ とする．
+辺 $ij$ の分母を $q>1$ と書く．両端の core は二高分母であり，
+$\ell,m$ は両端で共通の低分母 punctures である．
+共有高 ray の二つの低分母への outgoing entries は，各 core で一正一負である．
+
+二つの punctures で同符号同士が対応する場合，一方では負の entries が二つ接着する．
+補題~\ref{ls11:low-puncture} はその組を $\{-1,-(q-1)\}$ に限るが，
+補題~\ref{cc12:proper-negative} は二高分母の負の高低 entry が
+$-(q-1)$ であることを禁じる．従って，両 punctures とも異符号同士が対応する．
+それぞれの outgoing entries，および reverse entries の和は零である．
+
+各共通低 label に対して補題~\ref{cn12:reverse-bound} を適用すると，
+両端の共有高 ray における二つの reverse numerators の絶対値はともに四以下となる．
+この補題の第三 core の二つの rays は低分母なので pair product が零であり，
+その少なくとも一方の entry が零である．対応する低 edge の node 数が $1\pm c$ となり，
+row sums から従う区間 $[0,5]$ に入るため $|c|\leq4$ となる．
+第三 core の他の分母は，この議論に影響しない．
+
+補題~\ref{tn14:small-reverse-ray} により，共有 ray は両 core で canonical な $A$ である．
+一方の canonical reverse pair を $(r,-S)$ とすると，他方では符号が反転するため
+\[
+ (r',S')=(S,r).
+\]
+従って $2\leq r,S\leq4$ であり，$r\ne S$ なので一方の core は負の枝である．
+補題~\ref{tn14:small-negative-branch} により，その core の shared denominator は $q=9$，
+reverse pair は $(4,-2)$ となる．他方の core では
+\[
+ a=q=9,\qquad r=2,\qquad S=4,\qquad s=2
+\]
+でなければならない．
+
+このデータを二高分母の pair-product 方程式に代入すると
+\begin{equation}\label{tn14:terminal-divisor}
+ z(5T-33)=9
+\end{equation}
+を得る．正の枝の不等式は $T>6$ を与えるので $5T-33>0$ であり，
+$z$ は九の正約数である．しかし $z=1,3,9$ はそれぞれ
+\[
+ T=\frac{42}{5},\quad \frac{36}{5},\quad \frac{34}{5}
+\]
+を与え，いずれも整数ではない．これが最後の矛盾である．
+\end{proof}
+
+この定理は，三角形成分に加え，三角形に一枚の葉を付けた形，長さ二の枝を付けた形，
+同じ三角形頂点に二枚の葉を付けた形，および二つの三角形が一頂点を共有する形を排除する．
+一方，三角形の異なる二頂点に葉を付けた場合や diamond では，
+対象となる二価頂点の pair が存在しないので，この定理だけでは排除されない．
+ここで排除したのは明示された次数条件を持つ部分 graph であり，
+任意の三角形部分 graph の不存在を主張していない．

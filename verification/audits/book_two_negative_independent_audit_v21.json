@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "version": "v21",
+  "method": "Recomputed with the unchanged v19 generator; v21 primary code not imported.",
+  "initial_cores": 313,
+  "checked_neighbour_sets": 626,
+  "total_neighbours": 83,
+  "double_nonempty_cores": 6,
+  "final_pairs": 11,
+  "final_D_residuals": [
+    -9,
+    -8,
+    -6,
+    -5,
+    -2,
+    -1,
+    1,
+    1,
+    2,
+    6,
+    8
+  ],
+  "arbitrary_scale_or_denominator_cutoff": null,
+  "all_complete_neighbour_sets_equal": true,
+  "external_peer_review": false,
+  "proof_assistant_formalization": false,
+  "audit_script_sha256": "05c1b1fe999435cf11659bd406d2d284df414ac6a5f22c88730eb9b8b6ef22d6",
+  "certificate_sha256": "68b4e9f2cdfa27bc2d99df899a682806e293aee9e85829fd71b6fcc8e9b8bd21",
+  "previous_generator_sha256": "a5a0da0f8051068739b0e68effca1e20ed55a0acf9668802cb6bc814cdacf4dc"
+}

@@ -1,0 +1,209 @@
+% v11 staging module. General two-high sign theorem and triangular-support obstruction.
+% Assumes kl10:two-high-parametrization, kl10:two-high-positive,
+% and the already established opposing-end cancellation of D.
+
+\section{二高分母の符号と三角形成分の接着障害}
+\label{ls11:section}
+
+二高分母の factorization 表示の正値性条件は，分母が異なる場合にも
+単純な符号条件まで強められる．これを共有 puncture の整数 clutching と組み合わせると，
+高分母 support の一つの連結成分が三角形になる場合を，分母の上限なしで排除できる．
+
+\begin{theorem}[二高分母の正値性と符号]\label{ls11:two-high-signs}
+命題~\ref{kl10:two-high-parametrization} の標準表示に従う
+分母 $(a,b,1,1)$，$a,b>1$，の整数 numerator matrix を考える．
+正の局所 weights が存在することは
+\[
+ u<0<v
+\]
+と同値である．従って，正の局所模型の各高分母 row は，もう一つの高分母へ負の entry を持ち，
+二つの低分母へは正と負の entry を一つずつ持つ．
+この結論は $a=b$ を仮定しない．
+\end{theorem}
+
+\begin{proof}
+標準表示の記号を用いる．$A=a+x+u\geq x+1\geq2$ であり，
+pair-product 条件と $x=(a-1)/r$，$y=(b-1)/(r+1)$ から
+\begin{equation}\label{ls11:linear-v}
+ A(r+1)v=(1-ru)b-(A+r+1)
+\end{equation}
+を得る．$u<0$ なら $1-ru>0$ である．もし $v\leq-1$ なら
+\[
+ (1-ru)b=A(r+1)v+A+r+1
+ \leq r+1-Ar\leq0
+\]
+となり，$b>1$ に反する．$v\ne0$ なので $v>0$ である．
+また，$u<0$ なら既知の正値性条件~\eqref{kl10:two-high-positive} が成立する．
+
+残る $u>0$ の場合が正の weights を持たないことを示す．
+この場合は $v<0$ なので $v=-z$，$z>0$ と書く．
+\[
+ S=\frac{a-1}{u},\qquad T=\frac{b-1}{z},\qquad
+ d=T-S-1
+\]
+と置くと $S,T$ は正の整数である．正値性は
+$rud<a=uS+1$ を要求し，整数性から
+\begin{equation}\label{ls11:cycle-bound}
+ rd\leq S
+\end{equation}
+となる．次の正の量と整数を導入する：
+\[
+ \begin{split}
+ F&=(2r+1)S+r-r^2d,\qquad G=(r+1)(S+r),\\
+ H&=r(r+1),\qquad K=r(r+T+1).
+ \end{split}
+\]
+pair-product 条件を $a=uS+1$，$b=zT+1$，$T=S+d+1$ によって書き直すと
+\begin{equation}\label{ls11:bilinear-positive}
+ u(zF-G)=H-zK
+\end{equation}
+を得る．式~\eqref{ls11:cycle-bound} より
+\[
+ F\geq(r+1)S+r>0.
+\]
+一方，$z\geq1$，$T\geq1$ より
+$H-zK\leq H-K=-rT<0$ である．従って $zF<G$ であり，特に
+\[
+ 0<G-F=r\{r(d+1)-S\}.
+\]
+従って
+\begin{equation}\label{ls11:short-interval}
+ rd\leq S<r(d+1).
+\end{equation}
+$S>0$ なので $d\geq0$ である．
+
+$d=0$ なら，二つの低分母頂点間の entries は両方とも零である．
+これらの頂点を交換すると，再び同じ標準表示になり，新しい $r,S$ はそれぞれ $S,r$ となる．
+式~\eqref{ls11:short-interval} は元の標識で $S<r$，交換後には $r<S$ を与えるので矛盾する．
+
+$d\geq1$ なら $S\geq r$ であり，
+\[
+ 1\leq z<\frac GF
+ \leq\frac{(r+1)(S+r)}{(r+1)S+r}
+ =1+\frac{r^2}{(r+1)S+r}<2.
+\]
+従って $z=1$ である．$S=rd+e$，$0\leq e<r$ と書けば
+\[
+ T=S+d+1=(r+1)d+e+1.
+\]
+標準表示の整除条件 $r+1\mid b-1=zT$ は，$z=1$ より $r+1\mid e+1$ を要求する．
+しかし $1\leq e+1\leq r$ なので矛盾する．これで $u>0$ は排除された．
+\end{proof}
+
+この定理は，既知の factorization 表示における cycle 不等式を削除するものではなく，
+その整数条件を全て用いて，正値な場合を $u<0<v$ にちょうど絞り込む結果である．
+局所の正の chart の実現は命題~\ref{q9:four-line-criterion} に従う．
+
+\begin{lemma}[両端が低分母に接する puncture]\label{ls11:low-puncture}
+共有 branch の分母を $q>1$ とし，その同じ marked puncture が，
+両側の core において分母一の ray に向かうとする．
+共有 branch からその ray へ向かう二つの numerators を $p,p'$ と書く．
+整数 clutching $q\mid p+p'$ が成立するなら，次のいずれかに限られる：
+\[
+ p'=-p,\qquad
+ \{p,p'\}=\{1,q-1\},\qquad
+ \{p,p'\}=\{-1,-(q-1)\}.
+\]
+この三場合のいずれでも，逆向きの numerators の和は元の和と等しい：
+\[
+ \frac{q-1}{p}+\frac{q-1}{p'}=p+p'.
+\]
+meridian node 表示では，その puncture の node 数はそれぞれ $1,0,2$ である．
+\end{lemma}
+
+\begin{proof}
+crossing determinant により $p,p'$ は $q-1$ の非零 signed divisors である．
+従って $|p+p'|<2q$ であり，その和は $-q,0,q$ のいずれかとなる．
+和が零なら第一の場合である．和が $q$ なら両者は正であり，
+両者とも $q-1$ より小さい divisor なら各々 $(q-1)/2$ 以下なので矛盾する．
+従って一方が $q-1$，他方が一である．負の場合も同様である．
+逆向きの和についての等式と node 数は，各場合への直接代入で従う．
+\end{proof}
+
+\begin{theorem}[高分母の三角形成分の不存在]\label{ls11:no-triangle-component}
+現在の全平面五次の構成条件の下で，大域作用適合 atlas が存在するとする．
+その高分母 support
+\[
+ H=\bigl\{\{i,j\}:q_{ij}>1\bigr\}\subset K_5
+\]
+は，三角形を一つの連結成分として持たない．
+これは分母の大きさによらない一般障害である．
+証明に用いるのは局所の正値性，row sums，crossing determinants，
+marked puncture の整数 clutching，および対向端の $D$ の相殺である．
+node 数の非負性や各直線の全 node 数五は，この定理には必要ない．
+\end{theorem}
+
+\begin{proof}
+三角形の core labels を $0,1,2$ とし，添字は三を法として読む．
+辺 $\{i,i+1\}$ の分母を $q_i>1$ と書く．
+三角形成分という仮定から，この三つの cores はそれぞれ二高分母を持ち，
+残る二つの core labels へ向かう分母は一である．
+各共有 branch の二つの外側 punctures は，それら二つの固定された labels に対応する．
+
+定理~\ref{ls11:two-high-signs} より，その二つの outgoing entries は各端で一正一負である．
+同じ marked punctures を接続するとき，符号が対応するなら補題~\ref{ls11:low-puncture} により
+二つの和は $q_i,-q_i$，符号が逆に対応するなら零，零となる．
+従って二つの外側 punctures の outgoing sums の総和は零であり，
+同補題により incoming sums の総和も零である．
+
+core $i$ における二つの高分母 rays の numerators を
+\[
+ p_{i;i-1,i+1}=-\alpha_i,\qquad
+ p_{i;i+1,i-1}=-\beta_i,
+ \qquad \alpha_i,\beta_i>0
+\]
+と書く．局所 crossing determinant は
+\begin{equation}\label{ls11:triangle-products}
+ \alpha_i\beta_i=q_{i-1}q_i-1
+\end{equation}
+である．両端の outgoing row sums から，辺 $\{i,i+1\}$ について
+\[
+ \beta_i+\alpha_{i+1}=2q_i
+\]
+となる．また対向端の $D$ の相殺と incoming sums の総和零から
+\[
+ \alpha_i+\beta_{i+1}=2q_i
+\]
+を得る．差を取ると $\alpha_i-\beta_i$ は $i$ によらない整数 $\delta$ となる．
+meridian node 表示を用いる場合には，最初の等式は三角形に向かう puncture の node 数三を意味するが，
+ここではこの個数や全 node budget を別の仮定として用いていない．
+
+$T_i=(\alpha_i+\beta_i)/2>0$ と置くと，
+\[
+ q_i=\frac{T_i+T_{i+1}}2,
+ \qquad
+ (T_{i-1}+T_i)(T_i+T_{i+1})=4T_i^2-\delta^2+4.
+\]
+$T_i$ が最大となる頂点では左辺は $4T_i^2$ 以下なので $\delta^2\geq4$，
+最小となる頂点では逆に $\delta^2\leq4$ である．
+従って $\delta^2=4$ であり，最大頂点での等号から三つの $T_i$ は全て等しい．
+従って三辺の分母も全て同じ $q$ となり，各 core の二つの high--high numerators は
+$-q-1,-q+1$ となる．
+
+この特別な二高分母模型を標準表示で調べる．
+$m=q-1=t r(r+1)$，$x=t(r+1)$，$y=tr$ とし，$u=-s<0$，$v=z>0$ と置く．
+high--high entries は $-A,-B$，
+\[
+ A=q+x-s,\qquad B=q-y+z,\qquad \{A,B\}=\{q-1,q+1\}
+\]
+である．もし $A=q-1$ なら $s=x+1$ であり，$s\mid m=rx$ から $x+1\mid r$ となる．
+しかし $x=t(r+1)\geq r+1$ なので不可能である．
+従って $A=q+1$ であり，$s=x-1$，$z=y-1$ となる．
+$s\mid rx$ より $x-1\mid r$，一方 $x-1\geq r$ なので $t=1$，$s=r$ である．
+さらに $z=r-1>0$，$z\mid r(r+1)$ より $r-1\mid2$ となる．
+従って $r=2,3$，すなわち $q=7,13$ に限られる．
+
+直接計算すると，その二高分母における $D$ の組は，順序を除き
+\[
+ q=7:\quad (0,-2),\qquad
+ q=13:\quad (0,-1)
+\]
+である．どちらも高分母二頂点の係数和は負である．
+三つの cores にわたりこの和を足すと負になるが，各三角形辺の対向端では相殺するため零でなければならない．
+この矛盾が結論を与える．
+\end{proof}
+
+本定理は，高分母 support が三角形を部分 graph として含む場合を全て排除するものではない．
+三つの cores のいずれかにさらに高分母 branch が接続する場合には，
+二高分母の符号定理をその core へ適用できない．
+また，四角形・五角形や一般の path 成分の排除は，本定理だけからは従わない．

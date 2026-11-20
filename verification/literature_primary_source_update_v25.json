@@ -1,0 +1,128 @@
+{
+  "version": "v25",
+  "status": "PASS",
+  "review_date": "2026-10-28",
+  "document_timezone": "Asia/Tokyo",
+  "scope": "Targeted official primary-source version and scope refresh; broad previous Introduction and theorem-level audits retained. This is not a claim of exhaustive current search, priority, or absence of unpublished work.",
+  "primary_sources_checked_this_version": [
+    {
+      "url": "https://arxiv.org/abs/1905.09229v3",
+      "authors": "Jonathan David Evans and Mirko Mauri",
+      "title": "Constructing local models for Lagrangian torus fibrations",
+      "version_date": "2020-08-03",
+      "checked": "Official abstract, version history and scope. Earlier detailed theorem audit retained."
+    },
+    {
+      "url": "https://arxiv.org/abs/2312.13248v4",
+      "authors": "Javier Fernandez de Bobadilla and Tomasz Pelka",
+      "title": "Fibrations by Lagrangian tori for maximal Calabi-Yau degenerations and beyond",
+      "version_date": "2026-07-09",
+      "related_doi": "10.1002/cpa.70060",
+      "checked": "Official abstract, version history, related publication DOI; generic-region scope retained."
+    },
+    {
+      "url": "https://arxiv.org/abs/2502.04304",
+      "authors": "Pranav Chakravarthy and Yoel Groman",
+      "title": "Almost toric fibrations on K3 surfaces via degenerations",
+      "version": "v3",
+      "version_date": "2026-05-28",
+      "checked": "Official version history and abstract. Kulikov/almost-toric hypotheses retained; Lemma 2.13 detailed audit remains in earlier evidence."
+    },
+    {
+      "url": "https://arxiv.org/abs/2604.03161",
+      "authors": "S. Venugopalan and C. T. Woodward",
+      "title": "Tropical disk potential for almost toric manifolds",
+      "version": "v1",
+      "version_date": "2026-04-03",
+      "checked": "Official abstract and version history. Prior v24 full-text Theorem 1.3 hypothesis audit retained; no automatic application to branched bases."
+    }
+  ],
+  "queries_this_version": [
+    {
+      "query": "\"Lagrangian torus fibration\" \"general type\"",
+      "recency_days": 365
+    },
+    {
+      "query": "\"almost toric\" \"positive\" \"intersection\" matrix integral affine",
+      "recency_days": 365
+    },
+    {
+      "query": "\"Tropical disk potential\" \"Venugopalan\" \"Woodward\""
+    }
+  ],
+  "retrieval_limits": [
+    "Two Centre Mersenne article URLs returned 403; the official Evans-Mauri arXiv version was used.",
+    "A direct arXiv max-algebra URL did not load; its previously verified bibliography was retained, not represented as freshly checked.",
+    "Secondary search snippets were not used as technical authorities or to replace official publication dates."
+  ],
+  "editorial_changes": [
+    "Preserved all 18 arithmetic Introduction citation commands.",
+    "Retained geometry 55, arithmetic 17, notes 39 and surgery 12 bibliography entries.",
+    "Refactored the local integer results, distinguished them from existing cycle-gain and principal-minor theory, and updated all current research frontiers."
+  ],
+  "inference_limits": [
+    "No assertion that a formal preprint does not exist.",
+    "No priority conclusion from search absence.",
+    "No claim that announcement-level proof details have been independently verified.",
+    "Prior full primary literature reviews remain preserved in the bundle."
+  ],
+  "retained_primary_audits": [
+    {
+      "file": "verification/literature_source_review_v20.json",
+      "sha256": "65d74613567c0b6c985e3504e233e49e9113a8bceddc4e7a0c35f7d4fb278b3c"
+    },
+    {
+      "file": "verification/literature_source_review_v19.json",
+      "sha256": "c019f9ed0b2716b11d730c7ba400640d4fc5ad23cafc442b6df7675f92dfcdbf"
+    },
+    {
+      "file": "verification/literature_source_review_v18.json",
+      "sha256": "02a3101b6961f3c83cc0d36b7122df268c2a61a7e44f67ad75c734f55bc2975a"
+    },
+    {
+      "file": "verification/literature_source_review_v17.json",
+      "sha256": "330c130a52ad07dd039b3a9ccfbf570bb7fe8bb5483cfedd64544ab013986e22"
+    },
+    {
+      "file": "verification/audits/arithmetic_literature_audit_v17.json",
+      "sha256": "f2261c9e1ea2dfaa74a105ef07766dfbfc8bd398ae05edb7c886c2179deb7433"
+    },
+    {
+      "file": "verification/audits/literature_source_review_v16.json",
+      "sha256": "27fedd81ddb71920d514310788d9f76b3d97c028c5e94e614bce7fc360ec8dde"
+    },
+    {
+      "file": "verification/literature_primary_source_update_v21.json",
+      "sha256": "5a232876d3fa5ce0b8706aa16b4167a6c49121ae5ac8fdd9bdb545f47593d9b7"
+    },
+    {
+      "file": "verification/literature_primary_source_update_v22.json",
+      "sha256": "fe7c8e3f37c6f96dfa437a84e7258cff819a03d4adc1415d3c65117ff0c68685"
+    },
+    {
+      "file": "verification/literature_primary_source_update_v23.json",
+      "sha256": "9a1f839991cb5125417aec2dc6c03153ed891fcd380e9305e7c645d47d058e7c"
+    },
+    {
+      "file": "verification/literature_primary_source_update_v24.json",
+      "sha256": "3ef145527d6f61086a401a2b57872787bee5af1ffb347e23454d2225f4c7b2c0"
+    }
+  ],
+  "introduction_sha256": {
+    "paper/geometry_introduction_v25.tex": "383354c4d141117cd75eaed52fdfa7bbd3b5bbbf70ef5fdd85e7f3fd29ec447c",
+    "paper_arithmetic/arithmetic_introduction_v25.tex": "d8490c80e729413a93261389297de5b2928a65edc5706435c79ca409f92ac5bb",
+    "paper_surgery/introduction.tex": "d790bb60554ee7f0d47fbbf9758abfb291e5a04053f48baddb9c2b0294c698a5"
+  },
+  "bibliography_sha256": {
+    "paper/geometry_bibliography_v25.tex": "31caa6116b46ace8c04ca0d86351d38506f7d3b12e835cf66b4bd21abde9ce73",
+    "paper_arithmetic/arithmetic_bibliography_v25.tex": "7ebb07059469fd53ec91febb8f7adfc0f6ed3ad250c79a3359321c3ba23be987",
+    "notes/notes_bibliography_v25.tex": "5496c5aee9b63845c37f3a76538e86ffc28fc187e7fdbc4cabc056a105af9998",
+    "paper_surgery/bibliography.tex": "eabcf0ff31c00beb47c7c48d5756ae2f2f701369ae304d68dced4fa4e5ccc310"
+  },
+  "bibliography_entries": {
+    "geometry": 55,
+    "arithmetic": 17,
+    "notes": 39,
+    "surgery": 12
+  }
+}

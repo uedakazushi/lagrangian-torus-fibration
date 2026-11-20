@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "review_type": "internal independent mathematical proof review and separately implemented exact enumeration",
+  "not_external_peer_review": true,
+  "checks": [
+    {
+      "name": "one_high_hub_parameters",
+      "status": "PASS",
+      "finding": "Complete c,d integer freedom cd=0 is retained; Q=3 B/C duplicate representations are not removed."
+    },
+    {
+      "name": "weighted_flow_identity",
+      "status": "PASS",
+      "finding": "Substituting Rji=ell_j(1-Nji)-Vji into D opposition yields weighted node sum minus(Q+3)-ell_i."
+    },
+    {
+      "name": "B_ray_r_options",
+      "status": "PASS",
+      "finding": "The one-positive low row at core1 forces R10 in{-1,1,2}; r=-1 contradicts (aQ-1)(bq-1)=Qq-1 for all integer sign cases."
+    },
+    {
+      "name": "four_B_types",
+      "status": "PASS",
+      "finding": "For r=1,2 and all kappa in[-4,1], algebra gives precisely I/II/III/IV; typeIV retains every odd q01>=3 at Q3 or5."
+    },
+    {
+      "name": "typeI_Q3",
+      "status": "PASS",
+      "finding": "D04 gives X02+X03=-Q-t; node0 allocation fixes R03=-h. Modular X02=u+(z-1)Q gives q03=1+hz and w<=z. e(hz+1)=z+w forces e=h=1,t=1,Q3."
+    },
+    {
+      "name": "large_leaf_bound",
+      "status": "PASS",
+      "finding": "Q>21 implies u>=5,v>=6; d=0 contradicts R31>=3 and reverse-partner bound2. Therefore c=0, then row2/row3 one-positive conditions and R23 bound4 contradict R32>=v-1>=5."
+    },
+    {
+      "name": "fifteen_parameter_pairs",
+      "status": "PASS",
+      "finding": "h,t positive and Q=th(h+1)+1<=21 gives exactly h1 t1..10,h2 t1..3,h3 t1,h4 t1."
+    },
+    {
+      "name": "free_q_center_branch",
+      "status": "PASS",
+      "finding": "Both linear coefficients zero imply R=-r and r divides Q-1; all possible q are exactly1+lcm(2,abs(r))*a,a>=1."
+    },
+    {
+      "name": "free_c_d_coverage",
+      "status": "PASS",
+      "finding": "Every low reverse partner is ordinary -r, unit same-sign if abs(r)even, or a complete signed even halfline if abs(r)=1. No free coefficient or other q cutoff."
+    },
+    {
+      "name": "independent_N_first_enumeration",
+      "status": "PASS",
+      "finding": "All15 parameter counts agree with primary:345node configurations; independent full parity-axis decomposition has4629cells including1380unbounded cells,zero survivors."
+    }
+  ],
+  "source_hashes": {
+    "k4_leaf_obstruction_v18.tex": "4fd196421b7e0612b04fe647e8d396eb7691a06774a08bac9b349ff40234f323",
+    "verify_k4_leaf_obstruction_v18.py": "250ce9b2364a1c4271d0d8005d52857d484657324521f9fefc5f5097c090bdcb",
+    "k4_leaf_obstruction_verification_v18.json": "ea5679c66a5898d5e67cc22206e763d0eaa6253a876e6e10c36d4c893340c3a5"
+  },
+  "independent_audit_script": "audit_k4_leaf_cells_v18.py",
+  "independent_audit_result": "k4_leaf_parity_cell_independent_audit_v18.json"
+}

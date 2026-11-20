@@ -1,0 +1,5056 @@
+{
+  "version": "v16",
+  "status": "PASS",
+  "passed": true,
+  "audit_kind": "Independent original-equation recheck and completeness-composition review of the global two-leaf obstruction",
+  "captured_at_utc": "2026-10-27T07:15:37.172555+00:00",
+  "external_peer_review": false,
+  "proof_assistant_formalization": false,
+  "audit_script_sha256": "df380a38340a352fe6cdd07272360fdef28b474209578defc6a9b1fbbbce2f68",
+  "source_snapshot": {
+    "two_leaf_global_obstruction_v16.tex": "22ea8b0ac2f7f983224370046b0d40d24bf60fc7dc54b7cfb9e9fe4f453e8ea4",
+    "verify_two_leaf_centers_v16.py": "563bb9f3f54a028b4076adc8dbf3eade662e7bc7613abc0327b3dce87ca66f7b",
+    "two_leaf_center_obstruction_v16.json": "13c97196ba15337d4fada7cea3d5ccfb7c023967a93dbdcc458f188ddaf159b4",
+    "two_leaf_unit_finiteness_certificate_v16.json": "a0bc7d8201f1bf79b4752e1dfa2caf5a63becab8faf9ff2100a29dc1e70589ff",
+    "r1_B_leaf_verification_v16.json": "bd55740f4984d0c173b1367cb084575d0ce6038cfa992de5502e15bf942764f6"
+  },
+  "method": "No primary checker or leaf generator imported. Rows are independently reconstructed from two entry residues and the row sum; all three pair equations are checked by intersections of pairwise compatibility sets.",
+  "middle_models": 10,
+  "distinct_low_patches": 52,
+  "all_original_core_and_low_edge_conditions_rechecked": true,
+  "all_104_center_counts_match_primary": true,
+  "rows_per_known_ray": 21,
+  "center_obstruction_counts": {
+    "0": 51,
+    "1": 1
+  },
+  "unknown_q01_or_missing_row_used": false,
+  "center_D_or_weights_used_for_obstruction": false,
+  "q3_low_patches": [
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 0,
+      "leaf_denominators": [
+        3,
+        7
+      ]
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 1,
+      "leaf_denominators": [
+        3,
+        3
+      ]
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 2,
+      "leaf_denominators": [
+        3,
+        7
+      ]
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 3,
+      "leaf_denominators": [
+        5,
+        3
+      ]
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 9,
+      "leaf_denominators": [
+        5,
+        3
+      ]
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 11,
+      "leaf_denominators": [
+        5,
+        3
+      ]
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 16,
+      "leaf_denominators": [
+        5,
+        3
+      ]
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 7,
+        "z": 1,
+        "S": 4,
+        "T": 18
+      },
+      "low_patch_index": 0,
+      "leaf_denominators": [
+        21,
+        3
+      ]
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 7,
+        "z": 1,
+        "S": 4,
+        "T": 18
+      },
+      "low_patch_index": 2,
+      "leaf_denominators": [
+        21,
+        3
+      ]
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 15,
+        "z": 1,
+        "S": 12,
+        "T": 64
+      },
+      "low_patch_index": 0,
+      "leaf_denominators": [
+        157,
+        3
+      ]
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 15,
+        "z": 1,
+        "S": 12,
+        "T": 64
+      },
+      "low_patch_index": 2,
+      "leaf_denominators": [
+        157,
+        3
+      ]
+    },
+    {
+      "parameters": {
+        "r": 2,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 6
+      },
+      "low_patch_index": 0,
+      "leaf_denominators": [
+        3,
+        3
+      ]
+    },
+    {
+      "parameters": {
+        "r": 2,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 6
+      },
+      "low_patch_index": 1,
+      "leaf_denominators": [
+        5,
+        3
+      ]
+    },
+    {
+      "parameters": {
+        "r": 2,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 6
+      },
+      "low_patch_index": 2,
+      "leaf_denominators": [
+        5,
+        3
+      ]
+    },
+    {
+      "parameters": {
+        "r": 2,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 6
+      },
+      "low_patch_index": 3,
+      "leaf_denominators": [
+        5,
+        3
+      ]
+    },
+    {
+      "parameters": {
+        "r": 2,
+        "s": 5,
+        "z": 1,
+        "S": 14,
+        "T": 36
+      },
+      "low_patch_index": 0,
+      "leaf_denominators": [
+        31,
+        3
+      ]
+    },
+    {
+      "parameters": {
+        "r": 4,
+        "s": 4,
+        "z": 1,
+        "S": 18,
+        "T": 30
+      },
+      "low_patch_index": 0,
+      "leaf_denominators": [
+        19,
+        3
+      ]
+    }
+  ],
+  "B_patch_count": 7,
+  "all_B_patches_are_a_subset_of_52": true,
+  "B_subset_records": [
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "leaf_denominators": [
+        3,
+        3
+      ],
+      "belongs_to_52": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "leaf_denominators": [
+        5,
+        3
+      ],
+      "belongs_to_52": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "leaf_denominators": [
+        5,
+        3
+      ],
+      "belongs_to_52": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 8,
+        "T": 36
+      },
+      "leaf_denominators": [
+        9,
+        7
+      ],
+      "belongs_to_52": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 8,
+        "T": 36
+      },
+      "leaf_denominators": [
+        9,
+        5
+      ],
+      "belongs_to_52": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 7,
+        "z": 1,
+        "S": 4,
+        "T": 18
+      },
+      "leaf_denominators": [
+        21,
+        3
+      ],
+      "belongs_to_52": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 15,
+        "z": 1,
+        "S": 12,
+        "T": 64
+      },
+      "leaf_denominators": [
+        157,
+        3
+      ],
+      "belongs_to_52": true
+    }
+  ],
+  "counts_are_not_added": true,
+  "completeness_composition_review": [
+    {
+      "step": "Crossed positive-branch reduction",
+      "status": "PASS",
+      "reason": "The established v15 theorem excludes the uncrossed and all negative branches before the v16 positive-branch argument is applied."
+    },
+    {
+      "step": "z=1 and r<=4",
+      "status": "PASS",
+      "reason": "The new common-low pair/node bound forces both conditions. Its source was independently proved and audited in this work."
+    },
+    {
+      "step": "All normal-form labels of leaf4 ray2",
+      "status": "PASS",
+      "reason": "The full one-high normal form gives B,C,D. Its high ray is1, hence ray2 is always among these three low labels."
+    },
+    {
+      "step": "B representation implies r=1",
+      "status": "PASS",
+      "reason": "For ray2=B, p4_20=0. The low-edge24 node at puncture0 has sum r, requiring r<=1. Positive r then equals1."
+    },
+    {
+      "step": "B branch completeness",
+      "status": "PASS",
+      "reason": "The separate proof derives a complete 33-middle set and seven low patches, all excluded. Its finite parameter bound does not assume any denominator cutoff."
+    },
+    {
+      "step": "C/D branch completeness",
+      "status": "PASS",
+      "reason": "The non-B proof derives 31 middles from bounded-E, free-E and small-S cases. The free-E bound was independently rederived by this reviewer; the other two branches are covered by the separate review."
+    },
+    {
+      "step": "q=3 multiple representations",
+      "status": "PASS",
+      "reason": "The case split requires coverage, not disjoint representations. Every full integer one-high matrix has a B/C/D representation, and identical labelled matrix pairs are counted only once. The seven B patches are checked directly as a subset of the52."
+    },
+    {
+      "step": "Center reconstruction is necessary and complete at the known-row level",
+      "status": "PASS",
+      "reason": "Each shared edge has three nonnegative node counts summing to5. The original node equation uniquely determines the known row, and its row sum follows automatically. Any global completion supplies one of the 21 choices for each of the three known rows."
+    },
+    {
+      "step": "Global contradiction",
+      "status": "PASS",
+      "reason": "Every one of the52 low patches fails the three known-ray pair equations at a center. No choice of q01, the missing fourth row, or center D/weights can repair that necessary-condition failure."
+    }
+  ],
+  "records": [
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 0,
+      "leaf_denominators": [
+        3,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            2,
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            1,
+            0,
+            4
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 20,
+            "34": 16
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 30
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 1,
+      "leaf_denominators": [
+        3,
+        3
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            4,
+            1
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 30,
+            "34": 42
+          },
+          "compatible_row_triple_count": 2,
+          "compatible_node_triples": [
+            [
+              [
+                5,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                3
+              ],
+              [
+                2,
+                1,
+                2
+              ]
+            ],
+            [
+              [
+                5,
+                0,
+                0
+              ],
+              [
+                5,
+                0,
+                0
+              ],
+              [
+                3,
+                1,
+                1
+              ]
+            ]
+          ]
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 2,
+      "leaf_denominators": [
+        3,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            0,
+            5
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 20,
+            "34": 16
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 30
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 3,
+      "leaf_denominators": [
+        5,
+        3
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            0,
+            5
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            1,
+            4
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            3,
+            1,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 25,
+            "34": 30
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 36,
+            "34": 42
+          },
+          "compatible_row_triple_count": 2,
+          "compatible_node_triples": [
+            [
+              [
+                5,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                3
+              ],
+              [
+                3,
+                0,
+                2
+              ]
+            ],
+            [
+              [
+                5,
+                0,
+                0
+              ],
+              [
+                5,
+                0,
+                0
+              ],
+              [
+                4,
+                0,
+                1
+              ]
+            ]
+          ]
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 4,
+      "leaf_denominators": [
+        5,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            0,
+            5
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            1,
+            0,
+            4
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 20,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 5,
+      "leaf_denominators": [
+        5,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            0,
+            5
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            3,
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            3,
+            1,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 20,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 30
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 6,
+      "leaf_denominators": [
+        5,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            1,
+            4
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            0,
+            5
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 20,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 7,
+      "leaf_denominators": [
+        5,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            1,
+            4
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            2,
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            3,
+            1,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 20,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 30
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 8,
+      "leaf_denominators": [
+        5,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            1,
+            0,
+            4
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            3,
+            1,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 20,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 30
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 9,
+      "leaf_denominators": [
+        5,
+        3
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            3,
+            2
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            4,
+            1
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            3,
+            1,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 30,
+            "34": 42
+          },
+          "compatible_row_triple_count": 2,
+          "compatible_node_triples": [
+            [
+              [
+                5,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                3
+              ],
+              [
+                2,
+                1,
+                2
+              ]
+            ],
+            [
+              [
+                5,
+                0,
+                0
+              ],
+              [
+                5,
+                0,
+                0
+              ],
+              [
+                3,
+                1,
+                1
+              ]
+            ]
+          ]
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 10,
+      "leaf_denominators": [
+        5,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            3,
+            2
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            0,
+            5
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            3,
+            1,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 20,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 30
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 11,
+      "leaf_denominators": [
+        5,
+        3
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            4,
+            1
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            4,
+            1
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 30,
+            "34": 16
+          },
+          "compatible_row_triple_count": 1,
+          "compatible_node_triples": [
+            [
+              [
+                5,
+                0,
+                0
+              ],
+              [
+                3,
+                0,
+                2
+              ],
+              [
+                2,
+                1,
+                2
+              ]
+            ]
+          ]
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 12,
+      "leaf_denominators": [
+        5,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            4,
+            1
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            0,
+            5
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 20,
+            "34": 8
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 13,
+      "leaf_denominators": [
+        5,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            3,
+            2
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            1,
+            0,
+            4
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 20,
+            "34": 8
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 14,
+      "leaf_denominators": [
+        5,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            0,
+            5
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            1,
+            3,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 20,
+            "34": 34
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 15,
+      "leaf_denominators": [
+        5,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            2,
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 20,
+            "34": 8
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 16,
+      "leaf_denominators": [
+        5,
+        3
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            1,
+            4
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            1,
+            4
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 25,
+            "34": 25
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 36,
+            "34": 16
+          },
+          "compatible_row_triple_count": 1,
+          "compatible_node_triples": [
+            [
+              [
+                5,
+                0,
+                0
+              ],
+              [
+                3,
+                0,
+                2
+              ],
+              [
+                3,
+                0,
+                2
+              ]
+            ]
+          ]
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 17,
+      "leaf_denominators": [
+        5,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            1,
+            4
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            1,
+            0,
+            4
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            1,
+            3,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 20,
+            "34": 34
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 18,
+      "leaf_denominators": [
+        5,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            1,
+            4
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            3,
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 20,
+            "34": 8
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 19,
+      "leaf_denominators": [
+        5,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            0,
+            5
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            2,
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            1,
+            3,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 20,
+            "34": 34
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 12
+      },
+      "low_patch_index": 20,
+      "leaf_denominators": [
+        5,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            0,
+            5
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            4,
+            0,
+            1
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 20,
+            "34": 8
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 8,
+        "T": 36
+      },
+      "low_patch_index": 0,
+      "leaf_denominators": [
+        9,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            1,
+            2,
+            2
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            5,
+            0
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 8
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 8,
+        "T": 36
+      },
+      "low_patch_index": 1,
+      "leaf_denominators": [
+        9,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            1,
+            2,
+            2
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            4,
+            1
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            3,
+            0
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 8,
+        "T": 36
+      },
+      "low_patch_index": 2,
+      "leaf_denominators": [
+        9,
+        5
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            1,
+            0,
+            4
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            5,
+            0
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 16
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 4,
+        "z": 1,
+        "S": 8,
+        "T": 36
+      },
+      "low_patch_index": 3,
+      "leaf_denominators": [
+        9,
+        5
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            1,
+            0,
+            4
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            4,
+            1
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            3,
+            0
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 7,
+        "z": 1,
+        "S": 4,
+        "T": 18
+      },
+      "low_patch_index": 0,
+      "leaf_denominators": [
+        21,
+        3
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            5,
+            0
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            4,
+            1
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 30,
+            "34": 24
+          },
+          "compatible_row_triple_count": 1,
+          "compatible_node_triples": [
+            [
+              [
+                5,
+                0,
+                0
+              ],
+              [
+                5,
+                0,
+                0
+              ],
+              [
+                2,
+                1,
+                2
+              ]
+            ]
+          ]
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 7,
+        "z": 1,
+        "S": 4,
+        "T": 18
+      },
+      "low_patch_index": 1,
+      "leaf_denominators": [
+        21,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            5,
+            0
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            0,
+            5
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 8
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 7,
+        "z": 1,
+        "S": 4,
+        "T": 18
+      },
+      "low_patch_index": 2,
+      "leaf_denominators": [
+        21,
+        3
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            1,
+            4
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 36,
+            "34": 24
+          },
+          "compatible_row_triple_count": 1,
+          "compatible_node_triples": [
+            [
+              [
+                5,
+                0,
+                0
+              ],
+              [
+                5,
+                0,
+                0
+              ],
+              [
+                3,
+                0,
+                2
+              ]
+            ]
+          ]
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 15,
+        "z": 1,
+        "S": 12,
+        "T": 64
+      },
+      "low_patch_index": 0,
+      "leaf_denominators": [
+        157,
+        3
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            4,
+            1
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            4,
+            1
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 30,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 15,
+        "z": 1,
+        "S": 12,
+        "T": 64
+      },
+      "low_patch_index": 1,
+      "leaf_denominators": [
+        157,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            4,
+            1
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            0,
+            5
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 1,
+        "s": 15,
+        "z": 1,
+        "S": 12,
+        "T": 64
+      },
+      "low_patch_index": 2,
+      "leaf_denominators": [
+        157,
+        3
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            1,
+            4
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            1,
+            4
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 36,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 2,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 6
+      },
+      "low_patch_index": 0,
+      "leaf_denominators": [
+        3,
+        3
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            5,
+            0
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 15,
+            "34": 15
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 12,
+            "34": 42
+          },
+          "compatible_row_triple_count": 2,
+          "compatible_node_triples": [
+            [
+              [
+                3,
+                0,
+                2
+              ],
+              [
+                2,
+                0,
+                3
+              ],
+              [
+                0,
+                3,
+                2
+              ]
+            ],
+            [
+              [
+                3,
+                0,
+                2
+              ],
+              [
+                5,
+                0,
+                0
+              ],
+              [
+                1,
+                3,
+                1
+              ]
+            ]
+          ]
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 2,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 6
+      },
+      "low_patch_index": 1,
+      "leaf_denominators": [
+        5,
+        3
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            0,
+            1,
+            4
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 15,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 16,
+            "34": 42
+          },
+          "compatible_row_triple_count": 2,
+          "compatible_node_triples": [
+            [
+              [
+                3,
+                0,
+                2
+              ],
+              [
+                2,
+                0,
+                3
+              ],
+              [
+                1,
+                2,
+                2
+              ]
+            ],
+            [
+              [
+                3,
+                0,
+                2
+              ],
+              [
+                5,
+                0,
+                0
+              ],
+              [
+                2,
+                2,
+                1
+              ]
+            ]
+          ]
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 2,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 6
+      },
+      "low_patch_index": 2,
+      "leaf_denominators": [
+        5,
+        3
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            4,
+            1
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            5,
+            0
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            3,
+            1,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 15,
+            "34": 20
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 12,
+            "34": 42
+          },
+          "compatible_row_triple_count": 2,
+          "compatible_node_triples": [
+            [
+              [
+                3,
+                0,
+                2
+              ],
+              [
+                2,
+                0,
+                3
+              ],
+              [
+                0,
+                3,
+                2
+              ]
+            ],
+            [
+              [
+                3,
+                0,
+                2
+              ],
+              [
+                5,
+                0,
+                0
+              ],
+              [
+                1,
+                3,
+                1
+              ]
+            ]
+          ]
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 2,
+        "s": 4,
+        "z": 1,
+        "S": 3,
+        "T": 6
+      },
+      "low_patch_index": 3,
+      "leaf_denominators": [
+        5,
+        3
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            5,
+            0
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            5,
+            0
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 15,
+            "34": 15
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 12,
+            "34": 16
+          },
+          "compatible_row_triple_count": 1,
+          "compatible_node_triples": [
+            [
+              [
+                3,
+                0,
+                2
+              ],
+              [
+                3,
+                0,
+                2
+              ],
+              [
+                0,
+                3,
+                2
+              ]
+            ]
+          ]
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 2,
+        "s": 4,
+        "z": 1,
+        "S": 12,
+        "T": 30
+      },
+      "low_patch_index": 0,
+      "leaf_denominators": [
+        11,
+        13
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            3,
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            0,
+            5
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 15,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 2,
+        "s": 4,
+        "z": 1,
+        "S": 12,
+        "T": 30
+      },
+      "low_patch_index": 1,
+      "leaf_denominators": [
+        13,
+        13
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            1,
+            3,
+            1
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            0,
+            5
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 15,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 2,
+        "s": 4,
+        "z": 1,
+        "S": 12,
+        "T": 30
+      },
+      "low_patch_index": 2,
+      "leaf_denominators": [
+        13,
+        13
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            1,
+            2,
+            2
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            1,
+            0,
+            4
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 15,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 2,
+        "s": 4,
+        "z": 1,
+        "S": 12,
+        "T": 30
+      },
+      "low_patch_index": 3,
+      "leaf_denominators": [
+        13,
+        13
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            1,
+            1,
+            3
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            2,
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 15,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 2,
+        "s": 4,
+        "z": 1,
+        "S": 12,
+        "T": 30
+      },
+      "low_patch_index": 4,
+      "leaf_denominators": [
+        13,
+        13
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            1,
+            0,
+            4
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            3,
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 15,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 2,
+        "s": 5,
+        "z": 1,
+        "S": 14,
+        "T": 36
+      },
+      "low_patch_index": 0,
+      "leaf_denominators": [
+        31,
+        3
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            4,
+            1
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            5,
+            0
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 15,
+            "34": 15
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 4,
+        "s": 4,
+        "z": 1,
+        "S": 18,
+        "T": 30
+      },
+      "low_patch_index": 0,
+      "leaf_denominators": [
+        19,
+        3
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            1,
+            0,
+            4
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            4,
+            1
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            0,
+            2,
+            3
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 5,
+            "34": 30
+          },
+          "compatible_row_triple_count": 1,
+          "compatible_node_triples": [
+            [
+              [
+                4,
+                0,
+                1
+              ],
+              [
+                4,
+                0,
+                1
+              ],
+              [
+                0,
+                5,
+                0
+              ]
+            ]
+          ]
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 1,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 4,
+        "s": 4,
+        "z": 1,
+        "S": 35,
+        "T": 60
+      },
+      "low_patch_index": 0,
+      "leaf_denominators": [
+        35,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            2,
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            0,
+            5
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 5,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 4,
+        "s": 4,
+        "z": 1,
+        "S": 35,
+        "T": 60
+      },
+      "low_patch_index": 1,
+      "leaf_denominators": [
+        37,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            3,
+            2
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            0,
+            5
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 5,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 4,
+        "s": 4,
+        "z": 1,
+        "S": 35,
+        "T": 60
+      },
+      "low_patch_index": 2,
+      "leaf_denominators": [
+        37,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            1,
+            0,
+            4
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 5,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 4,
+        "s": 4,
+        "z": 1,
+        "S": 35,
+        "T": 60
+      },
+      "low_patch_index": 3,
+      "leaf_denominators": [
+        37,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            1,
+            4
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            0,
+            5
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            0,
+            4,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 5,
+            "34": 30
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 4,
+        "s": 4,
+        "z": 1,
+        "S": 35,
+        "T": 60
+      },
+      "low_patch_index": 4,
+      "leaf_denominators": [
+        37,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            1,
+            4
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            2,
+            0,
+            3
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 5,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 4,
+        "s": 4,
+        "z": 1,
+        "S": 35,
+        "T": 60
+      },
+      "low_patch_index": 5,
+      "leaf_denominators": [
+        37,
+        5
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            0,
+            5
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 5,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 4,
+        "s": 4,
+        "z": 1,
+        "S": 35,
+        "T": 60
+      },
+      "low_patch_index": 6,
+      "leaf_denominators": [
+        37,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            0,
+            5
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            1,
+            0,
+            4
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            0,
+            4,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 5,
+            "34": 30
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 4,
+        "s": 4,
+        "z": 1,
+        "S": 35,
+        "T": 60
+      },
+      "low_patch_index": 7,
+      "leaf_denominators": [
+        37,
+        7
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            0,
+            0,
+            5
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            3,
+            0,
+            2
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 0,
+            "24": 5,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 4,
+        "s": 4,
+        "z": 1,
+        "S": 52,
+        "T": 90
+      },
+      "low_patch_index": 0,
+      "leaf_denominators": [
+        53,
+        13
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            1,
+            1,
+            3
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 5,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    },
+    {
+      "parameters": {
+        "r": 4,
+        "s": 4,
+        "z": 1,
+        "S": 52,
+        "T": 90
+      },
+      "low_patch_index": 1,
+      "leaf_denominators": [
+        53,
+        13
+      ],
+      "low_edges": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "nodes": [
+            1,
+            0,
+            4
+          ]
+        },
+        {
+          "edge": [
+            2,
+            4
+          ],
+          "nodes": [
+            1,
+            2,
+            2
+          ]
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "nodes": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "centers": [
+        {
+          "center": 0,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 5,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        },
+        {
+          "center": 1,
+          "row_choice_counts": [
+            21,
+            21,
+            21
+          ],
+          "pairwise_compatible_counts": {
+            "23": 36,
+            "24": 0,
+            "34": 0
+          },
+          "compatible_row_triple_count": 0,
+          "compatible_node_triples": []
+        }
+      ],
+      "obstructing_center": 0,
+      "primary_counts_match": true
+    }
+  ],
+  "remaining_findings": []
+}

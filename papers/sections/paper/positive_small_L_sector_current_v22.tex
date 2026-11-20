@@ -1,0 +1,148 @@
+% v21: exact sector control for positive two-high branches with L=3 or 4.
+\section{小さい低辺係数を持つ正枝の符号と分母順序}
+\label{ps21:section}
+
+Book の低三角形では，正枝の非零低 entry は $-3$ または $-4$ である．
+この二つの値に限ると，pair equation の係数の符号は高分母の順序と結び付き，
+低 $D$ が負となる側には reverse parameter の強い上界がある．
+以下の局所補題には分母の奇数性，node 条件，clutching は不要である．
+
+\begin{lemma}[正枝の二つの sector]\label{ps21:positive-sector}
+正の整数二高分母標準形において
+\[
+ \delta=T-S\in\{2,3\},\quad d=\delta-1,\quad
+ h=S-r,\quad k=T-r-1=h+d,
+\]
+\[
+ \alpha=\frac{sh}{r},\quad\beta=\frac{zk}{r+1},\quad
+ F=(2r+1)h-r^2d
+\]
+と置く．このとき $F\ne0$ であり，次が成り立つ．
+\begin{enumerate}
+\item $F>0$ なら $s\le z$，$D_D<0<D_C$，$a<b$ である．
+\item $F<0$ なら $D_D\ge0$ であり，
+\begin{equation}\label{ps21:h-bound}
+ h\le
+ \begin{cases}
+ \lfloor(r-1)/2\rfloor,&\delta=2,\\
+ r-1,&\delta=3.
+ \end{cases}
+\end{equation}
+また $a>b$ であるか，次の二つの例外のいずれかである：
+\begin{equation}\label{ps21:equal-base-points}
+ (r,s,z,S,T)=(2,2,1,3,6),\qquad (3,3,2,4,6).
+\end{equation}
+この二点ではそれぞれ $a=b=7,13$，$D_D=0$，$D_C=2,1$ である．
+\end{enumerate}
+特に $D_C\le0$ なら $F<0$，$a>b$ であり，
+\begin{equation}\label{ps21:T-bound}
+ T\le
+ \begin{cases}
+ \lfloor(3r+3)/2\rfloor,&\delta=2,\\
+ 2r+2,&\delta=3.
+ \end{cases}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+正枝の既知の不等式 $rT>(r+1)S$ により $0<h<rd$ である．
+補題~\ref{ml12:dichotomy} と式~\eqref{td12:bezout} より，
+$\alpha,\beta$ は正の整数であり，
+\begin{equation}\label{ps21:two-identities}
+ F\alpha\beta=(\beta-\alpha-1)hk,\qquad
+ M\beta-N\alpha=1,
+ \quad M=rs+1,
+ \quad N=(r+1)z+1.
+\end{equation}
+特に $\gcd(\alpha,\beta)=1$ である．$F=0$ なら
+$2r+1\mid r^2d$ となるが，$\gcd(2r+1,r^2)=1$ と $d\in\{1,2\}$ に反する．
+
+まず $F>0$ とする．式~\eqref{ps21:two-identities} により
+$j=\beta-\alpha\ge2$ である．$s\ge z+1$ と仮定すると，
+第二式から
+\[
+ M\{r\beta-(r+1)\alpha\}
+ =r+\{r(r+1)(z-s)-1\}\alpha<0
+\]
+を得る．従って $\alpha>rj$，$\beta>(r+1)j$ となる．
+一方，$h<rd$，$k<d(r+1)$，$F\ge1$ なので
+\[
+ j-1=\frac{F\alpha\beta}{hk}
+ >\frac{j^2}{d^2}\ge\frac{j^2}{4}\ge j-1,
+\]
+ここで最後の不等式は $(j-2)^2\ge0$ である．これは矛盾であり，$s\le z$ である．
+従って $D_D=s-z-1<0$，また
+$T/(r+1)>S/r$ から $D_C=\delta-sS/r+zT/(r+1)>0$ となる．
+さらに
+\[
+ a-b=rs-(r+1)z+r\alpha-(r+1)\beta<0
+\]
+である．
+
+次に $F<0$ とする．整数 $h$ に対する
+$h<r^2d/(2r+1)$ は式~\eqref{ps21:h-bound} を与える．
+$j=\alpha-\beta\ge0$ と置くと，
+\[
+ E=-\frac{F}{hk}>0,\qquad E\alpha\beta=j+1.
+\]
+また
+\[
+ -F-k=(r+1)\{d(r-1)-2h\}\ge0
+\]
+なので $E\ge1/h$ であり，
+\[
+ E\beta=\frac{j+1}{\beta+j}\le1
+ \quad\Longrightarrow\quad \beta\le h<r.
+\]
+$rk-(r+1)h=rd-h>0$ と $\alpha\ge\beta$ により
+\[
+ \frac sz=\frac\alpha\beta\frac{rk}{(r+1)h}>1,
+\]
+従って $D_D\ge0$ である．$j\ge1$ なら
+$M\beta-N\alpha=1$ より $M>N$，すなわち
+$rs-(r+1)z\ge1$ である．ゆえに
+\[
+ a-b=rs-(r+1)z+rj-\beta>0.
+\]
+
+残る $j=0$ では $\alpha=\beta=1$ である．
+$rs-(r+1)z=1$ なので，$m=s-z\ge1$ と置くと
+$z=rm-1$，$s=(r+1)m-1$ である．
+$\alpha=sh/r=1$ から $s\le r$ となり，$m=1$，$s=r$，$z=r-1$ を得る．
+従って $h=1$，$k=(r+1)/(r-1)$ であり，
+$r-1\mid2$ から式~\eqref{ps21:equal-base-points} の二点に限られる．
+直接代入によって表示した分母と低 $D$ を得る．
+最後に $D_C\le0$ では $F>0$ とこの二点が排除され，
+式~\eqref{ps21:h-bound} に $T=r+h+\delta$ を代入すると
+式~\eqref{ps21:T-bound} を得る．
+\end{proof}
+
+\begin{corollary}[Book の $D$ 周期に沿う高分母の順序]
+\label{ps21:book-denominator-order}
+定理~\ref{bd20:nonzero-cycle} の book 低三角形を考える．
+二つの高頂点を $0,1$ とし，低 row の正 entry が高 ray $0$ を向く側を
+next とする有向 node 三角形を用いる．この向きに沿う各低 $D$ が正なら
+\[
+ q_{i0}<q_{i1}\qquad(i=2,3,4),
+\]
+全て負なら三つの不等号は全て逆になる．
+\end{corollary}
+
+\begin{proof}
+正枝では，非零低 $D$ が一正一負であることと補題~\ref{ps21:positive-sector} から
+\[
+ D_C<0\Longleftrightarrow F<0\Longleftrightarrow a>b,
+ \qquad
+ D_C>0\Longleftrightarrow F>0\Longleftrightarrow a<b
+\]
+となる．負枝でも式~\eqref{bd20:negative-low-D} と
+定理~\ref{ml12:denominator-descent} の証明により，同じ $D_C$ と $a-b$ の対応がある．
+canonical $A=0$ なら next は $C$，$a=q_{i0}$，$b=q_{i1}$ である．
+canonical $A=1$ なら next は $D$，$a=q_{i1}$，$b=q_{i0}$ であるため，
+$D$ の符号と分母順序が同時に反転する．
+対向 $D$ の相殺と各 core の一正一負性から，node 三角形上の next の $D$ は
+三つ全て同符号である．これで両方の場合が従う．
+\end{proof}
+
+この系は中心二 core に接続する三つずつの分母を比較する必要条件である．
+この順序条件だけでは book 全体の不存在は従わない．後の定理~\ref{bc22:book-obstruction} は正負枝の追加の整数剛性を用いて排除を完成する．

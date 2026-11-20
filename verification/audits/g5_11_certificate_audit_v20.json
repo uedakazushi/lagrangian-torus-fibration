@@ -1,0 +1,2952 @@
+{
+  "status": "PASS",
+  "counts": {
+    "node_compatible_cell_pairs": 3592,
+    "reconstructed_node_certificates": 1395,
+    "denominator_contradictions": 1309,
+    "odd_D_residuals": 72,
+    "nonzero_constant_D_residuals": 14
+  },
+  "independent_primitive_scale_coverage": [
+    {
+      "primitive_points": 90,
+      "primitive_halflines": 11,
+      "primary_residue_halflines": 78
+    },
+    {
+      "primitive_points": 90,
+      "primitive_halflines": 11,
+      "primary_residue_halflines": 78
+    }
+  ],
+  "primitive_halfline_certificates": [
+    [
+      {
+        "reverse_and_type": [
+          1,
+          2,
+          6,
+          1
+        ],
+        "primitive_scale": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "primary_parameter_progressions": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "coverage_period": 4,
+        "coverage_threshold": 3
+      },
+      {
+        "reverse_and_type": [
+          1,
+          2,
+          6,
+          2
+        ],
+        "primitive_scale": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "primary_parameter_progressions": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "coverage_period": 4,
+        "coverage_threshold": 3
+      },
+      {
+        "reverse_and_type": [
+          1,
+          2,
+          6,
+          4
+        ],
+        "primitive_scale": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "primary_parameter_progressions": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "coverage_period": 4,
+        "coverage_threshold": 3
+      },
+      {
+        "reverse_and_type": [
+          2,
+          3,
+          6,
+          1
+        ],
+        "primitive_scale": [
+          2,
+          2,
+          1,
+          0
+        ],
+        "primary_parameter_progressions": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "coverage_period": 6,
+        "coverage_threshold": 5
+      },
+      {
+        "reverse_and_type": [
+          2,
+          3,
+          6,
+          2
+        ],
+        "primitive_scale": [
+          2,
+          2,
+          1,
+          0
+        ],
+        "primary_parameter_progressions": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "coverage_period": 6,
+        "coverage_threshold": 5
+      },
+      {
+        "reverse_and_type": [
+          2,
+          3,
+          6,
+          4
+        ],
+        "primitive_scale": [
+          2,
+          2,
+          1,
+          0
+        ],
+        "primary_parameter_progressions": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "coverage_period": 6,
+        "coverage_threshold": 5
+      },
+      {
+        "reverse_and_type": [
+          2,
+          6,
+          12,
+          1
+        ],
+        "primitive_scale": [
+          1,
+          3,
+          1,
+          2
+        ],
+        "primary_parameter_progressions": [
+          [
+            0,
+            12
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11,
+            12
+          ]
+        ],
+        "coverage_period": 12,
+        "coverage_threshold": 11
+      },
+      {
+        "reverse_and_type": [
+          2,
+          6,
+          12,
+          2
+        ],
+        "primitive_scale": [
+          1,
+          3,
+          1,
+          2
+        ],
+        "primary_parameter_progressions": [
+          [
+            0,
+            12
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11,
+            12
+          ]
+        ],
+        "coverage_period": 12,
+        "coverage_threshold": 11
+      },
+      {
+        "reverse_and_type": [
+          3,
+          4,
+          6,
+          1
+        ],
+        "primitive_scale": [
+          3,
+          3,
+          2,
+          0
+        ],
+        "primary_parameter_progressions": [
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "coverage_period": 8,
+        "coverage_threshold": 7
+      },
+      {
+        "reverse_and_type": [
+          3,
+          4,
+          6,
+          2
+        ],
+        "primitive_scale": [
+          3,
+          3,
+          2,
+          0
+        ],
+        "primary_parameter_progressions": [
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "coverage_period": 8,
+        "coverage_threshold": 7
+      },
+      {
+        "reverse_and_type": [
+          3,
+          4,
+          6,
+          4
+        ],
+        "primitive_scale": [
+          3,
+          3,
+          2,
+          0
+        ],
+        "primary_parameter_progressions": [
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "coverage_period": 8,
+        "coverage_threshold": 7
+      }
+    ],
+    [
+      {
+        "reverse_and_type": [
+          1,
+          2,
+          6,
+          1
+        ],
+        "primitive_scale": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "primary_parameter_progressions": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "coverage_period": 4,
+        "coverage_threshold": 3
+      },
+      {
+        "reverse_and_type": [
+          1,
+          2,
+          6,
+          2
+        ],
+        "primitive_scale": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "primary_parameter_progressions": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "coverage_period": 4,
+        "coverage_threshold": 3
+      },
+      {
+        "reverse_and_type": [
+          1,
+          2,
+          6,
+          4
+        ],
+        "primitive_scale": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "primary_parameter_progressions": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "coverage_period": 4,
+        "coverage_threshold": 3
+      },
+      {
+        "reverse_and_type": [
+          2,
+          3,
+          6,
+          1
+        ],
+        "primitive_scale": [
+          2,
+          2,
+          1,
+          0
+        ],
+        "primary_parameter_progressions": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "coverage_period": 6,
+        "coverage_threshold": 5
+      },
+      {
+        "reverse_and_type": [
+          2,
+          3,
+          6,
+          2
+        ],
+        "primitive_scale": [
+          2,
+          2,
+          1,
+          0
+        ],
+        "primary_parameter_progressions": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "coverage_period": 6,
+        "coverage_threshold": 5
+      },
+      {
+        "reverse_and_type": [
+          2,
+          3,
+          6,
+          4
+        ],
+        "primitive_scale": [
+          2,
+          2,
+          1,
+          0
+        ],
+        "primary_parameter_progressions": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "coverage_period": 6,
+        "coverage_threshold": 5
+      },
+      {
+        "reverse_and_type": [
+          2,
+          6,
+          12,
+          1
+        ],
+        "primitive_scale": [
+          1,
+          3,
+          1,
+          2
+        ],
+        "primary_parameter_progressions": [
+          [
+            0,
+            12
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11,
+            12
+          ]
+        ],
+        "coverage_period": 12,
+        "coverage_threshold": 11
+      },
+      {
+        "reverse_and_type": [
+          2,
+          6,
+          12,
+          2
+        ],
+        "primitive_scale": [
+          1,
+          3,
+          1,
+          2
+        ],
+        "primary_parameter_progressions": [
+          [
+            0,
+            12
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            11,
+            12
+          ]
+        ],
+        "coverage_period": 12,
+        "coverage_threshold": 11
+      },
+      {
+        "reverse_and_type": [
+          3,
+          4,
+          6,
+          1
+        ],
+        "primitive_scale": [
+          3,
+          3,
+          2,
+          0
+        ],
+        "primary_parameter_progressions": [
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "coverage_period": 8,
+        "coverage_threshold": 7
+      },
+      {
+        "reverse_and_type": [
+          3,
+          4,
+          6,
+          2
+        ],
+        "primitive_scale": [
+          3,
+          3,
+          2,
+          0
+        ],
+        "primary_parameter_progressions": [
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "coverage_period": 8,
+        "coverage_threshold": 7
+      },
+      {
+        "reverse_and_type": [
+          3,
+          4,
+          6,
+          4
+        ],
+        "primitive_scale": [
+          3,
+          3,
+          2,
+          0
+        ],
+        "primary_parameter_progressions": [
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "coverage_period": 8,
+        "coverage_threshold": 7
+      }
+    ]
+  ],
+  "all_family_row_and_pair_identities_reconstructed": true,
+  "all_1395_node_records_reenumerated": true,
+  "D_residual_certificates": [
+    {
+      "certificate_key": [
+        1,
+        117,
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          4,
+          1
+        ]
+      ],
+      "coefficients": [
+        7,
+        0,
+        -32
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        1,
+        120,
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          4,
+          1
+        ]
+      ],
+      "coefficients": [
+        3,
+        0,
+        -32
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        1,
+        123,
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          4,
+          1
+        ]
+      ],
+      "coefficients": [
+        -1,
+        0,
+        -32
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        1,
+        126,
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          4,
+          1
+        ]
+      ],
+      "coefficients": [
+        -5,
+        0,
+        -32
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        1,
+        129,
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          4,
+          1
+        ]
+      ],
+      "coefficients": [
+        -9,
+        0,
+        -32
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        1,
+        132,
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          4,
+          1
+        ]
+      ],
+      "coefficients": [
+        -13,
+        0,
+        -32
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        1,
+        135,
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          4,
+          1
+        ]
+      ],
+      "coefficients": [
+        -17,
+        0,
+        -32
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        1,
+        138,
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          4,
+          1
+        ]
+      ],
+      "coefficients": [
+        -21,
+        0,
+        -32
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        2,
+        118,
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          1,
+          4
+        ]
+      ],
+      "coefficients": [
+        -1,
+        0,
+        -32
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        2,
+        121,
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          1,
+          4
+        ]
+      ],
+      "coefficients": [
+        -5,
+        0,
+        -32
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        2,
+        124,
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          1,
+          4
+        ]
+      ],
+      "coefficients": [
+        -9,
+        0,
+        -32
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        2,
+        127,
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          1,
+          4
+        ]
+      ],
+      "coefficients": [
+        -13,
+        0,
+        -32
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        2,
+        130,
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          1,
+          4
+        ]
+      ],
+      "coefficients": [
+        -17,
+        0,
+        -32
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        2,
+        133,
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          1,
+          4
+        ]
+      ],
+      "coefficients": [
+        -21,
+        0,
+        -32
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        2,
+        136,
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          1,
+          4
+        ]
+      ],
+      "coefficients": [
+        -25,
+        0,
+        -32
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        2,
+        139,
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          1,
+          4
+        ]
+      ],
+      "coefficients": [
+        -29,
+        0,
+        -32
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        4,
+        4,
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          4,
+          1
+        ]
+      ],
+      "coefficients": [
+        28,
+        0,
+        0
+      ],
+      "kind": "nonzero_constant_D"
+    },
+    {
+      "certificate_key": [
+        4,
+        117,
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          4,
+          1
+        ]
+      ],
+      "coefficients": [
+        15,
+        0,
+        -32
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        4,
+        120,
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          4,
+          1
+        ]
+      ],
+      "coefficients": [
+        11,
+        0,
+        -32
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        4,
+        123,
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          4,
+          1
+        ]
+      ],
+      "coefficients": [
+        7,
+        0,
+        -32
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        4,
+        126,
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          4,
+          1
+        ]
+      ],
+      "coefficients": [
+        3,
+        0,
+        -32
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        4,
+        129,
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          4,
+          1
+        ]
+      ],
+      "coefficients": [
+        -1,
+        0,
+        -32
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        4,
+        132,
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          4,
+          1
+        ]
+      ],
+      "coefficients": [
+        -5,
+        0,
+        -32
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        4,
+        135,
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          4,
+          1
+        ]
+      ],
+      "coefficients": [
+        -9,
+        0,
+        -32
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        4,
+        138,
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          4,
+          1
+        ]
+      ],
+      "coefficients": [
+        -13,
+        0,
+        -32
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        10,
+        10,
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          5,
+          0
+        ]
+      ],
+      "coefficients": [
+        8,
+        0,
+        0
+      ],
+      "kind": "nonzero_constant_D"
+    },
+    {
+      "certificate_key": [
+        10,
+        10,
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          1,
+          4,
+          0
+        ]
+      ],
+      "coefficients": [
+        8,
+        0,
+        0
+      ],
+      "kind": "nonzero_constant_D"
+    },
+    {
+      "certificate_key": [
+        10,
+        10,
+        [
+          1,
+          4,
+          0
+        ],
+        [
+          0,
+          5,
+          0
+        ]
+      ],
+      "coefficients": [
+        8,
+        0,
+        0
+      ],
+      "kind": "nonzero_constant_D"
+    },
+    {
+      "certificate_key": [
+        10,
+        10,
+        [
+          1,
+          4,
+          0
+        ],
+        [
+          1,
+          4,
+          0
+        ]
+      ],
+      "coefficients": [
+        8,
+        0,
+        0
+      ],
+      "kind": "nonzero_constant_D"
+    },
+    {
+      "certificate_key": [
+        62,
+        160,
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          5,
+          0
+        ]
+      ],
+      "coefficients": [
+        13,
+        0,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        62,
+        160,
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          0,
+          5,
+          0
+        ]
+      ],
+      "coefficients": [
+        13,
+        0,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        62,
+        160,
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          0,
+          5,
+          0
+        ]
+      ],
+      "coefficients": [
+        13,
+        0,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        62,
+        162,
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          5,
+          0
+        ]
+      ],
+      "coefficients": [
+        25,
+        0,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        62,
+        162,
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          0,
+          5,
+          0
+        ]
+      ],
+      "coefficients": [
+        25,
+        0,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        62,
+        162,
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          0,
+          5,
+          0
+        ]
+      ],
+      "coefficients": [
+        25,
+        0,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        62,
+        164,
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          5,
+          0
+        ]
+      ],
+      "coefficients": [
+        5,
+        0,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        62,
+        164,
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          0,
+          5,
+          0
+        ]
+      ],
+      "coefficients": [
+        5,
+        0,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        62,
+        164,
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          0,
+          5,
+          0
+        ]
+      ],
+      "coefficients": [
+        5,
+        0,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        62,
+        166,
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          5,
+          0
+        ]
+      ],
+      "coefficients": [
+        -11,
+        0,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        62,
+        166,
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          0,
+          5,
+          0
+        ]
+      ],
+      "coefficients": [
+        -11,
+        0,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        62,
+        166,
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          0,
+          5,
+          0
+        ]
+      ],
+      "coefficients": [
+        -11,
+        0,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        117,
+        1,
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "coefficients": [
+        7,
+        -32,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        117,
+        4,
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "coefficients": [
+        15,
+        -32,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        118,
+        2,
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "coefficients": [
+        -1,
+        -32,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        120,
+        1,
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "coefficients": [
+        3,
+        -32,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        120,
+        4,
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "coefficients": [
+        11,
+        -32,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        121,
+        2,
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "coefficients": [
+        -5,
+        -32,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        123,
+        1,
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "coefficients": [
+        -1,
+        -32,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        123,
+        4,
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "coefficients": [
+        7,
+        -32,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        124,
+        2,
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "coefficients": [
+        -9,
+        -32,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        126,
+        1,
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "coefficients": [
+        -5,
+        -32,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        126,
+        4,
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "coefficients": [
+        3,
+        -32,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        127,
+        2,
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "coefficients": [
+        -13,
+        -32,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        129,
+        1,
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "coefficients": [
+        -9,
+        -32,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        129,
+        4,
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "coefficients": [
+        -1,
+        -32,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        130,
+        2,
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "coefficients": [
+        -17,
+        -32,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        132,
+        1,
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "coefficients": [
+        -13,
+        -32,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        132,
+        4,
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "coefficients": [
+        -5,
+        -32,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        133,
+        2,
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "coefficients": [
+        -21,
+        -32,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        135,
+        1,
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "coefficients": [
+        -17,
+        -32,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        135,
+        4,
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "coefficients": [
+        -9,
+        -32,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        136,
+        2,
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "coefficients": [
+        -25,
+        -32,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        138,
+        1,
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "coefficients": [
+        -21,
+        -32,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        138,
+        4,
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "coefficients": [
+        -13,
+        -32,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        139,
+        2,
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "coefficients": [
+        -29,
+        -32,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        150,
+        150,
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "coefficients": [
+        -4,
+        0,
+        0
+      ],
+      "kind": "nonzero_constant_D"
+    },
+    {
+      "certificate_key": [
+        150,
+        150,
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          1,
+          1,
+          3
+        ]
+      ],
+      "coefficients": [
+        -4,
+        0,
+        0
+      ],
+      "kind": "nonzero_constant_D"
+    },
+    {
+      "certificate_key": [
+        150,
+        150,
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          2,
+          0,
+          3
+        ]
+      ],
+      "coefficients": [
+        -4,
+        0,
+        0
+      ],
+      "kind": "nonzero_constant_D"
+    },
+    {
+      "certificate_key": [
+        150,
+        150,
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "coefficients": [
+        -4,
+        0,
+        0
+      ],
+      "kind": "nonzero_constant_D"
+    },
+    {
+      "certificate_key": [
+        150,
+        150,
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          1,
+          1,
+          3
+        ]
+      ],
+      "coefficients": [
+        -4,
+        0,
+        0
+      ],
+      "kind": "nonzero_constant_D"
+    },
+    {
+      "certificate_key": [
+        150,
+        150,
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          2,
+          0,
+          3
+        ]
+      ],
+      "coefficients": [
+        -4,
+        0,
+        0
+      ],
+      "kind": "nonzero_constant_D"
+    },
+    {
+      "certificate_key": [
+        150,
+        150,
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "coefficients": [
+        -4,
+        0,
+        0
+      ],
+      "kind": "nonzero_constant_D"
+    },
+    {
+      "certificate_key": [
+        150,
+        150,
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          1,
+          1,
+          3
+        ]
+      ],
+      "coefficients": [
+        -4,
+        0,
+        0
+      ],
+      "kind": "nonzero_constant_D"
+    },
+    {
+      "certificate_key": [
+        150,
+        150,
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          2,
+          0,
+          3
+        ]
+      ],
+      "coefficients": [
+        -4,
+        0,
+        0
+      ],
+      "kind": "nonzero_constant_D"
+    },
+    {
+      "certificate_key": [
+        160,
+        62,
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "coefficients": [
+        13,
+        0,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        160,
+        62,
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          1,
+          1,
+          3
+        ]
+      ],
+      "coefficients": [
+        13,
+        0,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        160,
+        62,
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          2,
+          0,
+          3
+        ]
+      ],
+      "coefficients": [
+        13,
+        0,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        162,
+        62,
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "coefficients": [
+        25,
+        0,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        162,
+        62,
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          1,
+          1,
+          3
+        ]
+      ],
+      "coefficients": [
+        25,
+        0,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        162,
+        62,
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          2,
+          0,
+          3
+        ]
+      ],
+      "coefficients": [
+        25,
+        0,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        164,
+        62,
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "coefficients": [
+        5,
+        0,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        164,
+        62,
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          1,
+          1,
+          3
+        ]
+      ],
+      "coefficients": [
+        5,
+        0,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        164,
+        62,
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          2,
+          0,
+          3
+        ]
+      ],
+      "coefficients": [
+        5,
+        0,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        166,
+        62,
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "coefficients": [
+        -11,
+        0,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        166,
+        62,
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          1,
+          1,
+          3
+        ]
+      ],
+      "coefficients": [
+        -11,
+        0,
+        0
+      ],
+      "kind": "odd_D_residual"
+    },
+    {
+      "certificate_key": [
+        166,
+        62,
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          2,
+          0,
+          3
+        ]
+      ],
+      "coefficients": [
+        -11,
+        0,
+        0
+      ],
+      "kind": "odd_D_residual"
+    }
+  ],
+  "source": "verification/g5_11_obstruction_verification_v20.json",
+  "source_sha256": "bc593db605940e06149dc2ec0fbbfc9044d64015471aa35de10cf2f03414e492",
+  "primary_script_sha256_recorded": "a4a2983fdf6c5d28df4f53670271091b7f7374c02bde16156064e0a01840c74a",
+  "primary_source_hash_checked": true,
+  "auditor_sha256": "b9ee4d1c8a4f7c4a821be0c4c26d138dc6a47c760dc60f0dd591926445d72140",
+  "generator_imported": false,
+  "scale_or_denominator_cutoff": null,
+  "scope": "The analytical reverse bounds and positive type-III obstruction are reviewed separately; the full scale union, all recorded matrices, all node profiles and all contradictions are reconstructed here."
+}

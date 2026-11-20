@@ -1,0 +1,228 @@
+% v9. A genuinely geometric local high-denominator example for four lines.
+% Uses existing bibliography key EM and per:chart-definition.
+
+\section{四直線 core の奇数分母と五次の追加制約}
+\label{q9:quintic-local-high-q}
+
+四 puncture neck の剛性は両端の比較から生じる．
+三 puncture 曲線だけを用いる四直線 core では，高分母の作用適合 chart を実際に構成できる．
+次の基準では，局所の整数条件と正の basin areas が十分であることを，sector 全体で確認する．
+
+\begin{proposition}[四直線 core の十分条件]\label{q9:four-line-criterion}
+$L_1,\ldots,L_4\subset\PP^2$ を一般位置の四直線とし，正の weights $w_i$ と
+\[
+ [\omega]=2\pi\sum_{i=1}^4 w_i[L_i],\qquad W=\sum_iw_i
+\]
+を固定する．各直線に三 puncture の marked Morse foliation の相対 isotopy class を指定する．
+正の整数 $q_i$ と整数 $p_{ij}$，$i\ne j$，が
+\begin{equation}\label{q9:four-line-arithmetic}
+ \sum_{j\ne i}p_{ij}=-q_i,
+ \qquad q_iq_j-p_{ij}p_{ji}=1
+\end{equation}
+を満たし，さらに
+\begin{equation}\label{q9:four-line-basin-positive}
+ B_{ij}:=w_j-w_i\frac{p_{ij}}{q_i}>0
+ \qquad(i\ne j)
+\end{equation}
+とする．このとき，指定した isotopy classes 内で foliations の代表を選び，
+本稿の比例曲率 collars と Liouville cone construction による core に，
+標準 $K_4$ fan への作用適合 cone chart を構成できる．
+その四本の branch denominators は $q_i$ である．
+\end{proposition}
+
+\begin{proof}
+各直線の面積は $2\pi W$ であり，\eqref{q9:four-line-arithmetic} から
+\[
+ \sum_{j\ne i}B_{ij}=\sum_{j\ne i}w_j+w_i=W
+\]
+を得る．従って $L_i$ の三つの critical basins の面積を $2\pi B_{ij}$ と指定できる．
+具体的には，既存の marked foliation の各 puncture disk を十分小さく固定し，
+その外で正の density を調整して三 basin の面積を指定する．
+全積分が変わらないので，puncture disks に相対的な Moser isotopy によって，
+元の面積形式の下で所期の foliation の代表を得る．
+比例曲率 collar での critical slope は
+\[
+ h_{ij}=\frac{w_j-B_{ij}}{w_i}=\frac{p_{ij}}{q_i}.
+\]
+graph-period correction は fiber tangent を消す basic form で行うので，この作用値を変えない．
+
+$N_4=\ZZ^4/\ZZ(1,1,1,1)$ の標準 rays を $r_i$ とする．
+crossing face $ij$ の regular torus の基底を，二直線の正の meridians $(\mu_i,\mu_j)$ とする．
+その作用座標において
+\begin{equation}\label{q9:four-line-action-matrix}
+ \begin{pmatrix}I_{\mu_i}\\I_{\mu_j}\end{pmatrix}
+ =\begin{pmatrix}-q_i&-p_{ji}\\-p_{ij}&-q_j\end{pmatrix}
+   \begin{pmatrix}x\\y\end{pmatrix},
+ \qquad F=xr_i+yr_j
+\end{equation}
+と定める．行列の determinant は一である．
+$i$ 側の critical ray の action direction は $(-q_i,-p_{ij})$ であり，
+$j$ 側は $(-p_{ji},-q_j)$ なので，両境界 rays は所期の $r_i,r_j$ へ写る．
+
+sector 全体で $x,y>0$ であることを確認する．
+$i$ 側の比例曲率 collar では $I_{\mu_i}<0$ とし，
+$h=I_{\mu_j}/I_{\mu_i}$ を用いると
+\[
+ x=(-I_{\mu_i})(q_j-p_{ji}h),\qquad
+ y=(-I_{\mu_i})(q_i h-p_{ij})
+\]
+である．partial basin を critical level から puncture に向かって縮めると，
+$h$ は $p_{ij}/q_i$ から $w_j/w_i$ へ向かって厳密単調に増える．
+従って正則部分では $y>0$ となる．
+$x$ の括弧内は $h$ の affine function であり，両端でそれぞれ
+\[
+ q_j-p_{ji}\frac{p_{ij}}{q_i}=\frac1{q_i}>0,
+ \qquad
+ q_j-p_{ji}\frac{w_j}{w_i}
+   =\frac{q_j}{w_i}B_{ji}>0
+\]
+を取るため，全 interval で正である．$j$ 側も同様である．
+product crossing の極限作用点 $(-w_i,-w_j)$ における二係数は
+\[
+ x=q_jw_i-p_{ji}w_j=q_jB_{ji}>0,
+ \qquad
+ y=q_iw_j-p_{ij}w_i=q_iB_{ij}>0.
+\]
+transition caps は critical leaves から離れて固定できる．
+そこでは上の正値性に一様な余裕があり，cap 内の normal-radius に比例する有界な補正は，
+normal radius を十分小さくすることでこの余裕より小さくできる．
+従って caps，product crossings，それらの丸めを通じても正の sector 内に留まる．
+
+各 $i$ に incident な三つの maps は共通 ray 上で
+$F=(-I_{\mu_i}/q_i)r_i$ に一致する．
+\eqref{q9:four-line-arithmetic} の determinant 条件から
+$\gcd(q_i,p_{ij})=1$ であるため，それぞれの action direction は primitive であり，
+共通 branch lattice は三枚の sheets 全てで飽和している．
+三 arm の period relation は，row-sum 条件 $\sum_{j\ne i}p_{ij}=-q_i$ と整合する．
+標準 fan の各 cone の span lattice は $\ZZ r_i+\ZZ r_j$ なので，
+\eqref{q9:four-line-action-matrix} は作用の整数余接線格子と fan の整数接線格子の
+双対関係を通じて必要な格子同型を与える．
+
+最後に，各 contact-link edge の action vector を $a(t)$ とすると，
+Liouville cone の作用 map は $(r,t)\mapsto r a(t)$ である．
+正則 torus fibration の作用は局所座標なので $\det(a(t),a'(t))\ne0$ であり，
+正の sector 内の projective action ratio は厳密単調である\cite[Remarks 2.11--2.12]{EM}．
+両 endpoint rays の間を一度だけ走るので，各 face は対応する cone sector へ同相に写る．
+四つの rays 上での一致と compact link を用いて六つの faces を core まで貼れば，
+定義~\ref{per:chart-definition} の作用適合 cone chart を得る．
+\end{proof}
+
+\begin{corollary}[任意の奇数分母を持つ局所 chart]\label{q9:local-all-odd}
+任意の整数 $h\geq1$ に対し，$q=2h+1$ とする．
+四直線を $A,B,C,D$ と標識し，
+\[
+ (q_A,q_B,q_C,q_D)=(q,1,1,1),\qquad
+ (p_{ij})=
+ \begin{pmatrix}
+ 0&-2h&-2&1\\
+ -1&0&0&0\\
+ -h&h-1&0&0\\
+ 2h&0&-q&0
+ \end{pmatrix}
+\]
+とする．正の weights
+\begin{equation}\label{q9:local-all-odd-weights}
+ (w_A,w_B,w_C,w_D)=\left(q,h,1,1+\frac1{4h}\right)
+\end{equation}
+に対し，これらの分母と critical numerators を持つ局所作用適合 $K_4$ chart が存在する．
+全 weights の共通の正の倍率は任意なので，任意の正の hyperplane Kähler class に対して例が得られる．
+\end{corollary}
+
+\begin{proof}
+各 row の和は $-q_i$ である．$A$ に接する三辺では
+$p_{ij}p_{ji}=2h=q_iq_j-1$，残る三辺では零となる．
+従って全六 determinant が一である．
+normalized basin areas は
+\[
+ (B_{ij})=
+ \begin{pmatrix}
+ -&3h&3&1/(4h)\\
+ 3h+1&-&1&1+1/(4h)\\
+ 3h+1&1&-&1+1/(4h)\\
+ 1/2&h&2h+5/2+1/(4h)&-
+ \end{pmatrix}.
+\]
+全て正であり，各 row の和は $W=3h+3+1/(4h)$ である．
+命題~\ref{q9:four-line-criterion} を適用する．
+\end{proof}
+
+この族の normal-action branch coefficients は，$A,B,C,D$ の順に
+$(-3h,h,2h+2,-2)$ であり，総和は零である．
+各 normal Hamiltonian や全補集合の $H_1$ が ambient linear forms に延長する条件は課していない．
+三価 branch の必要条件である奇数性に対し，局所の四直線 core では任意に大きい奇数分母が生じる．
+これは一つの四直線 core の幾何学的な存在族であり，五つの quintic cores の同時接着を与えるものではない．
+共有 branch の分母と係数の相殺に加え，作用切片，面積，node 配分を同時に合わせる問題が残る．
+
+% Reusable v9 lemma: can be placed after the odd-denominator K4 family.
+\subsection{孤立した高分母 branch の接着障害}
+\label{qh9:isolated-section}
+
+全平面五次の一つの four-line core を考え，四 vertices の分母を
+$(q,1,1,1)$，$q>1$ とする．outgoing numerators を $p_{ij}$ と書く．
+各 line の三 basins が全曲線を尽くすので
+\[
+ \sum_{j\ne i}p_{ij}=-q_i,
+ \qquad q_iq_j-p_{ij}p_{ji}=1.
+\]
+正の weights に対して全 basin areas が正，すなわち
+$w_j-w_i p_{ij}/q_i>0$ であることも仮定する．
+
+\begin{proposition}[唯一の高分母 vertex の係数]\label{qh9:isolated-local}
+高分母 vertex から出る三 numerators は，順序を除いて
+\[
+ \bigl(-(q-1),-(b+1),b\bigr)
+\]
+である．ここで $b$ は正整数で，$b$ と $b+1$ はともに $q-1$ を割る．
+$q-1=t b(b+1)$ と書くと，その vertex の normal-action 分岐係数は
+\[
+ \mathfrak d_{\rm high}=-t\bigl(b(b+1)+1\bigr)<0
+\]
+となる．
+\end{proposition}
+
+\begin{proof}
+$m=q-1$ と置く．高分母 vertex を $0$ とすれば，各 edge で
+$p_{0j}p_{j0}=m>0$ なので，三つの $p_{0j}$ は零でなく，絶対値は $m$ の約数である．
+和は $-q=-(m+1)$ なので，二つ以上が正ではあり得ない．
+
+全てが負で $p_{0j}=-a_j$ と仮定する．$a_1+a_2+a_3=m+1$ であり，
+各 $a_j$ は正なので，いずれも $m$ には等しくない．
+従って $m$ の真の約数として $a_j\le m/2$ であり，
+低分母 vertex $j$ から他の二つの低分母 vertices へ出る numerators の和は
+\[
+ -1-p_{j0}=\frac{m}{a_j}-1>0.
+\]
+各低分母 vertex から少なくとも一つの正の directed edge が出る．
+低分母同士では $p_{jk}p_{kj}=0$ なので，これらの正の edges は
+三 vertices 上に directed cycle を持つ．正の整数 $p_{jk}$ に対して basin positivity は
+$w_k>p_{jk}w_j\ge w_j$ を要求するため，cycle を一周して矛盾する．
+
+よって正の entry がちょうど一つあり，三 entry を $(-a,-c,b)$ と書ける．
+$a+c-b=m+1$ である．$a,c$ の両方が $m$ の真の約数なら
+$a+c\le m$ なので不可能であり，順序を替えて $a=m$ とできる．
+すると $c=b+1$ となる．$b$ と $b+1$ は互いに素でともに $m$ を割るので，
+$m=t b(b+1)$，$t\in\ZZ_{>0}$ と書ける．
+
+高分母 vertex へ入る三 numerators は
+\[
+ \left(-1,-\frac{m}{b+1},\frac{m}{b}\right)
+\]
+であり，その和は $-1+t$ である．$K_4$ fan では $\kappa=-1$ なので，
+分岐係数は $-q-(-1+t)=-m-t=-t(b(b+1)+1)$ となる．
+\end{proof}
+
+\begin{corollary}[高分母 support の孤立 edge はない]\label{qh9:isolated-edge}
+全平面五次の既存の branch graph $K_5$ 上に，大域作用適合 atlas があるとする．
+$q>1$ の branches だけからなる部分 graph は，ただ一本の edge からなる
+連結成分を持たない．
+\end{corollary}
+
+\begin{proof}
+そのような edge の両端の core は，どちらも分母 pattern $(q,1,1,1)$ を持つ．
+命題~\ref{qh9:isolated-local} により，その branch の両端の normal-action 係数は
+ともに負となり，必要な対向端の相殺と矛盾する．
+\end{proof}
+
+これは五次の全分母が一であることまでは示さない．
+二本以上の高分母 branches が隣接する場合の相殺条件と，
+全共有曲線における整数 framing・実面積の同時整合が，次の問題として残る．

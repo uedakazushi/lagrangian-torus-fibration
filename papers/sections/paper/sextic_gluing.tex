@@ -1,0 +1,181 @@
+\section{六次 Petersen 系の共有面積と整数 framing}
+\label{sg8:section}
+
+六つの平面への退化について，定理~\ref{topo:petersen} の六つの Petersen 分割系の
+いずれか一つを固定する．各 $C_{ij}$ は四 punctures を持つ sphere で，
+その共通 quartet の両端を $A,B$ と呼ぶ．$A$ 側の二つの triple labels の集合を
+$K$，$B$ 側を $K^c$ とする．この名前は同じ実際の曲線の両側で共通に用いる．
+
+成分を $0,\ldots,5$ の順で小解消し，
+\[
+ c=\frac{a}{10\pi},\qquad b_i=\frac{\beta_i}{2\pi},\qquad
+ R_i=5c+\sum_jb_j-6b_i
+\]
+と置く．$i<j$ では $C_{ij}$ 上の六点を $D_i$ 側で blow up し，
+各 exceptional area は $2\pi\delta_{ij}$，$\delta_{ij}=b_j-b_i>0$ である．
+このとき
+\[
+ R_i-R_j=6\delta_{ij},\qquad
+ C_{ij}^2|_{D_i}=-5,\quad C_{ij}^2|_{D_j}=1,
+ \quad -5+1+4=0.
+\]
+
+\begin{proposition}[四 basins と一 annulus の同時面積解]
+\label{sg8:areas}
+各 blow-down core に
+\begin{equation}\label{sg8:weights}
+ w_{i,j}=c+b_j-b_i
+\end{equation}
+を与える．$C_{ij}$ 上の六つの blow-up points を，四つの external basins に一つずつ，
+内部 regular annulus に二つ割り当てる．
+このとき，Petersen core の正規化された四つの basin areas と内部 annulus area は，
+blow-up 後に反対側の成分の対応する五領域の面積と正確に一致する．
+全 weights が正となる条件は
+\begin{equation}\label{sg8:positive}
+ \max_i b_i-\min_i b_i<c,
+ \quad\text{すなわち}\quad
+ \max_i\beta_i-\min_i\beta_i<\frac a5
+\end{equation}
+である．この配分と row sums を固定すると，面積条件を解く weights は
+\eqref{sg8:weights} に一意に定まる．
+\end{proposition}
+
+\begin{proof}
+row sums は $\sum_{j\ne i}w_{i,j}=R_i$ である．
+blow-down の $C_{ij}$ 上で，puncture $k$ の basin area を $2\pi$ で割った値は $w_{i,k}$，
+内部 annulus の値は $w_{i,j}$ である．
+$i<j$ に対し，一点ずつと二点の blow-up を行うと
+\begin{equation}\label{sg8:matching-areas}
+ w_{i,k}-\delta_{ij}=w_{j,k}\quad(k\ne i,j),\qquad
+ w_{i,j}-2\delta_{ij}=w_{j,i}
+\end{equation}
+となる．各式の右辺は正で，四つの basin と annulus の和は $R_j$ である．
+この計算は actual divisor-compatible blow-up の relative area 計算であり，
+patch 外で恒等な nodal comparison と divisor-relative Moser の後も保たれる
+\cite[Theorem 1.1]{CGblowup}．
+
+一意性には $v_{i,j}=w_{i,j}-(b_j-b_i)$ と置く．
+四つの basin 条件から，相異なる $i,j,k$ について $v_{i,k}=v_{j,k}$ となるので，
+この値は $i$ に依存せず $v_k$ と書ける．
+annulus 条件は $v_{i,j}=v_{j,i}$，すなわち $v_j=v_i$ を与える．
+row sum は $5c$ だから全て $c$ に等しい．
+正値性は最小の weight が $c-(\max b-\min b)$ であることによる．
+\end{proof}
+
+固定された六つの相異なる points にこの allocation を実現できる．
+crossing disks を固定する isotopy により，四つの basins の指定 regular leaves に一点ずつ，
+内部 annulus の相異なる regular leaves に二点を置く．
+その六点の小近傍も固定した relative density--Moser argument を五領域に適用すれば，
+\eqref{sg8:matching-areas} の面積を，元の marked quartet class の中で実現できる．
+内部 annulus の目標面積も正なので，二つの saddle levels が衝突することはない．
+実際の ball capacities は，有限個の patches を準備した後で小さい ray を選んで確保する．
+例えば $\beta_i=(i-5)\varepsilon$，$0<\varepsilon<a/36$ なら
+\eqref{sg8:positive} を満たす．
+
+\begin{proposition}[二つの branch における framing と slope]
+\label{sg8:framing}
+$i<j$ とし，$\alpha$ を $D_i$ 側の正 normal cycle，$\alpha'=-\alpha$ を
+$D_j$ 側の正 normal cycle とする．各 external puncture cycle を $\gamma_k,\gamma'_k$ とすれば，
+対応する branch end の actual torus 内で
+\begin{equation}\label{sg8:external-cycle}
+ \gamma'_k=\gamma_k
+\end{equation}
+である．
+
+$\beta$ を $i$ 側 blow-down core の $K$-side internal annular cycle，
+$\beta'$ を $j$ 側の同じ $K$-side cycle とする．
+薄い実際の boundary collar を通して比較すると，
+\begin{equation}\label{sg8:internal-cycles}
+ A\text{ branch}:\quad\beta'=\beta,\qquad
+ B\text{ branch}:\quad\beta'=\beta+2\alpha.
+\end{equation}
+これらの式により，両 branch の critical actions の整数 slopes は一致する．
+内部 face 全体には二つの nodal points があるため，二つの式を一つの
+nodal monodromy のない trivialization の等式と解釈してはならない．
+\end{proposition}
+
+\begin{proof}
+各 basin に blow-up は一つあり，normal clutching は $+\alpha$ を与える．
+triple end $uvw=t$ は $-\alpha$ を与えるため，両者は相殺する．
+これは補題~\ref{qg8:framing} の $n=1$ の場合で，\eqref{sg8:external-cycle} を得る．
+
+$K$ の二 punctures を囲む正の base circle を考える．
+$A$ 側ではその内側に二つの basin nodes があり，actual normal framing は
+旧 core framingから $2\alpha$ だけずれる．
+$B$ 側までこの circle を動かすと，二つの内部 annulus nodes も内側に入り，ずれは $4\alpha$ となる．
+二つの punctures に対する triple-end comparison は合計 $-2\alpha$ なので，
+両 branch における残るずれはそれぞれ零と $2\alpha$ である．
+この計算は $x=zu$ の blow-up coordinates と $uvw=t$ の torus cycles による．
+補集合の global homology に closed でない primitive を積分してはいない．
+
+共通 moment を $\mu$ とする．$i$ core の $K$-side cycle は，
+$A$ branch では critical action $0$，$B$ branch では $-I_\alpha$ を持つ．
+従って $\mu$ に関する slopes は $0,-1$ である．
+$j$ core の対応する slopes は，$I_{\alpha'}$ の傾きが $-1$ なので $0,+1$ である．
+\eqref{sg8:internal-cycles} はこれを $0$ と $-1+2=+1$ に一致させる．
+external puncture periods は両側で critical slope が零なので，\eqref{sg8:external-cycle} と整合する．
+\end{proof}
+
+この配分は，指定された全零 external critical slopes の正規化に対して必要でもある．
+各 external branch face で \eqref{qg8:node-count} の導出と同じ個別 basin の計算を
+$\epsilon_i=\epsilon_j=0$ として行えば，
+各 basin の node count は一つに限られる．合計六つなので内部 annulus に二つ残る．
+この二つが \eqref{sg8:internal-cycles} の両 branch 間の差を正確に補う．
+
+\begin{lemma}[Petersen branch star の整数線形整合]
+\label{sg8:star}
+一つの共有 branch の Petersen rays を $r_v$，crossing neighbors を $r_x,r_y$，
+matching neighbor を $r_z$ とし，反対側を prime で表す．
+両側の face maps の線形部分は，一つの saturated rank-three star lattice の同型
+\begin{equation}\label{sg8:star-map}
+ r_v\longmapsto-r'_v,\qquad
+ r_x\longmapsto r'_x,\qquad r_y\longmapsto r'_y,\qquad
+ r_z\longmapsto r'_z-2r'_v
+\end{equation}
+に一致する．従って，整数 slopes の一致後に，三つの incident faces の
+線形部分を別々に接着する必要はない．
+\end{lemma}
+
+\begin{proof}
+branch の二つの external cycles を $b_1,b_2$ とすれば，両側の比較は
+$\alpha'=-\alpha$，$b'_1=b_1$，$b'_2=b_2$ である．
+crossing face の式 $F=-I_\alpha r_v-I_{b_l}r_l$ は
+$(s,t)\mapsto(-s,t)$ を与える．
+matching face では $b=b_1+b_2$ を使って
+$F=(-I_\alpha-I_b)r_v+I_b r_z$ と書けるので，
+反対側の coordinates は $(s,t)\mapsto(-s-2t,t)$ となる．
+これが \eqref{sg8:star-map} である．
+Petersen balancing relation $r_x+r_y+r_z=r_v$ は，
+$r'_x+r'_y+r'_z-2r'_v=-r'_v$ へ写る．
+基底 $(r_v,r_x,r_y)$ 上の determinant は $-1$ である．
+この star lattice の saturation は補題~\ref{per:branch-duality} の通りである．
+\end{proof}
+
+\begin{corollary}[面ごとの node 数と branch length]
+\label{sg8:counts}
+上の配分では，二十個の triangles に三つずつ，十五個の bigons に二つずつの
+nodal fibers が入り，合計は $20\cdot3+15\cdot2=90$ である．
+各 pair を結ぶ二本の branch の正規化された affine length は，いずれも
+\[
+ w_{i,j}+w_{j,i}=2c=\frac{a}{5\pi}
+\]
+である．
+\end{corollary}
+
+\begin{proof}
+各 triple $ijk$ は三つの pair の対応 basin を一つずつ持ち，そこに node が一つずつある．
+各 pair の内部 annulus は一つの bigon を与え，その node 数は二つである．
+branch の normal action は $i$ 側で $\mu-w_{i,j}$，$j$ 側で $-\mu-w_{j,i}$ なので，
+二つの core origins の affine distance はその weights の和である．
+\end{proof}
+
+本節の central curves 上の面積と nodal clutching の計算は，
+両 branch の整数 slopes と branch stars の共通線形部分を与える．
+有限 $t\ne0$ の end germs の切片には，系~\ref{ng8:central-criterion} を用いる．
+一つの全空間 primitive と共通の toric reference actions で正規化し，
+固定した非零 normal moment 上で輸送すれば，本節の共有面積から得た切片が保存される．
+命題~\ref{ng8:straight-neck} が，open end germs と一致し，critical actions を affine に保つ
+parameter family を構成する．
+実成分移植の順序とこれらの解析的結果の適用は，定理~\ref{ga8:global} の証明で行う．
+従って大域 atlas の結論には，node counts と標識付き quartets に加えて，
+この作用の正規化と measured-area interpolation を用いている．

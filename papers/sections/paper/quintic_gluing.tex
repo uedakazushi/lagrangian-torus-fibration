@@ -1,0 +1,369 @@
+\section{五次の共有 branch における面積と framing の整合条件}
+\label{qg8:section}
+
+四直線 core の作用座標を五つ並べるだけでは，二重曲線を横切る作用座標は定まらない．
+順序付き小解消では，同じ曲線が一方の成分上で五回 blow up されるため，
+面積と normal framing の両方を補正する必要がある．
+本節では，有向四角形による $q=1$ の $K_4$ charts について，この補正を計算する．
+一般の $K_4$ action charts 全ての分類は主張しない．
+
+\subsection{実際の二重曲線と面積の単位}
+
+五つの成分を $\{0,1,2,3,4\}$ で標識し，小解消の順序もこの順とする．
+$[\Omega]=aH+\sum_i\beta_i[D_i]$ とし，$\beta_0<\cdots<\beta_4$ とする．
+作用積分の単位に合わせて
+\[
+ c=\frac{a}{8\pi},\qquad b_i=\frac{\beta_i}{2\pi},\qquad
+ R_i=4c+\sum_jb_j-5b_i
+\]
+と置く．$D_i$ の blow-down は面積 class $2\pi R_iH$ を持つ $\PP^2$ である．
+$i<j$ のとき，$C_{ij}$ 上の五つの相異なる点 $q_{ij,r}$ は $D_i$ 側で blow up され，
+各 exceptional sphere の面積を $2\pi\delta_{ij}$，
+$\delta_{ij}=b_j-b_i>0$ と書く．従って
+\begin{equation}\label{qg8:actual-curve}
+ R_i-R_j=5\delta_{ij},\qquad
+ \frac{\operatorname{area}(C_{ij})}{2\pi}=R_j,
+ \qquad C_{ij}^2|_{D_i}=-4,\quad C_{ij}^2|_{D_j}=1.
+\end{equation}
+三つの triple points を $p_{ijk}$ $(k\ne i,j)$ とする．normal line bundles は
+\begin{equation}\label{qg8:normal-bundles}
+ N_{C_{ij}/D_i}\simeq\mathcal O(1)(-\textstyle\sum_rq_{ij,r}),\qquad
+ N_{C_{ij}/D_j}\simeq\mathcal O(1),\qquad
+ N_{C_{ij}/D_i}\otimes N_{C_{ij}/D_j}
+       \otimes\mathcal O(\textstyle\sum_kp_{ijk})\simeq\mathcal O.
+\end{equation}
+最後の同定は，実際の smoothing の係数から得られる．次数の等式だけに置き換えない．
+
+各 blow-down core $i$ には四つの正 weights $w_{i,j}$ $(j\ne i)$ を与え，
+\begin{equation}\label{qg8:row-sum}
+ \sum_{j\ne i}w_{i,j}=R_i
+\end{equation}
+とする．境界の四 labels の有向四角形を $f_i$ とし，
+\[
+ \epsilon_{i;jk}=\mathbf1_{\{k=f_i(j)\}}\qquad(k\ne i,j)
+\]
+と書く．$C_{ij}$ に対応する三つの critical basins の blow-down 面積は
+\begin{equation}\label{qg8:blowdown-basin}
+ B^0_{i;jk}:=\frac{\operatorname{area}(D^0_{i;jk})}{2\pi}
+ =w_{i,k}+\epsilon_{i;jk}w_{i,j}.
+\end{equation}
+basin は external Reeb edge に沿う regular puncture disks の増大極限であり，
+critical boundary が一つの単純 loop であることは必要ない．
+
+\begin{lemma}[basin ごとの実面積]\label{qg8:basin-area}
+$i<j$ とし，五つの blow-up patches を critical leaf から離れた regular basins 内に取る．
+$p_{ijk}$ の basin に含まれる patch 数を $n_{ij;k}$ とすれば
+\[
+ n_{ij;k}\geq0,\qquad\sum_{k\ne i,j}n_{ij;k}=5,
+\]
+かつ，blow-up 後の basin 面積は
+\begin{equation}\label{qg8:actual-basin}
+ B_{i;jk}=w_{i,k}+\epsilon_{i;jk}w_{i,j}-n_{ij;k}\delta_{ij}.
+\end{equation}
+両側で同じ実際の critical foliation を指定するなら，必要な面積条件は
+\begin{equation}\label{qg8:area-match}
+ w_{i,k}+\epsilon_{i;jk}w_{i,j}-n_{ij;k}\delta_{ij}
+ =w_{j,k}+\epsilon_{j;ik}w_{j,i}>0.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+divisor-compatible blow-up は patch の外で形式と critical leaf を変えず，
+その patch を含む divisor basin の面積を exceptional area だけ減らす．
+これは局所 blow-up の relative area 計算であり，五つの互いに素な patches に加法的に適用できる．
+nodal patch との比較は，divisor を保ち patch 外で恒等な相対同定を用いる
+\cite[Theorem 1.1]{CGblowup}．その後の divisor-relative symplectic identification も，
+basin と面積を共に運ぶので等式を保つ．$D_j$ 側ではこの曲線上の blow-up はない．
+従って同じ実際の basin を使う場合，両辺の積分は一致しなければならない．
+\end{proof}
+
+\subsection{五つの blow-ups と三つの triple ends の整数 framing}
+
+\begin{lemma}[basin 内の clutching 数]\label{qg8:framing}
+$i<j$ とする．共通 neck の circle cycle を $\alpha$ とし，$D_i$ 側の正 normal circle と
+一致させる．$D_j$ 側の正 normal circle は $\alpha'=-\alpha$ である．
+blow-down core $i$ の $k$-puncture cycle を $\beta_k$，
+core $j$ の対応する cycle を $\beta'_k$ とする．
+実際の regular annular sheet に沿って両者を運ぶと，その torus homology 内で
+\begin{equation}\label{qg8:cycle-shear}
+ \alpha'=-\alpha,\qquad
+ \beta'_k=\beta_k+(n_{ij;k}-1)\alpha
+\end{equation}
+が成り立つ．
+\end{lemma}
+
+\begin{proof}
+一つの blow-up point の近くで，旧 normal coordinate を $x$，曲線 coordinate を $z$ とする．
+blow-up chart は $x=zu$ であり，strict transform の normal coordinate は $u$ である．
+正向きの $z$-circle 上で $u$ を一定に保つ lift は，$x$ を一定に保つ旧 lift に
+正 normal circle を一回加えたものとなる．
+従って $n_{ij;k}$ 個の points を含む basin では，puncture-compatible な実際の
+neck framing は旧 core framing に $n_{ij;k}\alpha$ を加える．
+critical boundary が figure-eight 全体を通る場合も，regular disks の exhaustion で同じ整数を得る．
+
+次に triple end $uvw=t$ を考え，$D_i=\{u=0\}$，$D_j=\{v=0\}$ とする．
+積が一定となる torus action の整数 lattice 内で
+\[
+ \alpha=(-1,1,0),\qquad \alpha'=(1,-1,0),\qquad
+ \nu_k=(-1,0,1),\qquad \nu'_k=(0,-1,1)
+\]
+である．従って $\nu'_k=\nu_k-\alpha$ である．
+前段の $n_{ij;k}$ 回の加算と合わせると \eqref{qg8:cycle-shear} を得る．
+これは \eqref{qg8:normal-bundles} の actual smoothing identification の winding を，
+各 basin に分けて計算したものである．
+
+整合性の検算として，旧 core では $\sum_k\beta_k=-\alpha$ であるから，
+\[
+ \sum_k\beta'_k=-\alpha+(5-3)\alpha=\alpha=-\alpha'
+\]
+となり，反対側の自己交点 $+1$ の relation を回復する．
+証明は実際の circle bundle と torus の homology で行っている．
+blow-up complement の $H_1$ への単射性や，全空間での homology relation の積分は用いない．
+\end{proof}
+
+\begin{proposition}[straight branch の整数必要条件]\label{qg8:slope}
+上の二つの $q=1$ core charts を，追加の branch singularities を入れず，
+action-compatible matroidal charts によって共有 branch に沿って接続できるとする．
+このとき，各 $k\ne i,j$ について
+\begin{equation}\label{qg8:node-count}
+ n_{ij;k}=1+\epsilon_{i;jk}+\epsilon_{j;ik}
+\end{equation}
+が必要である．従って nodal allocation を指定したままこの式が破れる場合には，
+これらの既製 core charts をそのまま接続することはできない．
+\end{proposition}
+
+\begin{proof}
+共通 Hamiltonian moment を $\mu$ とし，$\alpha$ の action differential を $\dd\mu$ とする．
+$i$ 側の normal radius は $\mu$，$j$ 側は $-\mu$ である．
+core $i$ の branch では，$s_i=w_{i,j}-\mu$ に対して
+$I_\alpha=-s_i$，$I_{\beta_k}=\epsilon_{i;jk}s_i$ なので
+\[
+ \frac{\dd I_{\beta_k}}{\dd\mu}=-\epsilon_{i;jk}.
+\]
+core $j$ 側では $s_j=w_{j,i}+\mu$ であり，
+$\dd I_{\beta'_k}/\dd\mu=\epsilon_{j;ik}$ となる．
+\eqref{qg8:cycle-shear} を同じ torus basis に直すと，
+$j$ 側の $\beta_k$-action の傾きは $\epsilon_{j;ik}-(n_{ij;k}-1)$ である．
+normal circle が primitive な straight integral affine branch 上では，
+平行移動された torus cycle の action は $\mu$ の affine function である．
+その整数の傾きは連結な branch に沿って一定なので，二つの傾きを等置すればよい．
+\end{proof}
+
+この必要条件は，node の critical point だけを数える規則ではない．
+どの actual basin に，どの nodal patch が入るかを含む条件である．
+nodal fibers は branch の外に置くが，それらの framing change は branch の両端の比較に残る．
+
+\subsection{対称な mod-five 選択と重みの一意性}
+
+五つの labels を $\ZZ/5\ZZ$ とみなし，
+\begin{equation}\label{qg8:modfive}
+ f_i(j)=\frac{i+j}{2}=3(i+j)\pmod5
+\end{equation}
+とする．$j-i$ 上では乗法 $3$ なので各 $f_i$ は四角形をなし，
+$f_i(j)=f_j(i)\ne i,j$ である．
+従って $\epsilon_{i;jk}=\epsilon_{j;ik}=:\epsilon_{ij;k}$ となる．
+
+\begin{corollary}[対称な有向四角形系は六つ]\label{qg8:six-systems}
+五つの固定 labels に対し，各 $f_i$ が他の四 labels の四周期であり，
+$f_i(j)=f_j(i)$ を満たす系は正確に六個ある．
+これらは $S_5$ の作用で一つの軌道をなし，\eqref{qg8:modfive} がその代表である．
+この六個は作用面積の recipe に含まれる選択であり，
+全平面 quintic の抽象 $K_4$ link system が一つであることとは異なる．
+\end{corollary}
+
+\begin{proof}
+新しい label $\infty$ を加える．固定 $k$ について，
+$f_i(j)=k$ となる pairs $\{i,j\}$ は，$k$ 以外の四点の perfect matching をなす．
+それに $\{k,\infty\}$ を加えた matching を $M_k$ とする．
+全ての $M_k$ は $K_6$ の one-factorization を与える．
+
+逆に，$K_6$ の one-factorization のうち $\{k,\infty\}$ を含む matching を $M_k$ とし，
+$\{i,j\}\in M_k$ のとき $f_i(j)=k$ と定める．
+これは symmetric で，各 $f_i$ は他の四点の fixed-point-free permutation である．
+もし $f_i(j)=k$，$f_i(k)=j$ なら，$M_k$ は $\{k,\infty\},\{i,j\}$ を含み，
+$M_j$ は $\{j,\infty\},\{i,k\}$ を含む．残る二点は両 matching で同じ辺を作るため，
+edge-disjointness に反する．従って二周期はなく，全ての $f_i$ は四周期である．
+これで one-factorizations との全単射を得た．その個数は定理~\ref{topo:petersen} の六個である．
+
+\eqref{qg8:modfive} の stabilizer は $\operatorname{AGL}_1(\mathbb F_5)$ である．
+実際，この系を保つ置換 $g$ は midpoint を保ち，$h(x)=g(x)-g(0)$ は
+$h((x+y)/2)=(h(x)+h(y))/2$ と $h(0)=0$ を満たす．
+従って $h$ は加法的で，$h(x)=ux$，$u\in\mathbb F_5^*$ となる．
+逆に全ての affine permutations は系を保つ．stabilizer の位数は二十なので，
+$S_5$-orbit は $120/20=6$ 個で，全ての系を尽くす．
+\end{proof}
+
+\begin{theorem}[実面積と整数 slope の同時解]\label{qg8:unique-weights}
+選択 \eqref{qg8:modfive} と row sums \eqref{qg8:row-sum} を固定する．
+面積条件 \eqref{qg8:area-match} と straight-branch 条件 \eqref{qg8:node-count} を
+満たす重みと node counts は，存在すれば
+\begin{equation}\label{qg8:solution}
+ w_{i,j}=c+b_j-b_i,\qquad n_{ij;k}=1+2\epsilon_{ij;k}
+\end{equation}
+に一意に定まる．全ての重みが正となるための必要十分条件は
+\begin{equation}\label{qg8:spread}
+ \max_i b_i-\min_i b_i<c,
+ \quad\text{すなわち}\quad \max_i\beta_i-\min_i\beta_i<\frac a4
+\end{equation}
+である．この条件の下で共有 basin の面積は全て正であり，
+各 curve 上の node allocation は $(3,1,1)$，各 triangle に入る nodes の数は五つである．
+\end{theorem}
+
+\begin{proof}
+$v_{i,j}=w_{i,j}-(b_j-b_i)$ と置く．row sums は $\sum_{j\ne i}v_{i,j}=4c$ となる．
+\eqref{qg8:node-count} により $n_{ij;k}=1+2\epsilon_{ij;k}$ であり，
+面積の等式から $b$ の項を消去すると
+\begin{equation}\label{qg8:reduced-linear-system}
+ v_{i,k}+\epsilon_{ij;k}v_{i,j}
+ =v_{j,k}+\epsilon_{ij;k}v_{j,i}
+\end{equation}
+を得る．
+
+$k$ を固定する．残る四頂点上で $i+j=2k$ を満たす二辺は perfect matching をなす．
+その二辺を $K_4$ から除いた graph は連結な四角形である．
+そこでは $\epsilon_{ij;k}=0$ なので，\eqref{qg8:reduced-linear-system} により
+$v_{i,k}$ は $i\ne k$ に依存しない．その共通値を $v_k$ とする．
+任意の相異なる $i,j$ に対して $k=f_i(j)$ を取れば，残る等式は
+$v_k+v_j=v_k+v_i$ となる．よって全ての $v_i$ は等しく，row sum からその値は $c$ である．
+これが重みの一意性を与える．
+
+逆に \eqref{qg8:solution} を代入すると，$i<j$ について
+\[
+ (w_{i,k}-w_{j,k})+
+  \epsilon_{ij;k}(w_{i,j}-w_{j,i})
+ =(1+2\epsilon_{ij;k})(b_j-b_i)
+\]
+なので，面積と slope の両条件を満たす．
+正の weights の条件は，最小の $w_{i,j}$ が
+$c-(\max b-\min b)$ であることから \eqref{qg8:spread} と同値である．
+共有 basin 面積は $w_{j,k}+\epsilon_{ij;k}w_{j,i}>0$ となる．
+
+各 pair に一つだけ selected triple があるので，curve 上の allocation は $(3,1,1)$ である．
+一つの三点集合に二つの異なる midpoint relations があれば，差を取って
+$3(i-j)=0\pmod5$ となり，相異なることに反する．
+選択された pair の数と三点集合の数はいずれも十なので，各三点集合は
+ちょうど一つの selected pair を持つ．従って triangle 内の allocation は $3+1+1=5$ である．
+\end{proof}
+
+\begin{remark}[追加条件の射程]\label{qg8:spread-scope}
+\eqref{qg8:spread} は，指定した有向四角形 recipe と shared-basin normalization の条件であり，
+vertical Kähler simplex の条件そのものではない．後者を満たしても
+\eqref{qg8:spread} を満たさない class では，この recipe の正 weights 解はない．
+一方，surgery に用いる $\beta_i=(i-4)\varepsilon$，$0<\varepsilon<a/25$ の小さい ray は
+$4\varepsilon<a/4$ を満たすので，この障害を受けない．
+vertical polarization は補助的な選択であり，この限定された no-go を
+smooth quintic の fibration や一般の action-compatible atlas の不存在へ読み替えない．
+\end{remark}
+
+\begin{lemma}[固定された五点を含む marked な実現]\label{qg8:marked-allocation}
+各 $C_{ij}$ の五つの相異なる点 $q_{ij,r}$ に対して，
+\eqref{qg8:solution} の counts を持つ basin assignment と，
+全ての $q_{ij,r}$ が相異なる regular leaves にある marked Morse foliation を選べる．
+同時に，実際の曲線上で \eqref{qg8:area-match} の正の共有面積を指定できる．
+\end{lemma}
+
+\begin{proof}
+triple-point disks を固定した三穴球面の中で，五つの点を，指定した basins の
+相異なる regular leaves 上の五つの目標点へ動かす isotopy を取る．
+相異なる有限点の経路を互いに衝突しないように選び，isotopy extension を使えば，
+これは境界近傍で恒等な $\operatorname{Diff}_0$ の元として実現できる．
+その逆で foliation を運ぶと必要な allocation を得る．
+
+次に三つの basins の目標面積を \eqref{qg8:area-match} の右辺とする．
+その和は $R_j$ であり，全て正である．crossing disks と五つの点の近傍を十分小さく取り，
+それらで面積形式を固定したまま，各 basin 内の正 density を調整する．
+相対 Moser により，曲線上の実際の面積形式の下で目標面積を実現する foliation を得る．
+Moser isotopy は各指定点の近傍で恒等にできるので，regular-leaf 条件と allocation を保つ．
+\end{proof}
+
+\subsection{branch star の ambient 整数線形変換}
+
+\begin{proposition}[三つの face maps の共通延長]\label{qg8:star-transition}
+\eqref{qg8:node-count} を満たす二つの有向四角形 core charts を考える．
+triangle $ijk$ の $i$ 側 coordinates を $(s,t)$，$j$ 側を $(s',t')$ とする．
+$s,s'$ は共有 branch の方向，$t,t'$ はそれに transverse な方向である．
+作用の translations を除いた transition は
+\begin{equation}\label{qg8:face-transition}
+ t'=t,\qquad s'=-s+(y_k+y'_k)t,
+ \quad y_k=\mathbf1_{\{f_i(k)=j\}},\quad
+ y'_k=\mathbf1_{\{f_j(k)=i\}}
+\end{equation}
+となる．三つの $k$ に対するこれらの線形変換は，一つの
+ambient $\operatorname{GL}(3,\ZZ)$ map に延長する．
+\end{proposition}
+
+\begin{proof}
+$x=\epsilon_{i;jk}$，$x'=\epsilon_{j;ik}$ とする．作用行列は
+\[
+ A_i=\begin{pmatrix}-1&y_k\\x&-1\end{pmatrix},\qquad
+ A_j=\begin{pmatrix}-1&y'_k\\x'&-1\end{pmatrix}.
+\]
+$xy_k=x'y'_k=0$ であり，cycle change は
+$I_{\alpha'}=-I_\alpha$，
+$I_{\beta'}=I_\beta+(x+x')I_\alpha$ である．
+これを代入すると \eqref{qg8:face-transition} を得る．
+
+core $i$ の rays を $r_{ij},r_{ik}$，core $j$ の rays を $r_{ji},r_{jk}$ とすれば，
+必要な map は
+\[
+ r_{ij}\longmapsto-r_{ji},\qquad
+ r_{ik}\longmapsto r_{jk}+(y_k+y'_k)r_{ji}.
+\]
+各有向四角形では $j$，それぞれ $i$ の predecessor は一つだけなので
+$\sum_k(y_k+y'_k)=2$ である．
+従って $r_{ij}+\sum_kr_{ik}=0$ は，
+$-r_{ji}-r_{ji}+2r_{ji}=0$ へ写る．
+共通 branch ray と，三つの他の rays のうち二つを基底に取れば，
+この map の determinant は $-1$ である．
+\end{proof}
+
+\subsection{有限 parameter における作用の切片条件}
+
+上の計算は，実際の central curve における面積と，neck 内の整数 framing を決定する．
+これと，任意の有限 $t\ne0$ における既製 end germs の接着を区別する必要がある．
+次の条件は，marked isotopy だけからは従わない．
+
+\begin{lemma}[固定 neck における intercept obstruction]\label{qg8:intercept}
+Hamiltonian neck とその二つの end fibrations を固定し，$\alpha$ の action を $\mu$ に正規化する．
+cycle basis を \eqref{qg8:cycle-shear} により一方へ統一する．
+end germs の critical actions を
+\[
+ J^-_k(\mu)=-\epsilon_{i;jk}\mu+C^-_k,\qquad
+ J^+_k(\mu)=\bigl(\epsilon_{j;ik}-n_{ij;k}+1\bigr)\mu+C^+_k
+\]
+と書く．これらを一つの straight action-compatible branch として接続するには，
+\eqref{qg8:node-count} に加えて
+\begin{equation}\label{qg8:intercept-equality}
+ C^-_k=C^+_k\qquad(k\ne i,j)
+\end{equation}
+が必要である．差 $C^+_k-C^-_k$ は neck primitive の変更に依存しない．
+三つの差の和は零なので，独立な実条件は二つである．
+\end{lemma}
+
+\begin{proof}
+neck は三穴球面上の free circle bundle と interval の積として扱える．
+circle bundle は自明であり，その $H_2$ は，normal circle と基底の loops の積で生成される．
+これらの tori 上で Hamiltonian invariant form の積分は零なので，neck の二形式は exact である．
+primitive を circle 平均し，閉形式の定数倍を引けば $I_\alpha=\mu$ と正規化できる．
+二つの primitives の差は closed なので，平行移動した同じ cycle の action を
+両端で同じ定数だけ変える．従って intercept の差は不変である．
+
+一つの affine function が二つの open end germs と一致するには，傾きと切片の両方が一致する．
+また，三つの puncture cycles は，同じ critical fiber
+$S^1\times\figeight$ の中で $\sum_k\beta_k=-\alpha$ を満たすように取っている．
+これは normal Euler framing による fiber 内の relation であり，
+全空間の homology relation に primitive を直接積分しているのではない．
+各滑らかな critical stratum 上で $\dd\lambda=\omega$ の制限は零であるため，
+この stratified fiber 内の relation に積分を適用できる．
+従って $\sum_kJ_k=-\mu$ となり，切片の差の和は零である．
+\end{proof}
+
+有限 parameter の構成では，この切片条件を実際の reduction 上で確認する．
+系~\ref{ng8:central-criterion} は，一つの全空間 primitive と toric reference actions により
+central-curve の shared areas を \eqref{qg8:intercept-equality} へ結び付け，
+固定した非零 moment 上の輸送によって有限 parameter でもその等式を保つ．
+続いて命題~\ref{ng8:straight-neck} が critical actions を affine に保つ family を与える．
+定理~\ref{ga8:global} では，実成分への移植後も critical germs が affine であることを確認して，
+これらの結果を本節の面積・framing 計算へ適用する．
+命題~\ref{qg8:star-transition} の共通な整数線形延長と合わせて，大域 atlas を得る．
+単なる marked isotopy から critical action curve の直線性を推論しているのではない．

@@ -1,0 +1,128 @@
+{
+  "version": 11,
+  "passed": true,
+  "method": "Exact polynomial coefficient comparison plus exact checking of the two branches retained by a general written divisibility proof; no denominator cutoff.",
+  "polynomial_identity_count": 19,
+  "polynomial_identities": [
+    "general pair product reduced to Av",
+    "general linear-v identity",
+    "bilinear-positive identity after clearing denominators",
+    "F lower-bound difference",
+    "G minus F",
+    "H minus K",
+    "ratio bound numerator",
+    "final divisibility residual",
+    "opposite signed-divisor sum",
+    "positive extremal pair reciprocal-sum identity",
+    "negative extremal pair reciprocal-sum identity",
+    "high-high product from circulation",
+    "maximum principle nonnegative difference",
+    "minimum principle nonnegative difference",
+    "triangle equal-denominator m",
+    "triangle equal-denominator second m",
+    "A=q-1 divisor reduction",
+    "A=q+1 divisor reduction",
+    "r-1 divides two reduction"
+  ],
+  "triangle_local_branches": [
+    {
+      "r": 2,
+      "q": [
+        7,
+        7,
+        1,
+        1
+      ],
+      "p": [
+        [
+          0,
+          -8,
+          3,
+          -2
+        ],
+        [
+          -6,
+          0,
+          -2,
+          1
+        ],
+        [
+          2,
+          -3,
+          0,
+          0
+        ],
+        [
+          -3,
+          6,
+          -4,
+          0
+        ]
+      ],
+      "D": [
+        0,
+        -2,
+        2,
+        0
+      ],
+      "sum_high_D": -2
+    },
+    {
+      "r": 3,
+      "q": [
+        13,
+        13,
+        1,
+        1
+      ],
+      "p": [
+        [
+          0,
+          -14,
+          4,
+          -3
+        ],
+        [
+          -12,
+          0,
+          -3,
+          2
+        ],
+        [
+          3,
+          -4,
+          0,
+          0
+        ],
+        [
+          -4,
+          6,
+          -3,
+          0
+        ]
+      ],
+      "D": [
+        0,
+        -1,
+        1,
+        0
+      ],
+      "sum_high_D": -1
+    }
+  ],
+  "general_proof_assumptions": [
+    "Local row sums and crossing determinants.",
+    "Positive local basin weights, equivalently the two-high cycle condition before simplification.",
+    "Integer clutching at the same labelled punctures.",
+    "Opposing normal-action coefficients D sum to zero on every shared high branch.",
+    "The high-support triangle is a connected component, so each of its cores has exactly two high branches."
+  ],
+  "not_required": [
+    "node nonnegativity",
+    "line node budget five",
+    "a denominator bound"
+  ],
+  "scope": "The written proof excludes a triangular connected component, not every graph containing a triangle. It does not by itself exclude paths or cycles of length four or five.",
+  "source_sha256": "9bdc19d839e82ae2289d12bf3591b992fb22a9520c5d6b4f7134ca1745c1a08b",
+  "script_sha256": "841953d41449133088af9addc40b24d4933bc8c87ac4d5c7b2c917a7a6b3db7a"
+}

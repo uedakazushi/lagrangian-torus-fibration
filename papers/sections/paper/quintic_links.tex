@@ -1,0 +1,416 @@
+\section{五次の混合退化と matroidal core link の同時実現}
+\label{q5:section}
+
+次数だけから得られる第一 Betti 数は，異なる二重曲線が同じ core に入る方法を
+記録しない．五次ではこの違いが本質的である．平面の core link の候補は $K_4$，
+二次または三次成分の候補は $K_{3,3}$ であるが，それぞれを単独で実現できることから
+全成分での同時実現は従わない．本節では，個々の三重点を標識した Reeb graphs を用いて，
+五次の全 degree partitions に対するこの問題を決定する．
+
+ここでいう \emph{matroidal} は，core の cone germ が二次元 Bergman fan の
+原点近傍と局所同相であることを意味する．$K_4$ と $K_{3,3}$ を持つ fan は，
+それぞれ $U_{3,4}$ と $M(K_4-e)$ の Bergman fan である
+\cite[Examples 1.1--1.2 and Theorem 4.1]{FeichtnerSturmfels}．
+以下は実際の Lagrangian fibration の action lattice による判定とは別の，
+標識付きリンクの位相的な分類である．
+
+\begin{theorem}[五次における全 core の同時分類]
+\label{q5:classification}
+$5=e_1+\cdots+e_k$，$e_i\geq1$，$k\geq3$ とし，
+定理~\ref{part:global} の一般の degree-partition degeneration を考える．
+各 double curve では，三重点を個々に標識し，境界に沿って円周葉を持ち，
+内部には simple saddles のみを持つ Morse foliation を選ぶ．
+全ての core links を同時に matroidal とする選択の存在は，成分の置換を除いて
+次の表で尽くされる．
+\[
+\begin{array}{c|c|c|c}
+ (e_1,\ldots,e_k)&\text{候補となる core links}
+ &\text{全 core の同時実現}&\text{同時に matroidal となる最大個数}\\\hline
+ (1,1,3)&K_4,K_4,K_{3,3}&\text{不可}&2\\
+ (1,2,2)&K_4,K_{3,3},K_{3,3}&\text{不可}&2\\
+ (1,1,1,2)&K_4,K_4,K_4,K_{3,3}&\text{可}&4\\
+ (1,1,1,1,1)&K_4,K_4,K_4,K_4,K_4&\text{可}&5
+\end{array}
+\]
+$(1,1,1,2)$ では，成分と個々の三重点のラベルを固定したとき，
+全 core を matroidal とする葉ラベル付き抽象 Reeb graph の系はちょうど四個である．
+これらは後述の parity 条件 \eqref{q5:odd-parity} により特徴付けられ，
+各二点集合内の三重点ラベルの交換を許すと一つの軌道をなす．
+全平面の場合の抽象 graph system は一つである．
+
+ここで数えているものは，葉ラベル付き有限グラフの系である．
+曲線への埋込みの marked isotopy class，葉に横断的な測度，
+symplectic conjugacy class を数えてはいない．
+各々の存在する graph system は，実際の標識付き double curves 上の
+Morse foliations により実現でき，同じ曲線の両側で同一の foliation を使用できる．
+\end{theorem}
+
+\subsection{Divisor 成分を保つ graph expansion}
+
+まず，曲線上の Morse data が core link の中にどのように残るかを記述する．
+$T_a$ を，genus $g_a$，$n_a$ 個の境界円周を持つ曲面上の
+simple-saddle Morse foliation の Reeb graph とし，$H_a$ を葉とそれに接する辺を
+除いた内部部分とする．境界の各円周を一つの葉として扱う．
+内部頂点が空でない場合，$H_a$ は連結であり，
+\begin{equation}\label{q5:internal-counts}
+ |V(H_a)|=2g_a+n_a-2,\qquad
+ |E(H_a)|=3g_a+n_a-3,\qquad b_1(H_a)=g_a.
+\end{equation}
+一つの内部頂点からそれ自身に戻る辺は存在しない．実際，Morse function が
+Reeb graph に誘導する実数値関数は各開辺上で単調なので，そのような辺の
+両端の値を同じ critical value にすることはできない．
+異なる二頂点を結ぶ多重辺はあり得る．
+
+\begin{proposition}[誘導部分グラフとしての divisor blocks]
+\label{q5:induced-blocks}
+三重点のない SNC divisor の crossing graph を，各成分の $T_a$ で展開して得る
+core link を $\Gamma$ とする．各 $T_a$ は内部頂点を少なくとも一つ持ち，
+$T_a$ における内部頂点の価数は三とする．
+このとき，$V(\Gamma)$ は $V(H_a)$ により分割され，次を満たす．
+\begin{enumerate}
+\item 各 $H_a$ は $\Gamma$ の連結な誘導部分グラフである．
+\item 異なる blocks $H_a,H_b$ を結ぶ辺は，$D_a\cap D_b$ の個々の交点と
+一対一に対応する．その端点は対応する標識付き葉が接していた内部頂点である．
+\item $H_a$ から出る half-edges の数は $n_a$ であり，
+\begin{equation}\label{q5:port-count}
+ n_a=3|V(H_a)|-2|E(H_a)|.
+\end{equation}
+特に，$\Gamma$ が単純で girth $\ell$ を持ち，$g_a>0$ なら
+\begin{equation}\label{q5:girth-obstruction}
+ 2g_a+n_a-2\geq\ell.
+\end{equation}
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+graph expansion は，各 $T_a$ の標識付き葉を，対応する crossing の相手の葉に
+貼り，生じた二価点を除く操作である．この操作は内部頂点を同一視しない．
+同じ $H_a$ の二頂点の間に新しい辺を作ることもない．従って各 block は誘導部分グラフで，
+異なる blocks の間の辺は crossing labels そのものである．
+三価性から各内部頂点の incident half-edges を数えれば
+\eqref{q5:port-count} を得る．
+$g_a=b_1(H_a)>0$ なら $H_a$ に cycle がある．単純グラフ $\Gamma$ の cycle は
+少なくとも $\ell$ 個の相異なる頂点を含むので，\eqref{q5:internal-counts} から
+\eqref{q5:girth-obstruction} が従う．
+\end{proof}
+
+この命題は，単なる $b_1(\Gamma)$ の比較より強い．例えば，genus one で
+三つの punctures を持つ divisor は三頂点の cyclic block を強制するため，
+全体が $K_{3,3}$ となることを妨げる．また，多重交点を一つの crossing type に
+まとめてしまうと，第2項の情報を失い，以下の同時実現条件を検出できない．
+
+\begin{lemma}[小さい matroidal links の block criterion]
+\label{q5:block-criterion}
+目標グラフ $G$ を $K_4$ または $K_{3,3}$ とする．
+与えられた divisor incidence data が $G$ への graph expansion を持つための
+必要十分条件は，$V(G)$ を二個以上の空でない connected induced blocks $V_a$ に分割し，
+各 block の第一 Betti 数を $g_a$，出る half-edges の数を $n_a$ とし，
+異なる blocks 間の辺を与えられた個々の crossing labels と対応させられることである．
+この条件を満たす各 block の Reeb graph は，実際の genus $g_a$ の標識付き曲面上で実現できる．
+
+候補となる proper connected induced blocks は次で尽くされる．
+\[
+\begin{array}{c|c|c|c}
+G&H_a&g_a&n_a\\\hline
+K_4&\text{一点}&0&3\\
+K_4&K_{1,1}&0&4\\
+K_4&K_3&1&3\\\hline
+K_{3,3}&\text{一点}&0&3\\
+K_{3,3}&K_{1,1}&0&4\\
+K_{3,3}&K_{1,2}&0&5\\
+K_{3,3}&K_{1,3}&0&6\\
+K_{3,3}&K_{2,2}&1&4\\
+K_{3,3}&K_{2,3}&2&3
+\end{array}
+\]
+$K_{x,y}$ と $K_{y,x}$ は同じ行とする．
+\end{lemma}
+
+\begin{proof}
+必要性は命題~\ref{q5:induced-blocks} による．$K_4$ の induced blocks は完全グラフ，
+$K_{3,3}$ の connected induced blocks は一点または complete bipartite graph である．
+後者について
+\[
+ b_1(K_{x,y})=(x-1)(y-1),\qquad n=3(x+y)-2xy
+\]
+なので，proper blocks を列挙すると表を得る．
+
+十分性で注意すべき点は，正しい Euler characteristic を持つ抽象 graph が
+必ず実数値 Morse function の Reeb graph になるわけではないことである．
+必要な条件は，辺上で厳密に単調で，内部頂点に extrema を持たない高さ関数，
+すなわち good orientation の存在である．この条件と Reeb graph の実現問題の
+一般的な関係は \cite[Definition 2.2 and Theorem 5.6]{MichalakReeb} を参照されたい．
+ここでは表中の各 graph に対して境界付きの構成を直接与える．
+
+$H_a$ の各頂点 $v$ に $3-\deg_{H_a}(v)$ 本の葉を付けた graph を $T_a$ とする．
+$H_a$ が tree の場合は，一つの葉を root とし，全ての辺を root から外向きに向ける．
+各内部頂点は一つの入辺と二つの出辺を持つ．
+$H_a=K_3$ または $K_{2,2}$ の場合は cycle の頂点に相異なる高さを付ける．
+cycle 上で local minimum となる頂点には入る葉を，local maximum となる頂点には
+出る葉を付ける．それ以外の頂点の葉はどちら向きでもよい．
+各葉の高さを隣接頂点の適切な側に取れば，全ての辺で厳密に単調になる．
+$H_a=K_{2,3}$ の場合は bipartition を $\{u_1,u_2\}$ と
+$\{v_1,v_2,v_3\}$ とし，
+\[
+ h(v_1)<h(u_1)<h(v_2)<h(u_2)<h(v_3)
+\]
+とする．三つの葉は $v_1,v_2,v_3$ に付き，$v_1$ の葉を入辺，
+$v_3$ の葉を出辺とすればよい．$v_2$ の葉の向きは任意である．
+これで表中の全ての $T_a$ に good orientation を与えた．
+
+各三価頂点を一つの saddle を持つ oriented pair of pants に置き換え，
+高さに従って円筒を貼る．入辺が一つの場合は一円周が二円周へ分かれる saddle，
+入辺が二つの場合はその逆を使う．相異なる内部頂点の critical values は全て異なるように取る．
+残った葉の端には radial collar を付ける．この構成の曲面は連結かつ orientable で，
+境界数は $n_a$，Euler characteristic は $-|V(H_a)|=2-2g_a-n_a$ である．
+従って genus は $g_a$ である．標識付き境界を保つ orientation-preserving
+diffeomorphism により，与えられた実際の punctured curve へ移すことができる．
+この diffeomorphism は境界 collar の指定された radial coordinates と整合するように選べる．
+それぞれの crossing label で葉を貼れば，元の $G$ が復元される．
+\end{proof}
+
+この十分性は，表中の blocks について確認した good orientation を用いている．
+任意の target graph について，genus と incidence の数だけを同じにすれば
+Morse 実現が自動的に従う，という主張ではない．
+
+\subsection{五次の数値と三重点ラベル}
+
+以下では，成分を $A,B,C,Q$ などで表し，double curve $C_{ij}$ に対応する内部 graph を
+$H_{ij}$ と書く．五次では \eqref{trop:double-curve-data} が
+\begin{equation}\label{q5:curve-data}
+ g_{ij}=1+\frac{e_i e_j(e_i+e_j-4)}2,
+ \quad n_{ij}=e_i e_j(5-e_i-e_j),
+ \quad |V(H_{ij})|=e_i e_j
+\end{equation}
+となる．また命題~\ref{trop:partition-obstruction} より
+\begin{equation}\label{q5:core-genus}
+ b_1(\Gamma_i)=1+\frac{e_i(5-e_i)}2.
+\end{equation}
+従って，$e_i=1$ の core は四頂点，$e_i=2,3$ の core は六頂点を持つ．
+定理~\ref{trop:cubic-classification} によれば，それらの matroidal 候補は
+それぞれ $K_4$ と $K_{3,3}$ だけである．
+
+四つの葉を持つ genus-zero Reeb graph は，二つの三価頂点を一本の内部辺で結んだ
+quartet である．四点集合 $P$ 上の葉ラベル付き quartet は，$P$ の unordered な
+$2+2$ 分割と一対一に対応する．この三つの分割の集合を $\mathcal Q(P)$ と書く．
+ここで $P$ の元は triple \emph{type} ではなく，実際の個々の三重点である．
+
+\subsection{二平面と三次成分：\texorpdfstring{$(1,1,3)$}{(1,1,3)}}
+
+$A,B$ を平面，$C$ を三次成分とする．共通の三重点集合 $P=A\cap B\cap C$ は三点である．
+$C_{AB}$ は genus zero，三 punctures を持つので，$H_{AB}$ は一点である．
+$C_{AC},C_{BC}$ はそれぞれ genus one，三 punctures を持ち，
+$H_{AC},H_{BC}$ は三頂点三辺の connected graphs である．
+
+\begin{proposition}\label{q5:113}
+$(1,1,3)$ では三次成分の core は，どの marked Morse foliations を選んでも
+matroidal にならない．両方の平面 core を $K_4$ にすることはできる．
+その場合，三次成分の core link は triangular prism である．
+\end{proposition}
+
+\begin{proof}
+三次成分の link には $H_{AC}$ と $H_{BC}$ が induced blocks として入る．
+もし link が $K_{3,3}$ なら，genus one，三頂点の block を含むことになるが，
+これは補題~\ref{q5:block-criterion} の表にない．直接には，三頂点三辺の単純 graph は
+三角形であり，bipartite graph に入らない．$H_{AC}$ または $H_{BC}$ が非単純なら，
+やはり単純な $K_{3,3}$ の部分グラフにならない．
+
+一方，平面 $A$ の link が $K_4$ となるための必要十分条件は，
+$H_{AC}$ が三角形であり，各頂点に $P$ の葉が一つずつ付くことである．
+$H_{AB}$ の一点は三本の crossing edges によってその三角形の各頂点に結ばれる．
+平面 $B$ についても同様である．三角形に三つの葉を付けた Reeb graph は
+補題~\ref{q5:block-criterion} により actual elliptic curve 上で実現できる．
+両方をこのように取ると，三次成分の link は二つの三角形を三本の対応する
+$P$-labelled edges で結んだもの，すなわち triangular prism である．
+\end{proof}
+
+\subsection{一平面と二つの二次成分：\texorpdfstring{$(1,2,2)$}{(1,2,2)}}
+
+$A$ を平面，$B,C$ を二次成分とし，四つの共通三重点の集合を $P$ とする．
+$C_{AB}$ と $C_{AC}$ は四 punctures を持つ rational curves なので，
+その quartets を
+\[
+ \sigma_{AB},\sigma_{AC}\in\mathcal Q(P)
+\]
+で表す．$C_{BC}$ は四 punctures を持つ genus-one curve であり，
+$H_{BC}$ は四頂点四辺の connected graph である．
+
+\begin{proposition}\label{q5:122}
+$(1,2,2)$ では，全ての core を同時に matroidal にすることはできない．
+ただし，三つの core のうち任意に指定した二つを同時に matroidal にできる．
+
+より正確には，少なくとも一つの二次成分の core が $K_{3,3}$ なら，
+$H_{BC}$ は四角形であり，その各頂点に一つの葉が付く．
+四角形の bipartition が定める $P$ の $2+2$ 分割を $\tau$ とすると，
+\begin{align}
+ \Gamma_A\cong K_4&\quad\Longleftrightarrow\quad
+      \sigma_{AB}\ne\sigma_{AC},\label{q5:122-plane}\\
+ \Gamma_B\cong K_{3,3}&\quad\Longleftrightarrow\quad
+      \sigma_{AB}=\tau,\label{q5:122-B}\\
+ \Gamma_C\cong K_{3,3}&\quad\Longleftrightarrow\quad
+      \sigma_{AC}=\tau.\label{q5:122-C}
+\end{align}
+\end{proposition}
+
+\begin{proof}
+$K_{3,3}$ の induced block のうち四頂点で genus one を持つものは $K_{2,2}$ に限る．
+その各頂点の内部次数は二なので，残りの一つの half-edge が $P$ の葉となる．
+従って，quadric core が matroidal なら上記の四角形型に限られる．
+
+plane core では，$H_{AB}$ と $H_{AC}$ はそれぞれ一本の辺である．
+二つの端点間を結ぶ crossing edges の本数は，対応する二つの split parts の
+共通部分の大きさに等しい．二つの $2+2$ 分割が異なれば，全ての共通部分は一点である．
+従って四本の crossing edges は $K_{2,2}$ をなし，二本の内部辺を加えると $K_4$ になる．
+分割が同じなら二組の二重辺を生じる．これが \eqref{q5:122-plane} である．
+
+quadric $B$ の link は，四角形 $H_{BC}$ に，辺 $H_{AB}$ の両端を加えた graph である．
+$K_{3,3}$ となるためには，新しい二頂点がその bipartition の異なる側に属し，
+それぞれ四角形の反対側の二頂点に接続しなければならない．
+これは $\sigma_{AB}=\tau$ と同値で，そのとき得られる三価 bipartite graph は
+実際に $K_{3,3}$ である．$C$ についても同じ議論を適用する．
+
+両 quadric cores を $K_{3,3}$ にすると
+$\sigma_{AB}=\sigma_{AC}=\tau$ が強制され，plane core の条件と矛盾する．
+これで同時実現の不可能性が示された．両 quadrics だけを実現するには三つの分割を全て同じにし，
+plane と $B$ を実現するには $\sigma_{AB}=\tau\ne\sigma_{AC}$ とする．
+plane と $C$ の場合も同様である．四角形型と quartet 型は
+補題~\ref{q5:block-criterion} により実際の marked curves 上で実現できる．
+\end{proof}
+
+\subsection{三平面と一つの二次成分：\texorpdfstring{$(1,1,1,2)$}{(1,1,1,2)}}
+
+平面を $A,B,C$，二次成分を $Q$ とする．三平面の共通点を $q$ とし，
+\[
+ P_{AB}=A\cap B\cap Q,\quad
+ P_{AC}=A\cap C\cap Q,\quad
+ P_{BC}=B\cap C\cap Q
+\]
+と書く．これらは相異なる二点集合である．plane--plane curves 上の Reeb graphs は
+全て三葉の $Y$-graph である．plane--quadric curves 上の quartets は
+\[
+ \sigma_A\in\mathcal Q(P_{AB}\sqcup P_{AC}),\quad
+ \sigma_B\in\mathcal Q(P_{AB}\sqcup P_{BC}),\quad
+ \sigma_C\in\mathcal Q(P_{AC}\sqcup P_{BC})
+\]
+で定まる．
+
+各 quartet に一つずつ存在する，二つの二点集合をそのまま分離する split を
+\emph{grouped} と呼ぶ．他の二つは，各側が両方の二点集合から一点ずつを含むので
+\emph{crossed} と呼ぶ．
+
+\begin{proposition}[三つの quartet の parity]
+\label{q5:1112}
+各 plane core が $K_4$ となるための必要十分条件は，その plane に対応する
+quartet が crossed であることである．$Q$ の core が $K_{3,3}$ となるための
+必要十分条件は，三つの quartets が全て crossed で，以下の parity が odd となることである．
+
+$P_{XY}=\{p_{XY}^0,p_{XY}^1\}$ と各二点集合を列挙する．
+crossed splits を，$s\in\mathbb F_2$ に対して
+\begin{align*}
+ \sigma_A &: \{p_{AB}^s,p_{AC}^{s+\epsilon_A}\},\\
+ \sigma_B &: \{p_{AB}^s,p_{BC}^{s+\epsilon_B}\},\\
+ \sigma_C &: \{p_{AC}^s,p_{BC}^{s+\epsilon_C}\}
+\end{align*}
+という二つの parts で表す．このとき必要十分条件は
+\begin{equation}\label{q5:odd-parity}
+ \epsilon_A+\epsilon_B+\epsilon_C=1\quad\text{in }\mathbb F_2
+\end{equation}
+である．全て crossed で parity が even の場合，$Q$ の link は triangular prism となる．
+\end{proposition}
+
+\begin{proof}
+plane $A$ の link は，$H_{AB}$，$H_{AC}$ の二つの一点 blocks と，
+quartet の内部辺 $H_{AQ}$ からなる．前二者は $q$ による一本の辺で結ばれる．
+$P_{AB}$ と $P_{AC}$ は，それぞれ前二者を quartet の端点へ結ぶ二本の辺である．
+split が crossed なら，これらは四つの可能な端点対を一回ずつ結ぶので $K_4$ を得る．
+grouped なら二重辺を生じる．$B,C$ についても同様である．
+
+まず quadric core が $K_{3,3}$ なら，三つの quartets は全て crossed でなければならない．
+例えば $\sigma_A$ が grouped とする．$P_{AB}$ の二本の crossing edges は
+$H_{AQ}$ の同じ端点から出る．$\sigma_B$ も grouped なら，その二辺は
+$H_{BQ}$ の同じ端点に入り，二重辺となる．$\sigma_B$ が crossed なら，
+$H_{BQ}$ の異なる端点に入り，その内部辺と合わせて三角形を作る．
+いずれも単純 bipartite graph $K_{3,3}$ に反する．
+
+そこで全て crossed とする．$H_{AQ},H_{BQ},H_{CQ}$ の端点を，
+上の split parts に対応して $A_s,B_s,C_s$ と書く．
+三本の内部辺は
+\[
+ A_0A_1,\qquad B_0B_1,\qquad C_0C_1
+\]
+であり，六本の crossing edges は
+\begin{equation}\label{q5:voltage-edges}
+ A_sB_s,\qquad A_sC_{s+\epsilon_A},\qquad
+ B_sC_{s+\epsilon_B+\epsilon_C}
+ \qquad(s\in\mathbb F_2)
+\end{equation}
+である．従って crossing subgraph は三角形の二重被覆をなし，一周したときの
+sheet change は $\epsilon_A+\epsilon_B+\epsilon_C$ に等しい．
+
+parity が even なら被覆は二つの三角形の disjoint union である．
+各内部辺はその二つの対応する頂点を結ぶので，graph は triangular prism である．
+parity が odd なら被覆は一本の六角形となる．その deck involution は
+六角形の対頂点を交換し，三本の内部辺はその対頂点を結ぶ．
+得られる graph は $K_{3,3}$ である．
+\end{proof}
+
+\begin{corollary}[四つの標識付き系と完全な quartet 数え上げ]
+\label{q5:four-systems}
+$(1,1,1,2)$ における $3^3=27$ 個の quartet systems のうち，
+matroidal cores の個数が $4,3,2,1,0$ となるものは，それぞれ
+\[
+ 4,\quad4,\quad12,\quad6,\quad1
+\]
+個である．全 core を実現する四つは三つの二点集合内のラベル交換に関して一つの軌道をなす．
+\end{corollary}
+
+\begin{proof}
+全て crossed の八個のうち，odd parity の四個が全 core を実現し，
+even parity の四個は三つの plane cores だけを実現する．
+少なくとも一つが grouped なら quadric core は matroidal でないので，
+matroidal cores の個数は crossed quartets の個数に一致する．
+grouped が一つ，二つ，三つの系はそれぞれ
+$\binom31 2^2=12$，$\binom32 2=6$，$1$ 個である．
+
+$P_{AB}$ 内のラベルを交換すると $\epsilon_A,\epsilon_B$ が同時に変わり，
+$P_{AC}$ なら $\epsilon_A,\epsilon_C$，$P_{BC}$ なら
+$\epsilon_B,\epsilon_C$ が同時に変わる．従って parity は列挙の選び方に依存しない．
+これらの二 bit の反転は，odd parity を持つ四つの vectors に推移的に作用する．
+\end{proof}
+
+例えば $(\epsilon_A,\epsilon_B,\epsilon_C)=(1,0,0)$ とすれば，
+crossing subgraph の六角形は
+\[
+ A_0-B_0-C_0-A_1-B_1-C_1-A_0
+\]
+であり，残る三辺が対頂点を結ぶ．この記述は，実際の七個の三重点
+$q,P_{AB},P_{AC},P_{BC}$ のラベルを全て保持している．
+
+\subsection{Actual marked foliations と主定理の結論}
+
+以上の存在部分で使った内部 graphs は，一点，辺，三角形，四角形だけである．
+補題~\ref{q5:block-criterion} の構成は，それぞれを指定された punctures を持つ
+実際の rational または genus-one curve 上で実現する．
+特に，genus-one graph を rational pants tree に置き換えたり，
+同じ triple type の複数の点を一つにまとめたりしていない．
+
+各 $C_{ij}$ 上でこのような foliation を一度だけ選び，両側の成分に同じものを指定する．
+各 puncture の十分小さい固定円板では radial foliation とし，
+crossing の product germ を共通に選ぶ．その後，定理~\ref{snc:main} の相対構成と
+定理~\ref{part:global} の接着を適用する．
+これらの構成は指定した曲線上の foliation を保持するので，
+ここで決定した graph systems は実際の fibrations の core links として現れる．
+
+なお，この実現は指定した抽象型を持つ marked foliation の\emph{存在}を与える．
+同じ leaf-labelled Reeb graph を持つ任意の二つの foliations が
+標識を固定して isotopic，あるいは symplectically conjugate であるとは主張しない．
+後者には measured Reeb graph の情報も必要である
+\cite{DMT,IKM}．また，Bergman fan の abstract cone と同相であることから，
+action-compatible integral affine chart や，所定の symplectic filling との同一性は従わない．
+
+命題~\ref{q5:113}，\ref{q5:122}，\ref{q5:1112} と
+系~\ref{q5:four-systems} が三つの mixed partitions を尽くす．
+残る全平面 partition では，どの $C_{ij}$ も三 punctures を持つ rational curve で，
+その内部 graph は一点である．各 core では四つの一点 blocks が全て一回ずつ結ばれ，
+$K_4$ を得る．これで定理~\ref{q5:classification} が従う．
+

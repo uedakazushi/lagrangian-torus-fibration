@@ -1,0 +1,1164 @@
+{
+  "version": "v14",
+  "passed": true,
+  "scope": "No high-support triangle has two degree-two vertices in the fixed quintic standard model, assuming positive integer charts, integer marked clutching and nonnegative nodes. No D opposition or denominator cutoff is used.",
+  "polynomial_identity_count": 6,
+  "polynomial_identities": [
+    "reverse positive zero-side bound",
+    "reverse negative zero-side bound",
+    "negative branch r3 S2 rearrangement",
+    "negative branch r4 S3 rearrangement",
+    "negative branch r4 S2 divisor equation",
+    "terminal cleared high-high pair product"
+  ],
+  "reverse_bound": 4,
+  "negative_branch_cases": [
+    {
+      "r": 3,
+      "S": 2,
+      "T": 2,
+      "E": "-1"
+    },
+    {
+      "r": 4,
+      "S": 2,
+      "T": 2,
+      "E": "1/3"
+    },
+    {
+      "r": 4,
+      "S": 3,
+      "T": 3,
+      "E": "-7/2"
+    }
+  ],
+  "shared_B_positive_cases": [],
+  "shared_B_negative_cases": [
+    [
+      3,
+      2,
+      2
+    ]
+  ],
+  "small_divisor_trials": [
+    {
+      "ell_plus_one": 1,
+      "ell": 0,
+      "u": 1,
+      "accepted": false
+    },
+    {
+      "ell_plus_one": 2,
+      "ell": 1,
+      "u": 2,
+      "accepted": true
+    }
+  ],
+  "unique_negative_branch_model": {
+    "a": 9,
+    "b": 11,
+    "r": 4,
+    "s": 4,
+    "z": 5,
+    "S": 2,
+    "T": 2,
+    "d": -1,
+    "q": [
+      9,
+      11,
+      1,
+      1
+    ],
+    "p": [
+      [
+        0,
+        -7,
+        2,
+        -4
+      ],
+      [
+        -14,
+        0,
+        -2,
+        5
+      ],
+      [
+        4,
+        -5,
+        0,
+        0
+      ],
+      [
+        -2,
+        2,
+        -1,
+        0
+      ]
+    ],
+    "D": [
+      3,
+      -1,
+      0,
+      -2
+    ],
+    "weights": [
+      "9",
+      "11",
+      "17/8",
+      "21/4"
+    ]
+  },
+  "terminal_divisor_trials": [
+    {
+      "z": 1,
+      "T": "42/5",
+      "integral": false
+    },
+    {
+      "z": 3,
+      "T": "36/5",
+      "integral": false
+    },
+    {
+      "z": 9,
+      "T": "34/5",
+      "integral": false
+    }
+  ],
+  "all_labelled_K5_graphs": 1024,
+  "all_graphs_containing_motif": 185,
+  "previous_labelled_candidates": 686,
+  "remaining_labelled_candidates_after_this_theorem": 521,
+  "removed_previous_shapes": [
+    {
+      "vertices": 4,
+      "edges_count": 4,
+      "degree_sequence": [
+        3,
+        2,
+        2,
+        1
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "cycle_rank": 1,
+      "leaf_count": 1,
+      "leaf_edges": [
+        [
+          3,
+          0
+        ]
+      ],
+      "exact_transfer_paths": [],
+      "labelled_K5_count": 60,
+      "automorphism_order": 2,
+      "shape_id": "G4_1",
+      "degree_two_triangle_witnesses": [
+        [
+          1,
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "vertices": 5,
+      "edges_count": 5,
+      "degree_sequence": [
+        3,
+        2,
+        2,
+        2,
+        1
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "cycle_rank": 1,
+      "leaf_count": 1,
+      "leaf_edges": [
+        [
+          4,
+          3
+        ]
+      ],
+      "exact_transfer_paths": [
+        [
+          4,
+          3,
+          0
+        ]
+      ],
+      "labelled_K5_count": 60,
+      "automorphism_order": 2,
+      "shape_id": "G5_1",
+      "degree_two_triangle_witnesses": [
+        [
+          1,
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "vertices": 5,
+      "edges_count": 5,
+      "degree_sequence": [
+        4,
+        2,
+        2,
+        1,
+        1
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "cycle_rank": 1,
+      "leaf_count": 2,
+      "leaf_edges": [
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "exact_transfer_paths": [],
+      "labelled_K5_count": 30,
+      "automorphism_order": 4,
+      "shape_id": "G5_4",
+      "degree_two_triangle_witnesses": [
+        [
+          1,
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "vertices": 5,
+      "edges_count": 6,
+      "degree_sequence": [
+        4,
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "cycle_rank": 2,
+      "leaf_count": 0,
+      "leaf_edges": [],
+      "exact_transfer_paths": [],
+      "labelled_K5_count": 15,
+      "automorphism_order": 8,
+      "shape_id": "G5_8",
+      "degree_two_triangle_witnesses": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          3,
+          4,
+          0
+        ]
+      ]
+    }
+  ],
+  "remaining_unlabelled_candidates_after_this_theorem": 16,
+  "remaining_previous_shapes": [
+    {
+      "vertices": 4,
+      "edges_count": 5,
+      "degree_sequence": [
+        3,
+        3,
+        2,
+        2
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "cycle_rank": 2,
+      "leaf_count": 0,
+      "leaf_edges": [],
+      "exact_transfer_paths": [],
+      "labelled_K5_count": 30,
+      "automorphism_order": 4,
+      "shape_id": "G4_2",
+      "degree_two_triangle_witnesses": []
+    },
+    {
+      "vertices": 4,
+      "edges_count": 6,
+      "degree_sequence": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "cycle_rank": 3,
+      "leaf_count": 0,
+      "leaf_edges": [],
+      "exact_transfer_paths": [],
+      "labelled_K5_count": 5,
+      "automorphism_order": 24,
+      "shape_id": "G4_3",
+      "degree_two_triangle_witnesses": []
+    },
+    {
+      "vertices": 5,
+      "edges_count": 5,
+      "degree_sequence": [
+        3,
+        2,
+        2,
+        2,
+        1
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "cycle_rank": 1,
+      "leaf_count": 1,
+      "leaf_edges": [
+        [
+          3,
+          0
+        ]
+      ],
+      "exact_transfer_paths": [],
+      "labelled_K5_count": 60,
+      "automorphism_order": 2,
+      "shape_id": "G5_2",
+      "degree_two_triangle_witnesses": []
+    },
+    {
+      "vertices": 5,
+      "edges_count": 5,
+      "degree_sequence": [
+        3,
+        3,
+        2,
+        1,
+        1
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "cycle_rank": 1,
+      "leaf_count": 2,
+      "leaf_edges": [
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "exact_transfer_paths": [],
+      "labelled_K5_count": 60,
+      "automorphism_order": 2,
+      "shape_id": "G5_3",
+      "degree_two_triangle_witnesses": []
+    },
+    {
+      "vertices": 5,
+      "edges_count": 6,
+      "degree_sequence": [
+        3,
+        3,
+        2,
+        2,
+        2
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "cycle_rank": 2,
+      "leaf_count": 0,
+      "leaf_edges": [],
+      "exact_transfer_paths": [],
+      "labelled_K5_count": 60,
+      "automorphism_order": 2,
+      "shape_id": "G5_5",
+      "degree_two_triangle_witnesses": []
+    },
+    {
+      "vertices": 5,
+      "edges_count": 6,
+      "degree_sequence": [
+        3,
+        3,
+        2,
+        2,
+        2
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "cycle_rank": 2,
+      "leaf_count": 0,
+      "leaf_edges": [],
+      "exact_transfer_paths": [],
+      "labelled_K5_count": 10,
+      "automorphism_order": 12,
+      "shape_id": "G5_6",
+      "degree_two_triangle_witnesses": []
+    },
+    {
+      "vertices": 5,
+      "edges_count": 6,
+      "degree_sequence": [
+        3,
+        3,
+        3,
+        2,
+        1
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "cycle_rank": 2,
+      "leaf_count": 1,
+      "leaf_edges": [
+        [
+          4,
+          2
+        ]
+      ],
+      "exact_transfer_paths": [],
+      "labelled_K5_count": 60,
+      "automorphism_order": 2,
+      "shape_id": "G5_7",
+      "degree_two_triangle_witnesses": []
+    },
+    {
+      "vertices": 5,
+      "edges_count": 6,
+      "degree_sequence": [
+        4,
+        3,
+        2,
+        2,
+        1
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "cycle_rank": 2,
+      "leaf_count": 1,
+      "leaf_edges": [
+        [
+          4,
+          0
+        ]
+      ],
+      "exact_transfer_paths": [],
+      "labelled_K5_count": 60,
+      "automorphism_order": 2,
+      "shape_id": "G5_9",
+      "degree_two_triangle_witnesses": []
+    },
+    {
+      "vertices": 5,
+      "edges_count": 7,
+      "degree_sequence": [
+        3,
+        3,
+        3,
+        3,
+        2
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "cycle_rank": 3,
+      "leaf_count": 0,
+      "leaf_edges": [],
+      "exact_transfer_paths": [],
+      "labelled_K5_count": 30,
+      "automorphism_order": 4,
+      "shape_id": "G5_10",
+      "degree_two_triangle_witnesses": []
+    },
+    {
+      "vertices": 5,
+      "edges_count": 7,
+      "degree_sequence": [
+        4,
+        3,
+        3,
+        2,
+        2
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "cycle_rank": 3,
+      "leaf_count": 0,
+      "leaf_edges": [],
+      "exact_transfer_paths": [],
+      "labelled_K5_count": 60,
+      "automorphism_order": 2,
+      "shape_id": "G5_11",
+      "degree_two_triangle_witnesses": []
+    },
+    {
+      "vertices": 5,
+      "edges_count": 7,
+      "degree_sequence": [
+        4,
+        3,
+        3,
+        3,
+        1
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "cycle_rank": 3,
+      "leaf_count": 1,
+      "leaf_edges": [
+        [
+          4,
+          0
+        ]
+      ],
+      "exact_transfer_paths": [],
+      "labelled_K5_count": 20,
+      "automorphism_order": 6,
+      "shape_id": "G5_12",
+      "degree_two_triangle_witnesses": []
+    },
+    {
+      "vertices": 5,
+      "edges_count": 7,
+      "degree_sequence": [
+        4,
+        4,
+        2,
+        2,
+        2
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "cycle_rank": 3,
+      "leaf_count": 0,
+      "leaf_edges": [],
+      "exact_transfer_paths": [],
+      "labelled_K5_count": 10,
+      "automorphism_order": 12,
+      "shape_id": "G5_13",
+      "degree_two_triangle_witnesses": []
+    },
+    {
+      "vertices": 5,
+      "edges_count": 8,
+      "degree_sequence": [
+        4,
+        3,
+        3,
+        3,
+        3
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "cycle_rank": 4,
+      "leaf_count": 0,
+      "leaf_edges": [],
+      "exact_transfer_paths": [],
+      "labelled_K5_count": 15,
+      "automorphism_order": 8,
+      "shape_id": "G5_14",
+      "degree_two_triangle_witnesses": []
+    },
+    {
+      "vertices": 5,
+      "edges_count": 8,
+      "degree_sequence": [
+        4,
+        4,
+        3,
+        3,
+        2
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "cycle_rank": 4,
+      "leaf_count": 0,
+      "leaf_edges": [],
+      "exact_transfer_paths": [],
+      "labelled_K5_count": 30,
+      "automorphism_order": 4,
+      "shape_id": "G5_15",
+      "degree_two_triangle_witnesses": []
+    },
+    {
+      "vertices": 5,
+      "edges_count": 9,
+      "degree_sequence": [
+        4,
+        4,
+        4,
+        3,
+        3
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "cycle_rank": 5,
+      "leaf_count": 0,
+      "leaf_edges": [],
+      "exact_transfer_paths": [],
+      "labelled_K5_count": 10,
+      "automorphism_order": 12,
+      "shape_id": "G5_16",
+      "degree_two_triangle_witnesses": []
+    },
+    {
+      "vertices": 5,
+      "edges_count": 10,
+      "degree_sequence": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "cycle_rank": 6,
+      "leaf_count": 0,
+      "leaf_edges": [],
+      "exact_transfer_paths": [],
+      "labelled_K5_count": 1,
+      "automorphism_order": 120,
+      "shape_id": "G5_17",
+      "degree_two_triangle_witnesses": []
+    }
+  ],
+  "limitations": [
+    "The finite checks supplement the written general proof.",
+    "The graph list records necessary candidates only, not local integer or global geometric existence.",
+    "Other v14 theorems may further reduce this graph list."
+  ],
+  "source_sha256": "b0f42ef44ecff7418f0f74aa9a469e2893d2d0a34dff51cea0a6f209b6807db3",
+  "script_sha256": "92662851cdf29a9b0b9699331f36cecf989c19dfb36cdfb5042122d8419ca06a",
+  "dependency": {
+    "file": "verify_fixed_denominator_partners_v12.py",
+    "sha256": "20c2d4ac4a242ca89a61e7c973b8e673b5574eee985ecdd0e6bfd8240644ccae"
+  },
+  "previous_graph_certificate": {
+    "file": "forest_obstruction_verification_v13.json",
+    "sha256": "fdb7d87023dd840a5febbb61dec3c46b9a64a359811bc1fd605204c244418871"
+  }
+}

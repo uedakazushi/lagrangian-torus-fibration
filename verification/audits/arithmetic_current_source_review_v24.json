@@ -1,0 +1,187 @@
+{
+  "reviewer": "/root/g514_v24",
+  "reviewed_at_utc": "2026-10-27T20:44:08.703477+00:00",
+  "passed": true,
+  "issues": [],
+  "entry": "paper_arithmetic/general_type_surface_quintic_arithmetic_paper_ja_v24.tex",
+  "method": "Final active TeX input closure, labels/references/citations and status statements checked across all distributable active sources. Detailed mathematical reading of the current abstract/Introduction, setup, four-ray criterion, matching/sign refactor, axis/degenerate, proportional, and unit-triangle modules; comparison against the independently reviewed new theorem modules. Inherited proofs are not claimed to have been independently reproved in this editorial QA.",
+  "active_source_count": 74,
+  "static_checks": {
+    "label_count": 682,
+    "reference_keys": 412,
+    "duplicate_labels": {},
+    "missing_refs": {},
+    "bibliography_items": 17,
+    "cited_keys": 17,
+    "missing_cites": {},
+    "intro_cite_commands": 18,
+    "intro_cite_commands_equal_v23": true
+  },
+  "input_order_checks": [
+    {
+      "before": "paper/four_ray_positive_graph_v24.tex",
+      "after": "paper/three_high_sign_reduction_v24.tex",
+      "passed": true
+    },
+    {
+      "before": "paper/three_high_sign_reduction_v24.tex",
+      "after": "paper/three_high_matching_v24.tex",
+      "passed": true
+    },
+    {
+      "before": "paper/high_d_asymmetry_lattice_obstruction_v23.tex",
+      "after": "paper/high_d_axis_and_degenerate_obstruction_v24.tex",
+      "passed": true
+    },
+    {
+      "before": "paper/high_d_axis_and_degenerate_obstruction_v24.tex",
+      "after": "paper/high_d_proportional_reduction_v24.tex",
+      "passed": true
+    },
+    {
+      "before": "paper/outer_core_linear_transfer_v23.tex",
+      "after": "paper/unit_three_high_triangle_reduction_v24.tex",
+      "passed": true
+    }
+  ],
+  "old_matching_v18_inactive": true,
+  "removed_triangle_labels_have_no_active_references": true,
+  "mathematical_scope_checks": [
+    {
+      "item": "Four-ray criterion",
+      "passed": true,
+      "finding": "Positive integer denominators and integer entries, negative row sums, and every pair product strictly positive are explicit. Equivalence is positivity iff no isolated vertex iff 2K2 or P4. Four-high P4 existence is explicitly left open; no three-high matching result is applied to four-high data."
+    },
+    {
+      "item": "Three-high matching refactor",
+      "passed": true,
+      "finding": "The two low-ray integer path exclusions are retained, the positive triangle obstruction uses fg24:no-isolated with all its assumptions satisfied, and the old row/pair-only triangle counterexample remains. Separate review is matching_refactor_independent_review_v24.json."
+    },
+    {
+      "item": "Unit edge node and denominator constraints",
+      "passed": true,
+      "finding": "Both endpoints are positive three-high cores and the global arithmetic definition supplies node nonnegativity and opposite low-D cancellation. The three directional node counts are {5,0,0} or {4,1,0}; node 5 gives denominator pairs (3,7),(5,5),(7,3), node 4 gives minimum 3. The abstract and Introduction correctly say at least one adjacent denominator is 3 or 5, rather than requiring 3,5,7 simultaneously. At least one external pair is positive; G5_14 node 5 lies at an endpoint of the other unit edge."
+    },
+    {
+      "item": "Asymmetry one",
+      "passed": true,
+      "finding": "Delta -1 is inherited and delta +1 is now fully excluded, including x=0 and the z=1 boundary. The original pair residual is retained; the difference equations alone are not asserted sufficient."
+    },
+    {
+      "item": "Proportional sector",
+      "passed": true,
+      "finding": "Delta=0 is reduced to x=y=0, z>=1, s<t and 0<=n<=z. The finite count at most 4(z+1) is conditional on fixed s,z and precedes original-equation validation. The quartic leading coefficient n^2-zn-1 is strictly negative in this range. The divisor is b+1 and C_n>0; both zero-remainder exceptions are handled."
+    },
+    {
+      "item": "Degenerate residual coefficient",
+      "passed": true,
+      "finding": "a=0 implies s>=3 and 2<=b<=1+s^2(s-1)^2. Fixed s yields finite reconstruction of the remaining integers. The x=0,R0=1 branch is excluded, and y is recovered from a genuine linear residual. No general a=0 nonexistence or uniform bound on s is claimed."
+    },
+    {
+      "item": "Global frontier and geometric scope",
+      "passed": true,
+      "finding": "The frontier remains exactly three necessary support types G5_14,G5_16,G5_17 and 26 labels. No existence claim is inferred from necessary support types or finite reconstruction. Remaining arithmetic gluing, arbitrary denominator rigidity and geometric realization are open. The fixed standard marked quintic model is distinguished from arbitrary Lagrangian torus fibrations."
+    }
+  ],
+  "inherited_scope_observations": [
+    {
+      "file": "paper/high_d_asymmetry_lattice_obstruction_v23.tex",
+      "finding": "The final subsection explicitly limits the unexcluded delta=1,x=0 and proportional candidates to the result of that section (本節で全域排除したとはしない). The immediately following v24 sections and current Introduction add the complete delta=1 exclusion and proportional zero-axis reduction. This is a section-local limitation, not a current global open-problem claim. Parent confirmed retention to preserve the reviewed older source."
+    },
+    {
+      "file": "paper/quintic_support_frontier_v23.tex",
+      "finding": "Five candidate types appear only as an intermediate proof reduction before book and G5_15 are excluded; the final corollary is three types and 26 labels."
+    },
+    {
+      "file": "paper/high_d_eisenstein_reconstruction_v21.tex",
+      "finding": "The absence of a uniform bound on the five original inputs and the general nonexistence question remain true after fixed-input v24 reductions."
+    },
+    {
+      "file": "paper/three_high_sign_reduction_v24.tex",
+      "finding": "The beta<=-2 general simultaneous-nonnegative problem remains open; v24 only removes sectors and provides conditional finite reconstruction."
+    }
+  ],
+  "bibliography_scope": "All 18 Introduction citation commands, in their original order, are preserved from v23. All 17 active bibliography keys resolve. This QA does not replace the separate primary-literature review.",
+  "source_sha256": {
+    "paper_arithmetic/general_type_surface_quintic_arithmetic_paper_ja_v24.tex": "67b29e3ce62df02809eec7ab6fa968a5870bf073c825ad9296e66d55d0476d88",
+    "common.tex": "088345ae4134ff8a792c8c62932c038b7c5c1fb66732efddee5c480dd558d6e3",
+    "paper_arithmetic/arithmetic_introduction_v24.tex": "4ef2333f417d6dbfb43ae69cf91cd568677d9cfe3a8611fad64f7ee59e3ea1c6",
+    "paper_arithmetic/arithmetic_setup_v17.tex": "644af7eeaa78602e8082acf95677998c431f1c43660e7cf3812158d0d74d6175",
+    "paper/quintic_local_high_q.tex": "db7ae0d43abe66ff828652fbb6fc1707f69ac91d85ca189e5c5a9a73c39275e0",
+    "paper/quintic_local_structure.tex": "e6ac5af1336f6378e9a16c0ad96c4ebca177b9b0cdc6bd963c45bb6ec11259c9",
+    "paper/quintic_low_degree_support_v11.tex": "9bdc19d839e82ae2289d12bf3591b992fb22a9520c5d6b4f7134ca1745c1a08b",
+    "paper/quintic_two_high_defect_v12.tex": "c4b5ef1b979af4da27760a968ad0da215ea8bd8f0b66d80e0b4a1c2b97e76951",
+    "paper/quintic_path_support_v13.tex": "b40d46e6cf90cbdecd279972d96c01fb05fbb82b6b1fd05998c04cd30e871c5b",
+    "paper/path_component_escalation_v12.tex": "fc258ddcc1e38c72c7b5db9ae1da1dadba2e76f49bcdcdfe7e5fc08770e245c4",
+    "paper/quintic_minimal_low_entry_v12.tex": "dfa9446f3e3b9254d64322123a0e11c574da8421ac60a5ae70d5cbe935cd4c8b",
+    "paper/quintic_fixed_denominator_partners_v12.tex": "eff0568f54ebaa2e649f5837e34291f7d537c8ce42138254fc41c37c2de0aece",
+    "paper/small_denominator_propagation_v13.tex": "84ab44436a43c1261996dab4d1fcf35829c0160fb5a415a9e44ee0d8906931a1",
+    "paper/quintic_three_high_singular_v18.tex": "749759c7755c4cb97567115cccb01e920d77a56428d6f55c8d0aebac11e89651",
+    "paper/four_ray_positive_graph_v24.tex": "6c04d5f300f48ac0880cc0e1263148f95173a24d9fe44c744a69f81d52bac682",
+    "paper/three_high_sign_reduction_v24.tex": "4d84d24891852a3cb0d58b86e4ee66b7d6b4390ac3a44e1d997db5d8941f35d5",
+    "paper/three_high_matching_v24.tex": "02dd5f880bcda5b3cfe70195ce618d7cff4f3b50b6e1f567d4600dfff14f6631",
+    "paper/high_d_nonsingular_reduction_v20.tex": "4e266533bba11e67ff916e98878deb6caedd6ce16699743225c161674ac7ec88",
+    "paper/high_d_eisenstein_reconstruction_v21.tex": "ea0041d1b78efaabc87e475908c6c1746920b0fafa778e7521c5063bdff05209",
+    "paper/high_d_fixed_low_row_finiteness_v22.tex": "93f03f7462b3de63f88a708196bb0c56e473c0a7876f017fbfcc5353122c0949",
+    "paper/high_d_asymmetry_lattice_obstruction_v23.tex": "c00463573011530bdd4ad6bd7c6baed77a6273f82bd3e57aba0b4dc7b3ca3e8a",
+    "paper/high_d_axis_and_degenerate_obstruction_v24.tex": "0dc5d9a8647e341d1579a5a6139be7977a2490a2eec51df06d4e57c6eca97bdc",
+    "paper/high_d_proportional_reduction_v24.tex": "769f97916c5c0ca7a3227c798dbc92cd97920ac574f6aecf97f1eaf4e3155d66",
+    "paper/three_high_fixed_low_completion_v17.tex": "ba733676386c7c0ace7cc873b79323cd460a04591455b0c951c59af2b1b3433a",
+    "paper/cycle_node_sign_conditions_v13.tex": "e1519f0d7a96a72277111a709e6906d15e1215c295beefa65b98611709f2354d",
+    "paper/c4_equal_pairing_obstruction_v13.tex": "bd5273737d6ac02e37ec7bad33550a9f3662a4f369332d6474669b734ed68ff0",
+    "paper/quintic_cycle_completion_v13.tex": "fd42baf6bf948f070191fb21482be6bc1a42d7ad2b14fd15590848dfb7521e50",
+    "paper/quintic_c5_obstruction_v13.tex": "b5c90a05d6bdfe85467b6d5a0db2938f0ef5de68a81de1e4399d2b0e1c0be78a",
+    "paper/degree_two_triangle_obstruction_v14.tex": "b0f42ef44ecff7418f0f74aa9a469e2893d2d0a34dff51cea0a6f209b6807db3",
+    "paper/c4_pendant_obstruction_v14.tex": "cac4a5e1bfe66107f973f33850def05d2bdda58e32b190df88d5cfd0a0521736",
+    "paper/k23_obstruction_v15.tex": "af6f818c4d051de96f19077c9c0e563dcf9dee7969c7a6f28d3817a7376a5e41",
+    "paper/diamond_obstruction_v20.tex": "91785560f4be6da28c9dbfce6962b171633edd06179bca7fee207d8d6eb54b25",
+    "paper/one_high_and_crossed_pairing_v16.tex": "0c66778b35ea2f90cb43c3eaacbb6abcb4e114d835b89ffa1495605bb72719fa",
+    "paper/two_leaves_negative_branch_v16.tex": "a5f28e074080f128eb8b35d86428d1ede0c8a79066c1707cabed4af508ecf004",
+    "paper/common_low_node_bound_v16.tex": "78114487ce9d9f9259c0f6dbcb90e945e89693f825bf0eddef4260caf4d71029",
+    "paper/two_leaf_unit_finiteness_v16.tex": "c1d0d6b45cd8fe189285ea3f736fe668e4a3e8d9b4b472199ce1e7a146a54e92",
+    "paper/r1_exceptional_leaf_v16.tex": "1a4eb11675aa74bd0c1c04494d7816a605561f75480781e95e1f06bedb42296e",
+    "paper/two_leaf_global_obstruction_v16.tex": "22ea8b0ac2f7f983224370046b0d40d24bf60fc7dc54b7cfb9e9fe4f453e8ea4",
+    "paper/k4_low_hub_reduction_v17.tex": "1e7d12549d908c551bfdb8ce8a43689ae827a3211393f82b3436ecef68fc666b",
+    "paper/k4_two_exception_obstruction_v17.tex": "38655b8a6bc7c068e88e953531fe33f25307c84f0dfa3daf28dca6a874620327",
+    "paper/k4_four_exception_obstruction_v17.tex": "7321cf3bcfed0f303bfeaf918aaf4470123456804463d7726679d92e8efe292c",
+    "paper/k4_global_obstruction_v17.tex": "9a64d7f7e3c330961abb136217f10dddc80dcadbe33443ab7fde54e0407b0da2",
+    "paper/house_support_obstruction_v18.tex": "33f9cbc2670f52825a80d219d13d3d766233dea80ea4e3200323d9dd46fd96f2",
+    "paper/g5_10_obstruction_v18.tex": "06dcf4f9fbb01b37e21533feb7d589ad60375047da0e3377a3bae41cd53b518e",
+    "paper/k4_leaf_obstruction_v18.tex": "4fd196421b7e0612b04fe647e8d396eb7691a06774a08bac9b349ff40234f323",
+    "paper/g5_7_obstruction_v19.tex": "c9b8e2aeb6e40cfd50ffebb14e633d7b6f81ab26ef36131fd9ac0b97a27ee83b",
+    "paper/g5_9_obstruction_v19.tex": "df2974f6daa95aeb4f0d4d937825633d802feea3ec727d6116241e3cc2e47448",
+    "paper/g5_11_obstruction_v20.tex": "d67a265a50746b3b4084752f698e557cadef8b2eef26ad36499efe266c643f96",
+    "paper/g5_15_reduction_v21.tex": "0b9be523ca08544eafa35ba4ce8e660feba573297808fbd8c04c31df03449fef",
+    "paper/book_low_triangle_finiteness_current_v22.tex": "7391374f2ad6aa6387cbbaaf6c1e69ad26e3bf71a94b3a834b34f3e43ed5729f",
+    "paper/book_all_negative_obstruction_current_v22.tex": "05a077c2247f48b038e53c7b67f2ff8a4c959df59a155c81c7a8e7e73adf251b",
+    "paper/book_low_D_cycle_v20.tex": "f87b5adf0e4dcde92f580b3e922eb3ce641c843dd962857f8254ae0ff82ee98f",
+    "paper/positive_small_L_sector_current_v22.tex": "bef46c3d760e2cd7e1c8f2350a338abe97f7b537bf2348f2fd234fce7572c14c",
+    "paper/book_two_negative_obstruction_v21.tex": "94915dd80b0f9dc394a24b18a0e5e24583d5e2eb7ddfaf1dfd3fd467af4d45b3",
+    "paper/book_one_negative_sector_reduction_v21.tex": "8a982378a1959f0affbeb38e89f0345dd4c8c821017160d9d0719f8bc245b24d",
+    "paper/book_complete_obstruction_v22.tex": "f8dce7a0ee6732a628ab8cf9182d49f362eae6113e988606ee334e801f12ed4c",
+    "paper/two_high_rigid_scale_families_v22.tex": "df3e304136eb782c02901c10d58d0613b6900e1e99469cacd5f86dd58bce0d23",
+    "paper/outer_core_linear_transfer_v23.tex": "df3cd4f3d7016cd2f0aa6f17f1a9f10d42525afc2b6758a5032f47a8423fa244",
+    "paper/unit_three_high_triangle_reduction_v24.tex": "0665d10c71fe1e52b2ba2339ae57399cc10bfe0f550351e58f83da86cf947a3b",
+    "paper/g5_15_ordinary_outer_pair_obstruction_v23.tex": "aecd0ec96a5bda535f5c46f450797d10f3c75ef5894b53c7a4df2865295e54b6",
+    "paper/g5_15_negative_exception_obstruction_v23.tex": "7fdceb509ca0e07b7919c4f86533d2ea96a7bab8be3490fadb4a887eb35d7eef",
+    "paper/leaf_transfer_v13.tex": "1b32608df3ce9b857f55196c5629c95a6831ef4ec7e1a7a0db905e57a49fbb7f",
+    "paper/forest_obstruction_v13.tex": "142e8bd27bc8bbc154407b64eca9e8bab1cd3e61acbad91f226de8ab67d81082",
+    "paper/quintic_support_frontier_v23.tex": "4464ca16c4542431b7740c0e68122f80d0bf4da965aaeeb19311343f8c395f51",
+    "paper/quintic_uniform_two_high_v11.tex": "10adeede6916afb69c47fca7aff96b106e3c894369874a6960e9371ad19f5e7f",
+    "paper/quintic_equal_two_classification_v11.tex": "5c35ed79bd4206cecfcc0d45be3d6ab15fdb4a58332f9d923b2fa1482b697b2b",
+    "paper/quintic_uniform_denominators.tex": "e0093b48c85fa9c02de08e3b1e22a15bab48e2b2e8610ef79be666d6e9519f8c",
+    "paper/quintic_monochromatic_support_v11.tex": "cefbde021161cff47eedd601736eac1fb667ca9647b573b301a3cf81da342ae7",
+    "paper/quintic_prime_support.tex": "5dbc33dcdae29d96d8c914a27e12c44fa3b92264578ade7a0a25894688321c4a",
+    "paper/quintic_dense_prime_support_v11.tex": "fdbb670c736ea8d25036fb891a961c1e316dfd34c51f121dbad71379d43bca53",
+    "paper/global_primitive_denominators_v23.tex": "1dc41a28da58b75e8d8d1f6726e4ee717337f050dc3db26382d50576b8f059b1",
+    "paper/quintic_triangle_completion.tex": "302e5748ef5c026668436e20389b4316d9121d7e39721ce941a612f86b1e904c",
+    "paper/quintic_finite_exclusion.tex": "dc898c3cee98a4bc22c0af39e41d24c2a0468ee4ebb87666402f5a3f22c30a8f",
+    "paper_arithmetic/arithmetic_bibliography_v24.tex": "3d1336bea23937d7f26a9a09967e0bf4bea99d7c4faa0f6b6500ff751a30bc8d"
+  },
+  "resolved_typesetting_issue": {
+    "file": "paper/high_d_proportional_reduction_v24.tex",
+    "old_sha256": "ef70a01a770a0907ff6bed7ecb71d85910d1acbf13c0677c02744c7a854e7932",
+    "new_sha256": "769f97916c5c0ca7a3227c798dbc92cd97920ac574f6aecf97f1eaf4e3155d66",
+    "finding": "The execution example originally used nolinkurl for both filename and space-separated arguments, which removed the argument spaces in the PDF. Root separated the filename into nolinkurl and arguments into texttt. Exact reconstruction of the former source verifies this is the only active-source change; no mathematics or quantifier changed. Final PDF visual reinspection is recorded separately."
+  }
+}

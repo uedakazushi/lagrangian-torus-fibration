@@ -1,0 +1,131 @@
+{
+  "version": "v25",
+  "passed": true,
+  "issues": [],
+  "reviewed_at_utc": "2026-10-27T22:42:30.445900+00:00",
+  "scope": "Current continuation policy, root README, verification README, notes entry/current-status passages, and every active notes input checked for status/quantifier consistency. This is an integration review, not a new mathematical proof audit or external peer review.",
+  "policy_and_user_requirements": {
+    "continuation_policy_read_first": true,
+    "versioned_bundle_notes_and_public_papers": true,
+    "flexible_plan_maximizes_interest_and_impact": true,
+    "major_revision_of_notes_and_public_papers_allowed": true,
+    "notes_keep_only_potentially_future_useful_material": true,
+    "split_public_papers_to_maximize_total_value": true,
+    "thorough_introduction_prior_work_and_primary_citations": true,
+    "saving_authorization_persists_without_reconfirmation": true,
+    "private_saving_does_not_imply_publication_authorization": true,
+    "current_frontier_three_types_26_labels": true,
+    "p4_and_g514_node5_are_resolved": true,
+    "g514_aligned_central_matching_is_current": true,
+    "g516_node5_and_global_support_existence_remain_open": true,
+    "endpoint_finiteness_is_fixed_s_not_global_nonexistence": true,
+    "coprime_exclusion_retains_h_ge_b_hypothesis": true,
+    "degenerate_x0_h_lt_b_route_is_preserved": true,
+    "bounded_endpoint_s400_result_not_extrapolated": true,
+    "verification_readme_is_v25_current": true
+  },
+  "active_input_count": 36,
+  "label_count": 51,
+  "reference_count": 6,
+  "bibliography_key_count": 39,
+  "active_reference_audit": {
+    "missing_inputs": [],
+    "undefined_references": [],
+    "duplicate_labels": [],
+    "undefined_citations": []
+  },
+  "primary_script_count": 89,
+  "additional_audit_script_count": 24,
+  "review_findings": [
+    "P4 is resolved by the unbounded strict-pair integer theorem; the full sign classification includes triangle plus isolated vertex without weights and matching precisely with positive weights.",
+    "G514 node-five sectors and both crossing central matchings are resolved. G514 itself remains open, G516 node five remains open, and G517 is not assigned a nonexistent unit branch.",
+    "The stable global support frontier remains G514/G516/G517, 3 types and 26 labelled graphs. This is not a count of integer solutions or geometric realizations.",
+    "Axis endpoints n=0,z are completely finite after fixing s; s itself has no proved uniform bound, and endpoint or full-axis nonexistence is not claimed. The s<=400 result remains expressly bounded.",
+    "The coprime obstruction requires h>=b and gcd(h,b-1)=1. x>=1 implies h>=b; x=0,h<b retains the previous fixed-s reconstruction.",
+    "The new unit-edge notes retain the general node-four/node-five table as a reusable conditional lemma but explicitly remove G514 node five from the future plan.",
+    "Other retained intermediate inequalities and fixed-input reconstruction procedures remain valid necessary results; their current successors and stronger v25 reductions are supplied in the active current notes and policy.",
+    "Historical 4-type/56-label counts are explicitly identified as the stage before G515 exclusion, not presented as the current frontier.",
+    "The saving permission matches the user instruction to save without renewed approval. It is carried forward while third-party transmission/publication remains distinct.",
+    "Flexible planning, maximizing interest/impact, major revisions, future-useful-only notes, optional paper splitting/reintegration, and thorough primary-source Introduction research are explicit in the policy.",
+    "All 36 active notes inputs are present; no duplicate labels, undefined references, or undefined citations were found.",
+    "Verification README is updated to v25 with 89 primary scripts and 24 additional audit scripts, matching the actual directory inventory."
+  ],
+  "resolved_editorial_issues": [
+    {
+      "issue": "Active v24 unit-edge future plan still requested G514 node-five work.",
+      "resolution": "Created notes_unit_three_high_v25.tex, switched active input, and restricted current G514 work to node four plus aligned central matching; node five is retained only for G516."
+    },
+    {
+      "issue": "Notes summary and next-plan prose omitted the h>=b restriction on the coprime obstruction.",
+      "resolution": "Added h>=b and gcd(h,b-1)=1 to the summary, and explicitly retained the fixed-s route for x=0,h<b."
+    },
+    {
+      "issue": "Verification README still described v24 counts and the former unresolved P4 candidate.",
+      "resolution": "Replaced it with the v25 inventory, five new results/audits, and correctly quantified execution scopes."
+    },
+    {
+      "issue": "The next-plan phrase referring to the resolved five-node sector used an ambiguous antecedent.",
+      "resolution": "The notes entry now explicitly says G_{5,14}."
+    }
+  ],
+  "inactive_historical_status_modules": [
+    "notes_four_ray_positive_graph_v24.tex",
+    "notes_unit_three_high_v24.tex",
+    "notes_support_agenda_v24.tex",
+    "notes_high_d_proportional_v24.tex"
+  ],
+  "preserved_pre_v25_active_notes_count": 21,
+  "changed_preserved_pre_v25_notes": [],
+  "old_inactive_status_files_byte_identical_to_v24": true,
+  "shared_configuration_changes": [
+    {
+      "file": "common.tex",
+      "change": "Only running header v24 to v25; exact replacement verified."
+    }
+  ],
+  "source_sha256": {
+    "00_CONTINUATION_POLICY_ja.txt": "d16b18e170ee26408b087219bea3fa966f80a1d912f85567371bf3168527ac4e",
+    "README.txt": "ecad346a8a1c9a0019b0ee6f383a7750b547611c4595c3a6588ca2cdeb27504c",
+    "common.tex": "148e135a6ecaf15b9afe1a0f5b2c0e3a3be713e3765cb08bbcc64d112dd99dfc",
+    "notes/general_type_surface_fibration_research_notes_ja_v25.tex": "4d72db19460af94732cd27013d6a40ddd3c35fbc7327cf75034b74052aedaaa8",
+    "notes/notes_action_atlas.tex": "801458d9cb58642f51ed57dfc2961f9a1d577163fa5537c180ee7abfa752c4a2",
+    "notes/notes_axis_endpoints_v25.tex": "11bed5d498484fd7b3d40ea8afb3e0ed64574a3b9f30fe6319d2cd70833f4e93",
+    "notes/notes_bibliography_v25.tex": "5496c5aee9b63845c37f3a76538e86ffc28fc187e7fdbc4cabc056a105af9998",
+    "notes/notes_book_completion_v22.tex": "8f00b803c3db48ebefa2adb531c5457a1f803ae7adac6e08ce4612ac95f5b651",
+    "notes/notes_bounded_reverse_catalog_v13.tex": "4147ea373367552b3087c68f8f1c16788f94c4f3aef785cbb6c1dbd665357107",
+    "notes/notes_degenerate_divisor_v25.tex": "7c786b42e406deab51bf0533fb24d35fcef92af6a4d77e599b30cdbf006c1da0",
+    "notes/notes_fiber_invariants_literature_v24.tex": "7eb11f498f8da8d050234e29710f86114330eecdb76d5f989ce313606d7cd693",
+    "notes/notes_fixed_low_completion_v17.tex": "364bf7e651adf45ab371bc3d8eca93809b7613edde4f2c47fc4e61923b124903",
+    "notes/notes_four_ray_matching_v25.tex": "52fc9e042f95a4c863cf4fa49ec383f62d35c91d7a10f66efa26060ce97e4116",
+    "notes/notes_g514_five_node_v25.tex": "0264f2e3ba41fb9989529bfdb585f87e9b0d2ea271c4ca058d1b94201730eb32",
+    "notes/notes_g5_10_obstruction_v18.tex": "2a9f92a720f3dcd8c0a1a637472978e25fd7d0d31bde747d0afe78576fc1d626",
+    "notes/notes_g5_11_obstruction_v20.tex": "de0331e56d91a55a3cf1539d27b14c55738b07587fc0790e4ee33c9bffc9e530",
+    "notes/notes_g5_15_negative_exception_v23.tex": "4672a13ef9586e72298d3dc6a2f3c7e7ed824a624eeedcd08de2d01027f6dee5",
+    "notes/notes_g5_15_ordinary_outer_pair_v23.tex": "4789781712fddd6236aa3c3468d5db86e3c378e4b23ab63caa817795a6079211",
+    "notes/notes_high_d_asymmetry_v24.tex": "0648782c03e1578b3e43a4fd60b2290a07234b320153b579159a7efc041ef414",
+    "notes/notes_high_d_axis_degenerate_v24.tex": "5c0d70b656f3a7a2e614d9cafe601be9a393a3d96dc92abcc8cf860d2d55f128",
+    "notes/notes_high_d_low_row_v22.tex": "415b5b15043f40b607adefdad75e4cbf929d757857645da2e4ad0b255221808a",
+    "notes/notes_high_d_nonsingular_v20.tex": "a42f67c364682948ae9c6e7ef193e615b50365cd89eba81234beb7338aa7c9f4",
+    "notes/notes_high_d_proportional_v25.tex": "00e9d9c908b2e58755fa4d36801d1ca702944dfb6049444bd8b76c95c5b58023",
+    "notes/notes_high_d_reconstruction_current_v22.tex": "3d112b7cacb98ba340ab382bb5eb35c22a78b08a141742f2a03918a6446b83e1",
+    "notes/notes_house_obstruction_v23.tex": "ad033c44db5d13481848da8b6164b8011cb171d22e167796728d9430d4ea05c3",
+    "notes/notes_leaf_free_v19.tex": "5baf9b6658165743ff993f679284a8b99ee303a3a862ea138ef60eb230bc0b11",
+    "notes/notes_leaf_hub_v19.tex": "c5c33f2ed855fdbeb24994ccbac358e6f53c0579da388f544b47049ab756b029",
+    "notes/notes_local_gluing_v17.tex": "3b0b7f06ef73529933e7870cb4cd8df59af6867735be8ea9d712cbfe2371c74d",
+    "notes/notes_outer_core_transfer_v23.tex": "b2b8f0679ea6923ed9eeb6869c2b1c16e0a14930d87a9fc636be11e17bfd8070",
+    "notes/notes_quintic_denominators_v25.tex": "9d8d500ef97bc048508667c54ef14bba1296eb283aa62bc21190aa2148474a98",
+    "notes/notes_support_agenda_v25.tex": "5b1082101cb454bb638dd49c9a5ccbfb44d9a14cd42b563afa80c0fcbf456a7a",
+    "notes/notes_support_v25.tex": "ff1329a27ac76f47898d577d92db37e13e7384199a4b6c2c7061ca7502252aae",
+    "notes/notes_three_high_matching_v25.tex": "dbb3c63e004fb80f182714a8efb4e4d305ec54aa2675015506087b5c4618de68",
+    "notes/notes_uniform_two_high.tex": "23756b72d7be59b718f94f89b7b5a24b8546ca79b23e849a42037f186ecb211b",
+    "notes/notes_unit_three_high_v25.tex": "e0c0bd5db558e36d33084e0a34c1aa31247febfae90a6a3d9d009f34e9cf5d86",
+    "notes/three_high_opposite_exception_note_v17.tex": "c6cac76ccf5acba2ba9f51e95860a745ee1f892ac657c6d283030941def8fddb",
+    "notes/three_high_schur_reduction_v25.tex": "f0f5d689137aed20808c447c2fcda5ec2d8272b6b9298e4b16211dabb2449f0c",
+    "verification/README.txt": "07a113dc433b153a211d48a5ed2884fe5bb416d8c135654e4de0fb7f71e0229b"
+  },
+  "mathematical_source_mutations_by_this_reviewer": false,
+  "visual_review": "Not part of this source-consistency review; final PDF checks are recorded separately.",
+  "machine_font_override_verified_but_not_bundled": {
+    "sha256": "8434c1f9b51acb34c01dcc72678a9b0044fbd9e60129a7568c6f9184ba9b4869"
+  }
+}

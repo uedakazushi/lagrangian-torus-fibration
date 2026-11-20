@@ -1,0 +1,7060 @@
+{
+  "version": "v20",
+  "passed": true,
+  "scope": "Necessary support graphs under the prescribed quintic K5 arithmetic gluing assumptions. Candidate counts are not existence or geometric-isomorphism counts.",
+  "labelled_K5_graphs_checked": 1024,
+  "labelled_nonempty_supports_remaining": 66,
+  "unlabelled_shapes_remaining": 5,
+  "newly_excluded_labelled_supports": 60,
+  "new_exclusion_labelled_counts": {
+    "G5_11": 60
+  },
+  "excluded_counts_in_filter_order": {
+    "empty_support": 1,
+    "tree_component": 300,
+    "pure_cycle_component": 37,
+    "triangle_with_two_degree_two_vertices": 165,
+    "diamond": 30,
+    "two_leaf_triangle": 60,
+    "C4_with_pendant_edge": 60,
+    "G5_9_v19_exclusion": 60,
+    "K2_3": 10,
+    "K4_with_isolated_vertex": 5,
+    "G5_7_v19_exclusion": 60,
+    "G5_12_v18_exclusion": 20,
+    "G5_5_v18_exclusion": 60,
+    "G5_11_v20_exclusion": 60,
+    "G5_10_v18_exclusion": 30
+  },
+  "canonical_rule": "Lexicographically smallest sorted edge tuple on active labels 0,...,n-1.",
+  "shape_identifiers_preserved_from_prior_versions": true,
+  "remaining_counts_by_high_edge_number": {
+    "7": 10,
+    "8": 45,
+    "9": 10,
+    "10": 1
+  },
+  "structural_corollaries": {
+    "all_five_vertices_active": true,
+    "minimum_degree": 2,
+    "two_vertex_connected": true,
+    "minimum_high_edges": 7,
+    "minimum_first_betti_number": 3,
+    "one_core_with_at_most_one_high_ray_forces_all_denominators_one": true,
+    "every_degree_two_vertex_lies_on_triangle": true,
+    "every_neighbor_of_a_degree_two_vertex_has_degree_four": true,
+    "degree_two_vertex_checks_across_all_labelled_candidates": 60,
+    "possible_degree_two_vertex_counts": [
+      0,
+      1,
+      3
+    ],
+    "seven_high_edges_iff_book": true,
+    "remaining_low_complement_types": [
+      "K3",
+      "2K2",
+      "P3",
+      "K2",
+      "empty"
+    ]
+  },
+  "shapes": [
+    {
+      "vertices": 5,
+      "edges_count": 7,
+      "degree_sequence": [
+        4,
+        4,
+        2,
+        2,
+        2
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "cycle_rank": 3,
+      "leaf_count": 0,
+      "leaf_edges": [],
+      "exact_transfer_paths": [],
+      "labelled_K5_count": 10,
+      "automorphism_order": 12,
+      "shape_id": "G5_13",
+      "triangles": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          4
+        ]
+      ],
+      "two_high_vertices_forced_positive_by_low_neighbor_edge": [],
+      "common_low_puncture_triples": [],
+      "contains_K4_as_subgraph": false,
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 2,
+          "neighbors": [
+            0,
+            1
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "vertex": 3,
+          "neighbors": [
+            0,
+            1
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "vertex": 4,
+          "neighbors": [
+            0,
+            1
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            1,
+            4
+          ]
+        }
+      ],
+      "low_edges": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "K3",
+      "leaves": [],
+      "minimum_degree": 2,
+      "two_vertex_connected": true,
+      "degree_two_neighbors_all_degree_four": true
+    },
+    {
+      "vertices": 5,
+      "edges_count": 8,
+      "degree_sequence": [
+        4,
+        3,
+        3,
+        3,
+        3
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "cycle_rank": 4,
+      "leaf_count": 0,
+      "leaf_edges": [],
+      "exact_transfer_paths": [],
+      "labelled_K5_count": 15,
+      "automorphism_order": 8,
+      "shape_id": "G5_14",
+      "triangles": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          3,
+          4
+        ]
+      ],
+      "two_high_vertices_forced_positive_by_low_neighbor_edge": [],
+      "common_low_puncture_triples": [],
+      "contains_K4_as_subgraph": false,
+      "degree_two_triangle_checks": [],
+      "low_edges": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "2K2",
+      "leaves": [],
+      "minimum_degree": 3,
+      "two_vertex_connected": true,
+      "degree_two_neighbors_all_degree_four": true
+    },
+    {
+      "vertices": 5,
+      "edges_count": 8,
+      "degree_sequence": [
+        4,
+        4,
+        3,
+        3,
+        2
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "cycle_rank": 4,
+      "leaf_count": 0,
+      "leaf_edges": [],
+      "exact_transfer_paths": [],
+      "labelled_K5_count": 30,
+      "automorphism_order": 4,
+      "shape_id": "G5_15",
+      "triangles": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "two_high_vertices_forced_positive_by_low_neighbor_edge": [],
+      "common_low_puncture_triples": [
+        {
+          "high_edge": [
+            2,
+            3
+          ],
+          "common_low_core": 4
+        }
+      ],
+      "contains_K4_as_subgraph": true,
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 4,
+          "neighbors": [
+            0,
+            1
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            1,
+            4
+          ]
+        }
+      ],
+      "low_edges": [
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "leaves": [],
+      "minimum_degree": 2,
+      "two_vertex_connected": true,
+      "degree_two_neighbors_all_degree_four": true
+    },
+    {
+      "vertices": 5,
+      "edges_count": 9,
+      "degree_sequence": [
+        4,
+        4,
+        4,
+        3,
+        3
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "cycle_rank": 5,
+      "leaf_count": 0,
+      "leaf_edges": [],
+      "exact_transfer_paths": [],
+      "labelled_K5_count": 10,
+      "automorphism_order": 12,
+      "shape_id": "G5_16",
+      "triangles": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          4
+        ]
+      ],
+      "two_high_vertices_forced_positive_by_low_neighbor_edge": [],
+      "common_low_puncture_triples": [],
+      "contains_K4_as_subgraph": true,
+      "degree_two_triangle_checks": [],
+      "low_edges": [
+        [
+          3,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "K2",
+      "leaves": [],
+      "minimum_degree": 3,
+      "two_vertex_connected": true,
+      "degree_two_neighbors_all_degree_four": true
+    },
+    {
+      "vertices": 5,
+      "edges_count": 10,
+      "degree_sequence": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "canonical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "cycle_rank": 6,
+      "leaf_count": 0,
+      "leaf_edges": [],
+      "exact_transfer_paths": [],
+      "labelled_K5_count": 1,
+      "automorphism_order": 120,
+      "shape_id": "G5_17",
+      "triangles": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "two_high_vertices_forced_positive_by_low_neighbor_edge": [],
+      "common_low_puncture_triples": [],
+      "contains_K4_as_subgraph": true,
+      "degree_two_triangle_checks": [],
+      "low_edges": [],
+      "complement_type_omitting_isolated_vertices": "empty",
+      "leaves": [],
+      "minimum_degree": 4,
+      "two_vertex_connected": true,
+      "degree_two_neighbors_all_degree_four": true
+    }
+  ],
+  "all_66_remaining_labelled_supports": [
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "shape_id": "G5_13",
+      "low_edges": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "K3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 2,
+          "neighbors": [
+            0,
+            1
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            1,
+            2
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        },
+        {
+          "vertex": 3,
+          "neighbors": [
+            0,
+            1
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            1,
+            3
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        },
+        {
+          "vertex": 4,
+          "neighbors": [
+            0,
+            1
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            1,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 4,
+          "neighbors": [
+            0,
+            1
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            1,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 3,
+          "neighbors": [
+            0,
+            1
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            1,
+            3
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_13",
+      "low_edges": [
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "K3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 1,
+          "neighbors": [
+            0,
+            2
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            1,
+            2
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        },
+        {
+          "vertex": 3,
+          "neighbors": [
+            0,
+            2
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            2,
+            3
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        },
+        {
+          "vertex": 4,
+          "neighbors": [
+            0,
+            2
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            2,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 4,
+          "neighbors": [
+            0,
+            2
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            2,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 3,
+          "neighbors": [
+            0,
+            2
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            2,
+            3
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "low_edges": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "2K2",
+      "degree_two_triangle_checks": [],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_13",
+      "low_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "K3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 0,
+          "neighbors": [
+            1,
+            2
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            1,
+            2
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        },
+        {
+          "vertex": 3,
+          "neighbors": [
+            1,
+            2
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            1,
+            2,
+            3
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        },
+        {
+          "vertex": 4,
+          "neighbors": [
+            1,
+            2
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            1,
+            2,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 4,
+          "neighbors": [
+            1,
+            2
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            1,
+            2,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 3,
+          "neighbors": [
+            1,
+            2
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            1,
+            2,
+            3
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "low_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "2K2",
+      "degree_two_triangle_checks": [],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "low_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "2K2",
+      "degree_two_triangle_checks": [],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_16",
+      "low_edges": [
+        [
+          3,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "K2",
+      "degree_two_triangle_checks": [],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 2,
+          "neighbors": [
+            0,
+            1
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            1,
+            2
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_13",
+      "low_edges": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "K3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 1,
+          "neighbors": [
+            0,
+            3
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            1,
+            3
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        },
+        {
+          "vertex": 2,
+          "neighbors": [
+            0,
+            3
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            2,
+            3
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        },
+        {
+          "vertex": 4,
+          "neighbors": [
+            0,
+            3
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            3,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 4,
+          "neighbors": [
+            0,
+            3
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            3,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "low_edges": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "2K2",
+      "degree_two_triangle_checks": [],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 2,
+          "neighbors": [
+            0,
+            3
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            2,
+            3
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_13",
+      "low_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "K3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 0,
+          "neighbors": [
+            1,
+            3
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            1,
+            3
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        },
+        {
+          "vertex": 2,
+          "neighbors": [
+            1,
+            3
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            1,
+            2,
+            3
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        },
+        {
+          "vertex": 4,
+          "neighbors": [
+            1,
+            3
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            1,
+            3,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 4,
+          "neighbors": [
+            1,
+            3
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            1,
+            3,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "low_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "2K2",
+      "degree_two_triangle_checks": [],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 2,
+          "neighbors": [
+            1,
+            3
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            1,
+            2,
+            3
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "low_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "2K2",
+      "degree_two_triangle_checks": [],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_16",
+      "low_edges": [
+        [
+          2,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "K2",
+      "degree_two_triangle_checks": [],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "low_edges": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "2K2",
+      "degree_two_triangle_checks": [],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_13",
+      "low_edges": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "K3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 1,
+          "neighbors": [
+            0,
+            4
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            1,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        },
+        {
+          "vertex": 2,
+          "neighbors": [
+            0,
+            4
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            2,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        },
+        {
+          "vertex": 3,
+          "neighbors": [
+            0,
+            4
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            3,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 3,
+          "neighbors": [
+            0,
+            4
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            3,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 2,
+          "neighbors": [
+            0,
+            4
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            2,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "low_edges": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "2K2",
+      "degree_two_triangle_checks": [],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_13",
+      "low_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "K3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 0,
+          "neighbors": [
+            1,
+            4
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            1,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        },
+        {
+          "vertex": 2,
+          "neighbors": [
+            1,
+            4
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            1,
+            2,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        },
+        {
+          "vertex": 3,
+          "neighbors": [
+            1,
+            4
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            1,
+            3,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 3,
+          "neighbors": [
+            1,
+            4
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            1,
+            3,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 2,
+          "neighbors": [
+            1,
+            4
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            1,
+            2,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "low_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "2K2",
+      "degree_two_triangle_checks": [],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_16",
+      "low_edges": [
+        [
+          2,
+          3
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "K2",
+      "degree_two_triangle_checks": [],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 1,
+          "neighbors": [
+            0,
+            2
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            1,
+            2
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 1,
+          "neighbors": [
+            0,
+            3
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            1,
+            3
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_13",
+      "low_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "K3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 0,
+          "neighbors": [
+            2,
+            3
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            2,
+            3
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        },
+        {
+          "vertex": 1,
+          "neighbors": [
+            2,
+            3
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            1,
+            2,
+            3
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        },
+        {
+          "vertex": 4,
+          "neighbors": [
+            2,
+            3
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            2,
+            3,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 4,
+          "neighbors": [
+            2,
+            3
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            2,
+            3,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "low_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "2K2",
+      "degree_two_triangle_checks": [],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "low_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "2K2",
+      "degree_two_triangle_checks": [],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 1,
+          "neighbors": [
+            2,
+            3
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            1,
+            2,
+            3
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_16",
+      "low_edges": [
+        [
+          1,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "K2",
+      "degree_two_triangle_checks": [],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 1,
+          "neighbors": [
+            0,
+            4
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            1,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "low_edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "2K2",
+      "degree_two_triangle_checks": [],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_13",
+      "low_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "K3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 0,
+          "neighbors": [
+            2,
+            4
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            2,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        },
+        {
+          "vertex": 1,
+          "neighbors": [
+            2,
+            4
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            1,
+            2,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        },
+        {
+          "vertex": 3,
+          "neighbors": [
+            2,
+            4
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            2,
+            3,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 3,
+          "neighbors": [
+            2,
+            4
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            2,
+            3,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "low_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "2K2",
+      "degree_two_triangle_checks": [],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 1,
+          "neighbors": [
+            2,
+            4
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            1,
+            2,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_16",
+      "low_edges": [
+        [
+          1,
+          3
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "K2",
+      "degree_two_triangle_checks": [],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "low_edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "2K2",
+      "degree_two_triangle_checks": [],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_14",
+      "low_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "2K2",
+      "degree_two_triangle_checks": [],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_13",
+      "low_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "K3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 0,
+          "neighbors": [
+            3,
+            4
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            3,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        },
+        {
+          "vertex": 1,
+          "neighbors": [
+            3,
+            4
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            1,
+            3,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        },
+        {
+          "vertex": 2,
+          "neighbors": [
+            3,
+            4
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            2,
+            3,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 2,
+          "neighbors": [
+            3,
+            4
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            2,
+            3,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 1,
+          "neighbors": [
+            3,
+            4
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            1,
+            3,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_16",
+      "low_edges": [
+        [
+          1,
+          2
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "K2",
+      "degree_two_triangle_checks": [],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 0,
+          "neighbors": [
+            1,
+            2
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            1,
+            2
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 0,
+          "neighbors": [
+            1,
+            3
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            1,
+            3
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 0,
+          "neighbors": [
+            2,
+            3
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            2,
+            3
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_16",
+      "low_edges": [
+        [
+          0,
+          4
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "K2",
+      "degree_two_triangle_checks": [],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 0,
+          "neighbors": [
+            1,
+            4
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            1,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 0,
+          "neighbors": [
+            2,
+            4
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            2,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_16",
+      "low_edges": [
+        [
+          0,
+          3
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "K2",
+      "degree_two_triangle_checks": [],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_15",
+      "low_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "P3",
+      "degree_two_triangle_checks": [
+        {
+          "vertex": 0,
+          "neighbors": [
+            3,
+            4
+          ],
+          "neighbor_edge_high": true,
+          "triangle": [
+            0,
+            3,
+            4
+          ],
+          "neighbor_degrees": [
+            4,
+            4
+          ]
+        }
+      ],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_16",
+      "low_edges": [
+        [
+          0,
+          2
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "K2",
+      "degree_two_triangle_checks": [],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_16",
+      "low_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "complement_type_omitting_isolated_vertices": "K2",
+      "degree_two_triangle_checks": [],
+      "connected_after_each_vertex_deletion": true
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_17",
+      "low_edges": [],
+      "complement_type_omitting_isolated_vertices": "empty",
+      "degree_two_triangle_checks": [],
+      "connected_after_each_vertex_deletion": true
+    }
+  ],
+  "all_60_newly_excluded_labelled_supports": [
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    },
+    {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "shape_id": "G5_11",
+      "theorem": "g51120:no-support"
+    }
+  ],
+  "new_exclusion_theorems": {
+    "G5_11": "g51120:no-support"
+  },
+  "denominator_or_entry_cutoff": null,
+  "book_status": "Open. All-positive and all-negative low triangles are excluded. Every surviving low triangle must mix branches and carry a nonzero directed cycle of low D signs. Completion is finite for each fixed core.",
+  "general_three_high_nonnegative_D_status": "Open in the nonsingular Schur region; the fully nonnegative high-D hypothesis excludes all singular systems.",
+  "previous_certificate": {
+    "file": "support_agenda_verification_v19.json",
+    "sha256": "68886523b7569b539cd514b50b49dfd0d502d2d62b4ce1150596e49c8c6a854a"
+  },
+  "source_sha256": {
+    "paper/g5_11_obstruction_v20.tex": "d67a265a50746b3b4084752f698e557cadef8b2eef26ad36499efe266c643f96",
+    "paper/book_all_negative_obstruction_v20.tex": "a3fd08a5f4d39661b52e0406a9bea0bbff97d6dc9be70555db375698c626bd4c",
+    "paper/book_low_D_cycle_v20.tex": "f87b5adf0e4dcde92f580b3e922eb3ce641c843dd962857f8254ae0ff82ee98f",
+    "paper/quintic_support_frontier_v20.tex": "4151e8fcf49536c82ca7b133e11af612a13c52149364340f18e193618f073949",
+    "notes/notes_support_agenda_v20.tex": "9ef6c99b51924533b22b8127518723a9dbbdb48f2a14753b4957e000f58e7564"
+  },
+  "script_sha256": "c0ecb1007f67c87142b13fbdac7693784f0b3feff40e93e02e7de1f9a9256543",
+  "limitations": [
+    "Whole-support exclusions must not be applied to arbitrary containing subgraphs.",
+    "Graph enumeration applies preceding arithmetic proofs; it does not prove those obstructions.",
+    "The remaining supports do not imply existence of integer charts, atlases, or fibrations."
+  ]
+}

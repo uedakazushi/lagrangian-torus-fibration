@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "method": "Enumerate complete local models first using the retained v19 generator, then test all three original low node rows and original D columns; do not import the primary v20 verifier.",
+  "proved_w_bounds": [
+    16,
+    40,
+    17
+  ],
+  "local_model_counts": [
+    67,
+    235,
+    69
+  ],
+  "first_edge_node_compatible_pairs": 1642,
+  "all_three_edge_node_compatible_triples": 64,
+  "nonzero_first_D_residuals": 64,
+  "distinct_first_edge_pairs": 26,
+  "full_certificate_equality": true,
+  "primary_generator_imported": false,
+  "primary_sha256": "5dc9c4ff7a8e26d670117aeb299542c0b60706d37e8b1714ebf99c5177680de8",
+  "helper_sha256": "a5a0da0f8051068739b0e68effca1e20ed55a0acf9668802cb6bc814cdacf4dc",
+  "audit_script_sha256": "59d16209c01eb0c25eb81a0075331901ab07cbeddd33e3b0db1d008c12980ef0",
+  "survivors": 0,
+  "scale_or_denominator_cutoff": null
+}

@@ -1,0 +1,230 @@
+{
+  "scope": "Finite exact checks; no analytic or symplectic existence theorem is verified by this script.",
+  "degrees": [
+    {
+      "degree": 5,
+      "checked_ODPs": 50,
+      "a": "7/3",
+      "smallest_double_curve_area": "7/6",
+      "volume_sum": "245/9",
+      "all_exact_identities": true,
+      "core_Euler": 1,
+      "nodes": 50,
+      "uniform_pants_target": 5,
+      "corresponding_node_target": 50
+    },
+    {
+      "degree": 6,
+      "checked_ODPs": 90,
+      "a": "8/3",
+      "smallest_double_curve_area": "4/3",
+      "volume_sum": "128/3",
+      "all_exact_identities": true,
+      "core_Euler": 3,
+      "nodes": 90,
+      "uniform_pants_target": 24,
+      "corresponding_node_target": 84
+    },
+    {
+      "degree": 7,
+      "checked_ODPs": 147,
+      "a": "3",
+      "smallest_double_curve_area": "3/2",
+      "volume_sum": "63",
+      "all_exact_identities": true,
+      "core_Euler": 6,
+      "nodes": 147,
+      "uniform_pants_target": 63,
+      "corresponding_node_target": 126
+    },
+    {
+      "degree": 8,
+      "checked_ODPs": 224,
+      "a": "10/3",
+      "smallest_double_curve_area": "5/3",
+      "volume_sum": "800/9",
+      "all_exact_identities": true,
+      "core_Euler": 10,
+      "nodes": 224,
+      "uniform_pants_target": 128,
+      "corresponding_node_target": 176
+    },
+    {
+      "degree": 9,
+      "checked_ODPs": 324,
+      "a": "11/3",
+      "smallest_double_curve_area": "11/6",
+      "volume_sum": "121",
+      "all_exact_identities": true,
+      "core_Euler": 15,
+      "nodes": 324,
+      "uniform_pants_target": 225,
+      "corresponding_node_target": 234
+    },
+    {
+      "degree": 10,
+      "checked_ODPs": 450,
+      "a": "4",
+      "smallest_double_curve_area": "2",
+      "volume_sum": "160",
+      "all_exact_identities": true,
+      "core_Euler": 21,
+      "nodes": 450,
+      "uniform_pants_target": 360,
+      "corresponding_node_target": 300
+    },
+    {
+      "degree": 11,
+      "checked_ODPs": 605,
+      "a": "13/3",
+      "smallest_double_curve_area": "13/6",
+      "volume_sum": "1859/9",
+      "all_exact_identities": true,
+      "core_Euler": 28,
+      "nodes": 605,
+      "uniform_pants_target": 539,
+      "corresponding_node_target": 374
+    },
+    {
+      "degree": 12,
+      "checked_ODPs": 792,
+      "a": "14/3",
+      "smallest_double_curve_area": "7/3",
+      "volume_sum": "784/3",
+      "all_exact_identities": true,
+      "core_Euler": 36,
+      "nodes": 792,
+      "uniform_pants_target": 768,
+      "corresponding_node_target": 456
+    },
+    {
+      "degree": 13,
+      "checked_ODPs": 1014,
+      "a": "5",
+      "smallest_double_curve_area": "5/2",
+      "volume_sum": "325",
+      "all_exact_identities": true,
+      "core_Euler": 45,
+      "nodes": 1014,
+      "uniform_pants_target": 1053,
+      "corresponding_node_target": 546
+    },
+    {
+      "degree": 14,
+      "checked_ODPs": 1274,
+      "a": "16/3",
+      "smallest_double_curve_area": "8/3",
+      "volume_sum": "3584/9",
+      "all_exact_identities": true,
+      "core_Euler": 55,
+      "nodes": 1274,
+      "uniform_pants_target": 1400,
+      "corresponding_node_target": 644
+    },
+    {
+      "degree": 15,
+      "checked_ODPs": 1575,
+      "a": "17/3",
+      "smallest_double_curve_area": "17/6",
+      "volume_sum": "1445/3",
+      "all_exact_identities": true,
+      "core_Euler": 66,
+      "nodes": 1575,
+      "uniform_pants_target": 1815,
+      "corresponding_node_target": 750
+    },
+    {
+      "degree": 16,
+      "checked_ODPs": 1920,
+      "a": "6",
+      "smallest_double_curve_area": "3",
+      "volume_sum": "576",
+      "all_exact_identities": true,
+      "core_Euler": 78,
+      "nodes": 1920,
+      "uniform_pants_target": 2304,
+      "corresponding_node_target": 864
+    },
+    {
+      "degree": 17,
+      "checked_ODPs": 2312,
+      "a": "19/3",
+      "smallest_double_curve_area": "19/6",
+      "volume_sum": "6137/9",
+      "all_exact_identities": true,
+      "core_Euler": 91,
+      "nodes": 2312,
+      "uniform_pants_target": 2873,
+      "corresponding_node_target": 986
+    },
+    {
+      "degree": 18,
+      "checked_ODPs": 2754,
+      "a": "20/3",
+      "smallest_double_curve_area": "10/3",
+      "volume_sum": "800",
+      "all_exact_identities": true,
+      "core_Euler": 105,
+      "nodes": 2754,
+      "uniform_pants_target": 3528,
+      "corresponding_node_target": 1116
+    },
+    {
+      "degree": 19,
+      "checked_ODPs": 3249,
+      "a": "7",
+      "smallest_double_curve_area": "7/2",
+      "volume_sum": "931",
+      "all_exact_identities": true,
+      "core_Euler": 120,
+      "nodes": 3249,
+      "uniform_pants_target": 4275,
+      "corresponding_node_target": 1254
+    },
+    {
+      "degree": 20,
+      "checked_ODPs": 3800,
+      "a": "22/3",
+      "smallest_double_curve_area": "11/3",
+      "volume_sum": "9680/9",
+      "all_exact_identities": true,
+      "core_Euler": 136,
+      "nodes": 3800,
+      "uniform_pants_target": 5120,
+      "corresponding_node_target": 1400
+    }
+  ],
+  "triple_chart_hexagon": {
+    "L": "1",
+    "delta": "1/10",
+    "vertices": [
+      [
+        "-9/10",
+        "-4/5"
+      ],
+      [
+        "-4/5",
+        "-9/10"
+      ],
+      [
+        "-1/10",
+        "4/5"
+      ],
+      [
+        "1/10",
+        "9/10"
+      ],
+      [
+        "4/5",
+        "-1/10"
+      ],
+      [
+        "9/10",
+        "1/10"
+      ]
+    ],
+    "exact_grid_points": 14641,
+    "strict_interior_points": 14331,
+    "covered_without_interior_overlap": true
+  }
+}

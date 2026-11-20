@@ -1,0 +1,362 @@
+\section{\texorpdfstring{$G_{5,15}$}{G5,15} の負例外の全尺度排除}
+\label{ne23:section}
+
+共有高分母が三または五であることだけでは，三高 core の他の分母や尺度は
+有限にならない．ここでは未完成の四高 cores における単一の pair equation を先に使い，
+低 columns を中心模型の尺度の定数シフトへ限定する．最後は二つの三高局所方程式の
+resultant を整数多項式として扱う．尺度の数値的な探索上限は用いない．
+
+\begin{theorem}[二つの負例外 template の排除]
+\label{ne23:no-negative-exception}
+定理~\ref{g51521:reduction} と同じ標準五次の算術的接着条件の下で，
+命題~\ref{g51521:negative-templates} の負例外は存在しない．
+\end{theorem}
+
+証明に必要な条件は，二高中心の完全尺度表示，三高 matching 性，奇数高分母，
+低辺の対向 $D$，非負 node と各辺総数五，および外側 cores の一部の pair equations である．
+外側四高 cores の全行列や正の weights を先に完成する必要はない．
+また，最後の排除では共有高辺の対向 $D$ 条件さえ追加する必要がない．
+
+\subsection{外側 pair から得る二つの尺度表}
+
+以下の二つの表は，補題~\ref{oc23:linear-transfer} の整数符号を詳しく使うものである．
+全ての外側 node について $u,v\in\{-4,-3,-2,-1,0,1\}$ を保つ．
+
+\begin{lemma}[正の中心 entry を横切る尺度]
+\label{ne23:positive-transfer}
+$r\ge3,x\ge2$ とし，$a=rx+1$，$j=r+\nu-1$，$0\le\nu\le3$ と置く．
+外側 pair が
+\[
+ E=au-x,\qquad
+ E\{(jA+1)v+A\}=a(jA+1)-1,\qquad A\in\mathbb Z_{>0}
+\]
+を満たすなら，可能性は次の三つだけである：
+\[
+\begin{array}{c|c|c|c}
+\nu&A&u&v\\\hline
+0&x-1&1&1\\
+1&1&-1&-1\\
+2&x+1&-1&-1
+\end{array}
+\]
+$r=2$ でも同じ表が成り立つが，$\nu=0$ に限り
+$A=x,u=0,v=-3$ が追加される．
+\end{lemma}
+
+\begin{proof}
+$E$ と反対 entry の符号が一致するため，$u=1$ なら $v=0,1$ である．
+$v=0$ は不可能で，$v=1$ は
+$A(1-\nu x)=x-1$ を与えるため表の第一行だけが残る．
+
+残りでは $u=-h$，$v=-k$，$0\le h\le4$，$1\le k\le4$ と書ける．
+尺度の方程式は
+\[
+ A\{a[j(hk-1)-h]+x(jk-1)\}=a(1-hk)-kx-1
+\]
+である．$h\ge1,hk\ge2$ では，$j\ge2$ により左辺の係数が正，右辺が負となる．
+$h=k=1$ では
+$A\{1+(2-\nu)x\}=x+1$ となり，表の第二・第三行を得る．
+$h=0$ では
+\[
+ A\{xj(k-r)-x-j\}=x(r-k).
+\]
+$k\le r$ なら左辺の係数は負，右辺は非負である．
+$k>r$ なら $x,j\ge2$ より左辺の係数は
+$xj-x-j\ge0$，右辺は負となる．
+
+$r=2$ で追加検討が必要なのは $\nu=0,j=1$ だけである．
+$h=0,k=3$ が $A=x$ を与え，$k=4$ は符号で除かれる．
+$h\ge1,k=1$ は
+$A=h-1+(x+1)/(2x+1)$ を要求するため整数にならず，
+$k\ge2$ は再び符号で除かれる．
+\end{proof}
+
+\begin{lemma}[負の中心 entry を横切る尺度と共鳴]
+\label{ne23:negative-transfer}
+$r\ge4,y\ge1$，$b=(r+1)y+1$ は奇数，$k=r+h$，$h\in\{-1,0,1,2\}$ とする．
+外側 pair が
+\[
+ E=bu+y,\qquad
+ E\{(kB+1)v-B\}=b(kB+1)-1,\qquad B\in\mathbb Z_{>0}
+\]
+を満たすなら，可能性は次の表に限られる：
+\[
+\begin{array}{c|c|c|c|l}
+h&B&u&v&条件\\\hline
+0&y-1&-1&-1&y\ge2\\
+1&1&1&1&---\\
+1&\text{任意の正整数}&-1&-1&y=1\\
+2&y+1&1&1&---
+\end{array}
+\]
+第三行は係数も定数も零になる共鳴であり，捨ててはならない．
+また $r\ge2,y\ge2,h\in\{0,1,2\}$ に限定する場合にも，同じ非共鳴表が成り立つ．
+\end{lemma}
+
+\begin{proof}
+$E>0$ なら $u=0,1$，$v=1$ であり，$u=0$ は符号で不可能である．
+$u=1$ では
+$B\{1+(2-h)y\}=y+1$ となり，表の第二・第四行だけが残る．
+$u=-a\le-1,v=-c\le0$ とすると
+\[
+ B\{b[k(ac-1)+a]-y(kc+1)\}=b(1-ac)+cy-1.
+\]
+$ac\ge2$ では左辺の係数が正，右辺が負である．
+$a=c=1$ では $B(1-hy)=y-1$ となり，第一行と $h=1,y=1$ の共鳴を得る．
+$c=0$ では，正の尺度のために $a\ge k+1$ が必要である．
+$r\ge4$ では $r=4,h=-1,a=4$ の場合だけを調べればよく，
+$B=5y/(4y+1)$ が正整数になるのは $y=1$ のみだが，このとき $b=6$ は偶数である．
+
+最後の追加範囲でも $c=0$ の場合だけを補えばよい．
+$a=k+1$ では $(r+1)y/(ry+1)$ は一と二の間にあり，
+$a\ge k+2$ では比は一未満である．従って $y\ge2$ の正整数尺度は生じない．
+\end{proof}
+
+\subsection{第一 template の四つの中心と排除}
+
+中心の記号 $r,s,z,S,T,x,y,D_C,D_D$ は式~\eqref{g51521:central} に従う．
+負枝では $S=T=w$，$r\ge4$，$x\ge2,y\ge1$ である．
+第一 template は $Q=3,L=1$ であり，core $3$ の低 row と column を
+\[
+ (-k,k,-1),\quad (-A,B,-2),\qquad k=r+a_0-1,\quad0\le a_0\le3
+\]
+と書ける．低 $D$ 相殺は
+\begin{equation}\label{ne23:first-low-D}
+ A-B+1=-D_C=x-y
+\end{equation}
+である．二つの外側 pair に前二補題を適用する．
+$a_0=0,3$ は不可能である．$a_0=1$ では $A=1,B=y-1$ なので $x=3$ となる．
+$a_0=2$ では $A=x+1,B=y+2$ が必要であり，後者は第二補題の $y=1$ の共鳴に限られる．
+共鳴の全尺度をまず保持し，式~\eqref{ne23:first-low-D} を加えている．
+
+負枝の完全尺度表示では，$w=\ell(t+1)$ として
+\[
+\begin{array}{c|cc}
+&x&y\\\hline
+N_+&\ell t+1&wt\\
+N_-&wt&\ell t-1
+\end{array}
+\]
+である．$x=3$ は $N_+$ の $\ell t=2$ に限り，
+$y=1$ は $N_-$ の $\ell t=2$ に限られる．従って四つの中心で尽くされる．
+core $3$ の共有高 row を $(Y,-Y-1,-2)$ とし，その元の pair equations を整理すると，
+次の原始整数多項式を得る：
+\[
+\begin{array}{c|cc|ccc|l}
+\text{中心族}&\ell&t&k&A&B&\text{必要多項式}\\\hline
+N_+&1&2&6&1&5&3Y-20\\
+N_+&2&1&8&1&3&34Y-299\\
+N_-&1&2&6&7&3&3Y^2-97Y+544\\
+N_-&2&1&8&5&3&4Y^2-184Y+1403
+\end{array}
+\]
+前二式は整数根を持たない．後二式の判別式は $2881$ と $11408$ であり，
+それぞれ $53^2<2881<54^2$，$106^2<11408<107^2$ により整数根を持たない．
+従って第一 template は全て排除された．
+
+\subsection{第二 template の定数シフトと全尺度の parity}
+
+第二 template では core $3$ を $J$，core $4$ を $K$ と呼ぶ．
+高 ray の順は，$J$ では外部負・外部正・共有高の順 $(0,1,4)$，
+$K$ では $(1,0,3)$ とする．その低 rows と columns は
+\[
+\begin{array}{c|c|c}
+&\text{低 row}&\text{低 column}\\\hline
+J&(-j,j+Q-2,-(Q-1))&(-A_J,B_J,-1)\\
+K&(-k,k,-1)&(-A_K,B_K,-(Q-1))
+\end{array}
+\]
+となる．ここで $j=r+a_0-1$，$k=S+1-b_0$ である．
+
+\begin{lemma}[第二 template の残る全尺度形]
+\label{ne23:shift-table}
+第二 template が存在するなら，次のいずれかである：
+\[
+\begin{array}{c|c|ccc|ccc}
+\text{中心}&Q&j&A_J&B_J&k&A_K&B_K\\\hline
+N_\pm&3&r+\varepsilon&x+\varepsilon&y+\varepsilon&w+\eta&z+\eta&s+\eta\\
+P_\pm&5&r-1&x-1&y+1&S+1&z-1&s+1
+\end{array}
+\]
+第一行は $\varepsilon,\eta\in\{-1,1\}$ である．
+表示された全ての columns は正でなければならない．
+$N_\pm$ は負枝の $E$ 正負，$P_\pm$ は正 $L=3$ 枝の $F$ 正負を表す．
+全四族で，さらに $\ell$ は正の奇数，$t$ は正の偶数である．
+\end{lemma}
+
+\begin{proof}
+まず中心が正の $L=3$ 枝なら，$b_0=0$，$k=S+1$ である．
+低辺 $24$ の二つの外側 pair は
+$A_K=z-1$，$B_K=s+1$ を与える．最初は $T\ge5,z\ge2$ に対する
+補題~\ref{ne23:positive-transfer} の $\nu=0$，後者は
+補題~\ref{ne23:negative-transfer} の $r=S-1\ge2,y=s\ge2,h=2$ である．
+低 $D$ は
+\[
+ A_K-B_K+Q-2=z-s+Q-4=-D_D=z-s+1
+\]
+なので $Q=5$ となる．$a_0=0$ であり，低辺 $23$ の外側 pair は
+$A_J=x-1,B_J=y+1$ を与える．
+$r=2$ の唯一の中心は $(r,s,z,S,T)=(2,2,6,3,5)$ で，$x=3$ である．
+第一補題の追加候補 $A_J=x=3$ は $q_{30}=1+A_J=4$ が偶数なので除かれる．
+$r=3$ は $P_-$ の共鳴 $\ell=0$，任意の $t\ge1$ であり，
+この全族では $k=5,A_K=1$，従って高分母 $1+kA_K=6$ が偶数となる．
+残る $r\ge4$ では表を直接適用できる．
+
+中心が負枝の場合，$Q=5$ なら $a_0=0$ であり，
+$A_J=x-1,B_J=y+1$ となる．これは低 $D$ 相殺
+$A_J-B_J=x-y$ に反する．従って $Q=3$ である．
+$a_0=0,2$ は第一行の $J$ 側を与える．
+$a_0=1$ では $A_J=1$ である．非共鳴では $B_J=1$ なので $D_C=0$ となり，
+負枝の唯一の模型 $w=2,r=4$ を要求するが，$J$ 側の高分母は六となる．
+$y=1$ の共鳴を残した場合も，低 $D$ 相殺から $B_J=2-x\le0$ となる．
+
+低辺 $24$ について，まず $w\ge3$ とする．$b_0=0,1,2$ に応じて
+$A_K=z+1,1,z-1$ であり，外側のもう一つの pair は
+$B_K=s+1,1,s-1$ を要求する．$b_0=1$ の低 $D$ 相殺は $s=z$，すなわち $D_D=-1$ を要求するが，
+負枝の二つの完全尺度式はいずれもこの値を取らない．
+$w=2$ の唯一の中心については $s=4,z=5$ である．
+二つの通常シフト $(A_K,B_K)=(6,5),(4,3)$ は奇数性に反し，
+$b_0=1$ では $B_K=0$ となる．第一補題の追加候補 $(5,4)$ も高分母が六となる．
+従ってこの境界を含めて，残るのは第一行の $K$ 側だけである．
+
+最後に parity を調べる．$N_+$ では $B_K=s+\eta$，$N_-$ では $A_K=z+\eta$ が奇数である．
+高分母 $1+kB_K$ または $1+kA_K$ の奇数性は $k=w+\eta$ を偶数にし，$w$ を奇数にする．
+$P_+$ では $B_K=s+1$，$P_-$ では $A_K=z-1$ が奇数であり，同様に
+$k=S+1$ を偶数にする．それぞれ $S=3R$，$S=3R-2$ なので $R$ は奇数である．
+$w=\ell(t+1)$，$R=\ell(t+1)-2$ または $\ell(t+1)+2$ より，全ての場合で
+$\ell$ は奇数，$t$ は偶数となる．
+\end{proof}
+
+正 $L=4$ の七の共鳴族は，元の node 条件 $L+2\le5$ により本 template の対象外である．
+正 $L=3$ の十三の共鳴族は，前証明の通り全ての自由尺度を保持してから奇数性で排除した．
+固定した小分母だけから尺度有限性を主張した箇所はない．
+
+\subsection{元の pair 残余と四十個の resultant}
+
+低 row と column が $(-j,j+m-1,-m)$，$(-A,B,-U)$ である三高 core を考え，
+$Q=mU+1$ とする．共有高 row は
+$(X,-W,-U)$，$W=X+Q-U$ となる．pair 方程式で決まる正の量は
+\[
+ K=\frac{Q(jA+1)-1}{X},\qquad
+ N=\frac{Q((j+m-1)B+1)-1}{W}.
+\]
+外部二 rays の row sums は，反対 entries の大きさを
+$K+(j-1)A+1$ と $(j+m)B+1-N$ に決める．従って必要な元の pair 残余は
+\begin{align}
+\mathcal R_{j,m,U,A,B}(X)
+={}&\{QjA+Q-1+X((j-1)A+1)\}\notag\\
+ &\cdot\{(X+Q-U)((j+m)B+1)-Q(j+m-1)B-Q+1\}\notag\\
+ &-X(X+Q-U)\{j(j+m-1)AB+jA+(j+m-1)B\}=0.
+\label{ne23:residual}
+\end{align}
+これは $X$ の二次以下の整数多項式である．$X,W>0$ なので，払分母による必要性の喪失はない．
+$U=1$ の側では，$m=Q-1$，$v=j-X$ と置けば
+\[
+\mathcal R=(X(X+m)-Qv(v-1))AB+XvA+(X+m)(1-v)B+X(X+m)
+\]
+とも書ける．この式は低 $D$ 相殺 $A-B=-D_C$ を直接使う場合にも有用である．
+
+第二 template の共有高辺では puncture $2$ の node が二である．
+残る外部二 punctures の node の和は三なので，$n=n_{34;0}\in\{0,1,2,3\}$ と置くと
+\[
+ X-Y=\delta_n:=Q+1-Qn
+\]
+となる．補題~\ref{ne23:shift-table} の各行について
+\[
+ f(X)=\mathcal R_J(X),\qquad g(X)=\mathcal R_K(X-\delta_n)
+\]
+を定義する．負中心は二族・四つの符号配置・四つの nodes で三十二場合，
+正中心は二族・四つの nodes で八場合，合計四十場合である．
+
+$f=aX^2+bX+c$，$g=dX^2+eX+f_0$ と書き，
+\begin{equation}\label{ne23:resultant}
+ \mathcal P=(af_0-cd)^2-(ae-bd)(bf_0-ce)
+\end{equation}
+と置く．共通根を持てば必ず $\mathcal P=0$ である．
+実際，$P=ae-bd$，$Q_0=af_0-cd$，$W_0=bf_0-ce$ と書けば
+\[
+ Q_0^2-PW_0=(Q_0-PX)(ag-df)-P(bg-ef)
+\]
+という整数多項式恒等式がある．この必要性は $a$ や $d$ が零になる場合も変わらず，
+先頭係数で割っていない．
+
+\subsection{整数係数による全尺度の符号証明}
+
+各中心族を次の完全な多項式表示で式~\eqref{ne23:residual} に代入する：
+\[
+\begin{array}{c|ccc|cccc}
+&r&S&T&x&y&s&z\\\hline
+N_+&2w&w&w&\ell t+1&wt&2(\ell t+1)&(2w+1)t\\
+N_-&2w-1&w&w&wt&\ell t-1&(2w-1)t&2(\ell t-1)\\
+P_+&2R&3R&3R+2&3(\ell t-1)&(3R+2)t&2(\ell t-1)&(2R+1)t\\
+P_-&2R-1&3R-2&3R&(3R-2)t&3(\ell t+1)&(2R-1)t&2(\ell t+1)
+\end{array}
+\]
+ここで $N_\pm$ は $w=\ell(t+1)$，$P_+$ は $R=\ell(t+1)-2$，
+$P_-$ は $R=\ell(t+1)+2$ である．四十個の $\mathcal P(\ell,t)$ はこの表と
+補題~\ref{ne23:shift-table}，式~\eqref{ne23:residual}--\eqref{ne23:resultant} によって一意に指定される．
+
+全ての正の奇数 $\ell$ と正の偶数 $t$ は，次の三領域と四点で尽くされる：
+\begin{align*}
+\mathrm A&:\quad \ell=2v+3,\quad t=2u+4,\quad u,v\ge0,\\
+\mathrm B&:\quad \ell=2v+5,\quad t=2,\quad v\ge0,\\
+\mathrm C&:\quad \ell=1,\quad t=2u+8,\quad u\ge0,\\
+\mathrm D&:\quad (\ell,t)=(1,2),(3,2),(1,4),(1,6).
+\end{align*}
+これらは整数尺度全域の分割であり，有界探索の範囲指定ではない．
+
+\begin{lemma}[全 resultant の係数符号証明書]
+\label{ne23:coefficient-certificate}
+各行の四つの記号は $n=0,1,2,3$ の順である．領域 A，B，C のいずれでも，
+表示した符号を掛けた $\mathcal P$ の全係数は非負，定数項は正である：
+\[
+\begin{array}{c|cc|c}
+\text{中心族}&\varepsilon&\eta&n=0,1,2,3\text{ の符号}\\\hline
+N_+&-1&-1&+,+,-,-\\
+N_+&-1& 1&-,-,-,-\\
+N_+& 1&-1&+,-,-,-\\
+N_+& 1& 1&-,+,-,-\\
+N_-&-1&-1&-,-,+,-\\
+N_-&-1& 1&-,-,-,+\\
+N_-& 1&-1&-,-,-,-\\
+N_-& 1& 1&-,-,+,+\\
+P_+&\multicolumn{2}{c|}{---}&+,+,+,+\\
+P_-&\multicolumn{2}{c|}{---}&+,+,+,+
+\end{array}
+\]
+領域 D の百六十個の評価で零となるのは
+\[
+ (N_-,\varepsilon,\eta,n,\ell,t)= (N_-,-1,-1,2,1,2)
+\]
+の一つだけである．この場合は $B_J=y-1=0$ であり，正値性に反する．
+\end{lemma}
+
+\begin{proof}
+整数多項式の係数演算で確認する．再現可能な標準ライブラリ実装
+\nolinkurl{verify_g5_15_negative_exception_v23.py} は，中心表から全多項式を作り，
+三領域の百二十個のシフト多項式の全係数と，厳密に正の定数項を
+\nolinkurl{g5_15_negative_exception_verification_v23.json} に記録する．
+四点の百六十値も整数のまま記録する．例えば
+$(N_+,-1,-1,n=0)$ の $(\ell,t)=(1,2)$ の値は $1458466816$，
+$(P_+,n=3)$ の同じ点での値は $-958992384$ である．
+後者の符号は尾部と異なるため，境界を一様な符号と取り違えない．
+
+検査は，表示された有限個の多項式の全係数を調べるものであり，
+$\ell,t$ の有限範囲を試す手順ではない．非負変数における非負係数と正の定数項は，
+その領域全体で厳密な正値性を証明する．唯一の零評価については
+$N_-$ の $\ell=1,t=2$ から $y=\ell t-1=1$，従って $B_J=0$ を直接確認する．
+同実装は元の pair からの残余恒等式，Sylvester determinant と式~\eqref{ne23:resultant} の一致，
+四族の中心方程式，parity の全剰余類，および外側尺度表の千三百六十八個の
+記号的 node 場合分けも確認する．
+\end{proof}
+
+\begin{proof}[定理~\ref{ne23:no-negative-exception} の証明の完了]
+第一 template は四つの必要局所多項式で排除された．
+第二 template は定数シフト表と parity により，上記の四十場合と全尺度分割に含まれる．
+各有効場合で $\mathcal P\ne0$ なので，二つの必要局所方程式は共通根を持たない．
+唯一の零評価は正の column 条件を満たさない．従って第二 template も存在しない．
+\end{proof}
+
+本定理は内部の整数係数証明書を伴う算術的排除であり，proof assistant による形式化や
+外部査読を終えたという意味ではない．指定された標準接着の結論であり，
+任意の Lagrangian torus fibration の不存在定理へ拡張するものではない．

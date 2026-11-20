@@ -1,0 +1,66 @@
+{
+  "version": 8,
+  "status": "passed",
+  "code_sha256": "f2392bd4c5274bede347ffb6931e37757fbc892e1d165f12a7c596c362346759",
+  "exact_checks": 2154,
+  "petersen_vertices": 10,
+  "unimodular_faces": 15,
+  "crossing_faces": 10,
+  "matching_faces": 5,
+  "normalized_branch_denominators": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "normalized_internal_area_over_2piw": "1",
+  "ambient_rational_extension_denominator": 2,
+  "ambient_cotangent_overlattice_index": 16,
+  "twice_meridian_forms": [
+    [
+      -2,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      -2
+    ],
+    [
+      1,
+      1,
+      -2,
+      -2,
+      1
+    ],
+    [
+      0,
+      -2,
+      1,
+      0,
+      0
+    ]
+  ],
+  "crt_split_instances": 754,
+  "farey_completion_instances": 137,
+  "odd_factorization_instances": 100,
+  "scope": "Finite integral certificates only; relative Moser and the core chart homeomorphism are proved in the text. No global sextic atlas is certified."
+}

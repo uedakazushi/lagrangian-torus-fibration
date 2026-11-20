@@ -1,0 +1,6280 @@
+{
+  "status": "passed",
+  "scope": "Complete fixed-denominator arithmetic for n=3,5,7,13. No bound on partner denominators or numerators. All resonances handled symbolically. Necessary local D-matching data, not sufficient global clutching conditions.",
+  "dependency": {
+    "file": "verify_fixed_denominator_partners_v12.py",
+    "sha256": "20c2d4ac4a242ca89a61e7c973b8e673b5574eee985ecdd0e6bfd8240644ccae"
+  },
+  "source": {
+    "file": "small_denominator_propagation_v13.tex",
+    "sha256": "84ab44436a43c1261996dab4d1fcf35829c0160fb5a415a9e44ee0d8906931a1"
+  },
+  "fixed_denominator_count": 4,
+  "nonresonant_model_count": 47,
+  "resonance_count": 2,
+  "polynomial_checks": [
+    "fixed 7 resonance D_B identity",
+    "fixed 13 resonance D_B identity"
+  ],
+  "summaries": {
+    "3": {
+      "finite_nonresonant_coefficient_set": [
+        3,
+        6
+      ],
+      "nonresonant_model_count": 2,
+      "all_negative_coefficients": [],
+      "coefficient_set_intersection_with_its_negative": [],
+      "necessary_neighbor_pairs_and_absolute_D": [],
+      "matching_models": [],
+      "resonance_coefficients": null
+    },
+    "5": {
+      "finite_nonresonant_coefficient_set": [
+        6,
+        11,
+        18,
+        21
+      ],
+      "nonresonant_model_count": 4,
+      "all_negative_coefficients": [],
+      "coefficient_set_intersection_with_its_negative": [],
+      "necessary_neighbor_pairs_and_absolute_D": [],
+      "matching_models": [],
+      "resonance_coefficients": null
+    },
+    "7": {
+      "finite_nonresonant_coefficient_set": [
+        -7,
+        0,
+        3,
+        7,
+        9,
+        16,
+        21,
+        23,
+        44
+      ],
+      "nonresonant_model_count": 13,
+      "all_negative_coefficients": [
+        -7,
+        -2
+      ],
+      "coefficient_set_intersection_with_its_negative": [
+        -7,
+        0,
+        7
+      ],
+      "necessary_neighbor_pairs_and_absolute_D": [
+        [
+          3,
+          13,
+          7
+        ],
+        [
+          3,
+          19,
+          7
+        ],
+        [
+          7,
+          7,
+          0
+        ]
+      ],
+      "matching_models": [
+        {
+          "fixed_side": "B",
+          "a": 3,
+          "b": 7,
+          "r": 1,
+          "s": 1,
+          "z": 1,
+          "S": 2,
+          "T": 6,
+          "d": -5,
+          "q": [
+            3,
+            7,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -4,
+              2,
+              -1
+            ],
+            [
+              -5,
+              0,
+              -3,
+              1
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -2,
+              6,
+              -5,
+              0
+            ]
+          ],
+          "D": [
+            3,
+            -7,
+            5,
+            -1
+          ],
+          "weights": [
+            "3",
+            "7",
+            "5/2",
+            "13/12"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 7,
+          "b": 7,
+          "r": 2,
+          "s": 2,
+          "z": 1,
+          "S": 3,
+          "T": 6,
+          "d": -4,
+          "q": [
+            7,
+            7,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -8,
+              3,
+              -2
+            ],
+            [
+              -6,
+              0,
+              -2,
+              1
+            ],
+            [
+              2,
+              -3,
+              0,
+              0
+            ],
+            [
+              -3,
+              6,
+              -4,
+              0
+            ]
+          ],
+          "D": [
+            0,
+            -2,
+            2,
+            0
+          ],
+          "weights": [
+            "7",
+            "7",
+            "13/4",
+            "13/12"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 7,
+          "b": 13,
+          "r": 2,
+          "s": 1,
+          "z": 1,
+          "S": 6,
+          "T": 12,
+          "d": -7,
+          "q": [
+            7,
+            13,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -9,
+              3,
+              -1
+            ],
+            [
+              -10,
+              0,
+              -4,
+              1
+            ],
+            [
+              2,
+              -3,
+              0,
+              0
+            ],
+            [
+              -6,
+              12,
+              -7,
+              0
+            ]
+          ],
+          "D": [
+            7,
+            -13,
+            7,
+            -1
+          ],
+          "weights": [
+            "7",
+            "13",
+            "13/4",
+            "25/24"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 7,
+          "b": 19,
+          "r": 1,
+          "s": 2,
+          "z": 2,
+          "S": 3,
+          "T": 9,
+          "d": -7,
+          "q": [
+            7,
+            19,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -11,
+              6,
+              -2
+            ],
+            [
+              -12,
+              0,
+              -9,
+              2
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -3,
+              9,
+              -7,
+              0
+            ]
+          ],
+          "D": [
+            7,
+            -15,
+            9,
+            -1
+          ],
+          "weights": [
+            "7",
+            "19",
+            "13/2",
+            "37/18"
+          ]
+        }
+      ],
+      "resonance_coefficients": {
+        "expression": "7*k-9",
+        "parameter": "every integer k>=1",
+        "no_value_matches_an_opposite_local_coefficient": true
+      }
+    },
+    "13": {
+      "finite_nonresonant_coefficient_set": [
+        -15,
+        -13,
+        -7,
+        -6,
+        -3,
+        -2,
+        0,
+        13,
+        14,
+        15,
+        18,
+        22,
+        23,
+        26,
+        27,
+        28,
+        31,
+        41,
+        44,
+        52,
+        57,
+        58,
+        80,
+        83,
+        92,
+        161
+      ],
+      "nonresonant_model_count": 28,
+      "all_negative_coefficients": [
+        -15,
+        -13,
+        -7,
+        -6,
+        -3,
+        -2,
+        -1
+      ],
+      "coefficient_set_intersection_with_its_negative": [
+        -15,
+        -13,
+        0,
+        13,
+        15
+      ],
+      "necessary_neighbor_pairs_and_absolute_D": [
+        [
+          5,
+          25,
+          15
+        ],
+        [
+          7,
+          21,
+          13
+        ],
+        [
+          13,
+          13,
+          0
+        ],
+        [
+          13,
+          17,
+          0
+        ],
+        [
+          17,
+          17,
+          0
+        ]
+      ],
+      "matching_models": [
+        {
+          "fixed_side": "B",
+          "a": 5,
+          "b": 13,
+          "r": 1,
+          "s": 1,
+          "z": 1,
+          "S": 4,
+          "T": 12,
+          "d": -9,
+          "q": [
+            5,
+            13,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -8,
+              4,
+              -1
+            ],
+            [
+              -8,
+              0,
+              -6,
+              1
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -4,
+              12,
+              -9,
+              0
+            ]
+          ],
+          "D": [
+            6,
+            -15,
+            10,
+            -1
+          ],
+          "weights": [
+            "5",
+            "13",
+            "9/2",
+            "25/24"
+          ]
+        },
+        {
+          "fixed_side": "B",
+          "a": 7,
+          "b": 13,
+          "r": 2,
+          "s": 1,
+          "z": 1,
+          "S": 6,
+          "T": 12,
+          "d": -7,
+          "q": [
+            7,
+            13,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -9,
+              3,
+              -1
+            ],
+            [
+              -10,
+              0,
+              -4,
+              1
+            ],
+            [
+              2,
+              -3,
+              0,
+              0
+            ],
+            [
+              -6,
+              12,
+              -7,
+              0
+            ]
+          ],
+          "D": [
+            7,
+            -13,
+            7,
+            -1
+          ],
+          "weights": [
+            "7",
+            "13",
+            "13/4",
+            "25/24"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 13,
+          "r": 3,
+          "s": 3,
+          "z": 2,
+          "S": 4,
+          "T": 6,
+          "d": -3,
+          "q": [
+            13,
+            13,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -14,
+              4,
+              -3
+            ],
+            [
+              -12,
+              0,
+              -3,
+              2
+            ],
+            [
+              3,
+              -4,
+              0,
+              0
+            ],
+            [
+              -4,
+              6,
+              -3,
+              0
+            ]
+          ],
+          "D": [
+            0,
+            -1,
+            1,
+            0
+          ],
+          "weights": [
+            "13",
+            "13",
+            "25/6",
+            "25/12"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 17,
+          "r": 1,
+          "s": 3,
+          "z": 1,
+          "S": 4,
+          "T": 16,
+          "d": -13,
+          "q": [
+            13,
+            17,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -22,
+              12,
+              -3
+            ],
+            [
+              -10,
+              0,
+              -8,
+              1
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -4,
+              16,
+              -13,
+              0
+            ]
+          ],
+          "D": [
+            0,
+            -9,
+            8,
+            1
+          ],
+          "weights": [
+            "13",
+            "17",
+            "25/2",
+            "33/32"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 21,
+          "r": 3,
+          "s": 1,
+          "z": 1,
+          "S": 12,
+          "T": 20,
+          "d": -9,
+          "q": [
+            13,
+            21,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -16,
+              4,
+              -1
+            ],
+            [
+              -17,
+              0,
+              -5,
+              1
+            ],
+            [
+              3,
+              -4,
+              0,
+              0
+            ],
+            [
+              -12,
+              20,
+              -9,
+              0
+            ]
+          ],
+          "D": [
+            13,
+            -21,
+            9,
+            -1
+          ],
+          "weights": [
+            "13",
+            "21",
+            "25/6",
+            "41/40"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 25,
+          "r": 2,
+          "s": 1,
+          "z": 1,
+          "S": 12,
+          "T": 24,
+          "d": -13,
+          "q": [
+            13,
+            25,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -18,
+              6,
+              -1
+            ],
+            [
+              -18,
+              0,
+              -8,
+              1
+            ],
+            [
+              2,
+              -3,
+              0,
+              0
+            ],
+            [
+              -12,
+              24,
+              -13,
+              0
+            ]
+          ],
+          "D": [
+            15,
+            -28,
+            14,
+            -1
+          ],
+          "weights": [
+            "13",
+            "25",
+            "25/4",
+            "49/48"
+          ]
+        }
+      ],
+      "resonance_coefficients": {
+        "expression": "13*k-14",
+        "parameter": "every integer k>=1",
+        "no_value_matches_an_opposite_local_coefficient": true
+      }
+    }
+  },
+  "complete_divisor_catalogs": {
+    "3": {
+      "fixed_denominator": 3,
+      "nonresonant_partners": [
+        7,
+        11
+      ],
+      "nonresonant_models": [
+        {
+          "fixed_side": "A",
+          "a": 3,
+          "b": 7,
+          "r": 1,
+          "s": 1,
+          "z": 1,
+          "S": 2,
+          "T": 6,
+          "d": -5,
+          "q": [
+            3,
+            7,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -4,
+              2,
+              -1
+            ],
+            [
+              -5,
+              0,
+              -3,
+              1
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -2,
+              6,
+              -5,
+              0
+            ]
+          ],
+          "D": [
+            3,
+            -7,
+            5,
+            -1
+          ],
+          "weights": [
+            "3",
+            "7",
+            "5/2",
+            "13/12"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 3,
+          "b": 11,
+          "r": 1,
+          "s": 1,
+          "z": 2,
+          "S": 2,
+          "T": 5,
+          "d": -4,
+          "q": [
+            3,
+            11,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -4,
+              2,
+              -1
+            ],
+            [
+              -8,
+              0,
+              -5,
+              2
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -2,
+              5,
+              -4,
+              0
+            ]
+          ],
+          "D": [
+            6,
+            -10,
+            6,
+            -2
+          ],
+          "weights": [
+            "3",
+            "11",
+            "5/2",
+            "21/10"
+          ]
+        }
+      ],
+      "resonances": [],
+      "complete_divisor_seeds_and_trials": [
+        {
+          "side": "A",
+          "r": 1,
+          "s": 1,
+          "C": -4,
+          "trials": [
+            {
+              "z": 1,
+              "T": "6",
+              "outcome": "accepted",
+              "other_denominator": 7
+            },
+            {
+              "z": 2,
+              "T": "5",
+              "outcome": "accepted",
+              "other_denominator": 11
+            },
+            {
+              "z": 4,
+              "T": "9/2",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 1,
+          "s": 2,
+          "C": -2,
+          "trials": [
+            {
+              "z": 1,
+              "T": "8/3",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "7/3",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 2,
+          "s": 1,
+          "C": -3,
+          "trials": [
+            {
+              "z": 1,
+              "T": "4",
+              "outcome": "r+1 does not divide b-1."
+            },
+            {
+              "z": 3,
+              "T": "10/3",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 2,
+          "s": 2,
+          "C": 0,
+          "trials": [],
+          "zero_branch": "Impossible by the proved strictly positive remainder."
+        },
+        {
+          "side": "B",
+          "r": 1,
+          "z": 1,
+          "C": -1,
+          "trials": [
+            {
+              "s": 1,
+              "S": "2/3",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 1,
+          "z": 2,
+          "C": -2,
+          "trials": [
+            {
+              "s": 1,
+              "S": "2/5",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 2,
+              "S": "3/5",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        }
+      ]
+    },
+    "5": {
+      "fixed_denominator": 5,
+      "nonresonant_partners": [
+        13,
+        21,
+        31,
+        37
+      ],
+      "nonresonant_models": [
+        {
+          "fixed_side": "A",
+          "a": 5,
+          "b": 13,
+          "r": 1,
+          "s": 1,
+          "z": 1,
+          "S": 4,
+          "T": 12,
+          "d": -9,
+          "q": [
+            5,
+            13,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -8,
+              4,
+              -1
+            ],
+            [
+              -8,
+              0,
+              -6,
+              1
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -4,
+              12,
+              -9,
+              0
+            ]
+          ],
+          "D": [
+            6,
+            -15,
+            10,
+            -1
+          ],
+          "weights": [
+            "5",
+            "13",
+            "9/2",
+            "25/24"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 5,
+          "b": 21,
+          "r": 1,
+          "s": 1,
+          "z": 2,
+          "S": 4,
+          "T": 10,
+          "d": -7,
+          "q": [
+            5,
+            21,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -8,
+              4,
+              -1
+            ],
+            [
+              -13,
+              0,
+              -10,
+              2
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -4,
+              10,
+              -7,
+              0
+            ]
+          ],
+          "D": [
+            11,
+            -21,
+            12,
+            -2
+          ],
+          "weights": [
+            "5",
+            "21",
+            "9/2",
+            "41/20"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 5,
+          "b": 31,
+          "r": 1,
+          "s": 2,
+          "z": 6,
+          "S": 2,
+          "T": 5,
+          "d": -4,
+          "q": [
+            5,
+            31,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -7,
+              4,
+              -2
+            ],
+            [
+              -22,
+              0,
+              -15,
+              6
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -2,
+              5,
+              -4,
+              0
+            ]
+          ],
+          "D": [
+            18,
+            -27,
+            14,
+            -5
+          ],
+          "weights": [
+            "5",
+            "31",
+            "9/2",
+            "61/10"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 5,
+          "b": 37,
+          "r": 1,
+          "s": 1,
+          "z": 4,
+          "S": 4,
+          "T": 9,
+          "d": -6,
+          "q": [
+            5,
+            37,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -8,
+              4,
+              -1
+            ],
+            [
+              -23,
+              0,
+              -18,
+              4
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -4,
+              9,
+              -6,
+              0
+            ]
+          ],
+          "D": [
+            21,
+            -36,
+            19,
+            -4
+          ],
+          "weights": [
+            "5",
+            "37",
+            "9/2",
+            "73/18"
+          ]
+        }
+      ],
+      "resonances": [],
+      "complete_divisor_seeds_and_trials": [
+        {
+          "side": "A",
+          "r": 1,
+          "s": 1,
+          "C": -8,
+          "trials": [
+            {
+              "z": 1,
+              "T": "12",
+              "outcome": "accepted",
+              "other_denominator": 13
+            },
+            {
+              "z": 2,
+              "T": "10",
+              "outcome": "accepted",
+              "other_denominator": 21
+            },
+            {
+              "z": 4,
+              "T": "9",
+              "outcome": "accepted",
+              "other_denominator": 37
+            },
+            {
+              "z": 8,
+              "T": "17/2",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 1,
+          "s": 2,
+          "C": -6,
+          "trials": [
+            {
+              "z": 1,
+              "T": "20/3",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "17/3",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 3,
+              "T": "16/3",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 6,
+              "T": "5",
+              "outcome": "accepted",
+              "other_denominator": 31
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 1,
+          "s": 4,
+          "C": -2,
+          "trials": [
+            {
+              "z": 1,
+              "T": "12/5",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "11/5",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 2,
+          "s": 1,
+          "C": -6,
+          "trials": [
+            {
+              "z": 1,
+              "T": "8",
+              "outcome": "r+1 does not divide b-1."
+            },
+            {
+              "z": 2,
+              "T": "7",
+              "outcome": "r+1 does not divide b-1."
+            },
+            {
+              "z": 3,
+              "T": "20/3",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 6,
+              "T": "19/3",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 2,
+          "s": 2,
+          "C": -3,
+          "trials": [
+            {
+              "z": 1,
+              "T": "18/5",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 3,
+              "T": "16/5",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 2,
+          "s": 4,
+          "C": 3,
+          "trials": [
+            {
+              "z": 1,
+              "T": "2/3",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 3,
+              "T": "8/9",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 4,
+          "s": 1,
+          "C": -5,
+          "trials": [
+            {
+              "z": 1,
+              "T": "6",
+              "outcome": "r+1 does not divide b-1."
+            },
+            {
+              "z": 5,
+              "T": "26/5",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 4,
+          "s": 2,
+          "C": 0,
+          "trials": [],
+          "zero_branch": "Impossible by the proved strictly positive remainder."
+        },
+        {
+          "side": "A",
+          "r": 4,
+          "s": 4,
+          "C": 10,
+          "trials": [
+            {
+              "z": 1,
+              "T": "0",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "5/17",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 5,
+              "T": "8/17",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 10,
+              "T": "9/17",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 1,
+          "z": 1,
+          "C": 0,
+          "trials": [],
+          "S_at_zero_branch": "4/3",
+          "zero_branch": "S is not a positive integer."
+        },
+        {
+          "side": "B",
+          "r": 1,
+          "z": 2,
+          "C": -1,
+          "trials": [
+            {
+              "s": 1,
+              "S": "4/5",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 1,
+          "z": 4,
+          "C": -3,
+          "trials": [
+            {
+              "s": 1,
+              "S": "4/9",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 3,
+              "S": "2/3",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 3,
+          "z": 1,
+          "C": -3,
+          "trials": [
+            {
+              "s": 1,
+              "S": "12/5",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 3,
+              "S": "14/5",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 3,
+          "z": 2,
+          "C": -6,
+          "trials": [
+            {
+              "s": 1,
+              "S": "4/3",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 2,
+              "S": "5/3",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 3,
+              "S": "16/9",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 6,
+              "S": "17/9",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 3,
+          "z": 4,
+          "C": -12,
+          "trials": [
+            {
+              "s": 1,
+              "S": "12/17",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 2,
+              "S": "18/17",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 3,
+              "S": "20/17",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 4,
+              "S": "21/17",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 6,
+              "S": "22/17",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 12,
+              "S": "23/17",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        }
+      ]
+    },
+    "7": {
+      "fixed_denominator": 7,
+      "nonresonant_partners": [
+        3,
+        7,
+        13,
+        19,
+        31,
+        41,
+        43,
+        79
+      ],
+      "nonresonant_models": [
+        {
+          "fixed_side": "B",
+          "a": 3,
+          "b": 7,
+          "r": 1,
+          "s": 1,
+          "z": 1,
+          "S": 2,
+          "T": 6,
+          "d": -5,
+          "q": [
+            3,
+            7,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -4,
+              2,
+              -1
+            ],
+            [
+              -5,
+              0,
+              -3,
+              1
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -2,
+              6,
+              -5,
+              0
+            ]
+          ],
+          "D": [
+            3,
+            -7,
+            5,
+            -1
+          ],
+          "weights": [
+            "3",
+            "7",
+            "5/2",
+            "13/12"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 7,
+          "b": 7,
+          "r": 2,
+          "s": 2,
+          "z": 1,
+          "S": 3,
+          "T": 6,
+          "d": -4,
+          "q": [
+            7,
+            7,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -8,
+              3,
+              -2
+            ],
+            [
+              -6,
+              0,
+              -2,
+              1
+            ],
+            [
+              2,
+              -3,
+              0,
+              0
+            ],
+            [
+              -3,
+              6,
+              -4,
+              0
+            ]
+          ],
+          "D": [
+            0,
+            -2,
+            2,
+            0
+          ],
+          "weights": [
+            "7",
+            "7",
+            "13/4",
+            "13/12"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 7,
+          "b": 13,
+          "r": 1,
+          "s": 3,
+          "z": 2,
+          "S": 2,
+          "T": 6,
+          "d": -5,
+          "q": [
+            7,
+            13,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -10,
+              6,
+              -3
+            ],
+            [
+              -9,
+              0,
+              -6,
+              2
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -2,
+              6,
+              -5,
+              0
+            ]
+          ],
+          "D": [
+            3,
+            -7,
+            4,
+            0
+          ],
+          "weights": [
+            "7",
+            "13",
+            "13/2",
+            "25/12"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 7,
+          "b": 13,
+          "r": 2,
+          "s": 1,
+          "z": 1,
+          "S": 6,
+          "T": 12,
+          "d": -7,
+          "q": [
+            7,
+            13,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -9,
+              3,
+              -1
+            ],
+            [
+              -10,
+              0,
+              -4,
+              1
+            ],
+            [
+              2,
+              -3,
+              0,
+              0
+            ],
+            [
+              -6,
+              12,
+              -7,
+              0
+            ]
+          ],
+          "D": [
+            7,
+            -13,
+            7,
+            -1
+          ],
+          "weights": [
+            "7",
+            "13",
+            "13/4",
+            "25/24"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 7,
+          "b": 19,
+          "r": 1,
+          "s": 1,
+          "z": 1,
+          "S": 6,
+          "T": 18,
+          "d": -13,
+          "q": [
+            7,
+            19,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -12,
+              6,
+              -1
+            ],
+            [
+              -11,
+              0,
+              -9,
+              1
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -6,
+              18,
+              -13,
+              0
+            ]
+          ],
+          "D": [
+            9,
+            -23,
+            15,
+            -1
+          ],
+          "weights": [
+            "7",
+            "19",
+            "13/2",
+            "37/36"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 7,
+          "b": 19,
+          "r": 1,
+          "s": 2,
+          "z": 2,
+          "S": 3,
+          "T": 9,
+          "d": -7,
+          "q": [
+            7,
+            19,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -11,
+              6,
+              -2
+            ],
+            [
+              -12,
+              0,
+              -9,
+              2
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -3,
+              9,
+              -7,
+              0
+            ]
+          ],
+          "D": [
+            7,
+            -15,
+            9,
+            -1
+          ],
+          "weights": [
+            "7",
+            "19",
+            "13/2",
+            "37/18"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 7,
+          "b": 31,
+          "r": 1,
+          "s": 1,
+          "z": 2,
+          "S": 6,
+          "T": 15,
+          "d": -10,
+          "q": [
+            7,
+            31,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -12,
+              6,
+              -1
+            ],
+            [
+              -18,
+              0,
+              -15,
+              2
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -6,
+              15,
+              -10,
+              0
+            ]
+          ],
+          "D": [
+            16,
+            -32,
+            18,
+            -2
+          ],
+          "weights": [
+            "7",
+            "31",
+            "13/2",
+            "61/30"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 7,
+          "b": 31,
+          "r": 2,
+          "s": 1,
+          "z": 3,
+          "S": 6,
+          "T": 10,
+          "d": -5,
+          "q": [
+            7,
+            31,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -9,
+              3,
+              -1
+            ],
+            [
+              -24,
+              0,
+              -10,
+              3
+            ],
+            [
+              2,
+              -3,
+              0,
+              0
+            ],
+            [
+              -6,
+              10,
+              -5,
+              0
+            ]
+          ],
+          "D": [
+            21,
+            -29,
+            11,
+            -3
+          ],
+          "weights": [
+            "7",
+            "31",
+            "13/4",
+            "61/20"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 7,
+          "b": 31,
+          "r": 2,
+          "s": 2,
+          "z": 6,
+          "S": 3,
+          "T": 5,
+          "d": -3,
+          "q": [
+            7,
+            31,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -8,
+              3,
+              -2
+            ],
+            [
+              -27,
+              0,
+              -10,
+              6
+            ],
+            [
+              2,
+              -3,
+              0,
+              0
+            ],
+            [
+              -3,
+              5,
+              -3,
+              0
+            ]
+          ],
+          "D": [
+            21,
+            -25,
+            9,
+            -5
+          ],
+          "weights": [
+            "7",
+            "31",
+            "13/4",
+            "61/10"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 7,
+          "b": 41,
+          "r": 1,
+          "s": 2,
+          "z": 5,
+          "S": 3,
+          "T": 8,
+          "d": -6,
+          "q": [
+            7,
+            41,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -11,
+              6,
+              -2
+            ],
+            [
+              -26,
+              0,
+              -20,
+              5
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -3,
+              8,
+              -6,
+              0
+            ]
+          ],
+          "D": [
+            21,
+            -36,
+            19,
+            -4
+          ],
+          "weights": [
+            "7",
+            "41",
+            "13/2",
+            "81/16"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 7,
+          "b": 43,
+          "r": 1,
+          "s": 1,
+          "z": 3,
+          "S": 6,
+          "T": 14,
+          "d": -9,
+          "q": [
+            7,
+            43,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -12,
+              6,
+              -1
+            ],
+            [
+              -25,
+              0,
+              -21,
+              3
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -6,
+              14,
+              -9,
+              0
+            ]
+          ],
+          "D": [
+            23,
+            -43,
+            23,
+            -3
+          ],
+          "weights": [
+            "7",
+            "43",
+            "13/2",
+            "85/28"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 7,
+          "b": 79,
+          "r": 1,
+          "s": 1,
+          "z": 6,
+          "S": 6,
+          "T": 13,
+          "d": -8,
+          "q": [
+            7,
+            79,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -12,
+              6,
+              -1
+            ],
+            [
+              -46,
+              0,
+              -39,
+              6
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -6,
+              13,
+              -8,
+              0
+            ]
+          ],
+          "D": [
+            44,
+            -78,
+            40,
+            -6
+          ],
+          "weights": [
+            "7",
+            "79",
+            "13/2",
+            "157/26"
+          ]
+        },
+        {
+          "fixed_side": "B",
+          "a": 31,
+          "b": 7,
+          "r": 5,
+          "s": 10,
+          "z": 2,
+          "S": 3,
+          "T": 3,
+          "d": -1,
+          "q": [
+            31,
+            7,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -27,
+              6,
+              -10
+            ],
+            [
+              -8,
+              0,
+              -1,
+              2
+            ],
+            [
+              5,
+              -6,
+              0,
+              0
+            ],
+            [
+              -3,
+              3,
+              -1,
+              0
+            ]
+          ],
+          "D": [
+            -25,
+            23,
+            -5,
+            7
+          ],
+          "weights": [
+            "31",
+            "7",
+            "61/10",
+            "13/6"
+          ]
+        }
+      ],
+      "resonances": [
+        {
+          "b": 7,
+          "r": 2,
+          "z": 1,
+          "S": 3,
+          "T": 6,
+          "k": "every integer k>=1",
+          "s": "2k",
+          "a": "6k+1"
+        }
+      ],
+      "complete_divisor_seeds_and_trials": [
+        {
+          "side": "A",
+          "r": 1,
+          "s": 1,
+          "C": -12,
+          "trials": [
+            {
+              "z": 1,
+              "T": "18",
+              "outcome": "accepted",
+              "other_denominator": 19
+            },
+            {
+              "z": 2,
+              "T": "15",
+              "outcome": "accepted",
+              "other_denominator": 31
+            },
+            {
+              "z": 3,
+              "T": "14",
+              "outcome": "accepted",
+              "other_denominator": 43
+            },
+            {
+              "z": 4,
+              "T": "27/2",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 6,
+              "T": "13",
+              "outcome": "accepted",
+              "other_denominator": 79
+            },
+            {
+              "z": 12,
+              "T": "25/2",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 1,
+          "s": 2,
+          "C": -10,
+          "trials": [
+            {
+              "z": 1,
+              "T": "32/3",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "9",
+              "outcome": "accepted",
+              "other_denominator": 19
+            },
+            {
+              "z": 5,
+              "T": "8",
+              "outcome": "accepted",
+              "other_denominator": 41
+            },
+            {
+              "z": 10,
+              "T": "23/3",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 1,
+          "s": 3,
+          "C": -8,
+          "trials": [
+            {
+              "z": 1,
+              "T": "7",
+              "outcome": "r+1 does not divide b-1."
+            },
+            {
+              "z": 2,
+              "T": "6",
+              "outcome": "accepted",
+              "other_denominator": 13
+            },
+            {
+              "z": 4,
+              "T": "11/2",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 8,
+              "T": "21/4",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 1,
+          "s": 6,
+          "C": -2,
+          "trials": [
+            {
+              "z": 1,
+              "T": "16/7",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "15/7",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 2,
+          "s": 1,
+          "C": -9,
+          "trials": [
+            {
+              "z": 1,
+              "T": "12",
+              "outcome": "accepted",
+              "other_denominator": 13
+            },
+            {
+              "z": 3,
+              "T": "10",
+              "outcome": "accepted",
+              "other_denominator": 31
+            },
+            {
+              "z": 9,
+              "T": "28/3",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 2,
+          "s": 2,
+          "C": -6,
+          "trials": [
+            {
+              "z": 1,
+              "T": "6",
+              "outcome": "accepted",
+              "other_denominator": 7
+            },
+            {
+              "z": 2,
+              "T": "27/5",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 3,
+              "T": "26/5",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 6,
+              "T": "5",
+              "outcome": "accepted",
+              "other_denominator": 31
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 2,
+          "s": 3,
+          "C": -3,
+          "trials": [
+            {
+              "z": 1,
+              "T": "24/7",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 3,
+              "T": "22/7",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 2,
+          "s": 6,
+          "C": 6,
+          "trials": [
+            {
+              "z": 1,
+              "T": "6/13",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "9/13",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 3,
+              "T": "10/13",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 6,
+              "T": "11/13",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 3,
+          "s": 1,
+          "C": -8,
+          "trials": [
+            {
+              "z": 1,
+              "T": "10",
+              "outcome": "r+1 does not divide b-1."
+            },
+            {
+              "z": 2,
+              "T": "9",
+              "outcome": "r+1 does not divide b-1."
+            },
+            {
+              "z": 4,
+              "T": "17/2",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 8,
+              "T": "33/4",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 3,
+          "s": 2,
+          "C": -4,
+          "trials": [
+            {
+              "z": 1,
+              "T": "32/7",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "30/7",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 4,
+              "T": "29/7",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 3,
+          "s": 3,
+          "C": 0,
+          "trials": [],
+          "zero_branch": "Impossible by the proved strictly positive remainder."
+        },
+        {
+          "side": "A",
+          "r": 3,
+          "s": 6,
+          "C": 12,
+          "trials": [
+            {
+              "z": 1,
+              "T": "0",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "6/19",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 3,
+              "T": "8/19",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 4,
+              "T": "9/19",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 6,
+              "T": "10/19",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 12,
+              "T": "11/19",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 6,
+          "s": 1,
+          "C": -7,
+          "trials": [
+            {
+              "z": 1,
+              "T": "8",
+              "outcome": "r+1 does not divide b-1."
+            },
+            {
+              "z": 7,
+              "T": "50/7",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 6,
+          "s": 2,
+          "C": 0,
+          "trials": [],
+          "zero_branch": "Impossible by the proved strictly positive remainder."
+        },
+        {
+          "side": "A",
+          "r": 6,
+          "s": 3,
+          "C": 7,
+          "trials": [
+            {
+              "z": 1,
+              "T": "28/19",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 7,
+              "T": "34/19",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 6,
+          "s": 6,
+          "C": 28,
+          "trials": [
+            {
+              "z": 1,
+              "T": "-14/37",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "0",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 4,
+              "T": "7/37",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 7,
+              "T": "10/37",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 14,
+              "T": "12/37",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 28,
+              "T": "13/37",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 1,
+          "z": 1,
+          "C": 1,
+          "trials": [
+            {
+              "s": 1,
+              "S": "2",
+              "outcome": "accepted",
+              "other_denominator": 3
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 1,
+          "z": 2,
+          "C": 0,
+          "trials": [],
+          "S_at_zero_branch": "6/5",
+          "zero_branch": "S is not a positive integer."
+        },
+        {
+          "side": "B",
+          "r": 1,
+          "z": 3,
+          "C": -1,
+          "trials": [
+            {
+              "s": 1,
+              "S": "6/7",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 1,
+          "z": 6,
+          "C": -4,
+          "trials": [
+            {
+              "s": 1,
+              "S": "6/13",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 2,
+              "S": "8/13",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 4,
+              "S": "9/13",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 2,
+          "z": 1,
+          "C": 0,
+          "trials": [],
+          "S_at_zero_branch": "3",
+          "zero_branch": "A resonance with the recorded free parameter."
+        },
+        {
+          "side": "B",
+          "r": 2,
+          "z": 2,
+          "C": -2,
+          "trials": [
+            {
+              "s": 1,
+              "S": "12/7",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 2,
+              "S": "13/7",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 2,
+          "z": 3,
+          "C": -4,
+          "trials": [
+            {
+              "s": 1,
+              "S": "6/5",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 2,
+              "S": "7/5",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 4,
+              "S": "3/2",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 2,
+          "z": 6,
+          "C": -10,
+          "trials": [
+            {
+              "s": 1,
+              "S": "12/19",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 2,
+              "S": "17/19",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 5,
+              "S": "20/19",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 10,
+              "S": "21/19",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 5,
+          "z": 1,
+          "C": -5,
+          "trials": [
+            {
+              "s": 1,
+              "S": "30/7",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 5,
+              "S": "34/7",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 5,
+          "z": 2,
+          "C": -10,
+          "trials": [
+            {
+              "s": 1,
+              "S": "30/13",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 2,
+              "S": "35/13",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 5,
+              "S": "38/13",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 10,
+              "S": "3",
+              "outcome": "accepted",
+              "other_denominator": 31
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 5,
+          "z": 3,
+          "C": -15,
+          "trials": [
+            {
+              "s": 1,
+              "S": "30/19",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 3,
+              "S": "40/19",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 5,
+              "S": "42/19",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 15,
+              "S": "44/19",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 5,
+          "z": 6,
+          "C": -30,
+          "trials": [
+            {
+              "s": 1,
+              "S": "30/37",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 2,
+              "S": "45/37",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 3,
+              "S": "50/37",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 5,
+              "S": "54/37",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 6,
+              "S": "55/37",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 10,
+              "S": "57/37",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 15,
+              "S": "58/37",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 30,
+              "S": "59/37",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        }
+      ]
+    },
+    "13": {
+      "fixed_denominator": 13,
+      "nonresonant_partners": [
+        5,
+        7,
+        13,
+        17,
+        21,
+        25,
+        37,
+        39,
+        41,
+        43,
+        55,
+        61,
+        69,
+        85,
+        109,
+        115,
+        157,
+        177,
+        301
+      ],
+      "nonresonant_models": [
+        {
+          "fixed_side": "B",
+          "a": 5,
+          "b": 13,
+          "r": 1,
+          "s": 1,
+          "z": 1,
+          "S": 4,
+          "T": 12,
+          "d": -9,
+          "q": [
+            5,
+            13,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -8,
+              4,
+              -1
+            ],
+            [
+              -8,
+              0,
+              -6,
+              1
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -4,
+              12,
+              -9,
+              0
+            ]
+          ],
+          "D": [
+            6,
+            -15,
+            10,
+            -1
+          ],
+          "weights": [
+            "5",
+            "13",
+            "9/2",
+            "25/24"
+          ]
+        },
+        {
+          "fixed_side": "B",
+          "a": 7,
+          "b": 13,
+          "r": 1,
+          "s": 3,
+          "z": 2,
+          "S": 2,
+          "T": 6,
+          "d": -5,
+          "q": [
+            7,
+            13,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -10,
+              6,
+              -3
+            ],
+            [
+              -9,
+              0,
+              -6,
+              2
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -2,
+              6,
+              -5,
+              0
+            ]
+          ],
+          "D": [
+            3,
+            -7,
+            4,
+            0
+          ],
+          "weights": [
+            "7",
+            "13",
+            "13/2",
+            "25/12"
+          ]
+        },
+        {
+          "fixed_side": "B",
+          "a": 7,
+          "b": 13,
+          "r": 2,
+          "s": 1,
+          "z": 1,
+          "S": 6,
+          "T": 12,
+          "d": -7,
+          "q": [
+            7,
+            13,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -9,
+              3,
+              -1
+            ],
+            [
+              -10,
+              0,
+              -4,
+              1
+            ],
+            [
+              2,
+              -3,
+              0,
+              0
+            ],
+            [
+              -6,
+              12,
+              -7,
+              0
+            ]
+          ],
+          "D": [
+            7,
+            -13,
+            7,
+            -1
+          ],
+          "weights": [
+            "7",
+            "13",
+            "13/4",
+            "25/24"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 7,
+          "r": 2,
+          "s": 4,
+          "z": 1,
+          "S": 3,
+          "T": 6,
+          "d": -4,
+          "q": [
+            13,
+            7,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -15,
+              6,
+              -4
+            ],
+            [
+              -6,
+              0,
+              -2,
+              1
+            ],
+            [
+              2,
+              -3,
+              0,
+              0
+            ],
+            [
+              -3,
+              6,
+              -4,
+              0
+            ]
+          ],
+          "D": [
+            -6,
+            5,
+            -1,
+            2
+          ],
+          "weights": [
+            "13",
+            "7",
+            "25/4",
+            "13/12"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 13,
+          "r": 1,
+          "s": 4,
+          "z": 1,
+          "S": 3,
+          "T": 12,
+          "d": -10,
+          "q": [
+            13,
+            13,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -21,
+              12,
+              -4
+            ],
+            [
+              -8,
+              0,
+              -6,
+              1
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -3,
+              12,
+              -10,
+              0
+            ]
+          ],
+          "D": [
+            -3,
+            -2,
+            3,
+            2
+          ],
+          "weights": [
+            "13",
+            "13",
+            "25/2",
+            "25/24"
+          ]
+        },
+        {
+          "fixed_side": "B",
+          "a": 13,
+          "b": 13,
+          "r": 1,
+          "s": 4,
+          "z": 1,
+          "S": 3,
+          "T": 12,
+          "d": -10,
+          "q": [
+            13,
+            13,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -21,
+              12,
+              -4
+            ],
+            [
+              -8,
+              0,
+              -6,
+              1
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -3,
+              12,
+              -10,
+              0
+            ]
+          ],
+          "D": [
+            -3,
+            -2,
+            3,
+            2
+          ],
+          "weights": [
+            "13",
+            "13",
+            "25/2",
+            "25/24"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 13,
+          "r": 3,
+          "s": 3,
+          "z": 2,
+          "S": 4,
+          "T": 6,
+          "d": -3,
+          "q": [
+            13,
+            13,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -14,
+              4,
+              -3
+            ],
+            [
+              -12,
+              0,
+              -3,
+              2
+            ],
+            [
+              3,
+              -4,
+              0,
+              0
+            ],
+            [
+              -4,
+              6,
+              -3,
+              0
+            ]
+          ],
+          "D": [
+            0,
+            -1,
+            1,
+            0
+          ],
+          "weights": [
+            "13",
+            "13",
+            "25/6",
+            "25/12"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 17,
+          "r": 1,
+          "s": 3,
+          "z": 1,
+          "S": 4,
+          "T": 16,
+          "d": -13,
+          "q": [
+            13,
+            17,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -22,
+              12,
+              -3
+            ],
+            [
+              -10,
+              0,
+              -8,
+              1
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -4,
+              16,
+              -13,
+              0
+            ]
+          ],
+          "D": [
+            0,
+            -9,
+            8,
+            1
+          ],
+          "weights": [
+            "13",
+            "17",
+            "25/2",
+            "33/32"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 21,
+          "r": 3,
+          "s": 1,
+          "z": 1,
+          "S": 12,
+          "T": 20,
+          "d": -9,
+          "q": [
+            13,
+            21,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -16,
+              4,
+              -1
+            ],
+            [
+              -17,
+              0,
+              -5,
+              1
+            ],
+            [
+              3,
+              -4,
+              0,
+              0
+            ],
+            [
+              -12,
+              20,
+              -9,
+              0
+            ]
+          ],
+          "D": [
+            13,
+            -21,
+            9,
+            -1
+          ],
+          "weights": [
+            "13",
+            "21",
+            "25/6",
+            "41/40"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 25,
+          "r": 2,
+          "s": 1,
+          "z": 1,
+          "S": 12,
+          "T": 24,
+          "d": -13,
+          "q": [
+            13,
+            25,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -18,
+              6,
+              -1
+            ],
+            [
+              -18,
+              0,
+              -8,
+              1
+            ],
+            [
+              2,
+              -3,
+              0,
+              0
+            ],
+            [
+              -12,
+              24,
+              -13,
+              0
+            ]
+          ],
+          "D": [
+            15,
+            -28,
+            14,
+            -1
+          ],
+          "weights": [
+            "13",
+            "25",
+            "25/4",
+            "49/48"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 37,
+          "r": 1,
+          "s": 1,
+          "z": 1,
+          "S": 12,
+          "T": 36,
+          "d": -25,
+          "q": [
+            13,
+            37,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -24,
+              12,
+              -1
+            ],
+            [
+              -20,
+              0,
+              -18,
+              1
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -12,
+              36,
+              -25,
+              0
+            ]
+          ],
+          "D": [
+            18,
+            -47,
+            30,
+            -1
+          ],
+          "weights": [
+            "13",
+            "37",
+            "25/2",
+            "73/72"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 37,
+          "r": 3,
+          "s": 1,
+          "z": 2,
+          "S": 12,
+          "T": 18,
+          "d": -7,
+          "q": [
+            13,
+            37,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -16,
+              4,
+              -1
+            ],
+            [
+              -30,
+              0,
+              -9,
+              2
+            ],
+            [
+              3,
+              -4,
+              0,
+              0
+            ],
+            [
+              -12,
+              18,
+              -7,
+              0
+            ]
+          ],
+          "D": [
+            26,
+            -35,
+            11,
+            -2
+          ],
+          "weights": [
+            "13",
+            "37",
+            "25/6",
+            "73/36"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 37,
+          "r": 3,
+          "s": 2,
+          "z": 4,
+          "S": 6,
+          "T": 9,
+          "d": -4,
+          "q": [
+            13,
+            37,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -15,
+              4,
+              -2
+            ],
+            [
+              -32,
+              0,
+              -9,
+              4
+            ],
+            [
+              3,
+              -4,
+              0,
+              0
+            ],
+            [
+              -6,
+              9,
+              -4,
+              0
+            ]
+          ],
+          "D": [
+            22,
+            -27,
+            8,
+            -3
+          ],
+          "weights": [
+            "13",
+            "37",
+            "25/6",
+            "73/18"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 39,
+          "r": 1,
+          "s": 2,
+          "z": 2,
+          "S": 6,
+          "T": 19,
+          "d": -14,
+          "q": [
+            13,
+            39,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -23,
+              12,
+              -2
+            ],
+            [
+              -22,
+              0,
+              -19,
+              2
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -6,
+              19,
+              -14,
+              0
+            ]
+          ],
+          "D": [
+            14,
+            -33,
+            20,
+            -1
+          ],
+          "weights": [
+            "13",
+            "39",
+            "25/2",
+            "77/38"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 41,
+          "r": 4,
+          "s": 2,
+          "z": 5,
+          "S": 6,
+          "T": 8,
+          "d": -3,
+          "q": [
+            13,
+            41,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -14,
+              3,
+              -2
+            ],
+            [
+              -38,
+              0,
+              -8,
+              5
+            ],
+            [
+              4,
+              -5,
+              0,
+              0
+            ],
+            [
+              -6,
+              8,
+              -3,
+              0
+            ]
+          ],
+          "D": [
+            27,
+            -30,
+            7,
+            -4
+          ],
+          "weights": [
+            "13",
+            "41",
+            "25/8",
+            "81/16"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 43,
+          "r": 2,
+          "s": 1,
+          "z": 2,
+          "S": 12,
+          "T": 21,
+          "d": -10,
+          "q": [
+            13,
+            43,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -18,
+              6,
+              -1
+            ],
+            [
+              -31,
+              0,
+              -14,
+              2
+            ],
+            [
+              2,
+              -3,
+              0,
+              0
+            ],
+            [
+              -12,
+              21,
+              -10,
+              0
+            ]
+          ],
+          "D": [
+            28,
+            -43,
+            17,
+            -2
+          ],
+          "weights": [
+            "13",
+            "43",
+            "25/4",
+            "85/42"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 55,
+          "r": 1,
+          "s": 4,
+          "z": 6,
+          "S": 3,
+          "T": 9,
+          "d": -7,
+          "q": [
+            13,
+            55,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -21,
+              12,
+              -4
+            ],
+            [
+              -34,
+              0,
+              -27,
+              6
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -3,
+              9,
+              -7,
+              0
+            ]
+          ],
+          "D": [
+            23,
+            -41,
+            21,
+            -3
+          ],
+          "weights": [
+            "13",
+            "55",
+            "25/2",
+            "109/18"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 61,
+          "r": 1,
+          "s": 1,
+          "z": 2,
+          "S": 12,
+          "T": 30,
+          "d": -19,
+          "q": [
+            13,
+            61,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -24,
+              12,
+              -1
+            ],
+            [
+              -33,
+              0,
+              -30,
+              2
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -12,
+              30,
+              -19,
+              0
+            ]
+          ],
+          "D": [
+            31,
+            -65,
+            36,
+            -2
+          ],
+          "weights": [
+            "13",
+            "61",
+            "25/2",
+            "121/60"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 61,
+          "r": 1,
+          "s": 3,
+          "z": 5,
+          "S": 4,
+          "T": 12,
+          "d": -9,
+          "q": [
+            13,
+            61,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -22,
+              12,
+              -3
+            ],
+            [
+              -36,
+              0,
+              -30,
+              5
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -4,
+              12,
+              -9,
+              0
+            ]
+          ],
+          "D": [
+            26,
+            -49,
+            26,
+            -3
+          ],
+          "weights": [
+            "13",
+            "61",
+            "25/2",
+            "121/24"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 61,
+          "r": 2,
+          "s": 1,
+          "z": 3,
+          "S": 12,
+          "T": 20,
+          "d": -9,
+          "q": [
+            13,
+            61,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -18,
+              6,
+              -1
+            ],
+            [
+              -44,
+              0,
+              -20,
+              3
+            ],
+            [
+              2,
+              -3,
+              0,
+              0
+            ],
+            [
+              -12,
+              20,
+              -9,
+              0
+            ]
+          ],
+          "D": [
+            41,
+            -60,
+            22,
+            -3
+          ],
+          "weights": [
+            "13",
+            "61",
+            "25/4",
+            "121/40"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 69,
+          "r": 3,
+          "s": 1,
+          "z": 4,
+          "S": 12,
+          "T": 17,
+          "d": -6,
+          "q": [
+            13,
+            69,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -16,
+              4,
+              -1
+            ],
+            [
+              -56,
+              0,
+              -17,
+              4
+            ],
+            [
+              3,
+              -4,
+              0,
+              0
+            ],
+            [
+              -12,
+              17,
+              -6,
+              0
+            ]
+          ],
+          "D": [
+            52,
+            -66,
+            18,
+            -4
+          ],
+          "weights": [
+            "13",
+            "69",
+            "25/6",
+            "137/34"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 85,
+          "r": 1,
+          "s": 1,
+          "z": 3,
+          "S": 12,
+          "T": 28,
+          "d": -17,
+          "q": [
+            13,
+            85,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -24,
+              12,
+              -1
+            ],
+            [
+              -46,
+              0,
+              -42,
+              3
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -12,
+              28,
+              -17,
+              0
+            ]
+          ],
+          "D": [
+            44,
+            -87,
+            46,
+            -3
+          ],
+          "weights": [
+            "13",
+            "85",
+            "25/2",
+            "169/56"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 85,
+          "r": 2,
+          "s": 3,
+          "z": 12,
+          "S": 4,
+          "T": 7,
+          "d": -4,
+          "q": [
+            13,
+            85,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -16,
+              6,
+              -3
+            ],
+            [
+              -69,
+              0,
+              -28,
+              12
+            ],
+            [
+              2,
+              -3,
+              0,
+              0
+            ],
+            [
+              -4,
+              7,
+              -4,
+              0
+            ]
+          ],
+          "D": [
+            58,
+            -73,
+            25,
+            -10
+          ],
+          "weights": [
+            "13",
+            "85",
+            "25/4",
+            "169/14"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 109,
+          "r": 1,
+          "s": 1,
+          "z": 4,
+          "S": 12,
+          "T": 27,
+          "d": -16,
+          "q": [
+            13,
+            109,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -24,
+              12,
+              -1
+            ],
+            [
+              -59,
+              0,
+              -54,
+              4
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -12,
+              27,
+              -16,
+              0
+            ]
+          ],
+          "D": [
+            57,
+            -110,
+            57,
+            -4
+          ],
+          "weights": [
+            "13",
+            "109",
+            "25/2",
+            "217/54"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 115,
+          "r": 2,
+          "s": 1,
+          "z": 6,
+          "S": 12,
+          "T": 19,
+          "d": -8,
+          "q": [
+            13,
+            115,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -18,
+              6,
+              -1
+            ],
+            [
+              -83,
+              0,
+              -38,
+              6
+            ],
+            [
+              2,
+              -3,
+              0,
+              0
+            ],
+            [
+              -12,
+              19,
+              -8,
+              0
+            ]
+          ],
+          "D": [
+            80,
+            -113,
+            39,
+            -6
+          ],
+          "weights": [
+            "13",
+            "115",
+            "25/4",
+            "229/38"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 157,
+          "r": 1,
+          "s": 1,
+          "z": 6,
+          "S": 12,
+          "T": 26,
+          "d": -15,
+          "q": [
+            13,
+            157,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -24,
+              12,
+              -1
+            ],
+            [
+              -85,
+              0,
+              -78,
+              6
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -12,
+              26,
+              -15,
+              0
+            ]
+          ],
+          "D": [
+            83,
+            -157,
+            80,
+            -6
+          ],
+          "weights": [
+            "13",
+            "157",
+            "25/2",
+            "313/52"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 177,
+          "r": 1,
+          "s": 2,
+          "z": 11,
+          "S": 6,
+          "T": 16,
+          "d": -11,
+          "q": [
+            13,
+            177,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -23,
+              12,
+              -2
+            ],
+            [
+              -100,
+              0,
+              -88,
+              11
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -6,
+              16,
+              -11,
+              0
+            ]
+          ],
+          "D": [
+            92,
+            -168,
+            86,
+            -10
+          ],
+          "weights": [
+            "13",
+            "177",
+            "25/2",
+            "353/32"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 13,
+          "b": 301,
+          "r": 1,
+          "s": 1,
+          "z": 12,
+          "S": 12,
+          "T": 25,
+          "d": -14,
+          "q": [
+            13,
+            301,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -24,
+              12,
+              -1
+            ],
+            [
+              -163,
+              0,
+              -150,
+              12
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -12,
+              25,
+              -14,
+              0
+            ]
+          ],
+          "D": [
+            161,
+            -300,
+            151,
+            -12
+          ],
+          "weights": [
+            "13",
+            "301",
+            "25/2",
+            "601/50"
+          ]
+        }
+      ],
+      "resonances": [
+        {
+          "b": 13,
+          "r": 3,
+          "z": 2,
+          "S": 4,
+          "T": 6,
+          "k": "every integer k>=1",
+          "s": "3k",
+          "a": "12k+1"
+        }
+      ],
+      "complete_divisor_seeds_and_trials": [
+        {
+          "side": "A",
+          "r": 1,
+          "s": 1,
+          "C": -24,
+          "trials": [
+            {
+              "z": 1,
+              "T": "36",
+              "outcome": "accepted",
+              "other_denominator": 37
+            },
+            {
+              "z": 2,
+              "T": "30",
+              "outcome": "accepted",
+              "other_denominator": 61
+            },
+            {
+              "z": 3,
+              "T": "28",
+              "outcome": "accepted",
+              "other_denominator": 85
+            },
+            {
+              "z": 4,
+              "T": "27",
+              "outcome": "accepted",
+              "other_denominator": 109
+            },
+            {
+              "z": 6,
+              "T": "26",
+              "outcome": "accepted",
+              "other_denominator": 157
+            },
+            {
+              "z": 8,
+              "T": "51/2",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 12,
+              "T": "25",
+              "outcome": "accepted",
+              "other_denominator": 301
+            },
+            {
+              "z": 24,
+              "T": "49/2",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 1,
+          "s": 2,
+          "C": -22,
+          "trials": [
+            {
+              "z": 1,
+              "T": "68/3",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "19",
+              "outcome": "accepted",
+              "other_denominator": 39
+            },
+            {
+              "z": 11,
+              "T": "16",
+              "outcome": "accepted",
+              "other_denominator": 177
+            },
+            {
+              "z": 22,
+              "T": "47/3",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 1,
+          "s": 3,
+          "C": -20,
+          "trials": [
+            {
+              "z": 1,
+              "T": "16",
+              "outcome": "accepted",
+              "other_denominator": 17
+            },
+            {
+              "z": 2,
+              "T": "27/2",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 4,
+              "T": "49/4",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 5,
+              "T": "12",
+              "outcome": "accepted",
+              "other_denominator": 61
+            },
+            {
+              "z": 10,
+              "T": "23/2",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 20,
+              "T": "45/4",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 1,
+          "s": 4,
+          "C": -18,
+          "trials": [
+            {
+              "z": 1,
+              "T": "12",
+              "outcome": "accepted",
+              "other_denominator": 13
+            },
+            {
+              "z": 2,
+              "T": "51/5",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 3,
+              "T": "48/5",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 6,
+              "T": "9",
+              "outcome": "accepted",
+              "other_denominator": 55
+            },
+            {
+              "z": 9,
+              "T": "44/5",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 18,
+              "T": "43/5",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 1,
+          "s": 6,
+          "C": -14,
+          "trials": [
+            {
+              "z": 1,
+              "T": "52/7",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "45/7",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 7,
+              "T": "40/7",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 14,
+              "T": "39/7",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 1,
+          "s": 12,
+          "C": -2,
+          "trials": [
+            {
+              "z": 1,
+              "T": "28/13",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "27/13",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 2,
+          "s": 1,
+          "C": -18,
+          "trials": [
+            {
+              "z": 1,
+              "T": "24",
+              "outcome": "accepted",
+              "other_denominator": 25
+            },
+            {
+              "z": 2,
+              "T": "21",
+              "outcome": "accepted",
+              "other_denominator": 43
+            },
+            {
+              "z": 3,
+              "T": "20",
+              "outcome": "accepted",
+              "other_denominator": 61
+            },
+            {
+              "z": 6,
+              "T": "19",
+              "outcome": "accepted",
+              "other_denominator": 115
+            },
+            {
+              "z": 9,
+              "T": "56/3",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 18,
+              "T": "55/3",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 2,
+          "s": 2,
+          "C": -15,
+          "trials": [
+            {
+              "z": 1,
+              "T": "66/5",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 3,
+              "T": "56/5",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 5,
+              "T": "54/5",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 15,
+              "T": "52/5",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 2,
+          "s": 3,
+          "C": -12,
+          "trials": [
+            {
+              "z": 1,
+              "T": "60/7",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "54/7",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 3,
+              "T": "52/7",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 4,
+              "T": "51/7",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 6,
+              "T": "50/7",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 12,
+              "T": "7",
+              "outcome": "accepted",
+              "other_denominator": 85
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 2,
+          "s": 4,
+          "C": -9,
+          "trials": [
+            {
+              "z": 1,
+              "T": "6",
+              "outcome": "accepted",
+              "other_denominator": 7
+            },
+            {
+              "z": 3,
+              "T": "16/3",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 9,
+              "T": "46/9",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 2,
+          "s": 6,
+          "C": -3,
+          "trials": [
+            {
+              "z": 1,
+              "T": "42/13",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 3,
+              "T": "40/13",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 2,
+          "s": 12,
+          "C": 15,
+          "trials": [
+            {
+              "z": 1,
+              "T": "6/25",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 3,
+              "T": "16/25",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 5,
+              "T": "18/25",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 15,
+              "T": "4/5",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 3,
+          "s": 1,
+          "C": -16,
+          "trials": [
+            {
+              "z": 1,
+              "T": "20",
+              "outcome": "accepted",
+              "other_denominator": 21
+            },
+            {
+              "z": 2,
+              "T": "18",
+              "outcome": "accepted",
+              "other_denominator": 37
+            },
+            {
+              "z": 4,
+              "T": "17",
+              "outcome": "accepted",
+              "other_denominator": 69
+            },
+            {
+              "z": 8,
+              "T": "33/2",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 16,
+              "T": "65/4",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 3,
+          "s": 2,
+          "C": -12,
+          "trials": [
+            {
+              "z": 1,
+              "T": "72/7",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "66/7",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 3,
+              "T": "64/7",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 4,
+              "T": "9",
+              "outcome": "accepted",
+              "other_denominator": 37
+            },
+            {
+              "z": 6,
+              "T": "62/7",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 12,
+              "T": "61/7",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 3,
+          "s": 3,
+          "C": -8,
+          "trials": [
+            {
+              "z": 1,
+              "T": "32/5",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "6",
+              "outcome": "accepted",
+              "other_denominator": 13
+            },
+            {
+              "z": 4,
+              "T": "29/5",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 8,
+              "T": "57/10",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 3,
+          "s": 4,
+          "C": -4,
+          "trials": [
+            {
+              "z": 1,
+              "T": "56/13",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "54/13",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 4,
+              "T": "53/13",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 3,
+          "s": 6,
+          "C": 4,
+          "trials": [
+            {
+              "z": 1,
+              "T": "40/19",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "42/19",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 4,
+              "T": "43/19",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 3,
+          "s": 12,
+          "C": 28,
+          "trials": [
+            {
+              "z": 1,
+              "T": "-8/37",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "6/37",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 4,
+              "T": "13/37",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 7,
+              "T": "16/37",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 14,
+              "T": "18/37",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 28,
+              "T": "19/37",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 4,
+          "s": 1,
+          "C": -15,
+          "trials": [
+            {
+              "z": 1,
+              "T": "18",
+              "outcome": "r+1 does not divide b-1."
+            },
+            {
+              "z": 3,
+              "T": "16",
+              "outcome": "r+1 does not divide b-1."
+            },
+            {
+              "z": 5,
+              "T": "78/5",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 15,
+              "T": "76/5",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 4,
+          "s": 2,
+          "C": -10,
+          "trials": [
+            {
+              "z": 1,
+              "T": "80/9",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "25/3",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 5,
+              "T": "8",
+              "outcome": "accepted",
+              "other_denominator": 41
+            },
+            {
+              "z": 10,
+              "T": "71/9",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 4,
+          "s": 3,
+          "C": -5,
+          "trials": [
+            {
+              "z": 1,
+              "T": "70/13",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 5,
+              "T": "66/13",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 4,
+          "s": 4,
+          "C": 0,
+          "trials": [],
+          "zero_branch": "Impossible by the proved strictly positive remainder."
+        },
+        {
+          "side": "A",
+          "r": 4,
+          "s": 6,
+          "C": 10,
+          "trials": [
+            {
+              "z": 1,
+              "T": "8/5",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "9/5",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 5,
+              "T": "48/25",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 10,
+              "T": "49/25",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 4,
+          "s": 12,
+          "C": 40,
+          "trials": [
+            {
+              "z": 1,
+              "T": "-20/49",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "0",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 4,
+              "T": "10/49",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 5,
+              "T": "12/49",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 8,
+              "T": "15/49",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 10,
+              "T": "16/49",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 20,
+              "T": "18/49",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 40,
+              "T": "19/49",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 6,
+          "s": 1,
+          "C": -14,
+          "trials": [
+            {
+              "z": 1,
+              "T": "16",
+              "outcome": "r+1 does not divide b-1."
+            },
+            {
+              "z": 2,
+              "T": "15",
+              "outcome": "r+1 does not divide b-1."
+            },
+            {
+              "z": 7,
+              "T": "100/7",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 14,
+              "T": "99/7",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 6,
+          "s": 2,
+          "C": -7,
+          "trials": [
+            {
+              "z": 1,
+              "T": "98/13",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 7,
+              "T": "92/13",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 6,
+          "s": 3,
+          "C": 0,
+          "trials": [],
+          "zero_branch": "Impossible by the proved strictly positive remainder."
+        },
+        {
+          "side": "A",
+          "r": 6,
+          "s": 4,
+          "C": 7,
+          "trials": [
+            {
+              "z": 1,
+              "T": "14/5",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 7,
+              "T": "76/25",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 6,
+          "s": 6,
+          "C": 21,
+          "trials": [
+            {
+              "z": 1,
+              "T": "42/37",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 3,
+              "T": "56/37",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 7,
+              "T": "60/37",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 21,
+              "T": "62/37",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 6,
+          "s": 12,
+          "C": 63,
+          "trials": [
+            {
+              "z": 1,
+              "T": "-42/73",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 3,
+              "T": "0",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 7,
+              "T": "12/73",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 9,
+              "T": "14/73",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 21,
+              "T": "18/73",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 63,
+              "T": "20/73",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 12,
+          "s": 1,
+          "C": -13,
+          "trials": [
+            {
+              "z": 1,
+              "T": "14",
+              "outcome": "r+1 does not divide b-1."
+            },
+            {
+              "z": 13,
+              "T": "170/13",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 12,
+          "s": 2,
+          "C": 0,
+          "trials": [],
+          "zero_branch": "Impossible by the proved strictly positive remainder."
+        },
+        {
+          "side": "A",
+          "r": 12,
+          "s": 3,
+          "C": 13,
+          "trials": [
+            {
+              "z": 1,
+              "T": "130/37",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 13,
+              "T": "142/37",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 12,
+          "s": 4,
+          "C": 26,
+          "trials": [
+            {
+              "z": 1,
+              "T": "104/49",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "117/49",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 13,
+              "T": "128/49",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 26,
+              "T": "129/49",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 12,
+          "s": 6,
+          "C": 52,
+          "trials": [
+            {
+              "z": 1,
+              "T": "52/73",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "78/73",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 4,
+              "T": "91/73",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 13,
+              "T": "100/73",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 26,
+              "T": "102/73",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 52,
+              "T": "103/73",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 12,
+          "s": 12,
+          "C": 130,
+          "trials": [
+            {
+              "z": 1,
+              "T": "-104/145",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "-39/145",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 5,
+              "T": "0",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 10,
+              "T": "13/145",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 13,
+              "T": "16/145",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 26,
+              "T": "21/145",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 65,
+              "T": "24/145",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 130,
+              "T": "5/29",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 1,
+          "z": 1,
+          "C": 4,
+          "trials": [
+            {
+              "s": 1,
+              "S": "4",
+              "outcome": "accepted",
+              "other_denominator": 5
+            },
+            {
+              "s": 2,
+              "S": "10/3",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 4,
+              "S": "3",
+              "outcome": "accepted",
+              "other_denominator": 13
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 1,
+          "z": 2,
+          "C": 3,
+          "trials": [
+            {
+              "s": 1,
+              "S": "12/5",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 3,
+              "S": "2",
+              "outcome": "accepted",
+              "other_denominator": 7
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 1,
+          "z": 3,
+          "C": 2,
+          "trials": [
+            {
+              "s": 1,
+              "S": "12/7",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 2,
+              "S": "11/7",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 1,
+          "z": 4,
+          "C": 1,
+          "trials": [
+            {
+              "s": 1,
+              "S": "4/3",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 1,
+          "z": 6,
+          "C": -1,
+          "trials": [
+            {
+              "s": 1,
+              "S": "12/13",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 1,
+          "z": 12,
+          "C": -7,
+          "trials": [
+            {
+              "s": 1,
+              "S": "12/25",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 7,
+              "S": "18/25",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 2,
+          "z": 1,
+          "C": 4,
+          "trials": [
+            {
+              "s": 1,
+              "S": "6",
+              "outcome": "accepted",
+              "other_denominator": 7
+            },
+            {
+              "s": 2,
+              "S": "11/2",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 4,
+              "S": "21/4",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 2,
+          "z": 2,
+          "C": 2,
+          "trials": [
+            {
+              "s": 1,
+              "S": "24/7",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 2,
+              "S": "23/7",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 2,
+          "z": 3,
+          "C": 0,
+          "trials": [],
+          "S_at_zero_branch": "12/5",
+          "zero_branch": "S is not a positive integer."
+        },
+        {
+          "side": "B",
+          "r": 2,
+          "z": 4,
+          "C": -2,
+          "trials": [
+            {
+              "s": 1,
+              "S": "24/13",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 2,
+              "S": "25/13",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 2,
+          "z": 6,
+          "C": -6,
+          "trials": [
+            {
+              "s": 1,
+              "S": "24/19",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 2,
+              "S": "27/19",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 3,
+              "S": "28/19",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 6,
+              "S": "29/19",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 2,
+          "z": 12,
+          "C": -18,
+          "trials": [
+            {
+              "s": 1,
+              "S": "24/37",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 2,
+              "S": "33/37",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 3,
+              "S": "36/37",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 6,
+              "S": "39/37",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 9,
+              "S": "40/37",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 18,
+              "S": "41/37",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 3,
+          "z": 1,
+          "C": 3,
+          "trials": [
+            {
+              "s": 1,
+              "S": "36/5",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 3,
+              "S": "34/5",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 3,
+          "z": 2,
+          "C": 0,
+          "trials": [],
+          "S_at_zero_branch": "4",
+          "zero_branch": "A resonance with the recorded free parameter."
+        },
+        {
+          "side": "B",
+          "r": 3,
+          "z": 3,
+          "C": -3,
+          "trials": [
+            {
+              "s": 1,
+              "S": "36/13",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 3,
+              "S": "38/13",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 3,
+          "z": 4,
+          "C": -6,
+          "trials": [
+            {
+              "s": 1,
+              "S": "36/17",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 2,
+              "S": "39/17",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 3,
+              "S": "40/17",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 6,
+              "S": "41/17",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 3,
+          "z": 6,
+          "C": -12,
+          "trials": [
+            {
+              "s": 1,
+              "S": "36/25",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 2,
+              "S": "42/25",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 3,
+              "S": "44/25",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 4,
+              "S": "9/5",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 6,
+              "S": "46/25",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 12,
+              "S": "47/25",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 3,
+          "z": 12,
+          "C": -30,
+          "trials": [
+            {
+              "s": 1,
+              "S": "36/49",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 2,
+              "S": "51/49",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 3,
+              "S": "8/7",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 5,
+              "S": "60/49",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 6,
+              "S": "61/49",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 10,
+              "S": "9/7",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 15,
+              "S": "64/49",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 30,
+              "S": "65/49",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 5,
+          "z": 1,
+          "C": 0,
+          "trials": [],
+          "S_at_zero_branch": "60/7",
+          "zero_branch": "S is not a positive integer."
+        },
+        {
+          "side": "B",
+          "r": 5,
+          "z": 2,
+          "C": -5,
+          "trials": [
+            {
+              "s": 1,
+              "S": "60/13",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 5,
+              "S": "64/13",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 5,
+          "z": 3,
+          "C": -10,
+          "trials": [
+            {
+              "s": 1,
+              "S": "60/19",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 2,
+              "S": "65/19",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 5,
+              "S": "68/19",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 10,
+              "S": "69/19",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 5,
+          "z": 4,
+          "C": -15,
+          "trials": [
+            {
+              "s": 1,
+              "S": "12/5",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 3,
+              "S": "14/5",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 5,
+              "S": "72/25",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 15,
+              "S": "74/25",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 5,
+          "z": 6,
+          "C": -25,
+          "trials": [
+            {
+              "s": 1,
+              "S": "60/37",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 5,
+              "S": "80/37",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 25,
+              "S": "84/37",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 5,
+          "z": 12,
+          "C": -55,
+          "trials": [
+            {
+              "s": 1,
+              "S": "60/73",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 5,
+              "S": "104/73",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 11,
+              "S": "110/73",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 55,
+              "S": "114/73",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 11,
+          "z": 1,
+          "C": -11,
+          "trials": [
+            {
+              "s": 1,
+              "S": "132/13",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 11,
+              "S": "142/13",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 11,
+          "z": 2,
+          "C": -22,
+          "trials": [
+            {
+              "s": 1,
+              "S": "132/25",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 2,
+              "S": "143/25",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 11,
+              "S": "152/25",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 22,
+              "S": "153/25",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 11,
+          "z": 3,
+          "C": -33,
+          "trials": [
+            {
+              "s": 1,
+              "S": "132/37",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 3,
+              "S": "154/37",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 11,
+              "S": "162/37",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 33,
+              "S": "164/37",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 11,
+          "z": 4,
+          "C": -44,
+          "trials": [
+            {
+              "s": 1,
+              "S": "132/49",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 2,
+              "S": "22/7",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 4,
+              "S": "165/49",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 11,
+              "S": "172/49",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 22,
+              "S": "174/49",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 44,
+              "S": "25/7",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 11,
+          "z": 6,
+          "C": -66,
+          "trials": [
+            {
+              "s": 1,
+              "S": "132/73",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 2,
+              "S": "165/73",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 3,
+              "S": "176/73",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 6,
+              "S": "187/73",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 11,
+              "S": "192/73",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 22,
+              "S": "195/73",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 33,
+              "S": "196/73",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 66,
+              "S": "197/73",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 11,
+          "z": 12,
+          "C": -132,
+          "trials": [
+            {
+              "s": 1,
+              "S": "132/145",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 2,
+              "S": "198/145",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 3,
+              "S": "44/29",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 4,
+              "S": "231/145",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 6,
+              "S": "242/145",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 11,
+              "S": "252/145",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 12,
+              "S": "253/145",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 22,
+              "S": "258/145",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 33,
+              "S": "52/29",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 44,
+              "S": "9/5",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 66,
+              "S": "262/145",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 132,
+              "S": "263/145",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

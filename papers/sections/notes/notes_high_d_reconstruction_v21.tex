@@ -1,0 +1,72 @@
+\paragraph{五つの整数を固定した三高 $D$ の完全復元．}
+\label{nhd21:reconstruction}
+同時非負性の残余問題では，$x=D_a,y=D_b,z=D_c\ge0$ を直接指定する．
+$s,t$ も固定することが必要であり，$D$ だけを固定した有限性とは主張しない．
+次の変数は再開後の復元と消去にそのまま使える：
+\[
+ u=s+t-1,\quad d=x+y+z\ge1,\quad
+ k=sd+b-1-x,\quad\alpha=ud+b-1+z,
+\]
+\[
+ h=s-x,\quad j=t-y,\quad\ell=u+z,\quad
+ \lambda=ux+sz,\quad\mu=uy+tz,
+\]
+\[
+ F=b-1+\lambda,\quad m=F^2+F+1,\quad
+ E=\mu h-\ell-j,\quad J=h+\ell-\lambda j.
+\]
+正の模型では $h\ge1$，すなわち $D_a\le s-1$ が新しく必要となる．
+$j$ の符号は制限しない．$E,J$ は $b$ に依存せず，
+\[
+ S=h+\frac{FE-J}{m},\quad
+ T=j+\frac{E+(F+1)J}{m},\quad
+ U=\ell+\frac{(F+1)E+FJ}{m}
+\]
+が全尺度を一意に復元する．三尺度の整数性は単一条件 $m\mid FE-J$ と同値である．
+元の三つの高高 pair 残差はこの尺度で互いに等しくなるが，自動的に零にはならない．
+\[
+ (-s-tb)S+(s\alpha-t)T-\alpha b=0
+\]
+を最後まで保持し，全尺度の正値性，canonical 六符号量の正値性，
+$\alpha\ge k\ge b+1$ も確認する．これらは元の模型への必要十分判定となり，
+正の weights は公開稿の明示式から得られる．
+
+\paragraph{ノルムによる全 $b$ の有限化．}
+$v=S-h,w=T-j$ と置くと
+\[
+ E=(F+1)v+w,\qquad J=-v+Fw,
+\]
+\[
+ N=E^2+EJ+J^2=m(v^2+vw+w^2).
+\]
+零ノルムは，正尺度の下では
+$(s,t,x,y,z)=(3,3,0,0,1),(2,2,1,1,1)$ に限られる．
+元の残余式がそれぞれ $b(b+5)=27$，$b(b+9)=14$ を要求するため，両方とも排除される．
+従って $N>0$ であり，
+\[
+ m\mid N,\qquad m\le N,\qquad
+ b\le 1-\lambda+
+ \left\lfloor\frac{\sqrt{4N-3}-1}{2}\right\rfloor
+\]
+となる．実装では平方根を \texttt{isqrt} で厳密に評価する．
+$s,t,x,y,z$ を固定すれば，任意 cutoff なしに $b\ge2$ を全て調べられる．
+この五つの整数そのものへの一様上界は未証明である．
+
+\paragraph{誤った簡約を防ぐ二つの反例．}
+$(s,t,x,y,z,b)=(1,1,0,3,0,3)$ では
+$F=2,m=7,E=4,J=2,N=28$ である．$m\mid N$ でも
+$m\nmid FE-J=6$ なので尺度は整数でない．ノルム整除性だけに置き換えない．
+また $(1,3,0,4,0,2)$ では $(S,T,U)=(3,5,11)$ は正整数で，
+六符号量も正，$D=(0,4,0,-4)$ であるが，元の三つの高高 pair 残差は全て三である．
+この例は模型ではなく，残余式を落とせないことの確認例である．
+
+\paragraph{再利用する実装と次の課題．}
+\nolinkurl{verification/verify_high_d_reconstruction_v21.py} の
+\texttt{reconstruct\_fixed\_data(s,t,x,y,z)} が全 $b$ の完全復元器である．
+通常の実行は二十四の多項式係数恒等式と五つの厳密回帰を確認する．
+\texttt{--fixed 3 4 0 1 1} のように固定データを渡せる．
+既存の有限族検査は $s,t\le12,0\le x<s,0\le y,z\le4,d\ge1$ の
+$23256$ 組について $b\ge2$ を全範囲で尽くし，模型は零だった．
+結果と実行当時の source は \nolinkurl{research/} に保存した．
+これは五変数に制限を付けた結果であり，一般不存在ではない．
+次は単一合同式と元の残余式を同時に使い，五変数側の無上界障害または反例を探す．

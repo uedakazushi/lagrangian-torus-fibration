@@ -1,0 +1,728 @@
+\section{SNC 因子と connection holonomy による有限相対 compactification}
+\label{snc:section}
+
+直線配置に対する構成の本質は，個々の成分が ample であることではない．
+必要なのは，Kähler class が divisor 全体の正の重み付き和で表されることである．
+有理曲線の場合の graph periods に加え，正の genus を持つ成分上の periods は
+normal connection の holonomy を選ぶことで解消できる．
+本節では，任意の genus，負の自己交点数，同じ二成分の複数交点，
+および二価の成分を含む形でこの構成を証明する．
+
+\subsection{仮定，marking，結論}
+
+$M$ を連結な滑らかな射影複素曲面，$D=\bigcup_{a=1}^{r}D_a$ を
+reduced simple normal crossings divisor とする．
+各 $D_a$ は genus $g_a$ の滑らかな曲線とし，三重交点はない．
+異なる二成分が複数の点で交わることを許す．
+各交点を個別にラベル付けし，その集合を $E$ とする．
+$e=|E|$，$n_a=|D_a\cap\bigcup_{b\ne a}D_b|$ と置く．
+$n_a$ は隣接する成分の数ではなく，\emph{交点の数}である．
+以下では
+\begin{equation}\label{snc:valence}
+ n_a\geq2\qquad(1\leq a\leq r)
+\end{equation}
+を仮定する．$G$ は頂点が $D_a$，辺が個々の交点である dual multigraph とする．
+
+Kähler form $\omega$ と正の実数 $w_a$ を，
+\begin{equation}\label{snc:positive-class}
+ [\omega]=2\pi\sum_{a=1}^{r}w_a[D_a],\qquad w_a>0
+\end{equation}
+となるように固定する．重みは存在だけでなくデータの一部として固定する．
+normal-circle の周期は $2\pi$，Hamiltonian convention は
+$\iota_V\omega=-\dd\mu$，normal moment は $\mu\geq0$ とする．
+angular connection の curvature convention は
+\begin{equation}\label{snc:curvature-convention}
+ \int_{D_a}\dd\alpha_a=-2\pi D_a^2
+\end{equation}
+である．
+
+各 $D_a$ から交点の小円板を除いた genus $g_a$，$n_a$ 境界成分の曲面を $P_a$ とする．
+$P_a$ 上に，境界 collar で radial circles を葉とし，
+内部には $2g_a+n_a-2$ 個の simple saddles だけを持つ実数値 Morse function の
+connected-level-set 葉層 $\mathcal F_a$ を指定する．
+各 connected critical leaf は一つの saddle を含む．
+$n_a\geq2$ なら，このような Morse function は存在する．
+例えば genus 零の cobordism に split--merge saddle pair を $g_a$ 組挿入すればよい．
+$g_a=0,n_a=2$ の場合は annulus 上の正則な円周葉層である．
+marking は，交点のラベルと，実際の $P_a$ 上の葉層の相対 isotopy class を含む．
+その Reeb graph を $T_a$ と書く．$b_1(T_a)=g_a$ であり，有理成分の場合に限り tree である．
+各交点 $p\in D_a\cap D_b$ に対応する $T_a,T_b$ の葉を同一視し，
+そこでできる二価頂点を必要に応じて除いた graph を $\Gamma$ とする．
+全成分が有理で二価なら，$\Gamma$ は円周である．
+
+\begin{theorem}[SNC 因子の有限相対構成]
+\label{snc:main}
+仮定 \eqref{snc:valence}--\eqref{snc:positive-class} の下で，
+$\omega$ と同じ cohomology class の Kähler form $\omega'$ と，
+連結 fiber を持つ proper continuous surjection
+\[
+ \pi:(M,\omega')\longrightarrow\operatorname{Cone}_{\rm cl}(\Gamma)
+\]
+を次の性質を持つように構成できる．
+\begin{enumerate}
+\item cone point の fiber は $W=M\setminus D$ の，適切に選んだ
+  logarithmic Weinstein skeleton $\Sigma$ である．
+\item $W\setminus\Sigma$ の正則 fiber は Lagrangian $\TT^2$ であり，
+  $\Gamma$ の三価頂点から延びる開放射辺上の fiber は
+  $S^1\times\figeight$ である．他の内部 singular-fiber locus はない．
+\item outer graph $\Gamma$ の逆像は正確に $D$ である．
+  $D_a$ 上の connected fibers は指定した $\mathcal F_a$ の葉と一致し，
+  crossing collars では radial circles，交点では一点となる．
+\item 各交点の十分小さい holomorphic charts で，両 divisor を座標軸とする
+  正の diagonal product Kähler germs をあらかじめ指定できる．
+  collar の normal-circle action germs はそれらの product charts と一致する．
+  各成分の normal connection の holonomy は構成中に選択する．
+  collar の葉層は，その選択後の normal charts を用いて，固定した $D_a$ 上の
+  $\mathcal F_a$ を lift したものである．
+\item 各 $D_a$ の有限個の指定点が $\mathcal F_a$ の互いに異なる正則葉上にあり，
+  crossing collars の外にあるなら，それらの周囲に divisor-compatible な
+  holomorphic flat Kähler balls を同時に用意できる．
+  これらの点は regular elliptic-boundary patches に含まれる．
+\item $\Sigma$ を選んだ後の end の変更は，その近傍の Liouville structure を変えず，
+  新しい trapping を作らない．全 singular fibers は，Evans--Mauri の意味で
+  isotropic strata を持つ．特定の skeleton や Whitney 正則性は指定しない．
+\end{enumerate}
+個々の $D_a$ の ampleness，$D_a^2$ の正値性，
+$H^1(M;\RR)=0$，または $Q=(D_a\cdot D_b)$ の非退化性を追加仮定する必要はない．
+\end{theorem}
+
+\begin{corollary}[多直線配置の marked な有限 compactification]
+\label{comp:finite}
+$M=\PP^2$，$D=L_1\cup\cdots\cup L_m$ を一般位置の $m\geq4$ 本の直線の和とし，
+$c>0$ と各 $L_a$ 上の marked Morse 葉層を固定する．
+ある Kähler form $\omega'\in cH$ に対して，定理\ref{snc:main}の構成が得られる．
+各成分の Reeb graph は $m-1$ 個の labelled leaves と $m-3$ 個の三価頂点を持つ
+tree であり，$\Gamma$ は対応する葉を交点ごとに貼り合わせた graph である．
+crossing germs，full saddle collars，および有限個の指定された flat patches も
+同時に保持できる．
+\end{corollary}
+\begin{proof}
+$2\pi\sum_a w_a=c$ となる正の weights を選べば
+$[\omega]=2\pi\sum_a w_a[L_a]=cH$ である．
+全 $g_a=0$，$n_a=m-1\geq3$ なので，定理を適用できる．
+\end{proof}
+
+形式を $\omega'$ に替える点には実質的な意味がある．
+固定した $\omega$ と固定した $D$ に対して，交点が非直交であるまま
+commuting normal-circle actions を要求することはできない．
+この限界と，primitive の重みを変更する場合の限界を後で明示する．
+
+\begin{lemma}[連結性と affine 性]
+\label{snc:affine}
+\eqref{snc:positive-class} から $D$ は連結であり，$W$ は affine である．
+\end{lemma}
+\begin{proof}
+$D$ が二つの非空な disjoint unions に分かれるなら，
+対応する正の実 divisor を $A,B$ として $A\cdot B=0$ となる．
+$[\omega]=2\pi(A+B)$ と Kähler positivity より
+$A^2=[\omega]\cdot A/(2\pi)>0$，$B^2>0$ である．
+これは Hodge index theorem に反する．従って $D$ は連結である．
+
+Kähler cone は開いているので，$w$ を十分近い正の有理ベクトル $v$ に替えても
+$2\pi\sum v_a[D_a]$ は Kähler class である．
+分母を払うと，同じ support $D$ を持つ effective integral divisor
+$A_D$ で，$\mathcal O_M(A_D)$ が正の curvature metric を持つものを得る．
+従って $A_D$ は ample である．十分大きい倍を very ample とし，
+対応する section の零集合を hyperplane section として実現すると，
+その補集合 $W$ は affine となる．
+\end{proof}
+
+\subsection{重みを固定した global logarithmic primitive}
+
+各 $\mathcal O_M(D_a)$ に任意の smooth Hermitian metric を取り，
+canonical section を $s_a$ とする．
+$-\dd\dd^c\log\|s_a\|^2$ は $W$ 上の式から $M$ 上の smooth closed
+$(1,1)$-form $\Theta_a$ に延び，$[\Theta_a]=2\pi[D_a]$ である．
+個々の $\Theta_a$ が正である必要はない．
+compact Kähler manifold の $\dd\dd^c$-lemma より，smooth real function $u$ を用いて
+\[
+ \omega=\sum_a w_a\Theta_a+\dd\dd^c u
+\]
+と書ける\cite[Lemma (5.11), pp.~266--267; Remark (5.14)]{DGMS}．従って
+\begin{equation}\label{snc:log-potential}
+ \psi_0=-\sum_a w_a\log\|s_a\|^2+u,\qquad
+ \lambda_0=\dd^c\psi_0,\qquad
+ \dd\lambda_0=\omega|_W
+\end{equation}
+である．重みが全て正なので $\psi_0$ は exhaustion であり，
+$\dd\dd^c\psi_0=\omega>0$ だから strictly plurisubharmonic である．
+$D_a$ の正の meridian $\mathfrak m_a$ に対して
+\begin{equation}\label{snc:residues}
+ \lim_{\rho\to0}\int_{\mathfrak m_a(\rho)}\lambda_0=-2\pi w_a.
+\end{equation}
+
+SNC chart では $\psi_0$ は $-\sum w_a\log|z_a|^2$ と smooth function の和である．
+そのため critical locus は compact であり，compact subset of $W$ 内の
+小さい potential perturbation で Morse にできる．
+この変更は $M$ 上の Kähler class を変えず，divisor の近傍にも影響しない．
+その logarithmic Weinstein skeleton を $\Sigma$ とする．
+$\Sigma$ は $W$ の homotopy type を持つ connected compact set であり，
+stable strata は isotropic である\cite[\S2.3]{EM}．
+
+次に，全 critical values より高い end の中で，交点の Kähler form を product にする．
+同時に，指定された divisor 上の有限個の正則点を中心とする互いに素な charts を取り，
+divisor が一つの座標軸となる holomorphic flat balls を作る．
+holomorphic chart の potential を $\phi=Q+O(r^3)$ と書き，
+所望の正の diagonal quadratic form $Q'$ に対して
+\[
+ \phi'=(1-\chi(\log r))\phi+\chi(\log r)Q'
+\]
+を用いる．transition を長い logarithmic annulus に取ると
+$h(r)=\chi(\log r)$ に対する $r|h'(r)|+r^2|h''(r)|$ を小さくでき，
+$Q'-\phi=O(r^2)$ なので cutoff error は正の二形式の凸結合に対して任意に小さくなる．
+従って Kähler positivity を保ち，cohomology class も変えない．
+補正の微分は $O(r)$ であり，logarithmic normal differential は end で発散するので，
+chart を縮めれば新しい critical point は生じない．
+変更領域の potential value を元の全 critical values より高く保つため，
+$\Sigma$ も変わらない．
+以下ではこれまでの変更後の form と primitive を再び $\omega',\lambda_0$ と書く．
+この変更は指定した $D_a$ 上の foliation を動かさない．
+正則葉上の点では，normal-circle action と葉の局所 transverse coordinate が
+regular elliptic-boundary model を与える．
+ambient form が holomorphic flat であることと，
+fibration を symplectic coordinates でその標準形にすることは区別して用いる．
+
+crossing product charts を固定する relative symplectic tubular charts を選ぶ．
+normal first derivative は complex-linear に取る．
+normal coordinate の変換は $z\mapsto a z+O(|z|^2)$，$a\neq0$ であるから，
+angular pole の差を引いた remainder は有界である．
+交点では二つの charts が初めから product として一致する．
+この regularization と以下の connection の変更は，
+標準的な SNC symplectic neighborhoods の枠組みに属する
+\cite[\S2.4, Appendix A]{EM}\cite{TMZ}．
+
+\subsection{任意の自己交点数に対する curvature balance}
+
+$Q_{aa}=D_a^2$，$Q_{ab}=|D_a\cap D_b|$ $(a\neq b)$ とし，
+$A_a=\int_{D_a}\omega'$ とする．仮定から
+\begin{equation}\label{snc:area-balance}
+ A_a=2\pi\sum_b Q_{ab}w_b
+ =2\pi\left(w_aD_a^2+\sum_{p\in D_a\cap D_b}w_b\right).
+\end{equation}
+最後の和は全ての交点 $p$ について取り，同じ $b$ が複数回現れ得る．
+
+各 crossing cap $p\in D_a\cap D_b$ で
+$\omega'|_{D_a}=\dd I\wedge\dd\theta_b$，$p=\{I=0\}$ と書く．
+$P_a$ 全体には
+\[
+ \kappa_a=-\omega'|_{D_a}/w_a
+\]
+を指定する．cap では normal angular frame $\theta_a$ を用い，
+\begin{equation}\label{snc:connection-cap}
+ \alpha_a=\dd\theta_a+A_{a,p}(I)\dd\theta_b,\qquad
+ A_{a,p}=0\text{ near }I=0,\qquad
+ A_{a,p}=(w_b-I)/w_a\text{ near }P_a
+\end{equation}
+と指定する．この curvature の全積分は
+\begin{equation}\label{snc:curvature-integral}
+ \int_{D_a}\kappa_a
+ =\frac{2\pi\sum_{p\in D_a\cap D_b}w_b-A_a}{w_a}
+ =-2\pi D_a^2.
+\end{equation}
+従って，これは $N_{D_a/M}$ の connection として実現できる．
+$D_a^2\leq0$ でも，cap 内の curvature が必要な分を補償するため問題はない．
+
+$P_a$ 上で $\beta_a=0$，cap では
+\[
+ \beta_a=(I-w_b+w_aA_{a,p}(I))\dd\theta_b
+\]
+とする．$P_a$ との overlap では $\beta_a=0$ であり，
+$\dd\beta_a=\omega'|_{D_a}+w_a\kappa_a$ である．
+normal bundle の coupling model は
+\begin{equation}\label{snc:coupling}
+ \Omega_a=\omega'|_{D_a}+\dd(\mu_a\alpha_a),\qquad
+ \lambda_a=(\mu_a-w_a)\alpha_a+\beta_a.
+\end{equation}
+$\dd\lambda_a=\Omega_a$ であり，十分薄い collar では $\Omega_a$ は symplectic である．
+交点では両側の式が
+\[
+ (\mu_a-w_a)\dd\theta_a+(\mu_b-w_b)\dd\theta_b
+\]
+に一致するので，これらの primitive は一つの
+$\lambda_{\rm col}$ に貼り合わさる．
+
+ここで connection を選ぶ自由は，実際の $\omega'$ の collar を失わせない．
+二つの connections の差を $\pi^*\eta_a$ と書き，
+$\alpha_{a,s}=\alpha_{a,0}+s\pi^*\eta_a$ とする．
+対応する coupling forms の相対 Moser field を
+\[
+ \iota_{Y_s}\Omega_{a,s}=-\mu_a\pi^*\eta_a
+\]
+で定める．crossing product charts では $\eta_a=0$ と取れる．
+$Y_s$ は zero section とそこでの first jet を固定し，
+normal-circle に不変で，$Y_s\mu_a=0$ である．
+よって縮めた collar 上で，connection の変更を equivariant，moment-preserving な
+symplectomorphism に吸収できる．以下の式はこの同定後の実際の collar 上の式とみなす．
+
+\begin{lemma}[full Morse 葉層を保つ Liouville field]
+\label{snc:collar-dynamics}
+$\iota_Z\omega'=\lambda_{\rm col}$ とする．$P_a$ 上では
+\[
+ Z\mu_a=\mu_a-w_a,\qquad Z^{\rm horizontal}=0.
+\]
+cap では $A=A_{a,p}$ と略記すると
+\begin{equation}\label{snc:cap-dynamics}
+ Z\mu=\mu-w_a,\qquad
+ ZI=\frac{I-w_b+w_aA(I)}{1+\mu A'(I)}.
+\end{equation}
+従って normal circles と $\mathcal F_a$ の lift からなる collar 葉層を，
+saddle fiber 全体も含めて $Z$ の流れが保つ．
+\end{lemma}
+\begin{proof}
+$P_a$ 上では
+$\Omega_a=(1-\mu_a/w_a)\omega'|_{D_a}+\dd\mu_a\wedge\alpha_a$
+である．よって $Z=(\mu_a-w_a)\partial_{\mu_a}$ である．
+cap では
+\[
+ \lambda_{\rm col}=(\mu-w_a)\dd\theta_a+
+     (I-w_b+\mu A(I))\dd\theta_b
+\]
+を \eqref{snc:coupling} に代入して \eqref{snc:cap-dynamics} を得る．
+normal radius を小さくすれば $1+\mu A'(I)>0$ である．
+cap の radial circle leaves と $P_a$ 上の全 connected critical leaves が保存される．
+$g_a=0,n_a=2$ では $P_a$ は annulus であり，同じ計算がその正則円周葉層を保つ．
+\end{proof}
+
+\subsection{plumbing，component holonomy，graph periods}
+
+$N$ を $D$ の小さい plumbing neighborhood，$S=\partial N$ とする．
+$N$ は $D$ に retract する．曲面を交点で貼り合わせる Mayer--Vietoris 計算により
+\[
+ H_2(N;\ZZ)\simeq\ZZ^r,\qquad H_3(N;\ZZ)=0,
+\]
+かつ
+\begin{equation}\label{snc:divisor-homology}
+ 0\longrightarrow\bigoplus_aH_1(D_a;\ZZ)
+ \longrightarrow H_1(D;\ZZ)
+ \longrightarrow H_1(G;\ZZ)\longrightarrow0
+\end{equation}
+を得る．右端は free なのでこの列は非標準的に分裂し，$H_1(N;\ZZ)$ も free である．
+複数交点は $G$ の別々の辺として数える．
+
+\begin{proposition}[meridian と divisor の完全列]
+\label{snc:integer-sequence}
+整数係数で
+\begin{equation}\label{snc:integer-exact}
+ 0\longrightarrow\operatorname{coker}(Q:\ZZ^r\to\ZZ^r)
+ \longrightarrow H_1(S;\ZZ)
+ \longrightarrow H_1(D;\ZZ)\longrightarrow0
+\end{equation}
+が成り立つ．左側の subgroup は normal meridians で生成され，
+その関係式は $Q$ の行で与えられる．
+特に $Q$ が特異でもよく，cokernel の torsion も保持される．
+有理成分だけの場合には $H_1(D;\ZZ)=H_1(G;\ZZ)$ となる．
+\end{proposition}
+\begin{proof}
+Poincaré--Lefschetz duality と universal coefficient theorem より
+$H_2(N,S;\ZZ)\simeq H^2(N;\ZZ)\simeq\ZZ^r$，
+$H_1(N,S;\ZZ)\simeq H^3(N;\ZZ)=0$ である．
+$H_2(N)\to H_2(N,S)$ は intersection pairing，すなわち行列 $Q$ である．
+対の完全列の該当部分の cokernel を取れば \eqref{snc:integer-exact} を得る．
+normal disk の境界が meridian なので，生成元と関係式の説明も従う．
+\end{proof}
+
+各 $T_a$ は $n_a$ 個の一価頂点と $2g_a+n_a-2$ 個の三価頂点を持つ．
+従って $b_1(T_a)=g_a$ であり，これらを交点ごとに貼り合わせると
+\begin{equation}\label{snc:graph-counts}
+ b_1(\Gamma)=\sum_a g_a+e-r+1,\qquad
+ |V_3(\Gamma)|=\sum_a(2g_a+n_a-2)=2\sum_a g_a+2e-2r.
+\end{equation}
+$D\to\Gamma$ は $H_1$ の全射を誘導するが，正の genus の成分があると
+一般には同型でない．component 上の $2g_a$ 個の periods 全てを消すには，
+graph から引き戻した basic forms だけでは不足し得る．
+この不足は次の holonomy の自由度で解消する．
+
+\begin{lemma}[connection holonomy による periods の制御]
+\label{snc:holonomy}
+$\eta_a$ を $D_a$ 上の closed real one-form で，全 crossing disks の近傍で $0$ とする．
+connection を $\alpha_{a,s}=\alpha_a+s\pi^*\eta_a$ に替え，
+$\beta_a$ は変えずに $\Omega_{a,s},\lambda_{a,s}$ を \eqref{snc:coupling} で定める．
+十分薄い collar 上に，crossing germs と zero section を固定する Moser isotopy
+$\Phi_s$ が存在し，$\Phi_s^*\Omega_{a,s}=\Omega_{a,0}$，$\mu_a\circ\Phi_s=\mu_a$ である．
+その primitive の class の変化は
+\begin{equation}\label{snc:holonomy-variation}
+ [\Phi_s^*\lambda_{a,s}-\lambda_{a,0}]
+     =-s w_a[\pi^*\eta_a].
+\end{equation}
+この操作は $D_a$ 上の marked foliation を固定し，新しい normal charts 上に
+その同じ foliation を lift した collar fibration を保つ．
+\end{lemma}
+\begin{proof}
+$\eta_a$ が closed なので curvature と $\beta_a$ は変わらない．
+$\iota_{Y_s}\Omega_{a,s}=-\mu_a\pi^*\eta_a$ と置くと，
+$Y_s\mu_a=0$，$\alpha_{a,s}(Y_s)=0$ であり，horizontal part は $O(\mu_a)$ である．
+従って十分薄い collar では時間 $0\leq s\leq1$ の flow が存在し，
+zero section，そこでの normal first derivative，および crossing germs を固定する．
+Cartan の公式から
+\begin{align*}
+ \frac{\dd}{\dd s}\Phi_s^*\lambda_{a,s}
+ &=\Phi_s^*\left((\mu_a-w_a)\pi^*\eta_a
+                +\iota_{Y_s}\Omega_{a,s}
+                +\dd(\lambda_{a,s}(Y_s))\right)\\
+ &=-w_a\Phi_s^*(\pi^*\eta_a)
+      +\dd\bigl(\Phi_s^*(\lambda_{a,s}(Y_s))\bigr).
+\end{align*}
+$\Phi_s$ は identity と isotopic なので，cohomology を取って積分すると
+\eqref{snc:holonomy-variation} を得る．
+全 crossing disks で identity なので，他成分の model とそのまま貼り合わさる．
+zero section 上も identity であり，$P_a$ 上では引き続き
+$\kappa_a=-\omega'|_{D_a}/w_a$，$\beta_a=0$ である．
+従って新しい connection の coupling charts では
+$Z=(\mu_a-w_a)\partial_{\mu_a}$ であり，fixed marked foliation の lift を保つ．
+この chart を $\Phi_1$ で actual collar に引き戻せばよい．
+$\Omega_{a,s}$ は補助的な normal-bundle model であり，この引き戻し後の形式は
+最初の $\Omega_{a,0}$ である．従って actual manifold 上の Kähler form $\omega'$ 自体は
+この holonomy 補正では変更しない．
+\end{proof}
+
+$H^1(D_a;\RR)$ の任意の class は crossing disks と，
+指定した flat points を中心とする有限個の小円板の近傍で $0$ の closed form で表せる．
+実際，disks 上での局所 primitive を cutoff して引けばよい．
+これを他成分側で $0$ として plumbing に延長すると，
+\eqref{snc:divisor-homology} の component part を任意に制御できる．
+大きい holonomy の補正が必要な場合でも，その補正を選んだ後に collar を縮めれば，
+Moser isotopy の存在に支障はない．
+
+$\lambda_{\rm col}$ と $\lambda_0$ は同じ $\omega'$ の primitive であり，
+同じ重み $w_a$ を用いたので meridian residues が一致している．
+その差の meridian integral は radius に依存せず，radius $0$ の極限では $0$ になる．
+従って全 meridian periods は正確に $0$ である．
+\eqref{snc:integer-exact} を実数係数で双対化すると，差の class は
+$H^1(D;\RR)$ に由来する．torsion は real closed one-form の period では検出されない．
+まず補題\ref{snc:holonomy}で各 $D_a$ 上の全 periods を消す．
+その後に残る class は \eqref{snc:divisor-homology} により $H^1(G;\RR)$ から来る．
+以下では，この holonomy 補正後の実際の collar primitive を再び
+$\lambda_{\rm col}$ と書く．
+
+$G$ の spanning tree の外の各辺に一つの regular cap arm を対応させ，
+そこで支持された basic form $g(I)\dd I$ の積分を選ぶ．
+これら $e-r+1$ 個の forms は残る graph periods を任意に補正できる．
+その和を $\eta$ とすると
+\begin{equation}\label{snc:exact-correction}
+ \lambda_{\rm col}-\eta-\lambda_0=\dd f
+\end{equation}
+となる．$\eta$ は全 collar fibers の tangent spaces を消す．
+その補正は Liouville field の angular components だけを変え，
+\eqref{snc:cap-dynamics} は変えない．
+各 cap arm の端では $\eta=0$ とし，normal direction に同じ式を延長するため，
+$\eta$ は end 全体の smooth closed form である．
+
+normal first derivatives を complex-linear に選んだことから，
+両 primitive の angular poles を差し引いた remainder は有界である．
+holonomy の Moser isotopies も normal first derivatives を固定するので，
+この有界性を保つ．従って \eqref{snc:exact-correction} の $\dd f$ は有界であり，
+$f$ の定数を一つ固定すれば $f$ も有界である．
+後者は，finite plumbing cover 内で base point から各点まで
+一様に有限な長さの経路を選び，既に全 period が消えていることから従う．
+この議論で $H^1(M;\RR)$ の消滅は使わない．
+
+\subsection{core を保つ cutoff}
+
+十分高い level で $0$ から $1$ へ移る cutoff $\chi(\psi_0)$ を取り，
+\[
+ \lambda=\lambda_0+\dd\bigl(\chi(\psi_0)f\bigr)
+\]
+とする．$\dd\lambda=\omega'$ であり，core の近傍では $\lambda_0$，
+十分 end 側では $\lambda_{\rm col}-\eta$ と一致する．
+$\iota_{X_H}\omega'=-\dd H$ とすると
+\begin{equation}\label{snc:cutoff-estimate}
+ Z\psi_0=Z_0\psi_0-\chi(\psi_0)X_f\psi_0.
+\end{equation}
+$\chi'$ を含む項は $X_{\psi_0}\psi_0=0$ により消える．
+normal distance を $\rho_a$ と書けば，SNC charts と $\omega'$ の正値性から
+\[
+ Z_0\psi_0\geq C\sum_a\rho_a^{-2},\qquad
+ |X_f\psi_0|\leq C'\left(1+\sum_a\rho_a^{-1}\right)
+\]
+となる．よって cutoff を十分 end 側に置くと，変更領域の全てで $Z\psi_0>0$ となる．
+新しい zero，trapping，または低い critical region への正時間の戻りは生じない．
+したがって nonescaping set は正確に元の $\Sigma$ のままである．
+
+adapted Liouville primitive の一般的存在は
+\cite[Proposition 2.10]{BSV}にも与えられている．
+ここで加えたのは，指定した full Morse 葉層を保つ curvature と holonomy の選択，
+component および graph の全 periods の補正，core の germ を固定した cutoff，
+および後述の finite endpoint の制御である．
+
+\subsection{actual contact link と finite endpoint}
+
+$P_a$ と transition caps では $\mu_a=\eps_a<w_a/2$ とし，
+crossing product charts の内部だけでこれらの hypersurfaces の corners を丸める．
+全ての cuts は collar fibers で飽和させる．
+$Z\mu_a=\mu_a-w_a<0$ なので，得られる link $S_\infty$ は $Z$ に横断的であり，
+$\alpha=\lambda|_{S_\infty}$ は contact form である．
+normal-circle lift と toric orbits はそこで
+\[
+ S_\infty\longrightarrow\Gamma_S\simeq\Gamma
+\]
+という $\dd\alpha$-Lagrangian fibration を与える．
+full saddle fiber は $S^1\times\figeight$ である．
+
+$\Sigma$ 外の内側の全ての点は正時間の flow により $S_\infty$ に達する．
+低い sublevel では logarithmic Weinstein structure，
+高い end では \eqref{snc:cutoff-estimate} の nontrapping を使う．
+従って内側の $\Sigma$ の補集合は
+$((-\infty,0]\times S_\infty,\dd(e^t\alpha))$ と同定され，
+$(t,x)\mapsto(e^t,f(x))$ が cone fibration を与える．
+$\Sigma$ 全体を cone point に送る延長は，Evans--Mauri の cone-extension argument
+\cite[Lemma 2.16]{EM}によって連続である．
+これは completion の議論であり，有限体積側への延長は以下で別途確認する．
+
+normal moment は
+\begin{equation}\label{snc:time}
+ \mu_a(t)=w_a+e^t(\mu_a(0)-w_a),\qquad
+ T_a=\log\frac{w_a}{w_a-\mu_a(0)}
+\end{equation}
+を満たす．$P_a$ 上では曲線方向の点が固定されるので，
+$T_a$ に normal circle を潰せば指定された葉に到達する．
+
+transition cap $I\in[a,b]$，$a>0$ では，少し大きい interval に buffer を取り，
+$0\leq\mu\leq\eps_a<w_a/2$ において $|ZI|\leq C$ と抑える．
+\[
+ T_a\leq\frac{2\eps_a}{w_a},\qquad
+ |I(t)-I(0)|\leq\frac{2C\eps_a}{w_a}\quad(0\leq t\leq T_a).
+\]
+$\eps_a<a w_a/(4C)$ とし，上側の buffer からも退出しないように縮めれば，
+$\mu=0$ に達するまで $I\geq a/2>0$ である．$C=0$ ではこの制約は不要である．
+従って別の divisor に先に到達することはない．
+全ての caps が有限個であるため，一つの十分薄い collar で同時に処理できる．
+
+さらに $J=I-w_b+\mu A(I)$ と置くと $ZJ=J$ であり，
+\begin{equation}\label{snc:endpoint}
+ I_{\rm end}
+ =\frac{w_aI_0-\mu_0w_b+w_a\mu_0A(I_0)}{w_a-\mu_0},\qquad
+ \frac{\partial I_{\rm end}}{\partial I_0}
+ =\frac{w_a(1+\mu_0A'(I_0))}{w_a-\mu_0}>0.
+\end{equation}
+第二式では transition cap の link 上で $\mu_0=\eps_a$ が一定であることを使う．
+$P_a$ 側では $I_{\rm end}=I_0$ である．
+
+product crossing では二つの actual normal moments が同時に存在する．
+ここでのみ最初の collapse time を $\min(T_a,T_b)$ と書く．
+$R=(w_a-\mu_a)/(w_b-\mu_b)$ は flow invariant であり，endpoint は
+\[
+ \begin{cases}
+ (0,w_b-w_a/R),&R\geq w_a/w_b,\\
+ (w_a-w_bR,0),&R\leq w_a/w_b
+ \end{cases}
+\]
+となる．丸めた link arc 上で $R$ は厳密に単調なので，
+その quotient は二本の divisor arms の quotient と同相である．
+$R=w_a/w_b$ では両 circle が同時に潰れ，交点に到達する．
+
+従って endpoint map $\Gamma_S\to\Gamma_D$ は，$P_a$ 上で恒等，
+transition arms 上で厳密単調，crossing で同相である．
+同じ flow による写像なので overlaps で一致し，graph 全体の同相を与える．
+最初の到達時刻 $T(q)$ は正の連続関数である．
+saddle の近傍では一定で，product crossing では二つの連続関数の最小値である．
+base は $-\infty<t\leq T(q)$ に cone point を加えたものとなり，
+\[
+ (t,q)\longmapsto(e^{t-T(q)},q)
+\]
+で $\operatorname{Cone}_{\rm cl}(\Gamma)$ と同相になる．
+collapse は全て fiber ごとに行われるので，新しい fiber の切断や連結成分は生じない．
+outer graph の逆像は正確に $D$ となり，boundary fibers の記述も従う．
+以上で定理\ref{snc:main}を証明した．
+
+\subsection{固定形式と固定 residue に関する限界}
+
+\begin{proposition}[fixed form の orthogonality 障害]
+\label{snc:orthogonality}
+固定した $(M,\omega)$ と固定した SNC divisor $D$ に対して，
+交点近傍で commuting normal-circle actions を持つ product toric collar が存在するなら，
+各交点で $D_a$ と $D_b$ は $\omega$-orthogonal である．
+従って定理\ref{snc:main}で $\omega'$ を任意の元の $\omega$ に置き換えることはできない．
+\end{proposition}
+\begin{proof}
+交点の tangent space において，第一の circle の固定部分空間は $TD_a$，
+非自明な weight space はその normal plane である．
+$\omega$ の invariance により，この二つの weight spaces の mixed pairing は $0$ である．
+product action では第二の divisor の tangent plane が第一の normal plane なので，
+$TD_a$ と $TD_b$ は symplectically orthogonal である．
+これは \cite[Proposition 2.5]{BSV} の局所線形代数でもある．
+
+具体例として，$\PP^2$ の Fubini--Study form と
+$D=\{x_1=0\}\cup\{x_2-x_1=0\}\cup\{x_0=0\}$ を取る．
+各成分の valence は二で，正の weights による \eqref{snc:positive-class} を満たせる．
+しかし $[1:0:0]$ の affine coordinates では最初の二直線の tangent spaces は
+$\CC(0,1)$ と $\CC(1,1)$ であり，標準 Hermitian form に関して直交しない．
+\end{proof}
+
+元の $\omega$ 上に fibration を戻したければ，fixed-class Kähler path に対する
+Moser isotopy を用いればよい．このとき compactifying divisor は $D$ と isotopic な
+symplectic divisor へ移る．固定した holomorphic $D$ を同時に保存するとは限らない．
+元の form が必要な holomorphic product germs を既に持つ場合には，
+potential の Morse perturbation を $D$ から離して行えるため，
+Moser を divisor の近傍で恒等に選ぶことができる．
+
+\begin{proposition}[global residues と core germ]
+\label{snc:residue-change}
+$W=M\setminus D$ とし，closed one-form $\eta$ の residue を
+$\operatorname{Res}_a(\eta)=-(2\pi)^{-1}\int_{\mathfrak m_a}\eta$ と定義する．
+次は完全列である：
+\begin{equation}\label{snc:global-residue-exact}
+ H^1(M;\RR)\longrightarrow H^1(W;\RR)
+ \xrightarrow{\operatorname{Res}}\RR^r
+ \xrightarrow{(c_a)\mapsto\sum c_a[D_a]} H^2(M;\RR).
+\end{equation}
+従って，同じ $\omega|_W$ の primitive の重みを $w$ から $w'$ に変更できるための
+必要十分条件は $\sum_a(w_a'-w_a)[D_a]=0$ である．
+ただし $\Sigma\hookrightarrow W$ が homotopy equivalence である core の近傍で
+primitive の germ を固定したまま変更できる重みは，$w'=w$ に限られる．
+\end{proposition}
+\begin{proof}
+相対 cohomology の低次数において
+$H^2(M,W;\RR)\simeq\RR^r$ であり，その生成元は各成分の relative Thom class である．
+成分同士の交点は実 codimension 四なので，この次数に新たな生成元や関係は生じない．
+対 $(M,W)$ の完全列を，Thom class と meridian integral で表示すると
+\eqref{snc:global-residue-exact} を得る．
+同じ二形式の primitive の差は closed one-form であるから，最初の主張が従う．
+relative de Rham class と prescribed wrapping numbers の関係は
+\cite[\S1.1, Proposition 2.10]{BSV}でも明示されている．
+
+差の closed form が $\Sigma$ の近傍で $0$ なら，
+$\Sigma\hookrightarrow W$ が $H_1$ の同型を誘導するため，その全 periods は $0$ である．
+従って差は exact であり，全 residues も $0$ となる．
+これは primitive の germ の固定に関する障害であって，
+異なる weights による skeleton の集合としての同一性を一般に否定するものではない．
+\end{proof}
+
+特に，面積の線形条件 \eqref{snc:area-balance} だけで
+$[\omega]=2\pi\sum w_a[D_a]$ という global 条件を代用してはいけない．
+前者は collar の curvature balance であり，後者は complement 上の global exactness を保証する．
+また，graph-period correction は weights を固定した後の操作である．
+residues が異なる差を basic graph forms と bounded exact cutoff だけで消すことはできない．
+
+\subsection{valence 条件と具体例}
+
+$P_a$ の Euler 数は $2-2g_a-n_a$ である．
+境界で radial な実数値 Morse function に extrema を許さず saddles だけを置くなら，
+その数は $2g_a+n_a-2$ でなければならない．
+$n_a\geq2$ なら上述の構成により実現でき，$n_a=2$ を除外する必要はない．
+$n_a=0$ なら compactness により最大と最小が必要である．
+$n_a=1$ なら唯一の境界成分上の値が一定なので，非定数の関数は少なくとも一つの
+内部 extremum を持つ．従って $n_a\geq2$ は，ここで指定した
+実数値 Morse function による無 extrema の collar 模型の条件として sharp である．
+circle-valued foliations や elliptic strata を許す別の模型は，この主張の対象ではない．
+
+\begin{corollary}[graph と core の数値]
+\label{snc:counts}
+定理\ref{snc:main}では
+\[
+ b_1(\Gamma)=\sum_a g_a+e-r+1,\qquad
+ \#\{\text{開放射分岐辺}\}=2\sum_a g_a+2e-2r,
+\]
+\[
+ \chi(\Sigma)=\chi(M)-2r+2\sum_a g_a+e.
+\]
+\end{corollary}
+\begin{proof}
+最初の二式は \eqref{snc:graph-counts} である．
+三重交点がないので $\chi(D)=\sum_a(2-2g_a)-e$ である．
+$W$ は有限 CW 型を持つ実四次元の orientable manifold なので
+$\chi(W)=\chi_c(W)=\chi(M)-\chi(D)$ である．
+$\Sigma$ が $W$ の homotopy type を持つことから最後の式を得る．
+\end{proof}
+
+\paragraph{$\PP^1\times\PP^1$ の toric boundary.}
+二本ずつの horizontal fibers と vertical fibers の和を $D$ とする．
+$r=e=4$，各成分の valence は二で，$G$ と $\Gamma$ は円周である．
+各成分の自己交点は $0$ であり，個々の成分は ample ではない．
+しかし両 ruling の coefficient が正なら，その class は Kähler であり，
+四成分全てに正の weights を配ることができる．
+$W=(\CC^*)^2$ で，core は $T^2$ の homotopy type を持つ．
+この例は nonample components と valence 二を同時に含む．
+
+\paragraph{二本の $(1,1)$ 曲線.}
+$M=\PP^1\times\PP^1$ 上で二本の smooth $(1,1)$ curves を一般に取り，
+二点で横断的に交わらせる．$r=e=2$，各 valence は二で，
+$G$ は二頂点を二辺で結ぶ multigraph，$\Gamma$ は円周である．
+任意の正の $w_1,w_2$ に対して weighted class は Kähler であり，
+\[
+ Q=\begin{pmatrix}2&2\\2&2\end{pmatrix},\qquad
+ H_1(S;\ZZ)\simeq\ZZ^2\oplus\ZZ/2.
+\]
+実際，$Q$ の Smith normal form は $\operatorname{diag}(2,0)$ であり，
+\eqref{snc:integer-exact} の右端 $H_1(G;\ZZ)=\ZZ$ は free なので列は非標準的に分裂する．
+$\chi(W)=2$，$b_1(W)=1$ である．後者は \eqref{snc:global-residue-exact} と，
+二成分の class がともに $(1,1)$ であることから従う．
+$W$ は complex dimension 二の Stein manifold なので二次元 CW 型を持ち，
+$\chi(W)=1-b_1(W)+b_2(W)$ より $b_2(W)=2$ となる．
+この core を simple focus--focus fiber と同定することはできない．
+少なくともその Euler 数は，simple nodal fiber の $1$ と異なる．
+
+\paragraph{三本の $(1,1)$ 曲線.}
+同じ曲面上に三本の smooth $(1,1)$ curves を一般に取り，三重交点を避ける．
+各 pair は二点で横断的に交わるため $r=3$，$e=6$，全 valence は四である．
+従って $b_1(\Gamma)=4$，trivalent vertices は六個，core の Euler 数は四である．
+これは実際に branching を持ち，直線配置の単純グラフには含まれない例である．
+正の weights の任意の選択に対して weighted class は Kähler である．
+
+\paragraph{負の自己交点を含む例.}
+Hirzebruch surface $\mathbb F_n$ の toric boundary を
+$S_0+F_0+S_\infty+F_\infty$ とする．
+$S_0^2=-n$，$S_\infty=S_0+nF$，$F_i^2=0$ であり，全 valence は二である．
+weights を $u_0,u_\infty,v_0,v_\infty>0$ とすると，weighted divisor class は
+\[
+ (u_0+u_\infty)S_0+(nu_\infty+v_0+v_\infty)F.
+\]
+$v_0+v_\infty>nu_0$ ならこの class は ample であり，定理が適用される．
+cap の curvature balance は負の $S_0^2$ を含めて
+\eqref{snc:curvature-integral} により同時に解かれる．
+
+
+\paragraph{二本の smooth plane cubics.}
+$M=\PP^2$ で，smooth cubics $D_1,D_2$ を九点で横断的に交わるように取る．
+$g_1=g_2=1$，$r=2$，$e=9$，$n_1=n_2=9$ であり，
+任意の正の weights が Kähler class を与える．
+各 $P_a$ の Morse foliation は九個の saddles を持ち，
+\[
+ b_1(\Gamma)=10,\qquad |V_3(\Gamma)|=18,\qquad \chi(\Sigma)=12.
+\]
+meridians の整数表示は
+\[
+ H_1(W;\ZZ)=\langle \mathfrak m_1,\mathfrak m_2\mid
+          3\mathfrak m_1+3\mathfrak m_2=0\rangle
+     \simeq\ZZ\oplus\ZZ/3.
+\]
+これは pair の homology exact sequence と，line が各 cubic と三点で交わることから従う．
+この例では $H^1(D;\RR)$ の dimension は十二であるのに対して
+$H^1(\Gamma;\RR)$ の dimension は十であり，
+foliation を固定した basic forms だけでは任意の period 差を補正できないことが分かる．
+補題\ref{snc:holonomy}は，二つの elliptic components の holonomy を選んでこれを解消する．
+
+\begin{remark}[holonomy を固定する場合]
+\label{snc:fixed-holonomy}
+既に全 normal connections と collar foliation を固定し，変更を
+foliation-basic な closed one-forms に限るなら，primitive の差の class は
+同じ residues の下で $H^1(D;\RR)$ のうち $D\to\Gamma$ から
+引き戻した部分に属する必要がある．
+正の genus の成分がある場合，その cokernel の dimension は $\sum_a g_a$ である．
+これは固定済み holonomy を保つ追加条件であり，定理\ref{snc:main}の障害ではない．
+同定を変える自由を消した設定では，この条件を落としてはいけない．
+\end{remark}
+
+\subsection{実際の成分へ移す際に保持されるデータ}
+\label{snc:output-data}
+
+定理\ref{snc:main}は固定した Kähler class 内の一つの model として，
+次の相対データを与える．
+\begin{enumerate}
+\item crossing で固定した holomorphic product germs と，
+それに一致する commuting normal-circle action germs．
+\item 各 labelled $D_a$ 上の実際の marked Morse 葉層と，
+その connected critical leaf 全体を含む full saddle collar．
+正の genus の場合の holonomy はこの構成の一部として選ぶ．
+\item core から離れた有限個の divisor-compatible holomorphic flat balls と，
+regular elliptic-boundary patches．局所 nodal surgery を用いる場合には，
+その surgery に必要な symplectic chart との同定を別途行う．
+\item core と局所 surgery の compact support を避けてさらに縮められる divisor collars．
+normal moments は各 zero section 上で $0$ と正規化される．
+\item core 近傍の primitive germ を固定した component および graph の period 補正．
+この補正だけから，別個に選ばれた symplectic pieces の action data の一致を
+結論するものではない．
+\end{enumerate}
+actual component への移送では，固定 crossing germs を持つ Kähler path，
+divisor-relative Moser，normal-circle action germs の同定，
+および compact saturated truncation 全体の transport を用いる．
+これらは本節の有限 compactification の後で確認すべき別の相対条件である．

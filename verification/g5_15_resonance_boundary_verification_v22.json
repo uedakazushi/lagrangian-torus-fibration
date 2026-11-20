@@ -1,0 +1,537 @@
+{
+  "version": "v22",
+  "status": "PASS",
+  "method": "Exact polynomial coefficient identities and finite divisor certificates",
+  "arbitrary_denominator_cutoff": null,
+  "polynomial_identity_count": 16,
+  "polynomial_identities": [
+    "positive_side_quadratic_from_original_rows",
+    "positive_side_leading_coefficient",
+    "T1_constant_factor",
+    "T1_linear_factor",
+    "T1_ratio_is_linear_equation",
+    "T1_K_greater_than_two",
+    "T1_K_minus_three",
+    "T1_positive_gap_U_at_least_one",
+    "T1_m2_S_at_least_six_negative",
+    "T1_m4_S_at_least_four_negative",
+    "shared_D_linear_coefficient_numerator",
+    "shared_node_other_leg",
+    "resonant_M",
+    "resonant_N",
+    "resonant_W",
+    "resonant_D_integer_divisor_identity"
+  ],
+  "ordinary_cells": 14,
+  "all_ordinary_D_resonances_excluded": true,
+  "T1_boundary_excluded_for_all_five_fixed_low_data": true,
+  "excluded_by_coefficient_or_node": [
+    {
+      "cell": 0,
+      "reason": "3X=3U+1 has no integer solution"
+    },
+    {
+      "cell": 1,
+      "reason": "m=1 coefficient numerator is -j"
+    },
+    {
+      "cell": 2,
+      "h": 1,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 2,
+      "h": 2,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 3,
+      "h": 1,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 3,
+      "h": 2,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 4,
+      "h": 1,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 4,
+      "h": 2,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 5,
+      "h": 1,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 5,
+      "h": 2,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 6,
+      "h": 0,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 6,
+      "h": 1,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 6,
+      "h": 2,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 7,
+      "h": 0,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 7,
+      "h": 1,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 7,
+      "h": 2,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 8,
+      "h": 1,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 8,
+      "h": 2,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 9,
+      "h": 0,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 9,
+      "h": 1,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 9,
+      "h": 2,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 10,
+      "h": 0,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 10,
+      "h": 1,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 10,
+      "h": 2,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 11,
+      "h": 0,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 11,
+      "h": 1,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 11,
+      "h": 2,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 12,
+      "h": 0,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 12,
+      "h": 1,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 12,
+      "h": 2,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 13,
+      "h": 0,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 13,
+      "h": 1,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    },
+    {
+      "cell": 13,
+      "h": 2,
+      "reason": "N>=1 requires nonpositive coefficient times U >= positive RHS"
+    }
+  ],
+  "resonance_divisor_and_pair_certificates": [
+    {
+      "cell": 2,
+      "center": 2,
+      "m": 2,
+      "j": 3,
+      "dminus": 0,
+      "dplus": 2,
+      "swapped": false,
+      "h": 0,
+      "minimum_U": 1,
+      "fixed_divisor_integer": 26,
+      "complete_divisor_list": [
+        1,
+        2,
+        13,
+        26
+      ],
+      "surviving_U": [
+        12
+      ],
+      "U": 12,
+      "Q": 25,
+      "M": 14,
+      "N": 23,
+      "shared_D": -2,
+      "scale_sum": 15,
+      "first_pair_survivors": [
+        {
+          "S": 8,
+          "T": 7,
+          "first_numerator": 224,
+          "first_divisor": 14,
+          "first_quotient": 16,
+          "second_numerator": 374,
+          "second_divisor": 23,
+          "second_remainder": 6
+        }
+      ],
+      "both_pair_survivors": []
+    },
+    {
+      "cell": 3,
+      "center": 2,
+      "m": 2,
+      "j": 3,
+      "dminus": 0,
+      "dplus": 2,
+      "swapped": true,
+      "h": 0,
+      "minimum_U": 1,
+      "fixed_divisor_integer": 26,
+      "complete_divisor_list": [
+        1,
+        2,
+        13,
+        26
+      ],
+      "surviving_U": [
+        12
+      ],
+      "U": 12,
+      "Q": 25,
+      "M": 14,
+      "N": 23,
+      "shared_D": -2,
+      "scale_sum": 15,
+      "first_pair_survivors": [
+        {
+          "S": 4,
+          "T": 11,
+          "first_numerator": 574,
+          "first_divisor": 14,
+          "first_quotient": 41,
+          "second_numerator": 124,
+          "second_divisor": 23,
+          "second_remainder": 9
+        }
+      ],
+      "both_pair_survivors": []
+    },
+    {
+      "cell": 4,
+      "center": 2,
+      "m": 2,
+      "j": 4,
+      "dminus": 0,
+      "dplus": 2,
+      "swapped": false,
+      "h": 0,
+      "minimum_U": 3,
+      "fixed_divisor_integer": 42,
+      "complete_divisor_list": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        14,
+        21,
+        42
+      ],
+      "surviving_U": [
+        20
+      ],
+      "U": 20,
+      "Q": 41,
+      "M": 43,
+      "N": 18,
+      "shared_D": -2,
+      "scale_sum": 23,
+      "first_pair_survivors": [
+        {
+          "S": 20,
+          "T": 3,
+          "first_numerator": 860,
+          "first_divisor": 43,
+          "first_quotient": 20,
+          "second_numerator": 286,
+          "second_divisor": 18,
+          "second_remainder": 16
+        }
+      ],
+      "both_pair_survivors": []
+    },
+    {
+      "cell": 5,
+      "center": 2,
+      "m": 2,
+      "j": 4,
+      "dminus": 0,
+      "dplus": 2,
+      "swapped": true,
+      "h": 0,
+      "minimum_U": 3,
+      "fixed_divisor_integer": 42,
+      "complete_divisor_list": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        14,
+        21,
+        42
+      ],
+      "surviving_U": [
+        20
+      ],
+      "U": 20,
+      "Q": 41,
+      "M": 43,
+      "N": 18,
+      "shared_D": -2,
+      "scale_sum": 23,
+      "first_pair_survivors": [],
+      "both_pair_survivors": []
+    },
+    {
+      "cell": 8,
+      "center": 3,
+      "m": 2,
+      "j": 4,
+      "dminus": 5,
+      "dplus": -7,
+      "swapped": false,
+      "h": 0,
+      "minimum_U": 3,
+      "fixed_divisor_integer": 142,
+      "complete_divisor_list": [
+        1,
+        2,
+        71,
+        142
+      ],
+      "surviving_U": [
+        70
+      ],
+      "U": 70,
+      "Q": 141,
+      "M": 143,
+      "N": 68,
+      "shared_D": -12,
+      "scale_sum": 64,
+      "first_pair_survivors": [],
+      "both_pair_survivors": []
+    }
+  ],
+  "T1_certificates": [
+    {
+      "m": 4,
+      "d": 5,
+      "analytically_permitted_S": [
+        2
+      ],
+      "records": [
+        {
+          "S": 2,
+          "U": -3,
+          "status": "excluded",
+          "reason": "U<=0"
+        }
+      ],
+      "status": "excluded"
+    },
+    {
+      "m": 1,
+      "d": -9,
+      "status": "excluded",
+      "reason": "q_b=2 is even"
+    },
+    {
+      "m": 2,
+      "d": 2,
+      "analytically_permitted_S": [
+        2,
+        4
+      ],
+      "records": [
+        {
+          "S": 2,
+          "U": 0,
+          "status": "excluded",
+          "reason": "U<=0"
+        },
+        {
+          "S": 4,
+          "U": 2,
+          "K": "50/17",
+          "status": "excluded",
+          "reason": "K is nonintegral"
+        }
+      ],
+      "status": "excluded"
+    },
+    {
+      "m": 2,
+      "d": -7,
+      "analytically_permitted_S": [
+        2,
+        4
+      ],
+      "records": [
+        {
+          "S": 2,
+          "U": 9,
+          "K": "4",
+          "H": 2,
+          "pair_numerator": 56,
+          "pair_divisor": 3,
+          "pair_remainder": 2,
+          "status": "excluded",
+          "reason": "remaining pair integrality fails"
+        },
+        {
+          "S": 4,
+          "U": 11,
+          "K": "31/10",
+          "status": "excluded",
+          "reason": "K is nonintegral"
+        }
+      ],
+      "status": "excluded"
+    },
+    {
+      "m": 2,
+      "d": 9,
+      "analytically_permitted_S": [
+        2,
+        4
+      ],
+      "records": [
+        {
+          "S": 2,
+          "U": -7,
+          "status": "excluded",
+          "reason": "U<=0"
+        },
+        {
+          "S": 4,
+          "U": -5,
+          "status": "excluded",
+          "reason": "U<=0"
+        }
+      ],
+      "status": "excluded"
+    }
+  ],
+  "low_D_sign_counterexample": {
+    "q": [
+      5,
+      59,
+      293,
+      1
+    ],
+    "P": [
+      [
+        0,
+        7,
+        -8,
+        -4
+      ],
+      [
+        42,
+        0,
+        -43,
+        -58
+      ],
+      [
+        -183,
+        -402,
+        0,
+        292
+      ],
+      [
+        -1,
+        -1,
+        1,
+        0
+      ]
+    ],
+    "D": [
+      137,
+      337,
+      -243,
+      -231
+    ],
+    "positive_weights": [
+      "5",
+      "589/84",
+      "585/584",
+      "1"
+    ]
+  },
+  "conclusions_not_established": [
+    "unbounded exclusion or complete classification of nonresonant ordinary branches",
+    "exclusion of the negative exceptional Q=3,5 branches",
+    "completion of four-high cores 0,1 or a global fibration"
+  ],
+  "proof_file": "g5_15_resonance_boundary_v22.tex",
+  "proof_sha256": "931efd1307d1d9c8a411326e377389500e52e0aa47aa783f925eb7f531209d81",
+  "script_sha256": "7706994e4ca58080416a00ca247f3f4552ebef93f939648a5e07055699812fce",
+  "proof_assistant_formalization": false,
+  "external_peer_review": false
+}

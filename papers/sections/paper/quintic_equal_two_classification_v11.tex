@@ -1,0 +1,141 @@
+% Complete classification of the positive equal-two-high numerator data.
+% Depends on uniform_two_high_negativity_v11.tex; no geometric moduli count.
+
+\subsection{等二高分母の整数模型の完全分類}
+\label{uc11:classification-section}
+
+前の証明の補助整数は，符号だけでなく整数模型そのものを分類する．
+
+\begin{theorem}[等二高分母の全 numerator data]\label{uc11:classification}
+正の局所四直線 chart の分母を $(q,q,1,1)$，$q>1$ とする．
+二高分母の標準表示において $u=-s<0<v=z$，$q-1=tr(r+1)$ と書く．
+標識の交換を除いて，可能な整数データ $(r,t,s,z)$ は次表で尽きる．
+最終行では $t\geq1$ は任意の整数である．
+\begin{center}
+\small
+\begin{tabular}{ccccccl}
+$r$ & $t$ & $s$ & $z$ & $q$ & $s-z$ & $D_C+D_D$ \\
+\hline
+$2$ & $1$ & $2$ & $1$ & $7$ & $1$ & $2$ \\
+$1$ & $6$ & $4$ & $1$ & $13$ & $3$ & $5$ \\
+$2$ & $5$ & $6$ & $3$ & $31$ & $3$ & $2$ \\
+$6t-3$ & $t$ & $3t$ & $3t-1$ & $t(6t-3)(6t-2)+1$ & $1$ & $3t-2$
+\end{tabular}
+\end{center}
+ここで $C,D$ は分母一の頂点である．各行は正の weights を持ち，局所の幾何学的な chart を実現する．
+従って可能な $q$ の全体は
+\[
+ \{7,13,31\}\ \cup\
+ \{t(6t-3)(6t-2)+1:t\geq1\}
+\]
+である．$q=13$ では表の第二行と最終行の $t=1$ が異なる整数データを与える．
+この分類は整数 numerator systems の分類であり，weights の変形や幾何学的同型類の個数を主張しない．
+\end{theorem}
+
+\begin{proof}
+命題~\ref{uh11:two-integer-inequality} の証明の記号
+$\delta=s-z$，$R=r(r+1)$，$n=2r+1$，$H=Z-S$，$G,J,K$ を用いる．
+$\delta\geq2$ の場合，既に
+\[
+ \delta-1\leq J\leq3
+\]
+を証明したので，$\delta\leq4$ である．また同じ証明で用いた不等式を少し正確に書けば
+\begin{equation}\label{uc11:sharper-J}
+ J\leq\frac{\delta-1}{\delta}\left(4+\frac1R\right)
+\end{equation}
+となる．これは $x=z/\delta\geq r^2/n$ と
+$Jx(x+1)=(\delta-1)R/\delta$ から直接従う．
+
+\paragraph{$\delta=2,4$ の排除．}
+$\delta=2$ なら \eqref{uc11:sharper-J} より $J\leq2$ である．
+$J=1$ の場合は，\eqref{uh11:polynomial-elimination} の必要条件 $L>0$ に対し
+$L=-8G^2+4<0$ となり矛盾する．
+$J=2$ の場合は $sz=R$，$s=z+2$ だから
+\[
+ (z+1)^2=r^2+r+1
+\]
+となる．右辺は $r^2$ と $(r+1)^2$ の間に厳密にあり，平方ではない．
+
+$\delta=4$ なら $J=3$ であり，$\delta\mid Jz$ から $z=4k$，$s=4(k+1)$ と書ける．
+$Jsz=\delta(\delta-1)R$ より $R=4k(k+1)$ となるので
+\[
+ (2r+1)^2=4(2k+1)^2-3.
+\]
+従って
+\[
+ \{2(2k+1)-(2r+1)\}\{2(2k+1)+(2r+1)\}=3.
+\]
+左の二因子は正の整数なので一と三でなければならないが，その和は
+$4(2k+1)\geq12$ であり矛盾する．
+
+\paragraph{$\delta=3$ の二つの模型．}
+$J=2$ または $3$ である．$J=2$ の場合には
+\[
+ L=-18G^2+12G+22>0
+\]
+から $G=1$ だけが残る．式~\eqref{uh11:polynomial-elimination} は
+\[
+ 4R^2-23R-6=(R-6)(4R+1)=0
+\]
+となるので $R=6$，$r=2$ である．
+$sz=18$ と $s-z=3$ から $(s,z)=(6,3)$，
+$t=(\delta-1)(\delta G+J)/J$ から $t=5$ となる．
+
+$J=3$ の場合には \eqref{uc11:sharper-J} が $R\leq2$ を与えるので $r=1$，$R=2$ である．
+$sz=4$ と $s-z=3$ から $(s,z)=(4,1)$ となり，
+$tK=sz+\delta-1$ と $K=1$ から $t=6$ となる．
+
+\paragraph{$\delta=1$ の無限族と一つの例外．}
+この場合は $s=z+1$，$R=HK$，$sz=tK$ であり，先の証明から $z<r$ である．
+$a=r-z\geq1$ と置くと
+\[
+ K=R-na+1,\qquad a^2=(t-1)K+1,\qquad na=(H-1)K+1.
+\]
+最後の式を二乗し，$n^2=4HK+1$ と二番目の式を代入して整理すると
+\begin{equation}\label{uc11:LK}
+ LK=t+2H+1,\qquad L=(H+1)^2-4Ht>0
+\end{equation}
+となる．$L=H(H-4t+2)+1>0$ と $H\geq1$ から $H\geq4t-2$ である．
+そこで $H=4t-2+k$，$k\geq0$ と書く．
+\eqref{uc11:LK} は
+\[
+ K=\frac{9t-3+2k}{1+(4t-2)k+k^2}
+\]
+を与える．$k\geq3$ なら分母と分子の差は
+\[
+ k^2+(4t-4)k-9t+4\geq3t+1>0
+\]
+となり，正の整数 $K$ は存在しない．
+$k=2$ なら $K=(9t+1)/(8t+1)$ は一と二の間にあり，やはり整数ではない．
+$k=1$ なら $K=2+(t-1)/(4t)$ なので $t=1$ だけが可能であり，
+$H=3$，$K=2$，$R=6$ から $(r,t,s,z)=(2,1,2,1)$ を得る．
+
+残る $k=0$ の場合は
+\[
+ H=4t-2,\qquad K=9t-3,\qquad
+ R=HK=(6t-3)(6t-2).
+\]
+$r>0$ なので $r=6t-3$ であり，
+$a^2=(t-1)K+1=(3t-2)^2$ と $a>0$ から $a=3t-2$ となる．
+従って $z=r-a=3t-1$，$s=3t$ を得る．
+
+最後に，各行は \eqref{uh11:conic} と $s,z\mid tr(r+1)$ を満たす．
+無限族では $s=3t$ の整除性は $3\mid6t-3$，$z=3t-1$ の整除性は
+$6t-2=2(3t-1)$ から従い，conic は多項式恒等式である．
+$u=-s<0$ の標準形なので正の weights が存在し，局所 chart の十分条件を満たす．
+実際，$x=m/r$，$Z=m/z$ と書けば，全ての行で
+\[
+ (w_A,w_B,w_C,w_D)
+ =\left(q,q,x+\frac1{2r},z+\frac1{2Z}\right)
+\]
+と取れる．正の numerators は $A\leftrightarrow C$ と $B\leftrightarrow D$ のみであり，
+対応する四つの basin areas は $1/(2r),1/2,1/(2Z),1/2$ である．
+$D_C+D_D=\delta+H-t-1$ を代入すると表の最終列を得る．
+\end{proof}
+
+無限族の高分母二頂点の係数は，標準表示の順で
+\[
+ D_A=2(3t-2)(t-1),\qquad
+ D_B=-(3t-2)(2t-1)
+\]
+である．従って $t\geq2$ では一方が正である一方，その総和は常に $-(3t-2)$ である．

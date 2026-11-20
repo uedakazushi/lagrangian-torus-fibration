@@ -1,0 +1,2775 @@
+{
+  "version": "v25",
+  "status": "PASS",
+  "theorem": "In G5_14 both unit branches have node multiset {4,1,0}; {5,0,0} is impossible.",
+  "scope": "Original positive integer charts with row/pair, odd denominators, integer clutching, nonnegative node budget five, and opposite D. No exclusion of G5_14 itself or G5_16.",
+  "proof_dependencies": [
+    "Positive three-high matching theorem; all original positive-weight hypotheses retained.",
+    "Complete common-negative triangle classification, independently rechecked here for all negative-sign coefficient cases.",
+    "Opposite-sign n=0,1 classification: analytic proof restated in TeX, no finite-scale scan used.",
+    "Opposite low D enforces positive external pairs at both zero-node positions of a five-node unit branch."
+  ],
+  "all_negative_common_coefficient_cases": 96,
+  "all_negative_common_points": [
+    {
+      "s": 1,
+      "s_prime": 2,
+      "S": 2,
+      "T": 1,
+      "q": [
+        3,
+        3
+      ],
+      "alpha": -1,
+      "beta": -3
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "S": 2,
+      "T": 1,
+      "q": [
+        3,
+        3
+      ],
+      "alpha": -2,
+      "beta": -1
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "S": 2,
+      "T": 2,
+      "q": [
+        3,
+        7
+      ],
+      "alpha": -2,
+      "beta": -1
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "S": 1,
+      "T": 2,
+      "q": [
+        3,
+        3
+      ],
+      "alpha": -1,
+      "beta": -2
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "S": 1,
+      "T": 2,
+      "q": [
+        3,
+        3
+      ],
+      "alpha": -3,
+      "beta": -1
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "S": 3,
+      "T": 1,
+      "q": [
+        7,
+        3
+      ],
+      "alpha": -1,
+      "beta": -2
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "S": 2,
+      "T": 2,
+      "q": [
+        5,
+        5
+      ],
+      "alpha": -1,
+      "beta": -2
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "S": 1,
+      "T": 3,
+      "q": [
+        3,
+        7
+      ],
+      "alpha": -2,
+      "beta": -1
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "S": 2,
+      "T": 2,
+      "q": [
+        5,
+        5
+      ],
+      "alpha": -2,
+      "beta": -1
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "S": 2,
+      "T": 2,
+      "q": [
+        7,
+        3
+      ],
+      "alpha": -1,
+      "beta": -2
+    }
+  ],
+  "common_negative_audit": [
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 1,
+      "minus_beta": 1,
+      "C_D_E_F": [
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "factor_constant": 2,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 1,
+      "minus_beta": 2,
+      "C_D_E_F": [
+        -1,
+        -1,
+        0,
+        2
+      ],
+      "factor_constant": 2,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 1,
+      "minus_beta": 3,
+      "C_D_E_F": [
+        -1,
+        -1,
+        1,
+        3
+      ],
+      "factor_constant": 2,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 1,
+      "minus_beta": 4,
+      "C_D_E_F": [
+        -1,
+        -1,
+        2,
+        4
+      ],
+      "factor_constant": 2,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 2,
+      "minus_beta": 1,
+      "C_D_E_F": [
+        -1,
+        0,
+        -1,
+        2
+      ],
+      "factor_constant": 2,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 2,
+      "minus_beta": 2,
+      "C_D_E_F": [
+        0,
+        1,
+        1,
+        4
+      ],
+      "factor_constant": 1,
+      "method": "nonnegative coefficients and positive constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 2,
+      "minus_beta": 3,
+      "C_D_E_F": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "factor_constant": 0,
+      "method": "both zero-factor lines violate positivity or parity",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 2,
+      "minus_beta": 4,
+      "C_D_E_F": [
+        2,
+        3,
+        5,
+        8
+      ],
+      "factor_constant": -1,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 3,
+      "minus_beta": 1,
+      "C_D_E_F": [
+        -1,
+        1,
+        -1,
+        3
+      ],
+      "factor_constant": 2,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 3,
+      "minus_beta": 2,
+      "C_D_E_F": [
+        1,
+        3,
+        2,
+        6
+      ],
+      "factor_constant": 0,
+      "method": "both zero-factor lines violate positivity or parity",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 3,
+      "minus_beta": 3,
+      "C_D_E_F": [
+        3,
+        5,
+        5,
+        9
+      ],
+      "factor_constant": -2,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 3,
+      "minus_beta": 4,
+      "C_D_E_F": [
+        5,
+        7,
+        8,
+        12
+      ],
+      "factor_constant": -4,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 4,
+      "minus_beta": 1,
+      "C_D_E_F": [
+        -1,
+        2,
+        -1,
+        4
+      ],
+      "factor_constant": 2,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 4,
+      "minus_beta": 2,
+      "C_D_E_F": [
+        2,
+        5,
+        3,
+        8
+      ],
+      "factor_constant": -1,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 4,
+      "minus_beta": 3,
+      "C_D_E_F": [
+        5,
+        8,
+        7,
+        12
+      ],
+      "factor_constant": -4,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 1,
+      "minus_alpha": 4,
+      "minus_beta": 4,
+      "C_D_E_F": [
+        8,
+        11,
+        11,
+        16
+      ],
+      "factor_constant": -7,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 1,
+      "minus_beta": 1,
+      "C_D_E_F": [
+        -2,
+        -1,
+        -1,
+        1
+      ],
+      "factor_constant": 3,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 1,
+      "minus_beta": 2,
+      "C_D_E_F": [
+        -2,
+        -1,
+        1,
+        2
+      ],
+      "factor_constant": 3,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 1,
+      "minus_beta": 3,
+      "C_D_E_F": [
+        -2,
+        -1,
+        3,
+        3
+      ],
+      "factor_constant": 3,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": [
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 1,
+      "minus_beta": 4,
+      "C_D_E_F": [
+        -2,
+        -1,
+        5,
+        4
+      ],
+      "factor_constant": 3,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 2,
+      "minus_beta": 1,
+      "C_D_E_F": [
+        -1,
+        0,
+        0,
+        2
+      ],
+      "factor_constant": 2,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": [
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 2,
+      "minus_beta": 2,
+      "C_D_E_F": [
+        1,
+        1,
+        4,
+        4
+      ],
+      "factor_constant": 0,
+      "method": "both zero-factor lines violate positivity or parity",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 2,
+      "minus_beta": 3,
+      "C_D_E_F": [
+        3,
+        2,
+        8,
+        6
+      ],
+      "factor_constant": -2,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 2,
+      "minus_beta": 4,
+      "C_D_E_F": [
+        5,
+        3,
+        12,
+        8
+      ],
+      "factor_constant": -4,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 3,
+      "minus_beta": 1,
+      "C_D_E_F": [
+        0,
+        1,
+        1,
+        3
+      ],
+      "factor_constant": 1,
+      "method": "nonnegative coefficients and positive constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 3,
+      "minus_beta": 2,
+      "C_D_E_F": [
+        4,
+        3,
+        7,
+        6
+      ],
+      "factor_constant": -3,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 3,
+      "minus_beta": 3,
+      "C_D_E_F": [
+        8,
+        5,
+        13,
+        9
+      ],
+      "factor_constant": -7,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 3,
+      "minus_beta": 4,
+      "C_D_E_F": [
+        12,
+        7,
+        19,
+        12
+      ],
+      "factor_constant": -11,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 4,
+      "minus_beta": 1,
+      "C_D_E_F": [
+        1,
+        2,
+        2,
+        4
+      ],
+      "factor_constant": 0,
+      "method": "both zero-factor lines violate positivity or parity",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 4,
+      "minus_beta": 2,
+      "C_D_E_F": [
+        7,
+        5,
+        10,
+        8
+      ],
+      "factor_constant": -6,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 4,
+      "minus_beta": 3,
+      "C_D_E_F": [
+        13,
+        8,
+        18,
+        12
+      ],
+      "factor_constant": -12,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 2,
+      "minus_alpha": 4,
+      "minus_beta": 4,
+      "C_D_E_F": [
+        19,
+        11,
+        26,
+        16
+      ],
+      "factor_constant": -18,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 1,
+      "minus_beta": 1,
+      "C_D_E_F": [
+        -3,
+        -1,
+        -1,
+        1
+      ],
+      "factor_constant": 4,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 1,
+      "minus_beta": 2,
+      "C_D_E_F": [
+        -3,
+        -1,
+        2,
+        2
+      ],
+      "factor_constant": 4,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 1,
+      "minus_beta": 3,
+      "C_D_E_F": [
+        -3,
+        -1,
+        5,
+        3
+      ],
+      "factor_constant": 4,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 1,
+      "minus_beta": 4,
+      "C_D_E_F": [
+        -3,
+        -1,
+        8,
+        4
+      ],
+      "factor_constant": 4,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 2,
+      "minus_beta": 1,
+      "C_D_E_F": [
+        -1,
+        0,
+        1,
+        2
+      ],
+      "factor_constant": 2,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": [
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 2,
+      "minus_beta": 2,
+      "C_D_E_F": [
+        2,
+        1,
+        7,
+        4
+      ],
+      "factor_constant": -1,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 2,
+      "minus_beta": 3,
+      "C_D_E_F": [
+        5,
+        2,
+        13,
+        6
+      ],
+      "factor_constant": -4,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 2,
+      "minus_beta": 4,
+      "C_D_E_F": [
+        8,
+        3,
+        19,
+        8
+      ],
+      "factor_constant": -7,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 3,
+      "minus_beta": 1,
+      "C_D_E_F": [
+        1,
+        1,
+        3,
+        3
+      ],
+      "factor_constant": 0,
+      "method": "both zero-factor lines violate positivity or parity",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 3,
+      "minus_beta": 2,
+      "C_D_E_F": [
+        7,
+        3,
+        12,
+        6
+      ],
+      "factor_constant": -6,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 3,
+      "minus_beta": 3,
+      "C_D_E_F": [
+        13,
+        5,
+        21,
+        9
+      ],
+      "factor_constant": -12,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 3,
+      "minus_beta": 4,
+      "C_D_E_F": [
+        19,
+        7,
+        30,
+        12
+      ],
+      "factor_constant": -18,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 4,
+      "minus_beta": 1,
+      "C_D_E_F": [
+        3,
+        2,
+        5,
+        4
+      ],
+      "factor_constant": -2,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 4,
+      "minus_beta": 2,
+      "C_D_E_F": [
+        12,
+        5,
+        17,
+        8
+      ],
+      "factor_constant": -11,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 4,
+      "minus_beta": 3,
+      "C_D_E_F": [
+        21,
+        8,
+        29,
+        12
+      ],
+      "factor_constant": -20,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 1,
+      "s_prime": 3,
+      "minus_alpha": 4,
+      "minus_beta": 4,
+      "C_D_E_F": [
+        30,
+        11,
+        41,
+        16
+      ],
+      "factor_constant": -29,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 1,
+      "minus_beta": 1,
+      "C_D_E_F": [
+        -2,
+        -1,
+        -1,
+        1
+      ],
+      "factor_constant": 3,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 1,
+      "minus_beta": 2,
+      "C_D_E_F": [
+        -1,
+        0,
+        0,
+        2
+      ],
+      "factor_constant": 2,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": [
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 1,
+      "minus_beta": 3,
+      "C_D_E_F": [
+        0,
+        1,
+        1,
+        3
+      ],
+      "factor_constant": 1,
+      "method": "nonnegative coefficients and positive constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 1,
+      "minus_beta": 4,
+      "C_D_E_F": [
+        1,
+        2,
+        2,
+        4
+      ],
+      "factor_constant": 0,
+      "method": "both zero-factor lines violate positivity or parity",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 2,
+      "minus_beta": 1,
+      "C_D_E_F": [
+        -2,
+        1,
+        -1,
+        2
+      ],
+      "factor_constant": 3,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 2,
+      "minus_beta": 2,
+      "C_D_E_F": [
+        1,
+        4,
+        1,
+        4
+      ],
+      "factor_constant": 0,
+      "method": "both zero-factor lines violate positivity or parity",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 2,
+      "minus_beta": 3,
+      "C_D_E_F": [
+        4,
+        7,
+        3,
+        6
+      ],
+      "factor_constant": -3,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 2,
+      "minus_beta": 4,
+      "C_D_E_F": [
+        7,
+        10,
+        5,
+        8
+      ],
+      "factor_constant": -6,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 3,
+      "minus_beta": 1,
+      "C_D_E_F": [
+        -2,
+        3,
+        -1,
+        3
+      ],
+      "factor_constant": 3,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": [
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 3,
+      "minus_beta": 2,
+      "C_D_E_F": [
+        3,
+        8,
+        2,
+        6
+      ],
+      "factor_constant": -2,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 3,
+      "minus_beta": 3,
+      "C_D_E_F": [
+        8,
+        13,
+        5,
+        9
+      ],
+      "factor_constant": -7,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 3,
+      "minus_beta": 4,
+      "C_D_E_F": [
+        13,
+        18,
+        8,
+        12
+      ],
+      "factor_constant": -12,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 4,
+      "minus_beta": 1,
+      "C_D_E_F": [
+        -2,
+        5,
+        -1,
+        4
+      ],
+      "factor_constant": 3,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 4,
+      "minus_beta": 2,
+      "C_D_E_F": [
+        5,
+        12,
+        3,
+        8
+      ],
+      "factor_constant": -4,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 4,
+      "minus_beta": 3,
+      "C_D_E_F": [
+        12,
+        19,
+        7,
+        12
+      ],
+      "factor_constant": -11,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 1,
+      "minus_alpha": 4,
+      "minus_beta": 4,
+      "C_D_E_F": [
+        19,
+        26,
+        11,
+        16
+      ],
+      "factor_constant": -18,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 1,
+      "minus_beta": 1,
+      "C_D_E_F": [
+        -3,
+        -1,
+        -1,
+        1
+      ],
+      "factor_constant": 4,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 1,
+      "minus_beta": 2,
+      "C_D_E_F": [
+        -1,
+        0,
+        1,
+        2
+      ],
+      "factor_constant": 2,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ]
+      ]
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 1,
+      "minus_beta": 3,
+      "C_D_E_F": [
+        1,
+        1,
+        3,
+        3
+      ],
+      "factor_constant": 0,
+      "method": "both zero-factor lines violate positivity or parity",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 1,
+      "minus_beta": 4,
+      "C_D_E_F": [
+        3,
+        2,
+        5,
+        4
+      ],
+      "factor_constant": -2,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 2,
+      "minus_beta": 1,
+      "C_D_E_F": [
+        -1,
+        1,
+        0,
+        2
+      ],
+      "factor_constant": 2,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 2,
+      "minus_beta": 2,
+      "C_D_E_F": [
+        5,
+        4,
+        4,
+        4
+      ],
+      "factor_constant": -4,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 2,
+      "minus_beta": 3,
+      "C_D_E_F": [
+        11,
+        7,
+        8,
+        6
+      ],
+      "factor_constant": -10,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 2,
+      "minus_beta": 4,
+      "C_D_E_F": [
+        17,
+        10,
+        12,
+        8
+      ],
+      "factor_constant": -16,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 3,
+      "minus_beta": 1,
+      "C_D_E_F": [
+        1,
+        3,
+        1,
+        3
+      ],
+      "factor_constant": 0,
+      "method": "both zero-factor lines violate positivity or parity",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 3,
+      "minus_beta": 2,
+      "C_D_E_F": [
+        11,
+        8,
+        7,
+        6
+      ],
+      "factor_constant": -10,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 3,
+      "minus_beta": 3,
+      "C_D_E_F": [
+        21,
+        13,
+        13,
+        9
+      ],
+      "factor_constant": -20,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 3,
+      "minus_beta": 4,
+      "C_D_E_F": [
+        31,
+        18,
+        19,
+        12
+      ],
+      "factor_constant": -30,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 4,
+      "minus_beta": 1,
+      "C_D_E_F": [
+        3,
+        5,
+        2,
+        4
+      ],
+      "factor_constant": -2,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 4,
+      "minus_beta": 2,
+      "C_D_E_F": [
+        17,
+        12,
+        10,
+        8
+      ],
+      "factor_constant": -16,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 4,
+      "minus_beta": 3,
+      "C_D_E_F": [
+        31,
+        19,
+        18,
+        12
+      ],
+      "factor_constant": -30,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 2,
+      "s_prime": 2,
+      "minus_alpha": 4,
+      "minus_beta": 4,
+      "C_D_E_F": [
+        45,
+        26,
+        26,
+        16
+      ],
+      "factor_constant": -44,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 1,
+      "minus_beta": 1,
+      "C_D_E_F": [
+        -3,
+        -1,
+        -1,
+        1
+      ],
+      "factor_constant": 4,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 1,
+      "minus_beta": 2,
+      "C_D_E_F": [
+        -1,
+        1,
+        0,
+        2
+      ],
+      "factor_constant": 2,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": [
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 1,
+      "minus_beta": 3,
+      "C_D_E_F": [
+        1,
+        3,
+        1,
+        3
+      ],
+      "factor_constant": 0,
+      "method": "both zero-factor lines violate positivity or parity",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 1,
+      "minus_beta": 4,
+      "C_D_E_F": [
+        3,
+        5,
+        2,
+        4
+      ],
+      "factor_constant": -2,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 2,
+      "minus_beta": 1,
+      "C_D_E_F": [
+        -3,
+        2,
+        -1,
+        2
+      ],
+      "factor_constant": 4,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 2,
+      "minus_beta": 2,
+      "C_D_E_F": [
+        2,
+        7,
+        1,
+        4
+      ],
+      "factor_constant": -1,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 2,
+      "minus_beta": 3,
+      "C_D_E_F": [
+        7,
+        12,
+        3,
+        6
+      ],
+      "factor_constant": -6,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 2,
+      "minus_beta": 4,
+      "C_D_E_F": [
+        12,
+        17,
+        5,
+        8
+      ],
+      "factor_constant": -11,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 3,
+      "minus_beta": 1,
+      "C_D_E_F": [
+        -3,
+        5,
+        -1,
+        3
+      ],
+      "factor_constant": 4,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 3,
+      "minus_beta": 2,
+      "C_D_E_F": [
+        5,
+        13,
+        2,
+        6
+      ],
+      "factor_constant": -4,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 3,
+      "minus_beta": 3,
+      "C_D_E_F": [
+        13,
+        21,
+        5,
+        9
+      ],
+      "factor_constant": -12,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 3,
+      "minus_beta": 4,
+      "C_D_E_F": [
+        21,
+        29,
+        8,
+        12
+      ],
+      "factor_constant": -20,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 4,
+      "minus_beta": 1,
+      "C_D_E_F": [
+        -3,
+        8,
+        -1,
+        4
+      ],
+      "factor_constant": 4,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 4,
+      "minus_beta": 2,
+      "C_D_E_F": [
+        8,
+        19,
+        3,
+        8
+      ],
+      "factor_constant": -7,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 4,
+      "minus_beta": 3,
+      "C_D_E_F": [
+        19,
+        30,
+        7,
+        12
+      ],
+      "factor_constant": -18,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    },
+    {
+      "s": 3,
+      "s_prime": 1,
+      "minus_alpha": 4,
+      "minus_beta": 4,
+      "C_D_E_F": [
+        30,
+        41,
+        11,
+        16
+      ],
+      "factor_constant": -29,
+      "method": "all signed divisors of the exact nonzero factor constant",
+      "all_positive_odd_solutions": []
+    }
+  ],
+  "normal_form_cases": [
+    {
+      "name": "A1",
+      "s_sprime_S_T_u_A_t": [
+        3,
+        1,
+        2,
+        2,
+        3,
+        2,
+        1
+      ],
+      "fixed_low_row": [
+        -2,
+        -1,
+        2
+      ],
+      "fixed_low_column": [
+        -1,
+        -2,
+        "B"
+      ],
+      "m_n_v_a_b": [
+        3,
+        3,
+        2,
+        2,
+        1
+      ],
+      "all_positive_factor_checks": [
+        {
+          "L": 1,
+          "M": 8,
+          "reverse_denominators": [
+            3,
+            9
+          ],
+          "C": -9,
+          "E": -3,
+          "reverse_numerators": [
+            [
+              6,
+              2
+            ],
+            [
+              6,
+              2
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            -1,
+            3
+          ]
+        },
+        {
+          "L": 2,
+          "M": 4,
+          "reverse_denominators": [
+            4,
+            5
+          ],
+          "C": -6,
+          "E": -2,
+          "reverse_numerators": [
+            [
+              6,
+              2
+            ],
+            [
+              6,
+              2
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            -1,
+            3
+          ]
+        },
+        {
+          "L": 4,
+          "M": 2,
+          "reverse_denominators": [
+            6,
+            3
+          ],
+          "C": 0,
+          "E": 0,
+          "reverse_numerators": [
+            [
+              6,
+              2
+            ],
+            [
+              6,
+              2
+            ]
+          ],
+          "status": "linear identity but original pair divisibility impossible",
+          "divisibility_obstructions": [
+            {
+              "divisor": 6,
+              "coefficient": 6,
+              "constant": 2,
+              "gcd": 6,
+              "nonzero_residue": 2
+            },
+            {
+              "divisor": 3,
+              "coefficient": 6,
+              "constant": 2,
+              "gcd": 3,
+              "nonzero_residue": 2
+            }
+          ]
+        },
+        {
+          "L": 8,
+          "M": 1,
+          "reverse_denominators": [
+            10,
+            2
+          ],
+          "C": 12,
+          "E": 4,
+          "reverse_numerators": [
+            [
+              6,
+              2
+            ],
+            [
+              6,
+              2
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            -1,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "name": "A2",
+      "s_sprime_S_T_u_A_t": [
+        2,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1
+      ],
+      "fixed_low_row": [
+        -1,
+        -2,
+        2
+      ],
+      "fixed_low_column": [
+        -2,
+        -1,
+        "B"
+      ],
+      "m_n_v_a_b": [
+        3,
+        3,
+        2,
+        1,
+        2
+      ],
+      "all_positive_factor_checks": [
+        {
+          "L": 1,
+          "M": 8,
+          "reverse_denominators": [
+            2,
+            10
+          ],
+          "C": 12,
+          "E": 4,
+          "reverse_numerators": [
+            [
+              6,
+              2
+            ],
+            [
+              6,
+              2
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            -1,
+            3
+          ]
+        },
+        {
+          "L": 2,
+          "M": 4,
+          "reverse_denominators": [
+            3,
+            6
+          ],
+          "C": 0,
+          "E": 0,
+          "reverse_numerators": [
+            [
+              6,
+              2
+            ],
+            [
+              6,
+              2
+            ]
+          ],
+          "status": "linear identity but original pair divisibility impossible",
+          "divisibility_obstructions": [
+            {
+              "divisor": 3,
+              "coefficient": 6,
+              "constant": 2,
+              "gcd": 3,
+              "nonzero_residue": 2
+            },
+            {
+              "divisor": 6,
+              "coefficient": 6,
+              "constant": 2,
+              "gcd": 6,
+              "nonzero_residue": 2
+            }
+          ]
+        },
+        {
+          "L": 4,
+          "M": 2,
+          "reverse_denominators": [
+            5,
+            4
+          ],
+          "C": -6,
+          "E": -2,
+          "reverse_numerators": [
+            [
+              6,
+              2
+            ],
+            [
+              6,
+              2
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            -1,
+            3
+          ]
+        },
+        {
+          "L": 8,
+          "M": 1,
+          "reverse_denominators": [
+            9,
+            3
+          ],
+          "C": -9,
+          "E": -3,
+          "reverse_numerators": [
+            [
+              6,
+              2
+            ],
+            [
+              6,
+              2
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            -1,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "name": "A3",
+      "s_sprime_S_T_u_A_t": [
+        2,
+        2,
+        3,
+        1,
+        3,
+        2,
+        2
+      ],
+      "fixed_low_row": [
+        -2,
+        -2,
+        3
+      ],
+      "fixed_low_column": [
+        -1,
+        -1,
+        "B"
+      ],
+      "m_n_v_a_b": [
+        3,
+        3,
+        3,
+        2,
+        2
+      ],
+      "all_positive_factor_checks": [
+        {
+          "L": 1,
+          "M": 8,
+          "reverse_denominators": [
+            3,
+            10
+          ],
+          "C": -3,
+          "E": -4,
+          "reverse_numerators": [
+            [
+              9,
+              2
+            ],
+            [
+              9,
+              2
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            -4,
+            3
+          ]
+        },
+        {
+          "L": 2,
+          "M": 4,
+          "reverse_denominators": [
+            4,
+            6
+          ],
+          "C": -6,
+          "E": -4,
+          "reverse_numerators": [
+            [
+              9,
+              2
+            ],
+            [
+              9,
+              2
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            -2,
+            3
+          ]
+        },
+        {
+          "L": 4,
+          "M": 2,
+          "reverse_denominators": [
+            6,
+            4
+          ],
+          "C": -6,
+          "E": -4,
+          "reverse_numerators": [
+            [
+              9,
+              2
+            ],
+            [
+              9,
+              2
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            -2,
+            3
+          ]
+        },
+        {
+          "L": 8,
+          "M": 1,
+          "reverse_denominators": [
+            10,
+            3
+          ],
+          "C": -3,
+          "E": -4,
+          "reverse_numerators": [
+            [
+              9,
+              2
+            ],
+            [
+              9,
+              2
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            -4,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "name": "B1",
+      "s_sprime_S_T_u_A_t": [
+        1,
+        3,
+        2,
+        2,
+        2,
+        3,
+        2
+      ],
+      "fixed_low_row": [
+        -1,
+        -3,
+        3
+      ],
+      "fixed_low_column": [
+        -2,
+        -2,
+        "B"
+      ],
+      "m_n_v_a_b": [
+        3,
+        7,
+        3,
+        1,
+        5
+      ],
+      "all_positive_factor_checks": [
+        {
+          "L": 1,
+          "M": 20,
+          "reverse_denominators": [
+            2,
+            25
+          ],
+          "C": 67,
+          "E": 12,
+          "reverse_numerators": [
+            [
+              9,
+              2
+            ],
+            [
+              21,
+              6
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            -12,
+            67
+          ]
+        },
+        {
+          "L": 2,
+          "M": 10,
+          "reverse_denominators": [
+            3,
+            15
+          ],
+          "C": 18,
+          "E": 3,
+          "reverse_numerators": [
+            [
+              9,
+              2
+            ],
+            [
+              21,
+              6
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            -1,
+            6
+          ]
+        },
+        {
+          "L": 4,
+          "M": 5,
+          "reverse_denominators": [
+            5,
+            10
+          ],
+          "C": -5,
+          "E": 0,
+          "reverse_numerators": [
+            [
+              9,
+              2
+            ],
+            [
+              21,
+              6
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            0,
+            1
+          ]
+        },
+        {
+          "L": 5,
+          "M": 4,
+          "reverse_denominators": [
+            6,
+            9
+          ],
+          "C": -9,
+          "E": 0,
+          "reverse_numerators": [
+            [
+              9,
+              2
+            ],
+            [
+              21,
+              6
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            0,
+            1
+          ]
+        },
+        {
+          "L": 10,
+          "M": 2,
+          "reverse_denominators": [
+            11,
+            7
+          ],
+          "C": -14,
+          "E": 3,
+          "reverse_numerators": [
+            [
+              9,
+              2
+            ],
+            [
+              21,
+              6
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            3,
+            14
+          ]
+        },
+        {
+          "L": 20,
+          "M": 1,
+          "reverse_denominators": [
+            21,
+            6
+          ],
+          "C": -9,
+          "E": 12,
+          "reverse_numerators": [
+            [
+              9,
+              2
+            ],
+            [
+              21,
+              6
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            4,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "name": "B2",
+      "s_sprime_S_T_u_A_t": [
+        1,
+        3,
+        2,
+        2,
+        3,
+        2,
+        3
+      ],
+      "fixed_low_row": [
+        -2,
+        -3,
+        4
+      ],
+      "fixed_low_column": [
+        -1,
+        -2,
+        "B"
+      ],
+      "m_n_v_a_b": [
+        3,
+        7,
+        4,
+        2,
+        5
+      ],
+      "all_positive_factor_checks": [
+        {
+          "L": 1,
+          "M": 20,
+          "reverse_denominators": [
+            3,
+            25
+          ],
+          "C": 9,
+          "E": -7,
+          "reverse_numerators": [
+            [
+              12,
+              2
+            ],
+            [
+              28,
+              6
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            7,
+            9
+          ]
+        },
+        {
+          "L": 2,
+          "M": 10,
+          "reverse_denominators": [
+            4,
+            15
+          ],
+          "C": -8,
+          "E": -6,
+          "reverse_numerators": [
+            [
+              12,
+              2
+            ],
+            [
+              28,
+              6
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            -3,
+            4
+          ]
+        },
+        {
+          "L": 4,
+          "M": 5,
+          "reverse_denominators": [
+            6,
+            10
+          ],
+          "C": -12,
+          "E": -4,
+          "reverse_numerators": [
+            [
+              12,
+              2
+            ],
+            [
+              28,
+              6
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            -1,
+            3
+          ]
+        },
+        {
+          "L": 5,
+          "M": 4,
+          "reverse_denominators": [
+            7,
+            9
+          ],
+          "C": -11,
+          "E": -3,
+          "reverse_numerators": [
+            [
+              12,
+              2
+            ],
+            [
+              28,
+              6
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            -3,
+            11
+          ]
+        },
+        {
+          "L": 10,
+          "M": 2,
+          "reverse_denominators": [
+            12,
+            7
+          ],
+          "C": 0,
+          "E": 2,
+          "reverse_numerators": [
+            [
+              12,
+              2
+            ],
+            [
+              28,
+              6
+            ]
+          ],
+          "status": "zero coefficient but nonzero constant"
+        },
+        {
+          "L": 20,
+          "M": 1,
+          "reverse_denominators": [
+            22,
+            6
+          ],
+          "C": 28,
+          "E": 12,
+          "reverse_numerators": [
+            [
+              12,
+              2
+            ],
+            [
+              28,
+              6
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            -3,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "name": "B3",
+      "s_sprime_S_T_u_A_t": [
+        2,
+        2,
+        1,
+        3,
+        2,
+        3,
+        1
+      ],
+      "fixed_low_row": [
+        -1,
+        -2,
+        2
+      ],
+      "fixed_low_column": [
+        -2,
+        -3,
+        "B"
+      ],
+      "m_n_v_a_b": [
+        3,
+        7,
+        2,
+        1,
+        4
+      ],
+      "all_positive_factor_checks": [
+        {
+          "L": 1,
+          "M": 20,
+          "reverse_denominators": [
+            2,
+            24
+          ],
+          "C": 28,
+          "E": 12,
+          "reverse_numerators": [
+            [
+              6,
+              2
+            ],
+            [
+              14,
+              6
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            -3,
+            7
+          ]
+        },
+        {
+          "L": 2,
+          "M": 10,
+          "reverse_denominators": [
+            3,
+            14
+          ],
+          "C": 0,
+          "E": 4,
+          "reverse_numerators": [
+            [
+              6,
+              2
+            ],
+            [
+              14,
+              6
+            ]
+          ],
+          "status": "zero coefficient but nonzero constant"
+        },
+        {
+          "L": 4,
+          "M": 5,
+          "reverse_denominators": [
+            5,
+            9
+          ],
+          "C": -11,
+          "E": 3,
+          "reverse_numerators": [
+            [
+              6,
+              2
+            ],
+            [
+              14,
+              6
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            3,
+            11
+          ]
+        },
+        {
+          "L": 5,
+          "M": 4,
+          "reverse_denominators": [
+            6,
+            8
+          ],
+          "C": -12,
+          "E": 4,
+          "reverse_numerators": [
+            [
+              6,
+              2
+            ],
+            [
+              14,
+              6
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            1,
+            3
+          ]
+        },
+        {
+          "L": 10,
+          "M": 2,
+          "reverse_denominators": [
+            11,
+            6
+          ],
+          "C": -8,
+          "E": 12,
+          "reverse_numerators": [
+            [
+              6,
+              2
+            ],
+            [
+              14,
+              6
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            3,
+            2
+          ]
+        },
+        {
+          "L": 20,
+          "M": 1,
+          "reverse_denominators": [
+            21,
+            5
+          ],
+          "C": 9,
+          "E": 31,
+          "reverse_numerators": [
+            [
+              6,
+              2
+            ],
+            [
+              14,
+              6
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            -31,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "name": "B4",
+      "s_sprime_S_T_u_A_t": [
+        2,
+        2,
+        1,
+        3,
+        3,
+        2,
+        2
+      ],
+      "fixed_low_row": [
+        -2,
+        -2,
+        3
+      ],
+      "fixed_low_column": [
+        -1,
+        -3,
+        "B"
+      ],
+      "m_n_v_a_b": [
+        3,
+        7,
+        3,
+        2,
+        4
+      ],
+      "all_positive_factor_checks": [
+        {
+          "L": 1,
+          "M": 20,
+          "reverse_denominators": [
+            3,
+            24
+          ],
+          "C": -9,
+          "E": -6,
+          "reverse_numerators": [
+            [
+              9,
+              2
+            ],
+            [
+              21,
+              6
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            -2,
+            3
+          ]
+        },
+        {
+          "L": 2,
+          "M": 10,
+          "reverse_denominators": [
+            4,
+            14
+          ],
+          "C": -14,
+          "E": -4,
+          "reverse_numerators": [
+            [
+              9,
+              2
+            ],
+            [
+              21,
+              6
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            -2,
+            7
+          ]
+        },
+        {
+          "L": 4,
+          "M": 5,
+          "reverse_denominators": [
+            6,
+            9
+          ],
+          "C": -9,
+          "E": 0,
+          "reverse_numerators": [
+            [
+              9,
+              2
+            ],
+            [
+              21,
+              6
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            0,
+            1
+          ]
+        },
+        {
+          "L": 5,
+          "M": 4,
+          "reverse_denominators": [
+            7,
+            8
+          ],
+          "C": -5,
+          "E": 2,
+          "reverse_numerators": [
+            [
+              9,
+              2
+            ],
+            [
+              21,
+              6
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            2,
+            5
+          ]
+        },
+        {
+          "L": 10,
+          "M": 2,
+          "reverse_denominators": [
+            12,
+            6
+          ],
+          "C": 18,
+          "E": 12,
+          "reverse_numerators": [
+            [
+              9,
+              2
+            ],
+            [
+              21,
+              6
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            -2,
+            3
+          ]
+        },
+        {
+          "L": 20,
+          "M": 1,
+          "reverse_denominators": [
+            22,
+            5
+          ],
+          "C": 67,
+          "E": 32,
+          "reverse_numerators": [
+            [
+              9,
+              2
+            ],
+            [
+              21,
+              6
+            ]
+          ],
+          "status": "unique linear root is not a positive integer",
+          "B": [
+            -32,
+            67
+          ]
+        }
+      ]
+    }
+  ],
+  "fixed_positive_factor_checks": 36,
+  "identity_resonances_excluded_by_original_pair_divisibility": 2,
+  "zero_linear_coefficients_with_nonzero_constant": 2,
+  "unbounded_scale_root_cases": 32,
+  "denominator_cutoff": null,
+  "matrix_entry_cutoff": null,
+  "bounded_scan_used_for_theorem": false,
+  "old_verifier_imports": false,
+  "stdlib_only": true,
+  "proof_assistant_formalization": false,
+  "external_peer_review": false,
+  "proof_file": "g514_five_node_exclusion_v25.tex",
+  "proof_sha256": "a9762909df0ecf7518813604f408c1b6c157d65b4ef39bde5fb2dd92210dc627",
+  "verifier_file": "verify_g514_five_node_v25.py",
+  "verifier_sha256": "3a4d6c27261eb342ed5780cefaf60b5b2402cd28bef01741eee75689388aac07"
+}

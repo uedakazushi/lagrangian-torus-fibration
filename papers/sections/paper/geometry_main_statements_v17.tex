@@ -1,0 +1,160 @@
+\section{設定と主定理}\label{sec:main}
+
+全ての多様体、形式、写像は、特に断らない限り滑らかである。
+Hamiltonian vector fieldは$\iota_{X_H}\omega=-\mathrm dH$で定義し、normal circleの周期は$2\pi$とする。
+従って標準複素直線上の正のmomentは$|z|^2/2$である。
+$\dd^c$は$\dd^c\log|z|^2=\dd\theta$となる規約を用いる。
+$H$はhyperplane classで、$\int_{\PP^1}H=1$と正規化する。
+
+\begin{definition}\label{def:fibration}
+本稿の\emph{分岐底空間上のLagrangian torus fibration}とは、コンパクトなsymplectic 4多様体$(X,\omega)$から有限2複体$B$への、連結なfibersを持つproper continuous surjection $\pi:X\to B$で、$B$の稠密な開2次元stratum上では滑らかなsubmersionとなり、そのfibersがLagrangian $T^2$となるものをいう。
+特異fiberには、以下に指定する局所的な層構造を与え、その滑らかな各stratumはisotropicとする。
+ここでstratificationは\cite[Definition 2.1]{EM}の弱い意味、すなわち閉部分集合のfiltrationの各差が滑らかな多様体となるという意味で用い、Whitney条件は含めない。
+\emph{自由な辺がない}とは、2次元stratumの閉包に接する各開1次元stratumに、ちょうど一枚だけのsheetが接することがない、という意味である。
+\end{definition}
+
+この定義は、基底が通常の2次元多様体であるという条件を含まない。
+本稿では分岐辺の横断的な断面は三叉グラフ$Y$である。
+正則な底空間にはaction-angle theoremによるintegral affine structureがあるが、分岐を横断する単一のaffine chartは定義からは得られない。
+
+各$i\ne j$に対し、$d-2$個の葉が$\{1,\ldots,d\}\setminus\{i,j\}$でラベル付けされた三価木$T_{ij}=T_{ji}$を選ぶ。
+これは実際の多穴球面$C_{ij}^{\circ}$上のmarked pants分解で実現し、単なる抽象木の選択とは区別する。
+$B_d(T)$は、各成分のcoreを一つの頂点に、各$T_{ij}$の内部頂点を$i,j$間の分岐辺に、内部辺を二角形に対応させ、各三重点を三角形に対応させた2複体である。
+厳密なcellular定義と接着写像は底空間の節で与える。
+
+\begin{theorem}[境界のない分岐底空間への構成]\label{main:global}
+$X_d\subset\PP^3$を滑らかな次数$d\ge5$の曲面、$\omega$を$[\omega]=aH$, $a>0$を満たすKähler formとする。
+任意に選んだ上記のmarked pants treesを用いて
+\[
+\pi_d:(X_d,\omega)\longrightarrow B_d(T)
+\]
+という定義\ref{def:fibration}のfibrationを構成できる。そのfiberは次の表の通りであり、他の型の特異fiberを生じない。
+\begin{center}
+\begin{tabularx}{\linewidth}{@{}lXr@{}}
+\toprule
+底空間のstratum & fiber & 個数または成分数\\
+\midrule
+正則な開2次元部分 & Lagrangian $T^2$ & ---\\
+開分岐辺 & $S^1\times\figeight$ & $\binom d2(d-4)$\\
+面内のnodal values & 一度pinchされた$T^2$ & $d\binom d2$\\
+core頂点 & $\PP^2$の$d-1$直線補集合のlogarithmic Weinstein skeletonのsymplectic image & $d$\\
+\bottomrule
+\end{tabularx}
+\end{center}
+各分岐辺にはちょうど三枚のsheetが接する。
+基底は$\binom d3$枚の三角形、$\binom d2(d-5)$枚の二角形を持ち、
+\[
+B_d(T)\simeq\Sk_2\Delta^{d-1}\simeq\bigvee^{\binom{d-1}{3}}S^2.
+\]
+$d=5$では$B_5\cong\Sk_2\Delta^4$であり、$d\ge6$では$B_d(T)$は$\Sk_2\Delta^{d-1}$と同相ではない。
+\end{theorem}
+
+coreの同定は、適切に選んだlogarithmic Weinstein構造のskeletonとの同定である。
+特定のembedded skeletonを最初から指定して保存する、という主張ではない。
+Morse型coreの等方的なstratificationには\cite[\S2.3]{EM}を用いる。
+core fiberのEuler数は$\binom{d-3}{2}$であり、$d$とともに変化する。
+従ってこの定理は、全ての次数に共通の一種類のpants fiberだけで構成するという結論も含まない。
+
+\begin{theorem}[vertical Kähler slice]\label{main:cone}
+後述の順序付き小解消$f:\widetilde{\cX}_d\to\Delta$の中心成分を$D_1,\ldots,D_d$とする。
+$a>0$を固定し、$\sum_i[D_i]=0$による共通定数の不定性を除いて
+\[
+\xi=aH+\sum_{i=1}^d\beta_i[D_i]
+\]
+を考える。
+底を十分縮小した全空間上のKähler classとして$\xi$が実現できるための必要十分条件は
+\[
+\beta_1<\beta_2<\cdots<\beta_d,
+\qquad a+\sum_i\beta_i-d\beta_d>0
+\]
+である。$\delta_k=\beta_{k+1}-\beta_k$を用いると、この領域は
+\[
+\delta_k>0\quad(1\le k\le d-1),\qquad
+\sum_{k=1}^{d-1}k\delta_k<a
+\]
+という開単体になる。
+\end{theorem}
+
+これは全相対Kähler coneの記述ではなく、指定したvertical affine sliceとの交わりの完全な記述である。
+大域fibrationの証明には、この単体の中の十分小さいrayを用いる。
+単体の全ての点で同じ局所surgeryが実行できると主張する必要はない。
+
+\paragraph{証明の構造.}
+まず明示的な平面退化と偏極を構成する。
+次に、直線配置補集合の有限体積compactificationを、境界上のmarked Morse葉層に相対的に作る。
+小さいdivisor-compatible blow-upによってfocus--focus fibersを挿入し、実際の中心成分へfibrationを移す。
+その後、divisorから正の距離を置いた飽和領域を、同じ全空間のsymplectic connectionで平滑化へ運ぶ。
+二重曲線ではmomentに依存するMorse葉層を補間し、三重点ではtoric moment cutsを使う。
+この順序により、nodeのコンパクトなfiber全体を保ち、gluingの際にfiberを途中で切ることを避ける。
+
+\paragraph{一般化と局所的な障害.}
+上の平面模型に必要な相対 compactification は，正の重み付き Kähler divisor 表示を持つ
+任意の genus の SNC divisor に対して構成する（定理\ref{snc:main}）．
+これにより，$d=e_1+\cdots+e_k$，$k\geq3$ の次数分割に対し，
+$k$ 個の core と $d\sum_{i<j}e_i e_j$ 個の nodes を持つ構成を得る
+（定理\ref{part:global}）．その底空間は
+\[
+ B_{\boldsymbol e}\simeq
+ \bigvee^{\,p_g(X_d)-\sum_i p_g(S_i)}S^2
+\]
+であり，整数鎖の強変形収縮を明示する（定理\ref{part:homotopy}）．
+ここで $S_i\subset\PP^3$ は次数 $e_i$ の smooth surface である．
+
+この構成の core を保つ場合，三価 Bergman link の分類から $d\geq7$ の全ての次数分割に
+局所位相障害が生じる（定理~\ref{trop:cubic-classification}，命題~\ref{trop:partition-obstruction}）．
+六次では全平面分割だけが残り，六つの同時 Petersen systems がある．
+五次では全平面と $(1,1,1,2)$ だけが全 core の matroidal local topology を持ち得る．
+後者の標識付き抽象 graph systems は四個である（定理~\ref{q5:classification}）．
+
+\paragraph{作用適合 atlas の存在と分類.}
+作用適合 matroidal atlas の transitions は，ambient integer affine maps の制限とする．
+正則 faces の余接線格子は actual fibration の作用格子に等しい．
+focus points を通常の matroidal charts から除き，その punctured neighborhoods に
+実際の focus affine singularities を残す（定義~\ref{atl:definition}）．
+branch denominator $q$ は，primitive branch tangent に対する正 normal action の
+微分の絶対値であり，以下の構成は全 branch で $q=1$ を満たす．
+
+\begin{theorem}[五次・六次の大域作用適合 atlas]\label{main:action-atlas}
+$d=5,6$，$X_d\subset\PP^3$ smooth，$[\omega]=aH$，$a>0$ とする．
+定理~\ref{main:global} の全平面 fibration を，focus affine singularities を許す
+大域作用適合 matroidal atlas を持つように選べる．
+core charts は五次では標準 $K_4$，六次では標準 Petersen fans である．
+五次の十 triangles には各五つ，六次の二十 triangles と十五 bigons にはそれぞれ三つと二つの
+nodal values が入る．全 branch の正規化された affine length は $a/(\pi(d-1))$ である．
+\end{theorem}
+
+その証明は，局所作用座標，整数 framing，critical-area を指定した actual neck 接着を
+まとめる定理~\ref{ga8:global} で与える．
+個別の core charts を並べるだけでは，作用の加法定数と atlas transitions は決まらない．
+本稿は固定 nonzero moments 上の exact symplectic transport と相対 Moser により
+この接着条件を満たす．
+
+混合分割 $(1,1,1,2)$ では，三つの $K_4$ と一つの $K_{3,3}$ の各 core に個別の
+作用適合 chart がある（系~\ref{mixper:individual}）．
+しかし，四 puncture neck の両端の annulus を比較すると，正の分母 $q_A,q_B$ は
+$q_Aq_B\mid2$ を満たし，三価 branch の奇数性により両方とも一となる
+（命題~\ref{q9:rigidity}）．この剛性と法円作用の分岐係数の総和 $-6$ により，
+混合五次の大域接続は任意の分母を許しても不可能である
+（定理~\ref{hd9:mixed-no-go}）．
+
+\begin{theorem}[現行 SNC 構成の matroidal atlas の分類]\label{main:atlas-classification}
+$d\ge5$，$d=\sum_{i=1}^ke_i$，$k\ge3$ とする．本稿の比例曲率 SNC cores，
+既存の branch graph，標準 coarse matroidal cones を保ち，追加の branch singularities を
+入れない範囲で，大域作用適合 matroidal atlas を持つ fibration を構成できる次数分割は，
+全平面五次と全平面六次に限る．branch denominators に一という仮定を課さない．
+\end{theorem}
+
+証明は系~\ref{hd9:classification}で与える．全平面六次の atlas では，
+三十本全ての branch denominators が自動的に一となり，各 bigon は二 nodes を持つ
+（系~\ref{q9:sextic-rigidity}，注意~\ref{q9:node-budget}）．
+一方，四直線の一つの core では任意の奇数 $q\ge3$ に対し分母 $(q,1,1,1)$ の chart が
+存在する（\cite{QuinticArithmetic}）．従って分母剛性は大域接着を使う条件である．
+分類の範囲は指定した SNC 構成であり，core surgery，fan の変更，追加の branch singularities
+を許す全ての fibrations を分類する主張ではない．
+
+\paragraph{五次の整数アフィン接着との関係．}
+全平面五次で任意の奇数分母を許す chart の同時接着については，局所の整数行列，
+共有 puncture の整数 clutching，node 配分，および対向する分岐係数の相殺を同時に調べる必要がある．
+これらの算術条件，高分母支持 graph に対する障害，および局所整数族の分類は，
+companion 論文\cite{QuinticArithmetic}にまとめる．
+定理~\ref{main:action-atlas}で構成する分母一の大域 atlas の存在証明は，本稿内で完結する．

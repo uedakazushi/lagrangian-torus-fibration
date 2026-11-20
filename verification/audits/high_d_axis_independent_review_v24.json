@@ -1,0 +1,116 @@
+{
+  "version": "v24",
+  "status": "PASS",
+  "reviewer": "root",
+  "independence": "No producer import/execution. Separate sparse univariate Kronecker encoding with proved injective degree bound, original residual reconstruction, division-free quadratic resultant formula, binomial shifted coefficients.",
+  "radix": 64,
+  "maximum_total_degree_bound": 16,
+  "exact_identity_count": 13,
+  "identities": [
+    {
+      "name": "axis_original_pair_residual",
+      "status": "PASS",
+      "total_degree_bound": 4
+    },
+    {
+      "name": "axis_difference_elimination",
+      "status": "PASS",
+      "total_degree_bound": 4
+    },
+    {
+      "name": "axis_mod_C",
+      "status": "PASS",
+      "total_degree_bound": 2
+    },
+    {
+      "name": "degenerate_scale",
+      "status": "PASS",
+      "total_degree_bound": 5
+    },
+    {
+      "name": "degenerate_original_residual",
+      "status": "PASS",
+      "total_degree_bound": 10
+    },
+    {
+      "name": "degenerate_divisor_A",
+      "status": "PASS",
+      "total_degree_bound": 8
+    },
+    {
+      "name": "degenerate_divisor_H",
+      "status": "PASS",
+      "total_degree_bound": 9
+    },
+    {
+      "name": "degenerate_small_cofactor",
+      "status": "PASS",
+      "total_degree_bound": 7
+    },
+    {
+      "name": "resultant_A_linear",
+      "status": "PASS",
+      "total_degree_bound": 4
+    },
+    {
+      "name": "resultant_A_G",
+      "status": "PASS",
+      "total_degree_bound": 10
+    },
+    {
+      "name": "resultant_product",
+      "status": "PASS",
+      "total_degree_bound": 14
+    },
+    {
+      "name": "cofactor_bound_gap",
+      "status": "PASS",
+      "total_degree_bound": 6
+    },
+    {
+      "name": "square_interval_identity",
+      "status": "PASS",
+      "total_degree_bound": 16
+    }
+  ],
+  "square_gap_coefficients": {
+    "W(s+4)": [
+      609,
+      6324,
+      8934,
+      5652,
+      1967,
+      394,
+      43,
+      2
+    ],
+    "2P(s+4)-1-4W(s+4)": [
+      26135,
+      42152,
+      34636,
+      19704,
+      8134,
+      2316,
+      422,
+      44,
+      2
+    ]
+  },
+  "unbounded_argument_review": [
+    "Axis z=1 separately excluded; positive p and tR=BC retained from original residual.",
+    "R<=B, k=R^2/B positive integer, C>=5k and C divides 3k form the contradiction.",
+    "Degenerate s divides B from two consecutive product divisibilities.",
+    "Integral resultant argument does not divide a leading coefficient; gcd(D,s)=1 cancels s^8.",
+    "r=0 and r>=1 branches, s=3 and s=4 endpoints, cofactor4 and consecutive-square gap covered.",
+    "Fixed-s bound uses the old valid R0 bound, original-residual divisibility, and the new exclusion of x=0,R0=1."
+  ],
+  "source_sha256": {
+    "high_d_axis_and_degenerate_obstruction_v24.tex": "0dc5d9a8647e341d1579a5a6139be7977a2490a2eec51df06d4e57c6eca97bdc",
+    "verify_high_d_axis_degenerate_v24.py": "41320a21c34e9c74c5cfba2f47140bfc30765ceb01106094dbcb2c36592e0877",
+    "high_d_axis_degenerate_verification_v24.json": "2a5ed0596b9f146d793ea83be8f8322ca3894d7aa7d66c579232a1b1261f468c",
+    "audit_high_d_axis_independent_v24.py": "46a005e6240b475553a2f4f2dadb55046ea69a188c0e4f1707778933660a48a6"
+  },
+  "arbitrary_parameter_scan_used": false,
+  "external_peer_review": false,
+  "proof_assistant_formalization": false
+}

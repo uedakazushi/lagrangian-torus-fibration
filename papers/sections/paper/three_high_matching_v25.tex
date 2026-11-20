@@ -1,0 +1,50 @@
+% v25. The unified four-ray classification replaces the older path cases.
+% The proof is unbounded; all integer-gap arguments are explicit.
+\subsection{三高分母の正符号グラフは完全マッチングである}
+\label{mh18:section}
+
+三高の符号分類は，前節の四ray共通分類を低分母一の設定へ適用した系である．
+
+\begin{theorem}[三高分母の完全マッチング定理]
+\label{mh18:matching}
+$q_0=1$，$q_1,q_2,q_3>1$ とし，整数 $p_{ij}$ が行和と pair products
+\[
+ \sum_{j\ne i}p_{ij}=-q_i,\qquad p_{ij}p_{ji}=q_iq_j-1
+\]
+を満たすとする．$p_{ij}>0$ のとき無向辺 $ij$ を置くグラフを $G^+$ とする．
+このとき次が成り立つ．
+\begin{enumerate}
+\item $G^+$ は完全マッチング，または低 ray $0$ を含む三角形と孤立頂点の和である．
+\item 正の basin weights が存在することと，$G^+$ が完全マッチングであることは同値である．
+\end{enumerate}
+特に正の模型の低 row は，ちょうど二つの負の entry と一つの正の entry を持つ．
+二つの負の low-row entries の相手同士が，もう一つの正の辺を作る．
+分母の上限，整数 clutching，対向 $D$ の相殺，node 条件は仮定しない．
+\end{theorem}
+
+\begin{proof}
+全ての pair products は狭義正なので，定理~\ref{fh25:all-signs} と
+系~\ref{fh25:matching} を適用できる．前者は weights を仮定しない全符号型を
+完全 matching または三角形と孤立頂点に限定する．分母一の ray は孤立できないので，
+三角形型は低 ray を含む．後者は正 weights と完全 matching の同値性を与える．
+従って三高固有の道型の場合分けを追加する必要はない．
+\end{proof}
+
+\begin{remark}[正値性の仮定と適用範囲]
+\label{mh18:positivity-essential}
+正値性を落とすと三角形型は実際に存在する．例えば
+\[
+ q=(1,5,19,31),\qquad
+ P=\begin{pmatrix}
+ 0&1&1&-3\\
+ 4&0&2&-11\\
+ 18&47&0&-84\\
+ -10&-14&-7&0
+ \end{pmatrix}
+\]
+は全ての行和・pair products を満たす．しかし正の閉路 $0\to2\to1\to0$ の gain は
+$188/95>1$ であり，正の weights は存在しない．
+完全マッチング定理は，三つの高 $D$ が同時に非負でないことをまだ主張しない．
+一方，\ref{sh14:matching-setup} の Schur 表示と
+定理~\ref{sm14:beta-negative} の $\beta\le-1$ は，今後，全ての正の三高分母模型に適用できる．
+\end{remark}

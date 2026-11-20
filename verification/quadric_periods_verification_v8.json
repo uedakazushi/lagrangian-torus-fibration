@@ -1,0 +1,2262 @@
+{
+  "version": 8,
+  "code_sha256": "f48f5effd9b0e70a5c9d9381aea9ac67f35143b307c8850381f4ee75b7df2377",
+  "fan": {
+    "rays_A": [
+      [
+        -1,
+        -1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    "rays_B": [
+      [
+        0,
+        0,
+        -1,
+        -1
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "coarse_cones": 9,
+    "fine_cones": 14,
+    "graphic_circuits": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        3,
+        4
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ]
+    ],
+    "rank_two_flats": [
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        3,
+        4
+      ]
+    ],
+    "all_face_lattices_saturated": true,
+    "all_star_spans_saturated": true
+  },
+  "recipes": {
+    "recipes_total": 64,
+    "admissible_recipes": 40,
+    "degenerate_recipes": 24,
+    "principal_recipe": {
+      "recipe": [
+        [
+          "A",
+          1
+        ],
+        [
+          "A",
+          2
+        ],
+        [
+          "A",
+          0
+        ]
+      ],
+      "admissible": true,
+      "crossing_determinants": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "internal_determinants": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    "all_positive_weights": "area identities checked coefficientwise in w_0,w_1,w_2",
+    "records": [
+      {
+        "recipe": [
+          [
+            "A",
+            1
+          ],
+          [
+            "A",
+            0
+          ],
+          [
+            "A",
+            0
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            1
+          ],
+          [
+            "A",
+            0
+          ],
+          [
+            "A",
+            1
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            1
+          ],
+          [
+            "A",
+            0
+          ],
+          [
+            "B",
+            0
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            1
+          ],
+          [
+            "A",
+            0
+          ],
+          [
+            "B",
+            1
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            1
+          ],
+          [
+            "A",
+            2
+          ],
+          [
+            "A",
+            0
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            1
+          ],
+          [
+            "A",
+            2
+          ],
+          [
+            "A",
+            1
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            1
+          ],
+          [
+            "A",
+            2
+          ],
+          [
+            "B",
+            0
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            1
+          ],
+          [
+            "A",
+            2
+          ],
+          [
+            "B",
+            1
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            1
+          ],
+          [
+            "B",
+            0
+          ],
+          [
+            "A",
+            0
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            1
+          ],
+          [
+            "B",
+            0
+          ],
+          [
+            "A",
+            1
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            1
+          ],
+          [
+            "B",
+            0
+          ],
+          [
+            "B",
+            0
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            1
+          ],
+          [
+            "B",
+            0
+          ],
+          [
+            "B",
+            1
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            1
+          ],
+          [
+            "B",
+            2
+          ],
+          [
+            "A",
+            0
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            1
+          ],
+          [
+            "B",
+            2
+          ],
+          [
+            "A",
+            1
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            1
+          ],
+          [
+            "B",
+            2
+          ],
+          [
+            "B",
+            0
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            1
+          ],
+          [
+            "B",
+            2
+          ],
+          [
+            "B",
+            1
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            2
+          ],
+          [
+            "A",
+            0
+          ],
+          [
+            "A",
+            0
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            2
+          ],
+          [
+            "A",
+            0
+          ],
+          [
+            "A",
+            1
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            2
+          ],
+          [
+            "A",
+            0
+          ],
+          [
+            "B",
+            0
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            2
+          ],
+          [
+            "A",
+            0
+          ],
+          [
+            "B",
+            1
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            2
+          ],
+          [
+            "A",
+            2
+          ],
+          [
+            "A",
+            0
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            2
+          ],
+          [
+            "A",
+            2
+          ],
+          [
+            "A",
+            1
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            2
+          ],
+          [
+            "A",
+            2
+          ],
+          [
+            "B",
+            0
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            2
+          ],
+          [
+            "A",
+            2
+          ],
+          [
+            "B",
+            1
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            2
+          ],
+          [
+            "B",
+            0
+          ],
+          [
+            "A",
+            0
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            2
+          ],
+          [
+            "B",
+            0
+          ],
+          [
+            "A",
+            1
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            2
+          ],
+          [
+            "B",
+            0
+          ],
+          [
+            "B",
+            0
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            2
+          ],
+          [
+            "B",
+            0
+          ],
+          [
+            "B",
+            1
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            2
+          ],
+          [
+            "B",
+            2
+          ],
+          [
+            "A",
+            0
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            2
+          ],
+          [
+            "B",
+            2
+          ],
+          [
+            "A",
+            1
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            2
+          ],
+          [
+            "B",
+            2
+          ],
+          [
+            "B",
+            0
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "A",
+            2
+          ],
+          [
+            "B",
+            2
+          ],
+          [
+            "B",
+            1
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            1
+          ],
+          [
+            "A",
+            0
+          ],
+          [
+            "A",
+            0
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            1
+          ],
+          [
+            "A",
+            0
+          ],
+          [
+            "A",
+            1
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            1
+          ],
+          [
+            "A",
+            0
+          ],
+          [
+            "B",
+            0
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            1
+          ],
+          [
+            "A",
+            0
+          ],
+          [
+            "B",
+            1
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            1
+          ],
+          [
+            "A",
+            2
+          ],
+          [
+            "A",
+            0
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            1
+          ],
+          [
+            "A",
+            2
+          ],
+          [
+            "A",
+            1
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            1
+          ],
+          [
+            "A",
+            2
+          ],
+          [
+            "B",
+            0
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            1
+          ],
+          [
+            "A",
+            2
+          ],
+          [
+            "B",
+            1
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            1
+          ],
+          [
+            "B",
+            0
+          ],
+          [
+            "A",
+            0
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            1
+          ],
+          [
+            "B",
+            0
+          ],
+          [
+            "A",
+            1
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            1
+          ],
+          [
+            "B",
+            0
+          ],
+          [
+            "B",
+            0
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            1
+          ],
+          [
+            "B",
+            0
+          ],
+          [
+            "B",
+            1
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            1
+          ],
+          [
+            "B",
+            2
+          ],
+          [
+            "A",
+            0
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            1
+          ],
+          [
+            "B",
+            2
+          ],
+          [
+            "A",
+            1
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            1
+          ],
+          [
+            "B",
+            2
+          ],
+          [
+            "B",
+            0
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            1
+          ],
+          [
+            "B",
+            2
+          ],
+          [
+            "B",
+            1
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            2
+          ],
+          [
+            "A",
+            0
+          ],
+          [
+            "A",
+            0
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            2
+          ],
+          [
+            "A",
+            0
+          ],
+          [
+            "A",
+            1
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            2
+          ],
+          [
+            "A",
+            0
+          ],
+          [
+            "B",
+            0
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            2
+          ],
+          [
+            "A",
+            0
+          ],
+          [
+            "B",
+            1
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            2
+          ],
+          [
+            "A",
+            2
+          ],
+          [
+            "A",
+            0
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            2
+          ],
+          [
+            "A",
+            2
+          ],
+          [
+            "A",
+            1
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            2
+          ],
+          [
+            "A",
+            2
+          ],
+          [
+            "B",
+            0
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            2
+          ],
+          [
+            "A",
+            2
+          ],
+          [
+            "B",
+            1
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            2
+          ],
+          [
+            "B",
+            0
+          ],
+          [
+            "A",
+            0
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            2
+          ],
+          [
+            "B",
+            0
+          ],
+          [
+            "A",
+            1
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            2
+          ],
+          [
+            "B",
+            0
+          ],
+          [
+            "B",
+            0
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            2
+          ],
+          [
+            "B",
+            0
+          ],
+          [
+            "B",
+            1
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            2
+          ],
+          [
+            "B",
+            2
+          ],
+          [
+            "A",
+            0
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            2
+          ],
+          [
+            "B",
+            2
+          ],
+          [
+            "A",
+            1
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            2
+          ],
+          [
+            "B",
+            2
+          ],
+          [
+            "B",
+            0
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      },
+      {
+        "recipe": [
+          [
+            "B",
+            2
+          ],
+          [
+            "B",
+            2
+          ],
+          [
+            "B",
+            1
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_determinants": [
+          -1,
+          -1,
+          -1
+        ]
+      }
+    ]
+  },
+  "conditional_linear_obstruction": {
+    "scope": "all branch denominators equal one; common-circle star-linear extension",
+    "variables": [
+      [
+        "A",
+        0,
+        1
+      ],
+      [
+        "A",
+        0,
+        2
+      ],
+      [
+        "A",
+        1,
+        0
+      ],
+      [
+        "A",
+        1,
+        2
+      ],
+      [
+        "A",
+        2,
+        0
+      ],
+      [
+        "A",
+        2,
+        1
+      ],
+      [
+        "B",
+        0,
+        1
+      ],
+      [
+        "B",
+        0,
+        2
+      ],
+      [
+        "B",
+        1,
+        0
+      ],
+      [
+        "B",
+        1,
+        2
+      ],
+      [
+        "B",
+        2,
+        0
+      ],
+      [
+        "B",
+        2,
+        1
+      ]
+    ],
+    "annulus_rows": [
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "star_extension_rows": [
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    "annulus_rhs_total": -3,
+    "star_rhs_total": -6,
+    "certificate": "sum(annulus rows) - sum(star rows) gives 0 = 3",
+    "obstructs_facewise_chart": false,
+    "decides_higher_denominators": false
+  },
+  "proof_boundary": [
+    "finite exact checks do not prove relative Moser",
+    "actual torus framing uses a separate normal circle-bundle argument",
+    "sector positivity and cone homeomorphism use the written analytic proof",
+    "no simultaneous global quintic atlas is asserted"
+  ],
+  "checks": 3982,
+  "passed": true
+}

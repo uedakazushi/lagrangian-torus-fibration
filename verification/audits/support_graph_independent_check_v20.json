@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "passed": true,
+  "method": "Independent permutation orbits of K5 complements K3,2K2,P3,K2,empty and P4; the primary support verifier was not imported.",
+  "primary_verifier_imported": false,
+  "shape_counts": {
+    "G5_13": 10,
+    "G5_14": 15,
+    "G5_15": 30,
+    "G5_16": 10,
+    "G5_17": 1
+  },
+  "automorphism_orders": {
+    "G5_13": 12,
+    "G5_14": 8,
+    "G5_15": 4,
+    "G5_16": 12,
+    "G5_17": 120
+  },
+  "all_labelled_graphs": 1024,
+  "labelled_remaining": 66,
+  "newly_removed": 60,
+  "old_126_minus_G511_orbit_equals_66": true,
+  "degree_two_neighbor_degree_four_checks": 60,
+  "degree_two_triangle_checks": 60,
+  "vertex_deletion_connectivity_checks": 330,
+  "counts_by_number_of_degree_two_vertices": {
+    "0": 26,
+    "1": 30,
+    "3": 10
+  },
+  "counts_by_high_edge_number": {
+    "7": 10,
+    "8": 45,
+    "9": 10,
+    "10": 1
+  },
+  "seven_edges_iff_book": true,
+  "minimum_degree": 2,
+  "minimum_betti_number": 3,
+  "source_sha256": {
+    "00_CONTINUATION_POLICY_ja.txt": "ee28c9b3eb032d19ecd04a4b3bf13c3d8e4cd5ff80b12a620e4e22ebacdb0432",
+    "paper/quintic_support_frontier_v20.tex": "4151e8fcf49536c82ca7b133e11af612a13c52149364340f18e193618f073949",
+    "verification/support_agenda_verification_v20.json": "d8075763bb537c47d67ad4ea231408fe06781850810d52a69e7497bbaf678a7c"
+  }
+}

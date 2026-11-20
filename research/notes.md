@@ -1,14 +1,12 @@
-# 研究ノート：Lagrangian torus fibrations
-更新：2026-11-20 / v1.1
+# 研究ノートの入口
 
-## 曲面の相対接着
-\(X_d\subset\mathbf P^3\), \(d\ge5\) で、正則 \(T^2\)-fiberと分岐辺上の \(S^1\times(S^1\vee S^1)\) を持つbranched 2-complexへの写像を扱う。Liouville collars、divisor-preserving Moser、normal momentを固定したequivariant symplectic transportを個別の証明単位として点検する。Baseは通常の閉曲面ではなく自由辺なしのbranched complexである。
+詳細な現行ノートは `papers/research-notes.tex`（曲面第25版、65頁）に移行した。証明を短い要約で置き換えない。
 
-## 三次元のclosed-curve block
-\(X_d\subset\mathbf P^4,d\ge6\) のclosed symplectic curve \(C'\) はdegree \(d-2\)、genus \((d-3)(d-4)/2\)、symplectically trivial normal bundleを持つと原稿は主張する。Whole focus–hyperbolic fibersの数は \((d-2)(d-5)\)（六次では4）。Generic plane sectionのnormal degree \(2d\) は単純なsmooth focus Cartan familyに対する障害となる。
+## 曲面：現在の核心
+全pair productsが狭義正の四ray整数データの正weightsはmatchingと同値。G5_14両単位枝の{5,0,0}を排除し、{4,1,0}に限定したと原稿は記録する。必要支持はG5_14、G5_16、G5_17の3型26標識。存在・幾何的非同型類の個数とは異なる。三高Dの一般同時非負性と一般分母剛性は残る。
 
-## 未完成の大域接着
-Normal faces、positive normal shell、relative caps、complementを全 \(X_d\) に接着する構成は未完成。Local blockの存在とglobal boundary-free fibrationの完成は異なる。Maslov、boundary winding、symplectic area、monodromyを次の具体的な検証事項にする。Strict tropical atlas、special Lagrangian性、KE collapseとの対応は主張しない。
+## 三次元：元PDFの参照先
+`sources/threefold-blocks-v9.pdf`第25・33節：positive normal shell、membrane/focus collars。第26節：smooth focus Cartanとnormal degreeの障害。第34–35節：compact focus blockとnormal-trivial closed curve。第36節：weighted collars。旧48 ports、normal faces、complement、大域boundary-free fibrationは未完成。PDFの保存と独立証明監査・元TeX回収を区別する。
 
-## 原資料と移行制約
-原資料は2026-10-27曲面v5 PDF、2026-10-28三次元v9 PDF、Libraryの `quintic_fibration_source.zip`。生ZIPの元TeXソースを今回取得できていないため、GitHubの再構成LuaLaTeX論文は全証明の完全移行ではない。元資料は削除しない。
+## 検証
+v25の五主検算と五独立監査を今回再実行。保存済みの旧verification/証明書全体を今回の実行結果とは扱わない。詳細はmigration.md。計算は解析的symplectic gluingや新規性の証明を代替しない。

@@ -1,0 +1,394 @@
+% v21. G5_15: complete reduction of the common-low-puncture branches.
+% This is not a G5_15 exclusion theorem. No denominator cutoff is used.
+\section{\texorpdfstring{$G_{5,15}$}{G5,15} 型の有限中心と小分母への還元}
+\label{g51521:section}
+
+本節では低辺が $23,24$ の二本だけである支持
+\[
+ H=\{01,02,03,04,12,13,14,34\}=G_{5,15}
+\]
+を扱う．core $2$ は二高，cores $3,4$ は三高，cores $0,1$ は四高である．
+標識 $0,1$ と $3,4$ の交換により，core $2$ を次の canonical order $(0,1,3,4)$ に置ける：
+\begin{equation}\label{g51521:central}
+ P^2=\begin{pmatrix}
+ 0&-U&x&-s\\
+ -V&0&-y&z\\
+ r&-r-1&0&0\\
+ -S&T&-L&0
+ \end{pmatrix},\qquad
+ \begin{gathered}
+ a=sS+1,\quad b=zT+1,\\
+ x=sS/r,\quad y=zT/(r+1),\\
+ U=a+x-s,\quad V=b-y+z,\quad L=T-S+1.
+ \end{gathered}
+\end{equation}
+全ての $r,s,z,S,T,x,y$ は正整数，$a,b$ は奇数，$UV=ab-1$ である．
+二高分母の二分補題によって，正の枝では
+\begin{equation}\label{g51521:positive-central}
+ S>r,\qquad rT>(r+1)S,\qquad L\ge3,\qquad T\ge5,
+\end{equation}
+負の枝では
+\begin{equation}\label{g51521:negative-central}
+ S=T=w\ge2,\qquad r=w+H,\qquad
+ w^2<2H(H+1)<4w^2
+\end{equation}
+となる．特に負の枝では $H\ge2$ である．低 rays の係数は
+\begin{equation}\label{g51521:low-D}
+ D_C=D^2_3=T-S+y-x,\qquad D_D=D^2_4=s-z-1
+\end{equation}
+である．
+
+\begin{theorem}[有限中心または分母三・五への完全還元]
+\label{g51521:reduction}
+正の整数局所 charts，奇数分母，marked clutching，非負 node と node 総数五，
+および対向 $D$ の相殺を持つ上記の $G_{5,15}$ 支持を考える．
+共有高辺 $34$ と共通低 puncture $2$ における reverse entries を
+\[
+ u=p^3_{24},\qquad v=p^4_{23},\qquad Q=q_{34}>1
+\]
+と置くと，次のいずれかが必要である．
+\begin{enumerate}
+\item 通常型 $v=-u$ であり，core $2$ は表~\ref{g51521:center-table} の四模型の一つである．
+三高 cores の低 rows と低 $D$ は表~\ref{g51521:ordinary-row-table} の十四配置に限られる．
+\item 負例外型であり，$Q\in\{3,5\}$ である．全ての可能性は
+命題~\ref{g51521:negative-templates} の二つの template に含まれる．
+\end{enumerate}
+正例外型 $\{u,v\}=\{1,Q-1\}$ は，分母の上界を仮定せず排除される．
+\end{theorem}
+
+したがって $Q\ge7$ なら二価 core の二高分母は四つの組
+\[
+ (a,b)=(7,31),\ (9,11),\ (31,7),\ (19,43)
+\]
+のいずれかであり，両方とも四十三以下である．
+これは $Q$ 自身の上界でも，支持 $G_{5,15}$ の排除でもない．
+低辺の補 graph が $P_3$ である支持全体についての主張であり，
+大きい支持に同じ部分 graph が含まれるという理由だけで適用してはならない．
+
+\subsection{低 rows と reverse の三分岐}
+
+低辺の node 分配を
+\[
+ (n_{23;0},n_{23;1},n_{23;4})=(n_0,n_1,n_4),\qquad
+ (n_{24;0},n_{24;1},n_{24;3})=(m_0,m_1,m_3)
+\]
+とする．各成分は非負整数で，各 triple の和は五である．
+三高 cores の唯一の低 row は
+\begin{equation}\label{g51521:low-rows}
+ \begin{split}
+ R^3&=(1-r-n_0,\ r+2-n_1,\ 1-n_4),\\
+ R^4&=(S+1-m_0,\ 1-T-m_1,\ L+1-m_3),
+ \end{split}
+\end{equation}
+である．列順はそれぞれ $(0,1,4)$，$(0,1,3)$ である．
+三高 matching 定理~\ref{mh18:matching} により，全成分は非零で，
+正成分はちょうど一つである．特に
+\[
+ u=1-n_4\le1,\qquad v=L+1-m_3.
+\]
+共通低 puncture の補題~\ref{ls11:low-puncture} により
+\begin{equation}\label{g51521:three-branches}
+ v=-u,\qquad \{u,v\}=\{1,Q-1\},\qquad
+ \{u,v\}=\{-1,-(Q-1)\}
+\end{equation}
+の三択である．通常型では補題~\ref{cl16:ordinary-bound} から $|u|\le4$ である．
+
+\begin{lemma}\label{g51521:positive-reverse}
+$u>0$ なら
+\[
+ u=1,\qquad R^3=(-1,-1,1),\qquad r\in\{1,2\}.
+\]
+このとき $(n_0,n_1,n_4)=(1,4,0)$ または $(0,5,0)$ である．
+また $v>0$ なら $m_0\ge S+2$，従って $S\le3$ である．
+\end{lemma}
+\begin{proof}
+$u>0$ は $n_4=0,u=1$ を与える．残りの二成分が負なので
+$r+n_0\ge2$，$n_1\ge r+3$ であり，$n_0+n_1=5$ から
+$r+n_0=2$ を得る．これが最初の主張を与える．
+core $4$ の第二成分 $1-T-m_1$ は常に負なので，$v>0$ なら
+第一成分も負でなければならない．従って $m_0\ge S+2$ である．
+\end{proof}
+
+\subsection{通常型の四つの中心模型}
+
+\begin{proposition}\label{g51521:ordinary-reverse}
+通常型 $v=-u$ では，core $2$ の reverse triple $(r,S,T)$ は
+\[
+ (2,3,5),\quad (4,2,2),\quad (5,3,3),\quad (6,3,3)
+\]
+の四つに限られる．
+\end{proposition}
+\begin{proof}
+まず $u=1,v=-1$ とする．前補題から $r\le2$ なので，負の枝は不可能である．
+$m_3=L+2\le5$ と $L\ge3$ により $L=3$ である．
+従って $T=S+2$，$r<S<2r$ であり，$(r,S,T)=(2,3,5)$ に限られる．
+
+次に $u=-h,v=h$，$1\le h\le4$ とする．
+$m_0\ge S+2$，$m_3=L+1-h=T-S+2-h$ により
+\[
+ T+4-h\le m_0+m_3\le5,
+\]
+従って $T\le h+1\le5$ である．正の枝では $T\ge5$ なので
+$T=5,h=4$ となる．このとき $n_4=5,n_0=n_1=0$ であり，
+$R^3=(1-r,r+2,-4)$ の matching 性から $r\ge2$ を得る．
+$S\le3$ と $S>r$ を合わせると，やはり $(r,S,T)=(2,3,5)$ となる．
+
+負の枝では $S=T=w\le3$，$L=1$ であり，
+$m_3=2-h\ge0$ から $h\le2$ である．
+式~\eqref{g51521:negative-central} は
+$(w,H)=(2,2),(3,2),(3,3)$ だけを許す．これが残りの三つの reverse triples を与える．
+\end{proof}
+
+\paragraph{全 scale の復元．}
+$h=S-r$，$\delta=T-S$ と置く．高高 pair equation は
+\begin{equation}\label{g51521:bilinear}
+ Fsz+As+Bz+C=0,
+\end{equation}
+\[
+ F=(2r+1)h-r^2(\delta-1),\quad
+ A=h(r+1),\quad B=-r(h+\delta-1),\quad C=r(r+1)
+\]
+となる．$F\ne0$ では
+\begin{equation}\label{g51521:factorization}
+ (Fs+B)(Fz+A)=AB-FC
+\end{equation}
+である．上記の四 triples では右辺は順に $-18,-80,-270,-378$ で，零ではない．
+全 signed divisors を取り，$s,z>0$，$r\mid sS$，$r+1\mid zT$，
+$sS,zT\in2\ZZ$ を課すと，表~\ref{g51521:center-table} の四点を得る．
+分母にも scale にも探索上限を課していない．
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{c|ccccc|cc|rr}
+模型&$r$&$s$&$z$&$S$&$T$&$a$&$b$&$D_C$&$D_D$\\\hline
+$M_1$&2&2&6&3&5&7&31&9&$-5$\\
+$M_2$&4&4&5&2&2&9&11&0&$-2$\\
+$M_3$&5&10&2&3&3&31&7&$-5$&7\\
+$M_4$&6&6&14&3&3&19&43&3&$-9$
+\end{tabular}
+\caption{通常型に残る全中心模型．}\label{g51521:center-table}
+\end{table}
+
+式~\eqref{g51521:low-rows} で各 node triple の全二十一通りを取り，
+matching と $u+v=0$ を課すと十八配置を得る．
+低 row の三成分が全て奇数なら，奇数分母と pair products により低 column の三成分は全て偶数なので，
+低 $D$ は奇数である．$M_2$ における
+\[
+ R^3=(-j,j,-1),\quad 3\le j\le6,\qquad R^4=(-1,-1,1)
+\]
+の四配置は，対向端相殺が $D^4_2=2$ を要求するため排除される．
+残る十四配置を表~\ref{g51521:ordinary-row-table} に示す．
+各 $j$ と各表示された row の選択を別の配置として数える．
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{c|c|c|c|c|r}
+中心&$R^3$&$R^4$&$j$ の範囲&$(D^3_2,D^4_2)$&個数\\\hline
+$M_1$&$(-1,4,-4)$&$(-1,-4,4)$&---&$(-9,5)$&1\\
+$M_1$&$(-1,-1,1)$&$(4,-4,-1)$&---&$(-9,5)$&1\\
+$M_2$&$(-j,j+1,-2)$&$(-1,-2,2)$ または $(-2,-1,2)$&$3,4,5$&$(0,2)$&6\\
+$M_3$&$(-j,j+1,-2)$&$(-1,-2,2)$&$4,5,6$&$(5,-7)$&3\\
+$M_4$&$(-j,j+1,-2)$&$(-1,-2,2)$&$5,6,7$&$(-3,9)$&3
+\end{tabular}
+\caption{通常型に残る十四の低 row 配置．}\label{g51521:ordinary-row-table}
+\end{table}
+
+これらの配置では $Q$ は未固定であり，
+$m=|u|=|v|$ に対して $m\mid Q-1$ と $Q$ の奇数性が必要である．
+表は必要条件の完全還元であり，十四配置のいずれについても大域接着の存在を主張しない．
+
+\subsection{正例外型の無上界排除}
+
+\begin{proposition}\label{g51521:no-positive-exception}
+正例外型 $\{u,v\}=\{1,Q-1\}$ は起こらない．
+\end{proposition}
+\begin{proof}
+$u\le1$ なので $u=1,v=Q-1\ge2$ である．
+補題~\ref{g51521:positive-reverse} により
+\[
+ R^3=(-1,-1,1),\quad r\le2,\quad S\le3.
+\]
+中心は正の枝に属し，$(r,S)=(1,2),(1,3),(2,3)$ に限られる．
+高高 pair equation を $T$ について解くと
+\[
+ T=\frac{r+1}{r}\,
+ \frac{\{(r+1)S-r\}s+r+\{(S-r)s+r\}/z}{rs+1}.
+\]
+$z\ge1$ を用いると，$r=1$ では
+\[
+ T\le\frac{(6S-4)s+4}{s+1}<6S-4,
+\]
+$(r,S)=(2,3)$ では $T\le6$ である．
+従って reverse triples は次の十二個の範囲で全て尽くされる：
+\[
+ (r,S,T)=(1,2,5\ldots7),\quad (1,3,7\ldots13),\quad (2,3,5\ldots6).
+\]
+
+core $4$ の低 row を $(-c,-d,Q-1)$ と書くと $c+d=Q$ であり，
+低 column は $(-A,-B,1)$ と書ける．ここで $A,B>0$ である．
+$Q$ は奇数なので $c,d$ の一方は奇数であり，その ray の奇数分母は対応する scale の偶数性を要求する．
+従って $A+B\ge3$ であり，
+\[
+ D^4_2=A+B-2\ge1.
+\]
+対向端相殺 $D^4_2=-D_D=z+1-s$ は
+\begin{equation}\label{g51521:scale-inequality}
+ s\le z
+\end{equation}
+を与える．
+
+全十二 reverse triples に式~\eqref{g51521:bilinear} を適用する．
+$F(AB-FC)\ne0$ なら式~\eqref{g51521:factorization} の全 signed divisors を取り，
+$F=0$ または $AB-FC=0$ の全直線も保持する．
+この範囲で無限族を持つ reverse triples は
+\[
+ (r,S,T)=(1,2,6):\quad s=2z-1,\ z\ge1,
+ \qquad
+ (r,S,T)=(2,3,6):\quad z=1,\ s\in2\ZZ_{>0}
+\]
+だけである．式~\eqref{g51521:scale-inequality} は前者を $s=z=1$ に限定し，後者を排除する．
+全有限点にも同じ不等式を課すと，中心は次の八個だけになる：
+\[
+ \begin{gathered}
+ (r,s,z,S,T)=(1,1,2,2,5),\ (1,2,6,2,5),\ (1,1,1,2,6),\\
+ (1,2,5,3,8),\ (1,2,2,3,9),\ (1,4,6,3,9),\\
+ (1,6,26,3,9),\ (2,2,6,3,5).
+ \end{gathered}
+\]
+
+core $3$ の低 row $(-1,-1,1)$ に対して，低 column は $(-A',-B',Q-1)$ である．
+二つの高分母が奇数で三以上なので $A',B'\ge2$ であり，
+$D^3_2=-D_C$ は
+\begin{equation}\label{g51521:positive-low-D-obstruction}
+ A'+B'=Q-D_C\ge4
+\end{equation}
+を要求する．残る node 分配を全て入れると，次の八配置となる．
+$(1,2,5,3,8)$ は $Q=8$ を要求するため，奇数性で既に消えている．
+
+\begin{center}\small
+\begin{tabular}{c|c|c|r|r}
+$(r,s,z,S,T)$&$(n_0,n_1,n_4)$&$(m_0,m_1,m_3)$&$Q$&$Q-D_C$\\\hline
+$(1,1,2,2,5)$&$(1,4,0)$&$(4,0,1)$&5&$-1$\\
+$(1,2,6,2,5)$&$(1,4,0)$&$(4,0,1)$&5&$-9$\\
+$(1,1,1,2,6)$&$(1,4,0)$&$(4,1,0)$&7&2\\
+$(1,1,1,2,6)$&$(1,4,0)$&$(5,0,0)$&7&2\\
+$(1,2,2,3,9)$&$(1,4,0)$&$(5,0,0)$&9&0\\
+$(1,4,6,3,9)$&$(1,4,0)$&$(5,0,0)$&9&$-12$\\
+$(1,6,26,3,9)$&$(1,4,0)$&$(5,0,0)$&9&$-96$\\
+$(2,2,6,3,5)$&$(0,5,0)$&$(5,0,0)$&5&$-4$
+\end{tabular}
+\end{center}
+全て式~\eqref{g51521:positive-low-D-obstruction} に反する．
+従って正例外型は排除される．
+\end{proof}
+
+\subsection{残る負例外型の正確な形}
+
+\begin{proposition}\label{g51521:negative-templates}
+負例外型では，次の二つの template が全ての可能性を覆う．
+いずれの template でも中心の scale 条件，三高局所方程式，および未使用の接着条件は引き続き必要である．
+\begin{enumerate}
+\item $u=-1,v=-(Q-1)$ の場合は $Q=3,L=1$ であり，中心は負の枝に属する．
+$S=T=w$ とし，$0\le a_0\le3$，$0\le b_0\le1$ に対し
+\[
+ (n_0,n_1,n_4)=(a_0,3-a_0,2),\qquad
+ (m_0,m_1,m_3)=(b_0,1-b_0,4),
+\]
+\[
+ R^3=(-j,j,-1),\quad j=r+a_0-1,\qquad
+ R^4=(k+1,-k,-2),\quad k=w-b_0
+\]
+となる．
+\item $u=-(Q-1),v=-1$ の場合は $Q=3$ または五，$L=1$ または三である．
+$0\le a_0\le5-Q$，$0\le b_0\le3-L$ に対し
+\[
+ (n_0,n_1,n_4)=(a_0,5-Q-a_0,Q),\qquad
+ (m_0,m_1,m_3)=(b_0,3-L-b_0,L+2),
+\]
+\[
+ R^3=(-j,j+Q-2,-(Q-1)),\quad j=r+a_0-1\ge1,
+\]
+\[
+ R^4=(k,-k,-1),\quad k=S+1-b_0\ge1
+\]
+となる．$L=1$ は負の枝であり，$L=3$ は正の枝
+$T=S+2$，$r<S<2r$ である．
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+$u=-1$ なら $n_4=2$ であり，$v=-(Q-1)$ より $m_3=L+Q\le5$ である．
+$Q\ge3$ と二分補題を合わせると $L=1,Q=3$ だけが残る．
+node 総数と式~\eqref{g51521:low-rows} が第一の template を与える．
+
+$u=-(Q-1)$ なら $n_4=Q\le5$ であり，奇数性から $Q=3,5$ となる．
+$v=-1$ は $m_3=L+2\le5$ を与えるので $L=1,3$ である．
+再び node 総数から二番目の表示を得る．
+$L=3$ では $T=S+2$ を式~\eqref{g51521:positive-central} に入れると $r<S<2r$ となる．
+\end{proof}
+
+通常型の完全還元，命題~\ref{g51521:no-positive-exception}，および
+命題~\ref{g51521:negative-templates} を式~\eqref{g51521:three-branches} に適用すると，
+定理~\ref{g51521:reduction} が従う．
+
+\subsection{通常型の固定分母に対する完全な有限 lifting}
+
+\begin{proposition}\label{g51521:fixed-Q-finite}
+表~\ref{g51521:ordinary-row-table} の一配置と奇数 $Q\ge3$ を固定する．
+三 cores $2,3,4$ の局所方程式と，相互の三辺 $23,24,34$ の全 node 条件・対向 $D$ を満たす
+整数データは有限個であり，他の分母や scale の上限を仮定せず全て復元できる．
+\end{proposition}
+\begin{proof}
+共有高 ray への低 row 成分が正である側を先に復元する．
+その低 row を $(-c,-d,m)$，低 column を $(-A,-B,U)$ と書くと
+\[
+ U=(Q-1)/m,\qquad A+B=U+1+D_+,
+\]
+である．$D_+$ は表で指定された低 $D$ であり，$A,B>0$ なので全ての低 columns は有限個である．
+固定低 row・column の二次式による復元は各 column に高々二模型を与える
+（\ref{fc17:section} 節）．
+
+その模型を固定する．通常型では辺 $34$ の puncture $2$ の node は一なので，
+残りの node 分配は $(n_0,n_1)=(0,4),(1,3),\ldots,(4,0)$ の五つである．
+clutching により反対側の共有高 row が定まる．外部二標識を必要なら入れ替えて，
+反対側の低 row と共有高 row を
+\[
+ (-a,b,-m),\quad b=a+m-1,\qquad (X,-W,-U),\quad W=X+Q-U
+\]
+と書く．matching のため $X,W>0$ が必要である．
+反対側の低 column は $(-A_-,B_-,-U)$ であり，
+表で指定された低 $D_-$ によって
+\[
+ B_-=A_-+U-1-D_-
+\]
+となる．残る二分母は $q_-=1+aA_-$，$q_+=1+bB_-$ である．
+共有高 ray の $D$ 相殺は，$A_-$ に関する一次式であり，その係数は
+\[
+ Q\left(-\frac aX+\frac bW\right)
+\]
+である．これが非零なら候補は高々一つである．
+
+係数が零なら $(m-1)X=a(Q-U)$ であるから，$m=1$ は不可能である．
+従って $m\ge2$ とする．共有高 ray との pair equations と残る二つの row sums を使うと，
+外部二 rays の相互 entries は $A_-$ の一次式に決まる．
+その pair equation の残差の二次係数は
+\[
+ \frac{(m-1)^2U+m-2}{\{(m-1)U+1\}^2}>0
+\]
+である．実際，$t=1-Qa/X=1-Qb/W$ とするとこの係数は
+$-t(t+m-1)$ であり，
+$t=-(m-1)+1/\{(m-1)U+1\}$ を代入すれば表示式を得る．
+従って $D$ の一次式が恒等的に零になる場合も，残る pair equation は genuine な二次式で，
+候補は高々二つである．整数性，奇数性，正値性，元の全 row/pair equations を確認して完了する．
+\end{proof}
+
+\nolinkurl{ordinary_fixed_q_lifting_v21.py} はこの手順の独立した標準ライブラリ実装である．
+ここで完成するのは三 cores とその相互の三辺であり，四高 cores $0,1$ を含む大域接着の完成ではない．
+固定した $Q$ ごとの有限性は，全 $Q$ にわたる有限性を意味しない．
+
+\paragraph{検証範囲．}
+\nolinkurl{verify_g5_15_reduction_v21.py} は標準ライブラリの整数演算だけを用い，
+全 scale の signed-divisor 分解と全 affine 半直線，十八の通常配置，四つの parity 排除，
+および正例外型の八つの矛盾証明を JSON に保存する．
+上記の全結論は分母の数値 cutoff を用いない．
+別に，通常型の固定した $Q$ に対する有限 lifting 手順を研究ノートに収録する．
+その手順を有限範囲の $Q$ で実行した結果を，$Q$ 全体の排除に読み替えてはならない．

@@ -1,0 +1,380 @@
+{
+  "version": 8,
+  "status": "passed",
+  "arithmetic": "Python standard library, exact integers and fractions.Fraction",
+  "scope": "Finite consistency certificates; not an analytic or symplectic gluing proof.",
+  "hyperbola_model": {
+    "A": [
+      1,
+      2,
+      3
+    ],
+    "B": [
+      0,
+      1,
+      4
+    ],
+    "projection": "u=t+3z",
+    "discriminants_ascending": [
+      [
+        "-12",
+        "0",
+        "1"
+      ],
+      [
+        "-23",
+        "4",
+        "4"
+      ],
+      [
+        "-20",
+        "24",
+        "9"
+      ]
+    ],
+    "node_data": [
+      {
+        "components": [
+          1,
+          2
+        ],
+        "t": "-1",
+        "z": "-1",
+        "u": "-4",
+        "resultant_ascending": [
+          "12",
+          "3"
+        ]
+      },
+      {
+        "components": [
+          1,
+          3
+        ],
+        "t": "-2",
+        "z": "-1/2",
+        "u": "-7/2",
+        "resultant_ascending": [
+          "84",
+          "24"
+        ]
+      },
+      {
+        "components": [
+          2,
+          3
+        ],
+        "t": "-3",
+        "z": "-1/5",
+        "u": "-18/5",
+        "resultant_ascending": [
+          "54",
+          "15"
+        ]
+      }
+    ],
+    "exceptional_polynomial_ascending": [
+      "-300464640",
+      "168386688",
+      "419442624",
+      "86192640",
+      "-90853920",
+      "-43994664",
+      "-2057292",
+      "2503656",
+      "574128",
+      "38880"
+    ],
+    "exceptional_polynomial_degree": 9,
+    "squarefree_over_Q": true,
+    "simple_branch_values": 6,
+    "transverse_node_values": 3,
+    "smooth_handle_counts": {
+      "0": 1,
+      "1": 6,
+      "2": 9,
+      "3": 0,
+      "4": 0
+    }
+  },
+  "boundary_braid_invariants": {
+    "word": "T6 * T_minus^(-2) * T_plus^(-1)",
+    "pair_linking_table": [
+      {
+        "strands": [
+          "C1-",
+          "C2-"
+        ],
+        "linking": -1
+      },
+      {
+        "strands": [
+          "C1-",
+          "C3-"
+        ],
+        "linking": -1
+      },
+      {
+        "strands": [
+          "C1-",
+          "C1+"
+        ],
+        "linking": 1
+      },
+      {
+        "strands": [
+          "C1-",
+          "C2+"
+        ],
+        "linking": 1
+      },
+      {
+        "strands": [
+          "C1-",
+          "C3+"
+        ],
+        "linking": 1
+      },
+      {
+        "strands": [
+          "C2-",
+          "C3-"
+        ],
+        "linking": -1
+      },
+      {
+        "strands": [
+          "C2-",
+          "C1+"
+        ],
+        "linking": 1
+      },
+      {
+        "strands": [
+          "C2-",
+          "C2+"
+        ],
+        "linking": 1
+      },
+      {
+        "strands": [
+          "C2-",
+          "C3+"
+        ],
+        "linking": 1
+      },
+      {
+        "strands": [
+          "C3-",
+          "C1+"
+        ],
+        "linking": 1
+      },
+      {
+        "strands": [
+          "C3-",
+          "C2+"
+        ],
+        "linking": 1
+      },
+      {
+        "strands": [
+          "C3-",
+          "C3+"
+        ],
+        "linking": 1
+      },
+      {
+        "strands": [
+          "C1+",
+          "C2+"
+        ],
+        "linking": 0
+      },
+      {
+        "strands": [
+          "C1+",
+          "C3+"
+        ],
+        "linking": 0
+      },
+      {
+        "strands": [
+          "C2+",
+          "C3+"
+        ],
+        "linking": 0
+      }
+    ],
+    "pair_count": 15,
+    "exponent_from_pair_linking": 12,
+    "exponent_from_full_twists": 12,
+    "exponent_from_local_braids": 12,
+    "limitation": "Linking/exponent equality alone does not prove equality in the braid group; the manuscript uses the large-radius isotopy."
+  },
+  "complexity_budget": {
+    "canonical_budgets": [
+      {
+        "lines": 5,
+        "pants": 4,
+        "complexity": 10,
+        "facet_pairs": 3,
+        "connected_graph_b1": 0
+      },
+      {
+        "lines": 6,
+        "pants": 9,
+        "complexity": 18,
+        "facet_pairs": 9,
+        "connected_graph_b1": 1
+      },
+      {
+        "lines": 7,
+        "pants": 16,
+        "complexity": 28,
+        "facet_pairs": 18,
+        "connected_graph_b1": 3
+      },
+      {
+        "lines": 8,
+        "pants": 25,
+        "complexity": 40,
+        "facet_pairs": 30,
+        "connected_graph_b1": 6
+      },
+      {
+        "lines": 9,
+        "pants": 36,
+        "complexity": 54,
+        "facet_pairs": 45,
+        "connected_graph_b1": 10
+      },
+      {
+        "lines": 10,
+        "pants": 49,
+        "complexity": 70,
+        "facet_pairs": 63,
+        "connected_graph_b1": 15
+      },
+      {
+        "lines": 11,
+        "pants": 64,
+        "complexity": 88,
+        "facet_pairs": 84,
+        "connected_graph_b1": 21
+      },
+      {
+        "lines": 12,
+        "pants": 81,
+        "complexity": 108,
+        "facet_pairs": 108,
+        "connected_graph_b1": 28
+      },
+      {
+        "lines": 13,
+        "pants": 100,
+        "complexity": 130,
+        "facet_pairs": 135,
+        "connected_graph_b1": 36
+      },
+      {
+        "lines": 14,
+        "pants": 121,
+        "complexity": 154,
+        "facet_pairs": 165,
+        "connected_graph_b1": 45
+      },
+      {
+        "lines": 15,
+        "pants": 144,
+        "complexity": 180,
+        "facet_pairs": 198,
+        "connected_graph_b1": 55
+      },
+      {
+        "lines": 16,
+        "pants": 169,
+        "complexity": 208,
+        "facet_pairs": 234,
+        "connected_graph_b1": 66
+      },
+      {
+        "lines": 17,
+        "pants": 196,
+        "complexity": 238,
+        "facet_pairs": 273,
+        "connected_graph_b1": 78
+      },
+      {
+        "lines": 18,
+        "pants": 225,
+        "complexity": 270,
+        "facet_pairs": 315,
+        "connected_graph_b1": 91
+      },
+      {
+        "lines": 19,
+        "pants": 256,
+        "complexity": 304,
+        "facet_pairs": 360,
+        "connected_graph_b1": 105
+      },
+      {
+        "lines": 20,
+        "pants": 289,
+        "complexity": 340,
+        "facet_pairs": 408,
+        "connected_graph_b1": 120
+      },
+      {
+        "lines": 21,
+        "pants": 324,
+        "complexity": 378,
+        "facet_pairs": 459,
+        "connected_graph_b1": 136
+      },
+      {
+        "lines": 22,
+        "pants": 361,
+        "complexity": 418,
+        "facet_pairs": 513,
+        "connected_graph_b1": 153
+      },
+      {
+        "lines": 23,
+        "pants": 400,
+        "complexity": 460,
+        "facet_pairs": 570,
+        "connected_graph_b1": 171
+      },
+      {
+        "lines": 24,
+        "pants": 441,
+        "complexity": 504,
+        "facet_pairs": 630,
+        "connected_graph_b1": 190
+      }
+    ],
+    "budget_case_count": 20,
+    "four_pants_multigraphs": {
+      "raw_multigraphs": 220,
+      "degree_excluded": 16,
+      "facet_realizable_multigraphs": 204,
+      "disconnected_with_unfillable_tree_component": 188,
+      "connected_trees": 16
+    },
+    "component_count_distribution": {
+      "1": 16,
+      "2": 94,
+      "3": 78,
+      "4": 16
+    },
+    "limitations": [
+      "The finite graph enumeration is only for four pants and three facet pairs.",
+      "The general complexity dichotomy is proved in the manuscript, not inferred from enumeration.",
+      "No face diffeomorphism, JSJ classification, or torus-filler realization is certified by this script."
+    ]
+  },
+  "exact_checks": 1035,
+  "script_sha256": "33d1215a41c330cddd1087a93efd1b36346c4f0658008ee8a9119bcd74b2123e"
+}

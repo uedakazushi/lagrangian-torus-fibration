@@ -1,0 +1,162 @@
+% v9. General local denominator theorem, cone-index refinement,
+% and all-plane sextic consequence. No new bibliography is required.
+% Uses existing macros \ZZ and theorem environments.
+
+\subsection{四 puncture neck の分母剛性}
+\label{q9:four-puncture-section}
+
+一つの core の annular equation には，高分母の整数解がある．
+しかし，同じ actual neck の両端を比較すると，四 puncture 曲線には追加の整除条件が生じる．
+以下では作用関数を微分して比較するので，primitive の変更による加法定数や，
+有限の平滑化 parameter における作用切片の選択には依存しない．
+
+\begin{proposition}[四 puncture neck の整除条件]
+\label{q9:four-puncture-divisibility}
+\label{q9:rigidity}
+同じ marked actual neck の両端にある rational divisor components を
+$C^-,C^+$ とし，それぞれの compactification における自己交点を $e^-,e^+\in\ZZ$ とする．
+各曲線は四つの marked punctures を持ち，同じ $2+2$ 分割を実現する二つの
+三価 saddle vertices $A,B$ と一つの内部 annulus からなる Reeb tree を用いる．
+共有する二本の開 branch には追加の branch singularities を入れず，
+その primitive action tangent lattices を接着するとする．
+normal circles は同じ neck で互いに逆であり，puncture の正の meridian markings を保つとする．
+両端には本稿の比例曲率 collars と Liouville cone construction を用い，
+作用を $I_\gamma=(2\pi)^{-1}\int_\gamma\lambda$ と正規化する．
+
+両端で作用座標に適合する rational cone charts が与えられ，各 branch lattice が三枚の
+incident sheets の格子で飽和していると仮定する．
+各内部 annulus の二本の primitive endpoint directions が，その regular torus の
+action tangent lattice に生成する部分格子の index を $m^-,m^+\geq1$ とする．
+このとき，二本の共有 branch の normal-action denominators は両端で一致し，
+正の奇数 $q_A,q_B$ として
+\begin{equation}\label{q9:cone-index-divisibility}
+ q_Aq_B\mid m^-+m^+
+\end{equation}
+を満たす．特に，両方の annuli が一つずつの unimodular cone に対応する場合には
+\begin{equation}\label{q9:four-puncture-q-one}
+ q_A=q_B=1.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+共通の正の normal meridian を各端で $\alpha^\pm$ と書く．
+各 core から外向きの primitive branch tangent $v_s^\pm$，$s\in\{A,B\}$，に対し
+$\dd I_{\alpha^\pm}(v_s^\pm)=-q_s^\pm$ と置く．
+共有 branch の整数アフィン同定は $v_s^-\mapsto-v_s^+$ であり，
+$\alpha^+=-\alpha^-$ である．従って微分を比較すると $q_s^-=q_s^+$ となる．
+その共通値を $q_s$ と書く．$A,B$ が交換される marking を用いた場合も，
+片側の二頂点を先に交換すれば同じ記述になる．
+
+各 puncture $\ell$ を囲む正の base meridian の degree-one lift を $\beta_\ell^\pm$ とし，
+その puncture が接する saddle を $s(\ell)$ とする．primitive ray parameter $t$ で
+\[
+ I_{\alpha^\pm}=-q_{s(\ell)}t,
+ \qquad I_{\beta_\ell^\pm}=-p_\ell^\pm t,
+ \qquad p_\ell^\pm\in\ZZ
+\]
+と書ける．ここで core chart の加法定数は零に正規化してよく，
+以下の比較ではこの表示の微分だけを使う．
+三価 critical block の二つの arm cycles を $b_1,b_2$ とすれば，
+第三の arm cycle は向きを揃えて $b_1+b_2$ である．
+三つの sheets で branch direction が primitive となるためには，
+その二つの numerators と和が全て $q_s$ と互いに素でなければならない．
+$q_s$ が偶数なら二つの numerators は奇数で，和は偶数となり矛盾する．
+従って $q_A,q_B$ は奇数である．
+
+次に一つの端を固定し，記号 $\pm$ を省略する．
+$A$ 側，$B$ 側の二つずつの puncture numerators の和を $P_A,P_B$ と置く．
+puncture-compatible framing において，二組の puncture lifts の和を内部 annular torus
+へ運ぶと，その実際の整数一次ホモロジーの中で
+\[
+ \beta_A+\beta_B=-e\alpha
+\]
+となる．これは normal circle bundle の Euler clutching による関係であり，
+補集合の homology に移してから closed でない primitive を積分する操作ではない．
+$(\alpha,\beta_A)$ は整数 torus basis である．
+この基底で両 endpoint directions を並べた行列は
+\[
+ \begin{pmatrix}
+ -q_A&-q_B\\
+ -P_A&e q_B+P_B
+ \end{pmatrix}.
+\]
+内部 annulus の面積が正であることと相対 Stokes の公式から
+\[
+ \frac{\operatorname{area}(E)}{2\pi w}
+ =e+\frac{P_A}{q_A}+\frac{P_B}{q_B}>0
+\]
+を得る．従って上の determinant は負であり，その絶対値が $m$ であることは
+\begin{equation}\label{q9:annular-index-equation}
+ e q_Aq_B+q_BP_A+q_AP_B=m,
+ \qquad
+ \frac{\operatorname{area}(E)}{2\pi w}=\frac{m}{q_Aq_B}
+\end{equation}
+と同値である．normal Euler framing を整数だけ変更しても，この計算と以下の整除性は変わらない．
+
+一方，共有 puncture の両側の cycles は，実際の regular torus の中で
+\[
+ \alpha^+=-\alpha^- ,\qquad
+ \beta_\ell^+=\beta_\ell^-+k_\ell\alpha^-,
+ \qquad k_\ell\in\ZZ
+\]
+と比較される．base puncture の向きが同じなので $\beta_\ell^-$ の係数は $+1$ である．
+この式を共通 branch tangent に沿って微分すると
+\begin{equation}\label{q9:puncture-integrality}
+ \frac{p_\ell^-+p_\ell^+}{q_{s(\ell)}}=-k_\ell\in\ZZ
+\end{equation}
+となる．transport path を変更して node の周りの monodromy を加えても，
+現在の meridian-node model では $k_\ell$ を整数だけ変更するので，整除性は変わらない．
+
+両端で \eqref{q9:annular-index-equation} を $q_Aq_B$ で割り，足し合わせると
+\[
+ \frac{m^-+m^+}{q_Aq_B}
+ =e^-+e^+
+  +\sum_{\ell=1}^4\frac{p_\ell^-+p_\ell^+}{q_{s(\ell)}}
+ =e^-+e^+-\sum_{\ell=1}^4 k_\ell\in\ZZ.
+\]
+これが \eqref{q9:cone-index-divisibility} である．
+$m^-=m^+=1$ なら正の奇数 $q_Aq_B$ は二を割るので一であり，
+\eqref{q9:four-puncture-q-one} を得る．
+\end{proof}
+
+\begin{remark}[Node 配分による表示]\label{q9:node-budget}
+本稿の ordered resolution と puncture framing では，puncture basin $\ell$ に入る
+meridian nodes の数を $n_\ell$ とすると $k_\ell=n_\ell-1$ である．
+従って同じ必要条件は
+\begin{equation}\label{q9:external-node-budget}
+ \sum_{\ell=1}^4 n_\ell
+ =4+e^-+e^+-\frac{m^-+m^+}{q_Aq_B}
+\end{equation}
+と書ける．mixed quintic の plane--quadric conic では $(e^-,e^+)=(4,2)$ なので，
+unimodular の場合に右辺は $10-2/(q_Aq_B)$ である．
+全平面 sextic の共有直線では $(e^-,e^+)=(1,1)$ なので $6-2/(q_Aq_B)$ となる．
+前者の総 node 数は十，後者は六であり，分母剛性の後にはどちらも内部 annulus に二 nodes が残る．
+この総数だけでは四つの external basins への個別の配分は決まらない．
+命題の証明自体は $k_\ell$ の整数性だけを使い，node 数の非負性やこの具体的な framing 値を必要としない．
+\end{remark}
+
+\begin{corollary}[全平面 sextic の分岐分母]\label{q9:sextic-rigidity}
+全平面六次退化の既存の cores と branch graph を保ち，
+各 core に標準 Petersen fan の coarse cones への作用適合 charts を置く．
+それらが大域作用適合 matroidal atlas に接続するとすれば，全三十本の branch の
+normal-action denominator は一である．
+これは既に構成した weights や node 配分に限定された結論ではない．
+\end{corollary}
+
+\begin{proof}
+十五本の共有直線はそれぞれ四 punctures を持ち，二つの saddles と一つの内部 annulus を与える．
+両端の Petersen chart で内部 annulus は一つの unimodular coarse cone に対応する．
+命題~\ref{q9:four-puncture-divisibility} を各共有直線に適用すれば，
+対応する二本の branch の分母がともに一となる．
+\end{proof}
+
+\begin{remark}[適用範囲と高分母に必要な変更]\label{q9:scope}
+以上は，actual normal circles と puncture markings，二 saddle の Reeb tree，
+共有 branch の primitive lattice，および各内部 annulus が一つの cone に対応する条件を使う．
+各 sheet の作用微分の比較から従うため，各 normal Hamiltonian の ambient-linear 延長は仮定しない．
+三 puncture 曲線には内部 annulus がなく，この剛性命題をそのまま適用することはできない．
+高分母を得るために非 unimodular な内部 cones を許す場合でも，
+\eqref{q9:cone-index-divisibility} により $m^-+m^+\geq q_Aq_B$ が必要である．
+annulus の subdivision，Reeb tree の変更，追加の branch singularities を許す問題では，
+その変更に応じて整合条件を立て直す必要がある．
+\end{remark}

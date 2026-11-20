@@ -1,0 +1,292 @@
+% v24. Unbounded exclusion of the positive axis and exceptional degenerate branch.
+\section{正側残余軸の排除と退化面の一整数有限性}
+\label{ax24:section}
+
+三高係数が同時に非負である canonical 整数模型の記号
+\eqref{hd23:data} を用いる．本節では，前節で残った
+$\delta=1,x=0$ と $a=0,x=0,R_0=1$ を全域で排除する．
+その結果，$\delta=1$ の排除が完成し，退化面 $a=0$ の全体は
+低行の一整数 $s$ だけを固定して有限に復元できる．
+一般の $\delta$ や，退化面全体の不存在を主張するものではない．
+
+\subsection{正側残余軸の整除性障害}
+
+\begin{theorem}[非対称量一の完全排除]
+\label{ax24:positive-axis}
+三高係数が同時に非負である正の canonical 整数模型では
+$\delta=sy-tx=1$ は起こらない．
+この主張に分母，低行，係数，尺度の探索上限はない．
+\end{theorem}
+
+\begin{proof}
+$x\ge1$ は定理~\ref{hd23:main} により排除済みなので，$x=0$ とする．
+$sy=1$ より $s=y=1$ である．$k=b+z\ge b+1$ から $z\ge1$ を得る．
+$B=b-1\ge1$，$F=B+z$，$m=F^2+F+1$ と置く．
+格子表示~\eqref{hd23:lattice-form} で $S>0$ は $p=-n\ge1$ を強制し，
+\begin{equation}\label{ax24:axis-data}
+ \begin{gathered}
+ S=(F+1)p-z-1,\qquad T=t+z+1-Fp,\qquad U=t+z+p,\\
+ \alpha=t(z+1)+F,\\
+ Q:=(z-1)(t-1)-mp+F(z+2)=0
+ \end{gathered}
+\end{equation}
+となる．最後の式は元の二つの尺度差方程式の一方である．
+$z=1$ なら $mp=3F$ となるが，$F=b\ge2$ と
+$m-3F=(F-1)^2>0$ より不可能である．従って $z\ge2$ とする．
+
+次の整数を定義する：
+\begin{equation}\label{ax24:axis-auxiliary}
+ \begin{gathered}
+ C=F+2=B+z+2,\qquad R=t-B(p+z+1),\\
+ N=b^2+bz+z^2,\qquad K=(z+1)F+1.
+ \end{gathered}
+\end{equation}
+元の第一 pair-product 残余を $\mathfrak r$ とすると，直接の展開により
+\begin{equation}\label{ax24:two-identities}
+ \mathfrak r=(t+1)Q+tR-BC,\qquad
+ BQ=mR+BCK-Nt
+\end{equation}
+が成り立つ．模型では $Q=\mathfrak r=0$ なので $tR=BC>0$ であり，$R>0$ である．
+$t=B(p+z+1)+R$ を代入すると
+\[
+ R^2=B\bigl(C-R(p+z+1)\bigr).
+\]
+従って正整数 $k_*=R^2/B$ が存在し，
+\begin{equation}\label{ax24:small-divisor}
+ C=k_*+R(p+z+1)
+\end{equation}
+となる．もし $R\ge B+1$ なら
+$C>R(z+2)\ge(B+1)(z+2)>B+z+2=C$ となるので，$R\le B$ である．
+ゆえに $k_*\le R$ であり，$p\ge1,z\ge2$ と合わせて
+\begin{equation}\label{ax24:large-C}
+ C\ge k_*+(z+2)R\ge5k_*
+\end{equation}
+を得る．
+
+一方，式~\eqref{ax24:two-identities} の第二式に $R$ を掛け，
+$tR=BC$ と $R^2=Bk_*$ を使うと
+\[
+ mk_*=C(N-RK).
+\]
+$m=C(F-1)+3$ なので $C\mid3k_*$ である．
+これは $0<3k_*<C$ と矛盾する．
+\end{proof}
+
+この証明は元の残余 $\mathfrak r=0$ を本質的に用いる．
+尺度差方程式と整数尺度だけから $tR=BC$ を結論してはいけない．
+
+\subsection{退化面に残った例外枝の有界な約数}
+
+\begin{theorem}[退化面の例外枝の排除]
+\label{ax24:degenerate-R1}
+三高係数が同時に非負である正の canonical 整数模型において，
+\[
+ a=uh-(b-1)(F+1)=0,\qquad x=0,\qquad R_0=b^2-sT=1
+\]
+は同時には成立しない．$s,b$ に上限を課さない．
+\end{theorem}
+
+\begin{proof}
+$s=1,2$ は定理~\ref{hd23:main} で既に除かれているので $s\ge3$ とする．
+$B=b-1$，$h=s$ と置く．$F=B+sz$，$us=B(F+1)$，$sT=b^2-1$ より
+\[
+ s\mid B(B+1),\qquad s\mid B(B+2)
+\]
+である．差を取れば $s\mid B$ となる．従って
+\[
+ B=s\kappa,\qquad F=sL,\qquad
+ \kappa\ge1,\quad L=\kappa+z\ge\kappa
+\]
+と書ける．以下
+\begin{equation}\label{ax24:degenerate-data}
+ \begin{gathered}
+ K_0=s^2-s+1,\qquad
+ w=L+1-\kappa K_0,\qquad D=s(w+\kappa)+1,\\
+ u=\kappa(sL+1),\qquad
+ t=\kappa sL+\kappa-s+1,\qquad
+ T=\kappa(s\kappa+2)
+ \end{gathered}
+\end{equation}
+と置く．退化面の恒等式~\eqref{hd23:degenerate-bound} は
+\begin{equation}\label{ax24:degenerate-Q}
+ Q_s:=sLw-s\kappa^2+s-2\kappa=0
+\end{equation}
+を与える．$L>0$ と
+$Lw=\kappa^2-1+2\kappa/s>0$ より，整数 $w$ は正である．
+
+$S=FT-B(t-y)-(u+z)$ を使うと
+\[
+ S=(s\kappa-1)L+s\kappa(s-\kappa-1+y)
+\]
+であり，元の第一残余は
+\begin{equation}\label{ax24:degenerate-original}
+ \mathfrak r=\kappa\bigl[t(sw-1)-Dy\bigr]
+\end{equation}
+と因数分解される．従って整数 $y$ の存在には $D\mid t(sw-1)$ が必要である．
+
+この整除性と式~\eqref{ax24:degenerate-Q} から，
+\begin{equation}\label{ax24:divisor-bound}
+ D\mid C_s:=K_0\bigl((s-1)^4+3\bigr)
+\end{equation}
+を導く．そのために，変数 $X$ の整数多項式を
+\begin{equation}\label{ax24:resultant-polynomials}
+ \begin{aligned}
+ A_s(X)&=s^2K_0X^2+s(s-1)^2X-(s^2+s+1),\\
+ G_s(X)&=s^2(s-1)X^2-sX-s+1,\\
+ H_s(X)&=(sX+2)G_s(X)
+ \end{aligned}
+\end{equation}
+と定める．直接展開による二恒等式
+\begin{align*}
+ sQ_s+A_s(\kappa)
+ &=D\bigl[\kappa s^2(s-1)+sw-s-1\bigr],\\
+ t(sw-1)+H_s(\kappa)
+ &=D\bigl[\kappa^2s^2(s-1)+\kappa sw-\kappa s-\kappa-s+1\bigr]
+\end{align*}
+から $D\mid A_s(\kappa),H_s(\kappa)$ となる．整数係数の resultant の
+B\'ezout 恒等式により，$D$ は両多項式の resultant を割る．
+ここで
+\begin{equation}\label{ax24:resultants}
+ \begin{aligned}
+ \operatorname{Res}_X(A_s,sX+2)&=s^2K_0,\\
+ \operatorname{Res}_X(A_s,G_s)&=-s^6\bigl((s-1)^4+3\bigr),\\
+ \operatorname{Res}_X(A_s,H_s)&=-s^8C_s.
+ \end{aligned}
+\end{equation}
+第一式は $s^2A_s(-2/s)$ の計算であり，第二式は二次式の公式
+$(af-cd)^2-(ae-bd)(bf-ce)$ から従う．実際，$J=(s-1)^2+1$ とすれば
+第二式の右辺は $s^6\bigl(4(s-1)^2-J(J+2)\bigr)$ である．
+第三式は resultant の積性による．$\gcd(D,s)=1$ なので
+式~\eqref{ax24:divisor-bound} を得る．
+
+次に $r=\kappa-K_0w$ と置くと，式~\eqref{ax24:degenerate-Q} は
+\begin{equation}\label{ax24:small-cofactor}
+ \kappa(sr+2)=s(w^2-w+1)
+\end{equation}
+となる．$s\ge3$ と右辺の正値性から $r\ge0$ である．
+$r=0$ なら $\kappa=K_0w$，$2K_0w=s(w^2-w+1)$ なので $w\mid s$ である．
+従って $w\le s$ だが，同じ式は $2K_0\le sw\le s^2$ を要求する．
+$2K_0-s^2=(s-1)^2+1>0$ より矛盾する．
+
+ゆえに $r\ge1$ である．式~\eqref{ax24:small-cofactor} は
+$w^2-w+1>K_0w$ を与えるので $w\ge K_0+1$ となり，
+\begin{equation}\label{ax24:D-lower}
+ D=s(\kappa+w)+1\ge s\bigl((K_0+1)^2+1\bigr)+1
+\end{equation}
+を得る．また
+\[
+ s^2(K_0+1)^2-C_s
+ =3s^4(s-2)+10s^2(s-1)+8s-4>0.
+\]
+正整数 $e=C_s/D$ は従って $e<s$ を満たす．
+$C_s\equiv4\pmod s$，$D\equiv1\pmod s$ より $e\equiv4\pmod s$ でもある．
+$s=3$ では $C_s=133$ に対し式~\eqref{ax24:D-lower} が $D\ge196$ を要求する．
+$s=4$ では $0<e<4$ と $e\equiv0\pmod4$ が両立しない．
+従って残る $s\ge5$ では
+\begin{equation}\label{ax24:cofactor-four}
+ e=4,\qquad D=C_s/4
+\end{equation}
+に強制される．
+
+最後にこの唯一の約数も平方障害で除く．
+$M=(D-1)/s=\kappa+w$ とすると，式~\eqref{ax24:degenerate-Q} は
+\begin{equation}\label{ax24:kappa-quadratic}
+ sK_0\kappa^2+
+ \bigl(2-s[M(K_0-2)+1]\bigr)\kappa
+ -s\bigl(M(M-1)+1\bigr)=0
+\end{equation}
+となる．$D=C_s/4$ を代入したこの二次式の判別式を $\Delta$ とする．
+直接計算により
+\begin{equation}\label{ax24:square-gap}
+ 16\Delta=P(s)^2-4W(s)
+\end{equation}
+であり，ここで
+\begin{align*}
+ P(s)={}&s^8-6s^7+17s^6-30s^5+41s^4\\
+        &-44s^3+34s^2-20s-2,\\
+ W(s)={}&2s^7-13s^6+34s^5-73s^4+100s^3-106s^2+68s-15.
+\end{align*}
+$v=s-4\ge0$ における $W(s)$ と $G(s)=2P(s)-1-4W(s)$ の係数は次の通りである：
+\begin{center}\small
+\begin{tabular}{c|r|r}
+次数 $j$ & $[v^j]W(v+4)$ & $[v^j]G(v+4)$\\\hline
+0&609&26135\\
+1&6324&42152\\
+2&8934&34636\\
+3&5652&19704\\
+4&1967&8134\\
+5&394&2316\\
+6&43&422\\
+7&2&44\\
+8&0&2
+\end{tabular}
+\end{center}
+従って $W>0$，$G>0$ である．$P$ は正整数であり，
+\[
+ (P-1)^2<16\Delta<P^2
+\]
+となる．しかし整数根 $\kappa$ が存在すれば $\Delta$ は整数の平方であり，
+$16\Delta$ も平方となる．連続する二平方の間にあることと矛盾する．
+\end{proof}
+
+\subsection{退化面全体の一整数を固定した有限復元}
+
+\begin{corollary}[退化面の低行一整数有限性]
+\label{ax24:degenerate-finite}
+$a=0$ を満たす三高非負係数模型は，$s\ge3$ に対して
+\begin{equation}\label{ax24:uniform-b-bound}
+ 2\le b\le1+s^2(s-1)^2
+\end{equation}
+を満たす．従って $s$ だけを固定したとき，全ての残りの整数を有限に復元できる．
+この系は $s$ 自体に一様上界を与えず，退化面全体の不存在も結論しない．
+\end{corollary}
+
+\begin{proof}
+$x\ge1$ の場合は式~\eqref{hd23:degenerate-relations} の $s-bx>0$ により
+$b\le\lfloor(s-1)/x\rfloor$ である．$x=0$ の場合は前定理から $R_0\ge2$ である．
+退化面の元残余による整除条件は
+\begin{equation}\label{ax24:general-degenerate-divisibility}
+ B=b-1\mid h(s-1)(R_0-1)
+\end{equation}
+であり，$x=0$ では $h=s$，$R_0\le s(s-1)+1$ なので
+$b\le1+s^2(s-1)^2$ となる．
+
+式~\eqref{ax24:general-degenerate-divisibility} の導出も記す．
+$S_0=FT-Bt-\ell$，$\alpha_0=F+tz$，$H=s+tb$，$K=sT-b$ と置く．
+$a=0$ では $S=S_0+By$，$\alpha=\alpha_0+uy$ であり，
+\[
+ \mathfrak r=\mathfrak r_0-(BH-uK)y,
+ \qquad \mathfrak r_0=-HS_0+(s\alpha_0-t)T-\alpha_0b.
+\]
+$uh=B(F+1)$ より $B\mid h(BH-uK)$ なので $B\mid h\mathfrak r_0$ である．
+法 $B$ での恒等式
+\[
+ h(\mathfrak r_0+tT)
+ =h(tT+1)(s\ell-F)+t(1-sT)uh
+ \pmod B
+\]
+と $s\ell=bF$ から $B\mid htT$ を得る．
+$ht\equiv h(1-s)\pmod B$，$sT=b^2-R_0\equiv1-R_0\pmod B$ を順に使えば
+式~\eqref{ax24:general-degenerate-divisibility} が従う．
+
+具体的な有限復元では，$x=0,\ldots,s-1$，$h=s-x$，上の有限範囲の $b$，
+および $R_0=1,\ldots,h(s-1)+1$ を取る．$x=0,R_0=1$ は除外する．
+各組に対し，二次式
+\[
+ R_0F^2+(R_0-b[h(s-1)+1]+sh)F+R_0-b^2+sh=0
+\]
+の正整数根 $F$ は高々二個である．次に
+\[
+ u=\frac{B(F+1)}h,\quad \ell=\frac{bF}s,\quad
+ t=u-s+1,\quad z=\ell-u,\quad T=\frac{b^2-R_0}s
+\]
+を復元し，整数性と必要な正値性を確認する．
+元残余は $y$ の一次式で，その傾きは命題~\ref{hd22:residual-quadratic} により
+厳密に負である．従って $y$ は高々一個に定まる．
+非負整数性，単一合同，三尺度，六符号，元残余を検査し，
+命題~\ref{hd21:reconstruction} の行列と正 weights を構成すれば必要十分な復元となる．
+\end{proof}
+
+\nolinkurl{verify_high_d_axis_degenerate_v24.py} は，新しい多項式恒等式，
+二つの resultant，平方間隔と全係数符号を厳密整数演算で確認する．
+有限範囲の回帰確認を上の無上界証明の代用としていない．

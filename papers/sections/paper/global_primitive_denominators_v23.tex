@@ -1,0 +1,69 @@
+\subsection{高分母全体の原始性と単位枝による合同条件の強化}
+\label{gp23:section}
+
+高分母 support の大きさと密な素数 support の分類を合わせると，
+単色成分の排除より強い共通因子の制約が得られる．
+以下も指定した標準五次接着データに関する主張である．
+
+\begin{corollary}[高分母全体は原始的である]
+\label{gp23:primitive}
+高分母 support $H$ が非空なら，
+\[
+ \gcd\{q_{ij}:ij\in E(H)\}=1.
+\]
+従って非空の高分母全体が一つの素数の倍数からなることはない．
+\end{corollary}
+
+\begin{proof}
+系~\ref{sf22:no-leaves} より $|E(H)|\ge8$ である．
+全ての高分母を割る素数 $\ell$ が存在すると仮定する．分母の奇数性から $\ell$ も奇数である．
+単位分母は $\ell$ で割れないから，素数 support はちょうど $G_\ell=H$ となる．
+定理~\ref{ps11:dense} は
+$\ell=5$，$H\cong K_{2,2,1}$ を強制する．
+その二つの非辺を $ab,cd$ とすると，実際の分母は両方とも一である．
+一方，同定理の合同分類は，ある $\varepsilon\in\{1,-1\}$ に対し
+\[
+ q_{ab}\equiv-\varepsilon,\qquad q_{cd}\equiv\varepsilon\pmod5
+\]
+を与える．従って $2=q_{ab}+q_{cd}\equiv0\pmod5$ となり矛盾する．
+\end{proof}
+
+\begin{corollary}[二本の単位枝と七分母の互いに素性]
+\label{gp23:two-units}
+相異なる二本以上の branches の分母が一であるなら，任意に選んだ
+相異なる七本の branches の分母の最大公約数は一である．
+特に残る唯一の八高辺型 $G_{5,14}$ の場合，五で割れる分母は高々六本である．
+\end{corollary}
+
+\begin{proof}
+系~\ref{ps11:dense-gcd} により，七分母の最大公約数は五を割る．
+もし五が共通因子なら，定理~\ref{ps11:dense} により
+$G_5\cong K_{2,2,1}$ は八辺を持つ．
+二本の単位枝はその外にあるため，補 graph の二辺に一致しなければならない．
+前証明と同じ $q_{ab}+q_{cd}\equiv0\pmod5$ の矛盾が生じる．
+また五で割れる辺が七本あれば八本目が強制されるので，上限六を得る．
+\end{proof}
+
+\begin{corollary}[一本の単位枝がある密な五進配置]
+\label{gp23:one-unit-dense-five}
+$G_5$ が八辺を持ち，ある branch の分母が一であるとする．
+単位枝はちょうど一本であり，実際の高分母 support は $G_{5,16}$ となる．
+$G_5$ の外のもう一本の branch は単位枝と頂点を共有せず，その分母 $q$ は
+\[
+ q\equiv-1\pmod5,\qquad q\equiv9\pmod{10},\qquad q\ge9
+\]
+を満たす．
+\end{corollary}
+
+\begin{proof}
+$G_5$ の補 graph は二つの互いに素な辺である．一方が単位枝なら，
+合同分類により他方の分母は $-1$ modulo five となる．
+それは一ではなく，さらに局所方程式から分母は正の奇数であるため表示式を得る．
+八本の五の倍数とこの一本が高分母で，残る一本だけが単位分母となる．
+従って高分母 support は $K_5$ から一辺を除いた $G_{5,16}$ である．
+\end{proof}
+
+これらは既に証明した二つの support 分類を組み合わせた系であり，
+合同条件だけから実際の整数接着の存在を結論するものではない．
+局所模型単独には共通因子を持つ例があるため，原始性を局所分類の仮定として
+先に課してはいけない．

@@ -1,0 +1,80 @@
+% v10 computer-assisted finite exclusion, with complete enumeration proof.
+\section{分母百一以下における大域排除の厳密証明書}
+\label{ex10:section}
+
+一般の高分母に対する大域存在問題は残るが，固定された有限の分母集合については，
+numerators に探索上限を置かずに，全ての必要な局所候補を列挙できる．
+以下の結論は明示した有限範囲のものであり，任意分母への外挿を含まない．
+
+\begin{theorem}[有限分母範囲の排除]\label{ex10:bounded-exclusion}
+現在の全平面五次の SNC core models，標準 $K_4$ cones，既存の branch graph を用い，
+追加の branch singularities を入れない大域作用適合 atlas を考える．
+全ての branch denominators が百一以下なら，それらは全て一である．
+従って高分母を持つ大域 atlas が存在するとすれば，少なくとも一つの分母は百三以上である．
+\end{theorem}
+
+\begin{proof}
+各分母は奇数なので，調べる集合は
+$\mathcal Q=\{1,3,5,\ldots,101\}$ である．
+まず二つ以上の高分母を持つ一つの core を考える．
+標識を替えて $q_0,q_3>1$ とし，$N_{ij}=q_iq_j-1$ と置く．
+三つの signed divisors
+\[
+ a\mid N_{01},\qquad b\mid N_{02},\qquad d\mid N_{13}
+\]
+を選ぶだけで，次の順に全 numerators が決まる．
+\begin{align*}
+ p_{01}&=a,&p_{10}&=N_{01}/a,&
+ p_{02}&=b,&p_{20}&=N_{02}/b,\\
+ p_{03}&=-q_0-a-b,&p_{30}&=N_{03}/p_{03},&
+ p_{13}&=d,&p_{31}&=N_{13}/d,\\
+ p_{32}&=-q_3-p_{30}-p_{31},&p_{23}&=N_{23}/p_{32},\\
+ p_{12}&=-q_1-p_{10}-p_{13},&p_{21}&=-q_2-p_{20}-p_{23}.
+\end{align*}
+途中の分母が零または整除性を満たさない場合と，最後の
+$p_{12}p_{21}=N_{12}$ が成立しない場合を除く．
+全 row sums と pair products を満たす行列は必ずこの順序で再現されるので，
+これは固定された $q$ に対して完全な有限列挙である．
+特に $N_{12}=0$ の場合にも，$p_{12},p_{21}$ は他の row sums から既に決まり，
+自由な整数を任意の範囲で打ち切る必要はない．
+
+正の weights の存在は補題~\ref{kl10:cycle-positive} の全 simple directed cycles の
+有理数積で厳密に判定する．正値性を満たす場合には，同補題の方法で有理 weights を構成し，
+全 basin inequalities を再確認する．
+
+高分母が一つしかない core では，低分母 vertices の numerators は有界とは限らない．
+そこで全行列を列挙せず，命題~\ref{qh9:isolated-local} が与える高分母端の
+全ての必要な normal forms を候補として残す．
+これは候補集合を広げる方向の操作であり，大域排除に対して安全である．
+
+各高分母端には，分母 $q$，係数 $D$，三 numerators の residue multiset
+$\{p_1,p_2,p_3\}\bmod q$ を付ける．
+対向する端は，同じ $q$，係数 $-D$，負の residue multiset を持たなければならない．
+候補の中にその相手がない端を一つでも持つ core candidate を除く操作を繰り返す．
+punctures の全ての置換を許し，共有 weights や三角形の incidence の条件もこの段階では課さないので，
+実際の大域 atlas から来る候補が誤って除かれることはない．
+
+収録した標準 Python の厳密検算は，二つ以上の高分母を持つ $316\,200$ 個の
+分母多重集合を扱い，$2\,973$ 個の整数行列候補，そのうち $1\,864$ 個の正の局所候補を得る．
+さらに一高分母の必要な端点 normal forms $87$ 個を加えた $1\,951$ 個の候補は，
+上の相手の不存在による削除で
+\[
+1951\longrightarrow118\longrightarrow45\longrightarrow28\longrightarrow17
+\longrightarrow11\longrightarrow7\longrightarrow4\longrightarrow1\longrightarrow0
+\]
+となる．従って有限範囲内では，高分母を含む大域 atlas の局所データは存在しない．
+\end{proof}
+
+この列挙の件数は，分母の標識を正規化した有限な整数データの件数である．
+非同型な幾何的 charts や atlases の個数ではない．
+検算は \texttt{verification/verify\_quintic\_denominators\_v10.py} で再生成でき，
+候補データ，削除の理由，実行範囲とコード hash を対応する JSON に記録する．
+proof の整数式と正値性判定はすべて厳密であり，浮動小数点 tolerance や numerators の上限を用いない．
+
+定理の証明に使う削除は，node 数の非負性や全 node budget を必要としない．
+同じ候補にそれらと補題~\ref{qt10:third-corner} を追加すると，
+単独 branch の整数条件を満たす $835$ 個の標識付き端点の非順序対のうち，
+三つ全ての第三 corner の検査を通るものは $12$ 個に減り，
+core candidates は二回の削除で $1951\to4\to0$ となる．
+この追加検査は一般の高分母候補を調べる際にも使えるが，
+百一を超える全ての分母を排除する一般証明は与えていない．

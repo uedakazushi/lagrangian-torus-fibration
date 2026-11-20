@@ -1,0 +1,233 @@
+{
+  "version": "v14",
+  "passed": true,
+  "scope": "Complete fixed slice (s,t,alpha,beta,k)=(3,12,12,-4,1); no classification of other singular systems or global gluing.",
+  "polynomial_identity_count": 28,
+  "polynomial_identities": [
+    "row_0",
+    "pair_01",
+    "pair_02",
+    "pair_03",
+    "row_1",
+    "pair_12",
+    "pair_13",
+    "row_2",
+    "pair_23",
+    "row_3",
+    "D_0",
+    "D_1",
+    "D_2",
+    "D_3",
+    "D_sum",
+    "q_a",
+    "q_b",
+    "q_c",
+    "Schur_row_1",
+    "Schur_row_2",
+    "Schur_row_3",
+    "CRT_S",
+    "CRT_T",
+    "D0",
+    "gap_ab_times_2K",
+    "gap_ba_times_2qb",
+    "gap_0c_times_2U",
+    "gap_c0_times_2qc"
+  ],
+  "coefficient_matrix": [
+    [
+      -51,
+      24,
+      0
+    ],
+    [
+      -17,
+      0,
+      25
+    ],
+    [
+      0,
+      16,
+      -50
+    ]
+  ],
+  "right_hand_side": [
+    48,
+    13,
+    6
+  ],
+  "rank": 2,
+  "nonzero_minor": 408,
+  "complete_CRT_period": 136,
+  "complete_CRT_residues": [
+    93
+  ],
+  "parameters": {
+    "S": [
+      136,
+      200
+    ],
+    "T": [
+      291,
+      425
+    ],
+    "U": [
+      93,
+      136
+    ],
+    "n": "all nonnegative integers"
+  },
+  "oddness_and_positivity": "Coefficient signs prove these properties for every n>=0, not by extrapolating samples.",
+  "illustrative_exact_examples": [
+    {
+      "n": 0,
+      "q": [
+        409,
+        3493,
+        1303,
+        1
+      ],
+      "P": [
+        [
+          0,
+          1644,
+          -1917,
+          -136
+        ],
+        [
+          869,
+          0,
+          -4071,
+          -291
+        ],
+        [
+          -278,
+          -1118,
+          0,
+          93
+        ],
+        [
+          -3,
+          -12,
+          14,
+          0
+        ]
+      ],
+      "D": [
+        -997,
+        -4007,
+        4671,
+        333
+      ],
+      "positive_weights": [
+        "409",
+        "2857273/1738",
+        "2605/186",
+        "1"
+      ],
+      "minimum_basin_gap": "1/6986"
+    },
+    {
+      "n": 1,
+      "q": [
+        1009,
+        8593,
+        3207,
+        1
+      ],
+      "P": [
+        [
+          0,
+          4044,
+          -4717,
+          -336
+        ],
+        [
+          2144,
+          0,
+          -10021,
+          -716
+        ],
+        [
+          -686,
+          -2750,
+          0,
+          229
+        ],
+        [
+          -3,
+          -12,
+          14,
+          0
+        ]
+      ],
+      "D": [
+        -2464,
+        -9875,
+        11517,
+        822
+      ],
+      "positive_weights": [
+        "1009",
+        "17340673/4288",
+        "6413/458",
+        "1"
+      ],
+      "minimum_basin_gap": "1/17186"
+    },
+    {
+      "n": 10,
+      "q": [
+        6409,
+        54493,
+        20343,
+        1
+      ],
+      "P": [
+        [
+          0,
+          25644,
+          -29917,
+          -2136
+        ],
+        [
+          13619,
+          0,
+          -63571,
+          -4541
+        ],
+        [
+          -4358,
+          -17438,
+          0,
+          1453
+        ],
+        [
+          -3,
+          -12,
+          14,
+          0
+        ]
+      ],
+      "D": [
+        -15667,
+        -62687,
+        73131,
+        5223
+      ],
+      "positive_weights": [
+        "6409",
+        "698491273/27238",
+        "40685/2906",
+        "1"
+      ],
+      "minimum_basin_gap": "1/108986"
+    }
+  ],
+  "limitations": [
+    "Positive-entry graph is the matching type by construction.",
+    "Two high coefficients are negative.",
+    "No five-core global atlas is asserted."
+  ],
+  "script_sha256": "4547f51a8a71dc8e395c8160db57b4b20882ac6e8b52294666e9a5c9aabf9bfe",
+  "source_sha256": "1c3450a3fe7323931b70a5f5a727f01be5ead341d45074f51ba08889777b1644"
+}

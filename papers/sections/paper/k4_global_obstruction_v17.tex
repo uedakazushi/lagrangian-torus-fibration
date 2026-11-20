@@ -1,0 +1,46 @@
+% v17: combine the three complete exceptional-edge obstructions.
+\subsection{四頂点支持の全排除と全低分母 core からの伝播}
+\label{kg17:section}
+
+\begin{theorem}[$K_4$ 型高分母 support の全排除]
+\label{kg17:no-K4}
+五次の標準 $K_5$ branch graph において，高分母 support
+$H=\{ij:q_{ij}>1\}$ が四頂点上の $K_4$ と孤立頂点一つからなることはない．
+この結論は，整数の局所行和と pair products，高辺の奇数分母，
+共通低 puncture における整数 clutching，および全低 hub に接する
+四辺の node 非負性と対向 $D$ 相殺から従う．
+正の weights，高辺の $D$ 相殺，分母の上限，三高分母 chart の一般分類は必要ない．
+\end{theorem}
+
+\begin{proof}
+命題~\ref{kh16:counts-and-bridges} により，例外辺数は二，四，六のいずれかである．
+二本の場合は定理~\ref{kt17:no-two-exceptions}，四本の場合は
+定理~\ref{kf17:no-four-exceptions}，六本の場合は
+定理~\ref{kh16:not-all-exceptional} により，それぞれ排除される．
+三つの証明は上記の条件だけを用いるため，これで全場合を尽くす．
+\end{proof}
+
+\begin{corollary}[一つの全低分母 core からの大域伝播]
+\label{kg17:low-core-propagation}
+正の局所整数 charts，marked puncture の整数 clutching，対向 $D$ の相殺，
+および node 非負性を満たす五次の標準 $K_5$ branch graph を考える．
+ある core $i$ において $q_{ij}=1$ が全ての $j\ne i$ で成り立つなら，
+全ての辺について $q_{jk}=1$ が成り立つ．
+同値に，非空の高分母 support は全五頂点を使う連結 graph である．
+\end{corollary}
+
+\begin{proof}
+系~\ref{fo13:remaining-support} により，高分母の辺を持つ連結成分は一つであり，
+少なくとも四頂点を使い，木ではない．全低分母 core があれば，この成分は
+ちょうど残る四頂点を使う．四頂点の連結 graph で四辺のものは
+$C_4$ または三角形に葉辺を付けた形であり，前者は
+系~\ref{cf13:degree-two-rigidity}，後者は定理~\ref{tn14:no-degree-two-triangle}
+に反する．五辺の場合は diamond なので定理~\ref{dg15:no-diamond} に反し，
+六辺の場合は定理~\ref{kg17:no-K4} に反する．従って高分母の辺は存在しない．
+\end{proof}
+
+この伝播の仮定は固定した全平面五次の branch graph と作用適合整数 charts に関する．
+任意の Lagrangian torus fibration の分母剛性を述べるものではない．
+また，定理~\ref{kg17:no-K4} は support 全体が四頂点の $K_4$ となる場合を排除する．
+五頂点の support が $K_4$ を部分 graph として含む場合には，
+全低 hub が存在しないので，この定理をそのまま適用できない．

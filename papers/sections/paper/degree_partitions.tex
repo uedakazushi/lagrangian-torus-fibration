@@ -1,0 +1,403 @@
+\section{次数分割による core の選択と weighted vertical slice}
+\label{part:section}
+
+平面だけを用いる退化は，一般の次数分割を用いる構成の一例である．
+ここで得られる新しい自由度は，同じ滑らかな次数 $d$ の曲面上で，
+core の個数とその affine complement の型を変更できることである．
+また，vertical Kähler slice の sharp な不等式では，
+平面の順序に代わって分割次数の累積和が現れる．
+
+\subsection{一般位置の hypersurfaces と順序付き小解消}
+
+$d\geq5$ とし，正整数の順序付き分割
+\[
+ d=e_1+\cdots+e_k,\qquad k\geq3
+\]
+を固定する．$F_i$ を次数 $e_i$ の一般の homogeneous polynomial とし，
+$S_i=\{F_i=0\}\subset\PP^3$ と置く．
+$S_i$ は smooth，各 $C_{ij}=S_i\cap S_j$ は smooth connected curve であり，
+三成分は $e_i e_j e_\ell$ 個の点で横断的に交わり，四重交点はない．
+各 triple point は個別にラベル付けする．
+一般の次数 $d$ の polynomial $G_d$ を取り，
+\begin{equation}\label{part:family}
+ \mathcal X=\left\{\prod_{i=1}^kF_i+tG_d=0\right\}
+     \subset\PP^3\times\Delta
+\end{equation}
+を考える．$G_d$ は全 triple points で非零であり，
+各 $C_{ij}$ と横断的に $d e_i e_j$ 点で交わるように選ぶ．
+これらの点を $q_{ij,p}$ と書く．
+Bertini と transverse complete intersections の標準事実は
+\cite[Chapters II--III]{Hartshorne}を参照されたい．
+
+\begin{proposition}[分割退化の局所構造]
+\label{part:resolution}
+十分小さい円板上で，$\mathcal X$ の特異点は
+\[
+ N_{\rm node}=d\sum_{i<j}e_i e_j
+\]
+個の ordinary double points $q_{ij,p}$ のみであり，局所式は $xy=tz$ である．
+中心成分を $S_1,\ldots,S_k$ の順に blow up すると projective な小解消
+$f:\widetilde{\mathcal X}\to\Delta$ を得る．
+全空間は smooth で，中心 fiber は reduced SNC divisor
+$\bigcup_{i=1}^kD_i$ となり，
+\begin{equation}\label{part:components}
+ D_i\simeq\operatorname{Bl}_{\,d e_i\sum_{j>i}e_j}S_i.
+\end{equation}
+非零 fiber は滑らかな次数 $d$ の曲面である．
+\end{proposition}
+\begin{proof}
+一成分だけに属する中心 fiber の点では，全空間も写像 $f$ も滑らかである．
+$C_{ij}$ 上で $G_d\ne0$ なら，局所単元を吸収して $f=xy$ と書ける．
+$G_d|_{C_{ij}}$ の単純零点では $G_d$ を曲線方向の座標に取り，
+方程式は $xy=tz$ となる．その Hessian は非退化で，特異点は原点だけである．
+triple point では $G_d$ は単元なので，全空間は smooth で $f=uvw$ である．
+これらの局所モデルには $t\ne0$ の critical points がない．
+中心 fiber の compactness により，円板を一様に縮めれば他の特異点も現れない．
+
+node の ideal $(x,t)$ の blow-up は
+\[
+ x=tX,\quad z=Xy,
+ \qquad\hbox{または}\qquad
+ t=xT,\quad y=Tz
+\]
+で覆われる．後者では $f=xT$ であり，中心 fiber の SNC 性を保つ．
+この選択は $S_i$ 側だけを $q_{ij,p}$ で blow up するものである．
+triple point を含め，既に全空間が smooth な場所では中心成分の ideal は Cartier
+なので変更はない．この操作を順番に行うと
+\eqref{part:components} を得る．大域的には coherent ideals の blow-up の列であり，
+従って projective である．
+\end{proof}
+
+以後 $C_{ij}$ は，必要に応じて $D_i,D_j$ 上の strict transforms も表す．
+$H_i$ を hyperplane class の pullback，$E_{ij,p}$ を $D_i$ 上の exceptional curves とすると，
+$i<j$ に対して
+\begin{equation}\label{part:double-class}
+ [C_{ij}]_{D_i}=e_jH_i-\sum_{p=1}^{d e_i e_j}E_{ij,p},
+ \qquad [C_{ij}]_{D_j}=e_iH_j.
+\end{equation}
+blow-up points は全 triple points から離れているため，
+これらの strict transforms は元の $C_{ij}$ と同じ marked curve である．
+adjunction と Bézout により
+\begin{equation}\label{part:curve-data}
+ g_{ij}=1+\frac12e_i e_j(e_i+e_j-4),\qquad
+ n_{ij}=e_i e_j(d-e_i-e_j).
+\end{equation}
+$n_{ij}$ は $C_{ij}$ 上の triple points の総数である．
+normal degrees も
+\[
+ \deg N_{C_{ij}/D_i}=e_i e_j(e_j-d),\qquad
+ \deg N_{C_{ij}/D_j}=e_i^2e_j
+\]
+なので，両者の和に $n_{ij}$ を加えると $0$ となる．
+この式は multiplicities を含む triple-point relation である．
+正の genus の場合には，この degree の一致だけでは不十分なので，
+line bundle の同定も記しておく．
+$Q_{ij}=\{G_d=0\}\cap C_{ij}$，$T_{ij}^{\rm div}$ を $C_{ij}$ 上の triple-point divisor とすると，
+\[
+ \mathcal O_{C_{ij}}(Q_{ij})=\mathcal O_{C_{ij}}(d),\qquad
+ \mathcal O_{C_{ij}}(T_{ij}^{\rm div})
+       =\mathcal O_{C_{ij}}(d-e_i-e_j).
+\]
+従って
+\begin{equation}\label{part:normal-bundle}
+ N_{C_{ij}/D_i}\otimes N_{C_{ij}/D_j}
+       \otimes\mathcal O_{C_{ij}}(T_{ij}^{\rm div})
+ \simeq
+ \mathcal O_{C_{ij}}(e_j-d+e_i+d-e_i-e_j)
+ \simeq\mathcal O_{C_{ij}}.
+\end{equation}
+$G_d$ と $\prod_{\ell\ne i,j}F_\ell$ の restrictions がこの同定を与える．
+特に punctured curve 上の双対 normal bundles と $xy=t$ の smoothing data は，
+degree だけから推測することなく実際の family から得られる．
+
+\subsection{weighted sharp simplex}
+
+$\sum_i[D_i]=0$ なので，$\beta_i$ の共通定数の不定性を除いて
+\[
+ \xi=aH+\sum_{i=1}^k\beta_i[D_i],\qquad a>0
+\]
+と置く．さらに
+\[
+ S=\sum_i e_i\beta_i,\qquad a_i=a+S-d\beta_i,\qquad
+ E_\ell=\sum_{i=1}^{\ell}e_i
+\]
+と書く．$[D_i]|_{D_i}=-\sum_{j\ne i}[C_{ij}]$ と
+\eqref{part:double-class} から
+\begin{equation}\label{part:restriction}
+ \xi_i:=\xi|_{D_i}
+ =a_iH_i-\sum_{j>i}\sum_{p=1}^{d e_i e_j}
+                (\beta_j-\beta_i)E_{ij,p}.
+\end{equation}
+従って
+\begin{equation}\label{part:areas}
+ \xi_i\cdot E_{ij,p}=\beta_j-\beta_i,\qquad
+ \xi_i\cdot C_{ij}=e_i e_j a_j=\xi_j\cdot C_{ij}\quad(i<j).
+\end{equation}
+
+\begin{theorem}[分割次数で重み付けされた Kähler slice]
+\label{part:cone}
+$\xi$ が，底を十分縮めた $\widetilde{\mathcal X}$ 上で Kähler class として
+実現できるための必要十分条件は
+\begin{equation}\label{part:cone-condition}
+ \beta_1<\cdots<\beta_k,\qquad A:=a_k=a+S-d\beta_k>0
+\end{equation}
+である．$\delta_\ell=\beta_{\ell+1}-\beta_\ell$ を用いると，
+この領域は
+\begin{equation}\label{part:simplex}
+ \delta_\ell>0\quad(1\leq\ell<k),\qquad
+ \sum_{\ell=1}^{k-1}E_\ell\delta_\ell<a
+\end{equation}
+という sharp な開単体になる．
+これは指定した vertical affine slice の記述であり，
+全相対 Kähler cone の記述を主張するものではない．
+\end{theorem}
+\begin{proof}
+exceptional curves の正面積から $\beta_j-\beta_i>0$ が必要である．
+$C_{ik}$ の面積が $e_i e_k a_k$ であるため，$A>0$ も必要である．
+
+十分性を示す．exceptional curves と boundary curves の面積は
+\eqref{part:areas} により正である．
+それ以外の既約曲線の blow-down を $C\subset S_i$ とし，
+$m=H_i\cdot C>0$ と書く．
+$C$ はいずれの $C_{ij}$ も成分として含まない．
+各 blown-up point では $C_{ij}$ が smooth なので
+$I_p(C,C_{ij})\geq\operatorname{mult}_pC$ である．
+従って Bézout により
+\[
+ \sum_{p\in C_{ij}\cap\{G_d=0\}}\operatorname{mult}_pC
+   \leq C\cdot C_{ij}=e_jm.
+\]
+これを \eqref{part:restriction} に代入すると
+\begin{align*}
+ \xi_i\cdot\widetilde C
+ &\geq\left(a_i-\sum_{j>i}e_j(\beta_j-\beta_i)\right)m\\
+ &=\left(a-\sum_{j<i}e_j(\beta_i-\beta_j)\right)m
+ \geq A m>0.
+\end{align*}
+
+$u_i=\beta_k-\beta_i\geq0$ と置くと $a_i=A+du_i$ であり，
+$H_i^2=e_i$ と blow-up 点数から
+\begin{align*}
+ \xi_i^2
+ &=e_i\left(a_i^2-d\sum_{j>i}e_j(\beta_j-\beta_i)^2\right)\\
+ &\geq e_i\left((A+du_i)^2-d(d-E_i)u_i^2\right)\\
+ &=e_i\left(A^2+2dAu_i+dE_i u_i^2\right)>0.
+\end{align*}
+従って rational class については Nakai--Moishezon
+\cite[Chapter V, Theorem 1.10]{Hartshorne} により，分母を払った line bundle は
+各 $D_i$ 上で ample である．
+全成分の disjoint union から中心 fiber への finite surjection に沿う ampleness の降下，
+および relative ampleness の開性により，底を縮めると relatively ample となる
+\cite{StacksAmpleness}．
+curvature に底からの十分正の形式を加えれば全空間の Kähler form を得る．
+
+real class の場合は $\gamma_i=\beta_i/a$ として
+$\xi/a=H+\sum_i\gamma_i[D_i]$ に正規化する．
+$a=1$ の条件は rational strict linear inequalities なので，
+与えられた $\gamma$ はその領域内の有限個の rational points の凸結合である．
+対応する Kähler forms を共通の小さい円板上で凸結合し，最後に $a$ 倍する．
+
+最後に
+\[
+ A=a-\sum_{i<k}e_i(\beta_k-\beta_i)
+   =a-\sum_{\ell=1}^{k-1}E_\ell\delta_\ell
+\]
+より \eqref{part:simplex} を得る．
+各 $\delta_\ell=0$ では $q_{\ell,\ell+1,p}$ の exceptional areas が零になり，
+$A=0$ では最後の成分の double curves の面積が零になるので，不等式は sharp である．
+\end{proof}
+
+\begin{corollary}[volume の保存]
+\label{part:volume}
+\[
+ \sum_i\xi_i^2=da^2,\qquad \xi|_{X_t}=aH\quad(t\ne0).
+\]
+\end{corollary}
+\begin{proof}
+$R=\sum_i e_i\beta_i^2$ とすると
+\[
+ \sum_i e_i a_i^2=da^2-dS^2+d^2R,\qquad
+ \sum_{i<j}e_i e_j(\beta_j-\beta_i)^2=dR-S^2.
+\]
+\eqref{part:restriction} の平方を足してこれらを代入すれば最初の式を得る．
+非零 fiber 上では各 vertical divisor の line bundle が自明なので第二式も従う．
+\end{proof}
+
+\subsection{指定した次数分割に対する大域 fibration}
+
+各 $C_{ij}$ からその $n_{ij}$ 個の triple-point disks を除いた曲面に，
+境界で radial で，内部には
+\begin{equation}\label{part:saddle-count}
+ s_{ij}=2g_{ij}+n_{ij}-2=e_i e_j(d-4)
+\end{equation}
+個の simple saddles だけを持つ marked Morse 葉層を一つ選ぶ．
+両側で同じ実際の marked curve と同じ相対 isotopy class を用いる．
+その Reeb graph を $T_{ij}=T_{ji}$ とし，
+各 leaf は個々の triple point でラベル付けする．
+$d\geq5$ と $k\geq3$ から $n_{ij}\geq2$ である．
+実際，$e_i e_j=1$ なら $n_{ij}=d-2\geq3$，
+それ以外なら $n_{ij}\geq e_i e_j\geq2$ である．
+従って定理\ref{snc:main}の valence 仮定を満たす．
+
+\begin{theorem}[次数分割による core の構成]
+\label{part:global}
+任意の滑らかな次数 $d\geq5$ の曲面 $X_d\subset\PP^3$ と
+$[\omega]=aH$，$a>0$ を満たす Kähler form $\omega$，
+および上記の順序付き分割と marked foliations に対し，
+自由な辺を持たない有限二次元複体への Lagrangian torus fibration を構成できる．
+その core fibers はちょうど $k$ 個であり，第 $i$ core は
+\[
+ W_i=S_i\setminus\bigcup_{j\ne i}C_{ij}
+\]
+の適切に選んだ logarithmic Weinstein skeleton の symplectic image である．
+その他の内部 singular fibers は
+\[
+ d\sum_{i<j}e_i e_j
+ \quad\hbox{個の simple nodal fibers}
+\]
+と，$T_{ij}$ の各 saddle に沿う $S^1\times\figeight$ である．
+開放射分岐辺の総数は $(d-4)\sum_{i<j}e_i e_j$ となる．
+底空間は，各 $T_{ij}$ の内部頂点を $i,j$ 間の branch edge，
+内部辺を bigon，個々の triple point を triangle として得られる複体である．
+その topology は定理\ref{part:homotopy}の cellular 記述で計算される．
+\end{theorem}
+\begin{proof}
+polarization の構成には，開単体の全域ではなく
+$\beta_i=(i-k)\eps$，$\eps>0$ の十分小さい ray を使う．
+整数 class
+\[
+ \mathcal A=d^2H+\sum_i(i-k)[D_i]
+\]
+は定理\ref{part:cone}により relatively ample である．
+実際 $\sum_{\ell<k}E_\ell\leq d(k-1)<d^2$ である．
+その Kähler representative を $\Omega_{\mathcal A}$ とすると，
+\[
+ \Omega_\eps^K=(a-d^2\eps)\pi^*\omega_{\rm FS}
+              +\eps\Omega_{\mathcal A}+f^*\omega_\Delta
+\]
+は $0<\eps<a/d^2$ で Kähler であり，必要な class を持つ．
+この family は exceptional locus を避けた固定 compact sets 上で
+$a\pi^*\omega_{\rm FS}+f^*\omega_\Delta$ へ滑らかに近づく．
+各中心成分上のその制限は，対応する $S_i$ 上の $a\omega_{\rm FS}$ へ近づく．
+従って固定 crossing charts と局所 surgery patches を先に選び，
+その後で $\eps$ を一様に小さくできる．
+
+各 blow-down $S_i$ 上で，form の class を $a_iH_i$ とする．
+boundary curves は $[C_{ij}]=e_jH_i$ なので，
+例えば全 $j\ne i$ に
+\[
+ w_{ij}=\frac{a_i}{2\pi(d-e_i)}>0
+\]
+を配れば $a_iH_i=2\pi\sum_{j\ne i}w_{ij}[C_{ij}]$ である．
+定理\ref{snc:main}を用い，fixed crossing germs と full marked foliations を持つ
+finite compactification を作る．
+正の genus の component periods は，同定理の connection-holonomy 補正で消される．
+この時点で全 $q_{ij,p}$ を相異なる regular boundary leaves 上に置くよう，
+marking の相対 isotopy class 内で代表を選ぶ．
+有限個の点についての条件なので，crossing collars を固定した
+小さい isotopy で実現できる．
+
+$i<j$ の $q_{ij,p}$ ごとに，面積 $(j-i)\eps$ の divisor-compatible holomorphic
+blow-up を局所 patch の内部で行う．
+$\eps$ を小さくしてあるため，全ての balls を互いに素に選べる．
+局所 almost-toric comparison \cite[Theorem 1.1]{CGblowup} により，
+各 blow-up は一個の compact nodal fiber を与え，patch 外では変更しない．
+得られる form の class は正確に \eqref{part:restriction} である．
+actual $D_i$ の form へは，crossing germs を固定した同じ class の path に沿い，
+補題\ref{glue:pair-moser}の divisor-relative Moser と
+補題\ref{glue:circle}の normal-circle conjugacy を適用して移す．
+どちらの補題も curve の genus 零を仮定していない．
+前者は同じ marked curve 上の $\operatorname{Diff}_0$-isotopy であり，
+後者は curve を点ごとに固定する．
+regular annulus 内の twists は foliation の stabilizer として吸収できるので，
+positive genus でも prescribed marking は保たれる．
+
+double-curve neck の $xy=t$ と triple-point model の $uvw=t$ は
+命題\ref{part:resolution}により平面の場合と同じである．
+実際の family 上で circle action を得るには，
+節\ref{sec:necks}の exact-neck argument をそのまま用いる．
+$C_{ij}^{\circ}$ は genus によらず open Riemann surface であり，Stein かつ
+$H^2(C_{ij}^{\circ};\ZZ)=0$ である．
+Docquier--Grauert の tubular theorem と holomorphic bundle の自明性により，
+必要な compact punctured curve の周囲に product Stein tube を取れる
+\cite{Forstneric}．その Picard group は $0$ なので，両成分の defining functions を
+$x,y_0$ と取り，$f=vxy_0$ の unit を $y=vy_0$ に吸収できる．
+holomorphic retraction と $(x,y)$ の微分は zero section で可逆であるため，
+十分薄い tube で $f=xy$ が正確に成り立つ．
+従って反対向きの normal rotations が実際の tube 上で大域的に定義され，$f$ を保つ．
+triple-point ends への調整では，従来と同じ縮小と cutoff を用い，
+normal framing の winding は捨てずに残す．
+平均化後の invariant form に対して $\iota_V\Omega$ は closed であり，
+zero section 上への pullback が $0$ である．
+tube が zero section へ retract するので，これは exact であり，
+moment は zero section 上で $0$ と正規化できる．
+従って正の genus は Hamiltonian circle action の存在にも新たな障害を与えない．
+local moment averaging とその relative cutoff は有限個の charts に同様に適用できる．
+成分の core と \emph{compact nodal fiber 全体}を含む saturated truncation を
+選び，補題\ref{glue:transport}で nearby fiber へ運ぶ．
+両側の reduced foliations は同じ marked curve 上の
+$\operatorname{Diff}_0$-orbit に属する．
+補題\ref{neck:marked-interpolation}の構成は，境界 collars を固定する isotopy に
+沿って Morse function を引き戻すだけなので，genus を問わず適用できる．
+この補間では $\{\mu,h_\mu\}=0$ を保つ．
+個々の triple point では節\ref{glue:hexagon}の同じ saturated toric hexagon を用いる．
+
+以上により全 interfaces は whole fibers の union となり，
+core，neck，triple-point pieces が十分小さい nearby fiber を覆う．
+各 saddle は二つの component cores を結ぶ三枚-sheet の branch edge を与え，
+内部の regular Reeb edge は bigon，個々の triple point は triangle を与える．
+従って有限な Hausdorff 底空間を得て，自由な辺も新たな singular-fiber types も生じない．
+fiber 数は \eqref{part:saddle-count} と node 数から従う．
+最後に次数 $d$ の smooth hypersurfaces の連結な parameter space と fixed-class
+Moser を用いれば，構成を任意の $(X_d,\omega)$ に移せる．
+\end{proof}
+
+\begin{corollary}[core の Euler 数]
+\label{part:core-euler}
+$S_2=\sum_{i<j}e_i e_j$ と置くと，第 $i$ core の Euler 数は
+\begin{equation}\label{part:core-euler-formula}
+ \chi(\Sigma_i)=e_i(d^2-4d+6-S_2)
+\end{equation}
+であり，core と nodal fibers の寄与は
+\[
+ \sum_i\chi(\Sigma_i)+dS_2=d(d^2-4d+6)=\chi(X_d)
+\]
+を満たす．
+\end{corollary}
+\begin{proof}
+$c(TS_i)=(1+H)^4/(1+e_iH)$ から $\chi(S_i)=e_i(e_i^2-4e_i+6)$，
+$\chi(C_{ij})=-e_i e_j(e_i+e_j-4)$，
+$S_i$ 上の boundary crossings の数は
+$e_i\sum_{j<\ell,\ j,\ell\ne i}e_j e_\ell$ である．
+inclusion--exclusion と $\Sigma_i\simeq W_i$ から
+\[
+ \chi(\Sigma_i)
+ =e_i(e_i^2-4e_i+6)
+ +e_i\sum_{j\ne i}e_j(e_i+e_j-4)
+ +e_i\sum_{\substack{j<\ell\\ j,\ell\ne i}}e_j e_\ell.
+\]
+$d=\sum e_i$ を代入して整理すると \eqref{part:core-euler-formula} となる．
+$\sum_i e_i=d$ なので最後の式も従う．
+\end{proof}
+
+\paragraph{同じ曲面上での異なる core 配置.}
+次の数値は上の定理と定理\ref{part:homotopy}から得られる．
+\[
+\begin{array}{c|c|c|c|c}
+ d & (e_i) & (\chi(\Sigma_i)) & N_{\rm node} & b_2(B)\\ \hline
+ 5 &(1,2,2)&(3,6,6)&40&4\\
+ 6 &(2,2,2)&(12,12,12)&72&10\\
+ 6 &(1,1,4)&(9,9,36)&54&9
+\end{array}
+\]
+最後の二行は同じ次数六の曲面に適用できるが，底空間の第二 Betti 数が異なるため，
+その底空間は homotopy 同値でない．
+core の複雑さと node 数の分担を変更できることが，次数分割による構成の具体的な効果である．
+
+\begin{remark}
+定理\ref{part:global}は次数 $d$ の曲面の存在範囲を広げる主張ではない．
+同じ $(X_d,aH)$ に対して，平面分割 $(1,\ldots,1)$ による $d$ 個の cores と，
+他の分割による $k$ 個の異なる cores を選べることを主張する．
+また，定理\ref{part:cone}の開単体の全ての点に同一の局所 blow-up construction を
+実行できるとは主張しない．大域 fibration の証明で必要なのは十分小さい ray だけである．
+\end{remark}

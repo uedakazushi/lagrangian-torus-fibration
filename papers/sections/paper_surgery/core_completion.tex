@@ -1,0 +1,397 @@
+\section{Regular torus 領域を加えた core 置換の障害と具体的な handle 模型}
+\label{cs7:section}
+
+この節では、五直線 core と一つの指定された boundary blow-up から得られる
+\[
+ U=\operatorname{Bl}_p\mathbb P^2\setminus\bigcup_{i=1}^5D'_i
+\]
+を引き続き対象とする。$p$ は $L_1$ の他の直線との交点でない点であり、
+$D'_i$ は五直線の strict transform である。
+前節の no-go を、閉じた corner circuit に沿う regular torus bundle の付加まで拡張する。
+また、$U$ を三つの affine hyperbola の complement として表示し、
+generic projection による九つの局所 braid と smooth handle 数を求める。
+後者は fixed-boundary pants surgery の完成ではなく、
+そのために比較すべき具体的な filling の記述である。
+
+\subsection{閉じた corner circuit の torus completion}
+
+$P$ を標準四次元 pants とする。$\partial P$ には四つの
+$S^1\times\Sigma_{0,3}$ 型 facet と六つの corner torus がある。
+corner の小さい collar を残して facet を縮めれば、その閉包は互いに離れる。
+以下の定義では、この縮小と角の丸めを暗黙に行う。
+
+\begin{definition}[Closed-circuit torus completion]
+\label{cs7:completiondef}
+$p>0$ 個の $P$ のコピーの facet を、互いに異なる facet の対ごとに
+向きを逆にする diffeomorphism で貼る。各 facet は高々一回だけ用いる。
+使った対の数を $e$、pants を頂点、facet の対を辺とする graph を $\Gamma$ とする。
+loops と multiple edges は許す。
+
+corner collar は二種類に分かれる。未貼付 facet に達するものは
+external boundary の torus collar となる。未貼付 facet に達することなく閉じるものは
+\emph{closed corner circuit} であり、その三次元領域は $T^2$-bundle over $S^1$
+となる。この bundle の monodromy は自明とは仮定しない。
+
+これらの閉じた三次元 boundary components に、compact surface 上の任意の
+regular $T^2$-bundle を、boundary fibration を合わせて付加してよい。
+複数の boundary components を持つ surface、非自明な monodromy、
+許される Chern class を含める。disk 上の $T^2\times D^2$ による
+二次元 face の充填はこの特別な場合である。
+付加領域に circle collapse や singular fiber は入れない。
+また、open corner chain、未貼付 facet、その一部分に付加領域を直接取り付けることは許さない。
+最終空間 $X$ は連結とし、その boundary $Y_X$ は連結で、
+negative-base Seifert pieces を含むものとする。
+\end{definition}
+
+この定義は、二次元 nerve cell を全く認めなかった全 face assembly より広い。
+特に disk filling は基本群に追加の関係を与えるので、
+完成後の基本群に graph-of-spaces の式をそのまま使うことはできない。
+一方、開いた torus corridor による異なる boundary 部分の接続はこの定義に含まれない。
+Golla--Martelli の disk face の admissibility は
+\cite[Proposition~4.3]{GollaMartelli}、非 disk face への拡張とその選択は
+\cite[Remark~4.9]{GollaMartelli} に記述されている。
+ここでは、これらの extension が既に存在する場合まで許して障害を示す。
+
+\begin{definition}[境界の Seifert base complexity]
+全ての JSJ pieces が Euler 数負の base orbifold を持つ Seifert manifold である
+graph manifold $Y$ に対して
+\[
+ \mathcal C(Y)=\sum_V-\chi_{\mathrm{orb}}(B_V)
+\]
+と定める。以下の assembly から生じる pieces には exceptional fiber はないので、
+orbifold Euler 数は通常の base surface の Euler 数である。
+\end{definition}
+
+\begin{lemma}[境界 complexity と corner circuit]
+\label{cs7:complexitylemma}
+定義~\ref{cs7:completiondef} の $X$ に対して
+\begin{equation}
+ \chi(X)=p,\qquad \mathcal C(Y_X)=4p-2e.
+ \label{cs7:count}
+\end{equation}
+さらに $\Gamma$ の tree component には closed corner circuit がなく、
+regular torus 領域によって他の component と接続することはできない。
+\end{lemma}
+
+\begin{proof}
+各 pants の Euler 数は $1$、gluing facet、corner bundle、regular torus bundle の
+Euler 数は全て零である。従って $\chi(X)=p$ である。
+一対の facet を貼るごとに external boundary から二つの
+$S^1\times\Sigma_{0,3}$ が消える。残る $4p-2e$ 個の pieces を
+torus collars に沿って合わせたものが、external boundary の negative-base 部分である。
+regular torus 領域はこれと別の\emph{閉じた三次元 boundary components} にのみ付く。
+従ってこの negative-base 部分を変更しない。
+未充填の regular boundary component があれば別の boundary component になるので、
+$Y_X$ の連結性と negative-base 部分の存在により、そのような component は残らない。
+
+各残存 facet の base Euler 数は $-1$ である。
+隣接 piece の fiber slope が一致して Seifert pieces が合併する場合にも、
+base Euler 数は加法的である。負の Euler 数は保たれ、Seifert fibration の
+$T^2\times I$ や twisted $I$-bundle に由来する例外は生じない。
+fiber slopes の異なる tori は incompressible JSJ tori として残る。
+従って reduced JSJ decomposition に移っても和は $4p-2e$ のままである。
+この還元は Neumann~\cite[\S5]{Neumann} の基準とも一致する。
+
+一つの closed corner circuit を $\Gamma$ に射影する。
+各 pants 内では corner は\emph{異なる二つの facets} の間を通るため、
+射影された closed walk に即時の backtracking はない。
+従ってこれは cyclically reduced な非空の closed walk である。
+tree にそのような walk は存在しない。
+regular torus 領域の attaching boundary は全てこの種の circuit なので、
+tree component にその領域を取り付けることはできない。
+\end{proof}
+
+\begin{theorem}[最大 complexity の場合の剛性]
+\label{cs7:complexitydichotomy}
+定義~\ref{cs7:completiondef} の連結な $X$ について、次のいずれかが成り立つ。
+\begin{enumerate}
+ \item $\Gamma$ は tree で、regular torus completion は存在せず、
+ \[
+  \mathcal C(Y_X)=2\chi(X)+2.
+ \]
+ この場合、$Y_X$ の reduced JSJ graph は planar である。
+ \item $\Gamma$ の全ての connected components は cycle を含み、
+ \[
+  \mathcal C(Y_X)\leq2\chi(X).
+ \]
+\end{enumerate}
+特に $\mathcal C(Y_X)>2\chi(X)$ ならば第一の場合に限られる。
+\end{theorem}
+
+\begin{proof}
+$\Gamma$ に tree component があれば、前補題によりそれは completion によって
+他の component と接続できない。$X$ は連結なので、その tree component が $\Gamma$ 全体である。
+従って $e=p-1$ であり、closed corner circuit は一つもない。
+式~\eqref{cs7:count} は第一の場合の等式を与える。
+boundary graph は各 $K_4$ を 3-edge vertex-sum によって tree 状に合わせたものとなる。
+この操作は planarity を保ち、fiber-parallel merger は graph の edge contraction と
+loop の除去に対応するので、reduced JSJ graph も planar である。
+
+tree component がなければ、$\Gamma$ の component ごとに辺数は頂点数以上である。
+従って $e\geq p$ で、式~\eqref{cs7:count} は
+$\mathcal C(Y_X)\leq2p=2\chi(X)$ を与える。
+\end{proof}
+
+\begin{corollary}[四 pants の closed-circuit completion も不可能]
+\label{cs7:fourpantsnogo}
+五直線の一つの smooth boundary point を blow up して得られる $U$ の compact core $K$ は、
+定義~\ref{cs7:completiondef} の completion と diffeomorphic ではない。
+従って、任意の regular torus bundles による閉じた二次元 face の充填を加えても、
+このクラスの fixed-boundary 四 pants 置換は存在しない。
+\end{corollary}
+
+\begin{proof}
+$\chi(K)=4$ なので pants 数は $p=4$ である。
+$Y=\partial K$ の reduced JSJ pieces は五つの
+$S^1\times\Sigma_{0,4}$ であり、graph は $K_5$ である。従って
+\[
+ \mathcal C(Y)=5\cdot2=10=2\chi(K)+2.
+\]
+定理~\ref{cs7:complexitydichotomy} によれば、同じ境界を持つ completion の
+reduced JSJ graph は planar でなければならない。$K_5$ は非 planar なので矛盾する。
+\end{proof}
+
+\begin{remark}[必要になる変更の場所]
+この証明は完成後の基本群を計算していない。
+従って、disk face の追加関係や non-disk regular region の monodromy によって
+基本群が変わること自体では障害を回避できない。
+四 pants 構成が存在するなら、少なくとも定義の外にある操作、例えば
+open corner chains への torus corridor、circle collapse、
+標準 facet の一部分だけを用いる接続などが必要である。
+これはそれらの操作の実現を主張するものでも、一般の Golla--Martelli 型 decomposition を
+全て否定するものでもない。
+\end{remark}
+
+\subsection{多直線の canonical pants 数に対する incidence budget}
+
+$m\geq5$ 本の一般位置の直線の smooth boundary points を blow up し、
+strict transforms の complement を考える。
+blow-up は divisor の double points を変えないので、reduced boundary JSJ graph は
+$K_m$、各 piece の base は $\Sigma_{0,m-1}$ である。従って
+\begin{equation}
+ \mathcal C(Y)=m(m-3).
+ \label{cs7:manycomplexity}
+\end{equation}
+
+\begin{proposition}[canonical count から強制される gluing graph]
+\label{cs7:budget}
+pants 数を $p=(m-3)^2$ とし、この境界を
+closed-circuit torus completion で実現できたと仮定する。
+facet gluing の数は必ず
+\begin{equation}
+ e=\frac{3(m-3)(m-4)}2
+ \label{cs7:edgecount}
+\end{equation}
+である。$\Gamma$ が連結ならば
+\begin{equation}
+ b_1(\Gamma)=\binom{m-4}{2}.
+ \label{cs7:cyclebudget}
+\end{equation}
+completion が disk bundles のみからなる場合、$\Gamma$ は必ず連結である。
+\end{proposition}
+
+\begin{proof}
+式~\eqref{cs7:count} と~\eqref{cs7:manycomplexity} から
+$2e=4(m-3)^2-m(m-3)$ を解けば~\eqref{cs7:edgecount} を得る。
+連結なら $b_1=e-p+1$ であり、これが~\eqref{cs7:cyclebudget} である。
+disk bundle の boundary は連結なので、異なる connected components の間を接続できない。
+従って disk bundles の付加で連結な $X$ を作る場合、初めから $\Gamma$ が連結である。
+\end{proof}
+
+\begin{proposition}[disk relations の必要数と peripheral survival]
+\label{cs7:diskrelations}
+前命題の disk-only completion で、$g=b_1(\Gamma)>0$ とし、disk 数を $q$ とする。
+完成後の基本群が $\mathbb Z^3$ ならば
+\[
+ q\geq\max\{1,g-3\}.
+\]
+さらに、ある pants vertex の $\mathbb Z^3$ が完成後の基本群へ同型に写るという
+\emph{peripheral survival} を要求すると、
+\[
+ q\geq g.
+\]
+特に $m=6$ ならば、追加の survival 仮定なしに少なくとも一つの disk relation が必要である。
+\end{proposition}
+
+\begin{proof}
+completion 前の全 face assembly の基本群は
+$G=\mathbb Z^3\rtimes_\rho F_g$ である。
+一つの $T^2\times D^2$ の付加について、boundary group から filler group への写像は
+$\mathbb Z^3\to\mathbb Z^2$ の全射で、kernel は一つの primitive element により生成される。
+従って van Kampen の定理により、付加は $G$ に高々一つの normal relation を加える。
+vertex lattice も商に取ると、完成後の群は $g$ generators と高々 $q$ relations を持つ群へ全射する。
+この商は $\mathbb Z^3$ の商なので、その一次 Betti 数は高々 $3$ である。
+従って $g-q\leq3$ である。
+$q=0$ の場合は $\mathbb Z^3\rtimes F_g\not\cong\mathbb Z^3$ なので $q\geq1$ でもある。
+
+survival を仮定すれば、完成後の可換群で
+$\rho(\gamma)v=v$ が全ての $v\in\mathbb Z^3$ に対して成り立ち、
+vertex lattice の単射性から $\rho=I$ である。
+従って completion 前の $H_1$ は rank $3+g$ であり、
+一つの relation は rank を高々一つしか下げないので $q\geq g$ となる。
+\end{proof}
+
+\subsection{三つの affine hyperbola による exact algebraic model}
+
+\begin{proposition}[二つの affine coordinates]
+\label{cs7:hyperbola}
+$U$ は、適切な constants $A_i,B_i$ を用いて
+\begin{equation}
+ U\cong\mathbb C^2_{t,z}\setminus
+ \bigcup_{i=1}^3\{1-z(A_it+B_i)=0\}
+ \label{cs7:hyperbolachart}
+\end{equation}
+と代数的に同型である。$A_i\ne0$ であり、三つの curves はそれぞれ
+$\mathbb C^*$ と同型、pairwise に一点ずつ transverse に交わり、三重点はない。
+例外 affine line は $E^\circ=\{z=0\}$ である。
+affine modification map は
+\begin{equation}
+ (t,z)\longmapsto(x,z)=(tz,z)
+ \label{cs7:modmap}
+\end{equation}
+であり、その標的は三つの一般位置の affine lines
+$1-A_i x-B_i z=0$ の complement である。
+\end{proposition}
+
+\begin{proof}
+$L_5$ を line at infinity とする affine chart を取り、$p=(0,0)$、
+$L_1=\{z=0\}$ とする。残る三直線は、$p$ を通らないことから
+$1-A_i x-B_i z=0$ と書ける。
+$L_1$ と $L_5$ の交点が他の直線に含まれないので $A_i\ne0$ である。
+$\operatorname{Bl}_0\mathbb C^2$ から $\{z=0\}$ の strict transform を除くと、
+全体が $x=tz$ という一つの blow-up chart になる。
+残る三直線をこの chart へ引き戻せば~\eqref{cs7:hyperbolachart} を得る。
+$z=0$ は exceptional divisor の strict-transform boundary を除いた部分である。
+各 curve は $z\in\mathbb C^*$ によって
+$t=(z^{-1}-B_i)/A_i$ と parametrise される。
+交点と transversality は、blow-up center を含まない元の三直線から保たれる。
+\end{proof}
+
+式~\eqref{cs7:modmap} は Kaliman--Zaidenberg~\cite[\S\S1--3]{KalimanZaidenberg}
+の affine modification の具体的な chart である。
+また、元の ruling の表示で $L_5$ が $y=a_5t+b_5$ ならば、
+$z=(y-a_5t-b_5)^{-1}$ と置くことで同じ表示を得る。
+この変換は removed section を infinity に送るので、残る全空間は一つの affine plane chart に入る。
+
+\begin{proposition}[finite projection と局所 braid]
+\label{cs7:finiteprojection}
+$u=t+c z$ とし、$c\ne0$ を一般に選ぶ。
+deleted curve への projection は degree $6$ の finite map である。
+その exceptional values は六つの simple branch values と三つの node values の合計九個であり、
+全て相異なるように $c$ を選べる。
+generic fiber にある六つの punctures の local braid は、
+branch value で正の half twist、node value で正の full twist である。
+対応する compact smooth core には
+\begin{equation}
+ h_0=1,\qquad h_1=6,\qquad h_2=9,\qquad h_3=h_4=0
+ \label{cs7:handlecount}
+\end{equation}
+という handle decomposition がある。
+\end{proposition}
+
+\begin{proof}
+第 $i$ 成分の equation は $(u,z)$ 座標で
+\[
+ A_i c z^2-(A_i u+B_i)z+1=0
+\]
+である。$z^2$ の coefficient は非零定数なので projection は finite である。
+その discriminant は
+\[
+ (A_i u+B_i)^2-4A_i c,
+\]
+従って各成分に二つの simple branch values がある。
+三つの transverse intersections の projection と、これら六つの値との偶然の一致を避ける
+$c$ は Zariski open な条件で選べる。
+simple branch と node の局所 equations はそれぞれ
+$z^2=u$ と $z^2=u^2$ に帰着し、punctures の正の一周は
+half twist と full twist を与える。
+
+generic projection による curve complement の handle construction
+\cite[Proposition~3.1, Theorem~3.7]{Sugawara}
+では、六つの punctures から六つの $1$-handles が生じ、
+二点が合流する各 exceptional value から一つの $2$-handle が生じる。
+従って九つの exceptional values を用いると~\eqref{cs7:handlecount} を得る。
+Kirby attaching circles とその framing は同文献の Theorem~4.1 により
+braid transport を含めて定まる。
+\end{proof}
+
+\begin{example}[全 exceptional values を書ける実係数モデル]
+\label{cs7:explicitmodel}
+\[
+ h_1=1-tz,\qquad h_2=1-(2t+1)z,\qquad
+ h_3=1-(3t+4)z
+\]
+とし、$u=t+3z$ とする。
+三つの node の $(t,z)$ 座標は
+\[
+ (-1,-1),\qquad(-2,-1/2),\qquad(-3,-1/5),
+\]
+従って node values は
+\[
+ -4,\qquad-7/2,\qquad-18/5.
+\]
+六つの branch values は
+\[
+ \pm2\sqrt3,\qquad-\tfrac12\pm\sqrt6,\qquad
+ -\tfrac{10}{3},\quad\tfrac23.
+\]
+これら九個は全て相異なる。例えば $u_0=4$ を reference fiber として、
+この実数列の周囲の distinguished paths を選べば、
+三つの quadratic equations の roots を追うことで全 attaching braid を指定できる。
+ただし局所 braid の共役類の列だけでは global attaching diagram は決まらず、
+distinguished paths に沿う transport が必要である。
+\end{example}
+
+\begin{proposition}[六本 strand の boundary braid]
+\label{cs7:infinitybraid}
+上の具体例で、十分大きい正の circle $u=Re^{i\theta}$ 上の braid を考える。
+三つずつの root clusters を $I_-$、$I_+$ とし、$T_6$ を六本全体の正の full twist、
+$T_-$、$T_+$ を各 cluster 内の正の full twist とすると、simultaneous conjugacy を除いて
+\begin{equation}
+ \beta_\infty=T_6\,T_-^{-2}T_+^{-1}.
+ \label{cs7:infinityword}
+\end{equation}
+特に braid abelianization における exponent sum は $12$ である。
+\end{proposition}
+
+\begin{proof}
+一般に $B_i/A_i$ と $1/A_i$ がそれぞれ相異なる場合、大きい $u$ に対する roots は
+\[
+ z_{i,-}=\frac1{A_i u}+O(u^{-2}),\qquad
+ z_{i,+}=\frac u c+\frac{B_i}{A_i c}-\frac1{A_i u}+O(u^{-2})
+\]
+となる。この例はその仮定を満たす。
+十分大きい $R$ では、誤差を零へ縮めても同じ cluster 内にも cluster 間にも衝突はない。
+$I_-$ は原点近くで負に一回回転し、$I_+$ の center は $u/c$ に沿って正に一回回るが、
+$I_+$ 内の相対配置は定数である。
+二つの cluster の間だけの正の full twist は $T_6T_-^{-1}T_+^{-1}$ であり、
+$I_-$ 内の負の一回転 $T_-^{-1}$ を加えると~\eqref{cs7:infinityword} になる。
+$T_6$ の exponent sum は $6\cdot5=30$、$T_\pm$ のそれは $3\cdot2=6$ なので、
+合計は $30-2\cdot6-6=12$ である。
+これは六つの half twists と三つの full twists の合計 $6+3\cdot2=12$ とも一致する。
+\end{proof}
+
+\subsection{Weinstein 構成と relative surgery の間に残る問題}
+
+式~\eqref{cs7:hyperbolachart} は、今後の Kirby 比較に入力できる具体的な equation を与える。
+例えば
+\[
+ \varphi(t,z)=|t|^2+|z|^2+\sum_{i=1}^3|h_i(t,z)|^{-2}
+\]
+は $U$ 上の exhausting strictly plurisubharmonic function である。
+第一の二項が正定値 Levi form を与え、各 $h_i^{-1}$ は $U$ 上で holomorphic であり、
+deleted curve に近づくと対応する項は無限大へ発散する。
+generic な小 perturbation により Morse exhaustion を選べ、
+これに対応する Stein/Weinstein handlebody を検討できる。
+
+しかし~\eqref{cs7:handlecount} は smooth handle decomposition の主張である。
+これだけから、九つの attaching circles が既に所望の contact framing を持つとは結論しない。
+また九つの deleted-curve exceptional values を九つの focus--focus nodes と同一視しない。
+四 pants 側に同じ $\pi_1$、intersection lattice、boundary graph、braid exponent が現れても、
+fixed-boundary diffeomorphism、contact collar、action primitive と period lattice の一致は別に必要である。
+
+次の具体的な比較では、式~\eqref{cs7:hyperbolachart} と distinguished paths から
+framed Kirby diagram を作り、open torus corridor を含む pants 側の diagram と比較する。
+その際に boundary の rank-six peripheral kernel と五つの Seifert fiber slopes を追う。
+closed-circuit regular fillings だけの候補は系~\ref{cs7:fourpantsnogo} により除外済みであり、
+この候補群を繰り返し探索する必要はない。

@@ -1,0 +1,6032 @@
+{
+  "version": "v24",
+  "status": "PASS",
+  "scope": "Unbounded proportional-sector reduction: x=y=0 and 0<=n<=z; complete fixed-(s,z) axis reconstruction.",
+  "global_three_high_nonexistence_claim": false,
+  "global_proportional_nonexistence_claim": false,
+  "coefficient_identity_count": 10,
+  "coefficient_identities": [
+    {
+      "name": "original_residual_after_linear_Q_elimination",
+      "status": "PASS",
+      "left_terms": 122,
+      "right_terms": 122,
+      "difference_terms": 0
+    },
+    {
+      "name": "x_one_residual_coefficients",
+      "status": "PASS",
+      "left_terms": 38,
+      "right_terms": 38,
+      "difference_terms": 0
+    },
+    {
+      "name": "x_one_at_k_zero",
+      "status": "PASS",
+      "left_terms": 10,
+      "right_terms": 10,
+      "difference_terms": 0
+    },
+    {
+      "name": "x_one_at_k_one",
+      "status": "PASS",
+      "left_terms": 14,
+      "right_terms": 14,
+      "difference_terms": 0
+    },
+    {
+      "name": "x_one_h_one_all_k_ge_one",
+      "status": "PASS",
+      "left_terms": 12,
+      "right_terms": 12,
+      "difference_terms": 0
+    },
+    {
+      "name": "axis_quartic_leading_coefficient",
+      "status": "PASS",
+      "left_terms": 3,
+      "right_terms": 3,
+      "difference_terms": 0
+    },
+    {
+      "name": "axis_quadratic_in_lattice_integer",
+      "status": "PASS",
+      "left_terms": 68,
+      "right_terms": 68,
+      "difference_terms": 0
+    },
+    {
+      "name": "axis_divisor_remainder",
+      "status": "PASS",
+      "left_terms": 11,
+      "right_terms": 11,
+      "difference_terms": 0
+    },
+    {
+      "name": "axis_zero_remainder_resonance",
+      "status": "PASS",
+      "left_terms": 5,
+      "right_terms": 5,
+      "difference_terms": 0
+    },
+    {
+      "name": "axis_divisor_uniform_bound_at_n_equals_z",
+      "status": "PASS",
+      "left_terms": 6,
+      "right_terms": 6,
+      "difference_terms": 0
+    }
+  ],
+  "off_axis_positive_certificate": {
+    "name": "x>=2, h>=1, w>=1, z>=0",
+    "status": "PASS",
+    "variables": [
+      "h_minus_1",
+      "x_minus_2",
+      "w_minus_1",
+      "z"
+    ],
+    "nonzero_coefficient_count": 281,
+    "constant": 312,
+    "all_nonzero_coefficients_positive": true,
+    "degree_groups": {
+      "h_minus_1": {
+        "7": {
+          "count": 6,
+          "minimum_coefficient": 1
+        },
+        "6": {
+          "count": 15,
+          "minimum_coefficient": 2
+        },
+        "5": {
+          "count": 27,
+          "minimum_coefficient": 1
+        },
+        "4": {
+          "count": 38,
+          "minimum_coefficient": 2
+        },
+        "3": {
+          "count": 46,
+          "minimum_coefficient": 1
+        },
+        "2": {
+          "count": 49,
+          "minimum_coefficient": 2
+        },
+        "1": {
+          "count": 50,
+          "minimum_coefficient": 1
+        },
+        "0": {
+          "count": 50,
+          "minimum_coefficient": 1
+        }
+      },
+      "x_minus_2": {
+        "2": {
+          "count": 67,
+          "minimum_coefficient": 1
+        },
+        "1": {
+          "count": 74,
+          "minimum_coefficient": 2
+        },
+        "0": {
+          "count": 77,
+          "minimum_coefficient": 1
+        },
+        "3": {
+          "count": 43,
+          "minimum_coefficient": 2
+        },
+        "4": {
+          "count": 20,
+          "minimum_coefficient": 1
+        }
+      },
+      "w_minus_1": {
+        "0": {
+          "count": 87,
+          "minimum_coefficient": 1
+        },
+        "1": {
+          "count": 75,
+          "minimum_coefficient": 2
+        },
+        "2": {
+          "count": 63,
+          "minimum_coefficient": 1
+        },
+        "3": {
+          "count": 39,
+          "minimum_coefficient": 2
+        },
+        "4": {
+          "count": 17,
+          "minimum_coefficient": 1
+        }
+      },
+      "z": {
+        "0": {
+          "count": 135,
+          "minimum_coefficient": 1
+        },
+        "1": {
+          "count": 92,
+          "minimum_coefficient": 2
+        },
+        "2": {
+          "count": 54,
+          "minimum_coefficient": 1
+        }
+      }
+    },
+    "coefficients_sha256": "8766db72310e888f4ab234665859b519e3642b9f3444f6f77cbb94c69d20d338",
+    "full_coefficients": [
+      {
+        "exponents": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "coefficient": 312
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "coefficient": 176
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          0,
+          2
+        ],
+        "coefficient": 22
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "coefficient": 570
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "coefficient": 264
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          1,
+          2
+        ],
+        "coefficient": 24
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          2,
+          0
+        ],
+        "coefficient": 361
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          2,
+          1
+        ],
+        "coefficient": 122
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          2,
+          2
+        ],
+        "coefficient": 6
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          3,
+          0
+        ],
+        "coefficient": 96
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          3,
+          1
+        ],
+        "coefficient": 18
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          4,
+          0
+        ],
+        "coefficient": 9
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "coefficient": 916
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "coefficient": 306
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          0,
+          2
+        ],
+        "coefficient": 19
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "coefficient": 1692
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "coefficient": 443
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          1,
+          2
+        ],
+        "coefficient": 20
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          2,
+          0
+        ],
+        "coefficient": 1116
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          2,
+          1
+        ],
+        "coefficient": 203
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          2,
+          2
+        ],
+        "coefficient": 5
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          3,
+          0
+        ],
+        "coefficient": 317
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          3,
+          1
+        ],
+        "coefficient": 30
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          4,
+          0
+        ],
+        "coefficient": 33
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          0,
+          0
+        ],
+        "coefficient": 820
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          0,
+          1
+        ],
+        "coefficient": 154
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          0,
+          2
+        ],
+        "coefficient": 4
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          1,
+          0
+        ],
+        "coefficient": 1467
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          1,
+          1
+        ],
+        "coefficient": 214
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          1,
+          2
+        ],
+        "coefficient": 4
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          2,
+          0
+        ],
+        "coefficient": 953
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          2,
+          1
+        ],
+        "coefficient": 96
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          2,
+          2
+        ],
+        "coefficient": 1
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          3,
+          0
+        ],
+        "coefficient": 269
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "coefficient": 14
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          4,
+          0
+        ],
+        "coefficient": 28
+      },
+      {
+        "exponents": [
+          0,
+          3,
+          0,
+          0
+        ],
+        "coefficient": 291
+      },
+      {
+        "exponents": [
+          0,
+          3,
+          0,
+          1
+        ],
+        "coefficient": 24
+      },
+      {
+        "exponents": [
+          0,
+          3,
+          1,
+          0
+        ],
+        "coefficient": 502
+      },
+      {
+        "exponents": [
+          0,
+          3,
+          1,
+          1
+        ],
+        "coefficient": 32
+      },
+      {
+        "exponents": [
+          0,
+          3,
+          2,
+          0
+        ],
+        "coefficient": 318
+      },
+      {
+        "exponents": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "coefficient": 14
+      },
+      {
+        "exponents": [
+          0,
+          3,
+          3,
+          0
+        ],
+        "coefficient": 88
+      },
+      {
+        "exponents": [
+          0,
+          3,
+          3,
+          1
+        ],
+        "coefficient": 2
+      },
+      {
+        "exponents": [
+          0,
+          3,
+          4,
+          0
+        ],
+        "coefficient": 9
+      },
+      {
+        "exponents": [
+          0,
+          4,
+          0,
+          0
+        ],
+        "coefficient": 36
+      },
+      {
+        "exponents": [
+          0,
+          4,
+          1,
+          0
+        ],
+        "coefficient": 60
+      },
+      {
+        "exponents": [
+          0,
+          4,
+          2,
+          0
+        ],
+        "coefficient": 37
+      },
+      {
+        "exponents": [
+          0,
+          4,
+          3,
+          0
+        ],
+        "coefficient": 10
+      },
+      {
+        "exponents": [
+          0,
+          4,
+          4,
+          0
+        ],
+        "coefficient": 1
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "coefficient": 1744
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "coefficient": 935
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          0,
+          2
+        ],
+        "coefficient": 118
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "coefficient": 2906
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "coefficient": 1260
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          1,
+          2
+        ],
+        "coefficient": 116
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          2,
+          0
+        ],
+        "coefficient": 1660
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          2,
+          1
+        ],
+        "coefficient": 515
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          2,
+          2
+        ],
+        "coefficient": 26
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          3,
+          0
+        ],
+        "coefficient": 395
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          3,
+          1
+        ],
+        "coefficient": 66
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          4,
+          0
+        ],
+        "coefficient": 33
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "coefficient": 4203
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "coefficient": 1417
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          0,
+          2
+        ],
+        "coefficient": 88
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "coefficient": 6796
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "coefficient": 1802
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "coefficient": 82
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          2,
+          0
+        ],
+        "coefficient": 3829
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          2,
+          1
+        ],
+        "coefficient": 711
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "coefficient": 18
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          3,
+          0
+        ],
+        "coefficient": 900
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          3,
+          1
+        ],
+        "coefficient": 88
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          4,
+          0
+        ],
+        "coefficient": 74
+      },
+      {
+        "exponents": [
+          1,
+          2,
+          0,
+          0
+        ],
+        "coefficient": 3335
+      },
+      {
+        "exponents": [
+          1,
+          2,
+          0,
+          1
+        ],
+        "coefficient": 634
+      },
+      {
+        "exponents": [
+          1,
+          2,
+          0,
+          2
+        ],
+        "coefficient": 16
+      },
+      {
+        "exponents": [
+          1,
+          2,
+          1,
+          0
+        ],
+        "coefficient": 5120
+      },
+      {
+        "exponents": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "coefficient": 762
+      },
+      {
+        "exponents": [
+          1,
+          2,
+          1,
+          2
+        ],
+        "coefficient": 14
+      },
+      {
+        "exponents": [
+          1,
+          2,
+          2,
+          0
+        ],
+        "coefficient": 2768
+      },
+      {
+        "exponents": [
+          1,
+          2,
+          2,
+          1
+        ],
+        "coefficient": 288
+      },
+      {
+        "exponents": [
+          1,
+          2,
+          2,
+          2
+        ],
+        "coefficient": 3
+      },
+      {
+        "exponents": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "coefficient": 622
+      },
+      {
+        "exponents": [
+          1,
+          2,
+          3,
+          1
+        ],
+        "coefficient": 34
+      },
+      {
+        "exponents": [
+          1,
+          2,
+          4,
+          0
+        ],
+        "coefficient": 48
+      },
+      {
+        "exponents": [
+          1,
+          3,
+          0,
+          0
+        ],
+        "coefficient": 1070
+      },
+      {
+        "exponents": [
+          1,
+          3,
+          0,
+          1
+        ],
+        "coefficient": 88
+      },
+      {
+        "exponents": [
+          1,
+          3,
+          1,
+          0
+        ],
+        "coefficient": 1558
+      },
+      {
+        "exponents": [
+          1,
+          3,
+          1,
+          1
+        ],
+        "coefficient": 100
+      },
+      {
+        "exponents": [
+          1,
+          3,
+          2,
+          0
+        ],
+        "coefficient": 802
+      },
+      {
+        "exponents": [
+          1,
+          3,
+          2,
+          1
+        ],
+        "coefficient": 36
+      },
+      {
+        "exponents": [
+          1,
+          3,
+          3,
+          0
+        ],
+        "coefficient": 170
+      },
+      {
+        "exponents": [
+          1,
+          3,
+          3,
+          1
+        ],
+        "coefficient": 4
+      },
+      {
+        "exponents": [
+          1,
+          3,
+          4,
+          0
+        ],
+        "coefficient": 12
+      },
+      {
+        "exponents": [
+          1,
+          4,
+          0,
+          0
+        ],
+        "coefficient": 120
+      },
+      {
+        "exponents": [
+          1,
+          4,
+          1,
+          0
+        ],
+        "coefficient": 166
+      },
+      {
+        "exponents": [
+          1,
+          4,
+          2,
+          0
+        ],
+        "coefficient": 81
+      },
+      {
+        "exponents": [
+          1,
+          4,
+          3,
+          0
+        ],
+        "coefficient": 16
+      },
+      {
+        "exponents": [
+          1,
+          4,
+          4,
+          0
+        ],
+        "coefficient": 1
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          0,
+          0
+        ],
+        "coefficient": 3630
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          0,
+          1
+        ],
+        "coefficient": 1960
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          0,
+          2
+        ],
+        "coefficient": 255
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          1,
+          0
+        ],
+        "coefficient": 5118
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          1,
+          1
+        ],
+        "coefficient": 2251
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          1,
+          2
+        ],
+        "coefficient": 216
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          2,
+          0
+        ],
+        "coefficient": 2337
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          2,
+          1
+        ],
+        "coefficient": 753
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          2,
+          2
+        ],
+        "coefficient": 41
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          3,
+          0
+        ],
+        "coefficient": 403
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          3,
+          1
+        ],
+        "coefficient": 74
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          4,
+          0
+        ],
+        "coefficient": 19
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          0,
+          0
+        ],
+        "coefficient": 7659
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          0,
+          1
+        ],
+        "coefficient": 2637
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          0,
+          2
+        ],
+        "coefficient": 163
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          1,
+          0
+        ],
+        "coefficient": 10247
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          1,
+          1
+        ],
+        "coefficient": 2800
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          1,
+          2
+        ],
+        "coefficient": 128
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          2,
+          0
+        ],
+        "coefficient": 4508
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          2,
+          1
+        ],
+        "coefficient": 881
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          2,
+          2
+        ],
+        "coefficient": 23
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          3,
+          0
+        ],
+        "coefficient": 745
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          3,
+          1
+        ],
+        "coefficient": 80
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          4,
+          0
+        ],
+        "coefficient": 33
+      },
+      {
+        "exponents": [
+          2,
+          2,
+          0,
+          0
+        ],
+        "coefficient": 5460
+      },
+      {
+        "exponents": [
+          2,
+          2,
+          0,
+          1
+        ],
+        "coefficient": 1042
+      },
+      {
+        "exponents": [
+          2,
+          2,
+          0,
+          2
+        ],
+        "coefficient": 25
+      },
+      {
+        "exponents": [
+          2,
+          2,
+          1,
+          0
+        ],
+        "coefficient": 6807
+      },
+      {
+        "exponents": [
+          2,
+          2,
+          1,
+          1
+        ],
+        "coefficient": 1024
+      },
+      {
+        "exponents": [
+          2,
+          2,
+          1,
+          2
+        ],
+        "coefficient": 18
+      },
+      {
+        "exponents": [
+          2,
+          2,
+          2,
+          0
+        ],
+        "coefficient": 2799
+      },
+      {
+        "exponents": [
+          2,
+          2,
+          2,
+          1
+        ],
+        "coefficient": 298
+      },
+      {
+        "exponents": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "coefficient": 3
+      },
+      {
+        "exponents": [
+          2,
+          2,
+          3,
+          0
+        ],
+        "coefficient": 421
+      },
+      {
+        "exponents": [
+          2,
+          2,
+          3,
+          1
+        ],
+        "coefficient": 24
+      },
+      {
+        "exponents": [
+          2,
+          2,
+          4,
+          0
+        ],
+        "coefficient": 15
+      },
+      {
+        "exponents": [
+          2,
+          3,
+          0,
+          0
+        ],
+        "coefficient": 1574
+      },
+      {
+        "exponents": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "coefficient": 126
+      },
+      {
+        "exponents": [
+          2,
+          3,
+          1,
+          0
+        ],
+        "coefficient": 1822
+      },
+      {
+        "exponents": [
+          2,
+          3,
+          1,
+          1
+        ],
+        "coefficient": 114
+      },
+      {
+        "exponents": [
+          2,
+          3,
+          2,
+          0
+        ],
+        "coefficient": 688
+      },
+      {
+        "exponents": [
+          2,
+          3,
+          2,
+          1
+        ],
+        "coefficient": 30
+      },
+      {
+        "exponents": [
+          2,
+          3,
+          3,
+          0
+        ],
+        "coefficient": 90
+      },
+      {
+        "exponents": [
+          2,
+          3,
+          3,
+          1
+        ],
+        "coefficient": 2
+      },
+      {
+        "exponents": [
+          2,
+          3,
+          4,
+          0
+        ],
+        "coefficient": 2
+      },
+      {
+        "exponents": [
+          2,
+          4,
+          0,
+          0
+        ],
+        "coefficient": 157
+      },
+      {
+        "exponents": [
+          2,
+          4,
+          1,
+          0
+        ],
+        "coefficient": 168
+      },
+      {
+        "exponents": [
+          2,
+          4,
+          2,
+          0
+        ],
+        "coefficient": 57
+      },
+      {
+        "exponents": [
+          2,
+          4,
+          3,
+          0
+        ],
+        "coefficient": 6
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          0,
+          0
+        ],
+        "coefficient": 3926
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          0,
+          1
+        ],
+        "coefficient": 2152
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          0,
+          2
+        ],
+        "coefficient": 289
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          1,
+          0
+        ],
+        "coefficient": 4416
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          1,
+          1
+        ],
+        "coefficient": 1977
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          1,
+          2
+        ],
+        "coefficient": 198
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          2,
+          0
+        ],
+        "coefficient": 1471
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          2,
+          1
+        ],
+        "coefficient": 489
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          2,
+          2
+        ],
+        "coefficient": 29
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          3,
+          0
+        ],
+        "coefficient": 157
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          3,
+          1
+        ],
+        "coefficient": 30
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          4,
+          0
+        ],
+        "coefficient": 3
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          0,
+          0
+        ],
+        "coefficient": 7375
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          0,
+          1
+        ],
+        "coefficient": 2565
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          0,
+          2
+        ],
+        "coefficient": 154
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          1,
+          0
+        ],
+        "coefficient": 7690
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          1,
+          1
+        ],
+        "coefficient": 2122
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          1,
+          2
+        ],
+        "coefficient": 94
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          2,
+          0
+        ],
+        "coefficient": 2401
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          2,
+          1
+        ],
+        "coefficient": 473
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          2,
+          2
+        ],
+        "coefficient": 12
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          3,
+          0
+        ],
+        "coefficient": 234
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          3,
+          1
+        ],
+        "coefficient": 24
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          4,
+          0
+        ],
+        "coefficient": 4
+      },
+      {
+        "exponents": [
+          3,
+          2,
+          0,
+          0
+        ],
+        "coefficient": 4695
+      },
+      {
+        "exponents": [
+          3,
+          2,
+          0,
+          1
+        ],
+        "coefficient": 874
+      },
+      {
+        "exponents": [
+          3,
+          2,
+          0,
+          2
+        ],
+        "coefficient": 19
+      },
+      {
+        "exponents": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "coefficient": 4442
+      },
+      {
+        "exponents": [
+          3,
+          2,
+          1,
+          1
+        ],
+        "coefficient": 644
+      },
+      {
+        "exponents": [
+          3,
+          2,
+          1,
+          2
+        ],
+        "coefficient": 10
+      },
+      {
+        "exponents": [
+          3,
+          2,
+          2,
+          0
+        ],
+        "coefficient": 1238
+      },
+      {
+        "exponents": [
+          3,
+          2,
+          2,
+          1
+        ],
+        "coefficient": 122
+      },
+      {
+        "exponents": [
+          3,
+          2,
+          2,
+          2
+        ],
+        "coefficient": 1
+      },
+      {
+        "exponents": [
+          3,
+          2,
+          3,
+          0
+        ],
+        "coefficient": 98
+      },
+      {
+        "exponents": [
+          3,
+          2,
+          3,
+          1
+        ],
+        "coefficient": 4
+      },
+      {
+        "exponents": [
+          3,
+          2,
+          4,
+          0
+        ],
+        "coefficient": 1
+      },
+      {
+        "exponents": [
+          3,
+          3,
+          0,
+          0
+        ],
+        "coefficient": 1188
+      },
+      {
+        "exponents": [
+          3,
+          3,
+          0,
+          1
+        ],
+        "coefficient": 88
+      },
+      {
+        "exponents": [
+          3,
+          3,
+          1,
+          0
+        ],
+        "coefficient": 1004
+      },
+      {
+        "exponents": [
+          3,
+          3,
+          1,
+          1
+        ],
+        "coefficient": 56
+      },
+      {
+        "exponents": [
+          3,
+          3,
+          2,
+          0
+        ],
+        "coefficient": 236
+      },
+      {
+        "exponents": [
+          3,
+          3,
+          2,
+          1
+        ],
+        "coefficient": 8
+      },
+      {
+        "exponents": [
+          3,
+          3,
+          3,
+          0
+        ],
+        "coefficient": 12
+      },
+      {
+        "exponents": [
+          3,
+          4,
+          0,
+          0
+        ],
+        "coefficient": 101
+      },
+      {
+        "exponents": [
+          3,
+          4,
+          1,
+          0
+        ],
+        "coefficient": 74
+      },
+      {
+        "exponents": [
+          3,
+          4,
+          2,
+          0
+        ],
+        "coefficient": 13
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          0,
+          0
+        ],
+        "coefficient": 2458
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          0,
+          1
+        ],
+        "coefficient": 1358
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          0,
+          2
+        ],
+        "coefficient": 186
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          1,
+          0
+        ],
+        "coefficient": 2044
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          1,
+          1
+        ],
+        "coefficient": 917
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          1,
+          2
+        ],
+        "coefficient": 94
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          2,
+          0
+        ],
+        "coefficient": 434
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          2,
+          1
+        ],
+        "coefficient": 145
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          2,
+          2
+        ],
+        "coefficient": 9
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          3,
+          0
+        ],
+        "coefficient": 21
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          3,
+          1
+        ],
+        "coefficient": 4
+      },
+      {
+        "exponents": [
+          4,
+          1,
+          0,
+          0
+        ],
+        "coefficient": 4101
+      },
+      {
+        "exponents": [
+          4,
+          1,
+          0,
+          1
+        ],
+        "coefficient": 1409
+      },
+      {
+        "exponents": [
+          4,
+          1,
+          0,
+          2
+        ],
+        "coefficient": 78
+      },
+      {
+        "exponents": [
+          4,
+          1,
+          1,
+          0
+        ],
+        "coefficient": 3067
+      },
+      {
+        "exponents": [
+          4,
+          1,
+          1,
+          1
+        ],
+        "coefficient": 823
+      },
+      {
+        "exponents": [
+          4,
+          1,
+          1,
+          2
+        ],
+        "coefficient": 32
+      },
+      {
+        "exponents": [
+          4,
+          1,
+          2,
+          0
+        ],
+        "coefficient": 586
+      },
+      {
+        "exponents": [
+          4,
+          1,
+          2,
+          1
+        ],
+        "coefficient": 108
+      },
+      {
+        "exponents": [
+          4,
+          1,
+          2,
+          2
+        ],
+        "coefficient": 2
+      },
+      {
+        "exponents": [
+          4,
+          1,
+          3,
+          0
+        ],
+        "coefficient": 24
+      },
+      {
+        "exponents": [
+          4,
+          1,
+          3,
+          1
+        ],
+        "coefficient": 2
+      },
+      {
+        "exponents": [
+          4,
+          2,
+          0,
+          0
+        ],
+        "coefficient": 2284
+      },
+      {
+        "exponents": [
+          4,
+          2,
+          0,
+          1
+        ],
+        "coefficient": 394
+      },
+      {
+        "exponents": [
+          4,
+          2,
+          0,
+          2
+        ],
+        "coefficient": 7
+      },
+      {
+        "exponents": [
+          4,
+          2,
+          1,
+          0
+        ],
+        "coefficient": 1484
+      },
+      {
+        "exponents": [
+          4,
+          2,
+          1,
+          1
+        ],
+        "coefficient": 188
+      },
+      {
+        "exponents": [
+          4,
+          2,
+          1,
+          2
+        ],
+        "coefficient": 2
+      },
+      {
+        "exponents": [
+          4,
+          2,
+          2,
+          0
+        ],
+        "coefficient": 231
+      },
+      {
+        "exponents": [
+          4,
+          2,
+          2,
+          1
+        ],
+        "coefficient": 16
+      },
+      {
+        "exponents": [
+          4,
+          2,
+          3,
+          0
+        ],
+        "coefficient": 6
+      },
+      {
+        "exponents": [
+          4,
+          3,
+          0,
+          0
+        ],
+        "coefficient": 484
+      },
+      {
+        "exponents": [
+          4,
+          3,
+          0,
+          1
+        ],
+        "coefficient": 30
+      },
+      {
+        "exponents": [
+          4,
+          3,
+          1,
+          0
+        ],
+        "coefficient": 258
+      },
+      {
+        "exponents": [
+          4,
+          3,
+          1,
+          1
+        ],
+        "coefficient": 10
+      },
+      {
+        "exponents": [
+          4,
+          3,
+          2,
+          0
+        ],
+        "coefficient": 26
+      },
+      {
+        "exponents": [
+          4,
+          4,
+          0,
+          0
+        ],
+        "coefficient": 32
+      },
+      {
+        "exponents": [
+          4,
+          4,
+          1,
+          0
+        ],
+        "coefficient": 12
+      },
+      {
+        "exponents": [
+          5,
+          0,
+          0,
+          0
+        ],
+        "coefficient": 906
+      },
+      {
+        "exponents": [
+          5,
+          0,
+          0,
+          1
+        ],
+        "coefficient": 497
+      },
+      {
+        "exponents": [
+          5,
+          0,
+          0,
+          2
+        ],
+        "coefficient": 68
+      },
+      {
+        "exponents": [
+          5,
+          0,
+          1,
+          0
+        ],
+        "coefficient": 490
+      },
+      {
+        "exponents": [
+          5,
+          0,
+          1,
+          1
+        ],
+        "coefficient": 215
+      },
+      {
+        "exponents": [
+          5,
+          0,
+          1,
+          2
+        ],
+        "coefficient": 22
+      },
+      {
+        "exponents": [
+          5,
+          0,
+          2,
+          0
+        ],
+        "coefficient": 49
+      },
+      {
+        "exponents": [
+          5,
+          0,
+          2,
+          1
+        ],
+        "coefficient": 16
+      },
+      {
+        "exponents": [
+          5,
+          0,
+          2,
+          2
+        ],
+        "coefficient": 1
+      },
+      {
+        "exponents": [
+          5,
+          1,
+          0,
+          0
+        ],
+        "coefficient": 1322
+      },
+      {
+        "exponents": [
+          5,
+          1,
+          0,
+          1
+        ],
+        "coefficient": 434
+      },
+      {
+        "exponents": [
+          5,
+          1,
+          0,
+          2
+        ],
+        "coefficient": 20
+      },
+      {
+        "exponents": [
+          5,
+          1,
+          1,
+          0
+        ],
+        "coefficient": 616
+      },
+      {
+        "exponents": [
+          5,
+          1,
+          1,
+          1
+        ],
+        "coefficient": 152
+      },
+      {
+        "exponents": [
+          5,
+          1,
+          1,
+          2
+        ],
+        "coefficient": 4
+      },
+      {
+        "exponents": [
+          5,
+          1,
+          2,
+          0
+        ],
+        "coefficient": 52
+      },
+      {
+        "exponents": [
+          5,
+          1,
+          2,
+          1
+        ],
+        "coefficient": 8
+      },
+      {
+        "exponents": [
+          5,
+          2,
+          0,
+          0
+        ],
+        "coefficient": 620
+      },
+      {
+        "exponents": [
+          5,
+          2,
+          0,
+          1
+        ],
+        "coefficient": 90
+      },
+      {
+        "exponents": [
+          5,
+          2,
+          0,
+          2
+        ],
+        "coefficient": 1
+      },
+      {
+        "exponents": [
+          5,
+          2,
+          1,
+          0
+        ],
+        "coefficient": 232
+      },
+      {
+        "exponents": [
+          5,
+          2,
+          1,
+          1
+        ],
+        "coefficient": 20
+      },
+      {
+        "exponents": [
+          5,
+          2,
+          2,
+          0
+        ],
+        "coefficient": 13
+      },
+      {
+        "exponents": [
+          5,
+          3,
+          0,
+          0
+        ],
+        "coefficient": 100
+      },
+      {
+        "exponents": [
+          5,
+          3,
+          0,
+          1
+        ],
+        "coefficient": 4
+      },
+      {
+        "exponents": [
+          5,
+          3,
+          1,
+          0
+        ],
+        "coefficient": 24
+      },
+      {
+        "exponents": [
+          5,
+          4,
+          0,
+          0
+        ],
+        "coefficient": 4
+      },
+      {
+        "exponents": [
+          6,
+          0,
+          0,
+          0
+        ],
+        "coefficient": 184
+      },
+      {
+        "exponents": [
+          6,
+          0,
+          0,
+          1
+        ],
+        "coefficient": 98
+      },
+      {
+        "exponents": [
+          6,
+          0,
+          0,
+          2
+        ],
+        "coefficient": 13
+      },
+      {
+        "exponents": [
+          6,
+          0,
+          1,
+          0
+        ],
+        "coefficient": 48
+      },
+      {
+        "exponents": [
+          6,
+          0,
+          1,
+          1
+        ],
+        "coefficient": 20
+      },
+      {
+        "exponents": [
+          6,
+          0,
+          1,
+          2
+        ],
+        "coefficient": 2
+      },
+      {
+        "exponents": [
+          6,
+          1,
+          0,
+          0
+        ],
+        "coefficient": 228
+      },
+      {
+        "exponents": [
+          6,
+          1,
+          0,
+          1
+        ],
+        "coefficient": 68
+      },
+      {
+        "exponents": [
+          6,
+          1,
+          0,
+          2
+        ],
+        "coefficient": 2
+      },
+      {
+        "exponents": [
+          6,
+          1,
+          1,
+          0
+        ],
+        "coefficient": 48
+      },
+      {
+        "exponents": [
+          6,
+          1,
+          1,
+          1
+        ],
+        "coefficient": 10
+      },
+      {
+        "exponents": [
+          6,
+          2,
+          0,
+          0
+        ],
+        "coefficient": 84
+      },
+      {
+        "exponents": [
+          6,
+          2,
+          0,
+          1
+        ],
+        "coefficient": 8
+      },
+      {
+        "exponents": [
+          6,
+          2,
+          1,
+          0
+        ],
+        "coefficient": 12
+      },
+      {
+        "exponents": [
+          6,
+          3,
+          0,
+          0
+        ],
+        "coefficient": 8
+      },
+      {
+        "exponents": [
+          7,
+          0,
+          0,
+          0
+        ],
+        "coefficient": 16
+      },
+      {
+        "exponents": [
+          7,
+          0,
+          0,
+          1
+        ],
+        "coefficient": 8
+      },
+      {
+        "exponents": [
+          7,
+          0,
+          0,
+          2
+        ],
+        "coefficient": 1
+      },
+      {
+        "exponents": [
+          7,
+          1,
+          0,
+          0
+        ],
+        "coefficient": 16
+      },
+      {
+        "exponents": [
+          7,
+          1,
+          0,
+          1
+        ],
+        "coefficient": 4
+      },
+      {
+        "exponents": [
+          7,
+          2,
+          0,
+          0
+        ],
+        "coefficient": 4
+      }
+    ]
+  },
+  "x_one_sign_certificates": [
+    {
+      "name": "x=1, h>=2, k=0",
+      "status": "PASS",
+      "variables": [
+        "h_minus_2",
+        "z",
+        "unused"
+      ],
+      "nonzero_coefficient_count": 18,
+      "constant": 44,
+      "all_nonzero_coefficients_positive": true,
+      "degree_groups": {
+        "h_minus_2": {
+          "5": {
+            "count": 3,
+            "minimum_coefficient": 1
+          },
+          "4": {
+            "count": 3,
+            "minimum_coefficient": 12
+          },
+          "3": {
+            "count": 3,
+            "minimum_coefficient": 56
+          },
+          "2": {
+            "count": 3,
+            "minimum_coefficient": 127
+          },
+          "1": {
+            "count": 3,
+            "minimum_coefficient": 140
+          },
+          "0": {
+            "count": 3,
+            "minimum_coefficient": 44
+          }
+        },
+        "z": {
+          "2": {
+            "count": 6,
+            "minimum_coefficient": 1
+          },
+          "1": {
+            "count": 6,
+            "minimum_coefficient": 4
+          },
+          "0": {
+            "count": 6,
+            "minimum_coefficient": 4
+          }
+        },
+        "unused": {
+          "0": {
+            "count": 18,
+            "minimum_coefficient": 1
+          }
+        }
+      },
+      "coefficients_sha256": "0e3627de83ecc5997533833a16e59b36dba050a48a99205852cd6767ec0d015a",
+      "full_coefficients": [
+        {
+          "exponents": [
+            0,
+            0,
+            0
+          ],
+          "coefficient": 44
+        },
+        {
+          "exponents": [
+            0,
+            1,
+            0
+          ],
+          "coefficient": 100
+        },
+        {
+          "exponents": [
+            0,
+            2,
+            0
+          ],
+          "coefficient": 60
+        },
+        {
+          "exponents": [
+            1,
+            0,
+            0
+          ],
+          "coefficient": 140
+        },
+        {
+          "exponents": [
+            1,
+            1,
+            0
+          ],
+          "coefficient": 282
+        },
+        {
+          "exponents": [
+            1,
+            2,
+            0
+          ],
+          "coefficient": 140
+        },
+        {
+          "exponents": [
+            2,
+            0,
+            0
+          ],
+          "coefficient": 179
+        },
+        {
+          "exponents": [
+            2,
+            1,
+            0
+          ],
+          "coefficient": 308
+        },
+        {
+          "exponents": [
+            2,
+            2,
+            0
+          ],
+          "coefficient": 127
+        },
+        {
+          "exponents": [
+            3,
+            0,
+            0
+          ],
+          "coefficient": 112
+        },
+        {
+          "exponents": [
+            3,
+            1,
+            0
+          ],
+          "coefficient": 162
+        },
+        {
+          "exponents": [
+            3,
+            2,
+            0
+          ],
+          "coefficient": 56
+        },
+        {
+          "exponents": [
+            4,
+            0,
+            0
+          ],
+          "coefficient": 34
+        },
+        {
+          "exponents": [
+            4,
+            1,
+            0
+          ],
+          "coefficient": 41
+        },
+        {
+          "exponents": [
+            4,
+            2,
+            0
+          ],
+          "coefficient": 12
+        },
+        {
+          "exponents": [
+            5,
+            0,
+            0
+          ],
+          "coefficient": 4
+        },
+        {
+          "exponents": [
+            5,
+            1,
+            0
+          ],
+          "coefficient": 4
+        },
+        {
+          "exponents": [
+            5,
+            2,
+            0
+          ],
+          "coefficient": 1
+        }
+      ]
+    },
+    {
+      "name": "negative k coefficient 1",
+      "status": "PASS",
+      "variables": [
+        "h_minus_2",
+        "z",
+        "unused"
+      ],
+      "nonzero_coefficient_count": 18,
+      "constant": 35,
+      "all_nonzero_coefficients_positive": true,
+      "degree_groups": {
+        "h_minus_2": {
+          "5": {
+            "count": 3,
+            "minimum_coefficient": 2
+          },
+          "4": {
+            "count": 3,
+            "minimum_coefficient": 24
+          },
+          "3": {
+            "count": 3,
+            "minimum_coefficient": 112
+          },
+          "2": {
+            "count": 3,
+            "minimum_coefficient": 213
+          },
+          "1": {
+            "count": 3,
+            "minimum_coefficient": 144
+          },
+          "0": {
+            "count": 3,
+            "minimum_coefficient": 35
+          }
+        },
+        "z": {
+          "2": {
+            "count": 6,
+            "minimum_coefficient": 2
+          },
+          "1": {
+            "count": 6,
+            "minimum_coefficient": 7
+          },
+          "0": {
+            "count": 6,
+            "minimum_coefficient": 6
+          }
+        },
+        "unused": {
+          "0": {
+            "count": 18,
+            "minimum_coefficient": 2
+          }
+        }
+      },
+      "coefficients_sha256": "40c1446690f62fb08464eaa30d7f05bea2ffec0242f5c0845680a9dddf83c4d1",
+      "full_coefficients": [
+        {
+          "exponents": [
+            0,
+            0,
+            0
+          ],
+          "coefficient": 35
+        },
+        {
+          "exponents": [
+            0,
+            1,
+            0
+          ],
+          "coefficient": 152
+        },
+        {
+          "exponents": [
+            0,
+            2,
+            0
+          ],
+          "coefficient": 120
+        },
+        {
+          "exponents": [
+            1,
+            0,
+            0
+          ],
+          "coefficient": 144
+        },
+        {
+          "exponents": [
+            1,
+            1,
+            0
+          ],
+          "coefficient": 446
+        },
+        {
+          "exponents": [
+            1,
+            2,
+            0
+          ],
+          "coefficient": 280
+        },
+        {
+          "exponents": [
+            2,
+            0,
+            0
+          ],
+          "coefficient": 213
+        },
+        {
+          "exponents": [
+            2,
+            1,
+            0
+          ],
+          "coefficient": 501
+        },
+        {
+          "exponents": [
+            2,
+            2,
+            0
+          ],
+          "coefficient": 254
+        },
+        {
+          "exponents": [
+            3,
+            0,
+            0
+          ],
+          "coefficient": 147
+        },
+        {
+          "exponents": [
+            3,
+            1,
+            0
+          ],
+          "coefficient": 270
+        },
+        {
+          "exponents": [
+            3,
+            2,
+            0
+          ],
+          "coefficient": 112
+        },
+        {
+          "exponents": [
+            4,
+            0,
+            0
+          ],
+          "coefficient": 48
+        },
+        {
+          "exponents": [
+            4,
+            1,
+            0
+          ],
+          "coefficient": 70
+        },
+        {
+          "exponents": [
+            4,
+            2,
+            0
+          ],
+          "coefficient": 24
+        },
+        {
+          "exponents": [
+            5,
+            0,
+            0
+          ],
+          "coefficient": 6
+        },
+        {
+          "exponents": [
+            5,
+            1,
+            0
+          ],
+          "coefficient": 7
+        },
+        {
+          "exponents": [
+            5,
+            2,
+            0
+          ],
+          "coefficient": 2
+        }
+      ]
+    },
+    {
+      "name": "negative k coefficient 2",
+      "status": "PASS",
+      "variables": [
+        "h_minus_2",
+        "z",
+        "unused"
+      ],
+      "nonzero_coefficient_count": 15,
+      "constant": 111,
+      "all_nonzero_coefficients_positive": true,
+      "degree_groups": {
+        "h_minus_2": {
+          "4": {
+            "count": 3,
+            "minimum_coefficient": 1
+          },
+          "3": {
+            "count": 3,
+            "minimum_coefficient": 10
+          },
+          "2": {
+            "count": 3,
+            "minimum_coefficient": 36
+          },
+          "1": {
+            "count": 3,
+            "minimum_coefficient": 55
+          },
+          "0": {
+            "count": 3,
+            "minimum_coefficient": 30
+          }
+        },
+        "z": {
+          "2": {
+            "count": 5,
+            "minimum_coefficient": 1
+          },
+          "1": {
+            "count": 5,
+            "minimum_coefficient": 8
+          },
+          "0": {
+            "count": 5,
+            "minimum_coefficient": 10
+          }
+        },
+        "unused": {
+          "0": {
+            "count": 15,
+            "minimum_coefficient": 1
+          }
+        }
+      },
+      "coefficients_sha256": "89a779ed483d8e4e4e531f8b6e135c0e28d66ca9b367270eaf15c9a413fed305",
+      "full_coefficients": [
+        {
+          "exponents": [
+            0,
+            0,
+            0
+          ],
+          "coefficient": 111
+        },
+        {
+          "exponents": [
+            0,
+            1,
+            0
+          ],
+          "coefficient": 176
+        },
+        {
+          "exponents": [
+            0,
+            2,
+            0
+          ],
+          "coefficient": 30
+        },
+        {
+          "exponents": [
+            1,
+            0,
+            0
+          ],
+          "coefficient": 247
+        },
+        {
+          "exponents": [
+            1,
+            1,
+            0
+          ],
+          "coefficient": 332
+        },
+        {
+          "exponents": [
+            1,
+            2,
+            0
+          ],
+          "coefficient": 55
+        },
+        {
+          "exponents": [
+            2,
+            0,
+            0
+          ],
+          "coefficient": 204
+        },
+        {
+          "exponents": [
+            2,
+            1,
+            0
+          ],
+          "coefficient": 232
+        },
+        {
+          "exponents": [
+            2,
+            2,
+            0
+          ],
+          "coefficient": 36
+        },
+        {
+          "exponents": [
+            3,
+            0,
+            0
+          ],
+          "coefficient": 74
+        },
+        {
+          "exponents": [
+            3,
+            1,
+            0
+          ],
+          "coefficient": 71
+        },
+        {
+          "exponents": [
+            3,
+            2,
+            0
+          ],
+          "coefficient": 10
+        },
+        {
+          "exponents": [
+            4,
+            0,
+            0
+          ],
+          "coefficient": 10
+        },
+        {
+          "exponents": [
+            4,
+            1,
+            0
+          ],
+          "coefficient": 8
+        },
+        {
+          "exponents": [
+            4,
+            2,
+            0
+          ],
+          "coefficient": 1
+        }
+      ]
+    },
+    {
+      "name": "negative k coefficient 3",
+      "status": "PASS",
+      "variables": [
+        "h_minus_2",
+        "z",
+        "unused"
+      ],
+      "nonzero_coefficient_count": 8,
+      "constant": 56,
+      "all_nonzero_coefficients_positive": true,
+      "degree_groups": {
+        "h_minus_2": {
+          "3": {
+            "count": 2,
+            "minimum_coefficient": 2
+          },
+          "2": {
+            "count": 2,
+            "minimum_coefficient": 14
+          },
+          "1": {
+            "count": 2,
+            "minimum_coefficient": 32
+          },
+          "0": {
+            "count": 2,
+            "minimum_coefficient": 24
+          }
+        },
+        "z": {
+          "1": {
+            "count": 4,
+            "minimum_coefficient": 2
+          },
+          "0": {
+            "count": 4,
+            "minimum_coefficient": 6
+          }
+        },
+        "unused": {
+          "0": {
+            "count": 8,
+            "minimum_coefficient": 2
+          }
+        }
+      },
+      "coefficients_sha256": "e532232d9aa527fd528bc6dbcf6454bbe0962e8f7689a4f98121c4d07c98854a",
+      "full_coefficients": [
+        {
+          "exponents": [
+            0,
+            0,
+            0
+          ],
+          "coefficient": 56
+        },
+        {
+          "exponents": [
+            0,
+            1,
+            0
+          ],
+          "coefficient": 24
+        },
+        {
+          "exponents": [
+            1,
+            0,
+            0
+          ],
+          "coefficient": 78
+        },
+        {
+          "exponents": [
+            1,
+            1,
+            0
+          ],
+          "coefficient": 32
+        },
+        {
+          "exponents": [
+            2,
+            0,
+            0
+          ],
+          "coefficient": 37
+        },
+        {
+          "exponents": [
+            2,
+            1,
+            0
+          ],
+          "coefficient": 14
+        },
+        {
+          "exponents": [
+            3,
+            0,
+            0
+          ],
+          "coefficient": 6
+        },
+        {
+          "exponents": [
+            3,
+            1,
+            0
+          ],
+          "coefficient": 2
+        }
+      ]
+    },
+    {
+      "name": "negative k coefficient 4",
+      "status": "PASS",
+      "variables": [
+        "h_minus_2",
+        "z",
+        "unused"
+      ],
+      "nonzero_coefficient_count": 3,
+      "constant": 4,
+      "all_nonzero_coefficients_positive": true,
+      "degree_groups": {
+        "h_minus_2": {
+          "2": {
+            "count": 1,
+            "minimum_coefficient": 1
+          },
+          "1": {
+            "count": 1,
+            "minimum_coefficient": 4
+          },
+          "0": {
+            "count": 1,
+            "minimum_coefficient": 4
+          }
+        },
+        "z": {
+          "0": {
+            "count": 3,
+            "minimum_coefficient": 1
+          }
+        },
+        "unused": {
+          "0": {
+            "count": 3,
+            "minimum_coefficient": 1
+          }
+        }
+      },
+      "coefficients_sha256": "02551788cc3758b640d5ceb245a7ea96e3dc8dbc4d1fe4181d67dea18d1b9673",
+      "full_coefficients": [
+        {
+          "exponents": [
+            0,
+            0,
+            0
+          ],
+          "coefficient": 4
+        },
+        {
+          "exponents": [
+            1,
+            0,
+            0
+          ],
+          "coefficient": 4
+        },
+        {
+          "exponents": [
+            2,
+            0,
+            0
+          ],
+          "coefficient": 1
+        }
+      ]
+    },
+    {
+      "name": "x=1, h=1, k>=1",
+      "status": "PASS",
+      "variables": [
+        "unused",
+        "z",
+        "k_minus_1"
+      ],
+      "nonzero_coefficient_count": 12,
+      "constant": 12,
+      "all_nonzero_coefficients_positive": true,
+      "degree_groups": {
+        "unused": {
+          "0": {
+            "count": 12,
+            "minimum_coefficient": 1
+          }
+        },
+        "z": {
+          "0": {
+            "count": 5,
+            "minimum_coefficient": 1
+          },
+          "1": {
+            "count": 4,
+            "minimum_coefficient": 4
+          },
+          "2": {
+            "count": 3,
+            "minimum_coefficient": 2
+          }
+        },
+        "k_minus_1": {
+          "4": {
+            "count": 1,
+            "minimum_coefficient": 1
+          },
+          "3": {
+            "count": 2,
+            "minimum_coefficient": 4
+          },
+          "2": {
+            "count": 3,
+            "minimum_coefficient": 2
+          },
+          "1": {
+            "count": 3,
+            "minimum_coefficient": 8
+          },
+          "0": {
+            "count": 3,
+            "minimum_coefficient": 4
+          }
+        }
+      },
+      "coefficients_sha256": "986b5693d48c84c72de88b4eee88f771985a71bad74f1e0058b69c90ee3109b8",
+      "full_coefficients": [
+        {
+          "exponents": [
+            0,
+            0,
+            0
+          ],
+          "coefficient": 12
+        },
+        {
+          "exponents": [
+            0,
+            0,
+            1
+          ],
+          "coefficient": 38
+        },
+        {
+          "exponents": [
+            0,
+            0,
+            2
+          ],
+          "coefficient": 37
+        },
+        {
+          "exponents": [
+            0,
+            0,
+            3
+          ],
+          "coefficient": 13
+        },
+        {
+          "exponents": [
+            0,
+            0,
+            4
+          ],
+          "coefficient": 1
+        },
+        {
+          "exponents": [
+            0,
+            1,
+            0
+          ],
+          "coefficient": 16
+        },
+        {
+          "exponents": [
+            0,
+            1,
+            1
+          ],
+          "coefficient": 38
+        },
+        {
+          "exponents": [
+            0,
+            1,
+            2
+          ],
+          "coefficient": 25
+        },
+        {
+          "exponents": [
+            0,
+            1,
+            3
+          ],
+          "coefficient": 4
+        },
+        {
+          "exponents": [
+            0,
+            2,
+            0
+          ],
+          "coefficient": 4
+        },
+        {
+          "exponents": [
+            0,
+            2,
+            1
+          ],
+          "coefficient": 8
+        },
+        {
+          "exponents": [
+            0,
+            2,
+            2
+          ],
+          "coefficient": 2
+        }
+      ]
+    }
+  ],
+  "zero_axis_lattice_width_certificate": {
+    "name": "n>=z+1, s>=1, b>=2, z>=1",
+    "status": "PASS",
+    "variables": [
+      "s_minus_1",
+      "b_minus_2",
+      "z_minus_1",
+      "n_minus_z_minus_1"
+    ],
+    "nonzero_coefficient_count": 209,
+    "constant": 63,
+    "all_nonzero_coefficients_positive": true,
+    "degree_groups": {
+      "s_minus_1": {
+        "0": {
+          "count": 59,
+          "minimum_coefficient": 1
+        },
+        "1": {
+          "count": 54,
+          "minimum_coefficient": 1
+        },
+        "2": {
+          "count": 45,
+          "minimum_coefficient": 3
+        },
+        "3": {
+          "count": 33,
+          "minimum_coefficient": 3
+        },
+        "4": {
+          "count": 18,
+          "minimum_coefficient": 1
+        }
+      },
+      "b_minus_2": {
+        "4": {
+          "count": 5,
+          "minimum_coefficient": 1
+        },
+        "3": {
+          "count": 18,
+          "minimum_coefficient": 1
+        },
+        "2": {
+          "count": 36,
+          "minimum_coefficient": 3
+        },
+        "1": {
+          "count": 60,
+          "minimum_coefficient": 3
+        },
+        "0": {
+          "count": 90,
+          "minimum_coefficient": 1
+        }
+      },
+      "z_minus_1": {
+        "0": {
+          "count": 45,
+          "minimum_coefficient": 1
+        },
+        "1": {
+          "count": 44,
+          "minimum_coefficient": 1
+        },
+        "2": {
+          "count": 40,
+          "minimum_coefficient": 4
+        },
+        "3": {
+          "count": 35,
+          "minimum_coefficient": 1
+        },
+        "4": {
+          "count": 26,
+          "minimum_coefficient": 1
+        },
+        "5": {
+          "count": 14,
+          "minimum_coefficient": 2
+        },
+        "6": {
+          "count": 5,
+          "minimum_coefficient": 1
+        }
+      },
+      "n_minus_z_minus_1": {
+        "2": {
+          "count": 55,
+          "minimum_coefficient": 1
+        },
+        "1": {
+          "count": 70,
+          "minimum_coefficient": 1
+        },
+        "0": {
+          "count": 84,
+          "minimum_coefficient": 1
+        }
+      }
+    },
+    "coefficients_sha256": "7c7c9b014ed7b34804a0e06a29ee59157b22d378ada4892d1bef7cfb3a3292d9",
+    "full_coefficients": [
+      {
+        "exponents": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "coefficient": 63
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "coefficient": 102
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          0,
+          2
+        ],
+        "coefficient": 28
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "coefficient": 168
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "coefficient": 163
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          1,
+          2
+        ],
+        "coefficient": 34
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          2,
+          0
+        ],
+        "coefficient": 187
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          2,
+          1
+        ],
+        "coefficient": 136
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          2,
+          2
+        ],
+        "coefficient": 21
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          3,
+          0
+        ],
+        "coefficient": 124
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          3,
+          1
+        ],
+        "coefficient": 67
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          3,
+          2
+        ],
+        "coefficient": 7
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          4,
+          0
+        ],
+        "coefficient": 50
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          4,
+          1
+        ],
+        "coefficient": 18
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          4,
+          2
+        ],
+        "coefficient": 1
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          5,
+          0
+        ],
+        "coefficient": 11
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          5,
+          1
+        ],
+        "coefficient": 2
+      },
+      {
+        "exponents": [
+          0,
+          0,
+          6,
+          0
+        ],
+        "coefficient": 1
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "coefficient": 87
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "coefficient": 169
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          0,
+          2
+        ],
+        "coefficient": 48
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "coefficient": 209
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "coefficient": 217
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          1,
+          2
+        ],
+        "coefficient": 45
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          2,
+          0
+        ],
+        "coefficient": 185
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          2,
+          1
+        ],
+        "coefficient": 134
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          2,
+          2
+        ],
+        "coefficient": 18
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          3,
+          0
+        ],
+        "coefficient": 93
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          3,
+          1
+        ],
+        "coefficient": 44
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "coefficient": 3
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          4,
+          0
+        ],
+        "coefficient": 26
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          4,
+          1
+        ],
+        "coefficient": 6
+      },
+      {
+        "exponents": [
+          0,
+          1,
+          5,
+          0
+        ],
+        "coefficient": 3
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          0,
+          0
+        ],
+        "coefficient": 46
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          0,
+          1
+        ],
+        "coefficient": 105
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          0,
+          2
+        ],
+        "coefficient": 31
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          1,
+          0
+        ],
+        "coefficient": 93
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          1,
+          1
+        ],
+        "coefficient": 102
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          1,
+          2
+        ],
+        "coefficient": 20
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          2,
+          0
+        ],
+        "coefficient": 59
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          2,
+          1
+        ],
+        "coefficient": 42
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          2,
+          2
+        ],
+        "coefficient": 4
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          3,
+          0
+        ],
+        "coefficient": 20
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "coefficient": 7
+      },
+      {
+        "exponents": [
+          0,
+          2,
+          4,
+          0
+        ],
+        "coefficient": 3
+      },
+      {
+        "exponents": [
+          0,
+          3,
+          0,
+          0
+        ],
+        "coefficient": 11
+      },
+      {
+        "exponents": [
+          0,
+          3,
+          0,
+          1
+        ],
+        "coefficient": 29
+      },
+      {
+        "exponents": [
+          0,
+          3,
+          0,
+          2
+        ],
+        "coefficient": 9
+      },
+      {
+        "exponents": [
+          0,
+          3,
+          1,
+          0
+        ],
+        "coefficient": 17
+      },
+      {
+        "exponents": [
+          0,
+          3,
+          1,
+          1
+        ],
+        "coefficient": 19
+      },
+      {
+        "exponents": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "coefficient": 3
+      },
+      {
+        "exponents": [
+          0,
+          3,
+          2,
+          0
+        ],
+        "coefficient": 6
+      },
+      {
+        "exponents": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "coefficient": 4
+      },
+      {
+        "exponents": [
+          0,
+          3,
+          3,
+          0
+        ],
+        "coefficient": 1
+      },
+      {
+        "exponents": [
+          0,
+          4,
+          0,
+          0
+        ],
+        "coefficient": 1
+      },
+      {
+        "exponents": [
+          0,
+          4,
+          0,
+          1
+        ],
+        "coefficient": 3
+      },
+      {
+        "exponents": [
+          0,
+          4,
+          0,
+          2
+        ],
+        "coefficient": 1
+      },
+      {
+        "exponents": [
+          0,
+          4,
+          1,
+          0
+        ],
+        "coefficient": 1
+      },
+      {
+        "exponents": [
+          0,
+          4,
+          1,
+          1
+        ],
+        "coefficient": 1
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "coefficient": 207
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "coefficient": 171
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          0,
+          2
+        ],
+        "coefficient": 34
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "coefficient": 510
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "coefficient": 398
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          1,
+          2
+        ],
+        "coefficient": 76
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          2,
+          0
+        ],
+        "coefficient": 606
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          2,
+          1
+        ],
+        "coefficient": 402
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          2,
+          2
+        ],
+        "coefficient": 63
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          3,
+          0
+        ],
+        "coefficient": 422
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          3,
+          1
+        ],
+        "coefficient": 224
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          3,
+          2
+        ],
+        "coefficient": 25
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          4,
+          0
+        ],
+        "coefficient": 177
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          4,
+          1
+        ],
+        "coefficient": 66
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          4,
+          2
+        ],
+        "coefficient": 4
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          5,
+          0
+        ],
+        "coefficient": 41
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          5,
+          1
+        ],
+        "coefficient": 8
+      },
+      {
+        "exponents": [
+          1,
+          0,
+          6,
+          0
+        ],
+        "coefficient": 4
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "coefficient": 240
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "coefficient": 215
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          0,
+          2
+        ],
+        "coefficient": 45
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "coefficient": 501
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "coefficient": 410
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "coefficient": 81
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          2,
+          0
+        ],
+        "coefficient": 479
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          2,
+          1
+        ],
+        "coefficient": 313
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "coefficient": 45
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          3,
+          0
+        ],
+        "coefficient": 252
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          3,
+          1
+        ],
+        "coefficient": 118
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          3,
+          2
+        ],
+        "coefficient": 9
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          4,
+          0
+        ],
+        "coefficient": 73
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          4,
+          1
+        ],
+        "coefficient": 18
+      },
+      {
+        "exponents": [
+          1,
+          1,
+          5,
+          0
+        ],
+        "coefficient": 9
+      },
+      {
+        "exponents": [
+          1,
+          2,
+          0,
+          0
+        ],
+        "coefficient": 93
+      },
+      {
+        "exponents": [
+          1,
+          2,
+          0,
+          1
+        ],
+        "coefficient": 91
+      },
+      {
+        "exponents": [
+          1,
+          2,
+          0,
+          2
+        ],
+        "coefficient": 20
+      },
+      {
+        "exponents": [
+          1,
+          2,
+          1,
+          0
+        ],
+        "coefficient": 156
+      },
+      {
+        "exponents": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "coefficient": 136
+      },
+      {
+        "exponents": [
+          1,
+          2,
+          1,
+          2
+        ],
+        "coefficient": 28
+      },
+      {
+        "exponents": [
+          1,
+          2,
+          2,
+          0
+        ],
+        "coefficient": 112
+      },
+      {
+        "exponents": [
+          1,
+          2,
+          2,
+          1
+        ],
+        "coefficient": 71
+      },
+      {
+        "exponents": [
+          1,
+          2,
+          2,
+          2
+        ],
+        "coefficient": 8
+      },
+      {
+        "exponents": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "coefficient": 39
+      },
+      {
+        "exponents": [
+          1,
+          2,
+          3,
+          1
+        ],
+        "coefficient": 14
+      },
+      {
+        "exponents": [
+          1,
+          2,
+          4,
+          0
+        ],
+        "coefficient": 6
+      },
+      {
+        "exponents": [
+          1,
+          3,
+          0,
+          0
+        ],
+        "coefficient": 12
+      },
+      {
+        "exponents": [
+          1,
+          3,
+          0,
+          1
+        ],
+        "coefficient": 13
+      },
+      {
+        "exponents": [
+          1,
+          3,
+          0,
+          2
+        ],
+        "coefficient": 3
+      },
+      {
+        "exponents": [
+          1,
+          3,
+          1,
+          0
+        ],
+        "coefficient": 15
+      },
+      {
+        "exponents": [
+          1,
+          3,
+          1,
+          1
+        ],
+        "coefficient": 14
+      },
+      {
+        "exponents": [
+          1,
+          3,
+          1,
+          2
+        ],
+        "coefficient": 3
+      },
+      {
+        "exponents": [
+          1,
+          3,
+          2,
+          0
+        ],
+        "coefficient": 7
+      },
+      {
+        "exponents": [
+          1,
+          3,
+          2,
+          1
+        ],
+        "coefficient": 4
+      },
+      {
+        "exponents": [
+          1,
+          3,
+          3,
+          0
+        ],
+        "coefficient": 1
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          0,
+          0
+        ],
+        "coefficient": 180
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          0,
+          1
+        ],
+        "coefficient": 123
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          0,
+          2
+        ],
+        "coefficient": 21
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          1,
+          0
+        ],
+        "coefficient": 525
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          1,
+          1
+        ],
+        "coefficient": 364
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          1,
+          2
+        ],
+        "coefficient": 63
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          2,
+          0
+        ],
+        "coefficient": 696
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          2,
+          1
+        ],
+        "coefficient": 440
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          2,
+          2
+        ],
+        "coefficient": 69
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          3,
+          0
+        ],
+        "coefficient": 523
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          3,
+          1
+        ],
+        "coefficient": 277
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          3,
+          2
+        ],
+        "coefficient": 33
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          4,
+          0
+        ],
+        "coefficient": 232
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          4,
+          1
+        ],
+        "coefficient": 90
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          4,
+          2
+        ],
+        "coefficient": 6
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          5,
+          0
+        ],
+        "coefficient": 57
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          5,
+          1
+        ],
+        "coefficient": 12
+      },
+      {
+        "exponents": [
+          2,
+          0,
+          6,
+          0
+        ],
+        "coefficient": 6
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          0,
+          0
+        ],
+        "coefficient": 147
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          0,
+          1
+        ],
+        "coefficient": 103
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          0,
+          2
+        ],
+        "coefficient": 18
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          1,
+          0
+        ],
+        "coefficient": 363
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          1,
+          1
+        ],
+        "coefficient": 256
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          1,
+          2
+        ],
+        "coefficient": 45
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          2,
+          0
+        ],
+        "coefficient": 388
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          2,
+          1
+        ],
+        "coefficient": 239
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          2,
+          2
+        ],
+        "coefficient": 36
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          3,
+          0
+        ],
+        "coefficient": 222
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          3,
+          1
+        ],
+        "coefficient": 104
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          3,
+          2
+        ],
+        "coefficient": 9
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          4,
+          0
+        ],
+        "coefficient": 68
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          4,
+          1
+        ],
+        "coefficient": 18
+      },
+      {
+        "exponents": [
+          2,
+          1,
+          5,
+          0
+        ],
+        "coefficient": 9
+      },
+      {
+        "exponents": [
+          2,
+          2,
+          0,
+          0
+        ],
+        "coefficient": 30
+      },
+      {
+        "exponents": [
+          2,
+          2,
+          0,
+          1
+        ],
+        "coefficient": 22
+      },
+      {
+        "exponents": [
+          2,
+          2,
+          0,
+          2
+        ],
+        "coefficient": 4
+      },
+      {
+        "exponents": [
+          2,
+          2,
+          1,
+          0
+        ],
+        "coefficient": 60
+      },
+      {
+        "exponents": [
+          2,
+          2,
+          1,
+          1
+        ],
+        "coefficient": 44
+      },
+      {
+        "exponents": [
+          2,
+          2,
+          1,
+          2
+        ],
+        "coefficient": 8
+      },
+      {
+        "exponents": [
+          2,
+          2,
+          2,
+          0
+        ],
+        "coefficient": 49
+      },
+      {
+        "exponents": [
+          2,
+          2,
+          2,
+          1
+        ],
+        "coefficient": 29
+      },
+      {
+        "exponents": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "coefficient": 4
+      },
+      {
+        "exponents": [
+          2,
+          2,
+          3,
+          0
+        ],
+        "coefficient": 19
+      },
+      {
+        "exponents": [
+          2,
+          2,
+          3,
+          1
+        ],
+        "coefficient": 7
+      },
+      {
+        "exponents": [
+          2,
+          2,
+          4,
+          0
+        ],
+        "coefficient": 3
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          0,
+          0
+        ],
+        "coefficient": 63
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          0,
+          1
+        ],
+        "coefficient": 42
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          0,
+          2
+        ],
+        "coefficient": 7
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          1,
+          0
+        ],
+        "coefficient": 225
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          1,
+          1
+        ],
+        "coefficient": 150
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          1,
+          2
+        ],
+        "coefficient": 25
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          2,
+          0
+        ],
+        "coefficient": 339
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          2,
+          1
+        ],
+        "coefficient": 212
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          2,
+          2
+        ],
+        "coefficient": 33
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          3,
+          0
+        ],
+        "coefficient": 279
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          3,
+          1
+        ],
+        "coefficient": 150
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          3,
+          2
+        ],
+        "coefficient": 19
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          4,
+          0
+        ],
+        "coefficient": 133
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          4,
+          1
+        ],
+        "coefficient": 54
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          4,
+          2
+        ],
+        "coefficient": 4
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          5,
+          0
+        ],
+        "coefficient": 35
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          5,
+          1
+        ],
+        "coefficient": 8
+      },
+      {
+        "exponents": [
+          3,
+          0,
+          6,
+          0
+        ],
+        "coefficient": 4
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          0,
+          0
+        ],
+        "coefficient": 27
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          0,
+          1
+        ],
+        "coefficient": 18
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          0,
+          2
+        ],
+        "coefficient": 3
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          1,
+          0
+        ],
+        "coefficient": 81
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          1,
+          1
+        ],
+        "coefficient": 54
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          1,
+          2
+        ],
+        "coefficient": 9
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          2,
+          0
+        ],
+        "coefficient": 99
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          2,
+          1
+        ],
+        "coefficient": 60
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          2,
+          2
+        ],
+        "coefficient": 9
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          3,
+          0
+        ],
+        "coefficient": 63
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          3,
+          1
+        ],
+        "coefficient": 30
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          3,
+          2
+        ],
+        "coefficient": 3
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          4,
+          0
+        ],
+        "coefficient": 21
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          4,
+          1
+        ],
+        "coefficient": 6
+      },
+      {
+        "exponents": [
+          3,
+          1,
+          5,
+          0
+        ],
+        "coefficient": 3
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          0,
+          0
+        ],
+        "coefficient": 9
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          0,
+          1
+        ],
+        "coefficient": 6
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          0,
+          2
+        ],
+        "coefficient": 1
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          1,
+          0
+        ],
+        "coefficient": 36
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          1,
+          1
+        ],
+        "coefficient": 24
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          1,
+          2
+        ],
+        "coefficient": 4
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          2,
+          0
+        ],
+        "coefficient": 60
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          2,
+          1
+        ],
+        "coefficient": 38
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          2,
+          2
+        ],
+        "coefficient": 6
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          3,
+          0
+        ],
+        "coefficient": 54
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          3,
+          1
+        ],
+        "coefficient": 30
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          3,
+          2
+        ],
+        "coefficient": 4
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          4,
+          0
+        ],
+        "coefficient": 28
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          4,
+          1
+        ],
+        "coefficient": 12
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          4,
+          2
+        ],
+        "coefficient": 1
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          5,
+          0
+        ],
+        "coefficient": 8
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          5,
+          1
+        ],
+        "coefficient": 2
+      },
+      {
+        "exponents": [
+          4,
+          0,
+          6,
+          0
+        ],
+        "coefficient": 1
+      }
+    ]
+  },
+  "direct_residual_regressions": [
+    {
+      "parameters_s_b_z_n": [
+        1,
+        2,
+        1,
+        0
+      ],
+      "derived_t": "1/3",
+      "exact_original_residual": "-29/9",
+      "cleared_polynomial": -29
+    },
+    {
+      "parameters_s_b_z_n": [
+        2,
+        4,
+        3,
+        1
+      ],
+      "derived_t": "21",
+      "exact_original_residual": "119",
+      "cleared_polynomial": 2975
+    },
+    {
+      "parameters_s_b_z_n": [
+        3,
+        5,
+        2,
+        0
+      ],
+      "derived_t": "13/3",
+      "exact_original_residual": "-407/9",
+      "cleared_polynomial": -1628
+    },
+    {
+      "parameters_s_b_z_n": [
+        5,
+        7,
+        4,
+        2
+      ],
+      "derived_t": "191",
+      "exact_original_residual": "24879",
+      "cleared_polynomial": 1592256
+    }
+  ],
+  "finite_axis_fixtures": [
+    {
+      "fixed_s": 1,
+      "fixed_z": 1,
+      "lattice_integers_exhausted": [
+        0,
+        1
+      ],
+      "b_or_t_cutoff": null,
+      "candidate_bound": 8,
+      "quartics": [
+        {
+          "n": 0,
+          "quartic_coefficients_ascending": [
+            1,
+            1,
+            2,
+            -3,
+            -1
+          ],
+          "divisor_remainder_Cn": -2,
+          "all_integer_roots_b_ge_2": [],
+          "tested": []
+        },
+        {
+          "n": 1,
+          "quartic_coefficients_ascending": [
+            1,
+            2,
+            2,
+            -1,
+            -1
+          ],
+          "divisor_remainder_Cn": -1,
+          "all_integer_roots_b_ge_2": [],
+          "tested": []
+        }
+      ],
+      "models": [],
+      "scope": "Complete for this fixed (s,z) in the proportional sector; no global claim from finite fixtures."
+    },
+    {
+      "fixed_s": 1,
+      "fixed_z": 2,
+      "lattice_integers_exhausted": [
+        0,
+        1,
+        2
+      ],
+      "b_or_t_cutoff": null,
+      "candidate_bound": 12,
+      "quartics": [
+        {
+          "n": 0,
+          "quartic_coefficients_ascending": [
+            1,
+            3,
+            2,
+            -5,
+            -1
+          ],
+          "divisor_remainder_Cn": -2,
+          "all_integer_roots_b_ge_2": [],
+          "tested": []
+        },
+        {
+          "n": 1,
+          "quartic_coefficients_ascending": [
+            6,
+            15,
+            7,
+            -5,
+            -2
+          ],
+          "divisor_remainder_Cn": -1,
+          "all_integer_roots_b_ge_2": [],
+          "tested": []
+        },
+        {
+          "n": 2,
+          "quartic_coefficients_ascending": [
+            17,
+            39,
+            26,
+            3,
+            -1
+          ],
+          "divisor_remainder_Cn": 0,
+          "all_integer_roots_b_ge_2": [],
+          "tested": []
+        }
+      ],
+      "models": [],
+      "scope": "Complete for this fixed (s,z) in the proportional sector; no global claim from finite fixtures."
+    },
+    {
+      "fixed_s": 2,
+      "fixed_z": 1,
+      "lattice_integers_exhausted": [
+        0,
+        1
+      ],
+      "b_or_t_cutoff": null,
+      "candidate_bound": 8,
+      "quartics": [
+        {
+          "n": 0,
+          "quartic_coefficients_ascending": [
+            4,
+            11,
+            7,
+            -5,
+            -1
+          ],
+          "divisor_remainder_Cn": -2,
+          "all_integer_roots_b_ge_2": [],
+          "tested": []
+        },
+        {
+          "n": 1,
+          "quartic_coefficients_ascending": [
+            13,
+            34,
+            24,
+            1,
+            -1
+          ],
+          "divisor_remainder_Cn": -1,
+          "all_integer_roots_b_ge_2": [],
+          "tested": []
+        }
+      ],
+      "models": [],
+      "scope": "Complete for this fixed (s,z) in the proportional sector; no global claim from finite fixtures."
+    },
+    {
+      "fixed_s": 3,
+      "fixed_z": 2,
+      "lattice_integers_exhausted": [
+        0,
+        1,
+        2
+      ],
+      "b_or_t_cutoff": null,
+      "candidate_bound": 12,
+      "quartics": [
+        {
+          "n": 0,
+          "quartic_coefficients_ascending": [
+            177,
+            119,
+            -6,
+            -13,
+            -1
+          ],
+          "divisor_remainder_Cn": 8,
+          "all_integer_roots_b_ge_2": [],
+          "tested": []
+        },
+        {
+          "n": 1,
+          "quartic_coefficients_ascending": [
+            1692,
+            999,
+            139,
+            -11,
+            -2
+          ],
+          "divisor_remainder_Cn": 29,
+          "all_integer_roots_b_ge_2": [],
+          "tested": []
+        },
+        {
+          "n": 2,
+          "quartic_coefficients_ascending": [
+            4757,
+            2739,
+            506,
+            23,
+            -1
+          ],
+          "divisor_remainder_Cn": 50,
+          "all_integer_roots_b_ge_2": [],
+          "tested": []
+        }
+      ],
+      "models": [],
+      "scope": "Complete for this fixed (s,z) in the proportional sector; no global claim from finite fixtures."
+    },
+    {
+      "fixed_s": 4,
+      "fixed_z": 3,
+      "lattice_integers_exhausted": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "b_or_t_cutoff": null,
+      "candidate_bound": 16,
+      "quartics": [
+        {
+          "n": 0,
+          "quartic_coefficients_ascending": [
+            1696,
+            479,
+            -85,
+            -25,
+            -1
+          ],
+          "divisor_remainder_Cn": 34,
+          "all_integer_roots_b_ge_2": [],
+          "tested": []
+        },
+        {
+          "n": 1,
+          "quartic_coefficients_ascending": [
+            28239,
+            7570,
+            310,
+            -49,
+            -3
+          ],
+          "divisor_remainder_Cn": 145,
+          "all_integer_roots_b_ge_2": [],
+          "tested": []
+        },
+        {
+          "n": 2,
+          "quartic_coefficients_ascending": [
+            86968,
+            23153,
+            1719,
+            -5,
+            -3
+          ],
+          "divisor_remainder_Cn": 256,
+          "all_integer_roots_b_ge_2": [],
+          "tested": []
+        },
+        {
+          "n": 3,
+          "quartic_coefficients_ascending": [
+            177883,
+            47228,
+            4142,
+            107,
+            -1
+          ],
+          "divisor_remainder_Cn": 367,
+          "all_integer_roots_b_ge_2": [],
+          "tested": []
+        }
+      ],
+      "models": [],
+      "scope": "Complete for this fixed (s,z) in the proportional sector; no global claim from finite fixtures."
+    },
+    {
+      "fixed_s": 8,
+      "fixed_z": 4,
+      "lattice_integers_exhausted": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "b_or_t_cutoff": null,
+      "candidate_bound": 20,
+      "quartics": [
+        {
+          "n": 0,
+          "quartic_coefficients_ascending": [
+            58864,
+            5684,
+            -803,
+            -65,
+            -1
+          ],
+          "divisor_remainder_Cn": 229,
+          "all_integer_roots_b_ge_2": [],
+          "tested": []
+        },
+        {
+          "n": 1,
+          "quartic_coefficients_ascending": [
+            1487158,
+            142564,
+            810,
+            -200,
+            -4
+          ],
+          "divisor_remainder_Cn": 1160,
+          "all_integer_roots_b_ge_2": [],
+          "tested": []
+        },
+        {
+          "n": 2,
+          "quartic_coefficients_ascending": [
+            4823998,
+            462096,
+            10237,
+            -147,
+            -5
+          ],
+          "divisor_remainder_Cn": 2091,
+          "all_integer_roots_b_ge_2": [],
+          "tested": []
+        },
+        {
+          "n": 3,
+          "quartic_coefficients_ascending": [
+            10069384,
+            964280,
+            27478,
+            94,
+            -4
+          ],
+          "divisor_remainder_Cn": 3022,
+          "all_integer_roots_b_ge_2": [],
+          "tested": []
+        },
+        {
+          "n": 4,
+          "quartic_coefficients_ascending": [
+            17223316,
+            1649116,
+            52533,
+            523,
+            -1
+          ],
+          "divisor_remainder_Cn": 3953,
+          "all_integer_roots_b_ge_2": [],
+          "tested": []
+        }
+      ],
+      "models": [],
+      "scope": "Complete for this fixed (s,z) in the proportional sector; no global claim from finite fixtures."
+    }
+  ],
+  "finite_fixtures_not_used_as_unbounded_proof": true,
+  "old_scan_repeated": false,
+  "old_verifier_imports": false,
+  "dependencies": "Python standard library only",
+  "proof_sha256": "769f97916c5c0ca7a3227c798dbc92cd97920ac574f6aecf97f1eaf4e3155d66",
+  "source_sha256": "c877056432c8206239a0ecfaea855ff9be901611a807e295319485a9aebeab3a",
+  "external_peer_review": false,
+  "proof_assistant_formalization": false
+}

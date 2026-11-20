@@ -1,0 +1,6360 @@
+{
+  "scope": "Finite exact combinatorial and numerical checks. This script does not prove the general-degree theorem, generic algebraic existence, analytic gluing, or existence of a Lagrangian fibration.",
+  "dependencies": "Python standard library only",
+  "script_sha256": "34827a83010ab8efa035da518c02664dcc35c5ed04ed2febaf30cab7feba7411",
+  "partitions": [
+    [
+      1,
+      1,
+      3
+    ],
+    [
+      1,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      2
+    ],
+    [
+      1,
+      1,
+      1,
+      3
+    ],
+    [
+      1,
+      2,
+      4
+    ],
+    [
+      3,
+      3,
+      3
+    ],
+    [
+      2,
+      3,
+      4
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      6
+    ]
+  ],
+  "seeds": [
+    20261026,
+    20261027
+  ],
+  "runs": 20,
+  "all_checks_passed": true,
+  "total_checks_passed": 30824,
+  "results": [
+    {
+      "degrees": [
+        1,
+        1,
+        3
+      ],
+      "degree_sum": 5,
+      "components": 3,
+      "seed": 20261026,
+      "source_cell_dimensions": [
+        3,
+        7,
+        9
+      ],
+      "target_cell_dimensions": [
+        3,
+        3,
+        5
+      ],
+      "source_boundary_ranks_Q": [
+        2,
+        5
+      ],
+      "target_boundary_ranks_Q": [
+        2,
+        1
+      ],
+      "SDR": {
+        "integer_chain_maps": true,
+        "q_s_identity": true,
+        "id_minus_s_q_equals_dH_plus_Hd": true,
+        "H_s_zero": true,
+        "q_H_zero": true,
+        "H_squared_zero": true
+      },
+      "H2": {
+        "rank": 4,
+        "pg_degree_sum": 4,
+        "sum_component_pg": 0,
+        "basis_types": {
+          "simplex_tetrahedron_boundaries": 0,
+          "Reeb_cycles": 2,
+          "duplicate_triple_points": 2
+        },
+        "integral_basis_certified": true,
+        "coefficient_minor": "upper triangular with diagonal 1",
+        "coefficient_minor_determinant": 1
+      },
+      "trivalent_incidence_verified": true,
+      "curves": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 3,
+          "internal_vertices": 1,
+          "internal_edges": 0,
+          "root": -1,
+          "tree_edges": 0,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "degrees": [
+            1,
+            3
+          ],
+          "genus": 1,
+          "leaves": 3,
+          "internal_vertices": 3,
+          "internal_edges": 3,
+          "root": -1,
+          "tree_edges": 2,
+          "non_tree_edges": 1,
+          "parallel_edge_excess": 1
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "degrees": [
+            1,
+            3
+          ],
+          "genus": 1,
+          "leaves": 3,
+          "internal_vertices": 3,
+          "internal_edges": 3,
+          "root": -3,
+          "tree_edges": 2,
+          "non_tree_edges": 1,
+          "parallel_edge_excess": 1
+        }
+      ],
+      "links": [
+        {
+          "component": 1,
+          "degree": 1,
+          "V": 4,
+          "E": 6,
+          "b1": 3
+        },
+        {
+          "component": 2,
+          "degree": 1,
+          "V": 4,
+          "E": 6,
+          "b1": 3
+        },
+        {
+          "component": 3,
+          "degree": 3,
+          "V": 6,
+          "E": 9,
+          "b1": 4
+        }
+      ],
+      "numerical": {
+        "arithmetic": "fractions.Fraction and integers only",
+        "a": "3",
+        "prefix_degrees": [
+          1,
+          2
+        ],
+        "gaps": [
+          "78/175",
+          "66/175"
+        ],
+        "beta": [
+          "0",
+          "78/175",
+          "144/175"
+        ],
+        "weighted_gap_sum": "6/5",
+        "terminal_coefficient_A": "9/5",
+        "volume_sum": "45",
+        "expected_volume_d_a_squared": "45",
+        "gap_facets_checked": 2,
+        "terminal_facet_checked": true,
+        "components": [
+          {
+            "component": 1,
+            "degree": 1,
+            "hyperplane_coefficient": "207/35",
+            "assigned_nodes": 20,
+            "xi_square": "145953/6125",
+            "square_lower_bound": "131301/6125",
+            "curve_bound_coefficient": "3",
+            "core_Euler": 4,
+            "resolved_open_Euler": 24
+          },
+          {
+            "component": 2,
+            "degree": 1,
+            "hyperplane_coefficient": "129/35",
+            "assigned_nodes": 15,
+            "xi_square": "70137/6125",
+            "square_lower_bound": "70137/6125",
+            "curve_bound_coefficient": "447/175",
+            "core_Euler": 4,
+            "resolved_open_Euler": 19
+          },
+          {
+            "component": 3,
+            "degree": 3,
+            "hyperplane_coefficient": "9/5",
+            "assigned_nodes": 0,
+            "xi_square": "243/25",
+            "square_lower_bound": "243/25",
+            "curve_bound_coefficient": "9/5",
+            "core_Euler": 12,
+            "resolved_open_Euler": 12
+          }
+        ],
+        "double_curve_areas": [
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "nodes": 5,
+            "exceptional_area": "78/175",
+            "left_area": "129/35",
+            "right_area": "129/35",
+            "left_normal_degree": -4,
+            "right_normal_degree": 1,
+            "triple_points": 3
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "nodes": 15,
+            "exceptional_area": "144/175",
+            "left_area": "27/5",
+            "right_area": "27/5",
+            "left_normal_degree": -6,
+            "right_normal_degree": 3,
+            "triple_points": 3
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "nodes": 15,
+            "exceptional_area": "66/175",
+            "left_area": "27/5",
+            "right_area": "27/5",
+            "left_normal_degree": -6,
+            "right_normal_degree": 3,
+            "triple_points": 3
+          }
+        ],
+        "core_Euler_sum": 20,
+        "node_count": 35,
+        "surface_Euler": 55,
+        "Euler_identity_verified": true
+      },
+      "checks_passed": 388
+    },
+    {
+      "degrees": [
+        1,
+        1,
+        3
+      ],
+      "degree_sum": 5,
+      "components": 3,
+      "seed": 20261027,
+      "source_cell_dimensions": [
+        3,
+        7,
+        9
+      ],
+      "target_cell_dimensions": [
+        3,
+        3,
+        5
+      ],
+      "source_boundary_ranks_Q": [
+        2,
+        5
+      ],
+      "target_boundary_ranks_Q": [
+        2,
+        1
+      ],
+      "SDR": {
+        "integer_chain_maps": true,
+        "q_s_identity": true,
+        "id_minus_s_q_equals_dH_plus_Hd": true,
+        "H_s_zero": true,
+        "q_H_zero": true,
+        "H_squared_zero": true
+      },
+      "H2": {
+        "rank": 4,
+        "pg_degree_sum": 4,
+        "sum_component_pg": 0,
+        "basis_types": {
+          "simplex_tetrahedron_boundaries": 0,
+          "Reeb_cycles": 2,
+          "duplicate_triple_points": 2
+        },
+        "integral_basis_certified": true,
+        "coefficient_minor": "upper triangular with diagonal 1",
+        "coefficient_minor_determinant": 1
+      },
+      "trivalent_incidence_verified": true,
+      "curves": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 3,
+          "internal_vertices": 1,
+          "internal_edges": 0,
+          "root": -1,
+          "tree_edges": 0,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "degrees": [
+            1,
+            3
+          ],
+          "genus": 1,
+          "leaves": 3,
+          "internal_vertices": 3,
+          "internal_edges": 3,
+          "root": -2,
+          "tree_edges": 2,
+          "non_tree_edges": 1,
+          "parallel_edge_excess": 1
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "degrees": [
+            1,
+            3
+          ],
+          "genus": 1,
+          "leaves": 3,
+          "internal_vertices": 3,
+          "internal_edges": 3,
+          "root": -1,
+          "tree_edges": 2,
+          "non_tree_edges": 1,
+          "parallel_edge_excess": 1
+        }
+      ],
+      "links": [
+        {
+          "component": 1,
+          "degree": 1,
+          "V": 4,
+          "E": 6,
+          "b1": 3
+        },
+        {
+          "component": 2,
+          "degree": 1,
+          "V": 4,
+          "E": 6,
+          "b1": 3
+        },
+        {
+          "component": 3,
+          "degree": 3,
+          "V": 6,
+          "E": 9,
+          "b1": 4
+        }
+      ],
+      "numerical": {
+        "arithmetic": "fractions.Fraction and integers only",
+        "a": "3",
+        "prefix_degrees": [
+          1,
+          2
+        ],
+        "gaps": [
+          "6/17",
+          "39/68"
+        ],
+        "beta": [
+          "0",
+          "6/17",
+          "63/68"
+        ],
+        "weighted_gap_sum": "3/2",
+        "terminal_coefficient_A": "3/2",
+        "volume_sum": "45",
+        "expected_volume_d_a_squared": "45",
+        "gap_facets_checked": 2,
+        "terminal_facet_checked": true,
+        "components": [
+          {
+            "component": 1,
+            "degree": 1,
+            "hyperplane_coefficient": "417/68",
+            "assigned_nodes": 20,
+            "xi_square": "55737/2312",
+            "square_lower_bound": "94509/4624",
+            "curve_bound_coefficient": "3",
+            "core_Euler": 4,
+            "resolved_open_Euler": 24
+          },
+          {
+            "component": 2,
+            "degree": 1,
+            "hyperplane_coefficient": "297/68",
+            "assigned_nodes": 15,
+            "xi_square": "32697/2312",
+            "square_lower_bound": "32697/2312",
+            "curve_bound_coefficient": "45/17",
+            "core_Euler": 4,
+            "resolved_open_Euler": 19
+          },
+          {
+            "component": 3,
+            "degree": 3,
+            "hyperplane_coefficient": "3/2",
+            "assigned_nodes": 0,
+            "xi_square": "27/4",
+            "square_lower_bound": "27/4",
+            "curve_bound_coefficient": "3/2",
+            "core_Euler": 12,
+            "resolved_open_Euler": 12
+          }
+        ],
+        "double_curve_areas": [
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "nodes": 5,
+            "exceptional_area": "6/17",
+            "left_area": "297/68",
+            "right_area": "297/68",
+            "left_normal_degree": -4,
+            "right_normal_degree": 1,
+            "triple_points": 3
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "nodes": 15,
+            "exceptional_area": "63/68",
+            "left_area": "9/2",
+            "right_area": "9/2",
+            "left_normal_degree": -6,
+            "right_normal_degree": 3,
+            "triple_points": 3
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "nodes": 15,
+            "exceptional_area": "39/68",
+            "left_area": "9/2",
+            "right_area": "9/2",
+            "left_normal_degree": -6,
+            "right_normal_degree": 3,
+            "triple_points": 3
+          }
+        ],
+        "core_Euler_sum": 20,
+        "node_count": 35,
+        "surface_Euler": 55,
+        "Euler_identity_verified": true
+      },
+      "checks_passed": 388
+    },
+    {
+      "degrees": [
+        1,
+        2,
+        2
+      ],
+      "degree_sum": 5,
+      "components": 3,
+      "seed": 20261026,
+      "source_cell_dimensions": [
+        3,
+        8,
+        10
+      ],
+      "target_cell_dimensions": [
+        3,
+        3,
+        5
+      ],
+      "source_boundary_ranks_Q": [
+        2,
+        6
+      ],
+      "target_boundary_ranks_Q": [
+        2,
+        1
+      ],
+      "SDR": {
+        "integer_chain_maps": true,
+        "q_s_identity": true,
+        "id_minus_s_q_equals_dH_plus_Hd": true,
+        "H_s_zero": true,
+        "q_H_zero": true,
+        "H_squared_zero": true
+      },
+      "H2": {
+        "rank": 4,
+        "pg_degree_sum": 4,
+        "sum_component_pg": 0,
+        "basis_types": {
+          "simplex_tetrahedron_boundaries": 0,
+          "Reeb_cycles": 1,
+          "duplicate_triple_points": 3
+        },
+        "integral_basis_certified": true,
+        "coefficient_minor": "upper triangular with diagonal 1",
+        "coefficient_minor_determinant": 1
+      },
+      "trivalent_incidence_verified": true,
+      "curves": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "degrees": [
+            1,
+            2
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -2,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "degrees": [
+            1,
+            2
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -2,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "degrees": [
+            2,
+            2
+          ],
+          "genus": 1,
+          "leaves": 4,
+          "internal_vertices": 4,
+          "internal_edges": 4,
+          "root": -2,
+          "tree_edges": 3,
+          "non_tree_edges": 1,
+          "parallel_edge_excess": 1
+        }
+      ],
+      "links": [
+        {
+          "component": 1,
+          "degree": 1,
+          "V": 4,
+          "E": 6,
+          "b1": 3
+        },
+        {
+          "component": 2,
+          "degree": 2,
+          "V": 6,
+          "E": 9,
+          "b1": 4
+        },
+        {
+          "component": 3,
+          "degree": 2,
+          "V": 6,
+          "E": 9,
+          "b1": 4
+        }
+      ],
+      "numerical": {
+        "arithmetic": "fractions.Fraction and integers only",
+        "a": "3",
+        "prefix_degrees": [
+          1,
+          3
+        ],
+        "gaps": [
+          "39/115",
+          "33/115"
+        ],
+        "beta": [
+          "0",
+          "39/115",
+          "72/115"
+        ],
+        "weighted_gap_sum": "6/5",
+        "terminal_coefficient_A": "9/5",
+        "volume_sum": "45",
+        "expected_volume_d_a_squared": "45",
+        "gap_facets_checked": 2,
+        "terminal_facet_checked": true,
+        "components": [
+          {
+            "component": 1,
+            "degree": 1,
+            "hyperplane_coefficient": "567/115",
+            "assigned_nodes": 20,
+            "xi_square": "254439/13225",
+            "square_lower_bound": "217809/13225",
+            "curve_bound_coefficient": "3",
+            "core_Euler": 3,
+            "resolved_open_Euler": 23
+          },
+          {
+            "component": 2,
+            "degree": 2,
+            "hyperplane_coefficient": "372/115",
+            "assigned_nodes": 20,
+            "xi_square": "254988/13225",
+            "square_lower_bound": "254988/13225",
+            "curve_bound_coefficient": "306/115",
+            "core_Euler": 6,
+            "resolved_open_Euler": 26
+          },
+          {
+            "component": 3,
+            "degree": 2,
+            "hyperplane_coefficient": "9/5",
+            "assigned_nodes": 0,
+            "xi_square": "162/25",
+            "square_lower_bound": "162/25",
+            "curve_bound_coefficient": "9/5",
+            "core_Euler": 6,
+            "resolved_open_Euler": 6
+          }
+        ],
+        "double_curve_areas": [
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "nodes": 10,
+            "exceptional_area": "39/115",
+            "left_area": "744/115",
+            "right_area": "744/115",
+            "left_normal_degree": -6,
+            "right_normal_degree": 2,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "nodes": 10,
+            "exceptional_area": "72/115",
+            "left_area": "18/5",
+            "right_area": "18/5",
+            "left_normal_degree": -6,
+            "right_normal_degree": 2,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "nodes": 20,
+            "exceptional_area": "33/115",
+            "left_area": "36/5",
+            "right_area": "36/5",
+            "left_normal_degree": -12,
+            "right_normal_degree": 8,
+            "triple_points": 4
+          }
+        ],
+        "core_Euler_sum": 15,
+        "node_count": 40,
+        "surface_Euler": 55,
+        "Euler_identity_verified": true
+      },
+      "checks_passed": 409
+    },
+    {
+      "degrees": [
+        1,
+        2,
+        2
+      ],
+      "degree_sum": 5,
+      "components": 3,
+      "seed": 20261027,
+      "source_cell_dimensions": [
+        3,
+        8,
+        10
+      ],
+      "target_cell_dimensions": [
+        3,
+        3,
+        5
+      ],
+      "source_boundary_ranks_Q": [
+        2,
+        6
+      ],
+      "target_boundary_ranks_Q": [
+        2,
+        1
+      ],
+      "SDR": {
+        "integer_chain_maps": true,
+        "q_s_identity": true,
+        "id_minus_s_q_equals_dH_plus_Hd": true,
+        "H_s_zero": true,
+        "q_H_zero": true,
+        "H_squared_zero": true
+      },
+      "H2": {
+        "rank": 4,
+        "pg_degree_sum": 4,
+        "sum_component_pg": 0,
+        "basis_types": {
+          "simplex_tetrahedron_boundaries": 0,
+          "Reeb_cycles": 1,
+          "duplicate_triple_points": 3
+        },
+        "integral_basis_certified": true,
+        "coefficient_minor": "upper triangular with diagonal 1",
+        "coefficient_minor_determinant": 1
+      },
+      "trivalent_incidence_verified": true,
+      "curves": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "degrees": [
+            1,
+            2
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -2,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "degrees": [
+            1,
+            2
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -1,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "degrees": [
+            2,
+            2
+          ],
+          "genus": 1,
+          "leaves": 4,
+          "internal_vertices": 4,
+          "internal_edges": 4,
+          "root": -1,
+          "tree_edges": 3,
+          "non_tree_edges": 1,
+          "parallel_edge_excess": 1
+        }
+      ],
+      "links": [
+        {
+          "component": 1,
+          "degree": 1,
+          "V": 4,
+          "E": 6,
+          "b1": 3
+        },
+        {
+          "component": 2,
+          "degree": 2,
+          "V": 6,
+          "E": 9,
+          "b1": 4
+        },
+        {
+          "component": 3,
+          "degree": 2,
+          "V": 6,
+          "E": 9,
+          "b1": 4
+        }
+      ],
+      "numerical": {
+        "arithmetic": "fractions.Fraction and integers only",
+        "a": "3",
+        "prefix_degrees": [
+          1,
+          3
+        ],
+        "gaps": [
+          "12/47",
+          "39/94"
+        ],
+        "beta": [
+          "0",
+          "12/47",
+          "63/94"
+        ],
+        "weighted_gap_sum": "3/2",
+        "terminal_coefficient_A": "3/2",
+        "volume_sum": "45",
+        "expected_volume_d_a_squared": "45",
+        "gap_facets_checked": 2,
+        "terminal_facet_checked": true,
+        "components": [
+          {
+            "component": 1,
+            "degree": 1,
+            "hyperplane_coefficient": "228/47",
+            "assigned_nodes": 20,
+            "xi_square": "81243/4418",
+            "square_lower_bound": "32139/2209",
+            "curve_bound_coefficient": "3",
+            "core_Euler": 3,
+            "resolved_open_Euler": 23
+          },
+          {
+            "component": 2,
+            "degree": 2,
+            "hyperplane_coefficient": "168/47",
+            "assigned_nodes": 20,
+            "xi_square": "48843/2209",
+            "square_lower_bound": "48843/2209",
+            "curve_bound_coefficient": "129/47",
+            "core_Euler": 6,
+            "resolved_open_Euler": 26
+          },
+          {
+            "component": 3,
+            "degree": 2,
+            "hyperplane_coefficient": "3/2",
+            "assigned_nodes": 0,
+            "xi_square": "9/2",
+            "square_lower_bound": "9/2",
+            "curve_bound_coefficient": "3/2",
+            "core_Euler": 6,
+            "resolved_open_Euler": 6
+          }
+        ],
+        "double_curve_areas": [
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "nodes": 10,
+            "exceptional_area": "12/47",
+            "left_area": "336/47",
+            "right_area": "336/47",
+            "left_normal_degree": -6,
+            "right_normal_degree": 2,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "nodes": 10,
+            "exceptional_area": "63/94",
+            "left_area": "3",
+            "right_area": "3",
+            "left_normal_degree": -6,
+            "right_normal_degree": 2,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "nodes": 20,
+            "exceptional_area": "39/94",
+            "left_area": "6",
+            "right_area": "6",
+            "left_normal_degree": -12,
+            "right_normal_degree": 8,
+            "triple_points": 4
+          }
+        ],
+        "core_Euler_sum": 15,
+        "node_count": 40,
+        "surface_Euler": 55,
+        "Euler_identity_verified": true
+      },
+      "checks_passed": 409
+    },
+    {
+      "degrees": [
+        2,
+        2,
+        2
+      ],
+      "degree_sum": 6,
+      "components": 3,
+      "seed": 20261026,
+      "source_cell_dimensions": [
+        3,
+        24,
+        32
+      ],
+      "target_cell_dimensions": [
+        3,
+        3,
+        11
+      ],
+      "source_boundary_ranks_Q": [
+        2,
+        22
+      ],
+      "target_boundary_ranks_Q": [
+        2,
+        1
+      ],
+      "SDR": {
+        "integer_chain_maps": true,
+        "q_s_identity": true,
+        "id_minus_s_q_equals_dH_plus_Hd": true,
+        "H_s_zero": true,
+        "q_H_zero": true,
+        "H_squared_zero": true
+      },
+      "H2": {
+        "rank": 10,
+        "pg_degree_sum": 10,
+        "sum_component_pg": 0,
+        "basis_types": {
+          "simplex_tetrahedron_boundaries": 0,
+          "Reeb_cycles": 3,
+          "duplicate_triple_points": 7
+        },
+        "integral_basis_certified": true,
+        "coefficient_minor": "upper triangular with diagonal 1",
+        "coefficient_minor_determinant": 1
+      },
+      "trivalent_incidence_verified": true,
+      "curves": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "degrees": [
+            2,
+            2
+          ],
+          "genus": 1,
+          "leaves": 8,
+          "internal_vertices": 8,
+          "internal_edges": 8,
+          "root": -1,
+          "tree_edges": 7,
+          "non_tree_edges": 1,
+          "parallel_edge_excess": 1
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "degrees": [
+            2,
+            2
+          ],
+          "genus": 1,
+          "leaves": 8,
+          "internal_vertices": 8,
+          "internal_edges": 8,
+          "root": -3,
+          "tree_edges": 7,
+          "non_tree_edges": 1,
+          "parallel_edge_excess": 1
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "degrees": [
+            2,
+            2
+          ],
+          "genus": 1,
+          "leaves": 8,
+          "internal_vertices": 8,
+          "internal_edges": 8,
+          "root": -2,
+          "tree_edges": 7,
+          "non_tree_edges": 1,
+          "parallel_edge_excess": 1
+        }
+      ],
+      "links": [
+        {
+          "component": 1,
+          "degree": 2,
+          "V": 16,
+          "E": 24,
+          "b1": 9
+        },
+        {
+          "component": 2,
+          "degree": 2,
+          "V": 16,
+          "E": 24,
+          "b1": 9
+        },
+        {
+          "component": 3,
+          "degree": 2,
+          "V": 16,
+          "E": 24,
+          "b1": 9
+        }
+      ],
+      "numerical": {
+        "arithmetic": "fractions.Fraction and integers only",
+        "a": "10/3",
+        "prefix_degrees": [
+          2,
+          4
+        ],
+        "gaps": [
+          "26/105",
+          "22/105"
+        ],
+        "beta": [
+          "0",
+          "26/105",
+          "16/35"
+        ],
+        "weighted_gap_sum": "4/3",
+        "terminal_coefficient_A": "2",
+        "volume_sum": "200/3",
+        "expected_volume_d_a_squared": "200/3",
+        "gap_facets_checked": 2,
+        "terminal_facet_checked": true,
+        "components": [
+          {
+            "component": 1,
+            "degree": 2,
+            "hyperplane_coefficient": "166/35",
+            "assigned_nodes": 48,
+            "xi_square": "141496/3675",
+            "square_lower_bound": "42824/1225",
+            "curve_bound_coefficient": "10/3",
+            "core_Euler": 12,
+            "resolved_open_Euler": 60
+          },
+          {
+            "component": 2,
+            "degree": 2,
+            "hyperplane_coefficient": "114/35",
+            "assigned_nodes": 24,
+            "xi_square": "74104/3675",
+            "square_lower_bound": "74104/3675",
+            "curve_bound_coefficient": "298/105",
+            "core_Euler": 12,
+            "resolved_open_Euler": 36
+          },
+          {
+            "component": 3,
+            "degree": 2,
+            "hyperplane_coefficient": "2",
+            "assigned_nodes": 0,
+            "xi_square": "8",
+            "square_lower_bound": "8",
+            "curve_bound_coefficient": "2",
+            "core_Euler": 12,
+            "resolved_open_Euler": 12
+          }
+        ],
+        "double_curve_areas": [
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "nodes": 24,
+            "exceptional_area": "26/105",
+            "left_area": "456/35",
+            "right_area": "456/35",
+            "left_normal_degree": -16,
+            "right_normal_degree": 8,
+            "triple_points": 8
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "nodes": 24,
+            "exceptional_area": "16/35",
+            "left_area": "8",
+            "right_area": "8",
+            "left_normal_degree": -16,
+            "right_normal_degree": 8,
+            "triple_points": 8
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "nodes": 24,
+            "exceptional_area": "22/105",
+            "left_area": "8",
+            "right_area": "8",
+            "left_normal_degree": -16,
+            "right_normal_degree": 8,
+            "triple_points": 8
+          }
+        ],
+        "core_Euler_sum": 36,
+        "node_count": 72,
+        "surface_Euler": 108,
+        "Euler_identity_verified": true
+      },
+      "checks_passed": 841
+    },
+    {
+      "degrees": [
+        2,
+        2,
+        2
+      ],
+      "degree_sum": 6,
+      "components": 3,
+      "seed": 20261027,
+      "source_cell_dimensions": [
+        3,
+        24,
+        32
+      ],
+      "target_cell_dimensions": [
+        3,
+        3,
+        11
+      ],
+      "source_boundary_ranks_Q": [
+        2,
+        22
+      ],
+      "target_boundary_ranks_Q": [
+        2,
+        1
+      ],
+      "SDR": {
+        "integer_chain_maps": true,
+        "q_s_identity": true,
+        "id_minus_s_q_equals_dH_plus_Hd": true,
+        "H_s_zero": true,
+        "q_H_zero": true,
+        "H_squared_zero": true
+      },
+      "H2": {
+        "rank": 10,
+        "pg_degree_sum": 10,
+        "sum_component_pg": 0,
+        "basis_types": {
+          "simplex_tetrahedron_boundaries": 0,
+          "Reeb_cycles": 3,
+          "duplicate_triple_points": 7
+        },
+        "integral_basis_certified": true,
+        "coefficient_minor": "upper triangular with diagonal 1",
+        "coefficient_minor_determinant": 1
+      },
+      "trivalent_incidence_verified": true,
+      "curves": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "degrees": [
+            2,
+            2
+          ],
+          "genus": 1,
+          "leaves": 8,
+          "internal_vertices": 8,
+          "internal_edges": 8,
+          "root": -2,
+          "tree_edges": 7,
+          "non_tree_edges": 1,
+          "parallel_edge_excess": 1
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "degrees": [
+            2,
+            2
+          ],
+          "genus": 1,
+          "leaves": 8,
+          "internal_vertices": 8,
+          "internal_edges": 8,
+          "root": -4,
+          "tree_edges": 7,
+          "non_tree_edges": 1,
+          "parallel_edge_excess": 1
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "degrees": [
+            2,
+            2
+          ],
+          "genus": 1,
+          "leaves": 8,
+          "internal_vertices": 8,
+          "internal_edges": 8,
+          "root": -2,
+          "tree_edges": 7,
+          "non_tree_edges": 1,
+          "parallel_edge_excess": 1
+        }
+      ],
+      "links": [
+        {
+          "component": 1,
+          "degree": 2,
+          "V": 16,
+          "E": 24,
+          "b1": 9
+        },
+        {
+          "component": 2,
+          "degree": 2,
+          "V": 16,
+          "E": 24,
+          "b1": 9
+        },
+        {
+          "component": 3,
+          "degree": 2,
+          "V": 16,
+          "E": 24,
+          "b1": 9
+        }
+      ],
+      "numerical": {
+        "arithmetic": "fractions.Fraction and integers only",
+        "a": "10/3",
+        "prefix_degrees": [
+          2,
+          4
+        ],
+        "gaps": [
+          "10/51",
+          "65/204"
+        ],
+        "beta": [
+          "0",
+          "10/51",
+          "35/68"
+        ],
+        "weighted_gap_sum": "5/3",
+        "terminal_coefficient_A": "5/3",
+        "volume_sum": "200/3",
+        "expected_volume_d_a_squared": "200/3",
+        "gap_facets_checked": 2,
+        "terminal_facet_checked": true,
+        "components": [
+          {
+            "component": 1,
+            "degree": 2,
+            "hyperplane_coefficient": "485/102",
+            "assigned_nodes": 48,
+            "xi_square": "98675/2601",
+            "square_lower_bound": "169075/5202",
+            "curve_bound_coefficient": "10/3",
+            "core_Euler": 12,
+            "resolved_open_Euler": 60
+          },
+          {
+            "component": 2,
+            "degree": 2,
+            "hyperplane_coefficient": "365/102",
+            "assigned_nodes": 24,
+            "xi_square": "60275/2601",
+            "square_lower_bound": "60275/2601",
+            "curve_bound_coefficient": "50/17",
+            "core_Euler": 12,
+            "resolved_open_Euler": 36
+          },
+          {
+            "component": 3,
+            "degree": 2,
+            "hyperplane_coefficient": "5/3",
+            "assigned_nodes": 0,
+            "xi_square": "50/9",
+            "square_lower_bound": "50/9",
+            "curve_bound_coefficient": "5/3",
+            "core_Euler": 12,
+            "resolved_open_Euler": 12
+          }
+        ],
+        "double_curve_areas": [
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "nodes": 24,
+            "exceptional_area": "10/51",
+            "left_area": "730/51",
+            "right_area": "730/51",
+            "left_normal_degree": -16,
+            "right_normal_degree": 8,
+            "triple_points": 8
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "nodes": 24,
+            "exceptional_area": "35/68",
+            "left_area": "20/3",
+            "right_area": "20/3",
+            "left_normal_degree": -16,
+            "right_normal_degree": 8,
+            "triple_points": 8
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "nodes": 24,
+            "exceptional_area": "65/204",
+            "left_area": "20/3",
+            "right_area": "20/3",
+            "left_normal_degree": -16,
+            "right_normal_degree": 8,
+            "triple_points": 8
+          }
+        ],
+        "core_Euler_sum": 36,
+        "node_count": 72,
+        "surface_Euler": 108,
+        "Euler_identity_verified": true
+      },
+      "checks_passed": 841
+    },
+    {
+      "degrees": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "degree_sum": 6,
+      "components": 4,
+      "seed": 20261026,
+      "source_cell_dimensions": [
+        4,
+        24,
+        31
+      ],
+      "target_cell_dimensions": [
+        4,
+        6,
+        13
+      ],
+      "source_boundary_ranks_Q": [
+        3,
+        21
+      ],
+      "target_boundary_ranks_Q": [
+        3,
+        3
+      ],
+      "SDR": {
+        "integer_chain_maps": true,
+        "q_s_identity": true,
+        "id_minus_s_q_equals_dH_plus_Hd": true,
+        "H_s_zero": true,
+        "q_H_zero": true,
+        "H_squared_zero": true
+      },
+      "H2": {
+        "rank": 10,
+        "pg_degree_sum": 10,
+        "sum_component_pg": 0,
+        "basis_types": {
+          "simplex_tetrahedron_boundaries": 1,
+          "Reeb_cycles": 3,
+          "duplicate_triple_points": 6
+        },
+        "integral_basis_certified": true,
+        "coefficient_minor": "upper triangular with diagonal 1",
+        "coefficient_minor_determinant": 1
+      },
+      "trivalent_incidence_verified": true,
+      "curves": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -2,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -2,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            1,
+            4
+          ],
+          "degrees": [
+            1,
+            3
+          ],
+          "genus": 1,
+          "leaves": 6,
+          "internal_vertices": 6,
+          "internal_edges": 6,
+          "root": -1,
+          "tree_edges": 5,
+          "non_tree_edges": 1,
+          "parallel_edge_excess": 1
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -1,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            2,
+            4
+          ],
+          "degrees": [
+            1,
+            3
+          ],
+          "genus": 1,
+          "leaves": 6,
+          "internal_vertices": 6,
+          "internal_edges": 6,
+          "root": -4,
+          "tree_edges": 5,
+          "non_tree_edges": 1,
+          "parallel_edge_excess": 1
+        },
+        {
+          "pair": [
+            3,
+            4
+          ],
+          "degrees": [
+            1,
+            3
+          ],
+          "genus": 1,
+          "leaves": 6,
+          "internal_vertices": 6,
+          "internal_edges": 6,
+          "root": -6,
+          "tree_edges": 5,
+          "non_tree_edges": 1,
+          "parallel_edge_excess": 1
+        }
+      ],
+      "links": [
+        {
+          "component": 1,
+          "degree": 1,
+          "V": 10,
+          "E": 15,
+          "b1": 6
+        },
+        {
+          "component": 2,
+          "degree": 1,
+          "V": 10,
+          "E": 15,
+          "b1": 6
+        },
+        {
+          "component": 3,
+          "degree": 1,
+          "V": 10,
+          "E": 15,
+          "b1": 6
+        },
+        {
+          "component": 4,
+          "degree": 3,
+          "V": 18,
+          "E": 27,
+          "b1": 10
+        }
+      ],
+      "numerical": {
+        "arithmetic": "fractions.Fraction and integers only",
+        "a": "11/3",
+        "prefix_degrees": [
+          1,
+          2,
+          3
+        ],
+        "gaps": [
+          "1144/5805",
+          "968/5805",
+          "5434/17415"
+        ],
+        "beta": [
+          "0",
+          "1144/5805",
+          "704/1935",
+          "2354/3483"
+        ],
+        "weighted_gap_sum": "22/15",
+        "terminal_coefficient_A": "11/5",
+        "volume_sum": "242/3",
+        "expected_volume_d_a_squared": "242/3",
+        "gap_facets_checked": 3,
+        "terminal_facet_checked": true,
+        "components": [
+          {
+            "component": 1,
+            "degree": 1,
+            "hyperplane_coefficient": "36311/5805",
+            "assigned_nodes": 30,
+            "xi_square": "1006807241/33698025",
+            "square_lower_bound": "2570137163/101094075",
+            "curve_bound_coefficient": "11/3",
+            "core_Euler": 6,
+            "resolved_open_Euler": 36
+          },
+          {
+            "component": 2,
+            "degree": 1,
+            "hyperplane_coefficient": "29447/5805",
+            "assigned_nodes": 24,
+            "xi_square": "722459177/33698025",
+            "square_lower_bound": "81807979/4043763",
+            "curve_bound_coefficient": "20141/5805",
+            "core_Euler": 6,
+            "resolved_open_Euler": 30
+          },
+          {
+            "component": 3,
+            "degree": 1,
+            "hyperplane_coefficient": "23639/5805",
+            "assigned_nodes": 18,
+            "xi_square": "499745609/33698025",
+            "square_lower_bound": "499745609/33698025",
+            "curve_bound_coefficient": "3641/1161",
+            "core_Euler": 6,
+            "resolved_open_Euler": 24
+          },
+          {
+            "component": 4,
+            "degree": 3,
+            "hyperplane_coefficient": "11/5",
+            "assigned_nodes": 0,
+            "xi_square": "363/25",
+            "square_lower_bound": "363/25",
+            "curve_bound_coefficient": "11/5",
+            "core_Euler": 18,
+            "resolved_open_Euler": 18
+          }
+        ],
+        "double_curve_areas": [
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "nodes": 6,
+            "exceptional_area": "1144/5805",
+            "left_area": "29447/5805",
+            "right_area": "29447/5805",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "nodes": 6,
+            "exceptional_area": "704/1935",
+            "left_area": "23639/5805",
+            "right_area": "23639/5805",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "nodes": 18,
+            "exceptional_area": "2354/3483",
+            "left_area": "33/5",
+            "right_area": "33/5",
+            "left_normal_degree": -9,
+            "right_normal_degree": 3,
+            "triple_points": 6
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "nodes": 6,
+            "exceptional_area": "968/5805",
+            "left_area": "23639/5805",
+            "right_area": "23639/5805",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "nodes": 18,
+            "exceptional_area": "8338/17415",
+            "left_area": "33/5",
+            "right_area": "33/5",
+            "left_normal_degree": -9,
+            "right_normal_degree": 3,
+            "triple_points": 6
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "nodes": 18,
+            "exceptional_area": "5434/17415",
+            "left_area": "33/5",
+            "right_area": "33/5",
+            "left_normal_degree": -9,
+            "right_normal_degree": 3,
+            "triple_points": 6
+          }
+        ],
+        "core_Euler_sum": 36,
+        "node_count": 72,
+        "surface_Euler": 108,
+        "Euler_identity_verified": true
+      },
+      "checks_passed": 951
+    },
+    {
+      "degrees": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "degree_sum": 6,
+      "components": 4,
+      "seed": 20261027,
+      "source_cell_dimensions": [
+        4,
+        24,
+        31
+      ],
+      "target_cell_dimensions": [
+        4,
+        6,
+        13
+      ],
+      "source_boundary_ranks_Q": [
+        3,
+        21
+      ],
+      "target_boundary_ranks_Q": [
+        3,
+        3
+      ],
+      "SDR": {
+        "integer_chain_maps": true,
+        "q_s_identity": true,
+        "id_minus_s_q_equals_dH_plus_Hd": true,
+        "H_s_zero": true,
+        "q_H_zero": true,
+        "H_squared_zero": true
+      },
+      "H2": {
+        "rank": 10,
+        "pg_degree_sum": 10,
+        "sum_component_pg": 0,
+        "basis_types": {
+          "simplex_tetrahedron_boundaries": 1,
+          "Reeb_cycles": 3,
+          "duplicate_triple_points": 6
+        },
+        "integral_basis_certified": true,
+        "coefficient_minor": "upper triangular with diagonal 1",
+        "coefficient_minor_determinant": 1
+      },
+      "trivalent_incidence_verified": true,
+      "curves": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -2,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -1,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            1,
+            4
+          ],
+          "degrees": [
+            1,
+            3
+          ],
+          "genus": 1,
+          "leaves": 6,
+          "internal_vertices": 6,
+          "internal_edges": 6,
+          "root": -5,
+          "tree_edges": 5,
+          "non_tree_edges": 1,
+          "parallel_edge_excess": 1
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -1,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            2,
+            4
+          ],
+          "degrees": [
+            1,
+            3
+          ],
+          "genus": 1,
+          "leaves": 6,
+          "internal_vertices": 6,
+          "internal_edges": 6,
+          "root": -2,
+          "tree_edges": 5,
+          "non_tree_edges": 1,
+          "parallel_edge_excess": 1
+        },
+        {
+          "pair": [
+            3,
+            4
+          ],
+          "degrees": [
+            1,
+            3
+          ],
+          "genus": 1,
+          "leaves": 6,
+          "internal_vertices": 6,
+          "internal_edges": 6,
+          "root": -2,
+          "tree_edges": 5,
+          "non_tree_edges": 1,
+          "parallel_edge_excess": 1
+        }
+      ],
+      "links": [
+        {
+          "component": 1,
+          "degree": 1,
+          "V": 10,
+          "E": 15,
+          "b1": 6
+        },
+        {
+          "component": 2,
+          "degree": 1,
+          "V": 10,
+          "E": 15,
+          "b1": 6
+        },
+        {
+          "component": 3,
+          "degree": 1,
+          "V": 10,
+          "E": 15,
+          "b1": 6
+        },
+        {
+          "component": 4,
+          "degree": 3,
+          "V": 18,
+          "E": 27,
+          "b1": 10
+        }
+      ],
+      "numerical": {
+        "arithmetic": "fractions.Fraction and integers only",
+        "a": "11/3",
+        "prefix_degrees": [
+          1,
+          2,
+          3
+        ],
+        "gaps": [
+          "2288/4935",
+          "3718/4935",
+          "528/1645"
+        ],
+        "beta": [
+          "0",
+          "2288/4935",
+          "286/235",
+          "506/329"
+        ],
+        "weighted_gap_sum": "44/15",
+        "terminal_coefficient_A": "11/15",
+        "volume_sum": "242/3",
+        "expected_volume_d_a_squared": "242/3",
+        "gap_facets_checked": 3,
+        "terminal_facet_checked": true,
+        "components": [
+          {
+            "component": 1,
+            "degree": 1,
+            "hyperplane_coefficient": "49159/4935",
+            "assigned_nodes": 30,
+            "xi_square": "1131819601/24354225",
+            "square_lower_bound": "688364281/24354225",
+            "curve_bound_coefficient": "11/3",
+            "core_Euler": 6,
+            "resolved_open_Euler": 36
+          },
+          {
+            "component": 2,
+            "degree": 1,
+            "hyperplane_coefficient": "35431/4935",
+            "assigned_nodes": 24,
+            "xi_square": "133282589/4870845",
+            "square_lower_bound": "116137373/4870845",
+            "curve_bound_coefficient": "5269/1645",
+            "core_Euler": 6,
+            "resolved_open_Euler": 30
+          },
+          {
+            "component": 3,
+            "degree": 1,
+            "hyperplane_coefficient": "13123/4935",
+            "assigned_nodes": 18,
+            "xi_square": "127050121/24354225",
+            "square_lower_bound": "127050121/24354225",
+            "curve_bound_coefficient": "8371/4935",
+            "core_Euler": 6,
+            "resolved_open_Euler": 24
+          },
+          {
+            "component": 4,
+            "degree": 3,
+            "hyperplane_coefficient": "11/15",
+            "assigned_nodes": 0,
+            "xi_square": "121/75",
+            "square_lower_bound": "121/75",
+            "curve_bound_coefficient": "11/15",
+            "core_Euler": 18,
+            "resolved_open_Euler": 18
+          }
+        ],
+        "double_curve_areas": [
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "nodes": 6,
+            "exceptional_area": "2288/4935",
+            "left_area": "35431/4935",
+            "right_area": "35431/4935",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "nodes": 6,
+            "exceptional_area": "286/235",
+            "left_area": "13123/4935",
+            "right_area": "13123/4935",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "nodes": 18,
+            "exceptional_area": "506/329",
+            "left_area": "11/5",
+            "right_area": "11/5",
+            "left_normal_degree": -9,
+            "right_normal_degree": 3,
+            "triple_points": 6
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "nodes": 6,
+            "exceptional_area": "3718/4935",
+            "left_area": "13123/4935",
+            "right_area": "13123/4935",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "nodes": 18,
+            "exceptional_area": "5302/4935",
+            "left_area": "11/5",
+            "right_area": "11/5",
+            "left_normal_degree": -9,
+            "right_normal_degree": 3,
+            "triple_points": 6
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "nodes": 18,
+            "exceptional_area": "528/1645",
+            "left_area": "11/5",
+            "right_area": "11/5",
+            "left_normal_degree": -9,
+            "right_normal_degree": 3,
+            "triple_points": 6
+          }
+        ],
+        "core_Euler_sum": 36,
+        "node_count": 72,
+        "surface_Euler": 108,
+        "Euler_identity_verified": true
+      },
+      "checks_passed": 951
+    },
+    {
+      "degrees": [
+        1,
+        2,
+        4
+      ],
+      "degree_sum": 7,
+      "components": 3,
+      "seed": 20261026,
+      "source_cell_dimensions": [
+        3,
+        42,
+        59
+      ],
+      "target_cell_dimensions": [
+        3,
+        3,
+        20
+      ],
+      "source_boundary_ranks_Q": [
+        2,
+        40
+      ],
+      "target_boundary_ranks_Q": [
+        2,
+        1
+      ],
+      "SDR": {
+        "integer_chain_maps": true,
+        "q_s_identity": true,
+        "id_minus_s_q_equals_dH_plus_Hd": true,
+        "H_s_zero": true,
+        "q_H_zero": true,
+        "H_squared_zero": true
+      },
+      "H2": {
+        "rank": 19,
+        "pg_degree_sum": 20,
+        "sum_component_pg": 1,
+        "basis_types": {
+          "simplex_tetrahedron_boundaries": 0,
+          "Reeb_cycles": 12,
+          "duplicate_triple_points": 7
+        },
+        "integral_basis_certified": true,
+        "coefficient_minor": "upper triangular with diagonal 1",
+        "coefficient_minor_determinant": 1
+      },
+      "trivalent_incidence_verified": true,
+      "curves": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "degrees": [
+            1,
+            2
+          ],
+          "genus": 0,
+          "leaves": 8,
+          "internal_vertices": 6,
+          "internal_edges": 5,
+          "root": -4,
+          "tree_edges": 5,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "degrees": [
+            1,
+            4
+          ],
+          "genus": 3,
+          "leaves": 8,
+          "internal_vertices": 12,
+          "internal_edges": 14,
+          "root": -7,
+          "tree_edges": 11,
+          "non_tree_edges": 3,
+          "parallel_edge_excess": 3
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "degrees": [
+            2,
+            4
+          ],
+          "genus": 9,
+          "leaves": 8,
+          "internal_vertices": 24,
+          "internal_edges": 32,
+          "root": -10,
+          "tree_edges": 23,
+          "non_tree_edges": 9,
+          "parallel_edge_excess": 7
+        }
+      ],
+      "links": [
+        {
+          "component": 1,
+          "degree": 1,
+          "V": 18,
+          "E": 27,
+          "b1": 10
+        },
+        {
+          "component": 2,
+          "degree": 2,
+          "V": 30,
+          "E": 45,
+          "b1": 16
+        },
+        {
+          "component": 3,
+          "degree": 4,
+          "V": 36,
+          "E": 54,
+          "b1": 19
+        }
+      ],
+      "numerical": {
+        "arithmetic": "fractions.Fraction and integers only",
+        "a": "11/3",
+        "prefix_degrees": [
+          1,
+          3
+        ],
+        "gaps": [
+          "143/345",
+          "121/345"
+        ],
+        "beta": [
+          "0",
+          "143/345",
+          "88/115"
+        ],
+        "weighted_gap_sum": "22/15",
+        "terminal_coefficient_A": "11/5",
+        "volume_sum": "847/9",
+        "expected_volume_d_a_squared": "847/9",
+        "gap_facets_checked": 2,
+        "terminal_facet_checked": true,
+        "components": [
+          {
+            "component": 1,
+            "degree": 1,
+            "hyperplane_coefficient": "869/115",
+            "assigned_nodes": 42,
+            "xi_square": "182347/4761",
+            "square_lower_bound": "429913/13225",
+            "curve_bound_coefficient": "11/3",
+            "core_Euler": 13,
+            "resolved_open_Euler": 55
+          },
+          {
+            "component": 2,
+            "degree": 2,
+            "hyperplane_coefficient": "1606/345",
+            "assigned_nodes": 56,
+            "xi_square": "482064/13225",
+            "square_lower_bound": "482064/13225",
+            "curve_bound_coefficient": "374/115",
+            "core_Euler": 26,
+            "resolved_open_Euler": 82
+          },
+          {
+            "component": 3,
+            "degree": 4,
+            "hyperplane_coefficient": "11/5",
+            "assigned_nodes": 0,
+            "xi_square": "484/25",
+            "square_lower_bound": "484/25",
+            "curve_bound_coefficient": "11/5",
+            "core_Euler": 52,
+            "resolved_open_Euler": 52
+          }
+        ],
+        "double_curve_areas": [
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "nodes": 14,
+            "exceptional_area": "143/345",
+            "left_area": "3212/345",
+            "right_area": "3212/345",
+            "left_normal_degree": -10,
+            "right_normal_degree": 2,
+            "triple_points": 8
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "nodes": 28,
+            "exceptional_area": "88/115",
+            "left_area": "44/5",
+            "right_area": "44/5",
+            "left_normal_degree": -12,
+            "right_normal_degree": 4,
+            "triple_points": 8
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "nodes": 56,
+            "exceptional_area": "121/345",
+            "left_area": "88/5",
+            "right_area": "88/5",
+            "left_normal_degree": -24,
+            "right_normal_degree": 16,
+            "triple_points": 8
+          }
+        ],
+        "core_Euler_sum": 91,
+        "node_count": 98,
+        "surface_Euler": 189,
+        "Euler_identity_verified": true
+      },
+      "checks_passed": 1363
+    },
+    {
+      "degrees": [
+        1,
+        2,
+        4
+      ],
+      "degree_sum": 7,
+      "components": 3,
+      "seed": 20261027,
+      "source_cell_dimensions": [
+        3,
+        42,
+        59
+      ],
+      "target_cell_dimensions": [
+        3,
+        3,
+        20
+      ],
+      "source_boundary_ranks_Q": [
+        2,
+        40
+      ],
+      "target_boundary_ranks_Q": [
+        2,
+        1
+      ],
+      "SDR": {
+        "integer_chain_maps": true,
+        "q_s_identity": true,
+        "id_minus_s_q_equals_dH_plus_Hd": true,
+        "H_s_zero": true,
+        "q_H_zero": true,
+        "H_squared_zero": true
+      },
+      "H2": {
+        "rank": 19,
+        "pg_degree_sum": 20,
+        "sum_component_pg": 1,
+        "basis_types": {
+          "simplex_tetrahedron_boundaries": 0,
+          "Reeb_cycles": 12,
+          "duplicate_triple_points": 7
+        },
+        "integral_basis_certified": true,
+        "coefficient_minor": "upper triangular with diagonal 1",
+        "coefficient_minor_determinant": 1
+      },
+      "trivalent_incidence_verified": true,
+      "curves": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "degrees": [
+            1,
+            2
+          ],
+          "genus": 0,
+          "leaves": 8,
+          "internal_vertices": 6,
+          "internal_edges": 5,
+          "root": -6,
+          "tree_edges": 5,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "degrees": [
+            1,
+            4
+          ],
+          "genus": 3,
+          "leaves": 8,
+          "internal_vertices": 12,
+          "internal_edges": 14,
+          "root": -3,
+          "tree_edges": 11,
+          "non_tree_edges": 3,
+          "parallel_edge_excess": 3
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "degrees": [
+            2,
+            4
+          ],
+          "genus": 9,
+          "leaves": 8,
+          "internal_vertices": 24,
+          "internal_edges": 32,
+          "root": -6,
+          "tree_edges": 23,
+          "non_tree_edges": 9,
+          "parallel_edge_excess": 7
+        }
+      ],
+      "links": [
+        {
+          "component": 1,
+          "degree": 1,
+          "V": 18,
+          "E": 27,
+          "b1": 10
+        },
+        {
+          "component": 2,
+          "degree": 2,
+          "V": 30,
+          "E": 45,
+          "b1": 16
+        },
+        {
+          "component": 3,
+          "degree": 4,
+          "V": 36,
+          "E": 54,
+          "b1": 19
+        }
+      ],
+      "numerical": {
+        "arithmetic": "fractions.Fraction and integers only",
+        "a": "11/3",
+        "prefix_degrees": [
+          1,
+          3
+        ],
+        "gaps": [
+          "44/141",
+          "143/282"
+        ],
+        "beta": [
+          "0",
+          "44/141",
+          "77/94"
+        ],
+        "weighted_gap_sum": "11/6",
+        "terminal_coefficient_A": "11/6",
+        "volume_sum": "847/9",
+        "expected_volume_d_a_squared": "847/9",
+        "gap_facets_checked": 2,
+        "terminal_facet_checked": true,
+        "components": [
+          {
+            "component": 1,
+            "degree": 1,
+            "hyperplane_coefficient": "1067/141",
+            "assigned_nodes": 42,
+            "xi_square": "737858/19881",
+            "square_lower_bound": "1156397/39762",
+            "curve_bound_coefficient": "11/3",
+            "core_Euler": 13,
+            "resolved_open_Euler": 55
+          },
+          {
+            "component": 2,
+            "degree": 2,
+            "hyperplane_coefficient": "253/47",
+            "assigned_nodes": 56,
+            "xi_square": "865876/19881",
+            "square_lower_bound": "865876/19881",
+            "curve_bound_coefficient": "473/141",
+            "core_Euler": 26,
+            "resolved_open_Euler": 82
+          },
+          {
+            "component": 3,
+            "degree": 4,
+            "hyperplane_coefficient": "11/6",
+            "assigned_nodes": 0,
+            "xi_square": "121/9",
+            "square_lower_bound": "121/9",
+            "curve_bound_coefficient": "11/6",
+            "core_Euler": 52,
+            "resolved_open_Euler": 52
+          }
+        ],
+        "double_curve_areas": [
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "nodes": 14,
+            "exceptional_area": "44/141",
+            "left_area": "506/47",
+            "right_area": "506/47",
+            "left_normal_degree": -10,
+            "right_normal_degree": 2,
+            "triple_points": 8
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "nodes": 28,
+            "exceptional_area": "77/94",
+            "left_area": "22/3",
+            "right_area": "22/3",
+            "left_normal_degree": -12,
+            "right_normal_degree": 4,
+            "triple_points": 8
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "nodes": 56,
+            "exceptional_area": "143/282",
+            "left_area": "44/3",
+            "right_area": "44/3",
+            "left_normal_degree": -24,
+            "right_normal_degree": 16,
+            "triple_points": 8
+          }
+        ],
+        "core_Euler_sum": 91,
+        "node_count": 98,
+        "surface_Euler": 189,
+        "Euler_identity_verified": true
+      },
+      "checks_passed": 1363
+    },
+    {
+      "degrees": [
+        3,
+        3,
+        3
+      ],
+      "degree_sum": 9,
+      "components": 3,
+      "seed": 20261026,
+      "source_cell_dimensions": [
+        3,
+        135,
+        189
+      ],
+      "target_cell_dimensions": [
+        3,
+        3,
+        57
+      ],
+      "source_boundary_ranks_Q": [
+        2,
+        133
+      ],
+      "target_boundary_ranks_Q": [
+        2,
+        1
+      ],
+      "SDR": {
+        "integer_chain_maps": true,
+        "q_s_identity": true,
+        "id_minus_s_q_equals_dH_plus_Hd": true,
+        "H_s_zero": true,
+        "q_H_zero": true,
+        "H_squared_zero": true
+      },
+      "H2": {
+        "rank": 56,
+        "pg_degree_sum": 56,
+        "sum_component_pg": 0,
+        "basis_types": {
+          "simplex_tetrahedron_boundaries": 0,
+          "Reeb_cycles": 30,
+          "duplicate_triple_points": 26
+        },
+        "integral_basis_certified": true,
+        "coefficient_minor": "upper triangular with diagonal 1",
+        "coefficient_minor_determinant": 1
+      },
+      "trivalent_incidence_verified": true,
+      "curves": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "degrees": [
+            3,
+            3
+          ],
+          "genus": 10,
+          "leaves": 27,
+          "internal_vertices": 45,
+          "internal_edges": 54,
+          "root": -45,
+          "tree_edges": 44,
+          "non_tree_edges": 10,
+          "parallel_edge_excess": 8
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "degrees": [
+            3,
+            3
+          ],
+          "genus": 10,
+          "leaves": 27,
+          "internal_vertices": 45,
+          "internal_edges": 54,
+          "root": -8,
+          "tree_edges": 44,
+          "non_tree_edges": 10,
+          "parallel_edge_excess": 8
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "degrees": [
+            3,
+            3
+          ],
+          "genus": 10,
+          "leaves": 27,
+          "internal_vertices": 45,
+          "internal_edges": 54,
+          "root": -7,
+          "tree_edges": 44,
+          "non_tree_edges": 10,
+          "parallel_edge_excess": 10
+        }
+      ],
+      "links": [
+        {
+          "component": 1,
+          "degree": 3,
+          "V": 90,
+          "E": 135,
+          "b1": 46
+        },
+        {
+          "component": 2,
+          "degree": 3,
+          "V": 90,
+          "E": 135,
+          "b1": 46
+        },
+        {
+          "component": 3,
+          "degree": 3,
+          "V": 90,
+          "E": 135,
+          "b1": 46
+        }
+      ],
+      "numerical": {
+        "arithmetic": "fractions.Fraction and integers only",
+        "a": "13/3",
+        "prefix_degrees": [
+          3,
+          6
+        ],
+        "gaps": [
+          "338/1575",
+          "286/1575"
+        ],
+        "beta": [
+          "0",
+          "338/1575",
+          "208/525"
+        ],
+        "weighted_gap_sum": "26/15",
+        "terminal_coefficient_A": "13/5",
+        "volume_sum": "169",
+        "expected_volume_d_a_squared": "169",
+        "gap_facets_checked": 2,
+        "terminal_facet_checked": true,
+        "components": [
+          {
+            "component": 1,
+            "degree": 3,
+            "hyperplane_coefficient": "1079/175",
+            "assigned_nodes": 162,
+            "xi_square": "2989103/30625",
+            "square_lower_bound": "2713971/30625",
+            "curve_bound_coefficient": "13/3",
+            "core_Euler": 72,
+            "resolved_open_Euler": 234
+          },
+          {
+            "component": 2,
+            "degree": 3,
+            "hyperplane_coefficient": "741/175",
+            "assigned_nodes": 81,
+            "xi_square": "1565447/30625",
+            "square_lower_bound": "1565447/30625",
+            "curve_bound_coefficient": "1937/525",
+            "core_Euler": 72,
+            "resolved_open_Euler": 153
+          },
+          {
+            "component": 3,
+            "degree": 3,
+            "hyperplane_coefficient": "13/5",
+            "assigned_nodes": 0,
+            "xi_square": "507/25",
+            "square_lower_bound": "507/25",
+            "curve_bound_coefficient": "13/5",
+            "core_Euler": 72,
+            "resolved_open_Euler": 72
+          }
+        ],
+        "double_curve_areas": [
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "nodes": 81,
+            "exceptional_area": "338/1575",
+            "left_area": "6669/175",
+            "right_area": "6669/175",
+            "left_normal_degree": -54,
+            "right_normal_degree": 27,
+            "triple_points": 27
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "nodes": 81,
+            "exceptional_area": "208/525",
+            "left_area": "117/5",
+            "right_area": "117/5",
+            "left_normal_degree": -54,
+            "right_normal_degree": 27,
+            "triple_points": 27
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "nodes": 81,
+            "exceptional_area": "286/1575",
+            "left_area": "117/5",
+            "right_area": "117/5",
+            "left_normal_degree": -54,
+            "right_normal_degree": 27,
+            "triple_points": 27
+          }
+        ],
+        "core_Euler_sum": 216,
+        "node_count": 243,
+        "surface_Euler": 459,
+        "Euler_identity_verified": true
+      },
+      "checks_passed": 3908
+    },
+    {
+      "degrees": [
+        3,
+        3,
+        3
+      ],
+      "degree_sum": 9,
+      "components": 3,
+      "seed": 20261027,
+      "source_cell_dimensions": [
+        3,
+        135,
+        189
+      ],
+      "target_cell_dimensions": [
+        3,
+        3,
+        57
+      ],
+      "source_boundary_ranks_Q": [
+        2,
+        133
+      ],
+      "target_boundary_ranks_Q": [
+        2,
+        1
+      ],
+      "SDR": {
+        "integer_chain_maps": true,
+        "q_s_identity": true,
+        "id_minus_s_q_equals_dH_plus_Hd": true,
+        "H_s_zero": true,
+        "q_H_zero": true,
+        "H_squared_zero": true
+      },
+      "H2": {
+        "rank": 56,
+        "pg_degree_sum": 56,
+        "sum_component_pg": 0,
+        "basis_types": {
+          "simplex_tetrahedron_boundaries": 0,
+          "Reeb_cycles": 30,
+          "duplicate_triple_points": 26
+        },
+        "integral_basis_certified": true,
+        "coefficient_minor": "upper triangular with diagonal 1",
+        "coefficient_minor_determinant": 1
+      },
+      "trivalent_incidence_verified": true,
+      "curves": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "degrees": [
+            3,
+            3
+          ],
+          "genus": 10,
+          "leaves": 27,
+          "internal_vertices": 45,
+          "internal_edges": 54,
+          "root": -38,
+          "tree_edges": 44,
+          "non_tree_edges": 10,
+          "parallel_edge_excess": 10
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "degrees": [
+            3,
+            3
+          ],
+          "genus": 10,
+          "leaves": 27,
+          "internal_vertices": 45,
+          "internal_edges": 54,
+          "root": -9,
+          "tree_edges": 44,
+          "non_tree_edges": 10,
+          "parallel_edge_excess": 10
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "degrees": [
+            3,
+            3
+          ],
+          "genus": 10,
+          "leaves": 27,
+          "internal_vertices": 45,
+          "internal_edges": 54,
+          "root": -17,
+          "tree_edges": 44,
+          "non_tree_edges": 10,
+          "parallel_edge_excess": 7
+        }
+      ],
+      "links": [
+        {
+          "component": 1,
+          "degree": 3,
+          "V": 90,
+          "E": 135,
+          "b1": 46
+        },
+        {
+          "component": 2,
+          "degree": 3,
+          "V": 90,
+          "E": 135,
+          "b1": 46
+        },
+        {
+          "component": 3,
+          "degree": 3,
+          "V": 90,
+          "E": 135,
+          "b1": 46
+        }
+      ],
+      "numerical": {
+        "arithmetic": "fractions.Fraction and integers only",
+        "a": "13/3",
+        "prefix_degrees": [
+          3,
+          6
+        ],
+        "gaps": [
+          "26/153",
+          "169/612"
+        ],
+        "beta": [
+          "0",
+          "26/153",
+          "91/204"
+        ],
+        "weighted_gap_sum": "13/6",
+        "terminal_coefficient_A": "13/6",
+        "volume_sum": "169",
+        "expected_volume_d_a_squared": "169",
+        "gap_facets_checked": 2,
+        "terminal_facet_checked": true,
+        "components": [
+          {
+            "component": 1,
+            "degree": 3,
+            "hyperplane_coefficient": "1261/204",
+            "assigned_nodes": 162,
+            "xi_square": "667043/6936",
+            "square_lower_bound": "1142947/13872",
+            "curve_bound_coefficient": "13/3",
+            "core_Euler": 72,
+            "resolved_open_Euler": 234
+          },
+          {
+            "component": 2,
+            "degree": 3,
+            "hyperplane_coefficient": "949/204",
+            "assigned_nodes": 81,
+            "xi_square": "407459/6936",
+            "square_lower_bound": "407459/6936",
+            "curve_bound_coefficient": "65/17",
+            "core_Euler": 72,
+            "resolved_open_Euler": 153
+          },
+          {
+            "component": 3,
+            "degree": 3,
+            "hyperplane_coefficient": "13/6",
+            "assigned_nodes": 0,
+            "xi_square": "169/12",
+            "square_lower_bound": "169/12",
+            "curve_bound_coefficient": "13/6",
+            "core_Euler": 72,
+            "resolved_open_Euler": 72
+          }
+        ],
+        "double_curve_areas": [
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "nodes": 81,
+            "exceptional_area": "26/153",
+            "left_area": "2847/68",
+            "right_area": "2847/68",
+            "left_normal_degree": -54,
+            "right_normal_degree": 27,
+            "triple_points": 27
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "nodes": 81,
+            "exceptional_area": "91/204",
+            "left_area": "39/2",
+            "right_area": "39/2",
+            "left_normal_degree": -54,
+            "right_normal_degree": 27,
+            "triple_points": 27
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "nodes": 81,
+            "exceptional_area": "169/612",
+            "left_area": "39/2",
+            "right_area": "39/2",
+            "left_normal_degree": -54,
+            "right_normal_degree": 27,
+            "triple_points": 27
+          }
+        ],
+        "core_Euler_sum": 216,
+        "node_count": 243,
+        "surface_Euler": 459,
+        "Euler_identity_verified": true
+      },
+      "checks_passed": 3908
+    },
+    {
+      "degrees": [
+        2,
+        3,
+        4
+      ],
+      "degree_sum": 9,
+      "components": 3,
+      "seed": 20261026,
+      "source_cell_dimensions": [
+        3,
+        130,
+        183
+      ],
+      "target_cell_dimensions": [
+        3,
+        3,
+        56
+      ],
+      "source_boundary_ranks_Q": [
+        2,
+        128
+      ],
+      "target_boundary_ranks_Q": [
+        2,
+        1
+      ],
+      "SDR": {
+        "integer_chain_maps": true,
+        "q_s_identity": true,
+        "id_minus_s_q_equals_dH_plus_Hd": true,
+        "H_s_zero": true,
+        "q_H_zero": true,
+        "H_squared_zero": true
+      },
+      "H2": {
+        "rank": 55,
+        "pg_degree_sum": 56,
+        "sum_component_pg": 1,
+        "basis_types": {
+          "simplex_tetrahedron_boundaries": 0,
+          "Reeb_cycles": 32,
+          "duplicate_triple_points": 23
+        },
+        "integral_basis_certified": true,
+        "coefficient_minor": "upper triangular with diagonal 1",
+        "coefficient_minor_determinant": 1
+      },
+      "trivalent_incidence_verified": true,
+      "curves": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "degrees": [
+            2,
+            3
+          ],
+          "genus": 4,
+          "leaves": 24,
+          "internal_vertices": 30,
+          "internal_edges": 33,
+          "root": -18,
+          "tree_edges": 29,
+          "non_tree_edges": 4,
+          "parallel_edge_excess": 4
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "degrees": [
+            2,
+            4
+          ],
+          "genus": 9,
+          "leaves": 24,
+          "internal_vertices": 40,
+          "internal_edges": 48,
+          "root": -34,
+          "tree_edges": 39,
+          "non_tree_edges": 9,
+          "parallel_edge_excess": 8
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "degrees": [
+            3,
+            4
+          ],
+          "genus": 19,
+          "leaves": 24,
+          "internal_vertices": 60,
+          "internal_edges": 78,
+          "root": -40,
+          "tree_edges": 59,
+          "non_tree_edges": 19,
+          "parallel_edge_excess": 15
+        }
+      ],
+      "links": [
+        {
+          "component": 1,
+          "degree": 2,
+          "V": 70,
+          "E": 105,
+          "b1": 36
+        },
+        {
+          "component": 2,
+          "degree": 3,
+          "V": 90,
+          "E": 135,
+          "b1": 46
+        },
+        {
+          "component": 3,
+          "degree": 4,
+          "V": 100,
+          "E": 150,
+          "b1": 51
+        }
+      ],
+      "numerical": {
+        "arithmetic": "fractions.Fraction and integers only",
+        "a": "13/3",
+        "prefix_degrees": [
+          2,
+          5
+        ],
+        "gaps": [
+          "338/1215",
+          "286/1215"
+        ],
+        "beta": [
+          "0",
+          "338/1215",
+          "208/405"
+        ],
+        "weighted_gap_sum": "26/15",
+        "terminal_coefficient_A": "13/5",
+        "volume_sum": "169",
+        "expected_volume_d_a_squared": "169",
+        "gap_facets_checked": 2,
+        "terminal_facet_checked": true,
+        "components": [
+          {
+            "component": 1,
+            "degree": 2,
+            "hyperplane_coefficient": "65/9",
+            "assigned_nodes": 126,
+            "xi_square": "4436926/54675",
+            "square_lower_bound": "1295554/18225",
+            "curve_bound_coefficient": "13/3",
+            "core_Euler": 50,
+            "resolved_open_Euler": 176
+          },
+          {
+            "component": 2,
+            "degree": 3,
+            "hyperplane_coefficient": "637/135",
+            "assigned_nodes": 108,
+            "xi_square": "3324737/54675",
+            "square_lower_bound": "3324737/54675",
+            "curve_bound_coefficient": "4589/1215",
+            "core_Euler": 75,
+            "resolved_open_Euler": 183
+          },
+          {
+            "component": 3,
+            "degree": 4,
+            "hyperplane_coefficient": "13/5",
+            "assigned_nodes": 0,
+            "xi_square": "676/25",
+            "square_lower_bound": "676/25",
+            "curve_bound_coefficient": "13/5",
+            "core_Euler": 100,
+            "resolved_open_Euler": 100
+          }
+        ],
+        "double_curve_areas": [
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "nodes": 54,
+            "exceptional_area": "338/1215",
+            "left_area": "1274/45",
+            "right_area": "1274/45",
+            "left_normal_degree": -36,
+            "right_normal_degree": 12,
+            "triple_points": 24
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "nodes": 72,
+            "exceptional_area": "208/405",
+            "left_area": "104/5",
+            "right_area": "104/5",
+            "left_normal_degree": -40,
+            "right_normal_degree": 16,
+            "triple_points": 24
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "nodes": 108,
+            "exceptional_area": "286/1215",
+            "left_area": "156/5",
+            "right_area": "156/5",
+            "left_normal_degree": -60,
+            "right_normal_degree": 36,
+            "triple_points": 24
+          }
+        ],
+        "core_Euler_sum": 225,
+        "node_count": 234,
+        "surface_Euler": 459,
+        "Euler_identity_verified": true
+      },
+      "checks_passed": 3787
+    },
+    {
+      "degrees": [
+        2,
+        3,
+        4
+      ],
+      "degree_sum": 9,
+      "components": 3,
+      "seed": 20261027,
+      "source_cell_dimensions": [
+        3,
+        130,
+        183
+      ],
+      "target_cell_dimensions": [
+        3,
+        3,
+        56
+      ],
+      "source_boundary_ranks_Q": [
+        2,
+        128
+      ],
+      "target_boundary_ranks_Q": [
+        2,
+        1
+      ],
+      "SDR": {
+        "integer_chain_maps": true,
+        "q_s_identity": true,
+        "id_minus_s_q_equals_dH_plus_Hd": true,
+        "H_s_zero": true,
+        "q_H_zero": true,
+        "H_squared_zero": true
+      },
+      "H2": {
+        "rank": 55,
+        "pg_degree_sum": 56,
+        "sum_component_pg": 1,
+        "basis_types": {
+          "simplex_tetrahedron_boundaries": 0,
+          "Reeb_cycles": 32,
+          "duplicate_triple_points": 23
+        },
+        "integral_basis_certified": true,
+        "coefficient_minor": "upper triangular with diagonal 1",
+        "coefficient_minor_determinant": 1
+      },
+      "trivalent_incidence_verified": true,
+      "curves": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "degrees": [
+            2,
+            3
+          ],
+          "genus": 4,
+          "leaves": 24,
+          "internal_vertices": 30,
+          "internal_edges": 33,
+          "root": -21,
+          "tree_edges": 29,
+          "non_tree_edges": 4,
+          "parallel_edge_excess": 4
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "degrees": [
+            2,
+            4
+          ],
+          "genus": 9,
+          "leaves": 24,
+          "internal_vertices": 40,
+          "internal_edges": 48,
+          "root": -20,
+          "tree_edges": 39,
+          "non_tree_edges": 9,
+          "parallel_edge_excess": 8
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "degrees": [
+            3,
+            4
+          ],
+          "genus": 19,
+          "leaves": 24,
+          "internal_vertices": 60,
+          "internal_edges": 78,
+          "root": -48,
+          "tree_edges": 59,
+          "non_tree_edges": 19,
+          "parallel_edge_excess": 15
+        }
+      ],
+      "links": [
+        {
+          "component": 1,
+          "degree": 2,
+          "V": 70,
+          "E": 105,
+          "b1": 36
+        },
+        {
+          "component": 2,
+          "degree": 3,
+          "V": 90,
+          "E": 135,
+          "b1": 46
+        },
+        {
+          "component": 3,
+          "degree": 4,
+          "V": 100,
+          "E": 150,
+          "b1": 51
+        }
+      ],
+      "numerical": {
+        "arithmetic": "fractions.Fraction and integers only",
+        "a": "13/3",
+        "prefix_degrees": [
+          2,
+          5
+        ],
+        "gaps": [
+          "52/243",
+          "169/486"
+        ],
+        "beta": [
+          "0",
+          "52/243",
+          "91/162"
+        ],
+        "weighted_gap_sum": "13/6",
+        "terminal_coefficient_A": "13/6",
+        "volume_sum": "169",
+        "expected_volume_d_a_squared": "169",
+        "gap_facets_checked": 2,
+        "terminal_facet_checked": true,
+        "components": [
+          {
+            "component": 1,
+            "degree": 2,
+            "hyperplane_coefficient": "65/9",
+            "assigned_nodes": 126,
+            "xi_square": "173056/2187",
+            "square_lower_bound": "94133/1458",
+            "curve_bound_coefficient": "13/3",
+            "core_Euler": 50,
+            "resolved_open_Euler": 176
+          },
+          {
+            "component": 2,
+            "degree": 3,
+            "hyperplane_coefficient": "143/27",
+            "assigned_nodes": 108,
+            "xi_square": "155480/2187",
+            "square_lower_bound": "155480/2187",
+            "curve_bound_coefficient": "949/243",
+            "core_Euler": 75,
+            "resolved_open_Euler": 183
+          },
+          {
+            "component": 3,
+            "degree": 4,
+            "hyperplane_coefficient": "13/6",
+            "assigned_nodes": 0,
+            "xi_square": "169/9",
+            "square_lower_bound": "169/9",
+            "curve_bound_coefficient": "13/6",
+            "core_Euler": 100,
+            "resolved_open_Euler": 100
+          }
+        ],
+        "double_curve_areas": [
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "nodes": 54,
+            "exceptional_area": "52/243",
+            "left_area": "286/9",
+            "right_area": "286/9",
+            "left_normal_degree": -36,
+            "right_normal_degree": 12,
+            "triple_points": 24
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "nodes": 72,
+            "exceptional_area": "91/162",
+            "left_area": "52/3",
+            "right_area": "52/3",
+            "left_normal_degree": -40,
+            "right_normal_degree": 16,
+            "triple_points": 24
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "nodes": 108,
+            "exceptional_area": "169/486",
+            "left_area": "26",
+            "right_area": "26",
+            "left_normal_degree": -60,
+            "right_normal_degree": 36,
+            "triple_points": 24
+          }
+        ],
+        "core_Euler_sum": 225,
+        "node_count": 234,
+        "surface_Euler": 459,
+        "Euler_identity_verified": true
+      },
+      "checks_passed": 3787
+    },
+    {
+      "degrees": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "degree_sum": 5,
+      "components": 5,
+      "seed": 20261026,
+      "source_cell_dimensions": [
+        5,
+        10,
+        10
+      ],
+      "target_cell_dimensions": [
+        5,
+        10,
+        10
+      ],
+      "source_boundary_ranks_Q": [
+        4,
+        6
+      ],
+      "target_boundary_ranks_Q": [
+        4,
+        6
+      ],
+      "SDR": {
+        "integer_chain_maps": true,
+        "q_s_identity": true,
+        "id_minus_s_q_equals_dH_plus_Hd": true,
+        "H_s_zero": true,
+        "q_H_zero": true,
+        "H_squared_zero": true
+      },
+      "H2": {
+        "rank": 4,
+        "pg_degree_sum": 4,
+        "sum_component_pg": 0,
+        "basis_types": {
+          "simplex_tetrahedron_boundaries": 4,
+          "Reeb_cycles": 0,
+          "duplicate_triple_points": 0
+        },
+        "integral_basis_certified": true,
+        "coefficient_minor": "upper triangular with diagonal 1",
+        "coefficient_minor_determinant": 1
+      },
+      "trivalent_incidence_verified": true,
+      "curves": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 3,
+          "internal_vertices": 1,
+          "internal_edges": 0,
+          "root": -1,
+          "tree_edges": 0,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 3,
+          "internal_vertices": 1,
+          "internal_edges": 0,
+          "root": -1,
+          "tree_edges": 0,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            1,
+            4
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 3,
+          "internal_vertices": 1,
+          "internal_edges": 0,
+          "root": -1,
+          "tree_edges": 0,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            1,
+            5
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 3,
+          "internal_vertices": 1,
+          "internal_edges": 0,
+          "root": -1,
+          "tree_edges": 0,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 3,
+          "internal_vertices": 1,
+          "internal_edges": 0,
+          "root": -1,
+          "tree_edges": 0,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            2,
+            4
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 3,
+          "internal_vertices": 1,
+          "internal_edges": 0,
+          "root": -1,
+          "tree_edges": 0,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            2,
+            5
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 3,
+          "internal_vertices": 1,
+          "internal_edges": 0,
+          "root": -1,
+          "tree_edges": 0,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            3,
+            4
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 3,
+          "internal_vertices": 1,
+          "internal_edges": 0,
+          "root": -1,
+          "tree_edges": 0,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            3,
+            5
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 3,
+          "internal_vertices": 1,
+          "internal_edges": 0,
+          "root": -1,
+          "tree_edges": 0,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            4,
+            5
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 3,
+          "internal_vertices": 1,
+          "internal_edges": 0,
+          "root": -1,
+          "tree_edges": 0,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        }
+      ],
+      "links": [
+        {
+          "component": 1,
+          "degree": 1,
+          "V": 4,
+          "E": 6,
+          "b1": 3
+        },
+        {
+          "component": 2,
+          "degree": 1,
+          "V": 4,
+          "E": 6,
+          "b1": 3
+        },
+        {
+          "component": 3,
+          "degree": 1,
+          "V": 4,
+          "E": 6,
+          "b1": 3
+        },
+        {
+          "component": 4,
+          "degree": 1,
+          "V": 4,
+          "E": 6,
+          "b1": 3
+        },
+        {
+          "component": 5,
+          "degree": 1,
+          "V": 4,
+          "E": 6,
+          "b1": 3
+        }
+      ],
+      "numerical": {
+        "arithmetic": "fractions.Fraction and integers only",
+        "a": "11/3",
+        "prefix_degrees": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "gaps": [
+          "2574/25735",
+          "2178/25735",
+          "8151/51470",
+          "2288/25735"
+        ],
+        "beta": [
+          "0",
+          "2574/25735",
+          "4752/25735",
+          "3531/10294",
+          "22231/51470"
+        ],
+        "weighted_gap_sum": "11/10",
+        "terminal_coefficient_A": "77/30",
+        "volume_sum": "605/9",
+        "expected_volume_d_a_squared": "605/9",
+        "gap_facets_checked": 4,
+        "terminal_facet_checked": true,
+        "components": [
+          {
+            "component": 1,
+            "degree": 1,
+            "hyperplane_coefficient": "364892/77205",
+            "assigned_nodes": 20,
+            "xi_square": "245530596443/11921224050",
+            "square_lower_bound": "110906390419/5960612025",
+            "curve_bound_coefficient": "11/3",
+            "core_Euler": 1,
+            "resolved_open_Euler": 21
+          },
+          {
+            "component": 2,
+            "degree": 1,
+            "hyperplane_coefficient": "326282/77205",
+            "assigned_nodes": 15,
+            "xi_square": "202407241883/11921224050",
+            "square_lower_bound": "386442874081/23842448100",
+            "curve_bound_coefficient": "275363/77205",
+            "core_Euler": 1,
+            "resolved_open_Euler": 16
+          },
+          {
+            "component": 3,
+            "degree": 1,
+            "hyperplane_coefficient": "293612/77205",
+            "assigned_nodes": 10,
+            "xi_square": "167276668163/11921224050",
+            "square_lower_bound": "165127069283/11921224050",
+            "curve_bound_coefficient": "52459/15441",
+            "core_Euler": 1,
+            "resolved_open_Euler": 11
+          },
+          {
+            "component": 4,
+            "degree": 1,
+            "hyperplane_coefficient": "464959/154410",
+            "assigned_nodes": 5,
+            "xi_square": "215244581761/23842448100",
+            "square_lower_bound": "215244581761/23842448100",
+            "curve_bound_coefficient": "451231/154410",
+            "core_Euler": 1,
+            "resolved_open_Euler": 6
+          },
+          {
+            "component": 5,
+            "degree": 1,
+            "hyperplane_coefficient": "77/30",
+            "assigned_nodes": 0,
+            "xi_square": "5929/900",
+            "square_lower_bound": "5929/900",
+            "curve_bound_coefficient": "77/30",
+            "core_Euler": 1,
+            "resolved_open_Euler": 1
+          }
+        ],
+        "double_curve_areas": [
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "nodes": 5,
+            "exceptional_area": "2574/25735",
+            "left_area": "326282/77205",
+            "right_area": "326282/77205",
+            "left_normal_degree": -4,
+            "right_normal_degree": 1,
+            "triple_points": 3
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "nodes": 5,
+            "exceptional_area": "4752/25735",
+            "left_area": "293612/77205",
+            "right_area": "293612/77205",
+            "left_normal_degree": -4,
+            "right_normal_degree": 1,
+            "triple_points": 3
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "nodes": 5,
+            "exceptional_area": "3531/10294",
+            "left_area": "464959/154410",
+            "right_area": "464959/154410",
+            "left_normal_degree": -4,
+            "right_normal_degree": 1,
+            "triple_points": 3
+          },
+          {
+            "pair": [
+              1,
+              5
+            ],
+            "nodes": 5,
+            "exceptional_area": "22231/51470",
+            "left_area": "77/30",
+            "right_area": "77/30",
+            "left_normal_degree": -4,
+            "right_normal_degree": 1,
+            "triple_points": 3
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "nodes": 5,
+            "exceptional_area": "2178/25735",
+            "left_area": "293612/77205",
+            "right_area": "293612/77205",
+            "left_normal_degree": -4,
+            "right_normal_degree": 1,
+            "triple_points": 3
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "nodes": 5,
+            "exceptional_area": "12507/51470",
+            "left_area": "464959/154410",
+            "right_area": "464959/154410",
+            "left_normal_degree": -4,
+            "right_normal_degree": 1,
+            "triple_points": 3
+          },
+          {
+            "pair": [
+              2,
+              5
+            ],
+            "nodes": 5,
+            "exceptional_area": "17083/51470",
+            "left_area": "77/30",
+            "right_area": "77/30",
+            "left_normal_degree": -4,
+            "right_normal_degree": 1,
+            "triple_points": 3
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "nodes": 5,
+            "exceptional_area": "8151/51470",
+            "left_area": "464959/154410",
+            "right_area": "464959/154410",
+            "left_normal_degree": -4,
+            "right_normal_degree": 1,
+            "triple_points": 3
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "nodes": 5,
+            "exceptional_area": "12727/51470",
+            "left_area": "77/30",
+            "right_area": "77/30",
+            "left_normal_degree": -4,
+            "right_normal_degree": 1,
+            "triple_points": 3
+          },
+          {
+            "pair": [
+              4,
+              5
+            ],
+            "nodes": 5,
+            "exceptional_area": "2288/25735",
+            "left_area": "77/30",
+            "right_area": "77/30",
+            "left_normal_degree": -4,
+            "right_normal_degree": 1,
+            "triple_points": 3
+          }
+        ],
+        "core_Euler_sum": 5,
+        "node_count": 50,
+        "surface_Euler": 55,
+        "Euler_identity_verified": true
+      },
+      "checks_passed": 703
+    },
+    {
+      "degrees": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "degree_sum": 5,
+      "components": 5,
+      "seed": 20261027,
+      "source_cell_dimensions": [
+        5,
+        10,
+        10
+      ],
+      "target_cell_dimensions": [
+        5,
+        10,
+        10
+      ],
+      "source_boundary_ranks_Q": [
+        4,
+        6
+      ],
+      "target_boundary_ranks_Q": [
+        4,
+        6
+      ],
+      "SDR": {
+        "integer_chain_maps": true,
+        "q_s_identity": true,
+        "id_minus_s_q_equals_dH_plus_Hd": true,
+        "H_s_zero": true,
+        "q_H_zero": true,
+        "H_squared_zero": true
+      },
+      "H2": {
+        "rank": 4,
+        "pg_degree_sum": 4,
+        "sum_component_pg": 0,
+        "basis_types": {
+          "simplex_tetrahedron_boundaries": 4,
+          "Reeb_cycles": 0,
+          "duplicate_triple_points": 0
+        },
+        "integral_basis_certified": true,
+        "coefficient_minor": "upper triangular with diagonal 1",
+        "coefficient_minor_determinant": 1
+      },
+      "trivalent_incidence_verified": true,
+      "curves": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 3,
+          "internal_vertices": 1,
+          "internal_edges": 0,
+          "root": -1,
+          "tree_edges": 0,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 3,
+          "internal_vertices": 1,
+          "internal_edges": 0,
+          "root": -1,
+          "tree_edges": 0,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            1,
+            4
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 3,
+          "internal_vertices": 1,
+          "internal_edges": 0,
+          "root": -1,
+          "tree_edges": 0,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            1,
+            5
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 3,
+          "internal_vertices": 1,
+          "internal_edges": 0,
+          "root": -1,
+          "tree_edges": 0,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 3,
+          "internal_vertices": 1,
+          "internal_edges": 0,
+          "root": -1,
+          "tree_edges": 0,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            2,
+            4
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 3,
+          "internal_vertices": 1,
+          "internal_edges": 0,
+          "root": -1,
+          "tree_edges": 0,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            2,
+            5
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 3,
+          "internal_vertices": 1,
+          "internal_edges": 0,
+          "root": -1,
+          "tree_edges": 0,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            3,
+            4
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 3,
+          "internal_vertices": 1,
+          "internal_edges": 0,
+          "root": -1,
+          "tree_edges": 0,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            3,
+            5
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 3,
+          "internal_vertices": 1,
+          "internal_edges": 0,
+          "root": -1,
+          "tree_edges": 0,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            4,
+            5
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 3,
+          "internal_vertices": 1,
+          "internal_edges": 0,
+          "root": -1,
+          "tree_edges": 0,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        }
+      ],
+      "links": [
+        {
+          "component": 1,
+          "degree": 1,
+          "V": 4,
+          "E": 6,
+          "b1": 3
+        },
+        {
+          "component": 2,
+          "degree": 1,
+          "V": 4,
+          "E": 6,
+          "b1": 3
+        },
+        {
+          "component": 3,
+          "degree": 1,
+          "V": 4,
+          "E": 6,
+          "b1": 3
+        },
+        {
+          "component": 4,
+          "degree": 1,
+          "V": 4,
+          "E": 6,
+          "b1": 3
+        },
+        {
+          "component": 5,
+          "degree": 1,
+          "V": 4,
+          "E": 6,
+          "b1": 3
+        }
+      ],
+      "numerical": {
+        "arithmetic": "fractions.Fraction and integers only",
+        "a": "11/3",
+        "prefix_degrees": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "gaps": [
+          "1144/8535",
+          "1859/8535",
+          "264/2845",
+          "88/569"
+        ],
+        "beta": [
+          "0",
+          "1144/8535",
+          "1001/2845",
+          "253/569",
+          "341/569"
+        ],
+        "weighted_gap_sum": "22/15",
+        "terminal_coefficient_A": "11/5",
+        "volume_sum": "605/9",
+        "expected_volume_d_a_squared": "605/9",
+        "gap_facets_checked": 4,
+        "terminal_facet_checked": true,
+        "components": [
+          {
+            "component": 1,
+            "degree": 1,
+            "hyperplane_coefficient": "14784/2845",
+            "assigned_nodes": 20,
+            "xi_square": "1712639929/72846225",
+            "square_lower_bound": "160426156/8094025",
+            "curve_bound_coefficient": "11/3",
+            "core_Euler": 1,
+            "resolved_open_Euler": 21
+          },
+          {
+            "component": 2,
+            "degree": 1,
+            "hyperplane_coefficient": "38632/8535",
+            "assigned_nodes": 15,
+            "xi_square": "1361168809/72846225",
+            "square_lower_bound": "1255898809/72846225",
+            "curve_bound_coefficient": "30151/8535",
+            "core_Euler": 1,
+            "resolved_open_Euler": 16
+          },
+          {
+            "component": 3,
+            "degree": 1,
+            "hyperplane_coefficient": "9779/2845",
+            "assigned_nodes": 10,
+            "xi_square": "92802281/8094025",
+            "square_lower_bound": "90672681/8094025",
+            "curve_bound_coefficient": "8811/2845",
+            "core_Euler": 1,
+            "resolved_open_Euler": 11
+          },
+          {
+            "component": 4,
+            "degree": 1,
+            "hyperplane_coefficient": "8459/2845",
+            "assigned_nodes": 5,
+            "xi_square": "70586681/8094025",
+            "square_lower_bound": "70586681/8094025",
+            "curve_bound_coefficient": "8019/2845",
+            "core_Euler": 1,
+            "resolved_open_Euler": 6
+          },
+          {
+            "component": 5,
+            "degree": 1,
+            "hyperplane_coefficient": "11/5",
+            "assigned_nodes": 0,
+            "xi_square": "121/25",
+            "square_lower_bound": "121/25",
+            "curve_bound_coefficient": "11/5",
+            "core_Euler": 1,
+            "resolved_open_Euler": 1
+          }
+        ],
+        "double_curve_areas": [
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "nodes": 5,
+            "exceptional_area": "1144/8535",
+            "left_area": "38632/8535",
+            "right_area": "38632/8535",
+            "left_normal_degree": -4,
+            "right_normal_degree": 1,
+            "triple_points": 3
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "nodes": 5,
+            "exceptional_area": "1001/2845",
+            "left_area": "9779/2845",
+            "right_area": "9779/2845",
+            "left_normal_degree": -4,
+            "right_normal_degree": 1,
+            "triple_points": 3
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "nodes": 5,
+            "exceptional_area": "253/569",
+            "left_area": "8459/2845",
+            "right_area": "8459/2845",
+            "left_normal_degree": -4,
+            "right_normal_degree": 1,
+            "triple_points": 3
+          },
+          {
+            "pair": [
+              1,
+              5
+            ],
+            "nodes": 5,
+            "exceptional_area": "341/569",
+            "left_area": "11/5",
+            "right_area": "11/5",
+            "left_normal_degree": -4,
+            "right_normal_degree": 1,
+            "triple_points": 3
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "nodes": 5,
+            "exceptional_area": "1859/8535",
+            "left_area": "9779/2845",
+            "right_area": "9779/2845",
+            "left_normal_degree": -4,
+            "right_normal_degree": 1,
+            "triple_points": 3
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "nodes": 5,
+            "exceptional_area": "2651/8535",
+            "left_area": "8459/2845",
+            "right_area": "8459/2845",
+            "left_normal_degree": -4,
+            "right_normal_degree": 1,
+            "triple_points": 3
+          },
+          {
+            "pair": [
+              2,
+              5
+            ],
+            "nodes": 5,
+            "exceptional_area": "3971/8535",
+            "left_area": "11/5",
+            "right_area": "11/5",
+            "left_normal_degree": -4,
+            "right_normal_degree": 1,
+            "triple_points": 3
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "nodes": 5,
+            "exceptional_area": "264/2845",
+            "left_area": "8459/2845",
+            "right_area": "8459/2845",
+            "left_normal_degree": -4,
+            "right_normal_degree": 1,
+            "triple_points": 3
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "nodes": 5,
+            "exceptional_area": "704/2845",
+            "left_area": "11/5",
+            "right_area": "11/5",
+            "left_normal_degree": -4,
+            "right_normal_degree": 1,
+            "triple_points": 3
+          },
+          {
+            "pair": [
+              4,
+              5
+            ],
+            "nodes": 5,
+            "exceptional_area": "88/569",
+            "left_area": "11/5",
+            "right_area": "11/5",
+            "left_normal_degree": -4,
+            "right_normal_degree": 1,
+            "triple_points": 3
+          }
+        ],
+        "core_Euler_sum": 5,
+        "node_count": 50,
+        "surface_Euler": 55,
+        "Euler_identity_verified": true
+      },
+      "checks_passed": 703
+    },
+    {
+      "degrees": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "degree_sum": 6,
+      "components": 6,
+      "seed": 20261026,
+      "source_cell_dimensions": [
+        6,
+        30,
+        35
+      ],
+      "target_cell_dimensions": [
+        6,
+        15,
+        20
+      ],
+      "source_boundary_ranks_Q": [
+        5,
+        25
+      ],
+      "target_boundary_ranks_Q": [
+        5,
+        10
+      ],
+      "SDR": {
+        "integer_chain_maps": true,
+        "q_s_identity": true,
+        "id_minus_s_q_equals_dH_plus_Hd": true,
+        "H_s_zero": true,
+        "q_H_zero": true,
+        "H_squared_zero": true
+      },
+      "H2": {
+        "rank": 10,
+        "pg_degree_sum": 10,
+        "sum_component_pg": 0,
+        "basis_types": {
+          "simplex_tetrahedron_boundaries": 10,
+          "Reeb_cycles": 0,
+          "duplicate_triple_points": 0
+        },
+        "integral_basis_certified": true,
+        "coefficient_minor": "upper triangular with diagonal 1",
+        "coefficient_minor_determinant": 1
+      },
+      "trivalent_incidence_verified": true,
+      "curves": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -2,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -2,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            1,
+            4
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -1,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            1,
+            5
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -2,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            1,
+            6
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -1,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -2,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            2,
+            4
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -1,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            2,
+            5
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -1,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            2,
+            6
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -1,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            3,
+            4
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -1,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            3,
+            5
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -1,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            3,
+            6
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -1,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            4,
+            5
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -1,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            4,
+            6
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -1,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            5,
+            6
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -2,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        }
+      ],
+      "links": [
+        {
+          "component": 1,
+          "degree": 1,
+          "V": 10,
+          "E": 15,
+          "b1": 6
+        },
+        {
+          "component": 2,
+          "degree": 1,
+          "V": 10,
+          "E": 15,
+          "b1": 6
+        },
+        {
+          "component": 3,
+          "degree": 1,
+          "V": 10,
+          "E": 15,
+          "b1": 6
+        },
+        {
+          "component": 4,
+          "degree": 1,
+          "V": 10,
+          "E": 15,
+          "b1": 6
+        },
+        {
+          "component": 5,
+          "degree": 1,
+          "V": 10,
+          "E": 15,
+          "b1": 6
+        },
+        {
+          "component": 6,
+          "degree": 1,
+          "V": 10,
+          "E": 15,
+          "b1": 6
+        }
+      ],
+      "numerical": {
+        "arithmetic": "fractions.Fraction and integers only",
+        "a": "13/3",
+        "prefix_degrees": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "gaps": [
+          "8112/35485",
+          "6864/35485",
+          "12844/35485",
+          "21632/106455",
+          "1352/7097"
+        ],
+        "beta": [
+          "0",
+          "8112/35485",
+          "14976/35485",
+          "5564/7097",
+          "2236/2265",
+          "125372/106455"
+        ],
+        "weighted_gap_sum": "52/15",
+        "terminal_coefficient_A": "13/15",
+        "volume_sum": "338/3",
+        "expected_volume_d_a_squared": "338/3",
+        "gap_facets_checked": 5,
+        "terminal_facet_checked": true,
+        "components": [
+          {
+            "component": 1,
+            "degree": 1,
+            "hyperplane_coefficient": "844493/106455",
+            "assigned_nodes": 30,
+            "xi_square": "495135599881/11332667025",
+            "square_lower_bound": "241624275529/11332667025",
+            "curve_bound_coefficient": "13/3",
+            "core_Euler": 3,
+            "resolved_open_Euler": 33
+          },
+          {
+            "component": 2,
+            "degree": 1,
+            "hyperplane_coefficient": "698477/106455",
+            "assigned_nodes": 24,
+            "xi_square": "363973223497/11332667025",
+            "square_lower_bound": "9714862417/453306681",
+            "curve_bound_coefficient": "436969/106455",
+            "core_Euler": 3,
+            "resolved_open_Euler": 27
+          },
+          {
+            "component": 3,
+            "degree": 1,
+            "hyperplane_coefficient": "114985/21291",
+            "assigned_nodes": 18,
+            "xi_square": "261084801289/11332667025",
+            "square_lower_bound": "214056487177/11332667025",
+            "curve_bound_coefficient": "79157/21291",
+            "core_Euler": 3,
+            "resolved_open_Euler": 21
+          },
+          {
+            "component": 4,
+            "degree": 1,
+            "hyperplane_coefficient": "343733/106455",
+            "assigned_nodes": 12,
+            "xi_square": "104805020281/11332667025",
+            "square_lower_bound": "97072986361/11332667025",
+            "curve_bound_coefficient": "280189/106455",
+            "core_Euler": 3,
+            "resolved_open_Euler": 15
+          },
+          {
+            "component": 5,
+            "degree": 1,
+            "hyperplane_coefficient": "213941/106455",
+            "assigned_nodes": 6,
+            "xi_square": "43303081081/11332667025",
+            "square_lower_bound": "43303081081/11332667025",
+            "curve_bound_coefficient": "193661/106455",
+            "core_Euler": 3,
+            "resolved_open_Euler": 9
+          },
+          {
+            "component": 6,
+            "degree": 1,
+            "hyperplane_coefficient": "13/15",
+            "assigned_nodes": 0,
+            "xi_square": "169/225",
+            "square_lower_bound": "169/225",
+            "curve_bound_coefficient": "13/15",
+            "core_Euler": 3,
+            "resolved_open_Euler": 3
+          }
+        ],
+        "double_curve_areas": [
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "nodes": 6,
+            "exceptional_area": "8112/35485",
+            "left_area": "698477/106455",
+            "right_area": "698477/106455",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "nodes": 6,
+            "exceptional_area": "14976/35485",
+            "left_area": "114985/21291",
+            "right_area": "114985/21291",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "nodes": 6,
+            "exceptional_area": "5564/7097",
+            "left_area": "343733/106455",
+            "right_area": "343733/106455",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              1,
+              5
+            ],
+            "nodes": 6,
+            "exceptional_area": "2236/2265",
+            "left_area": "213941/106455",
+            "right_area": "213941/106455",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              1,
+              6
+            ],
+            "nodes": 6,
+            "exceptional_area": "125372/106455",
+            "left_area": "13/15",
+            "right_area": "13/15",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "nodes": 6,
+            "exceptional_area": "6864/35485",
+            "left_area": "114985/21291",
+            "right_area": "114985/21291",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "nodes": 6,
+            "exceptional_area": "19708/35485",
+            "left_area": "343733/106455",
+            "right_area": "343733/106455",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              2,
+              5
+            ],
+            "nodes": 6,
+            "exceptional_area": "80756/106455",
+            "left_area": "213941/106455",
+            "right_area": "213941/106455",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              2,
+              6
+            ],
+            "nodes": 6,
+            "exceptional_area": "101036/106455",
+            "left_area": "13/15",
+            "right_area": "13/15",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "nodes": 6,
+            "exceptional_area": "12844/35485",
+            "left_area": "343733/106455",
+            "right_area": "343733/106455",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "nodes": 6,
+            "exceptional_area": "60164/106455",
+            "left_area": "213941/106455",
+            "right_area": "213941/106455",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              3,
+              6
+            ],
+            "nodes": 6,
+            "exceptional_area": "80444/106455",
+            "left_area": "13/15",
+            "right_area": "13/15",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              4,
+              5
+            ],
+            "nodes": 6,
+            "exceptional_area": "21632/106455",
+            "left_area": "213941/106455",
+            "right_area": "213941/106455",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              4,
+              6
+            ],
+            "nodes": 6,
+            "exceptional_area": "41912/106455",
+            "left_area": "13/15",
+            "right_area": "13/15",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              5,
+              6
+            ],
+            "nodes": 6,
+            "exceptional_area": "1352/7097",
+            "left_area": "13/15",
+            "right_area": "13/15",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          }
+        ],
+        "core_Euler_sum": 18,
+        "node_count": 90,
+        "surface_Euler": 108,
+        "Euler_identity_verified": true
+      },
+      "checks_passed": 1393
+    },
+    {
+      "degrees": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "degree_sum": 6,
+      "components": 6,
+      "seed": 20261027,
+      "source_cell_dimensions": [
+        6,
+        30,
+        35
+      ],
+      "target_cell_dimensions": [
+        6,
+        15,
+        20
+      ],
+      "source_boundary_ranks_Q": [
+        5,
+        25
+      ],
+      "target_boundary_ranks_Q": [
+        5,
+        10
+      ],
+      "SDR": {
+        "integer_chain_maps": true,
+        "q_s_identity": true,
+        "id_minus_s_q_equals_dH_plus_Hd": true,
+        "H_s_zero": true,
+        "q_H_zero": true,
+        "H_squared_zero": true
+      },
+      "H2": {
+        "rank": 10,
+        "pg_degree_sum": 10,
+        "sum_component_pg": 0,
+        "basis_types": {
+          "simplex_tetrahedron_boundaries": 10,
+          "Reeb_cycles": 0,
+          "duplicate_triple_points": 0
+        },
+        "integral_basis_certified": true,
+        "coefficient_minor": "upper triangular with diagonal 1",
+        "coefficient_minor_determinant": 1
+      },
+      "trivalent_incidence_verified": true,
+      "curves": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -2,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -1,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            1,
+            4
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -2,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            1,
+            5
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -1,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            1,
+            6
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -2,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -2,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            2,
+            4
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -1,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            2,
+            5
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -2,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            2,
+            6
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -1,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            3,
+            4
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -1,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            3,
+            5
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -2,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            3,
+            6
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -1,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            4,
+            5
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -1,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            4,
+            6
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -2,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            5,
+            6
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 4,
+          "internal_vertices": 2,
+          "internal_edges": 1,
+          "root": -1,
+          "tree_edges": 1,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        }
+      ],
+      "links": [
+        {
+          "component": 1,
+          "degree": 1,
+          "V": 10,
+          "E": 15,
+          "b1": 6
+        },
+        {
+          "component": 2,
+          "degree": 1,
+          "V": 10,
+          "E": 15,
+          "b1": 6
+        },
+        {
+          "component": 3,
+          "degree": 1,
+          "V": 10,
+          "E": 15,
+          "b1": 6
+        },
+        {
+          "component": 4,
+          "degree": 1,
+          "V": 10,
+          "E": 15,
+          "b1": 6
+        },
+        {
+          "component": 5,
+          "degree": 1,
+          "V": 10,
+          "E": 15,
+          "b1": 6
+        },
+        {
+          "component": 6,
+          "degree": 1,
+          "V": 10,
+          "E": 15,
+          "b1": 6
+        }
+      ],
+      "numerical": {
+        "arithmetic": "fractions.Fraction and integers only",
+        "a": "13/3",
+        "prefix_degrees": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "gaps": [
+          "4056/47705",
+          "6591/47705",
+          "2808/47705",
+          "936/9541",
+          "22984/143115"
+        ],
+        "beta": [
+          "0",
+          "4056/47705",
+          "1521/6815",
+          "2691/9541",
+          "3627/9541",
+          "77389/143115"
+        ],
+        "weighted_gap_sum": "26/15",
+        "terminal_coefficient_A": "13/5",
+        "volume_sum": "338/3",
+        "expected_volume_d_a_squared": "338/3",
+        "gap_facets_checked": 5,
+        "terminal_facet_checked": true,
+        "components": [
+          {
+            "component": 1,
+            "degree": 1,
+            "hyperplane_coefficient": "278811/47705",
+            "assigned_nodes": 30,
+            "xi_square": "209713556611/6827301075",
+            "square_lower_bound": "173316147953/6827301075",
+            "curve_bound_coefficient": "13/3",
+            "core_Euler": 3,
+            "resolved_open_Euler": 33
+          },
+          {
+            "component": 2,
+            "degree": 1,
+            "hyperplane_coefficient": "1755/329",
+            "assigned_nodes": 24,
+            "xi_square": "25689286597/975328725",
+            "square_lower_bound": "190537867/8118075",
+            "curve_bound_coefficient": "607997/143115",
+            "core_Euler": 3,
+            "resolved_open_Euler": 27
+          },
+          {
+            "component": 3,
+            "degree": 1,
+            "hyperplane_coefficient": "214929/47705",
+            "assigned_nodes": 18,
+            "xi_square": "19043027653/975328725",
+            "square_lower_bound": "42063433633/2275767025",
+            "curve_bound_coefficient": "568451/143115",
+            "core_Euler": 3,
+            "resolved_open_Euler": 21
+          },
+          {
+            "component": 4,
+            "degree": 1,
+            "hyperplane_coefficient": "198081/47705",
+            "assigned_nodes": 12,
+            "xi_square": "114572451331/6827301075",
+            "square_lower_bound": "112225141379/6827301075",
+            "curve_bound_coefficient": "1651/435",
+            "core_Euler": 3,
+            "resolved_open_Euler": 15
+          },
+          {
+            "component": 5,
+            "degree": 1,
+            "hyperplane_coefficient": "170001/47705",
+            "assigned_nodes": 6,
+            "xi_square": "85644491491/6827301075",
+            "square_lower_bound": "85644491491/6827301075",
+            "curve_bound_coefficient": "487019/143115",
+            "core_Euler": 3,
+            "resolved_open_Euler": 9
+          },
+          {
+            "component": 6,
+            "degree": 1,
+            "hyperplane_coefficient": "13/5",
+            "assigned_nodes": 0,
+            "xi_square": "169/25",
+            "square_lower_bound": "169/25",
+            "curve_bound_coefficient": "13/5",
+            "core_Euler": 3,
+            "resolved_open_Euler": 3
+          }
+        ],
+        "double_curve_areas": [
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "nodes": 6,
+            "exceptional_area": "4056/47705",
+            "left_area": "1755/329",
+            "right_area": "1755/329",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "nodes": 6,
+            "exceptional_area": "1521/6815",
+            "left_area": "214929/47705",
+            "right_area": "214929/47705",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "nodes": 6,
+            "exceptional_area": "2691/9541",
+            "left_area": "198081/47705",
+            "right_area": "198081/47705",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              1,
+              5
+            ],
+            "nodes": 6,
+            "exceptional_area": "3627/9541",
+            "left_area": "170001/47705",
+            "right_area": "170001/47705",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              1,
+              6
+            ],
+            "nodes": 6,
+            "exceptional_area": "77389/143115",
+            "left_area": "13/5",
+            "right_area": "13/5",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "nodes": 6,
+            "exceptional_area": "6591/47705",
+            "left_area": "214929/47705",
+            "right_area": "214929/47705",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "nodes": 6,
+            "exceptional_area": "9399/47705",
+            "left_area": "198081/47705",
+            "right_area": "198081/47705",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              2,
+              5
+            ],
+            "nodes": 6,
+            "exceptional_area": "14079/47705",
+            "left_area": "170001/47705",
+            "right_area": "170001/47705",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              2,
+              6
+            ],
+            "nodes": 6,
+            "exceptional_area": "2249/4935",
+            "left_area": "13/5",
+            "right_area": "13/5",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "nodes": 6,
+            "exceptional_area": "2808/47705",
+            "left_area": "198081/47705",
+            "right_area": "198081/47705",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "nodes": 6,
+            "exceptional_area": "7488/47705",
+            "left_area": "170001/47705",
+            "right_area": "170001/47705",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              3,
+              6
+            ],
+            "nodes": 6,
+            "exceptional_area": "45448/143115",
+            "left_area": "13/5",
+            "right_area": "13/5",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              4,
+              5
+            ],
+            "nodes": 6,
+            "exceptional_area": "936/9541",
+            "left_area": "170001/47705",
+            "right_area": "170001/47705",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              4,
+              6
+            ],
+            "nodes": 6,
+            "exceptional_area": "37024/143115",
+            "left_area": "13/5",
+            "right_area": "13/5",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          },
+          {
+            "pair": [
+              5,
+              6
+            ],
+            "nodes": 6,
+            "exceptional_area": "22984/143115",
+            "left_area": "13/5",
+            "right_area": "13/5",
+            "left_normal_degree": -5,
+            "right_normal_degree": 1,
+            "triple_points": 4
+          }
+        ],
+        "core_Euler_sum": 18,
+        "node_count": 90,
+        "surface_Euler": 108,
+        "Euler_identity_verified": true
+      },
+      "checks_passed": 1393
+    },
+    {
+      "degrees": [
+        1,
+        1,
+        6
+      ],
+      "degree_sum": 8,
+      "components": 3,
+      "seed": 20261026,
+      "source_cell_dimensions": [
+        3,
+        52,
+        75
+      ],
+      "target_cell_dimensions": [
+        3,
+        3,
+        26
+      ],
+      "source_boundary_ranks_Q": [
+        2,
+        50
+      ],
+      "target_boundary_ranks_Q": [
+        2,
+        1
+      ],
+      "SDR": {
+        "integer_chain_maps": true,
+        "q_s_identity": true,
+        "id_minus_s_q_equals_dH_plus_Hd": true,
+        "H_s_zero": true,
+        "q_H_zero": true,
+        "H_squared_zero": true
+      },
+      "H2": {
+        "rank": 25,
+        "pg_degree_sum": 35,
+        "sum_component_pg": 10,
+        "basis_types": {
+          "simplex_tetrahedron_boundaries": 0,
+          "Reeb_cycles": 20,
+          "duplicate_triple_points": 5
+        },
+        "integral_basis_certified": true,
+        "coefficient_minor": "upper triangular with diagonal 1",
+        "coefficient_minor_determinant": 1
+      },
+      "trivalent_incidence_verified": true,
+      "curves": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 6,
+          "internal_vertices": 4,
+          "internal_edges": 3,
+          "root": -4,
+          "tree_edges": 3,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "degrees": [
+            1,
+            6
+          ],
+          "genus": 10,
+          "leaves": 6,
+          "internal_vertices": 24,
+          "internal_edges": 33,
+          "root": -23,
+          "tree_edges": 23,
+          "non_tree_edges": 10,
+          "parallel_edge_excess": 5
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "degrees": [
+            1,
+            6
+          ],
+          "genus": 10,
+          "leaves": 6,
+          "internal_vertices": 24,
+          "internal_edges": 33,
+          "root": -1,
+          "tree_edges": 23,
+          "non_tree_edges": 10,
+          "parallel_edge_excess": 8
+        }
+      ],
+      "links": [
+        {
+          "component": 1,
+          "degree": 1,
+          "V": 28,
+          "E": 42,
+          "b1": 15
+        },
+        {
+          "component": 2,
+          "degree": 1,
+          "V": 28,
+          "E": 42,
+          "b1": 15
+        },
+        {
+          "component": 3,
+          "degree": 6,
+          "V": 48,
+          "E": 72,
+          "b1": 25
+        }
+      ],
+      "numerical": {
+        "arithmetic": "fractions.Fraction and integers only",
+        "a": "4",
+        "prefix_degrees": [
+          1,
+          2
+        ],
+        "gaps": [
+          "104/175",
+          "88/175"
+        ],
+        "beta": [
+          "0",
+          "104/175",
+          "192/175"
+        ],
+        "weighted_gap_sum": "8/5",
+        "terminal_coefficient_A": "12/5",
+        "volume_sum": "128",
+        "expected_volume_d_a_squared": "128",
+        "gap_facets_checked": 2,
+        "terminal_facet_checked": true,
+        "components": [
+          {
+            "component": 1,
+            "degree": 1,
+            "hyperplane_coefficient": "1956/175",
+            "assigned_nodes": 56,
+            "xi_square": "1969936/30625",
+            "square_lower_bound": "1761552/30625",
+            "curve_bound_coefficient": "4",
+            "core_Euler": 25,
+            "resolved_open_Euler": 81
+          },
+          {
+            "component": 2,
+            "degree": 1,
+            "hyperplane_coefficient": "1124/175",
+            "assigned_nodes": 48,
+            "xi_square": "891664/30625",
+            "square_lower_bound": "891664/30625",
+            "curve_bound_coefficient": "596/175",
+            "core_Euler": 25,
+            "resolved_open_Euler": 73
+          },
+          {
+            "component": 3,
+            "degree": 6,
+            "hyperplane_coefficient": "12/5",
+            "assigned_nodes": 0,
+            "xi_square": "864/25",
+            "square_lower_bound": "864/25",
+            "curve_bound_coefficient": "12/5",
+            "core_Euler": 150,
+            "resolved_open_Euler": 150
+          }
+        ],
+        "double_curve_areas": [
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "nodes": 8,
+            "exceptional_area": "104/175",
+            "left_area": "1124/175",
+            "right_area": "1124/175",
+            "left_normal_degree": -7,
+            "right_normal_degree": 1,
+            "triple_points": 6
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "nodes": 48,
+            "exceptional_area": "192/175",
+            "left_area": "72/5",
+            "right_area": "72/5",
+            "left_normal_degree": -12,
+            "right_normal_degree": 6,
+            "triple_points": 6
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "nodes": 48,
+            "exceptional_area": "88/175",
+            "left_area": "72/5",
+            "right_area": "72/5",
+            "left_normal_degree": -12,
+            "right_normal_degree": 6,
+            "triple_points": 6
+          }
+        ],
+        "core_Euler_sum": 200,
+        "node_count": 104,
+        "surface_Euler": 304,
+        "Euler_identity_verified": true
+      },
+      "checks_passed": 1669
+    },
+    {
+      "degrees": [
+        1,
+        1,
+        6
+      ],
+      "degree_sum": 8,
+      "components": 3,
+      "seed": 20261027,
+      "source_cell_dimensions": [
+        3,
+        52,
+        75
+      ],
+      "target_cell_dimensions": [
+        3,
+        3,
+        26
+      ],
+      "source_boundary_ranks_Q": [
+        2,
+        50
+      ],
+      "target_boundary_ranks_Q": [
+        2,
+        1
+      ],
+      "SDR": {
+        "integer_chain_maps": true,
+        "q_s_identity": true,
+        "id_minus_s_q_equals_dH_plus_Hd": true,
+        "H_s_zero": true,
+        "q_H_zero": true,
+        "H_squared_zero": true
+      },
+      "H2": {
+        "rank": 25,
+        "pg_degree_sum": 35,
+        "sum_component_pg": 10,
+        "basis_types": {
+          "simplex_tetrahedron_boundaries": 0,
+          "Reeb_cycles": 20,
+          "duplicate_triple_points": 5
+        },
+        "integral_basis_certified": true,
+        "coefficient_minor": "upper triangular with diagonal 1",
+        "coefficient_minor_determinant": 1
+      },
+      "trivalent_incidence_verified": true,
+      "curves": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "degrees": [
+            1,
+            1
+          ],
+          "genus": 0,
+          "leaves": 6,
+          "internal_vertices": 4,
+          "internal_edges": 3,
+          "root": -1,
+          "tree_edges": 3,
+          "non_tree_edges": 0,
+          "parallel_edge_excess": 0
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "degrees": [
+            1,
+            6
+          ],
+          "genus": 10,
+          "leaves": 6,
+          "internal_vertices": 24,
+          "internal_edges": 33,
+          "root": -23,
+          "tree_edges": 23,
+          "non_tree_edges": 10,
+          "parallel_edge_excess": 7
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "degrees": [
+            1,
+            6
+          ],
+          "genus": 10,
+          "leaves": 6,
+          "internal_vertices": 24,
+          "internal_edges": 33,
+          "root": -14,
+          "tree_edges": 23,
+          "non_tree_edges": 10,
+          "parallel_edge_excess": 8
+        }
+      ],
+      "links": [
+        {
+          "component": 1,
+          "degree": 1,
+          "V": 28,
+          "E": 42,
+          "b1": 15
+        },
+        {
+          "component": 2,
+          "degree": 1,
+          "V": 28,
+          "E": 42,
+          "b1": 15
+        },
+        {
+          "component": 3,
+          "degree": 6,
+          "V": 48,
+          "E": 72,
+          "b1": 25
+        }
+      ],
+      "numerical": {
+        "arithmetic": "fractions.Fraction and integers only",
+        "a": "4",
+        "prefix_degrees": [
+          1,
+          2
+        ],
+        "gaps": [
+          "8/17",
+          "13/17"
+        ],
+        "beta": [
+          "0",
+          "8/17",
+          "21/17"
+        ],
+        "weighted_gap_sum": "2",
+        "terminal_coefficient_A": "2",
+        "volume_sum": "128",
+        "expected_volume_d_a_squared": "128",
+        "gap_facets_checked": 2,
+        "terminal_facet_checked": true,
+        "components": [
+          {
+            "component": 1,
+            "degree": 1,
+            "hyperplane_coefficient": "202/17",
+            "assigned_nodes": 56,
+            "xi_square": "19124/289",
+            "square_lower_bound": "16108/289",
+            "curve_bound_coefficient": "4",
+            "core_Euler": 25,
+            "resolved_open_Euler": 81
+          },
+          {
+            "component": 2,
+            "degree": 1,
+            "hyperplane_coefficient": "138/17",
+            "assigned_nodes": 48,
+            "xi_square": "10932/289",
+            "square_lower_bound": "10932/289",
+            "curve_bound_coefficient": "60/17",
+            "core_Euler": 25,
+            "resolved_open_Euler": 73
+          },
+          {
+            "component": 3,
+            "degree": 6,
+            "hyperplane_coefficient": "2",
+            "assigned_nodes": 0,
+            "xi_square": "24",
+            "square_lower_bound": "24",
+            "curve_bound_coefficient": "2",
+            "core_Euler": 150,
+            "resolved_open_Euler": 150
+          }
+        ],
+        "double_curve_areas": [
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "nodes": 8,
+            "exceptional_area": "8/17",
+            "left_area": "138/17",
+            "right_area": "138/17",
+            "left_normal_degree": -7,
+            "right_normal_degree": 1,
+            "triple_points": 6
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "nodes": 48,
+            "exceptional_area": "21/17",
+            "left_area": "12",
+            "right_area": "12",
+            "left_normal_degree": -12,
+            "right_normal_degree": 6,
+            "triple_points": 6
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "nodes": 48,
+            "exceptional_area": "13/17",
+            "left_area": "12",
+            "right_area": "12",
+            "left_normal_degree": -12,
+            "right_normal_degree": 6,
+            "triple_points": 6
+          }
+        ],
+        "core_Euler_sum": 200,
+        "node_count": 104,
+        "surface_Euler": 304,
+        "Euler_identity_verified": true
+      },
+      "checks_passed": 1669
+    }
+  ]
+}

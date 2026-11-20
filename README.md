@@ -1,11 +1,19 @@
-# Lagrangian torus fibrations on general-type hypersurfaces
+# Lagrangian torus fibrations
 
-更新：2026-11-20 / GitHub移行版 v1.0
+曲面側の第25版ソースを回収し、全文原稿と必要な検証資産を移行した。
 
-一般型超曲面のLagrangian torus fibrationを、曲面の相対pants/gluing構成と、3次元超曲面のclosed-curve local blocksから研究する。
+| 原稿 | 頁数 | 役割 |
+| --- | ---: | --- |
+| [主稿](papers/lagrangian-torus-fibration.tex) | 96 | 相対SNC構成・次数分割・作用atlas |
+| [整数接着](papers/quintic-integer-gluing.tex) | 201 | 指定K5データの整数条件と障害 |
+| [局所置換](papers/meridian-surgery.tex) | 18 | meridian・四pants置換の障害 |
+| [研究ノート](papers/research-notes.tex) | 65 | 証明素材・現在の残余 |
+| [三次元原資料](sources/threefold-blocks-v9.pdf) | 166 | PDF全文を確保。元TeXは未取得 |
 
-最初に [研究方針](00_research_plan.md)、次に [研究ノート](research/notes.md) と `papers/lagrangian-torus-fibration.tex` を読む。一般型曲面の構成と3次元超曲面の局所構成は別論文・別証明範囲として管理する。
+三次元の[短い要約](papers/threefold-blocks.tex)を全文と取り違えない。大域接着は研究上も未完成。
 
-原資料の最新PDF（曲面2026-10-27、第5稿、三次元2026-10-28、第9版）には異なる到達範囲がある。全体を覆う3次元T³-fibrationやspecial Lagrangian性は証明済みとして扱わない。
+最初に[研究方針](00_research_plan.md)、[移行範囲](research/migration.md)、[ソース対応](research/source-manifest.json)を確認する。
 
-正本は `main`。研究全体の入口：[research-hub](https://github.com/uedakazushi/research-hub)。
+組版はルートで `latexmk`。現行10検査は `python3 verification/run_current_checks.py`。PDF/SyncTeX・再実行結果はbuild/。
+
+正本はmain。[research-hub](https://github.com/uedakazushi/research-hub)。元Libraryは削除しない。

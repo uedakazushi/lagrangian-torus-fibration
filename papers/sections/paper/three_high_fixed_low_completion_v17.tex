@@ -1,0 +1,131 @@
+% v17. Complete three-high reconstruction with a fixed low row and column.
+\subsection{低分母の行と列を固定した三高分母行列の二次復元}
+\label{fc17:section}
+
+三高分母の完全な分類を先に行わなくても，低 ray に接するデータが固定されると，
+残る高高 entries は高々二つの候補から復元できる．この手順では正符号 graph の
+matching 性も，Schur 系の非特異性も仮定しない．
+
+\begin{proposition}[固定低行列データの完全復元]
+\label{fc17:at-most-two}
+分母を $q_0=1$，$q_1,q_2,q_3>1$ とし，低 ray の行と列を
+\[
+ r_i=p_{0i},\qquad x_i=p_{i0},\qquad
+ r_i,x_i\in\ZZ,\quad \sum_{i=1}^3r_i=-1,\quad r_ix_i=q_i-1
+\]
+と固定する．このデータを持ち，行和と全 pair products を満たす整数行列 $P$ は
+高々二つである．正の weights を持つものも，この候補の部分集合として完全に決まる．
+
+具体的には，同符号の二つの $r_i$ を $r_2,r_3$ とするよう高標識を交換し，
+\[
+ s_i=-q_i-x_i,\qquad Q_{ij}=q_iq_j-1
+\]
+と置く．$A=p_{12}$ は次の真の二次方程式を満たす：
+\begin{equation}\label{fc17:quadratic}
+ \Phi(A):=(s_2A-Q_{12})\{s_3(s_1-A)-Q_{13}\}
+             -Q_{23}A(s_1-A)=0.
+\end{equation}
+その整数根のうち
+\begin{equation}\label{fc17:divisibility}
+ A\ne0,s_1,\qquad A\mid Q_{12},\qquad s_1-A\mid Q_{13}
+\end{equation}
+を満たすものに対して，行列は
+\begin{equation}\label{fc17:complete-P}
+ P=\begin{pmatrix}
+ 0&r_1&r_2&r_3\\
+ x_1&0&A&s_1-A\\
+ x_2&Q_{12}/A&0&s_2-Q_{12}/A\\
+ x_3&Q_{13}/(s_1-A)&s_3-Q_{13}/(s_1-A)&0
+ \end{pmatrix}
+\end{equation}
+により一意に定まる．これが全整数解である．
+\end{proposition}
+
+\begin{proof}
+$r_ix_i=q_i-1>0$ なので，$r_i,x_i$ は非零で同符号である．
+$r_i>0$ なら $q_i+x_i\ge q_i+1$，$r_i<0$ なら
+$1\le q_i+x_i\le q_i-1$ である．従って $s_i<0$ である．
+三つの $r_i$ には同符号の対があるため，指定した標識を選べる．
+二次係数は
+\begin{equation}\label{fc17:leading-coefficient}
+ a=Q_{23}-s_2s_3.
+\end{equation}
+$r_2,r_3>0$ なら $s_2s_3>q_2q_3$ なので $a<0$，
+$r_2,r_3<0$ なら $s_2s_3\le(q_2-1)(q_3-1)<q_2q_3-1$ なので $a>0$ である．
+従って二次係数が消える場合はない．
+
+高 row $1$ と pair $12,13$ から，式~\eqref{fc17:complete-P} の対応する entries が定まる．
+pair products は正なので，$A$ と $s_1-A$ は非零であり，整数性は
+式~\eqref{fc17:divisibility} である．残る二つの row sums が最後の二 entries を決め，
+残った pair $23$ は，分母 $A(s_1-A)$ を払うと式~\eqref{fc17:quadratic} となる．
+逆に，これらの条件から全ての元の row sums と pair products が成立する．
+真の二次式なので候補は高々二つであり，正値性は
+補題~\ref{kl10:cycle-positive} の全正 cycle 条件を検査すればよい．
+\end{proof}
+
+$\Phi(A)=aA^2+bA+c$ と書けば，
+\begin{align*}
+ b&=s_2(s_3s_1-Q_{13})+Q_{12}s_3-Q_{23}s_1,\\
+ c&=-Q_{12}(s_3s_1-Q_{13}).
+\end{align*}
+その判別式は対称な式
+\begin{equation}\label{fc17:discriminant}
+ \Delta=
+ (s_1s_2s_3-s_1Q_{23}-s_2Q_{13}-s_3Q_{12})^2
+ -4Q_{12}Q_{13}Q_{23}
+\end{equation}
+を持つ．従って $\Delta$ が非負の平方数であること，
+$(-b\pm\sqrt\Delta)/(2a)$ が整数であること，
+式~\eqref{fc17:divisibility} を順に確認すればよい．
+\nolinkurl{exact_three_high_completion_v17.py} は整数平方根と整数演算で候補を復元し，
+元の全行和・pair products・正 cycle を再検査する．
+分母や entry を有限範囲で走査する必要はない．
+
+ここで固定しているのは低 row と低 column の両方である．
+定理~\ref{sh14:singular-family} の無限族では低 column 自体が動くので，
+この高々二つという結論とは両立する．
+
+\begin{remark}[標識を固定した場合の上界の達成]
+\label{fc17:sharp}
+上界二は，正の weights を要求しても達成される．例えば
+\[
+ r=(-2,-2,3),\qquad x=(-3,-3,2),\qquad q=(1,7,7,7)
+\]
+を固定すると，
+\[
+ P=\begin{pmatrix}
+ 0&-2&-2&3\\
+ -3&0&4&-8\\
+ -3&12&0&-16\\
+ 2&-6&-3&0
+ \end{pmatrix}
+\]
+と，高 ray $1,2$ を交換した行列が，異なる二つの completion となる．
+その正の simple cycles は二辺 cycles だけで，gain は $6/7$ と $48/49$ である．
+従って両者は正の weights を持ち，命題~\ref{q9:four-line-criterion} による局所 chart を与える．
+この二つは標識交換で対応するので，幾何学的な非同値性を主張する例ではない．
+\end{remark}
+
+\begin{corollary}[小さい三高分母データの実数障害]
+\label{fc17:335}
+低 row と column が，標識交換後
+\[
+ (r_1,r_2,r_3)=(-4,1,2),\qquad
+ (x_1,x_2,x_3)=(-1,2,1)
+\]
+である整数局所 chart は存在しない．実際，分母は $(1,5,3,3)$ であり，
+残る高高 entries は実数としても元の row sums と pair products を満たせない．
+\end{corollary}
+
+\begin{proof}
+この場合 $s=(-4,-5,-4)$，$Q_{12}=Q_{13}=14$，$Q_{23}=8$ であり，
+式~\eqref{fc17:quadratic} は
+\[
+ -12A^2-34A-28=0
+\]
+となる．しかし
+\[
+ 24(6A^2+17A+14)=(12A+17)^2+47>0
+\]
+なので実数根はない．この矛盾には正の weights や別の core との $D$ 相殺を用いない．
+\end{proof}

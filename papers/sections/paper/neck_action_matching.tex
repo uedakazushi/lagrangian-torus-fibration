@@ -1,0 +1,287 @@
+\section{Critical actions を直線に保つ相対 neck 接着}
+\label{ng8:section}
+
+葉層の相対 isotopy による補間だけでは，critical action curve の直線性は保たれない．
+ここでは，共通の Hamiltonian circle と三重点の toric reference circles を使って
+作用の加法定数を固定し，critical regions の面積を指定して補間する．
+輸送を行うのは常に正の距離を置いた切断面であり，
+$\mu=0,t=0$ の固定点集合を通る parallel transport は用いない．
+
+\subsection{作用の基準と固定 moment 上の輸送}
+
+二重曲線 $C=C_{ij}$ から三重点の小円板を除いた曲面を $P$ とする．
+節~\ref{sec:necks} の actual neck には，周期 $2\pi$ の Hamiltonian circle と
+正規化された moment $\mu$ がある．$i$ 側で normal moment が $\mu>0$，
+$j$ 側で $-\mu>0$ となるように向きを取る．
+有限個の nodal patches より十分薄い collar を選ぶ．
+各 $t\ne0$ の neck では circle action は free であるが，
+以下で primitive を取る全空間の tube には，中央 fiber の固定集合 $C^\circ$ も含める．
+
+buffer を持つ全空間の tube は，$P$ と同じ homotopy 型の open curve へ retract するので，
+$H^2=0$ である．
+従って $\Omega=\dd\lambda_{\rm neck}$ と書ける．
+circle averaging により $\lambda_{\rm neck}$ を invariant に取ると，
+Cartan の公式と $\iota_V\Omega=-\dd\mu$ から
+\[
+ \dd\bigl(\lambda_{\rm neck}(V)\bigr)
+ =-\iota_V\Omega=\dd\mu
+\]
+を得る．固定集合 $C^\circ$ 上では $V=0$ および $\mu=0$ なので，
+$\lambda_{\rm neck}(V)=\mu$ となる．
+以下の作用は，この一つの primitive で正規化する．
+これは各 puncture の toric action の加法定数を独立に零にする操作ではない．
+
+各 puncture end の toric chart で，circle generator $\alpha$ ともう一つの
+primitive generator $\beta_\ell$ を固定する．
+normal moment と残る toric moment の affine cuts で
+compact な reduced surface $P_{t,\mu}$ を切り出す．
+その境界 circle の第二作用を $R_\ell(\mu)$ と書く．
+各 end の toric moment を $\nu_\ell$ とすると，これは
+$\nu_\ell+c_\ell^{\rm ref}$ の cut への制限である．
+$c_\ell^{\rm ref}$ は $\lambda_{\rm neck}$ で決まる定数で，
+両側の成分と全ての $t$ に共通である．
+実際，$\beta_\ell$ の toric flow を $R_\theta$，generator を $V_{\beta_\ell}$ とすると，
+その orbit action は
+\[
+ \widetilde R_\ell=
+ \frac1{2\pi}\int_0^{2\pi}R_\theta^*
+       \bigl(\lambda_{\rm neck}(V_{\beta_\ell})\bigr)\,\dd\theta
+\]
+である．Cartan の公式の $\mathcal L_{V_{\beta_\ell}}\lambda_{\rm neck}$ 項は
+一周期で積分すると零になるので，
+$\dd\widetilde R_\ell=-\iota_{V_{\beta_\ell}}\Omega=\dd\nu_\ell$ を得る．
+従って同じ連結な全空間の toric end で
+$\widetilde R_\ell=\nu_\ell+c_\ell^{\rm ref}$ である．
+この計算に $\lambda_{\rm neck}$ 自体の全 $T^2$-invariance は必要ない．
+従って $R_\ell(\mu)$ は実数係数の affine function であり，$t$ に依存しない．
+cut 自体の勾配が整数であることは要求しない．
+
+boundary circle から同じ regular Reeb arm 上の circle $\gamma$ までの
+reduced annulus を $A$ とすれば，向きと lift を一貫して選ぶことで
+\begin{equation}\label{ng8:relative-action}
+ J_{\beta_\ell}(\mu,\gamma)-R_\ell(\mu)
+ =\frac1{2\pi}\int_A\omega_{t,\mu}
+\end{equation}
+となる．ここで $J_\alpha=\mu$ と正規化する．
+lift の整数変更は $J_\beta$ に整数倍の $\mu$ を加える．
+critical circle への値は regular annuli の exhaustion により定める．
+内部 Reeb edge の作用差も，同じ式をその annulus に適用して定める．
+
+\begin{lemma}[切断面における作用の加法定数の保存]
+\label{ng8:transport-intercept}
+固定した $0<\delta$ と $\mu=\delta$ または $\mu=-\delta$ の近傍で，
+成分側から nearby fiber への輸送は，
+toric reference circles で正規化した作用の加法定数を保存する．
+従って，成分側の critical action germ が
+$J_\beta=c+p\mu$ なら，輸送後も同じ $c,p$ を持つ．
+\end{lemma}
+
+\begin{proof}
+補題~\ref{glue:transport} の horizontal vector field は circle invariant で，
+全空間上の $\mu$ を保存する．固定 $\mu\ne0$ で symplectic reduction を取ると，
+その vector field は reduced symplectic forms を保つ horizontal field に降りる．
+三重点の端では二つの toric moments を保存するので，
+reference circle とその作用 $R_\ell(\mu)$ も保存される．
+式~\eqref{ng8:relative-action} の annulus を運べば，その面積が保存される．
+critical limits に対しても exhaustion により同じ結論が従う．
+
+一つの全空間 primitive を使うと，作用そのものの保存も直接確認できる．
+輸送 path を $\tau\mapsto\tau t$，その horizontal lift を $W_\tau$，
+transport を $\mathcal P_{\tau t}$ とする．
+固定した $\mu=\pm\delta$ の buffers を十分小さく取れば，全輸送軌跡は上の tube に入る．
+$W_\tau$ は fiber の tangent space と $\Omega$-orthogonal なので，
+Cartan の公式を fiber tangent に制限すると
+\[
+ \left.\mathcal L_{W_\tau}\lambda_{\rm neck}\right|_{TX_{\tau t}}
+ =\dd_{X_{\tau t}}\bigl(\lambda_{\rm neck}(W_\tau)\bigr).
+\]
+従って，輸送の定義域上で
+\begin{equation}\label{ng8:exact-transport}
+ \mathcal P_t^*(\lambda_{\rm neck}|_{X_t})
+   -\lambda_{\rm neck}|_{D_i}
+ =\dd\!\left(\int_0^1
+       \mathcal P_{\tau t}^*\bigl(\lambda_{\rm neck}(W_\tau)\bigr)
+       \,\dd\tau\right).
+\end{equation}
+閉じた transported cycles の積分は正確に保存される．
+この等式は primitive の period を任意に再正規化する操作ではない．
+
+切断面の小さい open moment interval 上でこの議論を行うので，
+作用微分だけでなく関数そのものが保存される．
+定理の証明に必要なのは固定した二つの切断面とその buffers だけである．
+$\delta\to0$ に一様な輸送を要求していない．
+\end{proof}
+
+\begin{lemma}[相対 reduced area の affine 性]
+\label{ng8:relative-dh}
+固定した十分小さい $t\ne0$ に対し，
+上記の toric moment cuts で切り出した $P_{t,\mu}$ の全 reduced area は
+$\mu$ の affine function である．
+その値は，両端の切断面で中央成分から輸送した reduced area と一致する．
+\end{lemma}
+
+\begin{proof}
+$t\ne0$ の neck に固定点はなく，moment interval 上の reduced surfaces は
+境界を含めて同じ曲面 $P$ と同定できる．
+principal circle bundle に connection を選ぶと，reduced cohomology class の変化は
+その curvature class に比例する．これは Duistermaat--Heckman の局所的な計算である
+\cite[Chapter~10]{DHJH}．境界付き曲面では絶対 cohomology class だけから総面積は
+決まらないため，ここで必要な主張は次の Stokes の計算で直接証明する．
+
+境界項も確認する．$P$ は境界を持つので circle bundle は自明化できる．
+この自明化と各 toric end の framing の差は，固定した整数 winding である．
+固定 $\mu$ 上で $\lambda_{\rm neck}-\mu\dd\theta$ は reduced surface の primitive に降りる．
+従ってその境界 circle の積分は $R_\ell(\mu)+m_\ell\mu$，
+$m_\ell\in\ZZ$，という affine function になる．
+Stokes の定理により全 reduced area は，これらの境界作用の符号付き和の
+$2\pi$ 倍であり，affine である．
+moving cut を用いる場合の境界の寄与も $R_\ell(\mu)$ に既に含まれている．
+両端の値の一致は補題~\ref{ng8:transport-intercept} の reduced transport による．
+\end{proof}
+
+\subsection{Critical regions の面積を保つ補間}
+
+球面上の固定された marked Morse foliation の critical leaves は，
+有限個の puncture basins と，内部 Reeb edges に対応する annuli に球面を分ける．
+以下では，これらをまとめて critical regions と呼ぶ．
+各 critical leaf 自体の面積は零である．
+境界付き曲面を用いる場合は，puncture caps を補助的に付けて同じ記述を用いてよい．
+caps と保存する puncture collars の和を，互いに素な固定 disks の内部に取る．
+この固定領域を $K$ と書く．その上の foliation と面積形式の parameter family は
+あらかじめ与えておき，以下の操作では変更しない．
+面積形式が parameter に依存しないことを要求しているわけではない．
+
+\begin{lemma}[Parameter に相対的な critical-area 指定]
+\label{ng8:parametric-moser}
+$u\in[u_-,u_+]$ に対して，球面上の正の面積形式 $\omega_u$ と，
+固定 puncture collars を持つ marked Reeb tree を与える．
+両端の open intervals には，同じ相対 isotopy class に属する
+Morse foliation germs が指定されているとする．
+
+各 critical region $D_h$ の target area $a_h(u)>0$ が滑らかで，
+その和が $\int_C\omega_u$ に等しく，変更しない全領域の面積に対して
+\begin{equation}\label{ng8:protected-area-margin}
+ a_h(u)>\int_{D_h\cap K}\omega_u
+\end{equation}
+を満たすとする．$K$ には caps だけでなく，保存する collars 全体を含める．
+両端では指定された germs がこの面積を持つと仮定する．
+このとき，端の germs と collars を保ち，
+全 $u$ で $\operatorname{area}_{\omega_u}(D_h)=a_h(u)$ を満たす
+滑らかな marked foliation family を構成できる．
+追加の compact parameters を用いる場合は，初期の marked interpolation と
+region identifications がそれらに関しても滑らかに与えられていると仮定する．
+その仮定の下で，面積指定と Moser の操作も parameter に相対的に行える．
+\end{lemma}
+
+\begin{proof}
+まず補題~\ref{neck:marked-interpolation} により，marked foliations を補間する．
+基準 foliation と滑らかな diffeomorphisms を使って各 region を同定すれば，
+それぞれの面積は parameter に関して滑らかである．
+
+各 region 内の，固定領域 $K$ を避けた部分に非負 bump functions を取る．
+正の density を掛けて面積を指定する方法は補題~\ref{per:lobe-areas} と同じである．
+\eqref{ng8:protected-area-margin} と parameter interval の compactness により，
+少し大きい固定近傍でも一様な面積の余裕がある．
+その近傍では density を一に保ち，それ以外でまず十分小さくした後，
+各 region の内部に支持された bump を加える．
+局所的には，region ごとの bump coefficient が面積の独立な座標となるので，
+正値性を保つ滑らかな解を取れる．
+同じ target integrals を持つ正の面積形式の集合は凸であるから，
+parameter 空間上の partition of unity で局所解を貼れる．
+両端では元の形式が既に条件を満たしているので，そこでは変更しない．
+こうして，固定 collars 上で $\omega_u$ に一致し，
+指定された region integrals を持つ正の形式 $\widehat\omega_u$ を得る．
+
+両形式の差は $K$ の近傍で零であり，その総積分も零である．
+固定 disks の補集合は連結なので，その interior の compactly supported
+二次 de Rham cohomology は積分により $\RR$ と同定される．
+従って差には，$K$ の近傍で零となる primitive がある．
+同じことは，境界付き曲面の記述では $H^2(P,\partial P;\RR)\simeq\RR$ から従う．
+固定した相対 de Rham 解作用素を用いて primitive を $u$ に滑らかに選び，
+差が零である両端の intervals では primitive も零に取る．
+凸結合に Moser の方法を適用して
+\[
+ \psi_u^*\widehat\omega_u=\omega_u
+\]
+を満たす diffeomorphisms を得る．
+端の intervals および fixed collars では $\psi_u=\id$ にできる．
+最初に補間した $u$ における foliation を $\psi_u^{-1}$ で移せば，
+元の $\omega_u$ に関して所期の面積を持つ．
+全ての操作は parameter に滑らかで，Morse 型と marked Reeb tree を保つ．
+\end{proof}
+
+\begin{proposition}[Straight critical actions を保つ actual neck]
+\label{ng8:straight-neck}
+actual Hamiltonian neck の両端の fibration germs を与える．
+各 germ は，同じ marked Reeb tree を持ち，
+共通の cycle framings と toric reference actions で書いた critical actions が
+同じ affine functions
+\[
+ J_{\beta_\ell}^{\rm crit}=c_\ell+p_\ell\mu,\qquad p_\ell\in\ZZ
+\]
+の制限であると仮定する．
+これらから式~\eqref{ng8:relative-action} で指定される
+basin および internal-annulus areas が正であり，
+\eqref{ng8:protected-area-margin}の固定領域に対する余裕を持つとする．
+このとき，全 interval にわたり critical actions が上の affine functions となる
+Lagrangian fibration を，両端の open germs を保って構成できる．
+\end{proposition}
+
+\begin{proof}
+boundary reference actions は affine なので，
+target region areas は $\mu$ の affine functions である．
+その和と total reduced area は，補題~\ref{ng8:relative-dh} により共に affine で，
+両端で一致する．従って interval 全体で一致する．
+正の target areas には compact interval 上で一様な正の下限がある．
+puncture cuts と保存する collars は最初に十分小さく選び，
+各 basin の target area から固定領域の面積を引いた値に一様な正の余裕を持たせる．
+内部 annulus の target area の正値性は，命題の仮定として保持する．
+
+補題~\ref{ng8:parametric-moser} を reduced surfaces に適用する．
+端で一致する marked foliation family を得て，
+その circle lifts の connected-fiber quotient を取る．
+補題~\ref{neck:lift} により正則 fibers は Lagrangian であり，
+critical fibers は $S^1\times(S^1\vee S^1)$ となる．
+式~\eqref{ng8:relative-action} により critical actions は所期の affine functions である．
+三重点の端では toric collars を固定しているので，既存の triple blocks と一致する．
+\end{proof}
+
+\subsection{中央成分の面積計算から nearby fiber への判定}
+
+\begin{corollary}[中央 fiber による十分条件]
+\label{ng8:central-criterion}
+両成分の collar germs で critical actions が整数勾配の affine functions であり，
+共通の neck framings へ移した後の勾配が一致するとする．
+さらに $\mu=0$ における strict double curve 上で，
+対応する critical regions の実際の面積が両側で一致するとする．
+このとき，十分小さい nearby fiber で命題~\ref{ng8:straight-neck} の接着ができる．
+\end{corollary}
+
+\begin{proof}
+中央成分上では，$\mu=0$ で normal circle が潰れ，
+式~\eqref{ng8:relative-action} は strict double curve 上の area difference になる．
+framing の整数変更による $m\mu$ はこの点で零である．
+三重点の toric reference actions は共通に固定されているので，
+実際の basin areas の一致は critical action functions の定数項の一致を与える．
+内部 annuli の作用差も，同じ面積公式で一致する．
+Reeb graph は tree なので，external reference から各 critical block をたどり，
+block 内の cycle relations と内部 annulus の作用差を用いれば，
+全 critical actions の定数項が共通に定まる．
+この過程で現れる整数 framing changes は $\mu=0$ では寄与しない．
+勾配の仮定と合わせ，両側は同じ affine functions となる．
+
+中央 curve の各 critical region の面積は正である．
+puncture cuts と固定 collars を先に十分小さく取り，その後で $\delta>0$ を小さくすれば，
+対応する affine target areas は $[-\delta,\delta]$ 全体で正となり，
+\eqref{ng8:protected-area-margin}も満たす．
+
+次に固定した正の切断値 $\mu=\delta$ と負の切断値 $\mu=-\delta$ および
+その open buffers だけを nearby fiber へ運ぶ．
+補題~\ref{ng8:transport-intercept} が同じ affine functions を保存する．
+これで有限 $t$ における加法定数も一致した．
+残りの moment interval には命題~\ref{ng8:straight-neck} を適用する．
+
+この議論は，中央 fiber の面積一致から有限 $t$ の一致を無条件に推論するものではない．
+固定 moment 上の相対 symplectic transport と toric reference normalization が，
+その二つの計算を接続している．
+\end{proof}

@@ -1,0 +1,697 @@
+{
+  "version": 8,
+  "status": "passed",
+  "scope": "Finite exact certificates; geometric and homotopy proofs are in the manuscript.",
+  "small_distribution_cases": 4915,
+  "canonical_budget_cases": 22,
+  "exact_checks": 45290,
+  "sextic_one_node": {
+    "m": 5,
+    "blowups_per_line": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "pi1_rank": 3,
+    "sphere_summands": 3,
+    "b2": 6,
+    "intersection_radical_rank": 6,
+    "signature": 0,
+    "boundary_free_rank": 9,
+    "boundary_torsion_cyclic_orders": []
+  },
+  "canonical_examples": [
+    {
+      "m": 5,
+      "blowups_per_line": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "pi1_rank": 3,
+      "sphere_summands": 3,
+      "b2": 6,
+      "intersection_radical_rank": 6,
+      "signature": 0,
+      "boundary_free_rank": 9,
+      "boundary_torsion_cyclic_orders": [],
+      "pants_budget": 4,
+      "pi2_free_group_ring_rank": 4
+    },
+    {
+      "m": 5,
+      "blowups_per_line": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pi1_rank": 3,
+      "sphere_summands": 3,
+      "b2": 6,
+      "intersection_radical_rank": 6,
+      "signature": 0,
+      "boundary_free_rank": 9,
+      "boundary_torsion_cyclic_orders": [],
+      "pants_budget": 4,
+      "pi2_free_group_ring_rank": 4
+    },
+    {
+      "m": 6,
+      "blowups_per_line": [
+        0,
+        2,
+        1,
+        0,
+        0,
+        0
+      ],
+      "pi1_rank": 3,
+      "sphere_summands": 8,
+      "b2": 11,
+      "intersection_radical_rank": 10,
+      "signature": -1,
+      "boundary_free_rank": 13,
+      "boundary_torsion_cyclic_orders": [
+        2
+      ],
+      "pants_budget": 9,
+      "pi2_free_group_ring_rank": 9
+    },
+    {
+      "m": 6,
+      "blowups_per_line": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pi1_rank": 3,
+      "sphere_summands": 8,
+      "b2": 11,
+      "intersection_radical_rank": 10,
+      "signature": -1,
+      "boundary_free_rank": 13,
+      "boundary_torsion_cyclic_orders": [
+        2
+      ],
+      "pants_budget": 9,
+      "pi2_free_group_ring_rank": 9
+    },
+    {
+      "m": 7,
+      "blowups_per_line": [
+        4,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pi1_rank": 3,
+      "sphere_summands": 15,
+      "b2": 18,
+      "intersection_radical_rank": 15,
+      "signature": -3,
+      "boundary_free_rank": 18,
+      "boundary_torsion_cyclic_orders": [
+        4
+      ],
+      "pants_budget": 16,
+      "pi2_free_group_ring_rank": 16
+    },
+    {
+      "m": 7,
+      "blowups_per_line": [
+        2,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pi1_rank": 3,
+      "sphere_summands": 15,
+      "b2": 18,
+      "intersection_radical_rank": 15,
+      "signature": -3,
+      "boundary_free_rank": 18,
+      "boundary_torsion_cyclic_orders": [
+        2,
+        2,
+        2
+      ],
+      "pants_budget": 16,
+      "pi2_free_group_ring_rank": 16
+    },
+    {
+      "m": 7,
+      "blowups_per_line": [
+        0,
+        2,
+        2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "pi1_rank": 3,
+      "sphere_summands": 15,
+      "b2": 18,
+      "intersection_radical_rank": 15,
+      "signature": -3,
+      "boundary_free_rank": 18,
+      "boundary_torsion_cyclic_orders": [
+        2,
+        2,
+        2
+      ],
+      "pants_budget": 16,
+      "pi2_free_group_ring_rank": 16
+    },
+    {
+      "m": 8,
+      "blowups_per_line": [
+        3,
+        3,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pi1_rank": 3,
+      "sphere_summands": 24,
+      "b2": 27,
+      "intersection_radical_rank": 21,
+      "signature": -6,
+      "boundary_free_rank": 24,
+      "boundary_torsion_cyclic_orders": [
+        3,
+        3,
+        2,
+        2
+      ],
+      "pants_budget": 25,
+      "pi2_free_group_ring_rank": 25
+    },
+    {
+      "m": 8,
+      "blowups_per_line": [
+        0,
+        3,
+        3,
+        2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "pi1_rank": 3,
+      "sphere_summands": 24,
+      "b2": 27,
+      "intersection_radical_rank": 21,
+      "signature": -6,
+      "boundary_free_rank": 24,
+      "boundary_torsion_cyclic_orders": [
+        3,
+        3,
+        2,
+        2
+      ],
+      "pants_budget": 25,
+      "pi2_free_group_ring_rank": 25
+    },
+    {
+      "m": 8,
+      "blowups_per_line": [
+        7,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pi1_rank": 3,
+      "sphere_summands": 24,
+      "b2": 27,
+      "intersection_radical_rank": 21,
+      "signature": -6,
+      "boundary_free_rank": 24,
+      "boundary_torsion_cyclic_orders": [
+        7
+      ],
+      "pants_budget": 25,
+      "pi2_free_group_ring_rank": 25
+    },
+    {
+      "m": 9,
+      "blowups_per_line": [
+        11,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pi1_rank": 3,
+      "sphere_summands": 35,
+      "b2": 38,
+      "intersection_radical_rank": 28,
+      "signature": -10,
+      "boundary_free_rank": 31,
+      "boundary_torsion_cyclic_orders": [
+        11
+      ],
+      "pants_budget": 36,
+      "pi2_free_group_ring_rank": 36
+    },
+    {
+      "m": 9,
+      "blowups_per_line": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pi1_rank": 3,
+      "sphere_summands": 35,
+      "b2": 38,
+      "intersection_radical_rank": 28,
+      "signature": -10,
+      "boundary_free_rank": 31,
+      "boundary_torsion_cyclic_orders": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "pants_budget": 36,
+      "pi2_free_group_ring_rank": 36
+    },
+    {
+      "m": 9,
+      "blowups_per_line": [
+        0,
+        3,
+        3,
+        3,
+        3,
+        3,
+        0,
+        0,
+        0
+      ],
+      "pi1_rank": 3,
+      "sphere_summands": 35,
+      "b2": 38,
+      "intersection_radical_rank": 28,
+      "signature": -10,
+      "boundary_free_rank": 31,
+      "boundary_torsion_cyclic_orders": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "pants_budget": 36,
+      "pi2_free_group_ring_rank": 36
+    },
+    {
+      "m": 10,
+      "blowups_per_line": [
+        4,
+        4,
+        4,
+        3,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pi1_rank": 3,
+      "sphere_summands": 48,
+      "b2": 51,
+      "intersection_radical_rank": 36,
+      "signature": -15,
+      "boundary_free_rank": 39,
+      "boundary_torsion_cyclic_orders": [
+        4,
+        4,
+        4,
+        3,
+        3,
+        3
+      ],
+      "pants_budget": 49,
+      "pi2_free_group_ring_rank": 49
+    },
+    {
+      "m": 10,
+      "blowups_per_line": [
+        16,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pi1_rank": 3,
+      "sphere_summands": 48,
+      "b2": 51,
+      "intersection_radical_rank": 36,
+      "signature": -15,
+      "boundary_free_rank": 39,
+      "boundary_torsion_cyclic_orders": [
+        16
+      ],
+      "pants_budget": 49,
+      "pi2_free_group_ring_rank": 49
+    },
+    {
+      "m": 10,
+      "blowups_per_line": [
+        0,
+        4,
+        4,
+        4,
+        3,
+        3,
+        3,
+        0,
+        0,
+        0
+      ],
+      "pi1_rank": 3,
+      "sphere_summands": 48,
+      "b2": 51,
+      "intersection_radical_rank": 36,
+      "signature": -15,
+      "boundary_free_rank": 39,
+      "boundary_torsion_cyclic_orders": [
+        4,
+        4,
+        4,
+        3,
+        3,
+        3
+      ],
+      "pants_budget": 49,
+      "pi2_free_group_ring_rank": 49
+    },
+    {
+      "m": 11,
+      "blowups_per_line": [
+        0,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        0,
+        0,
+        0
+      ],
+      "pi1_rank": 3,
+      "sphere_summands": 63,
+      "b2": 66,
+      "intersection_radical_rank": 45,
+      "signature": -21,
+      "boundary_free_rank": 48,
+      "boundary_torsion_cyclic_orders": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "pants_budget": 64,
+      "pi2_free_group_ring_rank": 64
+    },
+    {
+      "m": 11,
+      "blowups_per_line": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pi1_rank": 3,
+      "sphere_summands": 63,
+      "b2": 66,
+      "intersection_radical_rank": 45,
+      "signature": -21,
+      "boundary_free_rank": 48,
+      "boundary_torsion_cyclic_orders": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "pants_budget": 64,
+      "pi2_free_group_ring_rank": 64
+    },
+    {
+      "m": 11,
+      "blowups_per_line": [
+        22,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pi1_rank": 3,
+      "sphere_summands": 63,
+      "b2": 66,
+      "intersection_radical_rank": 45,
+      "signature": -21,
+      "boundary_free_rank": 48,
+      "boundary_torsion_cyclic_orders": [
+        22
+      ],
+      "pants_budget": 64,
+      "pi2_free_group_ring_rank": 64
+    },
+    {
+      "m": 12,
+      "blowups_per_line": [
+        0,
+        5,
+        5,
+        5,
+        5,
+        4,
+        4,
+        4,
+        4,
+        0,
+        0,
+        0
+      ],
+      "pi1_rank": 3,
+      "sphere_summands": 80,
+      "b2": 83,
+      "intersection_radical_rank": 55,
+      "signature": -28,
+      "boundary_free_rank": 58,
+      "boundary_torsion_cyclic_orders": [
+        5,
+        5,
+        5,
+        5,
+        4,
+        4,
+        4,
+        4
+      ],
+      "pants_budget": 81,
+      "pi2_free_group_ring_rank": 81
+    },
+    {
+      "m": 12,
+      "blowups_per_line": [
+        5,
+        5,
+        5,
+        5,
+        4,
+        4,
+        4,
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pi1_rank": 3,
+      "sphere_summands": 80,
+      "b2": 83,
+      "intersection_radical_rank": 55,
+      "signature": -28,
+      "boundary_free_rank": 58,
+      "boundary_torsion_cyclic_orders": [
+        5,
+        5,
+        5,
+        5,
+        4,
+        4,
+        4,
+        4
+      ],
+      "pants_budget": 81,
+      "pi2_free_group_ring_rank": 81
+    },
+    {
+      "m": 12,
+      "blowups_per_line": [
+        29,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pi1_rank": 3,
+      "sphere_summands": 80,
+      "b2": 83,
+      "intersection_radical_rank": 55,
+      "signature": -28,
+      "boundary_free_rank": 58,
+      "boundary_torsion_cyclic_orders": [
+        29
+      ],
+      "pants_budget": 81,
+      "pi2_free_group_ring_rank": 81
+    }
+  ],
+  "rank_one_local_system_samples": [
+    {
+      "character": [
+        1,
+        1,
+        1
+      ],
+      "homology_dimensions": [
+        1,
+        3,
+        6
+      ]
+    },
+    {
+      "character": [
+        2,
+        1,
+        1
+      ],
+      "homology_dimensions": [
+        0,
+        0,
+        4
+      ]
+    },
+    {
+      "character": [
+        1,
+        3,
+        1
+      ],
+      "homology_dimensions": [
+        0,
+        0,
+        4
+      ]
+    },
+    {
+      "character": [
+        1,
+        1,
+        -1
+      ],
+      "homology_dimensions": [
+        0,
+        0,
+        4
+      ]
+    },
+    {
+      "character": [
+        2,
+        3,
+        5
+      ],
+      "homology_dimensions": [
+        0,
+        0,
+        4
+      ]
+    },
+    {
+      "character": [
+        -1,
+        -1,
+        -1
+      ],
+      "homology_dimensions": [
+        0,
+        0,
+        4
+      ]
+    }
+  ],
+  "code_sha256": "c9eeefeb89271d16bafe1d867f2d1f6bcdc9eb672fe204230c0bb8021fe188b6"
+}

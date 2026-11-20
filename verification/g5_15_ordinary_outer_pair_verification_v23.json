@@ -1,0 +1,5573 @@
+{
+  "status": "PASS",
+  "conclusion": "All fourteen ordinary G5_15 cells are excluded for all denominators and scales",
+  "scope": "Standard marked quintic integer gluing, five nodes per edge; not a classification of isolated local charts",
+  "method": "Outer-core pair necessary conditions; complete proved node/divisor enumeration; final exact row/pair contradiction",
+  "arbitrary_cutoffs_used": false,
+  "earlier_code_imported": false,
+  "polynomial_identities": [
+    "outer_original_pair_equals_linear_residual",
+    "divisor_identity_from_linear_equation",
+    "resonance_elimination"
+  ],
+  "centers": [
+    {
+      "label": 1,
+      "parameters": [
+        2,
+        2,
+        6,
+        3,
+        5
+      ],
+      "ray_order": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "q": [
+        7,
+        31,
+        1,
+        1
+      ],
+      "P": [
+        [
+          0,
+          -8,
+          3,
+          -2
+        ],
+        [
+          -27,
+          0,
+          -10,
+          6
+        ],
+        [
+          2,
+          -3,
+          0,
+          0
+        ],
+        [
+          -3,
+          5,
+          -3,
+          0
+        ]
+      ],
+      "D": [
+        21,
+        -25,
+        9,
+        -5
+      ],
+      "weights": [
+        [
+          7,
+          1
+        ],
+        [
+          31,
+          1
+        ],
+        [
+          13,
+          4
+        ],
+        [
+          61,
+          10
+        ]
+      ],
+      "minimum_basin_gap": [
+        1,
+        10
+      ]
+    },
+    {
+      "label": 2,
+      "parameters": [
+        4,
+        4,
+        5,
+        2,
+        2
+      ],
+      "ray_order": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "q": [
+        9,
+        11,
+        1,
+        1
+      ],
+      "P": [
+        [
+          0,
+          -7,
+          2,
+          -4
+        ],
+        [
+          -14,
+          0,
+          -2,
+          5
+        ],
+        [
+          4,
+          -5,
+          0,
+          0
+        ],
+        [
+          -2,
+          2,
+          -1,
+          0
+        ]
+      ],
+      "D": [
+        3,
+        -1,
+        0,
+        -2
+      ],
+      "weights": [
+        [
+          9,
+          1
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          17,
+          8
+        ],
+        [
+          21,
+          4
+        ]
+      ],
+      "minimum_basin_gap": [
+        1,
+        8
+      ]
+    },
+    {
+      "label": 3,
+      "parameters": [
+        5,
+        10,
+        2,
+        3,
+        3
+      ],
+      "ray_order": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "q": [
+        31,
+        7,
+        1,
+        1
+      ],
+      "P": [
+        [
+          0,
+          -27,
+          6,
+          -10
+        ],
+        [
+          -8,
+          0,
+          -1,
+          2
+        ],
+        [
+          5,
+          -6,
+          0,
+          0
+        ],
+        [
+          -3,
+          3,
+          -1,
+          0
+        ]
+      ],
+      "D": [
+        -25,
+        23,
+        -5,
+        7
+      ],
+      "weights": [
+        [
+          31,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          61,
+          10
+        ],
+        [
+          13,
+          6
+        ]
+      ],
+      "minimum_basin_gap": [
+        1,
+        10
+      ]
+    },
+    {
+      "label": 4,
+      "parameters": [
+        6,
+        6,
+        14,
+        3,
+        3
+      ],
+      "ray_order": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "q": [
+        19,
+        43,
+        1,
+        1
+      ],
+      "P": [
+        [
+          0,
+          -16,
+          3,
+          -6
+        ],
+        [
+          -51,
+          0,
+          -6,
+          14
+        ],
+        [
+          6,
+          -7,
+          0,
+          0
+        ],
+        [
+          -3,
+          3,
+          -1,
+          0
+        ]
+      ],
+      "D": [
+        29,
+        -23,
+        3,
+        -9
+      ],
+      "weights": [
+        [
+          19,
+          1
+        ],
+        [
+          43,
+          1
+        ],
+        [
+          37,
+          12
+        ],
+        [
+          85,
+          6
+        ]
+      ],
+      "minimum_basin_gap": [
+        1,
+        12
+      ]
+    }
+  ],
+  "center_node_triples_checked_per_low_edge": 21,
+  "matching_ordinary_configurations_before_parity": 18,
+  "parity_rejected": [
+    {
+      "center": 2,
+      "R3": [
+        -3,
+        3,
+        -1
+      ],
+      "R4": [
+        -1,
+        -1,
+        1
+      ],
+      "d3": 0,
+      "d4": 2
+    },
+    {
+      "center": 2,
+      "R3": [
+        -4,
+        4,
+        -1
+      ],
+      "R4": [
+        -1,
+        -1,
+        1
+      ],
+      "d3": 0,
+      "d4": 2
+    },
+    {
+      "center": 2,
+      "R3": [
+        -5,
+        5,
+        -1
+      ],
+      "R4": [
+        -1,
+        -1,
+        1
+      ],
+      "d3": 0,
+      "d4": 2
+    },
+    {
+      "center": 2,
+      "R3": [
+        -6,
+        6,
+        -1
+      ],
+      "R4": [
+        -1,
+        -1,
+        1
+      ],
+      "d3": 0,
+      "d4": 2
+    }
+  ],
+  "ordinary_cell_count": 14,
+  "ordinary_cells": [
+    {
+      "center": 1,
+      "nodes23": [
+        0,
+        0,
+        5
+      ],
+      "nodes24": [
+        5,
+        0,
+        0
+      ],
+      "R3": [
+        -1,
+        4,
+        -4
+      ],
+      "R4": [
+        -1,
+        -4,
+        4
+      ],
+      "d3": -9,
+      "d4": 5,
+      "positive_core": 4,
+      "positive_row": [
+        -1,
+        -4,
+        4
+      ],
+      "positive_low_D": 5,
+      "outer_inputs": [
+        [
+          7,
+          -2,
+          1
+        ],
+        [
+          31,
+          6,
+          4
+        ]
+      ]
+    },
+    {
+      "center": 1,
+      "nodes23": [
+        0,
+        5,
+        0
+      ],
+      "nodes24": [
+        0,
+        0,
+        5
+      ],
+      "R3": [
+        -1,
+        -1,
+        1
+      ],
+      "R4": [
+        4,
+        -4,
+        -1
+      ],
+      "d3": -9,
+      "d4": 5,
+      "positive_core": 3,
+      "positive_row": [
+        -1,
+        -1,
+        1
+      ],
+      "positive_low_D": -9,
+      "outer_inputs": [
+        [
+          7,
+          3,
+          1
+        ],
+        [
+          31,
+          -10,
+          1
+        ]
+      ]
+    },
+    {
+      "center": 2,
+      "nodes23": [
+        0,
+        2,
+        3
+      ],
+      "nodes24": [
+        4,
+        1,
+        0
+      ],
+      "R3": [
+        -3,
+        4,
+        -2
+      ],
+      "R4": [
+        -1,
+        -2,
+        2
+      ],
+      "d3": 0,
+      "d4": 2,
+      "positive_core": 4,
+      "positive_row": [
+        -1,
+        -2,
+        2
+      ],
+      "positive_low_D": 2,
+      "outer_inputs": [
+        [
+          9,
+          -4,
+          1
+        ],
+        [
+          11,
+          5,
+          2
+        ]
+      ]
+    },
+    {
+      "center": 2,
+      "nodes23": [
+        0,
+        2,
+        3
+      ],
+      "nodes24": [
+        5,
+        0,
+        0
+      ],
+      "R3": [
+        -3,
+        4,
+        -2
+      ],
+      "R4": [
+        -2,
+        -1,
+        2
+      ],
+      "d3": 0,
+      "d4": 2,
+      "positive_core": 4,
+      "positive_row": [
+        -2,
+        -1,
+        2
+      ],
+      "positive_low_D": 2,
+      "outer_inputs": [
+        [
+          9,
+          -4,
+          2
+        ],
+        [
+          11,
+          5,
+          1
+        ]
+      ]
+    },
+    {
+      "center": 2,
+      "nodes23": [
+        1,
+        1,
+        3
+      ],
+      "nodes24": [
+        4,
+        1,
+        0
+      ],
+      "R3": [
+        -4,
+        5,
+        -2
+      ],
+      "R4": [
+        -1,
+        -2,
+        2
+      ],
+      "d3": 0,
+      "d4": 2,
+      "positive_core": 4,
+      "positive_row": [
+        -1,
+        -2,
+        2
+      ],
+      "positive_low_D": 2,
+      "outer_inputs": [
+        [
+          9,
+          -4,
+          1
+        ],
+        [
+          11,
+          5,
+          2
+        ]
+      ]
+    },
+    {
+      "center": 2,
+      "nodes23": [
+        1,
+        1,
+        3
+      ],
+      "nodes24": [
+        5,
+        0,
+        0
+      ],
+      "R3": [
+        -4,
+        5,
+        -2
+      ],
+      "R4": [
+        -2,
+        -1,
+        2
+      ],
+      "d3": 0,
+      "d4": 2,
+      "positive_core": 4,
+      "positive_row": [
+        -2,
+        -1,
+        2
+      ],
+      "positive_low_D": 2,
+      "outer_inputs": [
+        [
+          9,
+          -4,
+          2
+        ],
+        [
+          11,
+          5,
+          1
+        ]
+      ]
+    },
+    {
+      "center": 2,
+      "nodes23": [
+        2,
+        0,
+        3
+      ],
+      "nodes24": [
+        4,
+        1,
+        0
+      ],
+      "R3": [
+        -5,
+        6,
+        -2
+      ],
+      "R4": [
+        -1,
+        -2,
+        2
+      ],
+      "d3": 0,
+      "d4": 2,
+      "positive_core": 4,
+      "positive_row": [
+        -1,
+        -2,
+        2
+      ],
+      "positive_low_D": 2,
+      "outer_inputs": [
+        [
+          9,
+          -4,
+          1
+        ],
+        [
+          11,
+          5,
+          2
+        ]
+      ]
+    },
+    {
+      "center": 2,
+      "nodes23": [
+        2,
+        0,
+        3
+      ],
+      "nodes24": [
+        5,
+        0,
+        0
+      ],
+      "R3": [
+        -5,
+        6,
+        -2
+      ],
+      "R4": [
+        -2,
+        -1,
+        2
+      ],
+      "d3": 0,
+      "d4": 2,
+      "positive_core": 4,
+      "positive_row": [
+        -2,
+        -1,
+        2
+      ],
+      "positive_low_D": 2,
+      "outer_inputs": [
+        [
+          9,
+          -4,
+          2
+        ],
+        [
+          11,
+          5,
+          1
+        ]
+      ]
+    },
+    {
+      "center": 3,
+      "nodes23": [
+        0,
+        2,
+        3
+      ],
+      "nodes24": [
+        5,
+        0,
+        0
+      ],
+      "R3": [
+        -4,
+        5,
+        -2
+      ],
+      "R4": [
+        -1,
+        -2,
+        2
+      ],
+      "d3": 5,
+      "d4": -7,
+      "positive_core": 4,
+      "positive_row": [
+        -1,
+        -2,
+        2
+      ],
+      "positive_low_D": -7,
+      "outer_inputs": [
+        [
+          31,
+          -10,
+          1
+        ],
+        [
+          7,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "center": 3,
+      "nodes23": [
+        1,
+        1,
+        3
+      ],
+      "nodes24": [
+        5,
+        0,
+        0
+      ],
+      "R3": [
+        -5,
+        6,
+        -2
+      ],
+      "R4": [
+        -1,
+        -2,
+        2
+      ],
+      "d3": 5,
+      "d4": -7,
+      "positive_core": 4,
+      "positive_row": [
+        -1,
+        -2,
+        2
+      ],
+      "positive_low_D": -7,
+      "outer_inputs": [
+        [
+          31,
+          -10,
+          1
+        ],
+        [
+          7,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "center": 3,
+      "nodes23": [
+        2,
+        0,
+        3
+      ],
+      "nodes24": [
+        5,
+        0,
+        0
+      ],
+      "R3": [
+        -6,
+        7,
+        -2
+      ],
+      "R4": [
+        -1,
+        -2,
+        2
+      ],
+      "d3": 5,
+      "d4": -7,
+      "positive_core": 4,
+      "positive_row": [
+        -1,
+        -2,
+        2
+      ],
+      "positive_low_D": -7,
+      "outer_inputs": [
+        [
+          31,
+          -10,
+          1
+        ],
+        [
+          7,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "center": 4,
+      "nodes23": [
+        0,
+        2,
+        3
+      ],
+      "nodes24": [
+        5,
+        0,
+        0
+      ],
+      "R3": [
+        -5,
+        6,
+        -2
+      ],
+      "R4": [
+        -1,
+        -2,
+        2
+      ],
+      "d3": -3,
+      "d4": 9,
+      "positive_core": 4,
+      "positive_row": [
+        -1,
+        -2,
+        2
+      ],
+      "positive_low_D": 9,
+      "outer_inputs": [
+        [
+          19,
+          -6,
+          1
+        ],
+        [
+          43,
+          14,
+          2
+        ]
+      ]
+    },
+    {
+      "center": 4,
+      "nodes23": [
+        1,
+        1,
+        3
+      ],
+      "nodes24": [
+        5,
+        0,
+        0
+      ],
+      "R3": [
+        -6,
+        7,
+        -2
+      ],
+      "R4": [
+        -1,
+        -2,
+        2
+      ],
+      "d3": -3,
+      "d4": 9,
+      "positive_core": 4,
+      "positive_row": [
+        -1,
+        -2,
+        2
+      ],
+      "positive_low_D": 9,
+      "outer_inputs": [
+        [
+          19,
+          -6,
+          1
+        ],
+        [
+          43,
+          14,
+          2
+        ]
+      ]
+    },
+    {
+      "center": 4,
+      "nodes23": [
+        2,
+        0,
+        3
+      ],
+      "nodes24": [
+        5,
+        0,
+        0
+      ],
+      "R3": [
+        -7,
+        8,
+        -2
+      ],
+      "R4": [
+        -1,
+        -2,
+        2
+      ],
+      "d3": -3,
+      "d4": 9,
+      "positive_core": 4,
+      "positive_row": [
+        -1,
+        -2,
+        2
+      ],
+      "positive_low_D": 9,
+      "outer_inputs": [
+        [
+          19,
+          -6,
+          1
+        ],
+        [
+          43,
+          14,
+          2
+        ]
+      ]
+    }
+  ],
+  "positive_profile_count": 6,
+  "profiles": [
+    {
+      "center": 1,
+      "positive_core": 4,
+      "low_row": [
+        -1,
+        -4,
+        4
+      ],
+      "low_D": 5,
+      "cells_covered": 1,
+      "outer_inputs": [
+        [
+          7,
+          -2,
+          1
+        ],
+        [
+          31,
+          6,
+          4
+        ]
+      ],
+      "S_candidates": [
+        [
+          2,
+          -1,
+          -2
+        ]
+      ],
+      "T_candidates": [
+        [
+          5,
+          1,
+          1
+        ]
+      ],
+      "surviving_scale_pairs_before_local_check": [
+        {
+          "S": 2,
+          "T": 5,
+          "U": 1,
+          "exclusion": "last-point original pair/row contradiction"
+        }
+      ],
+      "completed_ordinary_models": 0
+    },
+    {
+      "center": 1,
+      "positive_core": 3,
+      "low_row": [
+        -1,
+        -1,
+        1
+      ],
+      "low_D": -9,
+      "cells_covered": 1,
+      "outer_inputs": [
+        [
+          7,
+          3,
+          1
+        ],
+        [
+          31,
+          -10,
+          1
+        ]
+      ],
+      "S_candidates": [
+        [
+          2,
+          1,
+          1
+        ]
+      ],
+      "T_candidates": [],
+      "surviving_scale_pairs_before_local_check": [],
+      "completed_ordinary_models": 0
+    },
+    {
+      "center": 2,
+      "positive_core": 4,
+      "low_row": [
+        -1,
+        -2,
+        2
+      ],
+      "low_D": 2,
+      "cells_covered": 3,
+      "outer_inputs": [
+        [
+          9,
+          -4,
+          1
+        ],
+        [
+          11,
+          5,
+          2
+        ]
+      ],
+      "S_candidates": [
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "T_candidates": [
+        [
+          1,
+          -1,
+          -1
+        ]
+      ],
+      "surviving_scale_pairs_before_local_check": [
+        {
+          "S": 2,
+          "T": 1,
+          "U": 0,
+          "exclusion": "shared low-column scale U is not positive"
+        }
+      ],
+      "completed_ordinary_models": 0
+    },
+    {
+      "center": 2,
+      "positive_core": 4,
+      "low_row": [
+        -2,
+        -1,
+        2
+      ],
+      "low_D": 2,
+      "cells_covered": 3,
+      "outer_inputs": [
+        [
+          9,
+          -4,
+          2
+        ],
+        [
+          11,
+          5,
+          1
+        ]
+      ],
+      "S_candidates": [],
+      "T_candidates": [
+        [
+          4,
+          1,
+          1
+        ]
+      ],
+      "surviving_scale_pairs_before_local_check": [],
+      "completed_ordinary_models": 0
+    },
+    {
+      "center": 3,
+      "positive_core": 4,
+      "low_row": [
+        -1,
+        -2,
+        2
+      ],
+      "low_D": -7,
+      "cells_covered": 3,
+      "outer_inputs": [
+        [
+          31,
+          -10,
+          1
+        ],
+        [
+          7,
+          2,
+          2
+        ]
+      ],
+      "S_candidates": [],
+      "T_candidates": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "surviving_scale_pairs_before_local_check": [],
+      "completed_ordinary_models": 0
+    },
+    {
+      "center": 4,
+      "positive_core": 4,
+      "low_row": [
+        -1,
+        -2,
+        2
+      ],
+      "low_D": 9,
+      "cells_covered": 3,
+      "outer_inputs": [
+        [
+          19,
+          -6,
+          1
+        ],
+        [
+          43,
+          14,
+          2
+        ]
+      ],
+      "S_candidates": [],
+      "T_candidates": [
+        [
+          13,
+          1,
+          1
+        ]
+      ],
+      "surviving_scale_pairs_before_local_check": [],
+      "completed_ordinary_models": 0
+    }
+  ],
+  "distinct_outer_inputs": 11,
+  "direct_node_pairs_per_outer_input": 36,
+  "direct_node_pairs_checked": 396,
+  "outer_input_checks": [
+    {
+      "a": 7,
+      "c": -2,
+      "j": 1,
+      "candidates": [
+        [
+          2,
+          -1,
+          -2
+        ]
+      ],
+      "complete_node_records": [
+        {
+          "u": -4,
+          "v": -4,
+          "E": -26,
+          "leading": 71,
+          "constant": -98,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -3,
+          "E": -26,
+          "leading": 45,
+          "constant": -72,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -2,
+          "E": -26,
+          "leading": 19,
+          "constant": -46,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -1,
+          "E": -26,
+          "leading": -7,
+          "constant": -20,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": 0,
+          "E": -26,
+          "leading": -33,
+          "constant": 6,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": 1,
+          "E": -26,
+          "leading": -59,
+          "constant": 32,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -4,
+          "E": -19,
+          "leading": 50,
+          "constant": -70,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -3,
+          "E": -19,
+          "leading": 31,
+          "constant": -51,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -2,
+          "E": -19,
+          "leading": 12,
+          "constant": -32,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -1,
+          "E": -19,
+          "leading": -7,
+          "constant": -13,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": 0,
+          "E": -19,
+          "leading": -26,
+          "constant": 6,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": 1,
+          "E": -19,
+          "leading": -45,
+          "constant": 25,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -4,
+          "E": -12,
+          "leading": 29,
+          "constant": -42,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -3,
+          "E": -12,
+          "leading": 17,
+          "constant": -30,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -2,
+          "E": -12,
+          "leading": 5,
+          "constant": -18,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -1,
+          "E": -12,
+          "leading": -7,
+          "constant": -6,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": 0,
+          "E": -12,
+          "leading": -19,
+          "constant": 6,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": 1,
+          "E": -12,
+          "leading": -31,
+          "constant": 18,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -4,
+          "E": -5,
+          "leading": 8,
+          "constant": -14,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -3,
+          "E": -5,
+          "leading": 3,
+          "constant": -9,
+          "scale": -3,
+          "disposition": "nonpositive_scale"
+        },
+        {
+          "u": -1,
+          "v": -2,
+          "E": -5,
+          "leading": -2,
+          "constant": -4,
+          "scale": 2,
+          "disposition": "retained",
+          "q": 3
+        },
+        {
+          "u": -1,
+          "v": -1,
+          "E": -5,
+          "leading": -7,
+          "constant": 1,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": 0,
+          "E": -5,
+          "leading": -12,
+          "constant": 6,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": 1,
+          "E": -5,
+          "leading": -17,
+          "constant": 11,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -4,
+          "E": 2,
+          "leading": -13,
+          "constant": 14,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -3,
+          "E": 2,
+          "leading": -11,
+          "constant": 12,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -2,
+          "E": 2,
+          "leading": -9,
+          "constant": 10,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -1,
+          "E": 2,
+          "leading": -7,
+          "constant": 8,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": 0,
+          "E": 2,
+          "leading": -5,
+          "constant": 6,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "E": 2,
+          "leading": -3,
+          "constant": 4,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -4,
+          "E": 9,
+          "leading": -34,
+          "constant": 42,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -3,
+          "E": 9,
+          "leading": -25,
+          "constant": 33,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -2,
+          "E": 9,
+          "leading": -16,
+          "constant": 24,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -1,
+          "E": 9,
+          "leading": -7,
+          "constant": 15,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": 0,
+          "E": 9,
+          "leading": 2,
+          "constant": 6,
+          "scale": 3,
+          "disposition": "even_denominator"
+        },
+        {
+          "u": 1,
+          "v": 1,
+          "E": 9,
+          "leading": 11,
+          "constant": -3,
+          "disposition": "noninteger_scale"
+        }
+      ],
+      "complete_divisor_records": [
+        {
+          "u": -4,
+          "E": -26,
+          "fixed_integer": -27,
+          "all_positive_divisors": [
+            1,
+            3,
+            9,
+            27
+          ],
+          "retained": []
+        },
+        {
+          "u": -3,
+          "E": -19,
+          "fixed_integer": -20,
+          "all_positive_divisors": [
+            1,
+            2,
+            4,
+            5,
+            10,
+            20
+          ],
+          "retained": []
+        },
+        {
+          "u": -2,
+          "E": -12,
+          "fixed_integer": -13,
+          "all_positive_divisors": [
+            1,
+            13
+          ],
+          "retained": []
+        },
+        {
+          "u": -1,
+          "E": -5,
+          "fixed_integer": -6,
+          "all_positive_divisors": [
+            1,
+            2,
+            3,
+            6
+          ],
+          "retained": [
+            {
+              "q": 3,
+              "sigma": 2,
+              "v": -2
+            }
+          ]
+        },
+        {
+          "u": 0,
+          "E": 2,
+          "fixed_integer": 1,
+          "all_positive_divisors": [
+            1
+          ],
+          "retained": []
+        },
+        {
+          "u": 1,
+          "E": 9,
+          "fixed_integer": 8,
+          "all_positive_divisors": [
+            1,
+            2,
+            4,
+            8
+          ],
+          "retained": []
+        }
+      ]
+    },
+    {
+      "a": 31,
+      "c": 6,
+      "j": 4,
+      "candidates": [
+        [
+          5,
+          1,
+          1
+        ]
+      ],
+      "complete_node_records": [
+        {
+          "u": -4,
+          "v": -4,
+          "E": -130,
+          "leading": 1826,
+          "constant": -490,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -3,
+          "E": -130,
+          "leading": 1306,
+          "constant": -360,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -2,
+          "E": -130,
+          "leading": 786,
+          "constant": -230,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -1,
+          "E": -130,
+          "leading": 266,
+          "constant": -100,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": 0,
+          "E": -130,
+          "leading": -254,
+          "constant": 30,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": 1,
+          "E": -130,
+          "leading": -774,
+          "constant": 160,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -4,
+          "E": -99,
+          "leading": 1361,
+          "constant": -366,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -3,
+          "E": -99,
+          "leading": 965,
+          "constant": -267,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -2,
+          "E": -99,
+          "leading": 569,
+          "constant": -168,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -1,
+          "E": -99,
+          "leading": 173,
+          "constant": -69,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": 0,
+          "E": -99,
+          "leading": -223,
+          "constant": 30,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": 1,
+          "E": -99,
+          "leading": -619,
+          "constant": 129,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -4,
+          "E": -68,
+          "leading": 896,
+          "constant": -242,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -3,
+          "E": -68,
+          "leading": 624,
+          "constant": -174,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -2,
+          "E": -68,
+          "leading": 352,
+          "constant": -106,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -1,
+          "E": -68,
+          "leading": 80,
+          "constant": -38,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": 0,
+          "E": -68,
+          "leading": -192,
+          "constant": 30,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": 1,
+          "E": -68,
+          "leading": -464,
+          "constant": 98,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -4,
+          "E": -37,
+          "leading": 431,
+          "constant": -118,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -3,
+          "E": -37,
+          "leading": 283,
+          "constant": -81,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -2,
+          "E": -37,
+          "leading": 135,
+          "constant": -44,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -1,
+          "E": -37,
+          "leading": -13,
+          "constant": -7,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": 0,
+          "E": -37,
+          "leading": -161,
+          "constant": 30,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": 1,
+          "E": -37,
+          "leading": -309,
+          "constant": 67,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -4,
+          "E": -6,
+          "leading": -34,
+          "constant": 6,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -3,
+          "E": -6,
+          "leading": -58,
+          "constant": 12,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -2,
+          "E": -6,
+          "leading": -82,
+          "constant": 18,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -1,
+          "E": -6,
+          "leading": -106,
+          "constant": 24,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": 0,
+          "E": -6,
+          "leading": -130,
+          "constant": 30,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "E": -6,
+          "leading": -154,
+          "constant": 36,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -4,
+          "E": 25,
+          "leading": -499,
+          "constant": 130,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -3,
+          "E": 25,
+          "leading": -399,
+          "constant": 105,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -2,
+          "E": 25,
+          "leading": -299,
+          "constant": 80,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -1,
+          "E": 25,
+          "leading": -199,
+          "constant": 55,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": 0,
+          "E": 25,
+          "leading": -99,
+          "constant": 30,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": 1,
+          "E": 25,
+          "leading": 1,
+          "constant": 5,
+          "scale": 5,
+          "disposition": "retained",
+          "q": 21
+        }
+      ],
+      "complete_divisor_records": [
+        {
+          "u": -4,
+          "E": -130,
+          "fixed_integer": -134,
+          "all_positive_divisors": [
+            1,
+            2,
+            67,
+            134
+          ],
+          "retained": []
+        },
+        {
+          "u": -3,
+          "E": -99,
+          "fixed_integer": -103,
+          "all_positive_divisors": [
+            1,
+            103
+          ],
+          "retained": []
+        },
+        {
+          "u": -2,
+          "E": -68,
+          "fixed_integer": -72,
+          "all_positive_divisors": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            8,
+            9,
+            12,
+            18,
+            24,
+            36,
+            72
+          ],
+          "retained": []
+        },
+        {
+          "u": -1,
+          "E": -37,
+          "fixed_integer": -41,
+          "all_positive_divisors": [
+            1,
+            41
+          ],
+          "retained": []
+        },
+        {
+          "u": 0,
+          "E": -6,
+          "fixed_integer": -10,
+          "all_positive_divisors": [
+            1,
+            2,
+            5,
+            10
+          ],
+          "retained": []
+        },
+        {
+          "u": 1,
+          "E": 25,
+          "fixed_integer": 21,
+          "all_positive_divisors": [
+            1,
+            3,
+            7,
+            21
+          ],
+          "retained": [
+            {
+              "q": 21,
+              "sigma": 5,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "a": 7,
+      "c": 3,
+      "j": 1,
+      "candidates": [
+        [
+          2,
+          1,
+          1
+        ]
+      ],
+      "complete_node_records": [
+        {
+          "u": -4,
+          "v": -4,
+          "E": -31,
+          "leading": 86,
+          "constant": -118,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -3,
+          "E": -31,
+          "leading": 55,
+          "constant": -87,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -2,
+          "E": -31,
+          "leading": 24,
+          "constant": -56,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -1,
+          "E": -31,
+          "leading": -7,
+          "constant": -25,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": 0,
+          "E": -31,
+          "leading": -38,
+          "constant": 6,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": 1,
+          "E": -31,
+          "leading": -69,
+          "constant": 37,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -4,
+          "E": -24,
+          "leading": 65,
+          "constant": -90,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -3,
+          "E": -24,
+          "leading": 41,
+          "constant": -66,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -2,
+          "E": -24,
+          "leading": 17,
+          "constant": -42,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -1,
+          "E": -24,
+          "leading": -7,
+          "constant": -18,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": 0,
+          "E": -24,
+          "leading": -31,
+          "constant": 6,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": 1,
+          "E": -24,
+          "leading": -55,
+          "constant": 30,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -4,
+          "E": -17,
+          "leading": 44,
+          "constant": -62,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -3,
+          "E": -17,
+          "leading": 27,
+          "constant": -45,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -2,
+          "E": -17,
+          "leading": 10,
+          "constant": -28,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -1,
+          "E": -17,
+          "leading": -7,
+          "constant": -11,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": 0,
+          "E": -17,
+          "leading": -24,
+          "constant": 6,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": 1,
+          "E": -17,
+          "leading": -41,
+          "constant": 23,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -4,
+          "E": -10,
+          "leading": 23,
+          "constant": -34,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -3,
+          "E": -10,
+          "leading": 13,
+          "constant": -24,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -2,
+          "E": -10,
+          "leading": 3,
+          "constant": -14,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -1,
+          "E": -10,
+          "leading": -7,
+          "constant": -4,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": 0,
+          "E": -10,
+          "leading": -17,
+          "constant": 6,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": 1,
+          "E": -10,
+          "leading": -27,
+          "constant": 16,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -4,
+          "E": -3,
+          "leading": 2,
+          "constant": -6,
+          "scale": -3,
+          "disposition": "nonpositive_scale"
+        },
+        {
+          "u": 0,
+          "v": -3,
+          "E": -3,
+          "leading": -1,
+          "constant": -3,
+          "scale": 3,
+          "disposition": "even_denominator"
+        },
+        {
+          "u": 0,
+          "v": -2,
+          "E": -3,
+          "leading": -4,
+          "constant": 0,
+          "scale": 0,
+          "disposition": "nonpositive_scale"
+        },
+        {
+          "u": 0,
+          "v": -1,
+          "E": -3,
+          "leading": -7,
+          "constant": 3,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": 0,
+          "E": -3,
+          "leading": -10,
+          "constant": 6,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "E": -3,
+          "leading": -13,
+          "constant": 9,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -4,
+          "E": 4,
+          "leading": -19,
+          "constant": 22,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -3,
+          "E": 4,
+          "leading": -15,
+          "constant": 18,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -2,
+          "E": 4,
+          "leading": -11,
+          "constant": 14,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -1,
+          "E": 4,
+          "leading": -7,
+          "constant": 10,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": 0,
+          "E": 4,
+          "leading": -3,
+          "constant": 6,
+          "scale": -2,
+          "disposition": "nonpositive_scale"
+        },
+        {
+          "u": 1,
+          "v": 1,
+          "E": 4,
+          "leading": 1,
+          "constant": 2,
+          "scale": 2,
+          "disposition": "retained",
+          "q": 3
+        }
+      ],
+      "complete_divisor_records": [
+        {
+          "u": -4,
+          "E": -31,
+          "fixed_integer": -32,
+          "all_positive_divisors": [
+            1,
+            2,
+            4,
+            8,
+            16,
+            32
+          ],
+          "retained": []
+        },
+        {
+          "u": -3,
+          "E": -24,
+          "fixed_integer": -25,
+          "all_positive_divisors": [
+            1,
+            5,
+            25
+          ],
+          "retained": []
+        },
+        {
+          "u": -2,
+          "E": -17,
+          "fixed_integer": -18,
+          "all_positive_divisors": [
+            1,
+            2,
+            3,
+            6,
+            9,
+            18
+          ],
+          "retained": []
+        },
+        {
+          "u": -1,
+          "E": -10,
+          "fixed_integer": -11,
+          "all_positive_divisors": [
+            1,
+            11
+          ],
+          "retained": []
+        },
+        {
+          "u": 0,
+          "E": -3,
+          "fixed_integer": -4,
+          "all_positive_divisors": [
+            1,
+            2,
+            4
+          ],
+          "retained": []
+        },
+        {
+          "u": 1,
+          "E": 4,
+          "fixed_integer": 3,
+          "all_positive_divisors": [
+            1,
+            3
+          ],
+          "retained": [
+            {
+              "q": 3,
+              "sigma": 2,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "a": 31,
+      "c": -10,
+      "j": 1,
+      "candidates": [],
+      "complete_node_records": [
+        {
+          "u": -4,
+          "v": -4,
+          "E": -114,
+          "leading": 311,
+          "constant": -426,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -3,
+          "E": -114,
+          "leading": 197,
+          "constant": -312,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -2,
+          "E": -114,
+          "leading": 83,
+          "constant": -198,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -1,
+          "E": -114,
+          "leading": -31,
+          "constant": -84,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": 0,
+          "E": -114,
+          "leading": -145,
+          "constant": 30,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": 1,
+          "E": -114,
+          "leading": -259,
+          "constant": 144,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -4,
+          "E": -83,
+          "leading": 218,
+          "constant": -302,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -3,
+          "E": -83,
+          "leading": 135,
+          "constant": -219,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -2,
+          "E": -83,
+          "leading": 52,
+          "constant": -136,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -1,
+          "E": -83,
+          "leading": -31,
+          "constant": -53,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": 0,
+          "E": -83,
+          "leading": -114,
+          "constant": 30,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": 1,
+          "E": -83,
+          "leading": -197,
+          "constant": 113,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -4,
+          "E": -52,
+          "leading": 125,
+          "constant": -178,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -3,
+          "E": -52,
+          "leading": 73,
+          "constant": -126,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -2,
+          "E": -52,
+          "leading": 21,
+          "constant": -74,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -1,
+          "E": -52,
+          "leading": -31,
+          "constant": -22,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": 0,
+          "E": -52,
+          "leading": -83,
+          "constant": 30,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": 1,
+          "E": -52,
+          "leading": -135,
+          "constant": 82,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -4,
+          "E": -21,
+          "leading": 32,
+          "constant": -54,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -3,
+          "E": -21,
+          "leading": 11,
+          "constant": -33,
+          "scale": -3,
+          "disposition": "nonpositive_scale"
+        },
+        {
+          "u": -1,
+          "v": -2,
+          "E": -21,
+          "leading": -10,
+          "constant": -12,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -1,
+          "E": -21,
+          "leading": -31,
+          "constant": 9,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": 0,
+          "E": -21,
+          "leading": -52,
+          "constant": 30,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": 1,
+          "E": -21,
+          "leading": -73,
+          "constant": 51,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -4,
+          "E": 10,
+          "leading": -61,
+          "constant": 70,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -3,
+          "E": 10,
+          "leading": -51,
+          "constant": 60,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -2,
+          "E": 10,
+          "leading": -41,
+          "constant": 50,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -1,
+          "E": 10,
+          "leading": -31,
+          "constant": 40,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": 0,
+          "E": 10,
+          "leading": -21,
+          "constant": 30,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "E": 10,
+          "leading": -11,
+          "constant": 20,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -4,
+          "E": 41,
+          "leading": -154,
+          "constant": 194,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -3,
+          "E": 41,
+          "leading": -113,
+          "constant": 153,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -2,
+          "E": 41,
+          "leading": -72,
+          "constant": 112,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -1,
+          "E": 41,
+          "leading": -31,
+          "constant": 71,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": 0,
+          "E": 41,
+          "leading": 10,
+          "constant": 30,
+          "scale": 3,
+          "disposition": "even_denominator"
+        },
+        {
+          "u": 1,
+          "v": 1,
+          "E": 41,
+          "leading": 51,
+          "constant": -11,
+          "disposition": "noninteger_scale"
+        }
+      ],
+      "complete_divisor_records": [
+        {
+          "u": -4,
+          "E": -114,
+          "fixed_integer": -115,
+          "all_positive_divisors": [
+            1,
+            5,
+            23,
+            115
+          ],
+          "retained": []
+        },
+        {
+          "u": -3,
+          "E": -83,
+          "fixed_integer": -84,
+          "all_positive_divisors": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            12,
+            14,
+            21,
+            28,
+            42,
+            84
+          ],
+          "retained": []
+        },
+        {
+          "u": -2,
+          "E": -52,
+          "fixed_integer": -53,
+          "all_positive_divisors": [
+            1,
+            53
+          ],
+          "retained": []
+        },
+        {
+          "u": -1,
+          "E": -21,
+          "fixed_integer": -22,
+          "all_positive_divisors": [
+            1,
+            2,
+            11,
+            22
+          ],
+          "retained": []
+        },
+        {
+          "u": 0,
+          "E": 10,
+          "fixed_integer": 9,
+          "all_positive_divisors": [
+            1,
+            3,
+            9
+          ],
+          "retained": []
+        },
+        {
+          "u": 1,
+          "E": 41,
+          "fixed_integer": 40,
+          "all_positive_divisors": [
+            1,
+            2,
+            4,
+            5,
+            8,
+            10,
+            20,
+            40
+          ],
+          "retained": []
+        }
+      ]
+    },
+    {
+      "a": 9,
+      "c": -4,
+      "j": 1,
+      "candidates": [
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "complete_node_records": [
+        {
+          "u": -4,
+          "v": -4,
+          "E": -32,
+          "leading": 87,
+          "constant": -120,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -3,
+          "E": -32,
+          "leading": 55,
+          "constant": -88,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -2,
+          "E": -32,
+          "leading": 23,
+          "constant": -56,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -1,
+          "E": -32,
+          "leading": -9,
+          "constant": -24,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": 0,
+          "E": -32,
+          "leading": -41,
+          "constant": 8,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": 1,
+          "E": -32,
+          "leading": -73,
+          "constant": 40,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -4,
+          "E": -23,
+          "leading": 60,
+          "constant": -84,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -3,
+          "E": -23,
+          "leading": 37,
+          "constant": -61,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -2,
+          "E": -23,
+          "leading": 14,
+          "constant": -38,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -1,
+          "E": -23,
+          "leading": -9,
+          "constant": -15,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": 0,
+          "E": -23,
+          "leading": -32,
+          "constant": 8,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": 1,
+          "E": -23,
+          "leading": -55,
+          "constant": 31,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -4,
+          "E": -14,
+          "leading": 33,
+          "constant": -48,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -3,
+          "E": -14,
+          "leading": 19,
+          "constant": -34,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -2,
+          "E": -14,
+          "leading": 5,
+          "constant": -20,
+          "scale": -4,
+          "disposition": "nonpositive_scale"
+        },
+        {
+          "u": -2,
+          "v": -1,
+          "E": -14,
+          "leading": -9,
+          "constant": -6,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": 0,
+          "E": -14,
+          "leading": -23,
+          "constant": 8,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": 1,
+          "E": -14,
+          "leading": -37,
+          "constant": 22,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -4,
+          "E": -5,
+          "leading": 6,
+          "constant": -12,
+          "scale": -2,
+          "disposition": "nonpositive_scale"
+        },
+        {
+          "u": -1,
+          "v": -3,
+          "E": -5,
+          "leading": 1,
+          "constant": -7,
+          "scale": -7,
+          "disposition": "nonpositive_scale"
+        },
+        {
+          "u": -1,
+          "v": -2,
+          "E": -5,
+          "leading": -4,
+          "constant": -2,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -1,
+          "E": -5,
+          "leading": -9,
+          "constant": 3,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": 0,
+          "E": -5,
+          "leading": -14,
+          "constant": 8,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": 1,
+          "E": -5,
+          "leading": -19,
+          "constant": 13,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -4,
+          "E": 4,
+          "leading": -21,
+          "constant": 24,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -3,
+          "E": 4,
+          "leading": -17,
+          "constant": 20,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -2,
+          "E": 4,
+          "leading": -13,
+          "constant": 16,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -1,
+          "E": 4,
+          "leading": -9,
+          "constant": 12,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": 0,
+          "E": 4,
+          "leading": -5,
+          "constant": 8,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "E": 4,
+          "leading": -1,
+          "constant": 4,
+          "scale": -4,
+          "disposition": "nonpositive_scale"
+        },
+        {
+          "u": 1,
+          "v": -4,
+          "E": 13,
+          "leading": -48,
+          "constant": 60,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -3,
+          "E": 13,
+          "leading": -35,
+          "constant": 47,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -2,
+          "E": 13,
+          "leading": -22,
+          "constant": 34,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -1,
+          "E": 13,
+          "leading": -9,
+          "constant": 21,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": 0,
+          "E": 13,
+          "leading": 4,
+          "constant": 8,
+          "scale": 2,
+          "disposition": "retained",
+          "q": 3
+        },
+        {
+          "u": 1,
+          "v": 1,
+          "E": 13,
+          "leading": 17,
+          "constant": -5,
+          "disposition": "noninteger_scale"
+        }
+      ],
+      "complete_divisor_records": [
+        {
+          "u": -4,
+          "E": -32,
+          "fixed_integer": -33,
+          "all_positive_divisors": [
+            1,
+            3,
+            11,
+            33
+          ],
+          "retained": []
+        },
+        {
+          "u": -3,
+          "E": -23,
+          "fixed_integer": -24,
+          "all_positive_divisors": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            8,
+            12,
+            24
+          ],
+          "retained": []
+        },
+        {
+          "u": -2,
+          "E": -14,
+          "fixed_integer": -15,
+          "all_positive_divisors": [
+            1,
+            3,
+            5,
+            15
+          ],
+          "retained": []
+        },
+        {
+          "u": -1,
+          "E": -5,
+          "fixed_integer": -6,
+          "all_positive_divisors": [
+            1,
+            2,
+            3,
+            6
+          ],
+          "retained": []
+        },
+        {
+          "u": 0,
+          "E": 4,
+          "fixed_integer": 3,
+          "all_positive_divisors": [
+            1,
+            3
+          ],
+          "retained": []
+        },
+        {
+          "u": 1,
+          "E": 13,
+          "fixed_integer": 12,
+          "all_positive_divisors": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            12
+          ],
+          "retained": [
+            {
+              "q": 3,
+              "sigma": 2,
+              "v": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "a": 11,
+      "c": 5,
+      "j": 2,
+      "candidates": [
+        [
+          1,
+          -1,
+          -1
+        ]
+      ],
+      "complete_node_records": [
+        {
+          "u": -4,
+          "v": -4,
+          "E": -49,
+          "leading": 321,
+          "constant": -186,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -3,
+          "E": -49,
+          "leading": 223,
+          "constant": -137,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -2,
+          "E": -49,
+          "leading": 125,
+          "constant": -88,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -1,
+          "E": -49,
+          "leading": 27,
+          "constant": -39,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": 0,
+          "E": -49,
+          "leading": -71,
+          "constant": 10,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": 1,
+          "E": -49,
+          "leading": -169,
+          "constant": 59,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -4,
+          "E": -38,
+          "leading": 244,
+          "constant": -142,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -3,
+          "E": -38,
+          "leading": 168,
+          "constant": -104,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -2,
+          "E": -38,
+          "leading": 92,
+          "constant": -66,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -1,
+          "E": -38,
+          "leading": 16,
+          "constant": -28,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": 0,
+          "E": -38,
+          "leading": -60,
+          "constant": 10,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": 1,
+          "E": -38,
+          "leading": -136,
+          "constant": 48,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -4,
+          "E": -27,
+          "leading": 167,
+          "constant": -98,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -3,
+          "E": -27,
+          "leading": 113,
+          "constant": -71,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -2,
+          "E": -27,
+          "leading": 59,
+          "constant": -44,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -1,
+          "E": -27,
+          "leading": 5,
+          "constant": -17,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": 0,
+          "E": -27,
+          "leading": -49,
+          "constant": 10,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": 1,
+          "E": -27,
+          "leading": -103,
+          "constant": 37,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -4,
+          "E": -16,
+          "leading": 90,
+          "constant": -54,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -3,
+          "E": -16,
+          "leading": 58,
+          "constant": -38,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -2,
+          "E": -16,
+          "leading": 26,
+          "constant": -22,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -1,
+          "E": -16,
+          "leading": -6,
+          "constant": -6,
+          "scale": 1,
+          "disposition": "retained",
+          "q": 3
+        },
+        {
+          "u": -1,
+          "v": 0,
+          "E": -16,
+          "leading": -38,
+          "constant": 10,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": 1,
+          "E": -16,
+          "leading": -70,
+          "constant": 26,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -4,
+          "E": -5,
+          "leading": 13,
+          "constant": -10,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -3,
+          "E": -5,
+          "leading": 3,
+          "constant": -5,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -2,
+          "E": -5,
+          "leading": -7,
+          "constant": 0,
+          "scale": 0,
+          "disposition": "nonpositive_scale"
+        },
+        {
+          "u": 0,
+          "v": -1,
+          "E": -5,
+          "leading": -17,
+          "constant": 5,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": 0,
+          "E": -5,
+          "leading": -27,
+          "constant": 10,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "E": -5,
+          "leading": -37,
+          "constant": 15,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -4,
+          "E": 6,
+          "leading": -64,
+          "constant": 34,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -3,
+          "E": 6,
+          "leading": -52,
+          "constant": 28,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -2,
+          "E": 6,
+          "leading": -40,
+          "constant": 22,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -1,
+          "E": 6,
+          "leading": -28,
+          "constant": 16,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": 0,
+          "E": 6,
+          "leading": -16,
+          "constant": 10,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": 1,
+          "E": 6,
+          "leading": -4,
+          "constant": 4,
+          "scale": -1,
+          "disposition": "nonpositive_scale"
+        }
+      ],
+      "complete_divisor_records": [
+        {
+          "u": -4,
+          "E": -49,
+          "fixed_integer": -51,
+          "all_positive_divisors": [
+            1,
+            3,
+            17,
+            51
+          ],
+          "retained": []
+        },
+        {
+          "u": -3,
+          "E": -38,
+          "fixed_integer": -40,
+          "all_positive_divisors": [
+            1,
+            2,
+            4,
+            5,
+            8,
+            10,
+            20,
+            40
+          ],
+          "retained": []
+        },
+        {
+          "u": -2,
+          "E": -27,
+          "fixed_integer": -29,
+          "all_positive_divisors": [
+            1,
+            29
+          ],
+          "retained": []
+        },
+        {
+          "u": -1,
+          "E": -16,
+          "fixed_integer": -18,
+          "all_positive_divisors": [
+            1,
+            2,
+            3,
+            6,
+            9,
+            18
+          ],
+          "retained": [
+            {
+              "q": 3,
+              "sigma": 1,
+              "v": -1
+            }
+          ]
+        },
+        {
+          "u": 0,
+          "E": -5,
+          "fixed_integer": -7,
+          "all_positive_divisors": [
+            1,
+            7
+          ],
+          "retained": []
+        },
+        {
+          "u": 1,
+          "E": 6,
+          "fixed_integer": 4,
+          "all_positive_divisors": [
+            1,
+            2,
+            4
+          ],
+          "retained": []
+        }
+      ]
+    },
+    {
+      "a": 9,
+      "c": -4,
+      "j": 2,
+      "candidates": [],
+      "complete_node_records": [
+        {
+          "u": -4,
+          "v": -4,
+          "E": -32,
+          "leading": 206,
+          "constant": -120,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -3,
+          "E": -32,
+          "leading": 142,
+          "constant": -88,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -2,
+          "E": -32,
+          "leading": 78,
+          "constant": -56,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -1,
+          "E": -32,
+          "leading": 14,
+          "constant": -24,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": 0,
+          "E": -32,
+          "leading": -50,
+          "constant": 8,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": 1,
+          "E": -32,
+          "leading": -114,
+          "constant": 40,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -4,
+          "E": -23,
+          "leading": 143,
+          "constant": -84,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -3,
+          "E": -23,
+          "leading": 97,
+          "constant": -61,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -2,
+          "E": -23,
+          "leading": 51,
+          "constant": -38,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -1,
+          "E": -23,
+          "leading": 5,
+          "constant": -15,
+          "scale": -3,
+          "disposition": "nonpositive_scale"
+        },
+        {
+          "u": -3,
+          "v": 0,
+          "E": -23,
+          "leading": -41,
+          "constant": 8,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": 1,
+          "E": -23,
+          "leading": -87,
+          "constant": 31,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -4,
+          "E": -14,
+          "leading": 80,
+          "constant": -48,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -3,
+          "E": -14,
+          "leading": 52,
+          "constant": -34,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -2,
+          "E": -14,
+          "leading": 24,
+          "constant": -20,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -1,
+          "E": -14,
+          "leading": -4,
+          "constant": -6,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": 0,
+          "E": -14,
+          "leading": -32,
+          "constant": 8,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": 1,
+          "E": -14,
+          "leading": -60,
+          "constant": 22,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -4,
+          "E": -5,
+          "leading": 17,
+          "constant": -12,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -3,
+          "E": -5,
+          "leading": 7,
+          "constant": -7,
+          "scale": -1,
+          "disposition": "nonpositive_scale"
+        },
+        {
+          "u": -1,
+          "v": -2,
+          "E": -5,
+          "leading": -3,
+          "constant": -2,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -1,
+          "E": -5,
+          "leading": -13,
+          "constant": 3,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": 0,
+          "E": -5,
+          "leading": -23,
+          "constant": 8,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": 1,
+          "E": -5,
+          "leading": -33,
+          "constant": 13,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -4,
+          "E": 4,
+          "leading": -46,
+          "constant": 24,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -3,
+          "E": 4,
+          "leading": -38,
+          "constant": 20,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -2,
+          "E": 4,
+          "leading": -30,
+          "constant": 16,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -1,
+          "E": 4,
+          "leading": -22,
+          "constant": 12,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": 0,
+          "E": 4,
+          "leading": -14,
+          "constant": 8,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "E": 4,
+          "leading": -6,
+          "constant": 4,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -4,
+          "E": 13,
+          "leading": -109,
+          "constant": 60,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -3,
+          "E": 13,
+          "leading": -83,
+          "constant": 47,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -2,
+          "E": 13,
+          "leading": -57,
+          "constant": 34,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -1,
+          "E": 13,
+          "leading": -31,
+          "constant": 21,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": 0,
+          "E": 13,
+          "leading": -5,
+          "constant": 8,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": 1,
+          "E": 13,
+          "leading": 21,
+          "constant": -5,
+          "disposition": "noninteger_scale"
+        }
+      ],
+      "complete_divisor_records": [
+        {
+          "u": -4,
+          "E": -32,
+          "fixed_integer": -34,
+          "all_positive_divisors": [
+            1,
+            2,
+            17,
+            34
+          ],
+          "retained": []
+        },
+        {
+          "u": -3,
+          "E": -23,
+          "fixed_integer": -25,
+          "all_positive_divisors": [
+            1,
+            5,
+            25
+          ],
+          "retained": []
+        },
+        {
+          "u": -2,
+          "E": -14,
+          "fixed_integer": -16,
+          "all_positive_divisors": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "retained": []
+        },
+        {
+          "u": -1,
+          "E": -5,
+          "fixed_integer": -7,
+          "all_positive_divisors": [
+            1,
+            7
+          ],
+          "retained": []
+        },
+        {
+          "u": 0,
+          "E": 4,
+          "fixed_integer": 2,
+          "all_positive_divisors": [
+            1,
+            2
+          ],
+          "retained": []
+        },
+        {
+          "u": 1,
+          "E": 13,
+          "fixed_integer": 11,
+          "all_positive_divisors": [
+            1,
+            11
+          ],
+          "retained": []
+        }
+      ]
+    },
+    {
+      "a": 11,
+      "c": 5,
+      "j": 1,
+      "candidates": [
+        [
+          4,
+          1,
+          1
+        ]
+      ],
+      "complete_node_records": [
+        {
+          "u": -4,
+          "v": -4,
+          "E": -49,
+          "leading": 136,
+          "constant": -186,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -3,
+          "E": -49,
+          "leading": 87,
+          "constant": -137,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -2,
+          "E": -49,
+          "leading": 38,
+          "constant": -88,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -1,
+          "E": -49,
+          "leading": -11,
+          "constant": -39,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": 0,
+          "E": -49,
+          "leading": -60,
+          "constant": 10,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": 1,
+          "E": -49,
+          "leading": -109,
+          "constant": 59,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -4,
+          "E": -38,
+          "leading": 103,
+          "constant": -142,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -3,
+          "E": -38,
+          "leading": 65,
+          "constant": -104,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -2,
+          "E": -38,
+          "leading": 27,
+          "constant": -66,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -1,
+          "E": -38,
+          "leading": -11,
+          "constant": -28,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": 0,
+          "E": -38,
+          "leading": -49,
+          "constant": 10,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": 1,
+          "E": -38,
+          "leading": -87,
+          "constant": 48,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -4,
+          "E": -27,
+          "leading": 70,
+          "constant": -98,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -3,
+          "E": -27,
+          "leading": 43,
+          "constant": -71,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -2,
+          "E": -27,
+          "leading": 16,
+          "constant": -44,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -1,
+          "E": -27,
+          "leading": -11,
+          "constant": -17,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": 0,
+          "E": -27,
+          "leading": -38,
+          "constant": 10,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": 1,
+          "E": -27,
+          "leading": -65,
+          "constant": 37,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -4,
+          "E": -16,
+          "leading": 37,
+          "constant": -54,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -3,
+          "E": -16,
+          "leading": 21,
+          "constant": -38,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -2,
+          "E": -16,
+          "leading": 5,
+          "constant": -22,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -1,
+          "E": -16,
+          "leading": -11,
+          "constant": -6,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": 0,
+          "E": -16,
+          "leading": -27,
+          "constant": 10,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": 1,
+          "E": -16,
+          "leading": -43,
+          "constant": 26,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -4,
+          "E": -5,
+          "leading": 4,
+          "constant": -10,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -3,
+          "E": -5,
+          "leading": -1,
+          "constant": -5,
+          "scale": 5,
+          "disposition": "even_denominator"
+        },
+        {
+          "u": 0,
+          "v": -2,
+          "E": -5,
+          "leading": -6,
+          "constant": 0,
+          "scale": 0,
+          "disposition": "nonpositive_scale"
+        },
+        {
+          "u": 0,
+          "v": -1,
+          "E": -5,
+          "leading": -11,
+          "constant": 5,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": 0,
+          "E": -5,
+          "leading": -16,
+          "constant": 10,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "E": -5,
+          "leading": -21,
+          "constant": 15,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -4,
+          "E": 6,
+          "leading": -29,
+          "constant": 34,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -3,
+          "E": 6,
+          "leading": -23,
+          "constant": 28,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -2,
+          "E": 6,
+          "leading": -17,
+          "constant": 22,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -1,
+          "E": 6,
+          "leading": -11,
+          "constant": 16,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": 0,
+          "E": 6,
+          "leading": -5,
+          "constant": 10,
+          "scale": -2,
+          "disposition": "nonpositive_scale"
+        },
+        {
+          "u": 1,
+          "v": 1,
+          "E": 6,
+          "leading": 1,
+          "constant": 4,
+          "scale": 4,
+          "disposition": "retained",
+          "q": 5
+        }
+      ],
+      "complete_divisor_records": [
+        {
+          "u": -4,
+          "E": -49,
+          "fixed_integer": -50,
+          "all_positive_divisors": [
+            1,
+            2,
+            5,
+            10,
+            25,
+            50
+          ],
+          "retained": []
+        },
+        {
+          "u": -3,
+          "E": -38,
+          "fixed_integer": -39,
+          "all_positive_divisors": [
+            1,
+            3,
+            13,
+            39
+          ],
+          "retained": []
+        },
+        {
+          "u": -2,
+          "E": -27,
+          "fixed_integer": -28,
+          "all_positive_divisors": [
+            1,
+            2,
+            4,
+            7,
+            14,
+            28
+          ],
+          "retained": []
+        },
+        {
+          "u": -1,
+          "E": -16,
+          "fixed_integer": -17,
+          "all_positive_divisors": [
+            1,
+            17
+          ],
+          "retained": []
+        },
+        {
+          "u": 0,
+          "E": -5,
+          "fixed_integer": -6,
+          "all_positive_divisors": [
+            1,
+            2,
+            3,
+            6
+          ],
+          "retained": []
+        },
+        {
+          "u": 1,
+          "E": 6,
+          "fixed_integer": 5,
+          "all_positive_divisors": [
+            1,
+            5
+          ],
+          "retained": [
+            {
+              "q": 5,
+              "sigma": 4,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "a": 7,
+      "c": 2,
+      "j": 2,
+      "candidates": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "complete_node_records": [
+        {
+          "u": -4,
+          "v": -4,
+          "E": -30,
+          "leading": 196,
+          "constant": -114,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -3,
+          "E": -30,
+          "leading": 136,
+          "constant": -84,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -2,
+          "E": -30,
+          "leading": 76,
+          "constant": -54,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -1,
+          "E": -30,
+          "leading": 16,
+          "constant": -24,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": 0,
+          "E": -30,
+          "leading": -44,
+          "constant": 6,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": 1,
+          "E": -30,
+          "leading": -104,
+          "constant": 36,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -4,
+          "E": -23,
+          "leading": 147,
+          "constant": -86,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -3,
+          "E": -23,
+          "leading": 101,
+          "constant": -63,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -2,
+          "E": -23,
+          "leading": 55,
+          "constant": -40,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -1,
+          "E": -23,
+          "leading": 9,
+          "constant": -17,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": 0,
+          "E": -23,
+          "leading": -37,
+          "constant": 6,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": 1,
+          "E": -23,
+          "leading": -83,
+          "constant": 29,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -4,
+          "E": -16,
+          "leading": 98,
+          "constant": -58,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -3,
+          "E": -16,
+          "leading": 66,
+          "constant": -42,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -2,
+          "E": -16,
+          "leading": 34,
+          "constant": -26,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -1,
+          "E": -16,
+          "leading": 2,
+          "constant": -10,
+          "scale": -5,
+          "disposition": "nonpositive_scale"
+        },
+        {
+          "u": -2,
+          "v": 0,
+          "E": -16,
+          "leading": -30,
+          "constant": 6,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": 1,
+          "E": -16,
+          "leading": -62,
+          "constant": 22,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -4,
+          "E": -9,
+          "leading": 49,
+          "constant": -30,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -3,
+          "E": -9,
+          "leading": 31,
+          "constant": -21,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -2,
+          "E": -9,
+          "leading": 13,
+          "constant": -12,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -1,
+          "E": -9,
+          "leading": -5,
+          "constant": -3,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": 0,
+          "E": -9,
+          "leading": -23,
+          "constant": 6,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": 1,
+          "E": -9,
+          "leading": -41,
+          "constant": 15,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -4,
+          "E": -2,
+          "leading": 0,
+          "constant": -2,
+          "disposition": "zero_leading_nonzero_constant"
+        },
+        {
+          "u": 0,
+          "v": -3,
+          "E": -2,
+          "leading": -4,
+          "constant": 0,
+          "scale": 0,
+          "disposition": "nonpositive_scale"
+        },
+        {
+          "u": 0,
+          "v": -2,
+          "E": -2,
+          "leading": -8,
+          "constant": 2,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -1,
+          "E": -2,
+          "leading": -12,
+          "constant": 4,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": 0,
+          "E": -2,
+          "leading": -16,
+          "constant": 6,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "E": -2,
+          "leading": -20,
+          "constant": 8,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -4,
+          "E": 5,
+          "leading": -49,
+          "constant": 26,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -3,
+          "E": 5,
+          "leading": -39,
+          "constant": 21,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -2,
+          "E": 5,
+          "leading": -29,
+          "constant": 16,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -1,
+          "E": 5,
+          "leading": -19,
+          "constant": 11,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": 0,
+          "E": 5,
+          "leading": -9,
+          "constant": 6,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": 1,
+          "E": 5,
+          "leading": 1,
+          "constant": 1,
+          "scale": 1,
+          "disposition": "retained",
+          "q": 3
+        }
+      ],
+      "complete_divisor_records": [
+        {
+          "u": -4,
+          "E": -30,
+          "fixed_integer": -32,
+          "all_positive_divisors": [
+            1,
+            2,
+            4,
+            8,
+            16,
+            32
+          ],
+          "retained": []
+        },
+        {
+          "u": -3,
+          "E": -23,
+          "fixed_integer": -25,
+          "all_positive_divisors": [
+            1,
+            5,
+            25
+          ],
+          "retained": []
+        },
+        {
+          "u": -2,
+          "E": -16,
+          "fixed_integer": -18,
+          "all_positive_divisors": [
+            1,
+            2,
+            3,
+            6,
+            9,
+            18
+          ],
+          "retained": []
+        },
+        {
+          "u": -1,
+          "E": -9,
+          "fixed_integer": -11,
+          "all_positive_divisors": [
+            1,
+            11
+          ],
+          "retained": []
+        },
+        {
+          "u": 0,
+          "E": -2,
+          "fixed_integer": -4,
+          "all_positive_divisors": [
+            1,
+            2,
+            4
+          ],
+          "retained": []
+        },
+        {
+          "u": 1,
+          "E": 5,
+          "fixed_integer": 3,
+          "all_positive_divisors": [
+            1,
+            3
+          ],
+          "retained": [
+            {
+              "q": 3,
+              "sigma": 1,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "a": 19,
+      "c": -6,
+      "j": 1,
+      "candidates": [],
+      "complete_node_records": [
+        {
+          "u": -4,
+          "v": -4,
+          "E": -70,
+          "leading": 191,
+          "constant": -262,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -3,
+          "E": -70,
+          "leading": 121,
+          "constant": -192,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -2,
+          "E": -70,
+          "leading": 51,
+          "constant": -122,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -1,
+          "E": -70,
+          "leading": -19,
+          "constant": -52,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": 0,
+          "E": -70,
+          "leading": -89,
+          "constant": 18,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": 1,
+          "E": -70,
+          "leading": -159,
+          "constant": 88,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -4,
+          "E": -51,
+          "leading": 134,
+          "constant": -186,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -3,
+          "E": -51,
+          "leading": 83,
+          "constant": -135,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -2,
+          "E": -51,
+          "leading": 32,
+          "constant": -84,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -1,
+          "E": -51,
+          "leading": -19,
+          "constant": -33,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": 0,
+          "E": -51,
+          "leading": -70,
+          "constant": 18,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": 1,
+          "E": -51,
+          "leading": -121,
+          "constant": 69,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -4,
+          "E": -32,
+          "leading": 77,
+          "constant": -110,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -3,
+          "E": -32,
+          "leading": 45,
+          "constant": -78,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -2,
+          "E": -32,
+          "leading": 13,
+          "constant": -46,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -1,
+          "E": -32,
+          "leading": -19,
+          "constant": -14,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": 0,
+          "E": -32,
+          "leading": -51,
+          "constant": 18,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": 1,
+          "E": -32,
+          "leading": -83,
+          "constant": 50,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -4,
+          "E": -13,
+          "leading": 20,
+          "constant": -34,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -3,
+          "E": -13,
+          "leading": 7,
+          "constant": -21,
+          "scale": -3,
+          "disposition": "nonpositive_scale"
+        },
+        {
+          "u": -1,
+          "v": -2,
+          "E": -13,
+          "leading": -6,
+          "constant": -8,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -1,
+          "E": -13,
+          "leading": -19,
+          "constant": 5,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": 0,
+          "E": -13,
+          "leading": -32,
+          "constant": 18,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": 1,
+          "E": -13,
+          "leading": -45,
+          "constant": 31,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -4,
+          "E": 6,
+          "leading": -37,
+          "constant": 42,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -3,
+          "E": 6,
+          "leading": -31,
+          "constant": 36,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -2,
+          "E": 6,
+          "leading": -25,
+          "constant": 30,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -1,
+          "E": 6,
+          "leading": -19,
+          "constant": 24,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": 0,
+          "E": 6,
+          "leading": -13,
+          "constant": 18,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "E": 6,
+          "leading": -7,
+          "constant": 12,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -4,
+          "E": 25,
+          "leading": -94,
+          "constant": 118,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -3,
+          "E": 25,
+          "leading": -69,
+          "constant": 93,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -2,
+          "E": 25,
+          "leading": -44,
+          "constant": 68,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -1,
+          "E": 25,
+          "leading": -19,
+          "constant": 43,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": 0,
+          "E": 25,
+          "leading": 6,
+          "constant": 18,
+          "scale": 3,
+          "disposition": "even_denominator"
+        },
+        {
+          "u": 1,
+          "v": 1,
+          "E": 25,
+          "leading": 31,
+          "constant": -7,
+          "disposition": "noninteger_scale"
+        }
+      ],
+      "complete_divisor_records": [
+        {
+          "u": -4,
+          "E": -70,
+          "fixed_integer": -71,
+          "all_positive_divisors": [
+            1,
+            71
+          ],
+          "retained": []
+        },
+        {
+          "u": -3,
+          "E": -51,
+          "fixed_integer": -52,
+          "all_positive_divisors": [
+            1,
+            2,
+            4,
+            13,
+            26,
+            52
+          ],
+          "retained": []
+        },
+        {
+          "u": -2,
+          "E": -32,
+          "fixed_integer": -33,
+          "all_positive_divisors": [
+            1,
+            3,
+            11,
+            33
+          ],
+          "retained": []
+        },
+        {
+          "u": -1,
+          "E": -13,
+          "fixed_integer": -14,
+          "all_positive_divisors": [
+            1,
+            2,
+            7,
+            14
+          ],
+          "retained": []
+        },
+        {
+          "u": 0,
+          "E": 6,
+          "fixed_integer": 5,
+          "all_positive_divisors": [
+            1,
+            5
+          ],
+          "retained": []
+        },
+        {
+          "u": 1,
+          "E": 25,
+          "fixed_integer": 24,
+          "all_positive_divisors": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            8,
+            12,
+            24
+          ],
+          "retained": []
+        }
+      ]
+    },
+    {
+      "a": 43,
+      "c": 14,
+      "j": 2,
+      "candidates": [
+        [
+          13,
+          1,
+          1
+        ]
+      ],
+      "complete_node_records": [
+        {
+          "u": -4,
+          "v": -4,
+          "E": -186,
+          "leading": 1216,
+          "constant": -702,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -3,
+          "E": -186,
+          "leading": 844,
+          "constant": -516,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -2,
+          "E": -186,
+          "leading": 472,
+          "constant": -330,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": -1,
+          "E": -186,
+          "leading": 100,
+          "constant": -144,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": 0,
+          "E": -186,
+          "leading": -272,
+          "constant": 42,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -4,
+          "v": 1,
+          "E": -186,
+          "leading": -644,
+          "constant": 228,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -4,
+          "E": -143,
+          "leading": 915,
+          "constant": -530,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -3,
+          "E": -143,
+          "leading": 629,
+          "constant": -387,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -2,
+          "E": -143,
+          "leading": 343,
+          "constant": -244,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": -1,
+          "E": -143,
+          "leading": 57,
+          "constant": -101,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": 0,
+          "E": -143,
+          "leading": -229,
+          "constant": 42,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -3,
+          "v": 1,
+          "E": -143,
+          "leading": -515,
+          "constant": 185,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -4,
+          "E": -100,
+          "leading": 614,
+          "constant": -358,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -3,
+          "E": -100,
+          "leading": 414,
+          "constant": -258,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -2,
+          "E": -100,
+          "leading": 214,
+          "constant": -158,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": -1,
+          "E": -100,
+          "leading": 14,
+          "constant": -58,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": 0,
+          "E": -100,
+          "leading": -186,
+          "constant": 42,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -2,
+          "v": 1,
+          "E": -100,
+          "leading": -386,
+          "constant": 142,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -4,
+          "E": -57,
+          "leading": 313,
+          "constant": -186,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -3,
+          "E": -57,
+          "leading": 199,
+          "constant": -129,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -2,
+          "E": -57,
+          "leading": 85,
+          "constant": -72,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": -1,
+          "E": -57,
+          "leading": -29,
+          "constant": -15,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": 0,
+          "E": -57,
+          "leading": -143,
+          "constant": 42,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": -1,
+          "v": 1,
+          "E": -57,
+          "leading": -257,
+          "constant": 99,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -4,
+          "E": -14,
+          "leading": 12,
+          "constant": -14,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -3,
+          "E": -14,
+          "leading": -16,
+          "constant": 0,
+          "scale": 0,
+          "disposition": "nonpositive_scale"
+        },
+        {
+          "u": 0,
+          "v": -2,
+          "E": -14,
+          "leading": -44,
+          "constant": 14,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": -1,
+          "E": -14,
+          "leading": -72,
+          "constant": 28,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": 0,
+          "E": -14,
+          "leading": -100,
+          "constant": 42,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "E": -14,
+          "leading": -128,
+          "constant": 56,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -4,
+          "E": 29,
+          "leading": -289,
+          "constant": 158,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -3,
+          "E": 29,
+          "leading": -231,
+          "constant": 129,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -2,
+          "E": 29,
+          "leading": -173,
+          "constant": 100,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": -1,
+          "E": 29,
+          "leading": -115,
+          "constant": 71,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": 0,
+          "E": 29,
+          "leading": -57,
+          "constant": 42,
+          "disposition": "noninteger_scale"
+        },
+        {
+          "u": 1,
+          "v": 1,
+          "E": 29,
+          "leading": 1,
+          "constant": 13,
+          "scale": 13,
+          "disposition": "retained",
+          "q": 27
+        }
+      ],
+      "complete_divisor_records": [
+        {
+          "u": -4,
+          "E": -186,
+          "fixed_integer": -188,
+          "all_positive_divisors": [
+            1,
+            2,
+            4,
+            47,
+            94,
+            188
+          ],
+          "retained": []
+        },
+        {
+          "u": -3,
+          "E": -143,
+          "fixed_integer": -145,
+          "all_positive_divisors": [
+            1,
+            5,
+            29,
+            145
+          ],
+          "retained": []
+        },
+        {
+          "u": -2,
+          "E": -100,
+          "fixed_integer": -102,
+          "all_positive_divisors": [
+            1,
+            2,
+            3,
+            6,
+            17,
+            34,
+            51,
+            102
+          ],
+          "retained": []
+        },
+        {
+          "u": -1,
+          "E": -57,
+          "fixed_integer": -59,
+          "all_positive_divisors": [
+            1,
+            59
+          ],
+          "retained": []
+        },
+        {
+          "u": 0,
+          "E": -14,
+          "fixed_integer": -16,
+          "all_positive_divisors": [
+            1,
+            2,
+            4,
+            8,
+            16
+          ],
+          "retained": []
+        },
+        {
+          "u": 1,
+          "E": 29,
+          "fixed_integer": 27,
+          "all_positive_divisors": [
+            1,
+            3,
+            9,
+            27
+          ],
+          "retained": [
+            {
+              "q": 27,
+              "sigma": 13,
+              "v": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "last_point": {
+    "low_row": [
+      -1,
+      -4,
+      4
+    ],
+    "low_column": [
+      -2,
+      -5,
+      1
+    ],
+    "high_denominators": [
+      3,
+      21,
+      5
+    ],
+    "H_all_positive_divisors": [
+      1,
+      2,
+      31,
+      62
+    ],
+    "pair_divisibility_candidates": [
+      {
+        "H": 1,
+        "K": 62,
+        "M": 7,
+        "N": -1,
+        "failure": "N must be strictly positive"
+      }
+    ],
+    "independent_primitive_quadratic": [
+      2,
+      -35,
+      124
+    ],
+    "discriminant": 233,
+    "discriminant_is_square": false,
+    "integer_positive_models": 0
+  },
+  "isolated_local_scope_witness": {
+    "ray_order": [
+      "a",
+      "b",
+      "c",
+      "low"
+    ],
+    "q": [
+      7,
+      7,
+      13,
+      1
+    ],
+    "P": [
+      [
+        0,
+        8,
+        -9,
+        -6
+      ],
+      [
+        6,
+        0,
+        -10,
+        -3
+      ],
+      [
+        -10,
+        -9,
+        0,
+        6
+      ],
+      [
+        -1,
+        -2,
+        2,
+        0
+      ]
+    ],
+    "D": [
+      -2,
+      -4,
+      4,
+      2
+    ],
+    "weights": [
+      [
+        7,
+        1
+      ],
+      [
+        97,
+        12
+      ],
+      [
+        25,
+        12
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "low_row": [
+      -1,
+      -2,
+      2
+    ],
+    "low_column": [
+      -6,
+      -3,
+      6
+    ],
+    "point": "An isolated positive local chart exists, but cannot be attached in ordinary G5_15"
+  },
+  "completed_ordinary_models": 0,
+  "source_sha256": {
+    "g5_15_ordinary_outer_pair_obstruction_v23.tex": "aecd0ec96a5bda535f5c46f450797d10f3c75ef5894b53c7a4df2865295e54b6",
+    "notes_g5_15_ordinary_outer_pair_v23.tex": "4789781712fddd6236aa3c3468d5db86e3c378e4b23ab63caa817795a6079211",
+    "verify_g5_15_ordinary_outer_pair_v23.py": "9aa8415b3ef1f2c6a6b69f034875b9723d5b0501bc8e6ac5ed7f2619a334b57f"
+  }
+}

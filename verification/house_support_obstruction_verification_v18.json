@@ -1,0 +1,2313 @@
+{
+  "scope": "Unbounded G5_5 support exclusion in the standard quintic arithmetic gluing problem",
+  "status": "PASS",
+  "denominator_cutoff": null,
+  "assumptions": [
+    "integer row sums",
+    "integer pair products",
+    "positive local weights",
+    "marked integer clutching",
+    "nonnegative nodes with automatic total5",
+    "opposing D only on low edges23 and24"
+  ],
+  "does_not_claim": [
+    "classification of arbitrary Lagrangian torus fibrations",
+    "geometric existence of partial necessary data",
+    "external peer review"
+  ],
+  "common_low_type_exhaustion": [
+    {
+      "left": [
+        "C",
+        "A"
+      ],
+      "right": [
+        "C",
+        "A"
+      ],
+      "outcome": "positive exceptional impossible: both x>=2"
+    },
+    {
+      "left": [
+        "C",
+        "A"
+      ],
+      "right": [
+        "C",
+        "B"
+      ],
+      "outcome": "remaining ordinary C-C with opposite A/B"
+    },
+    {
+      "left": [
+        "C",
+        "A"
+      ],
+      "right": [
+        "D",
+        "A"
+      ],
+      "outcome": "remaining ordinary C-A / D-A"
+    },
+    {
+      "left": [
+        "C",
+        "A"
+      ],
+      "right": [
+        "D",
+        "B"
+      ],
+      "outcome": "remaining positive exceptional C-A / D-B"
+    },
+    {
+      "left": [
+        "C",
+        "B"
+      ],
+      "right": [
+        "C",
+        "A"
+      ],
+      "outcome": "remaining ordinary C-C with opposite A/B"
+    },
+    {
+      "left": [
+        "C",
+        "B"
+      ],
+      "right": [
+        "C",
+        "B"
+      ],
+      "outcome": "negative exceptional impossible: both absolute entries proper"
+    },
+    {
+      "left": [
+        "C",
+        "B"
+      ],
+      "right": [
+        "D",
+        "A"
+      ],
+      "outcome": "negative exceptional impossible: both absolute entries proper"
+    },
+    {
+      "left": [
+        "C",
+        "B"
+      ],
+      "right": [
+        "D",
+        "B"
+      ],
+      "outcome": "ordinary impossible: reverse T>=5 contradicts bound4"
+    },
+    {
+      "left": [
+        "D",
+        "A"
+      ],
+      "right": [
+        "C",
+        "A"
+      ],
+      "outcome": "remaining ordinary C-A / D-A"
+    },
+    {
+      "left": [
+        "D",
+        "A"
+      ],
+      "right": [
+        "C",
+        "B"
+      ],
+      "outcome": "negative exceptional impossible: both absolute entries proper"
+    },
+    {
+      "left": [
+        "D",
+        "A"
+      ],
+      "right": [
+        "D",
+        "A"
+      ],
+      "outcome": "negative exceptional impossible: both absolute entries proper"
+    },
+    {
+      "left": [
+        "D",
+        "A"
+      ],
+      "right": [
+        "D",
+        "B"
+      ],
+      "outcome": "ordinary impossible: reverse T>=5 contradicts bound4"
+    },
+    {
+      "left": [
+        "D",
+        "B"
+      ],
+      "right": [
+        "C",
+        "A"
+      ],
+      "outcome": "remaining positive exceptional C-A / D-B"
+    },
+    {
+      "left": [
+        "D",
+        "B"
+      ],
+      "right": [
+        "C",
+        "B"
+      ],
+      "outcome": "ordinary impossible: reverse T>=5 contradicts bound4"
+    },
+    {
+      "left": [
+        "D",
+        "B"
+      ],
+      "right": [
+        "D",
+        "A"
+      ],
+      "outcome": "ordinary impossible: reverse T>=5 contradicts bound4"
+    },
+    {
+      "left": [
+        "D",
+        "B"
+      ],
+      "right": [
+        "D",
+        "B"
+      ],
+      "outcome": "positive exceptional impossible: both z proper"
+    }
+  ],
+  "node_contradictions": [
+    {
+      "case": "C-C, middle C4",
+      "node": "n23;1=1-T2",
+      "upper_bound": -1
+    },
+    {
+      "case": "C-C, middle C3, sharedA at3",
+      "node": "n23;4=1-r3, r3=r4+1",
+      "upper_bound": -1
+    },
+    {
+      "case": "C-C, middle C3, sharedB at3",
+      "node": "n23;0=1-r2-r3",
+      "upper_bound": -1
+    },
+    {
+      "case": "ordinary C-D, Dside3",
+      "node": "n23;0=1-r2-T3",
+      "upper_bound": -5
+    },
+    {
+      "case": "ordinary C-D, Dside4",
+      "node": "n23;0=S2+S4+2",
+      "lower_bound": 6
+    },
+    {
+      "case": "positive exceptional C-D, Dside4",
+      "node": "n24;0=1+S2+L4",
+      "lower_bound": 6
+    }
+  ],
+  "remaining_node_type": {
+    "Dside": 3,
+    "Cside": 4,
+    "forced_S2_S3": [
+      2,
+      2
+    ],
+    "remaining_node_numbers": [
+      "n23;1=T3-T2",
+      "n23;4=T2-T3"
+    ],
+    "forced_T2_equals_T3": true
+  },
+  "outer3_exact_divisor_trials": [
+    {
+      "s_plus_one": 1,
+      "s": 0,
+      "T": 4,
+      "accepted": false
+    },
+    {
+      "s_plus_one": 2,
+      "s": 1,
+      "T": 6,
+      "accepted": true
+    },
+    {
+      "s_plus_one": 4,
+      "s": 3,
+      "T": 7,
+      "accepted": false
+    }
+  ],
+  "remaining_middle_family": {
+    "r": 1,
+    "s": "2t-1",
+    "z": "t",
+    "S": 2,
+    "T": 6,
+    "t": "integer>=1",
+    "D_low3": "t-2",
+    "D_low4": "6-t"
+  },
+  "outer3_model": {
+    "a": 3,
+    "b": 7,
+    "r": 1,
+    "s": 1,
+    "z": 1,
+    "S": 2,
+    "T": 6,
+    "P": [
+      [
+        0,
+        -4,
+        2,
+        -1
+      ],
+      [
+        -5,
+        0,
+        -3,
+        1
+      ],
+      [
+        1,
+        -2,
+        0,
+        0
+      ],
+      [
+        -2,
+        6,
+        -5,
+        0
+      ]
+    ],
+    "q": [
+      3,
+      7,
+      1,
+      1
+    ],
+    "D": [
+      3,
+      -7,
+      5,
+      -1
+    ],
+    "positive_cycles": [
+      {
+        "cycle": [
+          0,
+          2
+        ],
+        "gain": "2/3"
+      },
+      {
+        "cycle": [
+          1,
+          3
+        ],
+        "gain": "6/7"
+      }
+    ]
+  },
+  "D23_forces_t": 3,
+  "fixed_seven_divisor_trials": [
+    {
+      "s": 1,
+      "z": 1,
+      "T": "18",
+      "outcome": "accepted",
+      "model": {
+        "a": 7,
+        "b": 19,
+        "r": 1,
+        "s": 1,
+        "z": 1,
+        "S": 6,
+        "T": 18,
+        "P": [
+          [
+            0,
+            -12,
+            6,
+            -1
+          ],
+          [
+            -11,
+            0,
+            -9,
+            1
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -6,
+            18,
+            -13,
+            0
+          ]
+        ],
+        "q": [
+          7,
+          19,
+          1,
+          1
+        ],
+        "D": [
+          9,
+          -23,
+          15,
+          -1
+        ],
+        "positive_cycles": [
+          {
+            "cycle": [
+              0,
+              2
+            ],
+            "gain": "6/7"
+          },
+          {
+            "cycle": [
+              1,
+              3
+            ],
+            "gain": "18/19"
+          }
+        ]
+      }
+    },
+    {
+      "s": 1,
+      "z": 2,
+      "T": "15",
+      "outcome": "accepted",
+      "model": {
+        "a": 7,
+        "b": 31,
+        "r": 1,
+        "s": 1,
+        "z": 2,
+        "S": 6,
+        "T": 15,
+        "P": [
+          [
+            0,
+            -12,
+            6,
+            -1
+          ],
+          [
+            -18,
+            0,
+            -15,
+            2
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -6,
+            15,
+            -10,
+            0
+          ]
+        ],
+        "q": [
+          7,
+          31,
+          1,
+          1
+        ],
+        "D": [
+          16,
+          -32,
+          18,
+          -2
+        ],
+        "positive_cycles": [
+          {
+            "cycle": [
+              0,
+              2
+            ],
+            "gain": "6/7"
+          },
+          {
+            "cycle": [
+              1,
+              3
+            ],
+            "gain": "30/31"
+          }
+        ]
+      }
+    },
+    {
+      "s": 1,
+      "z": 3,
+      "T": "14",
+      "outcome": "accepted",
+      "model": {
+        "a": 7,
+        "b": 43,
+        "r": 1,
+        "s": 1,
+        "z": 3,
+        "S": 6,
+        "T": 14,
+        "P": [
+          [
+            0,
+            -12,
+            6,
+            -1
+          ],
+          [
+            -25,
+            0,
+            -21,
+            3
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -6,
+            14,
+            -9,
+            0
+          ]
+        ],
+        "q": [
+          7,
+          43,
+          1,
+          1
+        ],
+        "D": [
+          23,
+          -43,
+          23,
+          -3
+        ],
+        "positive_cycles": [
+          {
+            "cycle": [
+              0,
+              2
+            ],
+            "gain": "6/7"
+          },
+          {
+            "cycle": [
+              1,
+              3
+            ],
+            "gain": "42/43"
+          }
+        ]
+      }
+    },
+    {
+      "s": 1,
+      "z": 4,
+      "T": "27/2",
+      "outcome": "T is not integral"
+    },
+    {
+      "s": 1,
+      "z": 6,
+      "T": "13",
+      "outcome": "accepted",
+      "model": {
+        "a": 7,
+        "b": 79,
+        "r": 1,
+        "s": 1,
+        "z": 6,
+        "S": 6,
+        "T": 13,
+        "P": [
+          [
+            0,
+            -12,
+            6,
+            -1
+          ],
+          [
+            -46,
+            0,
+            -39,
+            6
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -6,
+            13,
+            -8,
+            0
+          ]
+        ],
+        "q": [
+          7,
+          79,
+          1,
+          1
+        ],
+        "D": [
+          44,
+          -78,
+          40,
+          -6
+        ],
+        "positive_cycles": [
+          {
+            "cycle": [
+              0,
+              2
+            ],
+            "gain": "6/7"
+          },
+          {
+            "cycle": [
+              1,
+              3
+            ],
+            "gain": "78/79"
+          }
+        ]
+      }
+    },
+    {
+      "s": 1,
+      "z": 12,
+      "T": "25/2",
+      "outcome": "T is not integral"
+    },
+    {
+      "s": 2,
+      "z": 1,
+      "T": "32/3",
+      "outcome": "T is not integral"
+    },
+    {
+      "s": 2,
+      "z": 2,
+      "T": "9",
+      "outcome": "accepted",
+      "model": {
+        "a": 7,
+        "b": 19,
+        "r": 1,
+        "s": 2,
+        "z": 2,
+        "S": 3,
+        "T": 9,
+        "P": [
+          [
+            0,
+            -11,
+            6,
+            -2
+          ],
+          [
+            -12,
+            0,
+            -9,
+            2
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -3,
+            9,
+            -7,
+            0
+          ]
+        ],
+        "q": [
+          7,
+          19,
+          1,
+          1
+        ],
+        "D": [
+          7,
+          -15,
+          9,
+          -1
+        ],
+        "positive_cycles": [
+          {
+            "cycle": [
+              0,
+              2
+            ],
+            "gain": "6/7"
+          },
+          {
+            "cycle": [
+              1,
+              3
+            ],
+            "gain": "18/19"
+          }
+        ]
+      }
+    },
+    {
+      "s": 2,
+      "z": 5,
+      "T": "8",
+      "outcome": "accepted",
+      "model": {
+        "a": 7,
+        "b": 41,
+        "r": 1,
+        "s": 2,
+        "z": 5,
+        "S": 3,
+        "T": 8,
+        "P": [
+          [
+            0,
+            -11,
+            6,
+            -2
+          ],
+          [
+            -26,
+            0,
+            -20,
+            5
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -3,
+            8,
+            -6,
+            0
+          ]
+        ],
+        "q": [
+          7,
+          41,
+          1,
+          1
+        ],
+        "D": [
+          21,
+          -36,
+          19,
+          -4
+        ],
+        "positive_cycles": [
+          {
+            "cycle": [
+              0,
+              2
+            ],
+            "gain": "6/7"
+          },
+          {
+            "cycle": [
+              1,
+              3
+            ],
+            "gain": "40/41"
+          }
+        ]
+      }
+    },
+    {
+      "s": 2,
+      "z": 10,
+      "T": "23/3",
+      "outcome": "T is not integral"
+    },
+    {
+      "s": 3,
+      "z": 1,
+      "T": "7",
+      "outcome": "b is even"
+    },
+    {
+      "s": 3,
+      "z": 2,
+      "T": "6",
+      "outcome": "accepted",
+      "model": {
+        "a": 7,
+        "b": 13,
+        "r": 1,
+        "s": 3,
+        "z": 2,
+        "S": 2,
+        "T": 6,
+        "P": [
+          [
+            0,
+            -10,
+            6,
+            -3
+          ],
+          [
+            -9,
+            0,
+            -6,
+            2
+          ],
+          [
+            1,
+            -2,
+            0,
+            0
+          ],
+          [
+            -2,
+            6,
+            -5,
+            0
+          ]
+        ],
+        "q": [
+          7,
+          13,
+          1,
+          1
+        ],
+        "D": [
+          3,
+          -7,
+          4,
+          0
+        ],
+        "positive_cycles": [
+          {
+            "cycle": [
+              0,
+              2
+            ],
+            "gain": "6/7"
+          },
+          {
+            "cycle": [
+              1,
+              3
+            ],
+            "gain": "12/13"
+          }
+        ]
+      }
+    },
+    {
+      "s": 3,
+      "z": 4,
+      "T": "11/2",
+      "outcome": "T is not integral"
+    },
+    {
+      "s": 3,
+      "z": 8,
+      "T": "21/4",
+      "outcome": "T is not integral"
+    },
+    {
+      "s": 6,
+      "z": 1,
+      "T": "16/7",
+      "outcome": "T is not integral"
+    },
+    {
+      "s": 6,
+      "z": 2,
+      "T": "15/7",
+      "outcome": "T is not integral"
+    }
+  ],
+  "fixed_seven_models": [
+    {
+      "a": 7,
+      "b": 13,
+      "r": 1,
+      "s": 3,
+      "z": 2,
+      "S": 2,
+      "T": 6,
+      "P": [
+        [
+          0,
+          -10,
+          6,
+          -3
+        ],
+        [
+          -9,
+          0,
+          -6,
+          2
+        ],
+        [
+          1,
+          -2,
+          0,
+          0
+        ],
+        [
+          -2,
+          6,
+          -5,
+          0
+        ]
+      ],
+      "q": [
+        7,
+        13,
+        1,
+        1
+      ],
+      "D": [
+        3,
+        -7,
+        4,
+        0
+      ],
+      "positive_cycles": [
+        {
+          "cycle": [
+            0,
+            2
+          ],
+          "gain": "6/7"
+        },
+        {
+          "cycle": [
+            1,
+            3
+          ],
+          "gain": "12/13"
+        }
+      ]
+    },
+    {
+      "a": 7,
+      "b": 19,
+      "r": 1,
+      "s": 1,
+      "z": 1,
+      "S": 6,
+      "T": 18,
+      "P": [
+        [
+          0,
+          -12,
+          6,
+          -1
+        ],
+        [
+          -11,
+          0,
+          -9,
+          1
+        ],
+        [
+          1,
+          -2,
+          0,
+          0
+        ],
+        [
+          -6,
+          18,
+          -13,
+          0
+        ]
+      ],
+      "q": [
+        7,
+        19,
+        1,
+        1
+      ],
+      "D": [
+        9,
+        -23,
+        15,
+        -1
+      ],
+      "positive_cycles": [
+        {
+          "cycle": [
+            0,
+            2
+          ],
+          "gain": "6/7"
+        },
+        {
+          "cycle": [
+            1,
+            3
+          ],
+          "gain": "18/19"
+        }
+      ]
+    },
+    {
+      "a": 7,
+      "b": 19,
+      "r": 1,
+      "s": 2,
+      "z": 2,
+      "S": 3,
+      "T": 9,
+      "P": [
+        [
+          0,
+          -11,
+          6,
+          -2
+        ],
+        [
+          -12,
+          0,
+          -9,
+          2
+        ],
+        [
+          1,
+          -2,
+          0,
+          0
+        ],
+        [
+          -3,
+          9,
+          -7,
+          0
+        ]
+      ],
+      "q": [
+        7,
+        19,
+        1,
+        1
+      ],
+      "D": [
+        7,
+        -15,
+        9,
+        -1
+      ],
+      "positive_cycles": [
+        {
+          "cycle": [
+            0,
+            2
+          ],
+          "gain": "6/7"
+        },
+        {
+          "cycle": [
+            1,
+            3
+          ],
+          "gain": "18/19"
+        }
+      ]
+    },
+    {
+      "a": 7,
+      "b": 31,
+      "r": 1,
+      "s": 1,
+      "z": 2,
+      "S": 6,
+      "T": 15,
+      "P": [
+        [
+          0,
+          -12,
+          6,
+          -1
+        ],
+        [
+          -18,
+          0,
+          -15,
+          2
+        ],
+        [
+          1,
+          -2,
+          0,
+          0
+        ],
+        [
+          -6,
+          15,
+          -10,
+          0
+        ]
+      ],
+      "q": [
+        7,
+        31,
+        1,
+        1
+      ],
+      "D": [
+        16,
+        -32,
+        18,
+        -2
+      ],
+      "positive_cycles": [
+        {
+          "cycle": [
+            0,
+            2
+          ],
+          "gain": "6/7"
+        },
+        {
+          "cycle": [
+            1,
+            3
+          ],
+          "gain": "30/31"
+        }
+      ]
+    },
+    {
+      "a": 7,
+      "b": 41,
+      "r": 1,
+      "s": 2,
+      "z": 5,
+      "S": 3,
+      "T": 8,
+      "P": [
+        [
+          0,
+          -11,
+          6,
+          -2
+        ],
+        [
+          -26,
+          0,
+          -20,
+          5
+        ],
+        [
+          1,
+          -2,
+          0,
+          0
+        ],
+        [
+          -3,
+          8,
+          -6,
+          0
+        ]
+      ],
+      "q": [
+        7,
+        41,
+        1,
+        1
+      ],
+      "D": [
+        21,
+        -36,
+        19,
+        -4
+      ],
+      "positive_cycles": [
+        {
+          "cycle": [
+            0,
+            2
+          ],
+          "gain": "6/7"
+        },
+        {
+          "cycle": [
+            1,
+            3
+          ],
+          "gain": "40/41"
+        }
+      ]
+    },
+    {
+      "a": 7,
+      "b": 43,
+      "r": 1,
+      "s": 1,
+      "z": 3,
+      "S": 6,
+      "T": 14,
+      "P": [
+        [
+          0,
+          -12,
+          6,
+          -1
+        ],
+        [
+          -25,
+          0,
+          -21,
+          3
+        ],
+        [
+          1,
+          -2,
+          0,
+          0
+        ],
+        [
+          -6,
+          14,
+          -9,
+          0
+        ]
+      ],
+      "q": [
+        7,
+        43,
+        1,
+        1
+      ],
+      "D": [
+        23,
+        -43,
+        23,
+        -3
+      ],
+      "positive_cycles": [
+        {
+          "cycle": [
+            0,
+            2
+          ],
+          "gain": "6/7"
+        },
+        {
+          "cycle": [
+            1,
+            3
+          ],
+          "gain": "42/43"
+        }
+      ]
+    },
+    {
+      "a": 7,
+      "b": 79,
+      "r": 1,
+      "s": 1,
+      "z": 6,
+      "S": 6,
+      "T": 13,
+      "P": [
+        [
+          0,
+          -12,
+          6,
+          -1
+        ],
+        [
+          -46,
+          0,
+          -39,
+          6
+        ],
+        [
+          1,
+          -2,
+          0,
+          0
+        ],
+        [
+          -6,
+          13,
+          -8,
+          0
+        ]
+      ],
+      "q": [
+        7,
+        79,
+        1,
+        1
+      ],
+      "D": [
+        44,
+        -78,
+        40,
+        -6
+      ],
+      "positive_cycles": [
+        {
+          "cycle": [
+            0,
+            2
+          ],
+          "gain": "6/7"
+        },
+        {
+          "cycle": [
+            1,
+            3
+          ],
+          "gain": "78/79"
+        }
+      ]
+    }
+  ],
+  "independent_original_matrix_audit": [
+    {
+      "s": 1,
+      "Tmin": 13,
+      "positive_integer_gap": 2,
+      "derived_zmax": 6,
+      "derived_bmax": 79,
+      "trials": [
+        {
+          "b": 3,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 5,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 7,
+          "outcome": "row-reconstructed positive z fails its pair"
+        },
+        {
+          "b": 9,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 11,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 13,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 15,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 17,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 19,
+          "outcome": "accepted",
+          "model": {
+            "a": 7,
+            "b": 19,
+            "r": 1,
+            "s": 1,
+            "z": 1,
+            "S": 6,
+            "T": 18,
+            "P": [
+              [
+                0,
+                -12,
+                6,
+                -1
+              ],
+              [
+                -11,
+                0,
+                -9,
+                1
+              ],
+              [
+                1,
+                -2,
+                0,
+                0
+              ],
+              [
+                -6,
+                18,
+                -13,
+                0
+              ]
+            ],
+            "q": [
+              7,
+              19,
+              1,
+              1
+            ],
+            "D": [
+              9,
+              -23,
+              15,
+              -1
+            ],
+            "positive_cycles": [
+              {
+                "cycle": [
+                  0,
+                  2
+                ],
+                "gain": "6/7"
+              },
+              {
+                "cycle": [
+                  1,
+                  3
+                ],
+                "gain": "18/19"
+              }
+            ]
+          }
+        },
+        {
+          "b": 21,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 23,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 25,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 27,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 29,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 31,
+          "outcome": "accepted",
+          "model": {
+            "a": 7,
+            "b": 31,
+            "r": 1,
+            "s": 1,
+            "z": 2,
+            "S": 6,
+            "T": 15,
+            "P": [
+              [
+                0,
+                -12,
+                6,
+                -1
+              ],
+              [
+                -18,
+                0,
+                -15,
+                2
+              ],
+              [
+                1,
+                -2,
+                0,
+                0
+              ],
+              [
+                -6,
+                15,
+                -10,
+                0
+              ]
+            ],
+            "q": [
+              7,
+              31,
+              1,
+              1
+            ],
+            "D": [
+              16,
+              -32,
+              18,
+              -2
+            ],
+            "positive_cycles": [
+              {
+                "cycle": [
+                  0,
+                  2
+                ],
+                "gain": "6/7"
+              },
+              {
+                "cycle": [
+                  1,
+                  3
+                ],
+                "gain": "30/31"
+              }
+            ]
+          }
+        },
+        {
+          "b": 33,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 35,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 37,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 39,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 41,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 43,
+          "outcome": "accepted",
+          "model": {
+            "a": 7,
+            "b": 43,
+            "r": 1,
+            "s": 1,
+            "z": 3,
+            "S": 6,
+            "T": 14,
+            "P": [
+              [
+                0,
+                -12,
+                6,
+                -1
+              ],
+              [
+                -25,
+                0,
+                -21,
+                3
+              ],
+              [
+                1,
+                -2,
+                0,
+                0
+              ],
+              [
+                -6,
+                14,
+                -9,
+                0
+              ]
+            ],
+            "q": [
+              7,
+              43,
+              1,
+              1
+            ],
+            "D": [
+              23,
+              -43,
+              23,
+              -3
+            ],
+            "positive_cycles": [
+              {
+                "cycle": [
+                  0,
+                  2
+                ],
+                "gain": "6/7"
+              },
+              {
+                "cycle": [
+                  1,
+                  3
+                ],
+                "gain": "42/43"
+              }
+            ]
+          }
+        },
+        {
+          "b": 45,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 47,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 49,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 51,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 53,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 55,
+          "outcome": "row-reconstructed positive z fails its pair"
+        },
+        {
+          "b": 57,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 59,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 61,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 63,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 65,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 67,
+          "outcome": "row-reconstructed positive z fails its pair"
+        },
+        {
+          "b": 69,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 71,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 73,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 75,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 77,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 79,
+          "outcome": "accepted",
+          "model": {
+            "a": 7,
+            "b": 79,
+            "r": 1,
+            "s": 1,
+            "z": 6,
+            "S": 6,
+            "T": 13,
+            "P": [
+              [
+                0,
+                -12,
+                6,
+                -1
+              ],
+              [
+                -46,
+                0,
+                -39,
+                6
+              ],
+              [
+                1,
+                -2,
+                0,
+                0
+              ],
+              [
+                -6,
+                13,
+                -8,
+                0
+              ]
+            ],
+            "q": [
+              7,
+              79,
+              1,
+              1
+            ],
+            "D": [
+              44,
+              -78,
+              40,
+              -6
+            ],
+            "positive_cycles": [
+              {
+                "cycle": [
+                  0,
+                  2
+                ],
+                "gain": "6/7"
+              },
+              {
+                "cycle": [
+                  1,
+                  3
+                ],
+                "gain": "78/79"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "s": 2,
+      "Tmin": 8,
+      "positive_integer_gap": 2,
+      "derived_zmax": 5,
+      "derived_bmax": 41,
+      "trials": [
+        {
+          "b": 3,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 5,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 7,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 9,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 11,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 13,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 15,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 17,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 19,
+          "outcome": "accepted",
+          "model": {
+            "a": 7,
+            "b": 19,
+            "r": 1,
+            "s": 2,
+            "z": 2,
+            "S": 3,
+            "T": 9,
+            "P": [
+              [
+                0,
+                -11,
+                6,
+                -2
+              ],
+              [
+                -12,
+                0,
+                -9,
+                2
+              ],
+              [
+                1,
+                -2,
+                0,
+                0
+              ],
+              [
+                -3,
+                9,
+                -7,
+                0
+              ]
+            ],
+            "q": [
+              7,
+              19,
+              1,
+              1
+            ],
+            "D": [
+              7,
+              -15,
+              9,
+              -1
+            ],
+            "positive_cycles": [
+              {
+                "cycle": [
+                  0,
+                  2
+                ],
+                "gain": "6/7"
+              },
+              {
+                "cycle": [
+                  1,
+                  3
+                ],
+                "gain": "18/19"
+              }
+            ]
+          }
+        },
+        {
+          "b": 21,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 23,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 25,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 27,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 29,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 31,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 33,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 35,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 37,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 39,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 41,
+          "outcome": "accepted",
+          "model": {
+            "a": 7,
+            "b": 41,
+            "r": 1,
+            "s": 2,
+            "z": 5,
+            "S": 3,
+            "T": 8,
+            "P": [
+              [
+                0,
+                -11,
+                6,
+                -2
+              ],
+              [
+                -26,
+                0,
+                -20,
+                5
+              ],
+              [
+                1,
+                -2,
+                0,
+                0
+              ],
+              [
+                -3,
+                8,
+                -6,
+                0
+              ]
+            ],
+            "q": [
+              7,
+              41,
+              1,
+              1
+            ],
+            "D": [
+              21,
+              -36,
+              19,
+              -4
+            ],
+            "positive_cycles": [
+              {
+                "cycle": [
+                  0,
+                  2
+                ],
+                "gain": "6/7"
+              },
+              {
+                "cycle": [
+                  1,
+                  3
+                ],
+                "gain": "40/41"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "s": 3,
+      "Tmin": 6,
+      "positive_integer_gap": 4,
+      "derived_zmax": 2,
+      "derived_bmax": 13,
+      "trials": [
+        {
+          "b": 3,
+          "outcome": "row-reconstructed positive z fails its pair"
+        },
+        {
+          "b": 5,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 7,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 9,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 11,
+          "outcome": "original high-high pair fails divisibility"
+        },
+        {
+          "b": 13,
+          "outcome": "accepted",
+          "model": {
+            "a": 7,
+            "b": 13,
+            "r": 1,
+            "s": 3,
+            "z": 2,
+            "S": 2,
+            "T": 6,
+            "P": [
+              [
+                0,
+                -10,
+                6,
+                -3
+              ],
+              [
+                -9,
+                0,
+                -6,
+                2
+              ],
+              [
+                1,
+                -2,
+                0,
+                0
+              ],
+              [
+                -2,
+                6,
+                -5,
+                0
+              ]
+            ],
+            "q": [
+              7,
+              13,
+              1,
+              1
+            ],
+            "D": [
+              3,
+              -7,
+              4,
+              0
+            ],
+            "positive_cycles": [
+              {
+                "cycle": [
+                  0,
+                  2
+                ],
+                "gain": "6/7"
+              },
+              {
+                "cycle": [
+                  1,
+                  3
+                ],
+                "gain": "12/13"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "fixed_seven_audit_matches": true,
+  "fixed_seven_role": "q34 is forced to canonical A; the fixed-B resonance with r=2 is not in this role",
+  "final_patch_original_matrix_checks": [
+    {
+      "outer4_b": 13,
+      "outer4_s": 3,
+      "outer4_z": 2,
+      "node_numbers": {
+        "23": {
+          "0": "5",
+          "1": "0",
+          "4": "0"
+        },
+        "24": {
+          "0": "0",
+          "1": "5",
+          "3": "0"
+        },
+        "34": {
+          "0": "15/7",
+          "1": "20/7",
+          "2": "0"
+        }
+      },
+      "integer_clutching": {
+        "23": true,
+        "24": true,
+        "34": false
+      },
+      "opposing_D_sums": {
+        "23": 0,
+        "24": 7,
+        "34": -4
+      },
+      "decisive_failure": "D23=0 forces t=3, then D24=3+D_C>0"
+    },
+    {
+      "outer4_b": 19,
+      "outer4_s": 1,
+      "outer4_z": 1,
+      "node_numbers": {
+        "23": {
+          "0": "5",
+          "1": "0",
+          "4": "0"
+        },
+        "24": {
+          "0": "0",
+          "1": "5",
+          "3": "0"
+        },
+        "34": {
+          "0": "13/7",
+          "1": "22/7",
+          "2": "0"
+        }
+      },
+      "integer_clutching": {
+        "23": true,
+        "24": true,
+        "34": false
+      },
+      "opposing_D_sums": {
+        "23": 0,
+        "24": 18,
+        "34": 2
+      },
+      "decisive_failure": "D23=0 forces t=3, then D24=3+D_C>0"
+    },
+    {
+      "outer4_b": 19,
+      "outer4_s": 2,
+      "outer4_z": 2,
+      "node_numbers": {
+        "23": {
+          "0": "5",
+          "1": "0",
+          "4": "0"
+        },
+        "24": {
+          "0": "0",
+          "1": "5",
+          "3": "0"
+        },
+        "34": {
+          "0": "2",
+          "1": "3",
+          "2": "0"
+        }
+      },
+      "integer_clutching": {
+        "23": true,
+        "24": true,
+        "34": true
+      },
+      "opposing_D_sums": {
+        "23": 0,
+        "24": 12,
+        "34": 0
+      },
+      "decisive_failure": "D23=0 forces t=3, then D24=3+D_C>0"
+    },
+    {
+      "outer4_b": 31,
+      "outer4_s": 1,
+      "outer4_z": 2,
+      "node_numbers": {
+        "23": {
+          "0": "5",
+          "1": "0",
+          "4": "0"
+        },
+        "24": {
+          "0": "0",
+          "1": "5",
+          "3": "0"
+        },
+        "34": {
+          "0": "13/7",
+          "1": "22/7",
+          "2": "0"
+        }
+      },
+      "integer_clutching": {
+        "23": true,
+        "24": true,
+        "34": false
+      },
+      "opposing_D_sums": {
+        "23": 0,
+        "24": 21,
+        "34": 9
+      },
+      "decisive_failure": "D23=0 forces t=3, then D24=3+D_C>0"
+    },
+    {
+      "outer4_b": 41,
+      "outer4_s": 2,
+      "outer4_z": 5,
+      "node_numbers": {
+        "23": {
+          "0": "5",
+          "1": "0",
+          "4": "0"
+        },
+        "24": {
+          "0": "0",
+          "1": "5",
+          "3": "0"
+        },
+        "34": {
+          "0": "2",
+          "1": "3",
+          "2": "0"
+        }
+      },
+      "integer_clutching": {
+        "23": true,
+        "24": true,
+        "34": true
+      },
+      "opposing_D_sums": {
+        "23": 0,
+        "24": 22,
+        "34": 14
+      },
+      "decisive_failure": "D23=0 forces t=3, then D24=3+D_C>0"
+    },
+    {
+      "outer4_b": 43,
+      "outer4_s": 1,
+      "outer4_z": 3,
+      "node_numbers": {
+        "23": {
+          "0": "5",
+          "1": "0",
+          "4": "0"
+        },
+        "24": {
+          "0": "0",
+          "1": "5",
+          "3": "0"
+        },
+        "34": {
+          "0": "13/7",
+          "1": "22/7",
+          "2": "0"
+        }
+      },
+      "integer_clutching": {
+        "23": true,
+        "24": true,
+        "34": false
+      },
+      "opposing_D_sums": {
+        "23": 0,
+        "24": 26,
+        "34": 16
+      },
+      "decisive_failure": "D23=0 forces t=3, then D24=3+D_C>0"
+    },
+    {
+      "outer4_b": 79,
+      "outer4_s": 1,
+      "outer4_z": 6,
+      "node_numbers": {
+        "23": {
+          "0": "5",
+          "1": "0",
+          "4": "0"
+        },
+        "24": {
+          "0": "0",
+          "1": "5",
+          "3": "0"
+        },
+        "34": {
+          "0": "13/7",
+          "1": "22/7",
+          "2": "0"
+        }
+      },
+      "integer_clutching": {
+        "23": true,
+        "24": true,
+        "34": false
+      },
+      "opposing_D_sums": {
+        "23": 0,
+        "24": 43,
+        "34": 37
+      },
+      "decisive_failure": "D23=0 forces t=3, then D24=3+D_C>0"
+    }
+  ],
+  "polynomial_identity_checks": [
+    "middle family row0",
+    "middle family row1",
+    "middle family row2",
+    "middle family row3",
+    "middle family pair01",
+    "middle family pair02",
+    "middle family pair03",
+    "middle family pair12",
+    "middle family pair13",
+    "middle family pair23",
+    "middle D_C",
+    "middle D_D",
+    "low D23 opposition polynomial",
+    "r1,S2,z1 residual factor",
+    "r1,S2,T6 residual factor",
+    "fixed seven original pair residual",
+    "C-C crossed physical node23;1",
+    "C-C parallel sharedA physical node23;4",
+    "C-C parallel sharedB physical node23;0",
+    "ordinary Dside3 physical node23;0",
+    "ordinary Dside4 physical node23;0",
+    "exception Dside4 physical node24;0",
+    "exception Dside3 physical node23;0",
+    "exception forcedS physical node23;1",
+    "exception forcedS physical node23;4"
+  ],
+  "source_hashes": {
+    "verify_house_obstruction_v18.py": "54b980aeb70a9b26c60d81ad643b0560da20c42a052cf9db572282e8cf83ef7d",
+    "house_support_obstruction_v18.tex": "33f9cbc2670f52825a80d219d13d3d766233dea80ea4e3200323d9dd46fd96f2"
+  }
+}

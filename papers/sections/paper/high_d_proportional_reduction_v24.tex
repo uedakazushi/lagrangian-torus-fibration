@@ -1,0 +1,248 @@
+% v24: proportional high-D sector, unbounded exclusion off the zero axis.
+\section{比例する高係数の排除と残る零軸の有限復元}
+\label{hp24:section}
+
+本節では前節の canonical 表示と正の整数模型の必要十分復元を用いる．
+記号を再掲すると，
+\[
+\begin{gathered}
+s,t\ge1,\quad b\ge2,\quad B=b-1,\quad u=s+t-1,\\
+x,y,z\ge0,\quad d=x+y+z\ge1,\quad h=s-x\ge1,\quad j=t-y,\\
+\ell=u+z,\quad F=B+ux+sz,\quad m=F^2+F+1,\quad
+\alpha=ud+B+z
+\end{gathered}
+\]
+である．本節の対象は $\delta=sy-tx=0$ の領域である．
+尺度は格子変数 $n=\ell-U\in\mathbb Z$ を用いて
+\begin{equation}\label{hp24:lattice}
+ S=j-(F+1)n,\qquad T=h+Fn,\qquad U=\ell-n
+\end{equation}
+と書ける．差方程式に加えて，元の pair-product 残余
+\begin{equation}\label{hp24:residual}
+ \mathfrak r=-(s+tb)S+(s\alpha-t)T-\alpha b=0
+\end{equation}
+を必ず保持する．
+
+\begin{theorem}[比例領域の零軸への帰着]
+\label{hp24:main}
+三高 $D$ が同時に非負である正の canonical 整数模型で $sy=tx$ なら，
+\[
+ x=y=0,\qquad z\ge1,\qquad s<t,\qquad 0\le n\le z
+\]
+が必要である．従って $sy=tx$ かつ $x>0$ の領域は，低行整数，分母，
+尺度，高係数に上限を置かずに排除される．
+残る $x=y=0$ の零軸の一般不存在を，本定理では主張しない．
+\end{theorem}
+
+\subsection{正の比例係数では格子変数が零になる}
+
+$sy=tx$ と $h=s-x>0$ より $j=th/s>0$ である．
+また $F=B+h+s(d-1)\ge h+1$ なので，$T>0$ は $n\ge0$ を要求する．
+$x\ge1$ のときは
+\[
+ F+1-j=B+(s+t-1)(x-1)+s+sz+y>0.
+\]
+従って $n\ge1$ なら $S<0$ となり，$n=0$ である．
+この議論では $s$ と $t$ の順序を交換していない．
+$s\ge t$ は定理~\ref{hd23:main} で排除済みなので，以下では $s<t$ とする．
+
+このとき $S=j,T=h$ であり，差方程式は
+\begin{equation}\label{hp24:Q}
+ Q=(d-1)(sh-1)+h(h-3)+(b+1)(h-j)=0
+\end{equation}
+となる．また $w=j-h\ge1$ と置けば
+\[
+ s=h+x,\qquad j=h+w,\qquad t=\frac{sj}{h},\qquad
+ d-1=\frac{x(h+j)}h+z-1.
+\]
+これらの式は，元の整数模型から得られる有理式として用いる．
+任意の実数解を模型とみなすことはしない．
+
+\subsection{二以上の正係数を持つ領域の整数係数証明}
+
+$x\ge2$ とする．次の整数係数多項式を定義する：
+\begin{equation}\label{hp24:positive-certificate-data}
+\begin{aligned}
+s&=h+x,&j&=h+w,&q&=sh-1,\\
+D_*&=x(h+j)+h(z-1),& L&=h^2+sD_*,\\
+C&=D_*q+h^2(h-3)-hw,&
+A&=hC-h^2w+w(h+j)L,\\
+\mathcal N&=-A(sh^2w-C)+2sjh^3w^2+Csj^2hw.
+\end{aligned}
+\end{equation}
+差方程式~\eqref{hp24:Q} は $bhw=C$ を与え，
+$\lambda=ux+sz=L/h$，$\alpha=A/(h^2w)$ となる．
+従って元の残余を代入すると，恒等的に
+\begin{equation}\label{hp24:negative-residual-certificate}
+ \mathcal N=-h^3w^2\mathfrak r
+\end{equation}
+である．
+
+ここで式~\eqref{hp24:positive-certificate-data} に
+\[
+ h=H+1,\qquad x=X+2,\qquad w=W+1
+\]
+を代入し，$H,X,W,z$ の多項式として展開する．
+非零係数は $281$ 個で，全て正であり，定数項は $312$ である．
+これは明示的な整数多項式の有限係数命題であり，
+同梱の \nolinkurl{verify_high_d_proportional_v24.py} が整数辞書演算で全係数を再計算する．
+係数一覧と，変数の各次数ごとの係数数・最小係数は結果JSONに保持する．
+検算は他の検算器を import せず，元の残余から分母を払って得た多項式との
+恒等式~\eqref{hp24:negative-residual-certificate} も独立に係数比較する．
+
+$H,X,W,z\ge0$ より $\mathcal N>0$ である．
+しかし模型では $\mathfrak r=0$ が必要なので矛盾する．
+以上は有界なパラメータ探索ではなく，表示された全多項式の係数による証明である．
+
+\subsection{係数一の領域の解析的排除}
+
+$x=1$ とする．$sy=t$ より，$s=h+1$，$y=v+1$ と書けば
+\[
+ v\ge1,\qquad t=(h+1)(v+1),\qquad j=h(v+1),\qquad d-1=v+1+z.
+\]
+式~\eqref{hp24:Q} は
+\begin{equation}\label{hp24:x-one-v}
+ (hb-h^2+1)v=(h^2+h-1)z+2h^2-2h-1
+\end{equation}
+となる．$h\ge2$ では右辺が正なので $hb-h^2+1>0$ であり，
+整数 $b$ は $b\ge h$ を満たす．$k=b-h\ge0$ と置くと
+\[
+ v=\frac{(h^2+h-1)z+2h^2-2h-1}{hk+1}.
+\]
+この式を元の残余へ代入し，
+$\mathcal R_h(k,z)=(hk+1)^2\mathfrak r$ と置く．
+直接展開により
+\begin{equation}\label{hp24:R0}
+\begin{aligned}
+\mathcal R_h(0,z)={}&h^2(h+1)(h^2+h-1)z^2\\
+&+h(4h^4+h^3-6h^2+2)z+h^2(4h^3-6h^2+3)>0
+\end{aligned}
+\end{equation}
+である．一方，
+\begin{equation}\label{hp24:R1}
+\mathcal R_h(1,z)=-h(h+1)^2\bigl((h^2+h-1)z^2+h(3h+1)z+2h^2+1\bigr)<0.
+\end{equation}
+さらに $\mathcal R_h(k,z)=\sum_{i=0}^4 R_i(h,z)k^i$ の正次数係数は
+\begin{align*}
+-R_1={}&2h^2(h^3+2h^2-1)z^2+h(7h^4-10h^2+h+2)z\\
+ &+6h^4(h-2)+3h^3+3h^2-1,\\
+-R_2={}&h(h^3+2h^2-1)z^2+h^2(8h^2+7h-2)z
+ +10h^4-6h^3-h+1,\\
+-R_3={}&h\bigl(2h(h+1)z+6h^2+h+2\bigr),\qquad -R_4=h^2.
+\end{align*}
+$h\ge2,z\ge0$ で全て厳密に正である．従って $k\ge1$ では
+$\mathcal R_h(k,z)\le \mathcal R_h(1,z)<0$ となる．整数 $k\ge0$ に零点はない．
+
+$h=1$ では $b\ge2$ より $k=b-1\ge1$ である．$k=K+1$ と書けば
+\begin{equation}\label{hp24:h-one}
+\begin{aligned}
+-\mathcal R_1(K+1,z)={}&K^4+13K^3+37K^2+38K+12\\
+&+(4K^3+25K^2+38K+16)z+(2K^2+8K+4)z^2>0.
+\end{aligned}
+\end{equation}
+従ってこの場合も $\mathfrak r=0$ と両立しない．
+これで $x>0$ の全域が排除された．
+
+\subsection{零軸の格子幅と四次方程式}
+
+$x=0$ なら $sy=tx$ から $y=0$ であり，$d=z\ge1$ である．
+ここでは
+\[
+ F=b-1+sz,\quad m=F^2+F+1,\quad K=s(F-1)-z+1
+\]
+と置く．差方程式は
+\begin{equation}\label{hp24:axis-t}
+ (b+1)t=mn+K
+\end{equation}
+であり，元の残余は
+\begin{equation}\label{hp24:axis-r}
+ \mathfrak r=-bt^2+(s^2z-2s-bz)t+F(s^2-b)
+       +n\bigl(sm+(F^2+b)t\bigr)
+\end{equation}
+となる．従って
+\begin{equation}\label{hp24:axis-polynomial}
+\begin{aligned}
+\mathcal P_{s,z,n}(b)={}&-b(mn+K)^2
+ +(b+1)(s^2z-2s-bz)(mn+K)\\
+ &+(b+1)^2F(s^2-b)\\
+ &+n\bigl(s m(b+1)^2+(F^2+b)(mn+K)(b+1)\bigr)
+\end{aligned}
+\end{equation}
+は $(b+1)^2\mathfrak r$ に等しい．
+
+$n\ge z+1$ と仮定し，
+\[
+ s=\sigma+1,\quad b=\beta+2,\quad z=\zeta+1,
+ \quad n=\zeta+\nu+2
+\]
+を代入する．式~\eqref{hp24:axis-polynomial} の非零係数は $209$ 個で，全て正で，
+定数項は $63$ である．この有限係数命題も同じ独立な整数辞書演算で確認できる．
+$\sigma,\beta,\zeta,\nu\ge0$ より $\mathcal P>0$ となり，模型に必要な
+$\mathfrak r=0$ と矛盾する．従って $0\le n\le z$ である．
+これで定理~\ref{hp24:main} が証明された．
+
+\begin{lemma}[整除余りの共鳴と明示上界]
+\label{hp24:divisor-bound}
+零軸の模型では
+\[
+ C_n=n\bigl((sz)^2-3sz+3\bigr)+(s^2-1)z-3s+1
+\]
+が正であり，
+\begin{equation}\label{hp24:divisor-bound-formula}
+ b+1\mid C_n,\qquad b+1\le C_n\le
+ s^2z^3-3sz^2+(s^2+2)z-3s+1
+\end{equation}
+を満たす．
+\end{lemma}
+
+\begin{proof}
+次の恒等式を用いる：
+\[
+ mn+K=(b+1)\bigl(s+n(b+2sz-2)\bigr)+C_n.
+\]
+従って $b+1\mid C_n$ である．$M_0=(sz)^2-3sz+3\ge1$ なので，
+$C_n$ は $n$ とともに増加する．
+$C_0=(s^2-1)z-3s+1$ は，$s\ge4$ なら正，
+$s=3$ なら $8(z-1)$，$s=2$ なら $3z-5$，$s=1$ なら $-2$ である．
+$0\le n\le z$ を合わせると，$C_n=0$ は
+\[
+ (s,z,n)=(3,1,0),\qquad (1,2,2)
+\]
+だけである．その他の $C_n\le0$ は $-1,-2$ であり，$b+1\ge3$ が割ることはない．
+第一の零例外は式~\eqref{hp24:axis-t} から $t=s=3$ となり既に排除済みである．
+第二では $t=2b+5$，$S=1,T=2b+3,U=2b+5$ となるが，元残余は
+\[
+ \mathfrak r=-b^2+5b+17
+\]
+である．判別式 $93$ は $9^2<93<10^2$ により平方数でなく，整数根はない．
+従って模型では $C_n>0$ である．最後の上界は $n\le z$ と $M_0>0$ から従う．
+\end{proof}
+
+\begin{corollary}[二整数を固定した零軸の完全有限復元]
+\label{hp24:finite-axis}
+$s,z\ge1$ を固定する．比例領域の正整数模型は次の有限手順で全て復元される．
+\begin{enumerate}
+\item $n=0,\ldots,z$ ごとに，四次式 $\mathcal P_{s,z,n}(b)=0$ の整数根 $b\ge2$ を全て求める．
+\item 式~\eqref{hp24:axis-t} から $t$ を求め，整数性と $t>s$ を課す．
+\item $S=t-(F+1)n,T=s+Fn,U=s+t+z-1-n$ について，正整数性，
+六つの符号条件，元の全 pair-products と正 weights を検査する．
+\end{enumerate}
+各 $n$ の候補 $b$ は高々四個であり，検査前の候補数は高々 $4(z+1)$ である．
+この手順は $b,t$ や分母の探索上限を含まない．
+\end{corollary}
+
+\begin{proof}
+式~\eqref{hp24:axis-polynomial} の $b^4$ の係数は
+\[
+ n^2-zn-1<0\qquad(0\le n\le z)
+\]
+なので，各式は恒等的に零にならない真の四次式である．
+定数項が零なら $b$ の因子を取り去り，残った整数多項式の正の整数根を
+整数根定理から定数項の約数として全て列挙すればよい．
+候補を得た後の必要十分復元は従前の canonical 復元を用いる．
+模型から出発すれば全手順を通過し，通過したデータは元の全方程式と正 weights を持つ．
+\end{proof}
+
+この系は固定した $s,z$ ごとの完全性であり，$s,z$ 自体の一様上界や
+零軸の一般不存在を意味しない．\nolinkurl{verify_high_d_proportional_v24.py} \texttt{--axis s z}
+はこの復元を実行する．

@@ -1,0 +1,102 @@
+% v11 reusable notes. The equal-two-high inequality and integer classification are solved.
+\subsection{等二高分母の完全分類と再利用する整数変数}
+\label{uh10:two-reduction-section}
+
+等二高分母 $(q,q,1,1)$ の局所符号問題は解決した．
+高分母二頂点の係数和は常に負であり，正の整数 numerator data 自体も完全に分類できる．
+主論文の \texttt{uh11:two-negative} と \texttt{uc11:classification} に一般証明を置く．
+ここでは，他の分母 pattern に移す際に使える変数と，分類の結果だけを残す．
+
+\paragraph{整数性を保つ表示．}
+一般二高分母の符号定理から，標準表示では $u=-s<0<v=z$ である．
+\[
+ m=q-1=t r(r+1),\qquad R=r(r+1),\qquad r,t\geq1,
+ \qquad s,z\mid m,\quad s,z>0
+\]
+と置くと，残る条件は
+\begin{equation}\label{nt11:two-conic}
+ sz+(1+tr^2)s-\{1+t(r+1)^2\}z=t+1
+\end{equation}
+となる．低分母の二頂点の係数は
+\[
+ D_C=\frac mz-\frac ms-t,\qquad D_D=s-z-1.
+\]
+従って，この全整数解について解決した不等式は
+\[
+ D_C+D_D=(s-z)\left(1+\frac m{sz}\right)-t-1>0,
+ \qquad D_A+D_B=-(D_C+D_D)<0
+\]
+である．等しい分母という仮定を外した係数和には，同じ符号を仮定しない．
+
+\paragraph{一般の上限を作る補助整数．}
+\[
+ S=m/s,\quad Z=m/z,\quad H=Z-S,\quad
+ \delta=s-z,\quad n=2r+1,
+\]
+\[
+ 1\leq\delta\leq t,\qquad e=t-\delta,\qquad
+ G=r^2H+R-nS=\frac{R(e+1)}{sz}>0,\qquad J=H-\delta G,
+\]
+\[
+ tJ=(\delta-1)H,\qquad Jsz=\delta(\delta-1)R,
+ \qquad\delta\mid Jz,
+\]
+\[
+ K=nz-r^2\delta+1>0,
+ \qquad tK=sz+\delta-1
+\]
+を同時に保つ．$G,J,K$ を単なる実数へ緩めると，証明に使う情報を失う．
+特に $\delta\geq2$ では $x=z/\delta\geq r^2/n$ と
+$Jx(x+1)=(\delta-1)R/\delta$ から $J\leq4$ を得る．
+$J=4$ は $4x\in\ZZ$ によって排除され，$J\in\{1,2,3\}$ となる．
+さらに一般の係数評価で $J\leq\delta-2$ を排除するため，
+\[
+ \delta-1\leq J\leq3,\qquad \delta\leq4
+\]
+となる．その証明の最後の四つの二次方程式は，一般の不等式から残った候補であり，
+分母を有界にした探索の結果ではない．
+
+$\delta=1$ では $s=z+1$，$R=HK$，$sz=tK$ となる．
+$a=r-z>0$ と置き，$a^2=(t-1)K+1$ と $(2r+1)a=(H-1)K+1$ を消去すると
+\[
+ LK=t+2H+1,\qquad L=(H+1)^2-4Ht>0
+\]
+を得る．従って $H=4t-2+k$，$k\geq0$ と書け，$K$ の整数性が $k=0$，
+または $k=t=1$ だけを残す．この消去は，有限の例外と無限族を分ける際に再利用できる．
+
+\paragraph{全整数データと分母集合．}
+標準表示の $(r,t,s,z)$ は，標識の交換を除いて次表で尽きる．
+最終行では $t$ は任意の正整数である．
+\begin{center}
+\small
+\begin{tabular}{ccccccl}
+$r$ & $t$ & $s$ & $z$ & $q$ & $\delta$ & $D_C+D_D$ \\
+\hline
+$2$ & $1$ & $2$ & $1$ & $7$ & $1$ & $2$ \\
+$1$ & $6$ & $4$ & $1$ & $13$ & $3$ & $5$ \\
+$2$ & $5$ & $6$ & $3$ & $31$ & $3$ & $2$ \\
+$6t-3$ & $t$ & $3t$ & $3t-1$ & $t(6t-3)(6t-2)+1$ & $1$ & $3t-2$
+\end{tabular}
+\end{center}
+従って，可能な等高分母はちょうど
+\[
+ \{7,13,31\}\ \cup\
+ \{t(6t-3)(6t-2)+1:t\geq1\}
+\]
+である．無限族の最初の分母は $13,181,721,1849,\ldots$ となる．
+$q=13$ の第二行と無限族の $t=1$ は別の整数模型であり，
+high--high pair の絶対値はそれぞれ $(21,8)$ と $(14,12)$ である．
+この分類は numerator systems の分類であり，weights の変形や幾何学的同型類の数ではない．
+
+無限族では，高分母二頂点の係数は標準表示の順で
+\[
+ D_A=2(3t-2)(t-1),\qquad D_B=-(3t-2)(2t-1).
+\]
+$t\geq2$ なら一方は正であるが，総和は常に $-(3t-2)<0$ である．
+大域排除に使えるのはこの総和であり，個々の高分母端の係数が常に負という主張ではない．
+
+\paragraph{現在の限界と次の利用先．}
+等二高分母の再探索や，上の不等式の反例探しは必要ない．
+次は異なる分母 $(a,b,1,1)$ の端点接続で，この無限族がどの denominator や
+opposite $D$ と整合し得るかを調べる．単色成分は既に大域に存在できないため，
+局所等高分母模型を用いる候補には，その同じ高分母成分内に異なる値も必要となる．

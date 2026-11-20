@@ -1,0 +1,250 @@
+{
+  "status": "PASS",
+  "passed": true,
+  "version": "v15",
+  "script_sha256": "8a1b5a436b70e0cf632a03db3de510fa7381c75201d9778859f353ee0ddff506",
+  "source_sha256": "288efafc9f18aa10697472304192c6fdb104bc88cb9e04a6300f3395cd204c81",
+  "scope": "Symbolic integer-polynomial identities and exactly two logically forced small cases. No denominator bound and no local-model catalog used. The analytic proof is in diamond_obstruction_v15.tex.",
+  "polynomial_identity_count": 8,
+  "polynomial_identities": [
+    {
+      "identity": "negative_branch_E_identity",
+      "residual": []
+    },
+    {
+      "identity": "positive_unit_pair_outgoing_sum",
+      "residual": []
+    },
+    {
+      "identity": "negative_unit_pair_outgoing_sum",
+      "residual": []
+    },
+    {
+      "identity": "n23_total",
+      "residual": []
+    },
+    {
+      "identity": "central_reverse_baseline_sum",
+      "residual": []
+    },
+    {
+      "identity": "L4_s_unit_pair_residual",
+      "residual": []
+    },
+    {
+      "identity": "L4_z_unit_pair_residual",
+      "residual": []
+    },
+    {
+      "identity": "L4_terminal_pair_residual",
+      "residual": []
+    }
+  ],
+  "negative_branch_complete_small_cases": [
+    {
+      "parameters": {
+        "H": 1,
+        "S": 2
+      },
+      "exclusion": "unprimed strict H bound fails"
+    },
+    {
+      "parameters": {
+        "H": 2,
+        "S": 3,
+        "r": 5,
+        "Sprime": 3,
+        "rprime": 4,
+        "Hprime": 1
+      },
+      "exclusion": "primed strict H bound fails"
+    }
+  ],
+  "partial_patch": {
+    "scope": "Three positive local cores satisfying all three mutual low-edge node and D conditions; not a global diamond solution.",
+    "core_orders": {
+      "2": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "3": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "4": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    "q": {
+      "2": [
+        7,
+        7,
+        1,
+        1
+      ],
+      "3": [
+        11,
+        9,
+        1,
+        1
+      ],
+      "4": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "p": {
+      "2": [
+        [
+          0,
+          -6,
+          1,
+          -2
+        ],
+        [
+          -8,
+          0,
+          -2,
+          3
+        ],
+        [
+          6,
+          -3,
+          0,
+          -4
+        ],
+        [
+          -3,
+          2,
+          0,
+          0
+        ]
+      ],
+      "3": [
+        [
+          0,
+          -14,
+          -2,
+          5
+        ],
+        [
+          -7,
+          0,
+          2,
+          -4
+        ],
+        [
+          -5,
+          4,
+          0,
+          0
+        ],
+        [
+          2,
+          -2,
+          -1,
+          0
+        ]
+      ],
+      "4": [
+        [
+          0,
+          0,
+          -1,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          -3
+        ],
+        [
+          0,
+          -1,
+          0,
+          0
+        ],
+        [
+          -3,
+          0,
+          2,
+          0
+        ]
+      ]
+    },
+    "D": {
+      "2": [
+        -2,
+        0,
+        0,
+        2
+      ],
+      "3": [
+        -1,
+        3,
+        0,
+        -2
+      ],
+      "4": [
+        0,
+        0,
+        -2,
+        2
+      ]
+    },
+    "weights": {
+      "2": [
+        "7",
+        "7",
+        "13/12",
+        "13/4"
+      ],
+      "3": [
+        "11",
+        "9",
+        "17/8",
+        "21/4"
+      ],
+      "4": [
+        "3",
+        "1",
+        "3",
+        "1"
+      ]
+    },
+    "minimum_positive_slack": {
+      "2": "1/12",
+      "3": "1/8",
+      "4": "1"
+    },
+    "nodes": {
+      "23": [
+        0,
+        0,
+        5
+      ],
+      "24": [
+        4,
+        0,
+        1
+      ],
+      "34": [
+        2,
+        3,
+        0
+      ]
+    },
+    "hub_balance_defect": -3,
+    "global_completion": "Impossible by the new hub-balance identity; diamond exclusion does not rely on this example."
+  }
+}

@@ -1,0 +1,294 @@
+\section{任意の pants 木から得られる分岐基底}\label{topo:section}
+
+本節の結果は有限複体についての定理であり，シンプレクティックな接着の成立を仮定しない．
+したがって，前節の大域構成とは独立に用いることができる．
+以下，$d\geq5$，$[d]=\{1,\ldots,d\}$ とする．
+
+\begin{definition}\label{topo:definition}
+各非順序対 $ij=\{i,j\}\subset[d]$ に対し，葉が $[d]\setminus\{i,j\}$ でラベル付けされた
+有限三価木 $T_{ij}=T_{ji}$ を選ぶ．内部頂点の集合を $P_{ij}$，内部辺の集合を $A_{ij}$ とし，
+葉 $k$ に隣接する内部頂点を $p_{ij}(k)$ と書く．
+分岐複体 $B(T)$ を次のセルで定める．
+\begin{enumerate}
+\item 頂点は $v_1,\ldots,v_d$ とする．
+\item $p\in P_{ij}$ ごとに $v_i$ と $v_j$ を結ぶ辺 $e_{ij,p}$ を置く．
+\item 内部辺 $pq\in A_{ij}$ ごとに，$e_{ij,p}$ と $e_{ij,q}$ に沿う二角形を一枚付ける．
+\item $i<j<k$ ごとに，$e_{ij,p_{ij}(k)}$，$e_{jk,p_{jk}(i)}$，
+$e_{ik,p_{ik}(j)}$ を境界とする三角形を一枚付ける．
+\end{enumerate}
+二角形は二本の異なる辺に沿う閉円板である．この記述は有限正則 CW 複体を定め，
+細分すれば有限単体的多面体になる．
+\end{definition}
+
+三価木の辺数の公式から
+\[
+ |P_{ij}|=d-4,\qquad |A_{ij}|=d-5
+\]
+である．葉と葉に接する開辺を除く部分 $T_{ij}^{\rm int}$ は，内部頂点を全て含む木であり，
+$d=5$ では一点である．
+
+\begin{proposition}\label{topo:counts}
+$B(T)$ の各辺の内部にはちょうど三枚の面が接する．セル数は
+\[
+ V=d,\qquad E=\binom d2(d-4),\qquad
+ F_\triangle=\binom d3,\qquad F_2=\binom d2(d-5).
+\]
+頂点 $v_i$ のリンク $G_i$ は，完全グラフ $K_{d-1}$ の各頂点 $j$ を
+$T_{ij}^{\rm int}$ で展開した連結三価グラフであり，
+\[
+ |V(G_i)|=(d-1)(d-4),\quad
+ |E(G_i)|=\frac32(d-1)(d-4),\quad
+ b_1(G_i)=\binom{d-2}{2}.
+\]
+\end{proposition}
+
+\begin{proof}
+$e_{ij,p}$ に接する面は，$T_{ij}$ における $p$ の三つの flags に対応する．
+内部辺の flag は二角形，葉 $k$ の flag は三角形 $ijk$ を与えるため，面の数は三である．
+リンクの頂点は $(j,p)$，$j\ne i$，$p\in P_{ij}$ である．
+その辺は，各 $T_{ij}^{\rm int}$ の内部辺と，$j,k\ne i$ に対応する
+$(j,p_{ij}(k))$ と $(k,p_{ik}(j))$ を結ぶ辺である．
+内部木を全て縮約すると $K_{d-1}$ になり，連結性と第一 Betti 数が従う．
+三価性から $2|E(G_i)|=3|V(G_i)|$ も従う．
+\end{proof}
+
+\subsection{縮約写像と整数係数の鎖収縮}
+
+$S_d=\operatorname{Sk}_2\Delta^{d-1}$ と置く．同じ $ij$ の平行辺を $S_d$ の辺 $ij$ に送り，
+二角形をその辺に潰し，三角形を対応する三角形に写す写像
+\[
+ q:B(T)\longrightarrow S_d
+\]
+がある．より具体的には，$ij$ の全ての辺と二角形の和集合を
+\[
+ \bigl(T_{ij}^{\rm int}\times[0,1]\bigr)/
+ \bigl(T_{ij}^{\rm int}\times\{0\}\sim v_i,\ 
+ T_{ij}^{\rm int}\times\{1\}\sim v_j\bigr)
+\]
+と表示し，第二因子への射影を使う．三角形上の写像は，この境界のパラメータ表示と整合するように選ぶ．
+各辺の内点の逆像は $T_{ij}^{\rm int}$，それ以外の点の逆像は一点である．
+したがって $q$ は cell-like な写像，すなわち全ての点逆像が可縮な compact 多面体である写像である．
+
+\begin{theorem}\label{topo:sdr}
+任意の木の組 $T=(T_{ij})$ に対し，$q$ はホモトピー同値であり，
+\[
+ B(T)\simeq\bigvee^{\binom{d-1}{3}}S^2.
+\]
+さらに，セル鎖写像 $q_*$ は整数係数で明示的な鎖切断と鎖ホモトピーを持つ．
+\end{theorem}
+
+\begin{proof}
+$i<j$ に対して $e_{ij,p}$ を $v_i$ から $v_j$ に向ける．各内部木に根
+$r_{ij}\in P_{ij}$ を選び，内部辺を根から遠ざかる向きに向ける．
+その向きが $p\to u$ である二角形を $b_{ij,pu}$ と書き，
+\[
+ \partial b_{ij,pu}=e_{ij,u}-e_{ij,p}
+\]
+となる向きを与える．根から $p$ への経路に沿う二角形鎖を $D_{ij}(p)$ とすると
+\[
+ D_{ij}(r_{ij})=0,\qquad
+ \partial D_{ij}(p)=e_{ij,p}-e_{ij,r_{ij}}.
+\]
+三角形 $ijk$ の向きを $i<j<k$ の順序で定め，その鎖を $\tau_{ijk}$ とする．
+補正三角形
+\begin{align*}
+ \widehat\tau_{ijk}={}&\tau_{ijk}
+   -D_{ij}(p_{ij}(k))-D_{jk}(p_{jk}(i))
+   +D_{ik}(p_{ik}(j))
+\end{align*}
+は
+\[
+ \partial\widehat\tau_{ijk}
+ =e_{ij,r_{ij}}+e_{jk,r_{jk}}-e_{ik,r_{ik}}
+\]
+を満たす．したがって，$S_d$ の頂点を同じ頂点に，辺 $ij$ を
+$e_{ij,r_{ij}}$ に，三角形 $ijk$ を $\widehat\tau_{ijk}$ に送る写像
+$s:C_*(S_d;\ZZ)\to C_*(B(T);\ZZ)$ は鎖写像であり，$q_*s=1$ である．
+
+次数一の生成元に対し $H(e_{ij,p})=D_{ij}(p)$ と定め，それ以外の次数で
+$H=0$ と置く．木の経路の一意性から，内部辺 $p\to u$ に対して
+$D_{ij}(u)-D_{ij}(p)=b_{ij,pu}$ である．これと補正三角形の式を使うと，
+全てのセルについて
+\[
+ 1-sq_* =\partial H+H\partial
+\]
+が成り立つ．また $Hs=0$，$q_*H=0$，$H^2=0$ である．
+これは整数係数の鎖複体の明示的な strong deformation retraction である．
+
+基本群について，二角形の関係は同じ $ij$ の全ての辺を相対端点ホモトピーで同一視する．
+残る三角形の関係は完全グラフの全てのループを消すので，$B(T)$ は単連結である．
+$S_d$ も単連結であるため，いま証明した整数ホモロジー同値と
+単連結 CW 複体に対するホモロジー版 Whitehead 定理から，$q$ はホモトピー同値である
+\cite[Corollary 4.33]{Hatcher}．
+最後に，$S_d$ は単連結な二次元複体であり，$H_2(S_d;\ZZ)$ は自由群である．
+その基底を Hurewicz の定理で球面からの写像として実現し，再び Whitehead の定理を使えば，
+主張した球面の wedge を得る．球面数は
+$\chi(S_d)-1=d-\binom d2+\binom d3-1=\binom{d-1}{3}$ である．
+\end{proof}
+
+\begin{corollary}[整数二サイクルの基底]\label{topo:cycles}
+$2\leq i<j<k\leq d$ に対し
+\[
+ Z_{ijk}=\widehat\tau_{ijk}-\widehat\tau_{1jk}
+              +\widehat\tau_{1ik}-\widehat\tau_{1ij}
+\]
+と置くと，これらは $H_2(B(T);\ZZ)$ の基底を与える．
+\end{corollary}
+
+\begin{proof}
+標準複体では，$[ijk]-[1jk]+[1ik]-[1ij]$ は四面体 $[1ijk]$ の境界である．
+任意の二サイクルから，頂点 $1$ を含まない各三角形の係数だけこれらを差し引くと，
+残りは $1$ を含む三角形だけに支持される．そのような二サイクルは零である．
+実際，辺 $ij$，$i,j>1$ はその支持の中では三角形 $1ij$ にだけ現れる．
+同じ理由で基底の一次独立性も分かる．鎖切断 $s$ で移せばよい．
+\end{proof}
+
+この証明は有限個の次数の行列の階数計算を一般次数の証明に代用しない．
+各木について根と経路を列挙するだけで，整数係数の切断・ホモトピー・二サイクルを出力できる．
+
+\subsection{通常の双対複体との差}
+
+\begin{proposition}\label{topo:nonhomeomorphic}
+$d=5$ では $q:B(T)\to S_5$ は同相写像である．$d\geq6$ では
+$B(T)$ と $S_d$ は同相でない．
+\end{proposition}
+
+\begin{proof}
+$d=5$ では各内部木は一点であり，二角形が存在しない．
+$d\geq6$ では点 $x$ の局所ホモロジー
+$H_2(Y,Y\setminus\{x\};\ZZ)$ の階数で区別できる．
+三枚の面が接する $B(T)$ の辺内ではこの階数は二である．一方 $S_d$ では，
+面内・辺内・頂点における階数はそれぞれ
+\[
+ 1,\qquad d-3,\qquad \binom{d-2}{2}
+\]
+である．これは点のリンクの第一 Betti 数から従う．$d\geq6$ ではどれも二でない．
+\end{proof}
+
+したがって，木による三価化は通常の細分ではない．
+自由な辺がないこと，双対複体とホモトピー同値であること，双対複体と同相であることは
+区別しなければならない．また，この議論自体は integral-affine atlas を構成しない．
+
+\section{六次の場合の同時 Petersen 化}\label{topo:petersen-section}
+
+$d=6$ のとき，各 $T_{ij}$ は四つの葉を二組に分けるだけで定まり，
+各 $G_i$ は $K_5$ の各頂点を二個の三価頂点に展開したグラフである．
+分割を独立に選ぶとリンクの同型型は一定ではないが，六つのリンクを同時に
+Petersen グラフにできる．しかも，そのような分割系は完全に分類できる．
+
+\begin{definition}
+$K_6$ の完全マッチングは，六つのラベルを三組に分けたものである．
+$K_6$ の one-factorization は，その十五本の辺を五個の完全マッチングに分解したものである．
+\end{definition}
+
+\begin{theorem}\label{topo:petersen}
+ラベルを固定した $d=6$ の分割系で，全ての $G_i$ が Petersen グラフとなるものは
+ちょうど六個である．それらは $K_6$ の六個の one-factorization と自然に対応する．
+対応は，辺 $ij$ を含む完全マッチングの残りの二組を $T_{ij}$ の分割に取ることで与えられる．
+ラベルの置換を許せば，この六個は一つの同型類をなす．
+\end{theorem}
+
+まず存在とその対称性を明示する．六つのラベルを
+$\{\infty\}\cup\mathbb F_5$ とし，$c\in\mathbb F_5$ に対して
+\[
+ M_c=\bigl\{\{\infty,c\},\{c+1,c-1\},\{c+2,c-2\}\bigr\}
+\]
+と置く．五個の $M_c$ は one-factorization $\mathcal F$ をなす．
+$i=\infty$ のリンクでは，$T_{\infty c}$ の二つの頂点を，葉 $c\pm1$ に接する
+$A_c$ と，葉 $c\pm2$ に接する $B_c$ と書ける．その辺は
+\[
+ A_cB_c,\qquad A_cA_{c+1},\qquad B_cB_{c+2}\quad(c\in\mathbb F_5)
+\]
+であり，これは Petersen グラフの標準表示である．
+平行移動 $c\mapsto c+a$ は $\mathcal F$ を保ち，$\infty$ を固定する．
+反転 $c\mapsto c^{-1}$（$0\leftrightarrow\infty$）も $\mathcal F$ を保つ．
+実際，反転は $M_0$ を固定し，$M_1\leftrightarrow M_3$，
+$M_2\leftrightarrow M_4$ と入れ替える．したがって，この分割系の対称群は
+六つのラベル上で推移的に作用し，全てのリンクが Petersen グラフになる．
+
+\begin{lemma}\label{topo:factorizations}
+$K_6$ の完全マッチングは十五個あり，各完全マッチングはちょうど二個の
+one-factorization に属する．この二個はその完全マッチング以外を共有せず，
+その中の任意の一辺の両端を入れ替える置換で互いに移る．
+したがって one-factorization は六個で，互いにラベルの置換で同型である．
+\end{lemma}
+
+\begin{proof}
+完全マッチングの数は $5\cdot3\cdot1=15$ である．一個を固定し，その三組を
+$\{A_0,A_1\}$，$\{B_0,B_1\}$，$\{C_0,C_1\}$ と書く．
+これと辺を共有しない完全マッチングは
+\[
+ \{A_aB_b,\ B_{1-b}C_c,\ C_{1-c}A_{1-a}\},
+ \qquad(a,b,c)\in\{0,1\}^3
+\]
+の八個である．二個が辺を共有するのは，添字の三成分のうち相異なるものが
+ちょうど一個のときである．したがって，残りを四個の互いに素な完全マッチングに
+分解する問題は，三次元 cube の四頂点の独立集合を選ぶ問題になる．
+そのような独立集合は偶数パリティと奇数パリティの二個だけである．
+例えば $000$ を含むものは，$111$ を含めると大きさ二以下になるので，
+残る三個は $011,101,110$ に限られる．
+一組の両端交換は一個の添字を反転し，この二個を入れ替える．
+従って one-factorization の総数は $15\cdot2/5=6$ である．
+固定マッチングのラベルの置換と両端交換を使えば，全てが同型であることも分かる．
+\end{proof}
+
+\begin{lemma}\label{topo:local-petersen}
+一つのラベル $i$ を固定する．$G_i$ が Petersen グラフであるための必要十分条件は，
+$j\ne i$ に対する五個の完全マッチング
+\[
+ N_{ij}=\{ij\}\cup\{T_{ij}\text{ の二組}\}
+\]
+が one-factorization をなすことである．
+\end{lemma}
+
+\begin{proof}
+十分性は，補題\ref{topo:factorizations}の同型性と上の明示的構成から従う．
+必要性のため，$G_i$ の五本の内部辺が与える完全マッチングを除く．
+Petersen グラフの任意の完全マッチングの補集合は，二個の五角形である．
+この事実は標準表示で直接確認できる．完全マッチングに属する spoke の数は奇数である．
+三本の場合は，残る二つの添字が外側の五角形と内側の星の両方で隣接する必要があり，不可能である．
+五本の場合は明らかで，一本の場合は残りの外側と内側の四頂点のマッチングが一意に決まり，
+その補集合も二個の五角形になる．
+Petersen グラフには三角形がないので，完全マッチングの辺はこの五角形の弦になれず，
+全て二つの五角形の間を結ぶ．内部辺を縮約すると，これらの二個の五角形は
+$K_5$ の辺を互いに素に分割する．
+従って，一方の五角形に沿って残る五ラベルを巡回的に付け直せば，
+分割系は上の $A_c,B_c$ の表示に一致する．この表示の $N_{ij}$ は
+one-factorization である．
+\end{proof}
+
+\begin{proof}[定理\ref{topo:petersen}の証明]
+各リンクが Petersen であると仮定し，補題\ref{topo:local-petersen}による
+頂点 $i$ の one-factorization を $\mathcal F_i$ とする．
+$\mathcal F_i$ と $\mathcal F_j$ は $N_{ij}$ を共有する．
+ラベル $p$ を固定し，$\mathcal F=\mathcal F_p$ と置くと，
+補題\ref{topo:factorizations}より，各 $j\ne p$ に対し
+\[
+ \mathcal F_j=\mathcal F\quad\text{又は}\quad
+ \mathcal F_j=(pj)\mathcal F
+\]
+である．ここで $(pj)$ は両端交換の置換である．
+
+ある $a$ について $\mathcal F_a=(pa)\mathcal F\ne\mathcal F$ だったとする．
+$b\ne p,a$ を取る．もし $\mathcal F_b=\mathcal F$ なら，
+$\mathcal F_a\cap\mathcal F_b$ の唯一の完全マッチングは $pa$ を含み，
+$ab$ を含めないので，$N_{ab}$ の存在に矛盾する．
+残る場合は $\mathcal F_b=(pb)\mathcal F$ である．
+$N_{ab}$ を $(pa)$ で引き戻したものは，$\mathcal F$ に属し $pb$ を含むため，
+ある残りの三ラベル $c,e,f$ を使って
+\[
+ N=\{pb,ac,ef\}
+\]
+と書ける．一方 $N_{ab}\in(pb)\mathcal F$ から
+\[
+ (pb)(pa)N=\{pa,bc,ef\}\in\mathcal F
+\]
+も従う．これは $N$ と異なるのに辺 $ef$ を共有するので矛盾である．
+したがって全ての $\mathcal F_i$ は同一である．
+逆向きは既に示した．六個という数とラベル置換の下での一意性は
+補題\ref{topo:factorizations}から従う．
+\end{proof}
+
+この同時 Petersen 化は，六次の場合の全ての core の\emph{位相的なリンク}を統一する．
+それだけで格子付きファン，integral-affine atlas，あるいは対応する
+シンプレクティックな core の同定を与えるわけではない．

@@ -1,0 +1,81 @@
+% v9 module: place after four_puncture_rigidity.tex.
+% Provisional preceding label: q9:rigidity.
+\section{混合五次の全分母障害と現行 SNC 構成の分類}
+\label{hd9:section}
+
+共有 annulus の分母剛性により，混合五次の大域障害から
+全 branch denominators が一であるという仮定を除ける．
+plane--plane branches の分母は一と結論する必要がなく，
+その寄与が分岐係数の総和で相殺されることを用いる．
+
+\begin{theorem}[混合五次の高分母を含む大域障害]\label{hd9:mixed-no-go}
+分割 $(1,1,1,2)$ に対し，現在の proportional-curvature SNC core models，
+四つの同時 matroidal quartet systems のいずれか，既存の branch graph，
+および標準 coarse matroidal cones を用いる．追加の branch singularities を入れない場合，
+branch denominators を任意の正整数に許しても，個別の core charts は
+大域作用適合 matroidal atlas へ接続できない．
+\end{theorem}
+
+\begin{proof}
+三つの plane--quadric double curves は，plane 側で conic，quadric 側で $(1,1)$ curve である．
+各々は四 punctures と一つの内部 annulus を持つので，
+命題~\ref{q9:rigidity} により，その六本の共有 branches の分母は全て一となる．
+三本の plane--plane branches の分母は，この段階では任意のままとする．
+
+分岐係数 \eqref{mg8:defect} を一つの core の全 vertices で合計すると，一般の分母について
+\begin{equation}\label{hd9:general-defect-budget}
+ \sum_v\mathfrak d_v
+ =\sum_v\bigl(\kappa_v-\deg_{\rm int}(v)\bigr)q_v
+ -\sum_{v\to w\,\mathrm{crossing}}p_{v\to w}
+\end{equation}
+となる．内部 edge の二端では同じ normal circle を使い，
+両向きに足した寄与が $-(q_A+q_B)$ になることを用いた．
+crossing の寄与は各頂点では相手端の numerator であり，
+全頂点の和で directed edges の添字を入れ替えると右辺の和となる．
+
+mixed plane の $K_4$ fan は全 vertices で $\kappa=-1$ である．
+line component の三 basins はその曲線の全体を尽くすので，自己交点一の面積式から
+$\sum p=-q$ となり，その vertex の \eqref{hd9:general-defect-budget} への寄与は
+$-q-\sum p=0$ である．従って line の分母を一とする必要はない．
+conic の二分母は一であり，annular unimodularity から $P_A+P_B=1-4=-3$ なので，
+その寄与は $-2(1+1)-(-3)=-1$ となる．
+
+quadric の $K_{3,3}$ fan では $\kappa=0$ である．各 $(1,1)$ component について
+$q_A=q_B=1$，$P'_A+P'_B=1-2=-1$ なので，寄与は $-(1+1)-(-1)=-1$ である．
+従って全四 cores の係数総和は
+\[
+ 3(-1)+3(-1)=-6.
+\]
+一方，大域 atlas が存在すれば，補題~\ref{mg8:invariance} によって共有 branch の
+対向する二端の係数は相殺し，総和は零になる．矛盾する．
+\end{proof}
+
+\begin{remark}[局所算術解と共有曲線の接着]
+\label{hd9:node-budget}
+一つの annulus では $q_A=1,q_B=3$ を持つ整数解が存在する．
+例えば $e=4$ で $(P_A,P_B)=(-1,-8)$，$e=2$ で $(P'_A,P'_B)=(0,-5)$ とすれば，
+両側それぞれの determinant は一となる．しかし external node 数の和は
+$10-2/3=28/3$ となり，整数 clutching と両立しない．
+この例は局所整数式と共有曲線全体の接着条件を区別するために有用である．
+crossing faces の条件まで満たす局所 chart の例であるとは主張しない．
+\end{remark}
+
+\begin{corollary}[現行 SNC 構成の全分母分類]\label{hd9:classification}
+$d\ge5$，$d=\sum_{i=1}^ke_i$，$k\ge3$ の次数分割を考える．
+現在の proportional-curvature SNC cores，既存の branch graph，
+標準 coarse matroidal cones を保ち，追加の branch singularities を入れない範囲では，
+任意の正の branch denominators を許しても，大域作用適合 matroidal atlas が存在する
+次数分割は，全平面五次と全平面六次に限る．
+\end{corollary}
+
+\begin{proof}
+存在方向は五次・六次の構成済みの denominator-one atlases による．
+七次以上と六次の混合分割に対する命題~\ref{trop:partition-obstruction}，
+五次の $(1,1,3),(1,2,2)$ に対する定理~\ref{q5:classification} の
+局所 link および同時 link の障害は分母によらない．
+唯一残る $(1,1,1,2)$ を定理~\ref{hd9:mixed-no-go} で排除する．
+\end{proof}
+
+本系は，指定された SNC construction の全分母を扱う．
+core surgery，内部 fan の分割，orbifold lattice，追加の branch singularities，
+または異なる構成から得る全ての Lagrangian fibrations の分類ではない．

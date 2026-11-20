@@ -1,0 +1,239 @@
+% v17 current exposition; original v16 source retained for verification.
+\section{\texorpdfstring{$K_4$}{K4} 型 support における低 puncture の流れと例外辺}
+\label{kh16:section}
+
+高分母 support が $I=\{0,1,2,3\}$ 上の $K_4$ であり，
+第五の core $4$ は全低分母である場合を考える．
+三高分母 core の正符号 graph が完全マッチングであるとは仮定しない．
+ここでは，hub に接する四辺の node と対向係数だけから，
+六本の高辺の接着を二・四・六例外に帰着する．続く各節で三場合を全て排除する．
+
+\subsection{通常辺と例外辺，および node による流れの発散}
+
+\begin{definition}\label{kh16:notation}
+$i\ne j\in I$ について
+\[
+ R_{ij}=p^i_{4j},\qquad X_{ij}=p^i_{j4},\qquad
+ V_{ij}=p^4_{ij},\qquad N_{ij}=n_{i4;j}=1-R_{ij}-V_{ij}
+\]
+と置き，対角成分を零とする．各高辺では $R_{ij}X_{ij}=q_{ij}-1$ である．
+共通低 puncture $4$ の整数 clutching により，
+補題~\ref{dg15:hub-balance} の三択を reverse entries に書けば，
+\begin{equation}\label{kh16:edge-options}
+ (R_{ij},R_{ji})=(u,-u),\quad
+ \{R_{ij},R_{ji}\}=\{1,q_{ij}-1\},\quad
+ \{R_{ij},R_{ji}\}=\{-1,-(q_{ij}-1)\}.
+\end{equation}
+第一の場合を\emph{通常辺}，第二・第三の場合をそれぞれ正・負の\emph{例外辺}と呼ぶ．
+これは $H$ の辺を低 puncture での接着に応じて分類するものであり，
+局所三高分母行列の符号型の分類とは異なる．
+\end{definition}
+
+\begin{lemma}[通常辺の reverse bound と流れの式]
+\label{kh16:flow}
+上記の $K_4$ 型において，通常辺の $u$ は $1\leq |u|\leq4$ を満たす．
+さらに各 core の行和，四辺 $i4$ の対向 $D$ の相殺，node 非負性から
+\begin{equation}\label{kh16:node-budget}
+ N_{ij}\geq0,\qquad \sum_{j\ne i}N_{ij}=5
+\end{equation}
+および
+\begin{equation}\label{kh16:divergence}
+ \sum_{j\ne i}(X_{ij}-R_{ji})=d_i,
+ \qquad d_i:=\sum_{j\ne i}N_{ji}-5
+\end{equation}
+を得る．例外辺の左辺への寄与は零であり，通常辺の寄与は
+\begin{equation}\label{kh16:edge-weight}
+ X_{ij}-R_{ji}
+ =\operatorname{sgn}(R_{ij})W_{ij},\qquad
+ W_{ij}:=\frac{q_{ij}-1}{|R_{ij}|}+|R_{ij}|>0
+\end{equation}
+である．通常辺を $R_{ij}>0$ の向きに向けると，式~\eqref{kh16:divergence} は
+この正の重み付き流れの発散を指定する．
+\end{lemma}
+
+\begin{proof}
+通常辺で $R_{ij}=u\geq5$ とすれば，$N_{ij}\geq0$ から
+$V_{ij}\leq1-u<0$ である．hub の pair product は $V_{ij}V_{ji}=0$ なので
+$V_{ji}=0$，従って $N_{ji}=1+u\geq6$ となる．
+一方，$R,V$ の行和はいずれも $-1$ だから
+$\sum_jN_{ij}=3-(-1)-(-1)=5$ である．これは矛盾であり，負の $u$ は標識交換で同じである．
+
+対向 $D$ の相殺は
+\[
+ \sum_{j\ne i}X_{ij}+\sum_{j\ne i}V_{ji}=-2
+\]
+と同値である．$V_{ji}=1-R_{ji}-N_{ji}$ を代入すると
+式~\eqref{kh16:divergence} になる．通常辺では
+$R_{ji}=-R_{ij}$，$X_{ij}=(q_{ij}-1)/R_{ij}$ であり，
+例外辺では $X_{ij}=R_{ji}$ なので，残る主張も従う．
+\end{proof}
+
+\begin{proposition}[例外辺数と，通常の橋の分母上界]
+\label{kh16:counts-and-bridges}
+例外辺数は二，四，六のいずれかである．
+通常辺だけからなる graph の橋 $ij$ は
+\begin{equation}\label{kh16:bridge-bound}
+ W_{ij}\leq10,\qquad q_{ij}\leq25
+\end{equation}
+を満たす．従って例外辺が四本なら，残る通常辺二本の分母はともに $25$ 以下である．
+その通常辺二本が端点を共有しないなら，さらに両方とも $q_{ij}\leq7$ である．
+\end{proposition}
+
+\begin{proof}
+四行の $R$ の和は $-4$ である．通常辺の両方向の和は零，
+正・負の例外辺の和はそれぞれ $q_{ij},-q_{ij}$ だから
+\begin{equation}\label{kh16:exception-balance}
+ \sum_{\text{正例外辺}}q_{ij}-\sum_{\text{負例外辺}}q_{ij}=-4.
+\end{equation}
+各高分母は奇数なので，例外辺数は偶数であり，零ではない．
+
+$\varnothing\ne S\subsetneq I$ とする．式~\eqref{kh16:node-budget} と $N_{ii}=0$ より
+\[
+ \sum_{i\in S}d_i\in
+ \begin{cases}
+ [-5,10],&|S|=1,\\
+ [-10,10],&|S|=2,\\
+ [-10,5],&|S|=3.
+ \end{cases}
+\]
+一頂点への流入は他の三行から高々 $15$，二頂点への流入は全四行から高々 $20$ であり，
+三頂点の場合は $\sum_i d_i=0$ と補集合を用いた．
+通常 graph の橋を一本除き，その一方の連結成分を $S$ とすれば，
+流れの式を $S$ 上で足した左辺は $\pm W_{ij}$ だけになる．従って $W_{ij}\leq10$ である．
+$u=|R_{ij}|\in\{1,2,3,4\}$ なので
+\[
+ q_{ij}=1+u(W_{ij}-u)\leq1+u(10-u)\leq25.
+\]
+通常辺が二本だけなら両方とも橋である．さらに二本が端点を共有しないなら，
+各辺の負の発散を持つ端点で $d_i=-W_{ij}\geq-5$ だから $W_{ij}\leq5$ となり，
+$q_{ij}\leq1+\max_{1\leq u\leq4}u(5-u)=7$ を得る．
+\end{proof}
+
+\subsection{二例外の場合の完全な分母制約}
+
+\begin{proposition}[二本の例外辺の分母]
+\label{kh16:two-exceptions}
+例外辺が二本なら，一本は正，一本は負であり，その分母の順序付き対は
+\begin{equation}\label{kh16:two-exception-pairs}
+ (q_+,q_-)=(3,7)\quad\text{または}\quad(5,9)
+\end{equation}
+に限られる．
+\end{proposition}
+
+\begin{proof}
+式~\eqref{kh16:exception-balance} と $q_{ij}\geq3$ より，
+符号は正負一本ずつで，$q_-=q_++4$ である．
+$P=q_+-1$，$M=q_--1=P+4$ と置くと，$P,M$ は正の偶数で $M\geq6$ である．
+負例外辺の大きい reverse $-M$ を持つ頂点を $v$ とする．
+
+正例外辺が $v$ に接しないなら，$v$ の他の二つの reverse は通常辺で絶対値四以下だから，
+行和から $M\leq9$，偶数性から $M\leq8$ である．
+正例外辺が接し，$v$ での reverse が $1$ なら，残る通常 reverse を $u$ として
+$-M+1+u=-1$，従って $M=u+2\leq6$ となる．
+
+最後に，正例外辺も $v$ で大きい reverse $P$ を持つ場合を排除する．
+第三の辺は通常辺で，行和によりその reverse は $3$ である．
+正例外辺では $V$ の $v$ からの成分は $1-P-N\leq-1$ なので，相手からの成分は零である．
+負例外辺ではその成分は $1+M-N\geq M-4\geq2$，
+通常辺でも $1-3-N\leq-2$ なので，同じく相手からの成分は零である．
+従って $V$ の第 $v$ 列は零であり，対向 $D$ の相殺は
+$\sum_j X_{vj}=-2$ を要求する．ところが実際の和は
+\[
+ 1-1+\frac{q_{v\ell}-1}{3}>0
+\]
+である．これは矛盾する．
+以上より常に $M\leq8$，従って $P\in\{2,4\}$ となり，主張が従う．
+\end{proof}
+
+\subsection{全六辺が例外となる場合の排除}
+
+\begin{theorem}[全例外の $K_4$ は不可能]
+\label{kh16:not-all-exceptional}
+$K_4$ 型高分母 support の六辺がすべて例外辺となることはない．
+この排除には分母上限，三高分母 core の分類，正の weights の条件を用いない．
+\end{theorem}
+
+\begin{proof}
+各例外辺の reverse は $\pm1$ と $\pm(q-1)$ であり，$q-1$ は正の偶数である．
+単位 reverse の端から大きい reverse の端へ辺を向ける．
+各行の和が奇数 $-1$ なので，単位 reverse の本数は各頂点で奇数である．
+六本の向き付き辺の出次数は，標識交換により $(3,1,1,1)$ となる．
+頂点 $0$ を source とすれば，他の三頂点は有向三角形をなす．
+
+source の三つの単位 reverse の符号は一正二負である．
+他の各頂点では，大きい reverse が二つと単位 reverse が一つあり，
+行和 $-1$ から二つの大きい reverse の符号は反対でなければならない．
+正の source 辺を $01$ とし，残る標識を交換すると，
+ある正の偶数 $A,C,D\geq2$ を用いて全 reverse 行列は
+\begin{equation}\label{kh16:all-exception-R}
+ R=\begin{pmatrix}
+ 0&1&-1&-1\\
+ A&0&1&-A-2\\
+ -D-2&D&0&1\\
+ -C&-1&C&0
+ \end{pmatrix}
+\end{equation}
+となる．例えば，$1\to2\to3\to1$ を単位端から大きい端への三角形とすると，
+その辺の符号は順に正，正，負であり，三つの非 source 行の和が
+式~\eqref{kh16:all-exception-R} の係数差を与える．
+
+全辺が例外なら，式~\eqref{kh16:divergence} の左辺は零である．
+従って $N$ は行和・列和がともに五の非負整数行列である．
+三つの正例外辺 $01,12,23$ では，大きい reverse の端の $V$ 成分が厳密に負なので，
+hub の pair products により $V_{01}=V_{12}=V_{23}=0$ となる．
+$V$ の行和と $N=\boldsymbol{1}_{i\ne j}-R-V$ の列和を解くと，二整数 $u,w$ により
+\begin{equation}\label{kh16:all-exception-V}
+ V=\begin{pmatrix}
+ 0&0&u&-1-u\\
+ -A-2-u&0&0&A+1+u\\
+ D+3-w&w-D-4&0&0\\
+ C-1+w+u&2-w&-C-2-u&0
+ \end{pmatrix}
+\end{equation}
+と書ける．対応する node 行列は
+\begin{equation}\label{kh16:all-exception-N}
+ N=\begin{pmatrix}
+ 0&0&2-u&3+u\\
+ 3+u&0&0&2-u\\
+ w&5-w&0&0\\
+ 2-w-u&w&3+u&0
+ \end{pmatrix}.
+\end{equation}
+従って
+\begin{equation}\label{kh16:uw-range}
+ -3\leq u\leq2,\qquad0\leq w\leq5,\qquad u+w\leq2.
+\end{equation}
+残る三つの hub pair products は
+\begin{equation}\label{kh16:three-products}
+ \begin{split}
+ u(D+3-w)&=0,\\
+ (-1-u)(C-1+w+u)&=0,\\
+ (A+1+u)(2-w)&=0.
+ \end{split}
+\end{equation}
+
+$u\ne0$ なら第一式と $D\geq2,w\leq5$ から $D=2,w=5$ となり，
+式~\eqref{kh16:uw-range} から $u=-3$ である．第三式は $A=2$ を要求するが，
+第二式は $2(C+1)=0$ となり矛盾する．
+$u=0$ なら第三式から $w=2$ となり，第二式は $-(C+1)=0$ となる．
+従って全ての場合が排除される．
+\end{proof}
+
+\begin{corollary}[$K_4$ の接着に対する中間の二場合]
+\label{kh16:remaining-cases}
+$K_4$ 型高分母 support が残るなら，例外辺は二本または四本である．
+二本の場合，正・負の例外分母は $(3,7)$ または $(5,9)$ であり，
+通常四辺の graph は $C_4$ または三角形に葉辺を一本付けた形である．
+四本の場合，通常二辺の分母は二十五以下であり，二辺が端点を共有しないなら七以下である．
+これらは必要条件であり，いずれの整数接着の存在も主張しない．
+\end{corollary}
+
+\begin{remark}[有限化の前に残る自由度]
+通常辺上の流れは，発散を指定した有限 graph の流れである．
+二例外の場合の通常 graph は連結で第一 Betti 数一を持つので，
+固定した node 行列と通常 reverse に対して，重みの自由度は高々一つの cycle circulation である．
+これは三高分母 core の残る pair equations と高辺の接着を解いたことを意味しない．
+四例外の場合の通常分母上界だけでは，例外分母の上界は得られない．
+続く定理~\ref{kt17:no-two-exceptions} は二例外を hub の流れだけで排除し，
+定理~\ref{kf17:no-four-exceptions} は例外分母の無限方向を有限型にまとめて四例外を排除する．
+\end{remark}

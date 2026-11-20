@@ -1,0 +1,155 @@
+% v12 staging module: complete fixed-denominator factorization and resonances.
+
+\section{固定した分母の partner と二つの無限共鳴}
+\label{fp12:section}
+
+二高分母の正局所模型で，一方の分母を固定したときの相手分母を調べる．
+標準形の二つの高分母の役割は対称ではないため，固定した分母が
+canonical な $A$ 側にある場合と $B$ 側にある場合を両方調べる必要がある．
+
+\begin{theorem}[固定分母の有限な factorization と共鳴]
+\label{fp12:partner-structure}
+奇整数 $n>1$ に対し，正の整数局所模型 $(n,m,1,1)$ を持つ奇整数 $m>1$ の集合を
+$\mathcal P(n)$ とする．この集合は $n\notin\{7,13\}$ なら有限である．
+$n=7,13$ の場合にはそれぞれ
+\[
+ \{6k+1:k\geq1\}\subset\mathcal P(7),\qquad
+ \{12k+1:k\geq1\}\subset\mathcal P(13)
+\]
+となり，これらの表示された無限集合を除く partners は有限個である．
+従って $\mathcal P(n)$ が無限であることと $n\in\{7,13\}$ は同値である．
+全ての有限な候補も，以下の二方向の正約数計算で上限なしに列挙できる．
+\end{theorem}
+
+\begin{proof}
+正の二高分母標準形を
+\[
+ x=\frac{a-1}{r},\quad y=\frac{b-1}{r+1},\quad
+ u=-s<0<v=z,\quad
+ S=\frac{a-1}{s},\quad T=\frac{b-1}{z},
+\]
+\[
+ A=a+x-s,\qquad B=b-y+z,\qquad AB=ab-1
+\]
+と書く．
+
+\paragraph{固定分母が canonical な $A$ 側にある場合．}
+$a=n$ とし，まず正約数 $r,s\mid n-1$ を選ぶ．
+\[
+ M=1+rs,\qquad C_A=(r+1)(s-x-1)
+\]
+と置けば，pair product は
+\begin{equation}\label{fp12:A-factorization}
+ z\{A(r+1)-MT\}=C_A
+\end{equation}
+と同値である．$C_A\ne0$ なら $z$ は $|C_A|$ の正約数なので，
+\[
+ T=\frac{A(r+1)-C_A/z}{M},\qquad b=zT+1
+\]
+を計算し，$T\in\mathbb Z_{>0}$，$r+1\mid zT$，$b$ が奇数という条件を検査すればよい．
+この計算は有限である．
+
+$C_A=0$ なら $s=x+1\geq2$ であり，$s\mid a-1=r(s-1)$ より $r=ts$，$t\geq1$ となる．
+このとき
+\[
+ A=a-1=M-r-1,\qquad M=ts^2+1.
+\]
+式~\eqref{fp12:A-factorization} から $M\mid A(r+1)$，従って $M\mid(r+1)^2$ である．
+しかし
+\[
+ (r+1)^2=tM+\{t(2s-1)+1\},\qquad
+ 0<t(2s-1)+1<M,
+\]
+最後の差が $t(s-1)^2>0$ なので矛盾する．
+従ってこの向きに無限の枝はない．
+
+\paragraph{固定分母が canonical な $B$ 側にある場合．}
+$b=n$ とし，$r+1\mid n-1$，$r\geq1$ と正約数 $z\mid n-1$ を選ぶ．
+\[
+ N=1+(r+1)z,\qquad C_B=r(y-z-1)
+\]
+と置けば，pair product は
+\begin{equation}\label{fp12:B-factorization}
+ s\{NS-rB\}=C_B
+\end{equation}
+と同値である．$C_B\ne0$ なら $s$ は $|C_B|$ の正約数であり，
+\[
+ S=\frac{rB+C_B/s}{N},\qquad a=sS+1
+\]
+に対して $S\in\mathbb Z_{>0}$，$r\mid sS$，$a$ が奇数という条件を検査する．
+この計算も有限である．
+
+残る $C_B=0$ は $y=z+1$ と同値である．
+$z\mid b-1=(r+1)(z+1)$ より $r+1=tz$，$t\geq1$ であり，$tz\geq2$ である．
+\[
+ b=tz(z+1)+1,\qquad N=tz^2+1,\qquad B=N+r.
+\]
+$S=rB/N$ の整数性は $N\mid r^2$，すなわち
+\begin{equation}\label{fp12:resonance-divisibility}
+ tz^2+1\mid t(2z+1)-1
+\end{equation}
+と同値である．$z\geq3$ なら右辺は正で左辺より小さいため不可能である．
+$z=1$ なら $t\geq2$ であり，$t+1\mid3t-1$ は $t+1\mid4$ と同値なので $t=3$ となる．
+$z=2$ なら $4t+1\mid5t-1$ である．$t=1$ は不可能であり，$t\geq2$ では
+\[
+ 4t+1\leq5t-1<2(4t+1)
+\]
+なので $t=2$ に限られる．従って，共鳴する固定データはちょうど
+\[
+ (b,r,z,S,T)=(7,2,1,3,6),\qquad (13,3,2,4,6)
+\]
+である．
+
+前者では $r\mid sS$ により $s=2k$，後者では $s=3k$ となる．
+従って全ての共鳴模型は，それぞれ
+\[
+ \begin{array}{c|cccccc}
+  b&a&r&s&z&S&T\\\hline
+  7&6k+1&2&2k&1&3&6\\
+  13&12k+1&3&3k&2&4&6
+ \end{array}\qquad(k\geq1)
+\]
+にちょうど一致する．どちらも標準形の全整数条件を満たし，
+$u=-s<0<v=z$ なので正の weights を持つ．
+各固定分母の他の全枝は先の有限計算に含まれる．
+これは $b=7,13$ の全ての局所模型がこの二族に入るという主張ではなく，
+有限 factorization の右辺が零となる枝を全て分類したものである．
+\end{proof}
+
+\begin{proposition}[三と五の全 partners と負の低分母 entry]
+\label{fp12:small-partners}
+分母に上限を置かずに
+\[
+ \mathcal P(3)=\{7,11\},\qquad
+ \mathcal P(5)=\{13,21,31,37\}
+\]
+である．これらの小さい分母は canonical な $A$ 側にしか現れず，
+対応する標準形の全データは次の表で尽きる．
+\begin{center}
+\small
+\begin{tabular}{ccccccc}
+ $a$&$b$&$r$&$s$&$z$&$(S,T)$&$d$\\\hline
+ 3&7&1&1&1&$(2,6)$&$-5$\\
+ 3&11&1&1&2&$(2,5)$&$-4$\\
+ 5&13&1&1&1&$(4,12)$&$-9$\\
+ 5&21&1&1&2&$(4,10)$&$-7$\\
+ 5&31&1&2&6&$(2,5)$&$-4$\\
+ 5&37&1&1&4&$(4,9)$&$-6$
+\end{tabular}
+\end{center}
+従って，小さい分母三の row から低分母へ向かう負の entry は常に $-1$ であり，
+分母五の row では $-1$ または $-2$ に限られる．
+\end{proposition}
+
+\begin{proof}
+定理~\ref{fp12:partner-structure} の有限計算を両方向で行う．
+$a=3$ の $A$ 側では $r,s\in\{1,2\}$，$a=5$ では $r,s\in\{1,2,4\}$ を調べるだけである．
+$T$ の正整数性と $r+1\mid zT$ を満たすものは，三の場合に
+$(r,s,z)=(1,1,1),(1,1,2)$，五の場合に
+$(1,1,1),(1,1,2),(1,1,4),(1,2,6)$ となる．
+$B$ 側では，三の場合に $r+1=2$，五の場合に $r+1\in\{2,4\}$ であるが，
+式~\eqref{fp12:B-factorization} の候補で正整数 $S$ と $r\mid sS$ を同時に満たすものはない．
+表の全模型は正の weights を持つ．標準形の負の低分母 entry が $-s$ であることから，
+最後の主張も従う．これは $b$ の探索上限を用いた列挙ではなく，
+固定分母に対して完全であることが証明された正約数計算である．
+\end{proof}

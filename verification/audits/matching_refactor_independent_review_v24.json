@@ -1,0 +1,115 @@
+{
+  "version": "v24",
+  "status": "PASS",
+  "passed": true,
+  "reviewer": "g514_v24",
+  "issues": [],
+  "reviewed_at_utc": "2026-10-27T20:32:40.158016+00:00",
+  "scope": "Independent mathematical and reference review of the three-high matching refactor. The replacement proof and all unchanged hypotheses were read directly. No external peer review or full re-audit of all inherited theorems is claimed.",
+  "source_sha256": {
+    "paper/three_high_matching_v24.tex": "02dd5f880bcda5b3cfe70195ce618d7cff4f3b50b6e1f567d4600dfff14f6631",
+    "paper/three_high_sign_reduction_v24.tex": "4d84d24891852a3cb0d58b86e4ee66b7d6b4390ac3a44e1d997db5d8941f35d5",
+    "paper/four_ray_positive_graph_v24.tex": "6c04d5f300f48ac0880cc0e1263148f95173a24d9fe44c744a69f81d52bac682",
+    "paper/three_high_matching_v18.tex": "5aa8073709f953d9e25baa3519b1e3d060667d2c65428c16e32b6b8dffa02819",
+    "paper/three_high_sign_reduction_v18.tex": "8436ab48dfddcb18e258307f95449f18d0706ec059cf002b2393df9a04304907"
+  },
+  "mathematical_checks": [
+    {
+      "claim": "fg24:no-isolated applies to the three-high triangle",
+      "passed": true,
+      "reason": "Exactly one unit denominator and three denominators greater than one make all six pair products strictly positive; integer row/pair data and positive weights are precisely the isolated-vertex lemma hypotheses."
+    },
+    {
+      "claim": "Unweighted classification is preserved",
+      "passed": true,
+      "reason": "Both integer path exclusions are byte-identical. The theorem still permits a triangle without positive weights; only its positive-weight impossibility proof is replaced."
+    },
+    {
+      "claim": "No circular proof dependence",
+      "passed": true,
+      "reason": "The isolated-vertex proof uses row sums, pair products, integer gaps and the already established cycle-gain criterion, not the three-high matching theorem. A later explanatory remark referring back to matching is not a proof premise."
+    },
+    {
+      "claim": "Short replacement argument is complete",
+      "passed": true,
+      "reason": "At an isolated vertex h, c_i=-p_hi>0 and each sum of two integer gaps equals one. Selecting a nonpositive gap at every remaining vertex produces a positive directed cycle whose gain is at least one, contrary to positive weights."
+    },
+    {
+      "claim": "Matching sufficiency and counterexample are unchanged",
+      "passed": true,
+      "reason": "The two independent open intervals for rational weight ratios and the explicit unweighted triangle example remain unchanged. The obsolete temporary-variable warning was removed with its now absent variables."
+    },
+    {
+      "claim": "Canonical Schur section unchanged",
+      "passed": true,
+      "reason": "Apart from header and matching module filename, the entire sign-reduction source equals the inherited v18 source."
+    }
+  ],
+  "removed_labels": [
+    "mh18:tri-e1",
+    "mh18:tri-e2",
+    "mh18:tri-e3",
+    "mh18:triangle-alpha-beta",
+    "mh18:triangle-gap-identity"
+  ],
+  "added_matching_labels": [],
+  "external_references_to_removed_labels": [],
+  "historical_self_references_retained_only_in_old_source": [
+    {
+      "file": "paper/three_high_matching_v18.tex",
+      "line": 106,
+      "label": "mh18:triangle-alpha-beta"
+    },
+    {
+      "file": "paper/three_high_matching_v18.tex",
+      "line": 124,
+      "label": "mh18:tri-e1"
+    },
+    {
+      "file": "paper/three_high_matching_v18.tex",
+      "line": 125,
+      "label": "mh18:tri-e2"
+    },
+    {
+      "file": "paper/three_high_matching_v18.tex",
+      "line": 126,
+      "label": "mh18:tri-e3"
+    },
+    {
+      "file": "paper/three_high_matching_v18.tex",
+      "line": 136,
+      "label": "mh18:triangle-gap-identity"
+    },
+    {
+      "file": "paper/three_high_matching_v18.tex",
+      "line": 142,
+      "label": "mh18:tri-e1"
+    },
+    {
+      "file": "paper/three_high_matching_v18.tex",
+      "line": 142,
+      "label": "mh18:tri-e3"
+    },
+    {
+      "file": "paper/three_high_matching_v18.tex",
+      "line": 143,
+      "label": "mh18:triangle-gap-identity"
+    }
+  ],
+  "retained_matching_labels": [
+    "mh18:matching",
+    "mh18:path-polynomial",
+    "mh18:positivity-essential",
+    "mh18:section"
+  ],
+  "all_refactor_references_have_existing_label_definitions": true,
+  "planned_entry_import_order_valid": true,
+  "entry_integration_note": "The final v24 arithmetic entry has now been installed and directly checked: four_ray_positive_graph_v24 precedes three_high_sign_reduction_v24, which imports three_high_matching_v24. The old matching source is inactive. Detailed all-active-source checks are recorded separately in arithmetic_current_source_review_v24.json.",
+  "prepared_entry_sha256": "719db262065622b412361d03b8f14a8a3db30b23b9857da17a3bd47619eca405",
+  "sources_modified_by_reviewer": false,
+  "external_peer_review": false,
+  "proof_assistant_formalization": false,
+  "final_entry_import_order_valid": true,
+  "final_entry_sha256": "67b29e3ce62df02809eec7ab6fa968a5870bf073c825ad9296e66d55d0476d88",
+  "final_entry_reviewed_at_utc": "2026-10-27T20:42:40.413146+00:00"
+}

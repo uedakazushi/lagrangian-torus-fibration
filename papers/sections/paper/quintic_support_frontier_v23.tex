@@ -1,0 +1,85 @@
+% v23: complete G5_15 obstruction leaves three dense support types.
+\subsection{三型への帰着と同じ core に接する二本の単位枝}
+\label{sf23:section}\label{sf22:section}\label{sf21:section}\label{sf20:section}
+
+\begin{corollary}[非空支持の最小次数と三点連結性]
+\label{sf23:no-leaves}\label{sf22:no-leaves}\label{sf21:no-leaves}\label{sf20:no-leaves}
+正の局所整数 charts，marked puncture の整数 clutching，対向 $D$ 相殺，
+および非負 node と各辺の node 総数五を満たす標準五次 $K_5$ 接着データを考える．
+高分母支持 $H=\{ij:q_{ij}>1\}$ が非空なら，五頂点全てを使い，
+\[
+ \min\deg(H)\ge3,\qquad |E(H)|\ge8,\qquad b_1(H)\ge4
+\]
+が成り立つ．さらに $H$ は三点連結であり，二つ以下の任意の頂点を削除しても連結である．
+補 graph $K_5\setminus H$ は高々二辺の matching である．
+\end{corollary}
+
+\begin{proof}
+全低 core の伝播，木と閉路の障害，二価二頂点の三角形，葉付き四角形，
+$K_{2,3}$，diamond，二葉三角形，四使用頂点 $K_4$ の障害を適用する．
+さらに定理~\ref{hs18:no-house}，\ref{gten18:no-support}，
+\ref{lh18:no-K4-leaf}，\ref{g719:no-G5-7}，\ref{dl19:no-G5-9}，
+\ref{g51120:no-support} により，必要候補は従前の五型
+$G_{5,13},G_{5,14},G_{5,15},G_{5,16},G_{5,17}$ に限られる．
+Book $G_{5,13}$ は定理~\ref{bc22:book-obstruction} により排除される．
+$G_{5,15}$ は通常型の定理~\ref{g51523:no-ordinary}，
+負例外の定理~\ref{ne23:no-negative-exception}，および既存の正例外排除
+（定理~\ref{g51521:reduction}）を合わせて排除される．
+残る三型は，$K_5$ から二辺以下の matching を除いたものである．
+従って各頂点の次数は三以上であり，辺数と $b_1$ の主張も従う．
+
+三点連結性を確認する．任意の二頂点を削除した後には，三頂点上の完全 graph から
+高々一辺を除いた graph が残る．matching の二辺を三頂点上に同時に含めることはできないためである．
+この graph は連結である．一頂点または零頂点の削除でも連結性は保たれる．
+\end{proof}
+
+\begin{corollary}[三型・二十六標識]
+\label{sf23:remaining-support}\label{sf22:remaining-support}\label{sf21:remaining-support}\label{sf20:remaining-support}
+前系の仮定の下で，非空高分母支持の必要候補は次の三型に限られる．
+補 graph $\overline H=K_5\setminus H$ の表示では孤立頂点を省略する．
+\begin{center}\small
+\begin{tabular}{crcrcr}
+型&$|E|$&降順次数列&$b_1$&$\overline H$&標識付き個数\\\hline
+$G_{5,14}$&8&$(4,3,3,3,3)$&4&$2K_2$&15\\
+$G_{5,16}$&9&$(4,4,4,3,3)$&5&$K_2$&10\\
+$G_{5,17}$&10&$(4,4,4,4,4)$&6&$\varnothing$&1
+\end{tabular}
+\end{center}
+識別子は従前のものを保ち，欠番を詰めない．これらは必要条件を通過した
+graph の個数であり，整数接着，作用 atlas，幾何的非同型類の存在数ではない．
+\end{corollary}
+
+\begin{proof}
+二辺の matching は，孤立する補頂点を五通りに選び，残る四頂点の三つの完全 matching を選ぶため
+$5\cdot3=15$ 標識となる．一辺の matching は $\binom52=10$ 通り，空 matching は一通りであり，
+和は $15+10+1=26$ である．
+\nolinkurl{verify_support_agenda_v23.py} は，全 $2^{10}=1024$ 標識付き部分 graph を
+旧 graph 実装を import せずに列挙する．現行三型の自己同型群，最小次数，
+任意の二頂点削除後の連結性を確認し，第22版の五十六標識との差分が
+$G_{5,15}$ の三十標識ちょうどであることを記録する．
+算術障害は前系の証明を用い，graph 検査で算術証明を置き換えない．
+\end{proof}
+
+\begin{corollary}[隣接する二本の単位分母からの伝播]
+\label{sf23:adjacent-unit-branches}\label{sf22:three-unit-branches}
+同じ仮定の下で，一つの core に接する相異なる二本の branches がともに分母一なら，
+全ての分母は一である．同値に，一つの core の高分母 ray が高々二本なら全分母一である．
+また，十本の相異なる branches のうち三本以上が分母一なら，全分母一である．
+\end{corollary}
+
+\begin{proof}
+非空高分母支持の最小次数は三以上である．一つの core に二本の単位枝が接すれば
+その高次数は二以下となり，矛盾する．三本の単位枝があれば，五頂点上では
+その中の二本が必ず頂点を共有するため，同じ結論になる．
+二本の互いに素な単位枝だけでは，残る $G_{5,14}$ を排除していない．
+\end{proof}
+
+\paragraph{残る研究課題．}
+Book と $G_{5,15}$ は解決済みであり，専用の大分母探索や四高 core の完成は課題から外す．
+第三 core の単一 pair による尺度の線形復元と共鳴分類を，
+二本の互いに素な低辺を持つ $G_{5,14}$ へ移すことが具体的な入口となる．
+四高 core に三高 matching 定理を適用せず，必要な pair と node 条件から先に比較する．
+三高係数の同時非負性には新たな無上界排除領域が得られたが，
+一般の非対称問題は残る．三型の整数接着と幾何的実現，一般の五次分母剛性は未解決である．
+指定した cores，cones，marked punctures の接着問題の結論を，
+任意の Lagrangian torus fibration の不存在へ拡張してはいない．

@@ -1,0 +1,133 @@
+% v12 staging module. Depends on quintic_two_high_defect_v12.tex.
+
+\section{低分母間の最小 entry と分母の下降}
+\label{ml12:section}
+
+二高分母の正の標準形では，低分母間の二つの entries のうち一方が零で，他方が負である．
+この非零 entry が $-1$ の場合には，二つの高分母の大小と係数 $D$ の符号が完全に対応する．
+この結果は，非零 entry がさらに小さい場合へ拡張しない．
+
+\begin{lemma}[低分母間 entry の符号による二分]
+\label{ml12:dichotomy}
+定理~\ref{td12:one-negative} の標準形と補助変数を用いる．
+非零の低分母間 entry を $d=S-T-1<0$ とすると
+\[
+ \alpha,\beta<0\quad\Longleftrightarrow\quad d=-1.
+\]
+他方，$\alpha,\beta>0$ なら
+\[
+ rT>(r+1)S,\qquad d\leq-3.
+\]
+従って，この標準形の非零の低分母間 entry が $-2$ となることはない．
+\end{lemma}
+
+\begin{proof}
+$\alpha,\beta<0$ のとき
+\[
+ \alpha=-c,\quad\beta=-e,\quad h=-H,\quad k=-J
+\]
+と書く．$c,e>0$，$1\leq H\leq r-1$，$1\leq J\leq r$ であり，
+$S\leq T$ より $J\leq H+1$ である．
+式~\eqref{td12:sign-ratio} は，$c,e$ の大小によらず
+\[
+ Ece=e-c+1,\qquad E=\frac{(r+1)^2}{J}-\frac{r^2}{H}
+\]
+を与える．従って $Ec\leq1$ である．
+$J\leq H$ なら $E\geq(2r+1)/H>2$ となって矛盾するため，
+$J=H+1$，すなわち $S=T$，$d=-1$ となる．
+この段階では $E$ が正であるとは仮定していない．
+
+$\alpha,\beta>0$ なら $S\geq r+1$，$T\geq r+2$ である．
+\[
+ R=r(r+1),\qquad F=(r+1)^2S-r^2T-R
+\]
+と置くと，式~\eqref{td12:low-entry-product} は
+\[
+ 0=R+s(r+1)(S-r)+z\{sF-r(T-r-1)\}
+\]
+となる．もし $rT\leq(r+1)S$ なら
+\[
+ F-r(T-r-1)=(r+1)\{(r+1)S-rT\}\geq0.
+\]
+$T\geq r+2$ より $F>0$ であり，$s\geq1$ から最後の波括弧も非負となるので矛盾する．
+従って $r(T-S)>S>r$，すなわち $T-S\geq2$，$d\leq-3$ となる．
+$\alpha,\beta$ は非零で同符号であるため，これで二分と同値が従う．
+\end{proof}
+
+\begin{theorem}[最小の低分母間 entry における分母と係数の符号]
+\label{ml12:denominator-descent}
+二高分母 $(a,b,1,1)$ の正の整数局所模型で，非零の低分母間 entry が $-1$ であるとする．
+このとき $a\ne b$ であり，大きい分母の係数 $D$ は負，小さい分母の係数は正である．
+標準形の標識では
+\[
+ (a-b)D_A<0,\qquad (a-b)D_B>0.
+\]
+この結論にも分母の上限や奇数性は必要ない．
+\end{theorem}
+
+\begin{proof}
+補題~\ref{ml12:dichotomy} より $\alpha,\beta<0$ であり，
+\[
+ \alpha=-c,\quad \beta=-e,\quad h=-H,\quad k=-H-1,
+ \quad w=S=T=r-H\geq1
+\]
+と書ける．前証明の式は
+\begin{equation}\label{ml12:E-equation}
+ Ece=e-c+1,\qquad
+ E=1-\frac{w^2}{H(H+1)}
+\end{equation}
+となる．また
+\begin{equation}\label{ml12:s-z}
+ s=c+\frac{cw}{H},\qquad z=e+\frac{ew}{H+1},\qquad
+ a=sw+1,\quad b=zw+1.
+\end{equation}
+$H^2<H(H+1)<(H+1)^2$ なので $E=0$ は不可能である．
+
+$w\geq H+1$ なら $E<0$ である．式~\eqref{ml12:E-equation} から
+$c\geq e+2$，従って $\delta=e-c\leq-2$ となる．
+式~\eqref{ml12:s-z} より $s>z$，従って $a>b$ である．
+$\alpha<0$ と $1+a\delta<0$ により
+$\alpha L=1+a\delta$ は $L>0$ を与えるので $D_A=-H-L<0$ となる．
+さらに $j=c-e\geq2$ と書けば
+\[
+ D_B
+ =j\left(w+\frac{w^2}{H}-1\right)+H+1+\frac{j-1}{c}>0.
+\]
+ここでは $a/c=w+w^2/H+1/c$ を
+$D_B=L+\delta+H+1$ に代入した．
+
+$w\leq H$ なら $1/(H+1)\leq E<1$ である．
+式~\eqref{ml12:E-equation} から $e\geq c$ となる．
+$c=1$ なら $E=1$ で矛盾し，$c=e$ なら
+$\gcd(c,e)=1$ より $c=1$ となるため，$c\geq2$，
+$\delta=e-c\geq1$ である．
+\[
+ Ec=\frac{e-c+1}{e}<1
+\]
+と $E\geq1/(H+1)$ から $c\leq H$ を得る．
+式~\eqref{ml12:s-z} を引くと
+\[
+ s-z=-\delta+\frac{w(c-H\delta)}{H(H+1)}<0
+\]
+なので $a<b$ である．
+これは定理~\ref{td12:one-negative} の証明の第三の場合に属し，
+そこで示した厳密な不等式より $D_B<0$ となる．
+また $D_A+D_B=\delta+1>0$ だから $D_A>0$ である．
+\end{proof}
+
+\begin{corollary}[全頂点で低分母間 entry が最小の閉路は存在しない]
+\label{ml12:no-minimal-cycle}
+高分母 support の一つの連結成分が閉路であり，その各 core で非零の低分母間 entry が $-1$ であるとする．
+正の局所 weights と共有高分母 branch における対向 $D$ の相殺を同時に満たす atlas は存在しない．
+\end{corollary}
+
+\begin{proof}
+各 core の二つの高分母端のうち，負の $D$ を持つ端から正の $D$ を持つ端へ向きを付ける．
+定理~\ref{ml12:denominator-descent} より，この向きに沿って分母は厳密に減少する．
+共有 branch の両端では $D$ が相殺するため，向きは閉路全体で一貫する．
+閉路を一周して分母が厳密に減少することは不可能である．
+\end{proof}
+
+ここで仮定する entry は，各 core の二つの低分母頂点の間の\emph{非零} entry である．
+大域の固定標識に従って一方向だけを選んだ entry は零である場合があり，
+そのような entries の和から，この系の仮定を直ちに結論してはならない．

@@ -1,0 +1,71 @@
+{
+  "version": "v16",
+  "status": "PASS",
+  "audit_kind": "Independent audit of the free-E branch and its proof-derived finite ranges",
+  "external_peer_review": false,
+  "formal_proof_assistant": false,
+  "captured_at_utc": "2026-10-27T07:05:03.745817+00:00",
+  "source_snapshot": {
+    "two_leaf_unit_finiteness_v16.tex": "c1d0d6b45cd8fe189285ea3f736fe668e4a3e8d9b4b472199ce1e7a146a54e92",
+    "finite_nonB_trial.py": "78853ca531ba09d31e002611dc5381bdaf0740473c09451df3f7b51c3dcd0e00"
+  },
+  "polynomial_engine": {
+    "file": "verify_common_low_node_bound_v16.py",
+    "sha256": "c17572b476126bdeac12006b2809d65bd4851e8a2182a867b6b76d41e7729134"
+  },
+  "exact_polynomial_identities": [
+    "Independent elimination of y and S gives free-E identity",
+    "Coefficient difference equals minus A",
+    "Seven times A exceeds maximal RHS",
+    "Strict positivity for h>=1",
+    "alpha<=0 excludes h>=9",
+    "alpha=1,t>=2 excludes h>=8"
+  ],
+  "boundary_cases": [
+    {
+      "K": 2,
+      "h": 4
+    },
+    {
+      "K": 3,
+      "h": 12
+    }
+  ],
+  "manual_checks": [
+    "D opposition gives y=(h+4)S-t(h^2+h+1)-K with K=1+beta+kappa.",
+    "The alpha convention is v-S, opposite to the B-leaf module convention S-v.",
+    "alpha and beta lie in [-4,1]; gamma=-2-alpha-beta is imposed in the finite generator.",
+    "The maximum RHS h^2+15h+51 uses alpha<=1,beta<=1,kappa<=10.",
+    "All alpha<=0, alpha=1 with t>=2, and alpha=t=1 cases are covered.",
+    "The free leaf3=C branch has th<=4,c in [-4,1],s=h+3+c and the correct S reconstruction.",
+    "The finite generator implements exactly h<=12,t<=6,kappa in {2,5,8,10}, the displayed identity and the original central positivity/integrality rechecks."
+  ],
+  "scope_limit": "This review does not replace the separate review of the non-B split or small-S resonance branch. Final packaged checker source hashes are recorded when available.",
+  "final_checker_recheck_pending": false,
+  "final_source_snapshot": {
+    "two_leaf_unit_finiteness_v16.tex": "c1d0d6b45cd8fe189285ea3f736fe668e4a3e8d9b4b472199ce1e7a146a54e92",
+    "verify_two_leaf_unit_finiteness_v16.py": "eff9d9e3e7a8167faf9d9314d24cbc62132e378f77a31ab816e64f80002895f4",
+    "two_leaf_unit_finiteness_certificate_v16.json": "a0bc7d8201f1bf79b4752e1dfa2caf5a63becab8faf9ff2100a29dc1e70589ff"
+  },
+  "final_recheck_at_utc": "2026-10-27T07:05:47.789964+00:00",
+  "formal_checker_checks": {
+    "all_six_free_E_polynomial_identities_independently_rederived": true,
+    "node_triples_exhausted": 21,
+    "free_E_C_trials": 288,
+    "free_E_B_trials": 6048,
+    "alpha_sign_convention_correct": true,
+    "all_proof_derived_ranges_present": true,
+    "original_middle_and_leaf_equations_rechecked": true,
+    "existing_v15_helper_dependency_hash_recorded": true,
+    "source_and_script_hashes_match": true,
+    "minor_F1_typo_corrected": "F_r(1)=2r+3; positivity conclusion unchanged"
+  },
+  "reported_counts": {
+    "polynomial_identity_count": 15,
+    "trial_count": 6701,
+    "middle_candidates": 31,
+    "generation_witness_count": 66,
+    "surviving_middle_count": 10,
+    "surviving_low_patch_count": 52
+  }
+}

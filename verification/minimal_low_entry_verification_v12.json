@@ -1,0 +1,188 @@
+{
+  "version": 12,
+  "passed": true,
+  "method": "Exact polynomial coefficient comparison and Fraction arithmetic; no denominator cutoff.",
+  "polynomial_identity_count": 31,
+  "polynomial_identities": [
+    "negative-sign exclusion of J<=H after clearing HJ",
+    "Ec<=1 comparison numerator, without an ordering assumption",
+    "positive-sign pair-product grouping",
+    "positive-sign inequality factor",
+    "d<=-3 integer-gap identity",
+    "minimal-entry E numerator",
+    "E=0 lies strictly between consecutive squares, first gap",
+    "E=0 lies strictly between consecutive squares, second gap",
+    "E lower bound when w<=H after clearing H(H+1)",
+    "s-z formula for the w<=H branch",
+    "s-z is positive when c>e",
+    "strict D_B formula when delta=-j after clearing Hc",
+    "positive-sum family row 0",
+    "positive-sum family row 1",
+    "positive-sum family row 2",
+    "positive-sum family row 3",
+    "positive-sum family crossing 0,1",
+    "positive-sum family crossing 0,2",
+    "positive-sum family crossing 0,3",
+    "positive-sum family crossing 1,2",
+    "positive-sum family crossing 1,3",
+    "positive-sum family crossing 2,3",
+    "positive-sum family D_A",
+    "positive-sum family D_B",
+    "positive-sum family high-defect sum",
+    "positive-sum family all-defect sum",
+    "positive-sum family alpha",
+    "positive-sum family beta",
+    "positive-sum family D_A positive for H>=2",
+    "positive-sum family -D_B positive for H>=2",
+    "positive-sum family b-a positive for H>=2"
+  ],
+  "general_results_in_written_proof": [
+    "alpha,beta<0 if and only if the nonzero low-low entry d equals -1.",
+    "alpha,beta>0 implies rT>(r+1)S and d<=-3; d=-2 is impossible.",
+    "When d=-1, the larger high denominator has negative D and the smaller one has positive D.",
+    "A high-support cycle whose every core has nonzero low-low entry -1 is impossible under opposing-D cancellation."
+  ],
+  "exact_regression_models": [
+    {
+      "name": "E positive; high-defect sum positive",
+      "q": [
+        9,
+        11,
+        1,
+        1
+      ],
+      "p": [
+        [
+          0,
+          -7,
+          2,
+          -4
+        ],
+        [
+          -14,
+          0,
+          -2,
+          5
+        ],
+        [
+          4,
+          -5,
+          0,
+          0
+        ],
+        [
+          -2,
+          2,
+          -1,
+          0
+        ]
+      ],
+      "D": [
+        3,
+        -1,
+        0,
+        -2
+      ],
+      "r": 4,
+      "s": 4,
+      "z": 5,
+      "S": 2,
+      "T": 2,
+      "H": 2,
+      "E": "1/3",
+      "weights": [
+        "9",
+        "11",
+        "17/8",
+        "21/4"
+      ]
+    },
+    {
+      "name": "E negative; high-defect sum negative",
+      "q": [
+        31,
+        7,
+        1,
+        1
+      ],
+      "p": [
+        [
+          0,
+          -27,
+          6,
+          -10
+        ],
+        [
+          -8,
+          0,
+          -1,
+          2
+        ],
+        [
+          5,
+          -6,
+          0,
+          0
+        ],
+        [
+          -3,
+          3,
+          -1,
+          0
+        ]
+      ],
+      "D": [
+        -25,
+        23,
+        -5,
+        7
+      ],
+      "r": 5,
+      "s": 10,
+      "z": 2,
+      "S": 3,
+      "T": 3,
+      "H": 2,
+      "E": "-1/2",
+      "weights": [
+        "31",
+        "7",
+        "61/10",
+        "13/6"
+      ]
+    }
+  ],
+  "unbounded_positive_sum_family": {
+    "parameter": "Every integer H>=2.",
+    "r": "2H",
+    "S=T": "H",
+    "s": "2H",
+    "z": "(2H+1)(H-1)",
+    "a": "2H^2+1",
+    "b": "H(H-1)(2H+1)+1",
+    "alpha": "-H",
+    "beta": "-(H^2-1)",
+    "D_A": "2H^3-2H^2-2H-1 > 0",
+    "D_B": "-2H^3+3H^2+H+1 < 0",
+    "high_defect_sum": "H(H-1)>0",
+    "positivity": "The canonical explicit weights from td12:explicit-weights apply to every H>=2.",
+    "verification": "All row sums, crossings, displayed defects, and signs are polynomial identities or strictly positive coefficient expansions in H-2."
+  },
+  "assumptions": [
+    "The integer positive two-high standard form and the proven low-entry sign theorem.",
+    "For the cycle corollary, every nonzero low-low entry equals -1 and opposing high D coefficients cancel."
+  ],
+  "not_required": [
+    "odd denominators",
+    "a denominator bound",
+    "puncture clutching",
+    "a node budget"
+  ],
+  "limitations": [
+    "The script checks algebra; inequalities and exhaustive case distinctions are proved in the source.",
+    "The fixed direction chosen by a global labelling can be the zero low-low entry, so its sum does not force all nonzero entries to be -1.",
+    "The maximum-denominator sign conclusion is restricted to nonzero low-low entry -1."
+  ],
+  "source_sha256": "dfa9446f3e3b9254d64322123a0e11c574da8421ac60a5ae70d5cbe935cd4c8b",
+  "script_sha256": "79e70457d28a70669c799b858fdd149f1648aaf2e20afabef0a2ab1f0160fd3d"
+}

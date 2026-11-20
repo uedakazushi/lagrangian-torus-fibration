@@ -1,0 +1,186 @@
+{
+  "version": "v15",
+  "audit_kind": "independent completeness review of the fixed-middle auxiliary reconstruction",
+  "external_peer_review": false,
+  "captured_at_utc": "2026-10-27T06:33:18.812867+00:00",
+  "status": "PASS",
+  "scope": "A fixed valid positive-integer canonical two-high middle core, for the support {01,02,12,03,14}. This is auxiliary future-research code, not a dependency of the v15 main theorems.",
+  "source_snapshot": {
+    "exact_fixed_middle_completion_v15.py": "383e3f421d680cb75bd868c59113b0ff79e6797eb37d002fa43dfae420f9f924",
+    "two_leaves_research_note_v15.txt": "d3966f59199546f5bd2b57c73939baf10fbe18502048591ce686721392253755",
+    "fixed_middle_1_4_1_3_12_v15.json": "98b9ebd47735a23dd2188e1f727756073a1f8902923314ec70ef6c44ac63dd7c"
+  },
+  "polynomial_identity_count": 14,
+  "polynomial_identities": [
+    "B coefficient with d=0",
+    "K=C,d=0 puncture-2 entry",
+    "K=C,d=0 E reconstruction",
+    "K=C,c=0 target coefficient",
+    "K=C,c=0 B coefficient residual",
+    "K=C,c=0 proof-derived h-square bound",
+    "B coefficient with c=0",
+    "K=D,c=0 puncture-2 entry",
+    "K=D,d=0 target coefficient",
+    "K=D,d=0 B coefficient residual",
+    "K=D,d=0 proof-derived h-square bound",
+    "center missing-row entry from opposing D",
+    "center known row sum from node budget",
+    "shared center-edge node budget numerator"
+  ],
+  "complete_case_review": [
+    {
+      "step": "non_B ray2=C",
+      "assessment": "PASS",
+      "reason": "Node bounds give max(1,R-1)<=u<=R+4, every h divides u and t=u/h, D fixes d, and cd=0 leaves c=0 or the full six-integer node interval."
+    },
+    {
+      "step": "non_B ray2=D",
+      "assessment": "PASS",
+      "reason": "Node bounds give max(2,-4-R)<=v<=1-R, every h+1 divides v, D fixes c, and cd=0 leaves d=0 or the full six-integer node interval."
+    },
+    {
+      "step": "At most one ray2=B leaf",
+      "assessment": "PASS",
+      "reason": "In the crossed assignment leaf3=B would force T<=1. In the uncrossed assignment leaf3=B gives r<=2, while leaf4=B gives S=T=2 and hence r>S>=2, a contradiction."
+    },
+    {
+      "step": "K=C,d=0 exceptional branch",
+      "assessment": "PASS",
+      "reason": "h=F is fixed; the complete t interval is the integer intersection of t>=1 with -4<=t(h+1)^2-E+N<=1. No t bound is chosen arbitrarily."
+    },
+    {
+      "step": "K=C,c=0 exceptional branch",
+      "assessment": "PASS",
+      "reason": "tL(h)+h+1=E+F implies h^2<E+F. The code enumerates a containing finite h interval and checks the exact positive integral quotient."
+    },
+    {
+      "step": "K=D,c=0 exceptional branch",
+      "assessment": "PASS",
+      "reason": "h=-1-F is fixed; the complete t interval is the integer intersection of t>=1 with -4<=th^2-E+N<=1."
+    },
+    {
+      "step": "K=D,d=0 exceptional branch",
+      "assessment": "PASS",
+      "reason": "tL(h)-h=E+F and t>=1 imply h^2+1<=E+F. The code uses exactly the resulting square-root bound and tests the quotient."
+    },
+    {
+      "step": "Original low-edge rechecks",
+      "assessment": "PASS",
+      "reason": "All exceptional candidates are checked again against all three node counts and D opposition on both relevant low edges; arbitrary signed free entries are retained."
+    },
+    {
+      "step": "Center known-row reconstruction",
+      "assessment": "PASS",
+      "reason": "Each of the three known shared edges has exactly 21 nonnegative node triples of sum five. Their full Cartesian product determines the three center rows, with no entry cutoff."
+    },
+    {
+      "step": "Center unknown row and denominator",
+      "assessment": "PASS",
+      "reason": "D opposition fixes each missing-row entry. Each pair equation then fixes q01=(reverse*outgoing+1)/q_j. Equality, integrality, oddness, q01>1 and the missing row sum are checked."
+    },
+    {
+      "step": "All remaining local and edge conditions",
+      "assessment": "PASS",
+      "reason": "The three known-ray pair equations and three missing-ray pair equations cover all six pairs. Positive simple-cycle gains are checked exactly using Fraction. The final center edge is checked for common q01, D opposition, integer clutching and nonnegative nodes."
+    }
+  ],
+  "no_artificial_cutoff": true,
+  "candidate_graphs_or_central_models_searched": false,
+  "existing_fixture_replayed": true,
+  "existing_fixture_parameters": {
+    "r": 1,
+    "s": 4,
+    "z": 1,
+    "S": 3,
+    "T": 12
+  },
+  "fixture_summary": [
+    {
+      "crossed_pairing": false,
+      "stored_records": 0,
+      "distinct_labelled_matrix_pairs": 0,
+      "ray2_B_representations": 0,
+      "center0_count": 0,
+      "center1_count": 0,
+      "full_completion_count": 0
+    },
+    {
+      "crossed_pairing": true,
+      "stored_records": 24,
+      "distinct_labelled_matrix_pairs": 21,
+      "ray2_B_representations": 3,
+      "center0_count": 0,
+      "center1_count": 0,
+      "full_completion_count": 0
+    }
+  ],
+  "findings": [
+    {
+      "id": "FM15-01",
+      "severity": "low",
+      "type": "duplicate_record_count",
+      "finding": "The original low_completions concatenates non-B and B branches without final matrix-level deduplication. In the existing test there are 24 records but 21 distinct labelled matrix pairs; three q=3 B/C representations overlap.",
+      "effect": "No candidate is omitted and the no-center-extension conclusion is unchanged. Counts must not be presented as 24 distinct matrix configurations.",
+      "requested_change": "Deduplicate complete low patches before center reconstruction, or explicitly distinguish 24 records from 21 distinct matrix pairs. Root has requested the author to correct it.",
+      "resolution_status": "resolved",
+      "resolution": "Final low patches are deduplicated by both leaf denominators and both complete labelled matrices before center reconstruction; the existing fixture now stores exactly 21 distinct crossed patches."
+    },
+    {
+      "id": "FM15-02",
+      "severity": "low",
+      "type": "input_precondition",
+      "finding": "The canonical parameters r,s,z,S,T are assumed positive by the mathematical API, but make_middle did not explicitly check that precondition at entry.",
+      "effect": "No completeness defect for the stated valid canonical inputs.",
+      "requested_change": "Add an explicit min(r,s,z,S,T)>0 assertion to reject out-of-scope inputs clearly.",
+      "resolution_status": "resolved",
+      "resolution": "make_middle begins with assert min(r,s,z,S,T)>0; all five zero-parameter positions were checked to raise AssertionError before further computation."
+    }
+  ],
+  "limitations": [
+    "No enumeration of infinitely many middle models was performed or claimed.",
+    "A surviving arithmetic candidate would not by itself be a geometric atlas.",
+    "The existing example was replayed; no new research search was undertaken."
+  ],
+  "final_author_correction_recheck_pending": false,
+  "final_author_correction_recheck": {
+    "captured_at_utc": "2026-10-27T06:41:36.103619+00:00",
+    "assessment": "PASS",
+    "final_source_snapshot": {
+      "exact_fixed_middle_completion_v15.py": "cfb3110fe99ccc9d1d7e90bb402638078e6ebeac0f104f8429b60cdc4bdc78c8",
+      "two_leaves_research_note_v15.txt": "77693b7c1984f24b8a58e61b193c24158aa38a434a309a52b2a9b582c0661314",
+      "fixed_middle_1_4_1_3_12_v15.json": "ecd1347a413c2861cf1cc0a09b950332dcabe396f70b64f856963686e94f86f1"
+    },
+    "deduplication_key": "(q3,q4,complete labelled P3,complete labelled P4); all D entries are determined by these data, so distinct canonical representations are merged without deleting a distinct arithmetic configuration.",
+    "fixture_summary": [
+      {
+        "crossed_pairing": false,
+        "stored_records": 0,
+        "distinct_labelled_matrix_pairs": 0,
+        "center0_count": 0,
+        "center1_count": 0,
+        "full_completion_count": 0
+      },
+      {
+        "crossed_pairing": true,
+        "stored_records": 21,
+        "distinct_labelled_matrix_pairs": 21,
+        "center0_count": 0,
+        "center1_count": 0,
+        "full_completion_count": 0
+      }
+    ],
+    "stored_fixture_matches_independent_rerun_in_full": true,
+    "positive_input_precondition_checked": true,
+    "all_five_zero_parameter_positions_rejected": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "research_note_updated_to_twenty_one_distinct_patches": true,
+    "new_research_search_performed": false,
+    "original_snapshot_and_duplicate_finding_retained": true,
+    "main_v15_theorem_dependencies_changed": false
+  }
+}

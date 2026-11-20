@@ -1,0 +1,68 @@
+\subsection{Book の低三角形：固定 core の有限完全完成}
+\label{nb19:section}
+
+$G_{5,13}=\{01,02,03,04,12,13,14\}$ の二価 cores $2,3,4$ を扱う．
+各 core の canonical 非零低低 entry を $-L$ とすると，低三角形の node 総数五から
+\[
+ L\in\{1,3,4\}
+\]
+となる．高 ray $0$ へ正 entry を持つ低 row の先へ各 core から矢印を引くと，有向三角形になる．
+全て正枝であることは不可能であり，全て負枝でも canonical 高 ray の向きが三つとも同じことはない．
+従って少なくとも一つの負枝を含む場合に集中できる．
+高辺 $01$ があるので，負枝を禁じる低 wedge の補題は適用できない．
+
+有向順序で next row を $(a_i,-b_i,-c_i)$，previous row を $(-d_i,e_i,-f_i)$ と書くと，
+\[
+ b_i=a_i+1-c_i,\quad d_i=e_i+1-f_i,\quad c_if_i=0,\quad c_i+f_i\in\{1,3,4\}.
+\]
+三本の低辺の node 条件は有限な offset
+\[
+ c_i+f_{i+1}\le4,\quad e_{i+1}=a_i+t_{i+1},\quad
+ f_{i+1}-2\le t_{i+1}\le2-c_i
+\]
+で表示できる．この有限 node 型と，負枝の左右への接続条件の比較が次の具体的課題である．
+
+\paragraph{固定 core からの完全算法．}
+一つの二価 core の行列を固定すると，各低辺の二十一 node 分配は相手の低 row 全体を固定する．
+対向 $D$ はその低 ray の $D=d$ も固定する．canonical reverse data $r,S,T$ は，
+零低低 row なら $r$ の固定と $L\le4$，非零低低 row なら $S,T$ の固定と
+負枝の $w^2/2<H(H+1)<2w^2$ により有限個となる．
+
+$h=S-r$，$\delta=T-S\in\{0,2,3\}$ とすると，残る scale $s,z$ は
+\[
+ Fsz+As+Bz+C=0,\qquad \ell s+mz+n=0
+\]
+を満たす．ここで
+\[
+ F=(2r+1)h-r^2(\delta-1),\quad
+ A=h(r+1),\quad B=-r(h+\delta-1),\quad C=r(r+1)
+\]
+であり，低 $D$ の条件の $(\ell,m,n)$ は
+\[
+ \begin{cases}
+ (-S(r+1),rT,(\delta-d)r(r+1)),&C\text{ ray},\\
+ (1,-1,-d-1),&D\text{ ray}.
+ \end{cases}
+\]
+$\gcd(2r+1,r^2)=1$ から $F\ne0$，また $\ell m\ne0$ なので，消去した二次式
+\[
+ -F\ell s^2+(-Fn+Am-B\ell)s+(Cm-Bn)=0
+\]
+の最高次係数は消えない．固定 reverse data ごとに高々二つの scale が残り，
+整数平方判定と整除から全て復元できる．
+双一次式の因子分解で右辺が零になる七・十三の共鳴も，この二次式では処理できる．
+二つの低隣接 core の有限集合を作り，残る低辺を検査すれば固定 core の全低三角形完成を得る．
+四高中心 $0,1$ の完成や，固定 core 自体の無限集合の有限性は結論していない．
+
+実装は \nolinkurl{research/book_low_triangle_completion_v19.py} にある．
+例えば canonical $(r,s,z,S,T)=(4,4,5,2,2)$ では，左右の相手は $4,1$ 個，
+低三角形完成は零である．独立 signed-divisor catalog（各奇数高分母 $\le21$）との
+$168$ 照合と，共鳴を含む実装検算は \nolinkurl{verify_book_low_triangle_v19.py} に置く．
+一般の有限完成定理の証明と，この有界な実装照合の量化は区別する．
+
+今後の探索を重複させないため，有界結果も一つ残す．負枝の $2\le w\le150$ では
+因子分解から得た $1259$ canonical cores の各完全低三角形完成は全て空であった．
+両低 ray に少なくとも一つずつ相手が存在したのは六模型だけで，最大の $w$ は十八である．
+詳細は \nolinkurl{research/book_negative_w150_candidates_v19.json} にある．
+これは $w>150$ の排除ではない．次は node offset ごとに両側の相手の存在条件を代数的に比較し，
+この有界結果を使わない一般証明，または実際の完成例を探す．

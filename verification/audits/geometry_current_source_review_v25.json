@@ -1,0 +1,163 @@
+{
+  "version": 25,
+  "document": "geometry",
+  "passed": true,
+  "issues": [],
+  "source_sha256": {
+    "paper/general_type_surface_fibration_paper_ja_v25.tex": "8a2c45f5900c0ed367311bdb78e3a83042c96f82601a5055e2975311a3ad2ba0",
+    "common.tex": "148e135a6ecaf15b9afe1a0f5b2c0e3a3be713e3765cb08bbcc64d112dd99dfc",
+    "paper/geometry_introduction_v25.tex": "383354c4d141117cd75eaed52fdfa7bbd3b5bbbf70ef5fdd85e7f3fd29ec447c",
+    "paper/geometry_main_statements_v17.tex": "bd48d50cdf22f35a99628dc55569daab637870d1671519df7a1e650cfe336272",
+    "paper/degeneration_polarization.tex": "7bb6e5d6bfd93912dd1fe094d051830c10f96ac5ade1685fd2f0b3ff6bf2bc80",
+    "paper/relative_compactification.tex": "b61e4876b86e3a630c6ee7e6ef41dcb2e7b7aee153a2f8f65efb6ba206cedf34",
+    "paper/neck_models.tex": "e2ae7bb50132a93297efbd11a6b8e924712af976272d8c5fa8bc52158feda782",
+    "paper/global_gluing.tex": "ebe047ed56f22a89939d52b0777f52aad974410ec00aa5fe3acaa06bb45eff54",
+    "paper/base_topology.tex": "c3d11f4a2b55b4455d1a49bdaa22512b5880473939b6d82ad758543deccb76aa",
+    "paper/degree_partitions.tex": "83239e054a9762e5be740ead16c54dd451bee0e923b60bcc4a94c40b039266fd",
+    "paper/partition_topology.tex": "b29d58edd01333a6027cf816e3afe1c7d62d9b17cb9425f018d0393571b8a26e",
+    "paper/tropical_obstructions.tex": "e66c19396086a5c497eec819d9b31000eeaac14a540b1375e0aa6fe962e0c345",
+    "paper/quintic_links.tex": "458370fb9123b7dbf9a20c36760f9bf9f429849938ae62d8cf57ca5f6faa4a24",
+    "paper/petersen_periods.tex": "4eeb23c8d101266aea55e656ae30599b36839ecf2acf06d7d4213c04145b4267",
+    "paper/k4_periods.tex": "b13e9bb195267dbd96185867d37c37cb2254915a41cb52471ccfcb0c5d667197",
+    "paper/quadric_periods.tex": "8076adb88b93e77111177e2e7e4898ea09b74b72c1050e6a28c57b88042d9be5",
+    "paper/mixed_plane_periods.tex": "895c82589f0572fc0f5f9fc52a44a87ebab18ac29e42a819dc2b52d03af5056d",
+    "paper/atlas_gluing.tex": "6ce6086a2a0291e314feb16d8c8b82303e69d0db1b06b663136d704254b70ec2",
+    "paper/neck_action_matching.tex": "b64abf6c6b6c5963a8544ffcf26b896427427b602d1c22ef1d0cd2b5b07b3fdd",
+    "paper/quintic_gluing.tex": "af11011d1c15bba8fb08976e12cf7c575aa18c78ed4f6e05f22f341f65532955",
+    "paper/sextic_gluing.tex": "c052877d30a3cb8e3047a75c15776c62cf1c247a49db06ab63462c9591b2cefc",
+    "paper/global_action_atlas.tex": "30da09df446c7346bee8ae4ca35c88e575a75d2239da6365d29c79e86431c2a4",
+    "paper/mixed_global_obstruction.tex": "6b593a78c3c46717f2505f0830576a0ee894190eff6a5a2be91f98539133aae2",
+    "paper/four_puncture_rigidity.tex": "25918afc009a5583e8ac77260f97515ee4b868967e10669f9ca745b15de608aa",
+    "paper/mixed_all_denominator_obstruction.tex": "322d4ae0d98945ee8c13e65be7c3811ff38e3272ae8101266bb3eedadea42b36",
+    "paper/invariants_examples.tex": "36b0e905311c4b3f873007d7c8c9e4c7e1ecba4d5e4f71b0478e59404aba9e9c",
+    "paper/geometry_bibliography_v25.tex": "31caa6116b46ace8c04ca0d86351d38506f7d3b12e835cf66b4bd21abde9ce73",
+    "paper/four_ray_matching_v25.tex": "f2393b27afbb344bc890c9d9dc520d13fed873afbb80731650316553d5db1ce4",
+    "paper/g514_five_node_exclusion_v25.tex": "a9762909df0ecf7518813604f408c1b6c157d65b4ef39bde5fb2dd92210dc627"
+  },
+  "active_geometry_source_count": 28,
+  "active_geometry_sources": [
+    "paper/general_type_surface_fibration_paper_ja_v25.tex",
+    "common.tex",
+    "local-fonts.tex",
+    "paper/geometry_introduction_v25.tex",
+    "paper/geometry_main_statements_v17.tex",
+    "paper/degeneration_polarization.tex",
+    "paper/relative_compactification.tex",
+    "paper/neck_models.tex",
+    "paper/global_gluing.tex",
+    "paper/base_topology.tex",
+    "paper/degree_partitions.tex",
+    "paper/partition_topology.tex",
+    "paper/tropical_obstructions.tex",
+    "paper/quintic_links.tex",
+    "paper/petersen_periods.tex",
+    "paper/k4_periods.tex",
+    "paper/quadric_periods.tex",
+    "paper/mixed_plane_periods.tex",
+    "paper/atlas_gluing.tex",
+    "paper/neck_action_matching.tex",
+    "paper/quintic_gluing.tex",
+    "paper/sextic_gluing.tex",
+    "paper/global_action_atlas.tex",
+    "paper/mixed_global_obstruction.tex",
+    "paper/four_puncture_rigidity.tex",
+    "paper/mixed_all_denominator_obstruction.tex",
+    "paper/invariants_examples.tex",
+    "paper/geometry_bibliography_v25.tex"
+  ],
+  "comparison_base": "general_type_surface_fibration_v24",
+  "byte_identical_inherited_active_sources": [
+    "local-fonts.tex",
+    "paper/geometry_main_statements_v17.tex",
+    "paper/degeneration_polarization.tex",
+    "paper/relative_compactification.tex",
+    "paper/neck_models.tex",
+    "paper/global_gluing.tex",
+    "paper/base_topology.tex",
+    "paper/degree_partitions.tex",
+    "paper/partition_topology.tex",
+    "paper/tropical_obstructions.tex",
+    "paper/quintic_links.tex",
+    "paper/petersen_periods.tex",
+    "paper/k4_periods.tex",
+    "paper/quadric_periods.tex",
+    "paper/mixed_plane_periods.tex",
+    "paper/atlas_gluing.tex",
+    "paper/neck_action_matching.tex",
+    "paper/quintic_gluing.tex",
+    "paper/sextic_gluing.tex",
+    "paper/global_action_atlas.tex",
+    "paper/mixed_global_obstruction.tex",
+    "paper/four_puncture_rigidity.tex",
+    "paper/mixed_all_denominator_obstruction.tex",
+    "paper/invariants_examples.tex"
+  ],
+  "changed_active_sources": [
+    "paper/general_type_surface_fibration_paper_ja_v25.tex",
+    "common.tex",
+    "paper/geometry_introduction_v25.tex",
+    "paper/geometry_bibliography_v25.tex"
+  ],
+  "introduction_citation_occurrences": 59,
+  "introduction_unique_citation_keys": 49,
+  "bibliography_entry_count": 55,
+  "missing_citation_keys": [],
+  "citation_sequence_unchanged": true,
+  "bibliography_entries_unchanged_except_companion_edition": true,
+  "current_assumptions_and_summary_findings": [
+    {
+      "topic": "source changes",
+      "finding": "All 24 other files in the active geometry source closure, including every theorem/proof input, match v24 byte-for-byte. The only changes are edition headers, the companion edition, and the exactly checked three-line arithmetic summary."
+    },
+    {
+      "topic": "prior work",
+      "finding": "The full Introduction citation sequence and all 55 bibliography keys are retained. Every external bibliography entry is byte-identical. The only bibliography edit changes the companion draft from v24 to v25. No new external factual or priority claim was introduced by v25."
+    },
+    {
+      "topic": "fibration scope",
+      "finding": "Definition def:fibration explicitly uses a compact branched finite 2-complex, permits specified core and branch singularities, and does not impose an ordinary smooth surface base or Whitney stratification. The abstract and Introduction preserve this distinction."
+    },
+    {
+      "topic": "Kahler and SNC assumptions",
+      "finding": "The global statements keep X_d smooth in P^3, d>=5, and [omega]=aH with a>0. The relative SNC theorem keeps no triple points, at least two marked intersection points per component, fixed positive weights [omega]=2pi sum w_a[D_a], freely selected normal holonomy, and a same-class representative omega-prime."
+    },
+    {
+      "topic": "atlas and classification scope",
+      "finding": "The active atlas definition uses ambient integer affine transition maps on the complement of focus values. The existence statement uses all-plane quintic/sextic constructions; the classification retains proportional-curvature SNC cores, the existing branch graph and coarse cones, and excludes additional branch singularities. It does not classify all Lagrangian torus fibrations."
+    },
+    {
+      "topic": "new matching summary",
+      "finding": "Compared against fh25:matching and fh25:raw-equations. The summary stays within four-ray integer data with all pair products positive; the equivalence concerns existence of positive basin weights and the positive-sign graph being a perfect matching. It does not extend to zero pair products or unconstrained real entries."
+    },
+    {
+      "topic": "new G514 node summary",
+      "finding": "Compared against ug25:local--ug25:budget-D and ug25:no-five. The summary applies to standard all-plane quintic integer gluing with two unit branches, nonnegative integer nodes of total 5, positive local weights and opposite D cancellation. Both unit branches have {4,1,0}; G514 itself and the other two support types are explicitly not excluded."
+    },
+    {
+      "topic": "global versus local",
+      "finding": "The updated paragraph explicitly calls the arithmetic statements necessary local-area/integer-gluing conditions and does not assert existence for the remaining three global supports. The established denominator-one atlas construction is unchanged."
+    },
+    {
+      "topic": "research status",
+      "finding": "The geometry paper continues to describe the arithmetic companion as an unpublished draft. Source review is a consistency check of current assumptions and changed claims, not external peer review or a reproof of all inherited theorems."
+    }
+  ],
+  "method": "Read current root, complete Introduction and bibliography, main theorem statements and the actual SNC/atlas/classification hypotheses; compared exact active-source changes with v24; checked citation closure; read the new companion matching theorem and G514 theorem assumptions against the updated summary. No legacy proof scan was rerun.",
+  "legacy_proof_scans_rerun": false,
+  "external_sources_researched_anew": false,
+  "external_peer_review": false,
+  "proof_assistant_formalization": false,
+  "review_time_utc": "2026-10-27T22:38:54.495702+00:00",
+  "post_review_editorial_binding_update": {
+    "file": "paper/g514_five_node_exclusion_v25.tex",
+    "previous_sha256": "880f14170dd8df5c55a3199719ae72ac5a30f03ec5e80a4c7c698ce37888d906",
+    "final_sha256": "a9762909df0ecf7518813604f408c1b6c157d65b4ef39bde5fb2dd92210dc627",
+    "exact_delta_verified": "Only first section heading wraps printed G_{5,14} in texorpdfstring for a safe PDF bookmark. Removing that wrapper reproduces the reviewed bytes exactly.",
+    "mathematical_content_changed": false,
+    "active_geometry_input": false,
+    "final_arithmetic_source_review_and_reexecuted_verifiers_also_cover_this_file": true
+  },
+  "machine_font_override_verified_but_not_bundled": {
+    "sha256": "8434c1f9b51acb34c01dcc72678a9b0044fbd9e60129a7568c6f9184ba9b4869"
+  }
+}

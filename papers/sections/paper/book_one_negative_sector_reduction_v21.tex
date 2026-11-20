@@ -1,0 +1,248 @@
+% v21 supplement: sharpen the residual one-negative book sectors.
+% The earlier two-negative proof and its certificate remain unchanged.
+\section{一負枝 book の成長不等式と二つの残余 sector}
+\label{bs21:section}
+
+系~\ref{bn21:one-negative-normal-forms} は，仮想的な book 低三角形を
+唯一の負枝 $N$ と二つの正枝 $P_1,P_2$ に帰着し，
+node 周期の二つの型 I, II を与えた．
+本節ではこの二型をさらに低 $D$ の符号と $L$ によって絞る．
+前節の二負枝排除を変更するものではなく，残余一負枝に対する追加の必要条件である．
+
+高 ray の交換によって $\sigma_N=+$ とし，
+node 周期に沿う next の低 $D$ の共通符号を $\tau$ とする．
+前節により負枝の $w$ は少なくとも五十一である．
+正枝には引き続き
+\[
+ \begin{gathered}
+ \delta=T-S\in\{2,3\},\quad d=\delta-1,\quad h=S-r,\quad k=h+d,\\
+ \alpha=sh/r,\quad\beta=zk/(r+1),\quad F=(2r+1)h-r^2d .
+ \end{gathered}
+\]
+を用いる．
+
+\begin{lemma}[共鳴尺度の分類と残余三角形での排除]
+\label{bs21:beta}
+正枝において $\beta=1$ となる reverse data は
+\begin{equation}\label{bs21:resonances}
+ (r,S,T,z)=(3,4,6,2),\qquad(2,3,6,1)
+\end{equation}
+の二つに限られる．型 I, II の残余 book 低三角形には，
+これらの reverse data を持つ正枝は現れない．
+\end{lemma}
+
+\begin{proof}
+$\beta=1$ なら $r+1=zk$ である．
+式~\eqref{ps21:two-identities} の Bezout 恒等式に $\alpha=sh/r$ を代入すると
+\[
+ r^2=((r+1)z+1)h
+\]
+を得る．$r=zk-1$，$k=h+d$ を用いて整理すれば
+\[
+ k(1+2z-dz^2)=\delta.
+\]
+$k=h+d\ge d+1=\delta$ であり，括弧内は正の整数なので，
+$k=\delta$，$1+2z-dz^2=1$ である．従って $h=1$，$dz=2$ となり，
+式~\eqref{bs21:resonances} が従う．自由な $s$ はそれぞれ $3m,2m$ であり，
+この議論は既知の分母十三・七の共鳴族の全ての scale を含む．
+
+両方の node 型で，$P_1$ がこの枝なら $T_1=6$ である．
+辺 $N^+\to P_1^+$ の offset は $T_1=r_N+t_1$，$t_1\ge1$ なので
+$r_N\le5$，従って $w\le r_N-2\le3$ となる．
+型 I の $P_2$ がこの枝なら $r_2\le3$ であり，辺 $P_2^+\to N^+$ から
+$w\le r_2+2\le5$ となる．
+型 II の $P_2$ がこの枝なら $T_2=w+1=6$ より $w=5$ となる．
+いずれも $w\ge51$ に反する．
+\end{proof}
+
+\begin{lemma}[負の $F$ sector の成長下界]
+\label{bs21:growth}
+残余 book の正枝が $F<0$ を満たすなら
+\begin{equation}\label{bs21:half-sector}
+ 0<\frac{-F}{h(h+\delta-1)}<\frac12,
+ \qquad
+ 2(\delta-1)r^2<h^2+4rh+(\delta+1)h.
+\end{equation}
+特に
+\begin{equation}\label{bs21:linear-growth}
+ h>\frac37r-1,
+ \qquad T>\frac{10}{7}r+1.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+$F<0$ なら $\alpha\ge\beta\ge1$ であり，
+$E_+=-F/(hk)>0$ は
+\[
+ E_+\alpha\beta=\alpha-\beta+1
+\]
+を満たす．補題~\ref{bs21:beta} により $\beta\ge2$ なので
+\[
+ E_+\beta=1-\frac{\beta-1}{\alpha}<1.
+\]
+従って $E_+<1/\beta\le1/2$ であり，分母を払えば
+式~\eqref{bs21:half-sector} の第二式を得る．
+
+$h\le3r/7-1$ と仮定する．右辺が負なら $h\ge1$ に直ちに反する．
+そうでなければ，$H\mapsto H^2+4rH+(\delta+1)H$ は $H\ge0$ で増加するので，
+式~\eqref{bs21:half-sector} の右辺は $H=3r/7-1$ を代入した値以下である．
+その値を $2(\delta-1)r^2$ から引くと
+\[
+ \begin{cases}
+ \displaystyle\frac5{49}r^2+\frac{25}{7}r+2,&\delta=2,\\[3pt]
+ \displaystyle\frac{103}{49}r^2+\frac{22}{7}r+3,&\delta=3
+ \end{cases}
+\]
+となり，常に正である．これは式~\eqref{bs21:half-sector} に反する．
+従って $h>3r/7-1$ であり，$T=r+h+\delta$，$\delta\ge2$ から
+式~\eqref{bs21:linear-growth} を得る．
+\end{proof}
+
+\begin{proposition}[追加で排除する sector の解析的上界]
+\label{bs21:bounded-sectors}
+型 I, II の book 低三角形が次表のいずれかの sector に属すると仮定する．
+その唯一の負枝は，対応する有限上界を満たす．
+\begin{center}
+\begin{tabular}{llc}
+node 型 & 低 $D$ の符号と正枝の $L$ & 負枝の上界\\
+\hline
+I & $\tau=-$ & $w\le134$\\
+I & $\tau=+$，少なくとも一方の正枝で $L=4$ & $w\le8$\\
+II & $\tau=-$ & $w\le11$\\
+II & $\tau=+$，$L_{P_1}=3$ & $w\le6$\\
+\end{tabular}
+\end{center}
+これらの上界には scale または高分母の上界の仮定はない．
+\end{proposition}
+
+\begin{proof}
+型 I の node 周期は $N^+\to P_1^+\to P_2^+\to N^+$ である．
+offset を書けば
+\begin{equation}\label{bs21:I-offsets}
+ T_1=r_N+t_1,\quad T_2=r_1+t_2,\quad w=r_2+t_N,
+ \qquad
+ L_i-2\le t_i\le2,\quad-1\le t_N\le2.
+\end{equation}
+$\tau=-$ なら $D_C(N)<0$ より $r_N\le2w-1$ であり，
+両正枝は $F<0$ を満たす．従って
+\[
+ T_1\le r_N+2\le2w+1,
+\]
+\[
+ r_1\ge T_2-2>\frac{10}{7}r_2-1,
+ \qquad r_2\ge w-2.
+\]
+さらに補題~\ref{bs21:growth} を $P_1$ に適用すると
+\[
+ T_1>\frac{10}{7}r_1+1
+ >\frac{100}{49}r_2-\frac37
+ \ge\frac{100w-221}{49}.
+\]
+これと $T_1\le2w+1$ から $2w<270$，すなわち $w<135$ を得る．
+
+型 I の $\tau=+$ では両正枝で $F>0$ である．
+補題~\ref{bn21:bounds} により，$L=3$ なら $T\ge3r/2+2$，
+$L=4$ なら $T\ge2r+3$ となる．
+少なくとも一方が $L=4$ の場合，式~\eqref{bs21:I-offsets} の
+$r_1\ge T_2-2$ と合わせると，いずれの順序でも
+\[
+ T_1\ge3r_2+3\ge3w-3
+\]
+を得る．一方，負枝の $r_N<17w/7$ より
+$T_1\le r_N+2<17w/7+2$ である．
+従って $w<35/4<9$，すなわち $w\le8$ である．
+
+次に型 II を考える．この型では $L_{P_2}=3$，$T_2=w+1$ であり，
+残る offset は
+\begin{equation}\label{bs21:II-offsets}
+ T_1=r_N+t_1,\quad r_2=r_1+t_2,
+ \qquad L_{P_1}-2\le t_1\le2,\quad -2\le t_2\le2.
+\end{equation}
+$\tau=-$ なら $P_2$ の next は $D$ なので $D_C(P_2)>0$，従って $F_2>0$ である．
+その成長下界は
+\[
+ w+1=T_2\ge\frac32r_2+2,
+ \qquad r_2\le\frac{2(w-1)}3
+\]
+を与える．一方 $P_1$ は $F_1<0$ なので，両方の $L_{P_1}$ に対して
+$T_1\le2r_1+2$ である．従って
+\[
+ T_1\le2(r_2+2)+2\le\frac{4w+14}{3}.
+\]
+負枝の下界と $t_1\ge1$ から
+\[
+ T_1\ge r_N+1>\frac{17}{10}w+\frac12.
+\]
+両者を比較して $w<125/11<12$，すなわち $w\le11$ を得る．
+
+最後に型 II，$\tau=+$，$L_{P_1}=3$ とする．
+$P_2$ は $D_C(P_2)<0$，従って $F_2<0$ なので
+\[
+ w+1=T_2>\frac{10}{7}r_2+1,
+ \qquad r_2<\frac7{10}w.
+\]
+正枝 $P_1$ の一般不等式 $r_1<S_1<2r_1$ と式~\eqref{bs21:II-offsets} から
+\[
+ T_1\le2r_1+1\le2(r_2+2)+1<\frac75w+5.
+\]
+一方，$D_C(N)>0$ より $r_N\ge2w$ であり，$T_1\ge r_N+1\ge2w+1$ である．
+従って $w<20/3<7$，すなわち $w\le6$ となる．
+\end{proof}
+
+\begin{lemma}[追加の有限 certificate]
+\label{bs21:finite-certificate}
+Book 低三角形は $2\le w\le134$ の負 core を含まない．
+\end{lemma}
+
+\begin{proof}
+補題~\ref{bn21:finite-certificate} と同じ完全復元を，今回の
+命題~\ref{bs21:bounded-sectors} で導いた範囲 $2\le w\le134$ に適用する．
+初期負 core の全 scale は正の factorization
+式~\eqref{bn21:factorization} の全約数から得られる．
+各低辺の二十一 node triples と指定された低 $D$ から，
+相手の reverse data と全 scale を完全に復元する．
+最後に二つの相手の間の低辺の node と対向 $D$ を直接確認する．
+scale，高分母，行列 entry の上限は設定しない．
+初期 reverse parameters は六千三百九十二個，
+全 scale の復元後に残る負 canonical cores は千八十九個であり，
+左右の全相手集合に含まれる相手の総数は百六十九個である．
+
+この全数復元でも，両隣の相手集合が双方非空の初期 core は
+補題~\ref{bn21:finite-certificate} の表と同じ六個だけであり，
+最後の比較も同じ十一組だけである．従って最後の低辺の $D$ 残差は全て非零となる．
+新しい検証器 \nolinkurl{verify_book_one_negative_sector_reduction_v21.py} は，
+旧 v19 generator を使用しない第21版の独立復元実装をそのまま用い，
+今回の全固定 core と左右の全相手集合を
+\nolinkurl{book_one_negative_sector_reduction_verification_v21.json} に保存する．
+これは旧来の $w\le150$ の探索結果を外挿したものではなく，
+ここで証明した解析的上界に対する全 scale の再計算である．
+\end{proof}
+
+\begin{theorem}[一負枝 book の二つの残余 sector]
+\label{bs21:two-sectors}
+正の整数局所 charts，奇数高分母，低辺の非負 node，対向低 $D$ 相殺を満たす
+book 低三角形が存在すると仮定する．
+唯一の負枝 $N$ を $\sigma_N=+$ と正規化すると，次のいずれかに限られる：
+\begin{enumerate}
+ \item 型 I：$N^+\to P_1^+\to P_2^+\to N^+$，
+ $\tau=+$，$(L_{P_1},L_{P_2})=(3,3)$；
+ \item 型 II：$N^+\to P_1^+\to P_2^-\to N^+$，
+ $\tau=+$，$(L_{P_1},L_{P_2})=(4,3)$．
+\end{enumerate}
+いずれも負枝は $w\ge135$，$H\ge w$ を満たす．
+型 II では引き続き $S_{P_2}=w-1$，$T_{P_2}=w+1$，
+辺 $P_2\to N$ の node は $(0,0,5)$ である．
+\end{theorem}
+
+\begin{proof}
+命題~\ref{bs21:bounded-sectors} の四 sector は
+補題~\ref{bs21:finite-certificate} により全て排除される．
+残るのが表示した二 sector である．
+負 core に対する同じ有限 certificate は $w\ge135$ を与える．
+$\sigma_N=+$，$\tau=+$ より $D_C(N)>0$ なので，
+式~\eqref{bn21:negative-sector} によって $r_N\ge2w$，従って $H=r_N-w\ge w$ である．
+\end{proof}
+
+この定理は二つの残余 sector の存在を示すものでも，それらの不存在を示すものでもない．
+次の課題はこの二 sector に限って，node offset，低 $D$ の大きさ，
+および中心二 core に接続する高分母の順序を同時に制御することである．

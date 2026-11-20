@@ -1,0 +1,352 @@
+\section{\texorpdfstring{$G_{5,14}$}{G5,14} の五node単位枝の無上界排除}
+\label{ug25:section}
+
+本節では二つの単位枝を同時に用いる．単位枝一つの三角形条件だけでは残った
+$\{5,0,0\}$ 配分が，もう一つの単位枝と正の三高 core の行和を合わせると
+排除されることを示す．分母や行列成分に探索上限を置かない．
+
+\subsection{仮定と，利用する局所事実}
+
+五つの cores を $0,1,2,3,4$ とし，
+$q_{01}=q_{23}=1$，他の八分母は一より大きい奇数とする．
+core $i$ の ray $j$ から $k$ への整数成分を $p^i_{jk}$ と書き，
+元の条件を
+\begin{align}
+ \sum_{k\ne i,j}p^i_{jk}&=-q_{ij},&
+ p^i_{jk}p^i_{kj}&=q_{ij}q_{ik}-1,\label{ug25:local}\\
+ w^i_k-\frac{p^i_{jk}}{q_{ij}}w^i_j&>0\quad(w^i_j>0),&
+ n_{ij;k}&=1-\frac{p^i_{jk}+p^j_{ik}}{q_{ij}}\in\mathbb Z_{\ge0},
+ \label{ug25:positive-node}\\
+ \sum_{k\ne i,j}n_{ij;k}&=5,&
+ D^i_j+D^j_i&=0,\qquad
+ D^i_j=-q_{ij}-\sum_{k\ne i,j}p^i_{kj}
+ \label{ug25:budget-D}
+\end{align}
+とする．本節の結論はこの標準五次接着の必要条件に対するものであり，
+任意の Lagrangian torus fibration の分類を主張しない．
+
+正の三高 core の正 pair graph は完全マッチングである
+（三高 matching 定理~\ref{mh18:matching}）．従って唯一の低行は
+正一成分・負二成分を持ち，その二つの負位置同士も正 pair を作る．
+以下ではこの帰結を明示的に使う．四高 core の正 graph の分類は使わない．
+
+単位枝の両低行の正位置は異なる．同じ位置ならその node が負になるからである．
+正位置を $a,b$，共通の負位置を $c$ として
+\[
+ \begin{array}{c|ccc}
+ &a&b&c\\\hline
+ i&u&-t&-s\\
+ j&-j_0&v&-s'
+ \end{array},\qquad
+ u=s+t-1,\quad v=s'+j_0-1
+\]
+と書くと，$n_{ij;c}=1+s+s'$，従って $s+s'\le4$ である．
+共通負位置の低 column を $-S,-T$ と書けば
+$q_{ic}=sS+1$，$q_{jc}=s'T+1$ である．
+高枝の node から得る $\alpha,\beta\in\{-4,-3,-2,-1,0,1\}$ により，
+外側 core $c$ の pair equation は
+\begin{equation}\label{ug25:negative-pair}
+ ((s\alpha+1)S+\alpha)((s'\beta+1)T+\beta)
+ =(sS+1)(s'T+1)-1
+\end{equation}
+となる．ここから得る必要条件を再掲する：
+\begin{center}\small
+\begin{tabular}{c|c|c|c}
+外側 pair&$s+s'$&$(q_{ic},q_{jc})$&必要な低成分\\\hline
+正&3&$(2R+1,3)$&$(s,s',S,T)=(2,1,R,2)$\\
+正&3&$(3,2R+1)$&$(s,s',S,T)=(1,2,2,R)$\\
+負&3&$(3,3)$&---\\
+負&4&$(3,7)$&$(1,3,2,2)$ または $(2,2,1,3)$\\
+負&4&$(5,5)$&$(2,2,2,2)$\\
+負&4&$(7,3)$&$(3,1,2,2)$ または $(2,2,3,1)$
+\end{tabular}
+\end{center}
+$R$ は任意の正整数である．特に全配分は $\{4,1,0\}$ または
+$\{5,0,0\}$ であり，五nodeの場合には $S+T=4$ である．
+この表は補題~\ref{ut24:negative-classification} の全解から従うが，
+必要な無上界性は次の因数分解でも確認できる．
+負 pair に対して $\alpha=-A,\beta=-B$ とすると，
+\eqref{ug25:negative-pair} の左辺引く右辺は
+\[
+ CST+DS+ET+AB,
+ \quad C=ss'(AB-1)-sA-s'B+1,
+ \quad D=s(AB-1)-B,
+ \quad E=s'(AB-1)-A.
+\]
+$A,B\ge2$ は係数の非負性で，$A=B=1$ は狭義負で除かれる．
+交換により $A=1,2\le B\le4$ としてよい．
+$s=1$ なら $S=B-1-(T-1)/(s'T+1)$ より $T=1$，
+$s=2,B=2$ なら $T(S-s'+1)=2$，
+$s=3,s'=1,B=2$ なら $S(T-1)=2$ である．
+$s\ge2,B\ge3$ は係数の符号で除かれる．奇数性が上表の全点を与える．
+正 pair では $\alpha,\beta\in\{0,1\}$ となり，
+$(1,0)$ が $s'=1,T=s$，$(0,1)$ がその交換を与える．
+奇数性と $s+s'\le4$ が二つの正族を与える．
+
+次に反対符号位置の低行を $v,-j$，低 column を $V,-J$ とする．
+$n$ を単位枝上のその位置の node とすると $j=v+n-1$ である．
+外側 pair equation は
+\begin{equation}\label{ug25:opposite-pair}
+ ((v\alpha-1)V+\alpha)((j\beta+1)J+\beta)
+ =(vV+1)(jJ+1)-1.
+\end{equation}
+本節で必要な負 pair，$n\in\{0,1\}$ の全族は
+\begin{center}\small
+\begin{tabular}{c|c|c|c|c|c}
+$n$&$v$&$j$&$V$&$J$&$(\alpha,\beta)$\\\hline
+0&2&1&$2r$&$2r$&$(0,-3)$\\
+1&正の偶数&$v$&任意の正整数&1&$(-1,-1)$\\
+1&1&1&$2r$&$2r$&$(0,-2)$\\
+1&2&2&1&1&$(0,-3)$\\
+1&1&1&$2r$&$k\in\{2,4\}$&$(-k,-1)$
+\end{tabular}
+\end{center}
+であり，$r\ge1$ である．正 pair，$n=0$ の全族は
+\begin{equation}\label{ug25:positive-zero}
+ \alpha=\beta=1,\qquad j=v-1,\qquad J=V-1,
+ \qquad v,V\ge2,\quad v\not\equiv V\pmod2
+\end{equation}
+である．これらも命題~\ref{ut24:opposite-classification} の一部だが，
+本節で使う範囲の完全性を短く確認しておく．負 pair では
+$\alpha=-A,\beta=-B$，$0\le A\le4,1\le B\le4$ と置く．差は
+\[
+ [vj(AB-1)+jB-vA-1]VJ
+ +[v(AB-1)+B]V+[j(AB-1)-A]J+AB.
+\]
+$A\ge1,B\ge2$ は係数の非負性で除かれる．
+$A=B=1$ は $(n-2)VJ+V-J+1=0$ なので，$n=1,J=1$ となる．
+$A>1,B=1$ では $J$ 係数が負でなければならず $j=1$ であり，
+$n=0,v=2$ は整数解なし，$n=1,v=1$ は $J=A$ である．
+$A=0$ では $d=B-v$ と置くと
+\[
+ J((jd-1)V-j)=-dV.
+\]
+$d\le0$ は不可能，$jd=1$ は $j=d=1,J=V$，
+$jd>1$ は $d=V=J=1$ となる．これに奇数性を課すと上表を得る．
+正 pair では $(\alpha,\beta)=(1,1)$ 以外が排除され，
+$J(1-nV)=V-1$ から \eqref{ug25:positive-zero} を得る．
+
+\subsection{五node仮定の正規形}
+
+\begin{lemma}\label{ug25:normal-form}
+単位枝 $01$ が五nodeを持つなら，標識を取り直してその位置を $2$ とし，
+低 row と低 column を，列順 $(3,4,2)$ で
+\begin{equation}\label{ug25:normal-rows}
+ \begin{array}{c|c|c}
+ &\text{低 row}&\text{低 column}\\\hline
+ 0&(u,-t,-s)&(A,1-B,-S)\\
+ 1&(1-u,t+1,-s')&(1-A,B,-T)
+ \end{array}
+\end{equation}
+と書ける．ここで
+\[
+ u=s+t-1,\quad s+s'=S+T=4,\quad u,A,B\ge2,
+ \quad u\not\equiv A\pmod2,
+\]
+かつ $(s,s',S,T)$ は上の五node表に属する．従って
+\begin{align}
+ q_{02}&=sS+1\in\{3,5,7\},&q_{12}&=s'T+1,\label{ug25:qnormal1}\\
+ q_{03}&=uA+1\ge7,&q_{13}&=(u-1)(A-1)+1,\label{ug25:qnormal2}\\
+ q_{04}&=t(B-1)+1,&q_{14}&=(t+1)B+1.\label{ug25:qnormal3}
+\end{align}
+core $0$ の pair $23$ は負，core $1$ の pair $23$ は正である．
+core $3$ の低行の正位置は $4$ である．
+\end{lemma}
+
+\begin{proof}
+五nodeの他の二位置は node 零である．
+\eqref{ug25:opposite-pair} の $n=0$ の二族により，
+正側低 column と負側低 column の絶対値の差は零または一である．
+五node位置では $S+T=4$ であり，対向低 $D$ の相殺は全低 column の和を
+$-2$ とするので，残る二差の和は二である．従って両方の差は一で，
+両外側 pair は正となる．
+
+五node位置が $4$ なら，core $2,3$ の pair $01$ がともに正となる．
+matching によりそれぞれの低行の正位置が $4$ となり，単位枝 $23$ の
+位置 $4$ の node が負になる．従って五node位置は $2$ または $3$ である．
+交換して $2$ とし，$0,1$ を交換して core $0$ の低正位置を $3$，
+core $1$ の低正位置を $4$ とする．
+\eqref{ug25:positive-zero} を二つの位置に適用すると
+\eqref{ug25:normal-rows} と分母式を得る．
+$u,A\ge2$ は異なる偶奇なので $uA\ge6$ である．
+matching が残りの符号を決め，core $3$ で pair $01$ が正であることから
+その低正位置は $4$ となる．
+\end{proof}
+
+\subsection{もう一方の単位枝による二つの還元}
+
+core $2$ で pair $01$ は負であるため，matching によりその低正位置は
+$0$ または $1$ である．$4$ なら pair $01$ が正になるので不可能である．
+
+\begin{lemma}\label{ug25:case-A}
+core $2$ の低正位置が $0$ なら
+\[
+ (q_{02},q_{03},q_{12},q_{13})=(7,7,3,3),
+\]
+かつ $(s,s',S,T,u,A,t)$ は
+\begin{equation}\label{ug25:A-cases}
+ (3,1,2,2,3,2,1),\quad
+ (2,2,3,1,2,3,1),\quad
+ (2,2,3,1,3,2,2)
+\end{equation}
+の三つのいずれかである．
+\end{lemma}
+
+\begin{proof}
+単位枝 $23$ の両低正位置は $0,4$ なので，共通負位置は $1$ である．
+core $1$ の pair $23$ が正であるから，その位置の node は四であり，
+位置 $0$ の node $n$ は零または一である．
+core $0$ の pair $23$ は負である．その反対符号位置の表を用い，
+core $2$ 側を正の低行 $v$，低 column $V$，core $3$ 側を
+負の低行 $-j$，低 column $-J$ とする．
+\[
+ q_{02}=vV+1\le7,\qquad q_{03}=jJ+1\ge7.
+\]
+$n=0$ の例外は $v=2,j=1,V=J=2r$ であり，第一不等式から $r=1$，
+従って $q_{03}=3$ となり矛盾する．
+$n=1$ の通常負族は $j=v,J=1$ であり，
+$v+1\le vV+1\le7\le v+1$ から $v=6,V=1$ となる．
+例外 $v=j=1,V=J=2r$ も両分母を七に強制する．
+他の二例外では $q_{03}\le5$ なので不可能である．
+従って常に $q_{02}=q_{03}=7$ である．
+最初の単位枝の五node表から $q_{12}=3$，
+$uA=6$ から $(u,A)=(2,3),(3,2)$ かつ $q_{13}=3$ を得る．
+五node表と $t=u-s+1\ge1$ を組み合わせると
+\eqref{ug25:A-cases} が尽くされる．
+\end{proof}
+
+\begin{lemma}\label{ug25:case-B}
+core $2$ の低正位置が $1$ なら
+\[
+ (q_{02},q_{03},q_{12},q_{13})=(3,7,7,3),
+\]
+かつ $(s,s',S,T,u,A,t)$ は
+\begin{equation}\label{ug25:B-cases}
+ \begin{split}
+ &(1,3,2,2,2,3,2),\quad (1,3,2,2,3,2,3),\\
+ &(2,2,1,3,2,3,1),\quad (2,2,1,3,3,2,2)
+ \end{split}
+\end{equation}
+の四つのいずれかである．
+\end{lemma}
+
+\begin{proof}
+単位枝 $23$ の共通負位置は $0$ で，そこでの pair $23$ は負である．
+共通負位置の表により $(q_{02},q_{03})$ は
+$(3,3),(3,7),(5,5),(7,3)$ のいずれかである．
+$q_{03}\ge7$ により $(3,7)$ だけが残る．
+最初の単位枝の五node表から $q_{12}=7$，また $uA=6$ から
+$q_{13}=3$ を得る．同じ表の $(3,7)$ の二つの低成分と
+$(u,A)=(2,3),(3,2)$ を組み合わせると
+\eqref{ug25:B-cases} を得る．
+\end{proof}
+
+\subsection{二つの固定小分母を持つ core の有限因子障害}
+
+ここまで残った core $1$ の低 row と低 column を，列順 $(3,2,4)$ で
+\begin{equation}\label{ug25:fixed-core}
+ (-(u-1),-s',v),\qquad (-(A-1),-T,B),\qquad v=t+1
+\end{equation}
+と書く．最初の二分母を $m,n$ とすると，七つのケースは次表になる．
+$a=m-(A-1)$，$b=n-T$ とした．
+\begin{center}\small
+\begin{tabular}{c|cc|ccc|c}
+ケース&$m$&$n$&$v$&$a$&$b$&$B$ の当初の条件\\\hline
+$A_1$&3&3&2&2&1&$B\ge2$\\
+$A_2$&3&3&2&1&2&$B\ge2$\\
+$A_3$&3&3&3&2&2&$B\ge2$\\\hline
+$B_1$&3&7&3&1&5&$B\ge2$\\
+$B_2$&3&7&4&2&5&$B\ge2$\\
+$B_3$&3&7&2&1&4&$B\ge2$\\
+$B_4$&3&7&3&2&4&$B\ge2$
+\end{tabular}
+\end{center}
+
+\begin{lemma}[固定二分母の因子判定]\label{ug25:factor-test}
+\eqref{ug25:fixed-core} を持つ正の三高整数 core が存在するなら，
+ある正整数 $L,M$ に対して
+\begin{equation}\label{ug25:factor-equations}
+ LM=mn-1,\qquad
+ \frac{mvB+m-1}{L+a},\quad
+ \frac{nvB+n-1}{M+b}\quad\text{はいずれも正整数},
+\end{equation}
+かつ
+\begin{equation}\label{ug25:linear-equation}
+ CB+E=0,
+ \quad
+ \begin{cases}
+ C=mv(M+b)+nv(L+a)-(v+1)(L+a)(M+b),\\
+ E=(m-1)(M+b)+(n-1)(L+a)-(L+a)(M+b)
+ \end{cases}
+\end{equation}
+が成り立つ．これは任意に大きい $B$ に対する必要条件である．
+\end{lemma}
+
+\begin{proof}
+matching により，二つの負低行位置の間の pair は正である．
+その二 entries を $L,M>0$ とすれば $LM=mn-1$ である．
+当該二行の残りの高 entry は行和から $-(L+a),-(M+b)$ である．
+分母 $vB+1$ の ray からの逆 entries は pair equations により
+\eqref{ug25:factor-equations} の二商の負数となる．
+それらの絶対値の和は最後の行和から $(v+1)B+1$ である．
+分母を払うと \eqref{ug25:linear-equation} を得る．
+整除条件を落としていない点が重要である．
+\end{proof}
+
+$A$ の三ケースでは $LM=8$，$B$ の四ケースでは $LM=20$ である．
+全正因子を代入して得る $B=-E/C$ は次の通りである．
+\begin{center}\small
+\begin{tabular}{c|rrrr}
+&$L=1$&$L=2$&$L=4$&$L=8$\\\hline
+$A_1$&$-1/3$&$-1/3$&$\ast$&$-1/3$\\
+$A_2$&$-1/3$&$\ast$&$-1/3$&$-1/3$\\
+$A_3$&$-4/3$&$-2/3$&$-2/3$&$-4/3$
+\end{tabular}
+\end{center}
+$\ast$ では $C=E=0$ だが，二商の一方が
+$(6B+2)/6=B+1/3$ となり，整数性に反する．
+\begin{center}\small
+\begin{tabular}{c|rrrrrr}
+&$L=1$&$L=2$&$L=4$&$L=5$&$L=10$&$L=20$\\\hline
+$B_1$&$-12/67$&$-1/6$&0&0&$3/14$&$4/3$\\
+$B_2$&$7/9$&$-3/4$&$-1/3$&$-3/11$&$\dagger$&$-3/7$\\
+$B_3$&$-3/7$&$\dagger$&$3/11$&$1/3$&$3/2$&$-31/9$\\
+$B_4$&$-2/3$&$-2/7$&0&$2/5$&$-2/3$&$-32/67$
+\end{tabular}
+\end{center}
+$\dagger$ では $C=0,E\ne0$ である．従ってどの列にも正整数 $B$ はない．
+この三十六場合は固定された八と二十の全正因子であり，有限範囲の数値探索ではない．
+
+\begin{theorem}[$G_{5,14}$ の五node排除]\label{ug25:no-five}
+\eqref{ug25:local}--\eqref{ug25:budget-D} を満たす標準五次接着で，
+高分母 support が $G_{5,14}=K_5\setminus\{01,23\}$ ならば，
+二つの単位枝の node 配分はともに $\{4,1,0\}$ である．
+特にどの単位枝も $\{5,0,0\}$ を持たない．
+\end{theorem}
+
+\begin{proof}
+単位枝 $01$ が五nodeを持つと仮定する．
+補題~\ref{ug25:normal-form} で正規化し，core $2$ の低正位置により
+補題~\ref{ug25:case-A} または補題~\ref{ug25:case-B} を適用する．
+残る七つの局所型は全て補題~\ref{ug25:factor-test} と全因子表に反する．
+単位枝 $23$ については二つの枝を交換すれば同じである．
+一般の単位枝配分は既に二種類に限定されているので結論を得る．
+\end{proof}
+
+\begin{corollary}[残る配置の小分母]\label{ug25:small-three}
+$G_{5,14}$ の各単位枝について，共通負位置の二つの隣接高分母の少なくとも
+一つは三である．その外側 pair が負なら両方とも三であり，正なら
+$(3,2R+1)$ または $(2R+1,3)$，$R\ge1$ である．
+\end{corollary}
+\begin{proof}
+五nodeが排除された後の共通負位置の表を読むだけでよい．
+\end{proof}
+
+\paragraph{検証と残る問題．}
+\nolinkurl{verify_g514_five_node_v25.py} は旧 verifier を import せず，
+必要な共通負位置の有限係数分類，七局所型の再構成，三十六正因子の
+整数係数線形式と整除障害を Python 標準ライブラリの整数・有理数で確認する．
+無限尺度を除くのは式と整除障害であり，有界 scan の不在証明への外挿ではない．
+本定理は $G_{5,14}$ support 自体を排除していない．
+二つの $\{4,1,0\}$ 配分の同時接着，$G_{5,16}$ の五node sector，
+四高 core の完全 matching 型における整数模型の分類と大域整合性は未解決である．

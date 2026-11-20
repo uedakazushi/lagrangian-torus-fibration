@@ -1,0 +1,109 @@
+{
+  "version": 21,
+  "topic": "G5_15 dense support reduction",
+  "initial_continuation_policy": "00_CONTINUATION_POLICY_ja.txt was read before substantive work; v20 remained read-only.",
+  "deliverables": [
+    {
+      "source": "g5_15_reduction_v21.tex",
+      "bundle_path": "paper/g5_15_reduction_v21.tex",
+      "sha256": "0b9be523ca08544eafa35ba4ce8e660feba573297808fbd8c04c31df03449fef",
+      "bytes": 16406
+    },
+    {
+      "source": "notes_g5_15_reduction_v21.tex",
+      "bundle_path": "notes/notes_g5_15_reduction_v21.tex",
+      "sha256": "2b1d9c58a6ecc74fce57b9af2d568505930457853fe139ab6054c6f52292848e",
+      "bytes": 7368,
+      "upstream_sha256_before_editorial_heading_adjustment": "c915e8ba612a97b37697f5ee5177cc0493f844d7aa10d43da434b7353d1742b9",
+      "editorial_adjustment": "Only heading levels changed to fit the existing notes input hierarchy; mathematical text unchanged."
+    },
+    {
+      "source": "verify_g5_15_reduction_v21.py",
+      "bundle_path": "verification/verify_g5_15_reduction_v21.py",
+      "sha256": "254a6f76ef7a25676b14cffe63dc6412b4c1f479a8d8ba4ca18cf7e599da7b2a",
+      "bytes": 13999
+    },
+    {
+      "source": "g5_15_reduction_verification_v21.json",
+      "bundle_path": "verification/g5_15_reduction_verification_v21.json",
+      "sha256": "9841fee37e386f74b307d89e0b1aa5a05bbdc6e493aa82590da79ad33171903f",
+      "bytes": 36928
+    },
+    {
+      "source": "ordinary_fixed_q_lifting_v21.py",
+      "bundle_path": "research/ordinary_fixed_q_lifting_v21.py",
+      "sha256": "59ec820b09d7d16682452196e94c9f66698331a5b15b16e6f8be2faeb5a297bb",
+      "bytes": 10337
+    },
+    {
+      "source": "ordinary_q1001_exploration_v21.json",
+      "bundle_path": "research/ordinary_q1001_exploration_v21.json",
+      "sha256": "b76bb6d968bfaa4145a538a58aa74c0eb7cd7e6d45a4057883e10da8703a8019",
+      "bytes": 19182
+    }
+  ],
+  "previous_version_sources": [
+    {
+      "path": "00_CONTINUATION_POLICY_ja.txt",
+      "sha256": "ee28c9b3eb032d19ecd04a4b3bf13c3d8e4cd5ff80b12a620e4e22ebacdb0432",
+      "bytes": 18935
+    },
+    {
+      "path": "paper/g5_11_obstruction_v20.tex",
+      "sha256": "d67a265a50746b3b4084752f698e557cadef8b2eef26ad36499efe266c643f96",
+      "bytes": 16771
+    },
+    {
+      "path": "paper/common_low_node_bound_v16.tex",
+      "sha256": "78114487ce9d9f9259c0f6dbcb90e945e89693f825bf0eddef4260caf4d71029",
+      "bytes": 5356
+    },
+    {
+      "path": "paper/three_high_matching_v18.tex",
+      "sha256": "5aa8073709f953d9e25baa3519b1e3d060667d2c65428c16e32b6b8dffa02819",
+      "bytes": 6847
+    },
+    {
+      "path": "paper/three_high_fixed_low_completion_v17.tex",
+      "sha256": "ba733676386c7c0ace7cc873b79323cd460a04591455b0c951c59af2b1b3433a",
+      "bytes": 5409
+    },
+    {
+      "path": "research/exact_three_high_completion_v17.py",
+      "sha256": "946503cd9f5c202645ef4d97cd08e9f4fa920fee18095c96770c684d7173b835",
+      "bytes": 4034
+    },
+    {
+      "path": "verification/verify_g5_11_obstruction_v20.py",
+      "sha256": "a4a2983fdf6c5d28df4f53670271091b7f7374c02bde16156064e0a01840c74a",
+      "bytes": 10379
+    }
+  ],
+  "proved_without_denominator_cutoff": [
+    "positive-exception branch is impossible",
+    "ordinary branch has exactly four central models and fourteen remaining low-row cells",
+    "negative exception is contained in the stated q34=3 or5 templates",
+    "for every fixed odd q34 the ordinary three-core lifting set is finite and completely reconstructible"
+  ],
+  "bounded_exploration": {
+    "file": "ordinary_q1001_exploration_v21.json",
+    "scope": "3<=q34<=1001 odd only; all other scales complete at each fixed q34",
+    "positive_model_records": 15,
+    "compatible_three_core_lifts": 0,
+    "not_an_unbounded_exclusion": true
+  },
+  "unresolved": [
+    "G5_15 ordinary branch over all q34",
+    "G5_15 negative-exception templates",
+    "construction of the four-high cores 0,1",
+    "G5_14, which was not investigated in this subtask"
+  ],
+  "validation": {
+    "main_verifier": "PASS",
+    "local_rows_and_pairs": "exact integer checks",
+    "local_positivity": "explicit positive rational weight witnesses",
+    "affine_scale_families": "all coefficient identities checked, parameter t>=0 unrestricted before s<=z",
+    "simplified_note_quadratic": "derived by clearing denominators; also checked on all 15 retained local-model records"
+  },
+  "claim_scope": "Arithmetic charts for the whole stated G5_15 support only; no claim of a general fibration obstruction or a full global lift."
+}

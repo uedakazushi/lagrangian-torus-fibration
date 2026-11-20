@@ -1,0 +1,59 @@
+\subsection{house 型 \texorpdfstring{$G_{5,5}$}{G5,5} の全排除から再利用するもの}
+\label{nh18:house}
+
+$H=\{01,02,03,12,14,34\}$ は，分母上限なしで排除した．
+公開算術稿の定理 \texttt{hs18:no-house} が証明を与える．
+二価 core $2$ の負の枝は途中で残し，外側 $3,4$ だけを
+「高隣接頂点間が低辺」という既知の補題で正の枝へ制限した．
+三価 cores $0,1$ の分類は不要であり，$D$ 相殺を使うのは低辺 $23,24$ だけである．
+この型の排除と，現在の六型の存在・不存在の問題は区別する．
+
+\paragraph{共通低 ray の $C/D$ 型による分類．}
+正の二高分母標準形の低 rays を $C,D$ とすると，高 ray からの
+outgoing / reverse entries は
+\[
+ (C,A):(x,r),\quad(C,B):(-y,-r-1),\quad
+ (D,A):(-s,-S),\quad(D,B):(z,T)
+\]
+である．正の枝では $x\ge2,S\ge2,T\ge5,L=T-S+1\ge3$ であり，
+$y,s,z$ はそれぞれの高分母から一を引いた数の真約数である．
+共通低 puncture の signed-divisor 接着と reverse 上界四を組み合わせると，
+両 $D$ の型は不可能であり，$C/D$ 混在型では
+\[
+ \begin{array}{c|c}
+ \text{通常}&\text{両 shared rays}=A,\quad r_C=S_D\le4\\
+ \text{正例外}&\text{shared ray}=A_C,B_D,\quad r_C=z_D=1
+ \end{array}
+\]
+だけが残る．これは別の graph の隣接二価 cores にも再利用できる．
+canonical $D$ row の低低 entry は $-L$ であり，零と取り違えない．
+
+\paragraph{最終的に現れる完全な必要族．}
+house 型で中央 core $2$ の高 rays を $A=0,B=1$ とすると，node 条件は唯一の族
+\[
+ \begin{array}{c|c|ccccc}
+ \text{core}&(A,B,C,D)&r&s&z&S&T\\\hline
+ 2&(0,1,4,3)&1&2t-1&t&2&6\\
+ 3&(0,4,1,2)&1&1&1&2&6
+ \end{array}
+\]
+へ帰着する．$t\ge1$ は任意の整数であり，探索上限ではない．
+$D^2_3=t-2,D^3_2=-1$ なので低辺 $23$ の相殺で $t=3$ となる．
+core $4$ は $(A,B,C,D)=(3,1,2,0)$，$a=7,r=1$ で
+$D_C=-3$ を要求されるが，この固定データの全七模型は
+\[
+ D_C\in\{4,9,15,18,19,23,40\}
+\]
+を満たすので不可能である．
+固定 $b=7$ にある共鳴族を捨てたのではなく，この場所の共有 ray は
+canonical $A$ と先に強制されており，その共鳴族は適用範囲が異なる．
+
+\paragraph{検算と今後の使用範囲．}
+\nolinkurl{verify_house_obstruction_v18.py} は，共通低 ray の全十六型，
+node の不等式，物理標識付き node 式と無限族の二十五個の多項式恒等式，
+固定 $a=7,r=1$ の全約数を確認する．
+最後の七模型は，証明で導いた上界を使う別の original-matrix 復元でも一致する．
+検算結果は \nolinkurl{house_support_obstruction_verification_v18.json} に保存する．
+これは一般の node 不等式による場合分けと完全な有限計算を組み合わせた証明であり，
+数値上限以下の分母を試した経験的排除ではない．
+house 型自体の探索は終了し，共通低 ray の型分類と低辺係数相殺を残る型へ移す．

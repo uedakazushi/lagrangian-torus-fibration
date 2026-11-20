@@ -1,0 +1,77 @@
+{
+  "version": "v16",
+  "status": "PASS",
+  "captured_at_utc": "2026-10-27T07:18:21.471028+00:00",
+  "audit_kind": "Primary mathematical proof review and integration of independent reconstructions",
+  "source_snapshot": {
+    "paper/common_low_node_bound_v16.tex": "78114487ce9d9f9259c0f6dbcb90e945e89693f825bf0eddef4260caf4d71029",
+    "paper/two_leaf_unit_finiteness_v16.tex": "c1d0d6b45cd8fe189285ea3f736fe668e4a3e8d9b4b472199ce1e7a146a54e92",
+    "paper/r1_exceptional_leaf_v16.tex": "1a4eb11675aa74bd0c1c04494d7816a605561f75480781e95e1f06bedb42296e",
+    "paper/two_leaf_global_obstruction_v16.tex": "22ea8b0ac2f7f983224370046b0d40d24bf60fc7dc54b7cfb9e9fe4f453e8ea4",
+    "paper/k4_low_hub_reduction_v16.tex": "e37d64149dc69fa2dd826b312ef665101dc67c6becefbe9573547526d1e790f8",
+    "paper/quintic_support_frontier_v16.tex": "eddb27fb53839ce27aca817df220f050933d6afff5fd589edd0b597b1a9b4f6c",
+    "notes/notes_local_gluing_v16.tex": "b930d639c85dea330ba9cbff5838b7dc13b943b5aa8aae00a0568b9063784db9"
+  },
+  "setting": "All-plane quintic SNC cores, standard K4 cones and K5 branch graph; no additional branch singularities.",
+  "proof_reviews": [
+    {
+      "claim": "Common-low ordinary reverse bound",
+      "result": "PASS",
+      "reason": "Low-low pair ab=0 and node budget 5 force u=1-n or u=m-1; nonzero roots are exactly bounded by 4. No D opposition or neighbor degree hypothesis. Positive two-high inequality implies T>=5."
+    },
+    {
+      "claim": "Crossed two-leaf restriction r<=4 AND z=1",
+      "result": "PASS",
+      "reason": "z>1 forces ordinary clutching whose reverse T>=5 violates the general bound. The unit case forces the maximal positive exceptional pair. For r>1 the other high edge is ordinary, giving r<=4."
+    },
+    {
+      "claim": "Non-B finite reduction",
+      "result": "PASS",
+      "reason": "Re-derived F_r(s) coefficient relation, E>=-2 implies s<=9, small-S resonance is exhausted, and free-E branch splits into th<=4 or h<=12,t<=6. No denominator or arbitrary entry cutoff. Full fixed-middle leaf reconstruction retains cd=0 and q3 label degeneracy."
+    },
+    {
+      "claim": "B exceptional finite reduction",
+      "result": "PASS",
+      "reason": "B forces r=1. Re-derived (s+1)k=3S-4, complete C/B cases of the other leaf, case-I inequality and case-II C4<=29 bounds; all c=d=0 overlaps are deduplicated by labelled matrices. Four surviving middles and seven patches satisfy the short center obstruction."
+    },
+    {
+      "claim": "Known-three-row obstruction and global G5_3 exclusion",
+      "result": "PASS",
+      "reason": "Node sum 5 gives 21 rows per known neighbor. All 21^3 triples are complete without q01. Every one of the 52 complete low patches fails a known pair at center0 or center1. B/C/D presentations exhaust all leaves, including q3 multiple labels. B7 is a subset of 52, not an additional seven."
+    },
+    {
+      "claim": "K4 hub flow and residual cases",
+      "result": "PASS",
+      "reason": "Hub D opposition gives div(W)=columnsum(N)-5; ordinary reverse bound is general. Odd q forces 2/4/6 exceptional edges; six reduces to the explicit R,V,N matrices and 21 (u,w) cases, all impossible. Two exceptions force (3,7)/(5,9); four exceptions leave two ordinary bridges, q<=25 or q<=7 for disjoint endpoints. Whole K4 remains open."
+    },
+    {
+      "claim": "Support count and cycle rank",
+      "result": "PASS",
+      "reason": "Removing the single 60-labelled two-leaf triangle type from 13/421 gives 12/361. All 1024 K5 subgraphs checked; nonempty support contains a triangle, has beta1>=2 and at least six edges; the unique four-active-vertex shape is K4."
+    },
+    {
+      "claim": "General unit-entry note",
+      "result": "PASS",
+      "reason": "F=0 has only positive integer solution (r,s)=(12,4), forcing nonintegral E=-12/7; thus (r,s,E) uniquely recovers S,y. E>=-M implies s<=M+7 by E<(4+4/r-s)S/r and S>r. Independently re-derived by a second agent."
+    }
+  ],
+  "independent_evidence": [
+    "two_leaf_unit_finiteness_independent_audit_v16.json",
+    "nonB_freeE_independent_audit_v16.json",
+    "two_leaf_global_independent_audit_v16.json",
+    "overview_consistency_audit_v16.json"
+  ],
+  "full_theorem_D_opposition_used": true,
+  "center_obstruction_uses_unknown_q01": false,
+  "finite_ranges_are_proof_derived": true,
+  "external_peer_review": false,
+  "proof_assistant_formalization": false,
+  "open": [
+    "K4 high support itself",
+    "Other eleven high-support graph types",
+    "General quintic denominator rigidity",
+    "General three-high matching or high-D-sign theorem",
+    "Global geometric equivalence and the previously specified surgery questions"
+  ],
+  "unresolved_review_findings": []
+}

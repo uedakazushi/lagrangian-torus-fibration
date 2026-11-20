@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "reviewer": "paw_arithmetic_v14",
+  "source": "/workspace/scratch/d5d942d05d31/v14_work/branched_nodes/degree_two_triangle_obstruction_v14.tex",
+  "source_sha256": "b0f42ef44ecff7418f0f74aa9a469e2893d2d0a34dff51cea0a6f209b6807db3",
+  "script_sha256": "92662851cdf29a9b0b9699331f36cecf989c19dfb36cdfb5042122d8419ca06a",
+  "independent_checks": [
+    "Re-derived zero outgoing sums at both common-low punctures from opposite signs and the proper-negative-divisor lemma.",
+    "Re-derived reverse bound four using product-zero at the third core and all node counts in [0,5]; upper five follows from row sums, without D opposition.",
+    "Independently excluded shared B by rT>(r+1)S and the only remaining negative case r3,S2.",
+    "Enumerated all three negative cases in 2<=S<r<=4 and solved r4,S2 via (3-u)(ell+1)=2.",
+    "Independently derived z(5T-33)=9 for the swapped reverse pair r2,S4 at shared denominator9; all positive divisor cases are nonintegral.",
+    "Checked no D-opposition, denominator cutoff, canonical low-label agreement, or degree assumption on the third triangle vertex has entered.",
+    "Ran a private copied verifier and checked the reported four removed graph types and remaining count16."
+  ],
+  "issues": [],
+  "scope": "Internal independent mathematical audit and exact certificate replication, not formal proof-assistant verification."
+}

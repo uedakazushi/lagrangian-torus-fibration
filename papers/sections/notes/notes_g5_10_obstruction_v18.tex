@@ -1,0 +1,66 @@
+% Reusable results only. Detailed proof: gten18:no-support in arithmetic paper.
+\subsection{\texorpdfstring{$G_{5,10}$}{G5,10} の排除から再利用する方法}
+\label{ngten18:reusable}
+
+$G_{5,10}=\{01,02,03,12,13,24,34\}$ は，分母の上限なしに排除された．
+算術稿の定理 \texttt{gten18:no-support} を参照する．
+核心は，三高分母 core の正符号が完全 matching となる定理を，
+二価 core の二つの低辺の node 予算と組み合わせることである．
+対象は指定した五次の算術的接着模型であり，任意の fibration の分類ではない．
+
+頂点 $4$ の二高分母標準形を $(A,B,C,D)=(2,3,0,1)$ とし，
+$a=sS+1,b=zT+1,x=sS/r,y=zT/(r+1)$，$\delta=T-S$ とする．
+$q_{23}=1$ なので正の枝であり，$\delta\ge2$ である．
+低辺 $04,14$ の node 数をそれぞれ $(n_1,n_2,n_3)$，$(m_0,m_2,m_3)$ とすると，
+隣接する三高分母 cores の低 rows が
+\[
+ R^0=(1-n_1,1-r-n_2,r+2-n_3),\quad
+ R^1=(\delta+2-m_0,S+1-m_2,1-T-m_3)
+\]
+に固定される．各 row には正成分がちょうど一つあり，各 node 組の和は五である．
+共通低 puncture $(01;4)$ の三つの接着型は次のように処理する．
+
+\begin{enumerate}
+\item 通常型では，有限な node 予算と matching 性だけで
+$(r,S,T)=(2,3,5)$ が強制される．整数 pair equation は
+$(u-2)(v+1)=-3$ に帰着し，唯一の中央模型は
+$(r,s,z,S,T)=(2,2,6,3,5)$，$(a,b)=(7,31)$ である．
+しかし反対側の core では，$30$ の signed divisor が
+$27\pmod{31}$ であることを要求される．その候補 $27,-4$ はどちらも不適格である．
+この部分は $D$ 相殺を使わない．
+
+\item 正例外型では $R^0=(1,-1,-1)$ となる．二つの低辺の $D$ 相殺から
+$x-y>0$ と $s-z\le1$ が従う．正の枝の不等式は $s-z\ge1$ を与えるので
+$s=z+1$ である．反対側の低 column の二つの負成分がともに $-1$ となり，
+$q_{12}+q_{13}=q_{01}+2$ を要求するが，奇分母の parity と矛盾する．
+
+\item 負例外型では $q_{01}\in\{3,5\}$，$\delta=2$ となる．
+$h=S-r$，$\alpha=sh/r$，$\beta=z(h+1)/(r+1)$ とすると
+\[
+ \left(\frac{r^2}{h}-\frac{(r+1)^2}{h+1}\right)\alpha\beta
+   =\alpha-\beta+1.
+\]
+第三角の signed-divisor clutching により，$\alpha,\beta>1$ なら括弧が整数で，
+その絶対値は一未満となる．零の場合は $h=r^2/(2r+1)$ となり不可能である．
+$\alpha=1$ の例外も保持して処理すると，必ず $\beta=1$ となる．
+残る equation は $(h+1)z(z-2)=h-1$ であり，中央模型全体が
+\[
+ r=3,\quad S=4,\quad T=6,\quad z=2,\quad s=3\alpha,\quad
+ a=12\alpha+1,\quad b=13
+\]
+という無限共鳴族へ帰着する．これを探索上限で切らない．
+低辺 $14$ の $D$ と奇分母から $\alpha$ は正の偶数となり，
+$q_{12}\ge15\alpha+1$ を得る．低辺 $04$ から $q_{02}\ge8\alpha-7$ を得る．
+辺 $24$ の node と matching 性は二つの正整数 $M,N$ に
+\[
+ M+N=24\alpha+1,\quad M>3q_{02},\quad N>q_{12}
+\]
+を要求するため，$M+N>39\alpha-20\ge24\alpha+10$ と矛盾する．
+\end{enumerate}
+
+再利用すべき点は，低辺の有限な node 予算から隣接三高 core の低 row を固定すること，
+matching によってその符号を制限すること，そして第三角の signed divisors で
+共鳴族を特定してから $D$ と node の不等式で全族を排除することである．
+検算の入口は \nolinkurl{verify_g5_10_obstruction_v18.py} であり，
+係数ごとの恒等式二十四本と，証明由来の有限な node の場合分けを保持する．
+有界分母探索を一般証明の代わりにしていない．

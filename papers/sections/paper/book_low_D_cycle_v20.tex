@@ -1,0 +1,209 @@
+% v20: no zero low-D edge in a book low triangle; hence a nonzero D cycle.
+% Depends on the canonical two-high form and the v19 finite-completion theorem.
+\section{Book 低三角形の非零 \texorpdfstring{$D$}{D} 周期}
+\label{bd20:section}
+
+低辺の対向 $D$ 相殺は，node の向きとは別の符号の向きを定める．
+零の $D$ を捨てて議論する前に，その場合を完全に排除する．
+
+\begin{lemma}[低係数の零と負の隣接]
+\label{bd20:local-zero}
+正の整数二高分母標準形において，二つの低係数 $D_C,D_D$ が
+同時に零となることはない．一方が負でもう一方が零となるのは，
+canonical parameters
+\begin{equation}\label{bd20:unique-zero}
+ (r,s,z,S,T)=(4,4,5,2,2),\qquad (D_C,D_D)=(0,-2)
+\end{equation}
+の場合に限られる．この局所主張には分母の奇数性は不要である．
+\end{lemma}
+
+\begin{proof}
+$\delta=T-S$ と置くと
+\[
+ D_C=\delta-\frac Sr s+\frac T{r+1}z,\qquad
+ D_D=s-z-1.
+\]
+正の枝では $\delta\ge2$，$r\delta>S$ である．
+$D_D<0$ なら整数性から $z\ge s$ であり，
+$T/(r+1)>S/r$ によって $D_C>0$ となる．
+$D_D=0$ のときは $s=z+1$ を直接代入して
+\begin{equation}\label{bd20:positive-zero-identity}
+ D_C=\frac{(r+z+1)(r\delta-S)}{r(r+1)}>0
+\end{equation}
+を得る．従って正の枝には負と零の組も，二つの零もない．
+
+負の枝では $S=T=w$，$H=r-w$ とし，
+\[
+ c=\frac{sH}{r},\quad e=\frac{z(H+1)}{r+1},\qquad
+ E=1-\frac{w^2}{H(H+1)}
+\]
+を用いる．既知の恒等式 $Ece=e-c+1$ と
+$c\ge2,e\ge1,-1<E<1/2,E\ne0$ が成り立つ．
+$E<0$ なら整数性から $c\ge e+2$ であり，
+\[
+ D_C=w\left(\frac e{H+1}-\frac cH\right)<0,
+\]
+\[
+ s-z=(c-e)+w\left(\frac cH-\frac e{H+1}\right)>2.
+\]
+従って $D_D>1$ であり，零は生じない．
+
+$E>0$ なら，定理~\ref{ml12:denominator-descent} の証明と同じく，
+$j=e-c\ge1$，$c\le H$ となる．これらを再確認すると，
+$e\le c-1$ は $Ece=e-c+1>0$ に反し，
+$e=c$ は pair equation の $\gcd(c,e)=1$ と $c\ge2$ に反する．
+また $E>0$ は整数性から $w\le H$ を与えるので
+$E\ge1/(H+1)$，一方 $Ec=1-(c-1)/e<1$ だから $c\le H$ である．
+従って
+\[
+ s-z=-j+\frac{w(c-Hj)}{H(H+1)}<0,\qquad D_D<0,
+\]
+\begin{equation}\label{bd20:negative-low-D}
+ D_C=\frac{w(Hj-c)}{H(H+1)}\ge0.
+\end{equation}
+等号には $j=1,c=H$ が必要十分である．そのとき
+$E=2/[H(H+1)]$ なので
+\[
+ w^2=H(H+1)-2.
+\]
+$H\ge3$ なら右辺は $H^2$ と $(H+1)^2$ の間に厳密にあるため，
+$H=w=2$ に限られる．$c=2,e=3$ から $r=4,s=4,z=5$ を得る．
+以上で零の全場合が尽くされた．
+\end{proof}
+
+\begin{lemma}[唯一の負・零 core は低三角形へ完成しない]
+\label{bd20:zero-core-obstruction}
+Book の仮定の下で，式~\eqref{bd20:unique-zero} の core を含む
+低三角形は存在しない．
+\end{lemma}
+
+\begin{proof}
+その core を $2$ とし，canonical order を $(0,1,3,4)$ とする．
+行列と低係数は
+\[
+ P^2=
+ \begin{pmatrix}
+ 0&-7&2&-4\\
+ -14&0&-2&5\\
+ 4&-5&0&0\\
+ -2&2&-1&0
+ \end{pmatrix},\qquad
+ (q_{20},q_{21},q_{23},q_{24})=(9,11,1,1),
+\]
+\[
+ D^2_3=0,\qquad D^2_4=-2.
+\]
+低辺 $23$ の三つの node を $(n_0,n_1,n_4)$ とすると，
+core $3$ の ray $2$ の行は
+\[
+ (-3-n_0,\ 6-n_1,\ 1-n_4),\qquad n_0+n_1+n_4=5
+\]
+に固定され，その $D$ は零である．
+$n_4=1$ ならこの行は canonical $C$ で，高 ray の順序は $(1,0)$，
+$2\le r\le6$ となる．負枝は $2\le w<r$ と $H$ の既知の範囲を，
+正枝は $\delta=2,3$ と $r<S<r\delta$ を満たす．
+$n_4=L+1$，$L=1,3,4$ なら canonical $D$ で，高順序は $(0,1)$ である．
+$L=1$ では $S=T\in\{3,4,5,6\}$，
+$L=3,4$ では可能な $(r,S,T)$ は
+\[
+ (2,3,5),\quad(3,4,6),\quad(2,3,6)
+\]
+に限られる．それ以外の行は二高標準形に合わない．
+
+同様に低辺 $24$ の node を $(n_0,n_1,n_3)$ とすると，
+core $4$ の ray $2$ の行は
+\[
+ (3-n_0,\ -1-n_1,\ 2-n_3),\qquad n_0+n_1+n_3=5
+\]
+で，その $D$ は二である．
+canonical $C$ なら $n_3=2$，高順序 $(0,1)$，
+$1\le r\le3$ である．canonical $D$ なら，可能なのは
+高順序 $(1,0)$ の負枝 $w=2,3$ だけである．
+
+以上の有限 reverse data に対し，指定した低 $D$ と高高 pair equation を連立する．
+完全復元は定理~\ref{bk19:finite-completion} の二次式で実行できるが，
+ここでは次の直接表示でも確認できる．
+\[
+ u=S+\frac Sr-1,\qquad v=T-\frac T{r+1}+1
+\]
+と置くと，高高 pair equation は
+\[
+ (uv-ST)sz+(u-S)s+(v-T)z+1=0.
+\]
+指定された低係数を $d$ とすると
+\[
+ z=
+ \begin{cases}
+ \displaystyle\frac{(r+1)S}{rT}s+\frac{(r+1)(d-\delta)}T,
+       &\text{固定 ray が }C,\\[4pt]
+ s-d-1,&\text{固定 ray が }D.
+ \end{cases}
+\]
+この代入による二次式の整数根を取り，元の行列の整数性と奇数分母を検査する．
+core $3$ の reverse data は六十八個，core $4$ では十五個であり，
+全 scale の復元後に残る相手は次表の四個と一個だけである．
+scale や高分母の上限は使っていない．
+
+\begin{center}
+\small
+\begin{tabular}{cll}
+相手 core & canonical $(r,s,z,S,T)$ & canonical order\\
+\hline
+$3$ & $(2,2,1,3,6)$ & $(0,1,4,2)$\\
+$3$ & $(3,3,2,4,6)$ & $(0,1,4,2)$\\
+$3$ & $(4,4,5,2,2)$ & $(1,0,2,4)$\\
+$3$ & $(4,4,2,7,10)$ & $(1,0,2,4)$\\
+\hline
+$4$ & $(2,2,1,3,6)$ & $(0,1,2,3)$\\
+\end{tabular}
+\end{center}
+
+残る低辺 $34$ を比べると，core $3$ の上表の順で次の値となる．
+node の順序は punctures $(0,1,2)$ である．
+\begin{center}
+\small
+\begin{tabular}{lcc}
+core $3$ の canonical parameters & 最後の node 三つ & $D^3_4+D^4_3$\\
+\hline
+$(2,2,1,3,6)$ & $(2,-2,5)$ & $2$\\
+$(3,3,2,4,6)$ & $(1,-1,5)$ & $1$\\
+$(4,4,5,2,2)$ & $(2,-3,6)$ & $-2$\\
+$(4,4,2,7,10)$ & $(-6,2,9)$ & $1$\\
+\end{tabular}
+\end{center}
+いずれも node 非負性と $D$ 相殺に反する．
+全二十一 node 行からの復元とこの表は
+\nolinkurl{verify_book_low_D_cycle_v20.py} で独立に再計算し，
+\nolinkurl{book_low_D_cycle_verification_v20.json} に保存した．
+\end{proof}
+
+\begin{theorem}[Book 低三角形の非零 $D$ 周期]
+\label{bd20:nonzero-cycle}
+正の整数局所 charts，奇数高分母，低辺の非負 node，
+対向 $D$ 相殺を満たす book 低三角形が存在すると仮定する．
+三本の低辺の全てで両端の $D$ は非零である．
+各二価 core は一つの正の低 $D$ と一つの負の低 $D$ を持ち，
+各低辺を負の端から正の端へ向けると有向三角形をなす．
+\end{theorem}
+
+\begin{proof}
+二本以上の低辺が零の $D$ を持てば，その交点 core では二つの低 $D$ が
+零になり，補題~\ref{bd20:local-zero} に反する．
+零の辺がちょうど一本とする．その両端 core の残る低 $D$ は非零である．
+両方が正なら第三 core の二つの低 $D$ が負になり，
+補題~\ref{tl15:low-D} に反する．
+従って少なくとも一方の端 core は負と零の組を持つ．
+補題~\ref{bd20:local-zero} により式~\eqref{bd20:unique-zero} の模型に限られるが，
+補題~\ref{bd20:zero-core-obstruction} がその完成を排除する．
+
+これで全低 $D$ は非零である．三本の辺の相殺により，
+六つの低端のうち正が三つ，負が三つとなる．
+補題~\ref{tl15:low-D} により一つの core に負が二つ現れることはないので，
+三つの cores はそれぞれ一つずつ負を持ち，残りは正である．
+従って各頂点の入次数と出次数はともに一であり，有向三角形になる．
+\end{proof}
+
+この $D$ の向きは，高 ray $0$ への正 entry から定めた
+補題~\ref{bk19:triangle} の向きとは別であり，
+一致または反対のいずれも現時点では許している．
+符号の周期性だけから book 全体の不存在は結論しない．

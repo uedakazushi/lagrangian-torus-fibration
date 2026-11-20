@@ -1,0 +1,89 @@
+% v22: the complete book obstruction leaves four dense support types.
+% Stable sf20/sf21 labels are retained as aliases for current global conclusions.
+\subsection{四型への帰着と三本の単位分母の伝播}
+\label{sf22:section}\label{sf21:section}\label{sf20:section}
+
+\begin{corollary}[非空支持は少なくとも八本の高辺を持つ]
+\label{sf22:no-leaves}\label{sf21:no-leaves}\label{sf20:no-leaves}
+正の局所整数 charts，marked puncture の整数 clutching，対向 $D$ 相殺，
+および非負 node と各辺の node 総数五を満たす，標準五次 $K_5$ 接着データを考える．
+高分母支持 $H=\{ij:q_{ij}>1\}$ が非空なら，五頂点全てを使い，二点連結であり，
+\[
+ \min\deg(H)\ge2,\qquad |E(H)|\ge8,\qquad b_1(H)\ge4
+\]
+が成り立つ．二価頂点は高々一つであり，ある場合の高近傍二頂点はともに四価である．
+\end{corollary}
+
+\begin{proof}
+全低 core の伝播，木と閉路の障害，二価二頂点の三角形，葉付き四角形，
+$K_{2,3}$，diamond，二葉三角形，四使用頂点 $K_4$ の障害を適用する．
+さらに定理~\ref{hs18:no-house}，\ref{gten18:no-support}，
+\ref{lh18:no-K4-leaf}，\ref{g719:no-G5-7}，\ref{dl19:no-G5-9}，
+\ref{g51120:no-support} により，残る必要候補は従前の五型
+$G_{5,13},G_{5,14},G_{5,15},G_{5,16},G_{5,17}$ である．
+このうち唯一の七辺型 $G_{5,13}$ は定理~\ref{bc22:book-obstruction} により排除される．
+残る graph は $K_5$ から高々二辺を除いたものであり，以下の表が全ての型を与える．
+最小次数，二価頂点の個数と近傍次数はこの表から従う．
+
+二点連結性は直接にも分かる．任意の一頂点を削除した後は，$K_4$ から高々二辺を
+除いた graph が残る．$K_4$ の非自明な頂点分割を切断するには少なくとも三辺を
+除く必要があるため，削除後も連結である．従って元の graph は二点連結であり，
+$b_1(H)=|E(H)|-4\ge4$ を得る．
+\end{proof}
+
+\begin{corollary}[四型・五十六標識]
+\label{sf22:remaining-support}\label{sf21:remaining-support}\label{sf20:remaining-support}
+前系の仮定の下で，非空高分母支持の必要候補は次の四型に限られる．
+補 graph $\overline H=K_5\setminus H$ の表示では孤立頂点を省略する．
+\begin{center}\small
+\begin{tabular}{crcrcr}
+型&$|E|$&降順次数列&$b_1$&$\overline H$&標識付き個数\\\hline
+$G_{5,14}$&8&$(4,3,3,3,3)$&4&$2K_2$&15\\
+$G_{5,15}$&8&$(4,4,3,3,2)$&4&$P_3$&30\\
+$G_{5,16}$&9&$(4,4,4,3,3)$&5&$K_2$&10\\
+$G_{5,17}$&10&$(4,4,4,4,4)$&6&$\varnothing$&1
+\end{tabular}
+\end{center}
+識別子は従前のものを保ち，欠番を詰めない．これらは必要条件を通過した
+graph の個数であり，整数接着，作用 atlas，幾何的非同型類の存在数ではない．
+\end{corollary}
+
+\begin{proof}
+八高辺の場合，欠ける二辺が互いに素なら $2K_2$，一点を共有するなら $P_3$ である．
+前者は孤立する補頂点を五通りに選び，残る四頂点の三つの完全 matching を選ぶため
+$5\cdot3=15$ 標識となる．後者は中心を五通り，両端を $\binom42=6$ 通りに選ぶため
+$5\cdot6=30$ 標識となる．九高辺は欠ける辺の選択 $\binom52=10$ 通り，
+十高辺は一通りであり，和は $15+30+10+1=56$ である．
+\nolinkurl{verify_support_agenda_v22.py} は，旧 graph 実装を import せずに
+全 $2^{10}=1024$ 標識付き部分 graph を列挙し，この分類，自己同型群，
+各頂点削除後の連結性，二価頂点の近傍次数を確認する．
+第20版の六十六標識の全リストとも比較し，差分が book の十標識だけであることを記録する．
+この graph 検査は既述の算術障害を適用するものであり，算術証明の代用ではない．
+\end{proof}
+
+\begin{corollary}[三本の単位分母からの伝播]
+\label{sf22:three-unit-branches}
+同じ仮定の下で，十本の相異なる branches のうち三本以上が分母一なら，
+全ての分母は一である．また，一つの core の高分母 ray が高々一本である場合，
+または二つの異なる cores がそれぞれ高々二本の高分母 ray を持つ場合も，
+全分母は一である．
+\end{corollary}
+
+\begin{proof}
+三本以上の単位分母は $|E(H)|\le7$ を意味するので，非空の場合の
+$|E(H)|\ge8$ に反する．残りは最小次数二以上および二価頂点高々一つという
+非空支持の必要条件に反する．いずれも $H=\varnothing$ が従う．
+\end{proof}
+
+\paragraph{残る研究課題．}
+Book は解決済みであり，大きい分母の探索や四高中心の完成を別に行う必要はない．
+その証明で得た小さい $L$ の正枝の剛性と負枝の完全な reverse 分類は，
+他の支持へ移植できる局所的な道具として残る．
+$G_{5,15}$ の通常型は四中心・十四配置，負例外型は共有分母 $3,5$ の二 template に限られる
+（定理~\ref{g51521:reduction}）．通常型は固定した共有分母について有限復元できるが，
+共有分母自体の上界を意味しない．三高係数の同時非負性も，整数復元の条件と
+元の pair 残余式を同時に扱う必要がある．
+残る四型の整数接着と大域実現，一般の五次分母剛性は引き続き未解決である．
+$K_4$ を部分 graph として含むことだけでは，支持全体が $K_4$ の場合の障害を適用できない．
+また，ここで固定した cores，cones，marked punctures の接着問題の結論を，
+任意の Lagrangian torus fibration に対する不存在定理へ拡張してはいない．

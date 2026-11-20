@@ -1,0 +1,254 @@
+% v14: C4 with one pendant edge.  The finite coefficient exclusions are
+% complete divisor computations, using the proved fixed-denominator theorem.
+\section{四角形に一本の葉辺を付けた高分母成分の排除}
+\label{cp14:section}
+
+次に，高分母 support が四角形と一本の葉辺からなる場合を扱う．
+三つの二価 core を持つこの場合には，中央の二価 core から葉に向かう
+puncture の符号を用いて，全ての整数条件を有限計算と一つの無限族へ帰着できる．
+以下の有限計算は，分母の上限による探索ではない．
+固定分母の完全な約数表示を用い，検査した全約数と棄却理由を
+\texttt{verify\_c4\_pendant\_v14.py} の結果に記録する．
+
+\begin{lemma}[小さい負の枝の完全分類と接続障害]
+\label{cp14:small-negative}
+正の二高分母標準形で $S=T=w\leq4$ とする．
+このとき canonical データは次の七つだけである．
+\[
+\begin{array}{rrrr|rr|rr}
+r&s&z&w&a&b&D_A&D_B\\\hline
+4&4&5&2&9&11&3&-1\\
+5&10&2&3&31&7&-25&23\\
+6&6&14&3&19&43&29&-23\\
+7&7&2&4&29&9&-22&21\\
+7&21&4&4&85&17&-69&63\\
+8&6&9&4&25&37&13&-10\\
+8&8&27&4&33&109&87&-75
+\end{array}
+\]
+いずれの模型でも，どちらの高 ray についても，その $D$ と反対の係数を持つ
+同分母の正の二高分母模型は存在しない．従って，これらの高 ray は
+対向 $D$ の相殺を満たしながら別の二高分母 core に接続できない．
+\end{lemma}
+
+\begin{proof}
+$S\geq2$ である．$H=r-w$，$\alpha=-u$，$\beta=-v$ と置けば
+$H,u,v\geq1$ であり，既知の負の枝の式は
+\[
+ Euv=v-u+1,\qquad E=1-\frac{w^2}{H(H+1)}
+\]
+となる．$H^2<H(H+1)<(H+1)^2$ より $E\ne0$ である．また $u=1$ は $E=1$ を要求するので不可能である．$E\leq-1$ なら
+$u(1+Ev)=v+1$ の左辺が非正となるため不可能である．
+$E>0$ のとき $u=1$ は $E=1$ を要求するので $u\geq2$ であり，
+$Eu=1-(u-1)/v<1$ より $E<1/2$ を得る．従って全ての場合に
+\begin{equation}\label{cp14:H-bound}
+ \frac{w^2}{2}<H(H+1)<2w^2
+\end{equation}
+となる．$w=2,3,4$ に対する $(w,H)$ は
+\[
+ (2,2),\quad(3,2),(3,3),\quad(4,3),(4,4),(4,5)
+\]
+だけである．
+
+$E=M/N$ を既約表示し，$N>0$ とする．上の方程式は
+\begin{equation}\label{cp14:negative-factor}
+ (N-Mu)(N+Mv)=N(N-M)
+\end{equation}
+と同値である．実際，$N-Mu=N(u-1)/v>0$，$N+Mv=N(v+1)/u>0$ なので，両因子は正の整数である．その全ての正約数の組から
+\[
+ u=\frac{N-d}{M},\qquad
+ v=\frac{N(N-M)/d-N}{M}
+\]
+を復元し，$u,v$ の正の整数性と
+\[
+ s=\frac{u(H+w)}H,\qquad
+ z=\frac{v(H+w+1)}{H+1}
+\]
+の整数性を課すと，表の七模型を得る．これは六つの有限な約数計算で尽くされ，
+全ての採用模型は元の行和・pair products と正の標準 weights を満たす．
+
+接続障害には，固定分母の完全な factorization を適用する．
+表の各 ray に対し，以下の反対係数が存在しないことを得る．
+\[
+\begin{array}{r|l@{\qquad}r|l}
+q&\text{存在しない }D&q&\text{存在しない }D\\\hline
+7&-23&9&-3,-21\\
+11&1&17&-63\\
+19&-29&25&-13\\
+29&22&31&25\\
+33&-87&37&10\\
+43&23&85&69\\
+109&75&&
+\end{array}
+\]
+具体的には，固定 ray が $A$ の場合，$r,s\mid q-1$ と $x=(q-1)/r$ に対して
+\[
+ z\{(r+1)(q+x-s)-(rs+1)T\}=(r+1)(s-x-1)
+\]
+の非零右辺の全正約数 $z$ を調べる．固定 ray が $B$ の場合には，
+$r+1,z\mid q-1$，$y=(q-1)/(r+1)$ に対し
+\[
+ s\{((r+1)z+1)S-r(q-y+z)\}=r(y-z-1)
+\]
+の全正約数 $s$ を調べる．既存の固定分母定理により，これらは非共鳴の場合を全て尽くす．
+上表の分母のうち共鳴を持つのは七だけであり，その係数 $7k-9$，$k\geq1$，は
+$-23$ にはならない．計算では全候補の分母，整数性，行和，pair products，係数を再検査した．
+従って上表は相手分母の数値上限なしで成立する．
+\end{proof}
+
+\begin{lemma}[中央 core に現れる二つの小さい表示]
+\label{cp14:small-middle}
+正の二高分母標準形について，次が成立する．
+\begin{enumerate}
+\item $r=1$ かつ $L=T-S+1\leq5$ なら，
+$(a,b)=(3,11),(5,31)$，または
+\[
+ (r,s,z,S,T)=(1,2t-1,t,2,6),\quad
+ (a,b)=(4t-1,6t+1),\quad (D_A,D_B)=(3,-7),\quad t\geq1
+\]
+である．
+\item $z=1$，$S>r$，$S\leq4$ なら，次の五模型，または固定七の共鳴族だけが残る．
+\[
+\begin{array}{rr|rrrrr}
+a&b&r&s&z&S&T\\\hline
+3&7&1&1&1&2&6\\
+13&13&1&4&1&3&12\\
+5&13&1&1&1&4&12\\
+13&17&1&3&1&4&16\\
+29&19&1&7&1&4&18
+\end{array}
+\]
+この第二のリストでは，少なくとも一方の高 ray が，対向 $D$ の相殺を保って
+別の二高分母 core に接続することを妨げられる．
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+第一の場合，$S\geq2>r$ なので $T>2S$ である．$T-S+1\leq5$ と合わせると
+$(S,T)=(2,5),(2,6),(3,7)$ に限られる．
+最初の場合は pair-product 式が $(3-s)(z+2)=8$ となり，
+$(s,z)=(1,2),(2,6)$ を得る．第二の場合は $s=2z-1$ となる．
+最後の場合は $z(3s-5)+4s+2=0$ であり，$s=1,z=3$ 以外は不可能だが，
+この組は $2\mid zT$ を満たさない．各係数は標準式への代入で得る．
+
+第二の場合には $r<S\leq4$ である．$r=1$ なら
+\[
+ T=6S-4-\frac{6S-8}{s+1},\qquad 2\mid T
+\]
+となり，$S=2,3,4$ ごとの全正約数を調べると表の五模型を得る．
+$r=2,S=3$ なら $T=6$，$s=2k$ となって固定七の共鳴族である．
+$r=2,S=4$ では $T=9-3/(2s+1)$ なので，整数になる唯一の値 $s=1,T=8$ は
+$3\mid T$ に反する．$r=3,S=4$ では $s=3k$，$k\geq1$ と書け，
+\[
+ T=6+\frac{2k+2}{9k+1}
+\]
+は六と七の間にあるので整数ではない．
+
+表の第一・第三模型は分母三・五の係数集合から排除される．
+第二模型の $a=13,D_A=-3$ に対して反対係数三は存在せず，
+第四模型の $b=17,D_B=-9$ に対して反対係数九は存在せず，
+第五模型の $a=29,D_A=-15$ に対して反対係数十五は存在しない．
+これらも前補題と同じ完全な約数計算による．十三の共鳴係数 $13k-14$ は三にならない．
+固定七の共鳴族の接続は，既存の小分母係数伝播の結果
+\ref{sp13:no-resonant-continuation} によって妨げられる．
+\end{proof}
+
+\begin{theorem}[四角形と一本の葉辺からなる成分の不存在]
+\label{cp14:no-pendant-square}
+五次の標準 $K_5$ branch graph 上で，正の局所整数 charts，marked puncture の整数 clutching，
+対向 $D$ の相殺，および全ての node 数の非負性を仮定する．
+高分母 support は四角形に一本の葉辺を付けた graph ではあり得ない．
+分母の数値上限は仮定しない．
+\end{theorem}
+
+\begin{proof}
+四角形を $0123$，葉の辺を $04$ と標識する．core $1,2,3$ は二高分母，
+core $4$ は一高分母，core $0$ は三高分母である．
+中央の core $2$ の canonical 高 rays を $A=1,B=3$ とする．
+必要なら四角形を反転してこの標識を選べる．低 ray $4$ は $C,D$ のいずれかである．
+辺 $12,23$ の共通低 puncture $4$ の接着係数を $\lambda_A,\lambda_B$ と書く．
+負の高低 entry の真約数性から，それぞれ零または一である．
+core $2$ の二つの高 ray から低 ray $4$ への entries は異符号なので，
+両方が一となることはない．以下 $V_{ij}=p^4_{ij}$ と置く．
+
+\paragraph{低 ray $4$ が canonical な $D$ の場合．}
+両 $\lambda$ が零なら，共通 puncture の reverse bound により $S,T\leq4$ である．
+正の枝では $rT>(r+1)S$ と $S>r$ から $T\geq5$ なので不可能であり，
+負の枝 $S=T\leq4$ は補題~\ref{cp14:small-negative} によって接続できない．
+
+一方が一なら，正の entry $z$ を持つ $B$ 側の $\lambda_B=1$ であり，
+$\lambda_A=0$ である．canonical $B$ は最大約数 $b-1$ の正 entry を持てないので，
+$z=1$ となる．$A$ 側の reverse bound は $S\leq4$ を与える．
+$y$ は正整数で $\beta=y-z\ne0$ だから $\beta>0$，従って $S>r$ である．
+補題~\ref{cp14:small-middle} の第二の場合がこの接続を排除する．
+
+\paragraph{低 ray $4$ が canonical な $C$ の場合．}
+$B$ 側の outgoing entry $-y$ は負なので，$\lambda_B=0$ である．
+従って core $3$ の reverse entry は $p^3_{42}=r+1$ となる．
+低 edge $34$ の node 非負性は $V_{32}\leq-r<0$ を与え，pair product より $V_{23}=0$ である．
+一方，低 edge $24$ の punctures $1,0$ における node 非負性は，
+中央 core の $p^2_{41}=r$，$p^2_{40}=0$ を用いて
+\[
+ V_{21}\leq1-r\leq0,\qquad V_{20}\leq1
+\]
+を与える．葉の第二 row は $V_{20}+V_{21}=-1$ である．
+もし $V_{21}<0$ なら $V_{20}\geq0$，しかも高分母との pair product から $V_{20}\ne0$ である．
+しかし一高分母の葉の正の reverse entry は $t(h+1)\geq2$ なので，$V_{20}\leq1$ に反する．
+従って
+\[
+ V_{21}=V_{23}=0,\qquad V_{20}=-1,\qquad r=1
+\]
+である．この議論は $\lambda_A$ の値を指定しない．
+
+$q_{04}=m+1$ とすれば pair product は $V_{02}=-m$ を与える．
+辺 $04$ の puncture $2$ の clutching により
+\[
+ p^0_{42}\in\{m,-1\},\qquad R:=p^0_{24}\in\{1,-m\}.
+\]
+中央 core の低低 entry を $p^2_{04}=-L$，$L=T-S+1$ と置く．
+$r=1$ では正の枝なので $T>2S$，特に $L\geq4$ である．
+低 edge $02$ の node 式は
+\begin{equation}\label{cp14:central-low-node}
+ n_{02;4}=1-R+L\in[0,5]
+\end{equation}
+となる．$R=-m$ は $m\geq2$ により不可能なので，$R=1$，$L\leq5$ を得る．
+
+\paragraph{残った無限族の最後の障害．}
+以上より，残る場合には常に中央 core で $r=1,L\leq5$ である．
+補題~\ref{cp14:small-middle} の第一の場合の二つの有限模型は，
+分母三・五の二価接続障害によって排除される．従って
+\[
+ (a,b)=(4t-1,6t+1),\qquad
+ (r,s,z,S,T)=(1,2t-1,t,2,6),\qquad (D_A,D_B)=(3,-7)
+\]
+だけを調べればよい．$B$ 側の $\lambda_B=0$ なので，core $3$ の共有 ray $2$ は
+低 ray $4$ へ正の entry $3t$ と reverse entry 二を持つ．
+この共有 ray が canonical $B$ なら $T'=2$ となり，
+補題~\ref{cp14:small-negative} に反する．従って canonical $A$ で $r'=2$ である．
+そのもう一つの低 ray $1$ への entry を $-s'$ とする．
+
+辺 $23$ の puncture $1$ の outgoing sum は $-(4t+1+s')$ である．
+mixed puncture では負の高高 entry と $b-1$ の signed divisor を加えるため，その和は $b$ より小さい．整数 clutching からその和は非正であり，二つの mixed node 数はともに一以上である．従って
+\[
+ \frac{4t+1+s'}{6t+1}\in\{1,2\}.
+\]
+値二は $s'=8t+1>b-1$ を与えて整除条件に反するため，
+$s'=2t$，$S'=3$ である．対向 $D$ の相殺は $D'_A=7$ を要求し，
+\[
+ A'=b+3t-2t=7t+1,\qquad B'=b+6=6t+7
+\]
+となる．core $3$ のもう一つの高分母を $c$ とすれば
+\[
+ c=\frac{A'B'+1}{b}=7t+8,
+ \qquad z'=B'-c+\frac{c-1}{3}=\frac{4(t+1)}3.
+\]
+従って
+\[
+ T'=\frac{c-1}{z'}=\frac{21}{4}
+\]
+となり，整数性に反する．これで全ての場合が排除された．
+\end{proof}
+
+この結果は，node 非負性と対向 $D$ の相殺をともに用いる．
+三角形に葉を異なる二頂点で付けた形，diamond やその葉付きの形，
+その他のより密な support まで排除したとは主張しない．

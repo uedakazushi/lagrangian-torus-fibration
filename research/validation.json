@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-20",
+  "engine": "LuaHBTeX 1.24.0 / TeX Live 2026",
+  "manuscripts": [
+    {
+      "source": "papers/lagrangian-torus-fibration.tex",
+      "pages": 96,
+      "pdf_sha256": "d3c263b390c95550d4ac8f4444961e719bd756ef1e9be16c2068f4359f2bb197",
+      "unresolved_or_box_warnings": [],
+      "other_warnings": "Font substitution/scaling and PDF bookmark math warnings may remain."
+    },
+    {
+      "source": "papers/meridian-surgery.tex",
+      "pages": 18,
+      "pdf_sha256": "67a4d8cc3f5d45132b7a9b03f04d57da20b1df2d33b892d2f61e568ad34c2079",
+      "unresolved_or_box_warnings": [],
+      "other_warnings": "Font substitution/scaling and PDF bookmark math warnings may remain."
+    },
+    {
+      "source": "papers/quintic-integer-gluing.tex",
+      "pages": 201,
+      "pdf_sha256": "ace41dc85be64daa59b1850d63239ae8a5d03eaf1d4af28ef017f302a272b2fa",
+      "unresolved_or_box_warnings": [],
+      "other_warnings": "Font substitution/scaling and PDF bookmark math warnings may remain."
+    },
+    {
+      "source": "papers/research-notes.tex",
+      "pages": 65,
+      "pdf_sha256": "dd1b0172d639cd0e244a56d82459f68e26d558dc1dd8dce2565fe0023b09e406",
+      "unresolved_or_box_warnings": [],
+      "other_warnings": "Font substitution/scaling and PDF bookmark math warnings may remain."
+    },
+    {
+      "source": "papers/threefold-blocks.tex",
+      "pages": 2,
+      "pdf_sha256": "4344d44e39d1bdece90c41341fb61c017c82dc00d9c351966c5b518d0f735e34",
+      "unresolved_or_box_warnings": [],
+      "other_warnings": "Font substitution/scaling and PDF bookmark math warnings may remain."
+    }
+  ],
+  "scope": "Build and representative-page visual checks; not independent mathematical validation.",
+  "certificate_runs": [
+    {
+      "name": "four-ray",
+      "exit_code": 0
+    },
+    {
+      "name": "five-node",
+      "exit_code": 0
+    },
+    {
+      "name": "central",
+      "exit_code": 0
+    },
+    {
+      "name": "axis",
+      "exit_code": 0
+    },
+    {
+      "name": "divisor",
+      "exit_code": 0
+    },
+    {
+      "name": "audit-four-ray",
+      "exit_code": 0
+    },
+    {
+      "name": "audit-five-node",
+      "exit_code": 0
+    },
+    {
+      "name": "audit-central",
+      "exit_code": 0
+    },
+    {
+      "name": "audit-axis",
+      "exit_code": 0
+    },
+    {
+      "name": "audit-divisor",
+      "exit_code": 0
+    }
+  ],
+  "visual_check": {
+    "sample": "First, middle and last pages of each manuscript (38 distinct pages across the three repositories).",
+    "result": "Reviewed rendered contact sheets; no visible clipping or overlap in sampled pages.",
+    "full_page_review": false
+  },
+  "vscode": "Settings parsed and root search limited to papers/*.tex. UI not tested."
+}

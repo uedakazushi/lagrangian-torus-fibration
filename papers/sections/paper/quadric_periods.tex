@@ -1,0 +1,285 @@
+% v8 research source. Existing keys: EM, FeichtnerSturmfels, ArdilaKlivans.
+% New key: ShawWerner (complete entry in quadric_periods_report.txt).
+% Uses existing labels per:chart-definition, per:lobe-areas, snc:main, q5:1112.
+\section{Quadric の \texorpdfstring{$K_{3,3}$}{K3,3} core における非零作用周期}
+\label{quad:section}
+
+$Q=\PP^1\times\PP^1$ に一般位置の三本の $(1,1)$ 曲線
+$D_0,D_1,D_2$ を取り，$D=\bigcup_aD_a$ とする．
+各 $D_a$ は rational，$D_a^2=2$，$D_a\cdot D_b=2$ $(a\ne b)$ である．
+三重交点はなく，各 $D_a$ は四つの punctures を持つ．
+正の weights $w_a$ と Kähler form
+\begin{equation}\label{quad:class}
+ [\omega]=2\pi\sum_{a=0}^2w_a[D_a],\qquad W=w_0+w_1+w_2
+\end{equation}
+を固定する．従って $\int_{D_a}\omega=4\pi W$ である．
+
+命題~\ref{q5:1112} の odd-parity quartet system を一つ選ぶ．
+link の bipartition と component labels を用いれば，頂点を
+$A_a,B_a$ $(a\in\ZZ/3\ZZ)$ として，内部辺を $A_aB_a$，
+crossing edges を $A_aB_b$ $(a\ne b)$ と書ける．
+異なる二成分の二つの交点は，それぞれ $A_aB_b$ と $A_bB_a$ に対応する．
+これらの二点を同じ puncture として扱わない．
+
+本節では，定義~\ref{per:chart-definition} の facewise action-lattice 整合と
+branch saturation を満たす chart を構成する．さらに，全 branch の周期を
+ambient linear forms に延長する追加条件とは区別する．
+後者は branch denominator が全て一の場合には同時に満たせない．
+
+\subsection{標準 \texorpdfstring{$K_{3,3}$}{K3,3} fan と二つの tropical lines}
+
+\begin{lemma}[標準格子と九つの cones]\label{quad:fan}
+$N=\ZZ^2\oplus\ZZ^2$ とし，
+\begin{align*}
+ r_{A_0}&=(-1,-1,0,0),&r_{A_1}&=(1,0,0,0),&r_{A_2}&=(0,1,0,0),\\
+ r_{B_0}&=(0,0,-1,-1),&r_{B_1}&=(0,0,1,0),&r_{B_2}&=(0,0,0,1)
+\end{align*}
+と置く．九つの二次元 cones
+\[
+ \sigma_{ab}=\RR_{\geq0}r_{A_a}+\RR_{\geq0}r_{B_b}
+ \qquad(0\leq a,b\leq2)
+\]
+とその faces は，$M(K_4-e)$ の coarse Bergman fan を与える．
+全ての ray は primitive で，各 pair $(r_{A_a},r_{B_b})$ は
+$N\cap\operatorname{span}_\RR\sigma_{ab}$ の整数基底である．
+また
+\begin{equation}\label{quad:fan-relations}
+ r_{A_0}+r_{A_1}+r_{A_2}=0,
+ \qquad r_{B_0}+r_{B_1}+r_{B_2}=0.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+$M(K_4-e)$ は，共通要素 $0$ に沿った二つの $U_{2,3}$ の parallel connection である．
+parallel connection に対する coarse Bergman fan の積分解は
+Shaw--Werner\cite[Theorem 7.2]{ShawWerner}による．
+この場合には，二つの標準 tropical lines の積そのものであり，上の表示を得る．
+
+格子の規約を直接確認するため，ground set を $\{0,1,2,3,4\}$，
+三要素 circuits を $\{0,1,2\}$，$\{0,3,4\}$ とする．
+$N'=\ZZ^5/\ZZ(1,1,1,1,1)$ の中で，六つの coarse rays は
+\[
+ [e_1],\ [e_2],\ -[e_1]-[e_2],\qquad
+ [e_3],\ [e_4],\ -[e_3]-[e_4]
+\]
+である．二つの三点 flats の rays はそれぞれ
+$[e_0+e_3+e_4]=-[e_1]-[e_2]$，
+$[e_0+e_1+e_2]=-[e_3]-[e_4]$ となる．
+fine fan における $[e_0]$ の二価 ray は，この二本の和である．
+他の二価 rays は $[e_i+e_j]$ $(i\in\{1,2\},j\in\{3,4\})$ である．
+これらを含む fine cones を合わせると，上の九つの cones になる．
+fine fan と flats の対応には \cite{FeichtnerSturmfels,ArdilaKlivans} を参照されたい．
+$[e_1],\ldots,[e_4]$ は $N'$ の整数基底なので，$N'\cong N$ は整数格子同型である．
+各 cone の二本の generators は異なる $\ZZ^2$ factors の primitive vectors であるため，
+その rank-two lattice は飽和している．
+\end{proof}
+
+\subsection{Euler 数二の framing を実際の torus 上で比較する}
+
+\begin{lemma}[内部 annulus の framing]\label{quad:framing}
+$D_a$ の normal meridian を $\alpha_a$ とする．
+$A_a$ 側の二つの puncture meridians の和を内部 annular torus に運んだ cycle を
+$\beta_a$ とし，$B_a$ 側から同様に運んだ cycle を $\beta'_a$ とする．
+それぞれの puncture meridian は固定した product crossing chart の正の complex meridian とする．
+このとき，\emph{実際の annular torus} の整数一次ホモロジーで
+\begin{equation}\label{quad:actual-framing}
+ \beta_a=-2\alpha_a-\beta'_a
+\end{equation}
+が成立し，$(\alpha_a,\beta_a)$ は整数基底である．
+\end{lemma}
+
+\begin{proof}
+$D_a$ から四つの小円板を除いた曲面を $S_a$ とし，その上の normal circle bundle を考える．
+$S_a$ 上では bundle は自明である．各小円板上の product chart が与える normal framing と，
+$S_a$ 上の一つの section との差の winding numbers を $n_j$ とする．
+正の puncture circles を用いる convention では
+$\sum_jn_j=c_1(N_{D_a/Q})[D_a]=2$ である．
+section に沿った四つの circles の和は零なので，product-framed lifts $\gamma_j$ は
+\[
+ \sum_{j=1}^4\gamma_j=-2\alpha_a
+\]
+を満たす．これは相対 Chern 数の clutching 計算である．
+
+二つの pants regions でこの関係をまとめれば
+$\beta_a+\beta'_a=-2\alpha_a$ を得る．
+内部 annulus の base circle は，$S_a$ の二 punctures を囲む primitive nonzero class である．
+従って annular torus の $H_1$ から，$S_a$ 上の circle bundle の $H_1$ への写像は injective であり，
+上の等式は annular torus 自体で成立する．
+$\alpha_a$ は fiber generator，$\beta_a$ は base circle を次数一で被覆する lift なので，両者は整数基底である．
+\end{proof}
+
+ここでは補集合 $Q\setminus D$ の homology へ移してから作用積分を取っていない．
+実際，Gysin sequence と intersection map
+$H_2(Q;\ZZ)\to\ZZ^3$，$(u,v)\mapsto(u+v)(1,1,1)$ から
+$H_1(Q\setminus D;\ZZ)=\ZZ^3/\ZZ(1,1,1)$ であり，
+二つの $A_a$ punctures の meridian classes の和は $-\alpha_a$ になる．
+従って annular torus の $H_1$ から補集合の $H_1$ への写像は injective でない．
+closed でない primitive $\lambda$ を補集合の homology relation に直接積分することはできない．
+補題~\ref{quad:framing} の等式を先に torus 上で確定し，その上で closed な
+$\lambda|_{T^2}$ の作用積分を取る．
+
+\subsection{一つの basin を広げる幾何構成}
+
+\begin{theorem}[Quadric core の作用座標]\label{quad:realization}
+\eqref{quad:class} を満たす任意の正の weights に対し，
+$K_{3,3}$ link を実現する指定された marked relative isotopy classes の中から
+Morse foliations の代表を選び，定理~\ref{snc:main} による $Q\setminus D$ の core に，
+定義~\ref{per:chart-definition} の作用座標に適合する標準 $K_{3,3}$ cone chart を構成できる．
+branch denominator は全て一であり，九つの face maps は unimodular である．
+\end{theorem}
+
+\begin{proof}
+添字を $\ZZ/3\ZZ$ とする．crossing germs と divisor forms を準備した後，
+$D_a$ の四つの critical basins のうち，$A_aB_{a+1}$ に接する一つだけについて
+\begin{equation}\label{quad:basin-areas}
+ \frac{\operatorname{area}(D_{a;A,a+1})}{2\pi}=w_{a+1}+w_a
+\end{equation}
+とし，残る三つの basin の面積を $2\pi$ で割った値は，それぞれ相手成分の weight とする．
+四つの和は $2\sum_{b\ne a}w_b+w_a=2W-w_a$ である．
+従って残る内部 annulus の面積は $2\pi w_a$ となる．
+全て正なので，補題~\ref{per:lobe-areas} の density と relative Moser の議論により，
+十分小さい固定 crossing disks を保ち，指定された relative isotopy class 内で実現できる．
+可動対象は foliation の代表であり，既に固定した critical leaves を点ごとに保つ主張ではない．
+
+正の complex meridian を $\mu_a$，作用積分を
+$I_\gamma=(2\pi)^{-1}\int_\gamma\lambda$ と書く．
+normal moment は meridian と区別して $m_a$ とする．
+比例曲率 collar の puncture-compatible framing において，critical basin の slope は
+\begin{equation}\label{quad:critical-slope}
+ h_{a;b}=\frac{w_b-\operatorname{area}(D_{a;b})/(2\pi)}{w_a}.
+\end{equation}
+従って三つの $A_aB_{a+1}$ に接する $A_a$ 側が $-1$，他の九つの端は零である．
+normal action は $I_{\mu_a}=m_a-w_a<0$ である．
+graph-period correction は fiber tangent を消す basic form なので，この作用計算を変えない．
+
+まず crossing face $A_aB_b$ $(a\ne b)$ を考える．
+$\epsilon_{ab}=\mathbf1_{\{b=a+1\}}$ と書けば，整数 torus basis $(\mu_a,\mu_b)$ において
+\begin{equation}\label{quad:crossing-map}
+ \begin{pmatrix}I_{\mu_a}\\I_{\mu_b}\end{pmatrix}
+ =\begin{pmatrix}-1&0\\\epsilon_{ab}&-1\end{pmatrix}
+   \begin{pmatrix}x\\y\end{pmatrix},
+ \qquad F=xr_{A_a}+yr_{B_b}
+\end{equation}
+と置く．行列の determinant は一である．
+$A_a$ 側の ray では $(I_{\mu_a},I_{\mu_b})=(-s,\epsilon_{ab}s)$，
+$B_b$ 側では $(0,-s)$ なので，それぞれ $F=sr_{A_a},sr_{B_b}$ となる．
+
+sector 全体で $x,y>0$ である．選択された face では
+$x=-I_{\mu_a}$，$y=-I_{\mu_a}-I_{\mu_b}$ となる．
+$D_a$ 側の partial basin の slope は $h_{a;b}>-1$ なので
+$y=-I_{\mu_a}(1+h_{a;b})>0$ である．
+$D_b$ 側の slope は正なので，二つの meridian actions は負である．
+選択されない face では両側の slopes が正で，$x=-I_{\mu_a},y=-I_{\mu_b}>0$ となる．
+transition caps では puncture moment を $I<w_b/2$ に取り，normal radius を縮めて
+$I-w_b+m_aA_{ab}(I)<0$ を保証する．product crossing でも
+$m_a<w_a,m_b<w_b$ とする．従って caps と corner の丸めを通じて正値性を保つ．
+
+内部 face $A_aB_a$ には補題~\ref{quad:framing} の基底
+$(\alpha_a,\beta_a)$ を用いる．$A_a$ 側では二つの lobe slopes の和が $-1$，
+$B_a$ 側の二つの slopes は零である．従って両端の作用 directions は
+\[
+ (I_{\alpha_a},I_{\beta_a})=(-s,s),\qquad(-s,2s).
+\]
+そこで
+\begin{equation}\label{quad:internal-map}
+ \begin{pmatrix}I_{\alpha_a}\\I_{\beta_a}\end{pmatrix}
+ =\begin{pmatrix}-1&-1\\1&2\end{pmatrix}
+   \begin{pmatrix}x\\y\end{pmatrix},
+ \qquad F=xr_{A_a}+yr_{B_a}
+\end{equation}
+と置く．determinant は $-1$ であり，
+$x=-2I_{\alpha_a}-I_{\beta_a}$，$y=I_{\alpha_a}+I_{\beta_a}$ である．
+内部 annulus 上では $h=I_{\beta_a}/I_{\alpha_a}$ が $-1$ から $-2$ へ厳密単調に変わるため，
+$x=-I_{\alpha_a}(2+h)>0$，$y=I_{\alpha_a}(1+h)>0$ となる．
+
+全ての incident faces は各 $v=A_a,B_a$ に沿って
+$F=-I_{\mu_a}r_v$ に一致する．
+各 ray の action coordinates は第一成分 $-1$ の integer vector なので primitive であり，branch lattice は飽和する．
+補題~\ref{quad:fan} と上の unimodular matrices により face lattices も一致する．
+ここで $H_1(T^2;\ZZ)$ は action \emph{cotangent} lattice であり，fan の tangent lattice と直接同一視していない．
+
+最後に，各 contact-link edge の action vector を $a(t)$ とすると，
+Liouville cone の作用 map は $(r,t)\mapsto r a(t)$ である．
+vector は零でなく，正則 torus fibration の action coordinates は局所座標なので
+$\det(a(t),a'(t))\ne0$ である\cite[Remarks 2.11--2.12]{EM}．
+上で確認した正の sector の中では projective action ratio が厳密単調となり，
+両境界 rays の間を一度だけ走る．従って各 face map は所期の cone sector の原点近傍への同相を与える．
+compact な link による core への一様な収束を用いて九つの maps を貼り，
+必要なら近傍を縮めれば，標準 fan の原点近傍への同相写像を得る．
+\end{proof}
+
+\begin{corollary}[四十個の明示的な面積 recipes]\label{quad:forty}
+各 $D_a$ について四つの critical basins の一つを選び，
+その面積を $2\pi(w_b+w_a)$，他を $2\pi w_b$ とする．
+この $4^3=64$ 個の marked choices のうち，
+同じ crossing の両端を同時に選ばないものは正確に四十個あり，
+その全てが定理~\ref{quad:realization} と同じ意味の chart を与える．
+残る二十四個は，選択が重なる crossing face の determinant が零となる．
+\end{corollary}
+
+\begin{proof}
+各成分の内部 annulus の面積は常に $2\pi w_a$ である．
+拡大した basin が $A_a$ 側にあるかを $m_a\in\{0,1\}$ とすると，内部作用行列は
+\[
+ \begin{pmatrix}-1&-1\\m_a&m_a+1\end{pmatrix}
+\]
+であり，determinant は $-1$ である．
+crossing face の作用行列は
+$\left(\begin{smallmatrix}-1&\epsilon'\\\epsilon&-1\end{smallmatrix}\right)$ であり，
+determinant は $1-\epsilon\epsilon'$ となる．
+従って同じ crossing の両端を選ばないことが必要十分である．
+正値性と chart の貼合せは前定理と同じ計算による．
+不適合な選択は六つの crossing ごとに残る成分の四通りを選ぶので $6\cdot4=24$ 個であり，
+各成分で一つしか選ばないため，異なる crossing についての不適合は重ならない．
+よって適合する選択は $64-24=40$ 個である．
+これは上の限定した面積 recipe の個数であり，全ての chart や marked isotopy classes の分類ではない．
+\end{proof}
+
+\subsection{全 branch における linear-period 延長との相違}
+
+\begin{proposition}[denominator 一での追加延長条件の障害]\label{quad:strong-obstruction}
+上の比例曲率 collar に基づく quadric 型 fibration において，
+標準 $K_{3,3}$ fan への作用座標に適合する cone chart があり，
+全 branch denominator が一であるとする．
+各 branch に対し，その三つの incident faces 上の \emph{common normal circle} の作用関数が，
+fan の rank-three star span 上の一つの real linear form に延長する，という追加条件は
+全六 branch で同時には成立しない．
+従って，全 branch blocks の $H_1$ を star cotangent lattices に同時に整合させる条件も満たせない．
+\end{proposition}
+
+\begin{proof}
+branch denominator が一なので，$A_a$ と $B_a$ 上の normal action を
+$-t$ とする primitive ray parameter $t$ を使える．
+$A_a$ から $B_b$ へ向かう crossing の critical slope を $p^A_{ab}\in\ZZ$，
+$B_a$ から $A_b$ へ向かうものを $p^B_{ab}\in\ZZ$ とする $(a\ne b)$．
+内部 annulus の両端 directions を補題~\ref{quad:framing} で比較すると，その determinant の絶対値は
+\[
+ 2+\sum_{b\ne a}p^A_{ab}+\sum_{b\ne a}p^B_{ab}
+ =\frac{\operatorname{area}(E_a)}{2\pi w_a}>0.
+\]
+一つの unimodular cone に対応するため，この値は一である．
+全三成分について足すと
+\begin{equation}\label{quad:sum-minus-three}
+ \sum_{a\ne b}(p^A_{ab}+p^B_{ab})=-3
+\end{equation}
+を得る．
+
+一方，$A_a$ の common normal circle $\mu_a$ の作用を star 上で線形延長できるとする．
+隣接 rays $B_a,B_b$ $(b\ne a)$ におけるその評価は，それぞれ $-1$ と $-p^B_{ba}$ である．
+\eqref{quad:fan-relations} より
+$\sum_{b\ne a}p^B_{ba}=-1$ が必要である．
+$B_a$ の star について同じ議論をすると $\sum_{b\ne a}p^A_{ba}=-1$ となる．
+六つの条件を足すと左辺は \eqref{quad:sum-minus-three} と同じだが値が $-6$ となり，矛盾する．
+整数性を要求する前に，real linear extension 自体が不可能である．
+\end{proof}
+
+具体的に定理~\ref{quad:realization} の chart では，$A_a$ の common normal circle は
+$B_b$ $(b\ne a)$ で零，$B_a$ で $-1$ を取るので，その star だけでも線形延長できない．
+この追加条件は定義~\ref{per:chart-definition} に含まれず，
+定理~\ref{quad:realization} の存在結論と両立する．
+denominators を一に限らない場合の追加延長条件については，ここでは決定しない．
+さらに後の定理~\ref{hd9:mixed-no-go} は，分割 $(1,1,1,2)$ の全 core で
+任意の denominators を許し，既存の branch graph と標準 coarse cones を保つ場合にも，
+これらの個別の charts を ambient integer affine transitions を持つ大域 atlas へ
+接続できないことを示す．その大域障害は，各 normal action の ambient-linear 延長を仮定しない．
+core の置換，cone の格子や Reeb graph の変更，追加の branch singularities を許す場合は別の問題として残る．

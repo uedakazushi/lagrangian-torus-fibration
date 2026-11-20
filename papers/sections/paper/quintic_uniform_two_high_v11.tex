@@ -1,0 +1,217 @@
+% v11: general integer proof of the equal-two-high-denominator defect sign.
+% The finite table below follows from unbounded inequalities; it is not a
+% denominator-bounded search. Uses the general sign lemma ls11:two-high-signs.
+
+\subsection{等二高分母の係数和の負性}
+\label{uh11:two-section}
+
+等二高分母の場合に残っていた符号問題は，整除条件を保った次の整数不等式で解決する．
+
+\begin{proposition}[等二高分母の整数不等式]\label{uh11:two-integer-inequality}
+$r,t\geq1$ を整数，$m=tr(r+1)$ とし，$s,z$ を $m$ の正の divisors とする．
+\begin{equation}\label{uh11:conic}
+ sz+(1+tr^2)s-\{1+t(r+1)^2\}z=t+1
+\end{equation}
+が成立すれば，
+\begin{equation}\label{uh11:strict-inequality}
+ (s-z)\left(1+\frac{m}{sz}\right)>t+1
+\end{equation}
+である．$r,t,m$ の上限は仮定しない．
+\end{proposition}
+
+\begin{proof}
+$R=r(r+1)$，$n=2r+1$，$q=m+1$ と置き，
+\[
+ S=\frac ms,\qquad Z=\frac mz,\qquad H=Z-S,\qquad \delta=s-z
+\]
+とする．以下の全ての補助変数の整数性を保つことが重要である．
+
+\paragraph{差の正値性と上限．}
+まず $\delta>0$ を示す．式~\eqref{uh11:conic} は
+\[
+ \left(q+\frac mr-s\right)
+ \left(q-\frac{m}{r+1}+z\right)=q^2-1
+\]
+と同値である．$s=m/S$，$z=m/Z$ を代入して分母を払うと
+\begin{equation}\label{uh11:reciprocal-identity}
+ m^2\{nS-r^2H-R\}+m(SZ-RH)+RSZ=0
+\end{equation}
+を得る．もし $H\leq-1$ なら
+\[
+ nS-r^2H-R\geq n+r^2-R=r+1>0
+\]
+であり，\eqref{uh11:reciprocal-identity} の左辺の全項が正となって矛盾する．
+$H=0$ なら $s=z$ であり，\eqref{uh11:conic} は
+\[
+ s\{s-t(2r+1)\}=t+1
+\]
+となる．これは同時に $s\mid t+1$ と $s\geq t(2r+1)+1>t+1$ を要求するので不可能である．
+従って $H>0$，従って $\delta>0$ である．
+
+上の二因子を $A,B$ と書くと，$s\leq m$ より $A>0$，また $B>0$ であり，
+$AB=q^2-1$ である．$A,B$ は整数なので $A+B\geq2q$ である．
+一方 $A+B=2q+t-\delta$ だから
+\begin{equation}\label{uh11:delta-range}
+ 1\leq\delta\leq t,\qquad e=t-\delta\geq0.
+\end{equation}
+目標~\eqref{uh11:strict-inequality} は
+\begin{equation}\label{uh11:eta}
+ \eta:=\delta+H-t-1=H-e-1>0
+\end{equation}
+と同値である．
+
+\paragraph{二つの整数 $G,J$．}
+式~\eqref{uh11:reciprocal-identity} と $m=tR$ から
+\begin{equation}\label{uh11:G}
+ G:=r^2H+R-nS=\frac{R(e+1)}{sz}>0
+\end{equation}
+を得る．左辺から $G$ は整数である．さらに
+\[
+ J:=H-\delta G
+\]
+と置くと，$H=m\delta/(sz)$ より
+\begin{equation}\label{uh11:J-identities}
+ tJ=(\delta-1)H,\qquad Jsz=\delta(\delta-1)R.
+\end{equation}
+また $\delta S=zH$ と $H=\delta G+J$ から
+\begin{equation}\label{uh11:J-divisibility}
+ \delta\mid Jz
+\end{equation}
+が従う．元の式は
+\begin{equation}\label{uh11:K}
+ tK=sz+\delta-1,
+ \qquad K=nz-r^2\delta+1>0
+\end{equation}
+とも書ける．$K$ は正の整数なので $nz\geq r^2\delta$ である．
+
+\paragraph{$\delta=1$ の場合．}
+この場合は $s=z+1$，$sz=tK$，$H=R/K$ である．$H,K$ が正の整数なので $K\leq R$，従って
+\[
+ nz-r^2+1\leq R,\qquad nz\leq nr-1.
+\]
+よって $z<r$ であり，$s=z+1\leq r$ から $sz<R$ となる．従って
+$H/t=R/(sz)>1$，すなわち $\eta=H-t>0$ である．
+
+\paragraph{$\delta\geq2$ の場合の $J$ の制限．}
+式~\eqref{uh11:J-identities} より $J>0$ である．$x=z/\delta$ と置くと
+\[
+ x\geq\frac{r^2}{n},\qquad
+ Jx(x+1)=\frac{\delta-1}{\delta}R<R.
+\]
+一方
+\[
+ x(x+1)\geq\frac{r^2(r+1)^2}{n^2}=\frac{R^2}{n^2}
+\]
+なので，$J<n^2/R=4+1/R$ であり，$J\leq4$ である．
+$J=4$ なら，\eqref{uh11:J-divisibility} により $4x$ は整数である．
+\[
+ x\geq\frac{r^2}{2r+1}>\frac r2-\frac14
+\]
+より $4x\geq2r$，すなわち $x\geq r/2$ となる．これは
+$4x(x+1)\geq r(r+2)>R$ を与えて矛盾する．従って
+\begin{equation}\label{uh11:J-small}
+ J\in\{1,2,3\}.
+\end{equation}
+
+もし $J\geq\delta-1$ なら，\eqref{uh11:J-identities} より $t\leq H$ であり，
+$\eta\geq\delta-1>0$ が従う．以下では残る可能性
+\begin{equation}\label{uh11:bad-range}
+ 1\leq J\leq\delta-2
+\end{equation}
+が存在しないことを示す．
+
+\paragraph{残存候補の一般的な係数評価．}
+式~\eqref{uh11:G} と $H=\delta G+J$ は
+\[
+ nS=(\delta r^2-1)G+(J+1)r^2+r
+\]
+を与える．また
+\[
+ SZ=\frac{mH}{\delta}
+   =\frac{(\delta-1)R(\delta G+J)^2}{\delta J}.
+\]
+前式と $Z=S+H$ を後式に代入して展開すると
+\begin{equation}\label{uh11:polynomial-elimination}
+ R^2L-RM-N=0
+\end{equation}
+となる．ここで
+\begin{align*}
+ L={}&\delta^2(\delta J-4\delta+4)G^2
+      +\delta J(2\delta J-6\delta+8)G
+      +J\{\delta(J-1)^2+4J\},\\
+ M={}&\delta^2(2J+\delta-1)G^2
+      +\delta J(\delta+2J)G-J^2,\\
+ N={}&\delta J(\delta-1)G^2+\delta J^2G.
+\end{align*}
+$G\geq1$ と $\delta\geq J+2$ から $M,N>0$ なので，必要条件は $L>0$ である．
+
+$J=1$，$\delta\geq3$ の場合は
+\[
+ L=\delta^2(4-3\delta)G^2+\delta(8-4\delta)G+4
+   \leq-3\delta^3+8\delta+4<0.
+\]
+$J=2$，$\delta\geq4$ の場合も
+\[
+ L=\delta^2(4-2\delta)G^2+2\delta(8-2\delta)G+2\delta+16
+   \leq-2\delta^3+18\delta+16<0.
+\]
+いずれも矛盾する．$J=3$，$\delta\geq5$ では
+\[
+ L=\delta^2(4-\delta)G^2+24\delta G+12\delta+36.
+\]
+$\delta\geq9$ ならこれは $G\geq1$ で減少し，
+$L(1)=-\delta^3+4\delta^2+36\delta+36<0$ となる．
+残る $\delta=5,6,7,8$ における必要条件 $L>0$ は，それぞれ
+\[
+ G\leq5,\qquad G\leq2,\qquad G\leq1,\qquad G\leq1
+\]
+を与える．さらに
+\[
+ t=\frac{(\delta-1)(\delta G+3)}{3}\in\mathbb Z
+\]
+を課すと，残る組は
+\[
+ (\delta,G)=(5,3),(6,1),(6,2),(7,1)
+\]
+だけである．
+
+\paragraph{最後の四つの二次方程式．}
+これらを \eqref{uh11:polynomial-elimination} に代入し，共通の正の整数因子を除くと，
+次表の二次方程式が $R=r(r+1)$ に必要となる．
+\begin{center}
+\small
+\begin{tabular}{ccrl}
+$\delta$ & $G$ & 必要な二次式 & 判別式の厳密な区間 \\
+\hline
+$5$ & $3$ & $77R^2-912R-225=0$ & $949^2<901044<950^2$ \\
+$6$ & $1$ & $20R^2-67R-16=0$ & $75^2<5769<76^2$ \\
+$6$ & $2$ & $12R^2-223R-52=0$ & $228^2<52225<229^2$ \\
+$7$ & $1$ & $47R^2-284R-63=0$ & $304^2<92500<305^2$
+\end{tabular}
+\end{center}
+全ての判別式が非平方なので，いずれも整数 $R$ を持たない．
+従って \eqref{uh11:bad-range} は排除される．
+$J\geq\delta-1$ に戻れば $\eta>0$ が従い，証明が完了する．
+\end{proof}
+
+この証明の有限表は，分母の上限を置いた探索の結果ではない．
+任意の整数解を補助整数 $J\in\{1,2,3\}$ と一般の係数評価によって四候補へ帰着したものである．
+
+\begin{corollary}[等二高分母 core の負の総和]\label{uh11:two-negative}
+正の局所四直線 chart の分母が $(q,q,1,1)$，$q>1$，であるとする．
+二つの高分母頂点を $A,B$ と書けば
+\[
+ D_A+D_B<0.
+\]
+\end{corollary}
+
+\begin{proof}
+二高分母の表示と符号補題~\ref{ls11:two-high-signs} により，標識交換後に
+$m=q-1=tr(r+1)$，$u=-s<0<v=z$ と書け，$s,z$ は $m$ の正の divisors で
+\eqref{uh11:conic} を満たす．分母一の頂点を $C,D$ とすると
+\[
+ D_C=\frac mz-\frac ms-t,\qquad D_D=s-z-1.
+\]
+従って $D_C+D_D$ は \eqref{uh11:strict-inequality} の左辺から $t+1$ を引いた値であり，正である．
+四頂点の係数総和は零なので，$D_A+D_B=-(D_C+D_D)<0$ となる．
+\end{proof}

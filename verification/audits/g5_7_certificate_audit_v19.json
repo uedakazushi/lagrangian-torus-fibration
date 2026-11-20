@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "counts": {
+    "entire_q_progression_excluded": 71,
+    "fixed_q_residual_nonzero": 141
+  },
+  "certificate_count": 212,
+  "source": "verification/g5_7_obstruction_verification_v19.json",
+  "source_kind": "input certificate JSON",
+  "source_sha256": "992718e2e7fe9b84e32085e526412f824daa7a259a69e22ef7023635b3b14623",
+  "solver_source_sha256": "bb2d66a1c3d2145dd5500360c71eaef42a5857c97f46fc0296233e22a609df1f",
+  "auditor_sha256": "2fdf0c7e1677c826e15ba91734c37af03e9c41c7905864ff86d268ec568e2a96"
+}

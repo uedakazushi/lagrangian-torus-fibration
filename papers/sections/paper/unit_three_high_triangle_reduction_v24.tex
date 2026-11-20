@@ -1,0 +1,331 @@
+\section{三高 core 同士を結ぶ単位枝の三角形分類}
+\label{ut24:section}
+
+前節の単一 pair による線形復元は，二つの端点がともに三高 core である場合に
+さらに強くなる．本節では，単位枝の node 配分を二種類に限定し，必ず現れる
+小さい隣接分母を決定する．この結果は $G_{5,14}$ の二つの単位枝と
+$G_{5,16}$ の唯一の単位枝のいずれにも適用できる．
+第三 core の残りの行列を完成したという主張ではない．
+
+\subsection{二つの低行と共通の負位置}
+
+単位枝を $ij$，残る三つの cores を $a,b,c$ とする．両端 $i,j$ は，
+この枝だけを低 ray とする正の三高整数 core と仮定する．
+定理~\ref{mh18:matching} により，各低行は負二成分と正一成分を持つ．
+二つの正成分が同じ位置にあると，そこで
+$p^i_{jk}+p^j_{ik}\ge2$ となり $n_{ij;k}\ge0$ に反する．
+従って標識を選び，両低行を
+\begin{equation}\label{ut24:low-rows}
+ \begin{array}{c|ccc}
+       &a&b&c\\\hline
+ i\text{ の低行}&u&-t&-s\\
+ j\text{ の低行}&-j_0&v&-s'
+ \end{array}
+ \qquad
+ u=s+t-1,\quad v=s'+j_0-1
+\end{equation}
+と書ける．全ての表示した大きさは正整数である．
+共通の負位置 $c$ では
+\begin{equation}\label{ut24:small-negative-row}
+ n_{ij;c}=1+s+s',\qquad s+s'\le4.
+\end{equation}
+位置 $a$ の node を $n$ と書くと
+\begin{equation}\label{ut24:opposite-row}
+ j_0=u+n-1,\qquad
+ 0\le n\le2,\qquad n_{ij;b}=4-s-s'-n.
+\end{equation}
+ここで $j_0$ は正整数の大きさであり，core の標識 $j$ とは異なる．
+
+\subsection{共通の負位置での完全な pair 分類}
+
+位置 $c$ における低 column を $-S,-T$ と書く．
+\[
+ q_{ic}=sS+1,\qquad q_{jc}=s'T+1,\qquad S,T>0.
+\]
+さらに $\alpha=1-n_{ic;j}$，$\beta=1-n_{jc;i}$ と置く．
+clutching により core $c$ の該当する二 entries は
+\[
+ (sS+1)\alpha+S,\qquad(s'T+1)\beta+T
+\]
+となる．従って pair-product 条件は
+\begin{equation}\label{ut24:negative-pair}
+ \bigl((s\alpha+1)S+\alpha\bigr)
+ \bigl((s'\beta+1)T+\beta\bigr)
+ =(sS+1)(s'T+1)-1
+\end{equation}
+である．ここでも $-4\le\alpha,\beta\le1$ である．
+
+\begin{lemma}[共通負位置の全解]
+\label{ut24:negative-classification}
+$s,s',S,T>0$，$s+s'\le4$ とし，$sS+1,s'T+1$ は奇数とする．
+式~\eqref{ut24:negative-pair} の全解は次表で与えられる．
+自由な $R$ は任意の正整数である．
+\begin{center}\small
+\begin{tabular}{cc|rr|cc|cc}
+ $s$&$s'$&$\alpha$&$\beta$&$S$&$T$&$q_{ic}$&$q_{jc}$\\\hline
+ 2&1&1&0&$R$&2&$2R+1$&3\\
+ 1&2&0&1&2&$R$&3&$2R+1$\\\hline
+ 1&2&-1&-3&2&1&3&3\\
+ 1&2&-2&-1&2&1&3&3\\
+ 2&1&-1&-2&1&2&3&3\\
+ 2&1&-3&-1&1&2&3&3\\
+ 1&3&-2&-1&2&2&3&7\\
+ 3&1&-1&-2&2&2&7&3\\
+ 2&2&-1&-2&3&1&7&3\\
+ 2&2&-1&-2&2&2&5&5\\
+ 2&2&-2&-1&2&2&5&5\\
+ 2&2&-2&-1&1&3&3&7
+\end{tabular}
+\end{center}
+最初の二行では core $c$ の pair は正であり，残りの十行では負である．
+特に $s=s'=1$ には解がない．表は三角形の必要条件の全解であって，
+各行が両端の完全な局所模型や大域接着に延長することまでは述べない．
+\end{lemma}
+
+\begin{proof}
+左辺第一因子は $\alpha\ge0$ のとき正，$\alpha\le-1$ のとき負であり，
+第二因子も同様である．右辺は正なので，二つの因子の符号は等しい．
+
+両方が正なら $\alpha,\beta\in\{0,1\}$ である．
+$(0,0)$ では左辺が小さ過ぎ，$(1,1)$ では大き過ぎる．
+$(1,0)$ の場合の差は
+\[
+ [s+1-ss']ST-sS+(1-s')T.
+\]
+$s'\ge2$ なら全て非正で少なくとも一項は負になる．
+$s'=1$ なら $S(T-s)=0$ なので $T=s$ である．
+奇数分母は $s$ を偶数にし，$s+s'\le4$ より $s=2$ となる．
+$(0,1)$ は両端を交換した場合である．
+
+両方が負なら $\alpha=-A$，$\beta=-B$，$1\le A,B\le4$ とする．
+差は
+\begin{equation}\label{ut24:bilinear-coefficients}
+ C ST+D S+E T+AB,
+ \quad
+ \begin{cases}
+ C=ss'(AB-1)-sA-s'B+1,\\
+ D=s(AB-1)-B,\\
+ E=s'(AB-1)-A.
+ \end{cases}
+\end{equation}
+$A,B\ge2$ なら
+$(sA-1)(s'B-1)\ge ss'$ より $C\ge0$，また $D,E>0$ なので解はない．
+$A=B=1$ なら差は $-(s+s'-1)ST-S-T+1<0$ である．
+両端交換により，残りは $A=1$，$2\le B\le4$ だけ調べればよい．
+
+$s=1$ の場合，式は
+\[
+ S=B-1-\frac{T-1}{s'T+1}
+\]
+と書ける．$T>1$ では最後の分数が零と一の間にあるため，$T=1$，$S=B-1$ である．
+奇数分母と $s'\le3$ から $s'=2$，$B=3$ を得る．
+
+$s=2$ の場合，$D=B-2$，$C=s'(B-2)-1$，$E=s'(B-1)-1$ である．
+$B\ge3$ では全係数が非負で定数項が正なので解はない．
+$B=2$ では
+\[
+ T(S-s'+1)=2.
+\]
+$s'=1$ では奇数性から $(S,T)=(1,2)$，
+$s'=2$ では $(S,T)=(3,1),(2,2)$ となる．
+
+$s=3$ では $s'=1$ である．$B\ge3$ は再び係数の符号で除かれ，
+$B=2$ では $S(T-1)=2$ となる．奇数性により $(S,T)=(2,2)$ だけが残る．
+これらと両端交換が表の十点である．表への直接代入で逆向きも確認できる．
+\end{proof}
+
+\subsection{符号が反対の位置での全尺度族}
+
+位置 $a$ の低 row を $u,-j_0$，低 column を $U,-T$ とする．
+従って $q_{ia}=uU+1$，$q_{ja}=j_0T+1$ である．
+$n=n_{ij;a}$，$j_0=u+n-1$ とし，
+$\alpha=1-n_{ia;j}$，$\beta=1-n_{ja;i}$ と置くと，
+第三 core の pair は
+\begin{equation}\label{ut24:opposite-pair}
+ \bigl((u\alpha-1)U+\alpha\bigr)
+ \bigl((j_0\beta+1)T+\beta\bigr)
+ =(uU+1)(j_0T+1)-1
+\end{equation}
+となる．
+
+\begin{proposition}[反対符号位置の全族]
+\label{ut24:opposite-classification}
+$n\in\{0,1,2\}$，$u,j_0,U,T>0$，$j_0=u+n-1$ とし，
+$uU+1,j_0T+1$ は奇数とする．
+式~\eqref{ut24:opposite-pair} の全解は，次の四通常族と四種類の小例外である．
+\begin{center}\small
+\begin{tabular}{c|rr|l|l}
+ $n$&$\alpha$&$\beta$&尺度条件&整数・奇偶条件\\\hline
+ 0&1&1&$T=U-1$&$u,U\ge2$，$u,U$ は異なる偶奇\\
+ 1&1&1&$U=1$&$u\ge2$ 偶数，$T\ge1$\\
+ 1&-1&-1&$T=1$&$u\ge2$ 偶数，$U\ge1$\\
+ 2&-1&-1&$T=U+1$&$u,U\ge1$，$u,U$ は異なる偶奇
+\end{tabular}
+\end{center}
+\begin{center}\small
+\begin{tabular}{ccc|rr|cc|l}
+ $n$&$u$&$j_0$&$\alpha$&$\beta$&$U$&$T$&条件\\\hline
+ 0&2&1&0&-3&$2r$&$2r$&$r\ge1$\\
+ 1&1&1&0&-2&$2r$&$2r$&$r\ge1$\\
+ 1&2&2&0&-3&1&1&---\\
+ 1&1&1&$-k$&-1&$2r$&$k$&$r\ge1,\ k\in\{2,4\}$
+\end{tabular}
+\end{center}
+第三 core の pair が正なのは最初の表の最初の二族だけである．
+\end{proposition}
+
+\begin{proof}
+第一因子が正であることは $\alpha=1$ と同値であり，第二因子が正であることは
+$\beta\in\{0,1\}$ と同値である．両方が正の場合，$(\alpha,\beta)=(1,0)$ では
+差の $UT$ 係数 $u(1-j_0)-1$ が負，$U$ 係数が $-u$，$T$ 係数が $1-j_0$ なので不可能である．
+$(1,1)$ の場合は
+\[
+ T(1-nU)=U-1
+\]
+となり，正整数性から最初の二族を得る．
+
+両方が負の場合は $\alpha=-A$，$\beta=-B$ とし，
+$0\le A\le4$，$1\le B\le4$ とする．差は
+\begin{equation}\label{ut24:opposite-coefficients}
+ \bigl[uj_0(AB-1)+j_0B-uA-1\bigr]UT
+ +\bigl[u(AB-1)+B\bigr]U
+ +\bigl[j_0(AB-1)-A\bigr]T+AB.
+\end{equation}
+$A\ge1,B\ge2$ なら全係数が非負で $U$ 係数が正であるため不可能である．
+$A=B=1$ なら
+\[
+ (n-2)UT+U-T+1=0
+\]
+となり，第三・第四の通常族を得る．
+$A>1,B=1$ とする．$T$ 係数は $(j_0-1)(A-1)-1$ であり，
+これが非負なら他の全係数も非負で定数項が正である．
+従って $j_0=1$ である．$n=0,u=2$ では
+$T=A-1+(U+1)/(2U+1)$ が整数でなく，$n=1,u=1$ では $T=A$ となる．
+奇数性が $A\in\{2,4\}$，$U$ 偶数を強制し，最後の小例外を与える．
+
+最後に $A=0$ とする．$d=B-u$ と書くと
+\[
+ T\bigl((j_0d-1)U-j_0\bigr)=-dU.
+\]
+$d\le0$ では正整数解がない．$d\ge1$ の場合，右辺が負なので
+$(j_0d-1)U<j_0$ が必要である．$j_0d=1$ なら $j_0=d=1$，$T=U$ であり，
+$n=0,u=2,B=3$ または $n=1,u=1,B=2$ となる．これが最初の二小例外である．
+$j_0d>1$ なら $j_0(d-1)<1$ より $d=1$，さらに $U=1$，$T=1$ である．
+$B=u+1\le4$ と奇数性により $u=j_0=2,n=1,B=3$ が残る．
+全ての族で奇数性を課すと表示した偶奇条件を得る．直接代入で逆向きも成立する．
+\end{proof}
+
+\subsection{単位枝に必ず現れる小分母と五node境界}
+
+\begin{theorem}[二種類の node 配分と小分母]
+\label{ut24:unit-edge-boundary}
+標準五次接着において，単位枝 $ij$ の両端が正の三高 core であるとする．
+三つの node の多重集合は
+\[
+ \{n_{ij;a},n_{ij;b},n_{ij;c}\}
+   =\{5,0,0\}\quad\text{または}\quad\{4,1,0\}
+\]
+に限られる．最大 node の位置 $c$ は，両端の低行がともに負である唯一の位置である．
+\begin{enumerate}
+ \item $n_{ij;c}=5$ なら，$(q_{ic},q_{jc})$ は
+ $(3,7),(5,5),(7,3)$ のいずれかで，core $c$ の pair $ij$ は負である．
+ \item $n_{ij;c}=4$ なら，$\min(q_{ic},q_{jc})=3$ である．
+ core $c$ の pair が負なら両分母は三，正なら分母対は
+ $(3,2R+1)$ または $(2R+1,3)$，$R\ge1$ である．
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+式~\eqref{ut24:small-negative-row} と補題~\ref{ut24:negative-classification} により
+$s+s'$ は三または四である．総 node 数が五なので配分は表示した二種類となる．
+分母対と第三 core の符号は同補題の表から直接従う．
+\end{proof}
+
+\begin{proposition}[五node境界での二つの正 pair]
+\label{ut24:five-node-positive}
+前定理の仮定に対向低係数 $D^i_j+D^j_i=0$ を加え，$n_{ij;c}=5$ とする．
+他の二位置 $a,b$ では core $a,b$ の pair $ij$ がともに正であり，
+それぞれの隣接高辺の該当 node は零である．
+\end{proposition}
+
+\begin{proof}
+$n_{ij;a}=n_{ij;b}=0$ である．各位置について，正の低行を持つ側の低 column を
+$U_a,U_b$，反対側の負 column の絶対値を $T_a,T_b$ とする．
+命題~\ref{ut24:opposite-classification} の $n=0$ から，
+\[
+ U_a-T_a\in\{0,1\},\qquad U_b-T_b\in\{0,1\},
+\]
+である．値一は通常族 $\alpha=\beta=1$，値零は小例外を意味する．
+位置 $c$ の負 column の絶対値は補題~\ref{ut24:negative-classification} により
+$S+T=4$ を満たす．一方，対向 $D$ 相殺は全低 column の和を $-2$ とするので
+\[
+ (U_a-T_a)+(U_b-T_b)=S+T-2=2.
+\]
+両差は一となり，両位置で $\alpha=\beta=1$，すなわち隣接高辺の node が零である．
+\end{proof}
+
+\begin{proposition}[少なくとも一つの正の外側 pair]
+\label{ut24:positive-witness}
+前定理の仮定に対向低 $D$ の相殺を加えると，三つの外側 cores の少なくとも一つで
+単位枝の両端を結ぶ pair が正になる．
+\end{proposition}
+
+\begin{proof}
+五nodeの場合は前命題で示したので，四nodeの場合に三つの pair が全て負と仮定する．
+標識を選び，$n_{ij;a}=0$，$n_{ij;b}=1$，$n_{ij;c}=4$ とする．
+位置 $a$ に正の低行を持つ側を $i$ とすれば，式~\eqref{ut24:low-rows} において
+$s+s'=3$，$j_0=u-1$，$v=t$ である．
+位置 $a$ は負 pair なので命題~\ref{ut24:opposite-classification} の小例外により
+\[
+ u=2,\quad j_0=1,\quad U_a=T_a=2r,\qquad r\ge1.
+\]
+位置 $c$ も負 pair なので $S+T=3$ である．対向低 $D$ 相殺から，
+位置 $b$ の低 column の正側と負側の絶対値の差は一でなければならない．
+
+$u=s+t-1=2$ より $(s,t)=(1,2)$ または $(2,1)$ である．
+$t=1$ の場合，位置 $b$ では $n=1,u=1$ の小例外しか残らず，
+column の差は零または偶数であって一にはならない．
+従って $s=1,t=2,s'=2$ であり，位置 $b$ は通常負族の
+正 column 二，負 column の絶対値一に限られる．
+位置 $c$ の column の絶対値は $(S,T)=(2,1)$ である．
+
+core $i$ の高 rays を $b,c,a$ の順に並べると，低 row と column は
+\[
+ (-2,-1,2),\qquad(-1,-2,2r),
+\]
+高分母は $(3,3,4r+1)$ となる．$K=6r+1$，高 ray $a$ の $b$ 成分を $A$ とする．
+その残りの高成分は行和から $C=-K-A$ であり，pair products から $A,C\ne0$ である．
+残る二つの高行の和は $-2,-1$，共通 pair product は八であるから
+\[
+ \left(-2-\frac{2K}{A}\right)
+ \left(-1-\frac{2K}{C}\right)=8.
+\]
+$C=-K-A$ を代入して非零の $AC$ を払うと
+\[
+ (3A+K)(A+K)=0
+\]
+となる．$A=-K$ は $C=0$ に反し，$A=-K/3$ は $K\equiv1\pmod3$ に反する．
+従ってこの低 row/column は整数局所模型へ完成できず，矛盾する．
+\end{proof}
+
+\begin{corollary}[$G_{5,14}$ の五node位置]
+\label{ut24:g514-five-node}
+$G_{5,14}$ の単位枝を $ij,kl$，残る四高 core を $o$ とする．
+$ij$ に五nodeの位置があるなら，その位置は $k$ または $l$ であり，$o$ ではない．
+両端の低行の正位置の一つは $o$ である．
+\end{corollary}
+
+\begin{proof}
+仮に五node位置が $o$ なら，命題~\ref{ut24:five-node-positive} により core $k,l$ の pair $ij$ は両方とも正である．
+三高 matching 性により，core $k$ では低 ray $l$ と ray $o$ が正に結ばれ，
+core $l$ でも低 ray $k$ と ray $o$ が正に結ばれる．
+従って単位枝 $kl$ の位置 $o$ における両低行 entry が正となり，node 非負性に反する．
+残る二位置が低行の正位置なので，その一つは $o$ である．
+\end{proof}
+
+これらの結果は $G_{5,14}$ や $G_{5,16}$ 全体の排除ではない．
+大域接着には，残りの第三 core の pair，行和，正 weights，全高辺の node 配分，
+対向高 $D$ の相殺をさらに課す必要がある．
+\nolinkurl{verify_unit_three_high_triangles_v24.py} は恒等式を厳密係数で確認し，
+共通負位置の全九十六負符号場合を整数因数分解から完全に列挙する．
+反対符号の無限族は上の手計算による分類であり，有界回帰を無上界証明として用いない．

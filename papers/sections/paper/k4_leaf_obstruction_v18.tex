@@ -1,0 +1,303 @@
+% v18. K4 plus one high leaf: an unbounded obstruction.
+% Dependencies: mh18:matching, tl15:one-high-full, ls11:low-puncture.
+\section{\texorpdfstring{$K_4$}{K4} に一葉を付けた support の排除}
+\label{lh18:section}
+
+本節では，高分母 support
+\[
+ H=\{01,02,03,12,13,23,04\}
+\]
+を排除する．四頂点 $K_4$ の障害を部分 graph に適用するのではなく，
+一高分母 core $4$ の完全標準形を使う．
+三つの三高分母 cores $1,2,3$ に対しては
+定理~\ref{mh18:matching} を用いる．
+以下では各低 row に正の entry がちょうど一つある，という同定理の帰結が必要である．
+
+\subsection{一高 hub の補正された node と係数の式}
+
+命題~\ref{tl15:one-high-full} に従い，core $4$ の標識を
+$(A,B,C,D)=(0,1,2,3)$ とする．$K_4+\mathrm{leaf}$ は $1,2,3$ の任意の置換を許すので，
+この正規化で一般性を失わない．
+\begin{equation}\label{lh18:hub}
+ \begin{gathered}
+ h,t\ge1,\quad u=th,\quad v=t(h+1),\quad Q=q_{04}=th(h+1)+1=hv+1,\\
+ c,d\in\ZZ,\quad cd=0,\qquad
+ V=P^4=\begin{pmatrix}
+ 0&1-Q&-h-1&h\\
+ -1&0&0&0\\
+ -u&u-1-c&0&c\\
+ v&-v-1-d&d&0
+ \end{pmatrix}.
+ \end{gathered}
+\end{equation}
+$I=\{0,1,2,3\}$，$\ell_0=Q$，$\ell_1=\ell_2=\ell_3=1$ とし，
+$i\ne j\in I$ について
+\[
+ R_{ij}=p^i_{4j},\qquad X_{ij}=p^i_{j4},\qquad N_{ij}=n_{i4;j}
+\]
+と置く．対角成分は零とする．hub に接する四辺の node 条件は
+\begin{equation}\label{lh18:node-reconstruction}
+ N_{ij}\in\ZZ_{\ge0},\qquad \sum_{j\ne i}N_{ij}=5,\qquad
+ R_{ij}=\ell_i(1-N_{ij})-V_{ij}
+\end{equation}
+と同値である．特に各 node 行は二十一通りである．局所の pair products と
+四辺 $i4$ の対向 $D$ 相殺はそれぞれ
+\begin{align}
+ R_{ij}X_{ij}&=\ell_iq_{ij}-1,\label{lh18:pair}\\
+ \sum_{j\ne i}X_{ij}+\sum_{j\ne i}V_{ji}&=-2\ell_i.\label{lh18:D}
+\end{align}
+従って，補正された発散の式は
+\begin{equation}\label{lh18:weighted-flow}
+ \sum_{j\ne i}(X_{ij}-R_{ji})
+ =\sum_{j\ne i}\ell_jN_{ji}-(Q+3)-\ell_i
+\end{equation}
+である．これは全低 hub の発散公式を，重み $\ell_j$ 付きで置き換える．
+また $V_{0j}V_{j0}=Q-1$ であり，この三 pair に零積条件を課してはならない．
+
+$i,j\in\{1,2,3\}$ の共通低 puncture $4$ では，補題~\ref{ls11:low-puncture} の符号付き約数の分類により
+\begin{equation}\label{lh18:reverse-partners}
+ R_{ji}=-R_{ij},\quad\text{または}\quad
+ \{R_{ij},R_{ji}\}=\{s,s(q_{ij}-1)\},\quad s\in\{1,-1\}
+\end{equation}
+である．通常の場合に限って $q_{ij}$ が自由に残り，例外の場合には
+$q_{ij}=1+\max(|R_{ij}|,|R_{ji}|)$ となる．
+
+\subsection{特別な低 ray における四つの接続型}
+
+\begin{lemma}[標準形の $B$ ray を通る接続]\label{lh18:B-types}
+五次の算術的接着データが上記 support を持つとする．
+$\kappa=1-n_{01;4}\in\{-4,-3,-2,-1,0,1\}$ と置くと，
+$(N_{01},N_{10},q_{01},\kappa)$ は次の四型のいずれかである：
+\begin{equation}\label{lh18:B-table}
+\begin{array}{c|cccl}
+ \text{型}&N_{01}&N_{10}&q_{01}&\kappa\\\hline
+ \mathrm I&4&0&2Q-1&0\\
+ \mathrm {II}&3&1&Q&0\\
+ \mathrm {III}&0&0&2Q+1&1\\
+ \mathrm {IV}&2&1&\text{任意の奇数 }q_{01}\ge3&1-Q,\quad Q\in\{3,5\}
+\end{array}
+\end{equation}
+型 IV も残しており，$q_{01}$ に上限を置いていない．
+\end{lemma}
+
+\begin{proof}
+$r=R_{10}=2-N_{10}$ は $[-3,2]$ の非零整数である．
+$R_{12}=1-N_{12}$，$R_{13}=1-N_{13}$ は一以下である．
+core $1$ の低 row は正 entry をちょうど一つ持ち，行和は $-1$ だから，
+$r<0$ なら $r=-1$ でなければならない．
+
+$r=-1$ を排除する．$q=q_{01}$，$a=2-N_{01}\in[-3,2]$ と置くと
+$R_{01}=aQ-1$，$X_{10}=1-q$，$X_{01}=(\kappa+1)q-1$ である．
+$b=\kappa+1\in[-3,2]$ と書けば pair equation は
+\[
+ (aQ-1)(bq-1)=Qq-1
+\]
+となる．二因子は同符号なので，$a,b\ge1$ または $a,b\le0$ である．
+前者では $(a,b)=(1,1)$ の差は $2-Q-q<0$，$(1,2),(2,1)$ の差は
+それぞれ $(Q-2)(q-1)>0$，$(Q-1)(q-2)>0$，$(2,2)$ でも差は正である．
+後者で両者が負なら左辺は $Qq-1$ より大きい．一方だけが零なら
+$Q$ または $q$ が二を割る必要があり，両者が零でも不可能である．
+従って $r=1,2$ に限られる．
+
+$r=2$ では $x=(q-1)/2\ge1$ と置く．
+$X_{01}=(2\kappa-1)x+\kappa$ である．
+$\kappa=1$ なら $a\in\{1,2\}$ であり，pair equation は
+$a=2,x=Q$ だけを許す．
+$\kappa=0$ なら $a=-A$，$A\in\{0,1,2,3\}$ と書けて，
+\[
+ \{(A-2)Q+1\}x=Q-1
+\]
+となる．正整数解は $A=2,x=Q-1$ だけである．
+$\kappa=-k\le-1$ の場合，$A\ge1$ なら
+$(AQ+1)((2k+1)x+k)>Q(2x+1)-1$ である．
+$A=0$ なら $e=Q-k$ として $(2e-1)x=1-e$ となり，
+$e\ge1$，$e\le0$ のいずれも符号が矛盾する．
+これで型 I，III を得る．
+
+$r=1$ では $X_{10}=q-1$，$X_{01}=(\kappa-1)q+1$ である．
+$\kappa=1$ は $a=q\ge3$ を要求して不可能である．
+$\kappa=0$ では $a=-A$ として
+$\{(A-1)Q+1\}(q-1)=Q-1$ となり，$A=1,q=Q$ だけが残る．
+$\kappa=-k\le-1$ では，$A\ge1$ の pair product は再び過大であり，
+$A=0$ だけが残る．このとき $Q=k+1$ であり，$k\le4$ と $Q$ の奇数性から
+$Q=3,5$ である．これは型 II，IV を与える．
+\end{proof}
+
+\begin{lemma}[型 I は葉分母三に限られる]\label{lh18:typeI-small}
+補題~\ref{lh18:B-types} の型 I では $Q=3$ である．
+\end{lemma}
+
+\begin{proof}
+型 I では $X_{01}=1-Q$ であり，式~\eqref{lh18:D} の $i=0$ は
+\[
+ X_{02}+X_{03}=-Q-t
+\]
+を与える．$N_{01}=4$ なので $N_{02}+N_{03}=1$ である．
+$N_{03}=0$ なら $R_{02},R_{03}>0$ となって矛盾するから，
+$(N_{02},N_{03})=(0,1)$ であり，$(R_{02},R_{03})=(Q+h+1,-h)$ となる．
+$(h+1)u\equiv-1\pmod Q$ と $0<u<Q$ より，ある整数 $z\ge1$ を用いて
+\[
+ X_{02}=u+(z-1)Q,\qquad X_{03}=-v-zQ,\qquad q_{03}=1+hz
+\]
+と書ける．$R_{30}=-(v-1+N_{30})$ なので，
+\[
+ X_{30}=-w,\qquad
+ w=\frac{hz}{v-1+N_{30}}\in\ZZ_{>0},\qquad w\le z.
+\]
+辺 $03$ の node 条件は，ある $1\le a\le4$ に対して
+$v+zQ+w=a(1+hz)$ を要求する．$e=a-v$ と置き，$Q=hv+1$ を代入すると
+\[
+ e(hz+1)=z+w\le2z.
+\]
+従って $e>0$，$eh<2$ なので $e=h=1$ である．
+さらに $v=2t$，$a=v+1\le4$ より $t=1$，従って $Q=3$ となる．
+\end{proof}
+
+\begin{proposition}[葉分母の一様な上界]\label{lh18:leaf-bound}
+上記 support を持つ五次の算術的接着データでは $Q\le21$ である．
+\end{proposition}
+
+\begin{proof}
+$Q>21$ と仮定する．$u=th$，$h\le u$ なので，$u\le4$ なら
+$Q=u(h+1)+1\le21$ となる．従って $u\ge5$，$v=u+t\ge6$ である．
+補題~\ref{lh18:B-types} と補題~\ref{lh18:typeI-small} により型 II，III だけが残る．
+いずれも
+\[
+ R_{12},R_{13}\in\{-1,-2\},\qquad
+ R_{20}=u+1-N_{20}\ge u-4>0,\qquad R_{30}<0
+\]
+を満たす．core $2$ の低 row の唯一の正 entry は $R_{20}$ である．
+
+$d=0$ なら $R_{31}=v+2-N_{31}\ge v-3\ge3$ である．
+$R_{13}<0$ なので，式~\eqref{lh18:reverse-partners} は
+$R_{31}=-R_{13}\le2$ を要求し，矛盾する．
+従って $c=0$ である．このとき
+$R_{21}=2-u-N_{21}\le-3$ だから，式~\eqref{lh18:reverse-partners} は
+$R_{12}=-1$ を要求する．また $R_{23}=1-N_{23}<0$ なので $|R_{23}|\le4$ である．
+
+core $3$ では $R_{30}<0$ であり，$R_{31},R_{32}$ のちょうど一方が正である．
+もし $R_{32}<0$ なら $R_{31}=-R_{13}\le2$ である．しかし row sum から
+\[
+ R_{31}+R_{32}=v-2+N_{30}
+\]
+となるため，$R_{32}\ge v-4>0$ となり矛盾する．
+従って $R_{32}>0$，$R_{31}<0$ であり，辺 $23$ は通常接着なので $R_{32}\le4$ となる．
+一方，同じ row sum は $R_{32}\ge v-1\ge5$ を与える．これも矛盾である．
+\end{proof}
+
+\subsection{残る自由整数を切らない完全な有限型検査}
+
+$Q\le21$ と式~\eqref{lh18:hub} から，$(h,t)$ は
+\[
+ (1,1),\ldots,(1,10),\qquad (2,1),(2,2),(2,3),\qquad (3,1),(4,1)
+\]
+の十五個だけである．ただし，この上界だけから $c,d$ や他の高分母が有限になるとは言えない．
+次の手順では，それらを厳密な無限型のまま残す．
+
+\begin{lemma}[固定 node 行からの完全な型の復元]\label{lh18:finite-types}
+上の十五個の $(h,t)$ を固定し，式~\eqref{lh18:node-reconstruction} の四行を取る．
+$c=0,d=z$ または $d=0,c=z$ として，$z$ は全整数を動くものとする．
+次の有限な判定は，hub に関する row/pair，四辺 $i4$ の node 条件，
+六辺 $ij\subset I$ の puncture $4$ における clutching と非負 node 条件，
+および三高分母 cores の低 row の一正二負条件を完全に尽くす．
+\begin{enumerate}
+\item $i=1,2,3$ について $R=R_{0i}$，$r=R_{i0}$ と置く．
+これらは $z$ に依存しない．$Rr\ne0$ を要求し，各 $\kappa\in[-4,1]\cap\ZZ$ に対して
+\begin{equation}\label{lh18:center-linear}
+ \{Qr+R-\kappa Rr\}q_{0i}=R+r
+\end{equation}
+を調べる．左係数が非零なら得られた有理数を取り，
+\[
+ q_{0i}\in2\ZZ+1,\quad q_{0i}\ge3,\quad
+ r\mid q_{0i}-1,\quad R\mid Qq_{0i}-1
+\]
+を検査する．左係数が零で右辺が非零なら棄却する．両方が零なら
+\begin{equation}\label{lh18:free-center-q}
+ q_{0i}=1+\operatorname{lcm}(2,|r|)a,\qquad a\in\ZZ_{>0}
+\end{equation}
+という全無限族を残す．
+\item $z$ を含まない二つの低 rows の間の pair には
+式~\eqref{lh18:reverse-partners} をそのまま適用する．
+$z$ を含む row の残り二 entries は，それぞれ $s=z+b$，$s=-z+b'$ の形である．
+その相手側の固定 entry を $r\ne0$ とすると，$s$ の許される集合はちょうど
+\begin{equation}\label{lh18:partner-set}
+ \{-r\}\ \cup\
+ \begin{cases}\{\operatorname{sgn}(r)\},&|r|\in2\ZZ_{>0},\\ \varnothing,&\text{それ以外}
+ \end{cases}
+ \ \cup\
+ \begin{cases}\{2a\operatorname{sgn}(r):a\in\ZZ_{>0}\},&|r|=1,\\
+ \varnothing,&|r|\ne1.
+ \end{cases}
+\end{equation}
+これは有限個の点と偶奇を指定した半直線の和集合である．
+二つの entries に対する条件を $z$ 上の集合に直して交差させ，
+その row が正 entry をちょうど一つ持つ型だけを残す．
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+式~\eqref{lh18:center-linear} は
+$X_{0i}=(Qq_{0i}-1)/R$，$X_{i0}=(q_{0i}-1)/r$ と
+$X_{0i}+X_{i0}=\kappa q_{0i}$ から分母を払ったものである．
+両係数が零の場合は $R=-r$ かつ $r\mid Q-1$ なので，
+二つの pair 整除条件と奇数性は式~\eqref{lh18:free-center-q} にちょうど同値である．
+$\kappa\in[-4,1]$ は $0\le n_{0i;4}\le5$ を保持する．
+
+後半は式~\eqref{lh18:reverse-partners} を，固定した非零整数 $r$ に対して解いたものである．
+通常の $s=-r$ では $q=1+\operatorname{lcm}(2,|r|)a$ の全正整数族が残る．
+例外では $q=1+\max(|r|,|s|)$ である．半直線を有限個の値で置き換えていない．
+$cd=0$ は指定した二つの枝で尽くされ，その交わり $c=d=0$ が二重に現れることは
+不存在判定に影響しない．
+\end{proof}
+
+\begin{theorem}[$K_4$ に高分母の一葉を付けた support は不可能]\label{lh18:no-K4-leaf}
+五次の算術的接着データの高分母 support が
+$\{01,02,03,12,13,23,04\}$ となることはない．
+特に従来の候補 $G_{5,12}$ は排除される．
+\end{theorem}
+
+\begin{proof}
+命題~\ref{lh18:leaf-bound} により十五個の $(h,t)$ だけを扱えばよい．
+各 node 行の二十一通りを全て取り，補題~\ref{lh18:finite-types} の条件を検査する．
+固定された二つの低 rows の条件までを通過する node 配置数を $A$，
+残る二つの partner 型の組のうち一正二負条件を満たす数を $B$ とすると，結果は次表となる．
+\begin{center}
+\small
+\begin{tabular}{rrr|rr|r}
+ $h$&$t$&$Q$&$A$&$B$&\text{非空の交差}\\\hline
+ 1&1&3&76&135&0\\
+ 1&2&5&9&18&0\\
+ 1&3&7&23&37&0\\
+ 1&4&9&18&27&0\\
+ 1&5&11&23&37&0\\
+ 1&6&13&18&27&0\\
+ 1&7&15&23&37&0\\
+ 1&8&17&18&27&0\\
+ 1&9&19&23&37&0\\
+ 1&10&21&18&27&0\\
+ 2&1&7&8&16&0\\
+ 2&2&13&20&35&0\\
+ 2&3&19&22&40&0\\
+ 3&1&13&24&39&0\\
+ 4&1&21&22&40&0\\\hline
+ &&\text{合計}&345&579&0
+\end{tabular}
+\end{center}
+型の組は一正二負条件を課す前には $1192$ 個であり，そのうち $613$ 個が符号条件で落ちる．
+残る $579$ 個は全て，点または偶奇付き半直線の交差が空である．
+例えば交差を $[L,U]\cap(2\ZZ+\epsilon)$ と書ける場合，端点を指定した偶奇へ丸めて
+$L>U$ となることを判定する．無限端点は無限のまま保持する．
+\nolinkurl{verify_k4_leaf_obstruction_v18.py} は式~\eqref{lh18:center-linear} と
+式~\eqref{lh18:partner-set} だけを用い，この完全表と空交差の証明書を再生成する．
+未知の分母や $c,d$ への探索上限はない．従って必要条件だけで全ての型が排除される．
+\end{proof}
+
+\begin{remark}[量化と標識]
+上界 $Q\le21$ の証明では一高分母の完全標準形，三高分母の正値性，
+指定した clutching と node，および辺 $04$ の $D$ 相殺を使う．
+その後の有限型検査は追加の $D$ 条件や三高分母行列の高高 entries を用いない．
+表の $A,B$ は手順内の型の数であり，互いに異なる局所 charts や幾何的同型類の数ではない．
+$Q=3$ の標準形における同じ負 entry の重複は低標識を区別したまま扱う．
+$K_4$ の自己同型で標準形を選んだ後，全ての node 行を走査するため，
+$B,C$ の標識交換でしか現れない表示を捨てていない．
+\end{remark}

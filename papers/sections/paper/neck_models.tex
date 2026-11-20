@@ -1,0 +1,176 @@
+\section{二重曲線のHamiltonian neck}\label{sec:necks}
+
+\subsection{曲面上のmarked Morse葉層}
+$C_{ij}^{\circ}=C_{ij}\setminus\{p_{ijk}:k\ne i,j\}$は$d-2$穴の球面である。
+各三重点の小円板を除いたcompact surfaceを$P_{ij}$とする。
+その境界近傍ではradial circleを葉とし、内部には$d-4$個のsaddlesだけを持つMorse葉層を選ぶ。
+各connected critical leafにsaddleを一つだけ含ませる。
+そのReeb graphが$T_{ij}$であり、内部頂点$d-4$個、内部辺$d-5$本を持つ。
+一つの境界をrootとし、三つ穴球面を木に沿って接着すれば、この葉層は構成できる。
+有限個の$q_{ijr}$が相異なるregular leavesに乗るように、境界を固定したisotopyで調整する。
+
+\begin{lemma}\label{neck:marked-interpolation}
+$P$を境界を持つcompact oriented surface、$\mathcal F_0$を境界近傍でradialで内部にはsimple saddlesのみを持つmarked Morse葉層とする。
+両端に指定した滑らかなparameter germs $\mathcal F^-_u,\mathcal F^+_u$が、
+boundary collarsを固定する$\Diff_0(P)$による$\mathcal F_0$のorbitに属すると仮定する。
+そのとき、両端のgermsとopen overlap上で一致する滑らかな補間を、同じmarked Reeb treeと一critical-leaf一saddleの性質を保って構成できる。
+\end{lemma}
+\begin{proof}
+端のparameterを、端の近くでは変更せず、少し内側では一定にする。
+そこで得られる二つのsliceを、仮定したcollar-fixed isotopiesで$\mathcal F_0$へ結ぶ。
+接続点でparameterをstationaryにして連結する。
+関数で書く場合は、共通のMorse関数$h_0$とisotopy$\phi_u$により
+$h_u=h_0\circ\phi_u^{-1}$と書ける。
+scalar reparametrizationが必要な場合は、saddle近傍で共通のaffine germを用い、各regular edge上で単調に補間する。
+\end{proof}
+
+三つ穴球面では一本側の端を指定すれば十分である。
+実際、二つのMorse関数をboundary collar上およびsaddle valueで正規化して得られる共役diffeomorphismのmapping classは、boundary Dehn twistsで消せる。
+これらのtwistsはregular annulus上で葉層を保存する。
+四つ穴以上の場合は、抽象的なラベル付き木だけではpure mapping classを決められない。
+本稿では$P_{ij}=P_{ji}$という\emph{同じ実際の曲線}上でembedded marked decompositionを先に固定する。
+Morse関数空間の一般的な成分の記述は\cite{Maksymenko}を参照されたい。
+
+\subsection{reductionによるLagrangian性}
+Hermitian line bundle $L\to P$とその双対の和に、$xy=t$を満たす部分を取る。
+connectionを$\alpha$、曲率を$\kappa=\mathrm d\alpha$とする。
+$\mu=(|x|^2-|y|^2)/2$に対し、coupling formの制限は
+\begin{equation}\label{neck:form}
+\Omega_t=\omega_P+\mathrm d(\mu\alpha)
+=\omega_P+\mu\kappa+\mathrm d\mu\wedge\alpha.
+\end{equation}
+$|\mu|$が小さければreduced form $\omega_P+\mu\kappa$は正である。
+反対weightのcircle actionのmomentは$\mu$となる。
+
+\begin{lemma}\label{neck:lift}
+このmodelで$h_\mu$を$P$上の滑らかなMorse関数族とすると、
+$(\mu,h_\mu)$のconnected-fiber quotientはLagrangian fibrationである。
+regular circle leaf上のfiberは$T^2$、simple-saddle critical leaf上では$S^1\times\figeight$となる。
+\end{lemma}
+\begin{proof}
+$h_\mu$はcircle actionで不変なので$\{\mu,h_\mu\}=0$である。
+regular pointsでは二つの微分が独立であり、共通level setはLagrangianである。
+同じ結論はsymplectic reductionからも従う。すなわち曲面上の一次元葉はisotropicであり、そのcircle liftはLagrangianである。
+circle bundleはcircleおよびfigure-eight上で自明なので、fiberの位相型は記述の通りとなる。
+\end{proof}
+
+ここで$h_\mu$を作るisotopyは、reduced area formを保存する必要がない。
+一方、異なる既製のsymplectic piecesをfiber-preservingに同定する場合には、action periodsの一致は実質的な条件となる。
+この区別は本稿の接着の要点である。
+局所trivializationで$\omega_P=\mathrm d\beta$、$\alpha=\mathrm d\theta+A$と書くと、第二のactionは
+\[
+\mathcal A(\mu,q)=\frac{1}{2\pi}\int_{\gamma_{\mu,q}}(\beta+\mu A).
+\]
+leafのvariation fieldを$U$とすれば
+\begin{equation}\label{neck:action-variation}
+2\pi\dd\mathcal A(\dot\mu,\dot q)
+=\dot\mu\int_{\gamma_{\mu,q}}A
++\int_{\gamma_{\mu,q}}\iota_U(\omega_P+\mu\mathrm dA).
+\end{equation}
+葉の移動が掃く面積を第二項が記録する。
+同じ実際の$\Omega$の上で葉がopen overlap上一致すれば、intrinsicなaction differential
+\[
+\mathrm dI_\gamma(v)=\frac1{2\pi}\int_{\gamma}\iota_{\widetilde v}\Omega
+\]
+も一致する。linear monodromyだけからこの結論を出しているのではない。
+
+\subsection{実際の半安定族上の正確なneck座標}
+小解消後の$C_{ij}^{\circ}$は、他の中心成分を除いた全空間のclosed Stein submanifoldである。
+Docquier--Grauertのtubular-neighborhood theoremを用い、$P_{ij}$を含む比較的コンパクトな曲線領域$C_0$上のStein tubeを取る\cite{Forstneric}。
+open Riemann surface上のholomorphic vector bundleは自明であり、このtubeは$C_0\times\mathbb D^2$の小さい部分として取れる。
+従って$H^2(U;\ZZ)=0$であり、Cartanの定理とexponential sequenceから$\operatorname{Pic}(U)=0$である。
+$D_i,D_j$のdefining functionsを$x,y_0$とすると、$f=vxy_0$、$v$はunitである。
+$y=vy_0$とすれば、曲線方向のholomorphic retraction $z$と合わせて
+\[
+f=xy
+\]
+という正確な座標を得る。微分の可逆性と$P_{ij}$のcompactnessにより、一様に細いtubeを取れる。
+これは高次項を捨てた近似ではない。
+
+三重点座標$f=uvw$の$w\ne0$のendでは、$x'=u,y'=vw,z'=w$と書く。
+二つのneck chartのtransitionは
+\[
+T(z,x,y)=(Z(z,x,y),b(z,x,y)x,b(z,x,y)^{-1}y)
+\]
+の形である。
+$S_s(z,x,y)=(z,sx,sy)$により$T_s=S_s^{-1}TS_s$と置くと、$s=0$まで滑らかに延び、
+\[
+T_0(z,x,y)=(\varphi(z),b(z,0,0)x,b(z,0,0)^{-1}y)
+\]
+は標準circle actionと可換である。
+end annulus上のcutoff $\eta(z)$を用い、$G_s=T_sT_0^{-1}$から
+$F(p)=G_{\eta(z)}(p)$を作る。
+十分細いtubeではこれは$f$を保つdiffeomorphismである。
+実際、$\partial_sG_s=O(r)$なので、fixed-$s$のholomorphic微分からの誤差は$O(r|\mathrm d\eta|)$である。
+作用を$F$で共役すれば、endでtoric subgroupと正確に一致する。
+normal framingのwindingは$T_0$に残り、消していない。
+補助的な複素構造$J'=F_*J$は$J'-J=O(r)$を満たす。
+全空間の複素構造そのものを変更する必要はない。
+
+\subsection{classを保つ局所平均化}\label{neck:averaging}
+上記のcircle actionに形式を不変化する。
+曲線方向のcutoffを$\zeta$、normal方向のlogarithmic cutoffを$b$として
+\[
+\chi=\zeta(z)b\left(\frac{\log(r/r_-)}{L}\right),\qquad
+L=\log(r_+/r_-)
+\]
+を取る。全てのcutoffはcircle invariantに選ぶ。
+generatorを$V$、rotationを$R_\theta$とすると
+\[
+\Phi_\theta(p)=R_{\theta\chi(p)}(p)
+\]
+は$f$を保つdiffeomorphismであり、supportの外では恒等である。
+transition上で周期的なgroup actionである必要はない。
+fixed-angleのholomorphic微分からの誤差は
+\[
+\|V\|\,|\mathrm d\chi|
+\le C\bigl(r_+\|\mathrm d\zeta\|+L^{-1}\bigr).
+\]
+共役した作用ではさらに$O(r_+)$の誤差が加わる。
+コンパクトなtube上のtamingの下限を用い、まず$r_+$を小さく、次に$L$を大きくすれば、各$\Phi_\theta^*\Omega$は元の$J$をtameする。
+局所的な$J'$も同時にtameするようにできる。
+そこで
+\begin{equation}\label{neck:average}
+\bar\Omega=\frac1{2\pi}\int_0^{2\pi}\Phi_\theta^*\Omega\dd\theta
+\end{equation}
+と置く。これは$\chi=1$のtubeで不変であり、
+\[
+\bar\Omega-\Omega=\mathrm d\beta,\qquad
+\beta=\frac1{2\pi}\int_0^{2\pi}\int_0^\theta
+\Phi_s^*(\iota_{\chi V}\Omega)\dd s\dd\theta.
+\]
+凸結合も$J$-tameなので、各compact smooth fiber上で元の形式と同じclassのsymplectic isotopyを得る。
+
+三重点の小さいpolydiscsでは、最初にKähler potentialをproduct quadratic formへflattenする。
+二つのtoric circlesについても同じ平均化を用いる。
+既に$T^2$-invariantな領域では、neckのcutoffを$|u|,|v|,|w|$だけの関数に取る。
+そのsupportは、endのcircle actionが標準toric subgroupと既に一致する帯の内部に置く。
+可変角度の回転は$T^2$と可換でmomentsを保つので、その後の平均化も全$T^2$-invarianceを保つ。
+さらに小さい三重点近傍では全neck cutoffsを0とし、product formそのものを固定する。
+三重点から離れた各neckのnormal supportは互いに素にできる。
+
+\begin{proposition}\label{neck:actual}
+上記のexact modificationの後、実際の二重曲線近傍で、正規化されたHamiltonian moment $\mu$を持つcircle actionが存在する。
+一様に小さい$\delta,|t|>0$に対し、$f=t$, $|\mu|\le\delta$のreductionは$P_{ij}$と同定される。
+その上の任意のmarked simple-saddle葉層族をliftすることで、補題\ref{neck:lift}のfibrationが得られる。
+endでは三重点のtoric orbitsと一致させられる。
+\end{proposition}
+\begin{proof}
+circle actionのfixed locusを含むtubeは曲線へretractするので、閉形式$\iota_V\bar\Omega$はexactである。
+momentを曲線上で0と正規化する。
+局所$J'$のcomplexified orbit方向では
+\[
+\mathrm d\mu(-J'V)=\bar\Omega(V,J'V)>0.
+\]
+従って固定した$z,t$に対し$\mu$は半径比の狭義単調関数である。
+中心fiberの二つの軸上では符号が反対であり、固定normal radiusにおける絶対値に一様な正の下限がある。
+compactnessと連続性により、小さい$t$で$[-\delta,\delta]$を含む共通のmoment rangeを得る。
+各complexified orbitで一つのcircle orbitが選ばれるためreductionは$P_{ij}$になる。
+reduced formは$J'$-tamingから正である。
+葉のliftのLagrangian性は補題\ref{neck:lift}による。
+三重点の$w$方向radial circlesは、normal momentを固定したreductionで、残りのtoric momentのlevel circlesと同じ葉になる。
+\end{proof}
+
+この小解消後のneckはfree circle actionを持ち、focus--focus点を含まない。
+nodeは次節で中心成分のblow-up patchesに挿入する。
+従ってcompact nodal fiberの近傍をLiouville flowで拡大する操作は必要ない。

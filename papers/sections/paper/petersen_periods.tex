@@ -1,0 +1,431 @@
+% New v7 material; does not modify the v6 bundle.
+% Existing bibliography keys used: EM, Evans, GKM, Hattori, PapadimaSuciu.
+% Existing labels used: snc:main, trop:petersen-unimodular,
+% trop:farey-condition, trop:branch-denominator.
+
+\section{Petersen core の作用座標を実現する面積の選択}
+\label{per:section}
+
+Petersen graph と標準 fan の同型だけでは，実際の作用周期の整合性は決まらない．
+一方，foliation の相対 isotopy class を保ちながら代表を選べる場合には，
+五直線補集合の一つの core で，この整合性を具体的に実現できる．
+必要な操作は，各 puncture に接する critical lobe の面積を，その puncture の residue に合わせることである．
+これにより十五の全 face が unimodular になり，三価 branch での格子も飽和する．
+
+contact link の作用積分と symplectization による cone construction は
+Evans--Mauri\cite[Remarks 2.11--2.12, Lemma 2.16]{EM}に基づく．
+標準 Petersen fan の格子は，命題\ref{trop:petersen-unimodular}および
+Gathmann--Kerber--Markwig\cite[Construction 3.6, Theorem 3.7]{GKM}の unit-edge lattice を用いる．
+以下の構成で追加するのは，実際の作用積分とこの格子を合わせる面積条件と明示的な face maps である．
+
+\subsection{適合性の意味と面積指定の補題}
+
+正則 torus の整数一次ホモロジーを $L_e=H_1(T_e;\ZZ)$ とすると，
+作用一形式 $\dd I_\gamma$ により $L_e$ は底の整数余接線格子となる．
+従って整数接線格子は $L_e^*=\operatorname{Hom}(L_e,\ZZ)$ である．
+標準 fan の ambient tangent lattice $N$ と $L_e$ 自体を同一視しない．
+
+\begin{definition}[作用座標に適合する cone chart]
+\label{per:chart-definition}
+Liouville cone 型 fibration の底の core 頂点を $o$ とする．
+原点を持つ二次元 integral fan $\mathcal F\subset N_\RR$ への
+\emph{作用座標に適合する cone chart} とは，$o$ の近傍から $0$ の近傍への
+stratum を保つ同相写像 $F$ であって，次を満たすものである．
+各正則 face $e$ 上で，$F$ は作用座標の整数線形変換であり，
+その微分は $L_e^*$ を $N\cap\operatorname{span}_\RR F(e)$ へ同型に写す．
+さらに，branch ray の接線格子は，各 incident face の接線格子の飽和部分格子である．
+\end{definition}
+
+primitive を固定すると作用座標は core に向かって零に収束するので，
+$F(o)=0$ という正規化の下で translation は零となる．
+この定義は全空間の任意の homology class に ambient linear function を割り当てることを要求しない．
+その追加条件との違いは後で明示する．
+
+\begin{lemma}[四つの critical lobes の面積指定]
+\label{per:lobe-areas}
+面積形式 $\omega_C$ を持つ球面 $C$ に四つの異なる marked points を指定し，
+それらの $2+2$ 分割を固定する．
+この分割を実現する，二つの simple saddles を持つ marked Morse foliation の
+相対 isotopy class を一つ固定する．
+四つの正数 $s_1,s_2,s_3,s_4$ が
+\[
+ s_1+s_2+s_3+s_4<\int_C\omega_C
+\]
+を満たすとする．十分小さい marked disks を固定したまま，この相対 isotopy class の中で，
+四つの external Reeb edges に対応する critical basins の面積をそれぞれ $s_j$ とする代表を選べる．
+ここで critical basin とは，puncture から external edge に沿って拡大する regular disks の増大極限である．
+その境界が critical figure-eight の単純な一方の loop であることは要求しない．
+二つの critical levels の間の regular annulus の面積は
+$\int_C\omega_C-\sum_js_j$ となる．
+\end{lemma}
+
+\begin{proof}
+初めに，指定した class の代表を一つ取る．
+二つの figure-eight critical levels は，球面を四つの open critical basins と一つの open annulus に分ける．
+critical levels 自体の面積は零である．
+各 marked disk は対応する lobe の内部に十分小さく取り，その面積を $s_j$ より小さくする．
+
+元の面積形式に正の smooth density を掛け，marked disks の近傍では density を一に保つ．
+それ以外ではまず density を十分小さくし，各 open region 内の非負 bump functions を加えることで，
+四つの critical basins と annulus の積分をそれぞれ指定した五つの正数にできる．
+こうして得る面積形式を $\widehat\omega_C$ とする．
+$\int_C\widehat\omega_C=\int_C\omega_C$ であり，両形式は marked disks の近傍で一致する．
+
+差は exact である．その primitive は，各 disk 上では closed なので，
+局所 primitive の cutoff を引くことにより marked disks の近傍で零にできる．
+$\omega_C$ と $\widehat\omega_C$ の凸結合に Moser の議論を適用すると，
+disks を点ごとに固定する isotopy を得る．
+この isotopy によって元の foliation を運べば，$\omega_C$ に関して指定した面積を持つ代表となる．
+Morse 型および相対 isotopy class は保存される．
+\end{proof}
+
+この補題の可動対象は foliation の代表である．
+既に固定された embedded critical leaves を点ごとに保ったまま，その囲む面積を変更する主張ではない．
+
+\subsection{五直線に対する residue 正規化}
+
+$D=L_0\cup\cdots\cup L_4\subset\PP^2$ を一般位置の五直線とし，
+$w_a>0$ および
+\begin{equation}\label{per:positive-weights}
+ [\omega]=2\pi\sum_{a=0}^4w_a[L_a]
+\end{equation}
+を固定する．各 $L_a$ は面積 $2\pi\sum_bw_b$ を持つ．
+crossing charts と normal form の準備後，その時点の divisor 上の面積形式を用いて，
+以下の marked foliations の代表を選ぶ．この順序により，後の normal coupling は divisor 上の形式を変えない．
+
+添字は $\ZZ/5\ZZ$ とする．$L_a$ の二つの saddle vertices を $A_a,B_a$ とし，
+$A_a$ 側の punctures を $a-1,a+1$，$B_a$ 側を $a-2,a+2$ とする．
+link の辺は
+\[
+ A_aB_a,\qquad A_aA_{a+1},\qquad B_aB_{a+2}\quad(a\in\ZZ/5\ZZ)
+\]
+であり，これは Petersen graph である．
+同じ組合せ型の任意の marked relative isotopy classes を出発点にしてよい．
+
+補題\ref{per:lobe-areas}を各 $L_a$ に適用し，puncture $L_a\cap L_b$ に接する
+critical basin $D_{a;b}$ の面積を
+\begin{equation}\label{per:normalization}
+ \operatorname{area}(D_{a;b})=2\pi w_b\quad(b\ne a)
+\end{equation}
+とする．その四つの和は全体より $2\pi w_a$ だけ小さい．従って，内部 annulus $E_a$ の面積は
+\begin{equation}\label{per:annulus-one}
+ \operatorname{area}(E_a)=2\pi w_a.
+\end{equation}
+十個の crossing disks は先に十分小さく選び，面積を各 target より小さくしておく．
+各 component の相対 isotopy はその disks を固定するので，相互の crossing data に干渉しない．
+
+\begin{lemma}[critical crossing periods の消去]
+\label{per:zero-periods}
+比例曲率 collar で $\lambda=(m_a-w_a)\alpha_a$ とする．
+$L_a\cap L_b$ の product chart における正の meridian を $\mu_b$ と書き，
+その cycle を対応する regular sheet に沿って critical lobe まで運ぶ．
+正規化 \eqref{per:normalization} の下で，critical ray 上のその作用積分は零である．
+normal meridian $\mu_a$ の作用積分は $m_a-w_a<0$ であり，
+ここで $m_a$ は normal radial moment を表す．
+\end{lemma}
+
+\begin{proof}
+cycle と radial moment の記号を区別して計算する．
+product chart の puncture-compatible framing に沿って degree-one lift を取る．
+critical lobe $D_{a;b}$ に対する connection holonomy の実数 lift は，Stokes の定理から
+\begin{equation}\label{per:holonomy-lobe}
+ h_{a;b}=
+ \frac{w_b-\operatorname{area}(D_{a;b})/(2\pi)}{w_a}
+\end{equation}
+となる．実際，$L_a$ 内の小さい circle の disk area を $2\pi I$ とすれば，
+normal collar に入った所での holonomy は $(w_b-I)/w_a$ であり，
+残る領域で $\dd\alpha_a=-\omega_{L_a}/w_a$ を積分すればよい．
+\eqref{per:normalization} により $h_{a;b}=0$ となり，
+$I_{\mu_b}=(m_a-w_a)h_{a;b}=0$ を得る．
+normal cycle は $I_{\mu_a}=m_a-w_a$ である．
+これらの恒等式は Liouville flow の下で同じ倍率で拡大・縮小されるので，critical ray 全体で成り立つ．
+相対構成の graph-period correction は torus tangent を消す basic forms によるため，
+これらの fiberwise action periods を変えない．
+\end{proof}
+
+\subsection{十五の face maps と core chart}
+
+$\mu_a$ は以後 meridian cycle だけを表す．
+五直線補集合 $W_5$ の整数一次ホモロジーは
+\begin{equation}\label{per:global-meridians}
+ H:=H_1(W_5;\ZZ)
+  =\left(\bigoplus_{a=0}^4\ZZ\mu_a\right)
+     /\ZZ(\mu_0+\cdots+\mu_4)
+\end{equation}
+である\cite{Hattori,PapadimaSuciu}．
+crossing torus 上の二つの meridians は整数基底をなす．
+内部 annulus の torus 上では，
+\[
+ \alpha_a=\mu_a,\qquad
+ \beta_a=\mu_{a-1}+\mu_{a+1}
+\]
+が整数基底となる．$A_a$ 側の pants block で後者は二つの lobe cycles の和である．
+$B_a$ 側では，同じ annular cycle は
+\begin{equation}\label{per:normal-euler-framing}
+ \beta_a=-\mu_a-(\mu_{a-2}+\mu_{a+2})
+\end{equation}
+となる．これは normal bundle の Euler 数 $L_a^2=1$ に対応する framing relation である．
+
+ここで \eqref{per:global-meridians} を作用積分に直接代入してはいない．
+$\lambda$ は closed ではないので，全空間で homologous な曲線の積分が一致するとは限らない．
+まず実際の annular torus の二つの端から運んだ cycles を比較する．
+この torus の $H_1$ から $H$ への写像は，$\mu_a$ と $\mu_{a-1}+\mu_{a+1}$ の線形独立性から injective である．
+従って \eqref{per:global-meridians} は，この torus 自体の中で
+\eqref{per:normal-euler-framing} を与える．その後に，torus 上で closed な $\lambda$ の積分を取る．
+
+標準 Petersen fan の rays を $r_{A_a},r_{B_a}$ とし，前節のラベル付けを使う．
+例えば $A_a\leftrightarrow\{2a,2a+1\}$，$B_a\leftrightarrow\{2a+2,2a+4\}$ を
+$\ZZ/5\ZZ$ 上で取り，最後にラベルを $1,\ldots,5$ に読み替えればよい．
+
+\begin{theorem}[一つの Petersen core における作用座標の実現]
+\label{per:local-realization}
+\eqref{per:positive-weights} を満たす任意の正の weights に対し，
+Petersen 型の指定された marked relative isotopy classes の中から代表を選び，
+相対 SNC 構成による $W_5$ の core neighborhood に
+定義\ref{per:chart-definition}の作用座標に適合する標準 Petersen cone chart を与えられる．
+全ての branch denominator は $q=1$ であり，十五の face maps は unimodular である．
+この主張は一つの core の近傍についての存在を述べる．
+\end{theorem}
+
+\begin{proof}
+面積条件 \eqref{per:normalization} を実現し，補題\ref{per:zero-periods}を用いる．
+crossing face $e=vw$ が $L_a,L_b$ を結ぶとき，その face 上で
+\begin{equation}\label{per:crossing-map}
+ F=-I_{\mu_a}r_v-I_{\mu_b}r_w
+\end{equation}
+と定める．両作用が sector 全体で負であることを確認する．
+component 側の external arm では，partial disk の面積が critical basin の面積より小さいため，
+\eqref{per:holonomy-lobe}の holonomy は正である．normal action は負なので他方の meridian action も負となる．
+transition cap は $I<w_b/2$ に取り，normal radius を一様に縮めれば
+$I-w_b+m_a A_{ab}(I)<0$ である．product crossing でも $m_a<w_a$，$m_b<w_b$ とすれば両係数は負となる．
+$v$ 側の ray では $I_{\mu_b}=0$，
+$w$ 側では $I_{\mu_a}=0$ となる．
+$\mu_a,\mu_b$ は torus homology の基底なので，係数への変換行列は $-I_2$ である．
+
+内部 matching face $A_aB_a$ では
+\begin{equation}\label{per:internal-map}
+ F=(-I_{\mu_a}-I_{\beta_a})r_{A_a}+I_{\beta_a}r_{B_a}
+\end{equation}
+と定める．$A_a$ 側では $I_{\beta_a}=0$ である．
+$B_a$ 側では \eqref{per:normal-euler-framing} と二つの lobe periods の消去から
+$I_{\beta_a}=-I_{\mu_a}$ となる．
+内部 annulus では Stokes の定理により holonomy が $0$ から $-1$ へ単調に変わるので，
+二つの係数はいずれも正である．
+$(I_{\mu_a},I_{\beta_a})$ から係数への変換行列は
+\[
+ \begin{pmatrix}-1&-1\\0&1\end{pmatrix}
+\]
+であり，determinant は $-1$ である．
+
+三つの incident faces から $v\in\{A_a,B_a\}$ へ近づくと，いずれも
+\begin{equation}\label{per:common-ray}
+ F=-I_{\mu_a}r_v
+\end{equation}
+に一致する．従って各 map は branch 上で貼り合う．
+$\mu_a$ は primitive で，作用座標における ray は各 face で primitive integer vector を持つため，
+その branch lattice は飽和する．
+具体的に crossing face では $(-1,0)$，内部 face では $(-1,0)$ または $(-1,1)$ となる．
+
+各 sector が所期の fan sector の近傍へ一対一に写ることも確認する．
+contact link の regular edge を $t$ で parametrise し，作用 vector を $a(t)$ とすると，
+symplectization の作用 map は $(r,t)\mapsto r a(t)$ である．
+contact form の作用 vector は零にならず\cite[Remark 2.11]{EM}，
+正則 torus fibration の作用座標は局所座標である．従って
+$\det(a(t),a'(t))\ne0$ である．
+上で示した正の sector 内では，projective action ratio は単調であり，両境界 rays の間を一度だけ走る．
+従って map は sector の近傍の同相写像となる．
+Liouville flow は作用積分を同じ倍率で縮めるため，compact な link 全体で core への収束は一様である．
+有限個の sector maps を貼り，必要なら近傍を縮めれば，fan の原点近傍への同相写像を得る．
+
+最後に，標準 Petersen fan の全 cones はそれぞれの rank-two span で unimodular である．
+\eqref{per:crossing-map} と \eqref{per:internal-map} の整数行列も unimodular なので，
+各 face の action cotangent lattice と fan tangent lattice の dual が正しく一致する．
+\end{proof}
+
+\begin{lemma}[branch star における二つの整数延長]
+\label{per:branch-duality}
+前定理の一つの branch $v$ で，crossing neighbors を $x,y$，matching neighbor を $z$ とする．
+rank-three star lattice の基底を $(r_v,r_x,r_y)$ と取れば
+$r_z=r_v-r_x-r_y$ である．
+$H_1(Q_v)=\ZZ\alpha\oplus\ZZ b_1\oplus\ZZ b_2$ とし，二つの crossing faces の cycle lattices を
+$\langle\alpha,b_1\rangle$，$\langle\alpha,b_2\rangle$，matching face のものを
+$\langle\alpha,b_1+b_2\rangle$ とする．
+各 face の作用積分を保つ，$H_1(Q_v)$ から star cotangent lattice への同型は，
+この基底を固定すればちょうど二つあり，その一つは
+\[
+ \alpha\longmapsto(-1,0,0),\qquad
+ b_1\longmapsto(0,-1,0),\qquad
+ b_2\longmapsto(0,1,-1)
+\]
+で与えられる．
+\end{lemma}
+
+\begin{proof}
+この三本の rays は saturated rank-three lattice を生成する．
+例えば $v=15$ の場合は $r_v,r_{23},r_{24}$ の三次 minor が $\pm1$ であり，
+他の場合は五つの labels の置換で従う．
+face restrictions により，延長は
+\[
+ \alpha=(-1,0,0),\qquad b_1=(0,-1,t),\qquad b_2=(0,s,-1)
+\]
+という形に限る．matching ray 上で $b_1+b_2$ の値は一なので $s+t=1$ である．
+この三行の determinant の絶対値は
+$1-st=s^2-s+1$ となる．これが一であるのは $s=0,1$ の二つだけである．
+\end{proof}
+
+\begin{remark}[この局所存在が与えないもの]
+\label{per:scope}
+定理\ref{per:local-realization}では，全空間の boundary contact model を標準 $M_{0,5}$ の filling に置き換えていない．
+common-circle determinant と boundary homology の差はそのまま残る．
+また，六個の core の間で共有される actual double curves 上の面積条件，
+node patches，branch interiors および face transitions の同時整合は，この定理の範囲外である．
+これらの追加条件は，節~\ref{sg8:section} の計算と定理~\ref{ga8:global} の相対接着で満たす．
+\end{remark}
+
+\subsection{固定された面積に対する奇数逆数条件}
+
+\begin{proposition}[Farey 条件と branch saturation の結合]
+\label{per:odd-reciprocal}
+同一成分内の regular annulus $E$ の両端で branch tangent lattice が飽和し，
+$E$ に対応する face が一つの unimodular cone となるとする．
+その normal residue を $w>0$ とすると
+\begin{equation}\label{per:odd-area-spectrum}
+ \frac{\operatorname{area}(E)}{2\pi w}=\frac1m,
+ \qquad m\text{ は正の奇整数}
+\end{equation}
+である．両端の reduced denominators $q,q'$ は互いに素な奇数で，$m=qq'$ を満たす．
+
+逆に，任意の正の奇整数 $m$ に対して，branch numerator の primitivity と
+一つの annulus の signed Farey equation からなる算術条件には解がある．
+この逆向きの主張は算術方程式についてだけであり，指定された全ての geometric periods の実現を主張しない．
+\end{proposition}
+
+\begin{proof}
+命題\ref{trop:branch-denominator}により $q,q'$ は奇数である．
+命題\ref{trop:farey-condition}の determinant が $\pm1$ なので $\gcd(q,q')=1$ であり，
+同じ命題の面積公式から \eqref{per:odd-area-spectrum} を得る．
+
+逆向きには $m=qq'$ を互いに素な奇数の積に分ける．
+内部 annulus の framing を \eqref{per:normal-euler-framing} と同じ convention に取り，
+両端の internal numerators を $p,p'$ とする．正の面積 $1/(qq')$ に対応する式は
+\[
+ qq'+q'p+qp'=1.
+\]
+B\'ezout により整数解があり，式を $q$ および $q'$ で見ると
+$\gcd(p,q)=\gcd(p',q')=1$ が従う．
+奇数 $q$ では任意の unit $p$ を二つの units の和にできる．
+例えば $a\equiv2^{-1}p\pmod q$，$b=p-a$ とすればよい．
+$q'$ 側も同様である．$q=1$ の場合も $\gcd(0,1)=1$ の convention で成立する．
+従って二つの branch の三 numerator に必要な primitivity を同時に満たせる．
+\end{proof}
+
+\begin{lemma}[branch numerator の分解数]
+\label{per:unit-split-count}
+$q\ge1$ と $\gcd(p,q)=1$ に対し，
+$\gcd(a,q)=\gcd(p-a,q)=1$ を満たす residue class $a\pmod q$ の個数は
+\[
+ \prod_{\ell^e\parallel q}\ell^{e-1}(\ell-2)
+\]
+である．空積は一とする．従って解が存在するための必要十分条件は $q$ が奇数であることである．
+また $m$ の互いに素な正整数による ordered factorization $m=qq'$ の個数は
+$2^{\omega(m)}$ である．ここで $\omega(m)$ は異なる素因数の個数である．
+\end{lemma}
+
+\begin{proof}
+素数 $\ell$ に対して除外されるのは $a\equiv0,p\pmod\ell$ の異なる二つの類である．
+従って $\ell^e$ 上では $\ell^{e-1}(\ell-2)$ 個であり，Chinese remainder theorem で積を取ればよい．
+互いに素な factorization では各 prime power 全体を二つの因子のいずれか一方に割り当てる．
+\end{proof}
+
+\eqref{per:odd-area-spectrum} は，固定された weights と critical leaves に対する離散的な必要条件である．
+定理\ref{per:local-realization}は，そのうち $m=1$ を正の lobe areas によって幾何的に実現している．
+
+\input{k4_periods.tex}
+
+\section{ambient linear periods を要求した場合の分母二の障害}
+\label{per:ambient-section}
+
+前節の存在定理と矛盾しない，より強い同定への障害を述べる．
+$N$ は標準 Petersen fan の rank-five tangent lattice，$H$ は
+\eqref{per:global-meridians}の rank-four meridian group とする．
+\emph{meridian-linear extension} とは homomorphism
+\[
+ \Phi:H\longrightarrow N^*
+\]
+であって，各 regular face 上の torus homology から $H$ への inclusion に対し，
+$\Phi(\gamma)$ の restriction が前節の chart を介した実際の $I_\gamma$ に一致するものとする．
+これは facewise action compatibility に追加する条件である．
+affine functions を許しても，core における零極限が定数項を零にする．
+
+\begin{theorem}[正規化された Petersen chart の ambient period defect]
+\label{per:half-integral-obstruction}
+定理\ref{per:local-realization}で構成した chart には，meridian-linear extension は存在しない．
+値域を $N^*\otimes\mathbb Q$ に替えると extension は一意に存在し，
+その各 meridian の値は半整数となる．
+これらを含む最小の cotangent overlattice の $N^*$ に対する index は $16$ である．
+この障害は追加した ambient extension に関するものであり，前節の unimodular face maps の障害ではない．
+\end{theorem}
+
+\begin{proof}
+$\phi_a=\Phi(\mu_a)$ とする．crossing および matching faces 上の作用積分から
+\[
+ \phi_a(r_{A_a})=\phi_a(r_{B_a})=-1,
+ \qquad
+ \phi_a(r_{A_{a\pm1}})=\phi_a(r_{B_{a\pm2}})=0
+\]
+が必要である．標準 rays は
+\[
+ r_{A_{a-1}}+r_{A_{a+1}}+r_{B_a}=r_{A_a},
+ \qquad
+ r_{B_{a-2}}+r_{B_{a+2}}+r_{A_a}=r_{B_a}
+\]
+を満たす．これらを未定の四つの値に適用すると，一つの数 $x_a$ によって
+\begin{equation}\label{per:ambient-values}
+ \phi_a(r_{A_{a\pm2}})=x_a,
+ \qquad
+ \phi_a(r_{B_{a\pm1}})=1-x_a
+\end{equation}
+と書ける．逆に，この値の指定は全ての balancing relations を満たす．
+$N=\operatorname{coker}(A-I)$ の presentation より，各 $x_a\in\mathbb Q$ は
+一つの rational ambient linear form を定める．
+
+meridian relation $\sum_a\mu_a=0$ は $\sum_a\phi_a=0$ を要求する．
+これを $r_{A_j}$ 上で評価すると
+\[
+ x_{j-2}+x_{j+2}=1\qquad(j\in\ZZ/5\ZZ)
+\]
+となる．長さ五の奇周期に沿ってこの式を繰り返すと，$2x_a=1$ が全ての $a$ に対して従う．
+$B_j$ 上の条件もこの解で満たされる．従って rational extension は一意で，
+$x_a=1/2$ である．primitive ray 上で半整数値を取るため integral extension は存在しない．
+matching face のもう一つの cycle $\beta_a=\mu_{a-1}+\mu_{a+1}$ も確認する．
+$\phi_{a-1}+\phi_{a+1}$ は $r_{A_a}$ 上で零，$r_{B_a}$ 上で $1/2+1/2=1$ なので，
+\eqref{per:internal-map} の $I_{\beta_a}$ と一致する．
+従ってこの rational extension は個々の crossing meridians だけでなく，全ての face lattices 上で所要の作用積分を与える．
+
+最後の index を直接計算する．命題\ref{trop:petersen-unimodular}と同じ基底
+$[e_{12}],[e_{13}],[e_{14}],[e_{23}],[e_{24}]$ を使い，
+$A_a\leftrightarrow\{2a,2a+1\}$，$B_a\leftrightarrow\{2a+2,2a+4\}$ とラベルを対応させる．
+$2\phi_a$ の行列は
+\begin{equation}\label{per:half-matrix}
+ \begin{pmatrix}
+ -2&1&0&1&0\\
+ 0&0&0&1&1\\
+ 1&0&1&0&-2\\
+ 1&1&-2&-2&1\\
+ 0&-2&1&0&0
+ \end{pmatrix}.
+\end{equation}
+各列の和は零であり，modulo two でこの行列の rank は四である．
+従って五つの $\phi_a$ の $\tfrac12N^*/N^*$ における像が生成する群は
+$(\ZZ/2)^4$ であり，index は $2^4=16$ となる．
+\end{proof}
+
+\begin{remark}[homology diagram の向き]
+\label{per:variance}
+実際の branch block では $H_1(T_e)\to H_1(Q_v)$ は inclusion である．
+一方，fan の cotangent lattices の自然な map は，star から face への restriction であり，向きが逆である．
+従って $H_1(W_5)$ の rank 四と ambient lattice の rank 五を比較しただけでは障害は出ない．
+定理\ref{per:half-integral-obstruction}は，追加条件 $\Phi$ を明示した上で，
+実際の face restrictions と meridian relation を同時に解いた結果である．
+整数座標で実現される各 face の作用積分と，それを ambient linear functions に延長する問題を区別する必要がある．
+\end{remark}

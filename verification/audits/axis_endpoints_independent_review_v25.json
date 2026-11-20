@@ -1,0 +1,139 @@
+{
+  "version": "v25",
+  "status": "PASS",
+  "passed": true,
+  "issues": [],
+  "identities": [
+    {
+      "name": "n0_original_pair_to_quadratic",
+      "passed": true
+    },
+    {
+      "name": "s2_b2_exception",
+      "passed": true
+    },
+    {
+      "name": "s2_b3_exception",
+      "passed": true
+    },
+    {
+      "name": "nz_original_pair_cleared_without_quotient_import",
+      "passed": true
+    },
+    {
+      "name": "s1_C",
+      "passed": true
+    },
+    {
+      "name": "printed_R_s_table",
+      "passed": true
+    },
+    {
+      "name": "printed_root_gap_table",
+      "passed": true
+    }
+  ],
+  "positive_certificates": [
+    {
+      "name": "all_s_greater_b",
+      "terms": 44,
+      "minimum_coefficient": "1",
+      "constant": "117",
+      "passed": true
+    },
+    {
+      "name": "s_equals_b_at_least_3",
+      "terms": 9,
+      "minimum_coefficient": "1",
+      "constant": "48",
+      "passed": true
+    },
+    {
+      "name": "b_ge_three_s_over_two",
+      "terms": 41,
+      "minimum_coefficient": "16",
+      "constant": "7623",
+      "passed": true
+    },
+    {
+      "name": "z_ge_s_over_two",
+      "terms": 47,
+      "minimum_coefficient": "1",
+      "constant": "1456",
+      "passed": true
+    },
+    {
+      "name": "nz_s_ge_2_A",
+      "terms": 6,
+      "minimum_coefficient": "3",
+      "constant": "7",
+      "passed": true
+    },
+    {
+      "name": "nz_s_ge_2_B",
+      "terms": 15,
+      "minimum_coefficient": "3",
+      "constant": "15",
+      "passed": true
+    },
+    {
+      "name": "nz_s_ge_2_H",
+      "terms": 8,
+      "minimum_coefficient": "1",
+      "constant": "5",
+      "passed": true
+    },
+    {
+      "name": "nz_root_below_s",
+      "terms": 29,
+      "minimum_coefficient": "2",
+      "constant": "121",
+      "passed": true
+    },
+    {
+      "name": "nz_root_above_s_minus_one_when_z_ge_s_plus_one",
+      "terms": 49,
+      "minimum_coefficient": "1",
+      "constant": "289",
+      "passed": true
+    },
+    {
+      "name": "nz_s_one_A",
+      "terms": 3,
+      "minimum_coefficient": "3",
+      "constant": "6",
+      "passed": true
+    },
+    {
+      "name": "nz_s_one_B",
+      "terms": 5,
+      "minimum_coefficient": "3",
+      "constant": "11",
+      "passed": true
+    },
+    {
+      "name": "nz_s_one_H",
+      "terms": 4,
+      "minimum_coefficient": "1",
+      "constant": "7",
+      "passed": true
+    },
+    {
+      "name": "nz_s1_root_below_one",
+      "terms": 6,
+      "minimum_coefficient": "2",
+      "constant": "18",
+      "passed": true
+    }
+  ],
+  "rejected_original_residual": 81,
+  "source_sha256": {
+    "paper/high_d_axis_endpoints_v25.tex": "ed070bc442907ba197d9b39300814f6566e6fff5d703c1c8db512fdb078a7bc9",
+    "verification/verify_high_d_axis_endpoints_v25.py": "dc28a9d6b8650cb0996d8fa09445ceb9c697978435fbf9c2c127d204d73c7d91"
+  },
+  "review_script_sha256": "0b036d252b9774d6e438ede010423745e9140eb2992e6f0c5320abbcc26a2112",
+  "independence": "No producer or verifier imported; original residual rebuilt with a separate sparse rational polynomial implementation. Full nonnegative-domain coefficient signs checked. Published finite scans not repeated.",
+  "quantifier_review": "Unbounded endpoint exclusions are symbolic; only fixed-s endpoints are finite. General s and interior 0<n<z remain open.",
+  "external_peer_review": false,
+  "proof_assistant_formalization": false
+}

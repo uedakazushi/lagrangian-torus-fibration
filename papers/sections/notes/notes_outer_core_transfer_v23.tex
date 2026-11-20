@@ -1,0 +1,42 @@
+\subsection{外側 core の一つの pair から尺度を復元する}
+\label{noc23:section}
+
+低辺の両端だけを先に完成すると，自由尺度が残ることがある．
+第三 core の全行列を完成する前でも，その一つの pair equation は必要条件として使える．
+これは密な支持の接着へ移植できる今回の主要な道具である．
+
+三つの cores を $i,j_0,k$ とし，$q_{ij_0}=1$，$q_{ik}=a>1$，
+$p=p^i_{kj_0}\mid a-1$ とする．低辺の反対側の対応 entry を
+$p^{j_0}_{ik}=\varepsilon j$，$p^{j_0}_{ki}=\varepsilon S$，
+$\varepsilon=\pm1$，$j,S>0$ と書けば $q_{j_0k}=1+jS$ である．
+$u=1-n_{ik;j_0}$，$v=1-n_{j_0k;i}$，$E=au-p$ と置くと，
+\[
+ \{E(jv-\varepsilon)-aj\}S=a-1-Ev,
+ \qquad u,v\in\{-4,-3,-2,-1,0,1\}.
+\]
+係数が非零なら，各 node 組から正整数尺度は高々一つである．
+さらに係数を $A$ とすると
+\[
+ (1+jS)A=-\varepsilon E-j\ne0
+\]
+なので，未知分母は固定整数の約数としても求められる．
+低辺自身の node 条件 $(a-1)/p+\varepsilon j\in[-4,1]$ を加えると
+\[
+ j\le a+3,\qquad q_{j_0k}\le6a+2
+\]
+を得る．この比較は非共鳴時に限る．
+
+共鳴は $E=-\varepsilon j$，$jv=-\varepsilon(a-1)$ で完全に特徴づけられる．
+低辺の node 条件まで課した場合，$a\ge7$ で残るのは
+\[
+ (\varepsilon,p,j,u,v)=(-1,1,a-1,1,1),\quad
+ (1,-1,a-1,-1,-1)
+\]
+だけである．$a=3,5$ には三つの小例外が加わるので，公開稿
+\nolinkurl{outer_core_linear_transfer_v23.tex} の全表を使う．
+奇数分母，残る pair equations，row sums，$D$ 相殺，正 weights は別に確認する．
+単一 pair の共鳴を大域接着の存在と読み替えない．
+
+\nolinkurl{verify_outer_core_transfer_v23.py} は係数恒等式を厳密に確認し，
+元の pair 方程式との有限回帰で全共鳴表と低辺を加えた表を照合する．
+共鳴の無上界分類は本文の整数整除の証明によるものであり，回帰範囲からの外挿ではない．

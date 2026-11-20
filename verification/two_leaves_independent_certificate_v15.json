@@ -1,0 +1,232 @@
+{
+  "status": "PASS",
+  "passed": true,
+  "version": "v15",
+  "script_sha256": "0c0b11de86d028ff3598e5dab22437a4457e9280d84fbf9ec7c1725124461698",
+  "source_sha256": {
+    "one_high_and_crossed_pairing_v15.tex": "53d87e3f1723154016f10344747f583ed36ab5244fc655faa378c5e6a85a758a",
+    "two_leaves_negative_branch_v15.tex": "062f775c976f3ecc9706ef8898e7c17bd71c15e2ee06bdcf56bf9e839cf61a0a"
+  },
+  "dependency_sha256": {
+    "verify_two_leaves_v15.py": "3b9af094bb2d9bc26f964a538d552490bd118077e2d0cc9d7c59498344ccb58e"
+  },
+  "review_status": "Internal computational cross-check; not an external peer review.",
+  "scope": "The seven middle-core list is shared with the main verifier. All 14 leaf sets are independently reconstructed from 21 node allocations, fixed rows and columns, and signed divisors, then compared as complete matrix sets.",
+  "finite_bound_justification": "The one-high normal form and node intervals give u<=R+4 or v<=1-R. Then q<=u(u+1)+1 or q<=v(v-1)+1. These are proved per-middle bounds, not arbitrary denominator cutoffs.",
+  "node_allocations_per_middle_leaf": 21,
+  "leaf_list_count": 14,
+  "total_leaf_candidates": 127,
+  "largest_proved_leaf_q_bound": 91,
+  "records": [
+    {
+      "middle": {
+        "r": 4,
+        "s": 4,
+        "z": 5,
+        "S": 2,
+        "T": 2
+      },
+      "leaf": 3,
+      "proved_leaf_q_bound": 7,
+      "independent_candidates": 4,
+      "q3_candidates": 1,
+      "matches_main_verifier_exactly": true,
+      "matrix_set_sha256": "586419c17de5271d88c56887c15fd6ca6a9f5cbeac94e35cb3ca888a6c473646"
+    },
+    {
+      "middle": {
+        "r": 4,
+        "s": 4,
+        "z": 5,
+        "S": 2,
+        "T": 2
+      },
+      "leaf": 4,
+      "proved_leaf_q_bound": 31,
+      "independent_candidates": 8,
+      "q3_candidates": 1,
+      "matches_main_verifier_exactly": true,
+      "matrix_set_sha256": "1d47452d9c1f272203755c1a77ff2147c9cee0ac25e0c5018d952b8e0b3eb0d1"
+    },
+    {
+      "middle": {
+        "r": 5,
+        "s": 10,
+        "z": 2,
+        "S": 3,
+        "T": 3
+      },
+      "leaf": 3,
+      "proved_leaf_q_bound": 13,
+      "independent_candidates": 4,
+      "q3_candidates": 1,
+      "matches_main_verifier_exactly": true,
+      "matrix_set_sha256": "e0c2e09e3b1ed1da10b544191849cb0ade42f0e10bfa0df38495bd966d8e0d46"
+    },
+    {
+      "middle": {
+        "r": 5,
+        "s": 10,
+        "z": 2,
+        "S": 3,
+        "T": 3
+      },
+      "leaf": 4,
+      "proved_leaf_q_bound": 43,
+      "independent_candidates": 8,
+      "q3_candidates": 0,
+      "matches_main_verifier_exactly": true,
+      "matrix_set_sha256": "e432e2c7c83a357a81e1b32f7a70e36e1ef3d8e54eca16217150f32a075f58a0"
+    },
+    {
+      "middle": {
+        "r": 6,
+        "s": 6,
+        "z": 14,
+        "S": 3,
+        "T": 3
+      },
+      "leaf": 3,
+      "proved_leaf_q_bound": 13,
+      "independent_candidates": 4,
+      "q3_candidates": 1,
+      "matches_main_verifier_exactly": true,
+      "matrix_set_sha256": "41f90700b67ed27ad3373744a629e793da731808677d4be0071a243dac4036f2"
+    },
+    {
+      "middle": {
+        "r": 6,
+        "s": 6,
+        "z": 14,
+        "S": 3,
+        "T": 3
+      },
+      "leaf": 4,
+      "proved_leaf_q_bound": 57,
+      "independent_candidates": 19,
+      "q3_candidates": 0,
+      "matches_main_verifier_exactly": true,
+      "matrix_set_sha256": "61f82250570069cc1442fba65e03795e30b85fc12de4bf834f3183f4bb7c1a4f"
+    },
+    {
+      "middle": {
+        "r": 7,
+        "s": 7,
+        "z": 2,
+        "S": 4,
+        "T": 4
+      },
+      "leaf": 3,
+      "proved_leaf_q_bound": 21,
+      "independent_candidates": 14,
+      "q3_candidates": 1,
+      "matches_main_verifier_exactly": true,
+      "matrix_set_sha256": "108d84723bc2f2eff1e9acbba38457d2c5c91b2a02d3b82db7a0b413169461fd"
+    },
+    {
+      "middle": {
+        "r": 7,
+        "s": 7,
+        "z": 2,
+        "S": 4,
+        "T": 4
+      },
+      "leaf": 4,
+      "proved_leaf_q_bound": 73,
+      "independent_candidates": 10,
+      "q3_candidates": 0,
+      "matches_main_verifier_exactly": true,
+      "matrix_set_sha256": "5b0b72ce691ac97dd2c1c49db7fb20638b76cf21be94b18cbe5cd4aa5cda77a7"
+    },
+    {
+      "middle": {
+        "r": 7,
+        "s": 21,
+        "z": 4,
+        "S": 4,
+        "T": 4
+      },
+      "leaf": 3,
+      "proved_leaf_q_bound": 21,
+      "independent_candidates": 5,
+      "q3_candidates": 1,
+      "matches_main_verifier_exactly": true,
+      "matrix_set_sha256": "dd011a2c81a611cd507248dc22de581a98d8e0984bd0e6c57a4ff7905412faef"
+    },
+    {
+      "middle": {
+        "r": 7,
+        "s": 21,
+        "z": 4,
+        "S": 4,
+        "T": 4
+      },
+      "leaf": 4,
+      "proved_leaf_q_bound": 73,
+      "independent_candidates": 10,
+      "q3_candidates": 0,
+      "matches_main_verifier_exactly": true,
+      "matrix_set_sha256": "10393fe51a132bea5ed8547814534c110d8da803f3d4e8a1eefe2326d552d9d9"
+    },
+    {
+      "middle": {
+        "r": 8,
+        "s": 6,
+        "z": 9,
+        "S": 4,
+        "T": 4
+      },
+      "leaf": 3,
+      "proved_leaf_q_bound": 21,
+      "independent_candidates": 5,
+      "q3_candidates": 1,
+      "matches_main_verifier_exactly": true,
+      "matrix_set_sha256": "83c1b94deca4769a32c0f1c6528eb7d4f515569cf47fa7a06fa32322a8fb9952"
+    },
+    {
+      "middle": {
+        "r": 8,
+        "s": 6,
+        "z": 9,
+        "S": 4,
+        "T": 4
+      },
+      "leaf": 4,
+      "proved_leaf_q_bound": 91,
+      "independent_candidates": 12,
+      "q3_candidates": 0,
+      "matches_main_verifier_exactly": true,
+      "matrix_set_sha256": "1987cbd813c1cf8af06b46c86139a51589ae3ced23915831e41f091d32464ba1"
+    },
+    {
+      "middle": {
+        "r": 8,
+        "s": 8,
+        "z": 27,
+        "S": 4,
+        "T": 4
+      },
+      "leaf": 3,
+      "proved_leaf_q_bound": 21,
+      "independent_candidates": 5,
+      "q3_candidates": 1,
+      "matches_main_verifier_exactly": true,
+      "matrix_set_sha256": "b009df36ae809cf67e535b74afb9f780adc73de14cf1f1c3b1778a6160a5efff"
+    },
+    {
+      "middle": {
+        "r": 8,
+        "s": 8,
+        "z": 27,
+        "S": 4,
+        "T": 4
+      },
+      "leaf": 4,
+      "proved_leaf_q_bound": 91,
+      "independent_candidates": 19,
+      "q3_candidates": 0,
+      "matches_main_verifier_exactly": true,
+      "matrix_set_sha256": "b839a34e4caf43a297572f7c8a3e60f98695d7e65774a440e2daba764aba673b"
+    }
+  ]
+}

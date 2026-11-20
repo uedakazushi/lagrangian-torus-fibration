@@ -1,0 +1,56 @@
+\subsection{単色高分母成分と二値分母の剛性}
+\label{uh11:monochromatic-section}
+
+局所の係数和を高分母 support の連結成分上で足すと，
+分母の上限を置かずに二値分母を排除できる．
+ここで「単色」とは，その成分の全ての高分母が同じ正整数であることを意味する．
+
+\begin{theorem}[単色高分母成分の不存在]\label{uh11:monochromatic-component}
+本稿の全平面五次の SNC cores，標準 $K_4$ cones，既存の branch graph を保ち，
+追加の branch singularities を入れない大域作用適合 atlas を考える．
+高分母 support $H=\{ij:q_{ij}>1\}\subset K_5$ の，辺を持つ連結成分では，
+少なくとも二種類の高分母が現れる．
+この結論は分母の上限を仮定せず，node 数の非負性や全 node budget も用いない．
+\end{theorem}
+
+\begin{proof}
+辺を持つ連結成分 $C$ の全ての高分母が同じ $q>1$ であると仮定する．
+三価 branch の整数格子条件から $q$ は奇数であり，従って $q\geq3$ である．
+core $i\in V(C)$ で高分母 branch の本数を $k_i$ と書く．
+$C$ は $H$ の連結成分なので，その core の残る $4-k_i$ 個の分母は全て一である．
+その core における高分母 rays の normal-action 係数の和を
+\[
+ S_i=\sum_{\substack{j:\,ij\in E(C)}}D^i_j
+\]
+と置く．$k_i=1$ なら命題~\ref{qh9:isolated-local}，
+$k_i=2$ なら系~\ref{uh11:two-negative}，
+$k_i=3$ なら命題~\ref{uh10:three-negative} により $S_i<0$ である．
+$k_i=4$ なら全四 rays を足しているため，row-sum 条件から $S_i=0$ である．
+従って全ての $S_i\leq0$ であり，次数一から三の vertex が一つでもあれば総和は負となる．
+
+一方，各共有 branch では対向する normal actions の係数が相殺するので，
+\[
+ \sum_{i\in V(C)}S_i
+ =\sum_{ij\in E(C)}(D^i_j+D^j_i)=0.
+\]
+従って $C$ の全 vertices は次数四でなければならない．
+$C\subset K_5$ であるため，これは $C=K_5$ を意味する．
+すると $q$ の任意の素因数 $\ell$ に対し $G_\ell=K_5$ となり，
+定理~\ref{ps10:forbidden} の $K_4$ 禁止に反する．
+\end{proof}
+
+\begin{corollary}[二値分母の剛性]\label{uh11:two-value-rigidity}
+ある正整数 $q>1$ について，全十本の branch denominators が
+$q_{ij}\in\{1,q\}$ を満たすなら，全て $q_{ij}=1$ である．
+\end{corollary}
+
+\begin{proof}
+高分母 branch があれば，それを含む $H$ の連結成分は単色となり，
+定理~\ref{uh11:monochromatic-component} に反する．
+\end{proof}
+
+この剛性は，局所の等高分母 chart の不存在を述べるものではない．
+局所には $(q,q,1,1)$ の正の模型が存在する．
+その高分母係数の負の総和と，大域の対向端相殺を同時に要求すると矛盾するのである．
+異なる高分母が同じ連結成分内に混在する場合には，この総和の符号は一般には保たれない．
+従って任意分母に関する全剛性は，なお別の問題である．

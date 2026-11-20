@@ -1,0 +1,138 @@
+\subsection{次数分割に対する整数鎖収縮と幾何種数}
+\label{part:topology}
+
+$d=e_1+\cdots+e_k$ の退化で現れる二重曲線上の Reeb graph を $T_{ij}$ とする．
+その genus と葉の数はそれぞれ $g_{ij}$ と $n_{ij}$ であり，
+葉は実際の三重点でラベル付けする．
+内部部分を $K_{ij}$ と書く．これは連結 graph で，
+\[
+ |V(K_{ij})|=2g_{ij}+n_{ij}-2=e_ie_j(d-4),\qquad
+ |E(K_{ij})|=3g_{ij}+n_{ij}-3,
+ \qquad b_1(K_{ij})=g_{ij}.
+\]
+内部頂点は $i,j$ 間の branch edge，内部辺は bigon，
+各三重点は triangle に対応する．葉を除いても内部部分は連結である．
+$k\ge3,d\ge5$ の仮定により $n_{ij}\ge d-2\ge3$ で，内部頂点は空にならない．
+
+\begin{theorem}[次数分割と底空間の整数位相]\label{part:homotopy}
+この構成の底空間 $B_{\boldsymbol e}(T)$ は単連結な有限二次元複体であり，
+\begin{equation}\label{part:base-wedge}
+ B_{\boldsymbol e}(T)\simeq
+ \bigvee^{\,p_g(X_d)-\sum_i p_g(S_i)} S^2.
+\end{equation}
+ここで $p_g(S_i)=\binom{e_i-1}{3}$ は次数 $e_i$ の smooth surface の幾何種数であり，
+$e_i=1,2,3$ では零とする．整数係数のセル鎖複体は
+\begin{equation}\label{part:chain-target}
+ C_*(\operatorname{Sk}_2\Delta^{k-1};\ZZ)
+ \oplus\ZZ^{\,\sum_{i<j}g_{ij}+
+                    \sum_{i<j<l}(e_ie_je_l-1)}[2]
+\end{equation}
+への明示的な strong deformation retraction を持つ．
+$[2]$ は次数二だけに置く零微分の鎖複体を表す．
+\end{theorem}
+
+\begin{proof}
+各 $K_{ij}$ に spanning tree $R_{ij}$ と root $r_{ij}$ を選び，
+tree edges を root から外向きに向ける．
+内部頂点 $p$ に対応する branch edge を $e_{ij,p}$ とし，
+$i$ から $j$ に向ける．内部辺 $a:p\to q$ の bigon $b_{ij,a}$ は
+\[
+ \partial b_{ij,a}=e_{ij,q}-e_{ij,p}
+\]
+という向きを持つ．root から $p$ への tree path に沿う bigon chain を $D_{ij}(p)$ とすると，
+\[
+ \partial D_{ij}(p)=e_{ij,p}-e_{ij,r_{ij}}.
+\]
+non-tree edge $a:p\to q$ に対して
+\begin{equation}\label{part:loop-cycle}
+ C_{ij,a}=b_{ij,a}-D_{ij}(q)+D_{ij}(p)
+\end{equation}
+は二サイクルである．その個数は $g_{ij}$ である．
+
+$i<j<l$ を固定する．type $ijl$ の三重点は $e_ie_je_l$ 個あり，
+その集合を $P_{ijl}$ とする．$p\in P_{ijl}$ に対応する葉に接する
+内部頂点を $u_{ij}(p),u_{jl}(p),u_{il}(p)$ と書く．
+triangle $\tau_p$ の補正を
+\[
+ \widehat\tau_p=\tau_p
+ -D_{ij}(u_{ij}(p))-D_{jl}(u_{jl}(p))+D_{il}(u_{il}(p))
+\]
+と定めれば，その境界は
+\[
+ \partial\widehat\tau_p
+ =e_{ij,r_{ij}}+e_{jl,r_{jl}}-e_{il,r_{il}}
+\]
+であり，$p$ に依存しない．各 type に一つの基準点 $p^0_{ijl}$ を取り，
+\begin{equation}\label{part:duplicate-cycle}
+ W_{ijl,p}=\widehat\tau_p-\widehat\tau_{p^0_{ijl}}
+ \qquad(p\ne p^0_{ijl})
+\end{equation}
+を得る．
+
+\eqref{part:chain-target} の自由な次数二の生成元を，
+non-tree edges に対する $c_{ij,a}$ と，非基準三重点に対する $w_{ijl,p}$ でラベル付けする．
+鎖写像 $q$ は全ての $e_{ij,p}$ を単体の辺 $ij$ に送り，
+tree bigons を零，non-tree bigons を対応する $c_{ij,a}$ に送る．
+triangle $\tau_p$ は標準 triangle $[ijl]$ に送り，$p\ne p^0_{ijl}$ なら
+さらに $w_{ijl,p}$ を加える．
+切断 $s$ は標準辺を root edge に，標準 triangle を
+$\widehat\tau_{p^0_{ijl}}$ に，追加生成元をそれぞれ
+\eqref{part:loop-cycle}，\eqref{part:duplicate-cycle} に送る．
+\[
+ H(e_{ij,p})=D_{ij}(p),\qquad H=0\text{ in other degrees}
+\]
+とすると，直接計算により
+\[
+ qs=1,\qquad 1-sq=\partial H+H\partial,
+ \qquad Hs=qH=H^2=0
+\]
+である．non-tree bigon については
+$b_{ij,a}-s(c_{ij,a})=D_{ij}(q)-D_{ij}(p)$，
+各 triangle については $\tau_p-sq(\tau_p)=\tau_p-\widehat\tau_p$ を用いる．
+従って全ての恒等式は整数係数で成立する．
+
+基本群では $K_{ij}$ の連結性と bigon relations により，
+同じ $ij$ の全 branch edges が相対端点ホモトピーで同じになる．
+各 type $ijl$ には少なくとも一つの triangle があるので，
+残る完全グラフの全ての loops は消える．従って $\pi_1(B_{\boldsymbol e})=0$ である．
+有限二次元 CW complex の $H_2$ は自由であり，Hurewicz と Whitehead の定理から，
+基底を球面で実現した写像が球面の wedge からの homotopy equivalence を与える．
+
+その球面数はセル数から
+\begin{align*}
+ b_2(B_{\boldsymbol e})
+ &=k-1+\sum_{i<j}(g_{ij}-1)+\sum_{i<j<l}e_ie_je_l\\
+ &=k-1+\frac12\sum_{i<j}e_ie_j(e_i+e_j-4)
+          +\sum_{i<j<l}e_ie_je_l\\
+ &=\frac{(d-1)(d-2)(d-3)}6
+      -\sum_i\frac{(e_i-1)(e_i-2)(e_i-3)}6.
+\end{align*}
+最後の等式は $d=\sum e_i$ の三乗と二乗を展開したものである．
+これが \eqref{part:base-wedge} を与える．
+\end{proof}
+
+\begin{corollary}[三種類の整数基底]\label{part:h2-basis}
+$H_2(B_{\boldsymbol e};\ZZ)$ の基底は，次の三種類から取れる：
+\begin{enumerate}
+\item 各二重曲線の Reeb graph の non-tree edge による $C_{ij,a}$．
+\item 同じ triple type の三重点の差による $W_{ijl,p}$．
+\item $2\le i<j<l\le k$ に対する
+\[
+ Z_{ijl}=
+ \widehat\tau_{p^0_{ijl}}-\widehat\tau_{p^0_{1jl}}
+ +\widehat\tau_{p^0_{1il}}-\widehat\tau_{p^0_{1ij}}.
+\]
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+最初の二種類は \eqref{part:chain-target} の追加自由生成元の像であり，
+最後は単体の二次骨格の標準的な四面体境界の像である．
+定理の整数鎖収縮により，これらは自由な整数基底を与える．
+\end{proof}
+
+したがって，正の genus の二重曲線を tree として扱うことはできない．
+その各 Reeb cycle は追加の整数二サイクルを生む．
+一方，四次以上の成分 $S_i$ に隠れた幾何種数は
+\eqref{part:base-wedge} の底空間の球面数から差し引かれる．
+全成分が plane，quadric，cubic なら，底空間の球面数は従来通り $p_g(X_d)$ である．

@@ -1,0 +1,214 @@
+% v12: proper negative low entries and the complete C4 obstruction.
+% The local lemma and the no-negative-common-puncture lemma use no node
+% nonnegativity.  The C4/C5 global conclusions retain the stated hypotheses.
+
+\subsection{負の低分母 entry の真約数性と四角形成分の完全排除}
+\label{cc12:section}
+
+小さい分母の個別分類によらず，二高分母の標準形そのものから
+共通 puncture の負の clutching 係数を排除できる．
+ここで低分母とは分母が一であることを意味する．
+
+\begin{lemma}[負の低分母 entry は真約数である]
+\label{cc12:proper-negative}
+正の weights を持つ整数局所模型の分母が $(a,b,1,1)$，$a,b>1$，であるとする．
+高分母 $q\in\{a,b\}$ の row から低分母へ向かう負の entry を $p$ と書けば，
+\[
+ 1\leq -p\leq\frac{q-1}{2}.
+\]
+特に $p=-(q-1)$ は不可能である．
+この結論は分母の奇数性，大域 clutching，$D$ の相殺，node 条件のいずれも必要としない．
+\end{lemma}
+
+\begin{proof}
+正の二高分母標準形により，高分母を $A,B$，低分母を $C,D$ と標識すると
+\[
+ p_{AC}=x>0,\quad p_{AD}=-s<0,\quad
+ p_{BC}=-y<0,\quad p_{BD}=z>0,
+\]
+\[
+ x=\frac{a-1}{r},\quad y=\frac{b-1}{r+1},\quad
+ a=sS+1,\quad b=zT+1,
+\]
+\[
+ A=a+x-s>0,\qquad B=b-y+z>0,\qquad AB=ab-1
+\]
+と書ける．$r,s,z,S,T,x,y$ は正の整数である．
+高分母 $B$ の負の entry は $-y$ であり，$r+1\geq2$ から
+$y\leq(b-1)/2$ が直ちに従う．
+
+高分母 $A$ の負の entry について $s=a-1$ と仮定する．
+このとき $a-1=rx$，$s=rx$，$A=x+1$ である．
+$r=1$ なら $A=a$ なので，整数 $B$ に対する $AB=ab-1$ が不可能となる．
+以下 $r\geq2$ とする．
+
+$B=(rb+1)/(r+1)+z$ を pair product に代入して整理すると
+\[
+ A(r+1)z=(1+rs)b-(A+r+1)
+\]
+を得る．さらに $s=rx$，$A=x+1$，$b=zT+1$ を代入すれば
+\begin{equation}\label{cc12:maximal-negative-equation}
+ z\{(1+r^2x)T-(x+1)(r+1)\}
+ =-(r+1)\{(r-1)x-1\}.
+\end{equation}
+$r\geq3$ なら $T,x\geq1$ より左辺の括弧内は
+\[
+ (1+r^2x)T-(x+1)(r+1)
+ \geq x(r^2-r-1)-r
+ \geq r^2-2r-1>0,
+\]
+一方で右辺は負なので矛盾する．
+$r=2$ かつ $x\geq2$ なら左辺の括弧内は $x-2\geq0$，
+右辺は $-3(x-1)<0$ なので，やはり矛盾する．
+残る $r=2,x=1$ では式~\eqref{cc12:maximal-negative-equation} は
+$z(5T-6)=0$ となり，正の整数 $z,T$ に対して不可能である．
+
+従って $s\ne a-1$ である．$s$ は $a-1$ の正約数なので，
+真約数であることから $s\leq(a-1)/2$ を得る．
+これで二つの高分母 row の両方が処理された．
+\end{proof}
+
+\begin{lemma}[共通の低 puncture は両端で負にならない]
+\label{cc12:no-negative-lambda}
+高 edge $ij$ の両端の core がともに二高分母型であり，
+第三 label $k$ について $q_{ik}=q_{jk}=1$ とする．
+正の局所 weights と marked puncture の整数 clutching を仮定すれば，
+\[
+ p^i_{jk}<0,\qquad p^j_{ik}<0
+\]
+は同時には成立しない．
+従って共通 low-low puncture の outgoing sum を
+$\lambda_{ij}q_{ij}$ と書くと $\lambda_{ij}\in\{0,1\}$ である．
+この結果には $D$ の相殺も node 非負性も不要である．
+\end{lemma}
+
+\begin{proof}
+$q=q_{ij}>1$ と置く．両端で負なら補題~\ref{cc12:proper-negative} から
+\[
+ -(q-1)\leq p^i_{jk}+p^j_{ik}\leq-2<0.
+\]
+一方，整数 clutching は $q\mid p^i_{jk}+p^j_{ik}$ を要求する．
+この開区間 $(-q,0)$ は $q$ の倍数を含まないため矛盾する．
+一般には各 outgoing entry は $q-1$ の非零 signed divisor である．
+逆符号の場合には和の絶対値が $q$ 未満なので零となり，
+両方正の場合には和は正で $2q$ 未満なので $q$ となる．
+これで $\lambda_{ij}=0,1$ だけが残る．
+\end{proof}
+
+\begin{theorem}[四角形成分の完全排除]
+\label{cc12:no-C4}
+五成分 plane degeneration の正の局所 charts に対し，
+marked puncture の整数 clutching，および全ての node 数の非負性を仮定する．
+対向端の $D$ の相殺は仮定しない．
+このとき高分母 support の連結成分は $C_4$ ではあり得ない．
+各 branch の node 全数五は row sums から従うものであり，追加の上界として仮定しない．
+\end{theorem}
+
+\begin{proof}
+$C_4$ の vertices を $i\in\mathbb Z/4$，残る label を $*$ とし，
+\[
+ \varepsilon_i=\operatorname{sign}(p^i_{i+1,*})\in\{1,-1\}
+\]
+と置く．局所的な正の pairing により
+$p^{i+1}_{i,*}$ の符号は $-\varepsilon_{i+1}$ である．
+従って補題~\ref{cc12:no-negative-lambda} は
+$\varepsilon_i=-1,\varepsilon_{i+1}=1$ という隣接 pair を禁止する．
+すなわち全ての $i$ で $\varepsilon_i\geq\varepsilon_{i+1}$ である．
+cycle を一周すると全ての $\varepsilon_i$ が同じになる．
+これは定理~\ref{cq12:no-constant-pairing} に反する．
+ここで符号の一様性そのものは node 条件を使わずに従い，
+node 非負性は同符号型を排除する同定理で用いている．
+\end{proof}
+
+\begin{corollary}[五角形成分に残る二つの pairing 型]
+\label{cc12:C5-two-types}
+正の局所 charts，marked puncture の整数 clutching，node 非負性の下で，
+高分母 support の連結成分が $C_5$ であるとする．
+vertices を $i\in\mathbb Z/5$ とし，
+\[
+ \varepsilon_i=\operatorname{sign}(p^i_{i+1,i+2})
+\]
+と置く．このとき $\varepsilon_i=1$ となる vertex は高々一つである．
+共通 low-low puncture の係数 $\lambda_{i,i+1}$ の個数は
+\[
+ \bigl(\#\{\lambda=1\},\#\{\lambda=0\},\#\{\lambda=-1\}\bigr)
+ \in\{(5,0,0),(3,2,0)\}.
+\]
+この二つの型は，後の定理~\ref{cf13:no-C5} により共に排除される．
+\end{corollary}
+
+\begin{proof}
+高 edge $i,i+1$ の共通 low-low puncture の二つの符号は
+$-\varepsilon_i,-\varepsilon_{i+1}$ である．
+補題~\ref{cc12:no-negative-lambda} より正の vertices は隣接できない．
+また node 非負性により距離二の正の pair も存在しない
+（命題~\ref{cn12:cycle-signs}）．
+五角形の異なる二 vertices の距離は一または二なので，正の vertex は高々一つとなる．
+公式 $\lambda_{i,i+1}=-(\varepsilon_i+\varepsilon_{i+1})/2$ から，
+正の vertex が零なら全ての $\lambda$ が一，
+正の vertex が一つなら隣接する二つの $\lambda$ が零で他の三つが一となる．
+\end{proof}
+
+\begin{lemma}[一方の正の entry が一である標準形の最大分母]
+\label{cc12:unit-positive-max}
+正の二高分母標準形で $r=1,z=1$ とする．
+このとき局所的に最大の分母を持つ高 ray の係数 $D$ は負である．
+特に $a=b$ なら $D_A,D_B$ はともに負である．
+\end{lemma}
+
+\begin{proof}
+標準形の pair product と係数の定義から
+\[
+ (s+1)(b+3)=6a+2,\qquad S=\frac{a-1}{s},
+\]
+\[
+ D_A=\frac{b+1}{2}-a+S,\qquad
+ D_B=2(a-b)+2-s
+\]
+を得る．$b>a$ なら整数性により $D_B\leq-s<0$ である．
+$a\geq b$ の場合，$s=1$ なら $b=3a-2>a$ となり不可能であり，
+$s=2$ なら $3\mid6a+2$ を要求するので，やはり不可能である．
+従って $s\geq3$ であり，
+\[
+ D_A\leq\frac{a+1}{2}-a+\frac{a-1}{s}
+ =-(a-1)\left(\frac12-\frac1s\right)<0.
+\]
+さらに $a=b$ なら $D_B=2-s<0$ でもある．
+この補題に大域 clutching や node 条件は不要である．
+\end{proof}
+
+\begin{theorem}[全ての共通 punctures が正である五角形型の排除]
+\label{cc12:no-all-positive-common}
+五成分 plane degeneration の正の局所 charts，
+marked puncture の整数 clutching，対向端の $D$ の相殺を仮定する．
+高分母 support の連結成分が $C_5$ であるとき，
+全ての共通 low-low punctures で $\lambda=1$ となることは不可能である．
+この排除に node 非負性は必要ない．
+\end{theorem}
+
+\begin{proof}
+各高 edge の分母は奇数 $q\geq3$ である．
+$\lambda=1$ なら両端の共通 puncture への entries はともに正であり，
+その和は $q$ である．それぞれ $q-1$ の正約数なので，二つの値は
+$\{1,q-1\}$ である．実際，二つとも真約数なら和は $q-1$ 以下となり，
+両方とも $q-1$ なら $q\geq3$ と矛盾する．
+
+二高分母標準形の $B$ 側の正の低分母 entry $z$ は $b-1$ になれない．
+もし $z=b-1$ なら $T=1$ であり，補題~\ref{td12:low-entry} の $S\leq T$ から $S=1$，
+従って $s=a-1$ となるが，これは補題~\ref{cc12:proper-negative} に反する．
+一方，$A$ 側の正の低分母 entry $x=(a-1)/r$ が $a-1$ となることは
+$r=1$ と同値である．従って各 core には，対応する高分母を $q$ として
+値 $q-1$ を持つ正の低分母 entry が高々一つしかない．
+
+全ての $\lambda=1$ のとき，五本の高 edges はそれぞれちょうど一端で値 $q-1$ を持つ．
+各高 row の共通 puncture への entry はその row の唯一の正の低分母 entry なので，
+この計五個の値は五つの core に高々一個ずつ配られる．
+従って各 core にちょうど一個あり，それは canonical な $A$ 側である．
+もう一方の $B$ 側の正の entry は一となり，すべての core で $r=1,z=1$ を得る．
+
+五本の高 edges のうち最大の分母を持つものを選ぶ．
+その分母は両端の各 core でも局所的に最大なので，
+補題~\ref{cc12:unit-positive-max} により対向端の二つの係数 $D$ がともに負となる．
+これはそれらの相殺に反する．
+\end{proof}
+

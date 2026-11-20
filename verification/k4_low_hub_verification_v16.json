@@ -1,0 +1,1059 @@
+{
+  "version": "v16",
+  "passed": true,
+  "scope": "Necessary conditions for K4 high support with an all-low fifth core; no existence or complete exclusion of K4 is claimed.",
+  "general_proofs": [
+    "Ordinary reverse has absolute value at most four.",
+    "Low-hub D opposition is a divergence equation on ordinary edges.",
+    "Every ordinary bridge has denominator at most twenty-five.",
+    "With four exceptional edges, both ordinary denominators are at most twenty-five, or at most seven if disjoint.",
+    "With two exceptional edges their positive/negative denominator pair is (3,7) or (5,9).",
+    "Six exceptional edges are impossible, so the exceptional count is two or four."
+  ],
+  "assumptions": [
+    "integer row sums and pair products",
+    "odd high denominators greater than one",
+    "integer clutching at common low puncture",
+    "D opposition on four hub edges",
+    "nonnegative hub-edge node counts"
+  ],
+  "not_assumed": [
+    "three-high matching classification",
+    "positive weights",
+    "artificial denominator cutoff",
+    "D opposition on high edges"
+  ],
+  "polynomial_identity_count": 40,
+  "polynomial_identities": [
+    "R row 0",
+    "V row 0",
+    "N row 0",
+    "N column 0",
+    "node relation 0,1",
+    "node relation 0,2",
+    "node relation 0,3",
+    "R row 1",
+    "V row 1",
+    "N row 1",
+    "N column 1",
+    "node relation 1,0",
+    "node relation 1,2",
+    "node relation 1,3",
+    "R row 2",
+    "V row 2",
+    "N row 2",
+    "N column 2",
+    "node relation 2,0",
+    "node relation 2,1",
+    "node relation 2,3",
+    "R row 3",
+    "V row 3",
+    "N row 3",
+    "N column 3",
+    "node relation 3,0",
+    "node relation 3,1",
+    "node relation 3,2",
+    "high-low pair 0,1",
+    "high-low pair 0,2",
+    "high-low pair 0,3",
+    "high-low pair 1,2",
+    "high-low pair 1,3",
+    "high-low pair 2,3",
+    "hub pair 01",
+    "hub pair 12",
+    "hub pair 23",
+    "hub pair 02",
+    "hub pair 03",
+    "hub pair 13"
+  ],
+  "all_exception_signed_orientations": [
+    {
+      "source": 0,
+      "canonical_label_order": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "small_endpoints": [
+        0,
+        0,
+        0,
+        1,
+        3,
+        2
+      ],
+      "signs": [
+        -1,
+        -1,
+        1,
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "source": 0,
+      "canonical_label_order": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "small_endpoints": [
+        0,
+        0,
+        0,
+        1,
+        3,
+        2
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "source": 0,
+      "canonical_label_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "small_endpoints": [
+        0,
+        0,
+        0,
+        1,
+        3,
+        2
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "source": 0,
+      "canonical_label_order": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "small_endpoints": [
+        0,
+        0,
+        0,
+        2,
+        1,
+        3
+      ],
+      "signs": [
+        -1,
+        -1,
+        1,
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "source": 0,
+      "canonical_label_order": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "small_endpoints": [
+        0,
+        0,
+        0,
+        2,
+        1,
+        3
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "source": 0,
+      "canonical_label_order": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "small_endpoints": [
+        0,
+        0,
+        0,
+        2,
+        1,
+        3
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "source": 3,
+      "canonical_label_order": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "small_endpoints": [
+        0,
+        2,
+        3,
+        1,
+        3,
+        3
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "source": 3,
+      "canonical_label_order": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "small_endpoints": [
+        0,
+        2,
+        3,
+        1,
+        3,
+        3
+      ],
+      "signs": [
+        1,
+        -1,
+        1,
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "source": 3,
+      "canonical_label_order": [
+        3,
+        2,
+        0,
+        1
+      ],
+      "small_endpoints": [
+        0,
+        2,
+        3,
+        1,
+        3,
+        3
+      ],
+      "signs": [
+        1,
+        1,
+        -1,
+        -1,
+        -1,
+        1
+      ]
+    },
+    {
+      "source": 2,
+      "canonical_label_order": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "small_endpoints": [
+        0,
+        2,
+        3,
+        2,
+        1,
+        2
+      ],
+      "signs": [
+        -1,
+        -1,
+        1,
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "source": 2,
+      "canonical_label_order": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "small_endpoints": [
+        0,
+        2,
+        3,
+        2,
+        1,
+        2
+      ],
+      "signs": [
+        1,
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ]
+    },
+    {
+      "source": 2,
+      "canonical_label_order": [
+        2,
+        0,
+        1,
+        3
+      ],
+      "small_endpoints": [
+        0,
+        2,
+        3,
+        2,
+        1,
+        2
+      ],
+      "signs": [
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "source": 1,
+      "canonical_label_order": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "small_endpoints": [
+        1,
+        0,
+        3,
+        1,
+        1,
+        2
+      ],
+      "signs": [
+        -1,
+        -1,
+        1,
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "source": 1,
+      "canonical_label_order": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "small_endpoints": [
+        1,
+        0,
+        3,
+        1,
+        1,
+        2
+      ],
+      "signs": [
+        -1,
+        1,
+        1,
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "source": 1,
+      "canonical_label_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "small_endpoints": [
+        1,
+        0,
+        3,
+        1,
+        1,
+        2
+      ],
+      "signs": [
+        1,
+        1,
+        -1,
+        -1,
+        -1,
+        1
+      ]
+    },
+    {
+      "source": 3,
+      "canonical_label_order": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "small_endpoints": [
+        1,
+        0,
+        3,
+        2,
+        3,
+        3
+      ],
+      "signs": [
+        -1,
+        1,
+        1,
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "source": 3,
+      "canonical_label_order": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "small_endpoints": [
+        1,
+        0,
+        3,
+        2,
+        3,
+        3
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "source": 3,
+      "canonical_label_order": [
+        3,
+        1,
+        0,
+        2
+      ],
+      "small_endpoints": [
+        1,
+        0,
+        3,
+        2,
+        3,
+        3
+      ],
+      "signs": [
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "source": 1,
+      "canonical_label_order": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "small_endpoints": [
+        1,
+        2,
+        0,
+        1,
+        1,
+        3
+      ],
+      "signs": [
+        -1,
+        1,
+        -1,
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "source": 1,
+      "canonical_label_order": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "small_endpoints": [
+        1,
+        2,
+        0,
+        1,
+        1,
+        3
+      ],
+      "signs": [
+        -1,
+        1,
+        1,
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "source": 1,
+      "canonical_label_order": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "small_endpoints": [
+        1,
+        2,
+        0,
+        1,
+        1,
+        3
+      ],
+      "signs": [
+        1,
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ]
+    },
+    {
+      "source": 2,
+      "canonical_label_order": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "small_endpoints": [
+        1,
+        2,
+        0,
+        2,
+        3,
+        2
+      ],
+      "signs": [
+        -1,
+        1,
+        1,
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "source": 2,
+      "canonical_label_order": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "small_endpoints": [
+        1,
+        2,
+        0,
+        2,
+        3,
+        2
+      ],
+      "signs": [
+        1,
+        -1,
+        -1,
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "source": 2,
+      "canonical_label_order": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "small_endpoints": [
+        1,
+        2,
+        0,
+        2,
+        3,
+        2
+      ],
+      "signs": [
+        1,
+        -1,
+        1,
+        1,
+        -1,
+        -1
+      ]
+    }
+  ],
+  "proof_derived_complete_uw_cases": [
+    {
+      "u": -3,
+      "w": 0,
+      "forced_even_parameters": {
+        "D": -3,
+        "A": 2,
+        "C": 4
+      },
+      "nonpositive_or_odd_contradictions": {
+        "D": -3
+      }
+    },
+    {
+      "u": -3,
+      "w": 1,
+      "forced_even_parameters": {
+        "D": -2,
+        "A": 2,
+        "C": 3
+      },
+      "nonpositive_or_odd_contradictions": {
+        "D": -2,
+        "C": 3
+      }
+    },
+    {
+      "u": -3,
+      "w": 2,
+      "forced_even_parameters": {
+        "D": -1,
+        "C": 2
+      },
+      "nonpositive_or_odd_contradictions": {
+        "D": -1
+      }
+    },
+    {
+      "u": -3,
+      "w": 3,
+      "forced_even_parameters": {
+        "D": 0,
+        "A": 2,
+        "C": 1
+      },
+      "nonpositive_or_odd_contradictions": {
+        "D": 0,
+        "C": 1
+      }
+    },
+    {
+      "u": -3,
+      "w": 4,
+      "forced_even_parameters": {
+        "D": 1,
+        "A": 2,
+        "C": 0
+      },
+      "nonpositive_or_odd_contradictions": {
+        "D": 1,
+        "C": 0
+      }
+    },
+    {
+      "u": -3,
+      "w": 5,
+      "forced_even_parameters": {
+        "D": 2,
+        "A": 2,
+        "C": -1
+      },
+      "nonpositive_or_odd_contradictions": {
+        "C": -1
+      }
+    },
+    {
+      "u": -2,
+      "w": 0,
+      "forced_even_parameters": {
+        "D": -3,
+        "A": 1,
+        "C": 3
+      },
+      "nonpositive_or_odd_contradictions": {
+        "D": -3,
+        "A": 1,
+        "C": 3
+      }
+    },
+    {
+      "u": -2,
+      "w": 1,
+      "forced_even_parameters": {
+        "D": -2,
+        "A": 1,
+        "C": 2
+      },
+      "nonpositive_or_odd_contradictions": {
+        "D": -2,
+        "A": 1
+      }
+    },
+    {
+      "u": -2,
+      "w": 2,
+      "forced_even_parameters": {
+        "D": -1,
+        "C": 1
+      },
+      "nonpositive_or_odd_contradictions": {
+        "D": -1,
+        "C": 1
+      }
+    },
+    {
+      "u": -2,
+      "w": 3,
+      "forced_even_parameters": {
+        "D": 0,
+        "A": 1,
+        "C": 0
+      },
+      "nonpositive_or_odd_contradictions": {
+        "D": 0,
+        "A": 1,
+        "C": 0
+      }
+    },
+    {
+      "u": -2,
+      "w": 4,
+      "forced_even_parameters": {
+        "D": 1,
+        "A": 1,
+        "C": -1
+      },
+      "nonpositive_or_odd_contradictions": {
+        "D": 1,
+        "A": 1,
+        "C": -1
+      }
+    },
+    {
+      "u": -1,
+      "w": 0,
+      "forced_even_parameters": {
+        "D": -3,
+        "A": 0
+      },
+      "nonpositive_or_odd_contradictions": {
+        "D": -3,
+        "A": 0
+      }
+    },
+    {
+      "u": -1,
+      "w": 1,
+      "forced_even_parameters": {
+        "D": -2,
+        "A": 0
+      },
+      "nonpositive_or_odd_contradictions": {
+        "D": -2,
+        "A": 0
+      }
+    },
+    {
+      "u": -1,
+      "w": 2,
+      "forced_even_parameters": {
+        "D": -1
+      },
+      "nonpositive_or_odd_contradictions": {
+        "D": -1
+      }
+    },
+    {
+      "u": -1,
+      "w": 3,
+      "forced_even_parameters": {
+        "D": 0,
+        "A": 0
+      },
+      "nonpositive_or_odd_contradictions": {
+        "D": 0,
+        "A": 0
+      }
+    },
+    {
+      "u": 0,
+      "w": 0,
+      "forced_even_parameters": {
+        "A": -1,
+        "C": 1
+      },
+      "nonpositive_or_odd_contradictions": {
+        "A": -1,
+        "C": 1
+      }
+    },
+    {
+      "u": 0,
+      "w": 1,
+      "forced_even_parameters": {
+        "A": -1,
+        "C": 0
+      },
+      "nonpositive_or_odd_contradictions": {
+        "A": -1,
+        "C": 0
+      }
+    },
+    {
+      "u": 0,
+      "w": 2,
+      "forced_even_parameters": {
+        "C": -1
+      },
+      "nonpositive_or_odd_contradictions": {
+        "C": -1
+      }
+    },
+    {
+      "u": 1,
+      "w": 0,
+      "forced_even_parameters": {
+        "D": -3,
+        "A": -2,
+        "C": 0
+      },
+      "nonpositive_or_odd_contradictions": {
+        "D": -3,
+        "A": -2,
+        "C": 0
+      }
+    },
+    {
+      "u": 1,
+      "w": 1,
+      "forced_even_parameters": {
+        "D": -2,
+        "A": -2,
+        "C": -1
+      },
+      "nonpositive_or_odd_contradictions": {
+        "D": -2,
+        "A": -2,
+        "C": -1
+      }
+    },
+    {
+      "u": 2,
+      "w": 0,
+      "forced_even_parameters": {
+        "D": -3,
+        "A": -3,
+        "C": -1
+      },
+      "nonpositive_or_odd_contradictions": {
+        "D": -3,
+        "A": -3,
+        "C": -1
+      }
+    }
+  ],
+  "all_exception_survivors": 0,
+  "node_cut_extrema": {
+    "all_node_matrices": 194481,
+    "cut_ranges_by_size": {
+      "1": [
+        -5,
+        10
+      ],
+      "2": [
+        -10,
+        10
+      ],
+      "3": [
+        -10,
+        5
+      ]
+    }
+  },
+  "bridge_bounds": {
+    "5": {
+      "maximum_W": 5,
+      "rows": [
+        {
+          "absolute_reverse": 1,
+          "possible_denominators": [
+            3,
+            5
+          ]
+        },
+        {
+          "absolute_reverse": 2,
+          "possible_denominators": [
+            3,
+            5,
+            7
+          ]
+        },
+        {
+          "absolute_reverse": 3,
+          "possible_denominators": [
+            7
+          ]
+        },
+        {
+          "absolute_reverse": 4,
+          "possible_denominators": [
+            5
+          ]
+        }
+      ],
+      "maximum_q": 7
+    },
+    "10": {
+      "maximum_W": 10,
+      "rows": [
+        {
+          "absolute_reverse": 1,
+          "possible_denominators": [
+            3,
+            5,
+            7,
+            9
+          ]
+        },
+        {
+          "absolute_reverse": 2,
+          "possible_denominators": [
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15,
+            17
+          ]
+        },
+        {
+          "absolute_reverse": 3,
+          "possible_denominators": [
+            7,
+            13,
+            19
+          ]
+        },
+        {
+          "absolute_reverse": 4,
+          "possible_denominators": [
+            5,
+            9,
+            13,
+            17,
+            21,
+            25
+          ]
+        }
+      ],
+      "maximum_q": 25
+    }
+  },
+  "two_exception_denominator_pairs": [
+    [
+      3,
+      7
+    ],
+    [
+      5,
+      9
+    ]
+  ],
+  "two_exception_large_common_endpoint_argument": {
+    "P": "q_positive-1, a positive even integer",
+    "M": "P+4>=6",
+    "ordinary_reverse_at_common_big_endpoint": 3,
+    "all_incoming_hub_entries": 0,
+    "D_requires_outgoing_X_sum": -2,
+    "actual_outgoing_X_sum": "(q_ordinary-1)/3 > 0",
+    "status": "contradiction in general; no finite P enumeration"
+  },
+  "source_sha256": "e37d64149dc69fa2dd826b312ef665101dc67c6becefbe9573547526d1e790f8",
+  "script_sha256": "f67dd23c908f0d6cbc60e6543efeb818fee9d59020154a40c0e80be2daf090d7",
+  "external_peer_review": false,
+  "formal_proof_assistant": false
+}

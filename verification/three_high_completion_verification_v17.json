@@ -1,0 +1,8397 @@
+{
+  "version": "v17",
+  "passed": true,
+  "scope": "Complete integer three-high reconstruction for fixed low row AND column; no claim classifying all varying low data.",
+  "general_result": "At most two completions; a same-sign high pair gives a genuine quadratic with nonzero leading coefficient.",
+  "polynomial_identity_count": 7,
+  "polynomial_identities": [
+    "Cleared final pair equals the explicit quadratic",
+    "Symmetric discriminant",
+    "Opposite-exception tail is linear in P",
+    "Tail difference excludes resonance",
+    "Proved endpoint for the negative high entry",
+    "Tail B is positive past the endpoint",
+    "The small forbidden core is a sum of squares"
+  ],
+  "small_input_crosscheck": {
+    "purpose": "Implementation validation, not the range of the theorem",
+    "all_grid_cases": 567,
+    "r_values": [
+      -3,
+      -2,
+      -1,
+      1,
+      2,
+      3
+    ],
+    "x_absolute_values": [
+      1,
+      2,
+      3
+    ],
+    "count_by_completions": {
+      "0": 564,
+      "1": 0,
+      "2": 3
+    },
+    "all_matched_independent_signed_divisors": true,
+    "cases": [
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -1,
+          -1,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -1,
+          -1,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -1,
+          -1,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -1,
+          -2,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -1,
+          -2,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -1,
+          -2,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -1,
+          -3,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -1,
+          -3,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -1,
+          -3,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -2,
+          -1,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -2,
+          -1,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -2,
+          -1,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -2,
+          -2,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -2,
+          -2,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -2,
+          -2,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -2,
+          -3,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -2,
+          -3,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -2,
+          -3,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -3,
+          -1,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -3,
+          -1,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -3,
+          -1,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -3,
+          -2,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -3,
+          -2,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -3,
+          -2,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -3,
+          -3,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -3,
+          -3,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          -1,
+          3
+        ],
+        "x": [
+          -3,
+          -3,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -1,
+          1,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -1,
+          1,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -1,
+          1,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -1,
+          2,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -1,
+          2,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -1,
+          2,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -1,
+          3,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -1,
+          3,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -1,
+          3,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -2,
+          1,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -2,
+          1,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -2,
+          1,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -2,
+          2,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -2,
+          2,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -2,
+          2,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -2,
+          3,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -2,
+          3,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -2,
+          3,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -3,
+          1,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -3,
+          1,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -3,
+          1,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -3,
+          2,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -3,
+          2,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -3,
+          2,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -3,
+          3,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -3,
+          3,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          1,
+          1
+        ],
+        "x": [
+          -3,
+          3,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -1,
+          1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -1,
+          1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -1,
+          1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -1,
+          2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -1,
+          2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -1,
+          2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -1,
+          3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -1,
+          3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -1,
+          3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -2,
+          1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -2,
+          1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -2,
+          1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -2,
+          2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -2,
+          2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -2,
+          2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -2,
+          3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -2,
+          3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -2,
+          3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -3,
+          1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -3,
+          1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -3,
+          1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -3,
+          2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -3,
+          2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -3,
+          2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -3,
+          3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -3,
+          3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -3,
+          3,
+          -1
+        ],
+        "x": [
+          -3,
+          3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -1,
+          -1,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -1,
+          -1,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -1,
+          -1,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -1,
+          -2,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -1,
+          -2,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -1,
+          -2,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -1,
+          -3,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -1,
+          -3,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -1,
+          -3,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -2,
+          -1,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -2,
+          -1,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -2,
+          -1,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -2,
+          -2,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -2,
+          -2,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -2,
+          -2,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -2,
+          -3,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -2,
+          -3,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -2,
+          -3,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -3,
+          -1,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -3,
+          -1,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -3,
+          -1,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -3,
+          -2,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -3,
+          -2,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -3,
+          -2,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -3,
+          -3,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -3,
+          -3,
+          2
+        ],
+        "integer_completions": 2,
+        "positive_completions": 2
+      },
+      {
+        "r": [
+          -2,
+          -2,
+          3
+        ],
+        "x": [
+          -3,
+          -3,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -1,
+          -1,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -1,
+          -1,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -1,
+          -1,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -1,
+          -2,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -1,
+          -2,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -1,
+          -2,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -1,
+          -3,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -1,
+          -3,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -1,
+          -3,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -2,
+          -1,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -2,
+          -1,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -2,
+          -1,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -2,
+          -2,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -2,
+          -2,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -2,
+          -2,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -2,
+          -3,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -2,
+          -3,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -2,
+          -3,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -3,
+          -1,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -3,
+          -1,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -3,
+          -1,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -3,
+          -2,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -3,
+          -2,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -3,
+          -2,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -3,
+          -3,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -3,
+          -3,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          -1,
+          2
+        ],
+        "x": [
+          -3,
+          -3,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -1,
+          1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -1,
+          1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -1,
+          1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -1,
+          2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -1,
+          2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -1,
+          2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -1,
+          3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -1,
+          3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -1,
+          3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -2,
+          1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -2,
+          1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -2,
+          1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -2,
+          2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -2,
+          2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -2,
+          2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -2,
+          3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -2,
+          3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -2,
+          3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -3,
+          1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -3,
+          1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -3,
+          1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -3,
+          2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -3,
+          2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -3,
+          2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -3,
+          3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -3,
+          3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          2,
+          -1
+        ],
+        "x": [
+          -3,
+          3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -1,
+          1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -1,
+          1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -1,
+          1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -1,
+          2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -1,
+          2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -1,
+          2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -1,
+          3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -1,
+          3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -1,
+          3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -2,
+          1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -2,
+          1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -2,
+          1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -2,
+          2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -2,
+          2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -2,
+          2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -2,
+          3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -2,
+          3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -2,
+          3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -3,
+          1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -3,
+          1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -3,
+          1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -3,
+          2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -3,
+          2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -3,
+          2,
+          -3
+        ],
+        "integer_completions": 2,
+        "positive_completions": 2
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -3,
+          3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -3,
+          3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -2,
+          3,
+          -2
+        ],
+        "x": [
+          -3,
+          3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -1,
+          -1,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -1,
+          -1,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -1,
+          -1,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -1,
+          -2,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -1,
+          -2,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -1,
+          -2,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -1,
+          -3,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -1,
+          -3,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -1,
+          -3,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -2,
+          -1,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -2,
+          -1,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -2,
+          -1,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -2,
+          -2,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -2,
+          -2,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -2,
+          -2,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -2,
+          -3,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -2,
+          -3,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -2,
+          -3,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -3,
+          -1,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -3,
+          -1,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -3,
+          -1,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -3,
+          -2,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -3,
+          -2,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -3,
+          -2,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -3,
+          -3,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -3,
+          -3,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -3,
+          3
+        ],
+        "x": [
+          -3,
+          -3,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -1,
+          -1,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -1,
+          -1,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -1,
+          -1,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -1,
+          -2,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -1,
+          -2,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -1,
+          -2,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -1,
+          -3,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -1,
+          -3,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -1,
+          -3,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -2,
+          -1,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -2,
+          -1,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -2,
+          -1,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -2,
+          -2,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -2,
+          -2,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -2,
+          -2,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -2,
+          -3,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -2,
+          -3,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -2,
+          -3,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -3,
+          -1,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -3,
+          -1,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -3,
+          -1,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -3,
+          -2,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -3,
+          -2,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -3,
+          -2,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -3,
+          -3,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -3,
+          -3,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -2,
+          2
+        ],
+        "x": [
+          -3,
+          -3,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -1,
+          -1,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -1,
+          -1,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -1,
+          -1,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -1,
+          -2,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -1,
+          -2,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -1,
+          -2,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -1,
+          -3,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -1,
+          -3,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -1,
+          -3,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -2,
+          -1,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -2,
+          -1,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -2,
+          -1,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -2,
+          -2,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -2,
+          -2,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -2,
+          -2,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -2,
+          -3,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -2,
+          -3,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -2,
+          -3,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -3,
+          -1,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -3,
+          -1,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -3,
+          -1,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -3,
+          -2,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -3,
+          -2,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -3,
+          -2,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -3,
+          -3,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -3,
+          -3,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          -1,
+          1
+        ],
+        "x": [
+          -3,
+          -3,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -1,
+          1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -1,
+          1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -1,
+          1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -1,
+          2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -1,
+          2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -1,
+          2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -1,
+          3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -1,
+          3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -1,
+          3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -2,
+          1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -2,
+          1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -2,
+          1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -2,
+          2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -2,
+          2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -2,
+          2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -2,
+          3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -2,
+          3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -2,
+          3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -3,
+          1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -3,
+          1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -3,
+          1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -3,
+          2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -3,
+          2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -3,
+          2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -3,
+          3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -3,
+          3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          1,
+          -1
+        ],
+        "x": [
+          -3,
+          3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -1,
+          1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -1,
+          1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -1,
+          1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -1,
+          2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -1,
+          2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -1,
+          2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -1,
+          3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -1,
+          3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -1,
+          3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -2,
+          1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -2,
+          1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -2,
+          1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -2,
+          2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -2,
+          2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -2,
+          2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -2,
+          3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -2,
+          3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -2,
+          3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -3,
+          1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -3,
+          1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -3,
+          1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -3,
+          2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -3,
+          2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -3,
+          2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -3,
+          3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -3,
+          3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          2,
+          -2
+        ],
+        "x": [
+          -3,
+          3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -1,
+          1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -1,
+          1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -1,
+          1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -1,
+          2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -1,
+          2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -1,
+          2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -1,
+          3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -1,
+          3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -1,
+          3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -2,
+          1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -2,
+          1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -2,
+          1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -2,
+          2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -2,
+          2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -2,
+          2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -2,
+          3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -2,
+          3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -2,
+          3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -3,
+          1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -3,
+          1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -3,
+          1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -3,
+          2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -3,
+          2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -3,
+          2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -3,
+          3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -3,
+          3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          -1,
+          3,
+          -3
+        ],
+        "x": [
+          -3,
+          3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          1,
+          -1,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          1,
+          -1,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          1,
+          -1,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          1,
+          -2,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          1,
+          -2,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          1,
+          -2,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          1,
+          -3,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          1,
+          -3,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          1,
+          -3,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          2,
+          -1,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          2,
+          -1,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          2,
+          -1,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          2,
+          -2,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          2,
+          -2,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          2,
+          -2,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          2,
+          -3,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          2,
+          -3,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          2,
+          -3,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          3,
+          -1,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          3,
+          -1,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          3,
+          -1,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          3,
+          -2,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          3,
+          -2,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          3,
+          -2,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          3,
+          -3,
+          1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          3,
+          -3,
+          2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -3,
+          1
+        ],
+        "x": [
+          3,
+          -3,
+          3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          1,
+          -1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          1,
+          -1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          1,
+          -1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          1,
+          -2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          1,
+          -2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          1,
+          -2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          1,
+          -3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          1,
+          -3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          1,
+          -3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          2,
+          -1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          2,
+          -1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          2,
+          -1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          2,
+          -2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          2,
+          -2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          2,
+          -2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          2,
+          -3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          2,
+          -3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          2,
+          -3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          3,
+          -1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          3,
+          -1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          3,
+          -1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          3,
+          -2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          3,
+          -2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          3,
+          -2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          3,
+          -3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          3,
+          -3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          -1,
+          -1
+        ],
+        "x": [
+          3,
+          -3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          1,
+          1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          1,
+          1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          1,
+          1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          1,
+          2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          1,
+          2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          1,
+          2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          1,
+          3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          1,
+          3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          1,
+          3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          2,
+          1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          2,
+          1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          2,
+          1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          2,
+          2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          2,
+          2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          2,
+          2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          2,
+          3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          2,
+          3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          2,
+          3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          3,
+          1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          3,
+          1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          3,
+          1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          3,
+          2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          3,
+          2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          3,
+          2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          3,
+          3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          3,
+          3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          1,
+          1,
+          -3
+        ],
+        "x": [
+          3,
+          3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          1,
+          -1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          1,
+          -1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          1,
+          -1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          1,
+          -2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          1,
+          -2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          1,
+          -2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          1,
+          -3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          1,
+          -3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          1,
+          -3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          2,
+          -1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          2,
+          -1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          2,
+          -1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          2,
+          -2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          2,
+          -2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          2,
+          -2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          2,
+          -3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          2,
+          -3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          2,
+          -3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          3,
+          -1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          3,
+          -1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          3,
+          -1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          3,
+          -2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          3,
+          -2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          3,
+          -2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          3,
+          -3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          3,
+          -3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -2,
+          -1
+        ],
+        "x": [
+          3,
+          -3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          1,
+          -1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          1,
+          -1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          1,
+          -1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          1,
+          -2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          1,
+          -2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          1,
+          -2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          1,
+          -3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          1,
+          -3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          1,
+          -3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          2,
+          -1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          2,
+          -1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          2,
+          -1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          2,
+          -2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          2,
+          -2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          2,
+          -2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          2,
+          -3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          2,
+          -3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          2,
+          -3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          3,
+          -1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          3,
+          -1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          3,
+          -1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          3,
+          -2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          3,
+          -2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          3,
+          -2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          3,
+          -3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          3,
+          -3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          2,
+          -1,
+          -2
+        ],
+        "x": [
+          3,
+          -3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          1,
+          -1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          1,
+          -1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          1,
+          -1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          1,
+          -2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          1,
+          -2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          1,
+          -2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          1,
+          -3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          1,
+          -3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          1,
+          -3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          2,
+          -1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          2,
+          -1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          2,
+          -1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          2,
+          -2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          2,
+          -2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          2,
+          -2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          2,
+          -3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          2,
+          -3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          2,
+          -3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          3,
+          -1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          3,
+          -1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          3,
+          -1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          3,
+          -2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          3,
+          -2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          3,
+          -2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          3,
+          -3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          3,
+          -3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -3,
+          -1
+        ],
+        "x": [
+          3,
+          -3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          1,
+          -1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          1,
+          -1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          1,
+          -1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          1,
+          -2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          1,
+          -2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          1,
+          -2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          1,
+          -3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          1,
+          -3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          1,
+          -3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          2,
+          -1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          2,
+          -1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          2,
+          -1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          2,
+          -2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          2,
+          -2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          2,
+          -2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          2,
+          -3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          2,
+          -3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          2,
+          -3,
+          -3
+        ],
+        "integer_completions": 2,
+        "positive_completions": 2
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          3,
+          -1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          3,
+          -1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          3,
+          -1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          3,
+          -2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          3,
+          -2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          3,
+          -2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          3,
+          -3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          3,
+          -3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -2,
+          -2
+        ],
+        "x": [
+          3,
+          -3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          1,
+          -1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          1,
+          -1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          1,
+          -1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          1,
+          -2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          1,
+          -2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          1,
+          -2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          1,
+          -3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          1,
+          -3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          1,
+          -3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          2,
+          -1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          2,
+          -1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          2,
+          -1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          2,
+          -2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          2,
+          -2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          2,
+          -2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          2,
+          -3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          2,
+          -3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          2,
+          -3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          3,
+          -1,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          3,
+          -1,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          3,
+          -1,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          3,
+          -2,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          3,
+          -2,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          3,
+          -2,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          3,
+          -3,
+          -1
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          3,
+          -3,
+          -2
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      },
+      {
+        "r": [
+          3,
+          -1,
+          -3
+        ],
+        "x": [
+          3,
+          -3,
+          -3
+        ],
+        "integer_completions": 0,
+        "positive_completions": 0
+      }
+    ]
+  },
+  "rank_two_family_examples": [
+    {
+      "n": 0,
+      "q": [
+        1,
+        409,
+        3493,
+        1303
+      ],
+      "positive_completions": 1,
+      "known_rank_two_family_member_recovered": true
+    },
+    {
+      "n": 1,
+      "q": [
+        1,
+        1009,
+        8593,
+        3207
+      ],
+      "positive_completions": 1,
+      "known_rank_two_family_member_recovered": true
+    },
+    {
+      "n": 10,
+      "q": [
+        1,
+        6409,
+        54493,
+        20343
+      ],
+      "positive_completions": 1,
+      "known_rank_two_family_member_recovered": true
+    },
+    {
+      "n": 1000000,
+      "q": [
+        1,
+        600000409,
+        5100003493,
+        1904001303
+      ],
+      "positive_completions": 1,
+      "known_rank_two_family_member_recovered": true
+    }
+  ],
+  "forbidden_335_data": {
+    "r": [
+      -4,
+      1,
+      2
+    ],
+    "x": [
+      -1,
+      2,
+      1
+    ],
+    "q": [
+      5,
+      3,
+      3
+    ],
+    "s": [
+      -4,
+      -5,
+      -4
+    ],
+    "order": [
+      0,
+      1,
+      2
+    ],
+    "coefficients": [
+      -12,
+      -34,
+      -28
+    ],
+    "discriminant": -188
+  },
+  "sharp_labeled_bound": {
+    "r": [
+      -2,
+      -2,
+      3
+    ],
+    "x": [
+      -3,
+      -3,
+      2
+    ],
+    "completions": [
+      {
+        "q": [
+          1,
+          7,
+          7,
+          7
+        ],
+        "P": [
+          [
+            0,
+            -2,
+            -2,
+            3
+          ],
+          [
+            -3,
+            0,
+            4,
+            -8
+          ],
+          [
+            -3,
+            12,
+            0,
+            -16
+          ],
+          [
+            2,
+            -6,
+            -3,
+            0
+          ]
+        ],
+        "D": [
+          3,
+          -11,
+          -6,
+          14
+        ],
+        "positive": true,
+        "positive_cycles": [
+          {
+            "cycle": [
+              0,
+              3
+            ],
+            "gain": [
+              6,
+              7
+            ]
+          },
+          {
+            "cycle": [
+              1,
+              2
+            ],
+            "gain": [
+              48,
+              49
+            ]
+          }
+        ]
+      },
+      {
+        "q": [
+          1,
+          7,
+          7,
+          7
+        ],
+        "P": [
+          [
+            0,
+            -2,
+            -2,
+            3
+          ],
+          [
+            -3,
+            0,
+            12,
+            -16
+          ],
+          [
+            -3,
+            4,
+            0,
+            -8
+          ],
+          [
+            2,
+            -3,
+            -6,
+            0
+          ]
+        ],
+        "D": [
+          3,
+          -6,
+          -11,
+          14
+        ],
+        "positive": true,
+        "positive_cycles": [
+          {
+            "cycle": [
+              0,
+              3
+            ],
+            "gain": [
+              6,
+              7
+            ]
+          },
+          {
+            "cycle": [
+              1,
+              2
+            ],
+            "gain": [
+              48,
+              49
+            ]
+          }
+        ]
+      }
+    ],
+    "up_to_permutation": "The two completions exchange high labels 1 and 2; geometric inequivalence is not asserted."
+  },
+  "proof_derived_tail_checks": {
+    "conditions": "h<=4 and hv+1<=25",
+    "all_proved_z_intervals_checked": true,
+    "arbitrary_cutoff": false,
+    "records": [
+      {
+        "h": 1,
+        "v": 1,
+        "z": 3,
+        "P": 1,
+        "q_ordinary": 2,
+        "proved_bound": 5,
+        "completions": 0
+      },
+      {
+        "h": 2,
+        "v": 1,
+        "z": 4,
+        "P": 2,
+        "q_ordinary": 3,
+        "proved_bound": 18,
+        "completions": 0
+      },
+      {
+        "h": 2,
+        "v": 3,
+        "z": 4,
+        "P": 22,
+        "q_ordinary": 7,
+        "proved_bound": 28,
+        "completions": 0
+      },
+      {
+        "h": 3,
+        "v": 1,
+        "z": 5,
+        "P": 3,
+        "q_ordinary": 4,
+        "proved_bound": 39,
+        "completions": 0
+      },
+      {
+        "h": 3,
+        "v": 6,
+        "z": 5,
+        "P": 38,
+        "q_ordinary": 19,
+        "proved_bound": 109,
+        "completions": 0
+      },
+      {
+        "h": 3,
+        "v": 7,
+        "z": 5,
+        "P": 87,
+        "q_ordinary": 22,
+        "proved_bound": 123,
+        "completions": 0
+      },
+      {
+        "h": 4,
+        "v": 1,
+        "z": 2,
+        "P": 12,
+        "q_ordinary": 5,
+        "proved_bound": 68,
+        "completions": 0
+      },
+      {
+        "h": 4,
+        "v": 1,
+        "z": 6,
+        "P": 4,
+        "q_ordinary": 5,
+        "proved_bound": 68,
+        "completions": 0
+      },
+      {
+        "h": 4,
+        "v": 1,
+        "z": 8,
+        "P": 60,
+        "q_ordinary": 5,
+        "proved_bound": 68,
+        "completions": 0
+      },
+      {
+        "h": 4,
+        "v": 2,
+        "z": 2,
+        "P": 18,
+        "q_ordinary": 9,
+        "proved_bound": 95,
+        "completions": 0
+      },
+      {
+        "h": 4,
+        "v": 2,
+        "z": 6,
+        "P": 6,
+        "q_ordinary": 9,
+        "proved_bound": 95,
+        "completions": 0
+      },
+      {
+        "h": 4,
+        "v": 2,
+        "z": 7,
+        "P": 73,
+        "q_ordinary": 9,
+        "proved_bound": 95,
+        "completions": 0
+      },
+      {
+        "h": 4,
+        "v": 3,
+        "z": 2,
+        "P": 24,
+        "q_ordinary": 13,
+        "proved_bound": 122,
+        "completions": 0
+      },
+      {
+        "h": 4,
+        "v": 3,
+        "z": 6,
+        "P": 8,
+        "q_ordinary": 13,
+        "proved_bound": 122,
+        "completions": 0
+      },
+      {
+        "h": 4,
+        "v": 4,
+        "z": 2,
+        "P": 30,
+        "q_ordinary": 17,
+        "proved_bound": 149,
+        "completions": 0
+      },
+      {
+        "h": 4,
+        "v": 4,
+        "z": 6,
+        "P": 10,
+        "q_ordinary": 17,
+        "proved_bound": 149,
+        "completions": 0
+      },
+      {
+        "h": 4,
+        "v": 5,
+        "z": 2,
+        "P": 36,
+        "q_ordinary": 21,
+        "proved_bound": 176,
+        "completions": 0
+      },
+      {
+        "h": 4,
+        "v": 5,
+        "z": 6,
+        "P": 12,
+        "q_ordinary": 21,
+        "proved_bound": 176,
+        "completions": 0
+      },
+      {
+        "h": 4,
+        "v": 6,
+        "z": 2,
+        "P": 42,
+        "q_ordinary": 25,
+        "proved_bound": 203,
+        "completions": 0
+      },
+      {
+        "h": 4,
+        "v": 6,
+        "z": 6,
+        "P": 14,
+        "q_ordinary": 25,
+        "proved_bound": 203,
+        "completions": 0
+      }
+    ]
+  },
+  "source_sha256": {
+    "three_high_fixed_low_completion_v17.tex": "ba733676386c7c0ace7cc873b79323cd460a04591455b0c951c59af2b1b3433a",
+    "three_high_opposite_exception_note_v17.tex": "c6cac76ccf5acba2ba9f51e95860a745ee1f892ac657c6d283030941def8fddb"
+  },
+  "script_sha256": "dbbe2e75a2422c19f9bafaa4eb71dc99a1ef80b23df07a1988c0bea85a1ebe63",
+  "research_helper": {
+    "file": "research/exact_three_high_completion_v17.py",
+    "sha256": "946503cd9f5c202645ef4d97cd08e9f4fa920fee18095c96770c684d7173b835"
+  },
+  "external_peer_review": false,
+  "proof_assistant_formalization": false
+}

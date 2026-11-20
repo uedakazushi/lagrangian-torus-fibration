@@ -1,0 +1,178 @@
+% v18. Complete sign classification for positive three-high charts.
+% The proof is unbounded; all integer-gap arguments are explicit.
+\subsection{三高分母の正符号グラフは完全マッチングである}
+\label{mh18:section}
+
+命題~\ref{sm14:four-sign-types} の四つの候補から，整数性によって二つの道型を除き，
+正の weights によって三角形型を除く．これにより，以前は仮定していた完全マッチング性が
+全ての正の三高分母模型について成り立つ．
+
+\begin{theorem}[三高分母の完全マッチング定理]
+\label{mh18:matching}
+$q_0=1$，$q_1,q_2,q_3>1$ とし，整数 $p_{ij}$ が行和と pair products
+\[
+ \sum_{j\ne i}p_{ij}=-q_i,\qquad p_{ij}p_{ji}=q_iq_j-1
+\]
+を満たすとする．$p_{ij}>0$ のとき無向辺 $ij$ を置くグラフを $G^+$ とする．
+このとき次が成り立つ．
+\begin{enumerate}
+\item $G^+$ は完全マッチング，または低 ray $0$ を含む三角形と孤立頂点の和である．
+\item 正の basin weights が存在することと，$G^+$ が完全マッチングであることは同値である．
+\end{enumerate}
+特に正の模型の低 row は，ちょうど二つの負の entry と一つの正の entry を持つ．
+二つの負の low-row entries の相手同士が，もう一つの正の辺を作る．
+分母の上限，整数 clutching，対向 $D$ の相殺，node 条件は仮定しない．
+\end{theorem}
+
+\begin{proof}
+命題~\ref{sm14:four-sign-types} により，除くべき型は，$0$ を端点に持つ $P_3$ と孤立頂点，
+$0$ を内部頂点に持つ $P_4$，および $0$ を含む三角形である．
+
+\paragraph{$0$ が端点である $P_3$ の排除．}
+正の辺を $03,13$ とし，正整数 $s,t,S,T,U$ により
+\[
+ (p_{01},p_{02},p_{03})=(-s,-t,s+t-1),\quad
+ (p_{10},p_{20},p_{30})=(-S,-T,U)
+\]
+と書く．$u=s+t-1$ とすると，$q_1=sS+1,q_2=tT+1,q_3=uU+1$ である．
+さらに
+\[
+ p_{13}=L>0,\quad p_{31}=M>0,\quad
+ (p_{12},p_{21},p_{23},p_{32})=(-H,-K,-N,-O)
+\]
+と置き，
+\[
+ a=q_1q_2-1,\quad b=q_2q_3-1,\quad d=q_1q_3-1,
+\]
+\[
+ B=q_1-S>0,\quad C=q_3+U>0,\quad k=q_2-T>0
+\]
+と略記する．行和と pair equations は
+\[
+ H=L+B,\quad O=M+C,\quad K+N=k,\quad
+ HK=a,\ NO=b,\ LM=d
+\]
+を与える．従って
+\begin{equation}\label{mh18:path-polynomial}
+ (kC-b)L^2+\{kd-aC+B(kC-b)\}L+d(kB-a)=0.
+\end{equation}
+一方，直接計算により
+\[
+ kC-b=-U(sT-1)-T+1\le0,
+\]
+\[
+ kB-a=-uST-S-T+1<0,\qquad
+ kd-aC=-dT-aU+q_3-q_2<0.
+\]
+最後の不等式は $d=q_1q_3-1>q_3$ と $T\ge1$ による．
+式~\eqref{mh18:path-polynomial} は $L>0$ で狭義負となるため矛盾する．
+
+\paragraph{$0$ が内部頂点である $P_4$ の排除．}
+正の辺を $01,02,13$ とし，今度は
+\[
+ (p_{01},p_{02},p_{03})=(s,t,-s-t-1),\quad
+ (p_{10},p_{20},p_{30})=(S,T,-U)
+\]
+と書く．$u=s+t+1$，$q_1=sS+1,q_2=tT+1,q_3=uU+1$ とし，
+$L,M,H,K,N,O,a,b,d$ は前段落と同じ符号で定める．
+\[
+ B=q_1+S,\quad C=q_3-U,\quad k=q_2+T
+\]
+と置けば，全て正であり，同じ式~\eqref{mh18:path-polynomial} が必要となる．
+この場合は
+\[
+ kC-b=U(sT-1)+T+1>0,
+\]
+\[
+ kB-a=uST+S+T+1>0,\qquad
+ kd-aC=dT+aU+q_3-q_2>0.
+\]
+最後は $a=q_1q_2-1>q_2$，$U\ge1$ による．
+式の左辺は $L>0$ で狭義正となり，再び矛盾する．
+ここまでには正の weights を用いていない．
+
+\paragraph{三角形に対する正値性の障害．}
+正の三角形を $012$，孤立頂点を $3$ とする．正整数 $s,t,S,T,U$ を用い，
+\[
+ (p_{01},p_{02},p_{03})=(s,t,-u),\quad u=s+t+1,
+ \qquad(p_{10},p_{20},p_{30})=(S,T,-U)
+\]
+と書く．$q_1=sS+1,q_2=tT+1,q_3=uU+1$ である．
+$H=p_{12}>0,K=p_{21}>0$ と置くと，正の三閉路の条件から
+\[
+ tSK<q_1q_2=HK+1,\qquad sTH<q_1q_2=HK+1
+\]
+を得る．従って $(tS-H)K<1$ と $(sT-K)H<1$ であり，整数性から
+\begin{equation}\label{mh18:triangle-alpha-beta}
+ H=tS+\alpha,\quad K=sT+\beta,\qquad \alpha,\beta\in\ZZ_{\ge0}
+\end{equation}
+となる．残る負の entries の絶対値は，行和により
+\[
+ -p_{13}=uS+\alpha+1,\quad -p_{23}=uT+\beta+1,
+\]
+\[
+ -p_{31}=sU+\mu,\quad -p_{32}=tU+1-\mu,\qquad \mu\in\ZZ
+\]
+と書ける．標識 $1,2$ の交換は $\mu$ を $1-\mu$ に変えるので，
+必要なら交換して $\mu=-k$，$k\in\ZZ_{\ge0}$ としてよい．
+
+\[
+ A=s\alpha-t,\qquad b=s-t\beta,\qquad C=s+uk
+\]
+と置く．三つの高高 pair equations を展開すると
+\begin{align}
+ bS&=AT+\alpha\beta,\label{mh18:tri-e1}\\
+ (A-1)U&=CS+k(\alpha+1),\label{mh18:tri-e2}\\
+ (b+1)U&=(C+1)T+(k+1)(\beta+1)\label{mh18:tri-e3}
+\end{align}
+となる．第二式の右辺は正なので $A>1$，第一式から $b>0$ である．
+また $C\ge s\ge b$ なので
+\[
+ (A-1)U\ge CS\ge bS=AT+\alpha\beta\ge AT
+\]
+となり，$U>T$ である．従って整数 $\delta=U-T$ は $\delta\ge1$ を満たす．
+
+ところが三式の消去は
+\begin{equation}\label{mh18:triangle-gap-identity}
+ A\{s(1-\delta)-k\beta\}
+ =bsU+bk(s+t)+Ct\beta
+\end{equation}
+を与える．右辺は $bsU>0$ により正であり，左辺は $\delta\ge1$ と $\beta,k\ge0$ により
+非正なので矛盾する．恒等式を直接確認するには，
+\eqref{mh18:tri-e1}--\eqref{mh18:tri-e3} の左辺から右辺を引いたものを
+$E_1,E_2,E_3$ とすると，\eqref{mh18:triangle-gap-identity} の左辺引く右辺は
+\[
+ CsE_1+bsE_2-AsE_3
+\]
+に等しいことを用いればよい．
+
+\paragraph{完全マッチングの十分性．}
+正の二辺は互いに端点を共有しない．各正の辺 $ij$ について
+\[
+ \frac{p_{ij}}{q_i}<\frac{w_j}{w_i}<\frac{q_j}{p_{ji}}
+\]
+という開区間は，$p_{ij}p_{ji}=q_iq_j-1<q_iq_j$ により空でない．
+二辺について独立に有理数の比を選べば，正の有理 weights が得られる．
+負の entries の basin inequalities は自動的に成立する．これで同値性も従う．
+\end{proof}
+
+\begin{remark}[正値性の仮定と適用範囲]
+\label{mh18:positivity-essential}
+正値性を落とすと三角形型は実際に存在する．例えば
+\[
+ q=(1,5,19,31),\qquad
+ P=\begin{pmatrix}
+ 0&1&1&-3\\
+ 4&0&2&-11\\
+ 18&47&0&-84\\
+ -10&-14&-7&0
+ \end{pmatrix}
+\]
+は全ての行和・pair products を満たす．しかし正の閉路 $0\to2\to1\to0$ の gain は
+$188/95>1$ であり，正の weights は存在しない．
+完全マッチング定理は，三つの高 $D$ が同時に非負でないことをまだ主張しない．
+一方，\ref{sh14:matching-setup} の Schur 表示と
+定理~\ref{sm14:beta-negative} の $\beta\le-1$ は，今後，全ての正の三高分母模型に適用できる．
+ここで用いた $\alpha,\beta,k$ は三角形の排除中の一時的な記号であり，
+完全マッチングの canonical Schur variables と同一のパラメータではない．
+\end{remark}

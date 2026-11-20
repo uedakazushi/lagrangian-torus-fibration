@@ -1,0 +1,221 @@
+\subsection{Book は排除済み：再利用する整数剛性と尺度公式}
+\label{nb22:section}
+
+$G_{5,13}=\{01,02,03,04,12,13,14\}$ の二価 cores の低三角形は存在しない．
+第21版で残った二つの一負枝 sector を，第22版では探索上限を増やさず排除した．
+対象は引き続き標準 $K_5$ 配置，正の整数局所 charts，奇数高分母，
+非負 node・総和五，対向低 $D$ 相殺である．
+任意の Lagrangian torus fibration に対する一般的な不存在定理にはしていない．
+今後 book の大きい分母を探索する必要はない．
+
+\paragraph{証明の依存関係と再開時の確認点．}
+第21版の定理 \texttt{bs21:two-sectors} は，既存の全尺度有限復元
+$2\le w\le134$ を含めて，仮想的な book を次へ帰着している：
+\[
+ \begin{array}{c|c|c}
+ &\text{node 周期}&(L_{P_1},L_{P_2})\\\hline
+ \mathrm I&N^+\to P_1^+\to P_2^+\to N^+&(3,3)\\
+ \mathrm {II}&N^+\to P_1^+\to P_2^-\to N^+&(4,3)
+ \end{array}
+\]
+どちらも $\tau=+$，$S_N=T_N=w\ge135$，$H=r_N-w\ge w$ を満たす．
+新しい証明は \nolinkurl{paper/book_complete_obstruction_v22.tex}，
+補助的な厳密係数検査は
+\nolinkurl{verification/verify_book_complete_obstruction_v22.py} と対応する JSON にある．
+この新検査器は旧 generator を import せず，百五十二個の多項式恒等式，
+型 I の全十六 offset，型 II の parity 障害，全六族の尺度公式と
+高分母の自動的な奇数性を検査する．
+既存の第21版の有限証明書に代わるものではない．
+
+\paragraph{小さい $L$ の正枝：厳密な reverse data．}
+一般正枝で
+\[
+ \begin{gathered}
+ \delta=T-S\in\{2,3\},\quad d=\delta-1,\quad h=S-r,\\
+ \alpha=sh/r,\quad\beta=z(h+d)/(r+1),\quad F=(2r+1)h-r^2d.
+ \end{gathered}
+\]
+と置く．$\alpha,\beta$ は正整数であり，$F>0$ なら
+\[
+ 0<\frac{F\alpha}{h(h+d)}
+ =\frac{r(2\alpha-ds)+\alpha}{h+d}<1.
+\]
+$d=1$ では非負整数 $2\alpha-s$，$d=2$ では非負整数 $\alpha-s$ が
+一以上であると右辺が一以上になる．従ってそれらは零であり，
+\[
+ \begin{array}{c|ccc}
+ L&r&S&T\\\hline
+ 3&2R&3R&3R+2\\
+ 4&r&2r&2r+3
+ \end{array}
+\]
+に限られる．これは book の接合に依存しない局所剛性なので，
+他の支持の局所模型にも使える．
+
+\paragraph{同じ正枝の全尺度：将来の接合への公式．}
+$L=3$ の場合，$R\ge1$ を固定する．
+\[
+ \ell\mid R+2,\quad1\le\ell\le R,\quad
+ t=\frac{R+2}{\ell}-1,\qquad
+ s=2(R+1-\ell),\quad z=(2R+1)t
+\]
+が全尺度を与える．$R=\ell(t+1)-2$ なので
+$Rt=\ell t(t+1)-2t$ は偶数であり，高分母の奇数性も自動である．
+$L=4$ の場合，$r\ge1$ を固定する．
+\[
+ \ell\mid r+3,\quad1\le\ell\le r+1,\quad
+ t=\frac{r+3}{\ell}-1,\qquad
+ s=r+2-\ell,\quad z=(r+1)t
+\]
+が全尺度を与える．$(r+1)t=\ell t(t+1)-2t$ は偶数なので，
+こちらも高分母の奇数性は自動である．
+これらは必要条件だけではない．表示式を代入すると整数行列の全 row 和と
+全六 pair 方程式を満たし，正枝の strict chart 条件も既知の正の weights によって満たされる．
+
+必要性は，$L=3$ で $\alpha=s/2$，$E_+=1/(R+1)$，
+$\beta=z(R+1)/(2R+1)$ を使い，$\gcd(R+1,2R+1)=1$ から
+$\beta=(R+1)t$ と書けば
+\[
+ (t+1)(R+1-\alpha)=R+2
+\]
+となることによる．$L=4$ も $\alpha=s$，$E_+=1/(r+2)$ と
+$\gcd(r+2,r+1)=1$ から
+$(t+1)(r+2-s)=r+3$ を得る．
+従って共鳴自由尺度の取りこぼしはない．
+
+$p=-D_D>0$，$q=D_C>0$ と書けば，この表示は低 $D$ の大きさも与える：
+\[
+ \begin{array}{c|c|c|c}
+ L&p&q&\text{線形関係}\\\hline
+ 3&2\ell t^2-3t+3&3\ell t^2-4t+5&2q-3p=t+1\\
+ 4&\ell t^2-2t+2&2\ell t^2-3t+5&q-2p=t+1
+ \end{array}
+\]
+この公式は別の低 cycle を扱う際に，符号だけでなく大きさを接合する入口になる．
+
+\paragraph{正枝の $F<0$ 側も剛性を持つ．}
+$\rho=r+1$，$k=h+d$ と書くと
+\[
+ F=(2\rho-1)k-\rho^2d,\qquad
+ 0<E_-\beta=\frac{\rho(dz-2\beta)+\beta}{h}
+ =1-\frac{\beta-1}{\alpha}\le1.
+\]
+$F<0$ と整数性から，$d=1$ では $k\le\rho/2$，
+$d=2$ では $k\le\rho$ である．従って非負整数
+$z-2\beta$ または $z-\beta$ が一以上なら，表示式の分子が分母を超える．
+それらは零なので，
+\[
+ \begin{array}{c|ccc}
+ L&r&S&T\\\hline
+ 3&2R-1&3R-2&3R\quad(R\ge2)\\
+ 4&r&2r-1&2r+2\quad(r\ge2)
+ \end{array}
+\]
+に限られる．$F=0$ は $\gcd(r^2,2r+1)=1$ から
+$2r+1\mid d\in\{1,2\}$ を要求するので不可能である．
+
+この二族の全尺度は $\ell\ge0$，$t\ge1$ によって
+\[
+ \begin{array}{c|c|c|c}
+ L&\text{reverse parameter}&s&z\\\hline
+ 3&R=\ell(t+1)+2&(2R-1)t&2(\ell t+1)\\
+ 4&r=\ell(t+1)+2&rt&\ell t+1
+ \end{array}
+\]
+となる．必要性は，$L=3$ で $\alpha=(R-1)t$，$\beta=z/2$ から
+$(t+1)(R-1-\beta)=R-2$，$L=4$ で $\alpha=(r-1)t$，$\beta=z$ から
+$(t+1)(r-1-z)=r-2$ を得ることによる．逆向きも行列へ直接代入できる．
+どちらも $Rt$ または $rt$ が $\ell t(t+1)+2t$ で偶数となるので，高分母は自動的に奇数である．
+
+$\ell=0$ は任意の $t\ge1$ を持つ既知の共鳴族
+$(r,s,z,S,T)=(3,3t,2,4,6),(2,2t,1,3,6)$ そのものである．
+それ以外の固定 reverse data の尺度は $R-2$ または $r-2$ の正約数によって有限に復元できる．
+従って「固定 reverse data の尺度は全て有限」と共鳴族まで含めて述べてはいけない．
+
+低係数は
+\[
+ \begin{array}{c|cc|c}
+ L&D_C&D_D&\text{関係}\\\hline
+ 3&5-3\ell t^2-4t&2\ell t^2+3t-3&2D_C+3D_D=t+1\\
+ 4&5-2\ell t^2-3t&\ell t^2+2t-2&D_C+2D_D=t+1
+ \end{array}
+\]
+である．$L=3$ の $(\ell,t)=(0,1)$ は $(D_C,D_D)=(1,0)$，
+$L=4$ の $(0,1)$ は $(2,0)$，$(1,1)$ は $(0,1)$ を与える．
+最後の模型は $(r,s,z,S,T)=(4,4,2,7,10)$ である．
+この三点を除くと $D_C<0<D_D$ である．
+以上により，負枝の二族と合わせた全六族が $L\in\{1,3,4\}$ の二高模型を尽くす．
+公開証明は \nolinkurl{paper/two_high_rigid_scale_families_v22.tex} にまとめてある．
+
+\paragraph{負枝の完全な reverse 分類．}
+負枝で
+\[
+ E=1-\frac{w^2}{H(H+1)},\quad
+ c=\frac{sH}{w+H}\ge2,\quad
+ e=\frac{z(H+1)}{w+H+1}\ge1
+\]
+と置くと $Ece=e-c+1$ である．$H^2<H(H+1)<(H+1)^2$ より $E\ne0$ である．
+$E>0$ で $H>w$ と仮定すると，
+正整数 $u=s-c=cw/H$ は $u\le c-1$ なので
+\[
+ 1>Ec=c-\frac{u^2}{c}\frac{H}{H+1}
+ >c-\frac{u^2}{c}\ge2-\frac1c>1
+\]
+と矛盾する．従って $E>0$ では必ず $H=w$，$r=2w$ である．
+$E<0$ で $H\le w-2$ と仮定すると，
+正整数 $v=z-e=ew/(H+1)$ は $v\ge e+1$ なので
+\[
+ 1>(-E)e=\frac{v^2}{e}\frac{H+1}{H}-e
+ >\frac{v^2}{e}-e\ge2+\frac1e>1
+\]
+と矛盾する．従って $E<0$ では必ず $H=w-1$，$r=2w-1$ である．
+この分類は低辺の接合や book に依存しない．
+
+\paragraph{負枝の全尺度と低 $D$．}
+どちらの符号でも $S=T=w$，$\ell\mid w$，$t=w/\ell-1\ge1$ と書ける．
+全尺度は次の二族である：
+\[
+ \begin{array}{c|c|c|c|c}
+  &r&\ell\text{ の範囲}&s&z\\\hline
+  E>0&2w&1\le\ell\le w-1&2(w+1-\ell)&(2w+1)t\\
+  E<0&2w-1&1\le\ell\le w-2&(2w-1)t&2(w-1-\ell)
+ \end{array}
+\]
+両族とも $wt=\ell t(t+1)$ は偶数なので，高分母の奇数性は自動である．
+必要性は，$E>0$ で $\gcd(w+1,2w+1)=1$ から
+$e=(w+1)t$，$\ell=w+1-c$ とおけば $(t+1)\ell=w$ となり，
+$E<0$ で $\gcd(w-1,2w-1)=1$ から
+$c=(w-1)t$，$\ell=w-1-e$ とおけば同じ因数式になることによる．
+十分性は行列へ直接代入して全 row 和と pair 方程式を確認できる．
+低 $D$ は
+\[
+ \begin{array}{c|cc}
+  &D_C&D_D\\\hline
+  E>0&\ell t^2-1&-2\ell t^2-t+1\\
+  E<0&-\ell t^2-1&2\ell t^2-t+1
+ \end{array}
+\]
+であり，両方で $-D_D-2D_C=t+1$ となる．
+零低 $D$ は $E>0$，$\ell=t=1$，$w=2$ の唯一の模型
+$(r,s,z,S,T)=(4,4,5,2,2)$ だけである．
+以前の一般 factorization は正しいが，負枝だけを生成する場合には，
+$w,H$ の二重ループをこの二つの約数族へ置き換えられる．
+既存証明書を修正しなくても，今後の局所・接合計算でこの短い完全表示を使える．
+
+\paragraph{二つの sector を閉じる式．}
+型 I では $T_i=(3r_i+4)/2$ と node offset から
+\[
+ 4H=5w+\kappa,\quad
+ \kappa=20-4t_1-6t_2-9t_N\in[-18,19],
+ \quad t_1,t_2\in\{1,2\},\quad t_N\in\{-1,0,1,2\}.
+\]
+この sector では $E>0$，従って新しい負枝剛性から $H=w$ である．
+代入すると $w=-\kappa\le18$ となり，第21版の $w\ge135$ に反する．
+
+型 II では $P_1$ の剛性と最初の node が $r_N=2r_1+1$ を与える一方，
+負枝の剛性は $r_N=2w$ を与える．偶奇の矛盾であり，この最後の排除には
+第21版の下限 $w\ge135$ さえ不要である．
+
+高中心二 core の四高分母条件や，高中心間の denominator order を使わずに
+book を閉じられたため，その専用完成問題は今後の研究課題から外す．
+今後は残った支持に対する障害・構成を優先し，上記の局所尺度公式を必要に応じて移植する．

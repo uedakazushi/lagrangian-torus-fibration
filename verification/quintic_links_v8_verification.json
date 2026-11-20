@@ -1,0 +1,2486 @@
+{
+  "version": 8,
+  "verification_kind": "Exact finite graph enumeration using Python standard library",
+  "distinction": "Counts concern finite leaf-labelled graph/split data only. They do not count embedded marked isotopy classes, measured foliations, action-compatible atlases or symplectic fillings.",
+  "partition_113": {
+    "scope": "The six matchings between two triangles with their vertex coordinates fixed; these are presentations of one abstract leaf-labelled triangle system, not six marked-isotopy classes. The obstruction for arbitrary genus-one graphs is the girth proof.",
+    "presentations": 6,
+    "all_cubic_core_types": "triangular_prism",
+    "records": [
+      {
+        "triangle_vertex_identification": [
+          0,
+          1,
+          2
+        ],
+        "cubic_core_type": "triangular_prism"
+      },
+      {
+        "triangle_vertex_identification": [
+          0,
+          2,
+          1
+        ],
+        "cubic_core_type": "triangular_prism"
+      },
+      {
+        "triangle_vertex_identification": [
+          1,
+          0,
+          2
+        ],
+        "cubic_core_type": "triangular_prism"
+      },
+      {
+        "triangle_vertex_identification": [
+          1,
+          2,
+          0
+        ],
+        "cubic_core_type": "triangular_prism"
+      },
+      {
+        "triangle_vertex_identification": [
+          2,
+          0,
+          1
+        ],
+        "cubic_core_type": "triangular_prism"
+      },
+      {
+        "triangle_vertex_identification": [
+          2,
+          1,
+          0
+        ],
+        "cubic_core_type": "triangular_prism"
+      }
+    ]
+  },
+  "partition_122": {
+    "scope": "All 27 two-quartet plus labelled elliptic C4 systems. Other elliptic graph types cannot give a matroidal quadric by the induced-block proof.",
+    "systems": 27,
+    "by_matroidal_core_count": {
+      "0": 6,
+      "1": 6,
+      "2": 15
+    },
+    "simultaneous_all": 0,
+    "any_prescribed_pair_realized": true,
+    "records": [
+      {
+        "sigma_AB": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "cycle": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "core_types": [
+          "cubic_multigraph",
+          "triangular_prism",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 0
+      },
+      {
+        "sigma_AB": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "cycle": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "core_types": [
+          "cubic_multigraph",
+          "triangular_prism",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 0
+      },
+      {
+        "sigma_AB": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "cycle": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "core_types": [
+          "cubic_multigraph",
+          "K3,3",
+          "K3,3"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_AB": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "cycle": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "core_types": [
+          "K4",
+          "triangular_prism",
+          "K3,3"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_AB": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "cycle": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "core_types": [
+          "K4",
+          "triangular_prism",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 1
+      },
+      {
+        "sigma_AB": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "cycle": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "core_types": [
+          "K4",
+          "K3,3",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_AB": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "cycle": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "core_types": [
+          "K4",
+          "triangular_prism",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 1
+      },
+      {
+        "sigma_AB": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "cycle": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "core_types": [
+          "K4",
+          "triangular_prism",
+          "K3,3"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_AB": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "cycle": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "core_types": [
+          "K4",
+          "K3,3",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_AB": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "cycle": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "core_types": [
+          "K4",
+          "K3,3",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_AB": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "cycle": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "core_types": [
+          "K4",
+          "triangular_prism",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 1
+      },
+      {
+        "sigma_AB": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "cycle": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "core_types": [
+          "K4",
+          "triangular_prism",
+          "K3,3"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_AB": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "cycle": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "core_types": [
+          "cubic_multigraph",
+          "K3,3",
+          "K3,3"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_AB": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "cycle": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "core_types": [
+          "cubic_multigraph",
+          "triangular_prism",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 0
+      },
+      {
+        "sigma_AB": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "cycle": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "core_types": [
+          "cubic_multigraph",
+          "triangular_prism",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 0
+      },
+      {
+        "sigma_AB": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "cycle": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "core_types": [
+          "K4",
+          "K3,3",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_AB": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "cycle": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "core_types": [
+          "K4",
+          "triangular_prism",
+          "K3,3"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_AB": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "cycle": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "core_types": [
+          "K4",
+          "triangular_prism",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 1
+      },
+      {
+        "sigma_AB": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "cycle": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "core_types": [
+          "K4",
+          "triangular_prism",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 1
+      },
+      {
+        "sigma_AB": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "cycle": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "core_types": [
+          "K4",
+          "K3,3",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_AB": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "cycle": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "core_types": [
+          "K4",
+          "triangular_prism",
+          "K3,3"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_AB": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "cycle": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "core_types": [
+          "K4",
+          "triangular_prism",
+          "K3,3"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_AB": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "cycle": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "core_types": [
+          "K4",
+          "K3,3",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_AB": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "cycle": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "core_types": [
+          "K4",
+          "triangular_prism",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 1
+      },
+      {
+        "sigma_AB": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "cycle": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "core_types": [
+          "cubic_multigraph",
+          "triangular_prism",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 0
+      },
+      {
+        "sigma_AB": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "cycle": [
+          0,
+          1,
+          3,
+          2
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "core_types": [
+          "cubic_multigraph",
+          "K3,3",
+          "K3,3"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_AB": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "sigma_AC": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "cycle": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "bipartition_tau": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "core_types": [
+          "cubic_multigraph",
+          "triangular_prism",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 0
+      }
+    ]
+  },
+  "partition_1112": {
+    "scope": "All 27 leaf-labelled quartet systems; not embedded marked isotopy or symplectic-conjugacy classes.",
+    "systems": 27,
+    "by_matroidal_core_count": {
+      "0": 1,
+      "1": 6,
+      "2": 12,
+      "3": 4,
+      "4": 4
+    },
+    "simultaneous_all": 4,
+    "odd_parity_solutions": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "orbits_under_pair_label_swaps": 1,
+    "records": [
+      {
+        "sigma_A": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            1
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "crossed_bits": [
+          null,
+          null,
+          null
+        ],
+        "core_types": [
+          "cubic_multigraph",
+          "cubic_multigraph",
+          "cubic_multigraph",
+          "cubic_multigraph"
+        ],
+        "matroidal_core_count": 0
+      },
+      {
+        "sigma_A": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            1
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "crossed_bits": [
+          null,
+          null,
+          0
+        ],
+        "core_types": [
+          "cubic_multigraph",
+          "cubic_multigraph",
+          "K4",
+          "cubic_multigraph"
+        ],
+        "matroidal_core_count": 1
+      },
+      {
+        "sigma_A": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            1
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "crossed_bits": [
+          null,
+          null,
+          1
+        ],
+        "core_types": [
+          "cubic_multigraph",
+          "cubic_multigraph",
+          "K4",
+          "cubic_multigraph"
+        ],
+        "matroidal_core_count": 1
+      },
+      {
+        "sigma_A": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "crossed_bits": [
+          null,
+          0,
+          null
+        ],
+        "core_types": [
+          "cubic_multigraph",
+          "K4",
+          "cubic_multigraph",
+          "cubic_multigraph"
+        ],
+        "matroidal_core_count": 1
+      },
+      {
+        "sigma_A": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "crossed_bits": [
+          null,
+          0,
+          0
+        ],
+        "core_types": [
+          "cubic_multigraph",
+          "K4",
+          "K4",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_A": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "crossed_bits": [
+          null,
+          0,
+          1
+        ],
+        "core_types": [
+          "cubic_multigraph",
+          "K4",
+          "K4",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_A": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "crossed_bits": [
+          null,
+          1,
+          null
+        ],
+        "core_types": [
+          "cubic_multigraph",
+          "K4",
+          "cubic_multigraph",
+          "cubic_multigraph"
+        ],
+        "matroidal_core_count": 1
+      },
+      {
+        "sigma_A": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "crossed_bits": [
+          null,
+          1,
+          0
+        ],
+        "core_types": [
+          "cubic_multigraph",
+          "K4",
+          "K4",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_A": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "crossed_bits": [
+          null,
+          1,
+          1
+        ],
+        "core_types": [
+          "cubic_multigraph",
+          "K4",
+          "K4",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_A": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            1
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "crossed_bits": [
+          0,
+          null,
+          null
+        ],
+        "core_types": [
+          "K4",
+          "cubic_multigraph",
+          "cubic_multigraph",
+          "cubic_multigraph"
+        ],
+        "matroidal_core_count": 1
+      },
+      {
+        "sigma_A": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            1
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "crossed_bits": [
+          0,
+          null,
+          0
+        ],
+        "core_types": [
+          "K4",
+          "cubic_multigraph",
+          "K4",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_A": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            1
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "crossed_bits": [
+          0,
+          null,
+          1
+        ],
+        "core_types": [
+          "K4",
+          "cubic_multigraph",
+          "K4",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_A": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "crossed_bits": [
+          0,
+          0,
+          null
+        ],
+        "core_types": [
+          "K4",
+          "K4",
+          "cubic_multigraph",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_A": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "crossed_bits": [
+          0,
+          0,
+          0
+        ],
+        "core_types": [
+          "K4",
+          "K4",
+          "K4",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 3
+      },
+      {
+        "sigma_A": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "crossed_bits": [
+          0,
+          0,
+          1
+        ],
+        "core_types": [
+          "K4",
+          "K4",
+          "K4",
+          "K3,3"
+        ],
+        "matroidal_core_count": 4
+      },
+      {
+        "sigma_A": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "crossed_bits": [
+          0,
+          1,
+          null
+        ],
+        "core_types": [
+          "K4",
+          "K4",
+          "cubic_multigraph",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_A": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "crossed_bits": [
+          0,
+          1,
+          0
+        ],
+        "core_types": [
+          "K4",
+          "K4",
+          "K4",
+          "K3,3"
+        ],
+        "matroidal_core_count": 4
+      },
+      {
+        "sigma_A": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "crossed_bits": [
+          0,
+          1,
+          1
+        ],
+        "core_types": [
+          "K4",
+          "K4",
+          "K4",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 3
+      },
+      {
+        "sigma_A": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            1
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "crossed_bits": [
+          1,
+          null,
+          null
+        ],
+        "core_types": [
+          "K4",
+          "cubic_multigraph",
+          "cubic_multigraph",
+          "cubic_multigraph"
+        ],
+        "matroidal_core_count": 1
+      },
+      {
+        "sigma_A": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            1
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "crossed_bits": [
+          1,
+          null,
+          0
+        ],
+        "core_types": [
+          "K4",
+          "cubic_multigraph",
+          "K4",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_A": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            1
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "crossed_bits": [
+          1,
+          null,
+          1
+        ],
+        "core_types": [
+          "K4",
+          "cubic_multigraph",
+          "K4",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_A": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "crossed_bits": [
+          1,
+          0,
+          null
+        ],
+        "core_types": [
+          "K4",
+          "K4",
+          "cubic_multigraph",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_A": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "crossed_bits": [
+          1,
+          0,
+          0
+        ],
+        "core_types": [
+          "K4",
+          "K4",
+          "K4",
+          "K3,3"
+        ],
+        "matroidal_core_count": 4
+      },
+      {
+        "sigma_A": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "crossed_bits": [
+          1,
+          0,
+          1
+        ],
+        "core_types": [
+          "K4",
+          "K4",
+          "K4",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 3
+      },
+      {
+        "sigma_A": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "crossed_bits": [
+          1,
+          1,
+          null
+        ],
+        "core_types": [
+          "K4",
+          "K4",
+          "cubic_multigraph",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 2
+      },
+      {
+        "sigma_A": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "crossed_bits": [
+          1,
+          1,
+          0
+        ],
+        "core_types": [
+          "K4",
+          "K4",
+          "K4",
+          "triangular_prism"
+        ],
+        "matroidal_core_count": 3
+      },
+      {
+        "sigma_A": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "sigma_B": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "sigma_C": [
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "crossed_bits": [
+          1,
+          1,
+          1
+        ],
+        "core_types": [
+          "K4",
+          "K4",
+          "K4",
+          "K3,3"
+        ],
+        "matroidal_core_count": 4
+      }
+    ]
+  }
+}

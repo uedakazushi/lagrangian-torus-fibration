@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "independently_reconstructed_D_certificates": 2596,
+  "halfline_canonical_b3_certificates": 18,
+  "source": "g5_9_obstruction_verification_v19.json",
+  "source_sha256": "0760272b825c28c1c331bf8612229fc953ca39316b032a72b52fbf9127763183",
+  "auditor_sha256": "d2cb7de387f4661ac1817b5c994137f454b5beff07544aad1314bc7daaf47224",
+  "generator_imported": false
+}

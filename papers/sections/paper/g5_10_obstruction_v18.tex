@@ -1,0 +1,256 @@
+% v18. G_{5,10}; no denominator cutoff. Depends on mh18:matching.
+\section{\texorpdfstring{$G_{5,10}$}{G5,10} 型の完全排除}
+\label{gten18:section}
+
+\begin{theorem}[$G_{5,10}$ の障害]
+\label{gten18:no-support}
+五次の算術的接着データの高分母 support は
+\[
+ G_{5,10}=\{01,02,03,12,13,24,34\}
+\]
+と同型ではあり得ない．分母の上限は仮定しない．
+証明には正の局所整数データ，marked clutching，非負 nodes，
+対向 $D$ 相殺を用いる．
+\end{theorem}
+
+\subsection{二価 core と二つの低 row}
+
+頂点 $4$ の高分母近傍 $2,3$ の間は低辺である．従って
+補題~\ref{kb15:no-negative-low-wedge} により，core $4$ は正の二高分母枝に属する．
+graph の自己同型 $0\leftrightarrow1$，$2\leftrightarrow3$ を使って
+canonical な標識を $(A,B,C,D)=(2,3,0,1)$ にそろえる．その行列は
+\begin{equation}\label{gten18:central-matrix}
+ P^4=
+ \begin{pmatrix}
+ 0&-A&x&-s\\
+ -B&0&-y&z\\
+ r&-r-1&0&0\\
+ -S&T&S-T-1&0
+ \end{pmatrix},
+\end{equation}
+ただし行・列の順は $(2,3,0,1)$，
+\[
+ \begin{gathered}
+ a=q_{24}=sS+1,\quad b=q_{34}=zT+1,\quad
+ x=\frac{sS}{r},\quad y=\frac{zT}{r+1},\\
+ A=a+x-s,\quad B=b-y+z,\quad AB=ab-1.
+ \end{gathered}
+\]
+全ての $r,s,z,S,T,x,y$ は正整数で，
+\[
+ S>r,\qquad rT>(r+1)S,\qquad S\ge2.
+\]
+$\delta=T-S$ と置くと $r\delta>S>r$ なので $\delta\ge2$ である．
+
+低辺 $04,14$ の node 数を
+\[
+ (n_1,n_2,n_3)=(n_{04;1},n_{04;2},n_{04;3}),\quad
+ (m_0,m_2,m_3)=(n_{14;0},n_{14;2},n_{14;3})
+\]
+と書く．いずれも非負整数で，各組の和は五である．
+core $0,1$ は三高分母であり，それらの唯一の低 ray $4$ の rows は
+\begin{align}
+ R^0&=(p^0_{41},p^0_{42},p^0_{43})
+       =(1-n_1, 1-r-n_2, r+2-n_3),\label{gten18:R0}\\
+ R^1&=(p^1_{40},p^1_{42},p^1_{43})
+       =(\delta+2-m_0, S+1-m_2, 1-T-m_3).
+       \label{gten18:R1}
+\end{align}
+定理~\ref{mh18:matching} により，これらの各 row はちょうど一つの正成分を持つ．
+三高分母なので全成分は非零であり，特に
+$R^0_2<0$，$R^1_3<0$ である．
+
+$q=q_{01}>1$ とする．共通低 puncture $(01;4)$ の signed-divisor 分類により，
+$(R^0_1,R^1_0)$ は通常型 $(u,-u)$，正例外型 $\{1,q-1\}$，
+負例外型 $\{-1,-(q-1)\}$ のいずれかである．
+以下で三場合を排除する．
+
+\subsection{通常接着の場合}
+
+まず $R^0_1>0$ とする．式~\eqref{gten18:R0} から $R^0_1=1,n_1=0$ であり，
+$R^1_0=-1$ から $m_0=\delta+3\le5$ を得る．従って
+$\delta=2,m_0=5,m_2=m_3=0$ である．
+matching 性により $R^0_3<0$ なので $n_3\ge r+3$，従って $r\le2$ である．
+$r<S<2r$ より，唯一の可能性は
+\begin{equation}\label{gten18:ordinary-central}
+ (r,S,T)=(2,3,5)
+\end{equation}
+である．このとき $R^0=(1,-1,-1)$，$R^1=(-1,4,-4)$ となる．
+
+次に $R^0_1<0$ とすると $R^1_0>0$ である．matching 性から
+$S+1-m_2<0$，すなわち $m_2\ge S+2$ なので $S\le3$ である．
+また $R^1_0=-R^0_1\le4$ と $m_0\le3-S$ より
+\[
+ \delta\le m_0+2\le5-S.
+\]
+$S=2$ なら $r=1$，正の枝から $\delta\ge3$ であるため
+$\delta=3,m_0=1,m_2=4,m_3=0,R^1_0=4$ となる．
+すると $n_1=5,n_2=n_3=0$ なので $R^0_2=0$ となり不可能である．
+$S=3$ なら $\delta=2,m_0=m_3=0,m_2=5$ であり，
+再び式~\eqref{gten18:ordinary-central} を得る．
+この場合の rows は $R^0=(-4,-1,4)$，$R^1=(4,-1,-4)$ である．
+
+式~\eqref{gten18:ordinary-central} の整数条件から $s=2u,z=3v$ と書ける．
+pair equation は
+\[
+ (7u+1)(13v+1)=(6u+1)(15v+1)-1,
+ \qquad (u-2)(v+1)=-3
+\]
+となる．$u,v\ge1$ より $u=1,v=2$，従って
+\[
+ (r,s,z,S,T)=(2,2,6,3,5),\qquad (a,b)=(7,31),\qquad B=27.
+\]
+しかし $q_{23}=1$ なので，core $3$ の $p^3_{42}$ は $30$ の非零 signed divisor である．
+辺 $34$ の puncture $2$ の clutching は
+$p^3_{42}-27\equiv0\pmod{31}$ を要求する．
+$|p^3_{42}|\le30$ の下でその候補は $27,-4$ だけで，どちらも $30$ を割らない．
+これは矛盾である．この通常型の排除には $D$ 相殺を用いていない．
+
+\subsection{正の例外接着の場合}
+
+$R^0_1\le1$ なので，正例外の向きは
+\[
+ R^0_1=1,\quad R^1_0=q-1,\quad n_1=0,\quad
+ q=\delta+3-m_0
+\]
+である．matching 性と row sum により $R^0=(1,-1,-1)$ となる．
+行列~\eqref{gten18:central-matrix} の低 rays における係数は
+\begin{equation}\label{gten18:D-low}
+ D^4_0=\delta+y-x,\qquad D^4_1=s-z-1.
+\end{equation}
+辺 $04$ の $D$ 相殺を，core $0$ の低 column を用いて書くと
+\[
+ q_{02}+q_{03}=5-m_0+x-y.
+\]
+左辺は六以上なので $x-y>0$ である．
+辺 $14$ の $D$ 相殺は
+\[
+ p^1_{04}+p^1_{24}+p^1_{34}=s-z-2
+\]
+を与える．ここで $p^1_{04}=1$，他の二成分は負整数なので $s-z\le1$ である．
+一方，正の枝の不等式から
+\[
+ x-y=\frac{sS}{r}-\frac{zT}{r+1}
+       <\frac{(s-z)S}{r}
+\]
+であり，$x-y>0$ は $s-z\ge1$ を要求する．従って $s=z+1$ である．
+上の低 column の和は $-1$ となり，二つの負成分はともに $-1$ でなければならない．
+pair equations と低 row の和から
+\[
+ q_{12}+q_{13}=2-(p^1_{42}+p^1_{43})=q+2
+\]
+を得るが，左辺は偶数，右辺は奇数である．これが矛盾である．
+
+\subsection{負の例外接着と差二の共鳴}
+
+負例外の場合，式~\eqref{gten18:R1} と $\delta\ge2$ から
+$R^1_0\ge-1$ であるため，必ず
+\begin{equation}\label{gten18:negative-exception}
+ R^1_0=-1,\quad R^0_1=-(q-1),\quad
+ \delta=2,\quad m_0=5,\quad m_2=m_3=0,\quad
+ n_1=q,\quad q\in\{3,5\}
+\end{equation}
+となる．$h=S-r$ と置けば $1\le h\le r-1$，特に $r\ge2$ である．
+正整数
+\[
+ \alpha=x-s=\frac{sh}{r},\qquad
+ \beta=y-z=\frac{z(h+1)}{r+1}
+\]
+を導入する．二高分母の pair equation は
+\begin{equation}\label{gten18:E}
+ E\alpha\beta=\alpha-\beta+1,\qquad
+ E=\frac{r^2}{h}-\frac{(r+1)^2}{h+1}
+\end{equation}
+を与える．
+
+辺 $24$ の puncture $3$ では，$p^2_{43}$ は $a-1$ の signed divisor で，
+$p^2_{43}\equiv\alpha\pmod a$ である．
+$0<\alpha<(a-1)/2$ なので候補は $\alpha$ と $-(a-\alpha)$ だけである．
+後者の絶対値は $(a-1)/2$ より大きく，$a-1$ を割るなら $a-1$ 自身である．
+従って後者は $\alpha=1$ の場合に限られる．
+同様に，辺 $34$ の puncture $2$ では，$p^3_{42}$ は $b-1$ の signed divisor で，
+通常の値 $-\beta$ 以外が可能なのは $\beta=1$ のときだけである．
+
+$\alpha,\beta>1$ なら，これらの整除性から
+$r^2/h$，$(r+1)^2/(h+1)$ はともに整数となる．
+式~\eqref{gten18:E} の右辺を $\alpha\beta$ で割った値は絶対値一未満なので，
+$E=0$ である．これは $h=r^2/(2r+1)$ を要求するが，
+$\gcd(r,2r+1)=1$ より不可能である．
+$\alpha=1,\beta>1$ の場合も $r=sh$ により $r^2/h$ は整数であり，
+他方の通常整除性と合わせて $E$ は整数となる．
+$E=2/\beta-1$ なので $\beta=2,E=0$ となり，やはり不可能である．
+従って必ず $\beta=1$ である．
+
+このとき $E=1$，$r+1=z(h+1)$，$z\ge2$ である．これらを代入すると
+\[
+ (h+1)z(z-2)=h-1
+\]
+を得る．$z\ge3$ は不可能であり，$z=2,h=1$ に限られる．
+以上により全ての残存模型は，探索上限なしに
+\begin{equation}\label{gten18:resonance}
+ r=3,\quad S=4,\quad T=6,\quad z=2,\quad s=3\alpha,\quad
+ a=12\alpha+1,\quad b=13,\qquad \alpha\in\ZZ_{>0}
+\end{equation}
+へ帰着した．これは固定分母十三の既知の共鳴族と一致する．
+
+\subsection{共鳴族の \texorpdfstring{$D$}{D} と node による排除}
+
+式~\eqref{gten18:negative-exception}--\eqref{gten18:resonance} により
+\[
+ R^1=(-1,5,-5).
+\]
+その低 column を $(-(q-1),U,-V)$ と書けば
+$q_{12}=5U+1$，$q_{13}=5V+1$ であり，$U,V$ は正の偶整数である．
+式~\eqref{gten18:D-low} と辺 $14$ の $D$ 相殺は
+\begin{equation}\label{gten18:UV}
+ U-V=3\alpha+q-5
+\end{equation}
+を与える．従って $\alpha$ は偶数で，$\alpha\ge2$，
+$U\ge3\alpha$，$q_{12}\ge15\alpha+1$ である．
+
+core $0$ の低 row は
+$R^0=(-(q-1),-(2+n_2),5-n_3)$ である．
+初めの二成分は負なので最後は正であり，その低 column は
+$(-1,-u,v)$，$u,v>0$ と書ける．辺 $04$ の $D$ 相殺から
+\begin{equation}\label{gten18:uv}
+ u=v+4\alpha-5\ge4\alpha-4,\qquad
+ q_{02}=(2+n_2)u+1\ge8\alpha-7
+\end{equation}
+を得る．
+
+$\alpha\ge2$ なので，上の signed-divisor 分類は
+$p^2_{43}=\alpha$ を強制する．従って $p^2_{34}=12$ である．
+core $2$ は三高分母であり，matching 性によって低 ray $3$ は高 ray $4$ と対になる．
+そのため $p^2_{40},p^2_{41}$ はともに負である．
+辺 $24$ の puncture $3$ の node は二なので，残る二つの node を $\nu_0,\nu_1$ とすると
+$\nu_0+\nu_1=3$ である．clutching と node の式は
+\[
+ p^2_{40}=(8-12\nu_0)\alpha+1-\nu_0,\qquad
+ p^2_{41}=(12\nu_0-21)\alpha+\nu_0-2
+\]
+を与える．両方が負になるのは $\nu_0=1,\nu_1=2$ の場合だけであり，
+\[
+ p^2_{40}=-4\alpha,\qquad p^2_{41}=-(9\alpha+1)
+\]
+である．正整数
+\[
+ M=-p^2_{04}=\frac{a q_{02}-1}{4\alpha}>3q_{02},\qquad
+ N=-p^2_{14}=\frac{a q_{12}-1}{9\alpha+1}>q_{12}
+\]
+を考える．core $4$ の高 ray $2$ の係数は
+$D^4_2=12-12\alpha$ なので，辺 $24$ の $D$ 相殺は
+\[
+ M+N=24\alpha+1
+\]
+を要求する．一方，式~\eqref{gten18:UV},\eqref{gten18:uv} から
+\[
+ M+N>3q_{02}+q_{12}
+       \ge39\alpha-20
+       \ge24\alpha+10
+\]
+となり矛盾する．これで三つの接着型を全て排除し，
+定理~\ref{gten18:no-support} が従う．
+
+この証明で有限に数えたものは node の三成分配分および符号の場合分けである．
+分母を切る探索ではなく，残り得る無限族~\eqref{gten18:resonance} も不等式で排除した．
+$D$ 相殺を実際に用いた辺は，canonical 標識で $04,14,24$ の三本だけである．

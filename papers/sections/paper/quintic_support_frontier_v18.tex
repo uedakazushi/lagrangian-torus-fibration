@@ -1,0 +1,125 @@
+% Current v18 support consequences. Candidate counts never assert existence.
+\subsection{全五頂点への伝播と，残る八型}
+\label{sf18:section}
+
+\begin{corollary}[三角形の必要性]
+\label{sf18:triangle-required}
+正の局所整数 charts，marked puncture の整数 clutching，対向 $D$ の相殺，
+および node 非負性を満たす，五次の標準 $K_5$ branch graph を考える．
+高分母 support $H=\{ij:q_{ij}>1\}$ が非空なら，$H$ は三角形を含む．
+従って $H$ が triangle-free なら，全ての分母は一である．
+\end{corollary}
+
+\begin{proof}
+系~\ref{fo13:remaining-support} により，辺を持つ成分は一つで，
+四または五頂点を使い，閉路を含む．$H$ に三角形がないと仮定する．
+五角形を含む場合，その対角線はどれも三角形を作るので，
+$H=C_5$ となり，系~\ref{cf13:degree-two-rigidity} に反する．
+従って四角形を含む．その二本の対角線も加えられない．
+第五頂点から四角形への高辺が二本以上あれば，その行先は隣接できないので，
+ちょうど二本で，行先は対向する二頂点である．
+可能な形は $C_4$，葉辺付き $C_4$，$K_{2,3}$ に尽くされるが，
+それぞれ系~\ref{cf13:degree-two-rigidity}，
+定理~\ref{cp14:no-pendant-square}，定理~\ref{kb15:no-K23} に反する．
+\end{proof}
+
+\begin{corollary}[残る八型と，全五頂点の連結性]
+\label{sf18:remaining-support}
+前系の仮定の下で，高分母 support $H$ が非空なら，
+$H$ は五頂点全てを使う連結 graph である．
+その第一 Betti 数は二以上であり，少なくとも六辺を持つ．
+最大次数は三以上で，孤立頂点は存在しない．
+同値な形で，一つの core の四分母が全て一なら，全ての core の全分母が一となる．
+
+本稿の graph 障害を通過する型は，標識を忘れると八，
+$K_5$ の標識を保つと二百四十六である．安定した識別子は
+\[
+ G_{5,7},\ G_{5,9},\ G_{5,11},\ G_{5,13},\
+ G_{5,14},\ G_{5,15},\ G_{5,16},\ G_{5,17}
+\]
+であり，欠番を詰めない．これらは必要条件を通過した候補の個数であり，
+整数 charts の同時接着や幾何的実現の存在を主張しない．
+\end{corollary}
+
+\begin{proof}
+辺を持つ成分は一つであることは系~\ref{fo13:remaining-support} による．
+系~\ref{kg17:low-core-propagation} により，非空の場合に孤立頂点はない．
+従って全五頂点が一つの連結成分に属する．
+
+閉路を含むので第一 Betti 数は一以上である．
+それが一なら，前系によって唯一の閉路は三角形となる．
+三角形に長さ二の道を付ける場合，または同じ頂点に二本の葉辺を付ける場合は，
+三角形の二頂点が二価のままなので
+定理~\ref{tn14:no-degree-two-triangle} に反する．
+残る，異なる二頂点に葉辺を一本ずつ付けた形も
+定理~\ref{tg16:no-two-leaf-triangle} により排除された．
+従って第一 Betti 数は二以上であり，辺数は少なくとも六である．
+五頂点で六辺以上を持つので最大次数は三以上である．
+
+定理~\ref{kg17:no-K4} までの障害を課すと十一型・三百五十六標識であった．
+三高分母の構造定理~\ref{mh18:matching} を用いた
+定理~\ref{hs18:no-house}，定理~\ref{gten18:no-support}，
+定理~\ref{lh18:no-K4-leaf} は，そこからそれぞれ
+\[
+ G_{5,5}\ (60),\qquad G_{5,10}\ (30),\qquad G_{5,12}\ (20)
+\]
+を排除する．括弧内は標識付き個数である．従って残りは
+$356-60-30-20=246$ となる．各代表の次数列と個数は次の通りである．
+\begin{center}
+\small
+\begin{tabular}{crcrr}
+ 型&$|E|$&降順の次数列&$\beta_1$&標識付き個数\\\hline
+ $G_{5,7}$&6&$(3,3,3,2,1)$&2&60\\
+ $G_{5,9}$&6&$(4,3,2,2,1)$&2&60\\
+ $G_{5,11}$&7&$(4,3,3,2,2)$&3&60\\
+ $G_{5,13}$&7&$(4,4,2,2,2)$&3&10\\
+ $G_{5,14}$&8&$(4,3,3,3,3)$&4&15\\
+ $G_{5,15}$&8&$(4,4,3,3,2)$&4&30\\
+ $G_{5,16}$&9&$(4,4,4,3,3)$&5&10\\
+ $G_{5,17}$&10&$(4,4,4,4,4)$&6&1
+\end{tabular}
+\end{center}
+
+全 $2^{10}=1024$ 部分 graph を再列挙し，自己同型群と軌道の個数，
+旧識別子の保持，三つの新しい障害の全標識を独立に検査した．
+\nolinkurl{verify_support_agenda_v18.py} と
+\nolinkurl{support_agenda_verification_v18.json} に全ての代表と標識付き graph を保存した．
+この graph 列挙は，前掲の整数接着に関する排除定理を適用するものであり，
+それらの証明の代わりではない．分母や行列 entry の有界探索でもない．
+\end{proof}
+
+\begin{corollary}[二価頂点は必ず三角形に属する]
+\label{sf18:degree-two-triangle}
+系~\ref{sf18:remaining-support} の仮定の下で，$H$ の次数二の頂点の二近傍は
+互いに高辺で結ばれる．従って全ての二価頂点は三角形に属する．
+\end{corollary}
+
+\begin{proof}
+旧十一型のうち，二近傍が結ばれない二価頂点を持つ型は
+$G_{5,5}$ と $G_{5,10}$ だけである．前者では該当する頂点が $3,4$，後者では $4$ であり，
+両型は定理~\ref{hs18:no-house}，定理~\ref{gten18:no-support} により排除された．
+残る八代表の全二価頂点について二近傍の辺を直接確認できる．
+この確認も全二百四十六標識に対して再実行した．
+\end{proof}
+
+\begin{corollary}[六辺と葉の存在]
+\label{sf18:six-edge-leaf}
+系~\ref{sf18:remaining-support} の仮定の下で，$H$ が六辺を持つことと，
+$H$ が葉を持つことは同値である．この場合は $G_{5,7}$ または $G_{5,9}$ であり，
+葉はちょうど一つである．従って葉を持たない非空 support は少なくとも七辺を持つ．
+\end{corollary}
+
+\begin{proof}
+八型の表で六辺の型は $G_{5,7},G_{5,9}$ に尽くされ，両者の次数列は一を一つだけ含む．
+他の六型の最小次数は二以上である．
+\end{proof}
+
+系~\ref{kb15:negative-closes-triangle} は，二高分母 core の負の枝に三角形を要求する．
+今回残る全ての二価頂点はその必要条件を満たすため，同系だけから正の枝に限定してはならない．
+一方，三高分母 core には定理~\ref{mh18:matching} の完全 matching 構造を適用できる．
+任意の高辺と共通低 puncture に対する通常接着では，
+補題~\ref{cl16:ordinary-bound} の reverse bound $|u|\le4$ も引き続き使える．
+
+四頂点 $K_4$ と $K_4$ 一葉型の排除はそれぞれ support 全体に関する定理である．
+残る型が $K_4$ を部分 graph として含むだけでは排除されない．
+また，正の局所整数行列の族や生き残った graph は，五 core の同時接着を意味しない．

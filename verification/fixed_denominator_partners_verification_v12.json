@@ -1,0 +1,977 @@
+{
+  "version": 12,
+  "passed": true,
+  "method": "Exact polynomial coefficient comparison, complete positive-divisor enumeration in both canonical orientations for fixed n=3,5, and Fraction verification of accepted models. No bound on the partner denominator is used.",
+  "polynomial_identity_count": 33,
+  "polynomial_identities": [
+    "canonical A factorization after clearing r+1",
+    "canonical B factorization after clearing r",
+    "canonical A zero-branch remainder",
+    "canonical A remainder is strictly below M",
+    "canonical B zero-branch divisibility",
+    "canonical B z>=3 remainder bound with z=u+3",
+    "canonical B z=1 reduces to divisibility of four",
+    "canonical B z=2 lower comparison",
+    "canonical B z=2 upper comparison",
+    "b=7 resonance row 0",
+    "b=7 resonance row 1",
+    "b=7 resonance row 2",
+    "b=7 resonance row 3",
+    "b=7 resonance crossing 0,1",
+    "b=7 resonance crossing 0,2",
+    "b=7 resonance crossing 0,3",
+    "b=7 resonance crossing 1,2",
+    "b=7 resonance crossing 1,3",
+    "b=7 resonance crossing 2,3",
+    "b=7 resonance sS equals a-1",
+    "b=7 resonance rx equals a-1",
+    "b=13 resonance row 0",
+    "b=13 resonance row 1",
+    "b=13 resonance row 2",
+    "b=13 resonance row 3",
+    "b=13 resonance crossing 0,1",
+    "b=13 resonance crossing 0,2",
+    "b=13 resonance crossing 0,3",
+    "b=13 resonance crossing 1,2",
+    "b=13 resonance crossing 1,3",
+    "b=13 resonance crossing 2,3",
+    "b=13 resonance sS equals a-1",
+    "b=13 resonance rx equals a-1"
+  ],
+  "general_written_theorem": "The fixed odd denominator n>1 has infinitely many odd partners if and only if n is 7 or 13. The resonant families are exactly the two displayed arithmetic progressions; other branches form a finite set.",
+  "resonant_families": [
+    {
+      "b": 7,
+      "a": "6k+1",
+      "r": 2,
+      "s": "2k",
+      "z": 1,
+      "S": 3,
+      "T": 6,
+      "d": -4,
+      "parameter": "Every integer k>=1.",
+      "verification": "All rows and crossings are polynomial identities in k; u=-s<0<v=z gives positive weights."
+    },
+    {
+      "b": 13,
+      "a": "12k+1",
+      "r": 3,
+      "s": "3k",
+      "z": 2,
+      "S": 4,
+      "T": 6,
+      "d": -3,
+      "parameter": "Every integer k>=1.",
+      "verification": "All rows and crossings are polynomial identities in k; u=-s<0<v=z gives positive weights."
+    }
+  ],
+  "family_exact_examples": [
+    {
+      "a": 13,
+      "b": 7,
+      "r": 2,
+      "s": 4,
+      "z": 1,
+      "S": 3,
+      "T": 6,
+      "d": -4,
+      "q": [
+        13,
+        7,
+        1,
+        1
+      ],
+      "p": [
+        [
+          0,
+          -15,
+          6,
+          -4
+        ],
+        [
+          -6,
+          0,
+          -2,
+          1
+        ],
+        [
+          2,
+          -3,
+          0,
+          0
+        ],
+        [
+          -3,
+          6,
+          -4,
+          0
+        ]
+      ],
+      "D": [
+        -6,
+        5,
+        -1,
+        2
+      ],
+      "weights": [
+        "13",
+        "7",
+        "25/4",
+        "13/12"
+      ]
+    },
+    {
+      "a": 25,
+      "b": 13,
+      "r": 3,
+      "s": 6,
+      "z": 2,
+      "S": 4,
+      "T": 6,
+      "d": -3,
+      "q": [
+        25,
+        13,
+        1,
+        1
+      ],
+      "p": [
+        [
+          0,
+          -27,
+          8,
+          -6
+        ],
+        [
+          -12,
+          0,
+          -3,
+          2
+        ],
+        [
+          3,
+          -4,
+          0,
+          0
+        ],
+        [
+          -4,
+          6,
+          -3,
+          0
+        ]
+      ],
+      "D": [
+        -12,
+        12,
+        -3,
+        3
+      ],
+      "weights": [
+        "25",
+        "13",
+        "49/6",
+        "25/12"
+      ]
+    }
+  ],
+  "complete_small_denominator_calculations": {
+    "3": {
+      "fixed_denominator": 3,
+      "nonresonant_partners": [
+        7,
+        11
+      ],
+      "nonresonant_models": [
+        {
+          "fixed_side": "A",
+          "a": 3,
+          "b": 7,
+          "r": 1,
+          "s": 1,
+          "z": 1,
+          "S": 2,
+          "T": 6,
+          "d": -5,
+          "q": [
+            3,
+            7,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -4,
+              2,
+              -1
+            ],
+            [
+              -5,
+              0,
+              -3,
+              1
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -2,
+              6,
+              -5,
+              0
+            ]
+          ],
+          "D": [
+            3,
+            -7,
+            5,
+            -1
+          ],
+          "weights": [
+            "3",
+            "7",
+            "5/2",
+            "13/12"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 3,
+          "b": 11,
+          "r": 1,
+          "s": 1,
+          "z": 2,
+          "S": 2,
+          "T": 5,
+          "d": -4,
+          "q": [
+            3,
+            11,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -4,
+              2,
+              -1
+            ],
+            [
+              -8,
+              0,
+              -5,
+              2
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -2,
+              5,
+              -4,
+              0
+            ]
+          ],
+          "D": [
+            6,
+            -10,
+            6,
+            -2
+          ],
+          "weights": [
+            "3",
+            "11",
+            "5/2",
+            "21/10"
+          ]
+        }
+      ],
+      "resonances": [],
+      "complete_divisor_seeds_and_trials": [
+        {
+          "side": "A",
+          "r": 1,
+          "s": 1,
+          "C": -4,
+          "trials": [
+            {
+              "z": 1,
+              "T": "6",
+              "outcome": "accepted",
+              "other_denominator": 7
+            },
+            {
+              "z": 2,
+              "T": "5",
+              "outcome": "accepted",
+              "other_denominator": 11
+            },
+            {
+              "z": 4,
+              "T": "9/2",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 1,
+          "s": 2,
+          "C": -2,
+          "trials": [
+            {
+              "z": 1,
+              "T": "8/3",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "7/3",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 2,
+          "s": 1,
+          "C": -3,
+          "trials": [
+            {
+              "z": 1,
+              "T": "4",
+              "outcome": "r+1 does not divide b-1."
+            },
+            {
+              "z": 3,
+              "T": "10/3",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 2,
+          "s": 2,
+          "C": 0,
+          "trials": [],
+          "zero_branch": "Impossible by the proved strictly positive remainder."
+        },
+        {
+          "side": "B",
+          "r": 1,
+          "z": 1,
+          "C": -1,
+          "trials": [
+            {
+              "s": 1,
+              "S": "2/3",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 1,
+          "z": 2,
+          "C": -2,
+          "trials": [
+            {
+              "s": 1,
+              "S": "2/5",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 2,
+              "S": "3/5",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        }
+      ]
+    },
+    "5": {
+      "fixed_denominator": 5,
+      "nonresonant_partners": [
+        13,
+        21,
+        31,
+        37
+      ],
+      "nonresonant_models": [
+        {
+          "fixed_side": "A",
+          "a": 5,
+          "b": 13,
+          "r": 1,
+          "s": 1,
+          "z": 1,
+          "S": 4,
+          "T": 12,
+          "d": -9,
+          "q": [
+            5,
+            13,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -8,
+              4,
+              -1
+            ],
+            [
+              -8,
+              0,
+              -6,
+              1
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -4,
+              12,
+              -9,
+              0
+            ]
+          ],
+          "D": [
+            6,
+            -15,
+            10,
+            -1
+          ],
+          "weights": [
+            "5",
+            "13",
+            "9/2",
+            "25/24"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 5,
+          "b": 21,
+          "r": 1,
+          "s": 1,
+          "z": 2,
+          "S": 4,
+          "T": 10,
+          "d": -7,
+          "q": [
+            5,
+            21,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -8,
+              4,
+              -1
+            ],
+            [
+              -13,
+              0,
+              -10,
+              2
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -4,
+              10,
+              -7,
+              0
+            ]
+          ],
+          "D": [
+            11,
+            -21,
+            12,
+            -2
+          ],
+          "weights": [
+            "5",
+            "21",
+            "9/2",
+            "41/20"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 5,
+          "b": 31,
+          "r": 1,
+          "s": 2,
+          "z": 6,
+          "S": 2,
+          "T": 5,
+          "d": -4,
+          "q": [
+            5,
+            31,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -7,
+              4,
+              -2
+            ],
+            [
+              -22,
+              0,
+              -15,
+              6
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -2,
+              5,
+              -4,
+              0
+            ]
+          ],
+          "D": [
+            18,
+            -27,
+            14,
+            -5
+          ],
+          "weights": [
+            "5",
+            "31",
+            "9/2",
+            "61/10"
+          ]
+        },
+        {
+          "fixed_side": "A",
+          "a": 5,
+          "b": 37,
+          "r": 1,
+          "s": 1,
+          "z": 4,
+          "S": 4,
+          "T": 9,
+          "d": -6,
+          "q": [
+            5,
+            37,
+            1,
+            1
+          ],
+          "p": [
+            [
+              0,
+              -8,
+              4,
+              -1
+            ],
+            [
+              -23,
+              0,
+              -18,
+              4
+            ],
+            [
+              1,
+              -2,
+              0,
+              0
+            ],
+            [
+              -4,
+              9,
+              -6,
+              0
+            ]
+          ],
+          "D": [
+            21,
+            -36,
+            19,
+            -4
+          ],
+          "weights": [
+            "5",
+            "37",
+            "9/2",
+            "73/18"
+          ]
+        }
+      ],
+      "resonances": [],
+      "complete_divisor_seeds_and_trials": [
+        {
+          "side": "A",
+          "r": 1,
+          "s": 1,
+          "C": -8,
+          "trials": [
+            {
+              "z": 1,
+              "T": "12",
+              "outcome": "accepted",
+              "other_denominator": 13
+            },
+            {
+              "z": 2,
+              "T": "10",
+              "outcome": "accepted",
+              "other_denominator": 21
+            },
+            {
+              "z": 4,
+              "T": "9",
+              "outcome": "accepted",
+              "other_denominator": 37
+            },
+            {
+              "z": 8,
+              "T": "17/2",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 1,
+          "s": 2,
+          "C": -6,
+          "trials": [
+            {
+              "z": 1,
+              "T": "20/3",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "17/3",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 3,
+              "T": "16/3",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 6,
+              "T": "5",
+              "outcome": "accepted",
+              "other_denominator": 31
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 1,
+          "s": 4,
+          "C": -2,
+          "trials": [
+            {
+              "z": 1,
+              "T": "12/5",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "11/5",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 2,
+          "s": 1,
+          "C": -6,
+          "trials": [
+            {
+              "z": 1,
+              "T": "8",
+              "outcome": "r+1 does not divide b-1."
+            },
+            {
+              "z": 2,
+              "T": "7",
+              "outcome": "r+1 does not divide b-1."
+            },
+            {
+              "z": 3,
+              "T": "20/3",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 6,
+              "T": "19/3",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 2,
+          "s": 2,
+          "C": -3,
+          "trials": [
+            {
+              "z": 1,
+              "T": "18/5",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 3,
+              "T": "16/5",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 2,
+          "s": 4,
+          "C": 3,
+          "trials": [
+            {
+              "z": 1,
+              "T": "2/3",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 3,
+              "T": "8/9",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 4,
+          "s": 1,
+          "C": -5,
+          "trials": [
+            {
+              "z": 1,
+              "T": "6",
+              "outcome": "r+1 does not divide b-1."
+            },
+            {
+              "z": 5,
+              "T": "26/5",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "A",
+          "r": 4,
+          "s": 2,
+          "C": 0,
+          "trials": [],
+          "zero_branch": "Impossible by the proved strictly positive remainder."
+        },
+        {
+          "side": "A",
+          "r": 4,
+          "s": 4,
+          "C": 10,
+          "trials": [
+            {
+              "z": 1,
+              "T": "0",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 2,
+              "T": "5/17",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 5,
+              "T": "8/17",
+              "outcome": "T is not a positive integer."
+            },
+            {
+              "z": 10,
+              "T": "9/17",
+              "outcome": "T is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 1,
+          "z": 1,
+          "C": 0,
+          "trials": [],
+          "S_at_zero_branch": "4/3",
+          "zero_branch": "S is not a positive integer."
+        },
+        {
+          "side": "B",
+          "r": 1,
+          "z": 2,
+          "C": -1,
+          "trials": [
+            {
+              "s": 1,
+              "S": "4/5",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 1,
+          "z": 4,
+          "C": -3,
+          "trials": [
+            {
+              "s": 1,
+              "S": "4/9",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 3,
+              "S": "2/3",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 3,
+          "z": 1,
+          "C": -3,
+          "trials": [
+            {
+              "s": 1,
+              "S": "12/5",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 3,
+              "S": "14/5",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 3,
+          "z": 2,
+          "C": -6,
+          "trials": [
+            {
+              "s": 1,
+              "S": "4/3",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 2,
+              "S": "5/3",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 3,
+              "S": "16/9",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 6,
+              "S": "17/9",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        },
+        {
+          "side": "B",
+          "r": 3,
+          "z": 4,
+          "C": -12,
+          "trials": [
+            {
+              "s": 1,
+              "S": "12/17",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 2,
+              "S": "18/17",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 3,
+              "S": "20/17",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 4,
+              "S": "21/17",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 6,
+              "S": "22/17",
+              "outcome": "S is not a positive integer."
+            },
+            {
+              "s": 12,
+              "S": "23/17",
+              "outcome": "S is not a positive integer."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "small_denominator_negative_low_entries": {
+    "3": [
+      -1
+    ],
+    "5": [
+      -2,
+      -1
+    ]
+  },
+  "consequence": "For q=3 or q=5 a two-high endpoint never has the negative low outgoing entry -(q-1); two such endpoints cannot have lambda=-1 at a common low puncture.",
+  "proof_dependencies": [
+    "The complete two-high standard form.",
+    "The equivalence of positivity with u<0<v."
+  ],
+  "limitations": [
+    "The script checks the algebra and the complete finite calculations; general completeness and resonance exclusion are proved in the TeX source.",
+    "For n=7,13 the resonant family is not asserted to exhaust every model or every partner; there are finitely many nonresonant branches as well.",
+    "These are local models and their partner relation, not a construction of a global atlas."
+  ],
+  "source_sha256": "eff0568f54ebaa2e649f5837e34291f7d537c8ce42138254fc41c37c2de0aece",
+  "script_sha256": "20c2d4ac4a242ca89a61e7c973b8e673b5574eee985ecdd0e6bfd8240644ccae"
+}

@@ -1,0 +1,205 @@
+% New v22 section.  All denominator bounds below are proved, not imposed.
+\subsection{通常型の共有係数共鳴と退化境界の全排除}
+\label{g51522:section}
+
+命題~\ref{g51521:fixed-Q-finite} の復元では，共有高 ray の
+$D$ 相殺が残る低 column の scale に関して一次式となる．
+一般の低データではその係数が零になる場合を二次式で処理する必要があるが，
+表~\ref{g51521:ordinary-row-table} の十四配置では，この係数消失そのものを排除できる．
+以下の議論では共有分母 $Q$ の上界を置かない．
+
+\begin{proposition}[通常型の非共鳴性]
+\label{g51522:no-resonance}
+通常型十四配置のいずれかを満たす正の整数局所模型を考える．
+共有低 reverse が正の側の模型と辺 $34$ の node 分配を固定し，
+負の側を命題~\ref{g51521:fixed-Q-finite} の方法で復元する．
+このとき，共有高 ray の $D$ 相殺を満たす負側整数模型が存在するなら，
+相殺式の一次係数は必ず非零である．
+従って共鳴分岐を棄却でき，各正側模型と node 分配に対する負側の完成は，高々一つである．
+\end{proposition}
+
+\begin{proof}
+共有低 reverse の絶対値を $m$ とし，$Q=mU+1$，$U\ge1$ と置く．
+負側の外部二標識を，低 row が
+\[
+ (-j,j+m-1,-m),\qquad j\ge1
+\]
+となる順に取る．この向きにおける負側の共有高 row を
+$(X,-W,-U)$ と書くと，
+\[
+ X,W>0,\qquad W=X+Q-U.
+\]
+正側の共有高 row は $(-M,-N,U)$ と書け，row sum から
+\begin{equation}\label{g51522:MN}
+ M,N>0,\qquad M+N=Q+U=(m+1)U+1
+\end{equation}
+である．これは正側の二つの負の低 row 成分の順序に依存しない．
+
+負側の低 column を $(-A,B,-U)$ とし，低 $D$ を $d_-$ と書くと
+$B=A+U-1-d_-$ である．共有高 ray の $D$ の $A$ 係数は
+\begin{equation}\label{g51522:linear-coefficient}
+ Q\left(-\frac{j}{X}+\frac{j+m-1}{W}\right)
+ =\frac{Q\{(m-1)X-j(Q-U)\}}{XW}.
+\end{equation}
+従って共鳴には
+\begin{equation}\label{g51522:resonance}
+ (m-1)X=j\{(m-1)U+1\}
+\end{equation}
+が必要である．$m=1$ では右辺が $j>0$ なので不可能である．
+十四配置の $m=4$ の場合は $j=1$ であり，$3X=3U+1$ も不可能である．
+残るのは $m=2$ で，この場合には
+\[
+ X=j(U+1),\qquad W=(j+1)(U+1).
+\]
+
+負側の共有高 row の正 entry $X$ に対応する puncture の node を $h$ とする．
+共有低 puncture の node は一であり，もう一つの外部 node は $4-h$ である．
+clutching は
+\[
+ X-M=Q(1-h),\qquad W+N=Q(3-h)
+\]
+を与える．後者と $W,N>0$ から $h\in\{0,1,2\}$ である．
+共鳴時は $Q=2U+1$ なので
+\begin{equation}\label{g51522:resonant-MN}
+ M=(j-2+2h)U+j-1+h,\qquad
+ N=(5-j-2h)U+2-j-h.
+\end{equation}
+ここで $N\ge1$ は
+\[
+ (5-j-2h)U\ge j-1+h
+\]
+を意味する．十四配置の $m=2$ では $j\ge3$ であるから，
+可能なのは $h=0$，$j\in\{3,4\}$ のみである．
+$j=3$ では $U\ge1$，$j=4$ では $U\ge3$ を要する．
+従って調べるべき $(j,d_-,d_+)$ は
+\begin{equation}\label{g51522:resonance-three}
+ (3,0,2),\quad(4,0,2),\quad(4,5,-7)
+\end{equation}
+だけとなる．最初の二組では正側の二つの負成分の両順序を許す．
+
+負側の共有高 ray と外部 rays の pair equations から，その $D$ は
+\[
+ D_{\rm sh}^-
+ =2-Q-\frac{Q-1}{X}+\frac{Q-1}{W}
+       +Q\left(-\frac{jA}{X}+\frac{(j+1)B}{W}\right).
+\]
+共鳴を代入すれば $A$ が消え，$J=j(j+1)$ として
+\begin{equation}\label{g51522:resonant-D}
+ D_{\rm sh}^-
+ =-2d_--2-\frac2J+
+       \frac{J(d_-+2)+2}{J(U+1)}.
+\end{equation}
+全 entries が整数なら $D_{\rm sh}^-$ も整数である．
+特に
+\begin{equation}\label{g51522:finite-divisor}
+ U+1\mid J(d_-+2)+2
+\end{equation}
+が必要である．式~\eqref{g51522:resonance-three} について正の約数を調べ，
+上記の $U$ の下限と式~\eqref{g51522:resonant-D} の整数性を併用すると，
+表~\ref{g51522:finite-resonances} の三例だけが残る．
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{c|c|c|c|c|c|c}
+$(j,d_-,d_+)$&$J(d_-+2)+2$&$U$&$Q$&$(M,N)$&$D_{\rm sh}^-$&$S+T$\\\hline
+$(3,0,2)$&26&12&25&$(14,23)$&$-2$&15\\
+$(4,0,2)$&42&20&41&$(43,18)$&$-2$&23\\
+$(4,5,-7)$&142&70&141&$(143,68)$&$-12$&64
+\end{tabular}
+\caption{共鳴の整数性が許す全候補．人工的な分母 cutoff は用いていない．}
+\label{g51522:finite-resonances}
+\end{table}
+
+最後に正側の pair equations の整除性を用いる．
+低 row の $-1,-2$ に対応する低 column の絶対値をそれぞれ $S,T$ とする．
+対応する分母は $1+S,1+2T$ であり，$S$ は正の偶数，$T\ge1$，
+$S+T=U+1+d_+$ である．正側の順序が $(-1,-2,2)$ なら
+\begin{equation}\label{g51522:positive-divisibilities}
+ M\mid Q(1+S)-1,\qquad N\mid Q(1+2T)-1.
+\end{equation}
+順序が $(-2,-1,2)$ なら，右辺に現れる $1+S$ と $1+2T$ を交換する．
+表~\ref{g51522:pair-failures} は最初の整除条件と正値性・奇数性を全て解き，
+次の条件が破れることを示す．
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{c|c|c|l}
+$(U,j)$&正側低 row&最初の条件の候補&不成立の理由\\\hline
+$(12,3)$&$(-1,-2,2)$&$(S,T)=(8,7)$&$23\nmid374$\\
+$(12,3)$&$(-2,-1,2)$&$(S,T)=(4,11)$&$23\nmid124$\\
+$(20,4)$&$(-1,-2,2)$&$(S,T)=(20,3)$&$18\nmid286$\\
+$(20,4)$&$(-2,-1,2)$&$T\equiv10\pmod {43}$&$1\le T\le21$ は奇数なので不可能\\
+$(70,4)$&$(-1,-2,2)$&$S\equiv70\pmod {143}$&$2\le S\le62$ なので不可能
+\end{tabular}
+\caption{共有高 row の pair equations による全共鳴候補の排除．}
+\label{g51522:pair-failures}
+\end{table}
+
+これで $M_2$ の二つの負成分の交換を含む全十四配置を覆い，共鳴は排除された．
+\end{proof}
+
+\paragraph{固定低データの $T=1$ 境界．}
+非共鳴性の証明は固定低 row・column の二次復元を変更しない．
+別に，五つの固定低データ問題では，負成分 $-m$ に対応する column の scale
+$T=1$ を次の直接計算で全て排除できる．
+これは復元式の先頭係数が消える境界を落としていないことの確認にもなる．
+
+\begin{proposition}\label{g51522:T1}
+低 row が $(-1,-m,m)$，低 $D$ が $d$ で，
+\[
+ (m,d)=(4,5),(1,-9),(2,2),(2,-7),(2,9)
+\]
+のいずれかである正の奇分母三高整数模型を考える．
+低 column を $(-S,-T,U)$ とすれば $T\ne1$ である．
+\end{proposition}
+
+\begin{proof}
+分母は $(S+1,mT+1,mU+1)$，かつ $U=S+T-d-1$ である．
+$m=1,T=1$ では第二分母が二となり，奇分母条件に反する．
+以下 $m\in\{2,4\}$ とし，$T=1$ を仮定する．
+このとき $S\ge2$ は偶数，$U=S-d\ge1$ である．
+matching の正の二 entries を $H,K$ とし，
+\[
+ HK=(m+1)S+m=:A
+\]
+と書く．二つの負の entries の絶対値は row sums から $H+1,K+m$ である．
+残る row sum と pair equations は
+\[
+ \frac{(S+1)(mU+1)-1}{H+1}
+ +\frac{(m+1)(mU+1)-1}{K+m}=(m+1)U+1
+\]
+を与える．$HK=A$ を代入して分母を払うと，
+\begin{equation}\label{g51522:T1-ratio}
+ K=\frac{F}{G},\quad
+ F=\{(2m+1)S+m\}U+S+m,\quad
+ G=(mS-1)U+S-1>0
+\end{equation}
+となる．ここでは二次式で先頭係数を割っていない．
+
+\[
+ F-2G=(S+m+2)U-S+m+2>0
+\]
+なので整数 $K$ は $K\ge3$ を満たす．一方，
+\[
+ F-3G=\{(1-m)S+m+3\}U-2S+m+3.
+\]
+$m=2,S\ge6$，または $m=4,S\ge4$ なら右辺は負であり，$K\ge3$ と矛盾する．
+従って $m=2$ では $S\in\{2,4\}$，$m=4$ では $S=2$ に限られる．
+$m=4,d=5$ と $m=2,d=9$ は $U=S-d>0$ に反する．
+$m=2,d=2$ では $(S,U)=(4,2)$ だけが残るが，$K=50/17$ は整数でない．
+$m=2,d=-7$ では
+\[
+ (S,U,K)=(2,9,4),\qquad (4,11,31/10)
+\]
+であり，後者は整数性に反する．前者は $H=A/K=2$ を与えるが，
+残る pair equation は $H+1=3$ が
+$(S+1)(mU+1)-1=56$ を割ることを要求し，矛盾する．
+\end{proof}
+
+\paragraph{この改良の射程．}
+命題~\ref{g51522:no-resonance} は通常型十四配置の共有 $D$ に関する共鳴を全て排除する．
+命題~\ref{g51522:T1} は五つの固定低データ問題の一つの退化境界を排除する．
+いずれも非共鳴の $T\ge2$ の候補を全 $Q$ にわたって分類したという主張ではない．
+従って $G_{5,15}$ の通常型全体と，既存の $Q=3,5$ の負例外型は引き続き未解決である．
+独立検算 \nolinkurl{verify_g5_15_resonance_boundary_v22.py} は，多項式恒等式を係数ごとに検査し，
+証明された約数条件から三例・五つの順序付き検査を再生成する．

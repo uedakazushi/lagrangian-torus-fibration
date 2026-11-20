@@ -1,0 +1,147 @@
+\section{四・五角形成分の接着障害}\label{cy12:section}
+
+% v12: rigorous necessary conditions for C4/C5 support components.
+% These statements use nonnegative node counts, unlike the path obstruction.
+
+\subsection{四・五角形成分に対する node と符号の制約}
+\label{cn12:section}
+
+この節では正の局所 charts と整数 clutching に加え，
+\begin{equation}\label{cn12:node-convention}
+ n_{ij;k}=1-\frac{p^i_{jk}+p^j_{ik}}{q_{ij}}\geq0
+\end{equation}
+を仮定する．両端の row sums から $\sum_{k\ne i,j}n_{ij;k}=5$ なので，各 $n_{ij;k}\leq5$ も従う．
+まず一般的な必要条件を導く．四・五角形成分の完全排除は後続の定理で与える．
+
+\begin{lemma}[cycle edge の三 punctures]\label{cn12:three-punctures}
+高分母 support の連結成分が $C_4$ または $C_5$ であるとする．
+その高分母 edge $ij$ の三 punctures のうち，二つは一方の core で高分母へ，
+他方で低分母へ向かい，残る一つは両端で低分母へ向かう．
+後者の outgoing sum を $\lambda_{ij}q_{ij}$ と書くと
+\[
+ \lambda_{ij}\in\{-1,0,1\}.
+\]
+二つの mixed punctures の node 数はそれぞれ一以上であり，その和は $4+\lambda_{ij}$ である．
+mixed node 数の下限一は，node 非負性を追加しなくても整数 clutching から従う．
+\end{lemma}
+
+\begin{proof}
+cycle の次数二と長さが四以上であることから，三 punctures の型が指定通りになる．
+共通 low-low puncture には既知の signed-divisor clutching 補題を適用する．
+mixed puncture では一端の entry は二高分母間の負の整数 $-\alpha$，
+他端の entry は $q-1$ の非零 signed divisor $x$ である．
+従って $(x-\alpha)/q<1$ であり，この値が整数なので零以下である．
+node 数は $1-(x-\alpha)/q\geq1$ となる．
+共通 puncture の node 数が $1-\lambda_{ij}$ なので，全数五から和の式を得る．
+\end{proof}
+
+\begin{proposition}[正の pairing の有限な符号型]\label{cn12:cycle-signs}
+$C_4$ の vertices を $i\in\mathbb Z/4$，残る label を $*$ とし，
+\[
+ \varepsilon_i=\operatorname{sign}(p^i_{i+1,*})\in\{1,-1\}
+\]
+と置く．このとき
+\[
+ \varepsilon_i=\varepsilon_{i+2}.
+\]
+従って四つの符号は全て等しいか，交互である．共通 puncture の係数は
+\[
+ \lambda_{i,i+1}=\frac{\varepsilon_i-\varepsilon_{i+1}}2.
+\]
+
+$C_5$ の vertices を $i\in\mathbb Z/5$ とし，
+\[
+ \varepsilon_i=\operatorname{sign}(p^i_{i+1,i+2})
+\]
+と置く．$\varepsilon_i=1$ となる vertices は高々二つで，二つなら cycle 上で隣接する．
+この場合
+\[
+ \lambda_{i,i+1}=-\frac{\varepsilon_i+\varepsilon_{i+1}}2.
+\]
+従って $\lambda$ の個数は，次の三つのいずれかである：
+\[
+ (\#\{\lambda=1\},\#\{\lambda=0\},\#\{\lambda=-1\})
+ \in\{(5,0,0),(3,2,0),(2,2,1)\}.
+\]
+\end{proposition}
+
+\begin{proof}
+二高分母の標準符号から，各高分母 row の低分母二 entries は一正一負であり，
+同じ低分母 column に対する二つの高分母 entries も異符号である．
+二つの高 edges $i-1,i$ と $i,i+1$ が作る wedge を考える．
+外側の低分母 edge $i-1,i+1$ に沿う puncture $i$ では，二つの incoming numerators が同時に正だと，
+それぞれ一以上なので node 数が $1-(\text{二つの和})<0$ となる．
+
+$C_4$ ではそれらの符号は $-\varepsilon_{i-1}$ と $\varepsilon_{i+1}$ である．
+もう一つの center $i+2$ に対しても同じ議論を行えば，
+$\varepsilon_{i-1}$ と $\varepsilon_{i+1}$ が異なる両場合が排除される．
+$C_5$ では二つの符号は $\varepsilon_{i-1}$ と $\varepsilon_{i+1}$ である．
+従って正の vertices は距離二の pair を含まない．五角形でそのような集合は高々二点で，
+二点なら隣接する．
+
+共通 low-low puncture の二つの符号は $C_4$ では
+$\varepsilon_i,-\varepsilon_{i+1}$，$C_5$ では
+$-\varepsilon_i,-\varepsilon_{i+1}$ である．
+同符号なら和は $\pm q$，逆符号なら零なので，表示した $\lambda$ の式が従う．
+正の vertices が零，一，二の場合を数えると最後の三組を得る．
+\end{proof}
+
+\begin{lemma}[一高分母 triangle の小さい reverse divisor]\label{cn12:reverse-bound}
+triangle $i,j,k$ について $q_{ij}=q>1$，$q_{ik}=q_{jk}=1$ とする．
+共通 puncture の outgoing numerators が逆符号なら，その reverse numerators は $c,-c$ と書け，
+\[
+ 1\leq |c|\leq4.
+\]
+これは第三 core の低低 entries の符号を仮定しない．
+\end{lemma}
+
+\begin{proof}
+逆符号の outgoing numerators は $p,-p$ であり，reverse は $(q-1)/p,-(q-1)/p$ である．
+第三 core の対応する二つの entries の積は零なので，少なくとも一つが零である．
+それに対応する低 edge の node 数は $1-c$ または $1+c$ である．
+これが零以上五以下という条件から $|c|\leq4$ を得る．
+\end{proof}
+
+\begin{proposition}[$C_5$ の一高分母 triangle の node 条件]\label{cn12:C5-table}
+$C_5$ の高 edge $ij$ と，両端で共通の低 label $k$ を考える．
+第三 core $k$ の対応する低低 entries は，一方が零，他方が $-L$，$L\geq1$ である．
+$i,j$ を必要に応じて交換して，零を $ki\to kj$ 側に置く．
+共通 puncture の reverse numerators を $r,r'$ とすると，三つの node 数は
+\[
+ (n_{ij;k},n_{ik;j},n_{jk;i})=(1-\lambda,1-r,1-r'+L).
+\]
+可能性は次の表で尽きる．
+\begin{center}
+\small
+\begin{tabular}{ccll}
+$\lambda$ & $(r,r')$ & 三つの node 数 & 必要条件 \\
+\hline
+$1$ & $(1,q-1)$ & $(0,0,L-q+2)$ & $q-2\leq L\leq q+3$ \\
+$0$ & $(1,-1)$ & $(1,0,L+2)$ & $1\leq L\leq3$ \\
+$0$ & $(-c,c)$ & $(1,1+c,1-c+L)$ & $1\leq c\leq4$, $\max(1,c-1)\leq L\leq c+4$ \\
+$-1$ & $(-(q-1),-1)$ & $(2,q,L+2)$ & $q\leq5$, $1\leq L\leq3$ \\
+$-1$ & $(-1,-(q-1))$ & $(2,2,q+L)$ & $q+L\leq5$
+\end{tabular}
+\end{center}
+表では $r,r'$ が $q-1$ の signed divisors であるという元の条件も保持する．
+特に第三行には $c\mid q-1$ が必要である．
+さらに補題~\ref{ml12:dichotomy} により，非零低低 entry の大きさは
+$L\in\{1\}\cup\mathbb Z_{\geq3}$ であり，$L=2$ は除外する．
+この表は node 式の必要条件を整理したもので，局所整数模型や幾何学的 chart の十分条件ではない．
+特に $\lambda=-1$ の高 edge は $q\in\{3,5\}$ に限られる．
+従って，全ての高分母が七以上の $C_5$ 成分では，命題~\ref{cn12:cycle-signs} の
+三つの型のうち最後の型は存在しない．
+\end{proposition}
+
+\begin{proof}
+第三 core は二高分母であり，その二つの低分母が $ki,kj$ である．
+低低 entry の負性から，二つの entries はちょうど $0,-L$ である．
+signed-divisor clutching の三場合を逆向きに書くと，
+$\lambda=1$ では $\{r,r'\}=\{1,q-1\}$，
+$\lambda=0$ では $r'=-r$，
+$\lambda=-1$ では $\{r,r'\}=\{-1,-(q-1)\}$ である．
+各 node 数を区間 $[0,5]$ に入れるだけで表を得る．
+例えば $\lambda=1$ で $r=q-1$ とすると $1-r=2-q<0$ なので，表示した順序だけが可能である．
+最後に高分母は奇数で一より大きいので，$q\leq5$ は $q=3,5$ を意味する．
+\end{proof}
+

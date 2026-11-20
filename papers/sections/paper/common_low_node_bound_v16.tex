@@ -1,0 +1,137 @@
+% v16. A node budget bound at a common low puncture.
+% No D opposition or hypothesis on the high degrees of the three cores
+% is used in the general lemma.
+
+\section{共通低 puncture における reverse 係数の一様な上界}
+\label{cl16:section}
+
+高辺の共通低 puncture では，二つの逆向き係数だけでなく，
+第三の core における低低 pair equation を併せて使える．
+この条件は，二高分母の標準形や一高分母の葉の分類に依存しない．
+
+\begin{lemma}[共通低 puncture の通常接着における node 上界]
+\label{cl16:ordinary-bound}
+異なる三つの cores $i,j,k$ について
+\[
+ q_{ij}=q>1,\qquad q_{ik}=q_{jk}=1
+\]
+とする．各 core の整数 pair equations と各共有辺の非負 node 条件を仮定する．
+各辺の node 総数を五とし，共有高辺の puncture $k$ において
+通常の反対符号接着
+\[
+ p^i_{jk}=-p^j_{ik}
+\]
+が成立するとする．このとき
+\begin{equation}\label{cl16:reverse-bound}
+ p^i_{kj}=-p^j_{ki}=u,\qquad 1\le |u|\le4.
+\end{equation}
+この結論は，三つの cores の高分母次数を制限せず，対向 $D$ の相殺も使わない．
+\end{lemma}
+
+\begin{proof}
+高低 pair product が $q-1$ であるため，通常接着から reverse entries は
+$u,-u$ となり，$u$ は零でない整数である．core $k$ において
+\[
+ a=p^k_{ij},\qquad b=p^k_{ji}
+\]
+と置く．この二つの rays は低分母なので $ab=0$ である．
+低辺 $ik,jk$ の node 数をそれぞれ $n=n_{ik;j}$，$m=n_{jk;i}$ とすると
+\[
+ a=1-n-u,\qquad b=1-m+u,\qquad 0\le n,m\le5.
+\]
+従って
+\[
+ 0=ab=-\{u-(1-n)\}\{u-(m-1)\}.
+\]
+ゆえに $u=1-n\in[-4,1]$ または $u=m-1\in[-1,4]$ であり，
+式~\eqref{cl16:reverse-bound} を得る．
+\end{proof}
+
+\begin{remark}[他の node 予算]
+同じ証明により，共有辺の node 総数がそれぞれ $N_i,N_j$ なら
+$u\in[1-N_i,1]\cup[-1,N_j-1]$ である．特に両辺の総数が
+同じ $N\ge2$ なら $|u|\le N-1$ となる．
+本稿の五次模型では $N=5$ を用いる．
+\end{remark}
+
+\begin{lemma}[正の二高分母枝における $T$ の下界]
+\label{cl16:T-five}
+二高分母標準形の正の枝 $S>r$，$rT>(r+1)S$ では $T\ge5$ である．
+\end{lemma}
+
+\begin{proof}
+$S,r$ は正整数なので $S\ge r+1$ である．従って
+\[
+ rT>(r+1)S\ge(r+1)^2=4r+(r-1)^2\ge4r.
+\]
+ゆえに $T>4$ である．
+\end{proof}
+
+\begin{theorem}[二葉三角形に残る四つの reverse 値と単位係数]
+\label{cl16:two-leaf-unit}
+定理~\ref{tl15:remaining-positive} の仮定の下で，二葉三角形 support
+$H=\{01,02,12,03,14\}$ が存在するとする．同定理の交差標識
+$(A,B,C,D)=(0,1,4,3)$ における二高分母標準形は，必ず
+\begin{equation}\label{cl16:small-and-unit}
+ 1\le r\le4,\qquad z=1
+\end{equation}
+を満たす．さらに
+\begin{equation}\label{cl16:forced-exception}
+ b=T+1,\qquad
+ p^1_{23}=T,\quad p^1_{32}=1,\quad
+ p^3_{12}=0,\qquad
+ n_{12;3}=n_{13;2}=0
+\end{equation}
+が強制される．$r>1$ の場合には，併せて
+\begin{equation}\label{cl16:forced-ordinary}
+ p^0_{24}=-x,\quad p^0_{42}=-r,\quad p^4_{02}=0,\qquad
+ n_{02;4}=1,\quad n_{04;2}=r+1
+\end{equation}
+となる．これらの追加制約を導く際には対向 $D$ の相殺は使わない．
+\end{theorem}
+
+\begin{proof}
+既知の帰着により $S>r$，$rT>(r+1)S$ の正の枝である．
+その交差標識では
+\[
+ p^2_{13}=z,\quad p^2_{31}=T,\quad b-1=zT;
+ \qquad
+ p^2_{04}=x,\quad p^2_{40}=r,\quad a-1=rx.
+\]
+補題~\ref{cl16:T-five} により $T\ge5$ である．
+
+まず $z>1$ と仮定する．$T>1$ より $1<z<b-1$ である．
+共通低 puncture の符号付き約数の分類
+（補題~\ref{ls11:low-puncture}）により，高辺 $12$ の puncture $3$ では
+$p^1_{23}=-z$ の通常接着しか起こらない．従って
+補題~\ref{cl16:ordinary-bound} が $T\le4$ を与え，矛盾する．
+ゆえに $z=1$ である．このとき $b=T+1$ であり，符号付き約数の二択は
+$p^1_{23}=-1$ または $T$ となる．前者は同じ通常接着の矛盾を与えるので，
+$p^1_{23}=T$，pair product から $p^1_{32}=1$ である．
+また，低辺 $23$ の node 非負性より
+$p^3_{21}\le1-T<0$ なので，core $3$ の低低 pair equation が
+$p^3_{12}=0$ を与える．従って
+\[
+ n_{12;3}=1-\frac{1+T}{T+1}=0,\qquad
+ n_{13;2}=1-(1+0)=0.
+\]
+
+次に $r>1$ とする．正の枝で $x=sS/r>1$ であり，
+$x=(a-1)/r<a-1$ なので，高辺 $02$ の共通低 puncture $4$ でも
+通常接着しか起こらない．従って $p^0_{24}=-x$，$p^0_{42}=-r$ であり，
+補題~\ref{cl16:ordinary-bound} より $r\le4$ である．
+$r=1$ の場合にも式~\eqref{cl16:small-and-unit} は成立する．
+最後に $r>1$ なら低辺 $24$ の node 条件が
+$p^4_{20}\le1-r<0$ を与え，低低 pair equation より $p^4_{02}=0$ となる．
+従って
+\[
+ n_{02;4}=1-\frac{x-x}{a}=1,\qquad
+ n_{04;2}=1-(-r+0)=r+1.
+\]
+これが式~\eqref{cl16:forced-ordinary} である．
+\end{proof}
+
+式~\eqref{cl16:small-and-unit} は，従来の
+「$r\le4$ または $z=1$」を，同時に成立する二条件へ強める．
+その証明の中心は，第三 core の低低 pair equation と，node 数の有限な予算である．
+葉の分母や三価中心の未分類の整数模型に探索上限を置く必要はない．

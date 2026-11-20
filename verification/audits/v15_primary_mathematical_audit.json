@@ -1,0 +1,76 @@
+{
+  "version": "v15",
+  "passed": true,
+  "external_peer_review": false,
+  "formal_proof_assistant": false,
+  "reviewer": "primary agent",
+  "scope": "Independent hand derivations of the new general proofs and completeness arguments; exact verifiers are recorded separately.",
+  "results": [
+    {
+      "labels": [
+        "kb15:no-negative-low-wedge",
+        "kb15:no-K23"
+      ],
+      "checks": [
+        "Signed-divisor candidates follow from integer clutching without restrictions on center degrees.",
+        "Negative-branch bounds exclude every integer E in (-1,1/2).",
+        "The e=1 alternate divisor forces a node greater than six.",
+        "Three-core sign cycle and both constant/mixed assignments exhaust K2,3."
+      ],
+      "D_opposition_used": false
+    },
+    {
+      "labels": [
+        "dg15:hub-balance",
+        "dg15:no-diamond"
+      ],
+      "checks": [
+        "Summing the four low-edge D cancellations gives both ordered sums -4.",
+        "All common-low divisor alternatives preserve pair sums.",
+        "Opposite low-low orientations and equal L exhaust the balance condition.",
+        "All four switch types checked with physical indices.",
+        "L=1,3,4 cases and all terminal inequalities rederived.",
+        "The final (r,S,T)=(3,4,7) pair equation is k(11h+3)=h+1."
+      ],
+      "D_use": "Only the sum on four edges incident to the all-low hub is needed."
+    },
+    {
+      "labels": [
+        "tl15:one-high-full",
+        "tl15:low-D",
+        "tl15:leaf-test",
+        "tl15:crossed-pairing",
+        "tl15:remaining-positive"
+      ],
+      "checks": [
+        "Full one-high row/pair/column identities and q=3 label exchange checked.",
+        "Only positive cycle A-D has gain m/(m+1), so all cd=0 parameter choices admit positive weights.",
+        "Two low D values cannot be simultaneously negative, on either branch.",
+        "The non-crossed case split y>1,s>1 / s=1 / y=1 is exhaustive.",
+        "All large-reverse node signs and central shared-low assignments independently checked.",
+        "Finite leaf reconstruction includes every C/D choice and all free c/d entries; B is excluded by the explicit fixed negative-branch row condition.",
+        "Seven small negative cores are completely enumerated by the established factorization; 485 pairs are checked by exact integer arithmetic.",
+        "The surviving graph is still open: only crossed positive branch r<=4 or z=1 is asserted."
+      ]
+    },
+    {
+      "labels": [
+        "sf15:triangle-required",
+        "sf15:remaining-support"
+      ],
+      "checks": [
+        "Triangle-free cycle-containing graphs on at most five active vertices reduce to C4,C5,C4+leaf,K2,3.",
+        "Diamond removal leaves only K4 on four active vertices.",
+        "13/421 is a necessary support count, not a count of existing atlases."
+      ]
+    }
+  ],
+  "source_hashes": {
+    "one_high_and_crossed_pairing_v15.tex": "53d87e3f1723154016f10344747f583ed36ab5244fc655faa378c5e6a85a758a",
+    "two_leaves_negative_branch_v15.tex": "062f775c976f3ecc9706ef8898e7c17bd71c15e2ee06bdcf56bf9e839cf61a0a",
+    "diamond_obstruction_v15.tex": "288efafc9f18aa10697472304192c6fdb104bc88cb9e04a6300f3395cd204c81",
+    "quintic_support_frontier_v15.tex": "90a66904f6f2f8a9ccee7d5c1f57996e2aee96f774ef822018de7d6c8c6268c3",
+    "k23_obstruction_v15.tex": "af6f818c4d051de96f19077c9c0e563dcf9dee7969c7a6f28d3817a7376a5e41"
+  },
+  "editorial_note": "The public source changed only in filename wrapping after the last two-leaf hand audit; all resulting source hashes are regenerated in the exact certificates."
+}

@@ -1,0 +1,221 @@
+% v20. General three-high D sign problem: reduction to a nonsingular sector.
+% No search bound, parity hypothesis, clutching or node condition is used.
+\section{高係数の同時非負性に対する非特異領域への帰着}
+\label{hd20:section}
+
+三高分母の完全 matching 定理により，正の weights を持つ整数模型は
+\ref{sh14:matching-setup} の canonical 表示で尽くされる．
+この節では，三つの高係数が全て非負となる可能性を調べる．
+一般の非特異模型についての不存在は主張せず，
+その候補から全ての特異 Schur 系と二つの境界を除く．
+
+記号を
+\[
+ b=-\beta,\quad u=s+t-1,\quad
+ A=s\alpha-t,\quad B=-s-tb,\quad C=s+uk,
+ \qquad d=U+1-S-T=-D_0
+\]
+とする．$s,t,S,T,U$ は正整数，$k\ge0$ である．
+既知の $\beta=-1$ の境界定理を除いた範囲では $b\ge2$ であり，
+$A\ge1$，$C\ge2$ が成り立つ．三つの高係数は
+\begin{equation}\label{hd20:D}
+ D_a=sd+b-k-1,\qquad
+ D_b=td-\alpha+k,\qquad
+ D_c=\alpha-b+1-ud
+\end{equation}
+である．その和は $d$ である．
+
+\begin{theorem}[同時非負性が要求する非特異領域]
+\label{hd20:nonsingular}
+$q_0=1$，$q_a,q_b,q_c>1$ とし，整数 row sums，pair products，
+正の weights を満たす局所模型を考える．
+$D_a,D_b,D_c\ge0$ なら，canonical な向き $k\ge0$ において
+\[
+ b=-\beta\ge2,\qquad d\ge1,\qquad
+ \alpha\ge k\ge b+1
+\]
+であり，Schur 線形系の determinant は
+\begin{equation}\label{hd20:positive-det}
+ \Delta=C(A-B)+B(A+1)
+ \ge(-B)(-B-1)>0
+\end{equation}
+を満たす．従って，特異な Schur 線形系から三高係数が全て非負である
+整数模型が生じることはない．
+分母の上限，分母の奇数性，clutching，node 配分，対向 $D$ の相殺は仮定しない．
+\end{theorem}
+
+証明を，全係数零の排除と $k=b-1,b$ の境界の排除に分ける．
+境界では $d$ の整数性と $S\ge1$ を用いる．
+
+\subsection{全係数零の無上界排除}
+
+\begin{proposition}[三高模型の $D$ ベクトルは零ではない]
+\label{hd20:no-zero-D}
+上の局所模型において $(D_a,D_b,D_c,D_0)=(0,0,0,0)$ は起こらない．
+特に，$D_0=0$ なら三つの高係数には正のものと負のものがともに現れる．
+\end{proposition}
+
+\begin{proof}
+全係数が零であると仮定する．既知の $\beta=-1$ の境界では $D_0>0$ なので，
+$b\ge2$ である．$d=0$ を式~\eqref{hd20:D}へ代入すると
+\[
+ \alpha=k=b-1
+\]
+となる．以下
+\[
+ m=b^2-b+1,\qquad
+ K=s^2+st+t^2-s-t,\qquad
+ r=(-s,-t,u)^{\mathsf T},\quad x=(-S,-T,U)^{\mathsf T}
+\]
+と置く．$m$ は三以上の奇整数，$K\ge1$ である．
+このとき三次 Schur 補行列は
+\[
+ B_0=\begin{pmatrix}
+ 1&b-1&-b\\
+ -b&1&b-1\\
+ b-1&-b&1
+ \end{pmatrix},\qquad
+ B_0\mathbf1=B_0^{\mathsf T}\mathbf1=0
+\]
+である．ここで $B_0$ は三次行列を，$B=-s-tb$ は線形系の scalar を表す．
+
+線形系~\eqref{sh14:matching-linear} の determinant を展開すると
+\[
+ \Delta=mK>0
+\]
+となる．$N_S,N_T,N_U$ をそれぞれ $S,T,U$ の Cramer 分子とすると，
+直接の多項式恒等式により
+\begin{align}
+ N_S&=(m-1)\bigl(ms+(B_0r)_a\bigr),\notag\\
+ N_T&=(m-1)\bigl(mt+(B_0r)_b\bigr),\notag\\
+ N_U&=(m-1)\bigl(mu-(B_0r)_c\bigr),\label{hd20:zero-cramer}\\
+ N_U+\Delta-N_S-N_T&=m\bigl(K-(m-1)\bigr).\notag
+\end{align}
+$U+1-S-T=d=0$ なので最後の式から $K=m-1$ が従う．
+残る三式は
+\begin{equation}\label{hd20:zero-rotation}
+ x=r-\frac1m B_0r
+\end{equation}
+と書ける．$r,x$ が整数ベクトルであることから，各成分について $m\mid B_0r$ となる．
+
+一方，$J$ を全成分が一の三次行列とすると，直接計算により
+\[
+ B_0^{\mathsf T}B_0=m(3I-J),\qquad
+ \mathbf1^{\mathsf T}r=-1,\qquad
+ \lVert r\rVert^2=2K+1=2m-1
+\]
+である．従って
+\[
+ \lVert B_0r\rVert^2
+ =m\bigl(3\lVert r\rVert^2-1\bigr)=m(6m-4).
+\]
+左辺は $m^2$ で割り切れるので，$m\mid4$ である．
+これは $m\ge3$ が奇整数であることに反する．
+最後の主張は $D_a+D_b+D_c=-D_0=0$ と，三つが同時に零とはならないことから従う．
+\end{proof}
+
+\subsection{二つの境界の排除}
+
+\begin{lemma}[境界からの同時非負性は生じない]
+\label{hd20:k-boundary}
+$b\ge2$，$k=b-1$ の canonical 整数模型において
+$D_a,D_b,D_c\ge0$ は起こらない．
+\end{lemma}
+
+\begin{proof}
+非負性と前命題から $d\ge1$ である．$k=b-1$ なら $D_a=sd$ なので，
+$D_a\le d$ と $s\ge1$ によって $s=1$ が従う．このとき $u=t$ であり，
+Schur 線形系~\eqref{sh14:matching-linear} の第三式は
+\[
+ t(b-1)T-tbU=b(b-1)>0
+\]
+となる．ところが $U=S+T+d-1\ge S+T>T$ なので左辺は負となり，矛盾する．
+\end{proof}
+
+\begin{lemma}[隣接する境界の排除]
+\label{hd20:k-next-boundary}
+$b\ge2$，$k=b$ の canonical 整数模型においても
+$D_a,D_b,D_c\ge0$ は起こらない．
+\end{lemma}
+
+\begin{proof}
+前命題により $d\ge1$ である．$D_a=sd-1\le d$ なので
+$(s-1)d\le1$ であり，$s=1$ または $(s,d)=(2,1)$ に限られる．
+$s=1$ なら線形系の第三式は
+\[
+ tb(T-U)=b^2-1>0
+\]
+となるが，やはり $U\ge S+T>T$ なので矛盾する．
+
+$(s,d)=(2,1)$ の場合は $D_a=1,D_b=D_c=0$ であり，
+$\alpha=b+t$，$U=S+T$ となる．線形系の第一式と第三式は，それぞれ
+\[
+ -(2+tb)S+(2b+t)T=b(b+t),
+ \qquad bT-(1+tb)S=b^2-1
+\]
+である．第一式の $b$ 倍から第三式の $(2b+t)$ 倍を引くと
+\[
+ t(1+b^2+tb)S=t+2b-b^3<t
+\]
+を得る．$b\ge2,t\ge1$ なので，これは正整数 $S\ge1$ に反する．
+両境界の証明に determinant による除算はなく，特異系を落としていない．
+\end{proof}
+
+\begin{proof}[定理~\ref{hd20:nonsingular}の証明]
+$\beta=-1$ の境界は既知の定理で除かれるので，$b\ge2$ としてよい．
+非負性と命題~\ref{hd20:no-zero-D}から $d\ge1$ である．
+さらに $0\le D_a\le d$ より
+\[
+ (s-1)d+b-1\le k\le sd+b-1.
+\]
+特に $k\ge b-1$ である．補題~\ref{hd20:k-boundary}と
+補題~\ref{hd20:k-next-boundary}によって $k=b-1,b$ は起こらず，
+整数性から $k\ge b+1$ を得る．また $D_c\ge0$ から
+$\alpha\ge ud+b-1$ なので
+\[
+ \alpha-k\ge(u-s)d=(t-1)d\ge0.
+\]
+$\bar b=-B=s+tb$ と置くと
+\[
+ C-\bar b=(s-1)b+u(k-b)\ge0.
+\]
+従って determinant の恒等式
+\[
+ \Delta=\bar b(\bar b-1)+(C-\bar b)(A+\bar b)
+\]
+から式~\eqref{hd20:positive-det}が従う．$\bar b\ge3$ なので右辺は狭義正である．
+\end{proof}
+
+\begin{remark}[残る非特異領域の量化]
+\label{hd20:remaining}
+本定理は全ての特異 Schur 系を，高係数の同時非負性という問題から除くものである．
+特異な正整数局所模型自体の不存在を意味しない．
+定理~\ref{sh14:singular-family}の無限族はそのまま存在し，
+少なくとも一つの高係数が負となる．
+また $\Delta>0$ の領域では一般の同時非負性は未解決である．
+Cramer 分子の整除性，$S,T,U$ の正整数性，canonical entries の正値性を
+引き続き確認する必要がある．
+\end{remark}
+
+\begin{example}[残る領域には正整数局所模型がある]
+\label{hd20:remaining-example}
+$(s,t,\alpha,\beta,k)=(1,2,10,-2,5)$，$(S,T,U)=(4,5,11)$ は
+\[
+ q=(5,11,23,1),\qquad
+ P=\begin{pmatrix}
+ 0&18&-19&-4\\
+ 3&0&-9&-5\\
+ -6&-28&0&11\\
+ -1&-2&2&0
+ \end{pmatrix},\qquad
+ D=(-1,1,3,-3)
+\]
+を与える．正の weights は $(5,109/6,45/22,1)$ と取れる．
+この例は $k\ge b+1$ や $\Delta>0$ だけを理由に局所模型を除外できないことを示す．
+三つの高係数の一つは負であり，同時非負性の反例ではない．
+\end{example}
+
+本節の Cramer 恒等式と norm 恒等式は，
+\texttt{verify\_high\_d\_boundary\_v20.py} により
+多変数整数・有理係数多項式として確認する．
+有限範囲の代入から一般定理を推論していない．

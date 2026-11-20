@@ -1,0 +1,266 @@
+% v8: atlas definitions and branch-transition audit.
+% Independent source.  No v7 file is changed.
+% New bibliography keys: ShawSurfaces, JellRauShaw, LRSChern, CartwrightComplexes.
+% Existing keys: EM, VuNgoc.  Existing labels: per:chart-definition,
+% per:k4-realization, per:branch-duality.
+
+\section{作用適合 atlas と分岐辺での整数アフィン延長}
+\label{atl:section}
+
+一つの cone chart と，複数の chart の tropical compatibility を区別する必要がある．
+定義\ref{per:chart-definition}の同相写像は，標準 fan の整数アフィン関数の層を
+引き戻すことにより，その定義域に局所的な matroidal 構造を与える．
+従って，既に得た一 core の局所存在を変更する必要はない．
+ただし，各 face 上の格子同型と branch の saturation だけでは，
+異なる chart の間の transition が tropical isomorphism であることは従わない．
+
+\subsection{atlas の定義と一つの欠陥整数}
+
+本節で integer affine map とは，整数行列を線形部分に持ち，
+translation は実数でよい affine map をいう．
+Shaw\cite[Definition~3.1]{ShawSurfaces}，
+Jell--Rau--Shaw\cite[Definitions~2.1, 5.1]{JellRauShaw}，
+L\'opez de Medrano--Rinc\'on--Shaw\cite[Definitions~2.2--2.3]{LRSChern}
+の chart transitions は，ambient integer affine maps の制限である．
+各 face ごとに異なる affine map を選ぶだけでは，この条件を満たさない．
+
+\begin{definition}[focus 特異点を許す作用適合 matroidal atlas]
+\label{atl:definition}
+$B$ を本稿の底空間，$\Delta_{\mathrm{ff}}$ を正則 faces の内部にある有限個の
+focus--focus values とする．$B\setminus\Delta_{\mathrm{ff}}$ 上の
+\emph{作用適合 matroidal atlas}とは，二次元 matroidal fans の開集合への
+stratum-preserving homeomorphisms からなる atlas で，次を満たすものである．
+各 transition とその逆は，局所的に ambient integer affine map の制限である．
+各正則 face の整数余接線格子は，Lagrangian fibration の作用一形式が定める格子と一致する．
+各 focus point の punctured neighborhood では，実際の focus--focus fibration の
+作用アフィン構造を用いる．
+\end{definition}
+
+この定義は，focus point 自体に通常の matroidal chart があるとは要求しない．
+また，punctured space に対する finite-type compactification の条件を追加していない．
+その種の大域条件を要求する文献の定義を使う場合には，別途その仮定を確認する．
+整数アフィン関数の層を用いれば，transition 条件は，各 chart が引き戻す層
+$\operatorname{Aff}_{\ZZ}$ が overlap 上で一致することと言い換えられる
+\cite[Definition~3.1]{JellRauShaw}．
+
+三価 branch の最小 ambient lattice は rank three である．
+その primitive tangent を $v$，三つの outward transverse lifts を $u_1,u_2,u_3$ とし，
+\begin{equation}\label{atl:branch-relation}
+ N=\ZZ v\oplus\ZZ u_1\oplus\ZZ u_2,
+ \qquad u_1+u_2+u_3=\kappa v
+\end{equation}
+と書く．例えば product model $\RR\times\operatorname{Trop}(\text{line})$ では
+$\kappa=0$ とできる．$K_4$ fan の ray $r_i$ で，残りの三本の rays を lifts に取ると
+$\kappa=-1$ である．target 側にも $(v',u'_1,u'_2,u'_3,\kappa')$ を取る．
+
+\begin{lemma}[三価 branch の延長条件]
+\label{atl:branch-extension}
+branch germs の同相写像 $G$ が，各 incident sheet 上で integer affine isomorphism であり，
+branch tangent lattices を同型に写すとする．原点を branch 上の対応する点に移し，
+sheet の対応を置換 $\sigma$ で表すと，その線形部分は
+\begin{equation}\label{atl:sheet-linear}
+ v\longmapsto\varepsilon v',\qquad
+ u_a\longmapsto u'_{\sigma(a)}+c_a v',
+ \qquad \varepsilon\in\{1,-1\},\quad c_a\in\ZZ
+\end{equation}
+となる．$G$ が一つの ambient affine lattice isomorphism の制限となるための
+必要十分条件は
+\begin{equation}\label{atl:defect-zero}
+ c_1+c_2+c_3=\varepsilon\kappa-\kappa'
+\end{equation}
+である．その延長は一意であり，線形部分は $\operatorname{GL}(3,\ZZ)$ に属する．
+\end{lemma}
+
+\begin{proof}
+branch lattice の primitive generator は $\pm v'$ に写る．
+各 sheet の格子を branch lattice で割ると rank-one lattice となる．
+outward half-plane を outward half-plane へ写す unimodular map は，
+その正の primitive generator を正の primitive generator に写すので，
+\eqref{atl:sheet-linear}を得る．三 sheet の translations は branch 上で一致し，
+基点を移せば一つの translation を除去できる．
+
+三本の $u_a$ の像の和は $(\kappa'+\sum_a c_a)v'$ であり，
+source の relation の像は $\varepsilon\kappa v'$ である．
+従って\eqref{atl:defect-zero}が必要である．逆にこの式が成り立てば，
+$(v,u_1,u_2)$ の像を指定する線形写像は $u_3$ 上でも所定の写像となる．
+$(v',u'_{\sigma(1)},u'_{\sigma(2)})$ も整数基底であるから，
+この写像の determinant は符号を除いて一である．
+star は ambient space を張るので延長は一意である．
+\end{proof}
+
+\begin{example}[facewise unimodularity だけでは十分でない]
+\label{atl:counterexample}
+$v=e_0$，$u_1=e_1$，$u_2=e_2$，$u_3=-e_1-e_2$ とする．
+第1 sheet のみで
+\[
+ xv+tu_1\longmapsto(x+t)v+tu_1\qquad(t\geq0)
+\]
+とし，第2・第3 sheet では恒等写像とする．
+これは branch を点ごとに固定する同相写像で，全 sheet で unimodular であり，
+branch lattices も飽和する．しかし $\sum_a c_a=1$ なので
+ambient integer affine extension は存在しない．
+これは二つの局所 chart の非適合性の例であり，一つの chart が
+matroidal 構造を引き戻せないという意味ではない．
+\end{example}
+
+\subsection{共通の Hamiltonian による十分条件}
+
+\begin{proposition}[共通 circle action による延長]
+\label{atl:common-hamiltonian}
+補題\ref{atl:branch-extension}の状況で，branch の近傍に連続関数 $h$ があり，
+source と target の両 chart において，$h$ が一つの ambient affine function の
+pullback として表されるとする．$h$ の branch tangent に沿う勾配が非零ならば，
+$G$ は ambient affine lattice isomorphism へ一意に延長する．
+特に，$h$ を両側で同じ共通 Hamiltonian circle の作用積分として取れればよい．
+二つの primitive の違いによる定数の差は許す．
+\end{proposition}
+
+\begin{proof}
+基点と定数項を除き，$h$ の source と target における線形部分を
+$\ell$，$\ell'$ と書く．各 sheet で $\ell=\ell'\circ G$ が成り立つ．
+三つの transverse lifts についてこの式を足すと
+\[
+ \kappa\ell(v)
+ =\sum_a\ell(u_a)
+ =\ell'\left(\sum_a u'_{\sigma(a)}+\sum_a c_a v'\right)
+ =(\kappa'+\sum_a c_a)\ell'(v').
+\]
+一方 $\ell(v)=\varepsilon\ell'(v')$ であり，$\ell'(v')\ne0$ である．
+従って\eqref{atl:defect-zero}を得る．補題\ref{atl:branch-extension}を適用する．
+\end{proof}
+
+ここで必要なのは，共通 circle の一つの Hamiltonian の ambient-affine 性である．
+block 全体の $H_1$ のすべての元に ambient affine function を割り当てる条件ではない．
+$K_4$ chart では\eqref{per:k4-lattice-map}の $\Phi(\mu_i)$ がこの関数を与える．
+Petersen chart でも，補題\ref{per:branch-duality}の
+$\alpha\mapsto(-1,0,0)$ が各 branch でこの条件を満たす．
+
+\begin{lemma}[denominator one の branch chart]
+\label{atl:qone-chart}
+三価 branch block の共通 circle action を $h$ とする．
+各 sheet に作用座標 $(h,J_a)$ があり，branch へ連続に延長すると仮定する．
+critical action curves が
+\[
+ J_a=m_a h+b_a,\qquad m_a\in\ZZ,\quad b_a\in\RR
+\]
+という直線であり，その両側の regular sheets で
+$\bigl(h,\delta_a(J_a-m_a h-b_a)\bigr)$ が branch までの half-plane の
+局所同相座標となるとする．ここで $\delta_a=\pm1$ は outward direction を選ぶ符号である．
+このとき，共通 Hamiltonian $h$ が ambient-affine となる作用適合 branch chart が存在する．
+\end{lemma}
+
+\begin{proof}
+$\kappa=0$ の標準 star を取り，各 sheet 上で
+\[
+ F_a=h v+\delta_a(J_a-m_a h-b_a)u_a
+\]
+と定める．各 face map の作用座標に関する determinant は $\delta_a$ であり，
+branch ではすべて $F_a=hv$ に一致する．仮定した half-plane 座標により
+貼り合わせた $F$ は star の開近傍への同相写像である．
+$h$ は $v$ に一，$u_1,u_2$ に零を与える一つの整数線形形式の pullback である．
+\end{proof}
+
+simple saddle からの通常の action coordinates では，最後の half-plane 条件は
+transverse action の連続性と strict monotonicity によって確認できる．
+これに対し，critical action curve の直線性は，Lagrangian 葉層の補間からは従わない．
+その条件は実際の parametric area calculation で証明する必要がある．
+
+\subsection{大域貼り合わせの条件と scope}
+
+\begin{proposition}[局所作用座標から atlas への貼り合わせ]
+\label{atl:gluing-criterion}
+$B\setminus\Delta_{\mathrm{ff}}$ を，既に構成された一 core の matroidal charts，
+三価 branch charts，および正則 face の action charts で覆う．
+core charts の core points を含む部分は互いに交わらないように縮めてよい．
+次を仮定する．
+各 chart は同じ actual fibration の正則 face の作用格子に適合する．
+branch に交わる任意の overlap で，その共通 circle action の作用積分は，
+両 chart で一つの ambient affine function として表され，branch 上で非定数である．
+このとき，これらの charts は定義\ref{atl:definition}の作用適合 matroidal atlas を与える．
+\end{proposition}
+
+\begin{proof}
+正則 face 内の overlap では，二組の作用座標は整数基底の変換と実数 translation で異なる．
+face lattice は ambient lattice の飽和部分格子なので，必要なら整数補空間を選ぶことにより，
+この rank-two affine map は ambient integer affine map として表せる．
+branch を含む overlap では命題\ref{atl:common-hamiltonian}を用いる．
+branch の rank-three span がより大きな core ambient lattice に飽和して入っている場合も，
+整数補空間を選べば同じ結論を得る．
+最後に transition は実際の chart maps の合成 $F_b\circ F_a^{-1}$ なので，
+triple overlap 上の cocycle identity は写像として自動的に成立する．
+\end{proof}
+
+cocycle identity が要求されるのは実際の overlap 上である．
+overlap が一つの二次元 face にのみ含まれる場合，ambient rank-three space 全体で
+選んだ延長行列の積まで恒等になる必要はない．
+そのような延長は face の外では一意ではないからである．
+これに対し，branch star を含む overlap では ambient span が rank three なので，
+補題\ref{atl:branch-extension}の一意性も使える．
+
+Evans--Mauri\cite[Remark~2.7, Lemma~3.1 and \S3.1]{EM}は，正則部の
+作用アフィン構造と，四直線補集合から tetrahedral-link cone への
+Lagrangian fibration を与える．同論文の Proposition~6.13 と Theorem~6.15 の
+大域 monodromy 比較は，Assumption~6.6 の log Calabi--Yau 条件を持つ
+one-dimensional strata の toric neighborhoods に対する結果である．
+三 punctures を持つ line と branch sheets を含む本節の貼り合わせを，
+その定理から直接結論することはできない．
+
+Cartwright の tropical complex は，dual complex に intersection-number data
+$\alpha(v,e)$ を加え，codimension-one star 上の線形関数を別途指定する構造である
+\cite[Definitions~2.5, 2.8; Construction~3.2]{CartwrightComplexes}．
+その sheaf の指定は，本節で facewise affine maps と ambient affine maps を
+区別する必要性とよく対応する．ただし，tropical complex の存在だけでは，
+matroidal smoothness や本稿の actual action periods との一致は従わない．
+特異 affine 構造の置かれる場所が異なり得る点についても，
+同論文 Remark~3.4 が Gross--Siebert 型構造との違いを明示している．
+
+本稿の ordered small resolution では，この違いを intersection matrix から
+直接確認できる．次の命題は作用 atlas の不存在を述べるものではない．
+
+\begin{proposition}[ordered degeneration の weak tropical complex]
+\label{atl:cartwright-distinction}
+次数分割 $d=e_1+\cdots+e_k$ の ordered small resolution から得る
+Cartwright の weak tropical complex は，最初の component $D_1$ において
+tropical complex の local intersection condition を満たさない．
+具体的に，$\mathbf e=(e_2,\ldots,e_k)^{\mathsf T}$ と書くと，その local matrix は
+\begin{equation}\label{atl:negative-cartwright}
+ Q_1=e_1\left(\mathbf e\mathbf e^{\mathsf T}
+                  -d\,\operatorname{diag}(e_2,\ldots,e_k)\right)
+\end{equation}
+であり，負定値である．全平面分割では $Q_1=J_{d-1}-dI_{d-1}$ となる．
+\end{proposition}
+
+\begin{proof}
+$D_1$ 上の boundary curves は
+$C_{1j}=e_jH_1-\sum_{p=1}^{d e_1e_j}E_{1j,p}$ である．
+従って
+\[
+ C_{1j}^2=e_1e_j(e_j-d),\qquad
+ C_{1j}\cdot C_{1l}=e_1e_je_l\quad(j\ne l),
+\]
+すなわち\eqref{atl:negative-cartwright}を得る．
+Cartwright の convention では $\alpha(v,e)$ は，$e$ の反対側の
+surface 内の double curve の自己交点の負である
+\cite[Lemma~2.2]{CartwrightComplexes}．
+従って，Definition~2.8 の $D_1$ における local intersection matrix は正確に $Q_1$ である．
+任意の非零 $z=(z_2,\ldots,z_k)$ に対し，weighted Cauchy--Schwarz inequality より
+\[
+ \frac1{e_1}z^{\mathsf T}Q_1z
+ =\left(\sum_{j=2}^ke_jz_j\right)^2-d\sum_{j=2}^ke_jz_j^2
+ \leq-e_1\sum_{j=2}^ke_jz_j^2<0.
+\]
+local matrix に正の固有値がちょうど一つあるという条件に反する．
+全平面分割では固有値は $-1$ と，重複度 $d-2$ の $-d$ である．
+\end{proof}
+
+したがって，本稿で考える matroidal action atlas を，元の semistable dual complex に
+Cartwright の intersection data を付けただけの構造と同一視してはならない．
+node neighborhoods を別の strata として残すことや，作用周期から chart を構成することは，
+この比較においても実質的な追加データである．
+
+最後に，simple focus--focus point の周りの作用格子は
+$\left(\begin{smallmatrix}1&1\\0&1\end{smallmatrix}\right)$ と共役な非自明 monodromy を持つ
+\cite[Remark~3.1]{VuNgoc}．その点が位相的に face の内部にある以上，
+そこに通常の smooth matroidal chart を延長すれば局所モデルは $\RR^2$ となり，
+punctured disk の monodromy は自明になるはずである．従って，
+focus points の除外または明示的な affine singularities の許容は不可欠である．

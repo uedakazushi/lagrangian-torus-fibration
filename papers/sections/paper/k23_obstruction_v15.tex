@@ -1,0 +1,183 @@
+% v15: a negative two-high branch cannot face a low edge; K_{2,3} follows.
+% No denominator cutoff, oddness argument, or opposing-D cancellation is used.
+\section{低辺を挟む二高分母の障害と \texorpdfstring{$K_{2,3}$}{K2,3} の排除}
+\label{kb15:section}
+
+二高分母 core の二つの高分母近傍が互いに低辺で結ばれるとき，
+その低辺の一つの node 条件が，元の core の負の補助変数の枝を排除する．
+この局所的な障害では，二つの近傍 core の高分母次数を制限しない．
+その結果，三つの二価 core を持つ $K_{2,3}$ support を排除できる．
+
+\begin{lemma}[二つの高分母近傍の間が低辺である場合]
+\label{kb15:no-negative-low-wedge}
+五次の標準 $K_5$ branch graph 上で，正の局所整数 charts，marked puncture の
+整数 clutching，および node 数の非負性を仮定する．
+高分母 support の二価頂点 $i$ の高分母近傍を $j,k$ とし，
+$q_{jk}=1$ と仮定する．このとき core $i$ の二高分母標準形は正の枝に属する．
+すなわち，canonical な記号では
+\[
+ S>r,\qquad rT>(r+1)S,\qquad T-S+1\geq3
+\]
+であり，負の枝 $S=T<r$ は不可能である．
+この結論に対向 $D$ の相殺と分母の数値上限は不要であり，
+core $j,k$ の高分母次数にも仮定を置かない．
+\end{lemma}
+
+\begin{proof}
+補題~\ref{ml12:dichotomy} の負の枝が存在すると仮定する．
+core $i$ の canonical 高 rays を $A=j,B=k$ とし，
+その分母を $a=q_{ij}>1,b=q_{ik}>1$ と書く．負の枝の表示を
+\[
+ S=T=w,\quad H=r-w>0,\quad
+ \alpha=x-s=-c<0,\quad \beta=y-z=-e<0
+\]
+とする．ここで $r,s,z,w,x,y,c,e$ は正整数で，
+\[
+ a=sw+1,\quad b=zw+1,\quad
+ x=\frac{sw}{r},\quad y=\frac{zw}{r+1},\quad
+ c=\frac{sH}{r},\quad e=\frac{z(H+1)}{r+1}.
+\]
+負の枝の pair-product 式~\eqref{ml12:E-equation} は
+\begin{equation}\label{kb15:E}
+ Ece=e-c+1,\qquad E=1-\frac{w^2}{H(H+1)}
+\end{equation}
+である．まず，この式から
+\begin{equation}\label{kb15:E-bounds}
+ c\geq2,\qquad -1<E<\frac12,\qquad E\ne0,\qquad w\geq2
+\end{equation}
+を得る．実際，$c=1$ なら $E=1$ となって不可能である．
+$E\leq-1$ なら $c(1+Ee)=e+1$ の左辺が非正となる．
+$E>0$ の場合には $Ec=1-(c-1)/e<1$ なので $E<1/2$ であり，
+$E\leq0$ の場合にも同じ上界は自明である．
+$H^2<H(H+1)<(H+1)^2$ より $H(H+1)$ は平方数でなく，$E=0$ はない．
+最後に $w=1$ なら $E\geq1/2$ となるので，$w\geq2$ である．
+
+高辺 $ij,ik$ を，それぞれ puncture $k,j$ で比較する．
+\[
+ X=p^j_{ik},\qquad Y=p^k_{ij}
+\]
+と置くと，core $i$ での高高 entries は
+$p^i_{jk}=-(a-c)$，$p^i_{kj}=-(b+e)$ なので，整数 clutching は
+\begin{equation}\label{kb15:clutching-residues}
+ X\equiv-c\pmod a,\qquad Y\equiv e\pmod b
+\end{equation}
+を要求する．一方，$q_{jk}=1$ により，core $j,k$ の pair equations は
+\[
+ Xp^j_{ki}=a-1,\qquad Yp^k_{ji}=b-1
+\]
+となる．従って $X,Y$ はそれぞれ $a-1,b-1$ の非零 signed divisors であり，
+$1\leq|X|\leq a-1$，$1\leq|Y|\leq b-1$ である．
+$c=s-x\leq s-1\leq a-2$，$e=z-y\leq z-1\leq b-2$ と合わせると，
+合同式~\eqref{kb15:clutching-residues} の全ての候補は
+\begin{equation}\label{kb15:two-representatives}
+ X\in\{-c,a-c\},\qquad Y\in\{e,e-b\}
+\end{equation}
+で尽くされる．
+
+正の候補 $a-c$ は
+\[
+ a-c=s(w-1)+x+1>\frac{a-1}{2},\qquad a-c<a-1
+\]
+を満たす．後者には $c\geq2$ を用いた．正整数の真約数はその半分以下なので，
+$a-c$ は $a-1$ を割らず，$X=-c$ に限られる．
+同様に，$e\geq2$ なら
+\[
+ b-e=z(w-1)+y+1>\frac{b-1}{2},\qquad b-e<b-1
+\]
+となり，$Y=e-b$ は不可能である．
+
+まず $Y=e$ の場合を考える．$e=1$ でもこの場合は含まれる．
+二つの逆向き entries は整数だが，その和は
+\begin{align}
+ p^j_{ki}+p^k_{ji}
+ &= -\frac{a-1}{c}+\frac{b-1}{e}
+ =-\frac{rw}{H}+\frac{(r+1)w}{H+1}\notag\\
+ &=-\frac{w^2}{H(H+1)}=E-1.
+ \label{kb15:reverse-sum}
+\end{align}
+従って $E$ は整数でなければならないが，式~\eqref{kb15:E-bounds} に反する．
+
+残るのは $e=1$，$Y=1-b$ だけである．このとき $p^k_{ji}=-1$ であり，
+低辺 $jk$ の puncture $i$ における node 数は
+\begin{equation}\label{kb15:exceptional-node}
+ n_{jk;i}=1-p^j_{ki}-p^k_{ji}
+ =2+\frac{rw}{H}.
+\end{equation}
+式~\eqref{kb15:E} は $E=2/c-1$ を与える．$c\geq2$ であり，
+$c=2$ は $E=0$ となって不可能なので，$E<0$ である．
+従って $w^2>H(H+1)>H^2$，すなわち $w>H$ となる．ゆえに
+\[
+ \frac{rw}{H}=w+\frac{w^2}{H}>2w\geq4,
+ \qquad n_{jk;i}>6.
+\]
+辺 $jk$ の三つの node 数の和は，その両端の row sums が $-1$ であることから五である．
+全て非負なら各 node 数は五以下なので，これは矛盾である．
+これで負の枝を全て排除した．正の枝の残りの不等式は
+補題~\ref{ml12:dichotomy} の二分から従う．
+\end{proof}
+
+\begin{corollary}[負の枝は高分母三角形に属する]
+\label{kb15:negative-closes-triangle}
+前補題の大域仮定の下で，二価 core の標準形が負の枝に属するなら，
+その二つの高分母近傍を結ぶ辺も高分母である．従って，その core は
+高分母 support の三角形に属する．
+\end{corollary}
+
+\begin{proof}
+近傍間の分母が一である場合は前補題で排除されたので，一より大きい．
+\end{proof}
+
+この証明で core $j,k$ に使ったのは，整数 pair equations，整数 clutching，
+および低辺 $jk$ の node 非負性と row sums である．
+高分母次数三の標準形や，特定の一高分母・全低分母 core の分類は用いていない．
+従って，分母三に伴う低 core の追加の自由度を捨てる議論にも依存しない．
+
+\begin{theorem}[\texorpdfstring{$K_{2,3}$}{K2,3} 高分母 support の不存在]
+\label{kb15:no-K23}
+五次の標準 $K_5$ branch graph 上で，正の局所整数 charts，marked puncture の
+整数 clutching，および node 数の非負性を仮定する．
+高分母 support が $K_{2,3}$ となることはない．
+この結論に対向 $D$ の相殺と分母の数値上限は不要である．
+\end{theorem}
+
+\begin{proof}
+三価頂点を $a,b$，二価頂点を $i\in\mathbb Z/3$ とする．$q_{ab}=1$ なので，
+補題~\ref{kb15:no-negative-low-wedge} により三つの二価 core は全て正の枝に属する．
+各 core の canonical data を $r_i,S_i,T_i$ と書き，$L_i=T_i-S_i+1$ とすると
+\begin{equation}\label{kb15:positive-bounds}
+ S_i\geq r_i+1,\qquad T_i\geq r_i+3,\qquad L_i\geq3.
+\end{equation}
+第二式は $r_iT_i>(r_i+1)S_i\geq(r_i+1)^2$ から従う．
+
+二価 core $i$ の二つの低 rays のうち，高 ray $a$ へ正の逆向き entry を持つ方へ
+矢印を向ける．互いに相手へ矢印を向ける二頂点 $i,j$ があれば，
+低辺 $ij$ の puncture $a$ で
+$n_{ij;a}=1-p^i_{ja}-p^j_{ia}\leq-1$ となるため不可能である．
+三頂点の各 outdegree は一なので，矢印は directed three-cycle をなす．
+その向きに合わせて $i\to i+1$ と標識する．
+
+canonical 高 ray $A$ が $a$ に対応するときを $\sigma_i=+$，
+$b$ に対応するときを $\sigma_i=-$ とする．
+低 rays 間の entries は，$\sigma_i=+$ なら
+\[
+ (p^i_{i+1,i-1},p^i_{i-1,i+1})=(0,-L_i),
+\]
+$\sigma_i=-$ なら $(-L_i,0)$ である．
+もし $\sigma_i$ が一定でなければ，ある cyclic な隣接対 $i,j=i+1$ で
+$(\sigma_i,\sigma_j)=(-,+)$ となる．残る二価頂点を $k$ とすると
+\[
+ n_{ij;k}=1+L_i+L_j\geq7
+\]
+となり，その低辺の node 全数五と非負性に反する．従って $\sigma_i$ は一定である．
+
+全て $\sigma_i=+$ の場合，低辺 $i,i+1$ の puncture $b$ の node 数は
+$2+r_i-T_{i+1}$ である．三辺で足すと
+\[
+ \sum_i n_{i,i+1;b}=6+\sum_i(r_i-T_i)\leq-3
+\]
+となり，非負性に反する．全て $\sigma_i=-$ の場合にも，puncture $a$ の node 数を足すと
+同じ矛盾を得る．従って全ての場合が排除された．
+\end{proof}
+
+三つの二価 core の間の低辺だけを課した必要条件系は，中心間の低辺を含まない．
+本節の障害は，中心間の低辺と，そこへ到達する高辺の整数 clutching を用いる．

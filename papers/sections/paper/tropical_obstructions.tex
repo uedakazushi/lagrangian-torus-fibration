@@ -1,0 +1,568 @@
+\section{三価リンクを持つ matroidal 曲面の分類}
+\label{trop:classification-section}
+
+底空間の core を smooth tropical surface の点とみなせるかどうかには，
+integral affine 構造を考える前から位相的な制約がある．
+本節では二次元 matroidal fan の三価リンクを分類し，この制約を次数別に決定する．
+特に，Petersen グラフが現れることの意味は，六次に特有の局所的な可能性として説明できる．
+
+loopless matroid $M$ の Bergman fan を，対角方向を除いた convention
+\[
+ \mathcal B(M)\subset N_{M,\RR},\qquad
+ N_M=\ZZ^{E(M)}/\ZZ(1,\ldots,1)
+\]
+で用いる．その次元は $\operatorname{rk}M-1$ である．
+matroidal fan とその積を局所モデルにする意味での smooth tropical charts は
+\cite[\S2.4]{Shaw} を参照されたい．
+ここでいうリンクの同型型は，二価頂点の挿入・除去を許すグラフの位相型である．
+従って，異なる fan subdivisions によって答えは変わらない．
+
+\begin{theorem}[二次元 matroidal fan の三価リンク]
+\label{trop:cubic-classification}
+$M$ を loopless rank-three matroid とし，$\mathcal B(M)$ の原点のリンクに
+一価または四価以上の点がないとする．parallel elements を簡約した後に $M$ が連結なら，
+そのリンクと matroid は次の四つに限る．
+\[
+\begin{array}{c|c|c|c|c}
+ |E(M)|&M&\text{三点 rank-two flats の数}&\text{リンク}&b_1\\\hline
+ 4&U_{3,4}&0&K_4&3\\
+ 5&M(K_4-e)&2&K_{3,3}&4\\
+ 6&M(K_4)&4&\text{Petersen}&6\\
+ 7&F_7&7&\text{Heawood}&8
+\end{array}
+\]
+ここで $F_7$ は Fano matroid である．簡約後の ground set にラベルを付けたときの
+各行の matroid の個数は，順に $1,15,30,30$ である．
+
+非連結 matroids と Euclidean factors も許した任意の二次元 matroidal local model では，
+上の四つに加えて円周と theta graph が現れる．特に，三価の分岐しか持たないリンクでは
+\begin{equation}\label{trop:genus-bound}
+ b_1\leq8
+\end{equation}
+である．この結論に matroid の体上での realizability は必要ない．
+\end{theorem}
+
+\begin{proof}
+parallel elements $a,b$ は二点 circuit をなすので，Bergman 条件は $x_a=x_b$ を強制する．
+各 parallel class から一元を選ぶ簡約は，支持集合の線形同相を誘導する．
+従ってまず simple connected rank-three matroid に帰着する．
+
+この場合，minimal nested set complex の頂点は，個々の元 $i$ と，
+$|F|\geq3$ の rank-two flats $F$ である．辺は
+\[
+ i\text{---}F\quad(i\in F),\qquad
+ i\text{---}j\quad\bigl(\operatorname{cl}\{i,j\}=\{i,j\}\bigr)
+\]
+である．これは，rank-two restriction が連結であるのが $|F|\geq3$ の場合であり，
+二つの異なる rank-two flats の join が連結な全体 $E(M)$ になることから従う．
+Feichtner--Sturmfels の triangulation theorem により，このグラフは Bergman link と
+同じ位相型を持つ\cite[Theorem 4.1]{FeichtnerSturmfels}．
+
+$F$ に対応する頂点の次数は $|F|$ である．従って，全ての rank-two flats は
+二点または三点からなる．$n=|E(M)|$ とし，$i$ を通る三点 flats の数を $t_i$，
+二点 flats の数を $s_i$ とすると
+\begin{equation}\label{trop:point-count}
+ 2t_i+s_i=n-1,\qquad \deg(i)=t_i+s_i.
+\end{equation}
+異なる flats は $i$ 以外に共通点を持たないため，最初の式は各 $j\ne i$ を一回ずつ数える．
+次数二は単なる細分点であり，それ以外の点は三価でなければならない．従って
+\[
+ n-1=2t_i+s_i\leq2(t_i+s_i)\leq6,
+\]
+すなわち $n\leq7$ である．また連結 rank-three matroid では $n\geq4$ である．
+
+$n=4$ の場合，三点 flat があれば残る一点は coloop となるので，連結性から
+$M=U_{3,4}$ に限る．その nested graph は $K_4$ である．
+
+$n=5$ の場合，\eqref{trop:point-count} から各点が少なくとも一つの三点 flat に属する．
+三点 flats は相異なるもの同士で高々一点を共有する．五点上では，二つの三点 flats は
+ちょうど一点で交わり，三つ目は置けない．実際，最初の二つを $123,145$ とすると，
+未使用の二点対は $24,25,34,35$ だけで，そこに三角形はない．
+従って，この二つが全てである．共通点 $1$ の nested vertex は二価であり，
+それを除くと $K_{3,3}$ になる．これは $M(K_4-e)$ である．
+
+$n=6$ では $t_i=2,s_i=1$ が全ての $i$ について成り立つ．三点 flats は四つある．
+これら四つを頂点とし，各元 $i$ が属する二つの flats を一本の辺で結ぶと，
+四頂点の単純三価グラフを得る．単純性は二つの flats が二点を共有しないことによる．
+従って，このグラフは $K_4$ であり，元の三点系はその四つの vertex stars，
+すなわち Pasch configuration である．$K_4$ の各辺を反対辺に送る置換により，
+この四つの stars は四つの三角形に移る．従って $M\cong M(K_4)$ である．
+その nested graph は Petersen グラフである．
+$K_{3,3}$ と Petersen の同定は，それぞれ
+\cite[Examples 1.2 and 1.1]{FeichtnerSturmfels} にも明示されている．
+
+$n=7$ では $t_i=3,s_i=0$ となり，全ての二点対がちょうど一つの三点 flat に含まれる．
+これは七点の Steiner triple system である．点 $1$ を通る三つを
+$123,145,167$ とし，残るラベルの交換で $246$ を選ぶと，
+残りは $257,347,356$ に強制される．従って Fano plane が唯一であり，
+その point--line incidence graph は Heawood graph である．
+各グラフの $b_1$ は $|E|-|V|+1$ から表の通りになる．
+ラベル付きの個数は，五点の場合 $5\cdot3=15$，六点の場合 $6!/24=30$，
+七点の場合 $7!/168=30$ である．後二式の分母は，それぞれ $K_4$ の頂点置換群と
+$\operatorname{GL}(3,\mathbb F_2)$ の位数である．
+
+非連結 simple rank-three matroid は，連結 rank-two matroid と一つの rank-one component の
+直和，または三つの rank-one components の直和である．前者は
+\[
+ \mathcal B(U_{2,k})\times\RR
+\]
+に同型で，リンクは $k$ 点集合の suspension，すなわち $K_{2,k}$ である．
+三価性を満たす非平面の場合は $k=3$ だけで，二価頂点を除くと theta graph となる．
+$k>3$ では suspension の両端が $k$ 価である．三つの rank-one components の場合は
+$\RR^2$ であり，リンクは円周である．
+明示的な $\RR$ factors を加えた二次元 charts も，coloops を加えた matroid として
+同じ場合に含まれる．これで全ての二次元 matroidal local models を尽くす．
+\end{proof}
+
+\begin{remark}\label{trop:verification}
+この分類は，有限次数の計算から一般の上界を推測したものではない．
+\eqref{trop:point-count} が任意の ground set に対して $n\leq7$ を証明し，
+残る四つの場合を上の議論が尽くしている．付属の整数検算は，$n=4,5,6,7$ の
+全ての linear triple systems を backtracking で列挙し，basis exchange，連結性，
+nested graph の同型，ラベル付き個数 $1,15,30,30$ を独立に検査する．
+\end{remark}
+
+\subsection{超曲面退化の次数別の障害}
+
+\begin{theorem}[平面退化の core における局所位相分類]
+\label{trop:degree-classification}
+各 $T_{ij}$ を任意の marked pants tree とした底空間 $B(T)$ について，
+各 core の近傍が二次元 matroidal fan の原点近傍に局所同相となる可能性は次で尽くされる．
+\begin{enumerate}
+\item $d=5$ では，全ての core link は $K_4$ であり，$\mathcal B(U_{3,4})$ によって
+  局所位相型が実現される．
+\item $d=6$ では，一つの core の局所位相型が matroidal であるための必要十分条件は，
+  その link が Petersen graph であることである．全ての core についてこの条件を満たす
+  ラベル付き分割系は正確に六個あり，$K_6$ の one-factorizations と対応する．
+\item $d\geq7$ では，どの core の近傍も二次元 matroidal fan の原点近傍に局所同相でない．
+  従って，core を保ったまま $B(T)$ を smooth tropical surface にすることはできない．
+\end{enumerate}
+第1，2項は局所位相型の実現を述べる．実際の fibration の action lattice と整合する
+integral affine atlas の存在を含めない．
+\end{theorem}
+
+\begin{proof}
+命題~\ref{topo:counts} より，全ての core link は三価で，
+\[
+ b_1(G_i)=\binom{d-2}{2}.
+\]
+fan の原点以外での三価性は，点の局所ホモロジーの階数からも判定できるため，
+単なる局所同相を仮定しても定理~\ref{trop:cubic-classification} を適用できる．
+より具体的には，punctured core germ の三価 locus の連結成分がリンクの頂点を，
+その補集合の face germs と境界への incidence がリンクの辺を復元する．
+従ってこの状況では，cone germs の局所同相はリンクのグラフ同相を誘導する．
+$d=5$ のリンクは $K_4$，$d=6$ の第一 Betti 数は六であり，分類中では Petersen に限る．
+その全 core での同時実現は定理~\ref{topo:petersen} によりちょうど六個である．
+$d\geq7$ なら $\binom{d-2}{2}\geq10>8$ なので不可能である．
+グラフの同相写像を cone に延長すれば，最初の二項の局所的十分性が従う．
+\end{proof}
+
+この障害は，退化成分を平面から高い次数の超曲面に替えても残る．
+次では，異なる成分は transverse に交わり，三重点は transverse，四重点はないとする．
+交点は個々に標識し，正の genus の曲線上でも，境界に extrema を持つ
+simple-saddle Morse foliation を用いる．
+
+\begin{proposition}[任意の degree partition に対する core link]
+\label{trop:partition-obstruction}
+$d=e_1+\cdots+e_k$，$e_i\geq1$，$k\geq3$ とし，次数 $e_i$ の滑らかな
+超曲面 $S_i\subset\PP^3$ の union への退化を考える．
+double curve $C_{ij}=S_i\cap S_j$ の genus と三重点数は
+\begin{equation}\label{trop:double-curve-data}
+ g_{ij}=1+\frac{e_i e_j(e_i+e_j-4)}2,
+ \qquad n_{ij}=e_i e_j(d-e_i-e_j).
+\end{equation}
+その punctured curve の Reeb graph $T_{ij}$ は $b_1(T_{ij})=g_{ij}$ を満たし，
+内部頂点数と内部辺数は
+\[
+ v_{ij}=2g_{ij}+n_{ij}-2=e_i e_j(d-4),\qquad
+ a_{ij}=3g_{ij}+n_{ij}-3
+\]
+である．$S_i$ に対応する core link $\Gamma_i$ は連結三価グラフで，
+\begin{equation}\label{trop:partition-core-genus}
+ b_1(\Gamma_i)
+ =\sum_{j\ne i}g_{ij}
+  +\sum_{\substack{j<\ell\\j,\ell\ne i}}e_i e_j e_\ell-(k-1)+1
+ =1+\frac{e_i(d-e_i)(d-4)}2.
+\end{equation}
+従って，$d\geq7$ では任意の degree partition と任意の marked Reeb graphs に対して
+全ての core が matroidal local topology を持ち得ない．
+$d=6$ でも，非線形成分が一つあれば，その core は matroidal でない．
+従って六次で全 core が局所位相的に matroidal となる候補は全平面退化に限られ，
+その分割系は前定理の六個で尽くされる．
+\end{proposition}
+
+\begin{proof}
+adjunction と B\'ezout から \eqref{trop:double-curve-data} を得る．
+$a,b,c\geq1$，$a+b+c=d$ に対して $abc\geq d-2$ なので
+$n_{ij}\geq d-2\geq3$ である．曲線の pants decomposition は
+$2g+n-2$ 個の pairs of pants を持ち，Reeb graph の内部辺数は
+$3g+n-3$ となる．
+
+$S_i$ の境界 divisor の dual multigraph は $k-1$ 頂点を持ち，
+頂点 $j,\ell$ の間に $e_i e_j e_\ell$ 本の辺がある．
+各頂点を $T_{ij}$ の内部部分に替えると，第一 Betti 数は
+この dual graph の第一 Betti 数に $\sum_{j\ne i}g_{ij}$ を加えたものとなる．
+これが \eqref{trop:partition-core-genus} の第一の式である．
+$s=d-e_i=\sum_{j\ne i}e_j$ と書けば，その右辺は
+\[
+ 1+\frac{e_i}{2}
+ \left((e_i-4)s+\sum_{j\ne i}e_j^2+
+                   2\sum_{\substack{j<\ell\\j,\ell\ne i}}e_j e_\ell\right)
+ =1+\frac{e_i s(d-4)}2
+\]
+と整理できる．$1\leq e_i\leq d-2$ だから
+\[
+ e_i(d-e_i)\geq d-1,
+ \qquad b_1(\Gamma_i)\geq1+\frac{(d-1)(d-4)}2=\binom{d-2}{2}.
+\]
+$d\geq7$ の主張は定理~\ref{trop:cubic-classification} に従う．
+$d=6$ で $e_i=2,3,4$ の場合は $b_1=9,10,9$ であり，やはり上界八を超える．
+\end{proof}
+
+\input{quintic_links.tex}
+
+\section{Petersen star の整数格子と torus cycles}
+\label{trop:petersen-lattice-section}
+
+\subsection{標準 fan の primitive rays と balancing}
+
+$K_4$ の辺集合を
+$E=\{12,13,14,23,24,34\}$ とし，
+\[
+ N=\ZZ^E/\ZZ\mathbf 1
+\]
+とする．この格子の rank は五であり，fan 自体の次元二とは異なる．
+Petersen graph を，五点集合の二元部分集合を頂点とし，互いに素な部分集合を結ぶ
+Kneser graph $KG(5,2)$ として表示する．その十本の rays を
+\begin{equation}\label{trop:ray-formula}
+ r_{ab}=[e_{ab}]\quad(1\leq a<b\leq4),\qquad
+ r_{a5}=\left[\sum_{\substack{b<c\\b,c\in\{1,2,3,4\}\setminus\{a\}}}e_{bc}\right]
+ \quad(1\leq a\leq4)
+\end{equation}
+で定める．二次元 cones は $S\cap T=\varnothing$ を満たす
+$\RR_{\geq0}r_S+\RR_{\geq0}r_T$ の十五個である．
+これは $\mathcal B(M(K_4))$ の minimal nested fan であり，
+$M_{0,5}^{\mathrm{trop}}$ の標準 fan model と同型である
+\cite[\S4]{ArdilaKlivans}\cite[arXiv版, Example 2.28]{Shaw}．
+
+基底を $[e_{12}],[e_{13}],[e_{14}],[e_{23}],[e_{24}]$ とすると，座標は次の通りである．
+\[
+\begin{array}{c|rrrrr}
+ S&r_S^{(1)}&r_S^{(2)}&r_S^{(3)}&r_S^{(4)}&r_S^{(5)}\\\hline
+ 12&1&0&0&0&0\\
+ 13&0&1&0&0&0\\
+ 14&0&0&1&0&0\\
+ 23&0&0&0&1&0\\
+ 24&0&0&0&0&1\\
+ 34&-1&-1&-1&-1&-1\\
+ 15&-1&-1&-1&0&0\\
+ 25&-1&0&0&-1&-1\\
+ 35&1&0&1&0&1\\
+ 45&1&1&0&1&0
+\end{array}
+\]
+
+\begin{proposition}\label{trop:petersen-unimodular}
+上の rays は primitive であり，各二次元 cone の二本の generators は，
+その実線形 span と $N$ との交わりの格子基底をなす．
+また，重みを一とした balancing identity は
+\begin{equation}\label{trop:petersen-balancing}
+ \sum_{T\cap S=\varnothing}r_T=r_S
+\end{equation}
+である．Petersen adjacency matrix を $A$ とすると，
+\begin{equation}\label{trop:petersen-presentation}
+ N\cong\operatorname{coker}(A-I:\ZZ^{10}\longrightarrow\ZZ^{10})\cong\ZZ^5,
+\end{equation}
+ここで十個の generators はそれぞれ $r_S$ に送られる．
+\end{proposition}
+
+\begin{proof}
+非空な真部分集合の indicator vector の対角方向を除いた像は primitive である．
+二本とも singleton-edge rays である場合，それらの座標と別の一座標を選ぶと，
+二本の vectors と $\mathbf1$ の三次 minor に $\pm1$ がある．
+一方が triangle-flat ray の場合，もう一方の辺はその三角形に含まれる．
+その辺，同じ三角形の別の辺，三角形外の辺を選ぶと，やはり三次 minor が $\pm1$ になる．
+これは $N$ における rank-two sublattice の saturation を示す．
+二本とも triangle-flat rays である cone は存在しない．
+
+\eqref{trop:petersen-balancing} は \eqref{trop:ray-formula} に代入すれば従う．
+例えば $S=a5$ では隣接する三本の singleton-edge rays の和そのものであり，
+$S=12$ では $r_{34}+r_{35}+r_{45}=r_{12}$ となる．
+$a5$ に対応する四つの関係を使うと，$r_{a5}$ は残る六個の edge generators の和で消去できる．
+残りの六つの関係はいずれも $\sum_{ab\in E}e_{ab}=0$ に帰着する．
+従って，これは自由格子 $\ZZ^6/\ZZ\mathbf1$ の整数係数 presentation であり，torsion はない．
+\end{proof}
+
+標準的な edge length の整数単位との整合も確認できる．
+Gathmann--Kerber--Markwig\cite[Construction 3.6, Theorem 3.7]{GKM}は，
+長さ一の internal edge を持つ split tree の vectors $v_S$ の整数 span を
+$M_{0,5}^{\mathrm{trop}}$ の lattice $\Lambda_5$ とする．
+これらは \eqref{trop:petersen-balancing} と同じ関係を満たし，$\Lambda_5$ の rank は五である．
+従って \eqref{trop:petersen-presentation} から，$r_S\mapsto v_S$ は格子同型となる．
+以下ではこの unit-edge lattice の正規化を用いる．
+
+\subsection{六つの stars への同時ラベル付け}
+
+定理~\ref{topo:petersen} の one-factorization を
+$\{\infty\}\cup\mathbb F_5$ 上に取り，
+$M_c=\{\infty c,(c+1)(c-1),(c+2)(c-2)\}$ とする．
+$i\in\mathbb F_5$ に対して
+\[
+ f_i(x)=\frac1{x-i},\qquad f_i(i)=\infty,\qquad f_i(\infty)=0,
+ \qquad f_\infty=\operatorname{id}
+\]
+と置く．translation と inversion がこの factorization を保つため，
+$f_i$ は $i$ の star を $\infty$ の star に写す．
+後者の頂点を $A_c,B_c$ とした表示に対し
+\begin{equation}\label{trop:kneser-labels}
+ A_c\longmapsto\{2c,2c+1\},\qquad
+ B_c\longmapsto\{2c+2,2c+4\}\quad\text{in }\mathbb F_5
+\end{equation}
+と置くと，隣接は二元部分集合の非交差性と一致する．
+最後に $0,1,2,3,4$ を $1,2,3,4,5$ と読み替え，
+\eqref{trop:ray-formula} を割り当てれば，全六 stars について primitive rays を明示できる．
+他の五つの factorization もラベルの置換で得られる．
+
+この構成は各 core の抽象的な fan lattice を指定する．
+三角形・二角形の内部を通る lattice transition maps は，このラベル付けのデータには含まれない．
+また，$N$ は fan の ambient tangent lattice であり，Lagrangian torus の
+$H_1(\TT^2;\ZZ)$ が action cotangent lattice を与えることとは convention が異なる．
+両者を同一視する場合には，face ごとの rank-two lattices と dualization を明示する必要がある．
+
+\subsection{common-circle invariant と divisor incidence の復元}
+
+SNC divisor に付随する contact-link fibration $S\to\Gamma$ を考える．
+各三価頂点 $v$ の小さい閉近傍の逆像 $Q_v$ は，pair of pants $P$ 上の circle bundle であり，
+$H^2(P;\ZZ)=0$ によって $S^1\times P$ と同相である．
+三つの boundary tori の $H_1$ は $H_1(Q_v;\ZZ)\cong\ZZ^3$ に injective に入り，
+その三つの像の共通部分は primitive rank-one subgroup である．その generator を
+符号を除いて $\alpha_v$ と書く．
+
+\begin{definition}\label{trop:delta-definition}
+辺 $e=vw$ 上の regular torus の homology を辺に沿って同定し，
+両端の common-circle generators を同じ $H_1(\TT^2;\ZZ)$ に移す．
+\[
+ \delta(e)=|\det(\alpha_v,\alpha_w)|
+\]
+を \emph{common-circle determinant} と呼ぶ．これは基底，向き，trivialization に依存しない．
+\end{definition}
+
+\begin{proposition}[cycle data からの divisor 復元]
+\label{trop:divisor-recovery}
+$D=\bigcup_aD_a$ を SNC divisor とし，各 punctured component が
+$n_a\geq3$ 個の punctures を持つとする．genus $g_a$ の成分には
+$2g_a+n_a-2$ 個の simple saddles を持つ marked pants model を選ぶ．
+その link fibration について
+\[
+ \delta(e)=
+ \begin{cases}
+ 0,&\text{同一の }D_a\text{ の Reeb graph 内の辺},\\
+ 1,&\text{SNC crossing に対応する辺}
+ \end{cases}
+\]
+である．全ての頂点を含む $\delta=0$ 部分グラフの連結成分は，各 $D_a$ の内部 Reeb graph であり，
+その第一 Betti 数は $g_a$ である．各連結成分を一点に縮約すると，元の dual multigraph を復元できる．
+従って fiber-preserving な link-fibration germ は，dual incidence と各成分の genus を記憶する．
+有理成分だけの場合，$\delta=0$ の連結成分は内部 pants trees である．
+\end{proposition}
+
+\begin{proof}
+$Q_v\cong S^1\times P$ の三つの tori の homology images を
+$\langle\alpha,\beta_1\rangle$，$\langle\alpha,\beta_2\rangle$，
+$\langle\alpha,\beta_1+\beta_2\rangle$ と書けば，その共通部分は $\ZZ\alpha$ である．
+この $\alpha$ は成分 $D_a$ の normal circle に一致する．
+同じ成分内の annulus を通ると，両端の normal circles は同じ cycle なので determinant は零である．
+crossing の product chart では，両成分の normal circles が torus の整数基底になるので determinant は一である．
+内部 Reeb graph は連結であり，葉を除いても第一 Betti 数 $g_a$ は変わらない．
+従って，零 determinant の連結成分を潰せば，残る一本一本の辺が正確に SNC crossing となる．
+これらの構成は全て torus homology と vertex-block inclusions から定義されるため，
+fiber-preserving 同値で保たれる．
+\end{proof}
+
+\begin{remark}
+saddle を持たない二価の有理成分は，この復元定理の仮定に含めない．
+そのような成分を許した一般的な boundary homology の完全列とは，適用範囲が異なる．
+\end{remark}
+
+$m$ 本の一般位置の直線の場合，各成分は $m-1$ 個の punctures を持つので
+\[
+ \#\{e:\delta(e)=0\}=m(m-4),\qquad
+ \#\{e:\delta(e)=1\}=\binom m2.
+\]
+零辺の縮約は $K_m$ を与える．特に $m=5$ の Petersen model では，
+五本の internal matching edges が $\delta=0$，残る十本が $\delta=1$ である．
+
+一方，$\overline M_{0,5}$ は $\PP^2$ の一般位置の四点での blow-up であり，
+その境界は十本の $(-1)$-curves からなる\cite[Theorem 4.3.3]{KapranovChow}．
+四本の exceptional curves と六本の二点を結ぶ直線の strict transforms を用いれば，
+その交点グラフは Petersen で，各成分は三点で他成分と交わることが直接分かる．
+従って，この compactification の標準 pants link では十五辺の全てで $\delta=1$ となる．
+
+\begin{corollary}\label{trop:not-standard-M05}
+五直線補集合 $W_5$ に由来する Petersen link fibration は，
+$\overline M_{0,5}\setminus M_{0,5}$ に由来する標準 SNC link fibration と
+fiber-preserving 同値ではない．さらに，両者の boundary three-manifolds は同相でない．
+\end{corollary}
+
+\begin{proof}
+最初の主張は $\delta=0$ の辺数の差から従う．第二の主張は整数ホモロジーで区別できる．
+有理 SNC divisor の plumbing neighborhood $N_D$，境界 $S_D$，
+intersection matrix $Q_D$，dual graph $G_D$ に対して
+\begin{equation}\label{trop:boundary-homology}
+ 0\longrightarrow\operatorname{coker}(Q_D:\ZZ^r\to\ZZ^r)
+ \longrightarrow H_1(S_D;\ZZ)
+ \longrightarrow H_1(G_D;\ZZ)\longrightarrow0
+\end{equation}
+が成り立つ．実際，$N_D$ は $D$ に retract し，$H_2(N_D)=\ZZ^r$，
+$H_1(N_D)=H_1(G_D)$ は自由群，$H_3(N_D)=0$ である．
+Poincar\'e--Lefschetz duality と対の完全列により，左の写像は交点形式 $Q_D$ となる．
+
+五直線の場合は $Q_D=J_5$，従って cokernel は $\ZZ^4$，$b_1(K_5)=6$ であり，
+\[
+ H_1(S_{W_5};\ZZ)\cong\ZZ^{10}.
+\]
+標準 $\overline M_{0,5}$ 境界では $Q_D=A-I$ であり，
+\eqref{trop:petersen-presentation} と $b_1(\text{Petersen})=6$ により
+\[
+ H_1(S_{M_{0,5}};\ZZ)\cong\ZZ^{11}.
+\]
+\eqref{trop:boundary-homology} の右端が自由群なので，いずれも extension は分裂する．
+\end{proof}
+
+\begin{remark}\label{trop:standard-model-scope}
+この結果が禁じるのは，標準 $M_{0,5}$ の SNC contact model と整合する局所同定である．
+抽象的な Bergman fan atlas だけからその plumbing filling が強制されるとは主張しない．
+従って，位相的な Petersen star，標準 $M_{0,5}$ filling，実際の action lattices に適合する
+integral affine chart は，それぞれ異なる条件として扱う必要がある．
+\end{remark}
+
+\section{作用周期からの integral affine 必要条件}
+\label{trop:action-conditions-section}
+
+ここでは存在定理を述べず，構成済み fibration の action coordinates を
+unimodular な Petersen fan charts に合わせる際の必要条件を明示する．
+正則 torus の $H_1(\TT^2;\ZZ)$ は integral cotangent lattice を与え，
+primitive $\lambda$ による局所作用座標を
+$I_\gamma=(2\pi)^{-1}\int_\gamma\lambda$ とする．
+action coordinates の変換は整数線形変換と translation である．
+
+\subsection{rational directions と annular areas}
+
+一つの成分の比例曲率 collar で，$\beta_a=0$ の部分を考える．
+normal circle の重みを $w>0$，connection を $\alpha$ とすると
+\[
+ \lambda=(\mu-w)\alpha,\qquad \dd\alpha=-\omega_P/w.
+\]
+normal cycle を $a$，regular level circle $\gamma$ の degree-one closed lift を $b$ とし，
+\[
+ h(\gamma)=\frac1{2\pi}\int_b\alpha
+\]
+と定める．$b$ の変更は $h$ に整数を加える．この基底で
+\begin{equation}\label{trop:action-cone}
+ (I_a,I_b)=(\mu-w)(1,h(\gamma)).
+\end{equation}
+Liouville cone の action coordinates は core に向かって一様に零へ収束するため，
+core の像を原点に取れば，critical level に対応する放射辺の方向は $(1,h_*)$ である．
+方向全体の符号は以下の条件に影響しない．
+
+\begin{proposition}[ray と annulus の算術条件]
+\label{trop:farey-condition}
+上の collar に由来する core chart が，正則 faces 上の action lattice を保って
+rational polyhedral fan に写るなら，各 critical value において
+\begin{equation}\label{trop:rational-slope}
+ h_*\in\mathbb Q
+\end{equation}
+でなければならない．
+
+さらに，同じ成分内の二つの saddle levels の間の regular annulus $A$ が，
+unimodular 二次元 cone の一つに対応するとする．両端の holonomies を，
+$A$ 上で整合する lifts により $h_\pm=p_\pm/q_\pm$，$q_\pm>0$，
+$\gcd(p_\pm,q_\pm)=1$ と書けば
+\begin{equation}\label{trop:farey-determinant}
+ |q_-p_+-q_+p_-|=1,
+ \qquad
+ \frac{\operatorname{area}(A)}{2\pi w}=\frac1{q_-q_+}
+\end{equation}
+が必要である．
+\end{proposition}
+
+\begin{proof}
+ray に非零整数 vector が存在することは $h_*\in\mathbb Q$ と同値であり，
+この性質は $\operatorname{GL}(2,\ZZ)$ で不変である．
+$h_*=p/q$ のときの primitive direction は，符号を除いて $(q,p)$ となる．
+
+$A$ の circle bundle は trivial なので，annular section を取って Stokes の定理を適用すると
+\begin{equation}\label{trop:holonomy-area}
+ h_+-h_-=-\frac1{2\pi w}\int_A\omega_P
+\end{equation}
+を得る．端点が critical leaves の場合は，regular annuli の exhaustion により同じ式を得る．
+二本の primitive directions が cone の lattice basis になる条件は
+\eqref{trop:farey-determinant} の第一式であり，第二式は
+\eqref{trop:holonomy-area} によってこれと同値である．
+\end{proof}
+
+例えば $h_-=0$，$h_+=-2/3$ の directions はどちらも rational であるが，
+primitive generators $(1,0),(3,-2)$ の determinant の絶対値は二である．
+この period data は unimodular Petersen cone に適合しない．
+また，葉層を境界に相対的に小さく isotopy すると，critical leaf が囲む area は連続的に変わる．
+\eqref{trop:holonomy-area} により irrational な $h_*$ も生じるため，
+位相的な marking を固定したことから rationality が自動的に従うわけではない．
+
+\subsection{三つの sheets の saturated branch lattice}
+
+三価の critical block で，向きを選んで
+\[
+ H_1(Q_v;\ZZ)=\ZZ a\oplus\ZZ b_1\oplus\ZZ b_2,
+ \qquad b_3=b_1+b_2
+\]
+とする．三つの regular sheets の lattices は
+$\langle a,b_1\rangle$，$\langle a,b_2\rangle$，$\langle a,b_3\rangle$ である．
+critical level への period limits は $I_{b_3}=I_{b_1}+I_{b_2}$ を満たす．
+
+\begin{proposition}[branch denominator の必要条件]
+\label{trop:branch-denominator}
+三つの sheets が共通の rank-one branch tangent lattice に沿って貼られ，
+その lattice が各 sheet の action tangent lattice の saturated sublattice となると仮定する．
+共通の circle action $I_a$ を三つの sheets で同じ関数とし，
+branch の primitive tangent generator に対する $I_a$ の絶対勾配を $q>0$ とする．
+このとき critical slopes は
+\[
+ h_1=p_1/q,\qquad h_2=p_2/q,\qquad h_3=(p_1+p_2)/q
+\]
+と書け，
+\begin{equation}\label{trop:branch-coprime}
+ \gcd(q,p_1)=\gcd(q,p_2)=\gcd(q,p_1+p_2)=1
+\end{equation}
+が必要である．特に $q$ は奇数である．
+\end{proposition}
+
+\begin{proof}
+共通 primitive generator の三つの action-coordinate 表示を
+$(q,p_1),(q,p_2),(q,p_3)$ とする．第一成分が同じ整数になるのは，$I_a$ が共通だからである．
+period relation から $p_3=p_1+p_2$ となる．saturation は各表示の primitivity を意味するので
+\eqref{trop:branch-coprime} を得る．$q$ が偶数なら $p_1,p_2$ はどちらも奇数であり，
+$p_1+p_2$ は偶数となって第三の条件に反する．
+\end{proof}
+
+この条件と annulus の Farey 条件は両立すべき別の条件である．
+例えば両端の $q$ が一なら，annulus を挟む numerator の差は一でなければならない．
+抽象 fan の balancing identity \eqref{trop:petersen-balancing} だけでは，
+これらの作用周期条件は検査されない．
+
+\subsection{大域接着に必要な追加条件}
+
+六次の Petersen choices に対して，以上は次のデータを確定する：
+各 core の抽象 fan lattice，十五 cones の saturation と balancing，
+実際の link fibration の common-circle determinants，および作用周期の必要条件である．
+全体の action-compatible atlas を構成するには，さらに，各 face を通る
+rank-two lattice identifications を選び，三価辺の common sublattices，
+face transitions の cocycle condition，および実際の period data を同時に合わせる必要がある．
+
+既存の focus--focus points の周囲には，適切な基底で
+$\left(\begin{smallmatrix}1&1\\0&1\end{smallmatrix}\right)$ 型の非自明な monodromy がある
+\cite{Evans,VuNgoc}．従って，action lattice と整合する通常の integral affine chart を
+その点まで滑らかに延長することはできない．大域 atlas の定式化では，
+focus points を除くか，その affine singularities を明示的に許す必要がある．
+定義~\ref{atl:definition} はこの射程を明示し，定理~\ref{ga8:global} は
+局所作用座標と実面積の接着によって，六次および五次の大域存在を証明する．
+

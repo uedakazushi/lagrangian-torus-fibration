@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "source_sha256": "1c3450a3fe7323931b70a5f5a727f01be5ead341d45074f51ba08889777b1644",
+  "reviewed_source": "v14_work/root/quintic_three_high_singular_v14.tex",
+  "written_proof_audit": [
+    "The matching sign assumption is explicit; the statement does not cover all local models.",
+    "Linear row reduction and middle-gap weights are correct.",
+    "Coefficient matrix has rank two with minor408 and dependent row1=3row2+3/2row3.",
+    "All equations reduce to S=(25U-13)/17, T=(25U+3)/8.",
+    "Integrality is exactly U=93 mod136; U>0 iff n>=0.",
+    "Displayed P, q and all four D coefficients match substitutions.",
+    "Each positive directed-edge gap is 1/(2K),1/(2qb),1/(2U),1/(2qc); other entries remain negative for n>=0.",
+    "Oddness follows from odd intercept/even slope in every high q.",
+    "The complete fixed-slice quantifier and absence of global gluing conclusions are correct."
+  ],
+  "illustrative_models_checked": [
+    0,
+    1,
+    2
+  ],
+  "issues": []
+}

@@ -1,0 +1,246 @@
+% v15. General one-high normal form, a two-high low-coefficient lemma,
+% and an unbounded restriction on the remaining two-leaf triangle support.
+% Dependencies: qh9:isolated-local, q9:four-line-criterion,
+% td12:one-negative, ml12:dichotomy, ml12:denominator-descent,
+% ls11:low-puncture, cc12:proper-negative, cq13:reverse-two.
+
+\section{一高分母の完全標準形と二葉三角形の交差条件}
+\label{tl15:section}
+
+一高分母 core の高分母 row だけでなく，全ての低分母 entries を記述する．
+その自由度を保持することは，分母三で同じ負の entry が二度現れる場合にも必要である．
+以下では，局所係数を
+\[
+ D_j=-q_j-\sum_{k\ne j}p_{kj}
+\]
+と書く．共有辺に対しては，同じ marked punctures の clutching と
+$D$ の相殺を仮定する．
+
+\begin{proposition}[一高分母 core の全整数標準形]
+\label{tl15:one-high-full}
+正の weights を持つ分母 pattern $(q,1,1,1)$，$q>1$ の四直線 core は，
+高分母 ray を $A$ とし，低分母 rays を適切に標識すると，次の形に書ける：
+\begin{equation}\label{tl15:leaf-matrix}
+\begin{gathered}
+ h,t\in\ZZ_{>0},\quad m=th(h+1),\quad q=m+1,\quad
+ u=th,\quad v=t(h+1),\\
+ c,d\in\ZZ,\quad cd=0,\qquad
+ P=\begin{pmatrix}
+ 0&-m&-h-1&h\\
+ -1&0&0&0\\
+ -u&u-1-c&0&c\\
+ v&-v-1-d&d&0
+ \end{pmatrix}.
+\end{gathered}
+\end{equation}
+逆に，この表示の全ての整数 choices は正の weights を持つ局所模型を与える．
+係数は $A,B,C,D$ の順に
+\begin{equation}\label{tl15:leaf-D}
+ (-m-t,\ m+t+1+c+d,\ h-d,\ -h-1-c)
+\end{equation}
+である．
+\end{proposition}
+
+\begin{proof}
+命題~\ref{qh9:isolated-local} により，高分母 row とその reverse entries を
+$(-m,-h-1,h)$ と $(-1,-u,v)$ に標準化できる．
+$B$ から他の低分母 rays への entries を $(e,-e)$ とする．
+$e\ne0$ なら低分母間の pair products が零であるため
+$p_{CB}=p_{DB}=0$ である．残る二つの row sums は
+\[
+ p_{CD}=u-1,\qquad p_{DC}=-v-1
+\]
+を与える．その積は零であり，$v+1>0$ なので $u=1$，従って $h=t=1$ である．
+この場合 $A\to B,A\to C$ はともに $-2$，reverse entries はともに $-1$ であり，
+$C$ の低分母 outgoing entries は零である．$B,C$ を交換すれば，
+高分母 row を保ったまま $B$ の低分母 outgoing entries を零にできる．
+従って全ての場合に $p_{BC}=p_{BD}=0$ としてよい．
+$p_{CD}=c,p_{DC}=d$ と置けば，残る row sums と pair equation は
+式~\eqref{tl15:leaf-matrix} と $cd=0$ をちょうど与える．
+各 column sum が式~\eqref{tl15:leaf-D} を与える．
+
+逆向きには，表示した行列の row sums は $(-q,-1,-1,-1)$ であり，
+全ての pair products は $q_iq_j-1$ となる．
+正の entry の directed graph を考えると，$B$ から正の edge は出ず，
+$C\to A$ は負である．$cd=0$ より $C,D$ 間には正の二閉路がない．
+従って唯一あり得る正の directed cycle は $A\leftrightarrow D$ であり，
+その normalized gain は
+\[
+ \frac{p_{AD}p_{DA}}{q_Aq_D}=\frac{hv}{q}=\frac{m}{m+1}<1
+\]
+である．正の entries に対する不等式
+$w_j>(p_{ij}/q_i)w_i$ を対数化した有限差分不等式系は，
+全ての directed cycle の gain が一未満なら解を持つ．
+実際，有限個の単純 cycles の各平均対数 gain が負なので，
+全 edges に十分小さい共通の正数を加えても cycle sums は負のままであり，
+通常の差分不等式の potential を取れば元の厳密不等式を得る．
+非正の entries に対しては任意の正の weights で basin positivity が成立する．
+よって正の weights が存在し，命題~\ref{q9:four-line-criterion} が適用できる．
+\end{proof}
+
+\begin{lemma}[二高分母 core の低係数は同時に負でない]
+\label{tl15:low-D}
+正の二高分母標準形
+\[
+ P=\begin{pmatrix}
+ 0&-A&x&-s\\
+ -B&0&-y&z\\
+ r&-r-1&0&0\\
+ -S&T&S-T-1&0
+ \end{pmatrix},\quad
+ a=sS+1, b=zT+1, x=\frac{sS}{r}, y=\frac{zT}{r+1}
+\]
+において，低分母係数
+\begin{equation}\label{tl15:low-D-formula}
+ D_C=y-x+T-S,\qquad D_D=s-z-1
+\end{equation}
+が同時に負となることはない．
+\end{lemma}
+
+\begin{proof}
+$D_D<0$ と仮定すると整数性から $z\ge s$ である．
+正の枝 $S>r$ では，補題~\ref{ml12:dichotomy} より
+$T/(r+1)>S/r$ なので $y>x$，従って $D_C>0$ となる．
+負の枝では $S=T=w<r$ と書ける．
+定理~\ref{ml12:denominator-descent} の証明の記号
+\[
+ H=r-w,\quad E=1-\frac{w^2}{H(H+1)},\quad
+ s=c+\frac{cw}{H},\quad z=e+\frac{ew}{H+1}
+\]
+を用いる．$E<0$ の場合は同証明により $s>z$ なので，現在の仮定の下では
+$E>0$ である．同証明から $\delta=e-c\ge1$，$c\le H$ を得るため，
+\[
+ D_C=\frac{w(H\delta-c)}{H(H+1)}\ge0
+\]
+である．
+\end{proof}
+
+\begin{lemma}[葉の負の reverse entry に対する二分]
+\label{tl15:leaf-test}
+式~\eqref{tl15:leaf-matrix} の葉 core において，低分母 ray $E$ から
+唯一の高分母 ray $A$ への entry が負とする．従って $E=B$ または $C$ である．
+残る二つの低分母 rays を $J,K$ とし，ある整数 $\kappa\ge1$ について
+$p_{JE}\le-\kappa$ とする．このとき次が成立する．
+\begin{enumerate}
+\item $E=C$ なら $J=D,K=B$，$d\le-\kappa$，$c=0$ であり，
+$D_E>0$ および $p_{KE}=0$ である．
+\item $E=B$ かつ $D_E\le0$ なら $J=D,K=C$，$d=0$ であり，
+\begin{equation}\label{tl15:leaf-test-large}
+ p_{KE}=t(h+1)^2-D_E\ge4
+\end{equation}
+となる．
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+$E=C$ の場合，$B\to C=0$ なので $J=D$ であり，結論は標準形から従う．
+$E=B$ とする．$J=C$ なら $u-1-c\le-\kappa$ より
+$c\ge u+\kappa-1>0$，従って $d=0$ であり $D_B>0$ となる．
+$J=D$ で $d\ne0$ なら $c=0$ であり，
+$-v-1-d\le-\kappa$ から
+\[
+ D_B=m+t+1+d\ge m+t+\kappa-v=th^2+\kappa>0
+\]
+となる．従って $D_B\le0$ の下では $J=D,d=0$ でなければならない．
+このとき $c=D_B-m-t-1$ を $p_{CB}=u-1-c$ に代入すると
+式~\eqref{tl15:leaf-test-large} を得る．
+\end{proof}
+
+\begin{theorem}[二葉三角形に必要な交差 pairing]
+\label{tl15:crossed-pairing}
+各 core が正の weights を持つ整数局所 chart であり，全共有辺で
+同じ marked punctures の整数 clutching，対向 $D$ の相殺，
+meridian node 数の非負性を満たすとする．高分母 support が
+\[
+ H=\{01,02,12,03,14\}
+\]
+であるとする．support の自己同型 $(0\,1)(3\,4)$ による標識交換を必要なら行い，
+三角形 $012$ の二価 core $2$ の正の二高分母標準形で
+$A=0,B=1$ とすると，低分母標識 $C=3,D=4$ は不可能である．
+従って，この support が残るなら $C=4,D=3$ でなければならない．
+すなわち，二価 core の正の高低 pairing は，葉の付く三角形頂点を交差して対応させる．
+この結論に分母の上限はない．三価 cores の一般分類も用いない．
+\end{theorem}
+
+\begin{proof}
+$C=3,D=4$ と仮定する．core $2$ の低 rows は
+\[
+ (p^2_{30},p^2_{31},p^2_{34})=(r,-r-1,0),\quad
+ (p^2_{40},p^2_{41},p^2_{43})=(-S,T,S-T-1).
+\]
+低辺 $23,24$ の node 非負性から
+\[
+ p^3_{20}\le1-r\le0,\qquad p^4_{21}\le1-T<0.
+\]
+前者も pair product が正であるため零ではない．
+従って両葉で ray $2$ は一高分母標準形の $B$ または $C$ である．
+両方が $B$ なら $r-1\le1,T-1\le1$ なので $r\le2,T\le2$ となる．
+$2\le S\le T$ より $S=T=2$ であり，負の枝 $r>S$ と矛盾する．
+よって $B$ 型の葉は高々一つである．
+
+core $2$ の負の高低 entries $-y=p^2_{13}$ と $-s=p^2_{04}$ は
+補題~\ref{cc12:proper-negative} により各 $q-1$ の真の約数である．
+補題~\ref{ls11:low-puncture} を共有高辺 $12,02$ に適用すると，
+$y>1,s>1$ の場合には
+\[
+ p^1_{23}=y,\quad p^1_{32}=r+1,\qquad
+ p^0_{24}=s,\quad p^0_{42}=S
+\]
+しかない．従って低辺 $13,04$ の node 非負性が
+\begin{equation}\label{tl15:cross-low-bounds}
+ p^3_{12}\le-r,\qquad p^4_{02}\le1-S
+\end{equation}
+を要求する．
+両葉で ray $2$ が $C$ なら，補題~\ref{tl15:leaf-test} によって
+両葉の $D_2$ が正となる．低辺 $23,24$ の相殺により
+core $2$ の $D_C,D_D$ がともに負となり，補題~\ref{tl15:low-D} に反する．
+一方だけが $B$ なら，もう一方の $C$ 型葉に対向する低係数は負である．
+補題~\ref{tl15:low-D} により $B$ 型葉に対向する低係数は非負なので，
+その葉の $D_2$ は非正である．補題~\ref{tl15:leaf-test} から，
+低辺 $34$ の puncture $2$ における二つの outgoing entries は，
+一方が少なくとも四，他方が零となる．その和は一以下でなければならず，矛盾する．
+
+例外 $s=1$ を扱う．負の枝では $x=sS/r<s$ が正整数でなければならないため，
+現在は正の枝である．従って $T>r+1$，$y>1$ であり，
+\[
+ D_D=-z<0,\qquad
+ D_C-z=z\left(\frac{T}{r+1}-1\right)
+          +T-S-\frac Sr>0.
+\]
+式~\eqref{tl15:cross-low-bounds} の第一の不等式は有効である．
+$D_C>0$ と補題~\ref{tl15:leaf-test} により，葉 $3$ では
+ray $2$ が $B$，ray $1$ が $D$，ray $4$ が $C$，かつ $d_3=0$ となる．
+その parameters を $h,t$ と書くと
+\[
+ D^3_4=h,\qquad p^3_{42}=D_C+t(h+1)^2.
+\]
+葉 $4$ の ray $2$ は $C$ である．低辺 $34$ の node 条件から
+$p^4_{32}<0$ が必要なので，その ray $3$ は $D$，ray $0$ は $B$，
+$d_4<0,c_4=0$ となる．葉 $4$ の parameter を $h_4$ とすると，
+低辺 $34,24$ の係数相殺がそれぞれ
+\[
+ h=h_4+1,\qquad d_4=h_4-z
+\]
+を与える．従って低辺 $34$ の puncture $2$ は
+\[
+ D_C+t(h+1)^2+h-1-z\le1
+\]
+を要求する．しかし $D_C>z$，$h,t\ge1$ なので不可能である．
+
+最後に $y=1$ とする．正の枝では $T>r+1$ により $y>z\ge1$ なので，
+現在は負の枝 $S=T$，かつ $s>1$ である．
+$D_C=1-x$ であり，$x=1$ なら $sS=r,zS=r+1$，従って
+$(z-s)S=1$ となって $S\ge2$ に反する．よって $D_C<0$ であり，
+補題~\ref{tl15:low-D} から $D_D\ge0$ となる．
+式~\eqref{tl15:cross-low-bounds} の第二の不等式と
+補題~\ref{tl15:leaf-test} によって，葉 $4$ の ray $2$ は $B$ でなければならない．
+先ほどと同じ node 条件が $T\le2$，従って $S=T=2$ を強制する．
+しかし補題~\ref{cq13:reverse-two} の唯一の模型では $y=2$ であり矛盾する．
+$s>1,y>1$，$s=1$，$y=1$ の全てを排除した．
+\end{proof}
+
+定理~\ref{tl15:crossed-pairing} は二葉三角形 support 全体を排除するものではない．
+残る低標識 $C=4,D=3$ では葉から高 ray への reverse entries が正にもなり得るため，
+上の負の reverse entry の二分をそのまま適用できない．
+一高分母標準形の自由な整数 $c,d$ を保持し，残る全低辺と三価 cores の同時接続を
+検査する必要がある．

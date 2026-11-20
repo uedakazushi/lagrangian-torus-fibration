@@ -1,0 +1,96 @@
+\subsection{二葉付き三角形の全排除}
+\label{tg16:section}
+
+\begin{lemma}[中心の既知三行の有限復元]
+\label{tg16:known-rows}
+cores $2,3,4$ の整数行列と分母を固定し，中心 $i\in\{0,1\}$ への延長を考える．
+$j\in\{2,3,4\}$ に対して $q_j=q_{ij}$ と置く．
+未知の中心行列の row $j$ は，三つの node 数を指定すれば
+\begin{equation}\label{tg16:row-reconstruction}
+ p^i_{jk}=q_j(1-n_{ij;k})-p^j_{ik},
+ \qquad k\notin\{i,j\}
+\end{equation}
+によって一意に定まる．非負 node 数の総和は五なので，各 row の候補は
+$\binom{7}{2}=21$ 個である．従って三行の全候補は $21^3$ 個であり，
+\begin{equation}\label{tg16:known-pairs}
+ p^i_{jk}p^i_{kj}=q_jq_k-1,\qquad
+ \{j,k\}\subset\{2,3,4\}
+\end{equation}
+を全て満たす候補がなければ，中心 $i$ への延長は不可能である．
+この必要条件には，中心間の分母 $q_{01}$，未知の第四行，
+中心での $D$ の相殺，または正の weights の判定は現れない．
+\end{lemma}
+
+\begin{proof}
+式~\eqref{tg16:row-reconstruction} は整数 clutching の node 式そのものである．
+三つの非負整数の和が五となる組は二十一個である．
+既知の反対側の row sum が $-q_j$ であるため，復元された row sum も
+$q_j(3-5)+q_j=-q_j$ となる．
+局所 pair equations は延長に必要なので，三つの既知 rays の間だけでも
+式~\eqref{tg16:known-pairs} が必要である．
+\end{proof}
+
+\begin{proposition}[十模型の中心延長障害]
+\label{tg16:finite-obstruction}
+命題~\ref{zu16:nonB-finite} の十模型・五十二組は，全て中心 $0$ または $1$ へ延長できない．
+各模型について，下表の中心では，低三角形の全ての組に対して
+式~\eqref{tg16:known-pairs} を満たす三行候補が零である．
+\[
+\begin{array}{rrrr|r|c}
+r&s&S&T&\#\text{低三角形}&\text{矛盾する中心}\\\hline
+1&4&3&12&21&0\\
+1&7&4&18&3&0\\
+1&4&8&36&4&0\\
+1&15&12&64&3&0\\
+2&4&3&6&4&0\\
+2&4&12&30&5&0\\
+2&5&14&36&1&0\\
+4&4&18&30&1&1\\
+4&4&35&60&8&0\\
+4&4&52&90&2&0
+\end{array}
+\]
+\end{proposition}
+
+\begin{proof}
+五十二組の元の局所行和・pair products・$D$ 係数・正の cycle inequalities，
+および低辺 $23,24,34$ の全 node と係数相殺を再確認した上で，
+補題~\ref{tg16:known-rows} の二十一通りずつの全復元を行う．
+各組で上表の中心における三つの pair products の少なくとも一つが不成立となる．
+\nolinkurl{verify_two_leaf_centers_v16.py} は，葉を生成するコードの中心復元関数を使わず，
+元の式~\eqref{tg16:row-reconstruction} から三行を構成し，
+全 node 配分を整数演算で検査する．
+入力の五十二組と検算コードの hash，各組の棄却数と必要条件を満たす候補数を
+\nolinkurl{two_leaf_center_obstruction_v16.json} に記録する．
+有限集合の完全性は前の二つの有限化の証明によるもので，
+分母や未知行列 entries に数値上限を仮定したものではない．
+\end{proof}
+
+\begin{theorem}[二葉付き三角形 support の不存在]
+\label{tg16:no-two-leaf-triangle}
+五次の標準 $K_5$ branch graph において，各 core が正の weights を持つ
+整数局所 chart であり，全共有辺が marked punctures の整数 clutching，
+対向 $D$ の相殺，非負の node 条件を満たすとする．
+高分母 support が
+\[
+ H=\{01,02,12,03,14\}
+\]
+となる配置は存在しない．分母の上限は不要であり，
+三高分母 core の一般分類は用いない．
+\end{theorem}
+
+\begin{proof}
+定理~\ref{tl15:remaining-positive} と定理~\ref{cl16:two-leaf-unit} により，
+中央 core $2$ は交差標識の正の枝で $z=1$，$1\le r\le4$ を満たす．
+一高分母標準形の葉 $4$ における ray $2$ は $B,C,D$ のいずれかである．
+$B$ として表せる場合は node 条件から $r=1$ であり，
+命題~\ref{rb16:complete-list} と命題~\ref{rb16:no-B-extension} に反する．
+$C$ または $D$ として表せる場合は，命題~\ref{zu16:nonB-finite} と
+命題~\ref{tg16:finite-obstruction} に反する．
+分母三で複数の標準形表示を持つ行列も，この場合分けの少なくとも一方に含まれる．
+従って全ての配置が排除される．
+\end{proof}
+
+命題~\ref{rb16:complete-list} の七組は，十模型の全葉を復元した五十二組にも含まれる．
+これらの個数を足して五十九組と数えてはならない．
+二つの有限化は，無限に見える葉の自由度を別々の条件から抑えるために必要である．

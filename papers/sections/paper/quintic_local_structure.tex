@@ -1,0 +1,258 @@
+% v10 local K4 structure: exact positivity criterion, two-high parametrization,
+% and geometric counterexamples to proposed local maximum principles.
+% Uses v9 q9:four-line-criterion and existing theorem environments/macros.
+
+\subsection{正の局所 weights の有限な判定}
+\label{kl10:positivity-section}
+
+四直線 core について，分母 $q_i>0$ と整数 numerators $p_{ij}$ が
+\[
+ \sum_{j\ne i}p_{ij}=-q_i,
+ \qquad p_{ij}p_{ji}=q_iq_j-1
+\]
+を満たすとする．この節での係数は
+$D_i=-q_i-\sum_{j\ne i}p_{ji}$ である．
+これらの row sums から $\sum_iD_i=0$ が従う．
+次の閉路判定は，対数を取った差分不等式の標準的な判定であり，
+max-times algebra の Kleene star の存在条件の特殊化でもある
+\cite[\S2, Theorem~2.2 (arXiv version)]{SergeevSchneiderButkovic}．
+局所の幾何学的な実現に残る正値性は
+$w_j>w_i p_{ij}/q_i$ であり，次の有限条件と同値である．
+
+\begin{lemma}[有向 cycle による正値性判定]\label{kl10:cycle-positive}
+$p_{ij}>0$ の場合にだけ有向辺 $i\to j$ を置き，その gain を
+$c_{ij}=p_{ij}/q_i>0$ とする．
+全ての basin areas が正となる weights $w_i>0$ が存在することと，
+この graph の全ての simple directed cycles $C$ について
+\begin{equation}\label{kl10:cycle-test}
+ \prod_{(i\to j)\in C}p_{ij}<\prod_{i\in C}q_i
+\end{equation}
+が成立することは同値である．存在する場合には，全 weights を有理数に取れる．
+\end{lemma}
+
+\begin{proof}
+正の weights があれば，cycle に沿って $w_j>c_{ij}w_i$ を掛けることで必要条件を得る．
+逆に，全 cycle gains が一未満とする．simple cycles は有限個なので，
+有理数 $\theta>1$ を十分一に近く選べば，辺の gains を
+$\widetilde c_{ij}=\theta c_{ij}$ に替えても全 cycle gains は一未満である．
+頂点 $j$ で終わる全ての simple directed paths の gains と，empty path の gain 一の最大値を $w_j$ とする．
+これは有限個の正の有理数の最大なので，有理数である．
+$w_i$ を与える path に $i\to j$ を付け加える．
+繰返し頂点が生じたら cycle を削除することで，gain は小さくならず，終点 $j$ の simple path を得る．
+従って $w_j\geq\widetilde c_{ij}w_i>c_{ij}w_i$ となる．
+$p_{ij}\leq0$ の場合の basin positivity は $w_i,w_j>0$ から自動的に従う．
+\end{proof}
+
+四頂点なので検査する cycle の長さは二，三，四だけである．
+長さ二の条件は $p_{ij}p_{ji}=q_iq_j-1$ から従うが，
+長さ三，四の条件は row sums と pair products だけから省略しない．
+検査対象は最大八個の有向三角形と六個の有向四角形である．
+この判定は有限の整数積の比較であり，数値的な線形計画法の tolerance を用いない．
+
+\subsection{二つの高分母を持つ局所模型の算術的な表示}
+\label{kl10:two-high-section}
+
+\begin{proposition}[二高分母の factorization 表示]\label{kl10:two-high-parametrization}
+分母が $(a,b,1,1)$，$a,b>1$，である局所四直線模型を考える．
+二つの高分母頂点および二つの分母一の頂点の標識を必要に応じて交換すれば，
+その全ての整数 numerator matrices は次の形に表せる．
+正の整数 $r$ と非零整数 $u$ を取り，
+\[
+ r\mid a-1,\qquad r+1\mid b-1,\qquad u\mid a-1,
+ \qquad x=\frac{a-1}{r},\qquad y=\frac{b-1}{r+1}
+\]
+と置く．さらに
+\[
+ A=a+x+u,\qquad A\mid ab-1,\qquad
+ B=\frac{ab-1}{A},\qquad v=B-b+y
+\]
+が $v\ne0$，$v\mid b-1$ を満たすとする．このとき
+\begin{equation}\label{kl10:two-high-matrix}
+ (p_{ij})=
+ \begin{pmatrix}
+ 0&-A&x&u\\
+ -B&0&-y&v\\
+ r&-r-1&0&0\\
+ (a-1)/u&(b-1)/v&d&0
+ \end{pmatrix},\qquad
+ d=-1-\frac{a-1}{u}-\frac{b-1}{v}
+\end{equation}
+となる．ここで $A,B$ は自動的に正である．
+逆に，以上の条件を満たすデータは全 row sums と pair products を満たす．
+
+正の weights が存在するための必要十分条件は，次の単一条件である：
+\begin{equation}\label{kl10:two-high-positive}
+ u<0\quad\text{または}\quad rud<a.
+\end{equation}
+これを満たすデータは命題~\ref{q9:four-line-criterion} により実際の局所作用 chart を与える．
+\end{proposition}
+
+\begin{proof}
+分母一の二頂点を $C,D$ とすると，$p_{CD}p_{DC}=0$ である．
+交換によって $p_{CD}=0$ としてよい．$C$ の row sum から
+$p_{CA}+p_{CB}=-1$ であり，$a,b>1$ なので両者は非零整数である．
+従って一方が正，一方が負であり，高分母頂点を交換して
+$p_{CA}=r>0$，$p_{CB}=-r-1$ とできる．
+pair products により $p_{AC}=x=(a-1)/r$，$p_{BC}=-y=-(b-1)/(r+1)$ となる．
+$p_{AD}=u$ を選ぶと $u\mid a-1$ であり，$A$ の row sum は $p_{AB}=-a-x-u=-A$ を与える．
+$|u|\leq a-1$ なので $A\geq x+1>0$ である．
+残る pair product と $B$ の row sum から，$B$ と $v$ が指定通りに決まり，
+$D$ の row sum が $d$ を与える．逆方向の検査は直接代入による．
+
+正の辺は，常に存在する $A\leftrightarrow C$ に加え，
+$u>0$ なら $A\leftrightarrow D$，$v>0$ なら $B\leftrightarrow D$，
+$d>0$ なら $D\to C$ だけである．$A\leftrightarrow B$ と $B\leftrightarrow C$ の entries は負である．
+$u<0$ の場合には長さ三以上の正の directed cycle はなく，正値性は自動的に成立する．
+$u>0$ の場合には
+\[
+ A v=y(1-ru)-(x+u+1)<0
+\]
+なので $v<0$ である．長さ三以上の正の cycle が存在するとすれば
+$A\to D\to C\to A$ のみで，その gain は $rud/a$ となる．
+$d\leq0$ ならこの cycle は存在せず，同時に $rud<a$ は自動的に成立する．
+補題~\ref{kl10:cycle-positive} により \eqref{kl10:two-high-positive} が必要十分である．
+\end{proof}
+
+この表示は任意の固定された $(a,b)$ に対し有限である．
+$r$ と $u$ はそれぞれ $a-1$ の正の divisor と signed divisor から選び，
+残りは整除性で決まる．この意味で，二高分母の局所問題は正値性も含めて有限な factorization 問題に帰着した．
+これは全 $(a,b)$ にわたる可能な分母対を有限個に分類する主張ではない．
+
+\begin{corollary}[分母三を含む二高分母の分類]\label{kl10:three-pair-classification}
+$b>1$ を奇数とする．分母 $(3,b,1,1)$ を持つ正の局所四直線 chart が存在するための
+必要十分条件は
+\[
+ b\in\{7,11\}
+\]
+である．この主張では $b$ の上限を仮定しない．
+\end{corollary}
+
+\begin{proof}
+命題~\ref{kl10:two-high-parametrization} の標準表示における高分母の順序は
+$(a,b)=(k,3)$ または $(3,k)$ である．まず $(k,3)$ の場合には $r=1$，
+$x=k-1$，$y=1$ となる．$u\mid k-1$ より
+\[
+ A=2k-1+u\geq k,\qquad B=\frac{3k-1}{A}<3.
+\]
+$B=1$ は $u=k$ を強制し，$B=2$ は $v=B-3+1=0$ を強制するので，いずれも不可能である．
+
+$(3,k)$ の場合には $r\in\{1,2\}$，$u\in\{-2,-1,1,2\}$ である．
+式~\eqref{kl10:two-high-matrix} の整除条件を代入した全八場合は次の通りである．
+表の最終列は，正値性をまだ課さずに全ての整数条件を満たす $k>1$ を示す．
+\begin{center}
+\small
+\begin{tabular}{ccccc}
+$r$ & $u$ & $A$ & $v$ & 可能な $k$ \\
+\hline
+$1$ & $-2$ & $3$ & --- & $\varnothing$ \\
+$1$ & $-1$ & $4$ & $(k-3)/4$ & $7,11$ \\
+$1$ & $1$ & $6$ & --- & $\varnothing$ \\
+$1$ & $2$ & $7$ & $-(k+9)/14$ & $5,19,61,131$ \\
+$2$ & $-2$ & $2$ & $5(k-1)/6$ & $\varnothing$ \\
+$2$ & $-1$ & $3$ & --- & $\varnothing$ \\
+$2$ & $1$ & $5$ & $-(k+8)/15$ & $7,37,127$ \\
+$2$ & $2$ & $6$ & --- & $\varnothing$
+\end{tabular}
+\end{center}
+$A=3,6$ の場合は $A\nmid3k-1$ であり，$(r,u)=(2,-2)$ の場合は
+$(k-1)/v=6/5\notin\mathbb Z$ である．$(r,u)=(1,-1)$ では
+$k=4v+3$ と $v\mid k-1$ から $v\mid2$ となり，$v>0$ より $v=1,2$ である．
+これが $k=7,11$ を与え，$u<0$ なので両者は正の局所 chart を与える．
+
+残る二行は正値性によって排除される．$(r,u)=(1,2)$ では
+$v=-z$ と置くと $k=14z-9$，$z\mid10$ であり，
+\[
+ rud=24-\frac{20}{z}\geq4>3.
+\]
+$(r,u)=(2,1)$ では $k=15z-8$，$z\mid9$ であり，
+\[
+ rud=24-\frac{18}{z}\geq6>3.
+\]
+いずれも条件~\eqref{kl10:two-high-positive} に反する．
+\end{proof}
+
+\subsection{複数高分母と局所最大原理への反例}
+\label{kl10:counterexamples}
+
+複数の高分母を持つ正の局所 chart は存在する．例えば
+\[
+ q=(7,3,1,1),\quad
+ P=\begin{pmatrix}
+ 0&-5&-3&1\\-4&0&2&-1\\-2&1&0&0\\6&-2&-5&0
+ \end{pmatrix},\qquad
+ w=(13/2,5/4,1,1)
+\]
+は全条件を満たし，$D=(-7,3,5,-1)$ を与える．
+同じ素数を共有する二分母についても
+\[
+ q=(7,7,1,1),\quad
+ P=\begin{pmatrix}
+ 0&-8&-2&3\\-6&0&1&-2\\-3&6&0&-4\\2&-3&0&0
+ \end{pmatrix},\qquad
+ w=(13/6,13/2,1,1)
+\]
+が正の局所 chart を与え，$D=(0,-2,0,2)$ となる．
+従って「一つの core の高分母頂点は高々一つ」という局所命題は成立しない．
+
+最大分母の頂点の係数が負であるという命題は，最大分母が一意の場合にも成立しない．
+具体的には
+\begin{equation}\label{kl10:unique-max-counterexample}
+ q=(13,7,7,1),\quad
+ P=\begin{pmatrix}
+ 0&-10&-9&6\\-9&0&8&-6\\-10&6&0&-3\\2&-1&-2&0
+ \end{pmatrix},\qquad
+ w=(25/12,1,23/20,1)
+\end{equation}
+について $D=(4,-2,-4,2)$ であり，一意の最大分母十三の頂点で $D=4>0$ となる．
+正の numerators に対応する四つの basin areas は
+$1/26,1/12,1/140,1/70$ で，残りは numerators が非正なので正である．
+全 row sums と pair products は整数の直接計算で確認できる．
+
+全四分母が同じである局所模型もある．
+\begin{equation}\label{kl10:uniform-eleven}
+ q=(11,11,11,11),\quad
+ P=\begin{pmatrix}
+ 0&-20&-15&24\\-6&0&10&-15\\-8&12&0&-15\\5&-8&-8&0
+ \end{pmatrix},\qquad
+ w=(1,23/21,1,35/16)
+\end{equation}
+では，正の numerators に対応する basin areas は $1/176,1/231,1/231,1/176$ であり，
+$D=(-2,5,2,-5)$ となる．
+いずれの例も命題~\ref{q9:four-line-criterion} による幾何学的な存在例であるが，
+五つの cores を接続する大域 atlas の存在を主張するものではない．
+大域の不存在を示す場合には，局所の分母や係数の大小だけに依拠せず，
+対向端の clutching と全体の incidence を使う必要がある．
+
+\subsection{非正の numerators だけでは高分母は生じない}
+\label{lit10:nonpositive}
+
+\begin{lemma}\label{lit10:nonpositive-q1}
+四つの正整数 $q_i$ と非正整数 $p_{ij}$ が
+$\sum_{j\ne i}p_{ij}=-q_i$ と $q_iq_j-p_{ij}p_{ji}=1$ を満たすなら，
+すべての $q_i$ は一である．
+\end{lemma}
+
+\begin{proof}
+$a_{ij}=-p_{ij}\ge0$ と置く．$q_i=1$ の vertex があり，
+異なる二つの vertices の分母が一より大きいなら，その二方向の
+$a_{ij}$ がともに正となり $\sum_j a_{ij}=1$ に反する．
+従って分母一の vertex がある場合，高分母 vertex は高々一つである．
+唯一の高分母を $q>1$ とすると，他の各 vertex の outgoing row は
+高分母 vertex への一を除いて零となる．
+高分母 vertex の三つの outgoing entries はすべて $q-1$ なので，
+$q=3(q-1)$ となり整数性に反する．
+
+残る場合はすべての $q_i>1$ である．
+このときすべての $a_{ij}\ge1$ なので $q_i\ge3$ および
+$a_{ij}\le q_i-2$ となる．しかし
+\[
+ 1=q_iq_j-a_{ij}a_{ji}
+   \ge q_iq_j-(q_i-2)(q_j-2)
+   =2q_i+2q_j-4\ge8
+\]
+は矛盾である．
+\end{proof}
+
+従って高分母の局所模型は必ず正の numerator を含む．
+通常の arithmetical structures の $Z$-matrix 仮定\cite[\S\S1--3]{CorralesValencia}へ直接帰着する方法では
+高分母模型の全体を扱えない．

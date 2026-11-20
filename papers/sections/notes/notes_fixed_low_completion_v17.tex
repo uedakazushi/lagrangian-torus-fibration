@@ -1,0 +1,47 @@
+\subsection{固定した低 row と column からの三高分母の完全復元}
+\label{nc17:fixed-low}
+
+今後は三高分母 core の全分類を待たず，隣接 core から低データが決まった時点で
+次の二次復元を使える．低 ray を $0$ とし，整数
+\[
+ r_i=p_{0i},\quad x_i=p_{i0},\quad
+ \sum_i r_i=-1,\quad q_i=1+r_ix_i>1\quad(i=1,2,3)
+\]
+を固定する．三つの $r_i$ の同符号の対を $r_2,r_3$ とし，
+$s_i=-q_i-x_i<0$，$Q_{ij}=q_iq_j-1>0$ と置く．
+$A=p_{12}$ は
+\[
+ (s_2A-Q_{12})\{s_3(s_1-A)-Q_{13}\}
+ -Q_{23}A(s_1-A)=0
+\]
+を満たす．二次係数 $a=Q_{23}-s_2s_3$ は，$r_2,r_3>0$ なら負，
+$r_2,r_3<0$ なら正なので消えない．従って高高 entries の completion は高々二つである．
+その整数根から
+\[
+ p_{21}=Q_{12}/A,\quad p_{13}=s_1-A,\quad p_{31}=Q_{13}/(s_1-A),
+\]
+\[
+ p_{23}=s_2-Q_{12}/A,\qquad p_{32}=s_3-Q_{13}/(s_1-A)
+\]
+を復元する．必要十分な整数条件は $A\ne0,s_1$，$A\mid Q_{12}$，
+$s_1-A\mid Q_{13}$ であり，その後に全正 cycle の条件を課す．
+判別式は
+\[
+ \Delta=(s_1s_2s_3-s_1Q_{23}-s_2Q_{13}-s_3Q_{12})^2
+            -4Q_{12}Q_{13}Q_{23}.
+\]
+任意の探索上限を置かず，整数平方根と二つの割り算だけで全候補を得る．
+
+実装 \nolinkurl{research/exact_three_high_completion_v17.py} の
+\texttt{complete\_three\_high} は元の物理標識の順を保存する．
+同符号対を選ぶ内部の標識交換を，隣接 core への clutching に誤って持ち込まない．
+通常の整数行列だけを求める場合と，正の weights を求める場合を区別できる．
+\nolinkurl{verify_three_high_completion_v17.py} は別の signed-divisor 復元との一致も検査する．
+
+分母 $q$ と低 row $r$ が既知なら，$x_i=(q_i-1)/r_i$ も決まるため同じ手順を使える．
+一方，分母を可変のまま低 row だけを固定した場合には高々二つとはいえない．
+既存の rank 二 Schur 無限族は低 column 自体が変化する例である．
+$r=(-2,-2,3)$，$x=(-3,-3,2)$，$q=(1,7,7,7)$ は二つの正の標識付きcompletionを持つが，
+両者は高 ray $1,2$ の交換で対応する．標識付き解の個数を幾何学的同値類数と同一視しない．
+
+\input{three_high_opposite_exception_note_v17.tex}

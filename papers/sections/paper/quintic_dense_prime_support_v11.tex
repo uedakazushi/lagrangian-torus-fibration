@@ -1,0 +1,331 @@
+% v11 addition after quintic_prime_support.tex.  No existing source is edited.
+% This is an unbounded-prime proof; the companion program only checks examples
+% and exhausts the small F_5 completion problem.
+
+\subsection{七辺 support の排除と密な合同模型の完全記述}
+\label{ps11:dense-section}
+
+本節でも条件~\eqref{ps10:row}--\eqref{ps10:clutch} を仮定し，
+合同計算には basin 面積の正値性を用いない．
+前節の七辺 bound は，五つの cores の局所式を同時に使うと強化できる．
+
+\begin{theorem}[密な素数 support]\label{ps11:dense}
+任意の奇素数 $\ell$ に対し，$|E(G_\ell)|\ge7$ なら
+\[
+ \ell=5,\qquad G_\ell\cong K_{2,2,1}.
+\]
+特に，七辺ちょうどの $G_\ell$ は存在せず，
+\begin{equation}\label{ps11:bounds}
+ |E(G_\ell)|\le
+ \begin{cases}
+ 2&\ell=3,\\
+ 8&\ell=5,\\
+ 6&\ell\ne3,5
+ \end{cases}
+\end{equation}
+となる．$\ell=5$ でも，許される edge 数は $0,\ldots,6,8$ に限られる．
+
+固定された標識付き $K_{2,2,1}$ に対し，対応する $\mathbf F_5$ 上の
+row sums，determinants，零分母辺の clutching の解は，後述する
+$s=\pm1$ の二つだけである．これらは normal-action 係数の対向相殺も満たす．
+これは合同式の解の分類であり，正整数への lifting や大域作用 atlas の実現を含まない．
+\end{theorem}
+
+\begin{lemma}[二部 graph に一本を加えた場合]\label{ps11:seven-bipartite}
+$G_\ell$ が，parts $\{a,b\},\{c,d,e\}$ の $K_{2,3}$ に
+辺 $cd$ を加えた七辺 graph $H$ を含むとする．
+このとき $\ell=5$ であり，$ce,de$ のちょうど一方も $G_5$ の辺である．
+従って $G_5$ は $K_{2,2,1}$ であり，$H$ そのものを exact support とすることはできない．
+\end{lemma}
+
+\begin{proof}
+三角形 $acd,bcd$ の符号を $s,t\in\{\pm1\}$ とする．
+core $c$ の row $d$ は，最初の二 entries が $s,t$ であり，
+第三 entry $-s-t$ も非零である．従って $t=s$ である．
+この合同計算の間だけ，全 $p,q$ を同じ $s$ で割る．
+$s^2=1$ なので row sums，determinants，零分母辺の clutching は保たれ，
+二つの三角形の符号は一に正規化される．
+
+\[
+ u=p^c_{ab},\qquad v=p^d_{ab},\qquad
+ x=q_{ab},\quad y=q_{ce},\quad z=q_{de}
+\]
+と置く．core $c$ の rows $a,b,d$ は，列順を $a,b,d,e$ として
+\[
+ \begin{pmatrix}
+ 0&u&-1&1-u\\
+ -1/u&0&-1&1+1/u\\
+ 1&1&0&-2
+ \end{pmatrix},
+\]
+core $d$ の対応する rows は，列順 $a,b,c,e$ で
+\[
+ \begin{pmatrix}
+ 0&v&1&-1-v\\
+ -1/v&0&1&-1+1/v\\
+ -1&-1&0&2
+ \end{pmatrix}
+\]
+となる．高分母の局所 branch に接する entries は全て非零なので，
+$u,v,1-u,1+u,1-v,1+v$ は非零である．
+
+辺 $ac,ad,bc,bd$ の clutching と各 core の determinants を使うと，
+core $a$ の row $b$ と core $b$ の row $a$ はそれぞれ
+\begin{align}
+ -x&=\frac1u+\frac1v+
+       \frac{(1-u)(1+v)}{u+v},\label{ps11:x-a}\\
+ -x&=-u-v+\frac{(1+u)(1-v)}{u+v}.
+       \label{ps11:x-b}
+\end{align}
+ここで $u+v\ne0$ は，core $a$ の row $e$ の entry
+\[
+ p^a_{eb}=-\frac{u+v}{(1-u)(1+v)}
+\]
+が非零であることから従う．辺 $ae,be$ の clutching により，
+core $e$ の rows $a,b$ は列順 $a,b,c,d$ で
+\begin{equation}\label{ps11:e-high-rows}
+ \begin{pmatrix}
+ 0&\dfrac{u+v}{(1-u)(1+v)}&-\dfrac1{1-u}&\dfrac1{1+v}\\[6pt]
+ \dfrac{u+v}{(1+u)(1-v)}&0&-\dfrac u{1+u}&-\dfrac v{1-v}
+ \end{pmatrix}
+\end{equation}
+となる．その pair $ab$ の determinant は
+\[
+ (u+v)^2+(1-u^2)(1-v^2)=(uv+1)^2=0
+\]
+を要求する．体上の計算なので $uv=-1$ である．
+\eqref{ps11:x-a} から \eqref{ps11:x-b} を引くと
+\[
+ 0=\frac{u+v}{uv}+(u+v)+\frac{2(v-u)}{u+v}
+   =\frac{2(v-u)}{u+v}.
+\]
+$\ell$ は奇数であるため，$v=u$，従って $u^2=-1$ を得る．
+core $c,d$ の残る row sums と \eqref{ps11:x-a} は
+\begin{equation}\label{ps11:xyz}
+ x=3u,\qquad y=u+\frac12,\qquad z=u-\frac12
+\end{equation}
+を与える．具体的に，$y,z$ を決める式は
+\[
+ y=\frac1{1-u}+\frac u{1+u}-\frac12,
+ \qquad
+ z=-\frac1{1+v}+\frac v{1-v}+\frac12
+\]
+である．
+
+\eqref{ps11:e-high-rows} の reverse entries を determinants で求め，
+残る二つの row sums を使うと，core $e$ の rows $c,d$ は
+\[
+ \begin{pmatrix}
+ 1-u&1-u&0&u-5/2\\
+ -1-u&-1-u&u+5/2&0
+ \end{pmatrix}
+\]
+となる．最後の pair $cd$ の determinant の左右の差は
+\begin{equation}\label{ps11:five-residual}
+ \left(u-\frac52\right)\left(u+\frac52\right)
+ -\left[\left(u+\frac12\right)\left(u-\frac12\right)-1\right]
+ =-5.
+\end{equation}
+従って $\ell=5$ が必要である．$\mathbf F_5$ 内の $u^2=-1$ の解は
+$u=\pm2$ なので，\eqref{ps11:xyz} から $y,z$ のちょうど一方は零，
+他方は非零となる．また $x=3u\ne0$ である．
+元の符号 $s$ を戻しても零か否かは変わらず，結論を得る．
+特に，ここで禁止しているのは exact 七辺 support であり，
+$H$ を部分 graph として含む $K_{2,2,1}$ を排除していない．
+\end{proof}
+
+次の小さな局所計算を，もう一つの七辺 graph と八辺模型の記述に使う．
+
+\begin{lemma}[三つの零分母を持つ局所合同模型]\label{ps11:three-zero}
+$\mathbf F_5$ 上の局所四 branch を $o,b,c,d$ とし，
+分母が $(0,r,0,0)$，$r\ne0$ であるとする．
+row $o$ が $(p_{ob},p_{oc},p_{od})=(2s,-s,-s)$，$s=\pm1$ なら，
+row sums と determinants は
+\begin{equation}\label{ps11:outer-matrix}
+ r=-s,\qquad
+ P=s\begin{pmatrix}
+ 0&2&-1&-1\\
+ 2&0&2&2\\
+ 1&2&0&2\\
+ 1&2&2&0
+ \end{pmatrix}
+\end{equation}
+を強制する．
+\end{lemma}
+
+\begin{proof}
+$p_{cd}=st$ と置く．determinants と rows $c,d$ から
+\[
+ p_{cb}=-s(1+t),\quad p_{db}=s(-1+t^{-1}),\quad
+ p_{bc}=\frac{s}{1+t},\quad p_{bd}=\frac{s}{1-t^{-1}}.
+\]
+全 entries は零分母 branch に接するので非零であり，$t\ne0,\pm1$ である．
+従って $t=\pm2$ である．row $b$ の和は，$t=2$ なら $s$，
+$t=-2$ なら零である．$r\ne0$ より前者に限られ，表示した値が全て従う．
+\end{proof}
+
+\begin{lemma}[$K_1\vee P_4$ の completion]\label{ps11:path-completion}
+$G_\ell$ が，vertex $o$ と path $a-b-c-d$ の join を含むなら，
+$\ell=5$ であり，さらに辺 $ad$ を含む．従ってその support は
+parts $\{a,c\},\{b,d\},\{o\}$ の $K_{2,2,1}$ に等しい．
+\end{lemma}
+
+\begin{proof}
+定理~\ref{ps10:forbidden} により $\ell=5$ であり，$K_4$ の禁止により
+$q_{ac},q_{bd}$ は非零である．同定理の証明で得た core $o$ の行列を
+$\mathbf F_5$ で書くと，列・行の順 $a,b,c,d$ に対し
+\[
+ P^o=s\begin{pmatrix}
+ 0&1&3&1\\
+ 4&0&4&2\\
+ 3&1&0&1\\
+ 4&2&4&0
+ \end{pmatrix},\qquad s\in\{\pm1\}.
+\]
+core $c$ と core $b$ に補題~\ref{ps11:three-zero} を適用すると，それぞれ
+\[
+ q_{ac}=-s,\qquad q_{bd}=s
+\]
+となる．core $b$ の row $a$ は，列 $o,c,d$ に対して
+$(-s,-2s,-2s)$ である．辺 $ab$ の clutching を使うと，
+core $a$ の row $b$ は $(s,2s,2s)$ となる．
+さらに辺 $ao$ の clutching と determinants により，core $a$ では
+\[
+ p^a_{co}=2s,\quad p^a_{do}=s,\quad
+ p^a_{cb}=p^a_{db}=2s.
+\]
+$y=q_{ad}$ と置くと，rows $c,d$ より
+\[
+ p^a_{cd}=2s,\qquad p^a_{dc}=-y-3s.
+\]
+pair $cd$ の determinant は
+\[
+ 2s(-y-3s)=(-s)y-1
+\]
+を要求する．$\mathbf F_5$ 内ではこの式は $sy=0$ と同値であるから，$y=0$ である．
+これが追加辺 $ad$ を与える．他の二辺を加えると $K_4$ となるので，
+support は表示した $K_{2,2,1}$ に等しい．
+\end{proof}
+
+\begin{proof}[定理~\ref{ps11:dense} の証明]
+八辺以上の場合は系~\ref{ps10:counts-gcd} と命題~\ref{ps10:k221} による．
+七辺の場合，complement は三辺 graph である．
+孤立 vertices を省くと，それは $K_3,K_{1,3},P_4,P_3\sqcup K_2$ のいずれかである．
+最初の二つの complements はそれぞれ $B_3$ と $K_4$ を含むため排除される．
+後の二つはそれぞれ $K_1\vee P_4$ と補題~\ref{ps11:seven-bipartite} の $H$ なので，
+いずれも補題により八本目の辺を強制する．従って七辺ちょうどの場合はない．
+三に関する bound は既存の matching 定理から従う．
+
+残る八辺の場合を具体的に記述する．parts を $\{a,b\},\{c,d\},\{o\}$ と固定する．
+命題~\ref{ps10:k221} より，ある $s=\pm1$ に対し
+\[
+ q_{ab}=-s,\qquad q_{cd}=s,\qquad
+ q_{ij}=0\quad(ij\ne ab,cd)
+\]
+となる．core $o$ の行列は，行・列順 $a,b,c,d$ で
+\begin{equation}\label{ps11:central-matrix}
+ P^o=s\begin{pmatrix}
+ 0&-2&1&1\\
+ -2&0&1&1\\
+ -1&-1&0&2\\
+ -1&-1&2&0
+ \end{pmatrix}.
+\end{equation}
+core $a,b$ は，他方を $b'$ と書き，行・列順 $(o,b',c,d)$ で
+\eqref{ps11:outer-matrix} の行列である．core $c,d$ は同様に，
+行・列順 $(o,d',a,b)$ に対し同じ行列の符号 $s$ を $-s$ に置き換えたものである．
+補題~\ref{ps11:three-zero} により，これら以外の局所 completion はない．
+
+逆に，表示した二組のデータを代入すると，全ての row sums，determinants，
+零分母辺の clutching が成り立つ．normal-action 係数
+\[
+ D^i_j=-q_{ij}-\sum_{k\ne i,j}p^i_{kj}
+\]
+は core $o$ で $s(-1,-1,1,1)$，core $a,b$ の上記順序で
+$s(1,0,2,2)$，core $c,d$ の上記順序で $-s(1,0,2,2)$ となる．
+従って全十辺で $D^i_j+D^j_i=0$ も満たす．
+これは，この八辺型を同じ mod~$5$ 条件だけでさらに排除できないことを示す．
+\end{proof}
+
+\begin{corollary}[七分母の共通因子の指数]\label{ps11:dense-gcd}
+任意に選んだ七本の異なる branches の分母の最大公約数は五を割る．
+特に
+\[
+ \#\{ij:25\mid q_{ij}\}\le6.
+\]
+$G_5=K_{2,2,1}$ なら，その八辺の分母の最大公約数は正確に五である．
+従って，その八辺のうち少なくとも二本では $v_5(q_{ij})=1$ となる．
+\end{corollary}
+
+\begin{proof}
+七分母に共通する素因数は，定理~\ref{ps11:dense} により五に限られる．
+七分母の全てが二十五で割れると仮定する．その七辺は $G_5=K_{2,2,1}$ の
+部分 graph であるから，$K_1\vee P_4$ または補題~\ref{ps11:seven-bipartite} の $H$ となる．
+以下では $R=\ZZ/25\ZZ$ 上で計算する．
+高分母 branch に接する全 entries は determinant が $-1$ なので units である．
+三角形の計算から $x^2=1$ を得るが，この環でもその解は $x=\pm1$ に限られる．
+実際，$(x-1)(x+1)=0$ で両因子の差は unit の二であるから，
+片方は五で割れず，他方は二十五で割れなければならない．
+
+$K_1\vee P_4$ の場合，定理~\ref{ps10:forbidden} の path 計算がそのまま成り立ち，
+\[
+ p_{ab}=s,\quad p_{bc}=-s,\quad p_{cd}=s,
+ \qquad p_{da}=\frac{2s}{3},\quad
+ p_{db}=-\frac{s}{2},\quad p_{dc}=-s
+\]
+となる．分母二と三はこの環の units であり，row $d$ の和は
+$-5s/6\ne0$ in $R$ となる．これは row sum に反する．
+
+$H$ の場合も，補題~\ref{ps11:seven-bipartite} の有理式で現れた分母は
+全て units であり，\eqref{ps11:x-a}--\eqref{ps11:e-high-rows} は $R$ 上で有効である．
+ただし $r=uv+1$ と置いたとき，この環で $r^2=0$ から $r=0$ とは結論しない．
+代わりに，二つの $x$ の式の差から
+\[
+ 2uv(v-u)=-(u+v)^2r
+\]
+を使う．従って $v-u$ は ideal $(r)$ に属し，
+\[
+ u^2+1=r-u(v-u),\qquad v^2+1=r+v(v-u)
+\]
+も $(r)$ に属する．よってこれらの平方は零である．
+\[
+ A=\frac{2u}{1-u^2},\quad B=\frac{2v}{1-v^2},\quad
+ C=u-u^{-1}-A,\quad D=v-v^{-1}-B
+\]
+と置くと
+\[
+ C-A=\frac{(u^2+1)^2}{u(u^2-1)}=0,\qquad D-B=0,
+ \qquad
+ A-B=\frac{2(u-v)r}{(1-u^2)(1-v^2)}=0.
+\]
+core $c,d$ の残る row sums は $y=A+1/2,z=B-1/2$ を与え，
+core $e$ の最後の二 entries は $p^e_{cd}=C-5/2$，$p^e_{dc}=D+5/2$ となる．
+その determinant の左右の差は
+\[
+ CD-AB+\frac52(C-D)+\frac12(A-B)-5=-5\ne0
+ \quad\text{in }R.
+\]
+これも矛盾である．従って七分母の gcd は二十五では割れず，五を割る．
+
+二十五で割れる枝が七本以上あれば，そのうち七本を選んで直前の結論に反する．
+最後に $G_5=K_{2,2,1}$ の八分母は全て五で割れ，その gcd は五を割るので，
+gcd は正確に五である．二十五で割れるものは高々六本であるため，
+残る少なくとも二本の五進付値は一となる．
+\end{proof}
+
+\begin{remark}[合同分類と整数接着の区別]\label{ps11:modular-scope}
+零でない $q_{ij}$ に対する整数整除
+$q_{ij}\mid p^i_{jk}+p^j_{ik}$ は，mod~$5$ に落とすとそれだけでは
+追加の制約を課さない．上の二解は，この意味での reduced system の全解である．
+素数ごとの residue data が存在しても，正の奇整数 $q$，整数 $p$，
+全ての整除条件，正の basin 面積，node 配分，有限 neck の作用接着を
+同時に持つとは限らない．この定理は任意分母の大域存在も不存在も結論しない．
+
+標識付き $K_{2,2,1}$ は $5\cdot3=15$ 個であり，各々に二つの符号解がある．
+付属の標準 Python による検算は，この三十個の合同データについて全式を確認する．
+さらに $K_1\vee P_4$ を含む mod~$5$ データの全百六十通りの
+分母・符号 assignments を，numerator の全 residue pairs を含めて列挙し，
+八辺 completion の二解のみが残ることを確認する．
+一般の素数に対する結論はこの有限計算ではなく，
+\eqref{ps11:five-residual} を含む上の恒等式の証明による．
+\end{remark}

@@ -1,0 +1,191 @@
+% v19: a finite, exact completion reduction for the three bivalent cores
+% of G5_13.  This is NOT an exclusion of G5_13.
+\section{Book support の低三角形と固定 core の有限完成}
+\label{bk19:section}
+
+本節では高分母 support
+\[
+ G_{5,13}=\{01,02,03,04,12,13,14\}
+\]
+の二価 cores $2,3,4$ のみを扱う．その高 rays は共通して $0,1$ であり，
+二価 cores 間の三辺は低辺である．正の局所整数 charts，奇数分母，
+marked puncture の整数 clutching，非負 node，対向 $D$ の相殺を仮定する．
+core $0,1$ の完成は本節の結論に含めない．
+
+各二価 core の canonical order $(A,B,C,D)$ を用い，
+\begin{equation}\label{bk19:canonical}
+ P=\begin{pmatrix}
+ 0&-(a+x-s)&x&-s\\
+ -(b-y+z)&0&-y&z\\
+ r&-r-1&0&0\\
+ -S&T&-L&0
+ \end{pmatrix},
+\end{equation}
+\[
+ a=sS+1,\quad b=zT+1,\qquad
+ x=sS/r,\quad y=zT/(r+1),\quad L=T-S+1
+\]
+と書く．命題~\ref{kl10:two-high-parametrization} と
+補題~\ref{ml12:dichotomy} により，正の枝では
+$S>r$，$rT>(r+1)S$，$L\ge3$ であり，負の枝では
+$S=T=w<r$，$L=1$ である．後者では $H=r-w$ として
+\begin{equation}\label{bk19:H-bound}
+ w\ge2,\qquad \frac{w^2}{2}<H(H+1)<2w^2
+\end{equation}
+が成り立つ（式~\eqref{cp14:H-bound}，または
+式~\eqref{kb15:E-bounds}）．特に $H\ge2$ である．ここで負の枝は削除していない．
+book では $01$ が高辺なので，低 wedge の負枝排除補題は適用できない．
+
+\begin{lemma}[低三角形の node 制限]\label{bk19:triangle}
+各二価 core の $L$ は $1,3,4$ のいずれかである．
+各 core から，高 ray $0$ へ正の逆向き成分を持つ低 ray の先へ矢印を向けると，
+その矢印は有向三角形をなす．三つの core が全て正の枝であることはない．
+三つが全て負の枝である場合，canonical 高 ray $A$ が $0$ か $1$ かの選択は
+三つで一定にはならない．これらの結論には対向 $D$ の相殺は不要である．
+\end{lemma}
+
+\begin{proof}
+各 core の低低 entries は $0,-L$ である．$-L$ を含む低 ray の先との辺で，
+残る低 core における node は $1+L$ 以上である．三つの node は非負で総数五なので
+$L\le4$ であり，二分補題と合わせて $L\in\{1,3,4\}$ を得る．
+二つの矢印が互いに向き合えば，その低辺の puncture $0$ における node は
+$1$ から二つの正整数を引いた値となり負である．各 outdegree は一なので，
+矢印は有向三角形である．その方向に cores を $i\in\mathbb Z/3$ と標識する．
+
+$A=0$ のときを $\sigma_i=+$，$A=1$ のときを $\sigma_i=-$ とする．
+低辺 $i,i+1$ の残る低 core における node は
+\begin{equation}\label{bk19:low-node}
+ n_{i,i+1;i-1}=1+[\sigma_i=-]L_i+[\sigma_{i+1}=+]L_{i+1}.
+\end{equation}
+全て正の枝なら，全て $L_i\ge3$ である．$(-,+)$ の隣接対は
+式~\eqref{bk19:low-node} を七以上にするので，$\sigma$ は一定である．
+全て $+$ の場合，puncture $1$ の三つの node の和は
+$6+\sum_i(r_i-T_i)$ である．正の枝では $T_i\ge r_i+3$ なので，この和は負となる．
+全て $-$ の場合も puncture $0$ で同じ矛盾を得る．
+
+全て負の枝で，全て $+$ なら，puncture $0$ の node の和は
+$3+\sum_i(S_i-r_i)=3-\sum_iH_i\le-3$ である．全て $-$ の場合は
+高 rays の名前を交換すればよい．
+\end{proof}
+
+\begin{proposition}[有限 offset による低 node の表示]\label{bk19:offsets}
+有向三角形の順序で，core $i$ の低 ray $i+1,i-1$ の行を
+\[
+ (p^i_{i+1,0},p^i_{i+1,1},p^i_{i+1,i-1})=(a_i,-b_i,-c_i),
+\]
+\[
+ (p^i_{i-1,0},p^i_{i-1,1},p^i_{i-1,i+1})=(-d_i,e_i,-f_i)
+\]
+と書くと，$a_i,b_i,d_i,e_i$ は正整数であり，
+\[
+ b_i=a_i+1-c_i,\quad d_i=e_i+1-f_i,\quad
+ c_if_i=0,\quad c_i+f_i\in\{1,3,4\}.
+\]
+低辺 $i,i+1$ の node 非負性は，次の有限 offset 条件と同値である：
+\begin{equation}\label{bk19:finite-offset}
+ c_i+f_{i+1}\le4,\qquad
+ e_{i+1}=a_i+t_{i+1},\qquad
+ f_{i+1}-2\le t_{i+1}\le2-c_i.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+行和と式~\eqref{bk19:canonical} から最初の表示を得る．三つの node は
+\[
+ (n_{i,i+1;0},n_{i,i+1;1},n_{i,i+1;i-1})
+ =(1-a_i+d_{i+1},\ 1+b_i-e_{i+1},\ 1+c_i+f_{i+1}).
+\]
+その和は五である．初めの二つの非負性を代入すると
+$c_i-2\le a_i-e_{i+1}\le2-f_{i+1}$ となる．この区間が空でない条件が
+$c_i+f_{i+1}\le4$ であり，式~\eqref{bk19:finite-offset} を得る．
+\end{proof}
+
+\begin{theorem}[固定二価 core に対する低三角形の有限完全完成]
+\label{bk19:finite-completion}
+二価 core $i$ の分母と局所整数行列を一つ固定する．すると，
+低辺の node 非負性と対向 $D$ の相殺を満たす残り二価 cores の組は有限個である．
+その全てを整数演算と平方判定だけで完全列挙できる．
+この列挙は分母・分子の数値 cutoff を導入しない．
+固定分母 $7,13$ に属する共鳴族も含む．
+ただし，これは固定した一つの core に対する有限性であり，
+その core 自体を動かす無限集合の有限性も，book support の不存在も主張しない．
+\end{theorem}
+
+\begin{proof}
+まず固定 core $i$ の低 ray $j$ の相手 core $j$ を考える．
+残る三つの標識 $k$ について，非負整数の node 分配 $n_k$ は
+$\sum_kn_k=5$ を満たすので二十一通りである．各分配は
+\begin{equation}\label{bk19:fixed-row}
+ p^j_{ik}=1-n_k-p^i_{jk}
+\end{equation}
+によって，相手の低 ray $i$ の行全体を固定する．
+対向 $D$ は同時に $D^j_i=-D^i_j$ を固定する．
+
+この行が canonical $C$ なら，その高 ray への entries $r,-r-1$ によって
+$r$ と高 rays の順序が決まる．負の枝では $2\le w<r$ であり有限である．
+正の枝では $\delta=T-S=L-1\in\{2,3\}$ で，
+$rT>(r+1)S$ は $S<r\delta$ と同値なので
+\[
+ r<S<r\delta
+\]
+により $S$ と $T$ は有限個である．
+
+固定行が canonical $D$ なら，その entries $-S,T,-L$ によって
+$S,T$ と高 rays の順序が決まる．正の枝では
+$S/\delta<r<S$，負の枝では $r=w+H$ かつ
+式~\eqref{bk19:H-bound} である．従ってこの場合も $r$ は有限個である．
+canonical $C,D$ のどちらにも合わない行は棄却する．
+
+こうして固定された $r,S,T$ に対し，$h=S-r$，$\delta=T-S$ と置く．
+高高 pair equation は
+\begin{equation}\label{bk19:bilinear}
+ Fsz+As+Bz+C=0,
+\end{equation}
+\[
+ F=(2r+1)h-r^2(\delta-1),\quad
+ A=h(r+1),\quad B=-r(h+\delta-1),\quad C=r(r+1)
+\]
+と同値である．これは式~\eqref{bk19:canonical} の高高 entries の積を
+$(sS+1)(zT+1)-1$ と等置し，$r(r+1)$ 倍して展開した式である．
+ここで $\gcd(2r+1,r^2)=1$ である．もし $F=0$ なら
+$2r+1$ は $\delta-1\in\{-1,1,2\}$ を割るが，$2r+1\ge3$ なので不可能である．
+従って $F\ne0$ である．
+
+固定された低 ray の $D$ を $d$ とする．
+\[
+ D_C=\delta-\frac Sr s+\frac T{r+1}z,\qquad
+ D_D=s-z-1
+\]
+より，その $D$ の条件は
+\begin{equation}\label{bk19:linear}
+ \ell s+mz+n=0
+\end{equation}
+という一次式であり，係数は
+\[
+ (\ell,m,n)=
+ \begin{cases}
+ (-S(r+1),\ rT,\ (\delta-d)r(r+1)),&\text{固定 ray が }C,\\
+ (1,-1,-d-1),&\text{固定 ray が }D.
+ \end{cases}
+\]
+両場合とも $\ell m\ne0$ である．式~\eqref{bk19:linear} から $z$ を消去すると
+\begin{equation}\label{bk19:quadratic}
+ -F\ell s^2+(-Fn+Am-B\ell)s+(Cm-Bn)=0.
+\end{equation}
+最高次係数 $-F\ell$ は非零なので，この式には高々二つの整数解しかない．
+各 $s$ から $z$ を一意に復元し，正整数性，$x,y$ の整数性，奇数分母，
+元の局所方程式を検査する．これは退化した双一次式にも適用できる：
+$(Fs+B)(Fz+A)=AB-FC$ の右辺が零でも，
+式~\eqref{bk19:quadratic} の最高次係数は非零のままである．
+従って共鳴直線を捨てたり，その自由変数を cutoff したりする必要はない．
+
+もう一つの低辺の相手についても同じ有限列挙を行う．
+二つの有限集合の直積に対し，残る低辺の三つの node と対向 $D$ を検査すれば，
+必要条件を満たす低三角形を過不足なく得る．
+\end{proof}
+
+この証明の算法は
+\texttt{book\_low\_triangle\_completion\_v19.py} に標準ライブラリのみで実装した．
+この定理は高中心 cores $0,1$ の局所方程式，その高辺の clutching，または
+幾何学的な atlas の存在を判定したものではない．
+固定 core 自体が動く問題は本節の有限性だけでは解決しないが，後の定理~\ref{bc22:book-obstruction} が追加の整数剛性により book 全体を排除する．

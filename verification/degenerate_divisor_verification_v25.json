@@ -1,0 +1,331 @@
+{
+  "version": "v25",
+  "status": "PASS",
+  "coefficient_identity_count": 5,
+  "coefficient_identities": [
+    {
+      "name": "hM_minus_BL",
+      "status": "PASS",
+      "left_monomials": 5,
+      "right_monomials": 5
+    },
+    {
+      "name": "FL_identity_before_R_substitution",
+      "status": "PASS",
+      "left_monomials": 8,
+      "right_monomials": 8
+    },
+    {
+      "name": "strict_positive_slope_identity",
+      "status": "PASS",
+      "left_monomials": 17,
+      "right_monomials": 17
+    },
+    {
+      "name": "original_pair_product_factorization",
+      "status": "PASS",
+      "left_monomials": 35,
+      "right_monomials": 35
+    },
+    {
+      "name": "h_ge_b_gap",
+      "status": "PASS",
+      "left_monomials": 4,
+      "right_monomials": 4
+    }
+  ],
+  "new_unbounded_exclusion": "a=0, h>=b, gcd(h,b-1)=1; in particular applies to x>=1",
+  "proved_positive_divisor_relations": [
+    "hM=BL",
+    "Mj=tT",
+    "1<=L<=b-1 if h>=b",
+    "T<=M<=b-2 if h>=b"
+  ],
+  "fixed_b_reconstructions": [
+    {
+      "b": 2,
+      "s_x_pairs": 1,
+      "noncoprime_pairs": 0,
+      "T_L_candidates": 0,
+      "integral_F": 0,
+      "integral_degenerate_data": 0,
+      "scale_equation": 0,
+      "integer_y": 0,
+      "models": [],
+      "scope": "All a=0,x>=1 nonnegative-high-D canonical models for this fixed b; no bound on all b."
+    },
+    {
+      "b": 3,
+      "s_x_pairs": 7,
+      "noncoprime_pairs": 3,
+      "T_L_candidates": 1,
+      "integral_F": 1,
+      "integral_degenerate_data": 1,
+      "scale_equation": 0,
+      "integer_y": 0,
+      "models": [],
+      "scope": "All a=0,x>=1 nonnegative-high-D canonical models for this fixed b; no bound on all b."
+    },
+    {
+      "b": 4,
+      "s_x_pairs": 21,
+      "noncoprime_pairs": 6,
+      "T_L_candidates": 3,
+      "integral_F": 2,
+      "integral_degenerate_data": 1,
+      "scale_equation": 0,
+      "integer_y": 0,
+      "models": [],
+      "scope": "All a=0,x>=1 nonnegative-high-D canonical models for this fixed b; no bound on all b."
+    },
+    {
+      "b": 5,
+      "s_x_pairs": 46,
+      "noncoprime_pairs": 22,
+      "T_L_candidates": 10,
+      "integral_F": 8,
+      "integral_degenerate_data": 3,
+      "scale_equation": 0,
+      "integer_y": 0,
+      "models": [],
+      "scope": "All a=0,x>=1 nonnegative-high-D canonical models for this fixed b; no bound on all b."
+    },
+    {
+      "b": 6,
+      "s_x_pairs": 85,
+      "noncoprime_pairs": 15,
+      "T_L_candidates": 12,
+      "integral_F": 6,
+      "integral_degenerate_data": 1,
+      "scale_equation": 0,
+      "integer_y": 0,
+      "models": [],
+      "scope": "All a=0,x>=1 nonnegative-high-D canonical models for this fixed b; no bound on all b."
+    },
+    {
+      "b": 7,
+      "s_x_pairs": 141,
+      "noncoprime_pairs": 93,
+      "T_L_candidates": 40,
+      "integral_F": 28,
+      "integral_degenerate_data": 10,
+      "scale_equation": 0,
+      "integer_y": 0,
+      "models": [],
+      "scope": "All a=0,x>=1 nonnegative-high-D canonical models for this fixed b; no bound on all b."
+    },
+    {
+      "b": 8,
+      "s_x_pairs": 217,
+      "noncoprime_pairs": 28,
+      "T_L_candidates": 30,
+      "integral_F": 17,
+      "integral_degenerate_data": 5,
+      "scale_equation": 0,
+      "integer_y": 0,
+      "models": [],
+      "scope": "All a=0,x>=1 nonnegative-high-D canonical models for this fixed b; no bound on all b."
+    },
+    {
+      "b": 9,
+      "s_x_pairs": 316,
+      "noncoprime_pairs": 156,
+      "T_L_candidates": 71,
+      "integral_F": 34,
+      "integral_degenerate_data": 8,
+      "scale_equation": 0,
+      "integer_y": 0,
+      "models": [],
+      "scope": "All a=0,x>=1 nonnegative-high-D canonical models for this fixed b; no bound on all b."
+    },
+    {
+      "b": 10,
+      "s_x_pairs": 441,
+      "noncoprime_pairs": 144,
+      "T_L_candidates": 85,
+      "integral_F": 39,
+      "integral_degenerate_data": 8,
+      "scale_equation": 0,
+      "integer_y": 0,
+      "models": [],
+      "scope": "All a=0,x>=1 nonnegative-high-D canonical models for this fixed b; no bound on all b."
+    },
+    {
+      "b": 11,
+      "s_x_pairs": 595,
+      "noncoprime_pairs": 355,
+      "T_L_candidates": 141,
+      "integral_F": 82,
+      "integral_degenerate_data": 14,
+      "scale_equation": 0,
+      "integer_y": 0,
+      "models": [],
+      "scope": "All a=0,x>=1 nonnegative-high-D canonical models for this fixed b; no bound on all b."
+    },
+    {
+      "b": 12,
+      "s_x_pairs": 781,
+      "noncoprime_pairs": 66,
+      "T_L_candidates": 93,
+      "integral_F": 31,
+      "integral_degenerate_data": 7,
+      "scale_equation": 0,
+      "integer_y": 0,
+      "models": [],
+      "scope": "All a=0,x>=1 nonnegative-high-D canonical models for this fixed b; no bound on all b."
+    },
+    {
+      "b": 13,
+      "s_x_pairs": 1002,
+      "noncoprime_pairs": 666,
+      "T_L_candidates": 294,
+      "integral_F": 162,
+      "integral_degenerate_data": 30,
+      "scale_equation": 0,
+      "integer_y": 0,
+      "models": [],
+      "scope": "All a=0,x>=1 nonnegative-high-D canonical models for this fixed b; no bound on all b."
+    },
+    {
+      "b": 14,
+      "s_x_pairs": 1261,
+      "noncoprime_pairs": 91,
+      "T_L_candidates": 149,
+      "integral_F": 64,
+      "integral_degenerate_data": 9,
+      "scale_equation": 0,
+      "integer_y": 0,
+      "models": [],
+      "scope": "All a=0,x>=1 nonnegative-high-D canonical models for this fixed b; no bound on all b."
+    },
+    {
+      "b": 15,
+      "s_x_pairs": 1561,
+      "noncoprime_pairs": 889,
+      "T_L_candidates": 303,
+      "integral_F": 112,
+      "integral_degenerate_data": 21,
+      "scale_equation": 0,
+      "integer_y": 0,
+      "models": [],
+      "scope": "All a=0,x>=1 nonnegative-high-D canonical models for this fixed b; no bound on all b."
+    },
+    {
+      "b": 16,
+      "s_x_pairs": 1905,
+      "noncoprime_pairs": 885,
+      "T_L_candidates": 399,
+      "integral_F": 165,
+      "integral_degenerate_data": 24,
+      "scale_equation": 0,
+      "integer_y": 0,
+      "models": [],
+      "scope": "All a=0,x>=1 nonnegative-high-D canonical models for this fixed b; no bound on all b."
+    },
+    {
+      "b": 17,
+      "s_x_pairs": 2296,
+      "noncoprime_pairs": 1144,
+      "T_L_candidates": 490,
+      "integral_F": 227,
+      "integral_degenerate_data": 27,
+      "scale_equation": 0,
+      "integer_y": 0,
+      "models": [],
+      "scope": "All a=0,x>=1 nonnegative-high-D canonical models for this fixed b; no bound on all b."
+    },
+    {
+      "b": 18,
+      "s_x_pairs": 2737,
+      "noncoprime_pairs": 153,
+      "T_L_candidates": 282,
+      "integral_F": 104,
+      "integral_degenerate_data": 16,
+      "scale_equation": 0,
+      "integer_y": 0,
+      "models": [],
+      "scope": "All a=0,x>=1 nonnegative-high-D canonical models for this fixed b; no bound on all b."
+    },
+    {
+      "b": 19,
+      "s_x_pairs": 3231,
+      "noncoprime_pairs": 2151,
+      "T_L_candidates": 769,
+      "integral_F": 328,
+      "integral_degenerate_data": 40,
+      "scale_equation": 0,
+      "integer_y": 0,
+      "models": [],
+      "scope": "All a=0,x>=1 nonnegative-high-D canonical models for this fixed b; no bound on all b."
+    },
+    {
+      "b": 20,
+      "s_x_pairs": 3781,
+      "noncoprime_pairs": 190,
+      "T_L_candidates": 369,
+      "integral_F": 115,
+      "integral_degenerate_data": 17,
+      "scale_equation": 0,
+      "integer_y": 0,
+      "models": [],
+      "scope": "All a=0,x>=1 nonnegative-high-D canonical models for this fixed b; no bound on all b."
+    }
+  ],
+  "regression_original_residual_retained": {
+    "parameters": [
+      3,
+      138,
+      0,
+      0,
+      4,
+      16
+    ],
+    "scales": [
+      54,
+      84,
+      141
+    ],
+    "q": [
+      163,
+      11593,
+      19741,
+      1
+    ],
+    "pair_residuals": [
+      5658,
+      5658,
+      0,
+      5658,
+      0,
+      0
+    ],
+    "original_residual": 5658,
+    "D": [
+      0,
+      0,
+      4,
+      -4
+    ],
+    "sign_factors": [
+      8031,
+      236,
+      8140,
+      11745,
+      396,
+      19486
+    ],
+    "a": 0,
+    "single_congruence": true,
+    "model": false
+  },
+  "general_degenerate_nonexistence_claim": false,
+  "fixed_b_scan_is_not_global_proof": true,
+  "earlier_verifier_imported": false,
+  "old_fixed_s_scan_rerun": false,
+  "source_sha256": "96863fd5e9859e31e2098163ef7ee3d018c3e23dbf2dc79998e34c996daf5141",
+  "proof_file": "paper/degenerate_divisor_reduction_v25.tex",
+  "proof_sha256": "e0e74acc2ccbbdff298ea78c9ae6a0efa209eafdcabf6dd15b87ac1a565134fd",
+  "dependencies": "Python standard library only",
+  "external_peer_review": false,
+  "proof_assistant_formalization": false
+}

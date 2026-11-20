@@ -1,0 +1,235 @@
+% Independent introduction for the arithmetic companion paper, v17.
+% Source claims have been checked against primary publications/preprints.
+\section{序論}
+\label{ar17:introduction}
+
+一般型曲面の Lagrangian torus fibration を具体的な退化から構成するとき，
+局所の作用座標が整数格子を保つことと，異なる成分から来る座標が共有 branch で一致することは，
+別々に検討する必要がある．本稿は，五つの平面へ退化する五次曲面に現れる
+標準 $K_5$ branch graph と，その五つの四直線 $K_4$ cores に対象を絞り，
+この接着問題から生じる整数方程式を研究する．
+主な結論は，高分母が現れるなら，その support は五つ全ての cores を使わなければならないという剛性である．
+一方，一つの core では分母が無限に大きくなる正の局所 chart が存在する．
+両者の差を，行和，二次の principal minors，整数 clutching，node 配分，
+normal-action 係数の相殺を保持したまま解析する．
+
+\subsection{対象と主な結論}
+
+core の標識を $V=\{0,1,2,3,4\}$ とし，共有 branch $ij$ の分母を
+$q_{ij}=q_{ji}>0$，core $i$ における二つの rays $j,k$ の整数係数を $p^i_{jk}$ とする．
+基本の局所方程式は
+\[
+ \sum_{k\ne i,j}p^i_{jk}=-q_{ij},\qquad
+ p^i_{jk}p^i_{kj}=q_{ij}q_{ik}-1
+\]
+であり，各 core には正の weights $w^i_j$ を要求する．
+共有 branch では
+\[
+ q_{ij}\mid p^i_{jk}+p^j_{ik},\qquad
+ n_{ij;k}=1-\frac{p^i_{jk}+p^j_{ik}}{q_{ij}}\ge0,
+ \qquad D^i_j+D^j_i=0,
+\]
+\[
+ D^i_j=-q_{ij}-\sum_{k\ne i,j}p^i_{kj}
+\]
+を課す．正値性の意味と作用座標との関係は節~\ref{ar17:setup}で定義する．
+行和と pair products は分母の奇数性を，両端の行和は各 branch の node 総数五を含意する．
+
+\begin{theorem}[高分母 support は全五頂点を使う]
+\label{ar17:main-support}
+定義~\ref{ar17:admissible} の算術的接着データを考える．
+高分母 support $H=\{ij:q_{ij}>1\}$ が非空なら，$H$ は五頂点全てを使う連結 graph であり，
+三角形を含み，少なくとも六辺を持つ．従って
+\[
+ b_1(H)\ge2,
+\]
+かつ高分母には少なくとも二種類の値が現れる．
+特に，ある core に incident な四分母が全て一なら，全ての $q_{ij}$ は一である．
+\end{theorem}
+
+この結果の最後の段階は，四使用頂点の場合に残る唯一の graph $K_4$ の排除である．
+全低分母の第五 core を hub として，その四辺での node 条件と $D$ 相殺を正の重み付き流れへ書き換える．
+六本の高辺は共通低 puncture での接着により通常辺と例外辺に分かれ，
+例外辺数は二，四，六だけが可能になる．
+六例外は三つの hub pair equations で矛盾する
+（定理~\ref{kh16:not-all-exceptional}）．
+二例外は，大きい負の reverse entry を持つ頂点に注目した三場合の証明で排除できる
+（定理~\ref{kt17:no-two-exceptions}）．
+四例外は，例外 reverse の無限部分を node 予算に依存する有限個の型へ帰着し，
+残る六つの hub データが同じ小さい局所障害に反することを示す
+（定理~\ref{kf17:no-four-exceptions}）．
+この段階では，高分母の値に探索上限を置かず，
+三高分母 core の全分類や正符号 graph の特定の型も仮定しない．
+
+本稿内の他の graph 障害と合わせると，未排除の graph 必要候補は
+標識を忘れて十一型，$K_5$ の標識を保って三百五十六個となる．
+この数は整数接着データや幾何的 atlas の存在数ではない．
+全 $2^{10}$ 部分 graph の完全列挙により，従来の四頂点候補 $K_4$ の五標識が全て除かれ，
+残る候補が五頂点に広がることを確認する．
+ここでの $K_4$ 排除は support 全体が四使用頂点の $K_4$ となる場合に関する．
+$K_4$ に一本の葉辺を加えた graph のように，$K_4$ を部分 graph として含む五頂点候補は検討対象に残る．
+
+局所的には，低分母 ray に接する行と列を両方固定すると，
+三高分母行列の全整数 completion が高々二つに決まる
+（命題~\ref{fc17:at-most-two}）．
+三つの非零の low-row entries から同符号の対を選ぶことで，
+残る方程式を二次係数が決して消えない一変数二次式に帰着する．
+その整数根と二つの整除条件を調べれば，全解を復元できる．
+同じ固定データに対する二つの正の completion も存在する
+（注意~\ref{fc17:sharp}）．
+これは標識付き整数データの結果であり，局所 chart の幾何学的同値類の個数を述べるものではない．
+
+\subsection{幾何的な先行研究と，この算術問題の範囲}
+
+高次元の pairs-of-pants による複素超曲面の分解と，多面体的な底上の torus fibers は
+Mikhalkin\cite[Theorems~1 and~1$'$]{Mikhalkin}によって研究された．
+Leung--Wan\cite{LeungWan}は一般型超曲面の退化に tropical geometry を用い，
+正則最高次形式が Calabi--Yau 型の開部分へ集中する現象と，対応する Lagrangian fibers の
+漸近的な special Lagrangian 性を調べた．
+Zhang\cite[Theorem~1.1]{Zhang}は，次数 $d\ge5$ の超曲面に微分同相な四次元多様体を，
+$d(d-4)^2$ 個の四次元 pair-of-pants と K3 surfaces の部分集合に分解する結果を与えた．
+これらは一般型における分解と torus fibration の背景を与えるが，
+本稿で固定する五つの $K_4$ cones の整数分母配置を分類する主張とは区別される．
+
+局所のシンプレクティック模型については，Evans--Mauri\cite{EM}が
+contact link と Liouville cone を通じて Lagrangian torus fibrations を構成し，
+条件付きの SNC divisor 近傍の模型も与えた．
+本稿の四直線 core の幾何的解釈はこの方法を背景とし，
+marked basins の面積と meridian actions を指定して整数行列を実現する．
+一般の SNC 境界での相対構成，作用切片を含む neck の接続，
+曲面全体の fibration の存在は伴論文\cite{SurfaceGeometry}に置く．
+本稿の大域障害は，そこで用いる標準 branch graph と chart の接着に関する結果である．
+
+標準 $K_4$ cone を用いることは，単に link の抽象 graph を指定することより強い．
+その整数 fan は一様 matroid $U_{3,4}$ の Bergman fan であり，
+線形 tropicalization，matroid，hyperplane arrangement の関係は
+Feichtner--Sturmfels\cite{FeichtnerSturmfels}および
+Ardila--Klivans\cite{ArdilaKlivans}で体系的に扱われている．
+さらに tropical atlas では charts の重なりが ambient 整数アフィン写像の制限であることが必要であり，
+この定義は Shaw\cite[Definition~3.1]{ShawSurfaces}，
+Jell--Rau--Shaw\cite[Definitions~2.1 and~5.1]{JellRauShaw}に明示されている．
+本稿はその格子の接着と，torus cycles の作用微分との適合性を同時に要求する．
+
+退化から取り出す別の構造として，Cartwright\cite[Definitions~2.5 and~2.8]{CartwrightComplexes}の
+tropical complex は dual complex に交点数のデータを加え，
+局所交叉行列を用いて線形関数と divisor theory を定める．
+また Gross--Siebert\cite{GrossSiebert}は，特異点を持つ実アフィン幾何と追加の接着データから
+Calabi--Yau 退化を再構成する．
+本稿の $p$ と $q$ は実際の作用周期の格子から定まるので，
+これらの理論との比較には，交点数，アフィン層，特異集合，作用切片の対応を別に指定する必要がある．
+共通の tropical 用語だけから，それぞれの存在定理や有限性を本稿の分母へ移すことはしない．
+
+\subsection{principal minors，cycle gains，および関連する整数行列}
+
+一つの core の行列を $A=\operatorname{diag}(q_j)+P$ と書くと，
+\[
+ A\mathbf1=0,\qquad \det A_{\{j,k\}}=1\quad(j\ne k)
+\]
+となる．一般の非対称行列に対する principal-minor assignment と
+principal minors 間の多項式関係は古典的な問題であり，
+Lin--Sturmfels\cite{LinSturmfels}は $4\times4$ 行列の関係式を求めている．
+特に同論文 Proposition~4 は principal minors と cycle-sums の相互変換を与える．
+本稿の Schur 補行列や三角形の cycle products の消去は，この一般的な代数的枠組みに属する．
+ここで追跡するのはさらに，固定された kernel vector $\mathbf1$，整数整除性，
+正の basin inequalities，および異なる五行列の共有 punctures での整合である．
+一般の principal-minor 関係だけでは，これらの同時条件から生じる
+normal-action 係数の符号や support の障害は決まらない．
+
+正の局所 weights の存在判定自体は，既知の差分不等式の閉路条件である．
+$p_{jk}>0$ の辺に gain $p_{jk}/q_j$ を与えると，
+$w_k>(p_{jk}/q_j)w_j$ は全ての正の directed cycle の gain が一未満であることと同値となる．
+max-times algebra の言葉では，Sergeev--Schneider--Butkovi\v c
+\cite[\S2, Theorem~2.2]{SergeevSchneiderButkovic}の Kleene-star と subeigenvector の理論の特殊化である．
+本稿ではこれを初等的に証明し，有理 weights の構成と，整数積による厳密な検算に用いる．
+正値性の条件は代数的な行和・pair products に追加する条件であり，
+数値的な線形計画法の tolerance で置き換えない．
+
+もう一つの比較対象は，graph 上の arithmetical structures である．
+Corrales--Valencia\cite[\S\S2--3]{CorralesValencia}は，
+非正の非対角成分を持つ $Z$-matrices と $M$-matrices の枠組みで，
+graph の算術構造とその有限性を調べている．
+本稿の $A\mathbf1=0$ はそのような構造と似た形を持つが，
+高分母の局所行列には正の非対角成分が必ず現れる
+（補題~\ref{lit10:nonpositive-q1}）．
+従って，固定 graph に対する同理論の有限性を，ここでの分母の一様上界としては用いられない．
+
+unimodular な整数式は frieze patterns にも現れる．
+Cuntz--Holm\cite[\S\S2--3 and~7]{CuntzHolmFriezes}は，零を許す tame integral friezes の
+quiddity cycles の組合せ的表示と，離散集合上の零を持たない固定高さの friezes の有限性を与えた．
+Cuntz--Holm--Pagano\cite{CuntzHolmPagano}は，代数的数の環上でこの有限性を調べている．
+frieze の問題には隣接 minors に加えて境界行，周期性，quiddity cycle の積条件がある．
+本稿の六つの face determinants からその構造への写像は与えていないため，
+同じ determinant 一の式を持つことだけから分類や有限性を適用しない．
+以下の各算術結果は，明記した追加条件の下で直接証明する．
+
+\subsection{局所族と大域障害の論理}
+
+局所問題の出発点は，任意の奇数 $q>1$ に対して分母 $(q,1,1,1)$ の正の chart が存在することである
+（系~\ref{q9:local-all-odd}）．
+この場合，唯一の高 ray の係数 $D$ は常に負であり，孤立した高辺は両端で相殺できない．
+二高分母 $(a,b,1,1)$ では，全整数行列を signed divisors で表示でき，
+正値性は二本の高低 pairing の符号を固定する
+（命題~\ref{kl10:two-high-parametrization}，定理~\ref{ls11:two-high-signs}）．
+高い二係数の少なくとも一方が負になるという結果
+（定理~\ref{td12:one-negative}）を使うと，葉から係数の符号を伝播させられる．
+固定した一方の奇分母に対する partner の集合は，七と十三の共鳴を除けば有限であるが，
+この二つでは明示的な無限族が残る（定理~\ref{fp12:partner-structure}）．
+従って局所整数性を，根拠なく分母全体の有限性へ置き換えることはできない．
+
+同じ点は三高分母にも現れる．完全マッチングの正符号型では Schur 補行列から
+三元一次系が得られるが，その係数行列は特異になり得る．
+実際，階数二の系から
+\[
+ (q_a,q_b,q_c,q_0)
+ =(409+600n,\ 3493+5100n,\ 1303+1904n,\ 1),
+ \qquad n\in\ZZ_{\ge0},
+\]
+という正の整数局所族が生じる（定理~\ref{sh14:singular-family}）．
+固定低データの二次復元は，低 ray の行に加えて列も固定することによって有限性を得るものであり，
+この可変データの無限族と両立する．
+また，一意の最大分母を持つ ray で $D>0$ となる局所例もあるため，
+最大分母の単純な局所符号原理は使わない（節~\ref{kl10:counterexamples}）．
+
+大域的には，一高・二高分母の係数の符号と，三高分母中心の係数和の上界から木成分を排除する
+（定理~\ref{fo13:no-tree}）．
+共通低 puncture の signed-divisor clutching は，通常の反対符号接着と，
+同符号の極端な約数 $1,q-1$ の接着に分かれる．
+これを第三 core の pair equation と node 条件に組み合わせると，
+三角形・四角形・五角形の単純な cycle 成分，
+二つの二価頂点を持つ三角形，葉辺付き四角形，$K_{2,3}$，diamond，二葉付き三角形が除かれる
+（系~\ref{cf13:degree-two-rigidity}，定理~\ref{tn14:no-degree-two-triangle}，
+\ref{cp14:no-pendant-square}，\ref{kb15:no-K23}，\ref{dg15:no-diamond}，
+\ref{tg16:no-two-leaf-triangle}）．
+特に通常接着の reverse entry は，第三 core の低低 pair equation と五つの node だけから
+絶対値四以下となる（補題~\ref{cl16:ordinary-bound}）．
+この上界が，残る $K_4$ の hub 帰着にも使える共通の局所入力となる．
+定理~\ref{ar17:main-support} は，これらの障害と全 $K_4$ 排除，
+および単色成分の障害（定理~\ref{uh11:monochromatic-component}）を合わせた結論である．
+
+素数ごとの合同条件は，これと独立した制約を与える．
+$\ell\mid q_{ij}$ の辺からなる $G_\ell$ は任意の奇素数 $\ell$ に対して $K_4$ と book $B_3$ を含まず，
+$G_3$ は matching となる（定理~\ref{ps10:forbidden}）．
+さらに七辺以上の $G_\ell$ は，$\ell=5$，$G_5=K_{2,2,1}$ の場合に限られ，
+任意の七つの分母の gcd は五を割る
+（定理~\ref{ps11:dense}，系~\ref{ps11:dense-gcd}）．
+これらの合同条件は正値性を使わないが，その剰余解の存在は整数 lifting や atlas の存在を意味しない．
+
+\subsection{厳密計算と残る問題}
+
+証明中の有限計算では，先に式から有限範囲または有限個の無限型代表を導き，
+その全てを整数演算で再生成する．四例外 $K_4$ の無限部分では，
+大きい reverse の絶対値が六以上になると，node 数が零以上五以下であるため
+対応する hub entry の符号が固定される．
+このため，無限に多くの値を一つの hub 条件の型として完全に扱える．
+残った hub 候補の分母上界十三は計算結果であり，探索に先立つ仮定ではない．
+一方，全分母が百一以下なら全て一となる検算
+（定理~\ref{ex10:bounded-exclusion}）は，明示した分母範囲に関する結果である．
+本稿はこの範囲付きの結論と，上限を仮定しない support の排除を区別する．
+
+残る中心的な問題は，十一型の五頂点 support のいずれかが，
+異なる高分母を混在させた算術的接着データを持つかどうかである．
+存在する場合にも，局所の実面積と作用切片を同時に整合させて幾何的 atlas を構成する課題が残る．
+不存在を目指す場合には，二価 core の標準形，第三 corner の整数条件，
+素数 support，および固定低データの二次復元を同じ五頂点配置上で組み合わせる必要がある．
+本稿は一般型曲面上の Lagrangian torus fibration 全体を分類するものではなく，
+明示した標準五次模型の整数接着に対して，局所の無限自由度と大域の強い制約を記述する．

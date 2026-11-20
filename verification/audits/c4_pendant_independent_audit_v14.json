@@ -1,0 +1,836 @@
+{
+  "status": "passed",
+  "reviewer": "branched_node_obstructions_v14",
+  "source_sha256_at_audit": "cac4a5e1bfe66107f973f33850def05d2bdda58e32b190df88d5cfd0a0521736",
+  "general_proof_review": [
+    "All middle low4=D possibilities split exhaustively into both lambda zero or only lambda_B=1.",
+    "The small negative branch bound follows from -1<E<1/2; all six H,S cases were independently exhausted by integer factors.",
+    "Both high rays of all seven small negative models lack opposite coefficients in the complete fixed-denominator catalog; fixed-7 resonance checked separately.",
+    "For low4=C, lambda_B is necessarily zero. Lowedge34 atpuncture2 forces V23=0, and lowedge24 atpunctures1,0 gives V21<=1-r and V20<=1. The leaf row and positive reverse>=2 force V21=0,V20=-1,r=1.",
+    "The lowedge02 node with R in {1,-m}, L>=4 forces R=1 and L<=5, without discarding the qleaf=3 case.",
+    "The remaining family is excluded by exact common-puncture clutching, DA opposition, high pair product, and Tprime=21/4.",
+    "No denominator cutoff is used. D opposition is used in finite partner obstructions and the final family."
+  ],
+  "negative_branch_trials": [
+    {
+      "S": 2,
+      "H": 2,
+      "E": "1/3",
+      "trials": [
+        {
+          "factor": 1,
+          "u": "2",
+          "v": "3",
+          "accepted": true,
+          "s": "4",
+          "z": "5"
+        },
+        {
+          "factor": 2,
+          "u": "1",
+          "v": "0",
+          "accepted": false
+        },
+        {
+          "factor": 3,
+          "u": "0",
+          "v": "-1",
+          "accepted": false
+        },
+        {
+          "factor": 6,
+          "u": "-3",
+          "v": "-2",
+          "accepted": false
+        }
+      ]
+    },
+    {
+      "S": 3,
+      "H": 2,
+      "E": "-1/2",
+      "trials": [
+        {
+          "factor": 1,
+          "u": "-1",
+          "v": "-4",
+          "accepted": false
+        },
+        {
+          "factor": 2,
+          "u": "0",
+          "v": "-1",
+          "accepted": false
+        },
+        {
+          "factor": 3,
+          "u": "1",
+          "v": "0",
+          "accepted": false
+        },
+        {
+          "factor": 6,
+          "u": "4",
+          "v": "1",
+          "accepted": true,
+          "s": "10",
+          "z": "2"
+        }
+      ]
+    },
+    {
+      "S": 3,
+      "H": 3,
+      "E": "1/4",
+      "trials": [
+        {
+          "factor": 1,
+          "u": "3",
+          "v": "8",
+          "accepted": true,
+          "s": "6",
+          "z": "14"
+        },
+        {
+          "factor": 2,
+          "u": "2",
+          "v": "2",
+          "accepted": false,
+          "s": "4",
+          "z": "7/2"
+        },
+        {
+          "factor": 3,
+          "u": "1",
+          "v": "0",
+          "accepted": false
+        },
+        {
+          "factor": 4,
+          "u": "0",
+          "v": "-1",
+          "accepted": false
+        },
+        {
+          "factor": 6,
+          "u": "-2",
+          "v": "-2",
+          "accepted": false
+        },
+        {
+          "factor": 12,
+          "u": "-8",
+          "v": "-3",
+          "accepted": false
+        }
+      ]
+    },
+    {
+      "S": 4,
+      "H": 3,
+      "E": "-1/3",
+      "trials": [
+        {
+          "factor": 1,
+          "u": "-2",
+          "v": "-9",
+          "accepted": false
+        },
+        {
+          "factor": 2,
+          "u": "-1",
+          "v": "-3",
+          "accepted": false
+        },
+        {
+          "factor": 3,
+          "u": "0",
+          "v": "-1",
+          "accepted": false
+        },
+        {
+          "factor": 4,
+          "u": "1",
+          "v": "0",
+          "accepted": false
+        },
+        {
+          "factor": 6,
+          "u": "3",
+          "v": "1",
+          "accepted": true,
+          "s": "7",
+          "z": "2"
+        },
+        {
+          "factor": 12,
+          "u": "9",
+          "v": "2",
+          "accepted": true,
+          "s": "21",
+          "z": "4"
+        }
+      ]
+    },
+    {
+      "S": 4,
+      "H": 4,
+      "E": "1/5",
+      "trials": [
+        {
+          "factor": 1,
+          "u": "4",
+          "v": "15",
+          "accepted": true,
+          "s": "8",
+          "z": "27"
+        },
+        {
+          "factor": 2,
+          "u": "3",
+          "v": "5",
+          "accepted": true,
+          "s": "6",
+          "z": "9"
+        },
+        {
+          "factor": 4,
+          "u": "1",
+          "v": "0",
+          "accepted": false
+        },
+        {
+          "factor": 5,
+          "u": "0",
+          "v": "-1",
+          "accepted": false
+        },
+        {
+          "factor": 10,
+          "u": "-5",
+          "v": "-3",
+          "accepted": false
+        },
+        {
+          "factor": 20,
+          "u": "-15",
+          "v": "-4",
+          "accepted": false
+        }
+      ]
+    },
+    {
+      "S": 4,
+      "H": 5,
+      "E": "7/15",
+      "trials": [
+        {
+          "factor": 1,
+          "u": "2",
+          "v": "15",
+          "accepted": false,
+          "s": "18/5",
+          "z": "25"
+        },
+        {
+          "factor": 2,
+          "u": "13/7",
+          "v": "45/7",
+          "accepted": false
+        },
+        {
+          "factor": 3,
+          "u": "12/7",
+          "v": "25/7",
+          "accepted": false
+        },
+        {
+          "factor": 4,
+          "u": "11/7",
+          "v": "15/7",
+          "accepted": false
+        },
+        {
+          "factor": 5,
+          "u": "10/7",
+          "v": "9/7",
+          "accepted": false
+        },
+        {
+          "factor": 6,
+          "u": "9/7",
+          "v": "5/7",
+          "accepted": false
+        },
+        {
+          "factor": 8,
+          "u": "1",
+          "v": "0",
+          "accepted": false
+        },
+        {
+          "factor": 10,
+          "u": "5/7",
+          "v": "-3/7",
+          "accepted": false
+        },
+        {
+          "factor": 12,
+          "u": "3/7",
+          "v": "-5/7",
+          "accepted": false
+        },
+        {
+          "factor": 15,
+          "u": "0",
+          "v": "-1",
+          "accepted": false
+        },
+        {
+          "factor": 20,
+          "u": "-5/7",
+          "v": "-9/7",
+          "accepted": false
+        },
+        {
+          "factor": 24,
+          "u": "-9/7",
+          "v": "-10/7",
+          "accepted": false
+        },
+        {
+          "factor": 30,
+          "u": "-15/7",
+          "v": "-11/7",
+          "accepted": false
+        },
+        {
+          "factor": 40,
+          "u": "-25/7",
+          "v": "-12/7",
+          "accepted": false
+        },
+        {
+          "factor": 60,
+          "u": "-45/7",
+          "v": "-13/7",
+          "accepted": false
+        },
+        {
+          "factor": 120,
+          "u": "-15",
+          "v": "-2",
+          "accepted": false
+        }
+      ]
+    }
+  ],
+  "negative_models": [
+    {
+      "a": 9,
+      "b": 11,
+      "r": 4,
+      "s": 4,
+      "z": 5,
+      "S": 2,
+      "T": 2,
+      "d": -1,
+      "q": [
+        9,
+        11,
+        1,
+        1
+      ],
+      "p": [
+        [
+          0,
+          -7,
+          2,
+          -4
+        ],
+        [
+          -14,
+          0,
+          -2,
+          5
+        ],
+        [
+          4,
+          -5,
+          0,
+          0
+        ],
+        [
+          -2,
+          2,
+          -1,
+          0
+        ]
+      ],
+      "D": [
+        3,
+        -1,
+        0,
+        -2
+      ],
+      "weights": [
+        "9",
+        "11",
+        "17/8",
+        "21/4"
+      ]
+    },
+    {
+      "a": 31,
+      "b": 7,
+      "r": 5,
+      "s": 10,
+      "z": 2,
+      "S": 3,
+      "T": 3,
+      "d": -1,
+      "q": [
+        31,
+        7,
+        1,
+        1
+      ],
+      "p": [
+        [
+          0,
+          -27,
+          6,
+          -10
+        ],
+        [
+          -8,
+          0,
+          -1,
+          2
+        ],
+        [
+          5,
+          -6,
+          0,
+          0
+        ],
+        [
+          -3,
+          3,
+          -1,
+          0
+        ]
+      ],
+      "D": [
+        -25,
+        23,
+        -5,
+        7
+      ],
+      "weights": [
+        "31",
+        "7",
+        "61/10",
+        "13/6"
+      ]
+    },
+    {
+      "a": 19,
+      "b": 43,
+      "r": 6,
+      "s": 6,
+      "z": 14,
+      "S": 3,
+      "T": 3,
+      "d": -1,
+      "q": [
+        19,
+        43,
+        1,
+        1
+      ],
+      "p": [
+        [
+          0,
+          -16,
+          3,
+          -6
+        ],
+        [
+          -51,
+          0,
+          -6,
+          14
+        ],
+        [
+          6,
+          -7,
+          0,
+          0
+        ],
+        [
+          -3,
+          3,
+          -1,
+          0
+        ]
+      ],
+      "D": [
+        29,
+        -23,
+        3,
+        -9
+      ],
+      "weights": [
+        "19",
+        "43",
+        "37/12",
+        "85/6"
+      ]
+    },
+    {
+      "a": 29,
+      "b": 9,
+      "r": 7,
+      "s": 7,
+      "z": 2,
+      "S": 4,
+      "T": 4,
+      "d": -1,
+      "q": [
+        29,
+        9,
+        1,
+        1
+      ],
+      "p": [
+        [
+          0,
+          -26,
+          4,
+          -7
+        ],
+        [
+          -10,
+          0,
+          -1,
+          2
+        ],
+        [
+          7,
+          -8,
+          0,
+          0
+        ],
+        [
+          -4,
+          4,
+          -1,
+          0
+        ]
+      ],
+      "D": [
+        -22,
+        21,
+        -3,
+        4
+      ],
+      "weights": [
+        "29",
+        "9",
+        "57/14",
+        "17/8"
+      ]
+    },
+    {
+      "a": 85,
+      "b": 17,
+      "r": 7,
+      "s": 21,
+      "z": 4,
+      "S": 4,
+      "T": 4,
+      "d": -1,
+      "q": [
+        85,
+        17,
+        1,
+        1
+      ],
+      "p": [
+        [
+          0,
+          -76,
+          12,
+          -21
+        ],
+        [
+          -19,
+          0,
+          -2,
+          4
+        ],
+        [
+          7,
+          -8,
+          0,
+          0
+        ],
+        [
+          -4,
+          4,
+          -1,
+          0
+        ]
+      ],
+      "D": [
+        -69,
+        63,
+        -10,
+        16
+      ],
+      "weights": [
+        "85",
+        "17",
+        "169/14",
+        "33/8"
+      ]
+    },
+    {
+      "a": 33,
+      "b": 109,
+      "r": 8,
+      "s": 8,
+      "z": 27,
+      "S": 4,
+      "T": 4,
+      "d": -1,
+      "q": [
+        33,
+        109,
+        1,
+        1
+      ],
+      "p": [
+        [
+          0,
+          -29,
+          4,
+          -8
+        ],
+        [
+          -124,
+          0,
+          -12,
+          27
+        ],
+        [
+          8,
+          -9,
+          0,
+          0
+        ],
+        [
+          -4,
+          4,
+          -1,
+          0
+        ]
+      ],
+      "D": [
+        87,
+        -75,
+        8,
+        -20
+      ],
+      "weights": [
+        "33",
+        "109",
+        "65/16",
+        "217/8"
+      ]
+    },
+    {
+      "a": 25,
+      "b": 37,
+      "r": 8,
+      "s": 6,
+      "z": 9,
+      "S": 4,
+      "T": 4,
+      "d": -1,
+      "q": [
+        25,
+        37,
+        1,
+        1
+      ],
+      "p": [
+        [
+          0,
+          -22,
+          3,
+          -6
+        ],
+        [
+          -42,
+          0,
+          -4,
+          9
+        ],
+        [
+          8,
+          -9,
+          0,
+          0
+        ],
+        [
+          -4,
+          4,
+          -1,
+          0
+        ]
+      ],
+      "D": [
+        13,
+        -10,
+        1,
+        -4
+      ],
+      "weights": [
+        "25",
+        "37",
+        "49/16",
+        "73/8"
+      ]
+    }
+  ],
+  "complete_partner_absence_checks": [
+    {
+      "q": 9,
+      "excluded_D": -3,
+      "nonresonant_models": 6,
+      "resonance_trials": []
+    },
+    {
+      "q": 11,
+      "excluded_D": 1,
+      "nonresonant_models": 9,
+      "resonance_trials": []
+    },
+    {
+      "q": 31,
+      "excluded_D": 25,
+      "nonresonant_models": 50,
+      "resonance_trials": []
+    },
+    {
+      "q": 7,
+      "excluded_D": -23,
+      "nonresonant_models": 13,
+      "resonance_trials": [
+        {
+          "k": "-2",
+          "valid": false
+        }
+      ]
+    },
+    {
+      "q": 19,
+      "excluded_D": -29,
+      "nonresonant_models": 27,
+      "resonance_trials": []
+    },
+    {
+      "q": 43,
+      "excluded_D": 23,
+      "nonresonant_models": 49,
+      "resonance_trials": []
+    },
+    {
+      "q": 29,
+      "excluded_D": 22,
+      "nonresonant_models": 15,
+      "resonance_trials": []
+    },
+    {
+      "q": 9,
+      "excluded_D": -21,
+      "nonresonant_models": 6,
+      "resonance_trials": []
+    },
+    {
+      "q": 85,
+      "excluded_D": 69,
+      "nonresonant_models": 75,
+      "resonance_trials": []
+    },
+    {
+      "q": 17,
+      "excluded_D": -63,
+      "nonresonant_models": 13,
+      "resonance_trials": []
+    },
+    {
+      "q": 33,
+      "excluded_D": -87,
+      "nonresonant_models": 11,
+      "resonance_trials": []
+    },
+    {
+      "q": 109,
+      "excluded_D": 75,
+      "nonresonant_models": 79,
+      "resonance_trials": []
+    },
+    {
+      "q": 25,
+      "excluded_D": -13,
+      "nonresonant_models": 41,
+      "resonance_trials": []
+    },
+    {
+      "q": 37,
+      "excluded_D": 10,
+      "nonresonant_models": 60,
+      "resonance_trials": []
+    },
+    {
+      "q": 13,
+      "excluded_D": 3,
+      "nonresonant_models": 28,
+      "resonance_trials": [
+        {
+          "k": "17/13",
+          "valid": false
+        }
+      ]
+    },
+    {
+      "q": 17,
+      "excluded_D": 9,
+      "nonresonant_models": 13,
+      "resonance_trials": []
+    },
+    {
+      "q": 29,
+      "excluded_D": 15,
+      "nonresonant_models": 15,
+      "resonance_trials": []
+    }
+  ],
+  "polynomial_identities": [
+    "middle family high product",
+    "middle family DB",
+    "clutch quotient one",
+    "clutch quotient two rejected",
+    "neighbor DA opposition",
+    "neighbor high product plus one",
+    "neighbor cleared z equation",
+    "terminal cleared T constraint"
+  ],
+  "issues": [],
+  "notes": [
+    "The final source incorporates the independently derived unified zero-row argument, positive-factor identities and explicit mixed-node lower bound."
+  ]
+}

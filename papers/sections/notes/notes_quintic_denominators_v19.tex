@@ -1,0 +1,343 @@
+\section{五次の高分母：局所分類と大域整合}
+\label{nt19:denominators}
+
+この節には，今後の高分母の構成・排除に再利用する条件を残す．
+高分母を持つ全平面五次の大域作用 atlas の存在・不存在は，なお一般には未解決である．
+現在の必要候補は五頂点全てを使う六型・百二十六標識であり，
+最小次数二以上，二点連結で，高辺は七本以上である．
+二価頂点は必ず高分母三角形に属する．
+高分母が存在するなら最大値は百三以上で，少なくとも二種類の高分母が現れる．
+この有界排除と，分母上限を用いない graph 障害とは量化が異なる．
+
+三高分母の正符号 graph は完全 matching であることが証明されたため，
+固定低データの二次復元と canonical Schur 線形系を全ての正整数三高模型に使える．
+一般の高係数 $D$ の符号と，残る六型の五 core 同時接着は未解決である．
+
+\subsection{正値性と二高分母の表示}
+
+局所四頂点に $q_i>0$，$p_{ij}\in\ZZ$ を置く．
+\[
+ \sum_{j\ne i}p_{ij}=-q_i,\qquad
+ p_{ij}p_{ji}=q_iq_j-1,\qquad
+ D_i=-q_i-\sum_{j\ne i}p_{ji}.
+\]
+正の basin weights の存在は，$p_{ij}>0$ の directed edges からなる全 simple cycles で
+\[
+ \prod_{i\to j}p_{ij}<\prod_iq_i
+\]
+となることと同値である．二閉路は determinant 条件で自動的に通るので，
+最大八個の有向三角形と六個の有向四角形を検査すればよい．
+これは既知の差分不等式・max-times の判定\cite[\S2]{SergeevSchneiderButkovic}である．
+全 gains に有理数 $\theta>1$ を十分一に近く掛け，終点 $j$ の simple paths の gain と一の最大を
+$w_j$ と取れば，正の有理 weights の証明書を構成できる．
+
+二高分母 $(a,b,1,1)$，$a,b>1$ では，high vertices および low vertices の交換を許すと，
+次の表示が全 numerator matrices を尽くす．
+\[
+ r>0,\quad r\mid a-1,\quad r+1\mid b-1,\quad
+ u\ne0,\quad u\mid a-1,\quad
+ x=\frac{a-1}{r},\quad y=\frac{b-1}{r+1},
+\]
+\[
+ A=a+x+u,\quad A\mid ab-1,\quad
+ B=\frac{ab-1}{A},\quad v=B-b+y\ne0,\quad v\mid b-1.
+\]
+このとき $A,B>0$ であり，
+\[
+ P=\begin{pmatrix}
+ 0&-A&x&u\\
+ -B&0&-y&v\\
+ r&-r-1&0&0\\
+ (a-1)/u&(b-1)/v&d&0
+ \end{pmatrix},\qquad
+ d=-1-\frac{a-1}{u}-\frac{b-1}{v}.
+\]
+正の weights が存在するための必要十分条件は
+\[
+ u<0<v
+\]
+と分かっている．算術稿の \texttt{ls11:two-high-signs} は $a=b$ を仮定しない．
+従って正の模型を探索するとき，$u>0$ の候補を残す必要はない．
+各 high row のもう一つの high への entry は負であり，二つの low への entries は一正一負となる．
+固定した $(a,b)$ の局所幾何は，この有限な divisor 計算と局所 chart の十分条件で判定できる．
+分母対 $(a,b)$ の全体が有限個という主張ではない．
+
+奇数 $b>1$ に対し，$(3,b,1,1)$ の正の局所 chart が存在することと
+$b\in\{7,11\}$ は同値である．この結論にも $b$ の上限はない．
+非正の numerators だけなら全 $q_i=1$ なので，通常の arithmetical structures の
+非正非対角行列\cite[\S\S1--3]{CorralesValencia}へ高分母全体を帰着しない．
+
+\paragraph{一般二高分母の負係数と，再利用する整数変数．}
+正の標準形で $u=-s<0$，$v=z>0$，$S=(a-1)/s$，$T=(b-1)/z$ と置くと，
+$d=S-T-1<0$ であり，$\min(D_A,D_B)<0$ も一般に成立する．
+証明は算術稿の \texttt{td12:low-entry} と \texttt{td12:one-negative} にある．
+二高分母が同時に非負の $D$ を持つ候補を再探索する必要はない．
+再利用する変数は
+\[
+ h=S-r,\quad k=T-r-1,\quad
+ \alpha=x-s=sh/r,\quad \beta=y-z=zk/(r+1)
+\]
+であり，これらは全て非零で同符号となる．さらに
+\[
+ M=rs+1,\quad N=(r+1)z+1,\quad
+ \delta=\alpha-\beta,\quad L=M-N+r\delta
+\]
+と置けば
+\[
+ M\beta-N\alpha=1,\qquad \alpha L=1+a\delta,
+ \qquad D_A=h-L,\quad D_B=L+\delta-k
+\]
+となる．特に $\gcd(\alpha,\beta)=1$ である．
+負枝 $\alpha,\beta<0$，$\delta\geq0$ では，整数性が $S=T$ を強制する．
+この枝では $d=-1$ かつ $D_B<0$ となる．
+
+正の局所 weights は
+\[
+ (w_A,w_B,w_C,w_D)
+ =\left(a,b,x+\frac1{2r},z+\frac1{2T}\right)
+\]
+と明示できる．正の entries に対応する四つの basin areas は
+$1/(2r),1/2,1/(2T),1/2$ となるため，整数データから面積正値性の証明書を直接作れる．
+この定理は分母の上限，奇数性，大域 clutching，node budget を用いない．
+ただし一般の三高分母で全ての高係数 $D$ が非負となることを禁止できるかは未解決である．
+三高分母の numerators の matching 性とは別の問題である．
+
+\paragraph{再試行を避けるための符号反例．}
+一意の最大分母の係数が負とは限らない．二高分母だけでも
+\[
+ q=(19,17,1,1),\qquad
+ P=\begin{pmatrix}
+ 0&-23&6&-2\\-14&0&-4&1\\3&-4&0&0\\-9&16&-8&0
+ \end{pmatrix},\qquad
+ w=\left(19,17,\frac{37}{6},\frac{33}{32}\right)
+\]
+は正の局所模型であり，$D=(1,-6,5,0)$ となる．
+従って閉路に沿う $D$ の向きから分母の単調性を無条件には結論しない．
+三高分母の既存例 $(13,7,7,1)$ でも $D=(4,-2,-4,2)$ となる．
+また，異なる二高分母の係数和も常に負ではない．
+具体的には
+\[
+ q=(11,1,1,9),\qquad
+ P=\begin{pmatrix}
+ 0&-2&5&-14\\
+ -5&0&0&4\\
+ 2&-1&0&-2\\
+ -7&2&-4&0
+ \end{pmatrix},\qquad
+ w=(33/16,1,1,33/8)
+\]
+は正の局所 chart であり，$D=(-1,0,-2,3)$ を与える．従って
+\[
+ \sum_{q_i>1}D_i=2>0,\qquad
+ \sum_i\frac{D_i}{q_i}=-\frac{58}{33}<0.
+\]
+一方，等二高分母 $q=7$ の標準模型では $D=(0,-2,2,0)$ であり，
+$\sum_iD_i/q_i=12/7>0$ となる．したがって，単純な高分母部分和や
+この重み付き和の一様な符号を，大域の potential として仮定しない．
+
+\paragraph{等三高分母の負和．}
+分母 $(q,q,q,1)$，$q\geq3$，では低分母頂点の係数は $D_0>0$ であり，
+高分母三頂点の係数和は負となる．この結果には正値性を用いない．
+正局所模型では一般の matching 定理からも，低分母 row が二負一正であることが分かる．
+その row を $(-a,-b,a+b-1)$ と書けば
+\[
+ D_0=-1+(q-1)\left(\frac1a+\frac1b-\frac1{a+b-1}\right)>0
+\]
+となる．正値性を仮定しない元の等三高分母定理は，別途 row/pair の整数条件から証明されている．
+等二高分母の解決済みの分類と，それに使った整数変数を次にまとめる．
+
+\input{notes_uniform_two_high.tex}
+
+\subsection{単色の高分母成分と二値分母の排除}
+
+高分母 support を $H=\{ij:q_{ij}>1\}\subset K_5$ とする．
+辺を持つ一つの連結成分 $C$ の全高分母が同じ $q>1$ なら，
+各 core の分母 pattern は $(q^k,1^{4-k})$ となる．
+$k=1,2,3$ では高分母側の $D$ の和は負であり，$k=4$ では全四頂点の和なので零である．
+しかし $C$ 上で足すと各 edge の対向端が相殺し，総和は零でなければならない．
+従って全 vertices の次数が四となり，$C=K_5$ となるが，これは素数 support の
+$K_4$ 禁止に反する．
+
+従って，高分母 support の各非空連結成分には少なくとも二種類の高分母が必要である．
+特に，ある $q>1$ に対して全 branch denominators が $\{1,q\}$ に属すれば，全て一となる．
+算術稿の \texttt{uh11:monochromatic-component} と
+\texttt{uh11:two-value-rigidity} に対応する．
+この障害は分母上限，node 非負性，全 node budget を用いない．
+「単色の部分 graph」が別の高分母 edge に接する場合には，連結成分という仮定が失われるので，
+その部分 graph だけを同じ議論で排除しない．
+
+\subsection{素数 support と共通因子の制約}
+
+五 cores の labels を $V=\{0,1,2,3,4\}$ とする．
+共有 branch の分母を $q_{ij}=q_{ji}$，core $i$ の outgoing numerator を $p^i_{jk}$ と書く．
+\[
+ \sum_{k\ne i,j}p^i_{jk}=-q_{ij},\qquad
+ p^i_{jk}p^i_{kj}=q_{ij}q_{ik}-1,\qquad
+ q_{ij}\mid p^i_{jk}+p^j_{ik}.
+\]
+奇素数 $\ell$ ごとに $G_\ell=\{ij:\ell\mid q_{ij}\}\subset K_5$ とする．
+その三角形 $ijk$ 上では，$\mathbf F_\ell$ において
+\[
+ p^i_{jk}=p^j_{ki}=p^k_{ij}=\varepsilon,\qquad
+ p^i_{kj}=p^j_{ik}=p^k_{ji}=-\varepsilon,
+ \qquad\varepsilon=\pm1.
+\]
+三つの determinants と三つの clutchings を一周すると $x^2=1$ を得る．
+この式と row sums から $K_4$ と book $B_3$ が禁止され，$G_3$ は matching となる．
+
+現在の密な support に対する一般結論は
+\[
+ |E(G_\ell)|\geq7
+ \quad\Longrightarrow\quad
+ \ell=5,\quad G_\ell\cong K_{2,2,1}
+\]
+である．従って exact 七辺 support はどの奇素数でも存在せず，
+\[
+ |E(G_3)|\leq2,\qquad |E(G_5)|\leq8,\qquad
+ |E(G_\ell)|\leq6\quad(\ell\ne3,5).
+\]
+五の場合も edge 数七は不可能である．七辺 graph の残存二型
+$K_1\vee P_4$ と $K_{2,3}$ に一本を加えた graph は，
+全 cores の式を同時に使うと八本目の辺を強制する．
+後者では最後の determinant の残差が $-5$ になることが，素数を五へ限定する核心である．
+
+四 cores に対する以前の gcd 条件に加え，任意に選んだ七本の異なる branches に対して
+\[
+ \gcd\{q_{ij}:i,j\in S,\ i<j\}=1\quad(|S|=4),
+ \qquad
+ \gcd(q_{e_1},\ldots,q_{e_7})\mid5
+\]
+となる．特に二十五で割れる分母は高々六本である．
+$G_5=K_{2,2,1}$ の場合，その八辺の分母の gcd は正確に五であり，
+少なくとも二辺では五進付値が一となる．
+この指数の障害は $\ZZ/25\ZZ$ 上で証明する．
+その環では $r^2=0$ から $r=0$ としてはならず，nilpotent ideal を保持して
+最後の determinant 残差 $-5\ne0$ を取り出す．
+
+固定された標識付き $K_{2,2,1}$ に対し，modulo five の reduced system は符号 $s=\pm1$ の二解だけである．
+parts を $\{a,b\},\{c,d\},\{o\}$ とすると
+\[
+ q_{ab}=-s,\quad q_{cd}=s,\quad q_{ij}=0\ (ij\ne ab,cd),
+ \qquad
+ P^o=s\begin{pmatrix}
+ 0&-2&1&1\\-2&0&1&1\\-1&-1&0&2\\-1&-1&2&0
+ \end{pmatrix}
+\]
+となり，他の四 cores も一意に決まる．これらは対向 $D$ の相殺も満たすため，
+同じ mod~$5$ 条件だけでこの型をさらに排除できない．
+正の奇整数への lifting，全整数 clutching，面積，node 配分，actual neck の接着は別に確認する必要がある．
+
+三に関する局所計算も再利用できる．一つの core で二つの分母が三で割れると仮定すると，
+それらの rows は $\mathbf F_3$ 内で一定符号となり，残る二 rows の最初の二 entries は打ち消す．
+最後の pair は $p_{23}=-q_2$，$p_{32}=-q_3$ を要求し，determinant の $-1$ と矛盾する．
+実際の atlas で全ての高分母が三で割れるなら，$H=G_3$ が matching となり，
+孤立高分母 edge の障害から $H$ は空である．
+素数 support の合同定理には weights や node 非負性を使わないが，
+この最後の幾何的結論には正の basin areas と対向 $D$ の相殺を使う．
+
+\subsection{低分母 puncture と三角形成分の一般障害}
+
+同じ高分母 $q$ の共有 branch の一つの marked puncture が，両側で低分母一へ向かうとする．
+その outgoing entries $p,p'$ は $q-1$ の非零 signed divisors であり，
+$q\mid p+p'$ から
+\[
+ p'=-p,\qquad\{p,p'\}=\{1,q-1\},\qquad
+ \{p,p'\}=\{-1,-(q-1)\}
+\]
+の三型に限られる．各型で incoming entries の和も $p+p'$ に等しい．
+meridian node 表示での個数は順に $1,0,2$ である．
+これは marked punctures の対応を固定して使う必要がある．
+
+$H$ の一つの連結成分が三角形なら，各 core は二高分母を持つ．
+二つの外側 low punctures の outgoing sums は，符号が揃う場合に $q,-q$，
+逆に対応する場合に零，零となるため，総和は常に零である．
+従って三角形に向かう high puncture の outgoing numerators の和は $-2q$ となり，
+対向 $D$ の相殺も使うと high--high numerators の差は一つの circulation $\delta$ に一致する．
+それらの絶対値の平均を $T_i>0$ と書けば
+\[
+ q_i=\frac{T_i+T_{i+1}}2,\qquad
+ (T_{i-1}+T_i)(T_i+T_{i+1})=4T_i^2-\delta^2+4.
+\]
+最大値と最小値の比較から $\delta^2=4$ と全 $T_i$ の一致を得る．
+従って三辺分母が等しくなり，単色成分の障害に反する．
+局所の追加計算では $q=7,13$ の high--high pair $(-q-1,-q+1)$ だけが残り，
+その高分母係数は $(0,-2)$ または $(0,-1)$ で，やはり相殺できない．
+
+この三角形成分の排除は分母の上限によらず，node 非負性や全 node 数五も仮定しない．
+三角形に別の高分母 edge が接続する場合は，この議論の範囲に含まれない．
+一般の path 成分には，次に述べる別の局所符号の議論を用いる．
+
+\input{notes_fixed_low_completion_v17.tex}
+\input{notes_support_v19.tex}
+
+\subsection{第三 corner の有限条件と一辺で整合する無限族}
+
+二つの cores $i,j$ を共有辺 $ij$ で比較し，puncture $k$ に対して
+\[
+ A=q_{ik},\quad B=q_{jk},\quad r=p^i_{kj},\quad s=p^j_{ki}
+\]
+が既知とする．第三 core $k$ の二つの numerators は
+$e=Au-r$，$f=Bv-s$ と書かれ，$u=1-n_{ik;j}$，$v=1-n_{jk;i}$ である．
+各共有直線の全 node 数五と非負性を使うと，必要条件は
+\[
+ (Au-r)(Bv-s)=AB-1,
+ \qquad u,v\in\{-4,-3,-2,-1,0,1\}
+\]
+となる．この三十六候補の検査は分母の大きさによらず使える．
+三 punctures 全てで通っても，第三 core の全データや actual weights の同時実現はまだ必要である．
+
+再利用できる局所無限族として，$n\geq1$，$Q_n=n^2+n+1$，$R_n=n^2-n+1$ に対し
+\[
+ q=(Q_n,1,1,R_n),\qquad
+ P_n=\begin{pmatrix}
+ 0&-(n+1)&1&-(n^2+1)\\
+ -n&0&0&n-1\\
+ n(n+1)&-(2n+1)&0&-n(n-1)\\
+ -n^2&n&-1&0
+ \end{pmatrix},
+\]
+\[
+ w=(Q_n-1/2,1,1,n-1+1/(2n)),\qquad
+ D=(-Q_n,2n+1,-1,R_n)
+\]
+を持つ正局所模型 $L_n$ がある．$L_n$ の $Q_n$ 端と $L_{n+1}$ の $R_{n+1}=Q_n$ 端では
+$D$ が相殺し，outgoing および incoming numerators の和は，適切な共通順序で
+$(0,0,-2Q_n)$ となる．node 配分は $(1,1,3)$，star shears は $(0,0,2)$ である．
+しかし $n\geq2$ では residue matching が一意で，第三 corner は
+\[
+ (R_nu+n^2)\bigl(Q_{n+1}v+n^2+2n+2\bigr)
+   =n^2(n+1)^2+2
+\]
+を要求し，六値の $u,v$ の全場合が一般の多項式不等式で排除される．
+この族は局所模型と単独辺の整数整合の存在例であり，actual weights や切片まで接続した大域例ではない．
+
+\subsection{既存の有界排除の量化と，残る研究の入口}
+
+$q_{ij}\le101$ の全範囲では全 $q_{ij}=1$ が証明済みである．
+奇数性から，高分母が存在すれば最大値は百三以上となる．
+この結論は分母が全て百一以下という仮定を必要とし，現在の六候補の無上界排除を意味しない．
+
+完全性に必要な手法を残す．二高分母以上の core では $q_0,q_3>1$ と並べ替え，
+$p_{01},p_{02},p_{13}$ をそれぞれ $q_0q_1-1,q_0q_2-1,q_1q_3-1$ の signed divisors から選ぶ．
+残りは row sums と pair products で決まるため，numerators に独立の探索上限は不要である．
+一高分母では完全な高 ray の標準形を保持する．端点の fingerprint
+\[
+ \left(q,D,\operatorname{sort}(p_1,p_2,p_3\bmod q)\right)
+\]
+について，対向端での $D$ と residues の符号反転を要求し，相手のない候補を反復削除する．
+これは必要条件による削除なので，大域接着の十分条件とはしない．
+元の完全 catalog と証明書は
+\nolinkurl{verify_quintic_denominators_v10.py} と
+\nolinkurl{quintic_denominators_verification_v10.json} に保持し，版番号を付け替えない．
+
+次の対象は $G_{5,11},G_{5,13},G_{5,14},G_{5,15},G_{5,16},G_{5,17}$ である．
+book の有限 node offset と固定 core 完成法を，core 自体が動く場合へ拡張する．
+三高分母の canonical Schur 系では $\beta\le-2$ と特異系を落とさず，
+必要な整数候補が得られれば全 core の weights，整数 framings，実作用切片まで検討する．
+密な mod 五模型の整数 lifting では，五進付値一の辺が少なくとも二本ある条件を保持する．
+
+$G_{5,5},G_{5,10},G_{5,12}$ に加え，本版では $G_{5,7},G_{5,9}$ も全排除したので再探索しない．
+その証明から，共通低 ray の $C/D$ 型，matching が強制する符号，
+未知分母を切らない点・半直線の処理を取り出して次の候補へ使う．
+等二高分母の負和，素数 support の合同障害，または部分的に整合する整数模型を，
+任意分母の全体に対する不存在・存在へ無条件に移さない．

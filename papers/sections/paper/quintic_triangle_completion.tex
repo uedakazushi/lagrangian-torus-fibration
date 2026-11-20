@@ -1,0 +1,143 @@
+% v10: general triangle-completion test and a symbolic infinite obstruction family.
+% Requires q9:four-line-criterion, mg8:end-cancellation and the standard macros.
+\section{三角形の第三 corner による整数接着の障害}
+\label{qt10:section}
+
+一つの共有 branch の両端で分母，分岐係数，puncture clutching が整合しても，
+その三つの punctures が属する三角形全体で整合するとは限らない．
+全平面五次では各共有直線上の meridian node 数が五であることを用い，
+第三 corner の必要条件を分母の大きさによらない有限個の整数式にできる．
+
+\begin{lemma}[第三 corner の有限な必要条件]\label{qt10:third-corner}
+三つの異なる core labels を $i,j,k$ とする．
+core $i,j$ の整数作用データが既に与えられているとし，
+\[
+ A=q_{ik},\qquad B=q_{jk},\qquad
+ r=p_{i;kj},\qquad s=p_{j;ki}
+\]
+と置く．これらを全平面五次の大域 atlas に接続できるためには，
+\begin{equation}\label{qt10:completion}
+ (Au-r)(Bv-s)=AB-1
+\end{equation}
+を満たす $u,v\in\{-4,-3,-2,-1,0,1\}$ が必要である．
+\end{lemma}
+
+\begin{proof}
+第三 core $k$ で未定の numerators を
+$e=p_{k;ij}$，$f=p_{k;ji}$ と書く．
+共有直線 $ik,jk$ の puncture clutching は
+\[
+ e=A(1-n_{ik;j})-r,\qquad
+ f=B(1-n_{jk;i})-s
+\]
+を要求する．各直線の全 meridian node 数は五で，その各 basin の個数は非負なので，
+$0\le n_{ik;j},n_{jk;i}\le5$ である．
+$u=1-n_{ik;j}$，$v=1-n_{jk;i}$ と置けば指定した六値の範囲となる．
+core $k$ の crossing determinant $AB-ef=1$ が \eqref{qt10:completion} を与える．
+\end{proof}
+
+本補題は第三 core の他の二つの分母，weights，作用切片を用いない．
+従って候補となる二つの端点について，三つの punctures のそれぞれに適用できる．
+逆に，三つ全てがこの検査を通っても，第三 core の全データや大域 atlas の存在は従わない．
+
+\subsection{単独の共有辺では整合する無限族}
+
+\begin{proposition}[隣接する二高分母の局所族]\label{qt10:ladder-family}
+整数 $n\ge1$ に対し
+\[
+ Q_n=n^2+n+1,\qquad R_n=n^2-n+1=Q_{n-1}
+\]
+と置く．次のデータは正の局所四直線作用 chart $L_n$ を与える：
+\[
+ q=(Q_n,1,1,R_n),\qquad
+ P_n=\begin{pmatrix}
+ 0&-(n+1)&1&-(n^2+1)\\
+ -n&0&0&n-1\\
+ n(n+1)&-(2n+1)&0&-n(n-1)\\
+ -n^2&n&-1&0
+ \end{pmatrix},
+\]
+\[
+ w=\left(Q_n-\frac12,\ 1,\ 1,\ n-1+\frac1{2n}\right).
+\]
+その分岐係数は $(-Q_n,2n+1,-1,R_n)$ である．
+\end{proposition}
+
+\begin{proof}
+$Q_n,R_n$ は正の奇数である．全 row sums は $-q_i$ であり，
+六つの pair products は $q_iq_j-1$ となる．
+例えば $Q_nR_n-1=n^2(n^2+1)$ である．
+正の numerators に対応する basin areas は
+\[
+ B_{02}=\frac1{2Q_n},\qquad B_{20}=\frac12,
+ \qquad B_{13}=\frac1{2n},\qquad B_{31}=\frac1{2R_n}
+\]
+である．$n=1$ では $p_{13}=0$ だが，同じ正値の公式を用いてよい．
+残る numerators は非正なので，その basin areas も正である．
+命題~\ref{q9:four-line-criterion} を適用する．
+各 column sum から記した分岐係数を得る．
+\end{proof}
+
+$L_n$ の分母 $Q_n$ の端と，$L_{n+1}$ の分母 $R_{n+1}=Q_n$ の端を比較する．
+その分岐係数は $-Q_n,+Q_n$ なので相殺する．
+両端の三つの outgoing numerators はそれぞれ
+\[
+ (-(n+1),\ 1,\ -(n^2+1)),
+ \qquad (-(n+1)^2,\ n+1,\ -1).
+\]
+対応を，最初の列の順に第二列の第二，第三，第一 entry へ取ると，
+両端の和は $(0,0,-2Q_n)$ となる．従って node 配分は $(1,1,3)$ であり，
+全て非負で合計五となる．incoming numerators に対しても，同じ順の和は
+$(0,0,-2Q_n)$ であり，三枚の face の star shears は $(0,0,2)$ となる．
+その和二は $K_4$ の ambient star relation と整合する．
+ここで確認したのは整数データの接着条件であり，actual weights や切片を一致させた
+二つの幾何的 neck germs の接着を主張するものではない．
+
+\begin{theorem}[この無限族の隣接端は三角形へ延長しない]\label{qt10:ladder-no-triangle}
+$n\ge2$ とする．$L_n$ と $L_{n+1}$ の上記の分母 $Q_n$ の端は，
+単独の branch の整数条件を満たすが，現在の全平面五次の大域作用 atlas には同時に現れない．
+\end{theorem}
+
+\begin{proof}
+$L_n$ 側の outgoing residues は $Q_n$ を法として $\{1,n,n^2\}$ である．
+$n\ge2$ では三つは相異なるので，puncture clutching に適合する対応は上記のものに限られる．
+従って $L_n$ のもう一つの高分母 $R_n$ に向かう puncture と，
+$L_{n+1}$ のもう一つの高分母 $Q_{n+1}$ に向かう puncture は同じ第三 core $k$ を指す．
+
+この triangle について
+\[
+ R=n^2-n+1,\quad S=n^2+3n+3,\quad C=n^2+2n+2
+\]
+と置くと，補題~\ref{qt10:third-corner} は
+\begin{equation}\label{qt10:ladder-third-corner}
+ (Ru+n^2)(Sv+C)=RS-1=:M=n^2(n+1)^2+2
+\end{equation}
+を要求する．$u,v\in\{-4,\ldots,1\}$ の全場合を次の不等式で排除する．
+
+$u,v\ge0$ なら左辺は $n^2C$ 以上であり，$n^2C-M=n^2-2>0$ となる．
+$u=-1,v\ge0$ なら，左辺は正で $(n-1)(S+C)$ 以下であり，
+$M-(n-1)(S+C)=n^4-2n^2+7>0$ となる．
+$u\ge-1,v\le-1$ または $u\le-2,v\ge0$ なら，二因子の符号が異なるので左辺は負である．
+
+残る場合には $a=-u\in\{2,3,4\}$，$b=-v\in\{1,2,3,4\}$ と書く．
+左辺は正の二因子の積 $(aR-n^2)(bS-C)$ であり，$a,b$ に関して厳密に増加する．
+$b=1$ ならその最大値でも
+\[
+ M-(4R-n^2)(n+1)=n^4-n^3+2n^2-2>0.
+\]
+$(a,b)=(2,2)$ でも
+\[
+ M-(2R-n^2)(2S-C)=3n^2-6>0.
+\]
+他の全ての組は $(3,2)$ または $(2,3)$ 以上であり，
+\begin{align*}
+ (3R-n^2)(2S-C)-M&=n^4+3n^3-2n^2+10>0,\\
+ (2R-n^2)(3S-C)-M&=n^4+n^3-4n^2+12>0.
+\end{align*}
+最後の二つも $n\ge2$ で厳密に正である．
+従って \eqref{qt10:ladder-third-corner} は解を持たず，矛盾する．
+\end{proof}
+
+この無限族は，分母を大きくすると局所の高分母 chart と単独 branch の整数整合を
+いくらでも作れることを示す．同時に，それらから大域存在を推測する際には，
+同じ puncture が三つの cores に属することと，全 node budget を保持する必要がある．

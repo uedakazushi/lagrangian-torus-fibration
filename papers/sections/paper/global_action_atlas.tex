@@ -1,0 +1,269 @@
+\section{五次・六次全平面模型の大域作用適合 atlas}
+\label{ga8:section}
+
+局所 cone charts，実際の二重曲線上の面積，normal framing，および
+有限の平滑化 parameter における作用の加法定数を，ここで一つの構成にまとめる．
+必要なのは，既製の二つの foliations を単に isotopy で結ぶことではない．
+同じ actual Hamiltonian neck 上で critical actions を指定された直線に保ち，
+その共通 Hamiltonian が各 branch star で ambient-affine になることを用いる．
+
+\begin{theorem}[五次・六次の作用適合 matroidal atlas]
+\label{ga8:global}
+$d\in\{5,6\}$ とし，$X_d\subset\PP^3$ を任意の滑らかな次数 $d$ の曲面，
+$\omega$ を $[\omega]=aH$，$a>0$ を満たす任意の K\"ahler form とする．
+定理~\ref{main:global} の全平面構成を選び，その fibration
+\[
+ \pi:(X_d,\omega)\longrightarrow B_d
+\]
+について，定義~\ref{atl:definition} の，focus--focus 特異点を許す
+作用適合 matroidal atlas を構成できる．
+全ての branch denominator は $q=1$ である．
+
+$d=5$ では五つの core charts を標準 $K_4$ fan とし，
+系~\ref{qg8:six-systems} の六つの標識付き対称有向四角形系のいずれも選べる．
+$d=6$ では六つの core charts を標準 Petersen fan とし，
+定理~\ref{topo:petersen} の六つの標識付き同時 Petersen systems のいずれも選べる．
+それぞれの実際の二重曲線上で，対応する embedded marked pants class を先に固定できる．
+foliation の代表は，以下の面積条件を満たすようにその class 内で選ぶ．
+
+構成の個数と面内の node 配分は次の通りである．
+\begin{center}
+\begin{tabular}{c|ccccc}
+ $d$ & cores & branch edges & triangles & bigons & focus points\\ \hline
+ $5$ & $5$ & $10$ & $10$ & $0$ & $50$\\
+ $6$ & $6$ & $30$ & $20$ & $15$ & $90$
+\end{tabular}
+\end{center}
+五次では各 triangle に五つの focus points があり，
+六次では各 triangle に三つ，各 bigon に二つある．
+全ての branch edges の primitive affine length は
+\begin{equation}\label{ga8:branch-length}
+ \frac{a}{\pi(d-1)}
+ =\begin{cases}a/(4\pi),&d=5,\\a/(5\pi),&d=6\end{cases}
+\end{equation}
+である．底空間の homotopy 型はそれぞれ
+$\bigvee^4S^2$ と $\bigvee^{10}S^2$ である．
+
+focus values 自体は通常の matroidal charts の定義域から除き，
+その穿孔近傍には実際の nodal fibration の作用アフィン構造を用いる．
+core fibers は元の直線補集合の logarithmic skeleton の symplectic images である．
+特に Petersen fan という結論は，core の symplectic filling を
+標準 $M_{0,5}$ の filling と同定する主張ではない．
+\end{theorem}
+
+証明の前に，実際の成分へ移す際に使う二点を明示する．
+
+\begin{lemma}[有限標識点も固定する divisor-relative Moser]
+\label{ga8:fixed-q}
+補題~\ref{glue:pair-moser} の仮定の下で，crossings を避けた divisor 上の
+有限個の相異なる点を指定する．その結論の isotopy は，これらの点も
+全 parameter で固定するように選べる．
+\end{lemma}
+
+\begin{proof}
+$\dd\alpha_s=\partial_s\omega_s$ を取り，crossing balls の小近傍で
+$\alpha_s=0$ とする，元の証明から始める．指定点 $q\in C$ ごとに
+\[
+ g_s(q)=0,\qquad
+ (\dd g_s)|_{T_qC}=-\alpha_s|_{T_qC}
+\]
+という first jet を指定し，互いに素な小近傍に支持された滑らかな関数
+$g_s$ として延長する．$\alpha_s$ を $\alpha_s+\dd g_s$ で置き換えると，
+crossing balls の条件とその微分は変わらず，指定点での tangent restriction が零になる．
+
+次に，$N_s=(TC)^{\omega_s}$ に沿う元の normal-jet correction
+\[
+ F_s|_C=0,\qquad (\dd F_s)|_{N_s}=-\alpha_s|_{N_s}
+\]
+を行う．$F_s|_C=0$ なので tangent restriction は変更されない．
+従って $\eta_s=\alpha_s+\dd F_s$ は各指定点で covector として零である．
+$\iota_{Y_s}\omega_s=-\eta_s$ を解けば，$Y_s$ は全 divisor に接し，
+指定点およびより小さい crossing balls で零になる．
+その Moser flow が主張を満たす．
+\end{proof}
+
+\begin{lemma}[実成分への移植と critical action germs]
+\label{ga8:affine-persistence}
+命題~\ref{per:k4-realization} または定理~\ref{per:local-realization} の
+core model において，nodal blow-up patches を全 critical leaves から離して取る．
+局所 nodal comparison，divisor-relative Moser，および
+補題~\ref{glue:circle} の normal-circle conjugacy の後も，
+実際の二重曲線に十分近い critical action germs は，normal moment の
+整数勾配を持つ affine functions である．
+共通 neck framing へ直すときの勾配の変化は，
+補題~\ref{qg8:framing} または命題~\ref{sg8:framing} に記した整数 shear である．
+\end{lemma}
+
+\begin{proof}
+core model の proportional-curvature collar では，これらの作用は
+normal action $\rho-w$ の定数倍であり，指定した recipes ではその係数が整数である．
+flat-ball の準備，局所 blow-up，および相対 almost-toric comparison は，
+critical leaves の全 germ の外に支持を取れる．従ってこの段階では
+critical germs とその作用関数は変更されない\cite[Theorem~1.1]{CGblowup}．
+
+divisor-relative Moser は critical leaves を点ごとに固定する必要はない．
+この symplectomorphism により，fibration の germ 全体，その周期 cycles，
+primitive，および normal circle action を共に運ぶ．
+作用関数の値と moment の関係は，この同時輸送で保たれる．
+続く circle conjugacy は divisor を点ごとに固定し，
+normal weight $+1$ の作用を actual neck の作用へ合わせる．
+moments は divisor 上で零と正規化するので，両 moment の間に加法定数は残らない．
+crossing germs を固定し，余分な $U(1)$ gauge winding を入れない同定を用いる．
+
+運ばれた primitive と，節~\ref{ng8:section} の一つの neck primitive の差は，
+共通 collar 上で closed である．連続に運ばれる同じ cycle に対するその積分は定数なので，
+critical actions の変化は加法定数だけである．
+cycle framing を $\beta\mapsto\beta+m\alpha$ と変えたときは，
+さらに $m\mu$ が加わる．従って affine 性と整数勾配が保たれ，
+残る勾配の比較は actual normal-bundle clutching の計算に正確に帰着する．
+\end{proof}
+
+\begin{proof}[定理~\ref{ga8:global} の証明]
+\textit{偏極と有限個の marked データを準備する．}
+成分を $i=0,\ldots,d-1$ と標識し，十分小さい $\eps>0$ に対して
+\[
+ \beta_i=(i-d+1)\eps,\qquad
+ b_i=\frac{\beta_i}{2\pi},\qquad
+ c_d=\frac{a}{2\pi(d-1)},\qquad
+ w_{i,j}=c_d+b_j-b_i
+\]
+と置く．この ray は定理~\ref{pol:cone} の K\"ahler simplex の内部にあり，
+例えば $\eps<a/d^2$ とすれば全 weights は正である．
+実際の surgeries の capacity を確保するためには，後でさらに $\eps$ を小さくする．
+各 blow-down component における直線の面積は
+\[
+ 2\pi R_i,\qquad
+ R_i=(d-1)c_d+\sum_jb_j-db_i
+     =\sum_{j\ne i}w_{i,j}
+\]
+である．$i<j$ の二重曲線の $d$ 個の blow-up sizes は全て
+$2\pi\delta_{ij}$，$\delta_{ij}=b_j-b_i$ である．
+
+五次では六つの対称有向四角形系の一つを取り，その代表を
+$f_i(j)=(i+j)/2$ on $\mathbb F_5$ としてよい．
+各 $C_{ij}$ の三つの basins に，選択した一領域へ三点，残る二領域へ一点ずつ，
+実際の $q_{ij,r}$ を割り当てる．
+六次では選んだ同時 Petersen system に従って各 $C_{ij}$ の quartet を固定し，
+四つの external basins に一点ずつ，内部 annulus に二点を割り当てる．
+同じ $C_{ij}=C_{ji}$ 上で embedded marked class を先に選び，
+各 $q_{ij,r}$ を相異なる regular leaves に置く．
+補題~\ref{qg8:marked-allocation} と節~\ref{sg8:section} の density--Moser argument により，
+crossing disks と有限個の標識点の近傍を固定してこの選択ができる．
+
+blow-down で指定する basin areas は，五次では
+$2\pi(w_{i,k}+\epsilon_{i;jk}w_{i,j})$，六次では $2\pi w_{i,k}$ である．
+六次の内部 annulus の面積は $2\pi w_{i,j}$ とする．
+指定点近傍の flat-ball 準備は critical leaves を避けた一領域内の exact modification なので，
+その領域全体の積分を変えない．
+normal-coupling の準備も divisor の制限形式を保つ．
+その後の blow-up は，含まれる領域の面積から一個につき $2\pi\delta_{ij}$ を引く．
+従って，実際の strict curve 上の対応する領域面積は，
+定理~\ref{qg8:unique-weights} および命題~\ref{sg8:areas} によって両側で一致する．
+全ての目標面積は正である．これが中央曲線における面積の条件である．
+
+crossing germs，marked foliations，および regular patches は，
+$\eps=0$ の blow-down データから小さい parameter 族として準備できる．
+有限個の patch capacities は正の下限を持つので，この準備の後で $\eps$ を縮める．
+実際の全空間の neck 平均化と三重点の product germs は，
+節~\ref{sec:necks} の fixed-class 構成で先に準備する．
+
+\textit{core charts と nodes を実際の成分上へ移す．}
+各 blow-down component に定理~\ref{snc:main} の相対構成を施し，
+上記の面積を持つ foliation を用いて，五次では命題~\ref{per:k4-realization}，
+六次では定理~\ref{per:local-realization} の charts を取る．
+全ての surgeries は core と critical collar germs の外の regular patches 内で行う．
+局所比較定理は patch の外で恒等であるから，一個の blow-up ごとに
+一個の compact focus--focus fiber が入り，core charts は保たれる．
+
+モデルの blow-up 形式から actual $\Omega_i$ への同定には，
+補題~\ref{ga8:fixed-q} を用いて各 strict curve 上の標識点も固定する．
+これは crossing disks を固定する divisor-relative isotopy であるから，
+両側の reduced foliations は先に選んだ同じ marked class に留まる．
+全ての basin と annulus は形式と共に運ばれるので，既に確認した実面積の一致も保たれる．
+両側の embedded critical leaves がこの段階で点ごとに一致する必要はない．
+次の neck 補間に必要なのは，同じ marked class と対応する critical-region areas である．
+
+次に補題~\ref{glue:circle} を適用する．
+core と compact nodal fibers 全体を避けるほど細い collar で normal actions を合わせる．
+補題~\ref{ga8:affine-persistence} により，実際の成分側の critical actions はなお affine である．
+五次では補題~\ref{qg8:framing} と命題~\ref{qg8:slope}，
+六次では命題~\ref{sg8:framing} が，両側を共通 neck framing に直した後の
+整数勾配の一致を与える．この順序では，nodal monodromy と normal-bundle winding を
+葉層の isotopy で消したことにはしていない．
+
+\textit{有限の平滑化 parameter で critical actions を接続する．}
+各二重曲線について，中央 strict curve 上の面積一致と整数勾配の一致が揃ったので，
+系~\ref{ng8:central-criterion} を適用する．
+puncture cuts と保存する collars を先に十分小さく選び，その後で正の切断値
+$\delta$ を選ぶ．一つの全空間 primitive と toric reference actions を用いるため，
+中央曲線上で一致した critical action intercepts は，共通の意味を持つ．
+固定した $\mu=\delta$ と $\mu=-\delta$ の open buffers を nearby fiber に運ぶと，
+補題~\ref{ng8:transport-intercept} はこれらの作用関数そのものを保存する．
+ここでは $\mu=0,t=0$ を通る輸送も，$\delta\to0$ に一様な輸送も使わない．
+
+残る interval では命題~\ref{ng8:straight-neck} により，
+end germs と toric collars を保って measured critical regions を補間する．
+total reduced area との整合は補題~\ref{ng8:relative-dh} の affine Stokes formula による．
+中央曲線で正の basin および annulus areas は，$\delta$ を縮めれば全 interval で正となり，
+保存する領域に対する面積の余裕も確保できる．
+従って，actual neck 全体の critical actions は同じ整数勾配の affine functions となる．
+三重点では固定した toric leaves を使い，節~\ref{glue:hexagon} の
+飽和した affine moment cuts によって components と necks を接続する．
+
+core と nodal fiber 全体およびその飽和近傍は，
+補題~\ref{glue:transport} による固定 compact subset の輸送で保存する．
+全 interface は whole fibers の和であり，open overlap 上で実際の葉層が一致する．
+節~\ref{sec:gluing} の properness と飽和 quotient の議論が適用され，
+追加の特異 fibers を生じずに，compact $X_t$ 上の fibration を得る．
+
+\textit{facewise actions を一つの atlas にする．}
+core の近傍には既に $K_4$ または Petersen charts がある．
+各 branch の内部では，critical actions の整数勾配と
+simple-saddle の transverse action の strict monotonicity により，
+補題~\ref{atl:qone-chart} の chart が得られる．
+その共通 Hamiltonian は，neck の normal moment $\mu$ である．
+core chart 側でも，同じ作用は ambient-affine である．
+$K_4$ の場合は \eqref{per:k4-lattice-map} の $\Phi$ を用い，
+Petersen の場合は補題~\ref{per:branch-duality} の saturated branch-star lattice を用いる．
+加法定数は core primitive と neck primitive の正規化の差として許される．
+この Hamiltonian は branch tangent に沿って primitive な非零勾配を持つ．
+
+正則 faces では実際の fibration の通常の action charts を使う．
+これらと core および branch charts は同じ作用格子に適合し，
+branch を横切る overlap では共通 Hamiltonian が両方で ambient-affine である．
+従って命題~\ref{atl:gluing-criterion} により，transition とその逆は
+ambient integer affine maps の制限となる．
+五次の明示的な変換は命題~\ref{qg8:star-transition}，
+六次の変換は補題~\ref{sg8:star} にも記した通りである．
+cocycle identity は実際の chart transitions の合成として成り立つ．
+focus--focus values の穿孔近傍には，既存の compact nodal model の作用格子を用いる．
+その非自明 monodromy を通常の smooth matroidal chart で埋めることは要求していない．
+
+\textit{個数，長さ，および指定された K\"ahler form を確認する．}
+五次の一つの triangle では，三つの pair のうち選択 basin となる pair が一つなので，
+node 数は $3+1+1=5$ である．
+六次では各 triangle が三つの external basin nodes を持ち，
+各 bigon が一つの内部 annulus の二つの nodes を持つ．
+他の cell counts と homotopy 型は定理~\ref{main:global} による．
+branch 上の normal action の原点は，$i$ core では $\mu=w_{i,j}$，
+$j$ core では $\mu=-w_{j,i}$ にある．
+全区間で primitive な勾配は一なので，その affine length は
+$w_{i,j}+w_{j,i}=2c_d$ となり，\eqref{ga8:branch-length} を得る．
+
+最後に，全空間の exact modifications を compact $X_t$ 上で Moser により戻す．
+さらに，滑らかな次数 $d$ の射影超曲面の connected family に沿う symplectic transport と，
+同一 class の K\"ahler forms の凸結合に対する Moser を用いて，
+任意の指定された $(X_d,\omega)$ へ移す．
+これらは fibration と作用格子を共に運ぶ symplectomorphisms であり，
+atlas の存在，整数勾配，focus monodromy，および affine lengths を保つ．
+\end{proof}
+
+\begin{remark}[構成の量化]
+本定理は，各次数について作用適合 atlas を持つ fibration の存在を述べる．
+既に任意に固定された basin areas，normal holonomies，または end germs 全てが
+この方法で接着できるという主張ではない．
+また，K\"ahler simplex の全点で所定の容量の surgeries を実行する必要はなく，
+十分小さい vertical ray を用いている．
+六つの標識付き recipes または graph systems の実現は，
+六つの相異なる大域 affine-isomorphism classes の分類を意味しない．
+\end{remark}

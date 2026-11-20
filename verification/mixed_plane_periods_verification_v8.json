@@ -1,0 +1,1769 @@
+{
+  "version": 8,
+  "code_sha256": "3984564f975ebc440a861fce4833ac64bf4cb87566fbc952a0833864ff5ea303",
+  "data": {
+    "fan_rays": {
+      "X": [
+        1,
+        0,
+        0
+      ],
+      "Y": [
+        0,
+        1,
+        0
+      ],
+      "U": [
+        0,
+        0,
+        1
+      ],
+      "V": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    "saturated_fan_cones": 6,
+    "recipes_total": 36,
+    "admissible_recipes": 4,
+    "bad_crossing_count_histogram": {
+      "0": 4,
+      "1": 24,
+      "2": 8
+    },
+    "admissible_records": [
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "Y"
+          ],
+          [
+            "Y",
+            "U"
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "X",
+            "Y"
+          ],
+          [
+            "Y",
+            "V"
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "U"
+          ],
+          [
+            "Y",
+            "X"
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "V"
+          ],
+          [
+            "Y",
+            "X"
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "internal_determinant": -1
+      }
+    ],
+    "records": [
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "Y"
+          ],
+          [
+            "Y",
+            "X"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "Y"
+          ],
+          [
+            "Y",
+            "X"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "Y"
+          ],
+          [
+            "Y",
+            "X"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "X",
+            "Y"
+          ],
+          [
+            "Y",
+            "X"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "Y"
+          ],
+          [
+            "Y",
+            "U"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "Y"
+          ],
+          [
+            "Y",
+            "U"
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "Y"
+          ],
+          [
+            "Y",
+            "U"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "X",
+            "Y"
+          ],
+          [
+            "Y",
+            "U"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "Y"
+          ],
+          [
+            "Y",
+            "V"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "Y"
+          ],
+          [
+            "Y",
+            "V"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "Y"
+          ],
+          [
+            "Y",
+            "V"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "X",
+            "Y"
+          ],
+          [
+            "Y",
+            "V"
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "U"
+          ],
+          [
+            "Y",
+            "X"
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "U"
+          ],
+          [
+            "Y",
+            "X"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "U"
+          ],
+          [
+            "Y",
+            "X"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "X",
+            "U"
+          ],
+          [
+            "Y",
+            "X"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "U"
+          ],
+          [
+            "Y",
+            "U"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "U"
+          ],
+          [
+            "Y",
+            "U"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "U"
+          ],
+          [
+            "Y",
+            "U"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "X",
+            "U"
+          ],
+          [
+            "Y",
+            "U"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "U"
+          ],
+          [
+            "Y",
+            "V"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "U"
+          ],
+          [
+            "Y",
+            "V"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "U"
+          ],
+          [
+            "Y",
+            "V"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "X",
+            "U"
+          ],
+          [
+            "Y",
+            "V"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "V"
+          ],
+          [
+            "Y",
+            "X"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "V"
+          ],
+          [
+            "Y",
+            "X"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "V"
+          ],
+          [
+            "Y",
+            "X"
+          ]
+        ],
+        "admissible": true,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "X",
+            "V"
+          ],
+          [
+            "Y",
+            "X"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "V"
+          ],
+          [
+            "Y",
+            "U"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "V"
+          ],
+          [
+            "Y",
+            "U"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "V"
+          ],
+          [
+            "Y",
+            "U"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "X",
+            "V"
+          ],
+          [
+            "Y",
+            "U"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "V"
+          ],
+          [
+            "Y",
+            "V"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "V"
+          ],
+          [
+            "Y",
+            "V"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "Y"
+          ],
+          [
+            "X",
+            "V"
+          ],
+          [
+            "Y",
+            "V"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "internal_determinant": -1
+      },
+      {
+        "selected_half_edges": [
+          [
+            "U",
+            "X"
+          ],
+          [
+            "U",
+            "Y"
+          ],
+          [
+            "V",
+            "X"
+          ],
+          [
+            "X",
+            "V"
+          ],
+          [
+            "Y",
+            "V"
+          ]
+        ],
+        "admissible": false,
+        "crossing_determinants": [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "internal_matrix": [
+          [
+            -1,
+            -1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "internal_determinant": -1
+      }
+    ],
+    "all_positive_weights": "area identities verified coefficientwise in u_X,u_Y,u_C"
+  },
+  "checks": 1274,
+  "passed": true,
+  "proof_boundary": [
+    "does not replace relative Moser or normal Euler-four framing",
+    "local cone homeomorphism is proved in the text",
+    "all cores are realized individually; shared-curve compatibility is not asserted",
+    "does not impose common-circle ambient-linear extension"
+  ]
+}

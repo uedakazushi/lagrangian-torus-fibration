@@ -1,0 +1,297 @@
+% v21. Exact reconstruction in the remaining three-high nonnegative-D sector.
+% All algebra is over Z or Q.  No numerical cutoff is a theorem hypothesis.
+\section{三高係数の非負領域における単一整除条件と有限復元}
+\label{hd21:section}
+
+定理~\ref{hd20:nonsingular} は，三高係数の同時非負性を
+$b\ge2$，$d\ge1$，$\alpha\ge k\ge b+1$，$\Delta>0$ の領域へ帰着した．
+ここではこの残余領域を，$D$ 自身を固定した復元問題として書き直す．
+得られるのは，単一の合同条件，一つの元の pair-product 方程式，
+および正値性の条件からなる必要十分判定である．
+さらに，固定した五つの整数に対して残る $b$ の全範囲を有限化する．
+三高係数が全て非負である模型の一般不存在を主張するものではない．
+
+\subsection{係数を指定した二変数表示}
+
+三高 canonical 表示を，$b=-\beta$ として再掲する：
+\begin{equation}\label{hd21:canonical}
+\begin{split}
+ &u=s+t-1,\qquad
+ q=(1+sS,\,1+tT,\,1+uU,\,1),\\
+ &P=\begin{pmatrix}
+ 0&tS+\alpha&-(uS+\alpha+1)&-S\\
+ sT-b&0&-(uT-b+1)&-T\\
+ -(sU-k)&-(tU+k+1)&0&U\\
+ -s&-t&u&0
+ \end{pmatrix}.
+\end{split}
+\end{equation}
+ここで $s,t,S,T,U$ は正整数であり，表示された各 off-diagonal entry の
+符号はそのまま保つ．従って，負号の後の量を含む次の六つの量は全て正である：
+\begin{equation}\label{hd21:sign-factors}
+ tS+\alpha,\quad sT-b,\quad
+ uS+\alpha+1,\quad uT-b+1,\quad
+ sU-k,\quad tU+k+1.
+\end{equation}
+
+以下
+\begin{equation}\label{hd21:D-data}
+ x=D_a\ge0,\quad y=D_b\ge0,\quad z=D_c\ge0,
+ \qquad d=x+y+z\ge1
+\end{equation}
+と置く．式~\eqref{hd20:D} を解くと
+\begin{equation}\label{hd21:ak}
+ k=sd+b-1-x,\qquad
+ \alpha=ud+b-1+z,\qquad U=S+T+d-1.
+\end{equation}
+このとき $\alpha-k=td-y\ge0$ である．
+第20版で既に除外した $k=b-1,b$ の境界は再び探索しない．
+
+次の記号は，$s,t,x,y,z$ と $b$ の依存関係を分離するためのものである：
+\begin{equation}\label{hd21:fixed-data}
+\begin{gathered}
+ h=s-x,\qquad j=t-y,\qquad \ell=u+z,\\
+ \lambda=ux+sz,\qquad \mu=uy+tz,\\
+ F=b-1+\lambda,\qquad m=F^2+F+1,\\
+ E=\mu h-\ell-j,\qquad J=h+\ell-\lambda j.
+\end{gathered}
+\end{equation}
+$h,j,\ell,\lambda,\mu,E,J$ は $b$ に依存しない．
+$F\ge1$，$m\ge3$ である．$j$ は正と仮定しない．
+
+\begin{proposition}[単一合同条件を持つ復元表示]
+\label{hd21:reconstruction}
+式~\eqref{hd21:canonical} の正の整数模型が
+式~\eqref{hd21:D-data} を満たすなら $h=s-x\ge1$ であり，
+\begin{equation}\label{hd21:scales}
+\begin{split}
+ S&=h+\frac{FE-J}{m},\\
+ T&=j+\frac{E+(F+1)J}{m},\\
+ U&=\ell+\frac{(F+1)E+FJ}{m}
+\end{split}
+\end{equation}
+である．これら三尺度が全て整数となることは，一つの合同条件
+\begin{equation}\label{hd21:congruence}
+ m\mid FE-J
+\end{equation}
+と同値である．
+
+より正確には，任意の整数
+\[
+ s,t\ge1,\qquad x,y,z\ge0,\quad d=x+y+z\ge1,
+ \qquad b\ge2
+\]
+を指定し，式~\eqref{hd21:ak}，\eqref{hd21:fixed-data}，
+\eqref{hd21:scales} で全ての量を定める．
+第20版の残余領域で求める模型は，次の条件を全て満たすものとちょうど一致する：
+\begin{enumerate}
+ \item $h\ge1$，$\alpha\ge k\ge b+1$，および合同条件~\eqref{hd21:congruence}；
+ \item $S,T,U>0$，および六つの符号条件~\eqref{hd21:sign-factors}；
+ \item $A=s\alpha-t$，$B=-s-tb$ として，元の第一方程式
+ \begin{equation}\label{hd21:one-residue}
+ BS+AT=\alpha b.
+ \end{equation}
+\end{enumerate}
+特に，復元に際して正の weights の存在を別の存在問題として解く必要はない．
+上の条件が満たされれば，その weights は明示的に構成できる．
+\end{proposition}
+
+\begin{proof}
+$C=s+uk$ と置く．元の三つの高--高 pair-product 方程式は
+\begin{equation}\label{hd21:original-linear}
+\begin{split}
+ r_1&:=BS+AT-\alpha b=0,\\
+ r_2&:=-CS+(A+1)U-k(\alpha+1)=0,\\
+ r_3&:=(C-1)T+(B+1)U-(b-1)(k+1)=0
+\end{split}
+\end{equation}
+である．これは単なる必要条件ではない．例えば
+\[
+ (tS+\alpha)(sT-b)-(q_aq_b-1)=r_1,
+\]
+であり，残りの二つの積からもそれぞれ $r_2,r_3$ が得られる．
+低頂点 $0$ に接する三つの pair products と，全ての row sums は，
+式~\eqref{hd21:canonical} によって恒等的に成り立つ．
+
+$U=S+T+d-1$ を代入し，式~\eqref{hd21:ak} を用いる．
+\[
+ R=(b-1)j+\ell,
+ \qquad W=(\alpha+1)h-\ell
+\]
+と置けば，差を取るだけで
+\begin{equation}\label{hd21:row-differences}
+ r_2-r_1=(F+1)S+T-W,
+ \qquad r_1-r_3=-S+FT-R
+\end{equation}
+となる．従って三式が零なら
+\begin{equation}\label{hd21:two-relations}
+ S=FT-R,\qquad (F+1)S+T=W.
+\end{equation}
+逆に，この二式と $r_1=0$ を満たせば，式~\eqref{hd21:row-differences} により
+$r_2=r_3=0$ となる．ここで方程式を捨ててはいない．
+
+さらに
+\[
+ W=\alpha(s-x)+1-t-x-z
+\]
+である．$F\ge1$，$S,T>0$，$\alpha>0$ であり，
+$1-t-x-z\le0$ だから，式~\eqref{hd21:two-relations} の第二式は
+$s-x>0$ を強制する．整数性から $h\ge1$ を得る．
+これは $D_a\le s-1$ という新しい必要条件である．
+
+二式の determinant は $m=F^2+F+1>0$ であり，解は一意である．
+\[
+ \alpha=F+\mu,\quad
+ R=Fj+(\ell-\lambda j),\quad
+ W=(F+1)h+(\mu h-\ell)
+\]
+を用いて解くと，式~\eqref{hd21:scales} の最初の二式を得る．
+$\ell=h+j+d-1$ なので第三式は $U=S+T+d-1$ から従う．
+
+整数性については，$S$ が整数であることが
+式~\eqref{hd21:congruence} と同値である．恒等式
+\begin{equation}\label{hd21:one-divisibility}
+ E+(F+1)J=mE-(F+1)(FE-J)
+\end{equation}
+により，この一つの合同条件から $T$ も整数となる．
+$U=S+T+d-1$ も整数である．逆向きは $S$ だけから明らかである．
+
+最後に，復元した整数が命題の全ての条件を満たすとする．
+既に三つの元の pair products と全 row sums を確認した．
+式~\eqref{hd20:D} への代入により，$D$ は指定した
+$(x,y,z,-d)$ と厳密に一致する．$S,T,U>0$ から $q_a,q_b,q_c>1$ である．
+\[
+ H_*=tS+\alpha>0,\qquad K_*=sT-b>0
+\]
+と置き，weights を
+\begin{equation}\label{hd21:weights}
+ w=\left(q_a,\ H_*+\frac{1}{2K_*},\ u+\frac{1}{2U},\ 1\right)
+\end{equation}
+で定める．正の二辺 $ab,c0$ における四つの basin gaps は，順に
+\[
+ \frac{1}{2K_*},\quad \frac{1}{2q_b},\quad
+ \frac{1}{2q_c},\quad \frac{1}{2U}
+\]
+である．他の全ての off-diagonal entries は負であり，weights は正なので，
+残る gaps も正である．これで十分性が示された．
+必要性は canonical 完全 matching 定理，定理~\ref{hd20:nonsingular}，
+および上の恒等変形から従う．
+\end{proof}
+
+\subsection{Eisenstein 型ノルムと \texorpdfstring{$b$}{b} の全範囲の有限化}
+
+\begin{theorem}[固定した五つの整数データに対する有限復元]
+\label{hd21:norm-bound}
+命題~\ref{hd21:reconstruction} の正の整数模型では
+$(E,J)\ne(0,0)$ であり，
+\begin{equation}\label{hd21:norm}
+ E^2+EJ+J^2
+ =m\bigl((S-h)^2+(S-h)(T-j)+(T-j)^2\bigr).
+\end{equation}
+従って $N=E^2+EJ+J^2$ と置くと
+\begin{equation}\label{hd21:finite-bound}
+ m\mid N,\qquad
+ 3\le m\le N,\qquad
+ 2\le b\le
+ 1-\lambda+
+ \left\lfloor\frac{\sqrt{4N-3}-1}{2}\right\rfloor.
+\end{equation}
+特に，$s,t,x,y,z$ を固定すれば，$b\ge2$ の全範囲を有限個の厳密演算で
+完全に復元または排除できる．この上限は分母の探索上限を仮定したものではなく，
+元の整数方程式の必要条件である．
+\end{theorem}
+
+\begin{proof}
+$v=S-h$，$w=T-j$ と置く．式~\eqref{hd21:scales} の二式は，
+逆に
+\begin{equation}\label{hd21:norm-linear}
+ E=(F+1)v+w,\qquad J=-v+Fw
+\end{equation}
+と書ける．両辺の二次式を展開すれば
+\[
+ ((F+1)v+w)^2+((F+1)v+w)(-v+Fw)+(-v+Fw)^2
+ =(F^2+F+1)(v^2+vw+w^2)
+\]
+であり，式~\eqref{hd21:norm} が従う．
+この正定値二次形式を Eisenstein 型ノルムと呼ぶが，
+この証明には数体や整数環の外部定理を用いない．
+
+$(E,J)=(0,0)$ の可能性を完全に調べる．
+$J=0$ と $h\ge1$，$\ell\ge1$ より
+$\lambda j=h+\ell>0$ であり，$\lambda>0$，$j>0$ である．
+恒等式
+\begin{equation}\label{hd21:zero-norm-identity}
+ E+J=\ell(sy-tx)+h-j
+\end{equation}
+と $\ell=h+j+d-1\ge h+j$ を用いると，
+\[
+ |sy-tx|=\frac{|j-h|}{\ell}<1.
+\]
+左辺は整数なので $sy-tx=0$，従って $h=j$ である．
+$s=x+h$，$t=y+h$ と書けば
+$sy-tx=h(y-x)$ なので $x=y$，$s=t$ も従う．
+
+この場合 $d=2x+z$，$s=h+x$，
+$\lambda=\mu=sd-x$，$\ell=2h+d-1$ である．
+$E=0$ を整理すると
+\begin{equation}\label{hd21:zero-norm-classification}
+ (d-1)\bigl(h(h+x)-1\bigr)=h(3-h)
+\end{equation}
+となる．$d\ge1$ と $h\ge1$ から $h\le3$ である．
+なお $h(h+x)-1=0$ の唯一の場合 $h=1,x=0$ は右辺が二であり不可能である．
+$h=3$ では $d=1$，従って $x=y=0,z=1,s=t=3$ となる．
+$h=2$ では左辺が零または三以上なのに右辺は二であり，不可能である．
+$h=1$ では $(d-1)x=2$ である．
+$d\ge2x$ を満たす解は $x=y=1,d=3,z=1,s=t=2$ のみである．
+従って零ノルム候補は正確に
+\[
+ (s,t,x,y,z)=(3,3,0,0,1),\qquad (2,2,1,1,1)
+\]
+の二組である．
+
+第一の候補では $(S,T,U)=(3,3,6)$，$\alpha=b+5$ であり，
+元の式~\eqref{hd21:one-residue} は
+\[
+ b(b+5)=27
+\]
+を要求する．その discriminant は $133$ で平方数ではないので，整数解はない．
+第二の候補では $(S,T,U)=(1,1,4)$，$\alpha=b+9$ であり，
+同じ元の式は $b(b+9)=14$ を要求する．$b\ge2$ では左辺が二十二以上なので不可能である．
+よって正の整数模型では $(E,J)\ne(0,0)$ である．
+
+従って $(v,w)\ne(0,0)$ であり，$v,w$ の整数性と二次形式の正定値性から
+$v^2+vw+w^2\ge1$ を得る．式~\eqref{hd21:norm} は
+$m\mid N$ と $m\le N$ を与える．
+$m=F^2+F+1$ および $F=b-1+\lambda\ge1$ を解けば，
+式~\eqref{hd21:finite-bound} の最後の不等式を得る．
+\end{proof}
+
+\subsection{復元手順，検算，および残る量化}
+
+固定した五つの整数 $(s,t,x,y,z)$ に対する完全な手順は次の通りである．
+$s,t\ge1$，$x,y,z\ge0$，$d\ge1$ の入力条件を確認し，
+$h\le0$ なら命題~\ref{hd21:reconstruction} により排除する．
+$E=J=0$ なら上の二候補の分類と元の第一式により排除する．
+それ以外は $N>0$ であり，式~\eqref{hd21:finite-bound} の有限範囲内の $b$ を調べる．
+各 $b$ で合同条件~\eqref{hd21:congruence}，尺度と entry の正値性，
+$\alpha\ge k\ge b+1$，最後に元の式~\eqref{hd21:one-residue} を厳密に検査する．
+残れば式~\eqref{hd21:canonical} と~\eqref{hd21:weights} から模型が復元される．
+これらの判定は全て必要十分であり，元の三元一次系への復帰を含む．
+
+付属の Python 標準ライブラリのみの検証器
+\texttt{verify\_high\_d\_reconstruction\_v21.py} は，
+二十四個の多項式恒等式を係数ごとに検証する．
+特に，復元尺度の分母を払った元の三つの残差が全て等しいことを直接検証する．
+また，既知の整数模型
+$q=(5,11,23,1)$，$D=(-1,1,3,-3)$，
+既知の singular rank-two 族の $n=0$，および既知の有理零 $D$ 模型について，
+row sums，六つの pair products，四つの $D$，十二の basin gaps を
+有理数のまま再計算する．前二者の高係数は全て非負ではなく，
+第三の模型の尺度は整数ではない．従っていずれも本節の不存在候補の反例ではない．
+零ノルムの二候補についても，元の第一式の非零残差を回帰検証する．
+
+この結果が有限化するのは，指定した $(s,t,x,y,z)$ ごとの $b$ である．
+$s,t,x,y,z$ 自体にはまだ一様上限を得ていない．
+従って，この五つの変数を有限範囲で調べて模型が現れなくても，
+一般不存在は従わない．次の課題は，単一合同条件と元の残余式の併用により，
+この五変数側にも無上界の排除またはさらなる構造を与えることである．

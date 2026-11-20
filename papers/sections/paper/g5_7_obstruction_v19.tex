@@ -1,0 +1,262 @@
+% v19 G5_7 obstruction. Dependencies: mh18:matching, tl15:one-high-full,
+% ml12:dichotomy, ls11:low-puncture, td12:low-entry.
+% Exact arithmetic certificate: verify_g5_7_obstruction_v19.py.
+\section{三角形を共有する菱形に一葉を付けた支持の排除}
+\label{g719:section}
+
+高支持を
+\[
+ H=\{01,02,12,13,23,04\}
+\]
+とする．これは標準代表 $G5\_7=\{01,02,03,12,13,24\}$ を
+旧頂点 $(2,0,1,3,4)$ の順に新頂点 $(0,1,2,3,4)$ へ写したものである．
+以下では葉 $4$ の標準形の低 rays を $B,C,D$ と呼び，$A=0$ とする．
+三つの低 rays のうち $0$ との辺が低分母であるものを $m$ と書く．
+従って $m$ は物理的には頂点 $3$ であるが，標準形内での位置は
+$B,C,D$ の三通りを全て保つ．残る二頂点は互換である．
+
+\begin{lemma}[二高 core の二つの小さい正 reverse は共存しない]
+\label{g719:small-positive}
+正の整数二高局所模型の二つの低行を取り，各低行中の唯一の正 entry を
+$e_1,e_2$ とする．$e_1,e_2\le2$ は不可能である．
+\end{lemma}
+\begin{proof}
+二高標準形ではこれらは $r,T$ であり，低行は
+$(r,-r-1,0)$ と $(-S,T,S-T-1)$ である．
+正の枝では $S>r$ および $rT>(r+1)S$ なので $T>r+1\ge2$ となる．
+負の枝では $S=T<r$ なので，$r,T\le2$ のもとでは
+$r=2,S=T=1$ に限られる．この場合 $a=s+1,b=z+1$，
+$x=s/2,y=z/3$，$A=1+s/2,B=1+5z/3$ であり，
+$AB=ab-1$ は
+\[
+ (s-4)(z+3)=-6
+\]
+と同値である．整数性から $s\ge2$ は偶数，$z\ge3$ は三の倍数である．
+$s=2$ なら左辺は $-12$ 以下，$s\ge4$ なら非負であり矛盾する．
+負の枝を捨てず，その唯一の小さい場合をここで明示的に排除した．
+\end{proof}
+
+葉の完全標準形を
+\[
+ V=P^4=\begin{pmatrix}
+ 0&1-Q&-h-1&h\\
+ -1&0&0&0\\
+ -u&u-1-c&0&c\\
+ v&-v-1-d&d&0
+ \end{pmatrix},
+\qquad Q=th(h+1)+1,
+\]
+\[
+ u=th,\quad v=t(h+1),\quad cd=0
+\]
+と書く．$h,t\ge1$ であり，行列の順序は $(0,B,C,D)$ である．
+$N_{ij}=n_{i4;j}$ とし，各行の三成分は非負で総和五である．
+\[
+ \ell_0=Q,\quad \ell_B=\ell_C=\ell_D=1,\qquad
+ R_{ij}=p^i_{4j}=\ell_i(1-N_{ij})-V_{ij},\quad
+ X_{ij}=p^i_{j4}
+\]
+と置けば
+\begin{equation}\label{g719:basic}
+ R_{ij}X_{ij}=\ell_iq_{ij}-1,
+ \qquad
+ \sum_{j\ne i}X_{ij}+\sum_{j\ne i}V_{ji}=-2\ell_i.
+\end{equation}
+第二式は辺 $i4$ の $D$ 相殺である．特に
+\begin{equation}\label{g719:hub-D}
+ \sum_{j=B,C,D}X_{0j}=1-2Q-t.
+\end{equation}
+中央 core $0$ は三高なので，matching 定理から行 $R_0$ はちょうど一つの
+正 entry を持つ．core $m$ は二高で，その低 rays は $0,4$ である．
+従って
+\begin{equation}\label{g719:low-pair}
+ R_{m0}\le0,\quad X_{m0}\le0,\quad R_{m0}X_{m0}=0,\quad
+ R_{0m}X_{0m}=Q-1,\quad X_{0m}+X_{m0}\in\{-4,-3,-2,-1,0,1\}.
+\end{equation}
+
+\begin{lemma}[正の最大 divisor の二枝の排除]
+\label{g719:positive-branches}
+次の二つの枝はいずれも不可能である：
+\[
+ (m=B,\ N_{0B}=1),\qquad
+ (m=D,\ h=1,\ N_{0D}=0).
+\]
+\end{lemma}
+\begin{proof}
+両方の場合で $R_{0m}=Q-1>0$，$X_{0m}=1$ である．
+中央の matching と低行 $m$ の和 $-1$ から，残る二高 rays を $a,b$ と書くと
+\[
+ p^0_{ma}=p^0_{mb}=-1.
+\]
+従って低辺 $0m$ の clutch により
+$p^m_{0a}=2-n_{0m;a}\le2$，$p^m_{0b}=2-n_{0m;b}\le2$ である．
+
+$m=B$ の場合，葉の $B$ 行は $(-1,0,0)$ である．
+従って core $m$ の低行 $4$ の二つの高 entries は
+$1-N_{ma},1-N_{mb}$ であり，唯一の正 entry は一である．
+低行 $0$ の正 entry は二以下なので，補題~\ref{g719:small-positive} に反する．
+
+$m=D,h=1$ の場合には残る高 rays を葉の $B,C$ の順に置き，
+$A=q_{0B},B'=q_{0C}$ とする．中央の正高間 entries を
+$H=p^0_{BC}>0,K=p^0_{CB}>0$ と書けば，row sums と pair equations は
+\[
+ p^0_{B4}=-H-1,\quad p^0_{C4}=-K-1,\quad HK=AB'-1.
+\]
+式~\eqref{g719:hub-D} と $t=(Q-1)/2$ から
+\[
+ H+K=\frac{5(Q-1)}2.
+\]
+$R_{0B},R_{0C}<0$ なので $N_{0B},N_{0C}\ge2$ であり，
+$N_{0B}+N_{0C}=5$ から分配は $(2,3)$ または $(3,2)$ である．
+前者では $R_{0B}=-1$，従って $H=QA-2\ge3Q-2>5(Q-1)/2$ となり矛盾する．
+ここで高分母は奇数なので $A\ge3$ を用いた．
+後者では
+\[
+ R_{0B}=-(Q+1),\quad R_{0C}=-(Q-2),\quad
+ H+1=\frac{QA-1}{Q+1}.
+\]
+従って $A=k(Q+1)-1$，$H=Qk-2$ であり，$H,K>0$ により $k=1,2$ に限る．
+それぞれについて
+\[
+\begin{array}{c|cccc|c}
+ k&A&B'&H&K&HK-(AB'-1)\\\hline
+ 1&Q&(3Q-5)/2&Q-2&(3Q-1)/2&2-Q\\
+ 2&2Q+1&(Q-1)/2&2Q-2&(Q-1)/2&(5-3Q)/2
+\end{array}
+\]
+となり，$Q\ge3$ では最後の列が零にならない．
+\end{proof}
+
+\begin{proposition}[葉分母と配置の完全な有限帰着]
+\label{g719:leaf-bound}
+上記支持で正の整数局所模型，marked clutch，非負 node 配分（各辺総和五），
+および全ての対向 $D$ 相殺が成立するなら $Q\le21$ であり，
+さらに次の表のいずれかに属する：
+\[
+\begin{array}{c|c|c|c}
+ m&N_{0m}&R_{0m}&\text{追加条件}\\\hline
+ B&2&-1&Q\le5\\
+ C&1&h+1&th\le4\\
+ C&2&-1&h=t=1\\
+ D&1&-h&t(h+1)\le4
+\end{array}
+\]
+この帰着では他の高分母，および $c,d$ に上限を置かない．
+\end{proposition}
+\begin{proof}
+式~\eqref{g719:low-pair} により $R_{0m}$ は $Q-1$ の非零 signed divisor である．
+$m=B$ なら $R_{0B}=Q(2-N_{0B})-1$ なので，その絶対値から
+$N_{0B}=1,2$ に限る．前者は補題~\ref{g719:positive-branches} で排除済み．
+後者では $X_{0B}=-(Q-1)$ であり，$X_{B0}\le0$ と clutch から
+$-(Q-1)\ge-4$，従って $Q\le5$ である．
+
+$m=C$ なら $R_{0C}=Q(1-N_{0C})+h+1$ である．
+$N_{0C}=0$ または $N_{0C}\ge3$ では絶対値が $Q-1$ より大きい．
+$N_{0C}=2$ では $Q-h-1$ が $Q-1$ を割るので $Q-h-1\mid h$，
+従って $th(h+1)\le2h$ であり，$h=t=1$ に限る．
+$N_{0C}=1$ なら $R_{C0}=u+1-N_{C0}\le0$ と $N_{C0}\le5$ から
+$u=th\le4$ である．$h\le u$ より
+$Q=u(h+1)+1\le u(u+1)+1\le21$ となる．
+
+$m=D$ なら $R_{0D}=Q(1-N_{0D})-h$ である．$N_{0D}\ge2$ は大きすぎる．
+$N_{0D}=0$ なら $Q-h\mid Q-1$，従って $Q-h\mid h-1$ である．
+$h\ge2$ では $Q-h>h-1$ なので不可能であり，$h=1$ は
+補題~\ref{g719:positive-branches} で排除済みである．
+$N_{0D}=1$ なら $X_{0D}=-v$，かつ
+$R_{D0}=1-N_{D0}-v<0$ なので $X_{D0}=0$ である．
+従って $-v\in\{-4,-3,-2,-1,0,1\}$ より $v\le4$ であり，
+$Q=hv+1\le(v-1)v+1\le13$ である．
+\end{proof}
+
+\begin{lemma}[全整数の自由係数を保つ有限型検査]
+\label{g719:finite-types}
+命題~\ref{g719:leaf-bound} の下で，必要な node，matching，共通低 puncture 条件，
+および辺 $04$ の $D$ 相殺を全て検査すると，候補は残らない．
+自由係数 $c,d$ および $q_{0j}>1$ に人為的な上限を置く必要はない．
+\end{lemma}
+\begin{proof}
+標準形内の $B,C,D$ を以下では $1,2,3$ と書く．
+$Q\le21$ より $h(h+1)\le20$ なので $1\le h\le4$，
+$1\le t\le\lfloor20/(h(h+1))\rfloor$ である．
+$(h,t)$ は十五通りであり，$m=B,C,D$ と合わせて四十五通りとなる．
+このうち命題~\ref{g719:leaf-bound} の配置表だけを保つ．
+各 $N_i$ は非負三成分で和五なので二十一通りである．
+従って式~\eqref{g719:basic} の $R$ は，$c=0$ または $d=0$ の二枝それぞれにおいて，
+一つの行の二成分だけが自由整数 $z$ の一次式となる．
+
+$i\ne m$ の中央高辺に対して $R=R_{0i},r=R_{i0}$ と置くと，
+同じ marked puncture $4$ における clutch は
+\begin{equation}\label{g719:central-equation}
+ (Qr+R-\kappa Rr)q_{0i}=R+r,\qquad -4\le\kappa\le1.
+\end{equation}
+左辺係数が非零なら $q_{0i}$ はただ一つの有理数として決まり，
+奇数整数 $\ge3$ と二つの pair 整除を満たすものだけを保つ．
+左辺係数が零なら，右辺が零である場合のみ可能であり，
+\[
+ r=-R,\quad Q-1=-\kappa r,\quad
+ q_{0i}=1+\operatorname{lcm}(2,|r|)a,\qquad a\in\ZZ_{>0}
+\]
+という完全な無限等差数列を保つ．
+$i=m$ の低辺では $q_{0m}=1$ と式~\eqref{g719:low-pair} をそのまま用いる．
+
+$1,2,3$ 間の各辺は高分母であり，共通 puncture $4$ は両端で低分母である．
+従って補題~\ref{ls11:low-puncture} による reverse partner の必要条件は
+\begin{equation}\label{g719:partner}
+ r=-s\ne0\quad\text{または}\quad
+ rs>0,\quad\min(|r|,|s|)=1,\quad\max(|r|,|s|)\in2\ZZ_{>0}.
+\end{equation}
+固定 $r\ne0$ に対する $s$ の集合は，一点 $-r$ に加えて，
+$|r|$ が偶数なら一点 $\operatorname{sgn}(r)$，
+$|r|=1$ なら全半直線 $2a\operatorname{sgn}(r)$，$a\ge1$ である．
+従って $s=\pm z+b$ に対しても，一点または偶奇を指定した全半直線に厳密に移される．
+変数行の二つの条件の共通部分は，端点と偶奇の比較だけで空・非空を決定できる．
+各行の正 entry がちょうど一つという条件も，これらの型の符号で決定できる．
+二高 core $m$ では $R_{m0}=0$ も保ち，他の二高 entries は非零で逆符号とする．
+
+この有限整数演算は，同梱の標準 Python ライブラリのみの検算
+\nolinkurl{verify_g5_7_obstruction_v19.py} に完全に記載した．
+固定行間の条件を通る node 配置は $529$，自由行の partner 型対は $1988$ であり，
+そのうち符号適合は $910$，空交差は $750$，非空の型は $160$ となる．
+中央辺の $\kappa$ の選択まで展開すると $212$ 型であり，
+$D$ 相殺に必要な情報でまとめると次の十三行だけが残る．
+表中 $z$ は高分母なので奇数整数 $\ge3$ でなければならず，
+$\Delta=\sum_jX_{0j}-(1-2Q-t)$ とする．
+\begin{center}
+\small
+\begin{tabular}{c|c|c|c|c|c|r}
+$m$&$(h,t)$&$Q$&$(R_{0B},R_{0C},R_{0D})$&$(q_{0B},q_{0C},q_{0D})$&$D$ 条件の障害&型数\\\hline
+$B$&$(1,1)$&3&$(-1,2,-4)$&$(1,z,7)$&$z=1$&12\\
+$B$&$(1,1)$&3&$(-1,2,-4)$&$(1,z,3)$&$z=-1$&2\\
+$B$&$(1,1)$&3&$(-1,-4,2)$&$(1,7,z)$&$z=1$&6\\
+$B$&$(1,1)$&3&$(-1,-4,2)$&$(1,3,z)$&$z=-1$&2\\
+$B$&$(1,2)$&5&$(-1,-8,4)$&$(1,5,z)$&$z=-3$&1\\
+$C$&$(1,1)$&3&$(-1,2,-4)$&$(z,1,7)$&$z=1$&24\\
+$C$&$(1,2)$&5&$(-1,2,-6)$&$(z,1,11)$&$z=1$&24\\
+$D$&$(1,1)$&3&$(5,-7,-1)$&$(7,5,1)$&$\Delta=6$&42\\
+$D$&$(1,1)$&3&$(-7,5,-1)$&$(5,7,1)$&$\Delta=6$&42\\
+$D$&$(1,2)$&5&$(-11,7,-1)$&$(9,3,1)$&$\Delta=5$&12\\
+$D$&$(2,1)$&7&$(-15,10,-2)$&$(13,13,1)$&$\Delta=14$&24\\
+$D$&$(2,1)$&7&$(-15,10,-2)$&$(13,3,1)$&$\Delta=7$&9\\
+$D$&$(3,1)$&13&$(-27,17,-3)$&$(25,21,1)$&$\Delta=26$&12
+\end{tabular}
+\end{center}
+最後の計算では $X_{0j}=(Qq_{0j}-1)/R_{0j}$ を用いるだけである．
+全ての無限等差数列では $D$ 方程式の一意的な解が三未満であり，
+分母が全て決まった行では $\Delta\ne0$ である．
+これで全てが矛盾する．なお型数は branch と node 配分を保持した個数であり，
+$c=d=0$ は二枝に現れるので同型類の個数ではない．
+\end{proof}
+
+\begin{theorem}[$G5\_7$ の無上界排除]
+\label{g719:no-G5-7}
+五次 all-plane SNC，標準四直線 cones，固定された marked punctures の枠内で，
+局所正 weights，非負 node 配分（各辺総和五），marked clutch，
+および対向 $D$ 相殺を全て要求するとき，高分母支持 $G5\_7$ は存在しない．
+この結論は分母または numerator の探索 cutoff に依存しない．
+\end{theorem}
+\begin{proof}
+葉を頂点 $4$，その高隣接を $0$ とする．中央 $0$ は三高，
+残る非隣接 $m$ は二高，残る二つの cores は三高である．
+一高完全標準形の全標識を $m=B,C,D$ に分ければ漏れはない．
+命題~\ref{g719:leaf-bound} と補題~\ref{g719:finite-types} が全場合を排除する．
+\end{proof}

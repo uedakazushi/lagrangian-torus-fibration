@@ -1,0 +1,174 @@
+% v15. Additional independent module after one_high_and_crossed_pairing_v15.tex.
+% The finite calculation concerns only cores 2,3,4 and has no denominator cutoff.
+
+\subsection{二葉三角形の負の枝の排除と残る小 reverse 条件}
+\label{tl15:negative-section}
+
+\begin{lemma}[二高分母標準形の $x$ は一でない]
+\label{tl15:x-at-least-two}
+正の二高分母標準形では $x=(a-1)/r\ge2$ である．
+\end{lemma}
+
+\begin{proof}
+正の枝 $S>r$ では $x=sS/r>1$ である．
+負の枝 $S=T=w<r$ で $x=1$ と仮定する．
+$s w=r$ なので $s\ge2$ である．$y=zw/(r+1)$ の整数性と
+$\gcd(w,r+1)=1$ から $z=k(r+1)$，$y=kw$，$k\ge1$ と書ける．
+\[
+ a=r+1,\quad b=k(r+1)w+1,\quad
+ A=r+2-s,\quad B=1+k\{r(w+1)+1\}
+\]
+を $AB=ab-1$ に代入し，$r=sw$ を用いると
+\[
+ k\{w(-s^2+3s-1)+2-s\}=s-2
+\]
+となる．$s=2$ なら左辺は $kw>0$，右辺は零である．
+$s\ge3$ なら左辺は負，右辺は正である．いずれも矛盾する．
+\end{proof}
+
+\begin{lemma}[交差 pairing の大きい reverse entries の障害]
+\label{tl15:large-reverse}
+定理~\ref{tl15:crossed-pairing} の全仮定の下で，残る交差標識
+$(A,B,C,D)=(0,1,4,3)$ を取る．
+$r\ge5,S\ge5,z>1$ が同時に成立することはない．
+\end{lemma}
+
+\begin{proof}
+core $2$ の低 rows は
+\[
+ (p^2_{30},p^2_{31},p^2_{34})=(-S,T,S-T-1),\qquad
+ (p^2_{40},p^2_{41},p^2_{43})=(r,-r-1,0).
+\]
+各低辺の node 数は非負で総和五なので，各 puncture で
+$-4\le p+p'\le1$ である．従って低辺 $23,24$ は
+\[
+ p^3_{20}\ge S-4>0,\qquad p^4_{21}\ge r-3>0
+\]
+を要求する．一高分母標準形~\eqref{tl15:leaf-matrix} により，
+両葉の ray $2$ はその標準形の $D$ でなければならない．
+
+補題~\ref{tl15:x-at-least-two} と $r>1$ より
+$1<x<a-1$ であり，$z>1,T\ge S>1$ より $1<z<b-1$ である．
+共有高辺 $02,12$ の共通低 punctures に
+補題~\ref{ls11:low-puncture} を適用すると，反対符号の通常の場合しか残らず，
+\[
+ p^0_{42}=-r,\qquad p^1_{32}=-T
+\]
+となる．低辺 $04,13$ の node 上界五から，さらに
+\[
+ p^4_{02}\ge r-4>0,\qquad p^3_{12}\ge T-4>0
+\]
+を得る．
+各葉では ray $2=D$ であり，$B\to D=0$ なので，
+これらの正の entries の出発 ray は $C$ である．
+従って，両葉で他の葉へ向かう ray は $B$ であり，$c>0,d=0$ となる．
+その係数 $D_B=m+t+1+c$ は正なので，低辺 $34$ の両端の係数は相殺できない．
+\end{proof}
+
+\begin{lemma}[負の枝で中間 core を固定したときの葉の有限復元]
+\label{tl15:finite-leaves}
+交差標識 $(A,B,C,D)=(0,1,4,3)$ を持つ負の枝 $S=T=w<r$ の
+core $2$ の整数行列を固定する．低辺 $23,24$ において
+marked node 条件と $D$ の相殺を満たす一高分母の葉の行列は，
+分母の上限を置かず，有限個の約数計算から全て復元できる．
+\end{lemma}
+
+\begin{proof}
+葉 $3$ で ray $2=B$ とすると $p^3_{21}=0$ であるが，
+$p^2_{31}=w>1$ と合わせると低辺 $23$ の node 非負性に反する．
+葉 $4$ で ray $2=B$ とすると $p^4_{20}=0$ であるが，
+$p^2_{40}=r>1$ と合わせても同じ矛盾を得る．
+従って両葉で ray $2$ は $C$ または $D$ である．
+
+葉を $i\in\{3,4\}$，その高 ray を $H_i$ とし，固定された整数を
+\[
+ R_i=p^2_{iH_i},\qquad E_i=D^2_i
+\]
+と書く．ray $2=C$ の場合，$p^i_{2H_i}=-u$，$u=th$ は
+\[
+ u\in[R_i-1,R_i+4]\cap\ZZ_{>0}
+\]
+に入る．各 $u$ の全正約数 $h$ を取って $t=u/h$ とすれば，
+$h,t$ の全 choices を得る．係数相殺は $d=h+E_i$ を固定する．
+$d\ne0$ なら $c=0$ であり，$d=0$ なら残る $c=p^i_{2D}$ は
+低辺 $2i$ の puncture $D$ の六整数の node 区間に入る．
+残る二つの低 ray の $B,D$ の割当は二通りしかない．
+
+ray $2=D$ の場合，$p^i_{2H_i}=v$，$v=t(h+1)$ は
+\[
+ v\in[-4-R_i,1-R_i]\cap\ZZ_{\ge2}
+\]
+に入る．各 $v$ の二以上の全正約数 $h+1$ を取って $t=v/(h+1)$ とする．
+係数相殺は $c=E_i-h-1$ を固定する．
+$c\ne0$ なら $d=0$ であり，$c=0$ なら $d=p^i_{2C}$ が
+同じ六整数の node 区間で固定される．$B,C$ の二つの割当を試せばよい．
+
+最後に元の三つの node 条件と係数相殺を再検査すれば，ちょうど全候補を得る．
+どの段階にも葉の分母 $th(h+1)+1$ に対する上限は仮定していない．
+\end{proof}
+
+\begin{proposition}[小さい負の枝の低三角形は接続しない]
+\label{tl15:small-negative}
+交差標識で $S=T\le4$ の場合には，cores $2,3,4$ の低辺
+$23,24,34$ における node 条件と係数相殺を同時に満たす模型はない．
+\end{proposition}
+
+\begin{proof}
+補題~\ref{cp14:small-negative} の七模型がこの場合を全て尽くす．
+補題~\ref{tl15:finite-leaves} の全約数復元を実行すると，
+低辺 $23,24$ にそれぞれ接続する候補数と，検査する葉の全組数は次のとおりである．
+\[
+\begin{array}{rrrr|rr|r}
+ r&s&z&w&\#\text{leaf }3&\#\text{leaf }4&\#\text{pairs}\\\hline
+ 4&4&5&2&4&8&32\\
+ 5&10&2&3&4&8&32\\
+ 6&6&14&3&4&19&76\\
+ 7&7&2&4&14&10&140\\
+ 7&21&4&4&5&10&50\\
+ 8&6&9&4&5&12&60\\
+ 8&8&27&4&5&19&95
+\end{array}
+\]
+合計四百八十五組は全て，低辺 $34$ の三つの node 区間
+$[-4,1]$ または $D^3_4+D^4_3=0$ の少なくとも一方に反する．
+標準 library の整数・有理数演算だけを用いる
+\nolinkurl{verify_two_leaves_v15.py} は，七模型を生成する完全な約数 trials，
+全葉候補の行列，全組の棄却理由を
+\nolinkurl{two_leaves_exact_certificate_v15.json} に出力する．
+検算器は復元した各行列の元の row sums，pair products，係数，
+および正の cycle inequalities を全て再検査する．
+
+これは三つの cores の低三角形だけで生じる矛盾である．
+三価 cores の未知の分母 $q_{01}$ を固定・列挙する必要はなく，
+その値によってこの矛盾を回避することもできない．
+\end{proof}
+
+\begin{theorem}[二葉三角形に残る正の枝と小 reverse 条件]
+\label{tl15:remaining-positive}
+定理~\ref{tl15:crossed-pairing} の全仮定の下で，二葉三角形 support
+$\{01,02,12,03,14\}$ が残るなら，二価 core $2$ は
+\[
+ (A,B,C,D)=(0,1,4,3),\qquad S>r,\qquad rT>(r+1)S
+\]
+を満たす正の枝であり，さらに
+\begin{equation}\label{tl15:small-reverse-or-unit}
+ r\le4\quad\text{または}\quad z=1
+\end{equation}
+でなければならない．
+\end{theorem}
+
+\begin{proof}
+非交差標識は定理~\ref{tl15:crossed-pairing} によって排除される．
+交差標識で負の枝 $S=T=w$ を考える．$w\le4$ は
+命題~\ref{tl15:small-negative} に反する．$w\ge5$ なら
+$r>w\ge5$ であり，$y=zw/(r+1)$ は正整数で $y<z$ なので $z>1$ である．
+従って補題~\ref{tl15:large-reverse} に反する．
+よって正の枝のみが残り，$rT>(r+1)S$ は既知の二分補題に従う．
+その枝で $r\ge5,z>1$ なら $S>r\ge5$ なので，
+再び補題~\ref{tl15:large-reverse} に反する．
+\end{proof}
+
+式~\eqref{tl15:small-reverse-or-unit} は次の有限化への中間的な条件である．
+この段階では $S,T,s,z$ に上限を置いていない．
+次の共通低 puncture の補題で $1\le r\le4$ かつ $z=1$ へ強め，
+葉の完全復元と中心の pair equations により全体の不存在へ進む．

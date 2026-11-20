@@ -1,0 +1,171 @@
+{
+  "version": "v25",
+  "passed": true,
+  "issues": [],
+  "scope": "Final source review of current arithmetic entry, Introduction, unified three-high reductions and all five new proof modules. No old bounded scans rerun.",
+  "reviewed_in_full": [
+    "paper_arithmetic/general_type_surface_quintic_arithmetic_paper_ja_v25.tex",
+    "paper_arithmetic/arithmetic_introduction_v25.tex",
+    "paper/three_high_sign_reduction_v25.tex",
+    "paper/three_high_matching_v25.tex",
+    "paper/four_ray_matching_v25.tex",
+    "paper/high_d_axis_endpoints_v25.tex",
+    "paper/degenerate_divisor_reduction_v25.tex",
+    "paper/g514_five_node_exclusion_v25.tex",
+    "paper/g514_central_matching_v25.tex"
+  ],
+  "active_input_count": 79,
+  "label_count": 747,
+  "reference_count": 446,
+  "bibliography_key_count": 17,
+  "active_reference_audit": {
+    "missing_inputs": [],
+    "undefined_references": [],
+    "duplicate_labels": [],
+    "undefined_citations": []
+  },
+  "review_findings": [
+    "Current abstract and Introduction state P4 exclusion and full matching/triangle sign classification; P4 is not retained as an unresolved local positive sign type.",
+    "Old three-high path proofs are not active. Stable mh18 and sm14 labels are preserved, and their proofs now invoke fh25 all-signs/matching without circular dependence.",
+    "All-pair-product-strictly-positive assumption is retained. Two low rays with zero pair product are explicitly outside the unified theorem.",
+    "Raw integer rows/pairs, positive weights where required, integer clutching, nonnegative node budget and opposite D remain explicit in G514 results.",
+    "G514 five-node exclusion and aligned central matching are stated as structural reductions, not as exclusion of G514 itself.",
+    "G516 general two-pattern unit-edge constraints are explicitly separated from G514-only five-node exclusion. G517 has no unit branch.",
+    "Fixed-input finite reconstruction statements distinguish finite s or b input from uniform bounds or global nonexistence; endpoint s<=400 check is expressly bounded.",
+    "Degenerate fixed-b reconstruction applies to x>=1; x=0 retains fixed-s route. Divisor denominators are positive and original rows/pairs/signs/D/weights are checked before recognizing a model.",
+    "Remaining P4 strings in prime-support modules concern K1-join-P4 graph combinatorics, not a positive four-ray local sign candidate.",
+    "Current literature discussion separates prior geometric existence, principal-minor, cycle-gain, Z-matrix and frieze theory from new integer gluing claims."
+  ],
+  "resolved_editorial_clarifications": [
+    {
+      "file": "paper_arithmetic/arithmetic_introduction_v25.tex",
+      "change": "Replaced ambiguous G516 same-constraints wording with explicit {5,0,0}/{4,1,0} scope and unreached five-node exclusion."
+    },
+    {
+      "file": "paper/g514_five_node_exclusion_v25.tex",
+      "change": "Replaced broad four-high residual-classification wording by complete-matching integer-model classification and global consistency."
+    }
+  ],
+  "source_sha256": {
+    "common.tex": "148e135a6ecaf15b9afe1a0f5b2c0e3a3be713e3765cb08bbcc64d112dd99dfc",
+    "paper/book_all_negative_obstruction_current_v22.tex": "05a077c2247f48b038e53c7b67f2ff8a4c959df59a155c81c7a8e7e73adf251b",
+    "paper/book_complete_obstruction_v22.tex": "f8dce7a0ee6732a628ab8cf9182d49f362eae6113e988606ee334e801f12ed4c",
+    "paper/book_low_D_cycle_v20.tex": "f87b5adf0e4dcde92f580b3e922eb3ce641c843dd962857f8254ae0ff82ee98f",
+    "paper/book_low_triangle_finiteness_current_v22.tex": "7391374f2ad6aa6387cbbaaf6c1e69ad26e3bf71a94b3a834b34f3e43ed5729f",
+    "paper/book_one_negative_sector_reduction_v21.tex": "8a982378a1959f0affbeb38e89f0345dd4c8c821017160d9d0719f8bc245b24d",
+    "paper/book_two_negative_obstruction_v21.tex": "94915dd80b0f9dc394a24b18a0e5e24583d5e2eb7ddfaf1dfd3fd467af4d45b3",
+    "paper/c4_equal_pairing_obstruction_v13.tex": "bd5273737d6ac02e37ec7bad33550a9f3662a4f369332d6474669b734ed68ff0",
+    "paper/c4_pendant_obstruction_v14.tex": "cac4a5e1bfe66107f973f33850def05d2bdda58e32b190df88d5cfd0a0521736",
+    "paper/common_low_node_bound_v16.tex": "78114487ce9d9f9259c0f6dbcb90e945e89693f825bf0eddef4260caf4d71029",
+    "paper/cycle_node_sign_conditions_v13.tex": "e1519f0d7a96a72277111a709e6906d15e1215c295beefa65b98611709f2354d",
+    "paper/degenerate_divisor_reduction_v25.tex": "e0e74acc2ccbbdff298ea78c9ae6a0efa209eafdcabf6dd15b87ac1a565134fd",
+    "paper/degree_two_triangle_obstruction_v14.tex": "b0f42ef44ecff7418f0f74aa9a469e2893d2d0a34dff51cea0a6f209b6807db3",
+    "paper/diamond_obstruction_v20.tex": "91785560f4be6da28c9dbfce6962b171633edd06179bca7fee207d8d6eb54b25",
+    "paper/forest_obstruction_v13.tex": "142e8bd27bc8bbc154407b64eca9e8bab1cd3e61acbad91f226de8ab67d81082",
+    "paper/four_ray_matching_v25.tex": "f2393b27afbb344bc890c9d9dc520d13fed873afbb80731650316553d5db1ce4",
+    "paper/g514_central_matching_v25.tex": "fe56c191468280d389265fa7f5a5214b306b17bda1e3eeb6b46128b1891f94da",
+    "paper/g514_five_node_exclusion_v25.tex": "a9762909df0ecf7518813604f408c1b6c157d65b4ef39bde5fb2dd92210dc627",
+    "paper/g5_10_obstruction_v18.tex": "06dcf4f9fbb01b37e21533feb7d589ad60375047da0e3377a3bae41cd53b518e",
+    "paper/g5_11_obstruction_v20.tex": "d67a265a50746b3b4084752f698e557cadef8b2eef26ad36499efe266c643f96",
+    "paper/g5_15_negative_exception_obstruction_v23.tex": "7fdceb509ca0e07b7919c4f86533d2ea96a7bab8be3490fadb4a887eb35d7eef",
+    "paper/g5_15_ordinary_outer_pair_obstruction_v23.tex": "aecd0ec96a5bda535f5c46f450797d10f3c75ef5894b53c7a4df2865295e54b6",
+    "paper/g5_15_reduction_v21.tex": "0b9be523ca08544eafa35ba4ce8e660feba573297808fbd8c04c31df03449fef",
+    "paper/g5_7_obstruction_v19.tex": "c9b8e2aeb6e40cfd50ffebb14e633d7b6f81ab26ef36131fd9ac0b97a27ee83b",
+    "paper/g5_9_obstruction_v19.tex": "df2974f6daa95aeb4f0d4d937825633d802feea3ec727d6116241e3cc2e47448",
+    "paper/global_primitive_denominators_v23.tex": "1dc41a28da58b75e8d8d1f6726e4ee717337f050dc3db26382d50576b8f059b1",
+    "paper/high_d_asymmetry_lattice_obstruction_v23.tex": "c00463573011530bdd4ad6bd7c6baed77a6273f82bd3e57aba0b4dc7b3ca3e8a",
+    "paper/high_d_axis_and_degenerate_obstruction_v24.tex": "0dc5d9a8647e341d1579a5a6139be7977a2490a2eec51df06d4e57c6eca97bdc",
+    "paper/high_d_axis_endpoints_v25.tex": "ed070bc442907ba197d9b39300814f6566e6fff5d703c1c8db512fdb078a7bc9",
+    "paper/high_d_eisenstein_reconstruction_v21.tex": "ea0041d1b78efaabc87e475908c6c1746920b0fafa778e7521c5063bdff05209",
+    "paper/high_d_fixed_low_row_finiteness_v22.tex": "93f03f7462b3de63f88a708196bb0c56e473c0a7876f017fbfcc5353122c0949",
+    "paper/high_d_nonsingular_reduction_v20.tex": "4e266533bba11e67ff916e98878deb6caedd6ce16699743225c161674ac7ec88",
+    "paper/high_d_proportional_reduction_v24.tex": "769f97916c5c0ca7a3227c798dbc92cd97920ac574f6aecf97f1eaf4e3155d66",
+    "paper/house_support_obstruction_v18.tex": "33f9cbc2670f52825a80d219d13d3d766233dea80ea4e3200323d9dd46fd96f2",
+    "paper/k23_obstruction_v15.tex": "af6f818c4d051de96f19077c9c0e563dcf9dee7969c7a6f28d3817a7376a5e41",
+    "paper/k4_four_exception_obstruction_v17.tex": "7321cf3bcfed0f303bfeaf918aaf4470123456804463d7726679d92e8efe292c",
+    "paper/k4_global_obstruction_v17.tex": "9a64d7f7e3c330961abb136217f10dddc80dcadbe33443ab7fde54e0407b0da2",
+    "paper/k4_leaf_obstruction_v18.tex": "4fd196421b7e0612b04fe647e8d396eb7691a06774a08bac9b349ff40234f323",
+    "paper/k4_low_hub_reduction_v17.tex": "1e7d12549d908c551bfdb8ce8a43689ae827a3211393f82b3436ecef68fc666b",
+    "paper/k4_two_exception_obstruction_v17.tex": "38655b8a6bc7c068e88e953531fe33f25307c84f0dfa3daf28dca6a874620327",
+    "paper/leaf_transfer_v13.tex": "1b32608df3ce9b857f55196c5629c95a6831ef4ec7e1a7a0db905e57a49fbb7f",
+    "paper/one_high_and_crossed_pairing_v16.tex": "0c66778b35ea2f90cb43c3eaacbb6abcb4e114d835b89ffa1495605bb72719fa",
+    "paper/outer_core_linear_transfer_v23.tex": "df3cd4f3d7016cd2f0aa6f17f1a9f10d42525afc2b6758a5032f47a8423fa244",
+    "paper/path_component_escalation_v12.tex": "fc258ddcc1e38c72c7b5db9ae1da1dadba2e76f49bcdcdfe7e5fc08770e245c4",
+    "paper/positive_small_L_sector_current_v22.tex": "bef46c3d760e2cd7e1c8f2350a338abe97f7b537bf2348f2fd234fce7572c14c",
+    "paper/quintic_c5_obstruction_v13.tex": "b5c90a05d6bdfe85467b6d5a0db2938f0ef5de68a81de1e4399d2b0e1c0be78a",
+    "paper/quintic_cycle_completion_v13.tex": "fd42baf6bf948f070191fb21482be6bc1a42d7ad2b14fd15590848dfb7521e50",
+    "paper/quintic_dense_prime_support_v11.tex": "fdbb670c736ea8d25036fb891a961c1e316dfd34c51f121dbad71379d43bca53",
+    "paper/quintic_equal_two_classification_v11.tex": "5c35ed79bd4206cecfcc0d45be3d6ab15fdb4a58332f9d923b2fa1482b697b2b",
+    "paper/quintic_finite_exclusion.tex": "dc898c3cee98a4bc22c0af39e41d24c2a0468ee4ebb87666402f5a3f22c30a8f",
+    "paper/quintic_fixed_denominator_partners_v12.tex": "eff0568f54ebaa2e649f5837e34291f7d537c8ce42138254fc41c37c2de0aece",
+    "paper/quintic_local_high_q.tex": "db7ae0d43abe66ff828652fbb6fc1707f69ac91d85ca189e5c5a9a73c39275e0",
+    "paper/quintic_local_structure.tex": "e6ac5af1336f6378e9a16c0ad96c4ebca177b9b0cdc6bd963c45bb6ec11259c9",
+    "paper/quintic_low_degree_support_v11.tex": "9bdc19d839e82ae2289d12bf3591b992fb22a9520c5d6b4f7134ca1745c1a08b",
+    "paper/quintic_minimal_low_entry_v12.tex": "dfa9446f3e3b9254d64322123a0e11c574da8421ac60a5ae70d5cbe935cd4c8b",
+    "paper/quintic_monochromatic_support_v11.tex": "cefbde021161cff47eedd601736eac1fb667ca9647b573b301a3cf81da342ae7",
+    "paper/quintic_path_support_v13.tex": "b40d46e6cf90cbdecd279972d96c01fb05fbb82b6b1fd05998c04cd30e871c5b",
+    "paper/quintic_prime_support.tex": "5dbc33dcdae29d96d8c914a27e12c44fa3b92264578ade7a0a25894688321c4a",
+    "paper/quintic_support_frontier_v23.tex": "4464ca16c4542431b7740c0e68122f80d0bf4da965aaeeb19311343f8c395f51",
+    "paper/quintic_three_high_singular_v18.tex": "749759c7755c4cb97567115cccb01e920d77a56428d6f55c8d0aebac11e89651",
+    "paper/quintic_triangle_completion.tex": "302e5748ef5c026668436e20389b4316d9121d7e39721ce941a612f86b1e904c",
+    "paper/quintic_two_high_defect_v12.tex": "c4b5ef1b979af4da27760a968ad0da215ea8bd8f0b66d80e0b4a1c2b97e76951",
+    "paper/quintic_uniform_denominators.tex": "e0093b48c85fa9c02de08e3b1e22a15bab48e2b2e8610ef79be666d6e9519f8c",
+    "paper/quintic_uniform_two_high_v11.tex": "10adeede6916afb69c47fca7aff96b106e3c894369874a6960e9371ad19f5e7f",
+    "paper/r1_exceptional_leaf_v16.tex": "1a4eb11675aa74bd0c1c04494d7816a605561f75480781e95e1f06bedb42296e",
+    "paper/small_denominator_propagation_v13.tex": "84ab44436a43c1261996dab4d1fcf35829c0160fb5a415a9e44ee0d8906931a1",
+    "paper/three_high_fixed_low_completion_v17.tex": "ba733676386c7c0ace7cc873b79323cd460a04591455b0c951c59af2b1b3433a",
+    "paper/three_high_matching_v25.tex": "61f0c8687bb88e77a38d0ac25f60fb27a85304654ae8e91eee102c9a8b3429c3",
+    "paper/three_high_sign_reduction_v25.tex": "957c3a73f6a0da3b49a9b47e87f69d49eb9cca099ab0e2dfd2576d25b45cd028",
+    "paper/two_high_rigid_scale_families_v22.tex": "df3e304136eb782c02901c10d58d0613b6900e1e99469cacd5f86dd58bce0d23",
+    "paper/two_leaf_global_obstruction_v16.tex": "22ea8b0ac2f7f983224370046b0d40d24bf60fc7dc54b7cfb9e9fe4f453e8ea4",
+    "paper/two_leaf_unit_finiteness_v16.tex": "c1d0d6b45cd8fe189285ea3f736fe668e4a3e8d9b4b472199ce1e7a146a54e92",
+    "paper/two_leaves_negative_branch_v16.tex": "a5f28e074080f128eb8b35d86428d1ede0c8a79066c1707cabed4af508ecf004",
+    "paper/unit_three_high_triangle_reduction_v24.tex": "0665d10c71fe1e52b2ba2339ae57399cc10bfe0f550351e58f83da86cf947a3b",
+    "paper_arithmetic/arithmetic_bibliography_v25.tex": "7ebb07059469fd53ec91febb8f7adfc0f6ed3ad250c79a3359321c3ba23be987",
+    "paper_arithmetic/arithmetic_introduction_v25.tex": "d8490c80e729413a93261389297de5b2928a65edc5706435c79ca409f92ac5bb",
+    "paper_arithmetic/arithmetic_setup_v17.tex": "644af7eeaa78602e8082acf95677998c431f1c43660e7cf3812158d0d74d6175",
+    "paper_arithmetic/general_type_surface_quintic_arithmetic_paper_ja_v25.tex": "454f342ac6f05743cd6035f3f802c72e9935cd22e9d025e02e1fc10507d5f4f7"
+  },
+  "visual_review": {
+    "passed": true,
+    "record": "qa_v25/arithmetic_visual_review.json",
+    "pdf_sha256": "6102386d8858f8c823ac3a2a6b3c7318f324f516750ce170a0883dc01a4336c5",
+    "pages": 201,
+    "contact_sheets": 23,
+    "detailed_pages": 20
+  },
+  "mathematics_verification": "Earlier principal and independent exact verifiers passed; this audit checks integration, hypotheses, quantifiers and current-source consistency.",
+  "bookmark_headings_review": {
+    "passed": true,
+    "mathematical_content_changed": false,
+    "changes": [
+      {
+        "file": "paper/high_d_axis_endpoints_v25.tex",
+        "before_sha256": "a51cc0093fad793666bb1cba36429dd551e6fe177cdcafd4ce3912816eddf794",
+        "after_sha256": "ed070bc442907ba197d9b39300814f6566e6fff5d703c1c8db512fdb078a7bc9",
+        "change": "Only PDF bookmark-safe math headings; printed mathematical content unchanged."
+      },
+      {
+        "file": "paper/degenerate_divisor_reduction_v25.tex",
+        "before_sha256": "ccc3ddce25fcbca186ca5be24edfe2aa5ddababf6571639fa1a3afdc1aa7526d",
+        "after_sha256": "e0e74acc2ccbbdff298ea78c9ae6a0efa209eafdcabf6dd15b87ac1a565134fd",
+        "change": "Only PDF bookmark-safe math headings; printed mathematical content unchanged."
+      },
+      {
+        "file": "paper/g514_five_node_exclusion_v25.tex",
+        "before_sha256": "880f14170dd8df5c55a3199719ae72ac5a30f03ec5e80a4c7c698ce37888d906",
+        "after_sha256": "a9762909df0ecf7518813604f408c1b6c157d65b4ef39bde5fb2dd92210dc627",
+        "change": "Only PDF bookmark-safe math headings; printed mathematical content unchanged."
+      },
+      {
+        "file": "paper/g514_central_matching_v25.tex",
+        "before_sha256": "5aa7206fded1ac1d450d865ad254458bcc53612971e159c0a46fbcb2cad8734b",
+        "after_sha256": "fe56c191468280d389265fa7f5a5214b306b17bda1e3eeb6b46128b1891f94da",
+        "change": "Only PDF bookmark-safe math headings; printed mathematical content unchanged."
+      }
+    ]
+  },
+  "machine_font_override_verified_but_not_bundled": {
+    "sha256": "8434c1f9b51acb34c01dcc72678a9b0044fbd9e60129a7568c6f9184ba9b4869"
+  }
+}

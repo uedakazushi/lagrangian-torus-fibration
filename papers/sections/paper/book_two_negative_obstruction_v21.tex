@@ -1,0 +1,346 @@
+% v21: the two-negative-branch book obstruction, with proved finite bounds.
+% Requires ps21:positive-sector, bd20:nonzero-cycle, bk19:finite-completion.
+\section{Book の二負枝の排除と一負枝への還元}
+\label{bn21:section}
+
+全正枝と全負枝の排除だけでは，book の低三角形には
+負枝を一つまたは二つ持つ可能性が残る．
+本節では正枝の sector 補題を node 周期と結び付け，
+負枝を二つ持つ全ての場合に解析的な有限上界を与える．
+有限上界は低三角形が存在するという仮定から導くものであり，
+探索範囲の仮定ではない．
+
+\subsection{周期に沿う reverse parameter と sector の不等式}
+
+低頂点を node の有向三角形に沿って巡回添字 $i$ で表す．
+高 ray を $0,1$ とし，各 core で次の低 ray の row を
+$(u_i,-(u_i+1-\gamma_i),-\gamma_i)$，
+前の低 ray の row を $(-(v_i+1-\phi_i),v_i,-\phi_i)$ と書く．
+最初の二成分は高 ray $0,1$，最後の成分は他方の低 ray に対応する．
+canonical $A=0$ を $\sigma_i=+$，$A=1$ を $\sigma_i=-$ と記すと
+\begin{equation}\label{bn21:node-orientation}
+ (u_i,v_i,\gamma_i,\phi_i)=
+ \begin{cases}
+ (r_i,T_i,0,L_i),&\sigma_i=+,\\
+ (T_i,r_i,L_i,0),&\sigma_i=-.
+ \end{cases}
+\end{equation}
+辺 $i\to i+1$ の node 非負性は
+\begin{equation}\label{bn21:offset}
+ v_{i+1}=u_i+t_{i+1},\qquad
+ \phi_{i+1}-2\le t_{i+1}\le2-\gamma_i
+\end{equation}
+を与える．特に $\gamma_i+\phi_{i+1}\le4$ である．
+定理~\ref{bd20:nonzero-cycle} により，next 側の低係数は三つ全て
+同じ非零符号 $\tau\in\{+,-\}$ を持つ．
+
+\begin{lemma}[二つの枝の定量的不等式]\label{bn21:bounds}
+負枝を $S=T=w$，$H=r-w$ と書くと
+\begin{equation}\label{bn21:negative-linear}
+ \frac{17}{10}w-\frac12<r<\frac{17}{7}w,
+ \qquad w,H\ge2.
+\end{equation}
+また，非零低 $D$ を一正一負で持つ負枝では
+\begin{equation}\label{bn21:negative-sector}
+ D_C>0\Longrightarrow r\ge2w,\qquad
+ D_C<0\Longrightarrow r\le2w-1.
+\end{equation}
+
+正枝では $\delta=T-S\in\{2,3\}$，$h=S-r$，$d=\delta-1$，
+$k=h+d$ と置く．その低 $D$ が一正一負であるとき
+\begin{equation}\label{bn21:positive-lower}
+ D_C>0\Longrightarrow
+ T\ge
+ \begin{cases}
+ (3r+4)/2,&\delta=2,\\
+ 2r+3,&\delta=3.
+ \end{cases}
+\end{equation}
+また $D_C<0$ なら
+\begin{equation}\label{bn21:small-h}
+ d r^2\le2hr+h(h+\delta).
+\end{equation}
+従って $D_C<0$ かつ $T-r\le5$ なら
+$\delta=2$ では $r\le7$，$\delta=3$ では $r\le3$ である．
+\end{lemma}
+
+\begin{proof}
+負枝の既知の範囲 $w^2/2<H(H+1)<2w^2$ から
+$H+1/2>w/\sqrt2>7w/10$，$H<\sqrt2w<10w/7$ を得る．
+これが式~\eqref{bn21:negative-linear} である．
+$E=1-w^2/[H(H+1)]$ とすると，負枝の低 $D$ の符号計算より
+$D_C>0$ は $E>0$，$D_C<0$ は $E<0$ に対応する．
+$E>0$ なら整数性から $w\le H$ であり，$E<0$ なら $w\ge H+1$ である．
+これで式~\eqref{bn21:negative-sector} が従う．
+
+正枝の $F=(2r+1)h-r^2d$ は，補題~\ref{ps21:positive-sector} と
+一正一負性により，$D_C$ と同じ符号である．
+$F>0$，$d=1$ なら
+$h>r^2/(2r+1)>(r-1)/2$ なので $h\ge\lceil r/2\rceil$ である．
+$d=2$ なら $h>r-1/2$ なので $h\ge r$ である．
+$T=r+h+\delta$ に代入して式~\eqref{bn21:positive-lower} を得る．
+
+$F<0$ の場合，式~\eqref{ps21:two-identities} の正の整数
+$\alpha,\beta$ に対して $\alpha\ge\beta\ge1$ であり，
+\[
+ \frac{-F}{hk}\alpha\beta=\alpha-\beta+1\le\alpha.
+\]
+従って $-F\le hk$，すなわち式~\eqref{bn21:small-h} が成り立つ．
+$T-r\le5$ は $h\le3$（$\delta=2$）または $h\le2$（$\delta=3$）を意味する．
+前者では $r^2\le6r+15$ より $r\le7$，後者では
+$2r^2\le4r+10$ より $r\le3$ である．
+\end{proof}
+
+\begin{proposition}[二負枝に対する解析的な有限上界]
+\label{bn21:analytic-finite}
+Book の低三角形が負枝をちょうど二つ持つと仮定する．
+その二つのうち少なくとも一つは $2\le w\le50$ を満たす．
+この結論には scale または高分母の上界を仮定しない．
+\end{proposition}
+
+\begin{proof}
+唯一の正枝を $P$ とする．高 ray の交換は node 周期を反転し
+全ての $\sigma$ を交換するので，$\sigma_P=+$ としてよい．
+負枝二つの $\sigma$ による四場合を尽くす．
+
+\paragraph{負枝二つがともに $\sigma=-$ の場合．}
+式~\eqref{bn21:node-orientation} では，正枝で $v-u=T-r\ge L\ge3$，
+負枝で $v-u=H\ge2$ となる．三本の低辺の高 ray $1$ 側の node 総和は
+\[
+ \sum n_1=6+\sum(u_i-v_i)-\sum\gamma_i
+ \le6-(3+2+2)-(0+1+1)=-3,
+\]
+となり，node 非負性に反する．
+
+\paragraph{三枝とも $\sigma=+$ の場合．}
+node 周期を $N_1\to N_2\to P\to N_1$ と書き，
+正枝の parameters を $r,S,T,L$ とする．
+式~\eqref{bn21:offset} は
+\begin{equation}\label{bn21:same-offsets}
+ w_2=r_1+t_2,\quad T=r_2+t_3,\quad w_1=r+t_1,
+ \qquad
+ -1\le t_1,t_2\le2,\quad L-2\le t_3\le2
+\end{equation}
+を与える．$\tau=+$ なら二つの負枝で $r_i\ge2w_i$ である．
+$L=3$ では
+\[
+ 4w_1-1\le T\le2r+1\le2w_1+3,
+\]
+より $w_1\le2$ であり，$L=4$ では
+\[
+ 4w_1\le T\le3r+2\le3w_1+5
+\]
+より $w_1\le5$ である．上界は正枝の $r<S<r\delta$ から従う．
+
+$\tau=-$ なら $D_C(P)<0$ である．式~\eqref{bn21:negative-linear} を
+式~\eqref{bn21:same-offsets} に二回適用すると
+\[
+ r_2>\frac{289}{100}w_1-\frac{61}{20}.
+\]
+$L=3$ では
+\[
+ \frac{289}{100}w_1-\frac{41}{20}<T\le2w_1+3,
+\]
+$L=4$ では補題~\ref{ps21:positive-sector} の $T\le2r+2$ によって
+\[
+ \frac{289}{100}w_1-\frac{21}{20}<T\le2w_1+4.
+\]
+いずれも $w_1<505/89<6$ であり，$w_1\le5$ となる．
+
+\paragraph{周期が $P^+\to N_1^-\to N_2^+\to P^+$ の場合．}
+node 条件は
+\begin{equation}\label{bn21:A-offsets}
+ r_1=r+t_1,\quad w_2=w_1+t_2,\quad T=r_2+t_0,
+ \qquad
+ -2\le t_1\le2,\quad-1\le t_2\le1,\quad L-2\le t_0\le2
+\end{equation}
+である．$\tau=-$ なら $N_1$ の next は $D$ なので
+$D_C(N_1)>0$，一方 $D_C(N_2)<0$ である．従って
+\[
+ r_1\ge2w_1,\qquad r_2\le2w_2-1,
+\]
+から
+\[
+ T\le r_2+2\le2w_2+1\le2w_1+3\le r_1+3\le r+5
+\]
+を得る．補題~\ref{bn21:bounds} により $r\le7$ であり，
+$w_1\le r_1-2\le r\le7$ となる．
+
+$\tau=+$ なら $D_C(P)>0$ である．
+式~\eqref{bn21:A-offsets} と式~\eqref{bn21:negative-linear} より
+\[
+ r>\frac{17}{10}w_1-\frac52,\qquad
+ T<\frac{17}{7}w_1+\frac{31}{7}.
+\]
+一方，両方の $L$ に対して式~\eqref{bn21:positive-lower} は
+\[
+ T\ge\frac32r+2>\frac{51}{20}w_1-\frac74
+\]
+を与える．従って
+\begin{equation}\label{bn21:A-bound}
+ \frac{17}{140}w_1<\frac{173}{28},\qquad
+ w_1<\frac{865}{17}<51.
+\end{equation}
+特に $w_1\le50$ である．なお $L=4$ なら強い下界
+$T\ge2r+3$ を使って $w_1<225/34<7$ と改善できる．
+
+\paragraph{周期が $P^+\to N_1^+\to N_2^-\to P^+$ の場合．}
+$N_2^-\to P^+$ では $\gamma_{N_2}+\phi_P=1+L\le4$ が必要なので
+$L=3$ である．offset は
+\begin{equation}\label{bn21:B-offsets}
+ w_1=r+t_1,\quad r_2=r_1+t_2,\quad T=w_2+1,
+ \qquad-1\le t_1\le2,\quad-2\le t_2\le2.
+\end{equation}
+$\tau=-$ なら $r_1\le2w_1-1$，$r_2\ge2w_2$ なので
+\[
+ 2(T-1)=2w_2\le r_2\le r_1+2\le2w_1+1\le2r+5.
+\]
+整数性から $T-r\le3$ となる．$h=T-r-2\ge1$ より $h=1$ であり，
+式~\eqref{bn21:small-h} は $r^2\le2r+3$，従って $r\le3$ を与える．
+よって $w_1\le r+2\le5$ である．
+
+$\tau=+$ なら $r\ge w_1-2$ と式~\eqref{bn21:positive-lower} により
+\[
+ w_2=T-1\ge\frac32w_1-2.
+\]
+二つの負枝の線形評価と式~\eqref{bn21:B-offsets} から
+\[
+ \frac{51}{20}w_1-\frac{39}{10}<r_2
+ \le r_1+2<\frac{17}{7}w_1+2.
+\]
+従って $w_1<826/17<49$，すなわち $w_1\le48$ となる．
+以上で全ての $\sigma$ と $\tau$ の場合を尽くした．
+\end{proof}
+
+\subsection{導出された有限範囲の全 scale 復元}
+
+\begin{lemma}[小さい負 core の有限 certificate]
+\label{bn21:finite-certificate}
+正の整数局所 charts，奇数高分母，低辺の非負 node，対向低 $D$ の相殺を
+満たす book 低三角形は，$2\le w\le50$ の負 core を含まない．
+\end{lemma}
+
+\begin{proof}
+負 core を $2$，その canonical order を $(0,1,3,4)$ としてよい．
+$2\le w\le50$ と $w^2/2<H(H+1)<2w^2$ を満たす
+reverse parameters $(w,H)$ は八百九十八個である．
+各々について
+\[
+ E=1-\frac{w^2}{H(H+1)}=\frac MN\ne0,\qquad
+ c=\frac{sH}{w+H},\quad e=\frac{z(H+1)}{w+H+1}
+\]
+と置く．負枝の完全 factorization
+\begin{equation}\label{bn21:factorization}
+ (N-Mc)(N+Me)=N(N-M)>0
+\end{equation}
+では，$Ece=e-c+1$ と $c\ge2,e\ge1$ により
+$1-Ec=(c-1)/e>0$，$1+Ee=(e+1)/c>0$ である．
+従って両因子は正であり，$N(N-M)$ の正の約数を全て取ることにより
+正の整数 $c,e$，従って全ての scale $s,z$ を復元できる．
+行列の整数性，pair equation，奇数分母を課すと三百十三個の canonical cores が残る．
+ここでは $s,z$ または高分母に探索上限を設定していない．
+
+各固定 core の二本の低辺に対し，総和五の二十一個の非負 node triples を取る．
+相手の低 row は $p^j_{ik}=1-n_k-p^i_{jk}$ に固定される．
+定理~\ref{bk19:finite-completion} により，相手の reverse data は有限であり，
+指定された低 $D$ と高高 pair equation の連立は最高二次の非零方程式に帰着する．
+従って共鳴する reverse data を含めて全ての相手の scale を復元できる．
+
+計算の独立性のため，verifier では元の pair equation を直接用いる．
+\[
+ u=S+S/r-1,\qquad v=T-T/(r+1)+1
+\]
+とすると，その方程式は
+\[
+ (uv-ST)sz+(u-S)s+(v-T)z+1=0.
+\]
+指定された低係数を $D_*$ としたとき
+\[
+ z=\begin{cases}
+ \displaystyle\frac{(r+1)S}{rT}s+
+ \frac{(r+1)(D_*-(T-S))}{T},&\text{固定 ray が }C,\\[4pt]
+ s-D_*-1,&\text{固定 ray が }D
+ \end{cases}
+\]
+を代入し，整数根を正確に求める．二次係数が非零であることは
+$uv-ST=F/[r(r+1)]\ne0$ と正の線形係数から従う．
+再構成した行列では全ての row sum と pair equation を直接再検査する．
+さらに正の weights
+\[
+ \left(a,b,\frac{2a-1}{2r},\frac{2b-1}{2T}\right)
+\]
+により，全ての局所 strict positivity inequalities を直接確認できる．
+
+全三百十三 core のうち，二本の低辺の双方に相手が存在するのは次の六個だけである．
+$\mathcal N_3,\mathcal N_4$ は二本の低辺の全相手集合である．
+最後の低辺 $34$ における残差は $D^3_4+D^4_3$ を意味する．
+\begin{center}
+\small
+\begin{tabular}{lrrl}
+固定 $(r,s,z,w,w)$ & $|\mathcal N_3|$ & $|\mathcal N_4|$ & 最後の全 $D$ 残差\\
+\hline
+$(4,4,5,2,2)$ & 4 & 1 & $2,1,-2,1$\\
+$(6,6,14,3,3)$ & 1 & 1 & $-1$\\
+$(7,7,2,4,4)$ & 1 & 2 & $-8,-5$\\
+$(7,21,4,4,4)$ & 2 & 1 & $8,6$\\
+$(8,8,27,4,4)$ & 1 & 1 & $-9$\\
+$(35,35,16,18,18)$ & 1 & 1 & $-6$\\
+\end{tabular}
+\end{center}
+十一組全てで残差は非零である．従って最後の辺の対向 $D$ 相殺が成立しない．
+Python 標準ライブラリのみを用い，旧 generator を import しない
+\nolinkurl{verify_book_two_negative_obstruction_v21.py} が
+この有限全数復元を実装する．その全固定 core，個数，十一組の最後の node と
+$D$ 残差は \nolinkurl{book_two_negative_obstruction_verification_v21.json}
+に記録している．
+\end{proof}
+
+\begin{theorem}[Book 低三角形の二負枝不存在]
+\label{bn21:two-negative-obstruction}
+正の整数局所 charts，奇数高分母，低辺の非負 node，対向低 $D$ の相殺を
+満たす book 低三角形が，負枝をちょうど二つ持つことはない．
+従って既知の全正枝・全負枝の排除と合わせると，
+book 低三角形が存在するなら負枝はちょうど一つ，正枝はちょうど二つである．
+\end{theorem}
+
+\begin{proof}
+二負枝の低三角形が存在すれば，命題~\ref{bn21:analytic-finite} によって
+その一つは $w\le50$ を満たす．補題~\ref{bn21:finite-certificate} がこれを排除する．
+\end{proof}
+
+\begin{corollary}[残る一負枝の二つの node 型]
+\label{bn21:one-negative-normal-forms}
+Book 低三角形が存在すると仮定する．唯一の負枝を $N$ とし，
+高 ray の交換により $\sigma_N=+$ と正規化する．
+node 周期は次の二型のいずれかであり，$N$ は $w\ge51$ を満たす：
+\[
+ \mathrm{I}:\quad N^+\longrightarrow P_1^+\longrightarrow P_2^+
+ \longrightarrow N^+,
+\]
+\[
+ \mathrm{II}:\quad N^+\longrightarrow P_1^+\longrightarrow P_2^-
+ \longrightarrow N^+.
+\]
+型 II では $L_{P_2}=3$，$S_{P_2}=w-1$，$T_{P_2}=w+1$ であり，
+辺 $P_2\to N$ の node は高 ray $0,1$ と残る低 ray の順で $(0,0,5)$ となる．
+\end{corollary}
+
+\begin{proof}
+正枝二つがともに $\sigma=-$ なら，三本の低辺の高 ray $0$ 側の node 総和は
+\[
+ \sum n_0=6+\sum(v_i-u_i)-\sum\phi_i
+ \le6-(2+3+3)-(1+0+0)=-3
+\]
+となり，不可能である．周期 $N^+\to P_1^-\to P_2^+\to N^+$ も，
+辺 $P_1^-\to P_2^+$ が
+$\gamma_{P_1}+\phi_{P_2}=L_{P_1}+L_{P_2}\ge6$ を与え，
+式~\eqref{bn21:offset} に反する．残るのが型 I と II である．
+型 II の辺 $P_2^-\to N^+$ では $L_{P_2}+1\le4$ により $L_{P_2}=3$ である．
+この辺の offset は $t_N=-1$ に固定されるので $w=T_{P_2}-1$ となる．
+残る低 ray の node は $1+L_{P_2}+1=5$ であり，
+node 総和五と非負性から他の二つは零である．
+最後に $w\ge51$ は補題~\ref{bn21:finite-certificate} から従う．
+\end{proof}
+
+この結論は全ての scale と高分母について成り立つ．
+一方，負枝を一つ持つ型の全排除は本節では主張しない．

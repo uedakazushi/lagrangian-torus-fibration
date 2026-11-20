@@ -1,0 +1,296 @@
+{
+  "version": "v24",
+  "status": "PASS",
+  "reviewer": "highd_axis_v24",
+  "independence": "No producer imports or execution. Packed-exponent integer convolution with checked radix bounds; original residuals independently cleared before full coefficient comparison.",
+  "identity_count": 15,
+  "identities": [
+    {
+      "name": "off_axis_original_three_term_residual",
+      "status": "PASS",
+      "difference_terms": 0
+    },
+    {
+      "name": "x_one_k_zero_formula",
+      "status": "PASS",
+      "difference_terms": 0
+    },
+    {
+      "name": "x_one_k_one_formula",
+      "status": "PASS",
+      "difference_terms": 0
+    },
+    {
+      "name": "h_one_boundary_formula",
+      "status": "PASS",
+      "difference_terms": 0
+    },
+    {
+      "name": "zero_axis_original_residual_formula",
+      "status": "PASS",
+      "difference_terms": 0
+    },
+    {
+      "name": "zero_axis_scale_difference",
+      "status": "PASS",
+      "difference_terms": 0
+    },
+    {
+      "name": "zero_axis_denominator_clearing",
+      "status": "PASS",
+      "difference_terms": 0
+    },
+    {
+      "name": "quartic_leading_coefficient",
+      "status": "PASS",
+      "difference_terms": 0
+    },
+    {
+      "name": "divisor_remainder",
+      "status": "PASS",
+      "difference_terms": 0
+    },
+    {
+      "name": "resonance_s3_z1_n0",
+      "status": "PASS",
+      "difference_terms": 0
+    },
+    {
+      "name": "resonance_s1_z2_n2",
+      "status": "PASS",
+      "difference_terms": 0
+    },
+    {
+      "name": "resonance_original_residual",
+      "status": "PASS",
+      "difference_terms": 0
+    },
+    {
+      "name": "C0_s1",
+      "status": "PASS",
+      "difference_terms": 0
+    },
+    {
+      "name": "C0_s2",
+      "status": "PASS",
+      "difference_terms": 0
+    },
+    {
+      "name": "C0_s3",
+      "status": "PASS",
+      "difference_terms": 0
+    }
+  ],
+  "full_positive_coefficient_comparisons": [
+    {
+      "name": "x>=2 infinite domain",
+      "coefficients": 281,
+      "constant": 312,
+      "all_coefficients_exactly_equal": true,
+      "all_nonzero_coefficients_positive": true
+    },
+    {
+      "name": "x=1 h>=2 k=0",
+      "coefficients": 18,
+      "constant": 44,
+      "all_coefficients_exactly_equal": true,
+      "all_nonzero_coefficients_positive": true
+    },
+    {
+      "name": "x=1 negative coefficient k^1",
+      "coefficients": 18,
+      "constant": 35,
+      "all_coefficients_exactly_equal": true,
+      "all_nonzero_coefficients_positive": true
+    },
+    {
+      "name": "x=1 negative coefficient k^2",
+      "coefficients": 15,
+      "constant": 111,
+      "all_coefficients_exactly_equal": true,
+      "all_nonzero_coefficients_positive": true
+    },
+    {
+      "name": "x=1 negative coefficient k^3",
+      "coefficients": 8,
+      "constant": 56,
+      "all_coefficients_exactly_equal": true,
+      "all_nonzero_coefficients_positive": true
+    },
+    {
+      "name": "x=1 negative coefficient k^4",
+      "coefficients": 3,
+      "constant": 4,
+      "all_coefficients_exactly_equal": true,
+      "all_nonzero_coefficients_positive": true
+    },
+    {
+      "name": "x=1 h=1 k>=1",
+      "coefficients": 12,
+      "constant": 12,
+      "all_coefficients_exactly_equal": true,
+      "all_nonzero_coefficients_positive": true
+    },
+    {
+      "name": "n>=z+1 infinite domain",
+      "coefficients": 209,
+      "constant": 63,
+      "all_coefficients_exactly_equal": true,
+      "all_nonzero_coefficients_positive": true
+    }
+  ],
+  "fixed_fixture_quartics": [
+    {
+      "s": 1,
+      "z": 1,
+      "n": 0,
+      "quartic_coefficients_match": true,
+      "divisor_remainder_match": true
+    },
+    {
+      "s": 1,
+      "z": 1,
+      "n": 1,
+      "quartic_coefficients_match": true,
+      "divisor_remainder_match": true
+    },
+    {
+      "s": 1,
+      "z": 2,
+      "n": 0,
+      "quartic_coefficients_match": true,
+      "divisor_remainder_match": true
+    },
+    {
+      "s": 1,
+      "z": 2,
+      "n": 1,
+      "quartic_coefficients_match": true,
+      "divisor_remainder_match": true
+    },
+    {
+      "s": 1,
+      "z": 2,
+      "n": 2,
+      "quartic_coefficients_match": true,
+      "divisor_remainder_match": true
+    },
+    {
+      "s": 2,
+      "z": 1,
+      "n": 0,
+      "quartic_coefficients_match": true,
+      "divisor_remainder_match": true
+    },
+    {
+      "s": 2,
+      "z": 1,
+      "n": 1,
+      "quartic_coefficients_match": true,
+      "divisor_remainder_match": true
+    },
+    {
+      "s": 3,
+      "z": 2,
+      "n": 0,
+      "quartic_coefficients_match": true,
+      "divisor_remainder_match": true
+    },
+    {
+      "s": 3,
+      "z": 2,
+      "n": 1,
+      "quartic_coefficients_match": true,
+      "divisor_remainder_match": true
+    },
+    {
+      "s": 3,
+      "z": 2,
+      "n": 2,
+      "quartic_coefficients_match": true,
+      "divisor_remainder_match": true
+    },
+    {
+      "s": 4,
+      "z": 3,
+      "n": 0,
+      "quartic_coefficients_match": true,
+      "divisor_remainder_match": true
+    },
+    {
+      "s": 4,
+      "z": 3,
+      "n": 1,
+      "quartic_coefficients_match": true,
+      "divisor_remainder_match": true
+    },
+    {
+      "s": 4,
+      "z": 3,
+      "n": 2,
+      "quartic_coefficients_match": true,
+      "divisor_remainder_match": true
+    },
+    {
+      "s": 4,
+      "z": 3,
+      "n": 3,
+      "quartic_coefficients_match": true,
+      "divisor_remainder_match": true
+    },
+    {
+      "s": 8,
+      "z": 4,
+      "n": 0,
+      "quartic_coefficients_match": true,
+      "divisor_remainder_match": true
+    },
+    {
+      "s": 8,
+      "z": 4,
+      "n": 1,
+      "quartic_coefficients_match": true,
+      "divisor_remainder_match": true
+    },
+    {
+      "s": 8,
+      "z": 4,
+      "n": 2,
+      "quartic_coefficients_match": true,
+      "divisor_remainder_match": true
+    },
+    {
+      "s": 8,
+      "z": 4,
+      "n": 3,
+      "quartic_coefficients_match": true,
+      "divisor_remainder_match": true
+    },
+    {
+      "s": 8,
+      "z": 4,
+      "n": 4,
+      "quartic_coefficients_match": true,
+      "divisor_remainder_match": true
+    }
+  ],
+  "mathematical_read_through": [
+    "delta=0 implies j=th/s>0; F>=h+1 gives n>=0; x>=1 then forces n=0 without relabelling s,t.",
+    "x>=2 clearing has positive factor h^3 w^2; all 281 coefficients and constant312 are exactly reproduced.",
+    "x=1 uses the integrality of b to pass from hb-h^2+1>0 to b>=h. k=0 is positive, k>=1 strictly negative; h=1 covered separately.",
+    "Zero-axis n>=z+1 clearing has 209 positive coefficients and constant63; no denominator cutoff used.",
+    "The quartic has leading coefficient n^2-zn-1<0 on 0<=n<=z; integer-root enumeration is finite even when constant terms vanish.",
+    "Divisor remainder Cn has precisely the two stated zero cases; the first has t=s, the second has nonsquare discriminant93. Other nonpositive cases are -1,-2.",
+    "Fixed(s,z) reconstruction retains all original pair products and positive weights; no global proportional nonexistence is claimed."
+  ],
+  "issues": [],
+  "source_sha256": {
+    "audit_high_d_proportional_independent_v24.py": "5283a4b0df4273ba03d55d28a67d7ceac2349664205096c819458b4857bc32df",
+    "high_d_proportional_reduction_v24.tex": "769f97916c5c0ca7a3227c798dbc92cd97920ac574f6aecf97f1eaf4e3155d66",
+    "verify_high_d_proportional_v24.py": "c877056432c8206239a0ecfaea855ff9be901611a807e295319485a9aebeab3a",
+    "high_d_proportional_verification_v24.json": "71511c39f93e2ae56464d8fdb2bbadedef58f9ba1a91eb241e44149e4e819a56"
+  },
+  "external_peer_review": false,
+  "proof_assistant_formalization": false,
+  "bounded_parameter_scan_used": false
+}

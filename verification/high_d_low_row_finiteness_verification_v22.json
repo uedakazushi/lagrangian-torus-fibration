@@ -1,0 +1,4323 @@
+{
+  "version": 22,
+  "theorem": "finite reconstruction for a fixed two-integer low row, and exclusion of the symmetric sector",
+  "arithmetic": "Python standard library; exact integers and Fraction; no floating point",
+  "F_bound": "F <= s*t + (2*(s+t-1)+1)*(s-x) - 2",
+  "scope": "Only s,t are bounded in a scan; x,y,z,b and all high denominators are exhaustive for each low row.",
+  "global_nonexistence_claim": false,
+  "source_sha256": "7efc0ef9c356bb1cfbff9efe4daf48c98df590145c889e80ebbb75719e7fea14",
+  "coefficient_checks": [
+    {
+      "name": "E_affine_y",
+      "lhs_monomials": 13,
+      "rhs_monomials": 13,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "J_affine_y",
+      "lhs_monomials": 13,
+      "rhs_monomials": 13,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "S_numerator_affine_y",
+      "lhs_monomials": 88,
+      "rhs_monomials": 88,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "T_numerator_affine_y",
+      "lhs_monomials": 36,
+      "rhs_monomials": 36,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "U_from_S_T_d",
+      "lhs_monomials": 73,
+      "rhs_monomials": 73,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "alpha_affine_y",
+      "lhs_monomials": 10,
+      "rhs_monomials": 10,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "S_slope_at_degeneracy",
+      "lhs_monomials": 31,
+      "rhs_monomials": 31,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "K_numerator",
+      "lhs_monomials": 54,
+      "rhs_monomials": 54,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "first_bound_gap_nonnegative",
+      "lhs_monomials": 12,
+      "rhs_monomials": 12,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "second_bound_gap_nonnegative",
+      "lhs_monomials": 47,
+      "rhs_monomials": 47,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "threshold_a_upper_bound",
+      "lhs_monomials": 4,
+      "rhs_monomials": 4,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "threshold_Q2_upper_bound",
+      "lhs_monomials": 7,
+      "rhs_monomials": 7,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "linear_coefficient_nonzero_at_degeneracy",
+      "lhs_monomials": 79,
+      "rhs_monomials": 79,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "L_positive_expression",
+      "lhs_monomials": 14,
+      "rhs_monomials": 14,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "C_positive_expression",
+      "lhs_monomials": 16,
+      "rhs_monomials": 16,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "residual_quadratic",
+      "lhs_monomials": 249,
+      "rhs_monomials": 249,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "original_pair_residual_2_equals_1",
+      "lhs_monomials": 249,
+      "rhs_monomials": 249,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "original_pair_residual_3_equals_1",
+      "lhs_monomials": 249,
+      "rhs_monomials": 249,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "single_congruence",
+      "lhs_monomials": 57,
+      "rhs_monomials": 57,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "degenerate_hypersurface",
+      "lhs_monomials": 10,
+      "rhs_monomials": 10,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "symmetric_E_plus_J",
+      "lhs_monomials": 0,
+      "rhs_monomials": 0,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "symmetric_S_shift",
+      "lhs_monomials": 31,
+      "rhs_monomials": 31,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "symmetric_T_shift",
+      "lhs_monomials": 33,
+      "rhs_monomials": 33,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "symmetric_positive_F_gap",
+      "lhs_monomials": 5,
+      "rhs_monomials": 5,
+      "difference_monomials": 0,
+      "status": "pass"
+    }
+  ],
+  "regressions": [
+    {
+      "name": "known_integer_model_with_one_negative_high_D",
+      "status": "pass",
+      "parameters": [
+        1,
+        2,
+        -1,
+        1,
+        3,
+        2
+      ],
+      "q": [
+        5,
+        11,
+        23,
+        1
+      ],
+      "D": [
+        -1,
+        1,
+        3,
+        -3
+      ],
+      "scales": [
+        4,
+        5,
+        11
+      ]
+    },
+    {
+      "name": "known_rational_zero_D_model",
+      "status": "pass",
+      "parameters": [
+        3,
+        4,
+        0,
+        0,
+        0,
+        6
+      ],
+      "q": [
+        "133/31",
+        "703/31",
+        "1057/31",
+        1
+      ],
+      "D": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "scales": [
+        "34/31",
+        "168/31",
+        "171/31"
+      ]
+    },
+    {
+      "name": "positive_integral_difference_system_but_residual_nonzero",
+      "status": "pass",
+      "parameters": [
+        1,
+        3,
+        0,
+        4,
+        0,
+        2
+      ],
+      "original_residue": 3,
+      "residual_polynomial_value": 9
+    },
+    {
+      "name": "zero_norm_first_family_at_b3",
+      "status": "pass",
+      "parameters": [
+        3,
+        3,
+        0,
+        0,
+        1,
+        3
+      ],
+      "original_residue": 3,
+      "residual_polynomial_value": 93
+    },
+    {
+      "name": "zero_norm_second_family_at_b2",
+      "status": "pass",
+      "parameters": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      "original_residue": -8,
+      "residual_polynomial_value": -344
+    },
+    {
+      "name": "exact_integer_root_edge_cases",
+      "status": "pass",
+      "cases": 6
+    }
+  ],
+  "scan": {
+    "low_row_range": {
+      "s": [
+        1,
+        12
+      ],
+      "t": [
+        1,
+        12
+      ]
+    },
+    "complete_low_rows": 144,
+    "totals": {
+      "five_tuples": 2004015,
+      "quadratic_tuples": 2003796,
+      "linear_tuples": 219,
+      "nonnegative_integer_residual_roots": 6,
+      "positive_d": 0,
+      "nonsingular_sector": 0,
+      "congruence_pass": 0,
+      "positive_scales": 0,
+      "positive_signs": 0,
+      "exact_models": 0
+    },
+    "maxima": {
+      "F": 706,
+      "b": 707,
+      "z": 58,
+      "integer_root_y": 0
+    },
+    "rows": [
+      {
+        "fixed_low_row": [
+          1,
+          1
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 3,
+          "quadratic_tuples": 3,
+          "linear_tuples": 0,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 2,
+          "b": 3,
+          "z": 1,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          1,
+          2
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 15,
+          "quadratic_tuples": 14,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 5,
+          "b": 6,
+          "z": 4,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          1,
+          3
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 36,
+          "quadratic_tuples": 35,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 8,
+          "b": 9,
+          "z": 7,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          1,
+          4
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 66,
+          "quadratic_tuples": 65,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 11,
+          "b": 12,
+          "z": 10,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          1,
+          5
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 105,
+          "quadratic_tuples": 104,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 14,
+          "b": 15,
+          "z": 13,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          1,
+          6
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 153,
+          "quadratic_tuples": 151,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 17,
+          "b": 18,
+          "z": 16,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          1,
+          7
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 210,
+          "quadratic_tuples": 209,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 20,
+          "b": 21,
+          "z": 19,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          1,
+          8
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 276,
+          "quadratic_tuples": 274,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 23,
+          "b": 24,
+          "z": 22,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          1,
+          9
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 351,
+          "quadratic_tuples": 350,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 26,
+          "b": 27,
+          "z": 25,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          1,
+          10
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 435,
+          "quadratic_tuples": 433,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 29,
+          "b": 30,
+          "z": 28,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          1,
+          11
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 528,
+          "quadratic_tuples": 527,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 32,
+          "b": 33,
+          "z": 31,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          1,
+          12
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 630,
+          "quadratic_tuples": 627,
+          "linear_tuples": 3,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 35,
+          "b": 36,
+          "z": 34,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          2,
+          1
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 34,
+          "quadratic_tuples": 33,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 10,
+          "b": 11,
+          "z": 4,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          2,
+          2
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 84,
+          "quadratic_tuples": 82,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 16,
+          "b": 17,
+          "z": 7,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          2,
+          3
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 157,
+          "quadratic_tuples": 156,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 22,
+          "b": 23,
+          "z": 10,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          2,
+          4
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 252,
+          "quadratic_tuples": 250,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 28,
+          "b": 29,
+          "z": 13,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          2,
+          5
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 370,
+          "quadratic_tuples": 368,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 34,
+          "b": 35,
+          "z": 16,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          2,
+          6
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 510,
+          "quadratic_tuples": 508,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 40,
+          "b": 41,
+          "z": 19,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          2,
+          7
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 673,
+          "quadratic_tuples": 672,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 46,
+          "b": 47,
+          "z": 22,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          2,
+          8
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 858,
+          "quadratic_tuples": 855,
+          "linear_tuples": 3,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 52,
+          "b": 53,
+          "z": 25,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          2,
+          9
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 1066,
+          "quadratic_tuples": 1064,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 58,
+          "b": 59,
+          "z": 28,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          2,
+          10
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 1296,
+          "quadratic_tuples": 1294,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 64,
+          "b": 65,
+          "z": 31,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          2,
+          11
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 1549,
+          "quadratic_tuples": 1547,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 70,
+          "b": 71,
+          "z": 34,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          2,
+          12
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 1824,
+          "quadratic_tuples": 1822,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 76,
+          "b": 77,
+          "z": 37,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          3,
+          1
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 124,
+          "quadratic_tuples": 124,
+          "linear_tuples": 0,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 22,
+          "b": 23,
+          "z": 7,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          3,
+          2
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 246,
+          "quadratic_tuples": 244,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 31,
+          "b": 32,
+          "z": 10,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          3,
+          3
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 410,
+          "quadratic_tuples": 409,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 40,
+          "b": 41,
+          "z": 13,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          3,
+          4
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 616,
+          "quadratic_tuples": 615,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 1,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 49,
+          "b": 50,
+          "z": 16,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": [
+          {
+            "data": [
+              3,
+              4,
+              0,
+              0,
+              0,
+              6
+            ],
+            "scales": [
+              "34/31",
+              "168/31",
+              "171/31"
+            ],
+            "a": -12
+          }
+        ]
+      },
+      {
+        "fixed_low_row": [
+          3,
+          5
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 864,
+          "quadratic_tuples": 863,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 58,
+          "b": 59,
+          "z": 19,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          3,
+          6
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 1154,
+          "quadratic_tuples": 1152,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 67,
+          "b": 68,
+          "z": 22,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          3,
+          7
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 1486,
+          "quadratic_tuples": 1486,
+          "linear_tuples": 0,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 76,
+          "b": 77,
+          "z": 25,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          3,
+          8
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 1860,
+          "quadratic_tuples": 1857,
+          "linear_tuples": 3,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 85,
+          "b": 86,
+          "z": 28,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          3,
+          9
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 2276,
+          "quadratic_tuples": 2275,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 94,
+          "b": 95,
+          "z": 31,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          3,
+          10
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 2734,
+          "quadratic_tuples": 2733,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 103,
+          "b": 104,
+          "z": 34,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          3,
+          11
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 3234,
+          "quadratic_tuples": 3233,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 112,
+          "b": 113,
+          "z": 37,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          3,
+          12
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 3776,
+          "quadratic_tuples": 3773,
+          "linear_tuples": 3,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 121,
+          "b": 122,
+          "z": 40,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          4,
+          1
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 315,
+          "quadratic_tuples": 315,
+          "linear_tuples": 0,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 38,
+          "b": 39,
+          "z": 9,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          4,
+          2
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 552,
+          "quadratic_tuples": 550,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 50,
+          "b": 51,
+          "z": 12,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          4,
+          3
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 855,
+          "quadratic_tuples": 853,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 1,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 62,
+          "b": 63,
+          "z": 15,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": [
+          {
+            "data": [
+              4,
+              3,
+              0,
+              0,
+              0,
+              6
+            ],
+            "scales": [
+              "69/31",
+              "144/31",
+              "182/31"
+            ],
+            "a": -6
+          }
+        ]
+      },
+      {
+        "fixed_low_row": [
+          4,
+          4
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 1226,
+          "quadratic_tuples": 1225,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 74,
+          "b": 75,
+          "z": 18,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          4,
+          5
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 1665,
+          "quadratic_tuples": 1665,
+          "linear_tuples": 0,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 86,
+          "b": 87,
+          "z": 21,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          4,
+          6
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 2172,
+          "quadratic_tuples": 2169,
+          "linear_tuples": 3,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 98,
+          "b": 99,
+          "z": 24,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          4,
+          7
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 2745,
+          "quadratic_tuples": 2745,
+          "linear_tuples": 0,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 110,
+          "b": 111,
+          "z": 27,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          4,
+          8
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 3386,
+          "quadratic_tuples": 3385,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 122,
+          "b": 123,
+          "z": 30,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          4,
+          9
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 4095,
+          "quadratic_tuples": 4094,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 134,
+          "b": 135,
+          "z": 33,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          4,
+          10
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 4872,
+          "quadratic_tuples": 4870,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 146,
+          "b": 147,
+          "z": 36,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          4,
+          11
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 5715,
+          "quadratic_tuples": 5713,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 158,
+          "b": 159,
+          "z": 39,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          4,
+          12
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 6626,
+          "quadratic_tuples": 6624,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 170,
+          "b": 171,
+          "z": 42,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          5,
+          1
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 660,
+          "quadratic_tuples": 660,
+          "linear_tuples": 0,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 58,
+          "b": 59,
+          "z": 11,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          5,
+          2
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 1063,
+          "quadratic_tuples": 1062,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 73,
+          "b": 74,
+          "z": 14,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          5,
+          3
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 1564,
+          "quadratic_tuples": 1563,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 88,
+          "b": 89,
+          "z": 17,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          5,
+          4
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 2165,
+          "quadratic_tuples": 2163,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 103,
+          "b": 104,
+          "z": 20,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          5,
+          5
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 2863,
+          "quadratic_tuples": 2862,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 118,
+          "b": 119,
+          "z": 23,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          5,
+          6
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 3661,
+          "quadratic_tuples": 3661,
+          "linear_tuples": 0,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 133,
+          "b": 134,
+          "z": 26,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          5,
+          7
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 4558,
+          "quadratic_tuples": 4557,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 148,
+          "b": 149,
+          "z": 29,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          5,
+          8
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 5554,
+          "quadratic_tuples": 5551,
+          "linear_tuples": 3,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 163,
+          "b": 164,
+          "z": 32,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          5,
+          9
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 6650,
+          "quadratic_tuples": 6649,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 178,
+          "b": 179,
+          "z": 35,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          5,
+          10
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 7843,
+          "quadratic_tuples": 7842,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 193,
+          "b": 194,
+          "z": 38,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          5,
+          11
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 9136,
+          "quadratic_tuples": 9136,
+          "linear_tuples": 0,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 208,
+          "b": 209,
+          "z": 41,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          5,
+          12
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 10528,
+          "quadratic_tuples": 10526,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 223,
+          "b": 224,
+          "z": 44,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          6,
+          1
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 1220,
+          "quadratic_tuples": 1218,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 82,
+          "b": 83,
+          "z": 13,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          6,
+          2
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 1852,
+          "quadratic_tuples": 1849,
+          "linear_tuples": 3,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 100,
+          "b": 101,
+          "z": 16,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          6,
+          3
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 2620,
+          "quadratic_tuples": 2618,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 118,
+          "b": 119,
+          "z": 19,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          6,
+          4
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 3522,
+          "quadratic_tuples": 3521,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 136,
+          "b": 137,
+          "z": 22,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          6,
+          5
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 4560,
+          "quadratic_tuples": 4557,
+          "linear_tuples": 3,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 154,
+          "b": 155,
+          "z": 25,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          6,
+          6
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 5734,
+          "quadratic_tuples": 5731,
+          "linear_tuples": 3,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 172,
+          "b": 173,
+          "z": 28,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          6,
+          7
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 7045,
+          "quadratic_tuples": 7044,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 190,
+          "b": 191,
+          "z": 31,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          6,
+          8
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 8492,
+          "quadratic_tuples": 8489,
+          "linear_tuples": 3,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 208,
+          "b": 209,
+          "z": 34,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          6,
+          9
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 10076,
+          "quadratic_tuples": 10073,
+          "linear_tuples": 3,
+          "nonnegative_integer_residual_roots": 1,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 226,
+          "b": 227,
+          "z": 37,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": [
+          {
+            "data": [
+              6,
+              9,
+              0,
+              0,
+              0,
+              13
+            ],
+            "scales": [
+              "646/157",
+              "1650/157",
+              "2139/157"
+            ],
+            "a": -72
+          }
+        ]
+      },
+      {
+        "fixed_low_row": [
+          6,
+          10
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 11796,
+          "quadratic_tuples": 11792,
+          "linear_tuples": 4,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 244,
+          "b": 245,
+          "z": 40,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          6,
+          11
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 13653,
+          "quadratic_tuples": 13652,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 262,
+          "b": 263,
+          "z": 43,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          6,
+          12
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 15646,
+          "quadratic_tuples": 15643,
+          "linear_tuples": 3,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 280,
+          "b": 281,
+          "z": 46,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          7,
+          1
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 2070,
+          "quadratic_tuples": 2070,
+          "linear_tuples": 0,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 110,
+          "b": 111,
+          "z": 15,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          7,
+          2
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 3001,
+          "quadratic_tuples": 3000,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 131,
+          "b": 132,
+          "z": 18,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          7,
+          3
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 4112,
+          "quadratic_tuples": 4111,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 152,
+          "b": 153,
+          "z": 21,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          7,
+          4
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 5400,
+          "quadratic_tuples": 5398,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 173,
+          "b": 174,
+          "z": 24,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          7,
+          5
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 6867,
+          "quadratic_tuples": 6866,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 194,
+          "b": 195,
+          "z": 27,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          7,
+          6
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 8514,
+          "quadratic_tuples": 8512,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 215,
+          "b": 216,
+          "z": 30,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          7,
+          7
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 10338,
+          "quadratic_tuples": 10337,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 236,
+          "b": 237,
+          "z": 33,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          7,
+          8
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 12342,
+          "quadratic_tuples": 12342,
+          "linear_tuples": 0,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 257,
+          "b": 258,
+          "z": 36,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          7,
+          9
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 14526,
+          "quadratic_tuples": 14525,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 278,
+          "b": 279,
+          "z": 39,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          7,
+          10
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 16891,
+          "quadratic_tuples": 16890,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 299,
+          "b": 300,
+          "z": 42,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          7,
+          11
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 19434,
+          "quadratic_tuples": 19433,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 320,
+          "b": 321,
+          "z": 45,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          7,
+          12
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 22158,
+          "quadratic_tuples": 22156,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 341,
+          "b": 342,
+          "z": 48,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          8,
+          1
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 3297,
+          "quadratic_tuples": 3297,
+          "linear_tuples": 0,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 142,
+          "b": 143,
+          "z": 17,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          8,
+          2
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 4606,
+          "quadratic_tuples": 4603,
+          "linear_tuples": 3,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 166,
+          "b": 167,
+          "z": 20,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          8,
+          3
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 6142,
+          "quadratic_tuples": 6142,
+          "linear_tuples": 0,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 190,
+          "b": 191,
+          "z": 23,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          8,
+          4
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 7908,
+          "quadratic_tuples": 7906,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 214,
+          "b": 215,
+          "z": 26,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          8,
+          5
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 9901,
+          "quadratic_tuples": 9901,
+          "linear_tuples": 0,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 238,
+          "b": 239,
+          "z": 29,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          8,
+          6
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 12124,
+          "quadratic_tuples": 12123,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 262,
+          "b": 263,
+          "z": 32,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          8,
+          7
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 14574,
+          "quadratic_tuples": 14572,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 286,
+          "b": 287,
+          "z": 35,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          8,
+          8
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 17252,
+          "quadratic_tuples": 17249,
+          "linear_tuples": 3,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 310,
+          "b": 311,
+          "z": 38,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          8,
+          9
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 20160,
+          "quadratic_tuples": 20160,
+          "linear_tuples": 0,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 334,
+          "b": 335,
+          "z": 41,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          8,
+          10
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 23296,
+          "quadratic_tuples": 23294,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 358,
+          "b": 359,
+          "z": 44,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          8,
+          11
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 26659,
+          "quadratic_tuples": 26659,
+          "linear_tuples": 0,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 382,
+          "b": 383,
+          "z": 47,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          8,
+          12
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 30252,
+          "quadratic_tuples": 30250,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 406,
+          "b": 407,
+          "z": 50,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          9,
+          1
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 4991,
+          "quadratic_tuples": 4991,
+          "linear_tuples": 0,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 178,
+          "b": 179,
+          "z": 19,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          9,
+          2
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 6770,
+          "quadratic_tuples": 6767,
+          "linear_tuples": 3,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 205,
+          "b": 206,
+          "z": 22,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          9,
+          3
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 8830,
+          "quadratic_tuples": 8829,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 232,
+          "b": 233,
+          "z": 25,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          9,
+          4
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 11172,
+          "quadratic_tuples": 11171,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 259,
+          "b": 260,
+          "z": 28,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          9,
+          5
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 13797,
+          "quadratic_tuples": 13795,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 286,
+          "b": 287,
+          "z": 31,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          9,
+          6
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 16706,
+          "quadratic_tuples": 16704,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 1,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 313,
+          "b": 314,
+          "z": 34,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": [
+          {
+            "data": [
+              9,
+              6,
+              0,
+              0,
+              0,
+              13
+            ],
+            "scales": [
+              "1150/157",
+              "1221/157",
+              "2214/157"
+            ],
+            "a": -30
+          }
+        ]
+      },
+      {
+        "fixed_low_row": [
+          9,
+          7
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 19900,
+          "quadratic_tuples": 19900,
+          "linear_tuples": 0,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 340,
+          "b": 341,
+          "z": 37,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          9,
+          8
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 23377,
+          "quadratic_tuples": 23375,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 367,
+          "b": 368,
+          "z": 40,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          9,
+          9
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 27138,
+          "quadratic_tuples": 27137,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 394,
+          "b": 395,
+          "z": 43,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          9,
+          10
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 31184,
+          "quadratic_tuples": 31184,
+          "linear_tuples": 0,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 421,
+          "b": 422,
+          "z": 46,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          9,
+          11
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 35513,
+          "quadratic_tuples": 35511,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 448,
+          "b": 449,
+          "z": 49,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          9,
+          12
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 40126,
+          "quadratic_tuples": 40124,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 475,
+          "b": 476,
+          "z": 52,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          10,
+          1
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 7260,
+          "quadratic_tuples": 7259,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 218,
+          "b": 219,
+          "z": 21,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          10,
+          2
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 9606,
+          "quadratic_tuples": 9604,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 248,
+          "b": 249,
+          "z": 24,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          10,
+          3
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 12296,
+          "quadratic_tuples": 12293,
+          "linear_tuples": 3,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 278,
+          "b": 279,
+          "z": 27,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          10,
+          4
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 15328,
+          "quadratic_tuples": 15326,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 308,
+          "b": 309,
+          "z": 30,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          10,
+          5
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 18702,
+          "quadratic_tuples": 18699,
+          "linear_tuples": 3,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 338,
+          "b": 339,
+          "z": 33,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          10,
+          6
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 22418,
+          "quadratic_tuples": 22418,
+          "linear_tuples": 0,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 368,
+          "b": 369,
+          "z": 36,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          10,
+          7
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 26481,
+          "quadratic_tuples": 26480,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 398,
+          "b": 399,
+          "z": 39,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          10,
+          8
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 30890,
+          "quadratic_tuples": 30888,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 428,
+          "b": 429,
+          "z": 42,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          10,
+          9
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 35644,
+          "quadratic_tuples": 35639,
+          "linear_tuples": 5,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 458,
+          "b": 459,
+          "z": 45,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          10,
+          10
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 40742,
+          "quadratic_tuples": 40741,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 488,
+          "b": 489,
+          "z": 48,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          10,
+          11
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 46188,
+          "quadratic_tuples": 46186,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 518,
+          "b": 519,
+          "z": 51,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          10,
+          12
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 51978,
+          "quadratic_tuples": 51974,
+          "linear_tuples": 4,
+          "nonnegative_integer_residual_roots": 1,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 548,
+          "b": 549,
+          "z": 54,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": [
+          {
+            "data": [
+              10,
+              12,
+              0,
+              0,
+              0,
+              19
+            ],
+            "scales": [
+              "2805/343",
+              "4672/343",
+              "7134/343"
+            ],
+            "a": -132
+          }
+        ]
+      },
+      {
+        "fixed_low_row": [
+          11,
+          1
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 10224,
+          "quadratic_tuples": 10224,
+          "linear_tuples": 0,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 262,
+          "b": 263,
+          "z": 23,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          11,
+          2
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 13243,
+          "quadratic_tuples": 13242,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 295,
+          "b": 296,
+          "z": 26,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          11,
+          3
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 16674,
+          "quadratic_tuples": 16673,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 328,
+          "b": 329,
+          "z": 29,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          11,
+          4
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 20514,
+          "quadratic_tuples": 20513,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 361,
+          "b": 362,
+          "z": 32,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          11,
+          5
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 24766,
+          "quadratic_tuples": 24765,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 394,
+          "b": 395,
+          "z": 35,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          11,
+          6
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 29425,
+          "quadratic_tuples": 29424,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 427,
+          "b": 428,
+          "z": 38,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          11,
+          7
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 34495,
+          "quadratic_tuples": 34494,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 460,
+          "b": 461,
+          "z": 41,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          11,
+          8
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 39975,
+          "quadratic_tuples": 39973,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 493,
+          "b": 494,
+          "z": 44,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          11,
+          9
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 45870,
+          "quadratic_tuples": 45869,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 526,
+          "b": 527,
+          "z": 47,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          11,
+          10
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 52176,
+          "quadratic_tuples": 52173,
+          "linear_tuples": 3,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 559,
+          "b": 560,
+          "z": 50,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          11,
+          11
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 58896,
+          "quadratic_tuples": 58895,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 592,
+          "b": 593,
+          "z": 53,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          11,
+          12
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 66030,
+          "quadratic_tuples": 66030,
+          "linear_tuples": 0,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 625,
+          "b": 626,
+          "z": 56,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          12,
+          1
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 14004,
+          "quadratic_tuples": 14003,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 310,
+          "b": 311,
+          "z": 25,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          12,
+          2
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 17820,
+          "quadratic_tuples": 17816,
+          "linear_tuples": 4,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 346,
+          "b": 347,
+          "z": 28,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          12,
+          3
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 22114,
+          "quadratic_tuples": 22111,
+          "linear_tuples": 3,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 382,
+          "b": 383,
+          "z": 31,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          12,
+          4
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 26888,
+          "quadratic_tuples": 26886,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 418,
+          "b": 419,
+          "z": 34,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          12,
+          5
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 32150,
+          "quadratic_tuples": 32149,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 454,
+          "b": 455,
+          "z": 37,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          12,
+          6
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 37892,
+          "quadratic_tuples": 37890,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 490,
+          "b": 491,
+          "z": 40,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          12,
+          7
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 44119,
+          "quadratic_tuples": 44118,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 526,
+          "b": 527,
+          "z": 43,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          12,
+          8
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 50828,
+          "quadratic_tuples": 50826,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 562,
+          "b": 563,
+          "z": 46,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          12,
+          9
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 58025,
+          "quadratic_tuples": 58024,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 598,
+          "b": 599,
+          "z": 49,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          12,
+          10
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 65702,
+          "quadratic_tuples": 65700,
+          "linear_tuples": 2,
+          "nonnegative_integer_residual_roots": 1,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 634,
+          "b": 635,
+          "z": 52,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": [
+          {
+            "data": [
+              12,
+              10,
+              0,
+              0,
+              0,
+              19
+            ],
+            "scales": [
+              "3525/343",
+              "4026/343",
+              "7208/343"
+            ],
+            "a": -90
+          }
+        ]
+      },
+      {
+        "fixed_low_row": [
+          12,
+          11
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 73864,
+          "quadratic_tuples": 73860,
+          "linear_tuples": 4,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 670,
+          "b": 671,
+          "z": 55,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      },
+      {
+        "fixed_low_row": [
+          12,
+          12
+        ],
+        "status": "complete_for_this_low_row",
+        "counts": {
+          "five_tuples": 82514,
+          "quadratic_tuples": 82513,
+          "linear_tuples": 1,
+          "nonnegative_integer_residual_roots": 0,
+          "positive_d": 0,
+          "nonsingular_sector": 0,
+          "congruence_pass": 0,
+          "positive_scales": 0,
+          "positive_signs": 0,
+          "exact_models": 0
+        },
+        "maxima": {
+          "F": 706,
+          "b": 707,
+          "z": 58,
+          "integer_root_y": 0
+        },
+        "models": [],
+        "candidate_examples": []
+      }
+    ]
+  },
+  "status": "PASS",
+  "proof_file": "high_d_fixed_low_row_finiteness_v22.tex",
+  "proof_sha256": "93f03f7462b3de63f88a708196bb0c56e473c0a7876f017fbfcc5353122c0949",
+  "scan_provenance": {
+    "computation_source_sha256": "a134132bc82b6ef7dbffc3507c834904dad6e76f6cd2c9f08b1377155a7a70b9",
+    "reconstruction_algorithm_changed": false,
+    "reused_after": "Five extra symbolic identities and proof metadata added; the completed scan was not repeated."
+  },
+  "editorial_proof_hash_update": {
+    "before_sha256": "16b2094dd0f1ffc5aac49d8f14e399d6032fdd79c6fcd0ba12678c69057dcd1f",
+    "after_sha256": "93f03f7462b3de63f88a708196bb0c56e473c0a7876f017fbfcc5353122c0949",
+    "reason": "Only split-to-aligned display layout and line-breakable filename markup changed; all 24 coefficient checks and 6 regression groups rerun and equal; reconstruction source and completed scan unchanged.",
+    "scan_reexecuted_for_this_update": false
+  }
+}

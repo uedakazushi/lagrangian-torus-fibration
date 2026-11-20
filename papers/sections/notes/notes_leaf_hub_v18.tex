@@ -1,0 +1,56 @@
+% Reusable v18 notes; no exploration diary.
+\subsection{一高分母 hub の有限型復元と \texorpdfstring{$K_4$}{K4} 一葉型の解決}
+\label{nl18:leaf-hub}
+
+高分母 support が $K_4$ 上の $0,1,2,3$ に高辺 $04$ を加えた型 $G_{5,12}$ は排除された．
+入力は一高分母の完全標準形と，三高分母 core の正符号 graph が完全 matching となる定理である．
+全低 hub の $K_4$ 障害を部分 graph へ拡張したものではない．
+$G_{5,7},G_{5,9}$ の葉には同じ結論をまだ適用できない．
+
+\paragraph{再利用する補正公式．}
+任意の hub $4$ について $\ell_i=q_{i4}$ とし，
+$R_{ij}=p^i_{4j}$，$X_{ij}=p^i_{j4}$，$V_{ij}=p^4_{ij}$，$N_{ij}=n_{i4;j}$ と置けば，
+\[
+ R_{ij}=\ell_i(1-N_{ij})-V_{ij},\qquad
+ R_{ij}X_{ij}=\ell_iq_{ij}-1,\qquad
+ \sum_{j\ne i}N_{ij}=5.
+\]
+対向 $D$ 相殺は
+\[
+ \sum_{j\ne i}(X_{ij}-R_{ji})
+ =\sum_{j\ne i}\ell_jN_{ji}-\sum_j\ell_j-\ell_i
+\]
+となる．一高 hub では $\ell=(Q,1,1,1)$ である．
+高 ray を含む hub pair は $Q-1$ であり，零積へ置き換えない．
+
+\paragraph{葉分母の上界を導く仕組み．}
+標準形を $(A,B,C,D)=(0,1,2,3)$ とすると
+$u=th$，$v=t(h+1)$，$Q=th(h+1)+1$ である．
+特別な $B$ ray の低 row は $R_{10}=2-N_{10}$，$R_{12},R_{13}\le1$ となる．
+一正二負条件と clutching から $R_{10}=1,2$ のみが残り，
+$q_{01}=2Q-1,Q,2Q+1$ の三族と，$Q=3,5$ における任意奇数 $q_{01}$ の退化族を得る．
+$2Q-1$ 族は高 hub 辺の $D$ と他の高辺の node 条件により $Q=3$ に限られる．
+$Q>21$ なら $u\ge5,v\ge6$ である．$d=0$ は $R_{31}\ge3$ と
+$R_{13}\in\{-1,-2\}$ の反対符号接着に反する．$c=0$ では
+core $2$ の唯一の正 entry が $R_{20}$ となり，$|R_{23}|\le4$ である一方，
+core $3$ の row sum と一正二負条件は $R_{32}\ge5$ を要求する．
+従って $Q\le21$ である．
+
+\paragraph{自由整数と他の分母を切らない復元．}
+$Q\le21$ の $(h,t)$ は十五個，四つの node 行はそれぞれ二十一通りである．
+$c=0,d=z$ または $d=0,c=z$ とし，$z$ は全整数にわたって残す．
+辺 $0i$ では $R=R_{0i},r=R_{i0}$ が $z$ に依存せず，
+\[
+ (Qr+R-\kappa Rr)q_{0i}=R+r,\qquad -4\le\kappa\le1
+\]
+から固定分母または全無限族 $q_{0i}=1+\operatorname{lcm}(2,|r|)a$ を得る．
+低三角形内では固定 reverse $r$ の相手は $-r$，条件付きの $\operatorname{sgn}(r)$，
+または $|r|=1$ における同符号の全正偶数である．
+従って $z$ の許容集合は点と偶奇付き半直線の有限和となり，正確に交差できる．
+
+固定 node 配置 $345$，partner 型の組 $1192$ のうち符号条件を満たす $579$ 組は，
+全て空交差である．これらは手順内の枝を含む型の数で，charts の同型類数ではない．
+\nolinkurl{verify_k4_leaf_obstruction_v18.py} と
+\nolinkurl{k4_leaf_obstruction_verification_v18.json} に全 $579$ 個の空交差証明書を保持する．
+$Q=3$ における標識重複を残し，$c=d=0$ の二重計数も不存在判定のため許している．
+この方法では他の高分母や自由な低低係数に探索上限を置かない．

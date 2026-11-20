@@ -1,0 +1,83 @@
+% v10. General arithmetic sign theorem for q-pattern (q,q,q,1).
+% No basin-positivity assumption is needed for the exclusion step.
+
+\subsection{三つの等しい高分母を持つ core の係数和}
+\label{uh10:three-section}
+
+一般の最大分母についての局所符号原理は成立しないが，
+三つの高分母が等しい場合には，その三頂点の係数和に符号がある．
+
+\begin{proposition}[三つの等高分母の負の総和]\label{uh10:three-negative}
+局所四直線模型の分母が $(q,q,q,1)$，$q\geq3$，であり，
+全 row sums と pair products が
+\[
+ \sum_{j\ne i}p_{ij}=-q_i,
+ \qquad p_{ij}p_{ji}=q_iq_j-1
+\]
+を満たすとする．分母一の頂点を $0$ と書けば
+\[
+ D_0>0,\qquad \sum_{i\ne0}D_i=-D_0<0.
+\]
+この結論には basin positivity を仮定する必要はない．
+\end{proposition}
+
+\begin{proof}
+$m=q-1\geq2$ とする．分母一の row の三 entries は非零の signed divisors of $m$ で，
+和は $-1$ である．従って，二つが負で一つが正か，二つが正で一つが負である．
+
+まず $(-a,-b,c)$，$a,b,c>0$，$c=a+b-1$ と書ける場合を考える．
+pair products から
+\[
+ D_0=-1+m\left(\frac1a+\frac1b-\frac1c\right).
+\]
+$a=1$ なら $c=b$ なので $D_0=m-1>0$ である．
+$a>1$ なら $c>b$ なので括弧内は $1/a$ より大きい．
+$a\mid m$，$a>0$ より $m/a\geq1$ であり，この場合も $D_0>0$ となる．
+
+残る $(a,b,-c)$，$c=a+b+1$ の場合が存在しないことを示す．
+\[
+ r=\frac ma,\qquad s=\frac mb,\qquad t=\frac mc,
+ \qquad N=q^2-1
+\]
+と置く．高分母の三頂点における，分母一の頂点へ向かう entries は $r,s,-t$ である．
+従って高分母三頂点の内部 entries だけを取り，diagonal を
+\[
+ A=q+r,\qquad B=q+s,\qquad C=q-t
+\]
+とすれば，三行の和が全て零である $3\times3$ 行列を得る．
+その三つの off-diagonal pair products は全て $N$ である．
+二つの向きの三角 cycle products を $X,Y$ と書くと，determinant が零であることから
+\[
+ X+Y=-\{ABC-N(A+B+C)\},
+ \qquad XY=N^3.
+\]
+従って，実数 $X,Y$ の存在の必要条件は
+\begin{equation}\label{uh10:triangle-discriminant}
+ \{ABC-N(A+B+C)\}^2\geq4N^3
+\end{equation}
+である．
+
+一方，$c=a+b+1$ は
+\[
+ rs-rt-st=\frac{rst}{m}
+\]
+と同値である．これを用いて展開すると
+\[
+ ABC-N(A+B+C)=-L+U,
+ \qquad L=2q^3-3q,
+ \qquad U=r+s-t+\frac{rst}{m}
+\]
+となる．$c>a,b$ より $t<r,s$ なので $U>0$ であり，
+$1\leq r,s,t\leq m$ から
+\[
+ U\leq2m+m^2=N<L.
+\]
+従って $(-L+U)^2<L^2$ である．さらに
+\[
+ 4N^3-L^2=3q^2-4>0
+\]
+なので，\eqref{uh10:triangle-discriminant} に矛盾する．
+以上で二つが正の row は排除される．
+最後に，四頂点全体の係数和は row-sum 条件から零なので，
+高分母三頂点の係数和は $-D_0<0$ である．
+\end{proof}

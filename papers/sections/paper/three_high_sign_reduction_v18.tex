@@ -1,0 +1,209 @@
+% v18. Four candidate signs are reduced to a perfect matching by the new
+% integer and positive-cycle obstruction. Legacy labels are retained.
+% No denominator cutoff is used.
+
+\subsection{三高分母の完全マッチング定理と Schur 境界}
+\label{sm14:section}
+
+\begin{proposition}[三高分母に残る四つの正符号型]
+\label{sm14:four-sign-types}
+$q_0=1$，$q_1,q_2,q_3>1$ とし，整数 $p_{ij}$ が
+\[
+ \sum_{j\ne i}p_{ij}=-q_i,
+ \qquad p_{ij}p_{ji}=q_iq_j-1
+\]
+を満たすとする．$p_{ij}>0$ のとき辺 $ij$ を置くグラフを $G^+$ とする．
+このグラフは次の四型のいずれかである：
+完全マッチング，端点に $0$ を持つ $P_3$ と孤立頂点の和，
+内部頂点に $0$ を持つ $P_4$，または $0$ を含む三角形と孤立頂点の和．
+標識付きグラフとしての個数はそれぞれ $3,6,6,3$ である．
+この必要条件には，分母の奇数性，正の weights，接着，$D$ の相殺，node 条件を用いない．
+\end{proposition}
+
+\begin{proof}
+pair products が正なので，全ての $p_{ij}$ は非零で，両方向は同符号である．
+負の row sum から $G^+$ の最大次数は二以下である．
+また，頂点 $0$ の三つの entries が全て負なら，その和は $-3$ 以下となるので，
+$\deg_{G^+}(0)\geq1$ である．二つの孤立頂点 $i,j$ があるなら
+\[
+ |p_{ij}|\leq q_i-2,\qquad |p_{ji}|\leq q_j-2
+\]
+となり，$p_{ij}p_{ji}=q_iq_j-1$ に反する．
+
+さらに $p_{0i}=-t<0$，$p_{i0}=-T<0$ なら
+$q_i=tT+1>T$ である．従って頂点 $i$ の残る二つの entries がともに正になることはない．
+これにより，$0$ が端点である正の $P_4$ と，正の $C_4$ は排除される．
+
+残る除外は，$0$ が $P_3$ の中心である場合である．正の辺を $01,02$，孤立頂点を $3$ とし，
+\[
+ (p_{01},p_{02},p_{03})=(s,t,-u),\qquad
+ (p_{10},p_{20},p_{30})=(S,T,-U)
+\]
+と書く．全ての文字は正整数で，$u=s+t+1$ である．
+$q_1=sS+1$，$q_2=tT+1$，$q_3=uU+1$ となる．
+$L=-p_{13}$，$N=-p_{23}$，$M=-p_{31}$，$O=-p_{32}$ と置くと，
+二つの負の entries $p_{12},p_{21}$ と row sums から
+\[
+ L\leq(s+1)S,\quad N\leq(t+1)T,
+ \quad M+O=(s+t)U+1
+\]
+を得る．一方，pair products は
+$LM>suSU$，$NO>tuTU$ を与えるので，
+\[
+ M+O>uU\left(\frac{s}{s+1}+\frac{t}{t+1}\right)
+ \geq(s+t+1)U\geq(s+t)U+1.
+\]
+中央の不等式は
+\[
+ u\left(\frac{s}{s+1}+\frac{t}{t+1}\right)-(s+t+1)
+ =\frac{(s+t+1)(st-1)}{(s+1)(t+1)}\geq0
+\]
+による．これは row sum と矛盾する．
+四頂点で最大次数二以下のグラフを上の条件と合わせると，記載した四型だけが残る．
+\end{proof}
+
+\input{three_high_matching_v18.tex}
+
+定理~\ref{mh18:matching} により，正の weights を持つ三高分母の整数模型は
+全て完全マッチング型である．以下の Schur 表示は，したがって全ての正の三高分母模型を覆う．
+行列の整数 row/pair equations と正値性の役割は区別され，
+正値性を除いた三角形型は実際に存在する．
+
+以下では完全マッチングに合わせて標識を選び，\ref{sh14:matching-setup} の記号
+$s,t,S,T,U\geq1$，$u=s+t-1$，$k\geq0$，$\alpha,\beta\in\mathbb Z$ を用いる．
+\[
+ A=s\alpha-t,\qquad B=t\beta-s,\qquad C=s+uk
+\]
+と略記する．式~\eqref{sh14:matching-linear} は
+\begin{equation}\label{sm14:linear}
+ BS+AT=-\alpha\beta,\qquad
+ -CS+(A+1)U=k(\alpha+1),\qquad
+ (C-1)T+(B+1)U=-(\beta+1)(k+1)
+\end{equation}
+である．
+
+\begin{lemma}[基本的な整数 bound]
+\label{sm14:basic-bounds}
+この表示では $\alpha\geq1$，$A\geq1$，$B\leq-2$，$C\geq2$ が成り立つ．
+\end{lemma}
+
+\begin{proof}
+$\alpha+1\leq0$ なら，正の entries の絶対値 $L=uS+\alpha+1$，$M=sU-k$ は
+$LM\leq suSU=(q_a-1)(q_c-1)<q_aq_c-1$ を満たして矛盾する．
+従って $\alpha\geq0$ であり，第二式から $A\geq0$，さらに $s\alpha\geq t\geq1$ から
+$\alpha\geq1$ を得る．$\beta\leq-1$ なら $B\leq-s-t\leq-2$，
+$\beta\geq0$ なら第三式と $C\geq1$ から $B+1<0$ を得る．
+$A=0$ なら第一式から $\beta>0$ だが，$t=s\alpha$ より
+$B=s(\alpha\beta-1)\geq0$ となって矛盾する．
+$C=1$ なら $s=1,k=0$ となり，第三式は $t\beta U=-\beta-1$ となる．
+整数 $\beta\geq0$，$\beta\leq-1$ のどちらでも両辺の符号が矛盾する．
+\end{proof}
+
+\begin{theorem}[Schur 補助変数の符号]
+\label{sm14:beta-negative}
+完全マッチング型の正の整数模型では，canonical な向き $k\geq0$ において
+\[
+ \beta\leq-1
+\]
+が成り立つ．分母の上界，奇数性，接着および node 条件は不要である．
+\end{theorem}
+
+\begin{proof}
+$\beta\geq0$ と仮定し，$b=-B=s-t\beta\geq2$ と置く．
+$C=s+uk\geq s\geq b$ なので
+\[
+ \Delta=b(A+1)-C(A+b)\leq b(1-b)<0.
+\]
+三つの線形式から $S,U$ を消去すると，$\Delta T=N$，ただし
+\[
+ N=b(A+1)(\beta+1)(k+1)
+   -(b-1)\bigl(C\alpha\beta+bk(\alpha+1)\bigr)
+\]
+となる．$A=s\alpha-t$，$b=s-t\beta$ を代入すると，恒等式
+\begin{align*}
+ N-\Delta
+  &=(s+\beta)A+s+b(b+\beta-1)\\
+  &\quad+k\bigl\{uA+\alpha[s+\beta(s+b-1)]+b(\beta+1)\bigr\}
+\end{align*}
+を得る．右辺は狭義正である．従って $T=N/\Delta<1$ となり，
+$T$ が正整数であることに反する．
+\end{proof}
+
+\begin{theorem}[$\beta=-1$ の境界と高係数の負性]
+\label{sm14:beta-boundary}
+同じ完全マッチング型で $\beta=-1$ なら，必ず $k=0$ であり，$D_0>0$ となる．
+従って三つの高分母係数の少なくとも一つは負である．
+この結論にも分母上限，奇数性，接着および node 条件を用いない．
+\end{theorem}
+
+\begin{proof}
+ここでは $b=s+t$，$u=b-1$，$B=-b$ と書く．$k\geq1$ と仮定すると
+$C=s+uk\geq b$ であるから
+\[
+ F=C(A+b)-b(A+1)\geq b(b-1)>0.
+\]
+線形式~\eqref{sm14:linear} を解くと
+\[
+ T=\frac{u[(\alpha+b)k-s\alpha]}{F},\qquad
+ S=\frac{u(A-\alpha)k-\alpha(s-1)(A+1)}{F}
+\]
+となる．$S>0$ から $A>\alpha$ が必要である．ところが
+\[
+ F-u[(\alpha+b)k-s\alpha]
+ =(s-1)(s\alpha+b)+t^2+uk(A-\alpha)>0
+\]
+なので $T<1$ となり，整数性に反する．従って $k=0$ である．
+
+このとき $C=s\geq2$ であり，第三式は $uU=(s-1)T$ となる．
+$G=tA-b(s-1)$ と置き，第二式と第一式も合わせると
+$GT=\alpha su>0$ を得る．従って $G>0$ であり，特異な場合 $G=0$ は存在しない．
+その上で解を表示すると
+\[
+ T=\frac{\alpha su}{G},\quad
+ U=\frac{\alpha s(s-1)}{G},\quad
+ S=\frac{\alpha(s-1)(A+1)}{G}.
+\]
+$G>0$ から
+$A+1>s+s(s-1)/t>s$ であり，$sS=(A+1)U$ により $S>U$ を得る．
+従って $D_0=S+T-U-1>0$ である．全係数の和は零だから，高係数の和は負となる．
+\end{proof}
+
+\begin{corollary}[$\beta=-1$ の全整数模型を与える有限な約数手順]
+\label{sm14:beta-boundary-factorization}
+任意の固定した $s\geq2,t\geq1$ に対し，$\beta=-1$ の完全マッチング型は，
+\[
+ K_0=s^2+st+t^2-s-t,\qquad g=\gcd(s-1,t)
+\]
+を用いて次の有限手順で全て得られる．正の約数 $G\mid K_0g$ のうち
+$\alpha=(G+K_0)/(st)$ が正整数になるものを取り，
+\[
+ S=\frac{\alpha(s-1)(s\alpha-t+1)}G,\qquad
+ T=\frac{\alpha s(s+t-1)}G,\qquad
+ U=\frac{\alpha s(s-1)}G
+\]
+が全て整数となるものだけを残す．$k=0$ として canonical 行列を復元する．
+奇分母を要求する場合は，さらに $sS,tT,(s+t-1)U$ が全て偶数である条件を課す．
+\end{corollary}
+
+\begin{proof}
+前定理の $G$ は $st\alpha-K_0$ である．その表示から
+\[
+ tT-(s+t-1)=\frac{K_0(s+t-1)}G,
+ \qquad tU-(s-1)=\frac{K_0(s-1)}G
+\]
+となる．左辺は整数なので
+$G\mid K_0\gcd(s+t-1,s-1)=K_0g$ である．
+逆に，記載した検査を通ったデータは線形式を満たし，$S,T,U>0$ である．
+canonical entries は
+\[
+ H=tS+\alpha,\quad K=sT-1,\quad
+ L=uS+\alpha+1,\quad N=uT,\quad M=sU,\quad O=tU+1
+\]
+で全て正であり，row sums と pair equations が成り立つ．
+完全マッチングの二辺に中点 weights を取れば正値性も従う．
+よって候補生成にも棄却にも人工的な分母上限を置いていない．
+\end{proof}
+
+以上により，完全マッチング型で三つの高 $D$ が全て非負となる可能性を調べる際は
+$\beta\leq-2$ に制限できる．完全マッチング性は定理~\ref{mh18:matching} で証明されたが，
+残る $\beta\leq-2$ における三つの高 $D$ の同時非負性は未解決である．

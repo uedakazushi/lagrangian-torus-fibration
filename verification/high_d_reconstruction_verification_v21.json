@@ -1,0 +1,292 @@
+{
+  "status": "PASS",
+  "version": 21,
+  "theorem": "three-high nonnegative-D Eisenstein reconstruction and finite b bound",
+  "arithmetic": "integer and Fraction only; sparse exact polynomial coefficient checks",
+  "coefficient_check_count": 24,
+  "coefficient_checks": [
+    {
+      "name": "alpha_minus_k",
+      "lhs_monomials": 4,
+      "rhs_monomials": 4,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "alpha_from_F",
+      "lhs_monomials": 10,
+      "rhs_monomials": 10,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "k_from_F",
+      "lhs_monomials": 6,
+      "rhs_monomials": 6,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "ell_from_h_j_d",
+      "lhs_monomials": 4,
+      "rhs_monomials": 4,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "W_forms",
+      "lhs_monomials": 22,
+      "rhs_monomials": 22,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "R_forms",
+      "lhs_monomials": 6,
+      "rhs_monomials": 6,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "first_pair_product",
+      "lhs_monomials": 23,
+      "rhs_monomials": 23,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "second_pair_product",
+      "lhs_monomials": 68,
+      "rhs_monomials": 68,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "third_pair_product",
+      "lhs_monomials": 28,
+      "rhs_monomials": 28,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "row2_minus_row1",
+      "lhs_monomials": 73,
+      "rhs_monomials": 73,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "row1_minus_row3",
+      "lhs_monomials": 20,
+      "rhs_monomials": 20,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "numerator_S",
+      "lhs_monomials": 88,
+      "rhs_monomials": 88,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "numerator_T",
+      "lhs_monomials": 36,
+      "rhs_monomials": 36,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "numerator_U",
+      "lhs_monomials": 73,
+      "rhs_monomials": 73,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "linear_relation_1",
+      "lhs_monomials": 111,
+      "rhs_monomials": 111,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "linear_relation_2",
+      "lhs_monomials": 242,
+      "rhs_monomials": 242,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "single_congruence",
+      "lhs_monomials": 57,
+      "rhs_monomials": 57,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "Eisenstein_norm",
+      "lhs_monomials": 63,
+      "rhs_monomials": 63,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "inverse_E",
+      "lhs_monomials": 184,
+      "rhs_monomials": 184,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "inverse_J",
+      "lhs_monomials": 155,
+      "rhs_monomials": 155,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "E_plus_J",
+      "lhs_monomials": 12,
+      "rhs_monomials": 12,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "determinant",
+      "lhs_monomials": 96,
+      "rhs_monomials": 96,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "cleared_row2_equals_row1",
+      "lhs_monomials": 249,
+      "rhs_monomials": 249,
+      "difference_monomials": 0,
+      "status": "pass"
+    },
+    {
+      "name": "cleared_row3_equals_row1",
+      "lhs_monomials": 249,
+      "rhs_monomials": 249,
+      "difference_monomials": 0,
+      "status": "pass"
+    }
+  ],
+  "regressions": [
+    {
+      "name": "known_integer_mixed_D",
+      "status": "pass",
+      "parameters": [
+        1,
+        2,
+        -1,
+        1,
+        3,
+        2
+      ],
+      "scales": [
+        4,
+        5,
+        11
+      ],
+      "integral": true,
+      "D": [
+        -1,
+        1,
+        3,
+        -3
+      ],
+      "minimum_basin_gap": "1/46",
+      "all_high_D_nonnegative": false,
+      "in_new_d_positive_domain": false
+    },
+    {
+      "name": "known_singular_rank_two_family_n0",
+      "status": "pass",
+      "parameters": [
+        3,
+        12,
+        -997,
+        -4007,
+        4671,
+        4
+      ],
+      "scales": [
+        136,
+        291,
+        93
+      ],
+      "integral": true,
+      "D": [
+        -997,
+        -4007,
+        4671,
+        333
+      ],
+      "minimum_basin_gap": "1/6986",
+      "all_high_D_nonnegative": false,
+      "in_new_d_positive_domain": false
+    },
+    {
+      "name": "rational_all_D_zero",
+      "status": "pass",
+      "parameters": [
+        3,
+        4,
+        0,
+        0,
+        0,
+        6
+      ],
+      "scales": [
+        "34/31",
+        "168/31",
+        "171/31"
+      ],
+      "integral": false,
+      "D": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "minimum_basin_gap": "31/2114",
+      "all_high_D_nonnegative": true,
+      "in_new_d_positive_domain": false
+    },
+    {
+      "name": "zero_norm_exception_3_3_0_0_1",
+      "status": "pass",
+      "fixed": [
+        3,
+        3,
+        0,
+        0,
+        1
+      ],
+      "test_b": 3,
+      "original_first_row_residue": 3,
+      "all_b_exclusion": "classified zero-norm case; original first row has no integer b>=2 root"
+    },
+    {
+      "name": "zero_norm_exception_2_2_1_1_1",
+      "status": "pass",
+      "fixed": [
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "test_b": 2,
+      "original_first_row_residue": -8,
+      "all_b_exclusion": "classified zero-norm case; original first row has no integer b>=2 root"
+    }
+  ],
+  "global_nonexistence_claimed": false,
+  "script_sha256": "83e700d2817b716db2f09a2753d1195d11c2a90a78547721aaaa5d26a6a9dc8e",
+  "proof_file": "high_d_eisenstein_reconstruction_v21.tex",
+  "proof_sha256": "ea0041d1b78efaabc87e475908c6c1746920b0fafa778e7521c5063bdff05209"
+}

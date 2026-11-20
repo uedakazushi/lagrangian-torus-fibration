@@ -1,0 +1,109 @@
+\documentclass[11pt,a4paper]{article}
+\makeatletter\def\input@path{{sections/paper_arithmetic/}{sections/paper/}}\makeatother
+\input{sections/common.tex}
+\makeatletter
+\def\input@path{{sections/paper_arithmetic/}{sections/paper/}}
+\makeatother
+\hypersetup{pdftitle={五次曲面の整数アフィン接着と高分母支持グラフ 第25稿},pdfauthor={}}
+\title{五次曲面の整数アフィン接着と高分母支持グラフ\\[.4em]\large 四rayの完全符号分類，二単位枝の接着障害，三高係数の有限復元\\第25稿}
+\author{}
+\date{2026年10月28日}
+\begin{document}
+\maketitle
+\begin{abstract}
+五つの平面からなる五次曲面の退化に由来する標準 $K_5$ branch graph を固定し，
+四直線 core の作用適合整数アフィン charts の接着を研究する．
+局所の整数行和・pair products・正の basin weights と，整数 clutching，
+対向分岐係数の相殺，非負 node 配分を同時に課す．
+全ての pair product が狭義正である四ray整数データでは，正符号 graph は
+完全 matching または三角形と孤立頂点に限られ，正 weights の存在は完全 matching と同値である．
+道型 $P_4$ を正値恒等式で排除することにより，三高・四高を統一して扱う．
+局所尺度の復元と大域 node 条件から，非空高分母支持を三型・二十六標識に帰着する．
+三高 core 間の単位枝の node 配分は $\{5,0,0\}$ または $\{4,1,0\}$ であり，
+二単位枝を持つ $G_{5,14}$ では両方とも $\{4,1,0\}$ に限られ，中央の四高 core の正 matching も固定される．
+三高係数の同時非負性では非対称量 $\delta=\pm1$ を排除し，比例領域 $\delta=0$ を
+二つの高係数が零の軸へ帰着する．この零軸の端点は低行の一整数 $s$ だけで完全有限復元できる．
+退化面では元 pair 残余の正整数積表示により互いに素な領域を排除し，
+固定 $s$ に加えて $x\ge1$ の固定 $b$ からの有限復元も得る．
+これらの一般定理は任意の探索上限を用いない．
+残る三支持型の大域接着，一般分母剛性，比例零軸・退化面・一般非対称領域の全体は未解決である．
+対象は指定した cores，cones，marked punctures を保つ接着であり，
+任意の Lagrangian torus fibration の分類を主張しない．
+\end{abstract}
+\tableofcontents
+\input{sections/paper_arithmetic/arithmetic_introduction_v25.tex}
+\input{sections/paper_arithmetic/arithmetic_setup_v17.tex}
+\input{sections/paper/quintic_local_high_q.tex}
+\input{sections/paper/quintic_local_structure.tex}
+\input{sections/paper/quintic_low_degree_support_v11.tex}
+\input{sections/paper/quintic_two_high_defect_v12.tex}
+\input{sections/paper/quintic_path_support_v13.tex}
+\input{sections/paper/path_component_escalation_v12.tex}
+\input{sections/paper/quintic_minimal_low_entry_v12.tex}
+\input{sections/paper/quintic_fixed_denominator_partners_v12.tex}
+\input{sections/paper/small_denominator_propagation_v13.tex}
+\input{sections/paper/quintic_three_high_singular_v18.tex}
+\input{sections/paper/four_ray_matching_v25.tex}
+\input{sections/paper/three_high_sign_reduction_v25.tex}
+\input{sections/paper/high_d_nonsingular_reduction_v20.tex}
+\input{sections/paper/high_d_eisenstein_reconstruction_v21.tex}
+\input{sections/paper/high_d_fixed_low_row_finiteness_v22.tex}
+\input{sections/paper/high_d_asymmetry_lattice_obstruction_v23.tex}
+\input{sections/paper/high_d_axis_and_degenerate_obstruction_v24.tex}
+\input{sections/paper/high_d_proportional_reduction_v24.tex}
+\input{sections/paper/high_d_axis_endpoints_v25.tex}
+\input{sections/paper/degenerate_divisor_reduction_v25.tex}
+\input{sections/paper/three_high_fixed_low_completion_v17.tex}
+\input{sections/paper/cycle_node_sign_conditions_v13.tex}
+\input{sections/paper/c4_equal_pairing_obstruction_v13.tex}
+\input{sections/paper/quintic_cycle_completion_v13.tex}
+\input{sections/paper/quintic_c5_obstruction_v13.tex}
+\input{sections/paper/degree_two_triangle_obstruction_v14.tex}
+\input{sections/paper/c4_pendant_obstruction_v14.tex}
+\input{sections/paper/k23_obstruction_v15.tex}
+\input{sections/paper/diamond_obstruction_v20.tex}
+\input{sections/paper/one_high_and_crossed_pairing_v16.tex}
+\input{sections/paper/two_leaves_negative_branch_v16.tex}
+\input{sections/paper/common_low_node_bound_v16.tex}
+\input{sections/paper/two_leaf_unit_finiteness_v16.tex}
+\input{sections/paper/r1_exceptional_leaf_v16.tex}
+\input{sections/paper/two_leaf_global_obstruction_v16.tex}
+\input{sections/paper/k4_low_hub_reduction_v17.tex}
+\input{sections/paper/k4_two_exception_obstruction_v17.tex}
+\input{sections/paper/k4_four_exception_obstruction_v17.tex}
+\input{sections/paper/k4_global_obstruction_v17.tex}
+\input{sections/paper/house_support_obstruction_v18.tex}
+\input{sections/paper/g5_10_obstruction_v18.tex}
+\input{sections/paper/k4_leaf_obstruction_v18.tex}
+\input{sections/paper/g5_7_obstruction_v19.tex}
+\input{sections/paper/g5_9_obstruction_v19.tex}
+\input{sections/paper/g5_11_obstruction_v20.tex}
+\input{sections/paper/g5_15_reduction_v21.tex}
+\input{sections/paper/book_low_triangle_finiteness_current_v22.tex}
+\input{sections/paper/book_all_negative_obstruction_current_v22.tex}
+\input{sections/paper/book_low_D_cycle_v20.tex}
+\input{sections/paper/positive_small_L_sector_current_v22.tex}
+\input{sections/paper/book_two_negative_obstruction_v21.tex}
+\input{sections/paper/book_one_negative_sector_reduction_v21.tex}
+\input{sections/paper/book_complete_obstruction_v22.tex}
+\input{sections/paper/two_high_rigid_scale_families_v22.tex}
+\input{sections/paper/outer_core_linear_transfer_v23.tex}
+\input{sections/paper/unit_three_high_triangle_reduction_v24.tex}
+\input{sections/paper/g514_five_node_exclusion_v25.tex}
+\input{sections/paper/g514_central_matching_v25.tex}
+\input{sections/paper/g5_15_ordinary_outer_pair_obstruction_v23.tex}
+\input{sections/paper/g5_15_negative_exception_obstruction_v23.tex}
+\input{sections/paper/leaf_transfer_v13.tex}
+\input{sections/paper/forest_obstruction_v13.tex}
+\input{sections/paper/quintic_support_frontier_v23.tex}
+\input{sections/paper/quintic_uniform_two_high_v11.tex}
+\input{sections/paper/quintic_equal_two_classification_v11.tex}
+\input{sections/paper/quintic_uniform_denominators.tex}
+\input{sections/paper/quintic_monochromatic_support_v11.tex}
+\input{sections/paper/quintic_prime_support.tex}
+\input{sections/paper/quintic_dense_prime_support_v11.tex}
+\input{sections/paper/global_primitive_denominators_v23.tex}
+\input{sections/paper/quintic_triangle_completion.tex}
+\input{sections/paper/quintic_finite_exclusion.tex}
+\input{sections/paper_arithmetic/arithmetic_bibliography_v25.tex}
+\end{document}

@@ -1,0 +1,207 @@
+\subsection{\texorpdfstring{$L\in\{1,3,4\}$}{L=1,3,4} の二高枝の完全な尺度分類}
+\label{rs22:section}
+
+前節の局所剛性を正枝の $F<0$ 側にも拡張すると，
+$L\in\{1,3,4\}$ の全二高 canonical 模型が六族に分類される．
+各族は全整数尺度を含み，高分母の奇数性も自動的に成り立つ．
+これは book の排除後にも，他の支持の低辺を接続するために使える．
+以下では式~\eqref{g51521:central} の canonical 行列を用い，
+$a=sS+1$，$b=zT+1$，$x=sS/r$，$y=zT/(r+1)$ とする．
+本節の尺度 $s,z$ と低係数 $D_C,D_D$ の記号は同式および
+式~\eqref{g51521:low-D} に従う．
+
+\begin{lemma}[正枝の $F<0$ 側の剛性]
+\label{rs22:negative-F-rigidity}
+正枝で $L\in\{3,4\}$ とする．$F=0$ は起こらず，$F<0$ の場合には
+\[
+ \begin{array}{c|ccc}
+ L&r&S&T\\\hline
+ 3&2R-1&3R-2&3R\quad(R\ge2)\\
+ 4&r&2r-1&2r+2\quad(r\ge2)
+ \end{array}
+\]
+に限られる．
+\end{lemma}
+
+\begin{proof}
+引き続き $d=L-2\in\{1,2\}$，$h=S-r$，$k=h+d$，
+$\alpha=sh/r$，$\beta=zk/(r+1)$ を用いる．
+$F=(2r+1)h-r^2d=0$ なら，$\gcd(r^2,2r+1)=1$ より
+$2r+1\mid d$ となるが，$2r+1\ge3>d$ なので不可能である．
+
+$F<0$ とし，$\rho=r+1$ と置くと
+$F=(2\rho-1)k-\rho^2d$ である．
+$d=1$ で $k>\rho/2$ なら，$k$ の整数性から
+$k\ge(\rho+1)/2$，従って $F\ge(\rho-1)/2>0$ となる．
+ゆえに $k\le\rho/2$ である．
+$d=2$ で $k\ge\rho+1$ なら $F\ge\rho-1>0$ なので，$k\le\rho$ である．
+
+尺度方程式を $E_-=(-F)/(hk)>0$ によって書くと
+\[
+ E_-\beta=1-\frac{\beta-1}{\alpha}\le1,
+ \qquad
+ E_-\beta=\frac{\rho(dz-2\beta)+\beta}{h}.
+\]
+$d=1$ では $n=z-2\beta=z(1-2k/\rho)$ が非負整数であり，
+$n\ge1$ なら分子は $\rho+1$ 以上，分母は
+$h=k-1\le\rho/2-1$ なので矛盾する．
+従って $n=0$，$k=\rho/2$ であり，第一行を得る．
+$d=2$ では $n=z-\beta=z(1-k/\rho)$ が非負整数であり，
+$n\ge1$ なら分子は $2\rho+1$ 以上，分母は
+$h=k-2\le\rho-2$ なので同じ矛盾になる．
+従って $k=\rho$ であり，第二行を得る．
+\end{proof}
+
+\begin{proposition}[正枝の全尺度]
+\label{rs22:positive-scales}
+補題~\ref{bc22:positive-rigidity} の $F>0$ の模型は，次の表示で尽くされる．
+\begin{enumerate}
+\item $L=3$ では $R\ge1$，$\ell\mid R+2$，$1\le\ell\le R$ とし，
+\[
+ t=(R+2)/\ell-1,\quad
+ (r,S,T)=(2R,3R,3R+2),\quad
+ s=2(R+1-\ell),\quad z=(2R+1)t.
+\]
+高分母はともに奇数である．
+\item $L=4$ では $r\ge1$，$\ell\mid r+3$，$1\le\ell\le r+1$ とし，
+\[
+ t=(r+3)/\ell-1,\quad (S,T)=(2r,2r+3),\quad
+ s=r+2-\ell,\quad z=(r+1)t.
+\]
+高分母はともに奇数である．
+\end{enumerate}
+これらの表示は正の整数局所 charts を与える．低辺の node や対向 $D$ の相殺は仮定しない．
+\end{proposition}
+
+\begin{proof}
+$L=3$ では $\alpha=s/2$，$E_+=1/(R+1)$，
+$\beta=z(R+1)/(2R+1)$ である．$\beta$ の整数性と
+$\gcd(R+1,2R+1)=1$ から，$z=(2R+1)t$，$\beta=(R+1)t$ と書ける．
+尺度方程式は $(t+1)(R+1-\alpha)=R+2$ なので，
+$\ell=R+1-\alpha$ と置くと必要な全表示を得る．
+$\alpha\ge1$ と $\ell>0$ は $1\le\ell\le R$ に一致する．
+$L=4$ では $\alpha=s$，$E_+=1/(r+2)$，
+$\beta=z(r+2)/(r+1)$ を使う．同様に
+$(t+1)(r+2-s)=r+3$ となり，第二表示を得る．
+
+逆に表示式を canonical 行列へ代入すれば，$x,y$ は正整数であり，
+全 row sums と六つの pair products が成り立つ．
+正の weights は両方で
+\[
+ (w_A,w_B,w_C,w_D)=
+ \left(a,b,x+\frac1{2r},z+\frac1{2T}\right)
+\]
+と取れる．正の四 entry に対応する basin gaps は
+$1/(2r),1/2,1/(2T),1/2$ であり，他の entry は非正である．
+最後に，第一族では $Rt=\ell t(t+1)-2t$，
+第二族では $(r+1)t=\ell t(t+1)-2t$ が偶数なので，
+$sS,zT$ は両方とも偶数であり，高分母は奇数となる．
+\end{proof}
+
+\begin{proposition}[正枝の $F<0$ 側の全尺度と共鳴族]
+\label{rs22:negative-F-scales}
+補題~\ref{rs22:negative-F-rigidity} の全模型は，
+$\ell\in\mathbb Z_{\ge0}$，$t\in\mathbb Z_{>0}$ により次のように表示される：
+\begin{enumerate}
+ \item $L=3$ では
+ \[
+ R=\ell(t+1)+2,\quad (r,S,T)=(2R-1,3R-2,3R),\quad
+ s=(2R-1)t,\quad z=2(\ell t+1).
+ \]
+ \item $L=4$ では
+ \[
+ r=\ell(t+1)+2,\quad (S,T)=(2r-1,2r+2),\quad
+ s=rt,\quad z=\ell t+1.
+ \]
+\end{enumerate}
+両族は正の整数局所 charts を与え，高分母は自動的に奇数となる．
+$\ell=0$ は，それぞれ任意の $t\ge1$ を持つ共鳴族
+\[
+ (r,s,z,S,T)=(3,3t,2,4,6),\qquad(2,2t,1,3,6)
+\]
+である．$\ell>0$ では，固定した $R$ または $r$ に対する尺度は
+$(t+1)\ell=R-2$ または $(t+1)\ell=r-2$ の約数から全て得られる．
+\end{proposition}
+
+\begin{proof}
+$L=3$ では $\alpha=s(R-1)/(2R-1)$，$\beta=z/2$，
+$E_-=1/(R-1)$ である．$\gcd(R-1,2R-1)=1$ なので
+$s=(2R-1)t$，$\alpha=(R-1)t$ と書ける．
+尺度方程式から
+\[
+ (t+1)(R-1-\beta)=R-2
+\]
+を得る．$R\ge2$ なので $\ell=R-1-\beta\ge0$ であり，
+表示式に一致する．$R=2$ のときも $\ell=0$ として全ての $t\ge1$ を含む．
+
+$L=4$ では $\alpha=s(r-1)/r$，$\beta=z$，$E_-=1/(r-1)$ なので，
+$s=rt$ と書けば $(t+1)(r-1-z)=r-2$ となる．
+$\ell=r-1-z\ge0$ と置いて第二族を得る．
+逆向きの row/pair 方程式と正の weights は
+命題~\ref{rs22:positive-scales} と同じ直接代入で確認できる．
+第一族の $Rt$ と第二族の $rt$ は，どちらも
+$\ell t(t+1)+2t$ に等しく偶数なので，高分母は奇数である．
+\end{proof}
+
+\begin{proposition}[負枝の全尺度]
+\label{rs22:negative-scales}
+補題~\ref{bc22:negative-rigidity} の負枝は $S=T=w$ とし，
+正の約数 $\ell\mid w$ および $t=w/\ell-1\ge1$ によって次のように尽くされる：
+\[
+ \begin{array}{c|c|c|c|c}
+ &r&\ell\text{ の範囲}&s&z\\\hline
+ E>0&2w&1\le\ell\le w-1&2(w+1-\ell)&(2w+1)t\\
+ E<0&2w-1&1\le\ell\le w-2&(2w-1)t&2(w-1-\ell)
+ \end{array}
+\]
+両方とも高分母は自動的に奇数となる．
+これらは全て正の整数局所 charts を与え，低係数は
+\[
+ \begin{array}{c|cc}
+ &D_C&D_D\\\hline
+ E>0&\ell t^2-1&-2\ell t^2-t+1\\
+ E<0&-\ell t^2-1&2\ell t^2-t+1
+ \end{array}
+\]
+となる．特に $-D_D-2D_C=t+1$ が成り立つ．
+\end{proposition}
+
+\begin{proof}
+$E>0$ の場合，$H=w$ なので $c=s/2$ であり，
+$e=z(w+1)/(2w+1)$ の整数性から $z=(2w+1)t$ と書ける．
+$Ece=e-c+1$ は $(t+1)(w+1-c)=w$ となる．
+$\ell=w+1-c$ と置くと，$c\ge2$ より第一行の範囲と尺度を得る．
+$E<0$ の場合は $H=w-1$，$e=z/2$ であり，
+$c=s(w-1)/(2w-1)$ の整数性から $s=(2w-1)t$ と書ける．
+尺度方程式は $(t+1)(w-1-e)=w$ なので，$\ell=w-1-e$ と置けば第二行を得る．
+$e\ge1$ は $\ell\le w-2$ に対応する．
+逆向きの row/pair equations と正の weights は前命題と同じ直接代入で確認できる．
+$wt=\ell t(t+1)$ は偶数なので高分母は奇数である．
+低係数の表も $w=\ell(t+1)$ を用いた計算である．
+\end{proof}
+
+$F>0$ の正枝の低係数にも短い転送式がある．$p=-D_D>0$，$q=D_C>0$ と書けば
+\[
+ \begin{array}{c|c|c|c}
+ L&p&q&\text{関係}\\\hline
+ 3&2\ell t^2-3t+3&3\ell t^2-4t+5&2q-3p=t+1\\
+ 4&\ell t^2-2t+2&2\ell t^2-3t+5&q-2p=t+1
+ \end{array}
+\]
+となる．$F<0$ の二族では
+\[
+ \begin{array}{c|cc|c}
+ L&D_C&D_D&\text{関係}\\\hline
+ 3&5-3\ell t^2-4t&2\ell t^2+3t-3&2D_C+3D_D=t+1\\
+ 4&5-2\ell t^2-3t&\ell t^2+2t-2&D_C+2D_D=t+1
+ \end{array}
+\]
+である．$\ell=0,t=1$ は，それぞれ低 $D$ が $(1,0)$，$(2,0)$ となる
+既知の零低係数模型を含む．さらに $L=4$，$(\ell,t)=(1,1)$ では
+$(r,s,z,S,T)=(4,4,2,7,10)$，$(D_C,D_D)=(0,1)$ となる．
+この三つの零低係数端点を除くと $D_C<0<D_D$ である．
+これら全六族の row/pair 方程式と低係数の恒等式は
+\nolinkurl{verify_book_complete_obstruction_v22.py} が係数ごとに検査する．
+固定した reverse data では，明示した二つの共鳴族を除いて尺度の集合は有限である．
+共鳴族には無限個の尺度があり，また $R,r,w$ が動く全模型の一様有限性を
+主張するものでもない．

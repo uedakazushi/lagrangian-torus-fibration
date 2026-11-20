@@ -1,0 +1,214 @@
+% v23 notes: keep only reusable formulas, exact scope, and useful next steps.
+\subsection{三高同時非負性：非対称量と退化面}
+\label{notes:hd23}
+
+\paragraph{確定した四領域と残る量化}
+
+主証明は \nolinkurl{high_d_asymmetry_lattice_obstruction_v23.tex} にある．
+第22版の固定低行 $(s,t)$ ごとの全係数有限復元を保ち，
+\[
+ \delta=sy-tx,\qquad a=uh-(b-1)(F+1)
+\]
+を使って，次の四領域を新たに無上界で除外した：
+\[
+ \delta=0,\ s\ge t;\qquad
+ \delta=-1;\qquad
+ \delta=1,\ x\ge1;\qquad
+ a=0,\ s\le2.
+\]
+$s=t$ だけで模型を除外したわけではない．
+$\delta=0,s<t$，$|\delta|\ge2$，$\delta=1,x=0$，
+一般の $a=0,s\ge3$ は残る．三高同時非負性の一般不存在は未解決である．
+
+再利用する核は，$n=\ell-U\in\mathbb Z$ に対する
+\[
+ S=j-(F+1)n-\ell\delta,\qquad
+ T=h+Fn+\ell\delta,
+ \qquad F+\delta=b-1+h+s(d-1)
+\]
+である．$n$ は node 配分ではなく尺度の格子変数である．
+$\delta=-1$ では正値性が $x=1,n=1,t=sy+1$ を強制し，
+残る差方程式が正係数表示を持つ．
+$\delta=1,x\ge1$ では $x=1,n=-1,z=0,t=sy-1$ を強制する．
+後者では差方程式 $Q_+=0$ に加えて元残余を残すことにより
+\[
+ y\mathfrak r=\bigl(sy(y+1)+1\bigr)Q_++N_+,
+ \qquad N_+>0
+\]
+を得る．この二方向の違いは今後の $|\delta|\ge2$ でも保持すべきである．
+
+\paragraph{差方程式だけでは通過する新しい回帰例}
+
+\[
+ (s,t,x,y,z,b)=(5,4,1,1,0,3)
+\]
+は $\delta=1$ であり，復元尺度は $(S,T,U)=(6,2,9)$，
+$\alpha=18,k=11$，$q=(31,9,73,1)$ となる．
+単一合同と六つの符号条件を満たすが，三つの元の高--高 pair 残余は全て $16$ である．
+これは模型ではない．単一合同と正値性に元残余を付け加える必要を具体的に示す．
+また $(s,t,x,y,z,b)=(3,6,1,2,0,3)$ では
+$\delta=0,s<t$，$(S,T,U)=(4,2,8)$，元残余 $-18$ である．
+こちらも模型ではなく，今回の比例領域の順序仮定を勝手に捨てる根拠にならない．
+
+\paragraph{退化面の有界整数と追加の整除条件}
+
+$a=0$ では
+\[
+ s\ell=bF,\qquad uh=(b-1)(F+1),\qquad
+ u(s-bx)=(b-1)(b+sz)>0
+\]
+となる．公開証明の補題により
+\[
+ K_0=h(s-1)+1,\qquad R_0=b^2-sT
+\]
+は
+\begin{equation}\label{notes:hd23-degenerate-quadratic}
+ \begin{gathered}
+ 1\le R_0\le K_0,\\
+ R_0F^2+(R_0-bK_0+sh)F+R_0-b^2+sh=0
+ \end{gathered}
+\end{equation}
+を満たす．$s=1,2$ では $R_0$ はそれぞれ一通りと三通りだけとなり，
+各判別式の法三，五，七の平方障害で全て除外できた．
+
+元残余も使うと，さらに
+\begin{equation}\label{notes:hd23-extra-divisibility}
+ \boxed{\ b-1\mid h(s-1)(R_0-1)\ }
+\end{equation}
+を得る．この式の短い導出を残す．$B=b-1$ とし，
+\[
+ S_0=FT-Bt-\ell,\quad \alpha_0=F+tz,\quad
+ H=s+tb,\quad K=sT-b,\quad \rho=BH-uK
+\]
+と置く．$S=S_0+By$，$\alpha=\alpha_0+uy$ だから
+\[
+ \mathfrak r=\mathfrak r_0-\rho y,
+ \quad
+ \mathfrak r_0=-HS_0+(s\alpha_0-t)T-\alpha_0b.
+\]
+$uh=B(F+1)$ より $B\mid h\rho$ なので，$\mathfrak r=0$ なら
+$B\mid h\mathfrak r_0$ である．法 $B$ で $b=1$ とすると，恒等式
+\[
+ h(\mathfrak r_0+tT)
+ =h(tT+1)(s\ell-F)+t(1-sT)uh
+ \pmod B
+\]
+の右辺は零である．従って $B\mid htT$ であり，
+$ht\equiv h(1-s)\pmod B$ から $B\mid h(s-1)T$ となる．
+最後に $sT=b^2-R_0\equiv1-R_0\pmod B$ を使えば
+式~\eqref{notes:hd23-extra-divisibility} が従う．
+
+これにより，退化面の大部分は低行の一整数 $s$ だけを固定して有限化できる．
+$x\ge1$ の場合は $s-bx\ge1$ から
+\[
+ 2\le b\le\left\lfloor\frac{s-1}{x}\right\rfloor.
+\]
+$x=0$ かつ $R_0\ge2$ では $h=s$ なので
+\[
+ 2\le b\le1+s(s-1)(R_0-1)\le1+s^2(s-1)^2.
+\]
+$s,h,b,R_0$ を固定すれば，式~\eqref{notes:hd23-degenerate-quadratic} の
+正の二次係数 $R_0$ により整数 $F$ は高々二個であり，
+\[
+ u=\frac{B(F+1)}h,\qquad \ell=\frac{bF}s,\qquad
+ t=u-s+1,\quad x=s-h,\quad z=\ell-u
+\]
+で残りを復元できる．$y$ は第22版の恒等零でない一次残余で決まる．
+全ての整数性，正値性，単一合同，元の pair 残余は引き続き確認する．
+
+この有限化から外れる唯一の組合せは $x=0,R_0=1$ である．
+この枝には必要条件
+\begin{equation}\label{notes:hd23-exceptional-congruence}
+ s^2\mid2(b-1)
+\end{equation}
+がある．実際，$s\mid b(b-1)$ と $sT=b^2-1$ を比較すると $s\mid b-1$ であり，
+$b-1=s\kappa$，$F=sL$ と書ける．
+式~\eqref{notes:hd23-degenerate-quadratic} は
+\[
+ s\bigl(L^2+(1-\kappa K_0)L-\kappa^2+1\bigr)=2\kappa
+\]
+を与える．従って $s\mid2\kappa$，すなわち式~\eqref{notes:hd23-exceptional-congruence} が従う．
+この枝の一般不存在は証明していない．平方判別式と元残余を併用する，
+より小さい次の標的として扱える．
+
+$a=0$ だから全ての整数尺度が存在しない，という強化は誤りである．
+\[
+ (s,t,x,y,z,b)=(3,138,0,0,4,16)
+\]
+では $F=27,m=757$，$(S,T,U)=(54,84,141)$，$R_0=4$ となり，
+単一合同と六符号は成立する．元残余は $5658$ であり模型ではない．
+この例は一般の退化面で元残余を使う必要性を示す．
+
+\paragraph{残る $\delta=1,x=0$ の二整数による完全復元}
+
+この枝では $s=y=1$ である．$k=b+z\ge b+1$ より $z\ge1$ であり，
+格子正値性から $p=-n\ge1$ と書ける．
+\[
+ F=b-1+z,\quad m=F^2+F+1,\quad
+ S=(F+1)p-z-1,\quad T=t+z+1-Fp,\quad U=t+z+p.
+\]
+差方程式は
+\[
+ (t-1)(z-1)=mp-F(z+2)
+\]
+である．$z=1$ なら $mp=3F$ だが，$F=b\ge2$ で
+$m-3F=(F-1)^2>0$ なので不可能である．従って未解決枝は $z\ge2$ に限られる．
+
+固定 $b,z\ge2$ に対して $D=z-1$ とし，整数 $p$ の一次式を
+\[
+ \tau=D+mp-F(z+2),\quad
+ \sigma=(F+1)p-z-1,\quad
+ \theta=\tau+D(z+1-Fp)
+\]
+と定める．$t=\tau/D$，$S=\sigma$，$T=\theta/D$ であり，
+元残余の分母を払った式は
+\begin{equation}\label{notes:hd23-axis-quadratic}
+ \begin{aligned}
+ \mathcal P(p)={}&-D(D+b\tau)\sigma
+ +(z\tau+FD)\theta\\
+ &-bD\bigl((z+1)\tau+FD\bigr)=0.
+ \end{aligned}
+\end{equation}
+その二次係数は
+\[
+ (b^2+bz+z^2)m>0
+\]
+なので，各固定 $(b,z)$ に正整数根 $p$ は高々二個である．
+整数平方根による全根計算の後，
+\[
+ D\mid\tau\quad\Longleftrightarrow\quad
+ z-1\mid(b^2+b+1)p-3b
+\]
+と $t,S,T,U$ および六符号の正値性を検査すればよい．
+ここでは差方程式と元残余の双方を保持しており，通過したものは
+第21版の完全復元により全 pair products と正 weights を持つ．
+尺度整数性の単一合同も直接再確認できる．
+
+標準 Python 検証器の \texttt{remaining\_axis\_fixed\_b\_z(b,z)} はこの完全復元を実装する．
+\texttt{--axis b z} でも呼び出せる．$p$ や $t$ に探索上限はない．
+固定している $b,z$ 自体には上限を与えていないので，この手順だけで残余枝全体を
+不存在と結論してはいけない．
+
+\paragraph{検算と今後の焦点}
+
+\nolinkurl{verify_high_d_asymmetry_v23.py} は標準ライブラリのみを用い，
+四十一の多項式恒等式を係数ごとに検査する．
+退化面の四つの判別式は，法 $9,25,9,49$ の全九十二剰余類で
+平方剰余と交わらないことを独立確認する．七組の回帰例は
+元の rows，pair products，$D$，必要な場合の正 weights を再計算する．
+結果は \nolinkurl{high_d_asymmetry_verification_v23.json} にあり，
+source と公開証明の hash，検算の量化，残る範囲を記録している．
+第22版の二百万余の復元計算は再実行していない．
+
+次は，$\delta$ の絶対値を単に切って列挙するのでなく，
+格子正値性が $x,n$ をどう制限するかを一般の $\delta$ で整理する．
+とくに負側 $\delta=-k$，$s\ge k$ では，$j>0,n\ge1$ と $S>0$ から
+\[
+ u(x-k)+(s-k)z<t-(b-1)-1
+\]
+を得るので，$x\le k$ が必要である．
+正側でも $\delta=k$，$s\ge k$ なら $n\le-1$ と $T>0$ が $x\le k$ を与える．
+この一般の狭い格子幅と，二次残余の符号証明を組み合わせることが有望である．
+また，退化面の $x=0,R_0=1$ と，正側零境界の式~\eqref{notes:hd23-axis-quadratic} は
+独立した二つの具体的な未解決問題として追える．
+どちらも反例や無限族が現れれば，その構造の記述へ計画を変更する．
