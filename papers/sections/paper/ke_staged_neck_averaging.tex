@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.3: 二段階平均，固定残余領域の法線エネルギーと接続上界．
+% 2026-11-21 / v1.4: 二段階平均，actual neck と同一 moment 上の残余接続．
 \section{共通の normal circle に適合する二段階平均}
 \label{ke:staged-neck-section}
 
@@ -576,6 +576,85 @@ capped density と complete envelopes の比較を別途調べる必要がある
 同じ固定基底上で moving canonical moment strip を actual form に移せる．
 複数 end を同時に接着するには，正則束作用と triple 作用との
 開 overlap 上での整合も必要である．
+
+\begin{proposition}[同一 normal moment 上の残余方向を含む有界な接続]
+\label{ke:fixed-base-moment-connectors}
+命題\ref{ke:neck-deep-moment-strip}と定理\ref{ke:fixed-base-neck-moser}の
+固定 source-free 基底で，$P$ を連結な compact 境界付き曲面とし，
+その少し大きい固定近傍上で両結果を用いる．
+$m_t\to\infty$，$m_t\le\vartheta M_t$ とし，
+$I_t=[-c/(2m_t),c/(2m_t)]$ を共通 moment interval とする．
+円平均後の canonical moment を $\mu_t$，同じ normal Moser map を
+$\phi_t$ とし，$a\in I_t$ に対して
+\[
+ E_t(a)=\{p\in P,\ m_t\le s\le M_t-m_t,\ \mu_t=a\}
+\]
+と置く．$t,a$ に依存しない $C_P$ が存在して
+\begin{equation}\label{ke:eq:fixed-base-moment-connectors}
+ \operatorname{diam}_{d_{g_t}}E_t(a)\le C_P,
+ \qquad
+ \operatorname{diam}_{d_{g_t}}\phi_t(E_t(a))
+ \le C_P+O(m_t^{-1})
+\end{equation}
+となる．従って actual normal moment の同じ level に属する
+この neck 内の全 fibres の合併は，正規化距離 $R_t^{-1}d_{g_t}$ で
+一様に $O(R_t^{-1})$ の直径を持つ．
+接続経路は moment level や個々の fibre の中に留まる必要はなく，
+結論は ambient diameter についてのものである．
+\end{proposition}
+
+\begin{proof}
+$d(s)=\min(s,M_t-s)$ とする．
+命題\ref{ke:neck-deep-moment-strip}の証明から，定数を共通に取り
+\[
+ |\mu_t(s,p)|\le C_0/d(s),\qquad
+ c_0/s\le\mu_t(s,p)\le C_0/s
+ \quad(m_0\le s\le\vartheta M_t)
+\]
+を得る．右端では $s$ を $M_t-s$ に置き換え，符号を逆にする．
+各 $p$ で $s\mapsto\mu_t(s,p)$ は厳密に減少する．
+$A=2C_0/\vartheta$ と取ると，$a>A/M_t$ の level はすべて左端側にあり，
+\[
+ c_0/a\le s(a,p)\le C_0/a.
+\]
+$a<-A/M_t$ なら $M_t-s(a,p)$ が同様に比較できる．
+残る $|a|\le A/M_t$ では，左端側にある点に上の下界を適用すると
+$s(a,p)\ge c_0M_t/A$ となる．右端側も同様なので，
+ある固定 $\kappa>0$ に対して
+\[
+ \kappa M_t\le s(a,p)\le(1-\kappa)M_t
+\]
+を得る．以上の三場合のいずれでも，任意の二つの残余点について
+\begin{equation}\label{ke:eq:moment-depth-connector}
+ \left|\int_{s(a,p)}^{s(a,q)}\frac{ds}{d(s)}\right|\le C_1
+\end{equation}
+が一様に成り立つ．この議論は $s(a,p)$ の残余微分を評価しない．
+
+固定した円束の smooth connection と $P$ 上の固定補助計量を取る．
+連結 compact 曲面 $P$ の任意の二点は，この補助計量で長さが一様に有界な
+区分的 smooth な経路で結べる．定理\ref{ke:fixed-base-neck-moser}の
+二側比較を有限個の局所積座標に適用すると，深度 $s$ を固定して
+この経路を水平に持ち上げた actual 長さも一様に有界である．
+実際，局所正則 frame と固定 Hermitian norm の深度の差，および
+connection form は固定基底上で一様有界であり，normal 方向の寄与は
+$d(s)^{-1}$ 倍される．同じ二側比較から，固定残余点・固定角度の
+動径弧の長さは $C\int ds/d(s)$ 以下である．
+
+そこで $E_t(a)$ の二点を，第一点の深度を保つ水平経路，
+第二点の残余点での動径経路，最後の短い円弧によって結ぶ．
+動径費用は\eqref{ke:eq:moment-depth-connector}，
+円弧の費用は $|V|_{g_t}=O(m_t^{-1})$ から有界である．
+全経路は深部 neck 内に取り，最初の不等式を得る．
+最後に両端へ $\phi_t$ の trajectory を付ける．
+各 trajectory の actual 長さは $O(m_t^{-1})$ なので第二式が従う．
+これは同一 $a$ 上の任意の二点に一様であり，reduced foliation の
+葉の選択や葉内での長さに依存しない．
+\end{proof}
+
+この命題は，固定した source-free 基底上で異なる残余点を結ぶ
+portal 費用を扱う．Source を通る pinched fibre，三重点へ動く残余 collar，
+または異なる normal moment をまたぐ木全体の直径評価は含まない．
+従って全曲面の no-shortcut と大域 GH 実現はなお別の問題である．
 
 \begin{corollary}[Central source を含む深部での短い円]
 \label{ke:source-short-circle}

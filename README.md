@@ -1,5 +1,5 @@
 # Lagrangian torus fibrations on general-type surfaces
-2026-11-21 / v2.3 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
+2026-11-21 / v2.4 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
 
 **最優先目標は、本研究の大域Lagrangian torus fibrationが、負Kähler–Einstein計量のGromov–Hausdorff極限を幾何学的に実現すること。現時点では未解決である。** 対象は各固定次数 \(d\ge5\) の一般位置全平面退化 \(X_t\subset\mathbb P^3\)。**このリポジトリは複素次元2専用**。三次元の研究は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とする。
 
@@ -28,7 +28,7 @@ python3 scripts/research_check.py tex
 ## 論文と役割
 | 原稿 | 役割 | 組版の確認範囲 |
 | --- | --- | ---: |
-| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、局所KE収束と大域実現問題（改訂14） | 現行139頁・2026-11-21組版確認 |
+| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、局所KE収束と大域実現問題（改訂15） | 直前の改訂14は139頁・2026-11-21組版確認 |
 | [五次整数接着](papers/quintic-integer-gluing.tex) | 指定K5データの整数条件・高分母支持・未解決の大域接着 | 201頁 |
 | [Meridian surgery](papers/meridian-surgery.tex) | 閉corner circuitsの局所置換の障害 | 18頁 |
 | [TeX研究ノート](papers/research-notes.tex) | 証明素材・残る条件の整理 | 65頁 |
@@ -41,6 +41,8 @@ python3 scripts/research_check.py tex
 KE退化との関連では、全閉triple cornerのactual局所GH収縮、短normal circleを用いる定量的二段階平均・共通作用周期の管理が主な到達点。固定残余compactでは法線円の深度積分評価と、同じ残余点に沿う係数1・加法誤差 $O(1)$ の動径接続上界を得た。軌道平均エネルギーを使うMoser速度評価と、縮小する実計量の境界距離 $\delta_t$ に対する十分条件 $m_t\delta_t^2\to\infty$ も主稿に追加した。固定 source-free compact 基底では、capped density と Chern–Lu により actual 二側計量比較を得て、moving normal strip での一様buffer、短円 $O(m_t^{-1})$、共通 canonical moment interval を証明した。Source 模型では中心での生成場の長さ $O(L_t^{-1})$ と、十分遅く縮む領域での actual focus–focus germ を得た。固定残余基底では一つの円作用で通常 pair と source を覆い、閉じた一重 pinched torus と saddle fibre を含む actual neck fibration を構成した。**全neckの一様buffer、source・branch・core相対接着、全曲面のGH no-shortcutおよび既存fibrationとの大域的な一様適合性は未証明**。局所KE定理と大域GH収束を混同しない。先行研究の仮定と新規性の未確認点は主原稿序論と[研究ノート](research/notes.md)を参照。
 
 ## ビルドと再現
+同じ normal moment に属する固定 source-free 基底全体では、異なる残余点を有界なactual長さで接続できることを証明した（`ke:fixed-base-moment-connectors`）。複数のfiberの合併も正規化ambient径 $O(R_t^{-1})$ を持つ。Sourceを通るlevelと、三重点へ動く領域の接続には別の評価が必要である。この追加証明は独立に点検済みであり、改訂15の組版は次の検証段階で確認する。
+
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
 2026-11-21の改訂14で、静的構成検査とLuaLaTeX組版を実行し、主稿139頁、PDF・SyncTeXの同一出力先、追加した命題・定理の参照解決を確認した。射影計量の最大値原理と入れ子領域の境界距離の証明は独立に点検した。他三稿の頁数は従来記録。今回の整数検算suite、他三稿の組版、既存の全証明の再監査、形式証明、包括的新規性調査は未実施。
