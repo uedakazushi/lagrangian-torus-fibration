@@ -33,6 +33,9 @@ papers/sections/paper/base_topology.tex の topo:metric-collapse において、
 \]
 が C_d へ d_GH=O_{d,T,h}(\varepsilon) で収束することを証明。木fiber径は O(\varepsilon)、square galleryは有限で、各三角形上の逆写像は区分的Lipschitz。d≥6での非同相性は人工計量のGH収束の障害でない。Lagrangian作用アフィン計量やactual KE計量との比較は別問題で未解決。新規性は未確認。
 
+## 六次Petersen分岐基底の対称性
+$d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木系はちょうど六つであり、$S_6$ はこの集合に推移的に作用する。固定した一系の安定化群は位数 $6!/6=120$、指数6。従ってその一系の選択は座標置換の全 $S_6$ 対称性を保たない。KE候補 $\mathcal C_6$ は自然に $S_6$ 対称なので、Petersen分岐基底とのラベル付き比較を対称に行うには六つの木系全体を管理する必要がある。証明は base_topology.tex の topo:petersen-symmetry、全15 perfect matchingsと六one-factorizationsの有限列挙・安定化群位数は別に確認した。これは任意の別構成やラベル忘却後のシンプレクティックな対称性の不存在ではない。
+
 ## Symplectic normalが自明な閉曲線の次数・種数制約
 papers/sections/threefold/local_blocks/trivial_normal_curve.tex の tnc:degree-genus-parity に、任意のsmooth X_d⊂P^4 (d≥6)のclosed embedded symplectic S がnormal-trivialでhyperplane degree e>0を持てば
 \[
