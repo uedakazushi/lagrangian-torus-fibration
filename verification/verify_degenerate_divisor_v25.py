@@ -174,7 +174,7 @@ def clean(value):
 
 def main():
     parser=argparse.ArgumentParser();here=Path(__file__).resolve().parent
-    options=[here/'degenerate_divisor_reduction_v25.tex',here.parent/'paper/degenerate_divisor_reduction_v25.tex']
+    options=[here/'degenerate_divisor_reduction_v25.tex',here.parent/'papers/sections/paper/degenerate_divisor_reduction_v25.tex']
     parser.add_argument('--proof',type=Path,default=next((p for p in options if p.exists()),options[0]))
     parser.add_argument('--output',type=Path,default=here/'degenerate_divisor_verification_v25.json')
     parser.add_argument('--fixed-b',nargs='+',type=int,default=list(range(2,21)))

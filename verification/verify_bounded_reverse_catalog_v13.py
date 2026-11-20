@@ -151,7 +151,7 @@ def main():
                          'verification':'all rows, all crossings, and all four D entries are polynomial identities; positive weights follow from the standard-form theorem'})
 
     source_name='notes_bounded_reverse_catalog_v13.tex'
-    source=next((p for p in (HERE/source_name,HERE.parent/'notes'/source_name) if p.exists()),None)
+    source=next((p for p in (HERE/source_name,HERE.parent/'papers/sections/notes'/source_name) if p.exists()),None)
     result={'status':'passed',
             'scope':'Complete odd two-high local canonical catalog under 2<=S<=4 and1<=r<=3; no denominator cutoff; not a global atlas existence test.',
             'source':None if source is None else {'file':source.name,'sha256':hashlib.sha256(source.read_bytes()).hexdigest()},

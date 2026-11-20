@@ -97,8 +97,8 @@ def main():
 
     here = Path(__file__).resolve().parent
     source_paths = (here / "c4_equal_pairing_obstruction_v13.tex",
-                    here.parent / "paper" / "c4_equal_pairing_obstruction_v13.tex",
-                    here.parent / "paper" / "c4_equal_pairing_obstruction_v12.tex")
+                    here.parent / "papers/sections/paper" / "c4_equal_pairing_obstruction_v13.tex",
+                    here.parent / "papers/sections/paper" / "c4_equal_pairing_obstruction_v12.tex")
     source = next((p for p in source_paths if p.exists()), None)
     result = {
         "version": "v13", "status": "passed", "exact_assertion_count": checks,

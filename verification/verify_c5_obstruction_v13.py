@@ -126,7 +126,7 @@ def main():
 
     here = Path(__file__).resolve().parent
     possible_sources = (here / "quintic_c5_obstruction_v13.tex",
-                        here.parent / "paper" / "quintic_c5_obstruction_v13.tex")
+                        here.parent / "papers/sections/paper" / "quintic_c5_obstruction_v13.tex")
     source = next((p for p in possible_sources if p.exists()), None)
     result = {
         "version": "v13", "status": "passed", "exact_assertion_count": checks,

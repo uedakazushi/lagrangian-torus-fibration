@@ -89,7 +89,7 @@ def run():
     assert not survivors
     proof_name = 'book_one_negative_sector_reduction_v21.tex'
     proof_path = next(p for p in (Path(__file__).with_name(proof_name),
-                                  Path(__file__).parent.parent/'paper'/proof_name)
+                                  Path(__file__).parent.parent/'papers/sections/paper'/proof_name)
                       if p.is_file())
     return dict(
         status='PASS',

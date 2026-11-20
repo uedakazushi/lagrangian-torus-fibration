@@ -212,7 +212,7 @@ for aa, bb, ss in [(3, 7, 1), (5, 13, 1), (13, 13, 4), (29, 19, 7)]:
 
 tex = Path(__file__).with_name('quintic_cycle_completion_v12.tex')
 if not tex.is_file():
-    tex = Path(__file__).resolve().parent.parent / 'paper' / 'quintic_cycle_completion_v12.tex'
+    tex = Path(__file__).resolve().parent.parent / 'papers/sections/paper' / 'quintic_cycle_completion_v12.tex'
 out = {
     'version': 12, 'status': 'passed', 'check_count': len(checks), 'checks': checks,
     'scope': 'Exact polynomial identities, proof-derived finite sign and incidence cases, and illustrative exact local models. No high-denominator cutoff is used. The quantified inequalities and prior theorems are documented in the TeX proof.',

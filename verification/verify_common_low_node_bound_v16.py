@@ -96,7 +96,7 @@ def main():
     here = Path(__file__).resolve().parent
     source = here / 'common_low_node_bound_v16.tex'
     if not source.exists():
-        source = here.parent / 'paper' / source.name
+        source = here.parent / 'papers/sections/paper' / source.name
     result = {
         'version': 'v16', 'passed': True,
         'script_sha256': sha(Path(__file__).resolve()),

@@ -263,7 +263,7 @@ def main():
         'removed_v13_shapes':removed_shapes,'shapes':remaining_shapes}
 
     source_name='c4_pendant_obstruction_v14.tex'
-    source=next(p for p in (HERE/source_name,HERE.parent/'paper'/source_name) if p.is_file())
+    source=next(p for p in (HERE/source_name,HERE.parent/'papers/sections/paper'/source_name) if p.is_file())
     result={
         'version':'v14','passed':True,
         'scope':'Exclusion of C4 with a pendant edge in the fixed quintic support, assuming positive integer charts, integer marked clutching, D opposition and nonnegative nodes. No denominator cutoff.',
