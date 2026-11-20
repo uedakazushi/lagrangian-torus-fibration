@@ -276,6 +276,73 @@ $\mathcal U$ の corners を小さい collar 内で丸める操作は、領域�
 第\ref{bct:section}節の $\chi(X_d)$ の式を代入する。
 \end{proof}
 
+\begin{proposition}[補集合のEuler数が課すsingular fiber予算]
+\label{tnc:complement-singularity-budget}
+$d\ge6$ とし，系\ref{tnc:closed-block}の局所blockを
+$\mathcal U\subset X_d$，そのcompact complementを$\mathcal V$とする．
+次の正整数を置く：
+\[
+ \begin{split}
+ \mathcal N_d:=-\chi(\mathcal V)
+  &=d(d^3-5d^2+10d-10)-(d-2)(d-5)\\
+  &=d^4-5d^3+9d^2-3d-10>0.
+ \end{split}
+\]
+$\mathcal V$に，compact triangulable base $B_{\mathcal V}$への
+proper continuous map
+$f:\mathcal V\to B_{\mathcal V}$があり，
+有限CW型のfiberを持つ有限stratificationに関して局所自明であると仮定する．
+そのときすべてのfiberのEuler数が非負なら矛盾する．
+さらに，Euler数が零でないfiberの存在するbase pointsが
+有限集合$S$に限られ，それらが一様にEuler数$-1$を持つなら，
+\[
+ \boxed{|S|=\mathcal N_d}.
+\]
+特に$d=6$では$\mathcal N_6=512$である．
+\end{proposition}
+\begin{proof}
+系\ref{tnc:complement-euler}によって
+$\chi(\mathcal V)=-\mathcal N_d$である．
+その符号は$d\ge6$で
+$d(d^3-5d^2+10d-10)>(d-2)(d-5)$
+から直ちに従う．
+例えば$d^3-5d^2+10d-10=
+(d-2)(d^2-3d+4)-2$であり，この不等式は$d\ge6$で明らかである．
+
+有限stratificationの各stratum $S_\alpha$での典型fiberを
+$F_\alpha$とすると，compact支えEuler数の積公式と加法性から
+\[
+ \chi(\mathcal V)
+   =\sum_\alpha
+       \chi_c(S_\alpha)\,\chi(F_\alpha).
+\]
+すべてのfiberのEuler数が非負の場合，一般には
+$\chi_c(S_\alpha)$が負であり得るため，
+この式だけから非負性は結論できない．
+従って最初の文の結論を主張するには
+\emph{各正次元stratum上の$\chi_c$が非負}
+という追加条件が必要であり，
+以下ではこの追加条件の下に限って最初の文を用いる．
+一方，$S$以外のすべてのfiberのEuler数が零なら
+正次元strataからの寄与は零で，
+\[
+ \chi(\mathcal V)=\sum_{b\in S}\chi(f^{-1}(b))=-|S|
+\]
+となるので第二の結論は追加条件なしに従う．
+\end{proof}
+
+\begin{remark}[適用範囲と実際の課題]
+この命題は\emph{仮に補集合の有限stratified fibrationが存在すれば}
+生じる必要条件を与える．
+一般のfiberには負以外のEuler数が生じてもよく，
+Euler数が非零のfiberが正次元のbase stratumに並ぶ可能性もある．
+従って全体のLagrangian fibrationに
+$512$個の特定型fiberが必ず存在するとまでは主張しない．
+現在構成済みの局所blockは$\chi(\mathcal U)=-(d-2)(d-5)$だけを担うので，
+補集合の負のEuler数を説明するsingular strataを
+別途設計しなければならない，という具体的な障害である．
+\end{remark}
+
 この $-512$ は、構成済みの actual domain を除いた compact complement の Euler 数である。
 Complement 上の fibration はまだないため、残る singular fibers の個数とは解釈しない。
 
