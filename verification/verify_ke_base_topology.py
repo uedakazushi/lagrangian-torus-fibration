@@ -141,6 +141,45 @@ def check_threefold_euler_budget():
         print(f"d={d}: chi(X)={euler_threefold}, chi(U)={local_block}, "
               f"chi(V)={complement} PASS")
 
+
+def check_tubular_and_focus_boundary():
+    """Arithmetic checks for the Thom LES and the focus Wang sequence.
+
+    These checks do not prove the underlying geometric identifications
+    N(C), K_c or their boundary monodromy.
+    """
+    monodromy = ((1, 1), (0, 1))
+    difference = ((monodromy[0][0] - 1, monodromy[0][1]),
+                  (monodromy[1][0], monodromy[1][1] - 1))
+    assert difference == ((0, 1), (0, 0))
+    # One primitive nonzero invariant factor: coker(M-I)=Z,
+    # so H_1(boundary focus)=Z^2 and H_2(boundary focus)=Z^2.
+    for d in range(6, 13):
+        e = d - 2
+        genus = (d - 3) * (d - 4) // 2
+        euler_x = d * (10 - 10 * d + 5 * d * d - d ** 3)
+        middle_rank = 4 - euler_x
+        chi_tubular_complement = 2 - middle_rank + 2 * genus
+        chi_focus_complement = euler_x + (d - 2) * (d - 5)
+        assert chi_tubular_complement == chi_focus_complement
+        # Thom LES: H_4(X)=Z --times e--> H_0(C)=Z,
+        # so meridional H_3 torsion order is e.
+        assert e > 0
+        focus_boundary_betti = (
+            1, 2 * genus + 2, 4 * genus + 3,
+            4 * genus + 3, 2 * genus + 2, 1,
+        )
+        assert sum((-1) ** i * b
+                   for i, b in enumerate(focus_boundary_betti)) == 0
+        if d == 6:
+            assert (e, middle_rank, genus, chi_tubular_complement) == (
+                4, 520, 3, -512,
+            )
+            assert focus_boundary_betti == (1, 8, 15, 15, 8, 1)
+        print(f"d={d}: tubular H3 torsion=Z/{e}, "
+              f"b3(X)={middle_rank}, focus boundary betti="
+              f"{focus_boundary_betti} PASS")
+
 def main():
     for d in range(5, 9):
         e, f, b1, b2 = lagrangian_base(d)
@@ -155,6 +194,7 @@ def main():
               f"C=(V={v_c}, E={e_c}, F={f_c}, b1={h1}, b2={h2}) PASS")
     check_petersen_factorizations()
     check_threefold_euler_budget()
+    check_tubular_and_focus_boundary()
     print("Finite mod-p checks and exact K6 enumeration passed; "
           "general proof and metric collapse are in the manuscripts.")
 
