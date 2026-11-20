@@ -60,7 +60,7 @@ class Poly:
 
 def locate(name):
     for base in (HERE, HERE.parent):
-        for folder in ('', 'paper', 'paper_arithmetic', 'verification'):
+        for folder in ('', 'papers/sections/paper', 'papers/sections/paper_arithmetic', 'verification'):
             p = base / folder / name
             if p.is_file():
                 return p

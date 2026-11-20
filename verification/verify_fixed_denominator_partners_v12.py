@@ -275,7 +275,7 @@ def main():
 
     here = Path(__file__).resolve().parent
     candidates = [here/'quintic_fixed_denominator_partners_v12.tex',
-                  here.parent/'paper'/'quintic_fixed_denominator_partners_v12.tex']
+                  here.parent/'papers/sections/paper'/'quintic_fixed_denominator_partners_v12.tex']
     source = next((p for p in candidates if p.is_file()), None)
     if source is None:
         raise FileNotFoundError('quintic_fixed_denominator_partners_v12.tex')

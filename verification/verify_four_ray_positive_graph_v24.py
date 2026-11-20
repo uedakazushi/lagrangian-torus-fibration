@@ -94,7 +94,7 @@ def run():
     assert gain==Fraction(188,95)>1
 
     here=Path(__file__).resolve().parent
-    proof=next(p for p in [here/'four_ray_positive_graph_v24.tex',here.parent/'paper/four_ray_positive_graph_v24.tex'] if p.exists())
+    proof=next(p for p in [here/'four_ray_positive_graph_v24.tex',here.parent/'papers/sections/paper/four_ray_positive_graph_v24.tex'] if p.exists())
     result={
         'version':'v24','status':'PASS',
         'scope':'Local four-ray integral row/pair data with all pair products strictly positive. No gluing existence or four-high P4 existence claim.',

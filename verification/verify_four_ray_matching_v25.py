@@ -180,7 +180,7 @@ def main():
                         default=here / 'four_ray_matching_verification_v25.json')
     args = parser.parse_args()
     candidates = [here / 'four_ray_matching_v25.tex',
-                  here.parent / 'paper/four_ray_matching_v25.tex']
+                  here.parent / 'papers/sections/paper/four_ray_matching_v25.tex']
     source = args.source or next(p for p in candidates if p.exists())
     identities = []
 

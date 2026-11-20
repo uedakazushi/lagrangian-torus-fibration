@@ -151,7 +151,7 @@ def main():
     assert sum(s['labelled_K5_count'] for s in retained) == new_count
 
     source_name = 'degree_two_triangle_obstruction_v14.tex'
-    source = next(p for p in (HERE/source_name,HERE.parent/'paper'/source_name) if p.exists())
+    source = next(p for p in (HERE/source_name,HERE.parent/'papers/sections/paper'/source_name) if p.exists())
     result = {
         'version':'v14','passed':True,
         'scope':'No high-support triangle has two degree-two vertices in the fixed quintic standard model, assuming positive integer charts, integer marked clutching and nonnegative nodes. No D opposition or denominator cutoff is used.',

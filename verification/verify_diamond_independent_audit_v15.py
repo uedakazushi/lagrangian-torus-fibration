@@ -97,7 +97,7 @@ def main():
 
     source_name = "diamond_obstruction_v15.tex"
     source = next(p for p in (HERE.parent / "diamond" / source_name,
-                             HERE.parent / "paper" / source_name, HERE / source_name) if p.is_file())
+                             HERE.parent / "papers/sections/paper" / source_name, HERE / source_name) if p.is_file())
     result = {
         "version": "v15", "passed": True,
         "reviewer": "K2,3 worker, independent of diamond derivation and verifier",

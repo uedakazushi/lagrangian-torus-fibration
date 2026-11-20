@@ -202,7 +202,7 @@ assert hub_defect == -3
 
 script_path = Path(__file__).resolve()
 source_candidates = [script_path.with_name('diamond_obstruction_v15.tex'),
-                     script_path.parent.parent / 'paper' / 'diamond_obstruction_v15.tex']
+                     script_path.parent.parent / 'papers/sections/paper' / 'diamond_obstruction_v15.tex']
 source_path = next((candidate for candidate in source_candidates if candidate.is_file()), None)
 assert source_path is not None, 'The accompanying analytic proof must be available.'
 
