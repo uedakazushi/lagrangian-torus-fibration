@@ -125,7 +125,7 @@ def main():
     primary_data = locate('two_leaf_unit_finiteness_certificate_v16.json', 'verification')
     primary_code = locate('verify_two_leaf_centers_v16.py', 'verification')
     primary_result = locate('two_leaf_center_obstruction_v16.json', 'verification')
-    source = locate('two_leaf_global_obstruction_v16.tex', 'paper')
+    source = locate('two_leaf_global_obstruction_v16.tex', 'papers/sections/paper')
     B_data = locate('r1_B_leaf_verification_v16.json', 'verification')
     data, reference, b_data = map(load, (primary_data, primary_result, B_data))
     assert data['passed'] and reference['passed'] and b_data['passed']

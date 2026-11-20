@@ -14,7 +14,7 @@ def locate(name):
     roots = [HERE.parent/'z1', HERE, HERE.parent, HERE.parent.parent,
              HERE.parents[1]/'deliverables/general_type_surface_fibration_v15']
     for root in roots:
-        for folder in ('', 'paper', 'research', 'verification', 'verification/audits'):
+        for folder in ('', 'papers/sections/paper', 'research', 'verification', 'verification/audits'):
             p = root/folder/name
             if p.is_file():
                 return p

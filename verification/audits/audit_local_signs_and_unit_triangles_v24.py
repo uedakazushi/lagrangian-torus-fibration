@@ -151,9 +151,9 @@ def main():
            work/'root/verify_four_ray_positive_graph_v24.py']
     if not all(p.exists() for p in paths):
         base=here.parent.parent
-        paths=[base/'paper/unit_three_high_triangle_reduction_v24.tex',
+        paths=[base/'papers/sections/paper/unit_three_high_triangle_reduction_v24.tex',
                base/'verification/verify_unit_three_high_triangles_v24.py',
-               base/'paper/four_ray_positive_graph_v24.tex',
+               base/'papers/sections/paper/four_ray_positive_graph_v24.tex',
                base/'verification/verify_four_ray_positive_graph_v24.py']
     cases,table=negative_table()
     result={'version':'v24','status':'PASS','reviewer':'highd_proportional_v24',

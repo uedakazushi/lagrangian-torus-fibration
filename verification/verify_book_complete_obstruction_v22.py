@@ -306,7 +306,7 @@ def run():
     assert first['forced_w_max'] == 18 < prior_lower_bound
     proof_name = 'book_complete_obstruction_v22.tex'
     proof_path = next(p for p in (Path(__file__).with_name(proof_name),
-                                  Path(__file__).parent.parent/'paper'/proof_name)
+                                  Path(__file__).parent.parent/'papers/sections/paper'/proof_name)
                       if p.is_file())
     return dict(
         status='PASS',

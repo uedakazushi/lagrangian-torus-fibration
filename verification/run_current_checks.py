@@ -21,7 +21,7 @@ checks = [
 ]
 summary = []
 for name, script, flag, proof in checks:
-    args = [sys.executable, 'verification/' + script, flag, 'paper/' + proof if proof else '.']
+    args = [sys.executable, 'verification/' + script, flag, 'papers/sections/paper/' + proof if proof else '.']
     if name == 'audit-divisor':
         args += ['--primary-results', str(out / 'divisor.json')]
     args += ['--output', str(out / (name + '.json'))]
