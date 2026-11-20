@@ -147,7 +147,7 @@ Actual/model比較O(1/R)に加え、Moser場のC1評価からmodel計量のLie d
 
 `ke:open-cell-moser-c1` はchain primitiveとMoser場のC1 normをO(L^−η)とし、flowのpullback metricを制御する。`ke:open-cell-collapse` はactual Lagrangian T² fibration、fiberのintrinsic/ambient diameter O(L^−η)、raw-map誤差O(1/R)を与える。Moser像領域に内在長さ距離を入れると、R^−2 g_tは平坦KηへGH収束し、projection distortionはO(L^−η+L^−η/R)=O(L^−η)。定数は固定ηに依存する。
 
-開正方形の局所結果と、前節の全閉cornerの局所結果を区別する。閉cornerまでの距離同定は証明したが、全曲面のambient shortcut、source・branch・coreへの相対接着、既存大域fibrationとの同定は残る。
+開正方形の局所結果と、前節の全閉cornerの局所結果を区別する。閉cornerの距離同定とsource・saddleを含むneckとの部分fibrationへの接着は証明したが、全曲面のambient shortcut、coreへの相対延長・全域被覆、既存大域fibrationとの同定は残る。
 
 
 ## 負KE計量のGH極限とfiber収縮（2026-11-20）
