@@ -17,10 +17,11 @@
 - 人工的PL長さ距離\(d_\varepsilon\)によるgraph correspondenceの誤差は、\(d=5\) で \(\Theta(\varepsilon^2)\)、\(d\ge6\) で \(\Theta(\varepsilon)\)。GH収束は上から同じ次数で評価できるが、\(d\ge6\) にGH距離の同次数の下界を主張しない（`topo:metric-collapse-sharp`）。
 - 幾何学的な基底計量で同じ収束を得るための十分条件は、(N) global no-shortcut、(S) square geodesic lifts、(F) small-fiber/portal connectors（`topo:finite-portal-criterion`）。二つのsquareを一頂点で貼った反例（`topo:portal-counterexample`）により、(F) は(N)+(S)からは従わない。これらは抽象的距離論であり、actual action metricの構成と検証は未完成。
 - 六次同時Petersen分岐木系は6通り・\(S_6\)の一軌道で、各安定化群の位数は120。固定木系はfull \(S_6\)-equivariantではない。新規性は未確認。
-- 三次元のnormal-trivial closed symplectic curveは\(2g-2=(d-5)e\)を満たし、\(d\)偶数なら\(e\)偶数。構成済み局所blockを除いた補集合\(\mathcal V\)は\(\chi(\mathcal V)=-\mathcal N_d\)、\(\mathcal N_d=d^4-5d^3+9d^2-3d-10\)。Euler数非零のfiberが有限孤立集合だけにあり、各々\(-1\)なら必要数は\(\mathcal N_d\)、六次では512（`tnc:complement-singularity-budget`）。一般のglobal fibrationの存在・不在は結論しない。
+- 三次元のnormal-trivial closed symplectic curveは\(2g-2=(d-5)e\)を満たす。**小さい管状補集合**\(V_0=X_d\setminus\operatorname{int}N(C')\)について、Lefschetz–Thom長完全列から\(H_3(V_0;\mathbb Z)=\mathbb Z^{b_d}\oplus\mathbb Z/(d-2)\)、\(H_4(V_0;\mathbb Z)=\mathbb Z^{2g}\)を証明した（tnc:tubular-homology）。六次では\(\mathbb Z^{520}\oplus\mathbb Z/4\)。これは実際のfocus blockの補集合の群と同一視しない。
+- Actual focus blockの境界\(\partial K_c\)は一つのfocus点の周りの\(T^2\)-bundleで、\(\pi_1\)は整数Heisenberg群。\(\partial\mathcal U=C'\times\partial K_c\)のBetti数は\((1,2g+2,4g+3,4g+3,2g+2,1)\)（六次では\((1,8,15,15,8,1)\)）。また\(\chi(\mathcal V)=-\mathcal N_d\)、\(\mathcal N_d=d^4-5d^3+9d^2-3d-10\)。孤立した非零Euler fiberがすべて\(-1\)なら六次で512個必要という条件付き結果がある。**\(\mathcal V\) の整数homology、relative filling、global fibrationは未計算・未完成**。
 
 ## 次の一手
-1. 三次元のnormal faces・complementに必要なsingular strataを、\(\chi(\mathcal V)=-\mathcal N_d\) と整合するよう設計する。各stratumの\(\chi_c\)とfiber Euler数を明示し、面積・Maslov・作用周期・monodromyの制約と突き合わせる。局所blockは完成してもglobal fibrationは未完成。
+1. 三次元では管状disk bundleとactual focus blockの境界を区別し、normal facesとcomplementの接着を優先する。相対対\((K_c,\partial K_c)\)、境界包含\(\partial\mathcal U\to\mathcal U,\mathcal V\)の整数homology・\(\pi_1\)写像、meridional torsionの像を求め、Maslov・作用周期・unipotent monodromy・Euler予算を同時に照合する。
 2. 実際の曲面基底に作用アフィン計量の長さ完備化を定義し、(N) no-shortcut、(S) square内lift、(F) portal/fiber径をそれぞれ独立に検証する。\(\varepsilon\)と元の退化parameterの関係も確定する。純粋に位相的な基底比較だけでは不十分。
 3. 五次整数接着の\(G_{5,14}\)中央matchingと二\(\{4,1,0\}\)・分母三の位置条件、\(G_{5,16}\)、\(G_{5,17}\)、三高Dの未解決を継続する。
 4. 旧曲面v4と現行v25の補題単位の照合を進める。版番号付き分割原稿は、参照する証明書と依存関係を確認するまで削除しない。
