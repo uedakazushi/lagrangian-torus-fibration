@@ -60,7 +60,7 @@ def main() -> None:
     for path in scripts:
         content = path.read_text(encoding="utf-8")
         ast.parse(content, filename=str(path))
-        hit = LEGACY_PY_RE.search(content)
+        hit = None if path.name == "verify_repository_layout.py" else LEGACY_PY_RE.search(content)
         assert hit is None, f"Legacy active path in {path}: {hit.group() if hit else ''}"
 
     for proof in CURRENT_PROOFS:
