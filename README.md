@@ -15,7 +15,7 @@
 
 ## Cloud Codexから再開する
 
-最新mainで [研究方針](00_research_plan.md) → [AGENTS.md](AGENTS.md) → [依存関係](research/ke-dependencies.md) → [研究ノート](research/notes.md) を読む。固定残余基底の moving normal strip ではK1を証明した。次は三重点やsourceへ動く残余 collar での短円とbuffer、および開 overlap 上の作用整合。その後、複数endの作用・reduced葉、全特異領域への相対接着、全曲面の距離比較を進める。
+最新mainで [研究方針](00_research_plan.md) → [AGENTS.md](AGENTS.md) → [依存関係](research/ke-dependencies.md) → [研究ノート](research/notes.md) を読む。固定残余基底のactual neckと三重点内の座標・平均順序の整合が得られた。次は遅い残余exhaustionと一般cutのcornerを、同じmoment区間・共通の開領域で実際に接着する。その後、coreへの相対接着と全曲面の距離比較を進める。
 
 ```sh
 python3 scripts/research_check.py setup --require-tex
@@ -38,10 +38,16 @@ python3 scripts/research_check.py tex
 
 五次整数アフィン接着では、四rayの完全matching条件等を証明し、高分母の必要支持候補を \(G_{5,14},G_{5,16},G_{5,17}\) の3型・26標識まで絞った。ただし26は実現数ではなく、一般分母の剛性・三高係数の同時非負性や全支持型の大域接着は未解決。
 
-KE退化との関連では、全閉triple cornerのactual局所GH収縮、短normal circleを用いる定量的二段階平均・共通作用周期の管理が主な到達点。固定残余compactでは法線円の深度積分評価と、同じ残余点に沿う係数1・加法誤差 $O(1)$ の動径接続上界を得た。軌道平均エネルギーを使うMoser速度評価と、縮小する実計量の境界距離 $\delta_t$ に対する十分条件 $m_t\delta_t^2\to\infty$ も主稿に追加した。固定 source-free compact 基底では、capped density と Chern–Lu により actual 二側計量比較を得て、moving normal strip での一様buffer、短円 $O(m_t^{-1})$、共通 canonical moment interval を証明した。Source 模型では中心での生成場の長さ $O(L_t^{-1})$ と、十分遅く縮む領域での actual focus–focus germ を得た。固定残余基底では一つの円作用で通常 pair と source を覆い、閉じた一重 pinched torus と saddle fibre を含む actual neck fibration を構成した。**全neckの一様buffer、source・branch・core相対接着、全曲面のGH no-shortcutおよび既存fibrationとの大域的な一様適合性は未証明**。局所KE定理と大域GH収束を混同しない。先行研究の仮定と新規性の未確認点は主原稿序論と[研究ノート](research/notes.md)を参照。
+KE退化との関連では、全閉triple cornerのactual局所GH収束、定量的二段階平均、固定残余基底のactual neckとsourceのpinched torusを得ている。現行改訂15では次を証明・統合した。
+
+- **同じnormal moment上の接続：** 固定source-free基底の残余点全体をactual長さ $O(1)$ で結ぶ。Moser像と、同じlevel上の複数fiberの合併も、正規化ambient径 $O(R_t^{-1})$ を持つ（`ke:fixed-base-moment-connectors`）。
+- **三つの端の座標と作用：** 固定深度比で分離したarmで、射影neck座標との比の対数を全固定階で指数的に評価。積を保つsmooth補間で三端のnormal circlesを同時に合わせ、canonical normal periodの厳密な一致を示す。非正則な補間帯ではtame symplectic性を使う（`ke_neck_corner_transition.tex`）。
+- **一つのcorner bundleへの統合：** 平均順序を比較するHamiltonianを $O(m^{-2})$ で評価してcutoffし、各端のnormal-first構成を相対統合する。単一moving armでは共通moment intervalを両端の漸近から構成し、actual reduced葉が小さいgraphとなることを示す。Collar外を固定して延長できる（`ke_relative_corner_patch.tex`）。第二periodの一致は自動でない。
+- **遅いcutでも局所GH近似：** $m_t\to\infty,\ \log m_t=o(R_t)$ なら、内在・protected距離のdistortionは $C[m_t^{-1}+(\log(m_t+1)+\log R_t)/R_t]$。固定領域の列に合わせたstepwiseな対角選択にも使える（`ke:slow-cut-closed-corner-gh`）。
+
+**P0は未解決。** Source-inclusive neckと三重点の共通被覆・開overlapでの全体接着、coreへの相対接着、全曲面のshortcutとportal費用をさらに検証する。局所GH近似の標的は同一tripleの三枚のsquare自身であり、全曲面や全cubical複体の距離と同一視しない。先行研究の仮定と新規性の未確認点は主原稿序論と[研究ノート](research/notes.md)を参照。
 
 ## ビルドと再現
-同じ normal moment に属する固定 source-free 基底全体では、異なる残余点を有界なactual長さで接続できることを証明した（`ke:fixed-base-moment-connectors`）。複数のfiberの合併も正規化ambient径 $O(R_t^{-1})$ を持つ。Sourceを通るlevelと、三重点へ動く領域の接続には別の評価が必要である。この追加証明は独立に点検済みであり、改訂15の組版は次の検証段階で確認する。
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 

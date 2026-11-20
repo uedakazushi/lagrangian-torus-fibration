@@ -1,0 +1,368 @@
+% !TeX root = ../../surface-lagrangian-torus-fibration.tex
+% 2026-11-21 / v1.0: 固定深度比の arm における座標接続と symplectic 正値性．
+\section{三重点と射影 neck の定量的な座標接続}
+\label{ke:neck-corner-transition-section}
+
+本節では，三重点の三つの端における射影 neck の normal circle を，
+一つの滑らかな torus chart の中で同時に一致させる．
+比較するのは平均化前の作用である．各端で normal circle を先に平均した
+actual 作用と，全 corner の actual Lagrangian 葉を相対的に接着することは，
+この座標接続だけからは従わない．
+解析入力は関連 KE 主稿\cite{KELocalCurrent}の
+\texttt{coarse:lem:simplex-model} と \texttt{coarse:thm:full-triple-tensor}，
+すなわち complete simplex 模型の有界幾何と actual/model 比較である．
+以下の座標評価自体は正則性と Cauchy 評価による．
+
+\subsection{三つの端に共通な正確な積座標}
+
+射影 neck の補助データは次のように選ぶ．全ての三重点を避ける一つの
+超平面 $H_\infty=\{w=0\}$ を選び，各二重線 $D$ に対して
+$D$ と交わらない射影直線 $U_D\subset H_\infty$ を選ぶ．
+線形分解による射影 $\PP^3\setminus U_D\to D$ を，当該 $D$ の
+normal bundle projection として固定する．$w=1$ の affine 部分では
+この射影は affine 線形であり，各三重点の近傍で以下の線形式が成り立つ．
+これは有限個の $D$ について同時に可能な補助データの選択である．
+任意に先に固定した射影について，同じ affine 座標との無条件な一致を
+主張しているのではない．Global neck はこの射影 bundle で扱い，
+ここでは三重点近傍の $w=1$ の frame を用いる．
+
+三平面の固定 affine 座標を $q_0,q_1,q_2$ とし，族の式を
+\[
+ q_0q_1q_2=tU(q,t)
+\]
+と書く．$U$ は固定 polydisc 上の非零正則関数であり，$t=0$ の近傍でも
+非零とする．Polydisc を固定量だけ縮め，一価な正則三乗根
+$C(q,t)=U(q,t)^{1/3}$ を選ぶ．
+\[
+ \zeta_a=q_a/C(q,t),\qquad \zeta_0\zeta_1\zeta_2=t
+\]
+は $t$ に一様な正則座標である．実際，原点での Jacobian は
+$C(0,t)^{-1}I$ であり，固定近傍上の逆写像定理を使える．
+この対称な unit 除去を，三つの端で共通に用いる．
+
+端 $k$ に対応する二重線の射影座標を $p$ とする．
+$\{i,j,k\}=\{0,1,2\}$ とし，元の線形 frame で
+\[
+ q_i=x,\qquad q_j=y,\qquad q_k=p+\alpha x+\beta y
+\]
+と書く．$H(p,x,y,t)=U(q,t)$，
+$h=H/(p+\alpha x+\beta y)$ とすれば族は $xy=th$ である．
+補題\ref{ke:projected-source-normal-form}と同じ，恒等写像近傍の平方根を
+選ぶ射影 Morse 変換を使い，$x'y'=t h_t(p)$ とする．
+$C_D(p,t)=C(q_i=q_j=0,q_k=p,t)$ と置く．すなわち
+$H(p,0,0,t)^{1/3}$ の枝は共通の $C$ の制限を使う．
+\begin{equation}\label{ke:eq:arm-gauged-coordinates}
+ \Xi_{ki}=x'/C_D,\qquad
+ \Xi_{kj}=y'/C_D,\qquad
+ \Xi_{kk}=C_D^2/h_t(p)
+\end{equation}
+と定める．この gauge は base のみに依存し，
+$\prod_a\Xi_{ka}=t$ である．
+
+\begin{lemma}[射影座標と共通 triple 座標の比]
+\label{ke:arm-coordinate-ratio}
+ある固定 $c_0>0$ があり，
+$|x|+|y|<c_0|p|$，$|t|<c_0|p|^3$ の領域では上の Morse 変換が
+一様に定義される．その族の上で
+\begin{equation}\label{ke:eq:arm-coordinate-ratio}
+ \left|\frac{\Xi_{ka}}{\zeta_a}-1\right|
+ \le C\left(\frac{|x|+|y|}{|p|}+\frac{|t|}{|p|^3}\right)
+ \quad(a=0,1,2).
+\end{equation}
+この gauge は射影 neck の normal circle を厳密に保ち，
+$d\log(x'/C_D)\wedge dp=d\log x'\wedge dp$ である．
+\end{lemma}
+\begin{proof}
+$X=x/p$，$Y=y/p$，$\tau=t/p^3$ とすると，
+\[
+ \frac{xy-th}{p^2}
+ =XY-\tau\frac{H(p,pX,pY,t)}{1+\alpha X+\beta Y}.
+\]
+右辺は固定幅の $(X,Y)$-polydisc 上で，$XY$ の一様な $O(\tau)$ 正則摂動である．
+補題\ref{ke:projected-source-normal-form}の臨界点・行列平方根の構成から，
+元の座標に戻すと臨界断面 $a_t=O(t/p^2)$，$S-I=O(t/p^3)$，および
+\[
+ h_t(p)/h(p,0,0,t)=1+O(t/p^3)
+\]
+を得る．同じ一意な臨界断面と恒等近傍の平方根を取るので，
+これは固定基底上の構成と共通領域で一致する．
+族の上では $|h|\asymp |p|^{-1}$ であるから，例えば
+\[
+ \frac{|t|}{|x|\,|p|^2}\le C\frac{|y|}{|p|},\qquad
+ \frac{|t|\,|y|}{|x|\,|p|^3}\le C\frac{|y|^2}{|p|^2}.
+\]
+従って $(x'-x)/x$ と $(y'-y)/y$ は
+\eqref{ke:eq:arm-coordinate-ratio}の右辺で抑えられる．
+また $C(q,t)/C_D(p,t)=1+O(|x|+|y|)$ であり，
+$q_k=p+\alpha x+\beta y$ なので，
+\eqref{ke:eq:arm-gauged-coordinates}の第三座標にも同じ評価が成り立つ．
+全て正則関数の比であり，angular phases に制限を置いていない．
+Base-only gauge は weights $(1,-1,0)$ の作用と可換であり，
+最後の体積 frame の等式は $d\log C_D\wedge dp=0$ による．
+\end{proof}
+
+\subsection{固定深度比の arm での全微分評価}
+
+$\ell_a=-\log|\zeta_a|^2$，$L=-\log|t|^2$ とし，
+\[
+ h_t=4\sum_{a=0}^2\frac{|d\log\zeta_a|^2}{\ell_a^2}
+\]
+を $\sum_a d\log\zeta_a=0$ の接空間に制限する．
+以下の領域は常に全 angular phases を含む．固定 $\sigma>0$ に対して
+\[
+ A_k(\sigma,m)=\{\ell_k\ge m,\quad
+          \ell_i,\ell_j\ge(1+\sigma)\ell_k\}
+\]
+と置く．
+
+\begin{proposition}[比の対数の一様な指数的小摂動]
+\label{ke:arm-log-derivatives}
+十分大きい $m$ に対して，$A_k(\sigma,m)$ 上で
+\[
+ e_{ka}=\operatorname{Log}(\Xi_{ka}/\zeta_a)
+\]
+を主枝により一価に定義できる．ある $c_\sigma>0$ があり，
+全ての固定 $q\ge0$ について
+\begin{equation}\label{ke:eq:arm-log-derivatives}
+ \sum_a e_{ka}=0,\qquad
+ \|e_{ka}\|_{C^q(h_t;A_k(\sigma,m))}
+ \le C_{q,\sigma}e^{-c_\sigma m}.
+\end{equation}
+定数は $L$ に依存せず，固定した族・chart・$\sigma,q$ への依存を許す．
+\end{proposition}
+\begin{proof}
+共通座標では $|p|\asymp|\zeta_k|$，$|x|\asymp|\zeta_i|$，
+$|y|\asymp|\zeta_j|$ である．従って arm 上では
+補題\ref{ke:arm-coordinate-ratio}の右辺は $Ce^{-\sigma\ell_k/2}$ 以下である．
+特に比は $1$ の固定小円板に入り，主枝の対数を取れる．
+積が $1$ なので対数の和は $2\pi\sqrt{-1}\ZZ$ に属し，
+十分小さいことから零である．
+
+微分には angular universal cover の $w_a=\log\zeta_a$ を使う．
+点 $w^0$ において，$\sum_a v_a=0$ の複素二次元接空間に
+$h_t(w^0)$-正規直交の線形座標 $v=A\xi$ を取る．すると
+\[
+ |(A\xi)_a|\le\tfrac12\ell_a(w^0)|\xi|,
+ \qquad
+ (1-\rho)\ell_a(w^0)\le\ell_a(w^0+A\xi)
+                  \le(1+\rho)\ell_a(w^0)
+\]
+が $|\xi|<\rho$ で成立する．
+$0<\rho<\min\{1/4,\sigma/(4+3\sigma)\}$ を固定すれば，
+この複素球は深度比 $1+\sigma/2$ の arm に入り，残余深度も
+$\ell_k(w^0)/2$ 以上である．従って球全体で $|e_{ka}|\le Ce^{-c_\sigma m}$．
+Cauchy 評価は全ての固定階の $\xi$-微分を同じ指数率で抑える．
+この chart で $h_t$ は一様に Euclidean 計量と比較できる．
+係数は線形な深度の逆二乗の和であり，上記の row norm と深度比の評価から，
+係数・逆係数・全固定階微分も一様に有界である．
+従って Cauchy 評価を covariant $C^q(h_t)$ 評価へ移せる．
+この議論は全 phase と全深度比に一様である．
+\end{proof}
+
+\subsection{積を保つ滑らかな補間とその向き}
+
+\begin{proposition}[三つの arm の同時座標接続]
+\label{ke:three-arm-coordinate-interpolation}
+$\sigma>0$ を固定し，$m$ は十分大きく $m<L/3$ とする．
+$\mathcal U_t(a)=\{\min_b\ell_b>a\}$ と書く．
+積を保つ滑らかな embeddings
+\[
+ F_s:\mathcal U_t(m/4)\longrightarrow\mathcal U_t(m/8),
+ \qquad F_0=\id,\quad 0\le s\le1
+\]
+が存在し，全ての像は $\mathcal U_t(m/2)$ を含む．
+各 $F_s$ と，$\mathcal U_t(m/2)$ 上の逆写像 $G_s$ は，
+正規化された $h_t$-座標で恒等写像から全固定階で $O(e^{-cm})$ だけずれる．
+Trajectory の $h_t$-長は $O(e^{-cm}/m)$ である．
+
+$F_1$ は深度比が $1+\sigma$ 以上の各 arm で
+元の $\zeta$ 座標を射影座標 $\Xi_k$ へ写す．
+標準 torus 作用を $\rho$ とすると，変形した元の空間上の作用は
+\begin{equation}\label{ke:eq:deformed-action-direction}
+ \rho^{\mathrm{def}}=G_1\rho F_1
+ \quad\text{on }G_1(\mathcal U_t(m/2))
+\end{equation}
+である．この定義域は $\mathcal U_t(m)$ を含む．
+深度比 $1+2\sigma$，残余深度 $\ell_k\ge m$ の内側 arm では，
+対応する normal subgroup は射影 neck の正則 normal circle と厳密に一致する．
+\end{proposition}
+\begin{proof}
+滑らかな $\psi:\RR\to[0,1]$ を，
+$u\le\log(1+\sigma/2)$ で $0$，
+$u\ge\log(1+\sigma)$ で $1$ となるよう選び，
+\[
+ \chi_k=\psi(\log\ell_i-\log\ell_k)
+          \psi(\log\ell_j-\log\ell_k)
+\]
+とする．各 $d\log\ell_a$ とその全固定階微分は $h_t$ で一様有界であり，
+$\chi_k$ も同様である．二つの異なる $\chi_k$ が同時に非零なら，
+互いの残余深度が相手の $1+\sigma/2$ 倍より大きくなり矛盾する．
+従って三つの支持は互いに交わらない．
+
+$e_{ka}$ はさらに広い深度比 $1+\sigma/4$ の領域で定義し，
+$\chi_k e_{ka}$ をその外へ零で延長する．
+\[
+ E_a=\sum_k\chi_k e_{ka},\qquad
+ F_s(\zeta)_a=\zeta_a\exp(sE_a)
+\]
+と置くと $\sum_aE_a=0$ なので積は厳密に保存される．
+命題\ref{ke:arm-log-derivatives}より，外側深部領域で
+$\|E_a\|_{C^q(h_t)}\le C_qe^{-cm}$ である．
+通常の log 座標の固定半径の複素球にも Cauchy 評価を適用でき，
+その Euclidean 一階微分も $O(e^{-cm})$ となる．
+Cutoff の通常 log 座標での微分は $O(m^{-1})$ 以下であり，
+零延長した $E$ にも同じ一階上界を得る．
+
+$\mathcal U_t(m/4)$ の log cover は，実部が開 simplex，虚部が
+実二次元 affine 空間である凸集合である．そこで $w\mapsto w+sE(w)$ は
+恒等写像との差の Lipschitz 定数が $1/2$ 未満なので大域単射である．
+$E$ は deck-periodic であるから，この単射は phase quotient へ降りる．
+各深度の変化は $O(e^{-cm})$ であり，像は $\mathcal U_t(m/8)$ に入る．
+逆に $z\in\mathcal U_t(m/2)$ の log lift に対し，
+$w=z-sE(w)$ を半径 $Ce^{-cm}$ の小球で解けば縮小写像定理が使える．
+小球は $\mathcal U_t(m/4)$ の cover 内にあるので共通の image を得る．
+逆写像定理と微分した方程式により逆写像にも全固定階の評価が成り立つ．
+
+正規化 chart では各成分 $E_a$ に対応する変位の norm は
+$C\max_a|E_a|/\min_a\ell_a$ 以下であり，metric の係数の一様幾何を使えば
+写像と逆写像の $C^q$ 評価および trajectory 長の評価が従う．
+また $F_1(\mathcal U_t(m))\subset\mathcal U_t(m/2)$ なので
+\eqref{ke:eq:deformed-action-direction}の定義域は所要の内側領域を含む．
+
+内側 arm の深度比と cutoff の間には固定比の余裕がある．
+新座標で torus を一周しても，逆写像後の各旧深度の変化は
+$O(e^{-cm})$ なので，その全 orbit 上で $\chi_k=1$ が保たれる．
+そこで $F_1=\Xi_k$ であり，$(\Xi_{ki},\Xi_{kj})$ の逆向き回転は，
+base-only gauge を除けば $(x',y')$ の同じ回転そのものである．
+\end{proof}
+
+\begin{corollary}[Normal canonical moment の厳密な一致]
+\label{ke:transition-normal-primitive}
+命題\ref{ke:three-arm-coordinate-interpolation}の内側 arm で，
+全ての形式を元の実際の空間に置いて
+\[
+ \Omega_\zeta=d\log\zeta_i\wedge d\log\zeta_k,\qquad
+ \Omega_\Xi=d\log\Xi_{ki}\wedge d\log\Xi_{kk},\qquad
+ \Omega_N=d\log x'\wedge dp
+\]
+とする．$\Omega_\Xi=J_k\Omega_\zeta$ によって定義される
+logarithmic Jacobian は $J_k=1+O(e^{-cm})$ であり，
+一価な正則関数 $\operatorname{Log}J_k$ を持つ．
+\[
+ a_t(p)=\partial_p\log(C_D(p,t)^2/h_t(p)),\qquad
+ \lambda_\zeta=d^c\log\frac{\omega_t^2}{|\Omega_\zeta|^2},\qquad
+ \lambda_N=d^c\log\frac{\omega_t^2}{|\Omega_N|^2}
+\]
+とすると，$a_t$ はこの領域で非零であり，
+\begin{equation}\label{ke:eq:transition-primitive-decomposition}
+ \lambda_\zeta-\lambda_N
+ =-d^c\log|a_t(p)|^2+d\operatorname{Im}\operatorname{Log}J_k.
+\end{equation}
+従って共通の周期 $1$ の normal circle $\rho_N$ の生成場を $V_N$，
+その平均を $\mathcal A_N$ とすると，
+\[
+ (\mathcal A_N\lambda_\zeta)(V_N)
+   =(\mathcal A_N\lambda_N)(V_N).
+\]
+これは加法定数までの一致ではなく，canonical normal moment の厳密な一致である．
+残余 cycle の period の一致は結論しない．
+\end{corollary}
+\begin{proof}
+内側 arm では $F_1=\Xi_k$ は正則である．
+$\log\Xi_{ka}=\log\zeta_a+e_{ka}$ と，通常の log 座標の
+固定半径球における Cauchy 評価から，その logarithmic Jacobian は
+$1+O(e^{-cm})$ となる．従って全 phase に一価な主枝 $\operatorname{Log}J_k$ を取れる．
+一方，\eqref{ke:eq:arm-gauged-coordinates}を微分すると
+\[
+ \Omega_\Xi
+ =(d\log x'-d\log C_D)\wedge a_t(p)\,dp
+ =a_t(p)\Omega_N.
+\]
+両座標が非退化なので $a_t$ は非零である．
+$\Omega_\zeta=(a_t/J_k)\Omega_N$ を体積比へ代入し，
+$d^c\log|J_k|^2=d\operatorname{Im}\operatorname{Log}J_k$ を使えば
+\eqref{ke:eq:transition-primitive-decomposition}を得る．
+第一項は残余基底だけに依存する閉形式であり，$p$ を保つ正則 normal 作用の
+生成場を消す．第二項は一価関数の完全微分なので normal 円上の積分は零である．
+全 orbit の平均を取れば表示された moment の等式となる．
+$a_t(p)$ の winding は残余 cycle 上で非零となり得るので，
+第二 period まで同じ結論を適用しない．
+
+座標同定の向きも明記する．新しい数値座標を $Z_a$ と書き，
+$G=F_1^{-1}$，$\alpha_t=G^*\omega_t$ とする．正則な内側 arm では
+\[
+ G^*\Omega_\Xi=d\log Z_i\wedge d\log Z_k,\qquad
+ G^*\Omega_\zeta=(J_k\circ G)^{-1}d\log Z_i\wedge d\log Z_k.
+\]
+従って新座標の標準 logarithmic frame から作る primitive を
+$\lambda_{\mathrm{out}}$
+と書けば
+\[
+ G^*\lambda_\zeta
+ =\lambda_{\mathrm{out}}
+       +d\operatorname{Im}\operatorname{Log}(J_k\circ G).
+\]
+これは上記の実空間の分解を逆向きに引き戻した式である．
+非正則な cutoff 帯では $G^*$ と $d^c$ の可換性を使わない．
+\end{proof}
+
+\subsection{非正則な補間の後の symplectic 正値性}
+
+\begin{corollary}[平均と凸補間の tame 性]
+\label{ke:transition-tame-averaging}
+上記の共通 exact chart で，$\kappa_t$ を complete toric KE 模型とする．
+新座標側 $\mathcal U_t(m/2)$ に actual form を移したものは
+\[
+ \alpha_t=G_1^*\omega_t=(F_1^{-1})^*\omega_t
+\]
+であり，$F_1^*\omega_t$ ではない．全固定 $q$ について
+\begin{equation}\label{ke:eq:transition-form-estimate}
+ \|\alpha_t-\kappa_t\|_{C^q(h_t)}
+ \le C_q\bigl(m^{-1}+e^{-cm}\bigr).
+\end{equation}
+従って十分大きい $m$ では，$\alpha_t$，その標準 normal circle 平均，
+全 $T^2$ 平均，およびこれらの任意の凸結合は閉かつ $J$-tame な
+symplectic forms である．全 torus 平均に関して標準 phase tori は Lagrangian である．
+非定数 cutoff の領域でこれらを K\"ahler forms とは主張しない．
+\end{corollary}
+\begin{proof}
+対称 unit 除去の座標と元の各平面座標の比は bounded holomorphic units である．
+従って関連 KE 主稿の全深部比較に必要な capped density と residue frame の
+比較はこの chart でも成り立つ．同稿の
+\texttt{coarse:thm:full-triple-tensor}より
+$\omega_t-\kappa_t=O(m^{-1})$ を全固定階で得る．
+模型の有界幾何と命題\ref{ke:three-arm-coordinate-interpolation}を使って
+$G_1^*\kappa_t-\kappa_t=O(e^{-cm})$ と評価すれば
+\eqref{ke:eq:transition-form-estimate}となる．
+
+標準 torus は $h_t,\kappa_t,J$ を保つので，pullback と平均は
+この誤差の norm を増やさない．模型は $h_t$ を一様に正に支配するから，
+全ての列挙した form と凸結合は $J$-tame であり，従って非退化である．
+閉性は pullback，平均，定数係数の凸結合で保たれる．
+補題\ref{ke:negative-exact}と pullback により $\alpha_t$ は exact である．
+全 torus 平均の phase torus への制限は定数係数の二形式で，その積分は
+元の exact form の積分と同じく零なので，制限自体が零となる．
+滑らかな $F_1$ は一般に正則でなく，$(1,1)$-型は保存されないため，
+tame 性から K\"ahler 性への読み替えは行わない．
+\end{proof}
+
+\begin{remark}[値の小ささと微分の小ささの区別]
+\label{ke:coordinate-czero-obstruction}
+加法的深度差が無限大になるだけでは，normalized cusp 微分の小ささは従わない．
+例えば $f=\zeta_i/\zeta_k$ とし，
+$(\ell_i,\ell_j,\ell_k)=(N+a,N+a,N)$，$a=\log N$ とすると，
+$|f|=N^{-1/2}\to0$ である．一方，log cover で
+$\partial_{w_i}-\partial_{w_j}$ の $h_t$-norm は $N^{-1}$ と比較可能であり，
+その単位化した方向の $|df|$ は $N^{1/2}$ と比較可能である．
+従って単なる $C^0$ 比評価では補間後の正値性を結論できない．
+命題\ref{ke:arm-log-derivatives}の固定比の分離は，この微分損失を
+全固定階で指数減衰に吸収するための条件である．
+\end{remark}
+
+この接続による各深度の変化は $O(e^{-cm})$ なので，
+clipped logarithmic depth $R^{-1}\log\ell_a$ の変化は
+$O(e^{-cm}/(mR))$ である．しかし，ここで一致させたのは平均化前の
+normal circles であり，三つの normal-first Moser maps，reduced leaves，
+critical actions の同時相対整合は別に必要である．
+Source・branch・core を含む全域接着と，全曲面 ambient 距離の比較も
+本節の結論には含まれない．

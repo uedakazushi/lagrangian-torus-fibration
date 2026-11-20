@@ -604,11 +604,28 @@ Source-free な固定 compact base 上では，関連 KE 主稿\cite{KELocalCurr
 \texttt{pair:prop:bundle-conic} が射影的 normal-bundle coordinates から一つの正則円作用を与え，
 \texttt{pair:cor:global-primitive} と \texttt{pair:cor:actual-common-moment} が
 global primitive と円平均後の共通 moment interval を与える．
-後者は固定 end での KE 収束と cusp 漸近を使い，moving ends や neck 内部の
-一様 tensor 比較を含まない．本稿の条件付き延長
-（系\ref{ke:staged-reduced-extension}）を actual neck 全体へ適用するためには，
-normal flow の生存・buffer，triple collar の同一作用，
-および reduced foliation germs の整合をさらに検証する必要がある．
+後者は固定 end での KE 収束と cusp 漸近を使う．
+本稿の定理\ref{ke:fixed-base-neck-moser}は，capped density の大域下界と
+Chern--Lu 評価を組み合わせ，固定残余基底上の moving normal strip で
+actual 二側比較・短円・共通 Moser source と像を与える．
+命題\ref{ke:fixed-base-moment-connectors}では同一 normal moment 上の残余点を
+有界長で接続し，その level 全体の正規化 ambient 径 $O(R_t^{-1})$ を得る．
+固定残余基底では source を含む一つの作用で actual neck と閉じた pinched torus も
+構成する（定理\ref{ke:projected-source-neck}）．
+
+三重点への接続には，節\ref{ke:neck-corner-transition-section}で
+固定比に分離した三つの arm を用いる．射影 Morse 座標と一つの共通 triple 座標の
+対数比は，全 phase・全固定階の cusp 微分に関して指数的に小さい．
+積を保つ smooth 補間は非正則になり得るが，平均形式と凸 path の tame 性を保つ．
+Canonical primitive の base-only closed 差と exact 差を分離することで，
+normal period の厳密な一致も得る．第二 period は別の条件である．
+さらに節\ref{ke:relative-corner-section}で比較 Hamiltonian 自体を評価し，
+三つの端に指定した normal-first 平均を一つの actual corner bundle へ相対統合する．
+定理\ref{ke:slow-cut-closed-corner-gh}は
+$m_t\to\infty$，$\log m_t=o(R_t)$ の遅い cut に対しても，
+同じ corner 射影の局所 GH 近似を保証する．
+Moving neck との共通 moment strip，reduced foliation germs の実際の同定，
+core への接着と全曲面の距離比較は，引き続き証明すべき課題である．
 
 
 開いた二次元セルの固定 compact 部分では，さらに明示的な product model と局所 GH 極限を得る．

@@ -1,6 +1,6 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-21 / v1.2。目標・優先順位は [研究方針](../00_research_plan.md)、数学的な目標の定式化は主原稿の `ke:global-realization-section` 節を正本とする。本書は外部入力の所在・適用範囲と、次に証明すべき接続条件を保持する。
+2026-11-21 / v1.3。目標・優先順位は [研究方針](../00_research_plan.md)、数学的な目標の定式化は主原稿の `ke:global-realization-section` 節を正本とする。本書は外部入力の所在・適用範囲と、次に証明すべき接続条件を保持する。
 
 ## 確認した正本と規格化
 
@@ -46,6 +46,10 @@ L_t=-\log|t|^2,\quad R_t=\log L_t.
 | 入力・障害 | 原稿の所在 | 使用上の区別 |
 | --- | --- | --- |
 | 実際のLagrangian closed corner | [ke_closed_corner_gh.tex](../papers/sections/paper/ke_closed_corner_gh.tex), `ke:closed-corner-gh`, `ke:closed-corner-protected-gh` | 同じMoser像・同じfibrationに対する局所結果。Protected distanceを全曲面距離と同一視しない。 |
+| 遅いcutのclosed corner | 同上 `ke:slow-cut-closed-corner-gh` | $m\to\infty,\ \log m=o(R)$ ならdistortionは $C[m^{-1}+(\log(m+1)+\log R)/R]$。Stepwiseな対角選択可。外部のfull-triple比較、rank-one Schwarz、dominant-product比較と有限galleryを使用し、$m=R$ の定理を単に代入し直した結果ではない。 |
+| 固定baseの同一moment上の接続 | [ke_staged_neck_averaging.tex](../papers/sections/paper/ke_staged_neck_averaging.tex), `ke:fixed-base-moment-connectors` | Source-freeな固定連結基底に限り、level全体とMoser像のactual ambient径 $O(1)$、正規化後 $O(R^{-1})$。異なる残余点を結ぶ。Source・moving collar・全曲面の下界は含まない。 |
+| 三armの座標・normal period | [ke_neck_corner_transition.tex](../papers/sections/paper/ke_neck_corner_transition.tex), `ke:arm-log-derivatives`, `ke:three-arm-coordinate-interpolation`, `ke:transition-normal-primitive` | 共通の許容射影を選び、固定深度比で分離したarmに限る。全固定階で指数的小摂動、積保存smooth補間、canonical normal periodの厳密一致。非正則補間帯はtame symplecticでありKähler性を仮定しない。第二periodの一致は含まない。 |
+| 三端の平均順序の相対統合 | [ke_relative_corner_patch.tex](../papers/sections/paper/ke_relative_corner_patch.tex), `ke:quantitative-order-hamiltonian`, `ke:relative-corner-patch`, `ke:single-arm-reduced-graph`, `ke:arm-common-moment-strip` | 小さいprimitiveを固定し、centered平均の比較Hamiltonianを $O(m^{-2})$ で評価。Common source/imageとcutoff buffersの下で端ごとのstaged bundleを一つのactual corner bundleへ統合。単一moving armでは共通moment stripとactual reduced graphを証明。Source-inclusive neck全体との共通被覆は別課題。 |
 | 固定残余compactの法線エネルギーと接続 | [ke_staged_neck_averaging.tex](../papers/sections/paper/ke_staged_neck_averaging.tex), `ke:neck-integrated-normal-energy`, `ke:neck-axial-upper`, `ke:neck-averaged-speed`, `ke:neck-shrinking-buffer` | KE側 `neck:prop:volume-envelope` から積分短円と同一残余点の係数1の接続上界。実計量の境界距離（上限1） $\delta_t$ が $m_t\delta_t^2\to\infty$ なら共通source・像。所要のcollarでの境界距離下界とmoving residual baseへの拡張が残る。 |
 | Normal平均の双方向buffer | [ke_staged_neck_averaging.tex](../papers/sections/paper/ke_staged_neck_averaging.tex), `ke:short-circle-actual-buffer`, `ke:short-circle-image-buffer` | Actual短円とactual bufferを入力とする。像のambient直径を与えるが、$C^1$ 制御・intrinsic fiber径・base projection保存は与えない。 |
 | Endsとneckの接着 | 同上 `ke:staged-neck-averaging`, `ke:staged-reduced-extension`, `ke:staged-neck-scope`; `ke_closed_corner_gh.tex`, `ke:relative-neck-matching` | 共通primitive・marked periodsを追跡できる。Reduced foliation germsの同時延長、開overlapの同じfiber partition、actual flowの生存は別に確認する。 |

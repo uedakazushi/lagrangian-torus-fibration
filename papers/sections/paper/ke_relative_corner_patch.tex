@@ -1,0 +1,544 @@
+% !TeX root = ../../surface-lagrangian-torus-fibration.tex
+% 2026-11-21 / v1.1: 平均順序の相対化と単一 arm の reduced graph．
+\section{複数の三重点 end における平均順序の相対化}
+\label{ke:relative-corner-section}
+
+三つの end で異なる primitive normal subgroup を先に平均したい場合，
+一つの subgroup を指定する系\ref{ke:staged-closed-corner-gh}だけでは足りない．
+本節では，互いに離れた end 上の二段階構成を，
+一つの actual Lagrangian torus bundle に同時に組み込む．
+そのために命題\ref{ke:staged-hamiltonian-comparison}の比較 Hamiltonian 自体を評価する．
+座標の滑らかな補間によって作用が非正則になる場合も，
+同じ toric 模型に対する小摂動という仮定の下で扱う．
+Neck 全体との接着に必要な moving domain と共通 moment interval は，
+本節の相対化だけからは得られない．
+
+\subsection{小摂動の平均と比較 Hamiltonian}
+
+$U$ に自由な $T^2$ 作用を与え，その全平均を $\mathcal A$ とする．
+$\omega_0=d\lambda_0$ を作用不変な K\"ahler 模型とし，
+$h=g_{\omega_0}$ と置く．$h$ と $\lambda_0$ も作用不変とする．
+従って作用は模型の複素構造 $J_0$ を保存する．
+以下の微分の評価は，角度の universal cover 上の固定半径正規化 chart で用いる．
+$h,h^{-1}$ の固定階の bounds は一様とし，torus quotient の injectivity radius の
+一様下界は要求しない．有限個の固定整数基底だけを用いる．
+
+\begin{proposition}[比較 Hamiltonian の定量的な primitive 評価]
+\label{ke:quantitative-order-hamiltonian}
+$\omega=d\lambda$ を閉 $2$-form とし，ある $0<e\le1$，十分小さい $\delta>0$ に対し
+\begin{equation}\label{ke:eq:order-primitive-input}
+ \|\lambda_0\|_{C^4(h)}\le C_0,\qquad
+ \|\omega-\omega_0\|_{C^4(h)}+
+ \|\lambda-\lambda_0\|_{C^4(h)}\le\delta,\qquad
+ \|V_j\|_{C^4(h)}\le C_0 e
+\end{equation}
+を仮定する．$V_j$ は用いる有限個の周期 $1$ の生成場である．
+すべての平均の chain homotopy に centered kernel $1/2-s$ を用いる．
+
+一つの整数基底の一段階 Moser map を $\Phi$ とし，別に指定した整数基底での
+normal-first 二段階 map を $\Theta$ とする．
+内外の領域には共通の $h$-buffer $b>0$ を取り，$Ce\delta<b$ とする．
+これらの領域は torus 飽和したものとする．
+必要なら内側領域を一度縮めれば，$F_0=\Phi$，$F_1=\Theta$ である
+endpoint maps の滑らかな族 $F_r$ を構成でき，
+\[
+ F_r^*\omega=\mathcal A\omega,\qquad
+ F_r^*\lambda=\mathcal A\lambda+dQ_r
+\]
+を満たす．共通の像領域上で $\Psi_r=F_r\Phi^{-1}$ は $\omega$-Hamiltonian であり，
+その生成場 $W_r$ と，$\iota_{W_r}\omega=dH_r$ の規約で選んだ Hamiltonian は
+\begin{equation}\label{ke:eq:order-hamiltonian-bound}
+ \|W_r\|_{C^1(h)}+\|H_r\|_{C^2(h)}\le C e\delta
+\end{equation}
+を満たす．定数は模型の一様幾何と固定整数基底に依存するが，領域の直径には依存しない．
+作用が別途与えられた actual 複素構造を保存すること，および
+$\omega$ が模型の複素構造 $J_0$ に関して型 $(1,1)$ であることは不要である．
+\end{proposition}
+
+\begin{proof}
+各 $K_j$ は centered homotopy，$\mathcal A_j$ は円平均とする．
+模型とその primitive の不変性により
+\[
+ K_j\omega_0=0,\qquad K_j\lambda_0=0.
+\]
+$h$ に関する平均は固定階の tensor norms を増やさず，contraction の微分には
+$V_j$ の同じ階以下の微分だけが現れる．従って
+\[
+ \|K_j\omega\|_{C^3(h)}+
+ \|K_j\lambda\|_{C^3(h)}\le Ce\delta.
+\]
+先に他の円平均を施した場合にも同じ評価が成り立つ．
+各平均とその凸結合は $\omega_0$ から $C\delta$ 以内にある．
+特に模型の複素構造 $J_0$ に対して
+\[
+ \Omega(v,J_0v)\ge(1-C\delta)|v|_h^2
+\]
+を満たし，閉形式 $\Omega$ は非退化である．この箇所では平均の K\"ahler 性を使わない．
+
+指定した基底について $\eta=\mathcal A_1\omega$，$\kappa=\mathcal A\omega$ とし，
+命題\ref{ke:staged-hamiltonian-comparison}の三角形上の forms
+\[
+ \Omega_{u,v}=(1-u)\kappa+(u-v)\eta+v\omega,\qquad
+ \Lambda_{u,v}=(1-u)\mathcal A\lambda+(u-v)\mathcal A_1\lambda+v\lambda
+\]
+を用いる．$0\le v\le u\le1$ の中で，対角 path と二辺を通る path を
+滑らかな族 $(u_r(s),v_r(s))$ で結ぶ．二辺の接続を stationary に parameter 化すれば，
+必要な $r,s$ 微分を一様に有界にできる．
+\[
+ B_{r,s}=\dot u_r K_2\mathcal A_1\omega+\dot v_r K_1\omega,
+ \qquad \iota_{Y_{r,s}}\Omega_{u_r,v_r}=B_{r,s}
+\]
+と置く．$\Omega$ の逆の bounds と上の contraction 評価から，
+$Y_{r,s}$，$\partial_rY_{r,s}$ の $C^2(h)$ norms は $Ce\delta$ 以下である．
+この長さと共通 buffer によって全 flow が存在する．
+Flow の変分方程式と Gronwall の不等式から，endpoint の変位，微分の恒等写像からの差，
+および $\partial_rF_r$ の $C^2$ norm も同じ率で制御できる．
+Backward flow にも同じ長さ評価を用いれば，共通の内側集合を全 $F_r$ の像に含められる．
+
+\[
+ C_{r,s}=\dot u_rK_2\mathcal A_1\lambda+\dot v_rK_1\lambda
+\]
+とすると $B_{r,s}=-\partial_s\Lambda_{u_r,v_r}-dC_{r,s}$ である．
+時刻 $s$ までの flow を $F_{r,s}$ と書けば，exact transport の式は
+\[
+ Q_r=\int_0^1F_{r,s}^*
+       \bigl(\Lambda_{u_r,v_r}(Y_{r,s})-C_{r,s}\bigr)\,ds
+\]
+で与えられる．$\Lambda$ の norm は一様に有界で，
+$C_{r,s}$ とその $r$ 微分は $C^2(h)$ で $O(e\delta)$ である．
+また $\partial_r\Lambda$ は $O(\delta)$ である．模型部分の係数の和が常に $1$ なので，
+この微分で大きな模型項は現れない．従って
+\[
+ \|Q_r\|_{C^2(h)}+\|\partial_rQ_r\|_{C^2(h)}\le Ce\delta.
+\]
+Exact identity を $r$ で微分し，$W_r=(\partial_rF_r)\circ F_r^{-1}$ と置くと
+\[
+ F_r^*(\iota_{W_r}\omega)
+ =d\bigl(\partial_rQ_r-F_r^*(\lambda(W_r))\bigr).
+\]
+従って
+\[
+ H_r=(\partial_rQ_r)\circ F_r^{-1}-\lambda(W_r)
+\]
+が求める Hamiltonian であり，\eqref{ke:eq:order-hamiltonian-bound}を得る．
+単に $dH_r$ を評価して基点から積分する方法を用いないため，領域の直径は現れない．
+
+最初の整数基底が指定基底と異なる場合には，一段階の二つの homotopies $H,H'$ に対し
+同じ線形 form path 上で primitive を $(1-r)H\omega+rH'\omega$ と補間する．
+$H\omega=\mathcal A\lambda-\lambda-d(H\lambda)$ とその $H'$ 版により，
+上と同じ exact transport と評価が成立する．この族と三角形の族を，
+parameter の端で stationary にしてつなげれば一般の場合を得る．
+\end{proof}
+
+\begin{theorem}[互いに素な end で指定した二段階構成の相対統合]
+\label{ke:relative-corner-patch}
+命題\ref{ke:quantitative-order-hamiltonian}の仮定の下で，有限個の end ごとに
+primitive normal subgroup とその整数基底への補完を指定する．
+各 end の torus 飽和した内側領域を $E_a^-$ とし，少し広い領域 $E_a^0$，$E_a^+$ を取る．
+$\overline{E_a^-}\subset E_a^0\Subset E_a^+$ とし，$E_a^+$ は互いに素で，
+すべての比較 flow と inverse compositions の共通領域に相対コンパクトに含まれるとする．
+特に $\overline{E_a^+}$ は全ての $F_{a,r}$ の共通の像の内部に含める．
+これらを同じ ambient $U$ の部分集合として取り，source の $E_a^-$ と
+actual 像を置く $E_a^0$ の間には少なくとも $2Ce\delta$ の余裕を置く．
+$\chi_a=1$ on $E_a^0$，$\operatorname{supp}\chi_a\Subset E_a^+$，
+$\|\chi_a\|_{C^3(h)}\le B$ なる cutoffs を取る．
+入れ子領域間の $h$-buffer が $C_B e\delta$ より大きければ，
+一段階構成の torus bundle を actual $\omega$-Hamiltonian isotopy で変形し，
+各 $E_a^-$ の torus 上で，指定した normal-first map $\Theta_a$ の像と
+marked cycles ごと一致する一つの Lagrangian bundle を得る．
+補正は $\bigcup_a E_a^+$ の外で恒等であり，変位と微分の変化は $O_B(e\delta)$ である．
+\end{theorem}
+
+\begin{proof}
+各 $a$ に対して前命題を用い，$\Psi_{a,r}=F_{a,r}\Phi^{-1}$ と $H_{a,r}$ を取る．
+共通の像領域で
+\[
+ \widetilde H_r=\sum_a\chi_a H_{a,r}
+\]
+を定め，support の外へ零で延長する．
+$\iota_{X_{\chi H}}\omega=d(\chi H)$ より
+\[
+ X_{\chi H}=\chi X_H+H X_\chi,
+\]
+従ってその $C^1$ norm は $C_B e\delta$ 以下である．
+この compact support を持つ時間依存 Hamiltonian の flow を $\Upsilon_r$ とする．
+Buffer と前命題の変位評価により，$\Phi(E_a^-)$ から始まる
+$\Psi_{a,r}$ の全 trajectories は $E_a^0$ に留まる．
+そこで $\chi_a=1$，他の cutoffs は零なので，ODE の一意性により
+\[
+ \Upsilon_1\Phi(x)=F_{a,1}(x)=\Theta_a(x)\qquad(x\in E_a^-).
+\]
+$\kappa=d(\mathcal A\lambda)$ と primitive の不変性から
+$\kappa(V_1,V_2)=0$ であり，$\Phi$ の全 torus は $\omega$-Lagrangian である．
+$\Upsilon_1$ は $\omega$-symplectic なので，その像は一つの proper torus bundle である．
+元の torus を同じ写像で移しているため，表示された一致は marked cycles も保つ．
+Hamiltonian に共通の primitive が定義されている領域では，
+$\Upsilon_1^*\lambda-\lambda$ は exact であり，全 cycle periods を保つ．
+最後の変位と微分の評価は $X_{\widetilde H_r}$ の bounds から従う．
+\end{proof}
+
+\subsection{Actual triple での入力と適用範囲}
+
+本節の primitive の仮定は，metric の小摂動だけから任意の primitive について
+結論するものではない．Actual triple では選択を次のように固定できる．
+$\Omega=d\log\zeta_1\wedge d\log\zeta_2$，
+$\omega_0=k_L$，$h=g_L^{\mathrm{sf}}$ とし，
+\[
+ \lambda=d^c\log\frac{\omega_t^2}{|\Omega|^2},\qquad
+ \lambda_0=d^c\log\frac{k_L^2}{|\Omega|^2}
+\]
+を取る．関連 KE 主稿\cite[\texttt{coarse:thm:full-triple-tensor}]{KELocalCurrent}により，
+$\min\ell_i\ge m$ の少し広い領域で全固定階の metric 誤差は $O(m^{-1})$ である．
+同じ正規化 chart の determinant を取れば
+$v_t=\log(\omega_t^2/k_L^2)$ の全固定階の norm も $O(m^{-1})$ となり，
+\[
+ \lambda-\lambda_0=d^cv_t=O_{C^4(h)}(m^{-1})
+\]
+を得る．模型 primitive は $\lambda_0=2d^c\phi_L$ である．
+同稿 \texttt{coarse:lem:simplex-model} の potential bounds により，
+固定相対窓で $\phi_L$ の振幅は一様に有界である．凸性で一階微分を評価し，
+模型 metric の一様な高階 bounds を合わせれば $\lambda_0$ の $C^4$ bound を得る．
+また固定整数生成場の $C^4$ norm は $O(m^{-1})$ である．
+従って $e=C/m$，$\delta=C/m$ として本節を適用でき，比較 Hamiltonian は
+$O(m^{-2})$ となる．
+
+さらに命題\ref{ke:three-arm-coordinate-interpolation}の
+逆向きの座標同定 $G=F_1^{-1}$ を用いる場合も，
+同じ正規化 chart で $G-\mathrm{id}=O_{C^5}(\epsilon)$ なら，
+$G^*\omega_t$，$G^*\lambda$ に対して
+$\delta=C(m^{-1}+\epsilon)$ が使える．作用が非正則になる補間帯では，
+正値性は本節の共通模型による tame 評価から従う．
+$G^*\lambda_0-\lambda_0$ の $C^4$ 評価には模型 primitive の $C^5$ bound を用いる．
+上の模型の議論は任意の固定階に適用できるので，この追加の一階も一様である．
+三つの dominant arms の支持を固定の深度比で離して選べば，
+深度比の対数の滑らかな関数により一様な $C^3$ cutoffs を取れる．
+したがって $m=R$ の closed-corner 構成では，
+各 arm に指定した normal-first 構成を一つの bundle へ組み込める．
+補正の変位と $C^1$ 誤差は $O(R^{-2}+\epsilon/R)$ であり，
+$\epsilon$ が指数的に小さい場合，既存の内在・protected GH 誤差
+$O(\log R/R)$ を変えない．
+実際，同じ softmax domain の射影を用い，補正した parametrization で actual metric を
+引き戻すと，模型との差は引き続き $O(R^{-1})$ である．内在距離の上界には
+同じ模型の square lifts を用いる．Protected 距離の下界では外側領域全体の actual/model
+比較は変わらず，補正した端点からの clipped-depth 誤差は
+$O(R^{-3}+\epsilon/R)$ である．必要な source と像の余裕は，
+$\min\ell_i\ge R$ と $\min\ell_i>R/2$ の間に取れる．
+従って定理\ref{ke:closed-corner-gh}と
+系\ref{ke:closed-corner-protected-gh}の証明を同じ率で適用できる．
+これは同一 triple の局所結果である．
+
+一般の $m_t\to\infty$，$\log m_t=o(R_t)$ に対しても，
+外側境界の cutoffs を $\log(\ell_a/m_t)$ の固定幅で取り，
+定理\ref{ke:slow-cut-closed-corner-gh}の同じ softmax domain に適用できる．
+このとき座標補間を含めた pullback metric の誤差は $O(m_t^{-1})$，
+平均順序の補正は $O(m_t^{-2})$ である．
+Protected 距離の端点誤差には同定理の pruning 定数 $O(R_t^{-1})$ を掛ければよい．
+従って三端の指定を組み込んだ一つの bundle にも
+\eqref{ke:eq:slow-cut-distortion}と同じ局所 distortion 評価が成立する．
+
+系\ref{ke:transition-normal-primitive}により，内側 arm では射影的 neck と
+triple の canonical primitive の差は，残余基底のみに依存する閉形式と
+一価関数の完全微分の和になる．従って円平均後の normal moment は厳密に一致する．
+第二の cycle の period まで零差になるとは限らない．
+全 marked periods を比較するときは実際に同じ primitive を用いる必要がある．
+本節の小さい Hamiltonian の評価には上記の小さい triple primitive を用い，
+neck primitive への置換後にも同じ norm bound があるとは仮定しない．
+また各 end の正則作用が projected neck の作用と一致していても，
+normal trajectories が両側の共通開領域に留まることを確認する必要がある．
+固定残余基底の neck から三重点へ動く collar までの被覆，
+source-inclusive neck と共通の moment interval・開領域の確保と全曲面の距離比較は残る．
+単一 arm の interval と reduced 葉については，以下で実際の評価を与える．
+
+\subsection{Reduced collar の graph による延長}
+
+\begin{lemma}[小さい circle graph の相対延長]
+\label{ke:reduced-collar-graph}
+境界付き曲面 $P$ の互いに素な collars に座標 $(a,\theta)\in J\times S^1$ を取り，
+基準 foliation を $a=\mathrm{const}$ とする．
+共通 moment parameter $\mu\in I$ ごとに指定された end の葉が
+\[
+ a=Q_\mu(c,\theta),\qquad
+ \|Q_\mu(c,\theta)-c\|_{C^1(c,\theta)}\le\varepsilon
+\]
+という graph で，$\mu$ に滑らかに依存するとする．
+開 end germ 上で $1$ となり，少し広い collar に support を持つ cutoff $\chi(c)$ があり，
+$\varepsilon(1+\|\chi'\|_\infty)<1/2$ とする．
+Graph は cutoff の support を含む広い collar 全体で定義されているものとする．
+このとき基準の radial 葉を指定 end germs へ写す $\Diff_0(P)$ の滑らかな族が存在し，
+広い collars の外では恒等である．特にその外の sources と saddle markings を固定できる．
+\end{lemma}
+\begin{proof}
+各 collar で
+\[
+ D_\mu(c,\theta)
+ =\bigl(c+\chi(c)(Q_\mu(c,\theta)-c),\theta\bigr)
+\]
+と定め，外へ恒等写像で延長する．第一成分の $c$ 微分は $1/2$ より大きい．
+また collar の両端近くで恒等であるため，全体は orientation を保つ diffeomorphism である．
+$\chi$ を $s\chi$，$0\le s\le1$ に置き換えれば，支持を保つ isotopy を得る．
+互いに素な collars で同時に行え，parameter $\mu$ にも滑らかである．
+$\chi=1$ の開 collar 上では基準円の像が指定した graph 葉になる．
+\end{proof}
+
+この補題を系\ref{ke:staged-reduced-extension}へ使うには，actual reduction の共通同定と，
+その座標での graph 表示・$C^1$ 評価を確認しなければならない．
+Ambient Moser map が小さいという事実だけを，未指定の reduced 座標での
+一様な graph 評価に読み替えない．一次元 reduced 葉の Lagrangian lift を作ることと，
+第二の action や critical actions をあらかじめ指定した値へ合わせることも区別する．
+
+\begin{proposition}[単一 dominant arm の actual reduced graph]
+\label{ke:single-arm-reduced-graph}
+一つの source-free arm の標準積座標を $\zeta_i\zeta_j\zeta_k=t$ とし，
+\[
+ a=\ell_i,\qquad b=\ell_k,\qquad c=\ell_j=L-a-b,
+ \qquad n=\min(a,c)
+\]
+と書く．固定した $\sigma>0$ と有界区間 $J^+$ に対し，残余 collar を
+\[
+ q=\log(b/b_0)\in J^+,\qquad \theta=\arg\zeta_k,
+ \qquad b_0\longrightarrow\infty
+\]
+で表す．外側領域では $a,c>(1+\sigma)b$ とし，全 phase を含める．
+Normal subgroup を weights $(1,-1,0)$ の $\alpha$，その補完を
+weights $(0,-1,1)$ の $\beta$ とする．
+共通座標に移した actual form と小さい canonical primitive を $\omega=d\lambda$ とし，
+\[
+ \eta=\mathcal A_\alpha\omega,\qquad
+ \kappa=\mathcal A_\beta\eta,\qquad
+ \mu=(\mathcal A_\alpha\lambda)(V_\alpha),\qquad
+ \nu=\mathcal A_\beta\mu
+\]
+と置く．$\psi$ は centered homotopy による第二段の map，すなわち
+$\psi^*\eta=\kappa$，$\mu\circ\psi=\nu$ を満たすものとする．
+
+共通 interval $I$ が与えられ，各 $u\in I$ と各 $q\in J^+$ について
+$\nu=u$ は normal radial line 上に唯一の level を持ち，その level は
+$a,c>(1+2\sigma)b$ の内側に留まると仮定する．
+残余 collar にも固定の正の $q$-幅の余裕を取り，必要な比較が成立する
+外側 arm に全ての level とその一様な $h=g_L^{\rm sf}$ 近傍が含まれるものとする．
+Interval $I$ の存在はこの命題の仮定である．
+
+このとき，大きい $b_0$ について $\eta$ の対応する reductions も
+残余座標 $(q,\theta)$ で同定できる．$\psi$ による reduced map は
+\begin{equation}\label{ke:eq:reduced-arm-map}
+ D_u(q,\theta)=(q+u_0(u,q,\theta),\theta+v_0(u,q,\theta))
+\end{equation}
+と書け，角変位には恒等写像からの一価な実 lift を取れる．
+固定 $u$ での $(q,\theta)$ に関する通常の $C^1$ norm について，$u\in I$ に一様に
+\[
+ \|u_0(u,\cdot)\|_{C^1}\le Cb_0^{-2},\qquad
+ \|v_0(u,\cdot)\|_{C^1}\le Cb_0^{-1}
+\]
+を満たす．従って $\kappa$ の radial circle $q=s$ の像は
+\begin{equation}\label{ke:eq:actual-reduced-circle-graph}
+ q=Q_u(s,\theta),\qquad
+ \|Q_u(s,\theta)-s\|_{C^1(s,\theta)}\le Cb_0^{-2}
+\end{equation}
+という graph である．各族は $u$ に滑らかであるが，
+ここでの $C^1$ norms に無重みの $\partial_u$ は含めない．
+補題\ref{ke:reduced-collar-graph}により，これらの end 葉を固定幅の広い collar 内で
+基準 foliation へ相対的に延長できる．
+\end{proposition}
+
+\begin{proof}
+この固定幅の残余 collar では $b\asymp b_0$ である．
+Full-triple 比較と座標接続の指数評価により，$\omega,\eta,\kappa$ は
+模型から全ての必要な固定階で $O(b_0^{-1})$ 以内にある．
+模型の正規化 chart で最大の normal 深度を従属座標に選ぶと，
+$V_\alpha$ の非零係数は残る normal 深度の逆数と比較可能である．
+Constrained cusp metric と complete model の一様比較および高階 bounds から，
+\begin{equation}\label{ke:eq:normal-weighted-derivatives}
+ \mathfrak a:=|V_\alpha|_h\asymp n^{-1},\qquad
+ |\nabla_h^rV_\alpha|_h\le C_r\mathfrak a,
+ \qquad |\nabla_h^rV_\beta|_h\le C_r b_0^{-1}
+\end{equation}
+を得る．$\mathfrak a$ の対数微分も全ての必要な固定階で一様有界である．
+ここでは $n/b$ の上界を仮定していない．
+
+Centered 第二段 primitive を $\beta_2=K_\beta\eta$ とする．
+$K_\beta\omega_0=0$ と\eqref{ke:eq:normal-weighted-derivatives}により
+$\|\beta_2\|_{C^3(h)}\le Cb_0^{-2}$，第二段の場と flow の $C^2$ 誤差も
+$O(b_0^{-2})$ である．Moment identity の証明で用いた式から
+\[
+ \beta_2(V_\alpha)=\nu-\mu.
+\]
+従って $r\le2$ について
+\begin{equation}\label{ke:eq:weighted-moment-difference}
+ |\nabla_h^r(\mu-\nu)|_h\le C\mathfrak a b_0^{-2}.
+\end{equation}
+Normal moment の勾配が小さい場合に，右辺の $\mathfrak a$ を落としてはならない．
+
+$N=-J_0V_\alpha/\mathfrak a$ と置く．これは残余座標を保つ単位 normal radial 場で，
+その固定階の微分は一様有界である．$\eta,\kappa$ の $J_0$-tame 下界から
+\[
+ d\mu(N)\ge c_1\mathfrak a,\qquad
+ d\nu(N)\ge c_1\mathfrak a,
+ \qquad |\nabla_h^r d\mu|_h+|\nabla_h^r d\nu|_h\le C_r\mathfrak a
+\]
+を得る．$\nu=u$ の点から $N$ に沿って動き，同じ残余座標で $\mu=u$ を解く．
+式\eqref{ke:eq:weighted-moment-difference}と上の単調性により，
+一意な解までの normal 変位は $Cb_0^{-2}$ 以下である．
+正規化した方程式を出発点の $\mathfrak a$ で割れば，normal 微分は一様に正で，
+誤差とその固定 $u$ での tangential 微分は $O(b_0^{-2})$ になる．
+従って通常の陰関数定理の定量的評価は $n$ に依存しない．
+Level の normal 深度が非常に大きくても，$\mathfrak a$ の小ささは分子と分母で相殺される．
+
+使用した tangential bounds を具体的に確認する．
+$a$ を固定して $b$ を動かす $Q_0=\partial_q|_a$ は，
+$b\le c$ と模型比較から $h$-長さと固定階の微分が一様に有界である．
+$\kappa$ level 上の $q$ 方向は
+\[
+ S=Q_0-\frac{d\nu(Q_0)}{d\nu(N)}N
+\]
+で与えられる．上の weighted bounds により，その係数と固定階の微分は
+一様有界である．従って level の $(q,\theta)$ section において
+$|\partial_q|_h\le C$，$|\partial_\theta|_h\le C/b_0$ であり，
+必要な微分も同じ尺度で制御される．$\nu$ は全 torus 不変なので，
+normal phase を固定してこの section を選べる．
+$\eta$ 側では円平均による normal 不変性と先の一意性があり，
+同じ残余座標が reduction を parameter 化する．
+
+$\psi$ は normal 円と可換で，$\mu\circ\psi=\nu$ であるから，
+この二つの reductions の間に写像を誘導する．
+第二段の全 trajectories は固定の arm margin と残余 buffer に留まる．
+その場を $Z_s$ とし，$q$ と角の閉一形式 $d\theta$ を trajectory に沿って積分する．
+$dq$ の固定階の norm は有界，$d\theta$ の固定階の norm は $O(b_0)$ なので，
+\[
+ u_0=\int_0^1dq(Z_s)\circ\psi_s\,ds,
+ \qquad
+ v_0=\int_0^1d\theta(Z_s)\circ\psi_s\,ds
+\]
+はそれぞれ ambient $C^1(h)$ で $O(b_0^{-2})$，$O(b_0^{-1})$ である．
+後者の積分は winding を恒等写像から連続に固定した実 lift である．
+上の level section に制限すると，より具体的には
+\[
+ |\partial_q u_0|\le Cb_0^{-2},\quad
+ |\partial_\theta u_0|\le Cb_0^{-3},\qquad
+ |\partial_q v_0|\le Cb_0^{-1},\quad
+ |\partial_\theta v_0|\le Cb_0^{-2}.
+\]
+角の周期を無視して ambient 変位を通常の角座標へ移していないことに注意する．
+
+大きい $b_0$ では $\theta\mapsto\theta+v_0(u,s,\theta)$ は degree $1$ の
+orientation を保つ円の diffeomorphism である．その逆写像を代入して
+$q=s+u_0(u,s,\theta)$ を書き直せば，
+\eqref{ke:eq:actual-reduced-circle-graph}を得る．
+すべて固定 $u$ の微分評価であり，定数は $u\in I$ に共通である．
+一方，無重みの $\partial_u$ には normal 勾配の逆数が現れ得るので，
+同じ小ささは主張しない．固定 $t\ne0$ での滑らかな parameter 依存は
+非消滅の normal 微分による陰関数定理から従う．
+
+最後に，graph を定義した広い $q$-collar 内で cutoff を選ぶ．
+固定幅なら $\|\chi'\|_\infty$ は一様有界であり，
+補題\ref{ke:reduced-collar-graph}の条件は大きい $b_0$ で満たされる．
+幅 $w_t$ も縮める場合には，少なくとも
+$b_0^{-2}(1+w_t^{-1})\to0$ と，trajectory を収める同じ幅の余裕を別に確認する．
+\end{proof}
+
+本命題は，共通 $\kappa$-moment strip が既に与えられた単一 arm について，
+reduced 葉の小さい graph という入力を actual 解析から検証する．
+三つの end と source-inclusive neck を同時に覆う interval の存在，
+neck 全域の reduction の同定，所定の第二 period と critical actions の一致，
+全曲面の接着と距離比較は結論に含めない．
+
+\begin{proposition}[単一 arm の共通 canonical moment strip]
+\label{ke:arm-common-moment-strip}
+命題\ref{ke:single-arm-reduced-graph}の座標と normal 作用を用い，
+$b\asymp b_0$ の残余 annulus に対して
+\[
+ b_0\longrightarrow\infty,\qquad b_0/L\longrightarrow0
+\]
+とする．固定定数 $K>1+2\sigma$ を取り，normal radial interval を
+\[
+ Kb\le a\le L-(K+1)b
+ \qquad\bigl(c=L-a-b\ge Kb\bigr)
+\]
+とする．全ての座標は内側の正則 plateau arm にあり，
+triple からの小さい primitive を共通に用いる．このとき両端で，
+全角度および残余 annulus に一様に
+\begin{align}
+ \mu|_{a=Kb},\ \nu|_{a=Kb}
+  &=\frac{4\pi}{Kb}
+       +O\!\left(b_0^{-2}+\frac{(b_0/L)^2}{b_0}\right),
+       \label{ke:eq:arm-positive-moment}\\
+ \mu|_{c=Kb},\ \nu|_{c=Kb}
+  &=-\frac{4\pi}{Kb}
+       +O\!\left(b_0^{-2}+\frac{(b_0/L)^2}{b_0}\right).
+       \label{ke:eq:arm-negative-moment}
+\end{align}
+従って，ある $c_*>0$ に対し
+\[
+ I_t=[-c_*/b_0,c_*/b_0]
+\]
+の全ての値は，各残余点において $\nu$ と $\mu$ のそれぞれ唯一の normal level を持つ．
+それらは上の interval の内部にあり，dominant arm の固定比の margin を持つ．
+残余 annulus に固定幅の余裕を取れば，
+命題\ref{ke:single-arm-reduced-graph}の共通 strip の仮定をこの $I_t$ で満たす．
+従ってこの単一 arm では，共通 interval と actual reduced graph の両方が得られる．
+\end{proposition}
+
+\begin{proof}
+$a=Kb$ の端では $(a+b)/L=(K+1)b/L\to0$ であり，$c$ が最大深度である．
+まず座標接続前の共通 triple chart で比較する．
+独立座標を $(\zeta_i,\zeta_k)$ とし，対応する二つの cusp の積を
+$\omega_{\rm prod}$ とする．関連 KE 主稿\cite[
+\texttt{simplex:prop:dominant-product}]{KELocalCurrent}と，
+同稿の系 \texttt{simplex:cor:actual-dominant-product} の
+固定半径正規化 chart 上の全固定階評価により，
+\[
+ \left\|\log\frac{\omega_t^2}{\omega_{\rm prod}^2}\right\|_{C^2}
+ \le C\left(b_0^{-1}+(b_0/L)^2\right)
+\]
+を得る．射影座標へ移した場合も，命題\ref{ke:three-arm-coordinate-interpolation}の
+指数的な $C^q$ 誤差を加えるだけであり，それは $Cb_0^{-1}$ に吸収できる．
+ここで比較しているのは canonical volume potentials であり，
+任意の primitive の差を tensor 比較から結論していない．
+
+新しい logarithmic frame $\Omega_{\log}=d\log\zeta_i\wedge d\log\zeta_k$ に対して
+\[
+ \lambda_{\rm prod}
+ =d^c\log\frac{\omega_{\rm prod}^2}{|\Omega_{\log}|^2}
+ =d^c(-2\log a-2\log b)
+\]
+である．正の定数による volume の規格化は $d^c$ で消える．
+周期 $1$ の $V_\alpha$ は独立座標の $\arg\zeta_i$ を $2\pi$ だけ回すから
+\[
+ \lambda_{\rm prod}(V_\alpha)=\frac{4\pi}{a}.
+\]
+上の volume-potential 差に $d^c$ を施し，
+$|V_\alpha|=O(b_0^{-1})$ を掛ければ，normal moment の誤差は
+\eqref{ke:eq:arm-positive-moment}の率になる．
+
+座標変更後の小さい primitive が，新座標の canonical primitive と
+厳密には異なる点も確認する．正則 plateau で
+$G^*\Omega_{\rm old}=J_G\Omega_{\log}$ と書くと，
+$J_G=1+O(e^{-c b_0})$ は一価な正則対数を持ち，二つの primitive の差は
+$-d\operatorname{Im}\operatorname{Log}J_G$ である．
+この exact 項の normal 円上の平均積分は零である．
+また積模型の表示は全 torus 不変なので，normal 平均，さらに残余平均を取っても
+同じ leading term と誤差が得られる．従って $\mu$，$\nu$ の双方に上の式が成立する．
+射影 neck の canonical moment との比較には
+系\ref{ke:transition-normal-primitive}を使い，加法定数を独立に選び直さない．
+
+$c=Kb$ の端では独立座標を $(\zeta_j,\zeta_k)$ に取り直す．
+Logarithmic frame は符号だけ変わり，absolute volume は同じである．
+$V_\alpha$ の $\arg\zeta_j$ 成分は $-2\pi$ なので，
+同じ計算から\eqref{ke:eq:arm-negative-moment}を得る．
+
+残余 collar 全体で $b\le C_+b_0$ とする．例えば
+$c_*=\pi/(KC_+)$ と固定すれば，十分大きい $b_0$，十分小さい $b_0/L$ に対し，
+正の端の moment は $3c_*/b_0$ 以上，負の端は $-3c_*/b_0$ 以下となる．
+このとき $L>(2K+1)b$ なので normal interval は空でない．
+前命題の $J_0$-tame 評価により，$\mu$，$\nu$ はこの normal radial line に沿って
+狭義単調である．従って中間値の定理から $I_t$ の各値の存在と一意性を得る．
+全 level は $a,c\ge Kb>(1+2\sigma)b$ を満たし，
+外側 $a,c>(1+\sigma)b$ から固定比の余裕がある．
+少し広い残余 annulus でも同じ評価を先に適用し，内側に制限すれば，
+残余方向の正の $h$-buffer も取れる．これで前命題の適用条件を確認した．
+\end{proof}
+
+この interval は三重点の一つの source-free arm に関するものである．
+Source-inclusive neck 側の interval と共通の開領域を選び，
+両側の normal trajectories をそこに収めることは別の接続課題である．
+ここでの単一 arm の証明に exterior の $(\mathrm{TC})_d$ や
+global $(\mathrm{CP})_d+(\mathrm{PBE})_d$ は用いていない．

@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-20 / v1.0: 全閉 triple corner の GH 極限と fiber-preserving relative averaging．
+% 2026-11-21 / v1.1: 全閉 corner の GH 極限，一般の遅い cut と相対 averaging．
 \section{全閉 triple corner の内在的 GH 極限}
 \label{ke:closed-corner-gh-section}
 
@@ -284,6 +284,175 @@ Full complex $\mathcal C_d$ の他の cells を通る経路との比較は，
 本節の regular fibers と既存大域 fibration の singular fibers を同一視しない．
 解析入力の新規性の包括的確認も引き続き必要である．
 \end{remark}
+
+\subsection{任意の遅い深度 cut に対する閉 corner の極限}
+
+Neck の固定 compact exhaustion と接続する際には，三重点の cut を
+$m_t=R_t$ に固定する必要はない．以下では同じ softmax と averaging を用い，
+深度 cut が十分遅く発散する場合にも，射影自体の距離歪みを評価する．
+
+\begin{theorem}[遅い深度 cut による actual closed-corner GH 近似]
+\label{ke:slow-cut-closed-corner-gh}
+本節の固定次数・族・三重点 chart を保ち，$L=-\log|t|^2$，$R=\log L$ とする．
+正数 $m=m_t$ が
+\[
+ m_t\longrightarrow\infty,\qquad \log m_t=o(R_t)
+\]
+を満たすとする．十分小さい $t$ では $L\ge6m$ であり，
+$\mathcal H_{t,m}=\mathcal U_t(H_{L,m})$ を含む開近傍上に，
+定理\ref{ke:triple-moving-fibration}と同じ chain primitive による
+Moser map $\phi_{t,m}$ を構成できる．通常の kernel $1-s$ と
+centered kernel $1/2-s$ のいずれを用いても以下は成立する．
+Softmax projection を $P_{t,m}$ とし，
+\[
+ \mathcal W_{t,J}^{(m)}=\phi_{t,m}(\mathcal H_{t,m}),\qquad
+ \pi_{t,J}^{(m)}=P_{t,m}\circ\phi_{t,m}^{-1},\qquad
+ \mathcal V_{t,m}=\{\min_{a\in J}\ell_a>m/2\}
+\]
+と置く．$R^{-2}g_t$ に関して，$\mathcal W_{t,J}^{(m)}$ 自身の内在長さ距離を
+$d_{t,m}^{\rm int}$，$\mathcal V_{t,m}$ 内の全経路を許す距離の制限を
+$d_{t,m}^{\rm out}$ と書く．$\ast\in\{{\rm int},{\rm out}\}$ の双方について
+\begin{equation}\label{ke:eq:slow-cut-distortion}
+ \sup_{x,y\in\mathcal W_{t,J}^{(m)}}
+ \left|d_{t,m}^{\ast}(x,y)
+   -d_J\bigl(\pi_{t,J}^{(m)}(x),\pi_{t,J}^{(m)}(y)\bigr)\right|
+ \le C\left(\frac1m+\frac{\log(m+1)+\log R}{R}\right)
+\end{equation}
+が成り立つ．定数は固定した次数・族・chart に依存してよいが，$m,t$ には依存しない．
+従って同じ actual Lagrangian bundle の全射な射影が $\mathcal C_J$ への
+GH 近似を与える．全 fiber の非正規化 intrinsic diameter は $C/m$ 以下，
+正規化後は $C/(mR)$ 以下であり，raw target 誤差は
+\[
+ \sup_{w,\vartheta}d_\square\bigl(
+ \Phi_t^{\rm alg}(\phi_{t,m}F_{t,m}(w,\vartheta)),w\bigr)
+ \le C\frac{1+\log(m+1)}R+\frac C{mR}
+\]
+となる．$m_t$ の $t$ に関する連続性や微分可能性は仮定しない．
+\end{theorem}
+
+\begin{proof}
+模型の距離評価で $m=R$ を使った箇所を先に調べる．
+\[
+ B=(m+1)R^4,\qquad
+ \delta=\frac{\log B}{R},\qquad
+ S=R-\log m-\log R
+\]
+と置く．仮定から，十分小さい $t$ で $\delta<1/4$，$S>R/2$ となる．
+Softmax の $r_a=\ell_a-m$，$\lambda_a=r_a/(L-3m)$，
+$\sigma_a=r_a/\ell_a$ を用いる．Square $Q_i$ の独立座標が
+$w_j,w_k\in[\delta,1-\delta]$ を満たすとき，
+命題\ref{ke:triple-hexagon}の深度評価から
+\[
+ r_j,r_k\ge B/6,\qquad \lambda_j,\lambda_k\le B^{-1},\qquad
+ 1-\sigma_j,1-\sigma_k\le6R^{-4}
+\]
+を得る．また $B<L^{1/4}$，$m<B$ なので $mB<L$ であり，
+\[
+ \frac{\ell_j+\ell_k}{L}
+ \le 2m/L+2/B\le4/B\le CR^{-4}.
+\]
+関連 KE 主稿の dominant-product 比較を使うと，この領域で
+$\gamma_t=g_L^{\mathrm{sf}}$ は独立二因子の cusp product と
+相対誤差 $O(R^{-8})$ で一致する．一方，softmax の恒等式
+\[
+ R^{-1}d\log\ell_a
+ =\sigma_a\left(dw_a-\sum_b\lambda_bdw_b\right)
+\]
+は，$a=j,k$ について右辺が
+$dw_a+O(R^{-4})(|dw_j|+|dw_k|)$ であることを示す．
+従って固定位相の内部 square lift は，正規化後に Euclidean 計量と
+相対誤差 $O(R^{-4})$ で一致する．
+同じ恒等式と $\gamma_t\le Ch_t$ から，square 全体の粗い Lipschitz 定数は
+$m,L$ に一様である．
+
+定理\ref{ke:closed-corner-gh}の模型入力と同じ有限 gallery を用いる．
+高々三本の square 内の線分を
+$(u,v)\mapsto(\delta+(1-2\delta)u,\delta+(1-2\delta)v)$
+で内部へ移し，一つの位相で持ち上げる．上の鋭い評価により，その normalized
+length の総和は $(1+CR^{-4})d_J(w,w')$ 以下である．
+各 portal と両端を元の点へ戻す connector の総費用は，粗い評価により
+$C\delta$ 以下である．最後の phase 調整は，$\ell_a\ge m$ と
+$\gamma_t\le Ch_t$ から $C/(mR)$ 以下で済む．
+すべての経路は $\mathcal H_{t,m}$ に留まる．模型の距離も $R^{-2}\gamma_t$ で測り，
+内在距離を $d_{t,m}^{\rm sf,int}$ と書くと，その上界は
+\begin{equation}\label{ke:eq:slow-cut-model-upper}
+ d_{t,m}^{\rm sf,int}(z,z')
+ \le d_J(P_{t,m}(z),P_{t,m}(z'))+C\delta+C/(mR).
+\end{equation}
+
+下界のため，complete simplex 全体で
+\[
+ \Psi_a(\ell)=\left[\frac{\log(\ell_a/m)}S\right]_0^1
+\]
+と定める．$m e^S=L/R$ と $\max_a\ell_a\ge L/3$ より，
+$\Psi$ は $\mathcal C_J$ に値を取る．Active indices は高々二つで，
+各々 $m<\ell_a<L/R$ を満たす．一方向の係数 $1$ の Schwarz 評価と，
+二方向の場合の $(\ell_j+\ell_k)/L\le2/R$ に対する dominant-product 比較から，
+式\eqref{ke:eq:protected-pruning-length}と同じ計算で
+\begin{equation}\label{ke:eq:slow-cut-pruning-length}
+ \operatorname{Length}_{d_J}(\Psi\circ c)
+ \le\frac{\sqrt{1+CR^{-2}}}{S}
+       \operatorname{Length}_{\gamma_t}(c)
+\end{equation}
+を complete model 内の全経路に得る．Clipping level と seams 上も含む．
+$q_a=R^{-1}\log\ell_a\in[0,1]$ とすると，$\mathcal H_{t,m}$ 上で
+\[
+ |\Psi_a-q_a|\le\frac{\log m+\log R}{S},\qquad
+ |q_a-(P_{t,m})_a|\le\frac{C(1+\log(m+1))}{R}.
+\]
+Corner の chord comparison により
+$d_J(\Psi(z),P_{t,m}(z))\le C\delta$ である．
+従って complete model 全体の経路を許す距離の制限についても
+\[
+ \bar d_{t,m}^{\rm sf}(z,z')
+ \ge d_J(P_{t,m}(z),P_{t,m}(z'))-C\delta
+\]
+となる．式\eqref{ke:eq:slow-cut-model-upper}と合わせて，模型の distortion は
+$C\delta+C/(mR)$ 以下，normalized diameter は一様有界である．
+
+Actual form への移送には，全深部 triple 比較を最小深度 $m/2$ で使う．
+式\eqref{ke:eq:full-corner-input}が同じ定数で成立し，さらに
+$|g_t-\gamma_t|_{h_t}\le C/m$ である．
+系\ref{ke:actual-closed-corner}の一次微分の証明では，生成場の評価
+\eqref{ke:eq:full-corner-generator-c1}を $C/m$ に置き換えるだけで
+\[
+ |Y_{t,m,s}|_{h_t}+|\nabla^{h_t}Y_{t,m,s}|_{h_t}\le C/m
+\]
+を得る．内外領域間の $h_t$-buffer は $\log2$ であり，$C/m<\log2$ として
+同じ Moser flow は $\mathcal V_{t,m}$ に留まる．
+補題\ref{ke:closed-corner-moser-metric}の Lie derivative の証明から
+\[
+ (1-C/m)\gamma_t\le\phi_{t,m}^*g_t\le(1+C/m)\gamma_t
+\]
+となる．模型の normalized diameter が一様有界なので，内在距離の追加誤差は
+$C/m$ 以下である．これで\eqref{ke:eq:slow-cut-distortion}の内在版を得る．
+
+Protected 距離の上界は内在版から従う．下界については，
+式\eqref{ke:eq:slow-cut-pruning-length}と Moser trajectory の
+$\gamma_t$-長さ $C/m$ から
+\[
+ d_J(\Psi(\phi_{t,m}z),\Psi(z))\le C/(mS)
+\]
+を得る．また $\mathcal V_{t,m}$ 全体で $g_t\ge(1-C/m)\gamma_t$ なので
+\[
+ d_{t,m}^{\rm out}(x,y)
+ \ge\frac{S\sqrt{1-C/m}}{R\sqrt{1+CR^{-2}}}
+       d_J(\Psi(x),\Psi(y)).
+\]
+この係数と $1$ の差は $O(m^{-1}+\delta)$ であり，端点の誤差は
+$C\delta+C/(mS)$ 以下である．従って protected 版も従う．
+全射性は softmax と Moser embedding から得られる．
+Fiber の intrinsic 径には上の pullback 比較を元の torus 内の経路に適用し，
+raw 誤差には系\ref{ke:closed-corner-fibration}を用いればよい．
+証明では各 $t$ の領域上の微分だけを用い，$m_t$ を $t$ で微分していない．
+\end{proof}
+
+この定理は，固定 compact 領域の列に応じた段階的な対角選択にも適用できる．
+従って neck 側の exhaustion と合わせるために，三重点の cut を任意に遅く
+発散させても，この closed corner の GH 近似は失われない．
+実際の開 overlap 上で作用・reduced 葉・fiber partition を合わせること，
+保護領域の外を通る経路，source・branch・core を含む全域の距離比較は，
+依然として別の証明課題である．
 
 \subsection{次の相対接着への条件}
 

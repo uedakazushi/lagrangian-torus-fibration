@@ -9,11 +9,24 @@
 
 固定 source-free compact 基底上の moving normal strip では、actual 計量で一定の buffer と $O(m_t^{-1})$ の短円を証明した（主稿 `ke:fixed-base-neck-moser`）。$\varphi_t=\log(\omega_t^2/\Omega_{t,d}^{\rm low})$ とし、大域の $\varphi_t\ge-C$ と $dd^c\log\Omega_{t,d}^{\rm low}\ge c\omega_{\rm FS}$ を、正則包含の Chern–Lu 不等式に組み合わせる。最大値原理から $\operatorname{tr}_{\omega_t}\omega_{\rm FS}\le C e^{A\varphi_t}$。固定 pair chart では体積包絡が $\varphi_t\le C$ を与える。入れ子座標間の固定射影幅から actual 球を確保し、局所 Chern–Lu を complete annulus–disc に適用して actual 二側比較を得る。法線深度を $m_t$ から $m_t/2$ に広げ、残余基底にも固定した余裕を取ることで、Moser map の source と像の両方が同じ内側 strip を覆う。
 
-次は residual collar 自体を三重点へ動かす場合の束表示・短円・buffer と、triple action との開 overlap 上の整合である。Source gate の $|x|\asymp |t|^{1/2}$ では固定射影座標の距離下界は法線の rescaling 幅を検出しない。 一方、source 模型 $xy=tz$ の法線円は gate まで残余方向の rank-one 下界と annulus–disc の体積上界で短くなる。正則ベクトル場 $x\partial_x-y\partial_y$ の Bochner 不等式で gate の $O(L_t^{-1})$ 評価を central bidisc に伝播できる（主稿 `ke:source-short-circle`）。固定 shell 上の成分KE収束と cusp 下界を使い、対角選択で十分遅く縮む source 領域に限り、共通 Moser source・像と actual focus–focus germ を構成した（`ke:source-diagonal-moser`）。所定の速さで動く法線境界の下界と、閉じた pinched torus への相対接着は残る。
+次は residual collar 自体を三重点へ動かす場合の束表示・短円・buffer と、triple action との開 overlap 上の整合である。Source gate の $|x|\asymp |t|^{1/2}$ では固定射影座標の距離下界は法線の rescaling 幅を検出しない。 一方、source 模型 $xy=tz$ の法線円は gate まで残余方向の rank-one 下界と annulus–disc の体積上界で短くなる。正則ベクトル場 $x\partial_x-y\partial_y$ の Bochner 不等式で gate の $O(L_t^{-1})$ 評価を central bidisc に伝播できる（主稿 `ke:source-short-circle`）。固定 shell 上の成分KE収束と cusp 下界を使い、対角選択で十分遅く縮む source 領域に限り、共通 Moser source・像と actual focus–focus germ を構成した（`ke:source-diagonal-moser`）。所定の速さで動く法線境界の下界は別問題である。固定残余領域内の閉じた pinched torus は次の共通neckで構成する。
 
 Source と通常 pair の共通化を主稿 `ke:projected-source-normal-form`, `ke:projected-source-neck` で証明した。固定残余基底で射影を保つ正則 Morse 座標 $x'y'=t h_t(p)$ を用いる。capped density と短円評価は $O(t)$ 座標変更で保たれ、固定 shell の対角選択で source を含む一つの actual Moser map を得る。共通 primitive の moment と基底射影の組で商は $I_t\times P$。指定した残余葉の持ち上げから、閉じた一重 pinched torus と saddle fiber が得られる。次の接着課題は三重点側との開 overlap で同じ fiber partition を得ること。
 
-単一三重点での座標比較。二重線の射影座標を $p$、三番目の平面を $p+\alpha x+\beta y=0$ と書くと、局所的に $h=H/(p+\alpha x+\beta y)$ で $H$ は有界な非零 unit である。$|x|+|y|\le c|p|$ で $x=pX,y=pY$ とおくと、$f_t/p^2$ は有界な正則摂動 $O(t/p^3)$ を持つ $XY$ になる。射影Morse変換の証明をこの固定幅の座標に適用して、$a_t=O(t/p^2)$、$S-I=O(t/p^3)$、$h_t/h(p,0,0)=1+O(t/p^3)$ を得る。$xy=th$ と $|h|\asymp1/|p|$ から、例えば $|t/(xp^2)|\lesssim |y/p|$。従って exact triple 座標 $(x,y,1/h)$ と射影からの exact 座標 $(x',y',1/h_t)$ の各比は $1+O((|x|+|y|)/|p|+|t|/|p|^3)$ となる。これは normal 方向が residual より深い領域の比較である。次はこの比の対数に対する正規化座標での微分評価と、積を保つカットオフ補間の後の正値性・共通葉の確認である。
+三重点と射影neckの座標接続の正本は `papers/sections/paper/ke_neck_corner_transition.tex`。全三重点を避ける共通の無限遠超平面内に各二重線の射影補空間を選び、三平面の式 $q_0q_1q_2=tU$ のunitを三乗根で対称に除く。射影Morse変換の後にbase-only gaugeを施すことで、三つの端を同じexact triple chartと比較できる。固定 $\sigma>0$ のarm $\ell_i,\ell_j\ge(1+\sigma)\ell_k$ では、座標比の主枝対数 $e_{ka}$ が全phase・全固定階で $\|e_{ka}\|_{C^q(h)}\le C_{q,\sigma}e^{-c_\sigma m}$ を満たす。深度の相対幅が一定の正規化正則chartでCauchy評価を使い、$L_t$ に依存する微分損失を避ける。
+
+三つの分離したarmで積を保つsmooth補間を行うと、一つのtorus作用が各端の射影neckのnormal circleに厳密に一致する（`ke:three-arm-coordinate-interpolation`）。補間帯では非正則なのでKähler性を主張せず、共通toric模型との小摂動から平均と凸pathのtame symplectic性を証明する。Canonical primitiveの差はbase-only closed formと一価関数のexact differentialに分かれ、normal periodは一致する（`ke:transition-normal-primitive`）。残余cycleのperiodは同じとは限らない。
+
+`papers/sections/paper/ke_relative_corner_patch.tex` はcentered averagingの順序比較を定量化する。模型に近いprimitiveを選ぶと、比較Hamiltonianそのものが $O(e\delta)$ であり、領域の直径を掛けずにcutoffできる。Actual tripleでは $e,\delta=O(m^{-1})$ なので $O(m^{-2})$。三つの端にそれぞれ指定したnormal-first構成を、一つのactual corner bundleへ組み込める。小さいreduced circle graphを固定collarの外で恒等なdiffeomorphismへ延長する明示式も `ke:reduced-collar-graph` に置く。単一armでは、共通moment stripと外側marginを指定すればactual reduced葉のgraph評価も証明した（`ke:single-arm-reduced-graph`）。Normal生成場の長さを $a$ とするとmoment差が $O(a b^{-2})$、normal微分が $\ge ca$ なので、normal深度が極端に大きくても逆係数 $a^{-1}$ の損失は相殺される。Graphの $C^1$ はmomentを固定した残余座標に関するものとし、無重みのmoment微分には同じ一様性を主張しない。Source-inclusive neck全体との共通moment stripと共通被覆は別に確認する。
+
+単一armで必要なmoment区間の存在も `ke:arm-common-moment-strip` で実証した。残余深度 $b\asymp b_0\to\infty$、$b_0/L\to0$ とし、normal端を $\ell_i=Kb$ または $\ell_j=Kb$（固定 $K>1+2\sigma$）に取ると、canonical momentは
+\[
+ \mu,\nu=\pm\frac{4\pi}{Kb}
+ +O\!\left(b_0^{-2}+\frac{(b_0/L)^2}{b_0}\right).
+\]
+従って $I_t=[-c_*/b_0,c_*/b_0]$ の各levelが全残余annulusで一意に存在し、固定比のarm marginを持つ。これはSource-inclusive neck全体との共通区間・共通flow domainの構成とは区別する。
+
+微分評価の障害：単に $\ell_i-\ell_k\to\infty$ では足りない。例えば $f=\zeta_i/\zeta_k$、深度 $(N+\log N,N+\log N,N)$ では $|f|=N^{-1/2}$ だが、cusp単位ベクトルでの微分は $N^{1/2}$ と増大する（`ke:coordinate-czero-obstruction`）。座標比の値が1に近いことを、Moserの正値性に必要な微分小摂動へ読み替えない。
 
 固定残余compactの各座標では、`neck:prop:volume-envelope` から法線方向の積分評価を得た（主稿 `ke:neck-integrated-normal-energy`）。$s=-\log(|u|^2/r^2)$、$d(s)=\min(s,M_t-s)$ とし、周期1生成場の軌道平均エネルギーを $E_t$ とする。$\Omega=du/u\wedge dz$ に対する対数体積の角度平均 $\bar F_t$ は $-2\log d(s)+O(1)$、かつ $E_t=8\pi^2\partial_s^2\bar F_t$。よって $\int_m^{M_t-m}E_t(s,z)\,ds=O(m^{-1})$ が残余点 $z$ に一様に成立する。例外深度の測度は $E_t>A/m^2$ に対し $O(m/A)$ であり、例外集合の位置は $z$ に依存する。
 
@@ -101,6 +114,8 @@ C\bigl((b/\beta)^2+\beta/d_*\bigr)
 Actual/model比較O(1/R)に加え、Moser場のC1評価からmodel計量のLie derivativeを直接抑え、φ_t^*g_t=(1+O(1/R))g_L^sfを得る。保護領域内の全経路を扱うときは、Moser trajectoryのmodel長さO(1/R)とΨのLipschitz定数O(1/R)から、端点誤差d_J(Ψφ_t(z),Ψ(z))=O(R^−2)を用いる。これにより、閉cornerのfibrationの射影そのものがGH approximationになる。
 
 全fiberのintrinsic/ambient diameterはO(1/R)、正規化後はO(1/R²)、raw-map誤差はO(log R/R)。Squareの共通辺と共通頂点でも同じregular T² fiberである。これらを既存大域fibrationのsource・branch・coreのsingular fibersとは同定しない。V_t外を通る全曲面のshortcut、異なるtriple chartの接合、大域相対接着は未解決。新規性の網羅的確認と外部査読・形式証明は未実施。
+
+一般のcut $m_t\to\infty,\ \log m_t=o(R_t)$ についても、同じsoftmaxとMoser mapの射影が局所GH近似になることを `ke:slow-cut-closed-corner-gh` で証明した。内在・protected距離のdistortionは $C[m_t^{-1}+(\log(m_t+1)+\log R_t)/R_t]$、fiberの元の尺度の内在径は $C/m_t$。内部squareを幅 $\delta=(\log(m+1)+4\log R)/R$ だけ縮め、pruningでは $S=R-\log m-\log R$ を使う。$m_t$のparameter微分を使わず、stepwiseな遅いexhaustionにも適用できる。次の構成候補は、各固定残余compactの定数と必要なnormal cutoffを先に選び、その後 $t$ を小さくして共通moment stripを三重点armへ配置することである。実際の共通被覆・葉の一致を証明するまでは大域接着と扱わない。
 
 
 ## 開正方形上のactual KE–Lagrangian collapse

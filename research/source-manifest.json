@@ -1,6 +1,6 @@
 {
   "date": "2026-11-21",
-  "version": "2.2",
+  "version": "2.4",
   "scope": "GitHub mainだけから研究を再開するための現行主要ソース案内。完全なハッシュ台帳ではなく、実在するファイルの参照表。全ファイルの完全な一覧と現在のblob SHAはgit ls-filesおよびGitツリーを正本とする。",
   "primary_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
   "active_sources": [
@@ -95,6 +95,14 @@
     {
       "path": ".vscode/extensions.json",
       "role": "推奨拡張"
+    },
+    {
+      "path": "papers/sections/paper/ke_neck_corner_transition.tex",
+      "role": "三armの座標接続・normal period・tame averaging"
+    },
+    {
+      "path": "papers/sections/paper/ke_relative_corner_patch.tex",
+      "role": "平均順序のHamiltonian相対統合・reduced collars"
     }
   ],
   "source_roots": [
