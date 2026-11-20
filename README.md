@@ -28,7 +28,7 @@ python3 scripts/research_check.py tex
 ## 論文と役割
 | 原稿 | 役割 | 組版の確認範囲 |
 | --- | --- | ---: |
-| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、局所KE収束と大域実現問題（改訂12） | 現行137頁・2026-11-21組版確認 |
+| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、局所KE収束と大域実現問題（改訂13） | 現行137頁・2026-11-21組版確認 |
 | [五次整数接着](papers/quintic-integer-gluing.tex) | 指定K5データの整数条件・高分母支持・未解決の大域接着 | 201頁 |
 | [Meridian surgery](papers/meridian-surgery.tex) | 閉corner circuitsの局所置換の障害 | 18頁 |
 | [TeX研究ノート](papers/research-notes.tex) | 証明素材・残る条件の整理 | 65頁 |
@@ -38,11 +38,11 @@ python3 scripts/research_check.py tex
 
 五次整数アフィン接着では、四rayの完全matching条件等を証明し、高分母の必要支持候補を \(G_{5,14},G_{5,16},G_{5,17}\) の3型・26標識まで絞った。ただし26は実現数ではなく、一般分母の剛性・三高係数の同時非負性や全支持型の大域接着は未解決。
 
-KE退化との関連では、全閉triple cornerのactual局所GH収縮、短normal circleを用いる定量的二段階平均・共通作用周期の管理が主な到達点。固定残余compactでは法線円の深度積分評価と、同じ残余点に沿う係数1・加法誤差 $O(1)$ の動径接続上界を得た。軌道平均エネルギーを使うMoser速度評価と、縮小する実計量の境界距離 $\delta_t$ に対する十分条件 $m_t\delta_t^2\to\infty$ も主稿に追加した。固定 source-free compact 基底では、capped density と Chern–Lu により actual 二側計量比較を得て、moving normal strip での一様buffer、短円 $O(m_t^{-1})$、共通 canonical moment interval を証明した。Source 模型では central bidisc まで生成場の長さ $O(L_t^{-1})$ を得た。**全neckの一様buffer、source・branch・core相対接着、全曲面のGH no-shortcutおよび既存fibrationとの大域的な一様適合性は未証明**。局所KE定理と大域GH収束を混同しない。先行研究の仮定と新規性の未確認点は主原稿序論と[研究ノート](research/notes.md)を参照。
+KE退化との関連では、全閉triple cornerのactual局所GH収縮、短normal circleを用いる定量的二段階平均・共通作用周期の管理が主な到達点。固定残余compactでは法線円の深度積分評価と、同じ残余点に沿う係数1・加法誤差 $O(1)$ の動径接続上界を得た。軌道平均エネルギーを使うMoser速度評価と、縮小する実計量の境界距離 $\delta_t$ に対する十分条件 $m_t\delta_t^2\to\infty$ も主稿に追加した。固定 source-free compact 基底では、capped density と Chern–Lu により actual 二側計量比較を得て、moving normal strip での一様buffer、短円 $O(m_t^{-1})$、共通 canonical moment interval を証明した。Source 模型では中心での生成場の長さ $O(L_t^{-1})$ と、十分遅く縮む領域での actual focus–focus germ を得た。**全neckの一様buffer、source・branch・core相対接着、全曲面のGH no-shortcutおよび既存fibrationとの大域的な一様適合性は未証明**。局所KE定理と大域GH収束を混同しない。先行研究の仮定と新規性の未確認点は主原稿序論と[研究ノート](research/notes.md)を参照。
 
 ## ビルドと再現
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-2026-11-21の改訂12で、静的構成検査とLuaLaTeX組版を実行し、主稿137頁、PDF・SyncTeXの同一出力先、追加した命題・定理の参照解決を確認した。射影計量の最大値原理と入れ子領域の境界距離の証明は独立に点検した。他三稿の頁数は従来記録。今回の整数検算suite、他三稿の組版、既存の全証明の再監査、形式証明、包括的新規性調査は未実施。
+2026-11-21の改訂13で、静的構成検査とLuaLaTeX組版を実行し、主稿137頁、PDF・SyncTeXの同一出力先、追加した命題・定理の参照解決を確認した。射影計量の最大値原理と入れ子領域の境界距離の証明は独立に点検した。他三稿の頁数は従来記録。今回の整数検算suite、他三稿の組版、既存の全証明の再監査、形式証明、包括的新規性調査は未実施。
 
 **再現用パス：** 現行の分割TeXと検算入力は `papers/sections/` 以下を直接参照する。ルートの旧互換性symlink（`paper`, `paper_arithmetic`, `paper_surgery`, `notes`）は不要になり撤去した。構成の静的検査は `python3 verification/verify_repository_layout.py`、数学的な既定検算は `python3 verification/run_current_checks.py`。既存監査JSONの旧相対パスは出典記録として保持する。

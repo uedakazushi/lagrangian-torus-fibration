@@ -627,6 +627,65 @@ $\Delta_{\omega_t}|W|^2=|\nabla^{1,0}W|^2-\operatorname{Ric}(W,\bar W)\ge0$
 移動する normal 境界までの actual buffer，pinched torus の相対模型との
 接着，および source 全体の直径評価は別に必要である．
 
+\begin{corollary}[Source を含む遅い exhaustion 上の actual 円作用]
+\label{ke:source-diagonal-moser}
+上の source chart で固定した十分小さい $b>0$ を取る．
+$r_t\to0$ を十分遅く選べば，$xy=tz$ の飽和集合
+$K_{t,r_t}=\{|x|,|y|\le r_t^2,\ |z|\le b/2\}$ は
+normal Moser map の source と像の双方に含まれる．変位と円軌道像の
+ambient 直径は $O(1/|\log r_t|)$ で，source の固定点は移らない．
+この近傍に actual $\omega_t$ に対する focus--focus germ が得られる．
+\end{corollary}
+
+\begin{proof}
+まず $r$ を固定して $U_{t,r}=\{|x|,|y|<r,\ |z|<b\}$ とする．
+$K_{t,r}$ からの最初の退出が $|z|=b$ で起こる場合，経路は
+例えば $3b/4\le |z|\le b$ の固定 shell を横切る．これは source を避ける
+固定残余 compact に属し，十分小さい $r$ と $t$ で
+定理\ref{ke:fixed-base-neck-moser}の証明中の射影下界（又は局所積比較）が
+$z$ の変位に一定の actual 費用を与える．この shell では元の $z$ 自体が
+source-free pair の残余座標となる．
+
+$|x|=r$ で退出する場合は $r^2\le|x|\le r$ を横切る．
+この shell は $r$ を固定した後に $t\to0$ とすると $(x,z)$ 座標で
+成分 $y=0$ の smooth locus の固定 compact に収束する．
+関連 KE 主稿 \texttt{pair:thm:fixed-end-moment} の証明と同じ
+Song の smooth convergence を用いる．成分 $y=0$ では $x=0$ がこの近傍の
+滑らかな境界 divisor であり，$z=0$ はその成分上で新たな divisor ではない．
+同証明が用いる Rochon--Zhang の cusp 比較により，成分の complete KE 計量は
+ここで $c\,|dx|^2/(|x|^2(\log|x|^2)^2)$ を下から支配する．
+この $c$ は十分小さいすべての固定 $r$ に共通であり，各 $r$ に対し
+$t$ を十分小さくして actual shell でも定数の半分で同じ下界を得る．
+Shell の横断費用は従って一様に正である（深度比 $2$）．
+$y$ も同様である．
+
+よって各固定 $r$ について $|t|$ を十分小さくすれば，$K_{t,r}$ と
+$U_{t,r}$ の境界の間の actual buffer は $r$ に独立な正の定数以上である．
+補題\ref{ke:short-circle-actual-buffer}と系\ref{ke:short-circle-image-buffer}は
+作用の自由性を使わないので，$U_{t,r}$ 上の
+$|V_{\rm src}|=O(1/|\log r|)$ に適用できる．
+必要な比較的 compact な中間領域は，境界を少し内側に動かすか，
+$K_{t,r}$ の十分小さい actual 距離近傍を用いて取れる．
+$r_n\downarrow0$ と，各 $r_n$ に対する閾値 $t_n\downarrow0$ を選び，
+$t_{n+1}<|t|\le t_n$ では $r_t=r_n$ とする．
+これで被覆と変位上界を得る．原点では $V=0$ で Moser の $\beta$ も零なので，
+Moser map は固定点を保つ．
+
+$(x,y)$ は $X_t$ 上の正則座標であり，$dx\wedge dy$ に対する
+対数体積は $dd^c$-primitive を与える．円平均後を $(\eta,\mu)$ とすると，
+$(\mu,\Re z)$ は Poisson 可換である．原点以外では $dz$ が実 rank $2$ を持ち，
+$dz(JV)=0$，$d\mu(JV)=-|V|^2_\eta\ne0$ なので rank は $2$ である．
+原点では円作用の weights $(1,-1)$ により $\eta(0)$ は $(x,y)$ で対角である．
+各複素座標を線形に正規化すると，二次項は非零定数倍を除き
+$(|x|^2-|y|^2,\Re(xy))$ になり，これは focus--focus の二次正規形
+（位相と実線形 symplectic 座標の変更を許す）である．
+Moser map でこの germ を actual form へ移す．
+\end{proof}
+
+この diagonal 選択は所定の $t$ 依存の速さを保証しない．
+大域 fibration の閉じた pinched torus や gate connector を得るには
+外側の foliation との相対接着と接続費用の評価が必要である．
+
 \subsection{残る円の平均と同一 normal moment}
 
 今度は $\rho_{1,s}$ を neck の領域 $U$ 全体に与えた normal 円作用とする．
