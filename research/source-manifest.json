@@ -463,9 +463,9 @@
       "source": "paper/base_topology.tex",
       "destination": "papers/sections/paper/base_topology.tex",
       "source_sha256": "c3d11f4a2b55b4455d1a49bdaa22512b5880473939b6d82ad758543deccb76aa",
-      "sha256": "5f7b2a165e400906570fd92dcc1c56f0980dd7417f6b04dfa2ce4b0a70b92a06",
-      "bytes": 17002,
-      "current_blob_sha": "577c519de6f5f28261eb86e54ec7232d4073530c"
+      "sha256": "42f7ba52dcda4a701d1310af4c5cd69f3c7ab53366f06997d43155268d24157b",
+      "bytes": 21520,
+      "current_blob_sha": "604761885e020b1ee223e8851055b0862747d72b"
     },
     {
       "source": "paper/g5_11_obstruction_v20.tex",
@@ -3313,5 +3313,13 @@
     "local_blocks/focus_curve_blocks_and_obstructions_ja.tex": "papers/threefold-blocks.tex",
     "threefold_v11/threefold_fibration_note.tex": "papers/threefold-fibration.tex"
   },
-  "audit_update_2026_11_20": "Current sha256/bytes and Git blob reflect mathematical additions or repository entrypoint fixes; source_sha256 preserves original Library-bundle provenance. This update does not imply complete independent proof verification."
+  "audit_update_2026_11_20": "Current sha256/bytes and Git blob reflect mathematical additions or repository entrypoint fixes; source_sha256 preserves original Library-bundle provenance. This update does not imply complete independent proof verification.",
+  "current_post_migration_sources": [
+    {
+      "destination": "papers/sections/threefold/local_blocks/trivial_normal_curve.tex",
+      "sha256": "60c3ba7363da115eac9fddaca3c4f60d1b96b49e5a32d8c473392067f5df4f80",
+      "bytes": 15126,
+      "current_blob_sha": "30331dedec7f28f0ec6fc25924d85cf874733f93"
+    }
+  ]
 }
