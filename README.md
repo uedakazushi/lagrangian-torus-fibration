@@ -1,5 +1,8 @@
 # Lagrangian torus fibrations
 
+**2026-11-20 / v1.4：五次の開正方形上でactual KE–Lagrangian collapseを証明。** [主稿](papers/lagrangian-torus-fibration.tex)の `ke:open-cell-collapse` は、関連KE稿の明示barrier＋Savinによるtensor漸近を用い、固定Kη=[η,1−η]²上でfiber intrinsic diameter O(L^−η)、raw-map誤差O(1/R)、内在距離で平坦KηへのGH収束を与える。全曲面のshortcut、全閉corner、singular fibersと既存大域fibrationの接着は未解決。証明・適用条件を点検し、新規性は未確認。現行改訂はLuaLaTeX基本資産不足により未組版。
+
+
 曲面側の第25版ソースを回収し、全文原稿と必要な検証資産を移行した。
 
 | 原稿 | 頁数 | 役割 |

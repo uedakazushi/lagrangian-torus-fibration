@@ -367,9 +367,9 @@
       "source": "paper/geometry_bibliography_v25.tex",
       "destination": "papers/sections/paper/geometry_bibliography_v25.tex",
       "source_sha256": "31caa6116b46ace8c04ca0d86351d38506f7d3b12e835cf66b4bd21abde9ce73",
-      "sha256": "221b23b2badeaa848a136a932314240681cd80fb54634ae5f3d0728508499b59",
-      "bytes": 19085,
-      "current_blob_sha": "a60f9675951a44749cda952758f358b2ed91137a"
+      "sha256": "28cb091239e72e647b69b9952841a1411d307ed761b085d46531fa77713f0a6f",
+      "bytes": 19410,
+      "current_blob_sha": "654dee818925436dc1cfe4ffde21601afbddd057"
     },
     {
       "source": "paper/quintic_monochromatic_support_v11.tex",
@@ -803,9 +803,9 @@
       "source": "paper/geometry_introduction_v25.tex",
       "destination": "papers/sections/paper/geometry_introduction_v25.tex",
       "source_sha256": "383354c4d141117cd75eaed52fdfa7bbd3b5bbbf70ef5fdd85e7f3fd29ec447c",
-      "sha256": "131d7c34d23c1646d156895aeb6c16cc37da4fb06ebb58489cf274b1c4f3a761",
-      "bytes": 42173,
-      "current_blob_sha": "ba75b78d858e7bed6bff090059acbafb2f46b3b5"
+      "sha256": "dc898b3edf6a41d9b8fd2db57b2ea8159329853d27674ca9fbec6f6ba5bb77e2",
+      "bytes": 43295,
+      "current_blob_sha": "329ff716f5f4d2cba1ddbb840c05781829aacd76"
     },
     {
       "source": "paper/quintic_support_frontier_v19.tex",
@@ -3141,10 +3141,10 @@
       "source": "paper/general_type_surface_fibration_paper_ja_v25.tex",
       "destination": "papers/lagrangian-torus-fibration.tex",
       "source_sha256": "8a2c45f5900c0ed367311bdb78e3a83042c96f82601a5055e2975311a3ad2ba0",
-      "sha256": "e4aa332093b952659eaf20e3bdf00c1677372d1d54d317e8664ed679ca6d11c8",
+      "sha256": "20187c20603adc997a5a80698ae588bf66b9c6fe1fcdc97a8adbb1f66449c9e9",
       "changes": "TeX input paths and input search paths only",
-      "bytes": 4001,
-      "current_blob_sha": "8b166ddff6bf6c591fa514f1aa9f55de6044afe9"
+      "bytes": 4398,
+      "current_blob_sha": "f8146b57da2b2fd054d50d3c73907c7cf972af0b"
     },
     {
       "source": "paper_arithmetic/general_type_surface_quintic_arithmetic_paper_ja_v25.tex",
@@ -3319,7 +3319,11 @@
     "local_blocks/focus_curve_blocks_and_obstructions_ja.tex": "papers/threefold-blocks.tex",
     "threefold_v11/threefold_fibration_note.tex": "papers/threefold-fibration.tex"
   },
-  "audit_update_2026_11_20": "Current sha256/bytes and Git blob reflect mathematical additions or repository entrypoint fixes; source_sha256 preserves original Library-bundle provenance. This update does not imply complete independent proof verification.",
+  "audit_update_2026_11_20": {
+    "version": "v1.4",
+    "scope": "Open-cell actual KE tensor asymptotics via explicit volume barriers and Savin; quantitative Lagrangian local GH collapse; corrected product-window and oriented tensor assumptions. Global collapse and singular-fiber gluing remain open.",
+    "verification": "Primary sources, explicit estimates, dependencies and static TeX references checked; revised PDF not compiled because lualatex.fmt and essential TeX assets are absent."
+  },
   "current_post_migration_sources": [
     {
       "destination": "papers/sections/threefold/local_blocks/trivial_normal_curve.tex",
@@ -3344,6 +3348,12 @@
       "sha256": "2972a97b53950eab264605afb76d6929bc3b0637e1f206104d1680c6d55da4b9",
       "bytes": 31250,
       "current_blob_sha": "f1511c76b9404a5209fbe95f48de8ece094a09a4"
+    },
+    {
+      "destination": "papers/sections/paper/ke_open_cell_collapse.tex",
+      "sha256": "d066a2eff1d1eddecc303d4b227ab564195ad8ae36c62dfd451856cb2d8bc54b",
+      "bytes": 17116,
+      "current_blob_sha": "fe94a4ffab2634d4b0b47968b9ee60f6023896cd"
     }
   ]
 }

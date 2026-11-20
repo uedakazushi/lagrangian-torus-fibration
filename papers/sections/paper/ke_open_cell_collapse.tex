@@ -1,0 +1,390 @@
+% !TeX root = ../../lagrangian-torus-fibration.tex
+% 2026-11-20 / v1.0: open square 上の actual KE--Lagrangian collapse．
+\section{Open square 上の actual KE--Lagrangian collapse}
+\label{ke:open-cell-section}
+
+本節では，三重点に対応する一枚の open square の任意の固定 compactum 上で，
+actual 負 KE 計量の収縮を Lagrangian $T^2$ fibers の収縮として実現する．
+解析の入力は，関連 KE 主稿\cite{KECubicalCurrent}の Part~IV，
+定理 \texttt{coarse:thm:moving-triple-tensor} と
+系 \texttt{coarse:cor:open-square-tensor} である．
+これらは五次の全平面退化について，global capped volume 下界と局所上界を合わせ，
+小さい volume discrepancy に対する摂動正則性から，
+以下に記す full-phase moving sector の tensor 近似を与える．
+本節はその解析結果を入力として，Lagrangian 化と局所の GH 収束を導く．
+全閉 corner に対する定義\ref{ke:moving-comparison}の仮定，
+および大域 GH 収束の仮定を検証したことにはならない．
+
+\subsection{解析入力と square の正確な parameter 化}
+
+まず
+\[
+ X_t=\left\{\prod_{r=1}^{5}L_r+tF_5=0\right\}\subset\PP^3
+\]
+を，上記 KE 主稿の五次族および genericity 仮定の下で考える．
+その actual KE form と Riemannian metric を
+$\omega_t$，$g_t=\omega_t(\,\cdot\,,J\,\cdot\,)$ とし，
+$\operatorname{Ric}(\omega_t)=-\omega_t$ と正規化する．
+三重点の label を $J_0=\{i,j,k\}$ とし，補題\ref{ke:unit-removal}の座標で
+\[
+ \zeta_i\zeta_j\zeta_k=t,\qquad
+ \ell_r=-\log|\zeta_r|^2,\qquad
+ L=-\log|t|^2,\qquad R=\log L
+\]
+と書く．以下で $0<\eta<1/2$ は固定し，定数は $\eta$ と固定 chart に依存してよい．
+\[
+ a=\ell_j,\qquad b=\ell_k,\qquad \ell_i=L-a-b
+\]
+を用い，全 phase tori を含む三つの領域を
+\begin{align*}
+ D_t^{\mathrm{out}}
+   &=\left(\tfrac12L^\eta,\,2L^{1-\eta}\right)^2,
+ &\mathcal U_t^{\mathrm{out}}&=\mathcal U_t(D_t^{\mathrm{out}}),\\
+ D_t^{\mathrm{mid}}
+   &=\left(\tfrac34L^\eta,\,\tfrac32L^{1-\eta}\right)^2,
+ &\mathcal U_t^{\mathrm{mid}}&=\mathcal U_t(D_t^{\mathrm{mid}}),\\
+ Q_t&=[L^\eta,L^{1-\eta}]^2,
+ &\mathcal Q_t&=\mathcal U_t(Q_t)
+\end{align*}
+とする．ここでは $(a,b)$ を $\sum\ell_r=L$ の平面の座標とみなした．
+$t$ が十分小さければ $a+b\le4L^{1-\eta}<L/2$ なので，
+これらはすべて固定された正確な積 chart に含まれる．
+背景には $\zeta_j,\zeta_k$ に関する product cusp metric
+\begin{equation}\label{ke:eq:open-product-metric}
+ h_t^{\mathrm{prod}}
+ =\frac{da^2+4d\theta_j^2}{a^2}
+  +\frac{db^2+4d\theta_k^2}{b^2}
+\end{equation}
+を取る．これは torus 不変 Kähler 計量である．
+
+\begin{proposition}[五次の moving-sector tensor 近似：KE 主稿からの入力]
+\label{ke:open-cell-analytic-input}
+上記の五次族では，任意の固定非負整数 $q$ に対して
+\begin{equation}\label{ke:eq:open-tensor-input}
+ \sup_{\mathcal U_t^{\mathrm{out}}}
+ \left|\nabla_{h_t^{\mathrm{prod}}}^{q}
+       (g_t-h_t^{\mathrm{prod}})\right|_{h_t^{\mathrm{prod}}}
+ \le C_{\eta,q}\delta_t,
+ \qquad \delta_t=L^{-\eta/4}
+\end{equation}
+が十分小さい $t\ne0$ に対して成り立つ．
+評価は $\theta_j,\theta_k$ のすべての値について一様である．
+\end{proposition}
+\begin{proof}[出典と本節で使用する範囲]
+\cite[Part~IV, \texttt{coarse:thm:moving-triple-tensor},
+\texttt{coarse:cor:open-square-tensor}]{KECubicalCurrent}
+を，固定した $\eta$ と上記の外側領域に適用する．
+その入力には同稿で五次について証明した global capped volume 下界を含む．
+同稿の \texttt{coarse:lem:small-volume-tensor} は，
+負 KE 計量同士の volume ratio の対数が固定正規化 chart 上で零へ収束するとき，
+小さい摂動の正則性から tensor 近似を導く補題である．
+単に volume ratio が上下に有界であることを tensor 比較に置き換える議論ではない．
+本節の Moser flow の微分評価には $q\le1$ の場合だけを用いる．
+\end{proof}
+
+固定 square とその labelled embedding を
+\[
+ K_\eta=[\eta,1-\eta]^2,\qquad
+ \iota_{ijk}(u,v)=e_i+u e_j+v e_k\in\mathcal C_5
+\]
+と書く．元の torus bundle の parameter 化は
+\begin{equation}\label{ke:eq:open-square-parameter}
+ F_t:K_\eta\times\TT^2\longrightarrow\mathcal Q_t,
+ \qquad a=L^u,\quad b=L^v,
+ \quad\ell_i=L-L^u-L^v
+\end{equation}
+と全 phase により与える．ここで $\theta_j,\theta_k$ は
+$\RR/(2\pi\ZZ)$ の角変数，$\theta_i=\arg t-\theta_j-\theta_k$ である．
+$F_t$ は manifolds with corners の diffeomorphism であり，
+$K_\eta$ の開近傍にも滑らかに延長される．
+
+\subsection{Moser flow の一次微分評価}
+
+定理\ref{ke:short-torus-averaging}は fiber の ambient diameter の評価に
+flow の微分を必要としない．一方，変形した領域の内在距離を比較するには
+一次微分も制御する．次の補題がこの追加部分を与える．
+
+\begin{lemma}[Product sector 上の微分付き Moser estimate]
+\label{ke:open-cell-moser-c1}
+命題\ref{ke:open-cell-analytic-input}の設定で，
+定理\ref{ke:short-torus-averaging}の averaging--Moser flow を
+$\mathcal U_t^{\mathrm{mid}}$ 上に選ぶことができる．
+この flow を $\phi_{t,s}$，$\phi_t=\phi_{t,1}$ と書けば
+\begin{equation}\label{ke:eq:open-moser-c1}
+ \sup_{0\le s\le1}
+ \left(\|Y_{t,s}\|_{h_t^{\mathrm{prod}}}
+       +\|\nabla^{h_t^{\mathrm{prod}}}Y_{t,s}\|_{h_t^{\mathrm{prod}}}\right)
+ \le C e_t,
+ \qquad e_t=16\pi L^{-\eta}
+\end{equation}
+が全外側領域上で成立し，その flow は
+\begin{equation}\label{ke:eq:open-flow-metric}
+ e^{-Ce_t}h_t^{\mathrm{prod}}
+ \le\phi_{t,s}^*h_t^{\mathrm{prod}}
+ \le e^{Ce_t}h_t^{\mathrm{prod}}
+ \quad\text{on }\mathcal U_t^{\mathrm{mid}}
+\end{equation}
+を満たす．特に変位は $O(L^{-\eta})$ であり，
+\begin{equation}\label{ke:eq:open-pullback-metric}
+ (1-C(\delta_t+e_t))h_t^{\mathrm{prod}}
+ \le\phi_t^*g_t
+ \le(1+C(\delta_t+e_t))h_t^{\mathrm{prod}}
+\end{equation}
+となる．
+\end{lemma}
+\begin{proof}
+以下，$h=h_t^{\mathrm{prod}}$ と略す．
+独立角変数の周期 $1$ の生成場は $V_j=2\pi\partial_{\theta_j}$，
+$V_k=2\pi\partial_{\theta_k}$ である．
+従って外側領域上で
+\[
+ |V_j|_h=\frac{4\pi}{a},\qquad
+ |V_k|_h=\frac{4\pi}{b},\qquad
+ \sup|V_j|_h+\sup|V_k|_h\le e_t.
+\]
+さらに product cusp の Levi--Civita 接続について
+\begin{equation}\label{ke:eq:open-generator-c1}
+ |\nabla^hV_r|_h\le C|V_r|_h\qquad(r=j,k)
+\end{equation}
+が成り立つ．実際，一つの因子で $x=\log a$ と置くと
+$h=dx^2+4e^{-2x}d\theta_j^2$ であり，
+正規直交枠 $E=\partial_x$，$G=(e^x/2)\partial_{\theta_j}$ に関して
+\[
+ V_j=4\pi e^{-x}G,\qquad
+ \nabla_EV_j=-4\pi e^{-x}G,\qquad
+ \nabla_GV_j=4\pi e^{-x}E.
+\]
+他の因子方向の微分は零である．これで\eqref{ke:eq:open-generator-c1}を得る．
+
+命題\ref{ke:open-cell-analytic-input}の $q=0,1$ より，
+$t$ を十分小さくすれば $h/2\le g_t\le2h$ であり，
+$|\omega_t|_h+|\nabla^h\omega_t|_h\le C$ となる．
+ここで $h$ は Kähler なので $\nabla^hJ=0$ を用いた．
+定理\ref{ke:short-torus-averaging}の証明と同じ作用素
+\[
+ K_r\xi=\int_0^1(1-s)\rho_{r,s}^*(\iota_{V_r}\xi)\dd s,
+ \qquad H=K_j+\mathcal A_jK_k,
+ \qquad\beta_t=H\omega_t
+\]
+を取る．Torus 作用は $h$ の isometry なので，pullback は
+$\nabla^h$ と可換である．従って
+\[
+ |\nabla^h(\iota_{V_r}\omega_t)|_h
+ \le |\nabla^hV_r|_h|\omega_t|_h
+      +|V_r|_h|\nabla^h\omega_t|_h
+ \le C|V_r|_h
+\]
+から
+\[
+ |\beta_t|_h+|\nabla^h\beta_t|_h\le Ce_t
+\]
+を得る．平均 $\bar\omega_t=\mathcal A_j\mathcal A_k\omega_t$ と
+$\omega_{t,s}=(1-s)\bar\omega_t+s\omega_t$ は，一様な非退化性と
+一次微分 bound を保つ．$\iota_{Y_{t,s}}\omega_{t,s}=\beta_t$ を微分すると
+\[
+ \iota_{\nabla^h_ZY_{t,s}}\omega_{t,s}
+ =\nabla^h_Z\beta_t-\iota_{Y_{t,s}}\nabla^h_Z\omega_{t,s}
+\]
+なので，$|Y_{t,s}|_h\le Ce_t$ と合わせて
+\eqref{ke:eq:open-moser-c1}が従う．
+
+$|d\log a|_h=|d\log b|_h=1$ であるから，
+$\mathcal U_t^{\mathrm{mid}}$ から外側領域の境界までの内在的 $h$-距離は
+少なくとも
+\[
+ \kappa_0=\min\{\log(3/2),\log(4/3)\}=\log(4/3)>0
+\]
+である．$Ce_t<\kappa_0/2$ と取れば，flow の trajectory は
+外側領域に相対コンパクトに留まる．
+補題\ref{ke:negative-exact}が period 条件を与えるので，
+定理\ref{ke:short-torus-averaging}が適用され，
+\[
+ \phi_t^*\omega_t=\bar\omega_t,
+ \qquad \sup_x d_h(x,\phi_{t,s}(x))\le Ce_t
+\]
+となる．
+
+最後に\eqref{ke:eq:open-moser-c1}から
+$|\mathcal L_{Y_{t,s}}h|_h\le Ce_t$ である．
+\[
+ \frac{d}{ds}\phi_{t,s}^*h
+   =\phi_{t,s}^*(\mathcal L_{Y_{t,s}}h)
+\]
+に Gronwall の不等式を適用すると\eqref{ke:eq:open-flow-metric}を得る．
+これと $(1-C\delta_t)h\le g_t\le(1+C\delta_t)h$ を合わせれば
+\eqref{ke:eq:open-pullback-metric}が従う．
+\end{proof}
+
+\subsection{Lagrangian fibers と局所の内在的 GH 極限}
+
+\begin{theorem}[Open square の compactum 上の actual KE--Lagrangian collapse]
+\label{ke:open-cell-collapse}
+上記の五次族と固定 $0<\eta<1/2$ に対し，十分小さい $t\ne0$ で
+\[
+ F_t^{\mathrm{Lag}}=\phi_t\circ F_t,
+ \qquad \mathcal W_{t,\eta}=F_t^{\mathrm{Lag}}(K_\eta\times\TT^2),
+ \qquad
+ \pi_{t,\eta}=\operatorname{pr}_{K_\eta}\circ(F_t^{\mathrm{Lag}})^{-1}
+\]
+と置く．すると以下が成り立つ．
+\begin{enumerate}
+\item
+$\pi_{t,\eta}:\mathcal W_{t,\eta}\to K_\eta$ は全 fibers が
+actual $\omega_t$-Lagrangian $T^2$ である proper fibration であり，
+$K_\eta$ の開近傍上の滑らかな fibration に延長される．
+特に $K_\eta$ の辺と角はこの局所 fibration の singular values ではない．
+元の phase torus からの $h_t^{\mathrm{prod}}$-変位と，
+各 fiber の ambient $g_t$-diameter はともに $O_\eta(L^{-\eta})$ である．
+さらに各 fiber 自身の誘導計量に関する intrinsic diameter も
+$O_\eta(L^{-\eta})$ である．
+
+\item
+節\ref{ke:fiber-compatibility}の raw map と固定 retraction による
+$\Phi_t^{\mathrm{alg}}$ に対して
+\begin{equation}\label{ke:eq:open-raw-compatibility}
+ \sup_{x\in\mathcal W_{t,\eta}}
+ d_\square\left(\Phi_t^{\mathrm{alg}}(x),
+               \iota_{ijk}(\pi_{t,\eta}(x))\right)
+ \le\frac{C_\eta}{R}
+\end{equation}
+が成り立つ．
+
+\item
+$d_{t,\eta}^{\mathrm{int}}$ を，$\mathcal W_{t,\eta}$ 内に留まる
+piecewise smooth curves の $R^{-2}g_t$-長さの下限で定義する内在距離とする．
+このとき
+\begin{equation}\label{ke:eq:open-gh-distortion}
+ \sup_{x,y\in\mathcal W_{t,\eta}}
+ \left|d_{t,\eta}^{\mathrm{int}}(x,y)
+       -|\pi_{t,\eta}(x)-\pi_{t,\eta}(y)|_{\RR^2}\right|
+ \le C_\eta\left(L^{-\eta/4}+\frac{L^{-\eta}}R\right).
+\end{equation}
+従って $\pi_{t,\eta}$ は右辺を誤差とする全射 GH approximation であり，
+\begin{equation}\label{ke:eq:open-gh-limit}
+ (\mathcal W_{t,\eta},d_{t,\eta}^{\mathrm{int}})
+ \xrightarrow[t\to0]{\mathrm{GH}}
+ (K_\eta,|\,\cdot\,|_{\RR^2}).
+\end{equation}
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+補題\ref{ke:open-cell-moser-c1}と
+定理\ref{ke:short-torus-averaging}を用いる．
+元の全 phase tori は $\bar\omega_t$-Lagrangian なので，
+$\phi_t^*\omega_t=\bar\omega_t$ より像の全 fibers が
+$\omega_t$-Lagrangian となる．
+$\mathcal Q_t\Subset\mathcal U_t^{\mathrm{mid}}$ なので，
+この構成は closed rectangle に制限する前から開近傍上に定義されている．
+変位と ambient diameter は既存定理から従う．
+また $Q_t$ 上の元の fiber は平坦な矩形 torus であり，その intrinsic
+$h_t^{\mathrm{prod}}$-diameter は
+\[
+ 2\pi\sqrt{a^{-2}+b^{-2}}\le2\pi\sqrt2 L^{-\eta}
+\]
+である．\eqref{ke:eq:open-pullback-metric}を fiber の接束へ制限すれば，
+変形後の fiber 自身の intrinsic diameter にも同じ次数の上界を得る．
+
+Raw map の比較を示す．
+\eqref{ke:eq:capped-depth}によれば，$Q_t$ 上で
+\begin{align*}
+ \alpha_{i,t}&=L/2+A_0+O(1),\\
+ \alpha_{j,t}&=a+A_0+O(1),
+ &\alpha_{k,t}&=b+A_0+O(1).
+\end{align*}
+実際，$\ell_i\ge L/2$ であり，$a,b\le L^{1-\eta}<L/2$ である．
+Inactive labels の $\alpha_{r,t}$ は正の定数の範囲にある．従って
+\begin{equation}\label{ke:eq:open-raw-before-flow}
+ \sup_{(u,v),\vartheta}
+ \left|q_t(F_t(u,v,\vartheta))-(e_i+u e_j+v e_k)\right|
+ \le C_\eta/R.
+\end{equation}
+ここで active coordinates のうち，$i$ の誤差は
+$-(\log2)/R+O((LR)^{-1})$，$j,k$ の誤差は $O((L^\eta R)^{-1})$ である．
+
+Flow に沿った誤差も評価できる．
+\eqref{ke:eq:cusp-model}の constrained cusp metric を $h_t^{\mathrm{tri}}$ と書くと
+\[
+ h_t^{\mathrm{tri}}
+ =h_t^{\mathrm{prod}}
+  +\frac{(da+db)^2+4(d\theta_j+d\theta_k)^2}{(L-a-b)^2}.
+\]
+外側領域では Cauchy--Schwarz の不等式から
+\begin{equation}\label{ke:eq:open-two-models}
+ h_t^{\mathrm{prod}}
+ \le h_t^{\mathrm{tri}}
+ \le(1+C_\eta L^{-2\eta})h_t^{\mathrm{prod}}.
+\end{equation}
+従って補題\ref{ke:raw-lipschitz}により
+$\|dq_t\|_{h_t^{\mathrm{prod}}}\le C_\eta/R$ であり，
+\[
+ |q_t(\phi_t(z))-q_t(z)|\le C_\eta e_t/R.
+\]
+これを\eqref{ke:eq:open-raw-before-flow}に加え，固定 retraction $\Pi$ の
+Lipschitz 性を用いれば\eqref{ke:eq:open-raw-compatibility}を得る．
+
+次に距離を調べる．$F_t$ による引戻しでは
+\begin{equation}\label{ke:eq:open-scaled-product}
+ R^{-2}F_t^*h_t^{\mathrm{prod}}
+ =du^2+dv^2
+  +\frac4{R^2}\left(L^{-2u}d\theta_j^2+L^{-2v}d\theta_k^2\right).
+\end{equation}
+この計量が $K_\eta\times\TT^2$ 上に定める内在距離を $d_t^0$ と書く．
+任意の曲線の長さはその基底への射影の Euclidean 長さ以上なので
+\[
+ d_t^0((w,\vartheta),(w',\vartheta'))\ge|w-w'|.
+\]
+逆向きには，$K_\eta$ 内の直線分を phase を固定して持ち上げ，
+その終点の fiber 内で最短経路を加える．$K_\eta$ の凸性と fiber diameter から
+\begin{equation}\label{ke:eq:open-model-distance}
+ |w-w'|
+ \le d_t^0((w,\vartheta),(w',\vartheta'))
+ \le |w-w'|+\frac{2\pi\sqrt2 L^{-\eta}}R
+\end{equation}
+となる．ここで用いた全経路は $K_\eta\times\TT^2$ 内に留まる．
+
+\eqref{ke:eq:open-pullback-metric}を $F_t$ で引き戻すと，
+$\varepsilon_t=C_\eta(\delta_t+e_t)\to0$ に対して，対応する内在距離も
+\[
+ (1-\varepsilon_t)^{1/2}d_t^0
+ \le (F_t^{\mathrm{Lag}})^*d_{t,\eta}^{\mathrm{int}}
+ \le (1+\varepsilon_t)^{1/2}d_t^0
+\]
+を満たす．\eqref{ke:eq:open-model-distance}により $d_t^0$ の diameter は一様有界である．
+$e_t=O(L^{-\eta})=O(\delta_t)$ を用いれば
+\eqref{ke:eq:open-gh-distortion}を得る．
+$\pi_{t,\eta}$ は全射であるからその graph は correspondence となり，
+同じ誤差による GH 距離の上界，従って\eqref{ke:eq:open-gh-limit}が従う．
+\end{proof}
+
+\begin{remark}[距離と適用範囲の区別]
+\label{ke:open-cell-scope}
+\eqref{ke:eq:open-gh-limit}は，Moser 像の closed rectangle
+$\mathcal W_{t,\eta}$ に内在距離を入れた局所結果である．
+全体 $X_t$ の距離を $\mathcal W_{t,\eta}$ に制限した距離は，
+領域の外へ出る経路を許すため，これより小さくなり得る．
+その shortcut を排除する大域評価は本節では証明していない．
+従って本定理から，$X_t$ 全体の GH 極限，あるいは
+本稿の既存の大域 fibration の全 fibers による GH 収縮はまだ従わない．
+
+また $\eta$ は固定であり，constants は $\eta\downarrow0$ に対して一様とは主張しない．
+Square の境界，異なる distinguished component の領域の接合，
+source・branch・core の singular fibers の計量評価，
+および大域 fibration への相対接着は未解決である．
+本定理は $\omega_t$-Lagrangian 性を結論し，special Lagrangian 性や
+Hamiltonian-minimal 性を課していない．
+Averaging--Moser の先行研究は節\ref{ke:fiber-compatibility}のとおりであり，
+本節の定量的系を含む新規性の包括的確認は未完了である．
+\end{remark}
+
+\begin{remark}[固定した一般次数への条件付き拡張]
+\label{ke:open-cell-general-degree}
+固定 $d\ge5$ の全平面退化にも，三重点 chart，period の消滅，
+Moser flow の評価，raw map の比較，および内在距離の議論はそのまま適用される．
+したがって，その次数で命題\ref{ke:open-cell-analytic-input}と同じ
+full-phase moving-sector estimate を得れば，
+$\mathcal C_5$ を $\mathcal C_d$ に替えた同じ結論が成立する．
+KE 主稿で用いる六つの局所型に対する global capped volume 下界を，
+同じ正規化と $t$ に一様な定数でその次数にも証明することが，
+この解析入力を得るための追加課題である．
+本節ではその一般次数の下界を検証しておらず，無条件の actual 適用は五次に限る．
+\end{remark}

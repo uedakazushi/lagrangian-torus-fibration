@@ -1,7 +1,14 @@
 # 研究ノートの入口
-更新：2026-11-20 / v1.3
+更新：2026-11-20 / v1.4
 
 詳細な現行ノートは `papers/research-notes.tex`（曲面第25版、65頁）に移行した。証明を短い要約で置き換えない。
+
+## 開正方形上のactual KE–Lagrangian collapse
+主稿の `papers/sections/paper/ke_open_cell_collapse.tex` に、五次族のactual KE計量に対する局所結果を加えた。関連KE主稿 `coarse:cor:open-square-tensor` は、三重点独立深度 a,b∈[L^η/2,2L^(1−η)]、0<η<1/2 上のproduct-cusp比較を全固定階で O(L^(−η/4)) と証明する。依存するのは既存のglobal capped volume下界と、明示的な上下KE barriers、Savin (2007), Theorem 1.3であり、(TC)_5や(PBE)_5を追加仮定しない。
+
+`ke:open-cell-moser-c1` は平均化のprimitiveとMoser場のC1 normをO(L^−η)とし、flowのpullback metricを制御する。`ke:open-cell-collapse` はKη=[η,1−η]²上のactual KE–Lagrangian T² fibrationを構成し、fiberのintrinsic/ambient diameter O(L^−η)、raw mapとの誤差O(1/R)を与える。Moser像領域に内在長さ距離を入れると、R^−2 g_tは平坦KηへGH収束し、projection distortionはO(L^(−η/4)+L^−η/R)。これらの証明と一次資料の適用条件を今回点検した。一般的新規性は未確認。
+
+これは固定ηの局所定理である。曲面全体のambient shortcut、η→0での一様性、全閉corner、source・branch・coreのsingular fibersとの接着、既存の大域fibrationとの同定は未解決。一般次数d≥5への適用には対応するglobal capped volume下界を明示的に確認する必要がある。
 
 ## 負KE計量のGH極限とfiber収縮（2026-11-20）
 

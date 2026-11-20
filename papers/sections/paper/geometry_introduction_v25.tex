@@ -555,6 +555,20 @@ raw logarithmic-depth map との誤差 $O((1+\log m_t)/R_t)$ を与える．
 （命題\ref{ke:fixed-simplex-scale}）．
 残る課題は，この解析的比較と，異なる三重点・source・branch・core にわたる相対接着である．
 
+
+五次族の開いた二次元セル上では，この解析入力の一部を検証できる．
+関連 KE 原稿\cite{KECubicalCurrent} の \texttt{coarse:cor:open-square-tensor} は，
+三重点の独立深度 $a,b\in[\tfrac12L_t^\eta,2L_t^{1-\eta}]$，$0<\eta<1/2$ において，
+actual metric と product-cusp metric の全固定階の差を $O(L_t^{-\eta/4})$ と評価する．
+証明では大域体積下界を境界条件として明示的な負 KE 下 barrier を用い，
+complete annulus の上 barrier と合わせて volume ratio を $1$ に近づけ，
+Savin\cite[Theorem~1.3]{SavinSmall} の小摂動正則性から tensor 比較を得る．
+本稿の定理\ref{ke:open-cell-collapse}はこれを用い，
+$[\eta,1-\eta]^2$ 上の actual KE--Lagrangian torus fibers の intrinsic diameter を
+$O(L_t^{-\eta})$ とし，Moser 像領域の内在距離について平坦長方形への GH 収束を証明する．
+全曲面内の ambient distance は領域外の近道を許すため，この局所定理だけから
+大域 GH 収束や既存 fibration の全 fibers に関する収縮を結論しない．
+
 \subsection{他の tropical 構造との比較と残る問題}
 
 Cartwright の tropical complex は，退化の dual complex に intersection numbers を加えて，
