@@ -1,46 +1,15 @@
-# 移行範囲と検証
+# 現行ソースの由来と再現範囲
 
-2026-11-20。Libraryから曲面第25版のhandoff ZIP、三次元第9版166頁PDF、旧曲面第4版ZIPを取得した。元Libraryは変更・削除しない。
+2026-11-21 / v2.2。複素次元2の正本は本repoの `main`。研究再開は `00_research_plan.md` → `AGENTS.md` → `research/ke-dependencies.md` → `research/notes.md` → 主原稿から行い、過去のLibrary bundle、旧リポジトリ名、旧会話の取得を前提にしない。
 
-## 原資料と配置
+現行主原稿 `papers/surface-lagrangian-torus-fibration.tex` は日本語LuaLaTeXの本文を持ち、分割節は `papers/sections/paper/`、五次整数接着は `papers/sections/paper_arithmetic/`、meridianは `papers/sections/paper_surgery/`、TeXノートは `papers/sections/notes/` を利用する。ルートの旧互換性symlinkは存在しない。必要な検証コードと結果の正本は `verification/`。源流である2026-10-28のLibrary資料の識別子は `research/source-manifest.json` に残すが、現在のファイルや状態はその旧記録のハッシュではなくGitのmainと `research/validation.json` で確認する。
 
-第25版の4本の現行TeX（幾何、整数接着、meridian置換、研究ノート）をpapers/直下の全文主原稿にし、移行時にはinput先と探索パスを変更した。その後の基底の位相比較と研究再開先の修正があるため、`source-manifest.json` では `source_sha256`（元資料）と `sha256`（現行）を分ける。必要な分割ソースと過去の検証器・証明書が参照する証明をpapers/sections/へ保持した。ソース対応とhashはsource-manifest.json。原稿・証明のバイト一致と、主原稿のinputパス変換を区別する。
+複素次元3の局所稿・大域稿・全分割節・図・専用検証資産は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) が正本。本repoに旧三次元作業のログや組版報告を現行成果として重複させない。
 
-現行の検算コードは `papers/sections/paper/`、`papers/sections/paper_arithmetic/`、`papers/sections/paper_surgery/`、`papers/sections/notes/` を直接参照する。互換性用のルートsymlink四つは不要になったため撤去した。保存済みの旧監査JSONや `source-manifest.json` の `source` 欄には当時の `paper/` 等の相対パスとSHA-256が残るが、これは出典記録であり、現行実行パスではない。旧監査スクリプトで記録済みコードSHA-256を比較するときは、参照文字列のみを元へ戻した内容のハッシュを `verification/audits/_legacy_provenance.py` で照合する。数学的処理の変更を許容するものではない。移行前の旧TeXのうち、現行原稿と保存した検証器・証明書から参照されない6断片は持ち込まなかった。元資料は手元にも残している。
-
-
-## 照合と未了事項
-
-旧曲面v4はneck・relative compactification・actual component filling・transport・base homologyを含み、v25のrelative_compactification.tex、neck_models.tex、global_gluing.tex、base_topology.texが現在の詳細な対応先である。旧稿の全補題を逐一比較した網羅的保存監査は未了。
-
-
-## 今回の検証
-
-LuaLaTeXで幾何96頁、整数接着201頁、局所置換18頁、ノート65頁を生成し、当時の三次元要約も組版した。PDF/SyncTeXはbuild/。最終logに未解決参照・引用やoverfull/underfull boxがないことを確認した。フォント置換警告は残る。各原稿の冒頭・中間・末尾頁を画像化して目視確認した。VS Code UIは未検証。
-
-`python3 verification/run_current_checks.py`で第25版の五主検算と五独立監査を実行し全てexit 0。比例軸端点の有限再構成は既定s≤400、退化面の固定b検査は既定b=2,…,20。無上界の恒等式検査・係数証明と有限走査を区別する。詳細出力はbuild/migration-checks/。全113 scriptsの再実行や、外部査読・形式証明は行っていない。
-
-今回の全主原稿の最終logに未解決参照・引用とoverfull/underfull boxはなし。各原稿の冒頭・中間・末尾を描画して確認した。全頁の目視監査は未実施。フォント置換・scale・PDF bookmarkの数式警告は残る。VS Codeは主原稿だけをroot候補とする設定を検査したがUI操作は未検証。
-
-## 三次元継続用bundle第10版
-
-[2026-10-28版の原資料](https://chatgpt.com/space/file/libfile_47c5d4044694819192c28e687c95557f)から局所稿第9版と全体稿第11稿を全文移行した。共通の証明・図・コードは `papers/sections/threefold/` に置いた。組版の参照パスを調整し、図はPNGで収録した。旧原稿PDFをGitの現行ツリーから削除した。
-
-元bundleの検算15本はすべて成功した。うち三次元13本は `python3 verification/run_threefold_checks.py` で再実行できる。
-
-LuaLaTeXで局所稿166頁・全体稿187頁を生成し、最終ログで未解決の参照・引用がないことを確認した。
-
-## 曲面v4の検算の回収
-
-三次元研究継続用bundle第10版の `surface_v4/` を照合した。相対Moserと輸送の現行の参照先は `papers/sections/paper/global_gluing.tex`、整数鎖収縮と六次のPetersenリンクは `base_topology.tex`。旧稿の具体例を再現する二つの検算コードは `verification/surface_v4/` に収録した。五次の50節点・交点回避・面積・境界の検算と、次数5–12の構成データの検算が正常終了した。
-
-再実行するには、リポジトリ直下から以下を実行する。
-
+組版・検査：
 ```sh
-mkdir -p build/surface-v4-checks
-cp verification/surface_v4/*.py build/surface-v4-checks/
-python3 build/surface-v4-checks/verify_data.py
-python3 build/surface-v4-checks/verify_general_degree.py
+python3 scripts/research_check.py preflight
+python3 scripts/research_check.py static
+python3 scripts/research_check.py tex
 ```
-
-旧曲面稿の全証明の逐条照合は継続課題。
+整数接着の変更を確認するときは `python3 scripts/research_check.py arithmetic`。LuaLaTeX、latexmk、LuaTeX-ja、日本語フォント、TikZ等に依存し、PDF/SyncTeXは追跡しない `build/` へ出力。現在の達成状況、未解決・確認済み範囲は `research/validation.json` と研究方針を参照する。Libraryの元資料は削除しない。

@@ -1,233 +1,64 @@
 {
   "date": "2026-11-21",
-  "version": "1.9",
-  "scope": "Current verification status. Mathematical proof, independent reading, finite algebra, typesetting, publication novelty and repository saving are distinct.",
-  "engine": "LuaHBTeX 1.18.0 / TeX Live 2025/dev/Debian; user-local TeX packages and HaranoAji fonts",
-  "manuscripts": [
-    {
-      "source": "papers/threefold-blocks.tex",
-      "revision": 11,
+  "version": "2.2",
+  "scope": "複素次元2の現行研究状態。旧三次元稿の組版・監査記録ではない。数学的な証明と、その再監査、組版、整数計算、GitHub保存、Cloudタスク起動を区別する。",
+  "priority": "P0: actual負Kähler–Einstein形式での大域Lagrangian torus fibrationの射影 p_T∘π_t が、各固定 d≥5 の全曲面ambient距離に関する正規化GH近似を与えること。",
+  "priority_status": "open",
+  "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
+  "mathematics": {
+    "documented_local_results": [
+      "全閉triple cornerでの局所actual KE–Lagrangian GH比較",
+      "二段階平均・共通normal circleと作用周期・短円からのMoser buffer補題",
+      "分岐基底とcubical候補のcell-like収縮"
+    ],
+    "not_proved": [
+      "moving neck全域のactual短円とsource/image buffer",
+      "複数triple endのreduced foliationと全marked periodの同時整合",
+      "source/branch/coreへのactual KE相対接着と全域接続",
+      "全曲面ambient距離でのno-shortcut、square lifts、portal connectors",
+      "KE側のCP/PBE（および必要時のTC5）の対象族での証明、またはそれらの直接評価による代替",
+      "一般次数のP0達成に必要な全証明と先行研究の独立点検"
+    ],
+    "scope_warning": "原稿に証明が書かれていることを、今回全定理を独立に再検証したことと混同しない。"
+  },
+  "reproduction": {
+    "repository_tree": "main（現行Gitツリーで旧ルートsymlinkなし、主要ソースと入力参照の存在を確認）",
+    "source_layout": "papers/sections以下を直接参照。旧パスは現行実行に不要。",
+    "static_command": "python3 scripts/research_check.py static",
+    "build_command": "python3 scripts/research_check.py tex",
+    "arithmetic_command": "python3 scripts/research_check.py arithmetic",
+    "latest_reported_main_build": {
       "date": "2026-11-21",
-      "status": "built and selected new-section pages visually reviewed",
-      "pages": 190,
-      "source_sha256": "f5c88d9c1c6e482ae232ec7d5999593f2ba06f14aaefd4707a80e51d1c698414",
-      "pdf_sha256": "cd9fbd10c96429040ead3575f309b5cfb725d843b9d6aed93ab5eb210a125a52",
-      "pdf_tracked": false,
-      "synctex_generated": true,
-      "unresolved_references_or_citations": false,
-      "overfull_boxes": [
-        "Inherited 2.26894pt in exceptional_membranes.tex, lines 39-41; none in the new section."
-      ],
-      "visual_pages": [
-        173,
-        175,
-        176,
-        179,
-        180,
-        182,
-        183
-      ]
+      "revision": 9,
+      "pages": 132,
+      "pdf_and_synctex": true,
+      "refs_citations_checked": true,
+      "source": "更新作業時の検証記録。今回の監査では組版を再実行していない。"
     },
-    {
-      "source": "papers/threefold-fibration.tex",
-      "revision": 13,
+    "this_audit": {
       "date": "2026-11-21",
-      "status": "built and selected new-section pages visually reviewed",
-      "pages": 211,
-      "source_sha256": "894cc49b01fb2528606700b26e70cdcb74a3aa3cfc196f94c89776cddc97b331",
-      "pdf_sha256": "93f5761af91515f566df3d281fd739d3d7e3df1c4d2d0edaebdb0ffa8cc0fc38",
-      "pdf_tracked": false,
-      "synctex_generated": true,
-      "unresolved_references_or_citations": false,
-      "overfull_boxes": [
-        "Inherited 2.26894pt in exceptional_membranes.tex, lines 39-41; none in the new section."
-      ],
-      "visual_pages": [
-        192
-      ]
+      "scope": "GitHubからのファイル・パス・研究指示・外部定理の参照確認",
+      "reexecuted_build": false,
+      "reexecuted_python_suite": false
     }
-  ],
-  "unchanged_manuscripts": [
-    {
-      "source": "papers/lagrangian-torus-fibration.tex",
-      "revision": 8,
-      "pages": 130,
-      "status": "Prior successful build record retained; not modified or rebuilt in this continuation."
-    },
-    {
-      "source": "papers/meridian-surgery.tex",
-      "pages": 18,
-      "status": "Prior successful build record retained; not rebuilt in this continuation."
-    },
-    {
-      "source": "papers/quintic-integer-gluing.tex",
-      "pages": 201,
-      "status": "Prior successful build record retained; not rebuilt in this continuation."
-    },
-    {
-      "source": "papers/research-notes.tex",
-      "pages": 65,
-      "status": "Prior successful build record retained; not rebuilt in this continuation."
-    }
-  ],
-  "current_mathematical_review": {
-    "proof_source": "papers/sections/threefold/local_blocks/focus_relative_filling.tex",
-    "independently_read": [
-      "Relative toric outer completion fixing the whole inner focus block and its neighborhood",
-      "Persistence of the elliptic half-space base germ for a compact-to-Hausdorff whole-fiber extension",
-      "Round handle and reversed attaching homotopy class; relative pushout under V0 and cofiber",
-      "Minimal product relative handle counts and the two-direction Weinstein obstruction",
-      "Normal relative crossed module, vanishing central extension class, relative Hurewicz action quotient and second-difference formula",
-      "Global relative disk central extension, curve relation and degree quotient",
-      "Normal Maslov marking and clean Lagrangian disk obstruction"
-    ],
-    "additional_direct_calculation": "Punctured-curve relative Kunneth formula; the side boundary is not included in the relative subspace.",
-    "prior_results_retained": "Actual focus exterior boundary maps, equivariant pi2, cyclic-cover H2 and surface short-circle averaging retain their existing proofs and prior independent-reading records. They were not all re-audited in this continuation.",
-    "unresolved": [
-      "Boundary-free global Lagrangian fibration of X_d",
-      "V0-side fibration and modification of internal elliptic neighborhoods",
-      "Full t action on individual curve-disk lifts and smooth attaching framings",
-      "Whole-fiber, action-period and coorientation compatibility on the new side boundaries after cutting C"
-    ],
-    "formal_proof_assistant": false,
-    "external_peer_review": false,
-    "comprehensive_novelty_verification": false
   },
-  "current_computational_check": {
-    "command": "python3 verification/verify_focus_relative_models.py --json",
-    "arithmetic": "exact integer; Python standard library only",
-    "laurent_boundary": {
-      "boundary_convention": "(a,b)=(f'(1),f(1)); tau acts by (a+b,b)",
-      "coefficient_values": [
-        -1,
-        0,
-        1
-      ],
-      "deck_action_checks": 1701,
-      "deck_power_range": [
-        -3,
-        3
-      ],
-      "exact_divisions_after_canonical_remainder": 243,
-      "exponent_range": [
-        -2,
-        2
-      ],
-      "kernel_samples": 7,
-      "samples_checked": 243
-    },
-    "not_checked": [
-      "round-handle decomposition or attaching framings",
-      "relative Hurewicz hypotheses and crossed-module topology",
-      "symplectic or Lagrangian disk/handle realization",
-      "existence of a Weinstein structure after puncturing",
-      "global Lagrangian fibration or boundary-free completion"
-    ],
-    "relative_product_betti": {
-      "closed_curve_cases": 15,
-      "degree_range": [
-        6,
-        20
-      ],
-      "puncture_range": [
-        1,
-        4
-      ],
-      "punctured_curve_cases": 60,
-      "sextic_examples": {
-        "closed_inner_relative_betti": {
-          "2": 1,
-          "3": 7,
-          "4": 7,
-          "5": 1
-        },
-        "closed_outer_relative_betti": {
-          "1": 1,
-          "2": 7,
-          "3": 7,
-          "4": 1
-        },
-        "one_boundary_circle_outer_relative_betti": {
-          "1": 1,
-          "2": 7,
-          "3": 6
-        }
-      }
-    },
-    "scope": "Finite algebra checks of stated models; not proofs of geometric identifications.",
-    "status": "passed"
+  "cloud_codex": {
+    "repository_instructions_present": true,
+    "cloud_environment_published": "not verified; requires user-visible Cloud environment setup and Publish",
+    "cloud_task_running": "not verified; no launch performed",
+    "cloud_runtime_deps_or_git_write_access": "not verified; ChatGPT GitHub connector access does not prove Cloud runtime authorization",
+    "continuation_model": "一つのタスク内で研究を進め、切れた場合はmainに保存した現行資料から次のタスクを再開する。無期限の自動再起動は保証しない。"
   },
-  "retained_checks": {
-    "scope": "Previously executed exact certificate suites; not rerun as a whole in this continuation. Original reproducible scripts and certificates remain in verification/.",
-    "certificate_runs": [
-      {
-        "name": "four-ray",
-        "exit_code": 0
-      },
-      {
-        "name": "five-node",
-        "exit_code": 0
-      },
-      {
-        "name": "central",
-        "exit_code": 0
-      },
-      {
-        "name": "axis",
-        "exit_code": 0
-      },
-      {
-        "name": "divisor",
-        "exit_code": 0
-      },
-      {
-        "name": "audit-four-ray",
-        "exit_code": 0
-      },
-      {
-        "name": "audit-five-node",
-        "exit_code": 0
-      },
-      {
-        "name": "audit-central",
-        "exit_code": 0
-      },
-      {
-        "name": "audit-axis",
-        "exit_code": 0
-      },
-      {
-        "name": "audit-divisor",
-        "exit_code": 0
-      }
-    ],
-    "threefold_suite_status_file": "research/threefold-validation.json",
-    "focus_exterior_command": "python3 verification/verify_focus_exterior_topology.py --json"
+  "external_inputs": {
+    "ke_repo": "uedakazushi/kaehler-einstein-degeneration",
+    "verified_ke_main_commit": "74ba687f67e1f87a4d308bf868fcdef98db441df",
+    "status": "外部コミット・主要TeXのパスをGitHubで照合済み。解析的な全域仮定を証明済みとは扱わない。"
   },
-  "build_method": {
-    "commands": [
-      "latexmk -norc -r .latexmkrc papers/threefold-blocks.tex",
-      "latexmk -norc -r .latexmkrc papers/threefold-fibration.tex"
-    ],
-    "dependencies": [
-      "LuaLaTeX format",
-      "LuaTeX-ja and Japanese outline font",
-      "TikZ/PGF",
-      "standard LaTeX mathematics packages",
-      "latexmk"
-    ],
-    "output_directory": "build/",
-    "new_section_overfull_boxes": false,
-    "bitmap_type3_fonts": 0,
-    "vscode_ui_tested": false
+  "other_papers": {
+    "papers/quintic-integer-gluing.tex": "旧201頁の組版記録のみ。本監査では未再組版。",
+    "papers/meridian-surgery.tex": "旧18頁の組版記録のみ。本監査では未再組版。",
+    "papers/research-notes.tex": "旧65頁の組版記録のみ。本監査では未再組版。"
   },
-  "primary_sources_checked": [
-    "Symington, arXiv:math/0210033, section 6.1, Lemma 6.3 and Theorem 6.5",
-    "Cieliebak-Eliashberg, arXiv:1305.1635, section 1.1, pp.2-3",
-    "Brown, JLMS (2) 22 (1980), 146-152, author PDF section 2",
-    "Conrad, Group cohomology and group extensions, section 2",
-    "Hatcher, Algebraic Topology, Propositions 0.18-0.19 and Theorems 4.37,4.57",
-    "Asimov, Annals 102 (1975), 41-54: official bibliography only; the handle decomposition used here is proved directly"
-  ],
-  "repository_status": "The git commit history and remote main are authoritative for saving; no prediction of successful push is encoded in this file."
+  "formal_proof_assistant": false,
+  "comprehensive_novelty_check": false
 }

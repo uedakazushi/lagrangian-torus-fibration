@@ -47,6 +47,23 @@ repo直下で実行する。外部KEのcheckoutが兄弟ディレクトリにな
 
 外部結果を使う前に、KE依存表の参照先と実際のcheckoutの差を読む。`preflight`はcommitを表示するだけで、依存する定理の最新版の正しさや適用条件を保証しない。ネットワーク確認や認証済みpushは実際の接続で別途確認する。読取が可能でも書込権限があるとは判断しない。
 
+
+## 環境の公開前に確認すること
+
+Cloudの再利用環境を作るときは、まず \`surface-lagrangian-torus-fibration\`、\`kaehler-einstein-degeneration\`、\`research-hub\` を利用可能なリポジトリとして選び、必要なら \`multiscale-kaehler-einstein\` も追加する。前二者の研究資料は別正本であり、hubの更新も独立のpush権限が必要である。ChatGPTのGitHub connectorの書込権限はCloud実行環境の認証を保証しない。
+
+環境の初期設定ではTeX Liveの不足したLuaLaTeX/日本語パッケージと日本語フォントを実際に導入・確認する。\`setup --require-tex\` は依存を**インストールせず、存在を検査するだけ**である。環境をPublishする前に少なくとも以下を実行して成功を確かめる。
+
+\`\`\`bash
+python3 scripts/research_check.py setup --require-tex
+python3 scripts/research_check.py static
+python3 scripts/research_check.py tex
+\`\`\`
+
+次いで外部KE repoのcheckoutと参照コミット／最新mainを点検し、一次論文への必要なネットワークアクセスを設定する。認証済みGitHub pushが可能かは公開範囲を変えず別に確認する。**Environment published** と表示されたあと、その環境から新しいタスクを開始し、上記の開始指示を渡す。Cloud環境のPublish、実際のタスク起動、継続している状態はこのGitHubファイル自体には記録されないため、リポジトリの整備済みをCloud起動済みと読み替えない。
+
+Codexのタスクには実行・サービス上の区切りがある。AGENTSの「解決まで自走」は、実行できるあいだ優先課題を連続して進め、区切りではmainへ保存して次のタスクが自立再開できるという意味であり、**無期限の自動再起動を保証しない**。手動で再開する際も新しい指示を一から書く必要はない。
+
 ## 継続と実行状態
 
 実行中のタスクはAGENTS.mdの研究サイクルを繰り返す。未解決の補題で一つの方法が失敗した場合は本質的な障害をノートに残し、代替経路や依存する解析入力の証明へ進む。タスクを再開するときはmainの方針とノートから最初の未解決項目を選ぶ。過去のチャットや機械固有の作業ディレクトリを必須にしない。
