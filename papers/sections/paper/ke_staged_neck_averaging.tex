@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.2: 二段階平均，固定残余領域の法線エネルギーと接続上界．
+% 2026-11-21 / v1.3: 二段階平均，固定残余領域の法線エネルギーと接続上界．
 \section{共通の normal circle に適合する二段階平均}
 \label{ke:staged-neck-section}
 
@@ -336,6 +336,70 @@ $E_t/(16\pi^2)=\tfrac12\partial_s^2\bar F_t$ である．
 $R_t^{-1}\int_a^b ds/d(s)+O(R_t^{-1})$ 以下となる．
 この評価だけでは異なる残余点間の portal 接続費用や，全曲面を通る経路の下界は得られない．
 
+\begin{proposition}[固定残余基底上の moving deep moment strip]
+\label{ke:neck-deep-moment-strip}
+関連 KE 主稿の \texttt{pair:prop:bundle-conic} の固定 source-free compact
+基底 $Q\Subset D^\circ$ 上で，双対 Hermitian norms を用いて
+$uv=t$，$s=-\log(\|v\|^2/r^2)$，$M_t=-\log(|t|^2/r^4)$ とする．
+$V$ は $v$ を正方向に回す周期 $1$ の生成場とし，
+$\mu_t=(\mathcal A\lambda_t)(V)$ は同稿 \texttt{pair:cor:global-primitive}
+の canonical moment とする．
+定数 $m_0,c,C>0$ と $\vartheta\in(0,1/2)$ を固定できて，
+$m_0\le m\le\vartheta M_t$ のすべての深度について，全 $Q$ 上で
+\[
+ \frac c m\le\mu_t\big|_{s=m}\le\frac C m,
+ \qquad
+ -\frac C m\le\mu_t\big|_{s=M_t-m}\le-\frac c m
+\]
+が成り立つ．従って任意の $m=m_t$ がこの範囲にあれば，
+共通 interval $I_t=[-c/(2m_t),c/(2m_t)]$ の各 level は
+$m_t<s<M_t-m_t$ 内で各 annulus に一つの円を持つ．
+その商は $I_t\times Q$ であり，$Q$ が境界付き領域なら境界も保つ．
+特に $\mu_t=0$ の level は両側深度が少なくとも $\vartheta M_t$
+である領域に入る．
+\end{proposition}
+
+\begin{proof}
+局所正則 frame で $\Omega=dv/v\wedge dz$ をとる．
+$\bar F_t=\mathcal A\log(\omega_t^2/|\Omega|^2)$ とすると，
+定数倍および base-only factor を除いた primitive の規格化から
+$\mu_t=-2\pi\partial_s\bar F_t$ を得る．
+Hermitian norm による $s$ と正則 frame の座標による深度の差は
+固定 compact 上で有界な base-only 関数であり，$\partial_s$ は変わらない．
+有限個の少し大きい積座標に命題\ref{ke:neck-integrated-normal-energy}で使った
+体積包絡を適用して，$d(s)=\min(s,M_t-s)$ とすれば
+ある固定 $a_0>0$ について
+\[
+ |\bar F_t(s,z)+2\log d(s)|\le C_0
+ \qquad (a_0\le s\le M_t-a_0)
+\]
+を $Q$ 全体に一様に得る．Base coordinate の変更による加法項は
+有限個の compact patches 上で有界であり，差商には現れない．
+
+$2\log\Lambda>2C_0+1$ となる固定 $\Lambda>1$ を選び，
+$\vartheta=1/(2\Lambda)$ とする．$2a_0\le m\le\vartheta M_t$ なら，
+$m$ と $\Lambda m$ は左側半区間にある．凸性により
+\[
+ \partial_s\bar F_t(m,z)
+ \le\frac{\bar F_t(\Lambda m,z)-\bar F_t(m,z)}{(\Lambda-1)m}
+ \le -\frac{1}{(\Lambda-1)m}.
+\]
+逆向きの大きさの上界は命題\ref{ke:neck-integrated-normal-energy}の
+差商評価 $|\partial_s\bar F_t|\le C_1/m$ による．
+右側は $M_t-s$ を使って同様に求める．
+$\partial^2_s\bar F_t>0$ なので $\mu_t$ は各 annulus の深度に対し
+厳密に減少する．中間値定理と陰関数定理で，$I_t$ 全体にわたる
+一意な深度断面が滑らかに貼り合わさる．半径を正に変えても
+円束の標識は保たれるので商は $I_t\times Q$ になる．
+最後は $m=\vartheta M_t$ を選ぶ．
+\end{proof}
+
+この interval は normal 深度を動かしつつ，すべての固定残余点で
+同じ canonical moment を使うためのものである．
+既存の固定 end の moment 漸近を moving cut に代入する必要はない．
+レベル上で点ごとの円エネルギーを抑える評価と actual Moser buffer，
+および基底を source や三重点へ動かす場合の一様性は別に必要である．
+
 \begin{corollary}[軌道平均エネルギーを用いる Moser 速度評価]
 \label{ke:neck-averaged-speed}
 補題\ref{ke:short-circle-actual-buffer} の Moser 方程式において，
@@ -403,6 +467,115 @@ $\delta_t/4$ 以上であり，$m_t\delta_t^2\to\infty$ により
 $(2c_w+1/2)\varepsilon_t$ を上回る．系\ref{ke:short-circle-image-buffer}と
 補題\ref{ke:short-circle-actual-buffer}の直径評価を適用する．
 \end{proof}
+
+\subsection{固定残余領域での actual tensor 比較と Moser 被覆}
+
+\begin{lemma}[大域 capped density を用いた射影計量の下界]
+\label{ke:capped-projective-lower}
+固定次数 $d\ge5$ の一般位置全平面退化を考え，
+$\Omega_{t,d}^{\rm low}$ と $h_{t,d}^{\rm low}$ を
+関連 KE 主稿の \texttt{coarse:cor:degree-d-volume-lower} で定める．
+$\varphi_t=\log(\omega_t^2/\Omega_{t,d}^{\rm low})$ とすると，
+ある固定 $A,C>0$ に対し
+\[
+ \operatorname{tr}_{\omega_t}(\omega_{\mathrm{FS}}|_{X_t})
+ \le C\exp(A\varphi_t)
+\]
+が全 $X_t$ で成り立つ．従って $\varphi_t$ が一様に上から有界な領域では
+$g_t\ge c g_{\mathrm{FS}}|_{X_t}$ となる．
+\end{lemma}
+
+\begin{proof}
+KE 側の capped density の証明で $A_0$ を十分大きく固定して，
+$h_{t,d}^{\rm low}\ge c_0\omega_{\mathrm{FS}}|_{X_t}$ を得る．
+実際，背景は $(d-4)\omega_{\mathrm{FS}}|_{X_t}$ で，
+すべての cap の負部分と frame errors の和は
+その $O_d(A_0^{-1})$ 倍に抑えられ，残りは半正である．
+同じ大域体積下界から $\varphi_t\ge-C_0$ が全 $X_t$ で成り立つ．
+$T_t=\operatorname{tr}_{\omega_t}(\omega_{\mathrm{FS}}|_{X_t})$ とすると，
+正則包含 $X_t\to\PP^3$ の Chern--Lu 不等式は
+$\Delta_{\omega_t}\log T_t\ge-C_1-C_2 T_t$ を与える．
+ここでは射影空間の固定した curvature upper bound と
+$\operatorname{Ric}(\omega_t)=-\omega_t$ を用いる．
+$dd^c\varphi_t=\omega_t-h_{t,d}^{\rm low}$ なので
+\[
+ \Delta_{\omega_t}(\log T_t-A\varphi_t)
+ \ge (Ac_0-C_2)T_t-(C_1+2A).
+\]
+$Ac_0>C_2$ と取り，compact $X_t$ 上の最大点で $T_t$ を上から抑える．
+そこでの $\varphi_t\ge-C_0$ と合わせ，
+$\log T_t-A\varphi_t\le C'$ を全域に得る．
+\end{proof}
+
+\begin{theorem}[固定 source-free base の moving strip での actual Moser 被覆]
+\label{ke:fixed-base-neck-moser}
+関連 KE 主稿の \texttt{pair:prop:bundle-conic} の正則束座標を用い，
+source と三重点を避けた固定した $Q\Subset B$ 上で
+$uv=t$，$s=-\log(\|v\|^2/r^2)$，
+$M_t=-\log(|t|^2/r^4)$，$d(s)=\min(s,M_t-s)$ とする．
+$Q$ は compact とする．$m_t\to\infty$，$m_t\le M_t/2$ とし，
+$K_t=\{p\in Q,\ d(s)\ge m_t\}$ とする．
+$K_t$ を source と像の双方に含む normal Moser map が存在し，
+その軌道像の actual ambient 直径は $O(m_t^{-1})$ である．
+さらに $K_t$ を含む深部開 strip 上で，局所積座標の complete
+annulus--disc 計量 $g_{\rm prod}$ と $g_t$ は一様に二側比較可能である．
+\end{theorem}
+
+\begin{proof}
+まず $\overline Q$ の少し大きい固定残余近傍を有限個の局所積座標で覆う．
+各 patch で outer annulus--disc を固定し，その内部に
+三重に入れ子になった annulus--disc を，正の固定な normal radii と residual radii
+で選ぶ．最も外側の入れ子領域（outer chart には compact に含まれる）では
+outer chart の体積 envelope と capped density が一様に比較可能である．
+これは \texttt{neck:prop:volume-envelope} の証明にある
+ordinary-pair capped density の比較である．同命題の体積上界から
+そこでは $\varphi_t\le C$ であり，補題\ref{ke:capped-projective-lower}
+によって $g_t\ge c g_{\mathrm{FS}}$ を得る．
+
+内側の入れ子領域から中間領域の外へ出る経路は，その最初の退出までに，
+残余座標又は $u,v$ の一方を固定した正の幅だけ変化させる．
+これらの座標は固定な ambient 座標上で有界な微分を持つ．
+実際，正則束座標は $t$ に依存しない ambient 変換で作られ，
+コンパクトな座標範囲では変換とその逆の微分が一様に有界である．
+よって経路は比較が成立する部分だけで一様に正の actual 長さを持つ．
+従って内側の各点の一様な半径の actual ball の閉包は中間領域に含まれる．
+
+この actual ball 上で outer annulus--disc の complete product への
+正則恒等写像に localized Chern--Lu 評価
+（関連 KE 主稿 \texttt{coarse:lem:localized-chern-lu}）を適用する．
+曲率 $-1$ の二曲面の積の holomorphic sectional curvature は
+$-1/2$ 以下なので，中心で $g_t\ge c,g_{\rm prod}$ を得る．
+既存の体積上界と合わせれば複素次元 $2$ の行列の固有値比較により
+$g_t\le C g_{\rm prod}$ も従う．有限被覆で定数を一様にできる．
+固定 norm による $s$ は局所積座標の深度と有界な base-only 項だけ異なり，
+その項の微分も一様に有界である．従って十分深い領域上で
+\[
+ |V|_{g_t}\le C/d(s),\qquad
+ |dp|_{g_t}\le C,\qquad
+ |d\log d(s)|_{g_t}\le C
+\]
+となる．最後の不等式は $s=M_t/2$ の継目では片側微分，
+又は経路に沿う Lipschitz 評価として読む．$|dp|$ の標的には固定基底計量を用いる．
+
+$Q\Subset B'\Subset B$ を固定して，Moser の外側領域を
+$U_t=\{p\in B',\ d(s)>m_t/2\}$ とする．
+$K_t$ から $U_t$ の境界へ向かう任意の経路は，最初の退出以前に
+基底で固定した正の距離を移動するか，$\log d(s)$ を $\log 2$ 以上変える．
+従って actual buffer は正の定数以上である．ここで局所比較のための有限被覆は
+$\overline{B'}$ 上に選んでいる．同じ議論で $B'$ と $m_t/2$ を少し内側へ
+縮めた比較的 compact な領域を $U_t$ 内に取れる．
+$U_t$ 上の $|V|_{g_t}=O(m_t^{-1})$ と
+系\ref{ke:short-circle-image-buffer} により求める Moser map を得る．
+直径は補題\ref{ke:short-circle-actual-buffer}の評価による．
+\end{proof}
+
+定理\ref{ke:fixed-base-neck-moser} は residual base が固定した場合を扱う．
+Source や三重点へ近付く residual collars では，射影計量で測った入れ子領域間の幅や
+capped density と complete envelopes の比較を別途調べる必要がある．
+固定 compact の結論と命題\ref{ke:neck-deep-moment-strip} を合わせると，
+同じ固定基底上で moving canonical moment strip を actual form に移せる．
+複数 end を同時に接着するには，正則束作用と triple 作用との
+開 overlap 上での整合も必要である．
 
 \subsection{残る円の平均と同一 normal moment}
 

@@ -1,6 +1,6 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-21 / v1.1。目標・優先順位は [研究方針](../00_research_plan.md)、数学的な目標の定式化は主原稿の `ke:global-realization-section` 節を正本とする。本書は外部入力の所在・適用範囲と、次に証明すべき接続条件を保持する。
+2026-11-21 / v1.2。目標・優先順位は [研究方針](../00_research_plan.md)、数学的な目標の定式化は主原稿の `ke:global-realization-section` 節を正本とする。本書は外部入力の所在・適用範囲と、次に証明すべき接続条件を保持する。
 
 ## 確認した正本と規格化
 
@@ -55,16 +55,7 @@ L_t=-\log|t|^2,\quad R_t=\log L_t.
 
 ### 1. Actual normal circleとflowの共通領域
 
-まず $K\Subset B\Subset D^\circ$ を固定し、上の束座標を使う。局所 $U_t=A_t\times D_R$ で $s=-\log(|u|^2/r_+^2)$、$M_t=L_t+O(1)$ とする。中央のdeep stripに例えば $m_t=R_t$ を用い、compact飽和集合 $K_t$、$K_t\subset D_t\Subset U_t$ を**実際の座標で指定**して、
-
-\[
-\sup_{U_t}|V|_{g_t}\le\varepsilon_t,\qquad
-\delta_t=d_{g_t}^{U_t}(K_t,\partial D_t)
-   >(2c_w+\tfrac12)\varepsilon_t,
-\qquad c_w=\frac\pi{4\sqrt3}
-\]
-
-を証明する。ここではcentered kernel $w(a)=1/2-a$ を用いる。短円の上限を取る $U_t$ は必要なら外側のdeep stripへ縮小し、Moser trajectoryがその内部に留まることまで確認する。期待する中央stripの率は $\varepsilon_t=O(m_t^{-1})$ であり、現時点で証明済みとはしない。Rank-one法を使う場合は、各orbit上のactual ball $\overline B_{g_t}(q,2\sigma)\Subset U_t$ か同等のrank-one下界を独立に示す。欲しいtensor比較からactual bufferを逆算しない。固定endやsource/tripleへ近づくmoving baseはこの固定compact課題の外に残るので、別の領域評価で覆う。
+固定 compact の source-free 基底で normal 深度だけを動かす場合は、主稿 `ke:fixed-base-neck-moser` で解決した。$\Omega_{t,d}^{\rm low}$ の大域下界、capped background の射影下界、固定 pair chart の体積上界を使い、射影包含の大域 Chern–Lu と actual ball 上の局所 Chern–Lu を順に適用する。共通の縮小 moment interval は `ke:neck-deep-moment-strip`。次は residual base を動かす場合の束座標の有効範囲と計量評価である。Source gate 近くでは射影距離による buffer を rescaled normal 距離へ読み替えない。
 
 ### 2. 同じglobal fibrationへの相対接着
 

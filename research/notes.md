@@ -1,5 +1,5 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-21 / v2.2
+更新：2026-11-21 / v2.3
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
@@ -7,19 +7,15 @@
 
 現在の目標は、主稿 `ke:global-realization` のactual KE–Lagrangian fibrationによる全曲面GH極限の実現である。対象・達成条件・K0–K5の着手順は [研究方針](../00_research_plan.md)、外部定理の正確なpath・label・確認commit・残る仮定は [KE依存表](ke-dependencies.md) を参照する。ここには証明を進めるための知識を残し、課題一覧を重複させない。
 
-第一の未解決入力は、source-freeな**moving neck領域** \(U_t\) に対するnormal circleの一様な短さとactual bufferである。各領域とその作用を先に指定し、period-1 generator \(V_t\) について
-\[
- \varepsilon_t^{\mathrm{circ}}=\sup_{U_t}|V_t|_{g_t},\qquad
- \delta_t=\operatorname{dist}_{g_t}(K_t,X_t\setminus U_t),\qquad
- \delta_t>(2c_w+1/2)\varepsilon_t^{\mathrm{circ}}
-\]
-を確認する。\(K_t\) はcompactな作用飽和集合とする。この不等式は `ke:short-circle-image-buffer` のforward/backwardの像を含む条件であり、normal depthの大きさだけから距離bufferが従うと仮定しない。残余方向rank-one下界とvolume上界から短円上界を得る方法はKE側 `neck:lem:rank-one-circle` にある。求める補題の正確な領域・residual下界・境界距離を同時に書くことが最初の着手である。元の尺度で \(\varepsilon_t^{\mathrm{circ}}\to0\) を得るのは有用な十分条件だが、P0に最終的に必要なのは正規化後の誤差消失であり、より弱い十分な評価があれば採用できる。
+固定 source-free compact 基底上の moving normal strip では、actual 計量で一定の buffer と $O(m_t^{-1})$ の短円を証明した（主稿 `ke:fixed-base-neck-moser`）。$\varphi_t=\log(\omega_t^2/\Omega_{t,d}^{\rm low})$ とし、大域の $\varphi_t\ge-C$ と $dd^c\log\Omega_{t,d}^{\rm low}\ge c\omega_{\rm FS}$ を、正則包含の Chern–Lu 不等式に組み合わせる。最大値原理から $\operatorname{tr}_{\omega_t}\omega_{\rm FS}\le C e^{A\varphi_t}$。固定 pair chart では体積包絡が $\varphi_t\le C$ を与える。入れ子座標間の固定射影幅から actual 球を確保し、局所 Chern–Lu を complete annulus–disc に適用して actual 二側比較を得る。法線深度を $m_t$ から $m_t/2$ に広げ、残余基底にも固定した余裕を取ることで、Moser map の source と像の両方が同じ内側 strip を覆う。
+
+次は residual collar 自体を三重点へ動かす場合の束表示・短円・buffer と、triple action との開 overlap 上の整合である。Source gate の $|x|\asymp |t|^{1/2}$ では固定射影座標の距離下界は法線の rescaling 幅を検出しない。
 
 固定残余compactの各座標では、`neck:prop:volume-envelope` から法線方向の積分評価を得た（主稿 `ke:neck-integrated-normal-energy`）。$s=-\log(|u|^2/r^2)$、$d(s)=\min(s,M_t-s)$ とし、周期1生成場の軌道平均エネルギーを $E_t$ とする。$\Omega=du/u\wedge dz$ に対する対数体積の角度平均 $\bar F_t$ は $-2\log d(s)+O(1)$、かつ $E_t=8\pi^2\partial_s^2\bar F_t$。よって $\int_m^{M_t-m}E_t(s,z)\,ds=O(m^{-1})$ が残余点 $z$ に一様に成立する。例外深度の測度は $E_t>A/m^2$ に対し $O(m/A)$ であり、例外集合の位置は $z$ に依存する。
 
-同じ $z$ に沿う動径経路には一つの角度を選んで長さ $\int_a^b ds/d(s)+O(1)$ を得る（`ke:neck-axial-upper`）。両端円が短ければ任意の端点を結べる。この評価は局所の上界であり、異なる残余点を結ぶ portal 費用と全曲面の距離下界は残る。Moser 流では軌道全体の最大速度を軌道平均エネルギーの平方根で置き換えられる（`ke:neck-averaged-speed`）。外側の深部領域の実計量での境界距離 $\delta_t$（上限1）が $m_t\delta_t^2\to\infty$ を満たせば、局所 Chern–Lu と体積上界から共通の source・像を得る（`ke:neck-shrinking-buffer`）。所要の全 collar を含む $E_t$ の一様上界と actual buffer、またはこの縮小境界距離の下界が次の課題である。
+同じ $z$ に沿う動径経路には一つの角度を選んで長さ $\int_a^b ds/d(s)+O(1)$ を得る（`ke:neck-axial-upper`）。両端円が短ければ任意の端点を結べる。この評価は局所の上界であり、異なる残余点を結ぶ portal 費用と全曲面の距離下界は残る。Moser 流では軌道全体の最大速度を軌道平均エネルギーの平方根で置き換えられる（`ke:neck-averaged-speed`）。外側の深部領域の実計量での境界距離 $\delta_t$（上限1）が $m_t\delta_t^2\to\infty$ を満たせば、局所 Chern–Lu と体積上界から共通の source・像を得る（`ke:neck-shrinking-buffer`）。この縮小条件は残余 collar を動かす場合にも候補となる。
 
-固定compact base上の共通moment intervalは、このmoving領域の一様性をまだ含まない。K1の局所的な成功後も、第二periodとreduced葉の同時整合、source・branch・coreの被覆、全曲面のshortcutとportalを別々に検証する。任意のMoser移送による定性的存在と、\(p_T\pi_t\) の距離歪み消失も区別する。
+固定残余基底上で両側の moving cut $m_t$ における canonical moment は符号が逆で絶対値が $m_t^{-1}$ と一様比較可能である（`ke:neck-deep-moment-strip`）。よって同じ actual Moser map の下で、深部に共通の縮小 moment interval を置ける。K1の局所的な成功後も、第二periodとreduced葉の同時整合、source・branch・coreの被覆、全曲面のshortcutとportalを別々に検証する。任意のMoser移送による定性的存在と、\(p_T\pi_t\) の距離歪み消失も区別する。
 
 大域距離を得る経路は二つある。KE側の未解決解析入力を実証して既存近似写像 \(\Phi_t\) と \(p_T\pi_t\) を一様に比較するか、同じ \(p_T\pi_t\) に対して全域の距離下界・liftによる上界を直接証明する。前者の条件付き定理を無条件の入力にせず、後者では基底上の人工計量をactual全空間の距離で置き換える根拠が必要である。
 
