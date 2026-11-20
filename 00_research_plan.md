@@ -1,5 +1,5 @@
 # 現行研究方針：一般型曲面のLagrangian torus fibration
-更新：2026-11-21 / v2.5（複素次元2専用、曲面主稿改訂16・五次整数接着第25稿）
+更新：2026-11-21 / v2.6（複素次元2専用、曲面主稿改訂17・五次整数接着第25稿）
 
 ## 現在の目標と優先順位
 **最優先目標P0：本研究の大域Lagrangian torus fibrationによって、負Kähler–Einstein計量の径の尺度でのGromov–Hausdorff極限を幾何学的に実現する。現時点では未解決である。** 以下の達成条件を満たすまで、Cloud Codexはこの目標に必要な証明・計算・文献確認・原稿整備を自律的に進める。具体的な実行手順は [AGENTS.md](AGENTS.md) と [Cloud Codexの再開手順](research/cloud-codex.md) に置く。
@@ -51,8 +51,10 @@ K1–K2の正本は `ke_neck_corner_exhaustion.tex`。残余compactの定数を�
 
 この部分fibrationはsourceのpinched torusとsaddle fiberを含み、各closed cornerの内在・protected GH評価を保つ。次は部分領域の外に残るnormal領域とcomponent coreを覆い、source中央coreの全点径を制御する。中央sourceの短い退出や平均距離を、全source fiberの直径評価へ読み替えない。全曲面のshortcutと木上のfiber合併全体も別に検証する。
 
+Source全体のEuler場 $W_+=x\partial_x+y\partial_y$ のactual normを固定chart上で一様に抑えた（`ke:source-euler-bound`）。中央sourceの $|z|\ge e^{-a_t}$、$a_t=o(R_t)$ の部分は、固定residual shellへ $O(a_t+1)$ で接続でき、正規化ambient径が消える（`ke:source-sublog-residual-connectors`）。この結果は $z=0$ と極小residual領域を含む全点径をまだ与えない。
+
 ## 原稿・ノートの正本と公表単位
-- `papers/surface-lagrangian-torus-fibration.tex`：このrepoの主たる公表用本文。相対SNC構成、次数分割、分岐底、作用適合atlasとKE–fibrationの大域実現問題（現行改訂16。167頁の組版・変更頁表示確認済み）。
+- `papers/surface-lagrangian-torus-fibration.tex`：このrepoの主たる公表用本文。相対SNC構成、次数分割、分岐底、作用適合atlasとKE–fibrationの大域実現問題（現行改訂17。直近の組版確認は改訂16・167頁、追加証明は組版待ち）。
 - `papers/quintic-integer-gluing.tex`：五次整数アフィン接着、高分母支持グラフの独立論文（第25稿、201頁の記録）。指定SNC cores・K5 graph・標準cones・marked puncturesを保つ候補が対象。必要支持3型26標識は**実現数ではない**。G5_14の中央matching、一般分母剛性、三高Dの同時非負性が未解決。
 - `papers/meridian-surgery.tex`：四pantsのmeridian局所置換と閉corner circuitsの障害（18頁の記録）。
 - `papers/research-notes.tex`：各種補題・証明素材のTeXノート（65頁の記録）。
@@ -139,7 +141,7 @@ Lagrangian主稿 `ke:actual-closed-corner` の同じ averaging–Moser flow と�
 現行のTeX分割節と検証スクリプトは `papers/sections/` を直接参照し、旧ルートsymlinkに依存しない。静的な構成検査は `python3 verification/verify_repository_layout.py`、現行の五主検算・五独立監査は `python3 verification/run_current_checks.py`。旧JSONやmanifestの相対パス・記録時点のSHA-256は出典情報として保持し、パス正規化後の現行実行パスと区別する。
 組版はrepo直下の `latexmk papers/surface-lagrangian-torus-fibration.tex`、整数接着は `latexmk papers/quintic-integer-gluing.tex`。LuaLaTeXとLuaTeX-ja／TikZ／日本語フォントが必要、PDFとSyncTeXはbuild/へ出力しGitで追跡しない。段階別の実行は `scripts/research_check.py` と [Cloud Codexの再開手順](research/cloud-codex.md) を参照する。元の計算コード、入力、証明書は保持する。
 
-2026-11-21 / v2.5：静的構成検査（4主原稿・119 Python source）、主稿改訂16のLuaLaTeX組版（167頁）、PDF・SyncTeX出力と引用・相互参照を確認した。要旨・序論・中央帯・normal flow・exhaustion・source節・追加文献の変更頁を表示点検し、重複ラベル・欠落字形・overfull警告はない。全neck–corner交わりの飽和・Hausdorff基底とmarkingの範囲、中央sourceの体積・moment・平均距離・短い退出・中央帯帰着について、別担当の内部点検を実施した。GGZの局所距離命題は一次PDFの仮定を確認し、一様連続度を追加仮定する十分条件として記載した。これは形式証明・外部査読ではない。整数検算suite、他三稿の組版、既存の全解析・接着証明の再監査、包括的新規性調査は今回行っていない。P0は未解決。Cloud環境設定・新規タスク起動は実施していない。
+2026-11-21 / v2.6：静的構成検査（4主原稿・119 Python source）、主稿改訂16のLuaLaTeX組版（167頁）、PDF・SyncTeX出力と引用・相互参照を確認した。要旨・序論・中央帯・normal flow・exhaustion・source節・追加文献の変更頁を表示点検し、重複ラベル・欠落字形・overfull警告はない。全neck–corner交わりの飽和・Hausdorff基底とmarkingの範囲、中央sourceの体積・moment・平均距離・短い退出・中央帯帰着について、別担当の内部点検を実施した。GGZの局所距離命題は一次PDFの仮定を確認し、一様連続度を追加仮定する十分条件として記載した。これは形式証明・外部査読ではない。整数検算suite、他三稿の組版、既存の全解析・接着証明の再監査、包括的新規性調査は今回行っていない。P0は未解決。Cloud環境設定・新規タスク起動は実施していない。
 
 ## 共通研究原則と保存許可（研究固有方針から独立）
 数学的重要性・新規性・理解の深化・応用可能性・正確性・実現可能性を総合し方針を見直す。証明済み・仮定付き・未完成・予想・計算観察、既知成果と新規性、草稿の証明と今回の独立監査を区別する。重要な先行研究は一次資料の仮定と参照箇所を確認する。日本語LuaLaTeXで十分な証明を保ち、有効な着想・反例・障害は現行ノートへ整理する。再現資産を保持し、旧版ZIP/ログの集積を避ける。研究の区切りでは承諾なしで通常コミットを `main` へpushし、Cloud Codexの長時間作業は切りのよいところ、遅くとも前回成功pushから約15分を目安に現行の有効な成果と未解決箇所を保存する（詳細はAGENTS.md）。force push・GitHub Actions追加/起動をしない。Library旧資料を削除せず、GitHub管理後の定常二重保存は行わない。対象repo保存後にresearch-hubの到達点・核心・次の一手・依存と再開先を更新し、数学検証・組版・push・hub反映を区別する。

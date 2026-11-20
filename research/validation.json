@@ -1,6 +1,6 @@
 {
   "date": "2026-11-21",
-  "version": "2.5",
+  "version": "2.6",
   "scope": "複素次元2の現行研究状態。旧三次元稿の組版・監査記録ではない。数学的な証明と、その再監査、組版、整数計算、GitHub保存、Cloudタスク起動を区別する。",
   "priority": "P0: actual負Kähler–Einstein形式での大域Lagrangian torus fibrationの射影 p_T∘π_t が、各固定 d≥5 の全曲面ambient距離に関する正規化GH近似を与えること。",
   "priority_status": "open",
@@ -18,7 +18,8 @@
       "Centered normal Moser flowの自然性、moment依存の残余葉、遅いexhaustionによるsource-inclusive neckとclosed cornerの全交わりで飽和したactual部分fibration",
       "固定source-free基底の異なるmomentを含む中央帯のactual ambient径O(1)",
       "中央sourceのvolume densityのL^-2二側比較、有界canonical potential、moment O(L^-1)、traceと平均二点距離の積分評価",
-      "中央sourceのactual inradius O(L^-1/2)、oriented armへのO(1)接続、および中央moment帯の固定rescaled coreへのO(1)帰着"
+      "中央sourceのactual inradius O(L^-1/2)、oriented armへのO(1)接続、および中央moment帯の固定rescaled coreへのO(1)帰着",
+      "固定source chartのEuler場の一様上界と、central |z|>=exp(-a_t), a_t=o(R_t) の全点の固定shellへのO(a_t+1)接続"
     ],
     "not_proved": [
       "Neck–corner部分fibrationのcomponent coreへの延長、必要な第二period・critical actionの整合、および全曲面被覆",
@@ -71,7 +72,8 @@
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false
-    }
+    },
+    "current_revision_pending_build": 17
   },
   "cloud_codex": {
     "repository_instructions_present": true,

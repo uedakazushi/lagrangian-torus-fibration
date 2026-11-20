@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.0: Central source の volume・短い退出と残る接続条件．
+% 2026-11-21 / v1.1: Euler 場と sublog residual cutoff からの接続を含む．
 \section{Central source の体積評価と接続経路}
 \label{ke:source-connectors-section}
 
@@ -270,6 +270,108 @@ $z=0$ の軸も同じ片側の割線評価で扱える．
 $C\int_{\kappa_A L}^{L/2-\log c_1^2}ds/s\le C_A$ である．
 $y$-oriented arm は対称である．
 \end{proof}
+
+\subsection{正則 Euler 場による残余方向の接続}
+
+\begin{lemma}[Source 全体の Euler 場の有界性]
+\label{ke:source-euler-bound}
+十分小さい固定 $r_0,b_+>0$ を取り，その少し広い source chart 内で
+\[
+ U_t=\{|x|<r_0,\ |y|<r_0,\ |z|<b_+,\ xy=tz\}
+\]
+を考える．$X_t$ 上の $(x,y)$ 座標で定めた正則場
+\[
+ W_+=x\partial_x+y\partial_y
+\]
+は，十分小さい $|t|$ に対し $U_t$ 全体で $|W_+|_{g_t}\le C$ を満たす．
+定数は $r_0,b_+$ に依存してよい．
+\end{lemma}
+
+\begin{proof}
+$|x|=r_0$ の境界面では $(x,z)$ が正則座標であり，
+$W_+=x\partial_x+2z\partial_z$ と書ける．$r_0$ を固定した後で $t\to0$ とすれば，
+この面の固定近傍は成分 $y=0$ の smooth locus の compact に収束する．
+系\ref{ke:source-diagonal-moser}と同じ component smooth convergence により，
+この面上で $W_+$ の norm は一様有界である．$|y|=r_0$ も同様である．
+
+$|z|=b_+$ の面は固定 source-free residual annulus 上にある．
+この annulus を少し広げ，normal 半径も $r_0$ より大きく固定して，
+定理\ref{ke:fixed-base-neck-moser}の証明中の actual tensor 比較を適用する．
+ここでは Moser map のための moving cut を用いず，固定の人工境界から
+余裕を取った領域上の tensor 比較だけを用いる．
+$v=y/z$ とすると $xv=t$ であり，この積座標では
+$W_+=x\partial_x-v\partial_v+2z\partial_z$ である．
+Normal 部分は annulus の深度が固定最小値以上なので有界であり，
+残余部分も固定 annulus 上で有界である．従ってこの境界面でも同じ種類の上界を得る．
+
+$W_+$ は $U_t$ 全体で正則で，$\operatorname{Ric}(g_t)=-g_t$ であるから，
+Bochner 恒等式は $\Delta_{g_t}|W_+|^2\ge0$ を与える．
+三種類の境界面の上界と最大値原理により結論が従う．
+この証明は固定した $r_0,b_+$ を用い，追加の対角選択を必要としない．
+\end{proof}
+
+\begin{proposition}[極小 residual 領域を除いた source 中央帯の接続]
+\label{ke:source-sublog-residual-connectors}
+$c_1^2<\beta<b_+$ を固定する．$a_t\ge1$，$a_t=o(R_t)$ とし，
+\[
+ K_t(a_t)=\{p\in\overline{B_t(c_1)}:\ |z(p)|\ge e^{-a_t}\}
+\]
+と置く．この集合の各点を固定 source-free shell $|z|=\beta$ へ
+actual 長さ $C(a_t+1)$ 以下で接続でき，終点の canonical moment は
+$|\mu_t|\le C/L_t$ を満たす．従って
+\[
+ \operatorname{diam}_{d_{g_t}}K_t(a_t)\le C(a_t+1)=o(R_t).
+\]
+さらに固定 $A>0$ と $0<b<c_1^2$ に対し，
+命題\ref{ke:source-central-band-reduction}の normal tube 内の集合
+\[
+ \{|\mu_t|\le A/L_t,\ e^{-a_t}\le|z|\le b\}
+\]
+も ambient diameter $C_A(a_t+1)$ 以下を持つ．
+\end{proposition}
+
+\begin{proof}
+$p=(x,y,z)\in K_t(a_t)$ から実正の scaling
+\[
+ (x,y,z)\longmapsto(e^\sigma x,e^\sigma y,e^{2\sigma}z),
+ \qquad 0\le\sigma\le T_p:=\tfrac12\log(\beta/|z|)
+\]
+を取る．この flow の実生成場は $W_+$ の実部の固定倍である．
+$|x|,|y|\le c_1|t|^{1/2}$ と $|z|\ge e^{-a_t}$ により，全 trajectory 上で
+\[
+ |e^\sigma x|,|e^\sigma y|
+ \le c_1\sqrt\beta\,|t|^{1/2}e^{a_t/2}<r_0
+\]
+が十分小さい $t$ で成立する．また $|e^{2\sigma}z|\le\beta<b_+$ なので，
+trajectory 全体は前補題の $U_t$ 内にある．その長さは
+$CT_p\le C(a_t+1)$ 以下である．
+
+終点の normal 深度も確認する．$|X|,|Y|\le c_1$ と
+$|XY|\ge e^{-a_t}$ から $|X|,|Y|\ge e^{-a_t}/c_1$ である．
+Scaling 後には $|XY|=\beta$ となるので，二つの深度はともに
+\[
+ s_x=L_t/2+O(a_t+1),\qquad s_y=L_t/2+O(a_t+1)
+\]
+である．固定 source-free shell では束 frame の深度との差は有界であり，
+$M_t=L_t+O(1)$ である．従って $\min(s,M_t-s)\ge cL_t$ となり，
+命題\ref{ke:neck-deep-moment-strip}の $|\mu_t|\le C/\min(s,M_t-s)$ から
+終点の moment 上界を得る．ここでは同じ canonical normal primitive を用い，
+base-only frame 変更による moment の加法定数は導入しない．
+
+Shell を含む固定連結 residual annulus を取る．終点全体は
+系\ref{ke:fixed-base-central-band}の中央帯に入るため，その ambient 径は $O(1)$ である．
+同系の深部 cut には，例えば $m_t=L_t^{1/2}$ を取ればよい．
+二点の scaling paths と shell 内の connector を連結して第一の直径評価を得る．
+
+最後の集合については，命題\ref{ke:source-central-band-reduction}により
+各点を長さ $C_A$ 以下で $\overline{B_t(c_1)}$ へ戻す．その normal 動径経路は
+$z$ を保存するので，戻した点も $K_t(a_t)$ に属する．第一の評価を適用して結論を得る．
+\end{proof}
+
+この結果は，$z=0$ と $0<|z|<e^{-a_t}$ の全点接続を与えない．
+とくに source 固定点，およびそこへ非常に速く近づく residual points を含む
+pinched fibre 全体の直径を結論していない．$W_+$ の有界性を
+無限の logarithmic flow time に積分してはならない．
 
 \subsection{同一 moment の全点接続に残る条件}
 

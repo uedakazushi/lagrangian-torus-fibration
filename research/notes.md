@@ -1,5 +1,5 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-21 / v2.5
+更新：2026-11-21 / v2.6
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
@@ -61,6 +61,10 @@ Reduced graphに合わせて残余foliationをmomentに滑らかに依存させ�
 Source側の `ke:source-central-band-reduction` は、固定residual disc、人工境界からの余裕、normal最小深度の下で、$|\mu|\le A/L$ の全点を固定rescaled coreへ $O(1)$ で接続する。従って中央帯の残る径問題はcore全点の径、またはcoreからsource-free shellの $|\mu|\le A'/L$ への $o(R)$ 接続に帰着する。一般の同一moment集合については、指定した残余境界への退出条件 `ke:eq:source-moment-exit-input` が十分であるが、これは未証明。Central inradius、平均距離、全source fiberの径、長いnormal armsを含むneck全体の径を区別する。
 
 `ke:source-potential-modulus` はGuedj–Guenancia–Zeriahi（参考文献キー `GGZDiameter`、Proposition 1.4）の局所距離評価を用いる十分条件を記す。Potential $u_t$ に一様な連続度 $m$ があり $\int_0^{r_0}\sqrt{m(r)}\,dr/r<\infty$ なら、固定coreのambient径は $O(1)$。このsquare-root-Dini modulusや一様Hölder評価自体はまだ証明していない。有界potentialから自動的に導いたり、同論文の大域Kähler class仮定を局所族へ無条件に適用したりしない。
+
+## Source の residual cutoff と Euler 場
+
+`ke:source-euler-bound` は固定source tube上のEuler場 $W_+=x\partial_x+y\partial_y$ をactual norm $O(1)$ に抑える。固定normal境界はcomponent KE収束、固定residual境界はsource-free tensor比較で評価し、内部へBochner最大値原理で延ばす。中央点で $|z|\ge e^{-a_t}$、$a_t=o(R_t)$ なら正の同時scalingを $O(a_t+1)$ 時間で固定residual shellまで進められ、終点はcanonical central moment帯にある（`ke:source-sublog-residual-connectors`）。全点径の残余は $z=0$ と $|z|<e^{-a_t}$ である。無限のscaling時間を有界な経路長に読み替えない。
 
 ## 二段階平均によるnormal actionとperiodsの接続
 
