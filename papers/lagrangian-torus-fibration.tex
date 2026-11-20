@@ -1,0 +1,86 @@
+% LuaLaTeX, run "latexmk" in repository root
+\documentclass[a4paper,11pt]{ltjsarticle}
+\usepackage[margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage[unicode,colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\theoremstyle{plain}
+\newtheorem{proposition}{命題}[section]
+\newtheorem{lemma}[proposition]{補題}
+\theoremstyle{definition}
+\newtheorem{definition}[proposition]{定義}
+\newtheorem{conjecture}[proposition]{予想}
+\theoremstyle{remark}
+\newtheorem{remark}[proposition]{注意}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\T}{\mathbb T}
+\DeclareMathOperator{\Ric}{Ric}
+\title{一般型曲面のLagrangian torus fibration\\相対接着・分岐底空間・整数ホモロジー}
+\author{}
+\date{2026年11月20日 / GitHub移行用再構成草稿 v0.1}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+滑らかな一般型超曲面$X_d\subset\PP^3$に対し、特定のKähler class上で
+branched baseを持つLagrangian torus fibrationを作る問題を考える。
+2026年10月27日付の30頁原PDF（第5稿）はrelative compactification、
+Liouville collars、divisor-preserving Moser同定、baseの整数ホモロジーを扱う。
+本ファイルはその論理構造を整理した再構成草稿であり、
+原PDFの全証明を忠実に転記したものではない。
+\end{abstract}
+\section{一般型曲面と偏極}
+\begin{proposition}
+滑らかな次数$d$の超曲面$X_d\subset\PP^3$について
+\[
+ K_{X_d}\simeq\mathcal O_{X_d}(d-4)
+\]
+である。特に$d\ge5$では$K_{X_d}$はampleである。
+\end{proposition}
+\begin{proof}
+adjunction formulaにより
+$K_{X_d}=(K_{\PP^3}+X_d)|_{X_d}=
+\mathcal O_{\PP^3}(d-4)|_{X_d}$。
+$d-4>0$ならhyperplane classの正倍はampleである。
+\end{proof}
+\section{基底の分岐とfibers}
+原PDFの構成は通常の閉曲面ではない自由辺なしの
+compact branched two-complex $B_d$を基底とする。
+regular fiberは$\T^2$、branch edgeでは
+$S^1\times(S^1\vee S^1)$という特異fibre modelを用いる。
+\begin{definition}
+$X$のsymplectic form $\omega$に関し、
+$f:X\to B$のregular locusでfiber $F$が
+$\dim_\RR F=\frac12\dim_\RR X$かつ$\omega|_F=0$なら、
+そのregular fibersをLagrangianと呼ぶ。
+\end{definition}
+\section{相対構成の検証単位}
+原PDFで中心となる接着の入力は次の四段階である。
+\begin{enumerate}
+\item pants decomposition上で、boundary fibersまで管理したlocal modelを構成する。
+\item 指定Morse foliationを保つfinite-volume Liouville collarをとる。
+\item divisorを保つMoser identificationにより指定Kähler classと整合させる。
+\item positive normal momentで切ったregion上のequivariant symplectic
+transportを行い、fiberwise Lagrangian条件とbranching dataを照合する。
+\end{enumerate}
+これらは互いに独立の局所技法だが、境界での相対条件を同時に満たすことが
+global theoremの鍵である。原PDF v5はその構成を与えたと主張するが、
+本移行稿では各接着補題を完全な形で再掲しておらず、今回独立に監査していない。
+\section{基底の位相と比較}
+原稿は各marked pants treeに対して、base $B_d$から
+単体の2-skeletonへのhomotopy equivalenceと整数係数のchain homotopy、
+$H_2(B_d;\mathbb Z)$のbasisを与える。
+具体的なchain matricesの忠実な再現には原PDFと旧source ZIPの再照合が必要である。
+局所正則部分のintegral-affine structureはLagrangian fibrationの
+action coordinatesから得られるが、branch/coreを含むstrict tropical atlas、
+special Lagrangian性は証明したと主張しない。
+\section{公表までの最優先事項}
+第一にPDF v5の全補題とその証明を正規のLuaLaTeXソースとして移す。
+第二にMoser deformationが保持するKähler classの許容領域と
+boundary moment mapsを厳密に確認する。
+第三にbranch edgeからcoreへ移るmonodromyとintegral homology
+の全接着を独立に監査する。
+これはKE degenerationから自動的に従うものではない。
+
+\end{document}
