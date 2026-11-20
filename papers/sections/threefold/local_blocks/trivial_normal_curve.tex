@@ -482,6 +482,46 @@ $H_1(C')\oplus\mathbb Z$が直和因子として現れる．
 両者の第一Betti数が異なるので同じhomotopy型ではない．
 \end{proof}
 
+\begin{proposition}[Focus block の境界torus bundleとmeridianの差]
+\label{tnc:focus-boundary-homology}
+$K_c$を補題\ref{fhr:focus-block}のfour-dimensional
+focus blockとする．$\partial K_c$はcornersを丸めた後，
+$S^1$上の$T^2$-bundleであり，fiberの一次homology上の
+monodromyは適当なsymplectic integral basisで
+\[
+ M=\begin{pmatrix}1&1\\0&1\end{pmatrix}
+\]
+（基底とloopの向きによって逆または転置へ置換）である．
+従って
+\[
+ H_1(\partial K_c;\mathbb Z)\simeq\mathbb Z^2,\quad
+ H_2(\partial K_c;\mathbb Z)\simeq\mathbb Z^2,\quad
+ H_3(\partial K_c;\mathbb Z)\simeq\mathbb Z.
+\]
+特に$\partial K_c$は$S^3$とhomology equivalentではなく，
+closed curveに沿ったactual focus blockのnormal facesは
+通常の管状disk bundleの$S^3$ facesにそのまま置換できない．
+\end{proposition}
+\begin{proof}
+$G_c:K_c\to R$は中央$o$に一つだけ
+nondegenerate focus--focus critical pointを持ち，
+$\partial R$上ではregular torus fibersを持つ．
+従って$\partial K_c=G_c^{-1}(\partial R)$はtorus bundleである．
+一focus点の標準monodromy公式は
+\cite[Section~3]{zung-focus-cf}によって
+primitive unipotent transvection $M$ となる．
+Wang長完全列において
+\[
+ H_1(T^2)=\mathbb Z^2,\quad H_2(T^2)=\mathbb Z,\qquad
+ \operatorname{coker}(M-I)\simeq\mathbb Z,\quad
+ \ker(M-I)\simeq\mathbb Z
+\]
+だから，$H_1(\partial K_c)$は
+$\mathbb Z$と$\mathbb Z$のextensionであり$\mathbb Z^2$，
+同じく$H_2(\partial K_c)\simeq\mathbb Z^2$．
+Orientationで$H_3\simeq\mathbb Z$が従う．
+\end{proof}
+
 \begin{remark}[補集合のどちらを意味するか]
 \label{tnc:complement-distinction}
 系\ref{tnc:complement-euler}の
