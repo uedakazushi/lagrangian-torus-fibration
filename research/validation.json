@@ -88,9 +88,11 @@
   },
   "vscode": "Settings parsed and root search limited to papers/*.tex. UI not tested.",
   "current_math_audit_2026_11_20": {
-    "mathematical_check": "Added an explicit cell-like map B_d(T)->C_d, proved homeomorphism only for d=5 and non-homeomorphism for d>=6, independently checked closed symplectic curve normal Chern data and trivalent graph counts.",
-    "finite_test": "Independent finite d=5..8 cellular chain calculations; self-contained verification/verify_ke_base_topology.py added, but exact GitHub script not rerun from this chat environment.",
-    "dependency_scope": "225 version-labelled TeX fragments remain; no deletion because source/verification dependencies have not been exhaustively evaluated.",
-    "latest_full_lualatex_build": "Not rerun after these edits. Work migration logs record earlier successful builds and check runs."
+    "mathematical_results": "Proved artificial intrinsic length metric collapse of B_d(T) onto C_d with GH O(epsilon); proved normal-trivial symplectic curve degree-genus parity and trivalent graph saddle count; deduced six labelled Petersen models form one S6 orbit with stabilizer order 120.",
+    "independent_computation": "SymPy rational ranks of cellular complexes at d=5..8 checked; exhaustive K6 one-factorisation enumeration yielded 15 matchings, 6 factorisations, orbit size 6, stabilizer 120. The committed standard-library regression was extended with the enumeration.",
+    "reproducibility": "verification/verify_ke_base_topology.py contains finite-field chain checks plus exact K6 enumeration. The exact updated GitHub script was not rerun in this chat after modification.",
+    "full_lualatex_after_edits": "not run; previous Work build records predate modified fragments",
+    "source_hashes": "research/source-manifest.json updates current hashes without changing original source provenance",
+    "cleanup": "No versioned fragment or verification file deleted; complete dependency audit for past-version scripts still outstanding"
   }
 }
