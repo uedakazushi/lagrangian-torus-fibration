@@ -686,6 +686,75 @@ $H_k(\mathcal V)=0$ ($k\ge5$)を得る．
 六次の数値とEuler数は式への代入である．
 \end{proof}
 
+\begin{proposition}[Focus base circuit はactual補集合の原始一次class]
+\label{tnc:focus-boundary-primitive}
+定理\ref{tnc:actual-complement-homology}の設定で，
+normal focus map $G_c:K_c\to R$の境界
+$\partial R\simeq S^1$を一周するloopを，
+次のexplicit sectionで$\partial K_c$へ持ち上げる：
+\[
+ w=XY=c+\sqrt q>0,\quad
+ X=\sqrt{P_X(A,w)/\pi}>0,\quad Y=w/X>0
+ \qquad ((A,q)\in\partial R).
+\]
+このloopのclassを$t\in H_1(\partial K_c;\mathbb Z)$とする．
+$C'$の基点$p$を固定すると
+\[
+ t_p=[\{p\}\times t]\in H_1(\partial\mathcal U;\mathbb Z)
+\]
+は$H_1(\partial\mathcal U)\to H_1(\mathcal U)$の
+kernelを生成し，そのactual complementへの像は
+\[
+ H_1(\mathcal V;\mathbb Z)\simeq\mathbb Z
+\]
+の\emph{原始生成元}である（符号は向きによる）．
+従って，global fillingを考える際，
+normal focus base circuit を補集合側で
+null-homologousにするような境界同定は不可能である．
+\end{proposition}
+\begin{proof}
+補題\ref{tnc:focus-homotopy}の
+$\vartheta:K_c\to S^1$，
+$\vartheta(X,Y)=(XY-c)/|XY-c|$は
+$H_1(K_c)\simeq\mathbb Z$のgeneratorを検出する．
+$0<r<c$，$q_-<r^2<q_+$を固定し，
+$\partial R$のface $A=a_*$上で
+$w=c+r e^{i\theta}$と置く．
+式\eqref{fhr:radii}によって$X>0$を選び
+$Y=w/X$とすれば，このloopは
+$\vartheta$の下でdegree oneとなる．
+従って$H_1(\partial K_c)\to H_1(K_c)$は全射である．
+命題\ref{tnc:focus-boundary-homology}により
+$H_1(\partial K_c)\simeq\mathbb Z^2$だから，
+そのkernelはrank oneのprimitive sublatticeである．
+
+一方，表示したsectionは$R$全体へ延び，
+$w-c=\sqrt q>0$なので$\vartheta$はsection上定数である．
+従って$t$は$H_1(K_c)$で零である．
+また$G_{c*}(t)$は
+$H_1(\partial R)\simeq\mathbb Z$のgeneratorなので
+$t$は$H_1(\partial K_c)$でprimitiveである．
+ゆえに$t$がkernelを生成する．
+$\partial\mathcal U=C'\times\partial K_c$と
+$\mathcal U=C'\times K_c$にK\"unnethを用いると，
+$H_1(\partial\mathcal U)\to H_1(\mathcal U)$は全射で，
+kernelは$\mathbb Z\,t_p$である．
+
+最後に$X_d=\mathcal U\cup\mathcal V$の
+Mayer--Vietoris長完全列を用いる．
+$H_1(X_d)=0$だから
+\[
+ H_1(\partial\mathcal U)
+ \longrightarrow H_1(\mathcal U)\oplus H_1(\mathcal V)
+ \longrightarrow H_1(X_d)=0
+\]
+の左の写像は全射である．
+$H_1(\mathcal V)=\mathbb Z$は
+定理\ref{tnc:actual-complement-homology}で計算済みなので，
+$H_1(\mathcal U)$で零となるkernel generator $t_p$の
+補集合側の像は$\pm1$でなければならない．
+\end{proof}
+
 \begin{remark}[管状補集合とactual focus補集合の比較]
 \label{tnc:complement-distinction}
 定理\ref{tnc:tubular-homology}の$V_0$と
