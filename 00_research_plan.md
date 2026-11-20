@@ -2,11 +2,11 @@
 2026-11-20 / v1.0
 
 ## 研究固有の目標
-一般型射影超曲面の指定Kähler classで、分岐を許し自由な外部境界のないLagrangian torus fibrationを構成する。五次曲面等の2次元超曲面での相対接着と、(X_d\subset\mathbf P^4, d\ge6\) の3次元局所blocksを区別し、**局所blocksから大域global fibrationへのギャップ**を最優先にする。
+一般型射影超曲面の指定Kähler classで、分岐を許し自由な外部境界のないLagrangian torus fibrationを構成する。五次曲面等の2次元超曲面での相対接着と、\(X_d\subset\mathbf P^4, d\ge6\\) の3次元局所blocksを区別し、**局所blocksから大域global fibrationへのギャップ**を最優先にする。
 
 ## 現在の二本の原資料
-- 曲面：`general_type_surface_fibration_paper_ja_v5.pdf`（2026-10-27、第5稿、30頁）。(X_d\subset\mathbf P^3,d\ge5\)、三価分岐2-complexを基底とする(T^2)-fibration、relative Liouville collar / Moser / equivariant transport、底空間の整数ホモロジー等を原稿中で主張。解析的相対接着の全仮定と証明の独立精査は未了。
-- 3次元：`focus_curve_blocks_and_obstructions_ja.pdf`（2026-10-28、第9版、166頁）。(X_d\subset\mathbf P^4,d\ge6\) でnormal-trivialなclosed symplectic curveの近傍のactual (T^3)-blockと ((d-2)(d-5)) 個のfocus–hyperbolic fibersを原稿中で構成。**normal facesとcomplementのfibration、全体を覆う境界のないfibrationは未完成**。
+- 曲面：`general_type_surface_fibration_paper_ja_v5.pdf`（2026-10-27、第5稿、30頁）。\(X_d\subset\mathbf P^3,d\ge5\\)、三価分岐2-complexを基底とする\(T^2\)-fibration、relative Liouville collar / Moser / equivariant transport、底空間の整数ホモロジー等を原稿中で主張。解析的相対接着の全仮定と証明の独立精査は未了。
+- 3次元：`focus_curve_blocks_and_obstructions_ja.pdf`（2026-10-28、第9版、166頁）。\(X_d\subset\mathbf P^4,d\ge6\\) でnormal-trivialなclosed symplectic curveの近傍のactual \(T^3\)-blockと ((d-2)(d-5)) 個のfocus–hyperbolic fibersを原稿中で構成。**normal facesとcomplementのfibration、全体を覆う境界のないfibrationは未完成**。
 - 原稿の利用と今回の論理監査、生成された抽出テキストと正規のTeXソースを分ける。旧Libraryには `quintic_fibration_source.zip` があるが、今回は生のZIP内容の移行が接続制約で完了していない。
 
 ## 到達基準と優先順位
