@@ -537,6 +537,38 @@ $\langle a,b,t\rangle$のcommutatorは$a=[t,b]$で，
 $a$は中心に属するため整数Heisenberg群の標準表示を得る．
 \end{proof}
 
+\begin{corollary}[Closed-curve focus face の整数Betti数]
+\label{tnc:focus-boundary-betti}
+定理\ref{tnc:actual-curve}のgenus-$g$ closed curve $C'$上の
+product focus block $\mathcal U=C'\times K_c$の境界は，
+cornersを丸めた後，$C'\times\partial K_c$と同相である．
+その整数homologyはtorsion-freeで，
+\[
+ \bigl(b_0,b_1,b_2,b_3,b_4,b_5\bigr)
+ =\bigl(1,\,2g+2,\,4g+3,\,4g+3,\,2g+2,\,1\bigr).
+\]
+さらに
+\[
+ \pi_1(\partial\mathcal U)
+ \simeq\pi_1(C')\times H_{\mathbb Z}.
+\]
+特に$d=6$では$g=3$なので
+\[
+ (b_0,\ldots,b_5)=(1,8,15,15,8,1).
+\]
+\end{corollary}
+\begin{proof}
+$C'$はclosedであり$\mathcal U=C'\times K_c$だから
+$\partial\mathcal U=C'\times\partial K_c$である．
+命題\ref{tnc:focus-boundary-homology}から
+$\partial K_c$の整数homologyは
+$\mathbb Z,\mathbb Z^2,\mathbb Z^2,\mathbb Z$であり，
+各次数でtorsionを持たない．
+$H_*(C')=(\mathbb Z,\mathbb Z^{2g},\mathbb Z)$を用いる
+K\"unneth formulaにより表示が得られる．
+基本群はproductのvan Kampen定理による．
+\end{proof}
+
 \begin{remark}[補集合のどちらを意味するか]
 \label{tnc:complement-distinction}
 系\ref{tnc:complement-euler}の
