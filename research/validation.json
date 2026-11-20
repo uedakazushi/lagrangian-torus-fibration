@@ -88,12 +88,19 @@
   },
   "vscode": "Settings parsed and root search limited to papers/*.tex. UI not tested.",
   "current_math_audit_2026_11_20": {
-    "mathematics_verified": "Sharp graph-correspondence distortion Θ(epsilon^2) for d=5 and Θ(epsilon) for d>=6 for the synthetic metric; GH upper bounds only. Proved finite no-shortcut/square-lifts/fibre-connector criterion and a two-squares-wedged-at-origin counterexample showing connector necessity. Proved conditional Euler singular-fibre budget N_d=d^4-5d^3+9d^2-3d-10 for the threefold complement, with isolated nonzero Euler fibres as an indispensable hypothesis (N_6=512). Existing degree/genus and Petersen results retained.",
-    "independent_computations_executed": "Independent Python modular rank computations for d=5,6,7,8 gave (rank d1,rank d2)=(4,6),(5,25),(6,57),(7,105). Exhaustive K6 matching enumeration gave 15 perfect matchings, six one-factorizations, a single S6 orbit and stabilizer size 120. Independent Euler polynomial checks for d=6..11 gave chi(V)=-512,-1096,-2078,-3608,-5860,-9032.",
-    "repo_script_currently_executed": false,
-    "repo_script_reproduction": "verification/verify_ke_base_topology.py includes modular rank, exact K6 orbit and Euler polynomial checks. The exact latest committed copy was not executed in this chat.",
-    "post_edit_lualatex_rerun": false,
-    "build_note": "Work's recorded TeX compilation predates this set of source edits; no claim of recompilation or rendered-PDF audit for the new sections.",
-    "claims_not_established": "Actual action/KE metric comparison, (N)/(S)/(F) on the geometric base, analytic singular-fibre classifications, global threefold fibration, and originality in the literature remain open."
+    "proven_in_current_manuscript": "For the closed normal-trivial curve degree e=d−2 in smooth X_d⊂P^4: H3 of tubular complement is Z^{b_d}⊕Z/e; explicit K_c deformation retract is S1∨S2; actual focus complement has H1=Z, H2=Z^{2g+2}, H3=Z^{b_d+2g+1}⊕Z/e, H4=Z^{2g+1}. Focus boundary is one-unipotent-monodromy torus bundle with integral Heisenberg π1, and the closed-curve face Betti numbers are (1,2g+2,4g+3,4g+3,2g+2,1).",
+    "key_proofs": [
+      "papers/sections/threefold/local_blocks/trivial_normal_curve.tex#tnc:tubular-homology",
+      "tnc:focus-homotopy",
+      "tnc:actual-complement-homology",
+      "tnc:focus-boundary-homology",
+      "tnc:focus-boundary-betti"
+    ],
+    "independently_calculated": "Symbolic Euler formulas and finite substitutions d=6..10, including b3(X6)=520, g=3, actual complement free Betti (1,1,8,527,7,0) and torsion order 4; Wang Smith normal form of M−I= [[0,1],[0,0]] yielding no boundary torsion.",
+    "primary_source": "Oscar Randal-Williams, Monodromy and mapping class groups of 3-dimensional hypersurfaces, Math. Ann. 391 (2025), 1965-2003, §2.1, DOI 10.1007/s00208-024-02951-4, checked for integral cohomology of smooth hypersurface threefold X_d. Standard focus monodromy from the paper's existing cited Zung source.",
+    "scope_limits": "These are topological results for the explicitly defined focus-block domain. They do not establish the integer homology inclusion maps of its boundary into the actual complement, matching of whole Lagrangian foliations, action/Maslov data, global threefold Lagrangian fibration, or new literature priority.",
+    "committed_regression": "verification/verify_ke_base_topology.py includes arithmetic consistency checks, but the exact latest GitHub version was not executed in this turn.",
+    "lualatex": "Full post-edit compilation has NOT been run in this turn; historical Work validation applies only to its earlier source snapshot.",
+    "git": "Main branch commits made; source-manifest will track current SHA-256 separately from Library original."
   }
 }
