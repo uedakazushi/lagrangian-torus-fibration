@@ -98,7 +98,7 @@ def main():
                         default=here / 'g514_central_matching_independent_audit_v25.json')
     args = parser.parse_args()
     choices = [here.parent / 'unit_gluing/g514_central_matching_v25.tex',
-               here.parent / 'paper/g514_central_matching_v25.tex',
+               here.parent / 'papers/sections/paper/g514_central_matching_v25.tex',
                here / 'g514_central_matching_v25.tex']
     source = args.source or next(path for path in choices if path.exists())
     checks = []

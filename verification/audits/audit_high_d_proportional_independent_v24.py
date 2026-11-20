@@ -197,7 +197,7 @@ def main():
     parser.add_argument('--certificate',type=Path,default=None)
     parser.add_argument('--output',type=Path,default=here/'high_d_proportional_independent_review_v24.json')
     args=parser.parse_args()
-    proof=args.proof or first_existing([work/'high_d_proportional_reduction_v24.tex',bundle/'paper/high_d_proportional_reduction_v24.tex'])
+    proof=args.proof or first_existing([work/'high_d_proportional_reduction_v24.tex',bundle/'papers/sections/paper/high_d_proportional_reduction_v24.tex'])
     primary=args.primary or first_existing([work/'verify_high_d_proportional_v24.py',bundle/'verification/verify_high_d_proportional_v24.py'])
     cert=args.certificate or first_existing([work/'high_d_proportional_verification_v24.json',bundle/'verification/high_d_proportional_verification_v24.json'])
     data=json.loads(cert.read_text())

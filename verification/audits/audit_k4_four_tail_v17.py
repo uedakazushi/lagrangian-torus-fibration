@@ -25,8 +25,8 @@ def sha(path):
 
 def locate(name):
     options = [HERE / name, HERE.parent / 'four_exception' / name,
-               HERE.parent / 'paper' / name, HERE.parent / name,
-               HERE.parents[1] / 'paper' / name]
+               HERE.parent / 'papers/sections/paper' / name, HERE.parent / name,
+               HERE.parents[1] / 'papers/sections/paper' / name]
     return next(p for p in options if p.is_file())
 
 

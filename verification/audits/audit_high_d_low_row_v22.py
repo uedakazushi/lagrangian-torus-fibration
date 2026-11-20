@@ -73,7 +73,7 @@ CHECKS = []
 def optional_source_hash(filename):
     for base in (Path(__file__).parent, Path(__file__).parent.parent,
                  Path(__file__).parent.parent.parent):
-        for subdir in ('', 'highd', 'paper', 'verification'):
+        for subdir in ('', 'highd', 'papers/sections/paper', 'verification'):
             path = base/subdir/filename
             if path.is_file():
                 return hashlib.sha256(path.read_bytes()).hexdigest()

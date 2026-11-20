@@ -125,7 +125,7 @@ def run():
         result=producer/'high_d_axis_degenerate_verification_v24.json'
     else:
         root=here.parent.parent
-        proof=root/'paper/high_d_axis_and_degenerate_obstruction_v24.tex'
+        proof=root/'papers/sections/paper/high_d_axis_and_degenerate_obstruction_v24.tex'
         source=root/'verification/verify_high_d_axis_degenerate_v24.py'
         result=root/'verification/high_d_axis_degenerate_verification_v24.json'
     paths=[proof,source,result,Path(__file__).resolve()]
