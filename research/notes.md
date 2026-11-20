@@ -10,6 +10,18 @@
 
 整数鎖複体の主張を検査するため、\(d=5,\dots,8\) の \(B_d(T)\) と \(\operatorname{Sk}_2\Delta^{d-1}\) の \(\partial_1,\partial_2\) の階数を独立に計算して、\(b_1=0\)、\(b_2=\binom{d-1}{3}\) と一致した。再現コードは `verification/verify_ke_base_topology.py`。これは有限体 \(\mathbb F_{1000003}\) 上の有限検算であり、整数係数の一般定理の証明は本文のexplicit chain contractionが担当する。
 
+## 三次元一般型のLagrangian torus fibration：一次文献比較（2026-11-20）
+最重要の先行結果は以下。**位相的stratified torus fibration**、**選んだLagrangian fiber**、**全regular fibersがLagrangianな大域fibration**、**SNC degenerationの部分領域のLagrangian fibration**を混同しない。
+
+- G. Mikhalkin, *Decomposition into pairs-of-pants for complex algebraic hypersurfaces*, Topology 43 (2004), 1035–1065, DOI 10.1016/j.top.2003.11.006, arXiv:math/0205011。**Theorem 1**は全次数・全次元のsmooth hypersurface X_dにstratified topological T^n-fibrationを作り、底はwedge of p_g(X_d) spheres S^nのhomotopy型を持つ。**Lagrangian性は各maximal n-cell内の少なくとも一点のfiberに限る**。特に一般型threefold d≥6のtopological torus decompositionは既知。全regular fibersが所定ωでLagrangianという結論はない。
+- N. C. Leung and T. Y. H. Wan, *Calabi-Yau components in general type hypersurfaces*, J. Differential Geom. 83 (2009), 43–74, DOI 10.4310/jdg/1253804351, arXiv:0807.1784。**Theorem 2.4**がMikhalkinの定理を再掲し、**Theorem 3.3**は選ばれたLagrangian fibersが正則n形式に関してasymptotically specialになることを示す。全正則fiberのLagrangian性は証明しない。
+- J. D. Evans and M. Mauri, *Constructing local models for Lagrangian torus fibrations*, Ann. Henri Lebesgue 4 (2021), 537–570, DOI 10.5802/ahl.80。Affine SNC complementのlocal model、3-fold negative vertex、one-dimensional stratum近傍。Projective general type X_dのglobal fibrationではない。
+- M. Abouzaid, D. Auroux and L. Katzarkov, *Lagrangian fibrations on blowups of toric varieties and mirror symmetry for hypersurfaces*, Publ. Math. IHÉS 123 (2016), 199–282, DOI 10.1007/s10240-016-0081-9。Affine hypersurfaces of general typeへ応用するが、blowup of V×C along H×0のfibrationを、compact H⊂P^4そのものへのglobal fibrationと同一視できない。
+- J. Fernández de Bobadilla and T. Pełka, *Fibrations by Lagrangian Tori for Maximal Calabi–Yau Degenerations and Beyond*, Commun. Pure Appl. Math., first published 8 July 2026, article e70060, DOI 10.1002/cpa.70060, arXiv:2312.13248v4。A'Campo boundaryから近傍fiberへsymplectic transportをする一般Kähler degeneration方法。Maximal CYではgeneric regionのLagrangian torus fibrationであり、一般型compact threefoldのglobal coverageには直接至らない。本研究のthreefold-fibration.texにTheorem 6.14の部分適用が既にある。
+- C. Y. Mak, D. Matessi, H. Ruddat and I. ZharkovのCalabi–Yau hypersurfaceへのglobal Lagrangian fibrationは2026年1月/6月/11月の公的**講演要旨**で発表。2026年11月12日のMak講演要旨（IMJ-PRG）はiron coefficientsとconvex non-strict potential、Liouville flowを明示している。確認した範囲でcomplete published proof/preprintは未取得。対象はCY/anticanonicalであり一般型には自動適用できない。公式要旨 https://www.imj-prg.fr/gestion/evenement/affEvenement/45 と https://www.mittag-leffler.se/seminar/helge-ruddat-tba/ 。
+
+**目標の新規性の正確な位置**：smooth general type X_d⊂P^4, d≥6, 指定ω=aHについて、全regular T^3 fibersがLagrangianで、明示されたsingular local modelsをもち、全X_dを覆い、境界なし、連結fiber、Hausdorff baseとなるglobal mapを構成する。Mikhalkinのtopological fibrationとLeung–Wanの部分的special性より強い。しかし「初めての一般型torus fibration」「一般型のLagrangian torusが未知られ」などの主張は誤り。新規性の網羅的な保証は未完了。より弱いgeneral singular setを許しても大域存在を優先する。現在未完成の相対filling、curvature-flat normal lifts、reduced surfaceの両端葉層一致、actual coverageの証明を必要とする。
+
 ## 三次元：局所稿の参照先
 `papers/threefold-blocks.tex`第25・33節：positive normal shell、membrane/focus collars。第26節：smooth focus Cartanとnormal degreeの障害。第34–35節：compact focus blockとnormal-trivial closed curve。第36節：weighted collars。旧48 ports、normal faces、complement、大域boundary-free fibrationは未完成。全体稿は `papers/threefold-fibration.tex`。
 
