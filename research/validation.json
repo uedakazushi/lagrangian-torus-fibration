@@ -88,19 +88,21 @@
   },
   "vscode": "Settings parsed and root search limited to papers/*.tex. UI not tested.",
   "current_math_audit_2026_11_20": {
-    "proven_in_current_manuscript": "For the closed normal-trivial curve degree e=d−2 in smooth X_d⊂P^4: H3 of tubular complement is Z^{b_d}⊕Z/e; explicit K_c deformation retract is S1∨S2; actual focus complement has H1=Z, H2=Z^{2g+2}, H3=Z^{b_d+2g+1}⊕Z/e, H4=Z^{2g+1}. Focus boundary is one-unipotent-monodromy torus bundle with integral Heisenberg π1, and the closed-curve face Betti numbers are (1,2g+2,4g+3,4g+3,2g+2,1).",
+    "proven_in_current_manuscript": "For the closed normal-trivial curve degree e=d−2 in smooth X_d⊂P^4: H3 of tubular complement is Z^{b_d}⊕Z/e; explicit K_c deformation retract is S1∨S2; actual focus complement has H1=Z, H2=Z^{2g+2}, H3=Z^{b_d+2g+1}⊕Z/e, H4=Z^{2g+1}. Focus boundary is one-unipotent-monodromy torus bundle with integral Heisenberg π1, and the closed-curve face Betti numbers are (1,2g+2,4g+3,4g+3,2g+2,1). The focus base-boundary loop constructed by an explicit section is the primitive generator of ker(H1(∂U)→H1(U)); Mayer–Vietoris forces its image to generate H1(V)=Z (tnc:focus-boundary-primitive).",
     "key_proofs": [
       "papers/sections/threefold/local_blocks/trivial_normal_curve.tex#tnc:tubular-homology",
       "tnc:focus-homotopy",
       "tnc:actual-complement-homology",
       "tnc:focus-boundary-homology",
-      "tnc:focus-boundary-betti"
+      "tnc:focus-boundary-betti",
+      "tnc:focus-boundary-primitive"
     ],
     "independently_calculated": "Symbolic Euler formulas and finite substitutions d=6..10, including b3(X6)=520, g=3, actual complement free Betti (1,1,8,527,7,0) and torsion order 4; Wang Smith normal form of M−I= [[0,1],[0,0]] yielding no boundary torsion.",
     "primary_source": "Oscar Randal-Williams, Monodromy and mapping class groups of 3-dimensional hypersurfaces, Math. Ann. 391 (2025), 1965-2003, §2.1, DOI 10.1007/s00208-024-02951-4, checked for integral cohomology of smooth hypersurface threefold X_d. Standard focus monodromy from the paper's existing cited Zung source.",
-    "scope_limits": "These are topological results for the explicitly defined focus-block domain. They do not establish the integer homology inclusion maps of its boundary into the actual complement, matching of whole Lagrangian foliations, action/Maslov data, global threefold Lagrangian fibration, or new literature priority.",
+    "scope_limits": "Higher H2/H3/π1 boundary inclusion homomorphisms, action periods, Maslov/whole-foliation matching, global relative filling and global threefold Lagrangian fibration remain open. Algebraic topology theorems do not prove their existence.",
     "committed_regression": "verification/verify_ke_base_topology.py includes arithmetic consistency checks, but the exact latest GitHub version was not executed in this turn.",
     "lualatex": "Full post-edit compilation has NOT been run in this turn; historical Work validation applies only to its earlier source snapshot.",
-    "git": "Main branch commits made; source-manifest will track current SHA-256 separately from Library original."
+    "git": "Main branch commits made; source-manifest will track current SHA-256 separately from Library original.",
+    "computational_checks": "Independent SymPy checks of Euler polynomial and ranks in degrees 6..10; Smith normal form of focus monodromy M-I=[[0,1],[0,0]] yields primitive rank-one image; no formal proof assistant. The latest GitHub Python regression and LuaLaTeX compilation were not executed."
   }
 }
