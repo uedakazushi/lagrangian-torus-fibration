@@ -3317,9 +3317,9 @@
   "current_post_migration_sources": [
     {
       "destination": "papers/sections/threefold/local_blocks/trivial_normal_curve.tex",
-      "sha256": "5d132c497fa513c8ba5d17aeefddb8dad3b45abd1b032d84469f8361165e7123",
-      "bytes": 31469,
-      "current_blob_sha": "88b6fe43070c629c150a85922209a44ed29460a7"
+      "sha256": "75c35819d4bff2bb9c80975deb0b87fb354c81863d7150140cb35213c87ba4ec",
+      "bytes": 34094,
+      "current_blob_sha": "45d92e97f1d118605fe612b9cbb7d81647641ec3"
     },
     {
       "destination": "verification/verify_ke_base_topology.py",
