@@ -423,6 +423,32 @@ $N_{ab}$ を $(pa)$ で引き戻したものは，$\mathcal F$ に属し $pb$ �
 補題\ref{topo:factorizations}から従う．
 \end{proof}
 
+\begin{corollary}[六次の同時 Petersen 系におけるラベル対称性の破れ]
+\label{topo:petersen-symmetry}
+$d=6$ とし，$\mathfrak T_6^{\rm Pet}$ を全ての頂点リンクが
+Petersen となるラベル付き分割系の集合とする．
+$|\mathfrak T_6^{\rm Pet}|=6$ であり，
+$S_6$ はラベル置換によってこの集合上に推移的に作用する．
+各 $T\in\mathfrak T_6^{\rm Pet}$ の安定化部分群の位数は $120$，
+指数は $6$ である．
+特に全 $S_6$ で不変な単一のラベル付き Petersen 分割系は存在しない．
+\end{corollary}
+\begin{proof}
+定理\ref{topo:petersen}より全ての系は一つのラベル置換軌道に属し，
+軌道の大きさは六である．従って軌道・安定化群公式から
+$|\operatorname{Stab}_{S_6}(T)|=6!/6=120$ となる．
+全 $S_6$ に固定された系は軌道が一点になるはずなので存在しない．
+\end{proof}
+
+\begin{remark}
+KE候補$\mathcal C_6$の座標置換は全$S_6$で対称である一方，
+各Petersen分岐基底の\emph{選択した木系}は
+その対称性を保たない．従ってラベル付きPetersen構成の比較に
+全$S_6$-equivarianceを課すなら，単一の$T$ではなく
+六個の選択の置換を同時に管理する必要がある．
+これは別の分岐基底やラベルを忘れた幾何構成の存在を排除しない．
+\end{remark}
+
 この同時 Petersen 化は，六次の場合の全ての core の\emph{位相的なリンク}を統一する．
 それだけで格子付きファン，integral-affine atlas，あるいは対応する
 シンプレクティックな core の同定を与えるわけではない．
