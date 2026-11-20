@@ -13,7 +13,7 @@
 
 三次元の大域接着は研究上の未解決課題。三次元の検算は `python3 verification/run_threefold_checks.py`。
 
-**今回の数学的点検：** [基底の位相](papers/sections/paper/base_topology.tex) にKE退化の候補 \(\mathcal C_d\) とのcell-like homotopy equivalenceと \(d\ge6\) の非同相性を証明した。一般次数の鎖ホモトピーに加え、\(d=5,\ldots,8\) の有限次数検算は [コード](verification/verify_ke_base_topology.py) で再現できる。三次元のnormal-trivial closed curveのholomorphic determinant、symplectic triviality、focus graph数の関係も [研究ノート](research/notes.md) に独立点検を整理した。これらはglobal Lagrangian fibrationの証明ではない。
+**現在の独立検証：** [基底の位相](papers/sections/paper/base_topology.tex)にB_d(T)からKE候補C_dへの位相的比較と、人工的な内在的長さ計量による定量的GH収縮を証明。 [三次元の閉曲線](papers/sections/threefold/local_blocks/trivial_normal_curve.tex)にはnormal-trivialな曲線の必要条件2g−2=(d−5)eおよび次数の偶奇制約を証明した。[研究ノート](research/notes.md)に仮定と限界を整理。actual symplectic global gluing、action metricの収束は未解決。
 
 最初に[研究方針](00_research_plan.md)、[移行範囲](research/migration.md)、[ソース対応](research/source-manifest.json)を確認する。
 
