@@ -12,16 +12,18 @@
 - `papers/threefold-blocks.tex`：原版166頁の局所稿第9版。所定X_d⊂P⁴にdegree d−2、genus (d−3)(d−4)/2のnormal-trivial closed symplectic curveとactual local T³ blockを構成したとする。Normal faces、complement、大域boundary-free fibrationは未構成。
 - `papers/threefold-fibration.tex`：原版187頁の全体稿第11稿。
 
-## 独立に確認した幾何・位相
-主原稿が読み込むbase_topology.texでB_d(T)からKE候補C_dへのcell-like homotopy equivalenceとd≥6での非同相性を証明し、さらに任意の固定Tについて人工的な区分的長さ距離d_epsilonのGH収束を誤差O(epsilon)で証明した（topo:metric-collapse）。これは実際の作用計量やKE計量の収束ではない。d=5,6,7,8の鎖階数は独立に有理数体上で検算し、有限体の回帰コードもverification/verify_ke_base_topology.pyに保管した。三次元のtrivial_normal_curve.texでは、normal-trivialな閉symplectic曲線のdegree eとgenus gに2g-2=(d-5)eが必要で、d偶数ならe偶数という制約と、三価Reeb graphのsaddle数が(d-5)eとなることを証明した（tnc:degree-genus-parity）。これらはnormal faces/complementの大域Lagrangian接着を完成させるものではない。メトリック収縮の一般的な先行研究に対する新規性は未確認。
-
-六次の同時Petersen系は6通りでS6の一軌道、固定した系の安定化群は位数120・指数6。ラベル付きで全S6対称な比較には一つの固定Tでは足りない。これは組合せ論的結論であり、実際のfibrationの対称性や存在の不可能性ではない。
+## 中心結果と証明の状態
+- 曲面側の分岐基底 \(B_d(T)\) とKE候補 \(\mathcal C_d\) は、labelled cell-like homotopy equivalence \(p_T\) で結ばれる。\(d=5\) では同相、\(d\ge6\) では非同相（`papers/sections/paper/base_topology.tex` の `topo:KE-cubical-comparison`）。
+- 人工的PL長さ距離\(d_\varepsilon\)によるgraph correspondenceの誤差は、\(d=5\) で \(\Theta(\varepsilon^2)\)、\(d\ge6\) で \(\Theta(\varepsilon)\)。GH収束は上から同じ次数で評価できるが、\(d\ge6\) にGH距離の同次数の下界を主張しない（`topo:metric-collapse-sharp`）。
+- 幾何学的な基底計量で同じ収束を得るための十分条件は、(N) global no-shortcut、(S) square geodesic lifts、(F) small-fiber/portal connectors（`topo:finite-portal-criterion`）。二つのsquareを一頂点で貼った反例（`topo:portal-counterexample`）により、(F) は(N)+(S)からは従わない。これらは抽象的距離論であり、actual action metricの構成と検証は未完成。
+- 六次同時Petersen分岐木系は6通り・\(S_6\)の一軌道で、各安定化群の位数は120。固定木系はfull \(S_6\)-equivariantではない。新規性は未確認。
+- 三次元のnormal-trivial closed symplectic curveは\(2g-2=(d-5)e\)を満たし、\(d\)偶数なら\(e\)偶数。構成済み局所blockを除いた補集合\(\mathcal V\)は\(\chi(\mathcal V)=-\mathcal N_d\)、\(\mathcal N_d=d^4-5d^3+9d^2-3d-10\)。Euler数非零のfiberが有限孤立集合だけにあり、各々\(-1\)なら必要数は\(\mathcal N_d\)、六次では512（`tnc:complement-singularity-budget`）。一般のglobal fibrationの存在・不在は結論しない。
 
 ## 次の一手
-1. G5_14の中央matchingと二{4,1,0}・分母三の位置を同時に課す。G5_16のnode5、G5_17全matchingも別に扱う。
-2. 三高Dの比例零軸・退化面の固定入力有限復元を、一般入力の上界や不存在へ外挿しない。
-3. 三次元ではnormal facesとcomplementの大域接着を進める。
-4. 曲面の旧v4ソースと現行v25の主要構成を照合し、旧版独自内容の網羅的照合は未了と記録する。
+1. 三次元のnormal faces・complementに必要なsingular strataを、\(\chi(\mathcal V)=-\mathcal N_d\) と整合するよう設計する。各stratumの\(\chi_c\)とfiber Euler数を明示し、面積・Maslov・作用周期・monodromyの制約と突き合わせる。局所blockは完成してもglobal fibrationは未完成。
+2. 実際の曲面基底に作用アフィン計量の長さ完備化を定義し、(N) no-shortcut、(S) square内lift、(F) portal/fiber径をそれぞれ独立に検証する。\(\varepsilon\)と元の退化parameterの関係も確定する。純粋に位相的な基底比較だけでは不十分。
+3. 五次整数接着の\(G_{5,14}\)中央matchingと二\(\{4,1,0\}\)・分母三の位置条件、\(G_{5,16}\)、\(G_{5,17}\)、三高Dの未解決を継続する。
+4. 旧曲面v4と現行v25の補題単位の照合を進める。版番号付き分割原稿は、参照する証明書と依存関係を確認するまで削除しない。
 
 ## 保存と検証
 `research/source-manifest.json`に元ZIP・ソース対応・SHA-256を記載。各証明の断片はpapers/sections/に保持し、証明書が参照する旧版名の証明は必要依存として残す。古いビルドログ・PDF・不要TeXは持ち込まない。旧verification/内の証明書は保存時点の記録であり、今回全てを再実行した記録ではない。
