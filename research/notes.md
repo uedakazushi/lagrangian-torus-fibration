@@ -36,15 +36,23 @@ b_d=d^4-5d^3+10d^2-10d+4.
 \]
 Torsionはnormal meridian S³のclassから生じる（tnc:tubular-homology）。六次ではH_3(V_0)=Z^{520}⊕Z/4、H_4(V_0)=Z^6。X_dの整数cohomologyの一次資料はO. Randal-Williams, Math. Ann. 391 (2025), 1965–2003, §2.1, DOI 10.1007/s00208-024-02951-4。
 
-**Actual focus blockは別の位相：** 構成済みU=C'×K_cのnormal factorは、Q=|XY−c|²が正の区間に入るfocus block。Arg(XY−c)へ巻数1のloopが存在するのでH_1(K_c)はZを直和因子に持ち、K_cはD⁴とhomotopy equivalentでない（tnc:focus-nondisk）。境界∂K_cは一つのfocus–focus点の周りのT²-bundleで、monodromyはprimitive unipotent、基本群は整数Heisenberg群、H_1=H_2=Z²（tnc:focus-boundary-homology）。Closed-curve face ∂U=C'×∂K_cのBetti数は
+**Actual focus blockの整数homology（証明済み）：** $K_c$の座標を$w=XY$、$A=P_X-P_Y$とすると、$w$を保持して$A\to0$へ変形収縮できる。$A=0$は$w$-annulusと円周の積で、$w=0$の一円周を潰したものだから
 \[
-(1,\,2g+2,\,4g+3,\,4g+3,\,2g+2,\,1),
+K_c\simeq S^1\vee S^2
 \]
-六次では(1,8,15,15,8,1)（tnc:focus-boundary-betti）。**V_0と実際のUの補集合VのEuler数は一致するが、H_3(V)にZ/(d−2)が残るとはまだいえない。** Ambientのπ_3(X_d)に現れる既知のZ/dとも別の不変量。
+（tnc:focus-homotopy）。従って実際のblockの補集合$\mathcal V=\overline{X_d\setminus\operatorname{int}(C'\times K_c)}$に相対Poincaré–Lefschetz双対性を適用すると
+\[
+H_1(\mathcal V)=\mathbb Z,\quad H_2(\mathcal V)=\mathbb Z^{2g+2},\quad
+H_3(\mathcal V)=\mathbb Z^{b_d+2g+1}\oplus\mathbb Z/(d-2),\quad
+H_4(\mathcal V)=\mathbb Z^{2g+1}.
+\]
+六次では$(b_1,b_2,b_3^{\rm free},b_4)=(1,8,527,7)$、$H_3$のtorsionは$\mathbb Z/4$（tnc:actual-complement-homology）。Torsionを表す3-cycleは固定した曲線上の一点での$\partial K_c$。管状補集合$V_0$と$\mathcal V$は同じEuler数だが自由rankが異なる（tnc:complement-distinction）。Ambientの$\pi_3(X_d)$に現れる既知の$\mathbb Z/d$は別の不変量。
+
+**Actual normal face：** $\partial K_c$はfocus点一つのmonodromy $\left(\begin{smallmatrix}1&1\\0&1\end{smallmatrix}\right)$を持つtorus bundleで、$\pi_1$は整数Heisenberg群、$H_1=H_2=\mathbb Z^2$（tnc:focus-boundary-homology）。$\partial\mathcal U=C'\times\partial K_c$のBetti数は$(1,2g+2,4g+3,4g+3,2g+2,1)$、六次では$(1,8,15,15,8,1)$（tnc:focus-boundary-betti）。
 
 **Euler予算：** χ(U)=−(d−2)(d−5)、χ(V)=−(d⁴−5d³+9d²−3d−10)。六次ではχ(V)=−512。Euler数非零fiberが有限個の孤立基底点にだけ存在してすべて−1なら512個必要（tnc:complement-singularity-budget）。正次元特異strataではcompact-support Euler数で重み付けし、一般のglobal Lagrangian fibrationの実現数には外挿しない。
 
-**核心と次の一手：** 相対対(K_c,∂K_c)、境界包含∂U→Uおよび∂U→Vの整数homology・基本群写像、meridional classの像、monodromy/Maslov/action periodsを計算してから、補集合のsingular strataとnormal facesの接着へ進む。これらの境界写像とglobal fillingは未構成。
+**核心と次の一手：** 補集合の整数homology群自体は計算できた。次に、境界包含∂U→Uおよび∂U→VがH₁・H₂・H₃、基本群、vanishing-cycleとmeridional torsionに与える具体的な写像を決める。そのうえでmonodromy/Maslov/action periodsと整合するnormal facesのactual接着を構成する。大域fibrationは未完成。
 
 ## 検証
 移行時にWorkがv25の五主検算と五独立監査を再実行した。今回の新規トポロジー命題は原稿で論証し、次数ごとのEuler数とWang行列を独立検算したが、保存済み検算スクリプトの最新版全体は今回再実行していない。保存済みの旧verification/証明書全体を今回の実行結果とは扱わない。詳細はmigration.md。計算は解析的symplectic gluingや新規性の証明を代替しない。
