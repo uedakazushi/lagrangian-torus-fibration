@@ -50,15 +50,15 @@ repo直下で実行する。外部KEのcheckoutが兄弟ディレクトリにな
 
 ## 環境の公開前に確認すること
 
-Cloudの再利用環境を作るときは、まず \`surface-lagrangian-torus-fibration\`、\`kaehler-einstein-degeneration\`、\`research-hub\` を利用可能なリポジトリとして選び、必要なら \`multiscale-kaehler-einstein\` も追加する。前二者の研究資料は別正本であり、hubの更新も独立のpush権限が必要である。ChatGPTのGitHub connectorの書込権限はCloud実行環境の認証を保証しない。
+Cloudの再利用環境を作るときは、まず `surface-lagrangian-torus-fibration`、`kaehler-einstein-degeneration`、`research-hub` を利用可能なリポジトリとして選び、必要なら `multiscale-kaehler-einstein` も追加する。前二者の研究資料は別正本であり、hubの更新も独立のpush権限が必要である。ChatGPTのGitHub connectorの書込権限はCloud実行環境の認証を保証しない。
 
-環境の初期設定ではTeX Liveの不足したLuaLaTeX/日本語パッケージと日本語フォントを実際に導入・確認する。\`setup --require-tex\` は依存を**インストールせず、存在を検査するだけ**である。環境をPublishする前に少なくとも以下を実行して成功を確かめる。
+環境の初期設定ではTeX Liveの不足したLuaLaTeX/日本語パッケージと日本語フォントを実際に導入・確認する。`setup --require-tex` は依存を**インストールせず、存在を検査するだけ**である。環境をPublishする前に少なくとも以下を実行して成功を確かめる。
 
-\`\`\`bash
+```bash
 python3 scripts/research_check.py setup --require-tex
 python3 scripts/research_check.py static
 python3 scripts/research_check.py tex
-\`\`\`
+```
 
 次いで外部KE repoのcheckoutと参照コミット／最新mainを点検し、一次論文への必要なネットワークアクセスを設定する。認証済みGitHub pushが可能かは公開範囲を変えず別に確認する。**Environment published** と表示されたあと、その環境から新しいタスクを開始し、上記の開始指示を渡す。Cloud環境のPublish、実際のタスク起動、継続している状態はこのGitHubファイル自体には記録されないため、リポジトリの整備済みをCloud起動済みと読み替えない。
 
