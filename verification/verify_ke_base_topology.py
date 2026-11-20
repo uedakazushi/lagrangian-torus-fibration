@@ -162,6 +162,17 @@ def check_tubular_and_focus_boundary():
         chi_tubular_complement = 2 - middle_rank + 2 * genus
         chi_focus_complement = euler_x + (d - 2) * (d - 5)
         assert chi_tubular_complement == chi_focus_complement
+        # Explicit retract K_c ~ S1 wedge S2 and the relative duality
+        # computation predict the ACTUAL focus complement free ranks:
+        actual_betti = (1, 1, 2 * genus + 2,
+                        middle_rank + 2 * genus + 1, 2 * genus + 1, 0)
+        assert sum((-1)**i * b for i, b in enumerate(actual_betti)) \
+               == chi_focus_complement
+        # The relative H_4(X)->H^2(C x K_c) map is multiplication by e
+        # in its first summand; the torsion order remains e, but its
+        # representative is {point} x boundary(K_c), not a small S^3.
+        if d == 6:
+            assert actual_betti == (1, 1, 8, 527, 7, 0)
         # Thom LES: H_4(X)=Z --times e--> H_0(C)=Z,
         # so meridional H_3 torsion order is e.
         assert e > 0
