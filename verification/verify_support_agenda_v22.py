@@ -97,8 +97,8 @@ def main():
         shapes.append({'shape_id': sid, 'representative_edges': sorted(edges),
                        'canonical_edges': canonical(edges), 'automorphism_order': aut,
                        'labelled_count': expected[sid], 'low_complement_type': complement_types[sid]})
-    proof = HERE.parent / 'paper/quintic_support_frontier_v22.tex'
-    book_proof = HERE.parent / 'paper/book_complete_obstruction_v22.tex'
+    proof = HERE.parent / 'papers/sections/paper/quintic_support_frontier_v22.tex'
+    book_proof = HERE.parent / 'papers/sections/paper/book_complete_obstruction_v22.tex'
     result = {
         'version': 'v22', 'passed': True,
         'scope': 'Necessary supports for the prescribed quintic K5 arithmetic gluing data; candidate counts are not existence counts.',

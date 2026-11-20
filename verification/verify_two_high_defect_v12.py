@@ -230,7 +230,7 @@ assert models[4]['D'][:2] == [1, -6]
 
 here = Path(__file__).resolve().parent
 source_candidates = [here/'quintic_two_high_defect_v12.tex',
-                     here.parent/'paper'/'quintic_two_high_defect_v12.tex']
+                     here.parent/'papers/sections/paper'/'quintic_two_high_defect_v12.tex']
 source = next((path for path in source_candidates if path.is_file()), None)
 if source is None:
     raise FileNotFoundError('quintic_two_high_defect_v12.tex')

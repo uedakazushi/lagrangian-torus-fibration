@@ -19,7 +19,7 @@ HERE=Path(__file__).resolve().parent
 
 def locate(name):
     for base in (HERE,HERE.parent):
-        for folder in ('','paper','notes','research','verification'):
+        for folder in ('','papers/sections/paper','papers/sections/notes','research','verification'):
             path=base/folder/name
             if path.is_file():
                 return path

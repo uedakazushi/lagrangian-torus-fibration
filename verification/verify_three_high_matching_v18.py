@@ -66,7 +66,7 @@ def main():
     parser.add_argument('--source',type=Path)
     parser.add_argument('--output',type=Path,default=Path(__file__).with_name('three_high_matching_verification_v18.json'))
     args=parser.parse_args()
-    source=args.source or args.bundle/'paper/three_high_matching_v18.tex'
+    source=args.source or args.bundle/'papers/sections/paper/three_high_matching_v18.tex'
     helper=args.bundle/'research/exact_three_high_completion_v17.py'
     spec=importlib.util.spec_from_file_location('fixed_low',helper)
     module=importlib.util.module_from_spec(spec)

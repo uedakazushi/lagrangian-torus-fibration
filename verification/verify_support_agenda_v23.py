@@ -106,7 +106,7 @@ def main():
             'g5_15_negative_exception_obstruction_v23.tex','global_primitive_denominators_v23.tex',
             'g5_15_reduction_v21.tex','book_complete_obstruction_v22.tex',
             'quintic_dense_prime_support_v11.tex']
-    proof_hashes={name:digest(here.parent/'paper'/name) for name in proofs}
+    proof_hashes={name:digest(here.parent/'papers/sections/paper'/name) for name in proofs}
     result={
         'version':'v23','status':'PASS','labelled_K5_graphs_checked':1024,
         'labelled_nonempty_supports_remaining':26,'unlabelled_shapes_remaining':3,

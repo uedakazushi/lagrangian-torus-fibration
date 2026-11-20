@@ -303,7 +303,7 @@ def main():
     for filename in ('one_high_and_crossed_pairing_v15.tex','two_leaves_negative_branch_v15.tex'):
         source_path=script_path.with_name(filename)
         if not source_path.is_file():
-            source_path=script_path.parent.parent/'paper'/filename
+            source_path=script_path.parent.parent/'papers/sections/paper'/filename
         sources.append(dict(filename=filename,source_sha256=hashlib.sha256(source_path.read_bytes()).hexdigest()))
     report = dict(status='PASS',passed=True,version='v15',
                   script_sha256=hashlib.sha256(script_path.read_bytes()).hexdigest(),sources=sources,

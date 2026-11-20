@@ -169,7 +169,7 @@ def main():
     source_names = ['one_high_and_crossed_pairing_v15.tex',
                     'two_leaves_negative_branch_v15.tex']
     sources = {name: locate([DIRECTORY / name,
-                            DIRECTORY.parent / 'paper' / name,
+                            DIRECTORY.parent / 'papers/sections/paper' / name,
                             DEPENDENCY.parent / name], name)
                for name in source_names}
     report = {

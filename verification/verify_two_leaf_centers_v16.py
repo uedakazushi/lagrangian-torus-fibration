@@ -29,7 +29,7 @@ def sha(p):
 
 
 def locate(name, source=False):
-    choices = ([HERE/name, HERE.parent/'paper'/name, HERE.parent/'z1'/name,
+    choices = ([HERE/name, HERE.parent/'papers/sections/paper'/name, HERE.parent/'z1'/name,
                 HERE.parent/'small_r'/name] if source else
                [HERE/name, HERE.parent/'z1'/name, HERE.parent/'small_r'/name])
     return next(p for p in choices if p.is_file())

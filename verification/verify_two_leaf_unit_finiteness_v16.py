@@ -33,7 +33,7 @@ def locate(name, folder):
 
 
 HELPER = locate("exact_fixed_middle_completion_v15.py", "research")
-SOURCE = locate("two_leaf_unit_finiteness_v16.tex", "paper")
+SOURCE = locate("two_leaf_unit_finiteness_v16.tex", "papers/sections/paper")
 spec = importlib.util.spec_from_file_location("fixed_middle_v15", HELPER)
 base = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(base)

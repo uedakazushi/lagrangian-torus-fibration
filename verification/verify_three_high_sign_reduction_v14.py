@@ -178,7 +178,7 @@ for s,t in [(2,1),(2,5),(3,4),(4,3),(4,9),(5,6),(6,5)]:
                    'all_trials':trials,'all_integer_models':models})
 
 source_candidates=[Path(__file__).with_name('three_high_sign_reduction_v14.tex'),
-                   Path(__file__).parent.parent/'paper/three_high_sign_reduction_v14.tex']
+                   Path(__file__).parent.parent/'papers/sections/paper/three_high_sign_reduction_v14.tex']
 src=next(p for p in source_candidates if p.exists())
 result={'version':'v14','passed':True,'polynomial_identities':len(identities),
         'identity_names':identities,'labelled_graphs_checked':64,
