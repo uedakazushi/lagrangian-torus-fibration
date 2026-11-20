@@ -18,11 +18,11 @@
     },
     {
       "path": "papers/sections/paper/ke_staged_neck_averaging.tex",
-      "role": "作用・Moser buffer"
+      "role": "二段階平均・固定baseのactual neck・source模型・同一momentの有界接続"
     },
     {
       "path": "papers/sections/paper/ke_closed_corner_gh.tex",
-      "role": "局所actual閉corner"
+      "role": "局所actual閉corner・任意の遅い深度cutのGH比較"
     },
     {
       "path": "papers/sections/paper/ke_open_cell_collapse.tex",
@@ -102,7 +102,7 @@
     },
     {
       "path": "papers/sections/paper/ke_relative_corner_patch.tex",
-      "role": "平均順序のHamiltonian相対統合・reduced collars"
+      "role": "平均順序のHamiltonian相対統合・単一armの共通moment区間とreduced graph"
     }
   ],
   "source_roots": [

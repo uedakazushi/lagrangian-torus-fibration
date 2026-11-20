@@ -1,23 +1,28 @@
 {
   "date": "2026-11-21",
-  "version": "2.2",
+  "version": "2.4",
   "scope": "複素次元2の現行研究状態。旧三次元稿の組版・監査記録ではない。数学的な証明と、その再監査、組版、整数計算、GitHub保存、Cloudタスク起動を区別する。",
   "priority": "P0: actual負Kähler–Einstein形式での大域Lagrangian torus fibrationの射影 p_T∘π_t が、各固定 d≥5 の全曲面ambient距離に関する正規化GH近似を与えること。",
   "priority_status": "open",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
   "mathematics": {
     "documented_local_results": [
-      "全閉triple cornerでの局所actual KE–Lagrangian GH比較",
-      "二段階平均・共通normal circleと作用周期・短円からのMoser buffer補題",
+      "全閉triple cornerの局所actual KE–Lagrangian GH比較と、任意の遅いcut m→∞, log(m)=o(R)への拡張",
+      "二段階平均・共通normal circleと作用周期・短円からのMoser buffer",
+      "固定残余base上のsource-inclusive actual neck・閉じた一重pinched torus・saddle fibre",
+      "固定source-free baseの同一normal moment level全体のactual ambient直径O(1)、Moser像と正規化後O(R^-1)",
+      "三つの分離armでの全固定階の指数的座標比較・積保存補間・canonical normal momentの厳密な一致",
+      "Centered平均の順序比較HamiltonianのO(m^-2)評価と、三端で指定したstaged bundleの相対統合",
+      "単一moving armでの共通moment intervalと、固定momentでのactual reduced circle graphのC1評価",
       "分岐基底とcubical候補のcell-like収縮"
     ],
     "not_proved": [
-      "moving neck全域のactual短円とsource/image buffer",
-      "複数triple endのreduced foliationと全marked periodの同時整合",
-      "source/branch/coreへのactual KE相対接着と全域接続",
-      "全曲面ambient距離でのno-shortcut、square lifts、portal connectors",
+      "三重点へ動く残余exhaustionにおけるsource-inclusive neckとtripleの共通moment区間・共通開領域・全flowの同時被覆",
+      "全neckのreduced葉と必要な第二period・critical actionの整合、およびcoreへのactual KE相対接着",
+      "source・core・異なるmomentをまたぐ木上の複数fiberの合併全体の一様な正規化ambient直径収縮",
+      "全曲面ambient距離でのno-shortcut、square lifts、portal connectorsとP0の一様distortion",
       "KE側のCP/PBE（および必要時のTC5）の対象族での証明、またはそれらの直接評価による代替",
-      "一般次数のP0達成に必要な全証明と先行研究の独立点検"
+      "一般次数のP0達成に必要な既存全証明と先行研究の独立点検"
     ],
     "scope_warning": "原稿に証明が書かれていることを、今回全定理を独立に再検証したことと混同しない。"
   },
@@ -29,17 +34,36 @@
     "arithmetic_command": "python3 scripts/research_check.py arithmetic",
     "latest_reported_main_build": {
       "date": "2026-11-21",
-      "revision": 9,
-      "pages": 132,
+      "revision": 15,
+      "pages": 154,
       "pdf_and_synctex": true,
       "refs_citations_checked": true,
-      "source": "更新作業時の検証記録。今回の監査では組版を再実行していない。"
+      "overfull_box_warnings": 0,
+      "missing_glyphs": false,
+      "duplicate_labels": false,
+      "visual_review": "要旨と新しい定理・証明の変更頁を表示確認（1,64–66,73–74,81–92頁）。全154頁の視覚的再監査ではない。",
+      "mathematical_source_commit": "6f9f5f918921bce054e5768707574739d6e9b043",
+      "source": "この研究作業でLuaLaTeX/latexmkを実行し、出力PDF・SyncTeX・logを確認。PDFはGitで追跡しない。"
     },
     "this_audit": {
       "date": "2026-11-21",
-      "scope": "GitHubからのファイル・パス・研究指示・外部定理の参照確認",
-      "reexecuted_build": false,
-      "reexecuted_python_suite": false
+      "scope": "追加した局所的解析・座標接続・Hamiltonian補正・reduced graphとmoment区間の証明の内部点検、静的構成検査、主稿組版と変更頁表示",
+      "reexecuted_build": true,
+      "reexecuted_static_checks": true,
+      "reexecuted_python_suite": false,
+      "independent_internal_proof_review": [
+        "ke:fixed-base-moment-connectors",
+        "ke:slow-cut-closed-corner-gh",
+        "ke:arm-log-derivatives",
+        "ke:three-arm-coordinate-interpolation",
+        "ke:transition-normal-primitive",
+        "ke:quantitative-order-hamiltonian",
+        "ke:relative-corner-patch",
+        "ke:single-arm-reduced-graph",
+        "ke:arm-common-moment-strip"
+      ],
+      "all_existing_proofs_reaudited": false,
+      "external_referee_review": false
     }
   },
   "cloud_codex": {
@@ -52,7 +76,7 @@
   "external_inputs": {
     "ke_repo": "uedakazushi/kaehler-einstein-degeneration",
     "verified_ke_main_commit": "74ba687f67e1f87a4d308bf868fcdef98db441df",
-    "status": "外部コミット・主要TeXのパスをGitHubで照合済み。解析的な全域仮定を証明済みとは扱わない。"
+    "status": "最新mainのコミットをGitHubで照合。必要箇所のラベル・仮定・規格化と本repoでの適用を点検したが、外部原稿全証明や引用一次文献の全再精読は行っていない。解析的な全域仮定は未解決。"
   },
   "other_papers": {
     "papers/quintic-integer-gluing.tex": "旧201頁の組版記録のみ。本監査では未再組版。",

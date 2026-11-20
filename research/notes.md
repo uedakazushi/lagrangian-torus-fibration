@@ -253,7 +253,7 @@ d^c(AF-F)(\partial_{\theta_1})
 
 特にU=B×T²、Bは可縮なcorridor、N=N_-⊔N_+は両端のfull torus collarsとする。RestrictionはR²→R²⊕R²の対角写像なので、両端の二つのtorus period vectorsの一致が条件になる。その差は対応するS¹を運んだcylinder上のσ_sの積分である。これは指定したmarkingとaction originを保つ相対同定の条件であり、自由なbase relabellingを許すfibrationの存在障害と同一視しない。
 
-**着手方法。** 二段階平均とexact primitive transportは主稿 `ke:staged-neck-averaging` に証明した。Source-free固定base上のprimitiveと共通moment intervalも関連KE稿で確保した。次はactual familyでの全neck flow bufferと、複数endsの同一正則作用・reduced-circle foliationsを具体的に合わせる。Critical actionの直線性とsourceを含む接着は残り、既存の固定symplectic neck模型のtaming/cutoff評価をactual KE familyへ一様に移す証明はまだない。
+**着手方法。** 二段階平均とexact primitive transportは主稿 `ke:staged-neck-averaging` に証明した。Source-free固定base上のprimitiveと共通moment intervalも関連KE稿で確保した。固定残余baseではsourceを含むactual neckと閉pinched torusまで構成した。三重点の単一armでは座標接続・normal moment一致・共通moment区間・reduced graphを得たので、次は遅い残余exhaustionの各段階でneck側とtriple側の共通開領域を具体的に選ぶ。全endの葉と必要なcritical actionsの同時整合、core接着、全曲面距離の評価は残る。
 
 
 ## 複素次元2：先行研究・singular fibersの確定事項（2026-11-20）

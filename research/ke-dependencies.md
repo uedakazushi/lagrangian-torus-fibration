@@ -63,7 +63,7 @@ L_t=-\log|t|^2,\quad R_t=\log L_t.
 
 ### 2. 同じglobal fibrationへの相対接着
 
-第一課題で得た一つのnormal actionとprimitiveを用い、各triple collarの二段階平均、reduced circle foliation、critical actionsとmarkingを同時に合わせる。非定数holomorphic unitはfull $T^2$-orbit partitionを変え得るため、整数基底変更だけで処理しない。Sourceの $xy=tz$、branch、coreを含む全域へactual $\omega_t$-Lagrangian fibrationを延長し、使用した相対isotopyのraw map誤差または $g_t$-変位 $o(R_t)$ を明記する。単なる同じcohomology classやMoser同相はGH適合の証明にならない。
+第一課題で得た一つのnormal actionとprimitiveを用い、各triple collarの二段階平均、reduced circle foliation、critical actionsとmarkingを同時に合わせる。非定数holomorphic unitはfull $T^2$-orbit partitionを変え得るため、整数基底変更だけで処理しない。三armの定量的座標接続・normal periodの厳密一致と、平均順序の相対Hamiltonian補正は本repoで証明した。さらに単一moving armでは `ke:arm-common-moment-strip` と `ke:single-arm-reduced-graph` により共通moment区間とactual reduced graphを構成した。次はこれをsource-inclusive neck側のmoment区間・開領域と同時に合わせる。Sourceの $xy=tz$、branch、coreを含む全域へactual $\omega_t$-Lagrangian fibrationを延長し、使用した相対isotopyのraw map誤差または $g_t$-変位 $o(R_t)$ を明記する。単なる同じcohomology classやMoser同相はGH適合の証明にならない。
 
 ### 3. 全曲面の距離歪みとportal費用
 

@@ -28,7 +28,7 @@ python3 scripts/research_check.py tex
 ## 論文と役割
 | 原稿 | 役割 | 組版の確認範囲 |
 | --- | --- | ---: |
-| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、局所KE収束と大域実現問題（改訂15） | 直前の改訂14は139頁・2026-11-21組版確認 |
+| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、局所KE収束と大域実現問題（改訂15） | 154頁・2026-11-21組版と変更箇所表示を確認 |
 | [五次整数接着](papers/quintic-integer-gluing.tex) | 指定K5データの整数条件・高分母支持・未解決の大域接着 | 201頁 |
 | [Meridian surgery](papers/meridian-surgery.tex) | 閉corner circuitsの局所置換の障害 | 18頁 |
 | [TeX研究ノート](papers/research-notes.tex) | 証明素材・残る条件の整理 | 65頁 |
@@ -51,6 +51,6 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-2026-11-21の改訂14で、静的構成検査とLuaLaTeX組版を実行し、主稿139頁、PDF・SyncTeXの同一出力先、追加した命題・定理の参照解決を確認した。射影計量の最大値原理と入れ子領域の境界距離の証明は独立に点検した。他三稿の頁数は従来記録。今回の整数検算suite、他三稿の組版、既存の全証明の再監査、形式証明、包括的新規性調査は未実施。
+2026-11-21 / v2.4：静的構成検査（4主原稿・119 Python source）、主稿改訂15のLuaLaTeX組版（154頁）、PDF・SyncTeX出力と引用・相互参照を確認した。追加節と要旨の表示も点検し、重複ラベル・欠落字形・overfull警告はない。固定baseの同一moment接続、三armの座標・primitive比較、平均順序のHamiltonian補正、単一armのreduced graphと共通moment strip、遅いcutのGH評価について、証明を別担当が内部点検した。これは形式証明・外部査読ではない。整数検算suite、他三稿の組版、既存の全解析・接着証明の再監査、包括的新規性調査は今回行っていない。P0は未解決。Cloud環境設定・新規タスク起動は実施していない。
 
 **再現用パス：** 現行の分割TeXと検算入力は `papers/sections/` 以下を直接参照する。ルートの旧互換性symlink（`paper`, `paper_arithmetic`, `paper_surgery`, `notes`）は不要になり撤去した。構成の静的検査は `python3 verification/verify_repository_layout.py`、数学的な既定検算は `python3 verification/run_current_checks.py`。既存監査JSONの旧相対パスは出典記録として保持する。

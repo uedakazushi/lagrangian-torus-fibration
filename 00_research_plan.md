@@ -42,7 +42,7 @@ KE側の \((\mathrm{G})_d+(\mathrm{CP})_d+(\mathrm{PBE})_d\) を満たすこと�
 | --- | --- | --- |
 | K0：入力の監査 | `main:global`、`ke:global-realization` とKE依存表を読み、採用する族・木系・form・marked collarsを固定する。 | P0に実際に使う大域接着・外部定理の仮定と証明を照合。資料と入力の所在は整備済み、全証明の独立監査は未了。 |
 | K1：actual neckの短円とbuffer | `ke:short-circle-image-buffer` とKE側 `neck:lem:rank-one-circle` を接続する。Movingな作用不変領域 \(U_t\supset K_t\) を指定し、period-1生成場の上界 \(\varepsilon_t^{\rm circ}\) とactual境界距離 \(\delta_t\) を別々に評価する。 | \(\delta_t>(2c_w+1/2)\varepsilon_t^{\rm circ}\) と必要な誤差消失を全neckで証明し、sourceとMoser像の双方が同じ \(K_t\) を覆う。固定 source-free compact 基底の moving normal strip で、actual 二側比較・正の境界距離・短円 $O(m_t^{-1})$・共通 source/像を証明。Source 模型では中心を含む短円と、十分遅く縮む領域での共通 Moser 被覆・actual focus–focus germ を証明。固定残余基底では source と通常 pair を一つの actual neck に統合した（`ke:projected-source-neck`）。Source・三重点へ動く残余 collar 全体の buffer および作用整合は未達。 |
-| K2：複数endの同時整合 | `ke:arm-log-derivatives`、`ke:transition-normal-primitive`、`ke:relative-corner-patch` を使い、同じnormal momentと開collarの葉を合わせる。 | 三つの分離したarmで射影neck座標との全固定階の指数的比較を証明。積保存補間とtame averaging、比較Hamiltonianの $O(m^{-2})$ 評価により、各端のnormal-first構成を一つのactual corner bundleへ相対統合できる。Normal periodは一致するが第二periodは自動でない。単一moving armでは $b_0	o\infty, b_0/L	o0$ の下で共通moment interval $[-c_*/b_0,c_*/b_0]$ とactual reduced graphを実証。Source-inclusive neck全体との共通被覆・開collar接着、core接着は残る。 |
+| K2：複数endの同時整合 | `ke:arm-log-derivatives`、`ke:transition-normal-primitive`、`ke:relative-corner-patch` を使い、同じnormal momentと開collarの葉を合わせる。 | 三つの分離したarmで射影neck座標との全固定階の指数的比較を証明。積保存補間とtame averaging、比較Hamiltonianの $O(m^{-2})$ 評価により、各端のnormal-first構成を一つのactual corner bundleへ相対統合できる。Normal periodは一致するが第二periodは自動でない。単一moving armでは $b_0\to\infty, b_0/L\to0$ の下で共通moment interval $[-c_*/b_0,c_*/b_0]$ とactual reduced graphを実証。Source-inclusive neck全体との共通被覆・開collar接着、core接着は残る。 |
 | K3：source・branch・coreの相対接着 | `global_gluing.tex` / `neck_models.tex` / `relative_compactification.tex` をactual KE形式と計量の下で監査する。特に \(xy=tz\) のsourceとcoreを覆う領域・接続路を指定する。 | 全域を覆う連結fiberの \(\pi_t\) と、特異fiberおよび木fiber全体の正規化ambient接続費用の消失。既存の定性的構成だけでは未達。K1と独立な局所解析も行う。 |
 | K4：全曲面の距離比較 | K1–K3と閉corner評価を用い、全曲面を通る経路の下界とsquare lift・portal connectorによる上界を別々に作る。 | 固定 source-free 基底上では、同じ normal moment のlevel全体を actual長さ $O(1)$ で結び、そのMoser像の正規化ambient径 $O(R_t^{-1})$ を証明した（`ke:fixed-base-moment-connectors`）。Source・moving collar・異なるmomentをまたぐ木への拡張と、\(f_t\) の全点対distortionは未証明。(N),(S),(F)のactual全空間での検証と局所保護領域外のshortcutを含める。 |
 | K5：主定理と独立点検 | 五次の完結した証明を節目に、全固定 \(d\ge5\) へ一般化し、全ての入力と定数依存を追う。 | 主稿の問題を仮定未残の定理と十分な証明へ置換し、別の読み手による論理点検、一次文献比較、再現・組版を完了。現在未着手。 |
@@ -50,7 +50,7 @@ KE側の \((\mathrm{G})_d+(\mathrm{CP})_d+(\mathrm{PBE})_d\) を満たすこと�
 K1では固定残余基底の moving normal strip を解決した（`ke:fixed-base-neck-moser`）。次は固定残余compactの列を十分遅く動かし、各段階のnormal cutoffと共通moment intervalを三重点側の開collarに配置する。三重点は $m_t\to\infty,\ \log m_t=o(R_t)$ の任意の遅いcutでも局所GH評価を保つ（`ke:slow-cut-closed-corner-gh`）ので、cutを $R_t$ に固定する必要はない。固定比でnormal深度をresidual深度より大きく取れば、三armの座標接続と相対Hamiltonian補正を使える。Sourceのrescaling gate、moving collar全体の共通被覆、reduced葉と第二periodの整合は引き続き別に検証する。
 
 ## 原稿・ノートの正本と公表単位
-- `papers/surface-lagrangian-torus-fibration.tex`：このrepoの主たる公表用本文。相対SNC構成、次数分割、分岐底、作用適合atlasとKE–fibrationの大域実現問題（現行改訂15。直前の組版確認は改訂14・139頁、2026-11-21）。
+- `papers/surface-lagrangian-torus-fibration.tex`：このrepoの主たる公表用本文。相対SNC構成、次数分割、分岐底、作用適合atlasとKE–fibrationの大域実現問題（改訂15・154頁、2026-11-21に組版・変更箇所表示を確認）。
 - `papers/quintic-integer-gluing.tex`：五次整数アフィン接着、高分母支持グラフの独立論文（第25稿、201頁の記録）。指定SNC cores・K5 graph・標準cones・marked puncturesを保つ候補が対象。必要支持3型26標識は**実現数ではない**。G5_14の中央matching、一般分母剛性、三高Dの同時非負性が未解決。
 - `papers/meridian-surgery.tex`：四pantsのmeridian局所置換と閉corner circuitsの障害（18頁の記録）。
 - `papers/research-notes.tex`：各種補題・証明素材のTeXノート（65頁の記録）。
@@ -137,9 +137,7 @@ Lagrangian主稿 `ke:actual-closed-corner` の同じ averaging–Moser flow と�
 現行のTeX分割節と検証スクリプトは `papers/sections/` を直接参照し、旧ルートsymlinkに依存しない。静的な構成検査は `python3 verification/verify_repository_layout.py`、現行の五主検算・五独立監査は `python3 verification/run_current_checks.py`。旧JSONやmanifestの相対パス・記録時点のSHA-256は出典情報として保持し、パス正規化後の現行実行パスと区別する。
 組版はrepo直下の `latexmk papers/surface-lagrangian-torus-fibration.tex`、整数接着は `latexmk papers/quintic-integer-gluing.tex`。LuaLaTeXとLuaTeX-ja／TikZ／日本語フォントが必要、PDFとSyncTeXはbuild/へ出力しGitで追跡しない。段階別の実行は `scripts/research_check.py` と [Cloud Codexの再開手順](research/cloud-codex.md) を参照する。元の計算コード、入力、証明書は保持する。
 
-2026-11-21 / v2.1の確認：setup/preflight、4主原稿・119検証Python source等の静的構成検査、現行Markdown参照検査、主稿改訂9のLuaLaTeX組版（132頁）と変更箇所の表示確認を実施。引用・参照・PDF/SyncTeX出力を確認し、重複ラベル・欠落字形・overfull警告はない。P0の定式化とKE依存仮定の整合を別担当が点検した。整数検算suite、他三稿の組版、既存の解析・接着全証明の独立再監査は未実施。P0は未解決であり、新しい解析的解決を得たとは主張しない。形式証明・外部査読・包括的新規性確認も未実施。Cloud環境設定・新規タスク起動は今回のrepo整備と別であり、実施していない。
+2026-11-21 / v2.4：静的構成検査（4主原稿・119 Python source）、主稿改訂15のLuaLaTeX組版（154頁）、PDF・SyncTeX出力と引用・相互参照を確認した。追加節と要旨の表示も点検し、重複ラベル・欠落字形・overfull警告はない。固定baseの同一moment接続、三armの座標・primitive比較、平均順序のHamiltonian補正、単一armのreduced graphと共通moment strip、遅いcutのGH評価について、証明を別担当が内部点検した。これは形式証明・外部査読ではない。整数検算suite、他三稿の組版、既存の全解析・接着証明の再監査、包括的新規性調査は今回行っていない。P0は未解決。Cloud環境設定・新規タスク起動は実施していない。
 
 ## 共通研究原則と保存許可（研究固有方針から独立）
 数学的重要性・新規性・理解の深化・応用可能性・正確性・実現可能性を総合し方針を見直す。証明済み・仮定付き・未完成・予想・計算観察、既知成果と新規性、草稿の証明と今回の独立監査を区別する。重要な先行研究は一次資料の仮定と参照箇所を確認する。日本語LuaLaTeXで十分な証明を保ち、有効な着想・反例・障害は現行ノートへ整理する。再現資産を保持し、旧版ZIP/ログの集積を避ける。研究の区切りでは承諾なしで通常コミットを `main` へpushし、Cloud Codexの長時間作業は切りのよいところ、遅くとも前回成功pushから約15分を目安に現行の有効な成果と未解決箇所を保存する（詳細はAGENTS.md）。force push・GitHub Actions追加/起動をしない。Library旧資料を削除せず、GitHub管理後の定常二重保存は行わない。対象repo保存後にresearch-hubの到達点・核心・次の一手・依存と再開先を更新し、数学検証・組版・push・hub反映を区別する。
-
-2026-11-21 / v2.2の確認：主稿改訂10（134頁）を組版し、静的構成検査と追加の命題・系の参照解決を確認。法線方向の積分エネルギー、動径接続上界とMoser速度の規格化を独立に点検した。全neckの実計量buffer、特異領域接着と全域比較は未解決。
