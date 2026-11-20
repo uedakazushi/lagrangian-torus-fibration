@@ -200,7 +200,7 @@ def main():
     parser.add_argument("--certificate", type=Path, default=ROOT / "verification/book_one_negative_sector_reduction_verification_v21.json")
     parser.add_argument("--primary", type=Path, default=ROOT / "verification/verify_book_one_negative_sector_reduction_v21.py")
     parser.add_argument("--dependency", type=Path, default=ROOT / "verification/verify_book_two_negative_obstruction_v21.py")
-    parser.add_argument("--proof", type=Path, default=ROOT / "paper/book_one_negative_sector_reduction_v21.tex")
+    parser.add_argument("--proof", type=Path, default=ROOT / "papers/sections/paper/book_one_negative_sector_reduction_v21.tex")
     parser.add_argument("--output", type=Path, default=HERE.with_name("book_one_negative_sectors_independent_audit_v21.json"))
     parser.add_argument("--quiet", action="store_true")
     args = parser.parse_args()

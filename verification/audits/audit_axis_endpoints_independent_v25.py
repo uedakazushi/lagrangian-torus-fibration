@@ -106,7 +106,7 @@ if __name__=='__main__':
     p.add_argument('--root',type=Path,default=Path('/workspace/scratch/d5d942d05d31/deliverables/general_type_surface_fibration_v25'))
     p.add_argument('--output',type=Path,default=here/'axis_endpoints_independent_review_v25.json')
     a=p.parse_args();data=audit()
-    files=['paper/high_d_axis_endpoints_v25.tex','verification/verify_high_d_axis_endpoints_v25.py']
+    files=['papers/sections/paper/high_d_axis_endpoints_v25.tex','verification/verify_high_d_axis_endpoints_v25.py']
     out={'version':'v25','status':'PASS','passed':True,'issues':[],**data,
          'source_sha256':{n:sha256((a.root/n).read_bytes()).hexdigest() for n in files},
          'review_script_sha256':sha256(Path(__file__).read_bytes()).hexdigest(),

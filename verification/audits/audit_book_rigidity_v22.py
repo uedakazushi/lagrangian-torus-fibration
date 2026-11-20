@@ -20,7 +20,7 @@ candidates = []
 for parent in (HERE, *HERE.parents):
     candidates.extend((parent, parent/"deliverables/general_type_surface_fibration_v22"))
 BUNDLE = next(p for p in candidates
-              if (p/"paper/two_high_rigid_scale_families_v22.tex").is_file())
+              if (p/"papers/sections/paper/two_high_rigid_scale_families_v22.tex").is_file())
 
 
 def digest(path):
@@ -348,14 +348,14 @@ removed = set(old_frontier)-frontier
 assert len(removed) == 10 and {old_frontier[e] for e in removed} == {"G5_13"}
 
 source_names = [
-    "paper/book_complete_obstruction_v22.tex",
-    "paper/two_high_rigid_scale_families_v22.tex",
-    "notes/notes_book_completion_v22.tex",
+    "papers/sections/paper/book_complete_obstruction_v22.tex",
+    "papers/sections/paper/two_high_rigid_scale_families_v22.tex",
+    "papers/sections/notes/notes_book_completion_v22.tex",
     "verification/verify_book_complete_obstruction_v22.py",
-    "paper/quintic_support_frontier_v22.tex",
+    "papers/sections/paper/quintic_support_frontier_v22.tex",
     "verification/verify_support_agenda_v22.py",
-    "paper/book_one_negative_sector_reduction_v21.tex",
-    "paper/book_two_negative_obstruction_v21.tex",
+    "papers/sections/paper/book_one_negative_sector_reduction_v21.tex",
+    "papers/sections/paper/book_two_negative_obstruction_v21.tex",
 ]
 source_hashes = {name: digest(BUNDLE/name) for name in source_names}
 result = dict(

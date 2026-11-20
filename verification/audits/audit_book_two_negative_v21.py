@@ -64,7 +64,7 @@ assert {canonical_json(model) for model in computed_final} == {
     canonical_json(model) for model in certificate['final_edge_certificates']}
 primary = root/'verification/verify_book_two_negative_obstruction_v21.py'
 assert sha256(primary.read_bytes()).hexdigest() == certificate['source_sha256']
-proof = root/'paper/book_two_negative_obstruction_v21.tex'
+proof = root/'papers/sections/paper/book_two_negative_obstruction_v21.tex'
 if 'proof_sha256' in certificate:
     assert sha256(proof.read_bytes()).hexdigest() == certificate['proof_sha256']
 

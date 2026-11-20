@@ -486,7 +486,7 @@ def main():
     first = first_template_checks()
     parity, cases = parity_and_cases()
     certificates, zeros = full_coefficient_audit(cases, producer)
-    proof = locate("g5_15_negative_exception_obstruction_v23.tex", ("exceptional", "paper"))
+    proof = locate("g5_15_negative_exception_obstruction_v23.tex", ("exceptional", "papers/sections/paper"))
     source = locate("verify_g5_15_negative_exception_v23.py", ("exceptional", "verification"))
     assert sha256(proof.read_bytes()).hexdigest() == producer["proof_sha256"]
     assert sha256(source.read_bytes()).hexdigest() == producer["source_sha256"]
