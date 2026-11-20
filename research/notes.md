@@ -13,6 +13,8 @@
 
 Source と通常 pair の共通化を主稿 `ke:projected-source-normal-form`, `ke:projected-source-neck` で証明した。固定残余基底で射影を保つ正則 Morse 座標 $x'y'=t h_t(p)$ を用いる。capped density と短円評価は $O(t)$ 座標変更で保たれ、固定 shell の対角選択で source を含む一つの actual Moser map を得る。共通 primitive の moment と基底射影の組で商は $I_t\times P$。指定した残余葉の持ち上げから、閉じた一重 pinched torus と saddle fiber が得られる。次の接着課題は三重点側との開 overlap で同じ fiber partition を得ること。
 
+単一三重点での座標比較。二重線の射影座標を $p$、三番目の平面を $p+\alpha x+\beta y=0$ と書くと、局所的に $h=H/(p+\alpha x+\beta y)$ で $H$ は有界な非零 unit である。$|x|+|y|\le c|p|$ で $x=pX,y=pY$ とおくと、$f_t/p^2$ は有界な正則摂動 $O(t/p^3)$ を持つ $XY$ になる。射影Morse変換の証明をこの固定幅の座標に適用して、$a_t=O(t/p^2)$、$S-I=O(t/p^3)$、$h_t/h(p,0,0)=1+O(t/p^3)$ を得る。$xy=th$ と $|h|\asymp1/|p|$ から、例えば $|t/(xp^2)|\lesssim |y/p|$。従って exact triple 座標 $(x,y,1/h)$ と射影からの exact 座標 $(x',y',1/h_t)$ の各比は $1+O((|x|+|y|)/|p|+|t|/|p|^3)$ となる。これは normal 方向が residual より深い領域の比較である。次はこの比の対数に対する正規化座標での微分評価と、積を保つカットオフ補間の後の正値性・共通葉の確認である。
+
 固定残余compactの各座標では、`neck:prop:volume-envelope` から法線方向の積分評価を得た（主稿 `ke:neck-integrated-normal-energy`）。$s=-\log(|u|^2/r^2)$、$d(s)=\min(s,M_t-s)$ とし、周期1生成場の軌道平均エネルギーを $E_t$ とする。$\Omega=du/u\wedge dz$ に対する対数体積の角度平均 $\bar F_t$ は $-2\log d(s)+O(1)$、かつ $E_t=8\pi^2\partial_s^2\bar F_t$。よって $\int_m^{M_t-m}E_t(s,z)\,ds=O(m^{-1})$ が残余点 $z$ に一様に成立する。例外深度の測度は $E_t>A/m^2$ に対し $O(m/A)$ であり、例外集合の位置は $z$ に依存する。
 
 同じ $z$ に沿う動径経路には一つの角度を選んで長さ $\int_a^b ds/d(s)+O(1)$ を得る（`ke:neck-axial-upper`）。両端円が短ければ任意の端点を結べる。この評価は局所の上界であり、異なる残余点を結ぶ portal 費用と全曲面の距離下界は残る。Moser 流では軌道全体の最大速度を軌道平均エネルギーの平方根で置き換えられる（`ke:neck-averaged-speed`）。外側の深部領域の実計量での境界距離 $\delta_t$（上限1）が $m_t\delta_t^2\to\infty$ を満たせば、局所 Chern–Lu と体積上界から共通の source・像を得る（`ke:neck-shrinking-buffer`）。この縮小条件は残余 collar を動かす場合にも候補となる。
