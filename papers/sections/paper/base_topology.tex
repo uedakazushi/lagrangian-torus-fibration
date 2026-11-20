@@ -408,6 +408,27 @@ square内線分からなるgalleryを選ぶ．
 distortion boundからGH収束が従う．
 \end{proof}
 
+\begin{example}[各squareの局所モデルだけでは不十分]
+\label{topo:portal-counterexample}
+$Q=[0,1]^2$ の二つのコピー$Q_1,Q_2$を，原点だけで貼り合わせた
+長さ空間$Y=Q_1\vee_{\{0\}}Q_2$を考える．
+両コピー上でidentityとなる折り畳み写像$p:Y\to Q$を取る．
+この写像は非伸長なので，命題\ref{topo:finite-portal-criterion}の
+\textup{(N)}は$\alpha=0$で成立する．
+各squareの直線はどちらのコピーにも等長に持ち上がるので，
+\textup{(S)}も$\sigma=\lambda=0$で成立する．
+しかし二つの右上頂点は同じ$p$-fiberにあり，
+$Y$での距離は$2\sqrt2$である．
+従って \textup{(F)} は破れ，
+\[
+ \operatorname{diam}Y=2\sqrt2,\quad
+ \operatorname{diam}Q=\sqrt2,\quad
+ d_{\mathrm{GH}}(Y,Q)\ge\frac{\sqrt2}{2}.
+\]
+特に有限個の局所的なsquare isometriesと大域no-shortcutだけから
+global GH収束は導けない．
+\end{example}
+
 \begin{remark}[実際の幾何計量への接続に残るもの]
 定理\ref{topo:metric-collapse}の人工計量では
 \textup{(N)}が$\alpha=0$で成り立ち，
