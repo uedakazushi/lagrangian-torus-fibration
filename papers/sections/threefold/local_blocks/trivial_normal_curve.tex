@@ -348,6 +348,160 @@ $512$個の特定型fiberが必ず存在するとまでは主張しない．
 この $-512$ は、構成済みの actual domain を除いた compact complement の Euler 数である。
 Complement 上の fibration はまだないため、残る singular fibers の個数とは解釈しない。
 
+\subsection{管状補集合の整数ホモロジーと focus block との差}
+\label{tnc:tubular-complement}
+
+ここではEuler数だけでは見えない整数torsionと，
+管状近傍とactual focus blockのtopologyの差を区別する．
+$X_d$の三次元超曲面としての整数cohomologyについては
+\cite[\S2.1]{randal-williams-hypersurface}のLefschetzおよび
+Poincar\'e dualityの整理を用いる．
+
+\begin{theorem}[閉曲線の管状補集合に現れるmeridional torsion]
+\label{tnc:tubular-homology}
+$d\ge6$ とし，$X_d\subset\mathbb P^4$をsmooth degree-$d$
+hypersurface，$C\subset X_d$をdegree
+$e=\langle\mathsf H,[C]\rangle>0$，genus $g$ の
+connected closed embedded oriented surfaceとする．
+そのoriented real rank-four normal disk bundleの
+十分小さいclosed tubular neighborhoodを$N(C)$とし，
+\[
+ V_0=X_d\setminus\operatorname{int}N(C),\qquad
+ b_d=d^4-5d^3+10d^2-10d+4
+\]
+とおく．以下は\emph{整数係数}のhomology群の同型である：
+\begin{equation}\label{tnc:tubular-homology-groups}
+\begin{aligned}
+ H_0(V_0)&\simeq\mathbb Z,&
+ H_1(V_0)&=0,&
+ H_2(V_0)&\simeq\mathbb Z,\\
+ H_3(V_0)&\simeq\mathbb Z^{b_d}\oplus\mathbb Z/e\mathbb Z,&
+ H_4(V_0)&\simeq\mathbb Z^{2g},&
+ H_k(V_0)&=0\quad(k\ge5).
+\end{aligned}
+\end{equation}
+Normal $3$-sphere fiberのhomology classは
+$H_3(V_0)$のtorsion summandを生成し，その位数は正確に$e$である．
+特に定理\ref{tnc:actual-curve}のnormal-trivial curveでは
+$e=d-2$であり，$d=6$なら
+\[
+ H_3(V_0;\mathbb Z)\simeq
+       \mathbb Z^{520}\oplus\mathbb Z/4\mathbb Z,\qquad
+ H_4(V_0;\mathbb Z)\simeq\mathbb Z^6,\qquad
+ \chi(V_0)=-512.
+\]
+\end{theorem}
+\begin{proof}
+Lefschetzの超平面定理とPoincar\'e dualityにより
+$H_1(X_d)=H_5(X_d)=0$，
+$H_2(X_d)\simeq H_4(X_d)\simeq\mathbb Z$，
+$H_3(X_d)\simeq\mathbb Z^{b_d}$が成り立つ．
+ここで
+\[
+ b_d=4-\chi(X_d),\qquad
+ \chi(X_d)=d(10-10d+5d^2-d^3)
+\]
+はChern類の計算で得られる．
+Excisionとoriented codimension-fourのThom同型から
+\begin{equation}\label{tnc:thom-pair}
+ H_k(X_d,V_0;\mathbb Z)
+ \simeq H_k(N(C),\partial N(C);\mathbb Z)
+ \simeq H_{k-4}(C;\mathbb Z).
+\end{equation}
+対の長完全列の次数$4,3$の部分は
+\[
+ H_4(X_d)\xrightarrow{\;\iota_C\;}H_0(C)
+ \xrightarrow{\;\partial\;}H_3(V_0)
+ \longrightarrow H_3(X_d)\longrightarrow0.
+\]
+$H_4(X_d)$の生成元はhyperplane divisorの基本類であり，
+$\iota_C$はその$C$との交点数を取る写像，
+すなわち$\mathbb Z\xrightarrow{\times e}\mathbb Z$である．
+従って
+\[
+ 0\longrightarrow \mathbb Z/e\mathbb Z
+ \longrightarrow H_3(V_0)
+ \longrightarrow H_3(X_d)\longrightarrow0
+\]
+が得られる．$H_3(X_d)$は自由なので群としてsplitする．
+$\partial(1)$はThom円板の境界であるnormal meridian
+$S^3$を表し，その位数はちょうど$e$である．
+
+また$H_5(X_d)=0$と
+$H_5(X_d,V_0)\simeq H_1(C)=\mathbb Z^{2g}$より，
+前の$\iota_C$の単射性を用いて
+$H_4(V_0)\simeq H_1(C)$を得る．
+同様に$H_3(X_d,V_0)=H_2(X_d,V_0)=0$より
+$H_2(V_0)\simeq H_2(X_d)$，$H_1(V_0)=0$が従う．
+次数$6,5$では
+$H_6(X_d)\to H_6(X_d,V_0)\simeq H_2(C)$
+が両者の基本類の対応による同型であることから
+$H_5(V_0)=0$を得る．$V_0$は境界のあるcompact
+six-manifoldなので$H_6(V_0)=0$である．
+従って表示\eqref{tnc:tubular-homology-groups}を得る．
+Euler数は
+$2-b_d+2g=\chi(X_d)-(2-2g)$であり，六次では$-512$である．
+\end{proof}
+
+\begin{lemma}[Actual focus normal blockは円板ではない]
+\label{tnc:focus-nondisk}
+第\ref{fhr:section}節の
+$K_c=G_c^{-1}(R)\subset\mathbb C^2$は
+$H_1(K_c;\mathbb Z)$に$\mathbb Z$を直和因子として含む．
+従って定理\ref{tnc:actual-curve}のclosed-curve block
+$\mathcal U\simeq C'\times K_c$は，
+通常の管状disk neighborhood
+$C'\times D^4$とhomotopy equivalentではない．
+\end{lemma}
+\begin{proof}
+$G_c=(P_X-P_Y,|XY-c|^2)$，
+$R=[-a_*,a_*]\times[q_-,q_+]$であり
+$0<q_-<c^2<q_+$である．
+従って
+\[
+ \vartheta:K_c\longrightarrow S^1,\qquad
+ (X,Y)\longmapsto\frac{XY-c}{|XY-c|}
+\]
+は連続である．$\sqrt{q_-}<r<c$を固定し，
+$w(\theta)=c+r e^{i\theta}$と置く．
+$w(\theta)\ne0$なので
+\[
+ X(\theta)=\sqrt{|w(\theta)|}>0,\qquad
+ Y(\theta)=\frac{w(\theta)}{X(\theta)}
+\]
+は$K_c$内の閉曲線を定める：
+$P_X-P_Y=0$，$|XY-c|^2=r^2\in(q_-,q_+)$である．
+合成$\vartheta(X(\theta),Y(\theta))=e^{i\theta}$
+は$S^1$のidentityだから
+$\vartheta_*:H_1(K_c;\mathbb Z)\to\mathbb Z$は
+split surjectiveである．
+従って$H_1(K_c)$は$\mathbb Z$を直和因子に持つ．
+一方$H_1(C'\times D^4)=H_1(C')$に対し
+K\"unnethより$H_1(C'\times K_c)$には
+$H_1(C')\oplus\mathbb Z$が直和因子として現れる．
+両者の第一Betti数が異なるので同じhomotopy型ではない．
+\end{proof}
+
+\begin{remark}[補集合のどちらを意味するか]
+\label{tnc:complement-distinction}
+系\ref{tnc:complement-euler}の
+$\mathcal V=\overline{X_d\setminus\operatorname{int}\mathcal U}$
+は\emph{actual focus block $\mathcal U=C'\times K_c$}
+の補集合である．
+定理\ref{tnc:tubular-homology}が計算した
+$V_0=X_d\setminus\operatorname{int}N(C')$とは異なる．
+$\chi(K_c)=\chi(D^4)=1$なので，
+Euler数$\chi(V_0)=\chi(\mathcal V)$は一致するが，
+この事実から整数homologyやmeridional torsionまで
+一致すると推論してはならない．
+特に$\mathbb Z/(d-2)$のtorsionが
+$\mathcal V$に残るかどうかは，$K_c$の追加のcycleと
+$\partial K_c$を通したMayer--Vietoris/relative homology
+mapsを計算して判定する必要がある．
+その計算およびrelative action/monodromy boundary dataの
+解析が，global fillingに向けた次の具体的な課題である．
+\end{remark}
+
 \paragraph{閉還元面の収支との整合.}
 $\nu=\mathfrak a/(d-5)$ とすれば
 \[
