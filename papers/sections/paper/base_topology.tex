@@ -457,6 +457,64 @@ $\varepsilon$ は幾何から導いた parameter ではなく任意に入れた�
 この種の有限複体のcollapse自体の先行研究との新規性は未確認である．
 \end{remark}
 
+\subsection{KE 近似写像と Lagrangian fibration の適合性}
+
+\begin{proposition}[近似写像の一様比較による fiber 収縮]
+\label{topo:ke-map-compatibility}
+$T$ を固定し，$p_T:B_d(T)\to\mathcal C_d$ を
+系\ref{topo:KE-cubical-comparison}の全射とする．
+コンパクト距離空間 $(X_t,\bar d_t)$，全射
+$\pi_t:X_t\to B_d(T)$，写像 $\Phi_t:X_t\to\mathcal C_d$ が与えられ，
+\[
+ \sup_{x,y\in X_t}
+ \bigl|\bar d_t(x,y)-d_\square(\Phi_t(x),\Phi_t(y))\bigr|\le a_t,
+ \qquad
+ \sup_{x\in X_t}d_\square(\Phi_t(x),p_T\pi_t(x))\le b_t
+\]
+を満たすとする．$f_t=p_T\circ\pi_t$ と置くと，
+\[
+ \operatorname{dis}(f_t)\le a_t+2b_t,\qquad
+ d_{\mathrm{GH}}\bigl((X_t,\bar d_t),(\mathcal C_d,d_\square)\bigr)
+ \le \frac{a_t+2b_t}{2},
+\]
+および
+\[
+ \sup_{c\in\mathcal C_d}\operatorname{diam}_{\bar d_t}f_t^{-1}(c)
+ \le a_t+2b_t,\qquad
+ \sup_{b\in B_d(T)}\operatorname{diam}_{\bar d_t}\pi_t^{-1}(b)
+ \le a_t+2b_t
+\]
+が成り立つ．直径は全空間の距離を制限したものであり，
+fiber 内の経路長距離ではない．特に $a_t,b_t\to0$ なら $f_t$ は GH 近似を与える．
+\end{proposition}
+\begin{proof}
+任意の $x,y$ に対して三角不等式から
+\[
+ \bigl|d_\square(\Phi_t(x),\Phi_t(y))
+       -d_\square(f_t(x),f_t(y))\bigr|\le2b_t
+\]
+なので，距離歪みは $a_t+2b_t$ 以下である．
+$f_t$ は全射だから，その graph は両空間間の correspondence であり，
+GH 距離の評価が従う．$f_t(x)=f_t(y)$ の場合に同じ評価を使うと
+$\bar d_t(x,y)\le a_t+2b_t$ を得る．
+各 $\pi_t$-fiber はある $f_t$-fiber に含まれるので最後の評価も従う．
+\end{proof}
+
+\begin{remark}[実計量への適合性と特異 fibers]
+KE 退化では $\bar d_t=R_t^{-1}d_{g_t}$，
+$R_t=\log(-\log|t|^2)$ を取る．
+関連研究\cite{KECubicalCurrent}の $\mathrm{(CP)}_d+\mathrm{(PBE)}_d$ は
+適切な $\Phi_t$ に対する $a_t\to0$ を条件付きで与えるが，
+本稿の symplectic construction から $b_t\to0$ はまだ示されていない．
+Moser transport の一様な距離制御も別途必要であり得る．
+本命題で $a_t,b_t\to0$ が成り立てば，pinched torus，
+$S^1\times\figeight$，core skeleton を含め，全 fiber の縮小を結論する．
+一方，regular fibers の点ごとの縮小や，特異値集合の低次元性だけでは
+この一様評価を得られない．また $d\ge6$ では，
+$p_T$ の同じ木 fiber 上にある複数の $\pi_t$-fibers の集合全体も潰す必要がある．
+この比較原理に一般的新規性は主張しない．
+\end{remark}
+
 \section{六次の場合の同時 Petersen 化}\label{topo:petersen-section}
 
 $d=6$ のとき，各 $T_{ij}$ は四つの葉を二組に分けるだけで定まり，

@@ -483,6 +483,49 @@ focus values 自体に matroidal chart を延長する主張ではない．
 （\cite{QuinticArithmetic}）．この例は，局所の奇数分母条件と，実際の共有 neck に沿う
 大域的な剛性との違いを具体的に示す．
 
+\subsection{負 Kähler--Einstein 退化との計量的な比較}\label{intro:ke-collapse}
+
+本稿の fibration の存在と，負 Kähler--Einstein 計量の崩壊は異なる主張である．
+全平面退化 $X_t=\{\prod_i L_i+tF_d=0\}$ に対し，
+$\operatorname{Ric}(\omega_t)=-\omega_t$ と規格化すると
+$[\omega_t]=2\pi(d-4)H$ なので，本稿の存在定理の偏極範囲に入る．
+しかし，各 $t$ で $\omega_t$-Lagrangian な fibration が存在することは，
+その fibers の KE 直径が小さいことや，退化 parameter に関する計量的一様性を含意しない．
+
+Song\cite[Theorem~1.2]{SongNegativeKE}の stable degeneration の定理を
+この族に適用すると，成分内部に基点を選んだ非崩壊極限は
+$\PP^2$ から $d-1$ 本の直線を除いた $d$ 個の完備 KE 曲面となる．
+従って元の尺度では，各成分の内部領域には四実次元幾何が残る．
+他方，Zhang\cite[Theorems~1.1, 2.4]{ZhangNegativeKE}は，
+全空間が $\mathbb Q$-factorial な simple toroidal canonically polarized degenerationで，
+深い stratumへ基点を動かした局所 torus collapse を証明した．
+曲面の二重曲線では一つの円，三重点では二次元トーラスが潰れる．
+これは compact な全基底への GH 収束とは異なる．
+本稿の族には $xy=tz$ 型の非 $\mathbb Q$-factorial な全空間特異点があり，
+小解消後も crepant exceptional curve 上で相対 canonical bundle の次数が零となるため，
+同定理の相対 ample 仮定をそのまま使えない．
+Mandel\cite{MandelNegativeKE}の負 KE neck の構成も，
+我々の compact family との全域的な計量比較を自動的には与えない．
+
+別研究\cite{KECubicalCurrent}の diameter-scale 候補は
+\[
+ R_t=\log(-\log|t|^2),\qquad
+ (X_t,R_t^{-2}g_t)\longrightarrow(\mathcal C_d,d_\square).
+\]
+この収束は同稿の粗い比較仮定 $\mathrm{(CP)}_d$ と，
+増大する積領域の一様比較・整合性を課す $\mathrm{(PBE)}_d$ の下でのみ主張されている．
+さらに我々の fibration による収縮と解釈するには，適切に選びパラメータ化した
+$\pi_t:X_t\to B_d(T)$ と系\ref{topo:KE-cubical-comparison}の $p_T$ について，
+KE 側の近似写像 $\Phi_t$ が
+\[
+ \sup_{x\in X_t}d_\square\bigl(\Phi_t(x),p_T\pi_t(x)\bigr)\longrightarrow0
+\]
+となることを追加で示すのが一つの十分条件である．
+命題\ref{topo:ke-map-compatibility}は，この条件から正則・特異 fibers の
+\emph{ambient} 直径収縮と距離歪みの評価を導く初等的な比較原理である．
+解析仮定の証明や上の適合性評価を本稿が完成したとは扱わない．
+$d=5$ では $p_T$ は同相だが，$d\ge6$ では基底内の木の収縮も必要である．
+
 \subsection{他の tropical 構造との比較と残る問題}
 
 Cartwright の tropical complex は，退化の dual complex に intersection numbers を加えて，

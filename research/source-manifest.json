@@ -367,9 +367,9 @@
       "source": "paper/geometry_bibliography_v25.tex",
       "destination": "papers/sections/paper/geometry_bibliography_v25.tex",
       "source_sha256": "31caa6116b46ace8c04ca0d86351d38506f7d3b12e835cf66b4bd21abde9ce73",
-      "sha256": "b70385041dd5406c55cc3cb13416beffd442d30a5abcd117c4067c9a98857868",
-      "bytes": 17330,
-      "current_blob_sha": "dc0036f8d01c9a43c4d849209ef5c7bd67211a3d"
+      "sha256": "7cac4dbe4769a4851f689410557a95a6f9461112b77fde804fc2941917086d3a",
+      "bytes": 18397,
+      "current_blob_sha": "5a68ac59410ca03a1c054d7180cdff1cbb866dec"
     },
     {
       "source": "paper/quintic_monochromatic_support_v11.tex",
@@ -465,9 +465,9 @@
       "source": "paper/base_topology.tex",
       "destination": "papers/sections/paper/base_topology.tex",
       "source_sha256": "c3d11f4a2b55b4455d1a49bdaa22512b5880473939b6d82ad758543deccb76aa",
-      "sha256": "33d5319cdefdc94b0cfcb3676b973b246f6c51c66dbfef93519cdaf44cd8b1b6",
-      "bytes": 29347,
-      "current_blob_sha": "613ba505b8b93a6f652b50bdc7918c0c6540ff52"
+      "sha256": "a65c68c0a2e302ef16db6a855087b26809706ca76e020d664692ed6b43a44f9e",
+      "bytes": 31966,
+      "current_blob_sha": "fe47b05109b406d269e482e83525a7255849825b"
     },
     {
       "source": "paper/g5_11_obstruction_v20.tex",
@@ -803,9 +803,9 @@
       "source": "paper/geometry_introduction_v25.tex",
       "destination": "papers/sections/paper/geometry_introduction_v25.tex",
       "source_sha256": "383354c4d141117cd75eaed52fdfa7bbd3b5bbbf70ef5fdd85e7f3fd29ec447c",
-      "sha256": "ef48c3019cba06f17aa5c65b0e399d55e00d80475dc5e26621bfa9a5d527d888",
-      "bytes": 37122,
-      "current_blob_sha": "ae4b5e80b1947ac4f3f2a75b8ecc0c1a9d0aad7c"
+      "sha256": "08e2652a6e20f99500668c1990521b399c8827b3e0922a48c87c89e2c4db9214",
+      "bytes": 39969,
+      "current_blob_sha": "7f86887988bcef3a671fb8a77d11d71b13dc1f79"
     },
     {
       "source": "paper/quintic_support_frontier_v19.tex",
@@ -3141,8 +3141,10 @@
       "source": "paper/general_type_surface_fibration_paper_ja_v25.tex",
       "destination": "papers/lagrangian-torus-fibration.tex",
       "source_sha256": "8a2c45f5900c0ed367311bdb78e3a83042c96f82601a5055e2975311a3ad2ba0",
-      "sha256": "bcc38779838a2085429e799b34773e77c38771c77fc073c6184d12fda0dcf990",
-      "changes": "TeX input paths and input search paths only"
+      "sha256": "f68f0e9c814523c268cdad656f5a11ff480c4c2433914df52f310fc59040b01a",
+      "changes": "TeX input paths and input search paths only",
+      "bytes": 3555,
+      "current_blob_sha": "7cb3e79c58d1de952355475992c141ad9ebee480"
     },
     {
       "source": "paper_arithmetic/general_type_surface_quintic_arithmetic_paper_ja_v25.tex",
