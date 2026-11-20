@@ -4,7 +4,7 @@
 \hypersetup{pdftitle={一般型射影曲面のLagrangian torus fibrationと作用適合matroidal atlas},pdfauthor={}}
 \title{一般型射影曲面の\\Lagrangian torus fibrationと\\作用適合matroidal atlas\\[0.5em]\large 相対SNC構成、次数分割と分岐底空間、大域作用座標の接着}
 \author{}
-\date{2026年11月20日\quad 第25稿・現行改訂5}
+\date{2026年11月20日\quad 第25稿・現行改訂6}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -34,7 +34,12 @@ Savin の小摂動定理によって解析的比較を証明し，actual KE--Lag
 その領域の内在距離に関する平坦長方形への GH 収束を得る．
 Complete simplex KE 模型を用いる比較により，全深部三重点でも追加の tensor 仮定を外し，
 三枚の閉 square 全体を小さい actual Lagrangian tori で実現する．
-曲面全体の shortcut 制御，閉 corner の鋭い距離同定，および既存の大域 fibration への特異領域を含む接着は未証明である．
+同じ fibration の射影は，三枚の square 自身の内在距離に対し
+$O((\log R_t)/R_t)$ の距離歪みを持つ GH 近似となる．
+この結論は構成領域の内在距離と，深度 $\min\ell_i>R_t/2$ の保護領域内の経路を許す距離に成立する．
+さらに，元の phase tori が既に Lagrangian な collar では，平均化の Moser flow が
+fiber 分割を保つことを示す．
+曲面全体の shortcut 制御と，既存の大域 fibration への特異領域を含む相対接着は未証明である．
 \end{abstract}
 \tableofcontents
 \input{sections/paper/geometry_introduction_v25.tex}
@@ -46,6 +51,7 @@ Complete simplex KE 模型を用いる比較により，全深部三重点でも
 \input{sections/paper/base_topology.tex}
 \input{sections/paper/ke_fiber_compatibility.tex}
 \input{sections/paper/ke_open_cell_collapse.tex}
+\input{sections/paper/ke_closed_corner_gh.tex}
 \input{sections/paper/degree_partitions.tex}
 \input{sections/paper/partition_topology.tex}
 \input{sections/paper/tropical_obstructions.tex}

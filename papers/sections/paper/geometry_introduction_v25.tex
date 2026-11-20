@@ -556,20 +556,38 @@ raw logarithmic-depth map との誤差 $O((1+\log m_t)/R_t)$ を与える．
 この解析的比較は complete simplex model と境界体積比較によって検証できる．
 系\ref{ke:actual-closed-corner}は任意の固定 $d\ge5$ で，三枚の閉 square 全体に一つの
 actual Lagrangian torus bundle を構成し，$m_t=R_t$ のとき fiber 自身の intrinsic diameter も
-$O(R_t^{-1})$ と評価する．残る課題は，閉 corner の鋭い距離同定と，
-異なる三重点・source・branch・core にわたる相対接着，大域 shortcut の制御である．
+$O(R_t^{-1})$ と評価する．
+さらに定理\ref{ke:closed-corner-gh}は，同じ Moser flow と同じ fibers を用いて，
+三枚の閉 square 自身の内在距離への projection distortion を
+$O((\log R_t)/R_t)$ と評価する．
+系\ref{ke:closed-corner-protected-gh}により，$\min\ell_i>R_t/2$ の保護領域内の
+全経路を許してもこの評価は保たれる．
+模型側の入力は，関連 KE 主稿の係数 $1$ の rank-one Schwarz 評価，
+全正深度の二重 cusp 漸近，および clipped depth map による全経路の長さ下界である．
+これに有限 square gallery の持ち上げを合わせ，model metric の Lie derivative 評価で
+actual Lagrangian bundle へ移す．
+標的の距離は閉 corner 自身のものであり，全複体 $\mathcal C_d$ の他の cells を通る距離ではない．
+異なる三重点・source・branch・core にわたる相対接着と，全曲面の shortcut の制御は残る．
+
+その相対接着に向け，命題\ref{ke:relative-fiber-preserving}は，
+元の phase tori が既に actual Lagrangian である飽和 collar 上で
+averaging の chain primitive による Moser flow が fiber 分割を保つことを示す．
+Metric の torus 不変性は不要である．
+ただし actual neck との orbit partition の一致と quantitative buffer は未検証であり，
+この命題だけから既存の大域 fibration への接着を結論しない．
 
 
 開いた二次元セルの固定 compact 部分では，さらに明示的な product model と局所 GH 極限を得る．
-関連 KE 原稿\cite{KELocalCurrent} の \texttt{coarse:cor:open-square-tensor} は，
+関連 KE 原稿\cite{KELocalCurrent} の \texttt{simplex:cor:actual-dominant-product} は，
 三重点の独立深度 $a,b\in[\tfrac12L_t^\eta,2L_t^{1-\eta}]$，$0<\eta<1/2$ において，
-actual metric と product-cusp metric の全固定階の差を $O(L_t^{-\eta/4})$ と評価する．
-証明では大域体積下界を境界条件として明示的な負 KE 下 barrier を用い，
-complete annulus の上 barrier と合わせて volume ratio を $1$ に近づけ，
+actual metric と product-cusp metric の全固定階の差を $O(L_t^{-\eta})$ と評価する．
+証明では complete simplex と product domains の包含によって model volume ratio を $1$ に近づけ，
+全深部三重点の actual semi-flat 比較と合わせ，
 Savin\cite[Theorem~1.3]{SavinSmall} の小摂動正則性から tensor 比較を得る．
 本稿の定理\ref{ke:open-cell-collapse}はこれを用い，
 $[\eta,1-\eta]^2$ 上の actual KE--Lagrangian torus fibers の intrinsic diameter を
 $O(L_t^{-\eta})$ とし，Moser 像領域の内在距離について平坦長方形への GH 収束を証明する．
+Projection distortion も $O(L_t^{-\eta})$ である．
 全曲面内の ambient distance は領域外の近道を許すため，この局所定理だけから
 大域 GH 収束や既存 fibration の全 fibers に関する収縮を結論しない．
 

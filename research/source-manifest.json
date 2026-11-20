@@ -367,9 +367,9 @@
       "source": "paper/geometry_bibliography_v25.tex",
       "destination": "papers/sections/paper/geometry_bibliography_v25.tex",
       "source_sha256": "31caa6116b46ace8c04ca0d86351d38506f7d3b12e835cf66b4bd21abde9ce73",
-      "sha256": "e7bdbafcb2f4d807afed4e4bf9c57c82dbfebba3c9a6e8f29999de94eef13c8f",
-      "bytes": 19539,
-      "current_blob_sha": "9869832731988ab47b305119f5abe7bb95196e5d"
+      "sha256": "03e71b2f00cb606e289f586636ab18dbc02ee611fe1f0a16523579a9c86ce302",
+      "bytes": 19823,
+      "current_blob_sha": "f7184151e755cd51b448cc39a49d29c7b80ed222"
     },
     {
       "source": "paper/quintic_monochromatic_support_v11.tex",
@@ -803,9 +803,9 @@
       "source": "paper/geometry_introduction_v25.tex",
       "destination": "papers/sections/paper/geometry_introduction_v25.tex",
       "source_sha256": "383354c4d141117cd75eaed52fdfa7bbd3b5bbbf70ef5fdd85e7f3fd29ec447c",
-      "sha256": "acf993560781ec39c5c75d52b9307d0e47758aeb5d697f5117c9d468f1394e9a",
-      "bytes": 43702,
-      "current_blob_sha": "edff509f8e170f2cccffdd003e2e871c25fb24b7"
+      "sha256": "126633f3418a40927fb5ebf7f44fce6a29b3bf598d067fdf3529f3c1078e631f",
+      "bytes": 45012,
+      "current_blob_sha": "017f6b38cf5de56131b5d5059cd5b469068dbdfa"
     },
     {
       "source": "paper/quintic_support_frontier_v19.tex",
@@ -3141,10 +3141,10 @@
       "source": "paper/general_type_surface_fibration_paper_ja_v25.tex",
       "destination": "papers/lagrangian-torus-fibration.tex",
       "source_sha256": "8a2c45f5900c0ed367311bdb78e3a83042c96f82601a5055e2975311a3ad2ba0",
-      "sha256": "55703f7f117b576e68f4665bfc69416ee1eef2444cc4d6f946f808ff96708977",
+      "sha256": "3be85273b9857d0b074a8d30b777fd4ac5185f84cc40ca6c0fbb2facd729164e",
       "changes": "TeX input paths and input search paths only",
-      "bytes": 4622,
-      "current_blob_sha": "43a5e7ce1c45e8df872820b9995859c16de0441c"
+      "bytes": 5055,
+      "current_blob_sha": "57fd346b4d55c8e5414b3b04f502609647d6b2ea"
     },
     {
       "source": "paper_arithmetic/general_type_surface_quintic_arithmetic_paper_ja_v25.tex",
@@ -3320,9 +3320,9 @@
     "threefold_v11/threefold_fibration_note.tex": "papers/threefold-fibration.tex"
   },
   "audit_update_2026_11_20": {
-    "version": "v1.5",
-    "scope": "For every fixed degree d>=5: audited weighted-cap global density lower bound; full deep-triple actual semi-flat tensor asymptotics via translated complete-simplex barriers and Savin; closed-corner actual Lagrangian torus fibers with intrinsic and ambient diameter bounds; open-square intrinsic local GH collapse. Global distance control, relative gluing, and singular-fiber compatibility remain open; novelty is not confirmed.",
-    "verification": "Primary sources and new proof dependencies independently checked; recursive TeX inputs, references, citation keys, environment and brace balance checked. Revised PDFs are not compiled: lualatex.fmt and essential TeX assets are absent. No formal proof or new full audit of the pre-existing global constructions is claimed."
+    "version": "v1.6",
+    "scope": "For every fixed degree d>=5: full deep-triple actual semi-flat comparison; exact rank-one Schwarz bound; dominant O(delta^2), facet O(epsilon^(2/3)), and active co-Gram estimates; closed-corner intrinsic and protected-ambient GH collapse with distortion O(log R/R), realized by the same actual Lagrangian torus bundle. Open-square tensor and GH errors improve to O(L^(-eta)). Chain averaging preserves an already Lagrangian orbit collar as a fiber partition. Global X_t distances, actual neck matching, relative gluing, and singular-fiber compatibility remain open; novelty is unconfirmed.",
+    "verification": "Primary-source inputs and new proofs independently read, including normalizations, domain barriers, fixed-ball perturbation regularity, all-path pruning, finite galleries, Moser pullback, and protected-ambient endpoint control. Recursive TeX inputs, labels/references, citation keys, environments, braces, and newly introduced macros checked. Revised PDFs are not compiled: lualatex.fmt and essential LuaTeX-ja assets are unavailable. No formal proof, comprehensive novelty audit, or fresh full audit of the pre-existing global constructions is claimed."
   },
   "current_post_migration_sources": [
     {
@@ -3345,15 +3345,21 @@
     },
     {
       "destination": "papers/sections/paper/ke_fiber_compatibility.tex",
-      "sha256": "53ca0f29e288be06fafbc27b294373f9a833f4eaefacbd8bc3699953cacd3b92",
-      "bytes": 31506,
-      "current_blob_sha": "d2c29eed3a274ad4b840341273e5035b47a798d3"
+      "sha256": "675c0603c519cf80648e6a49af97f8b94562b4e81c18505b85f7f75d90d40a88",
+      "bytes": 31865,
+      "current_blob_sha": "f575c472d180a7672fb92ab485b8b2a795db79c3"
     },
     {
       "destination": "papers/sections/paper/ke_open_cell_collapse.tex",
-      "sha256": "e1559c0f528961112c3f1432e37320761a2d5c754ba7393a7f7675b69d3bbf36",
-      "bytes": 26481,
-      "current_blob_sha": "fd749397d8edc871c80b55b3de370dbd105046bd"
+      "sha256": "abeb43e3341b36edfd0b85e80572e39e445df05b1d5960dd04873bdf45b3956e",
+      "bytes": 26947,
+      "current_blob_sha": "e9615bd57fc0b3576e54b7022f34d60f2f39122e"
+    },
+    {
+      "destination": "papers/sections/paper/ke_closed_corner_gh.tex",
+      "sha256": "27b440503632dcb4b571e6de872d917fe07b4067a84ea03c275db0235a082ae5",
+      "bytes": 17607,
+      "current_blob_sha": "1e9b2261973a811b6ae171c10d738f06e02f0b18"
     }
   ]
 }

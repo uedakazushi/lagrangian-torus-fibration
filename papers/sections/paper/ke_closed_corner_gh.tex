@@ -1,0 +1,385 @@
+% !TeX root = ../../lagrangian-torus-fibration.tex
+% 2026-11-20 / v1.0: 全閉 triple corner の GH 極限と fiber-preserving relative averaging．
+\section{全閉 triple corner の内在的 GH 極限}
+\label{ke:closed-corner-gh-section}
+
+系\ref{ke:actual-closed-corner}で構成した actual Lagrangian bundle に対し，
+本節では三枚の閉 square の共通 face を含む領域全体の内在距離を同定する．
+Lagrangian 化に用いた Moser flow と fibers は同じものを使う．
+新たな距離の入力は，関連 KE 主稿\cite[Part~IV,
+\texttt{simplex:thm:closed-corner-model}]{KELocalCurrent}の
+complete simplex model に関する全閉 corner の評価である．
+同稿の \texttt{simplex:cor:actual-closed-corner-metric} は，
+Moser 変形前の actual 領域について対応する結論を与える．
+以下では model metric 自体の Lie derivative を評価し，
+既に構成した Moser 像へ sharp な距離比較を移す．
+さらに，三重点の外側保護領域内を通る経路を全て許した距離についても，
+同じ projection による極限を示す．
+
+\subsection{Closed corner 自身の距離と model の入力}
+
+前節と同じ任意の固定 $d\ge5$ の族を取り，その genericity 仮定を保つ．
+三重点の label を $J=\{i,j,k\}$，
+$L=-\log|t|^2$，$R=\log L$，$m=R$ とする．
+\[
+ \mathcal C_J
+ =\{w\in[0,1]^J:\max_{a\in J}w_a=1\}
+\]
+に，三枚の unit Euclidean square を共有 faces に沿って貼り合わせた
+\emph{この corner 自身の内在長さ距離} $d_J$ を入れる．
+この記号は，$\mathcal C_d$ 全体の距離 $d_\square$ を
+$\mathcal C_J$ に制限したものを意味しない．
+
+命題\ref{ke:triple-hexagon}の softmax を
+\[
+ \ell_a(w)=R+(L-3R)\frac{L^{w_a}}{\sum_{b\in J}L^{w_b}}
+\]
+とし，その六角形 $H_{L,R}$ の全 phase torus preimage を
+\[
+ \mathcal H_t=\mathcal U_t(H_{L,R}),\qquad
+ F_{t,R}:\mathcal C_J\times\TT^2\longrightarrow\mathcal H_t
+\]
+と書く．$F_{t,R}$ は既存の parameter 化と同じであり，
+\[
+ P_t=\operatorname{pr}_{\mathcal C_J}\circ F_{t,R}^{-1}
+\]
+は変形前の softmax projection である．
+Complete simplex KE form $k_L$ の実計量を $\gamma_t=g_L^{\mathrm{sf}}$ と書き，
+$\mathcal H_t$ の中に留まる曲線の $R^{-2}\gamma_t$-長さで定義した
+内在距離を $d_t^{\mathrm{sf,int}}$ とする．
+
+上記 KE 主稿の \texttt{simplex:thm:closed-corner-model} は
+\begin{equation}\label{ke:eq:closed-corner-model-input}
+ \sup_{z,z'\in\mathcal H_t}
+ \left|d_t^{\mathrm{sf,int}}(z,z')
+       -d_J(P_t(z),P_t(z'))\right|
+ \le C\frac{\log R}{R}
+\end{equation}
+を与える．この評価は全 closed corner と全 phase に一様である．
+特に $P_t$ の全射性から
+\begin{equation}\label{ke:eq:closed-model-diameter}
+ \operatorname{diam}(\mathcal H_t,d_t^{\mathrm{sf,int}})
+ \le\operatorname{diam}(\mathcal C_J,d_J)+C\frac{\log R}{R}
+\end{equation}
+は一様有界である．以下の actual estimates の定数には
+固定した $d$，族，Hermitian data，chart への依存を許す．
+次数や族全体にわたる一様性は主張しない．
+
+\subsection{同じ Moser flow による sharp な metric 比較}
+
+\begin{lemma}[全閉 corner の Moser pullback metric]
+\label{ke:closed-corner-moser-metric}
+系\ref{ke:actual-closed-corner}の flow $\phi_{t,s}$ と
+$\phi_t=\phi_{t,1}$ を用いる．十分小さい $t\ne0$ に対し，
+\begin{equation}\label{ke:eq:closed-model-flow-metric}
+ e^{-C/R}\gamma_t\le\phi_{t,s}^*\gamma_t
+                 \le e^{C/R}\gamma_t
+ \qquad(0\le s\le1)
+\end{equation}
+が $\mathcal U_t(D_{L,R})$ 上で成立する．さらに
+\begin{equation}\label{ke:eq:closed-actual-pullback}
+ (1-C/R)\gamma_t\le\phi_t^*g_t\le(1+C/R)\gamma_t
+\end{equation}
+となる．
+\end{lemma}
+\begin{proof}
+$h=h_t$ を\eqref{ke:eq:cusp-model}の constrained cusp metric とする．
+関連 KE 主稿の complete simplex model の一様幾何と
+\texttt{coarse:thm:full-triple-tensor} により，外側領域
+\[
+ \mathcal V_t=\mathcal U_t(\ell_a>R/2\text{ for all }a\in J)
+\]
+上で
+\begin{equation}\label{ke:eq:closed-model-c1-data}
+ c h\le\gamma_t\le C h,
+ \qquad |\nabla^h\gamma_t|_h\le C,
+ \qquad |g_t-\gamma_t|_h\le C/R
+\end{equation}
+が成り立つ．深度 $m=R/2$ で同定理を用いている．
+また\eqref{ke:eq:full-corner-moser-c1}より
+\[
+ |Y_{t,s}|_h+|\nabla^hY_{t,s}|_h\le C/R
+\]
+であり，内側領域からの flow は $\mathcal V_t$ に留まる．
+
+任意の接ベクトル $U,V$ に対し，$\nabla^h$ の torsion が零であることから
+\[
+ (\mathcal L_{Y_{t,s}}\gamma_t)(U,V)
+ =(\nabla^h_{Y_{t,s}}\gamma_t)(U,V)
+  +\gamma_t(\nabla^h_UY_{t,s},V)
+  +\gamma_t(U,\nabla^h_VY_{t,s}).
+\]
+従って\eqref{ke:eq:closed-model-c1-data}より
+\[
+ |\mathcal L_{Y_{t,s}}\gamma_t|_h\le C/R,
+ \qquad
+ -\frac CR\gamma_t\le\mathcal L_{Y_{t,s}}\gamma_t
+                         \le\frac CR\gamma_t.
+\]
+$\frac{d}{ds}\phi_{t,s}^*\gamma_t
+=\phi_{t,s}^*(\mathcal L_{Y_{t,s}}\gamma_t)$ に
+Gronwall の不等式を用いると\eqref{ke:eq:closed-model-flow-metric}を得る．
+さらに $\gamma_t\ge ch$ なので，最後の metric difference は
+\[
+ (1-C/R)\gamma_t\le g_t\le(1+C/R)\gamma_t
+ \quad\text{on }\mathcal V_t
+\]
+を意味する．これを $\phi_t$ で引き戻し，
+\eqref{ke:eq:closed-model-flow-metric}と合わせると，定数を増やして
+\eqref{ke:eq:closed-actual-pullback}を得る．
+背景間の coarse comparison だけで sharp comparison を置き換えず，
+model $\gamma_t$ の Lie derivative を直接用いた点がここで必要である．
+\end{proof}
+
+\begin{theorem}[Actual Lagrangian bundle による全閉 corner の内在的 GH 収束]
+\label{ke:closed-corner-gh}
+前節の系\ref{ke:actual-closed-corner}と同じ
+\[
+ \mathcal W_{t,J}=\phi_t(\mathcal H_t),\qquad
+ \pi_{t,J}=P_t\circ\phi_t^{-1}
+\]
+を取る．$\mathcal W_{t,J}$ の中に留まる piecewise smooth curves の
+$R^{-2}g_t$-長さから定まる内在距離を $d_{t,J}^{\mathrm{Lag,int}}$ とする．
+すると
+\begin{equation}\label{ke:eq:closed-corner-distortion}
+ \sup_{x,y\in\mathcal W_{t,J}}
+ \left|d_{t,J}^{\mathrm{Lag,int}}(x,y)
+      -d_J(\pi_{t,J}(x),\pi_{t,J}(y))\right|
+ \le C\frac{\log R}{R}.
+\end{equation}
+従って同じ actual $\omega_t$-Lagrangian $T^2$ fibration の射影
+$\pi_{t,J}$ 自身が全射 GH approximation となり，
+\begin{equation}\label{ke:eq:closed-corner-gh-limit}
+ (\mathcal W_{t,J},d_{t,J}^{\mathrm{Lag,int}})
+ \xrightarrow[t\to0]{\mathrm{GH}}(\mathcal C_J,d_J)
+\end{equation}
+を得る．
+全 fiber の非正規化の intrinsic diameter は $O(R^{-1})$，
+正規化後は $O(R^{-2})$ であり，
+raw map との\eqref{ke:eq:actual-closed-corner-target}も保たれる．
+\end{theorem}
+\begin{proof}
+補題\ref{ke:closed-corner-moser-metric}を $\mathcal H_t$ に制限する．
+$\phi_t$ はその開近傍で像への diffeomorphism であるから，
+$\mathcal H_t$ 内の経路と $\mathcal W_{t,J}$ 内の経路は一対一に対応する．
+従って $\varepsilon_t=C/R<1/2$ と置けば
+\[
+ (1-\varepsilon_t)^{1/2}d_t^{\mathrm{sf,int}}(z,z')
+ \le d_{t,J}^{\mathrm{Lag,int}}(\phi_t(z),\phi_t(z'))
+ \le(1+\varepsilon_t)^{1/2}d_t^{\mathrm{sf,int}}(z,z').
+\]
+\eqref{ke:eq:closed-model-diameter}により model diameter は一様有界なので，
+この差は一様に $O(R^{-1})$ である．
+\eqref{ke:eq:closed-corner-model-input}と
+$\pi_{t,J}\circ\phi_t=P_t$ を合わせると
+\eqref{ke:eq:closed-corner-distortion}を得る．
+
+$P_t$，従って $\pi_{t,J}$ は全射である．その graph を correspondence として用いれば，
+\eqref{ke:eq:closed-corner-distortion}から GH 距離の上界と
+\eqref{ke:eq:closed-corner-gh-limit}が従う．
+Fiber と raw map に関する記述は，bundle と Moser flow を変更していないので
+系\ref{ke:actual-closed-corner}そのものである．
+\end{proof}
+
+\begin{corollary}[外側保護領域を通る距離に関する同じ極限]
+\label{ke:closed-corner-protected-gh}
+定理\ref{ke:closed-corner-gh}と同じ $\mathcal W_{t,J}$ と $\pi_{t,J}$ を用いる．
+外側保護領域
+\[
+ \mathcal V_t
+ =\{\zeta_i\zeta_j\zeta_k=t,\ \min_{a\in J}\ell_a>R/2\}
+\]
+内の全 piecewise smooth curves の $R^{-2}g_t$-長さの下限で定まる距離を，
+$\mathcal W_{t,J}$ へ制限して $d_{t,J}^{\mathrm{Lag,out}}$ と書く．
+すると
+\begin{equation}\label{ke:eq:closed-corner-protected-distortion}
+ \sup_{x,y\in\mathcal W_{t,J}}
+ \left|d_{t,J}^{\mathrm{Lag,out}}(x,y)
+      -d_J(\pi_{t,J}(x),\pi_{t,J}(y))\right|
+ \le C\frac{\log R}{R}.
+\end{equation}
+特に $\pi_{t,J}$ 自身によって
+\[
+ (\mathcal W_{t,J},d_{t,J}^{\mathrm{Lag,out}})
+ \xrightarrow[t\to0]{\mathrm{GH}}(\mathcal C_J,d_J)
+\]
+となる．経路は $\mathcal W_{t,J}$ の外へ出てもよいが，
+$\mathcal V_t$ の外へは出ないものに限る．
+\end{corollary}
+\begin{proof}
+外側保護領域には全ての Moser trajectories が入るので，
+$\mathcal W_{t,J}\subset\mathcal V_t$ である．従って
+\[
+ d_{t,J}^{\mathrm{Lag,out}}\le d_{t,J}^{\mathrm{Lag,int}}
+\]
+となり，上界は定理\ref{ke:closed-corner-gh}から従う．
+
+下界には，関連 KE 主稿\cite[Part~IV,
+\texttt{simplex:lem:closed-corner-no-shortcut}]{KELocalCurrent}の
+両端を clipped した projection を用いる．
+$[s]_0^1=\max\{0,\min\{s,1\}\}$ と置き，
+\[
+ S=R-2\log R,\qquad
+ \Psi_a=\left[\frac{\log(\ell_a/R)}S\right]_0^1
+ \quad(a\in J)
+\]
+と定める．これは complete simplex 全体から $\mathcal C_J$ への写像である．
+同補題は，complete model 内の任意の曲線 $c$ に対して
+\begin{equation}\label{ke:eq:protected-pruning-length}
+ \operatorname{Length}_{d_J}(\Psi\circ c)
+ \le\frac{\sqrt{1+CR^{-2}}}{S}\operatorname{Length}_{\gamma_t}(c)
+\end{equation}
+を与え，また
+\begin{equation}\label{ke:eq:protected-pruning-endpoints}
+ \sup_{z\in\mathcal H_t}d_J(\Psi(z),P_t(z))
+ \le C\frac{\log R}{R}
+\end{equation}
+を与える．この長さ評価には clipping level と square seams 上の経路も含まれる．
+
+特に $z\in\mathcal H_t$ の Moser trajectory に対し，
+$|Y_{t,s}|_{\gamma_t}\le C/R$ と
+\eqref{ke:eq:protected-pruning-length}から
+\begin{equation}\label{ke:eq:protected-moser-endpoint}
+ d_J(\Psi(\phi_t(z)),\Psi(z))
+ \le\frac{C}{S}\int_0^1|Y_{t,s}(\phi_{t,s}(z))|_{\gamma_t}\,ds
+ \le\frac{C}{R^2}
+\end{equation}
+を得る．従って $x=\phi_t(z)$ について
+\[
+ d_J(\Psi(x),\pi_{t,J}(x))\le C\frac{\log R}{R}.
+\]
+
+さらに\eqref{ke:eq:closed-model-c1-data}による
+$(1-C/R)\gamma_t\le g_t$ は $\mathcal V_t$ 全体で成立する．
+$\mathcal V_t$ 内の $x,y$ を結ぶ任意の曲線に
+\eqref{ke:eq:protected-pruning-length}を用いて下限を取ると
+\[
+ d_{t,J}^{\mathrm{Lag,out}}(x,y)
+ \ge \frac{S\sqrt{1-C/R}}{R\sqrt{1+CR^{-2}}}
+          d_J(\Psi(x),\Psi(y)).
+\]
+右辺の係数は $1-O(\log R/R)$ であり，$d_J$ の diameter は有限である．
+端点評価を加えると
+\[
+ d_{t,J}^{\mathrm{Lag,out}}(x,y)
+ \ge d_J(\pi_{t,J}(x),\pi_{t,J}(y))-C\frac{\log R}{R}
+\]
+となる．既に示した上界と全射性から，distortion bound と GH 極限を得る．
+\end{proof}
+
+\begin{remark}[Corner 内の二つの距離と大域距離]
+\label{ke:closed-corner-gh-scope}
+定理\ref{ke:closed-corner-gh}は三枚の square を合わせた corner 全体を扱うが，
+曲面全体の距離を扱うものではない．$d_{t,J}^{\mathrm{Lag,int}}$ には
+$\mathcal W_{t,J}$ 内の経路を用い，
+系\ref{ke:closed-corner-protected-gh}の $d_{t,J}^{\mathrm{Lag,out}}$ には
+$\mathcal V_t$ 内の経路を全て許す．
+$X_t$ 内で $\mathcal V_t$ の外へ出る経路は，いずれにも含めていない．
+また標的の $d_J$ も $\mathcal C_J$ 内の経路だけを用いる．
+Full complex $\mathcal C_d$ の他の cells を通る経路との比較は，
+本節のいずれの distortion bound にも含めていない．
+
+従って異なる三重点 chart の接合，neck・source・branch・core を含む
+既存の大域 fibration への相対接着，および大域 shortcut の評価は残る．
+本節の regular fibers と既存大域 fibration の singular fibers を同一視しない．
+解析入力の新規性の包括的確認も引き続き必要である．
+\end{remark}
+
+\subsection{次の相対接着への条件}
+
+Fibration の接着に必要な collar の固定と，各点を固定することを区別する．
+以下の命題は，既存の averaging--Moser 構成に直接適用できる．
+Actual neck にその仮定を満たす collar が存在することを主張するものではない．
+
+\begin{proposition}[既に Lagrangian な orbit collar を保つ averaging]
+\label{ke:relative-fiber-preserving}
+定理\ref{ke:short-torus-averaging}の設定で，
+$N\subset\mathcal U'$ を torus 飽和した開集合とする．
+$N$ 内の元の全 phase tori が既に $\omega$-Lagrangian であると仮定する．
+同定理で用いた chain homotopy primitive
+\[
+ \beta=H\omega,
+ \qquad H=K_1+\mathcal A_1K_2
+\]
+と $\omega_s=(1-s)\bar\omega+s\omega$ による Moser flow は，
+$N$ の各 phase torus を集合として保つ．
+従って $\phi_s(N)=N$ であり，完成した fibration は
+\begin{equation}\label{ke:eq:relative-fibration-identity}
+ (p\circ\phi_1^{-1})|_N=p|_N
+\end{equation}
+を満たす．$\omega$ の torus 不変性は仮定しない．
+同じ結論は remark~\ref{ke:relative-averaging}の centered chain homotopy にも成立する．
+\end{proposition}
+\begin{proof}
+Vertical tangent distribution を $\mathcal E=\ker dp$ と書く．
+仮定より $\omega|_{\mathcal E\times\mathcal E}=0$ on $N$ であり，
+torus の各 translation は $N$ と $\mathcal E$ を保つ．
+従って，生成場 $V_j$ と任意の vertical vector $Z$ について
+\[
+ \bigl(\rho_{j,s}^*(\iota_{V_j}\omega)\bigr)(Z)
+ =\omega_{\rho_{j,s}(x)}
+     \bigl(V_j,\,d\rho_{j,s}(Z)\bigr)=0.
+\]
+積分と他の円作用による平均を取ってもこの消滅は保たれるので
+\begin{equation}\label{ke:eq:relative-primitive-vertical}
+ \beta|_{\mathcal E}=0\quad\text{on }N.
+\end{equation}
+Centered homotopy でも積分の weight が変わるだけで，同じ議論が成立する．
+
+$\bar\omega$ も $\mathcal E$ 上で零であり，
+$\omega_s$ は K\"ahler form の凸結合で非退化である．
+従って実次元二の $\mathcal E$ は各 $\omega_s$ に関して Lagrangian である．
+$\iota_{Y_s}\omega_s=\beta$ と
+\eqref{ke:eq:relative-primitive-vertical}より
+\[
+ \omega_s(Y_s,Z)=0\quad(Z\in\mathcal E),
+ \qquad Y_s\in\mathcal E^{\omega_s}=\mathcal E
+ \quad\text{on }N.
+\]
+したがって各 trajectory の基底値は一定である．
+各 orbit は compact torus なので，制限された時間依存 vector field の flow は
+正負両方向に全区間で存在し，各 orbit をそれ自身へ微分同相に写す．
+全体の flow との一意性から $\phi_s(N)=N$ および
+\eqref{ke:eq:relative-fibration-identity}が従う．
+\end{proof}
+
+\begin{corollary}[同じ orbit partition を持つ neck collar との局所接着]
+\label{ke:relative-neck-matching}
+上の $N$ が別の領域の actual $\omega$-Lagrangian fibration と重なり，
+その fibration の fibers が $N$ 上で $p$ の phase tori と一致すると仮定する．
+両基底の collar coordinates をこの orbit partition で同定すれば，
+averaging 後の fibration と与えられた fibration は $N$ 上で一致し，
+通常の開集合上の写像の接着によって一つの局所 fibration となる．
+\end{corollary}
+\begin{proof}
+与えられた fibers の Lagrangian 性により
+命題\ref{ke:relative-fiber-preserving}を適用できる．
+同命題は基底値も含めて\eqref{ke:eq:relative-fibration-identity}を与えるので，
+指定された基底 collar の同定後には二つの写像が open overlap 上で等しい．
+その写像と局所 trivializations を接着すればよい．
+ここでの結論は重なり近傍の局所的なものであり，
+基底全体の Hausdorff 性や大域 properness を別の仮定なしに主張しない．
+\end{proof}
+
+\begin{remark}[点ごとの固定と toric 座標変更の区別]
+\label{ke:relative-neck-obstructions}
+命題\ref{ke:relative-fiber-preserving}は fiber を集合として固定し，
+各点を固定するとは述べない．$\phi_s|_N=\id$ と
+$\phi_s^*\omega_s=\bar\omega$ を同時に要求するなら，
+$\omega_s|_N=\bar\omega|_N$ が必要である．
+その意味で，不変 collar を仮定する remark~\ref{ke:relative-averaging}の
+点ごとの固定とは異なる結論である．
+
+また，独立な二つの toric coordinates の変更が
+$\zeta'=c(t)\zeta^A$，$A\in\mathrm{GL}(2,\ZZ)$ という定数係数の monomial 変更なら，
+phase tori の orbit partition は変わらない．
+しかし非定数の holomorphic unit を含む
+$\zeta'=\zeta^A u(\zeta,t)$ という変更は，一般にその partition 自体を変える．
+曲面の同じ overlap に二つの torus actions が存在することだけでは，
+系\ref{ke:relative-neck-matching}の仮定は満たされない．
+本稿の actual neck と三重点領域の間で，必要な orbit partition，
+action periods，および quantitative buffer を同時に合わせることは残る課題である．
+上の fiber-preserving 証明では chain homotopy primitive を用いた．
+同じ exterior derivative を持つ任意の別の primitive へ替えても，
+\eqref{ke:eq:relative-primitive-vertical}が自動的に保たれるわけではない．
+\end{remark}

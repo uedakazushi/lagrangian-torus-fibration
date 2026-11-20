@@ -1,5 +1,5 @@
 # 現行研究方針：一般型超曲面のLagrangian torus fibration
-更新：2026-11-20 / v1.5・現行研究方針
+更新：2026-11-20 / v1.6・現行研究方針 / 主稿改訂6
 
 ## 目標と現行資料
 曲面の大域的fibration・作用適合atlasと、三次元のclosed-curve local blocksを区別する。曲面側は2026-10-28第25版のソース一式を回収し、旧30頁稿と短いGitHub草稿から現行の三論文へ移行した。三次元側は継続用bundle第10版から局所稿第9版・全体稿第11稿を全文TeXで移行した。
@@ -27,7 +27,7 @@ Evans–Mauri（2021）はSNC/negative vertexの局所模型、Abouzaid–Auroux
 ## KEのGH極限との関係
 標準負KE尺度では成分内部の四次元完備KE幾何が残る。径の尺度 $R_t=\log(-\log|t|^2)$ では、関連KE研究の $(\mathrm{CP})_d+(\mathrm{PBE})_d$ の下で候補 $\mathcal C_d$ へのGH収束を扱う。我々のfibrationによる実現には、さらに選んだ $\pi_t:X_t\to B_d(T)$ とKE近似写像 $\Phi_t$ が $\sup_x d_\square(\Phi_t(x),p_T\pi_t(x))\to0$ を満たす必要がある。主稿 `topo:ke-map-compatibility` はこの適合性から全fiberのambient直径収縮を導く初等的な比較命題であり、actual KEの収束を証明したものではない。五次は $p_T$ が同相、六次以上は基底内の木も収縮する。Zhang (MRL, 2015)の局所collapse定理のQ-factorial・相対ample仮定は、source germ $xy=tz$ を持つ我々の族へそのまま適用できない。文献と適用計算は `research/notes.md`、公表用の比較は主稿 `intro:ke-collapse` を参照。
 
-## 全深部三重点の actual semi-flat 比較と閉corner
+## 全深部三重点の actual 比較と閉cornerのGH極限
 任意の固定次数 d≥5 の一般位置全平面退化で、三重点の全深度比・全角度に一様な actual KE 比較を証明した。正確な座標 ζ0ζ1ζ2=t、ell_i=−log|ζ_i|²、L=−log|t|²、R=log L とし、k_Lをlogarithmic simplex上のcomplete toric KE form、その実計量をg_L^sfとする。十分大きい固定m1と各qのCqについて、m≥m1、min ell_i≥mで
 \[
 \left|\log\frac{\omega_t^2}{k_L^2}\right|\le C/m,\qquad
@@ -39,14 +39,27 @@ Evans–Mauri（2021）はSNC/negative vertexの局所模型、Abouzaid–Auroux
 
 Actual側の大域入力は `coarse:cor:degree-d-volume-lower`。Adjunction residueでcanonical densityを固定し、backgroundによるHermitian frame errorの吸収と各正のcap方向のminorから六型のdeterminant下界を証明する。Sourceでは元のplane coordinatesを保つexact xy=tzとrescalingにより二つのcap係数≥c_d/Lを使う。Compact minimum原理からactual volume下界を得る。今回この依存部分も再点検して明示化した。
 
-Lagrangian主稿 `ke:actual-closed-corner` により、m=Rでは三枚の閉square全体を一つのactual Lagrangian torus bundleで実現できる。全fiberのintrinsic/ambient diameterはO(1/R)、R^−2 g_tに正規化後はO(1/R²)、raw cubical mapとの誤差はO(log R/R)。Squareの継目でもfiberはregular T²であり、既存大域fibrationのsource・branch・coreのsingular fibersと同定したわけではない。閉corner全体の鋭い距離のGH同定、大域相対接着とshortcut制御は残る。新規性の網羅的確認と外部査読・形式証明は未実施。
+Lagrangian主稿 `ke:actual-closed-corner` の同じ averaging–Moser flow と同じactual Lagrangian torus bundleに対し、`ke:closed-corner-gh` と `ke:closed-corner-protected-gh` が全閉cornerのGH極限を与える。m=Rでsoftmax hexagonのMoser像をW_{t,J}、その射影をπ_{t,J}とすると、R^−2 g_tによる距離について
+\[
+\sup_{x,y\in W_{t,J}}
+\left|d_t(x,y)-d_J(\pi_{t,J}(x),\pi_{t,J}(y))\right|
+\le C\frac{\log R}{R}.
+\]
+これはW_{t,J}自身の内在距離と、外側保護領域V_t={min ell_i>R/2}内の全経路を許す距離の双方で成立する。標的のd_Jは三枚のunit squaresからなるC_J自身の内在距離であり、full C_dの距離を制限したものではない。全fiberのintrinsic/ambient diameterはO(1/R)、正規化後はO(1/R²)、raw cubical mapとの誤差はO(log R/R)。Squareの継目も同一のregular T²であり、既存大域fibrationのsource・branch・coreのsingular fibersとは同定しない。
+
+距離の解析入力はKE主稿 `simplex:lem:rank-one-schwarz` の係数1評価と `simplex:prop:dominant-product` のsharp product比較。Clipped logarithmic projectionで模型simplex全体の経路の下界を示し、三枚以内のsquare galleryを内部へ移して上界を得る（`simplex:thm:closed-corner-model`）。ActualとのO(1/R)比較と同じMoser flowのC1評価で上記の結論へ移す。正本は `papers/sections/paper/ke_closed_corner_gh.tex`。全曲面でのshortcut、異なるtriple chartの接合、actual neckおよびsingular fibersとの相対接着は未解決。新規性の網羅的確認と外部査読・形式証明は未実施。
 
 ## 開正方形上のactual KE–Lagrangian collapse
-主稿の `papers/sections/paper/ke_open_cell_collapse.tex` に、任意の固定次数d≥5のactual KE計量に対する局所結果を置く。関連KE主稿 `coarse:cor:open-square-tensor` は、三重点独立深度 a,b∈[L^η/2,2L^(1−η)]、0<η<1/2 上のproduct-cusp比較を全固定階で O(L^(−η/4)) と証明する。依存するのは既存のglobal capped volume下界と、明示的な上下KE barriers、Savin (2007), Theorem 1.3であり、(TC)_5や(PBE)_5を追加仮定しない。
+主稿の `papers/sections/paper/ke_open_cell_collapse.tex` に、任意の固定次数d≥5のactual KE計量に対する局所結果を置く。関連KE主稿 `simplex:cor:actual-dominant-product` は、三重点独立深度 a,b∈[L^η/2,2L^(1−η)]、0<η<1/2 上のproduct-cusp比較を全固定階でO(L^−η)と与える。Complete simplex模型の誤差O(((a+b)/L)²)とactual/model誤差O(1/min ell)を合わせた率であり、global capped volume下界、明示的な上下KE barriers、Savin (2007), Theorem 1.3に依存する。(TC)_dや(PBE)_dを追加仮定しない。
 
-`ke:open-cell-moser-c1` は平均化のprimitiveとMoser場のC1 normをO(L^−η)とし、flowのpullback metricを制御する。`ke:open-cell-collapse` はKη=[η,1−η]²上のactual KE–Lagrangian T² fibrationを構成し、fiberのintrinsic/ambient diameter O(L^−η)、raw mapとの誤差O(1/R)を与える。Moser像領域に内在長さ距離を入れると、R^−2 g_tは平坦KηへGH収束し、projection distortionはO(L^(−η/4)+L^−η/R)。これらの証明と一次資料の適用条件を今回点検した。一般的新規性は未確認。
+`ke:open-cell-moser-c1` は平均化のprimitiveとMoser場のC1 normをO(L^−η)とし、flowのpullback metricを制御する。`ke:open-cell-collapse` はKη=[η,1−η]²上のactual KE–Lagrangian T² fibrationを構成し、fiberのintrinsic/ambient diameter O(L^−η)、raw mapとの誤差O(1/R)を与える。Moser像領域に内在長さ距離を入れると、R^−2 g_tは平坦KηへGH収束し、projection distortionはO(L^−η+L^−η/R)=O(L^−η)。定数は固定ηに依存する。これらの証明と一次資料の適用条件を点検した。一般的新規性は未確認。
 
-開正方形のGH結論は固定ηの局所定理である。全閉cornerのfiber構成は上記の系で解決したが、η→0での鋭い距離の一様性、曲面全体のambient shortcut、source・branch・coreのsingular fibersとの接着、既存の大域fibrationとの同定は未解決。
+固定ηの開正方形と全閉cornerは、それぞれ上記の局所定理で扱う。全曲面のambient shortcut、source・branch・coreのsingular fibersとの接着、既存の大域fibrationとの同定は残る。
+
+## 相対接着で必要なcollar条件
+`ke:relative-fiber-preserving` は、torus飽和した開collar N上の元のphase toriが既にactual ω-Lagrangianなら、chain primitive β=Hω、H=K_1+A_1K_2によるMoser flowが各fiberを集合として保ち、p∘φ^−1=p on Nを満たすことを証明する。作用不変性は不要であり、centered chain primitiveでも同じ結論となる。各点を固定することとは異なる。点ごとの固定には、作用不変なcollarとcentered primitiveを用いる既存の `ke:relative-averaging` が使える。
+
+`ke:relative-neck-matching` は、同じorbit partitionを持つactual Lagrangian neck fibrationが開overlap上に与えられれば、基底collarを同定して局所接着できるという条件付きの系である。Actual neckでこの仮定を実現することは未解決。定数係数のmonomial座標変更はorbit partitionを保つが、非定数holomorphic unitを含む変更は一般に保たない。任意の別のprimitiveへの置換でもfiber保存が続くとは仮定しない。
 
 ## 小さいLagrangian fibersへの局所的な前進
 現在の着手対象は複素次元2でのKE極限とLagrangian fibrationの適合性である。主稿の `papers/sections/paper/ke_fiber_compatibility.tex` に次の証明を置いた。
@@ -70,7 +83,7 @@ Lagrangian主稿 `ke:actual-closed-corner` により、m=Rでは三枚の閉squa
 
 ## 次の一手
 1. 三次元では管状disk bundleとactual focus blockの境界を区別し、normal facesとcomplementの接着を優先する。計算済みの\(H_*(K_c)\)と\(H_*(\mathcal V)\)を使って境界包含\(\partial\mathcal U\to\mathcal U,\mathcal V\)の具体的な整数homology・\(\pi_1\)写像、meridional torsionの像を求め、Maslov・作用周期・unipotent monodromy・Euler予算を同時に照合する。
-2. 実際の曲面基底に作用アフィン計量の長さ完備化を定義し、(N) no-shortcut、(S) square内lift、(F) portal/fiber径をそれぞれ独立に検証する。\(\varepsilon\)と元の退化parameterの関係も確定する。純粋に位相的な基底比較だけでは不十分。KE近似写像との比較では、新節の定量的averaging–Moserを入口とする。Complete simplex背景と内外facet-shift barriersによる全closed tripleの解析入力は証明済み。次にopen-edge/neck領域とsourceの正しいorientationに沿って相対collarsを選ぶ。局所fibrationのoverlap、source・branch・coreへの相対接着と大域no-shortcutは別に進める。Sourceに対応するnodeのcritical valueは、対応するpair vertexへ近づく基底パラメータ化を選ぶ必要があり得る（`ke:source-marking`）。
+2. 曲面側では `ke:relative-fiber-preserving` を使えるactual neck collarを構成する。まず開overlap上でphase orbit partitionと既存のLagrangian fibersを一致させ、action periodsと定量的bufferを確認する。非定数unitを吸収する座標変更ではorbit partitionを再確認する。全閉cornerの内在・保護領域内のGH比較は証明済みであるが、source・branch・coreへの相対接着、異なるtriple chartsの接合、V_t外を通る大域no-shortcutは未解決。実際の基底長さ距離に対する(N)、(S)、(F)の大域検証はそれぞれ独立に行う。Source nodeのcritical valueには対応pair vertexへ近づく基底パラメータ化が必要であり得る（`ke:source-marking`）。
 3. 五次整数接着の\(G_{5,14}\)中央matchingと二\(\{4,1,0\}\)・分母三の位置条件、\(G_{5,16}\)、\(G_{5,17}\)、三高Dの未解決を継続する。
 4. 旧曲面v4と現行v25の補題単位の照合を進める。版番号付き分割原稿は、参照する証明書と依存関係を確認するまで削除しない。
 
@@ -79,7 +92,7 @@ Lagrangian主稿 `ke:actual-closed-corner` により、m=Rでは三枚の閉squa
 
 曲面移行時に4本の全文原稿をLuaLaTeXで組版し、v25の五主検算と五独立監査を再実行した。実行入口は `python3 verification/run_current_checks.py`。生成物はbuild/。外部査読・形式証明・全113 scripts再実行とは異なる。
 
-現行のKE比較部分では、全固定次数のglobal density下界、complete simplexのvolume squeezeと全閉cornerへの適用、shifted-sinh volume squeeze、Savinの適用、MoserのC1評価と内在的GH distortionを新たに点検した。加えて一次文献の仮定、averagingのchain homotopy、Moser flowの符号と定量評価、hexagonの逆写像、raw-depth誤差・微分評価、および固定simplexとmoving領域の尺度差を点検した。Actual GH収束・fibrationとの一様適合性の解析証明は未完成。現環境では `lualatex.fmt`・LuaTeX-ja等の基本資産がなく、LuaLaTeX組版の試行は本文処理前に停止した。回収時の組版成功と現行改訂の未組版を区別する。
+現行のKE比較部分では、全固定次数のglobal density下界、complete simplexのvolume squeeze、固定product balls上のSavin適用、dominant/facet漸近、exact rank-one Schwarz、clipped projectionによる全経路下界を点検した。Lagrangian側では同じMoser flowのC1評価、全閉cornerの内在・protected-ambient GH distortion、端点移動O(R^−2)、chain primitiveによるfiber保存を独立に読み直した。Averagingの符号、hexagonの逆写像、raw-depth誤差・微分評価、および固定simplexとmoving領域の尺度差も確認している。全曲面でのactual GH収束と既存大域fibrationとの一様適合性は未完成。現環境では `lualatex.fmt`・LuaTeX-ja等の基本資産がなく、LuaLaTeX組版の試行は本文処理前に停止した。回収時の組版成功と現行主稿改訂6の未組版を区別する。
 
 ## 共通研究原則と保存許可（研究固有方針から独立）
 数学的重要性・新規性・理解の深化・応用可能性・正確性・実現可能性を総合し方針を見直す。証明済み・仮定付き・未完成・予想・計算観察、既知成果と新規性、草稿の証明と今回の独立監査を区別する。重要な先行研究は一次資料の仮定と参照箇所を確認する。日本語LuaLaTeXで十分な証明を保ち、有効な着想・反例・障害は現行ノートへ整理する。再現資産を保持し、旧版ZIP/ログの集積を避ける。研究の区切りには承諾なしで通常コミットを `main` へpushし、15–30分ごとに区切って保存する。force push・GitHub Actions追加/起動をしない。Library旧資料を削除せず、GitHub管理後の定常二重保存は行わない。対象repo保存後にresearch-hubの到達点・核心・次の一手・依存と再開先を更新し、数学検証・組版・push・hub反映を区別する。

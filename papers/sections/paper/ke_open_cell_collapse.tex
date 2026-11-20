@@ -1,21 +1,23 @@
 % !TeX root = ../../lagrangian-torus-fibration.tex
-% 2026-11-20 / v1.2: 固定 d>=5 の open square の局所 GH 極限と全閉 triple corner の actual Lagrangian tori．
+% 2026-11-20 / v1.3: 開 square の改善された tensor 誤差と全閉 corner の actual Lagrangian tori．
 \section{三重点領域の actual KE--Lagrangian tori と局所収縮}
 \label{ke:open-cell-section}
 
 本節では，三重点に対応する一枚の open square の任意の固定 compactum 上で，
 actual 負 KE 計量の収縮を Lagrangian $T^2$ fibers の収縮として実現する．
 解析の入力は，関連 KE 主稿\cite{KELocalCurrent}の Part~IV，
-定理 \texttt{coarse:thm:moving-triple-tensor} と
-系 \texttt{coarse:cor:open-square-tensor} である．
-これらは任意の固定 $d\ge5$ の全平面退化について，global capped volume 下界と局所上界を合わせ，
+定理 \texttt{coarse:thm:full-triple-tensor} と
+系 \texttt{simplex:cor:actual-dominant-product} である．
+これらは任意の固定 $d\ge5$ の全平面退化について，global capped volume 下界と局所障壁を合わせ，
 小さい volume discrepancy に対する摂動正則性から，
 以下に記す full-phase moving sector の tensor 近似を与える．
 本節はその解析結果を入力として，Lagrangian 化と局所の GH 収束を導く．
 さらに同稿の全 triple 領域に対する比較定理を用い，
 最後に各固定 $d\ge5$ について定義\ref{ke:moving-comparison}の追加仮定を解除する．
-これにより三枚の閉 square を同時に覆う actual Lagrangian fibration を得るが，
-閉 corner 全体の距離の GH 極限や大域 GH 収束はまだ結論しない．
+これにより三枚の閉 square を同時に覆う actual Lagrangian fibration を得る．
+閉 corner 全体の内在距離と保護領域内の経路に対する GH 極限は
+次節の定理\ref{ke:closed-corner-gh}と系\ref{ke:closed-corner-protected-gh}で扱う．
+全曲面の GH 収束は別の課題である．
 
 \subsection{解析入力と square の正確な parameter 化}
 
@@ -72,15 +74,18 @@ $t$ が十分小さければ $a+b\le4L^{1-\eta}<L/2$ なので，
  \left|\nabla_{h_t^{\mathrm{prod}}}^{q}
        (g_t-h_t^{\mathrm{prod}})\right|_{h_t^{\mathrm{prod}}}
  \le C_{\eta,q}\delta_t,
- \qquad \delta_t=L^{-\eta/4}
+ \qquad \delta_t=L^{-\eta}
 \end{equation}
 が十分小さい $t\ne0$ に対して成り立つ．
 評価は $\theta_j,\theta_k$ のすべての値について一様である．
 \end{proposition}
 \begin{proof}[出典と本節で使用する範囲]
-\cite[Part~IV, \texttt{coarse:thm:moving-triple-tensor},
-\texttt{coarse:cor:open-square-tensor}]{KELocalCurrent}
+\cite[Part~IV, \texttt{coarse:thm:full-triple-tensor},
+\texttt{simplex:cor:actual-dominant-product}]{KELocalCurrent}
 を，固定した $\eta$ と上記の外側領域に適用する．
+Complete simplex と二重 cusp の model error は
+$O(((a+b)/L)^2)=O(L^{-2\eta})$ であり，
+actual metric との差 $O(1/\min\ell_i)=O(L^{-\eta})$ と合わせて上の率を得る．
 その入力には，同稿の系 \texttt{coarse:cor:degree-d-volume-lower} で
 各固定 $d\ge5$ について証明した global capped volume 下界を含む．
 同稿の \texttt{coarse:lem:small-volume-tensor} は，
@@ -265,7 +270,7 @@ piecewise smooth curves の $R^{-2}g_t$-長さの下限で定義する内在距�
  \sup_{x,y\in\mathcal W_{t,\eta}}
  \left|d_{t,\eta}^{\mathrm{int}}(x,y)
        -|\pi_{t,\eta}(x)-\pi_{t,\eta}(y)|_{\RR^2}\right|
- \le C_\eta\left(L^{-\eta/4}+\frac{L^{-\eta}}R\right).
+ \le C_\eta\left(L^{-\eta}+\frac{L^{-\eta}}R\right).
 \end{equation}
 従って $\pi_{t,\eta}$ は右辺を誤差とする全射 GH approximation であり，
 \begin{equation}\label{ke:eq:open-gh-limit}
@@ -377,9 +382,9 @@ $\mathcal W_{t,\eta}$ に内在距離を入れた局所結果である．
 また $\eta$ は固定であり，constants は $\eta\downarrow0$ に対して一様とは主張しない．
 三枚の square の共通 face を含む Lagrangian bundle の構成は，
 次の系\ref{ke:actual-closed-corner}で別の解析入力から得る．
-しかし閉 corner 全体の距離の極限，異なる三重点 chart の接合，
-source・branch・core の singular fibers の計量評価，
-および大域 fibration への相対接着は未解決である．
+全閉 corner の距離の極限は定理\ref{ke:closed-corner-gh}で別に証明する．
+異なる三重点 chart の接合，source・branch・core の singular fibers の計量評価，
+および大域 fibration への相対接着は残る．
 本定理は $\omega_t$-Lagrangian 性を結論し，special Lagrangian 性や
 Hamiltonian-minimal 性を課していない．
 Averaging--Moser の先行研究は節\ref{ke:fiber-compatibility}のとおりであり，
@@ -531,9 +536,10 @@ raw target 誤差は
 moving tensor comparison を追加仮定として課す必要がなくなった．
 これは三重点 chart 内の一つの actual Lagrangian fibration と，
 fiber diameter および raw target の評価である．
-全閉 corner における距離の distortion や GH 極限，
-本稿の既存の大域 fibration への相対接着，
-source・branch・core の singular fibers の記述と計量評価は結論していない．
+全閉 corner の距離の distortion と GH 極限は，この同じ bundle を用いて
+定理\ref{ke:closed-corner-gh}と系\ref{ke:closed-corner-protected-gh}で導く．
+本稿の既存の大域 fibration への相対接着と，
+source・branch・core の singular fibers との同定および計量評価は含めない．
 特に三枚の square のセルの継目を，大域 fibration の singular locus と同一視しない．
 \end{remark}
 

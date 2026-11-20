@@ -1,9 +1,9 @@
 # 研究ノートの入口
-更新：2026-11-20 / v1.5
+更新：2026-11-20 / v1.6 / 主稿改訂6
 
 詳細な現行ノートは `papers/research-notes.tex`（曲面第25版、65頁）に移行した。証明を短い要約で置き換えない。
 
-## 全深部三重点の actual semi-flat 比較と閉corner
+## 全深部三重点の actual semi-flat 比較
 任意の固定次数 d≥5 の一般位置全平面退化で、三重点の全深度比・全角度に一様な actual KE 比較を証明した。正確な座標 ζ0ζ1ζ2=t、ell_i=−log|ζ_i|²、L=−log|t|²、R=log L とし、k_Lをlogarithmic simplex上のcomplete toric KE form、その実計量をg_L^sfとする。十分大きい固定m1と各qのCqについて、m≥m1、min ell_i≥mで
 \[
 \left|\log\frac{\omega_t^2}{k_L^2}\right|\le C/m,\qquad
@@ -15,14 +15,54 @@
 
 Actual側の大域入力は `coarse:cor:degree-d-volume-lower`。Adjunction residueでcanonical densityを固定し、backgroundによるHermitian frame errorの吸収と各正のcap方向のminorから六型のdeterminant下界を証明する。Sourceでは元のplane coordinatesを保つexact xy=tzとrescalingにより二つのcap係数≥c_d/Lを使う。Compact minimum原理からactual volume下界を得る。今回この依存部分も再点検して明示化した。
 
-Lagrangian主稿 `ke:actual-closed-corner` により、m=Rでは三枚の閉square全体を一つのactual Lagrangian torus bundleで実現できる。全fiberのintrinsic/ambient diameterはO(1/R)、R^−2 g_tに正規化後はO(1/R²)、raw cubical mapとの誤差はO(log R/R)。Squareの継目でもfiberはregular T²であり、既存大域fibrationのsource・branch・coreのsingular fibersと同定したわけではない。閉corner全体の鋭い距離のGH同定、大域相対接着とshortcut制御は残る。新規性の網羅的確認と外部査読・形式証明は未実施。
+## Complete simplex模型の境界での鋭い比較
+KE主稿 `papers/sections/simplex_boundary_geometry.tex` が正本。`simplex:lem:rank-one-schwarz` は、complete模型から各半平面への正則写像にYau Schwarz lemmaを適用して
+\[
+|d\log\ell_i|_{(g_L^{\mathrm{sf}})^{-1}}\le1
+\]
+という係数1の評価を与える。粗いtensor比較によるtraceの有界性とcomplete最大値原理を使うので、深度比・全角度・正の深度に絶対的下限を設けず有効である。
+
+`simplex:prop:dominant-product` ではa=ell_j、b=ell_k、δ=(a+b)/Lとして
+\[
+1\le\frac{k_L^2}{\omega_{\mathrm{prod}}^2}
+ \le\left(\frac{\pi\delta}{\sin(\pi\delta)}\right)^4,
+\qquad
+g_L^{\mathrm{sf}}-g_{\mathrm{prod}}=O_{C^q}(\delta^2)
+\]
+を示す。下比較はexpanded quadrant、上比較は辺長La/(a+b)、Lb/(a+b)のrectangleによる。境界がsimplexと接するrectangleは内部へ縮めて比較してから極限を取る。固定product balls上では深度が中心と固定比の間にあり、potentialの小ささO(δ²)が保たれる。Angular coverを双曲平面二つの積の固定正則座標へ正規化し、Savinと線形化後のSchauder評価で同率の全固定階比較を得る。
+
+`simplex:prop:facet-product` は、一深度bがd_*=min(a,L−a)に比べ小さい場合に、cuspと幅Lのcomplete annulusの積p_Lを比較相手とする。内側rectangleの幅βを(b²d_*)^(1/3)とし、volume-potential誤差
+\[
+C\bigl((b/\beta)^2+\beta/d_*\bigr)
+ =O((b/d_*)^{2/3})
+\]
+を固定p_L-ball全体で評価する。Actual側にはO(1/b)を加える。`simplex:cor:active-cogram` はell_i≤L e^−Aのactive covectorsについて、二方向ならco-Gram誤差O(e^−2A)、一方向を含む一様評価ならO(e^−A/2)を与える。Actual側はO(1/min ell)を加える。閉cornerの距離下界には、一方向のexact Schwarz評価と二方向のdominant比較だけで足り、facet比較を追加依存としない。
+
+## 同じactual Lagrangian bundleによる全閉cornerのGH極限
+正本は `papers/sections/paper/ke_closed_corner_gh.tex`。Lagrangian主稿 `ke:actual-closed-corner` で構成した同じMoser flow φ_tと同じbundleを用いる。m=Rとし、
+\[
+\ell_a(w)=R+(L-3R)\frac{L^{w_a}}{\sum_bL^{w_b}},
+\qquad
+\mathcal C_J=\{w\in[0,1]^3:\max w_a=1\}
+\]
+のhexagon全phase preimageをH_t、そのMoser像をW_{t,J}、射影をπ_{t,J}とする。`ke:closed-corner-gh` と `ke:closed-corner-protected-gh` は、R^−2 g_tの二つの距離に対して
+\[
+\operatorname{dis}(\pi_{t,J})\le C\frac{\log R}{R}
+\]
+を証明する。一つはW_{t,J}内の経路による内在距離、もう一つはV_t={min ell_a>R/2}内の全経路を許した距離をW_{t,J}へ制限したもの。標的d_Jは三枚のunit squares自身の内在距離であり、full C_dの他のcellsを通る経路の距離ではない。
+
+模型の証明はKE主稿 `simplex:thm:closed-corner-model`。S=R−2 log Rとし、Ψ_a=[log(ell_a/R)/S]_0^1とclipする。最大深度≥L/3からΨの像はC_Jに入り、微分がactiveなのは高々二方向である。一方向では係数1のSchwarz評価、二方向ではell_j+ell_k≤2L/Rからsharp product比較を使い、complete simplex全体の全経路の長さ下界を得る。上界ではC_Jのgeodesicを高々三枚の異なるsquares内の直線分で実現し、各線分を幅4 log R/Rだけ内部へ移す。Sharpな内部比較とcoarseな短いconnectorsを合わせて同じ率を得る。Seam collarが薄いことだけを下界の根拠にはしない。
+
+Actual/model比較O(1/R)に加え、Moser場のC1評価からmodel計量のLie derivativeを直接抑え、φ_t^*g_t=(1+O(1/R))g_L^sfを得る。保護領域内の全経路を扱うときは、Moser trajectoryのmodel長さO(1/R)とΨのLipschitz定数O(1/R)から、端点誤差d_J(Ψφ_t(z),Ψ(z))=O(R^−2)を用いる。これにより、閉cornerのfibrationの射影そのものがGH approximationになる。
+
+全fiberのintrinsic/ambient diameterはO(1/R)、正規化後はO(1/R²)、raw-map誤差はO(log R/R)。Squareの共通辺と共通頂点でも同じregular T² fiberである。これらを既存大域fibrationのsource・branch・coreのsingular fibersとは同定しない。V_t外を通る全曲面のshortcut、異なるtriple chartの接合、大域相対接着は未解決。新規性の網羅的確認と外部査読・形式証明は未実施。
 
 ## 開正方形上のactual KE–Lagrangian collapse
-主稿の `papers/sections/paper/ke_open_cell_collapse.tex` に、任意の固定次数d≥5のactual KE計量に対する局所結果を置く。関連KE主稿 `coarse:cor:open-square-tensor` は、三重点独立深度 a,b∈[L^η/2,2L^(1−η)]、0<η<1/2 上のproduct-cusp比較を全固定階で O(L^(−η/4)) と証明する。依存するのは既存のglobal capped volume下界と、明示的な上下KE barriers、Savin (2007), Theorem 1.3であり、(TC)_5や(PBE)_5を追加仮定しない。
+主稿 `papers/sections/paper/ke_open_cell_collapse.tex` は、任意の固定次数d≥5、固定0<η<1/2についてKη=[η,1−η]²上の局所結果を与える。関連KE主稿 `simplex:cor:actual-dominant-product` により、独立深度a,b∈[L^η/2,2L^(1−η)]ではproduct-cuspとの誤差は全固定階でO(L^−η)である。模型側O(((a+b)/L)²)とactual側O(1/min ell)を合わせた率であり、global capped volume下界、complete模型の上下比較、Savin正則性に依存する。(TC)_dや(PBE)_dは追加仮定しない。
 
-`ke:open-cell-moser-c1` は平均化のprimitiveとMoser場のC1 normをO(L^−η)とし、flowのpullback metricを制御する。`ke:open-cell-collapse` はKη=[η,1−η]²上のactual KE–Lagrangian T² fibrationを構成し、fiberのintrinsic/ambient diameter O(L^−η)、raw mapとの誤差O(1/R)を与える。Moser像領域に内在長さ距離を入れると、R^−2 g_tは平坦KηへGH収束し、projection distortionはO(L^(−η/4)+L^−η/R)。これらの証明と一次資料の適用条件を今回点検した。一般的新規性は未確認。
+`ke:open-cell-moser-c1` はchain primitiveとMoser場のC1 normをO(L^−η)とし、flowのpullback metricを制御する。`ke:open-cell-collapse` はactual Lagrangian T² fibration、fiberのintrinsic/ambient diameter O(L^−η)、raw-map誤差O(1/R)を与える。Moser像領域に内在長さ距離を入れると、R^−2 g_tは平坦KηへGH収束し、projection distortionはO(L^−η+L^−η/R)=O(L^−η)。定数は固定ηに依存する。
 
-開正方形のGH結論は固定ηの局所定理である。全閉cornerのfiber構成は上記の系で解決したが、η→0での鋭い距離の一様性、曲面全体のambient shortcut、source・branch・coreのsingular fibersとの接着、既存の大域fibrationとの同定は未解決。
+開正方形の局所結果と、前節の全閉cornerの局所結果を区別する。閉cornerまでの距離同定は証明したが、全曲面のambient shortcut、source・branch・coreへの相対接着、既存大域fibrationとの同定は残る。
 
 ## 負KE計量のGH極限とfiber収縮（2026-11-20）
 
@@ -38,13 +78,13 @@ Mandel, *Degenerations of negative Kähler–Einstein surfaces*, JLMS 109 (2024)
 ### 我々のdiameter-scale候補と残る適合性
 KE研究の `papers/cubical-gh-limit.tex` では $R_t=\log(-\log|t|^2)$、$\mathcal C_d=\{w\in[0,1]^d:\max w_i=1,\ |\operatorname{supp}w|\le3\}$ とし、$(X_t,R_t^{-2}g_t)\to(\mathcal C_d,d_\square)$ を **(G)$_d$+(CP)$_d$+(PBE)$_d$の下**で述べる。関連repoの現行方針・Part IV–Vが解析入力の正本であり、無条件のactual GH収束は未証明。
 
-局所plumbingのモデル $z_0z_1z_2=t$ で $u_i=-\log|z_i|$、$L=-\log|t|$ とすると $\sum u_i=L$。Cuspのradial model $\sum (du_i/u_i)^2$ を $(\log L)^2$ で割り、$r_i=\log u_i/\log L$ と置くと、制約は極限で $\max r_i=1$ となる。三重点では三枚のsquareが現れる。これは候補を説明する模型計算であり、actual KE metricの一様漸近を証明しない。
+局所plumbingのモデル $z_0z_1z_2=t$ で $u_i=-\log|z_i|$、$L=-\log|t|$ とすると $\sum u_i=L$。Cuspのradial model $\sum (du_i/u_i)^2$ を $(\log L)^2$ で割り、$r_i=\log u_i/\log L$ と置くと、制約は極限で $\max r_i=1$ となる。三重点では三枚のsquareが現れる。このradial計算は候補の説明である。Actual KE metricの一様漸近と全閉cornerの局所GH極限には、上記のcomplete模型比較と距離定理を別に用いる。
 
 望ましい写像は $f_t=p_T\circ\pi_t:X_t\to B_d(T)\to\mathcal C_d$。五次では $p_T$ は同相、六次以上では基底内の木も収縮する。**空間としてのGH収束**と**指定したLagrangian fibrationによる実現**を区別する。
 
 主稿 `base_topology.tex` の `topo:ke-map-compatibility` に、$\operatorname{dis}(\Phi_t)\le a_t$ と $\sup_xd_\square(\Phi_t(x),p_T\pi_t(x))\le b_t$ から $\operatorname{dis}(p_T\pi_t)\le a_t+2b_t$ を得る比較命題と証明を置いた。Ambient fiber diametersは同じ量以下、GH距離はその半分以下である。一般的新規性は主張しない。証明を今回三角不等式で点検したことと、actual $a_t,b_t\to0$ が未証明であることを区別する。
 
-**具体的な次の課題：** 新節 `ke_fiber_compatibility.tex` の定量的averaging–Moserを用い、まず全phaseを含むmoving triple domainのtensor比較を示す。その局所fibrationをsourceのpinched torus、branchのS¹×figure-eight、coreへ相対的に接着する。必要なのは全特異領域を含む一様評価であり、regular fibersの点ごとの収縮では不足する。Moserのsymplectic同定だけでは距離制御は得られない。Action-affine structureだけからcanonicalなRiemannian基底計量も決まらない。
+**具体的な次の課題：** 全phaseのmoving triple比較と閉cornerの内在・保護領域内のGH同定を入力として、actual neck collarのorbit partition、action periods、定量的bufferを一致させる。`ke:relative-fiber-preserving` を適用できる開overlapを構成し、sourceのpinched torus、branchのS¹×figure-eight、coreへ相対的に接着する。必要なのは全特異領域を含む一様評価と大域no-shortcutであり、regular fibersの点ごとの収縮では不足する。Action-affine structureだけからcanonicalなRiemannian基底計量は決まらない。
 
 ## 局所fibrationの証明と解析入力
 現在の着手対象は複素次元2でのKE極限とLagrangian fibrationの適合性である。主稿の `papers/sections/paper/ke_fiber_compatibility.tex` に次の証明を置いた。
@@ -65,7 +105,91 @@ W.-D. Ruan, *H-minimal Lagrangian fibrations in Kähler manifolds and minimal La
 ### 固定領域と移動領域の区別・相対接着への入口
 主稿 `ke:fixed-simplex-scale` の計算により、固定simplex compactaは径の尺度のtriple vertexしか見ない。関連KE研究ノートの「固定領域の収束から径の尺度へ移る際の障害」に、固定compacta上ではcusp metricと完全一致し、全体で一様に粗比較できるにもかかわらず、正規化した区間長が $1$ から $3/2$ に変わる一次元例を証明付きで収録した。KE反例ではなく、sharp moving estimatesの必要性を示す例である。
 
-主稿 `ke:relative-averaging` はcentered homotopy kernel $1/2-s$ を用い、既に作用不変なtorus-saturated collarをMoser flowで点ごとに固定できることを示す。ただし、そのようなactual KE collarを必要なoverlap上に構成することは未解決。Sourceのcritical valuesについても `ke:source-marking` のcore交差仮定の下で、$p_T(b_t)\to e_i+e_j$ が必要であり、固定された任意の内部markingは使えない。
+主稿 `ke:relative-fiber-preserving` は、torus-saturatedな**開**collar N上で元のorbitsが既にactual ω-Lagrangianであれば、β=Hω、H=K_1+A_1K_2というchain primitiveがvertical vectorsを消すことを用いる。ω_sも同じvertical distributionをLagrangianに保つため、Moser場はverticalであり、各fiberと基底値が保存される。ωの作用不変性は不要。Centered chain primitiveでも同じ証明が成立するが、同じdβを持つ任意のprimitiveへの置換では消滅条件が保存されるとは限らない。
+
+`ke:relative-neck-matching` は、別のactual Lagrangian fibrationがこの開overlap上で同じorbit partitionを持つなら、基底collarを同定して写像を接着できるという局所系である。各点の固定や単一境界上の一致だけを用いた接着は主張しない。点ごとの固定が必要なら、既存の `ke:relative-averaging` のcentered kernel 1/2−sと作用不変collarを使える。Actual neckで必要なorbit一致・action periods・bufferを同時に実現することは未解決。
+
+定数係数monomial変更ζ'=c(t)ζ^A、A∈GL(2,Z)はphase orbit partitionを保つ。一方、非定数holomorphic unitを含む変更ζ'=ζ^A u(ζ,t)は一般に保存しない。二つのtorus actionsが同じoverlapに存在するだけでは相対補題の仮定にならない。Sourceのcritical valuesについても `ke:source-marking` のcore交差仮定の下でp_T(b_t)→e_i+e_jが必要であり、固定された任意の内部markingは使えない。
+
+## 相対接着の補助計算：primitiveの選択と障害
+
+以下はregular torus領域での補助計算であり、仮定と証明をこのノートに保持する。主稿の `ke:relative-fiber-preserving` の証明を重複させず、primitiveの変更、整数基底の変更、collarの点固定に関する情報を整理する。Actual neck全体でのorbit partition・action periods・bufferの整合は未証明であり、これらの補助計算の新規性も未確認である。
+
+### Centered primitiveの整数基底変更
+
+自由な同じT²作用に対し、全Haar平均をA、周期1の円作用をρ_{j,s}とする。Centered homotopy
+\[
+\widetilde K_j\xi=\int_0^1(1/2-s)\rho_{j,s}^*(\iota_{V_j}\xi)\,ds,
+\qquad \widetilde H=\widetilde K_1+A_1\widetilde K_2
+\]
+はdH̃+H̃d=A−IとAH̃=0を満たす。後者は全平均がpullback・contractionと可換で、weightの積分が零であることから従う。整数基底や順序を変えた二つのβ_r=H̃_rωはdβ_r=Aω−ω、Aβ_r=0を満たす。従ってγ=β_1−β_0はclosed、Aγ=0であり、いずれかのtorus homotopy Hを用いると
+\[
+\gamma=-d(H\gamma)=df,\qquad f=-H\gamma.
+\]
+これはbaseの単連結性やH¹(U)=0を要しない。
+
+ω_s=(1−s)Aω+sω、ι_{Y_s^r}ω_s=β_rとし、共通のbuffer内で両flow φ_s^rとその相対写像が定義される内側領域を取る。χ_s=(φ_s^0)^{-1}φ_s^1はAω-symplecticであり、Eulerian生成場Z_sは
+\[
+\iota_{Z_s}(A\omega)=(\phi_s^0)^*\gamma=d(f\circ\phi_s^0)
+\]
+を満たす。従ってHamiltonian isotopyで比較できる。ただし二つのflowそのものが一致するという主張ではない。両β_rが飽和collar N上で零なら、Hはorbit内で作用するためf|N=0、両flowとχ_sはNを点ごとに固定する。不変背景hに対して|Hγ|≤Ce|γ|なので、β_r=O(eδ)ならHamiltonianの大きさはO(e²δ)となる。定数は用いる有限個の整数基底に依存してよい。
+
+### 負KE potentialからのprimitiveと定数係数monomial変更
+
+Toric chart上の不変logarithmic volume formをΩ=dlogζ_1∧dlogζ_2とし、Ric(ω)=−ωとする。正のvolume規約で
+\[
+F=\log\frac{\omega^2}{\Omega\wedge\overline\Omega},\qquad
+dd^cF=\omega,\qquad
+\beta_{\rm can}=d^c(AF-F)
+\]
+と置く。ここでd^c=(i/2)(\bar∂−∂)。作用が正則なのでAとd^cは可換し、dβ_can=Aω−ω、Aβ_can=0である。同じphysical overlap上でζ′=c(t)ζ^B、B∈GL(2,Z)と変えると、orbitとHaar平均は同じで、Ω′=det(B)Ω、|det B|=1である。従ってF、β_can、ω_sが一致し、共通buffer上のMoser flowもODEの一意性により厳密に一致する。Centered chain primitiveとの比較は上のHamiltonian計算で与えられる。
+
+定量的には、torus不変Kähler背景h、torus不変模型k、v=log(ω²/k²)に対して、固定階のC^{q+2}(h) normがO(δ)、生成場の|V|+|∇V|がO(e)とする。模型のpotential部分は不変なのでAF−F=Av−vである。Isometric pullbackは∇_hと可換し、tensor∇^jvのLie derivativeにはVと∇Vだけが現れるから
+\[
+\|Av-v\|_{C^{q+1}(h)}\le C_q e\delta,
+\qquad \|\beta_{\rm can}\|_{C^q(h)}\le C_qe\delta.
+\]
+必要な逆形式の一様C^q boundsとflow bufferの下でMoser場も同率となる。全深部tripleではe=O(m^{-1})、δ=O(m^{-1})であり、固定階ごとにO(m^{-2})を得る。Centered chain primitiveについてもH̃k=0からβ=H̃(ω−k)となり、同じ短い生成場と微分評価の下でO(m^{-2})である。主稿のclosed-corner GHは既存のchain flowのO(m^{-1})評価だけで証明している。
+
+**Fiber保存との区別。** β_canのvertical成分の消滅は、元のorbitが既にLagrangianであることから自動的には導かれない。一般のpotential averagingの例として、compact product annulusの近傍で
+\[
+F=|z_1|^2+|z_2|^2+\epsilon\operatorname{Re}(z_1)|z_1|^2
+\]
+とする。十分小さいεではdd^cFは二つの複素一次元因子のKähler formの和なので、元のphase toriはLagrangianである。しかしz_1=re^{iθ_1}として
+\[
+d^c(AF-F)(\partial_{\theta_1})
+=-\frac32\epsilon r^3\cos\theta_1
+\]
+は一般に零でない。この例がKEであるとは主張しない。`ke:relative-fiber-preserving` を使う際はchain primitiveを選ぶ必要がある。ωがcollar上で作用不変なら、Fも不変なのでβ_canも零になる。
+
+### Volume frameのgaugeとorbit partitionの変更
+
+同じ作用を固定してΩ′=uΩ（holomorphic unit）とだけ変えれば
+\[
+\beta'_{\rm can}-\beta_{\rm can}
+=d^c(\log|u|^2-A\log|u|^2)
+\]
+はclosedである。Logarithmic base Dが可縮なReinhardt domainならu=ζ^n e^fと書ける。n∈Z²はwinding vector、fは一価正則関数であり、Afは正則かつtorus不変なので定数である。従って上の差はd Im fでexactとなり、Hamiltonian比較へ入る。
+
+一方、座標そのものを
+\[
+\zeta'_1=\zeta_1e^{\epsilon\zeta_2},\quad
+\zeta'_2=\zeta_2,\quad
+\zeta'_0=\zeta_0e^{-\epsilon\zeta_2}
+\]
+と変えると、積方程式ζ_0ζ_1ζ_2=tとΩ′=Ωは保たれるが、|ζ′_1|は元のphase torus上で一定でない。従ってorbit partitionとHaar averaging operator自体が異なる。小さいunit変化を小さいisotopyとして比較できても、指定neck collarに相対的なsymplectic/Hamiltonian matchingや作用周期の一致は別に必要である。
+
+### 点固定のrelative classと両端のperiod matching
+
+同じsymplectic pathに対する任意のprimitiveの差γ_sはclosedだが、一般にはexactでない。相対Moser isotopyの生成場のdualは(φ_s^0)^*γ_sであり、isotopyが各時刻でHamiltonianになる条件はこの1-formのexactnessである。時間積分したfluxやendpointのHamiltonian同値とは区別する。上のcentered choicesではγ_s=−d(Hγ_s)がこの障害を消す。
+
+ω_sが滑らかなcollar N上でsに依らず、σ_s=−∂_sω_sがNで零とする。Nを点ごとに固定するprimitive、すなわちdβ_s=σ_s、β_s|N=0の存在条件はrelative class [σ_s]∈H²(U,N;R)が零となることである。通常のrelative de Rham complexとextension/cutoffを使えるcollarを取り、必要なら少し縮める。時間についての滑らかな選択とflowの存在bufferは別に課す。
+
+絶対primitive β_sが既にあるとき、同条件は[β_s|N]がrestriction H¹(U;R)→H¹(N;R)の像に入ることと同値である。十分性は、同じrestriction classを持つglobal closed 1-formを引き、残るexact restrictionをcutoff extensionで消すことで示せる。必要性は二つのprimitiveの差がglobal closedであることから従う。
+
+特にU=B×T²、Bは可縮なcorridor、N=N_-⊔N_+は両端のfull torus collarsとする。RestrictionはR²→R²⊕R²の対角写像なので、両端の二つのtorus period vectorsの一致が条件になる。その差は対応するS¹を運んだcylinder上のσ_sの積分である。これは指定したmarkingとaction originを保つ相対同定の条件であり、自由なbase relabellingを許すfibrationの存在障害と同一視しない。
+
+**着手方法。** Source-free neckでは、共通のnormal S¹を平均化してactual symplectic circle actionへ運び、その後triple collarで残る円作用を最初のS¹にequivariantに平均する構成を検討する。三つのendsの整合、momentの加法定数、reduced-circle foliations、critical action periods、sourceを含む接着は未完成である。既存の固定symplectic neck模型のtaming/cutoff評価をactual KE familyへ一様に移す入力を先に確認する。
 
 ## 複素次元2：先行研究・singular fibersの確定事項（2026-11-20）
 本研究の曲面X_d⊂P³, d≥5の一般SNC gluingと、全平面模型の明示的なsingular fiber型を区別する。主要な定理は papers/sections/paper/geometry_main_statements_v17.tex の main:global、nodeの線型monodromyは invariants_examples.tex、より詳しい先行比較は geometry_introduction_v25.tex。
@@ -157,4 +281,6 @@ H_4(\mathcal V)=\mathbb Z^{2g+1}.
 **境界包含H₁の新たな必要条件：** Focus基底長方形の境界を一周するloopをnormal coordinatesのsectionで持ち上げると、H₁(∂U)→H₁(U)のkernelの原始生成元を得る。Mayer–Vietoris列によってこのclassはH₁(V)=Zの原始生成元へ写る（tnc:focus-boundary-primitive）。従って補集合でこのloopを零homologousにする境界同定はできない。**次は** 境界包含のH₂・H₃・基本群の写像、vanishing-cycleとmeridional torsion、monodromy/Maslov/action periodsを照合してrelative fillingを構成する。大域fibrationは未完成。
 
 ## 検証
+主稿改訂6の局所解析では、固定product balls上のSavin適用と同率のSchauder評価、facet O((b/d_*)^(2/3))、active co-Gram、closed-corner pruningと有限gallery、Moser pullback比較、protected-ambientの経路領域と端点誤差、chain primitiveによるfiber保存を独立に読み直した。これは現行局所結果の証明点検であり、既存大域gluing全証明の独立監査、外部査読、形式証明とは異なる。LuaLaTeX基本資産不足により現行改訂は未組版。
+
 移行時にWorkがv25の五主検算と五独立監査を再実行した。今回の新規トポロジー命題は原稿で論証し、次数ごとのEuler数とWang行列を独立検算したが、保存済み検算スクリプトの最新版全体は今回再実行していない。保存済みの旧verification/証明書全体を今回の実行結果とは扱わない。詳細はmigration.md。計算は解析的symplectic gluingや新規性の証明を代替しない。
