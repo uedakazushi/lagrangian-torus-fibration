@@ -463,7 +463,9 @@
       "source": "paper/base_topology.tex",
       "destination": "papers/sections/paper/base_topology.tex",
       "source_sha256": "c3d11f4a2b55b4455d1a49bdaa22512b5880473939b6d82ad758543deccb76aa",
-      "sha256": "c3d11f4a2b55b4455d1a49bdaa22512b5880473939b6d82ad758543deccb76aa"
+      "sha256": "5f7b2a165e400906570fd92dcc1c56f0980dd7417f6b04dfa2ce4b0a70b92a06",
+      "bytes": 17002,
+      "current_blob_sha": "577c519de6f5f28261eb86e54ec7232d4073530c"
     },
     {
       "source": "paper/g5_11_obstruction_v20.tex",
@@ -2347,7 +2349,9 @@
       "source": "notes/notes_support_agenda_v25.tex",
       "destination": "papers/sections/notes/notes_support_agenda_v25.tex",
       "source_sha256": "5b1082101cb454bb638dd49c9a5ccbfb44d9a14cd42b563afa80c0fcbf456a7a",
-      "sha256": "5b1082101cb454bb638dd49c9a5ccbfb44d9a14cd42b563afa80c0fcbf456a7a"
+      "sha256": "e2cc853fac26c574176b7efed2f9f546f6376fe36b6b2551f2f8e8990a8ad5d0",
+      "bytes": 4465,
+      "current_blob_sha": "2ea2a0713833180e69ee9f748199ea2c21ee8d9d"
     },
     {
       "source": "notes/notes_high_d_proportional_v24.tex",
@@ -3154,8 +3158,10 @@
       "source": "notes/general_type_surface_fibration_research_notes_ja_v25.tex",
       "destination": "papers/research-notes.tex",
       "source_sha256": "4d72db19460af94732cd27013d6a40ddd3c35fbc7327cf75034b74052aedaaa8",
-      "sha256": "bde66aeb1b04a40819a03bcfb13497a5f1f5ad89aa07435bb33f3a29f8810bfc",
-      "changes": "TeX input paths and input search paths only"
+      "sha256": "aa6554b28d9c54cf9b060d462152ca3cead1e89e3990d2f1b75cfddb3bccbeab",
+      "changes": "TeX input paths and input search paths only",
+      "bytes": 44988,
+      "current_blob_sha": "22a55045690a36b469ff0ff23cafa3e1c2ecaa92"
     }
   ],
   "omitted": {
@@ -3306,5 +3312,6 @@
     "library_url": "https://chatgpt.com/space/file/libfile_47c5d4044694819192c28e687c95557f",
     "local_blocks/focus_curve_blocks_and_obstructions_ja.tex": "papers/threefold-blocks.tex",
     "threefold_v11/threefold_fibration_note.tex": "papers/threefold-fibration.tex"
-  }
+  },
+  "audit_update_2026_11_20": "Current sha256/bytes and Git blob reflect mathematical additions or repository entrypoint fixes; source_sha256 preserves original Library-bundle provenance. This update does not imply complete independent proof verification."
 }
