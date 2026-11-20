@@ -10,19 +10,6 @@
 
 整数鎖複体の主張を検査するため、\(d=5,\dots,8\) の \(B_d(T)\) と \(\operatorname{Sk}_2\Delta^{d-1}\) の \(\partial_1,\partial_2\) の階数を独立に計算して、\(b_1=0\)、\(b_2=\binom{d-1}{3}\) と一致した。再現コードは `verification/verify_ke_base_topology.py`。これは有限体 \(\mathbb F_{1000003}\) 上の有限検算であり、整数係数の一般定理の証明は本文のexplicit chain contractionが担当する。
 
-## 三次元normal-trivial closed curveの代数的点検
-原稿の `papers/sections/threefold/local_blocks/trivial_normal_curve.tex` にある代数的構成を直接点検した。\(e=d-2\) のsmooth plane curve \(C_e\subset\mathbf P^2\subset\mathbf P^4\) を含む次数 \(d\) 超曲面を
-\[
-F=q_eR_2+z_3G_{d-1}+z_4H_{d-1}
-\]
-の一般元として選ぶ。曲線外では一次jet生成、曲線上では三つのnormal一次jetの独立性により一般元はsmoothになる。normal exact sequenceは
-\[
-0\to N_{C_e/Y_d}\to
-\mathcal O_{C_e}(e)\oplus\mathcal O_{C_e}(1)^{\oplus2}
-\to\mathcal O_{C_e}(d)\to0,
-\]
-よって \(\det N_{C_e/Y_d}\simeq\mathcal O_{C_e}(e+2-d)\simeq\mathcal O_{C_e}\)。これはholomorphic determinantの自明性であり、holomorphic rank-two bundle自体の自明性を意味しない。しかし閉曲面上のcomplex rank-two bundleは \(c_1\) でsmooth分類されるので、symplectic normal bundleは自明。\(g=(d-3)(d-4)/2\) かつ \(n=(d-2)(d-5)=2g-2\) は偶数で、三価graphの \(V=n,E=3n/2,b_1=g\) と一致する（六次では \(g=3,V=4,E=6\)）。指定した一般の \(X_d\) とKähler formへのEhresmann+Moser移送は原稿の別の補題である。Actual Lagrangian whole fibersの解析とglobal gluingはこのChern計算だけでは従わない。
-
 ## 三次元：局所稿の参照先
 `papers/threefold-blocks.tex`第25・33節：positive normal shell、membrane/focus collars。第26節：smooth focus Cartanとnormal degreeの障害。第34–35節：compact focus blockとnormal-trivial closed curve。第36節：weighted collars。旧48 ports、normal faces、complement、大域boundary-free fibrationは未完成。全体稿は `papers/threefold-fibration.tex`。
 
@@ -38,24 +25,26 @@ $p_T:B_d(T)\to\mathcal C_d$ に補助piecewise Euclidean metric $h$ を固定し
 ## 六次Petersen分岐基底の対称性
 $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木系はちょうど六つであり、$S_6$ はこの集合に推移的に作用する。固定した一系の安定化群は位数 $6!/6=120$、指数6。従ってその一系の選択は座標置換の全 $S_6$ 対称性を保たない。KE候補 $\mathcal C_6$ は自然に $S_6$ 対称なので、Petersen分岐基底とのラベル付き比較を対称に行うには六つの木系全体を管理する必要がある。証明は base_topology.tex の topo:petersen-symmetry、全15 perfect matchingsと六one-factorizationsの有限列挙・安定化群位数は別に確認した。これは任意の別構成やラベル忘却後のシンプレクティックな対称性の不存在ではない。
 
-## Symplectic normalが自明な閉曲線と補集合のEuler予算
-三次元の原稿 trivial_normal_curve.tex の tnc:degree-genus-parity は、任意のsmooth $X_d\subset\mathbf P^4$（$d\ge6$）のnormal-trivialなclosed symplectic curve $S$ について、hyperplane degreeを $e>0$ とすれば
-\[
-2g(S)-2=(d-5)e
-\]
-と示す。従って$d$偶数なら$e$偶数。曲線方向の三価Reeb graphの頂点数も（局所Morse構成の仮定下で）$(d-5)e$ に固定される。これだけでは埋込みやglobal fibrationは得られない。
+## 三次元：管状補集合とfocus境界の整数位相
+**曲線の構成：** d≥6、e=d−2。平面曲線C_eを含むsmooth hypersurfaceはF=q_eR_2+z_3G_{d−1}+z_4H_{d−1}のfirst-jet生成から取れる。Normal完全列より det N_{C_e/Y_d}=O_{C_e}(e+2−d)=O_{C_e}。Ehresmann–Moser移送したC'⊂X_dのsymplectic normalは自明、genusはg=(d−3)(d−4)/2。一般のnormal-trivial symplectic curve（degree e, genus g）には2g−2=(d−5)eが必要で、d偶数ならe偶数（主稿の tnc:degree-genus-parity）。Holomorphic normal rank-two bundleそのものの自明性は主張しない。
 
-構成済みblock $\mathcal U$ とcompact complement $\mathcal V$ には
+**管状補集合の整数homology：** 小さいnormal disk bundle N(C')の補集合V_0=X_d＼int N(C')では、Lefschetz・Thom長完全列により
 \[
-\chi(\mathcal U)=-(d-2)(d-5),\quad
-\chi(\mathcal V)=-\mathcal N_d,\quad
-\mathcal N_d=d^4-5d^3+9d^2-3d-10.
+H_3(V_0;\mathbb Z)\simeq \mathbb Z^{b_d}\oplus\mathbb Z/(d-2),\qquad
+H_4(V_0;\mathbb Z)\simeq\mathbb Z^{2g},\qquad
+b_d=d^4-5d^3+10d^2-10d+4.
 \]
-特に六次では$\chi(X_6)=-516$、$\chi(\mathcal U)=-4$、$\chi(\mathcal V)=-512$。$\mathcal V\to B_{\mathcal V}$ が有限層別局所自明で、Euler数非零のfiberが有限個の孤立基底点$S$にだけ存在すると仮定すれば、
+Torsionはnormal meridian S³のclassから生じる（tnc:tubular-homology）。六次ではH_3(V_0)=Z^{520}⊕Z/4、H_4(V_0)=Z^6。X_dの整数cohomologyの一次資料はO. Randal-Williams, Math. Ann. 391 (2025), 1965–2003, §2.1, DOI 10.1007/s00208-024-02951-4。
+
+**Actual focus blockは別の位相：** 構成済みU=C'×K_cのnormal factorは、Q=|XY−c|²が正の区間に入るfocus block。Arg(XY−c)へ巻数1のloopが存在するのでH_1(K_c)はZを直和因子に持ち、K_cはD⁴とhomotopy equivalentでない（tnc:focus-nondisk）。境界∂K_cは一つのfocus–focus点の周りのT²-bundleで、monodromyはprimitive unipotent、基本群は整数Heisenberg群、H_1=H_2=Z²（tnc:focus-boundary-homology）。Closed-curve face ∂U=C'×∂K_cのBetti数は
 \[
-\sum_{b\in S}\chi(f^{-1}(b))=-\mathcal N_d.
+(1,\,2g+2,\,4g+3,\,4g+3,\,2g+2,\,1),
 \]
-非零fiber全てがEuler数$-1$型なら、六次で**512個**必要（tnc:complement-singularity-budget）。特異ファイバーが正次元base stratum上に広がる場合はstratumのcompact支えEuler数 $\chi_c$ で重み付けしなければならず、この個数を一般の全体fibrationへ外挿できない。今後のnormal faces/complement設計では、fiber Euler、area/Maslov、monodromyを併せて検証する。
+六次では(1,8,15,15,8,1)（tnc:focus-boundary-betti）。**V_0と実際のUの補集合VのEuler数は一致するが、H_3(V)にZ/(d−2)が残るとはまだいえない。** Ambientのπ_3(X_d)に現れる既知のZ/dとも別の不変量。
+
+**Euler予算：** χ(U)=−(d−2)(d−5)、χ(V)=−(d⁴−5d³+9d²−3d−10)。六次ではχ(V)=−512。Euler数非零fiberが有限個の孤立基底点にだけ存在してすべて−1なら512個必要（tnc:complement-singularity-budget）。正次元特異strataではcompact-support Euler数で重み付けし、一般のglobal Lagrangian fibrationの実現数には外挿しない。
+
+**核心と次の一手：** 相対対(K_c,∂K_c)、境界包含∂U→Uおよび∂U→Vの整数homology・基本群写像、meridional classの像、monodromy/Maslov/action periodsを計算してから、補集合のsingular strataとnormal facesの接着へ進む。これらの境界写像とglobal fillingは未構成。
 
 ## 検証
-v25の五主検算と五独立監査を今回再実行。保存済みの旧verification/証明書全体を今回の実行結果とは扱わない。詳細はmigration.md。計算は解析的symplectic gluingや新規性の証明を代替しない。
+移行時にWorkがv25の五主検算と五独立監査を再実行した。今回の新規トポロジー命題は原稿で論証し、次数ごとのEuler数とWang行列を独立検算したが、保存済み検算スクリプトの最新版全体は今回再実行していない。保存済みの旧verification/証明書全体を今回の実行結果とは扱わない。詳細はmigration.md。計算は解析的symplectic gluingや新規性の証明を代替しない。
