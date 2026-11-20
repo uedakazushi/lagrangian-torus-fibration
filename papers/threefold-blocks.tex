@@ -22,7 +22,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\small\sffamily Lagrangian torus blocks / relative gluing}
-\fancyhead[R]{\small\sffamily 2026-10-28}
+\fancyhead[R]{\small\sffamily 2026-11-21}
 \fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0.3pt}
 \theoremstyle{definition}
@@ -46,8 +46,8 @@
 \begin{center}
 {\LARGE\sffamily\bfseries\color{ink}固定曲線近傍の Lagrangian torus blocks\\[0.3em]
 と相対接着}\\[0.8em]
-{\large 一般型三次元超曲面の局所構成：第9版}\\[0.45em]
-2026年10月28日
+{\large 一般型三次元超曲面の局所構成：第10版}\\[0.45em]
+2026年11月21日
 \end{center}
 
 \begin{abstract}
@@ -60,6 +60,13 @@ Special algebraic member 上の plane curve を、smooth hypersurface family と
 曲線方向の自由端も elliptic 成分もない Lagrangian $T^3$-fibration を作る。
 Whole focus--hyperbolic fibers は $(d-2)(d-5)$ 個で、各 Euler 数は $-1$、
 六次では4個となる。Normal faces と complement の fibration は未構成である。
+Actual focus 補集合の基本群は $\mathbb Z$ であり，
+両側の全整数境界写像を求める．
+特に二次 homology の境界像の指数は $d-2$ である．
+$e=d-2$，$g=(d-3)(d-4)/2$，$\Lambda=\mathbb Z[\tau,\tau^{-1}]$ とすると，
+第二 homotopy 群は $\Lambda^{2g+1}\oplus\Lambda/(e(\tau-1))$，
+$m$ 重巡回被覆の第二 homology は
+$\mathbb Z^{m(2g+1)+1}\oplus(\mathbb Z/e)^{m-1}$ である．
 一方、generic plane section の normal degree $2d$ は、splitting や generators を固定しない
 smooth focus Cartan family に対しても障害になることを証明する。
 曲線を puncture した product regions の whole-fiber count と boundary winding を計算し、
@@ -100,6 +107,17 @@ $m=2$ の非退化 hyperbolic 型、$m>2$ で同じ作用を保つ nonelliptic r
 別の actual local constructions として保持する。
 旧 fixed-collar assembly の48 ports は、第\ref{dpb:section}節の tube 障害を含めて未接続である。
 第\ref{bct:section}節の基底基本群と circle label の条件も、新しい $C'$ の block に引き続き課される。
+
+\paragraph{Actual focus 補集合の位相と先行研究.}
+第\ref{tnc:exterior-topology}節では，normal exterior の Hopf 商から
+基本群と両側の全整数境界写像，第二 homotopy 群の deck action，
+有限巡回被覆の第二 homology を明示する．
+標準 nodal 模型には Auroux \cite[Section~5.1]{auroux-local}，
+四次元 fishtail の補集合を利用する既知の構成には
+Akbulut \cite[Introduction]{akbulut-double-fishtail}が先行する．
+本稿はこの具体的な product 埋込みの gluing data を計算するものであり，
+所定の K\"ahler 形式に対する relative filling の存在や
+包括的な新規性を結論しない．
 
 \paragraph{既知の構成との関係.}
 四次元の $|yz-c|^2$ と逆位相の circle moment は
@@ -276,6 +294,7 @@ geometric corner 全体の相対構成を行う必要がある。
 \input{sections/threefold/local_blocks/membrane_families.tex}
 \input{sections/threefold/local_blocks/focus_hyperbolic_region.tex}
 \input{sections/threefold/local_blocks/trivial_normal_curve.tex}
+\input{sections/threefold/local_blocks/focus_exterior_topology.tex}
 \input{sections/threefold/local_blocks/twisted_focus_cap.tex}
 \input{sections/threefold/local_blocks/return_scaling.tex}
 

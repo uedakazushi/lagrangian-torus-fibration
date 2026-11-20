@@ -1,5 +1,5 @@
 # 研究ノートの入口
-更新：2026-11-20 / v1.7 / 主稿改訂7
+更新：2026-11-21 / v1.8 / 曲面改訂8・三次元局所稿10・全体稿12
 
 詳細な現行ノートは `papers/research-notes.tex`（曲面第25版、65頁）に移行した。証明を短い要約で置き換えない。
 
@@ -18,6 +18,8 @@
 関連KE主稿 `pair:prop:bundle-conic` は、射影的normal bundleでh=−F_d/G、x_i'=x_i h0/h、x_j'=x_jとしてexact uv=tを得る。局所overlapをcomplete C* automorphismとする不十分な議論を使わない。(u,v)↦(ue^u,ve^(−u))はuvとaxesを保つlocal mapだがbase-only乗数ではない、という例を覚えておく。新構成もfixed compact baseに限り、tripleへ動くbaseのtransition boundsを含まない。
 
 同稿 `pair:cor:global-primitive` / `pair:cor:actual-common-moment` は、source-free固定base B上で非消滅正則1-form τを選び、Ω=dlogv∧τからglobal λ_tを得る。Canonical normal momentはτの変更で変わらないが、residual periodsには同じprimitiveを使う。Song (arXiv:1706.01518, Lemmas 4.4–4.5)とRochon–Zhang (arXiv:1106.0873, Theorem 5.1)の固定end入力から、μ_tの端値は±4π/s_r+O(s_r^(−1−δ))+o_t(1)。rを固定後t→0とし、η_t=A1ω_tのreductionsの共通intervalを確保する。
+
+`ke:short-circle-actual-buffer` は不変背景を不要にする。g_a=ρ_a*g_ω、η=Aω、b=ε||w||₂とすると|β(X)|≤b|X|_{g_η}。Moser場は(1−s)|Y|²_η+s|Y|²_ω≤b|Y|_ηを満たし、平方完成で|Y|_ω≤b/(2√(s(1−s)))となる。両向きtrajectory長はc_w ε、通常kernelでc_w=π/(2√3)、centeredでπ/(4√3)。Exactnessは長さ評価に不要。`ke:short-circle-image-buffer` はδ>(2c_w+1/2)εから、同じcompact飽和集合Kを含むsource Oとimage φ(O)を得る。Backward c_w ε＋半orbit ε/2＋forward c_w εの予算であり、conjugated actionを元のK上で使うための像の条件を明示した。C¹制御やintrinsic径、全neckでの仮定検証とは別。
 
 残るactual入力は、neck全体のnormal Moser flowの生存・一様buffer、triple endsでの同一正則作用とreduced foliationの同時一致、source/coreとの接着である。KE側 `neck:lem:rank-one-circle` はresidual rank-one下界とvolume上界だけでnormal circle長を抑えるが、その下界とactual bufferを証明する必要がある。固定residual境界の影響が消えないexact negative KE productの例があるため、normal深度だけからproduct asymptoticsを推論しない。
 
@@ -105,7 +107,7 @@ KE研究の `papers/cubical-gh-limit.tex` では $R_t=\log(-\log|t|^2)$、$\math
 **具体的な次の課題：** 全phaseのmoving triple比較と閉cornerの内在・保護領域内のGH同定を入力として、actual neck collarのorbit partition、action periods、定量的bufferを一致させる。`ke:relative-fiber-preserving` を適用できる開overlapを構成し、sourceのpinched torus、branchのS¹×figure-eight、coreへ相対的に接着する。必要なのは全特異領域を含む一様評価と大域no-shortcutであり、regular fibersの点ごとの収縮では不足する。Action-affine structureだけからcanonicalなRiemannian基底計量は決まらない。
 
 ## 局所fibrationの証明と解析入力
-現在の着手対象は複素次元2でのKE極限とLagrangian fibrationの適合性である。主稿の `papers/sections/paper/ke_fiber_compatibility.tex` に次の証明を置いた。
+曲面側の着手対象は複素次元2でのKE極限とLagrangian fibrationの適合性である。主稿の `papers/sections/paper/ke_fiber_compatibility.tex` に次の証明を置いた。
 
 - `ke:short-torus-averaging`：自由な正則 $T^2$ 作用、torus不変Hermitian計量 $h$、$c h\le g_\omega\le C h$、torus上のperiod零を仮定する。作用の周期1生成場の長さの和を $e$ とすると、平均化のchain homotopyから長さ $O(e)$ のprimitiveを作り、一つのMoser flowで領域全体にLagrangian fibrationを構成する。変位は $Ce/(2c)$ 以下、ambient fiber diameterは $\sqrt C e(C/c+1/2)$ 以下。高階微分比較は使わない。
 - `ke:triple-hexagon`：$\zeta_i\zeta_j\zeta_k=t$ の三つのsquareを一つのhexagonとして全phase torusで実現し、raw-depth mapとの誤差を $O((1+\log m_t)/R_t)$ に抑える。
@@ -255,7 +257,7 @@ d\binom{d-3}{2}+d\binom d2=d(d^2-4d+6)=c_2(X_d).
 **目標の新規性の正確な位置**：smooth general type X_d⊂P^4, d≥6, 指定ω=aHについて、全regular T^3 fibersがLagrangianで、明示されたsingular local modelsをもち、全X_dを覆い、境界なし、連結fiber、Hausdorff baseとなるglobal mapを構成する。Mikhalkinのtopological fibrationとLeung–Wanの部分的special性より強い。しかし「初めての一般型torus fibration」「一般型のLagrangian torusが未知られ」などの主張は誤り。新規性の網羅的な保証は未完了。より弱いgeneral singular setを許しても大域存在を優先する。現在未完成の相対filling、curvature-flat normal lifts、reduced surfaceの両端葉層一致、actual coverageの証明を必要とする。
 
 ## 三次元：局所稿の参照先
-`papers/threefold-blocks.tex`第25・33節：positive normal shell、membrane/focus collars。第26節：smooth focus Cartanとnormal degreeの障害。第34–35節：compact focus blockとnormal-trivial closed curve。第36節：weighted collars。旧48 ports、normal faces、complement、大域boundary-free fibrationは未完成。全体稿は `papers/threefold-fibration.tex`。
+`papers/threefold-blocks.tex`第25・33節：positive normal shell、membrane/focus collars。第26節：smooth focus Cartanとnormal degreeの障害。第34–35節：compact focus blockとnormal-trivial closed curve。第36節：actual補集合の境界写像・equivariant π₂・巡回被覆。第37節：weighted collars。旧48 portsの接着、normal facesを保つ補集合上のLagrangian fibrationと大域boundary-free接着は未完成。全体稿は `papers/threefold-fibration.tex`。
 
 ## 人工的基底計量の鋭い収束速度と幾何学的比較の核心
 $p_T:B_d(T)\to\mathcal C_d$ に補助piecewise Euclidean metric $h$ を固定し、$|v|_\varepsilon^2=|dp_T(v)|_\square^2+\varepsilon^2|v|_h^2$ の内在距離を考える。graph correspondenceのdistortion $\mathcal D_\varepsilon$ は、$d=5$ で $\Theta(\varepsilon^2)$、$d\ge6$ で $\Theta(\varepsilon)$ と鋭く決まる（主原稿に読み込む base_topology.tex の topo:metric-collapse-sharp）。$d\ge6$ の下界は同一fiber内の正の $h$-距離に由来するが、**GH距離の下界ではない**。
@@ -296,9 +298,15 @@ H_4(\mathcal V)=\mathbb Z^{2g+1}.
 
 **Euler予算：** χ(U)=−(d−2)(d−5)、χ(V)=−(d⁴−5d³+9d²−3d−10)。六次ではχ(V)=−512。Euler数非零fiberが有限個の孤立基底点にだけ存在してすべて−1なら512個必要（tnc:complement-singularity-budget）。正次元特異strataではcompact-support Euler数で重み付けし、一般のglobal Lagrangian fibrationの実現数には外挿しない。
 
-**境界包含H₁の新たな必要条件：** Focus基底長方形の境界を一周するloopをnormal coordinatesのsectionで持ち上げると、H₁(∂U)→H₁(U)のkernelの原始生成元を得る。Mayer–Vietoris列によってこのclassはH₁(V)=Zの原始生成元へ写る（tnc:focus-boundary-primitive）。従って補集合でこのloopを零homologousにする境界同定はできない。**次は** 境界包含のH₂・H₃・基本群の写像、vanishing-cycleとmeridional torsion、monodromy/Maslov/action periodsを照合してrelative fillingを構成する。大域fibrationは未完成。
+**境界包含・被覆空間の現在の到達点：** 証明の正本は `papers/sections/threefold/local_blocks/focus_exterior_topology.tex`。Hopf商によってnormal exterior E≃S¹∨S²∨S³を同定し、V=V₀∪_{C'×S³}(C'×E)を用いてπ₁(V)=Zを証明した。境界のcurve loopsとa,bはVで消え、focus基底boundary lift tは生成元。両側への同時π₁写像のkernelはHeisenberg中心〈a〉である。全整数境界表も決定した（`tnc:all-boundary-homology-maps`）。F=regular torusはU側、T=aをt沿いにtransportしたtorusはV側に残る。H₂ boundary→VのcokernelはZ/e、[∂K_c]はH₃(V)の位数eのtorsion、H₃(V)/im boundary=H₃(X_d)、H₄ boundary→Vは全射。Framing・orientationを固定するが、H₃(X_d)のliftは非標準的なのでcanonicalなsplittingと混同しない。
+
+Λ=Z[τ,τ⁻¹]に対し `tnc:equivariant-pi2` はπ₂(V)=Λ^(2g+1)⊕Λ/(e(τ−1))を与える。Universal coverのMVで[C']=e hとなり、deck不変性からe(τ−1)h=0が生じる。残りのaugmentation ideal (τ−1)Λはfreeなのでextensionがsplitする。整数torsion部分はΛ/eΛだが、coinvariants H₂(V)=Z^(2g+2)はfreeである。`tnc:cyclic-cover-h2` は全m≥1についてH₂(V_m)=Z^{m(2g+1)+1}⊕(Z/e)^{m−1}を証明する。有限coverではH₁(C')⊗H₁(E_m)=Z^(2g)の項を落としてはいけない。六次二重被覆はZ¹⁵⊕Z/4。
+
+**再現と先行研究：** `python3 verification/verify_focus_exterior_topology.py --json` は17個のSmith algorithm自己照合、d6–20の60境界行列、m1–12の180被覆関係行列と180群環coinvariant行列を整数演算で確認する。一般の式は原稿の証明による。Auroux arXiv:0706.3207 §5.1のnodal model、Akbulut arXiv:1103.3137v2 Introduction/Figure 1のS⁴のfishtail分解、Hatcher Theorems 4.32/4.41・Example 4.45を一次資料で確認した。既知の模型・道具と今回の具体計算を区別し、包括的新規性は未確認。
+
+**残る構成：** EとV₀の相対handleを境界表とΛ-moduleに適合させ、a,bを殺してtを残す部分とe(τ−1)hの関係を幾何学的に実現する。その上でMaslov・作用周期・unipotent monodromy・whole boundary foliationを同時に照合する。位相的条件は必要条件であり、relative fillingと三次元大域fibrationは未完成。
 
 ## 検証
-主稿改訂7の局所解析では、固定product balls上のSavin適用と同率のSchauder評価、facet O((b/d_*)^(2/3))、active co-Gram、closed-corner pruningと有限gallery、Moser pullback比較、protected-ambientの経路領域と端点誤差、chain primitiveによるfiber保存を独立に読み直した。これは現行局所結果の証明点検であり、既存大域gluing全証明の独立監査、外部査読、形式証明とは異なる。LuaLaTeX基本資産不足により現行改訂は未組版。
+今回の相互点検対象は、新節のHopf商・normal exterior・全境界写像・equivariant π₂・有限巡回被覆と、曲面主稿のshort-circle averagingおよびimage bufferである。原稿の証明と独立点検を行い、上記の整数行列検算を実行した。これを既存大域接着全体の独立監査、外部査読、形式証明とは扱わない。既存のKE局所解析・closed-corner GH・fiber保存の証明と点検記録は保持し、今回は全体を再監査していない。
 
-移行時にWorkがv25の五主検算と五独立監査を再実行した。今回の新規トポロジー命題は原稿で論証し、次数ごとのEuler数とWang行列を独立検算したが、保存済み検算スクリプトの最新版全体は今回再実行していない。保存済みの旧verification/証明書全体を今回の実行結果とは扱わない。詳細はmigration.md。計算は解析的symplectic gluingや新規性の証明を代替しない。
+曲面主稿130頁、三次元局所稿179頁、三次元全体稿201頁を2026-11-21にLuaLaTeXとlatexmkで組版した。参照・引用の未解決はなく、追加した三次元の節と曲面の補題・系はPDFを画像化して表示も点検した。他の原稿と保存済みの検算suite全体は今回再実行していない。保存済みverification/の旧証明書は今回の実行結果ではない。計算は解析的symplectic gluingや新規性の証明を代替しない。

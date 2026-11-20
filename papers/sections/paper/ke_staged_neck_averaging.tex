@@ -1,5 +1,5 @@
 % !TeX root = ../../lagrangian-torus-fibration.tex
-% 2026-11-20 / v1.0: 共通 normal circle を保つ二段階平均と exact period matching．
+% 2026-11-21 / v1.1: 共通 normal circle を保つ二段階平均と exact period matching．
 \section{共通の normal circle に適合する二段階平均}
 \label{ke:staged-neck-section}
 
@@ -92,6 +92,152 @@ $(\mathcal A\lambda)(V)=\mu(x)$ は一定である．
 Exact differential の周期は零なので，
 $\int_{\phi(\rho_\bullet(x))}\lambda=\mu(x)$ である．
 \end{proof}
+
+\begin{lemma}[Actual circle の短さによる双方向 Moser buffer]
+\label{ke:short-circle-actual-buffer}
+上記の正則円作用と K\"ahler form に対し，作用不変な開集合 $U$ 全体で
+$|V|_{g_\omega}\le\varepsilon$ と仮定する．
+この補題の評価には $\omega$ の exactness，作用不変な背景計量，
+tensor の二側比較は不要である．
+$w(a)=1-a$ または $w(a)=1/2-a$ とし，
+\[
+ \beta=\int_0^1 w(a)\rho_a^*(\iota_V\omega)\,da,
+ \quad \eta=\mathcal A\omega,
+ \quad \omega_s=(1-s)\eta+s\omega,
+ \quad \iota_{Y_s}\omega_s=\beta
+\]
+と置く．$c_w=(\pi/2)\|w\|_{L^2(0,1)}$ とすれば，
+\begin{equation}\label{ke:eq:circle-actual-speed}
+ |Y_s|_{g_\omega}
+ \le\frac{\varepsilon\|w\|_{L^2(0,1)}}{2\sqrt{s(1-s)}}
+ \qquad (0<s<1).
+\end{equation}
+従って，任意の二つの時刻を結ぶ存在する trajectory の actual 長さは
+\begin{equation}\label{ke:eq:circle-actual-length}
+ \operatorname{Length}_{g_\omega}(\phi_{s,s_0}(x))
+ \le c_w\varepsilon,
+ \qquad
+ c_w=\begin{cases}
+ \pi/(2\sqrt3),&w(a)=1-a,\\
+ \pi/(4\sqrt3),&w(a)=1/2-a
+ \end{cases}
+\end{equation}
+である．ここで時間を逆向きに辿る場合も同じ評価を用いる．
+
+$K\subset U$ を compact な $\rho$-飽和集合とする．
+$K\subset D\Subset U$ なる開集合 $D$ が存在し，
+\begin{equation}\label{ke:eq:circle-actual-buffer}
+ \delta:=d_{g_\omega}^{U}(K,\partial D)>c_w\varepsilon
+\end{equation}
+を満たすとする．$d_{g_\omega}^{U}$ は $U$ 内の経路による actual 距離である．
+このとき $K$ のある $\rho$-飽和開近傍からの forward flow は全時刻で存在する．
+また，時刻 $1$ に $K$ の点を終点として指定する backward flow も時刻 $0$ まで存在する．
+従って最大の time-one flow の定義域と像はともに $K$ を含む．
+各円軌道 $\mathcal O\subset K$ に対して
+\begin{equation}\label{ke:eq:circle-actual-diameter}
+ \operatorname{diam}_{d_{g_\omega}^{U}}\phi_{1,0}(\mathcal O)
+ \le (2c_w+1/2)\varepsilon.
+\end{equation}
+ここで直径は ambient 距離による．
+像の円自身の intrinsic diameter，flow の $C^1$ 評価，
+元の neck base projection の保存は結論に含めない．
+\end{lemma}
+\begin{proof}
+$g_a=\rho_a^*g_\omega$ と置く．正則性により
+$g_\eta=\int_0^1g_a\,da$ であり，$d\rho_a(V)=V$ と仮定から
+$g_a(V,V)\le\varepsilon^2$ である．任意の接ベクトル $X$ に対し
+\begin{align*}
+ |\beta(X)|
+ &\le\varepsilon\int_0^1 |w(a)|\,|X|_{g_a}\,da\\
+ &\le\varepsilon\|w\|_{L^2(0,1)}
+       \left(\int_0^1g_a(X,X)\,da\right)^{1/2}
+ =b|X|_{g_\eta},\qquad b=\varepsilon\|w\|_{L^2(0,1)}.
+\end{align*}
+共通複素構造を $J$ とする．Moser 方程式から
+$g_{\omega_s}(Y_s,Y_s)=\beta(JY_s)$ なので，
+$r=|Y_s|_{g_\eta}$，$q=|Y_s|_{g_\omega}$ と置けば
+\[
+ (1-s)r^2+s q^2\le br.
+\]
+平方完成によって
+\[
+ s q^2\le br-(1-s)r^2\le\frac{b^2}{4(1-s)}
+\]
+となり，\eqref{ke:eq:circle-actual-speed}を得る．
+$\int_0^1(s(1-s))^{-1/2}\,ds=\pi$ を用いて
+\eqref{ke:eq:circle-actual-length}が従う．
+端点で表示した上界は発散するが可積分である．
+$Y_s$ 自身は K\"ahler 形式 $\omega_s$ の非退化性により
+$[0,1]\times U$ 上で滑らかに定義されている．
+
+任意の時刻に $K$ から出発する trajectory が初めて $D$ の境界へ達すれば，
+そこまでの長さは $\delta$ 以上になる．
+これは\eqref{ke:eq:circle-actual-length}に反する．
+従って trajectory は $\overline D\Subset U$ に留まり，
+compact 集合上の滑らかな時間依存 ODE の延長定理によって
+順方向・逆方向とも $[0,1]$ 全体へ延びる．
+Strict な余裕と $K$ の compact 性により，この結論は $K$ の開近傍にも成立する．
+$K$ と作用群が compact なので，その近傍に含まれる
+$\rho$-飽和開近傍を選べる．Backward flow の時刻 $0$ の点は forward flow の定義域に属するから，
+最大 flow の像も $K$ を含む．
+
+元の円軌道の任意の二点は高々半周で結べ，その長さは $\varepsilon/2$ 以下である．
+両端にそれぞれ長さ $c_w\varepsilon$ 以下の Moser trajectory を付ければ
+\eqref{ke:eq:circle-actual-diameter}となる．
+\end{proof}
+
+\begin{corollary}[同じ compact 領域を覆う actual 円作用]
+\label{ke:short-circle-image-buffer}
+補題\ref{ke:short-circle-actual-buffer}の仮定に加えて
+\begin{equation}\label{ke:eq:circle-image-buffer}
+ \delta>(2c_w+1/2)\varepsilon
+\end{equation}
+とする．このとき time-one Moser map $\phi$ の定義域には
+$\rho$-飽和した開集合 $O\supset K$ を取ることができ，その像も $K$ を含む：
+\[
+ K\subset O,\qquad K\subset\phi(O).
+\]
+従って $\widehat\rho=\phi\rho\phi^{-1}$ は $K$ の開近傍上の円作用となる．
+さらに $\omega=d\lambda$ の場合は補題\ref{ke:circle-exact-transport}の
+actual Hamiltonian action と moment の結論がその近傍で成立する．
+\end{corollary}
+\begin{proof}
+$F$ を，時刻 $0$ からの trajectory が全時刻で $D$ 内に留まる点の集合とする．
+これは開集合であり，time-one map は $F$ 上の滑らかな埋込である．
+その最大の $\rho$-飽和部分
+\[
+ O=\{y\in F:\rho_a(y)\in F\text{ for every }a\in\mathbb R/\mathbb Z\}
+\]
+も開である．実際，ある軌道が開集合 $F$ に含まれれば，軌道の compact 性と
+作用の連続性によりその近くの全軌道も $F$ に含まれる．
+補題の forward 結論と $K$ の飽和性から $K\subset O$ である．
+
+$x\in K$ を取り，backward flow による時刻 $0$ の点を $y$ とする．
+$d_{g_\omega}^{U}(x,y)\le c_w\varepsilon$ である．
+任意の $z=\rho_a(y)$ は $y$ から高々半周で結べるので
+\[
+ d_{g_\omega}^{U}(x,z)\le(c_w+1/2)\varepsilon.
+\]
+$y$ から $z$ への短い軌道弧も $D$ を出られない．
+もし出れば，$x$ から $\partial D$ までの経路の長さが
+$(c_w+1/2)\varepsilon<\delta$ となるからである．
+$z$ からの forward Moser trajectory が $D$ を出るなら，
+先ほどの $x$ から $z$ までの経路と合わせて
+$x$ から $\partial D$ まで長さ $(2c_w+1/2)\varepsilon$ 以下の経路ができる．
+これは\eqref{ke:eq:circle-image-buffer}に反する．
+従って全ての $z=\rho_a(y)$ は $F$ に属し，$y\in O$ となる．
+$x=\phi(y)$ だから $K\subset\phi(O)$ が従う．
+最後の主張は既存の exact transport identity を適用すればよい．
+\end{proof}
+
+\begin{remark}[Neck への適用範囲]
+上記の二つの結果は，actual normal generator の一様な短さと
+actual 距離の buffer から normal averaging を実行する条件である．
+Rank-one 評価と volume 比較から短さを得る場合も，
+source-free neck 全体でこれらの入力が一様であることを別に証明する必要がある．
+複数の triple end における同一作用，reduced leaves，markings の同時整合，
+source・branch・core への接着や全曲面の GH 収束は，この補題の結論ではない．
+\end{remark}
 
 \subsection{残る円の平均と同一 normal moment}
 

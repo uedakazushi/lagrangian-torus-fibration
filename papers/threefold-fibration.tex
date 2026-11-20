@@ -12,7 +12,7 @@
 \usepackage{graphicx}
 \graphicspath{{sections/threefold/local_blocks/}}
 \usepackage[unicode,colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
-\hypersetup{pdftitle={一般型三次元超曲面と境界を持たない Lagrangian fibration 第11稿},pdfauthor={研究ノート},pdfsubject={Trivial-normal symplectic curves・compact focus-hyperbolic blocks・intrinsic Cartan obstruction}}
+\hypersetup{pdftitle={一般型三次元超曲面と境界を持たない Lagrangian fibration 第12稿},pdfauthor={研究ノート},pdfsubject={Trivial-normal symplectic curves・compact focus-hyperbolic blocks・intrinsic Cartan obstruction}}
 \definecolor{ink}{HTML}{18374A}
 \definecolor{accent}{HTML}{276B79}
 \titleformat{\section}{\large\sffamily\bfseries\color{ink}}{\thesection}{0.7em}{}
@@ -24,7 +24,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\small\sffamily Threefolds in projective 4-space / Research note}
-\fancyhead[R]{\small\sffamily 2026-10-28}
+\fancyhead[R]{\small\sffamily 2026-11-21}
 \fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0.3pt}
 \theoremstyle{definition}
@@ -56,8 +56,8 @@
 {\LARGE\sffamily\bfseries\color{ink}一般型三次元超曲面と\\[0.3em]
 境界を持たない Lagrangian fibration}\\[0.8em]
 {\large $X_d\subset\PP^4$, $d\ge6$}\\[0.45em]
-{\small 第11稿：Trivial-normal curves と actual focus--hyperbolic blocks}\\[0.6em]
-2026年10月28日
+{\small 第12稿：Trivial-normal curves と actual focus--hyperbolic blocks}\\[0.6em]
+2026年11月21日
 \end{center}
 
 \noindent\textbf{到達点と未完了部分。}
@@ -73,6 +73,13 @@ Special algebraic member 上の curve を、smooth hypersurface family と Moser
 Whole focus--hyperbolic fibers は $(d-2)(d-5)$ 個、各 Euler 数は $-1$ である。
 六次では4個、block の Euler 数は $-4$、compact complement は $-512$。
 Normal faces と complement の fibration は未構成である。
+\item Actual focus 補集合の基本群 $\mathbb Z$ と，
+両側の境界包含が誘導する全整数 homology 写像を決定する．
+二次境界像の cokernel は $\mathbb Z/(d-2)$ であり，
+normal face の三次基本類は補集合の位数 $d-2$ の torsion を生成する．
+さらに $\Lambda=\mathbb Z[\tau,\tau^{-1}]$ 上の第二 homotopy 群を
+$\Lambda^{2g+1}\oplus\Lambda/((d-2)(\tau-1))$ と求める．
+$m$ 重巡回被覆の $H_2$ には $(\mathbb Z/(d-2))^{m-1}$ の torsion が現れる．
 \item 任意の smooth normal focus Cartan family は $2c_1(N)=0$ を要求する。
 固定 circle や splitting を外しても generic plane section の normal degree $2d$ は障害として残る。
 Boundary の squared determinant phase の総 winding は $4d$ である。
@@ -104,7 +111,7 @@ Product construction の全証明は第\ref{fhr:section}節、
 元の曲線に対する intrinsic obstruction は第\ref{fnc:section}節、
 weighted collars の局所分類は第\ref{tcf:section}節にある。
 既存の正 normal shell、membrane families、fixed-collar caps と相対 pants は別の入力として保持する。
-局所部分は第\ref{lc:construction}--\ref{rs:section}節にあり、共通ソースから局所原稿 第9版も組版する。
+局所部分は第\ref{lc:construction}--\ref{rs:section}節にあり、共通ソースから局所原稿 第10版も組版する。
 曲面版第4稿は内容を変更せず同梱する。
 本文の存在主張は仮定を明記した直接証明に基づき、有限検算と区別する。
 
@@ -827,6 +834,7 @@ fiber は moment level 内にあり、$\omega$ の制限は quotient map によ�
 \input{sections/threefold/local_blocks/membrane_families.tex}
 \input{sections/threefold/local_blocks/focus_hyperbolic_region.tex}
 \input{sections/threefold/local_blocks/trivial_normal_curve.tex}
+\input{sections/threefold/local_blocks/focus_exterior_topology.tex}
 \input{sections/threefold/local_blocks/twisted_focus_cap.tex}
 \input{sections/threefold/local_blocks/return_scaling.tex}
 
@@ -1009,6 +1017,17 @@ ironing coefficientsとconvex but not strictly convexなpotentialによる
 完成した公表論文の証明を今回確認したものではない．
 この発表の対象は Calabi--Yau であり、
 一般型の分岐基底と今回の相対 gluing を証明した定理としては扱わない。
+
+\paragraph{Actual focus 補集合の位相と先行研究.}
+第\ref{tnc:exterior-topology}節では，normal exterior の Hopf 商から
+基本群と両側の全整数境界写像，第二 homotopy 群の deck action，
+有限巡回被覆の第二 homology を明示する．
+標準 nodal 模型には Auroux \cite[Section~5.1]{auroux-local}，
+四次元 fishtail の補集合を利用する既知の構成には
+Akbulut \cite[Introduction]{akbulut-double-fishtail}が先行する．
+本稿はこの具体的な product 埋込みの gluing data を計算するものであり，
+所定の K\"ahler 形式に対する relative filling の存在や
+包括的な新規性を結論しない．
 
 現在の最も直接的な出発点は、第\ref{tnc:section}節の closed trivial-normal curve $C'$ である。
 この曲線全体と full normal neighborhood を含む compact actual block を、任意の所定 $X_d$ に構成した。
