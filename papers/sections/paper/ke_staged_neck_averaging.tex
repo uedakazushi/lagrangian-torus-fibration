@@ -686,6 +686,125 @@ Moser map でこの germ を actual form へ移す．
 大域 fibration の閉じた pinched torus や gate connector を得るには
 外側の foliation との相対接着と接続費用の評価が必要である．
 
+\subsection{Source を含む一つの射影的 neck}
+
+\begin{lemma}[射影を保つ source-inclusive normal form]
+\label{ke:projected-source-normal-form}
+固定二重線 $D=D_{ij}$ 上で，三重点を除く固定 compact 領域の近傍を取る．
+関連 KE 主稿 \texttt{pair:prop:bundle-conic} と同じ bundle projection を用い，
+$h=-F_d/\prod_{k\ne i,j}L_k$ とする．固定幅の零切断近傍で
+射影を保つ正則座標変換があり，退化族の式は
+\[
+ x'y'=t h_t(p),\qquad h_t=h|_D+O(t)
+\]
+となる．ここで $x',y'$ は元の二つの直線束に値を持ち，座標変換は
+恒等写像から全固定階で $O(t)$ ずれる．$h_t$ の零点は旧 source の近傍に
+一つずつある単純零点である．従って全基底上で一つの正則円作用
+$(x',y')\mapsto(e^{2\pi\sqrt{-1}a}x',e^{-2\pi\sqrt{-1}a}y')$ を得る．
+\end{lemma}
+
+\begin{proof}
+束の値を持つ関数 $f_t(p,x,y)=xy-th(p,x,y)$ の fibre derivative は
+$t=0$ の零切断で非退化な Hessian を持つ．陰関数定理から一意な
+正則臨界断面 $a_t=O(t)$ を得る．臨界点の一意性により線形 frame の間で貼り合う．
+$\xi=(x,y)-a_t$ とし，
+$f_t-f_t(p,a_t)=\xi^{\mathsf T} Q_t(p,\xi)\xi$ と Taylor 展開する．
+$Q_t$ は Hessian の線分積分で取れる対称な行列であり，
+$Q_t=Q_0+O(t)$，$\xi^{\mathsf T}Q_0\xi=\xi_1\xi_2$ である．
+$M=Q_0^{-1}Q_t$ は $Q_0$ に関し自己共役である．恒等行列の近傍で
+二項級数により $S=M^{1/2}$ を取ると $S^{\mathsf T}Q_0 S=Q_t$．
+Frame 変更で $M,S$ は共役変換するので，$\xi'=S\xi$ は束全体で定義される．
+固定幅を縮めれば $\xi\mapsto\xi'$ は一様に恒等写像に近い微分を持つ正則同型である．
+$t h_t=-f_t(p,a_t)$ とすれば所要の式を得る．
+$a_t=O(t)$ により $h_t=h|_D+O(t)$ となり，零点は陰関数定理と
+零点近傍の外の一様な非消滅から従う．
+\end{proof}
+
+\begin{theorem}[固定基底上の共通 actual neck と閉じた特異ファイバー]
+\label{ke:projected-source-neck}
+$P$ を三重点を避けた固定 compact な境界付き残余曲面とし，
+source は内点にあり，境界近傍にはないとする．
+$P$ 上に閉じた regular circle leaves と単純 saddle leaves を持つ
+marked Morse foliation を与える．各 saddle leaf は一つの saddle を含み，
+各 source は saddle のない相異なる regular leaves に置くとする
+（動く source に合わせた小さい isotopy を許す）．
+このとき，十分小さい $|t|$ について，ある共通 moment interval $I_t$ 上で
+同じ円作用を用いる actual $\omega_t$-Lagrangian neck fibration が存在する．
+Regular fibre は $T^2$，saddle fibre は $S^1\times\figeight$，
+各 source の critical fibre は一重 pinched torus である．
+\end{theorem}
+
+\begin{proof}
+$P$ を少し広げた固定基底 $P^+$ に補題\ref{ke:projected-source-normal-form}を適用する．
+三重点の一つを無限遠とする affine 座標 $p$ を取り，二つの直線束を
+自明化する．以下の絶対値はこの固定 frame による．
+$r>0$ を固定し，外側を $p\in\operatorname{int}P^+$，$|x'|,|y'|<r$，
+内側を $p\in P$，$|x'|,|y'|\le r^2$ とする．
+Source の近傍では $z=h_t(p)$ が正則残余座標で
+$x'y'=tz$ となる．この $t$ 依存座標でも系\ref{ke:source-short-circle}の
+oriented arm の体積比較は一様である．実際，oriented 側
+$|x'|\ge c|t|^{1/2}$ では元の平面座標 $x=x'+O(t)$ と $x'$ が比較可能で，
+$s_x=-\log|x'|^2+O(1)$ である．もう一方は $y'=tz/x'$ と $y=y'+O(t)$
+から $|y|=O(|t|^{1/2})$ である．Canonical residue は
+$d\log x'\wedge dz$ の一様に有界な非零倍である．これは
+$f_t$ と元の方程式の比が非零 unit で，座標変換の Jacobian と
+$h'_t(p)$ が一様に非退化であることによる．従って capped density は
+arm の annulus--disc envelope と同じ率を持つ．反対側も同様で，
+central bidisc には Bochner 最大値原理を同じ作用に適用する．
+Source を避ける固定部分では $h_t$ は一様に非消滅であり，
+$x'y'=th_t(p)$ は $y'/h_t(p)$ によって固定 pair の積座標になる．
+各 cap は元の座標と新座標の絶対値を $|t|^{1/2}$ で切ったものに関して
+一様比較可能なので，ordinary pair の体積比較と
+定理\ref{ke:fixed-base-neck-moser}の証明が適用できる．
+有限被覆で外側領域全体の生成場長は $O(1/|\log r|)$ となる．
+
+残余方向の最初の退出には $P^+\setminus P$ 内の source-free 固定幅を
+横切る必要があり，そこでの射影下界によって一定の費用がある．
+法線方向の退出については $r^2\le|x'|\le r$ 又は
+$r^2\le|y'|\le r$ の shell を横切る．それぞれ $r$ を固定して
+$t\to0$ とすれば，$P^+$ 全体で成分の smooth locus に固定 gauge で
+収束する．座標変換は $O(t)$ であり，系\ref{ke:source-diagonal-moser}の
+smooth convergence と cusp 下界により，この横断費用も $r$ に一様に正である．
+$ r=r_t\to0$ を対角的に選び，系\ref{ke:short-circle-image-buffer}を
+適用して内側を source と像の両方に含む一つの Moser map を得る．
+固定点を許すことは系\ref{ke:source-diagonal-moser}と同様である．
+
+正則体積 frame $\Omega=d\log x'\wedge dp$ は $y'\ne0$ で
+$-d\log y'\wedge dp$ と一致し，source では
+$dx'\wedge dy'/(t h'_t(p))$ として非零に延びる．
+従って $\lambda_t=d^c\log(\omega_t^2/|\Omega|^2)$ を全体で用いられる．
+$\eta=\mathcal A\omega_t$ とし，$\mu=(\mathcal A\lambda_t)(V)$ を取る．
+内側 cutoff の $|x'|=r_t^2$ と $|y'|=r_t^2$ における $\mu$ は逆符号で，
+絶対値は $c/|\log r_t|$ 以上ある．これは上述の fixed-shell convergence を
+対角選択で同時に適用し，関連 KE 主稿 \texttt{pair:thm:fixed-end-moment} の
+成分上の cusp 評価を使うことで得られる．同評価は $h_t=0$ 上の
+cutoff でも boundary divisor が滑らかなため有効であり，
+そこでの logarithmic volume frame も上記の $\Omega$ である．
+さらに対角閾値を縮めて $|t|\sup_{P^+}|h_t|<r_t^4$ とし，
+$I_t$ は両 cutoff の値の間にある $0$ を含む閉区間に取る．
+
+各 $p$ で $h_t(p)\ne0$ なら，$\mu$ は annulus の半径に沿って
+狭義単調なので各 $I_t$ level に唯一の円がある．
+$h_t(p)=0$ では二軸上で原点を共有し，原点の $\mu$ は零で，
+各半径に沿って逆方向に狭義単調である．従って $\mu\ne0$ では
+一方の軸に一つの円，$\mu=0$ では原点のみを得る．
+この compact な領域の円作用による商は，連続全単射
+$(\mu,p)$ によって $I_t\times P$ と同相である．
+この上で残余 foliation の葉を逆像に取り，さらに actual form へ Moser 移送する．
+正則 stratum の二次元接空間は $V$ と $\ker d\mu$ 内の葉方向で
+張られるため isotropic である．固定点では
+系\ref{ke:source-diagonal-moser}と同じ focus--focus 二次型を持つ．
+実際，残余葉の局所 submersion の一次項は $dp$ の非零実線形汎関数である．
+固定点を含まない円葉及び saddle graph 上の主円束は自明である．
+固定点を一つ含む円葉では，点を除いた開区間上では円束が自明であり，
+区間の両端の円が同じ一点へ収縮する．Compactness からこの
+compactification は一重 pinched torus である．
+\end{proof}
+
+ここで構成した neck は三重点を除く固定残余基底に沿う．
+三重点 collar における同一の fiber partition と，
+特異ファイバー全体の正規化 ambient 直径評価は別に必要である．
+
 \subsection{残る円の平均と同一 normal moment}
 
 今度は $\rho_{1,s}$ を neck の領域 $U$ 全体に与えた normal 円作用とする．

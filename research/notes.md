@@ -11,7 +11,7 @@
 
 次は residual collar 自体を三重点へ動かす場合の束表示・短円・buffer と、triple action との開 overlap 上の整合である。Source gate の $|x|\asymp |t|^{1/2}$ では固定射影座標の距離下界は法線の rescaling 幅を検出しない。 一方、source 模型 $xy=tz$ の法線円は gate まで残余方向の rank-one 下界と annulus–disc の体積上界で短くなる。正則ベクトル場 $x\partial_x-y\partial_y$ の Bochner 不等式で gate の $O(L_t^{-1})$ 評価を central bidisc に伝播できる（主稿 `ke:source-short-circle`）。固定 shell 上の成分KE収束と cusp 下界を使い、対角選択で十分遅く縮む source 領域に限り、共通 Moser source・像と actual focus–focus germ を構成した（`ke:source-diagonal-moser`）。所定の速さで動く法線境界の下界と、閉じた pinched torus への相対接着は残る。
 
-Source を跨ぐ作用を pair と共通化する次の構成候補。三重点を除く固定基底上の projective bundle で $f_t(p,x,y)=xy-th(p,x,y)$ とすると、中心の非退化な fibre Hessian から正則臨界断面 $a_t(p)=O(t)$ を得る。平行移動後の Taylor 公式を $f_t-f_t(a_t)=\xi^TQ_t(p,\xi)\xi$ と書き、$Q_0^{-1}Q_t$ の恒等行列近傍での正則平方根で座標を変えると、$x'y'=th_t(p)$、$h_t=-f_t(a_t)/t$ となる。平方根は線形 frame 変更に共役で貼り合わさり、$h_t=h_0+O(t)$ の単純零点上に固定点を持つ一つの円作用が得られる。この候補を使う際は、新座標での capped density／actual buffer の一様性と、所要の triple collars との相対整合を検証する。
+Source と通常 pair の共通化を主稿 `ke:projected-source-normal-form`, `ke:projected-source-neck` で証明した。固定残余基底で射影を保つ正則 Morse 座標 $x'y'=t h_t(p)$ を用いる。capped density と短円評価は $O(t)$ 座標変更で保たれ、固定 shell の対角選択で source を含む一つの actual Moser map を得る。共通 primitive の moment と基底射影の組で商は $I_t\times P$。指定した残余葉の持ち上げから、閉じた一重 pinched torus と saddle fiber が得られる。次の接着課題は三重点側との開 overlap で同じ fiber partition を得ること。
 
 固定残余compactの各座標では、`neck:prop:volume-envelope` から法線方向の積分評価を得た（主稿 `ke:neck-integrated-normal-energy`）。$s=-\log(|u|^2/r^2)$、$d(s)=\min(s,M_t-s)$ とし、周期1生成場の軌道平均エネルギーを $E_t$ とする。$\Omega=du/u\wedge dz$ に対する対数体積の角度平均 $\bar F_t$ は $-2\log d(s)+O(1)$、かつ $E_t=8\pi^2\partial_s^2\bar F_t$。よって $\int_m^{M_t-m}E_t(s,z)\,ds=O(m^{-1})$ が残余点 $z$ に一様に成立する。例外深度の測度は $E_t>A/m^2$ に対し $O(m/A)$ であり、例外集合の位置は $z$ に依存する。
 
