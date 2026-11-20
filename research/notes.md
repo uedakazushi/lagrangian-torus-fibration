@@ -26,22 +26,36 @@ F=q_eR_2+z_3G_{d-1}+z_4H_{d-1}
 ## 三次元：局所稿の参照先
 `papers/threefold-blocks.tex`第25・33節：positive normal shell、membrane/focus collars。第26節：smooth focus Cartanとnormal degreeの障害。第34–35節：compact focus blockとnormal-trivial closed curve。第36節：weighted collars。旧48 ports、normal faces、complement、大域boundary-free fibrationは未完成。全体稿は `papers/threefold-fibration.tex`。
 
-## 分岐基底の人工的な定量的metric collapse
-papers/sections/paper/base_topology.tex の topo:metric-collapse において、B_d(T)の二次元セル上の区分的長さ計量
+## 人工的基底計量の鋭い収束速度と幾何学的比較の核心
+$p_T:B_d(T)\to\mathcal C_d$ に補助piecewise Euclidean metric $h$ を固定し、$|v|_\varepsilon^2=|dp_T(v)|_\square^2+\varepsilon^2|v|_h^2$ の内在距離を考える。graph correspondenceのdistortion $\mathcal D_\varepsilon$ は、$d=5$ で $\Theta(\varepsilon^2)$、$d\ge6$ で $\Theta(\varepsilon)$ と鋭く決まる（主原稿に読み込む base_topology.tex の topo:metric-collapse-sharp）。$d\ge6$ の下界は同一fiber内の正の $h$-距離に由来するが、**GH距離の下界ではない**。
+
+実際の基底長さ計量 $d_t$ に対する十分条件（topo:finite-portal-criterion）は、(N) global no-shortcut誤差 $\alpha_t$、(S) square segment liftの乗法誤差 $\sigma_t$・加法誤差 $\lambda_t$、(F) 同じfiberの接続費用 $\kappa_t$。最大square数 $N_d=d\binom{d-1}{2}$、直径 $D_d$ について
 \[
-|v|_\varepsilon^2=|dp_T(v)|_\square^2+\varepsilon^2|v|_h^2
+\operatorname{dis}(p_T)\le\max\{\alpha_t,\ \sigma_tD_d+N_d\lambda_t+(N_d+1)\kappa_t\}.
 \]
-が C_d へ d_GH=O_{d,T,h}(\varepsilon) で収束することを証明。木fiber径は O(\varepsilon)、square galleryは有限で、各三角形上の逆写像は区分的Lipschitz。d≥6での非同相性は人工計量のGH収束の障害でない。Lagrangian作用アフィン計量やactual KE計量との比較は別問題で未解決。新規性は未確認。
+二枚のunit squareを一頂点で貼り、二枚を一枚に折る反例では(N),(S)が誤差零でも(F)が成立せず、$d_{\rm GH}\ge\sqrt2/2$（topo:portal-counterexample）。したがって局所模型だけでは大域収束は言えない。実際のLagrangian action metricの長さ完備化、枝・coreへの延長、および(N),(S),(F)の確認は未解決。新規性は未確認。
 
 ## 六次Petersen分岐基底の対称性
 $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木系はちょうど六つであり、$S_6$ はこの集合に推移的に作用する。固定した一系の安定化群は位数 $6!/6=120$、指数6。従ってその一系の選択は座標置換の全 $S_6$ 対称性を保たない。KE候補 $\mathcal C_6$ は自然に $S_6$ 対称なので、Petersen分岐基底とのラベル付き比較を対称に行うには六つの木系全体を管理する必要がある。証明は base_topology.tex の topo:petersen-symmetry、全15 perfect matchingsと六one-factorizationsの有限列挙・安定化群位数は別に確認した。これは任意の別構成やラベル忘却後のシンプレクティックな対称性の不存在ではない。
 
-## Symplectic normalが自明な閉曲線の次数・種数制約
-papers/sections/threefold/local_blocks/trivial_normal_curve.tex の tnc:degree-genus-parity に、任意のsmooth X_d⊂P^4 (d≥6)のclosed embedded symplectic S がnormal-trivialでhyperplane degree e>0を持てば
+## Symplectic normalが自明な閉曲線と補集合のEuler予算
+三次元の原稿 trivial_normal_curve.tex の tnc:degree-genus-parity は、任意のsmooth $X_d\subset\mathbf P^4$（$d\ge6$）のnormal-trivialなclosed symplectic curve $S$ について、hyperplane degreeを $e>0$ とすれば
 \[
 2g(S)-2=(d-5)e
 \]
-であり、特にdが偶数ならeは偶数、と証明した。極大・極小のないcircle-valued Morse mapで三価Reeb graphを作ると、頂点数は必ず (d-5)e。既存構成e=d-2は数値条件を満たすが、これのみでは曲線の存在やglobal fibrationは従わない。
+と示す。従って$d$偶数なら$e$偶数。曲線方向の三価Reeb graphの頂点数も（局所Morse構成の仮定下で）$(d-5)e$ に固定される。これだけでは埋込みやglobal fibrationは得られない。
+
+構成済みblock $\mathcal U$ とcompact complement $\mathcal V$ には
+\[
+\chi(\mathcal U)=-(d-2)(d-5),\quad
+\chi(\mathcal V)=-\mathcal N_d,\quad
+\mathcal N_d=d^4-5d^3+9d^2-3d-10.
+\]
+特に六次では$\chi(X_6)=-516$、$\chi(\mathcal U)=-4$、$\chi(\mathcal V)=-512$。$\mathcal V\to B_{\mathcal V}$ が有限層別局所自明で、Euler数非零のfiberが有限個の孤立基底点$S$にだけ存在すると仮定すれば、
+\[
+\sum_{b\in S}\chi(f^{-1}(b))=-\mathcal N_d.
+\]
+非零fiber全てがEuler数$-1$型なら、六次で**512個**必要（tnc:complement-singularity-budget）。特異ファイバーが正次元base stratum上に広がる場合はstratumのcompact支えEuler数 $\chi_c$ で重み付けしなければならず、この個数を一般の全体fibrationへ外挿できない。今後のnormal faces/complement設計では、fiber Euler、area/Maslov、monodromyを併せて検証する。
 
 ## 検証
 v25の五主検算と五独立監査を今回再実行。保存済みの旧verification/証明書全体を今回の実行結果とは扱わない。詳細はmigration.md。計算は解析的symplectic gluingや新規性の証明を代替しない。
