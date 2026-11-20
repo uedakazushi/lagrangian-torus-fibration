@@ -8,7 +8,7 @@
 \usepackage[margin=23mm,headheight=16pt]{geometry}
 \usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,tabularx,array,enumitem}
 \usepackage{xcolor,titlesec,fancyhdr}
-\usepackage{graphicx}
+\usepackage{graphicx,tikz}
 \graphicspath{{sections/threefold/local_blocks/}}
 \usepackage[unicode,colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
 \hypersetup{pdftitle={固定曲線近傍のLagrangian torus blocksと相対接着},pdfauthor={},pdfsubject={Trivial-normal symplectic curves、actual focus-hyperbolic blocks、Cartanとclutchingの障害}}
@@ -46,7 +46,7 @@
 \begin{center}
 {\LARGE\sffamily\bfseries\color{ink}固定曲線近傍の Lagrangian torus blocks\\[0.3em]
 と相対接着}\\[0.8em]
-{\large 一般型三次元超曲面の局所構成：第10版}\\[0.45em]
+{\large 一般型三次元超曲面の局所構成：第11版}\\[0.45em]
 2026年11月21日
 \end{center}
 
@@ -59,7 +59,9 @@ Special algebraic member 上の plane curve を、smooth hypersurface family と
 その曲線全体と full normal neighborhood を含む actual block に、
 曲線方向の自由端も elliptic 成分もない Lagrangian $T^3$-fibration を作る。
 Whole focus--hyperbolic fibers は $(d-2)(d-5)$ 個で、各 Euler 数は $-1$、
-六次では4個となる。Normal faces と complement の fibration は未構成である。
+六次では4個となる。このblockを開近傍ごと固定し，normal ball全体へ延長して，
+外側のsphere collarで標準toric fibrationになる写像を構成する．
+この延長にはelliptic base boundaryが現れ，それを除く大域化は未解決である．
 Actual focus 補集合の基本群は $\mathbb Z$ であり，
 両側の全整数境界写像を求める．
 特に二次 homology の境界像の指数は $d-2$ である．
@@ -67,6 +69,11 @@ $e=d-2$，$g=(d-3)(d-4)/2$，$\Lambda=\mathbb Z[\tau,\tau^{-1}]$ とすると，
 第二 homotopy 群は $\Lambda^{2g+1}\oplus\Lambda/(e(\tau-1))$，
 $m$ 重巡回被覆の第二 homology は
 $\mathbb Z^{m(2g+1)+1}\oplus(\mathbb Z/e)^{m-1}$ である．
+Normal exteriorはouter $S^3$から一つのround $1$-handleで得られ，
+閉曲線との積には相対 $4$ 次homologyが残るため，どちら向きにもWeinstein cobordismにはならない．
+Normal pairの相対円板群は $\Lambda B$ で，境界は
+$\partial(fB)=f(1)b+f'(1)a$ である．全補集合の相対円板群には
+曲線の次数を記憶する非分裂central extensionが現れる．
 一方、generic plane section の normal degree $2d$ は、splitting や generators を固定しない
 smooth focus Cartan family に対しても障害になることを証明する。
 曲線を puncture した product regions の whole-fiber count と boundary winding を計算し、
@@ -92,8 +99,9 @@ Normal degree を零にできる曲線を実際に選び、所定の $X_d$ と K
 Normal focus model と曲面の Morse construction 自体は既知の入力であり、
 本稿では actual embedding、全曲線に沿う normal triviality、whole fibers と残る境界を明示する。
 六次の block は degree $4$、genus $3$ の曲線の全近傍を含み、4個の rank-zero fibers を持つ。
-その Euler 数は $-4$、compact complement の Euler 数は $-512$ であるが、
-complement 上の fibration や特異 fibers の個数はまだ得ていない。
+その Euler 数は $-4$、compact complement の Euler 数は $-512$ である．
+Normal exterior上のfibrationは第\ref{ncc:section}節で得るが，
+管状補集合 $V_0$ 上のfibrationと大域の特異fiber数はまだ得ていない．
 
 第\ref{fnc:section}節は、smooth focus Cartan が intrinsic な unordered Lagrangian pair を定めることから、
 $2c_1(N)=0$ を示す。Closed surface 上では $c_1(N)=0$ が linear focus family の必要十分条件となる。
@@ -116,8 +124,27 @@ $m=2$ の非退化 hyperbolic 型、$m>2$ で同じ作用を保つ nonelliptic r
 四次元 fishtail の補集合を利用する既知の構成には
 Akbulut \cite[Introduction]{akbulut-double-fishtail}が先行する．
 本稿はこの具体的な product 埋込みの gluing data を計算するものであり，
-所定の K\"ahler 形式に対する relative filling の存在や
-包括的な新規性を結論しない．
+任意のrelative fillingや包括的な新規性を結論しない．
+
+\paragraph{Normal ballへの相対補完と円板の関係.}
+第\ref{ncc:section}節では $G_c=(A,|XY-c|^2)$ をwhole blockの開近傍で固定し，
+その外側で $H=|\psi_A(XY)|^2$ と補間する．$\psi_A$ は商平面のdiffeomorphismであり，
+標準symplectic formは変更しない．逆位相circleに不変であることが
+$\{A,H\}=0$ を保証する．Outer sphereの近くでは $H=|XY|^2$ となる．
+標準nodal tradeはSymington \cite[Section~6.1]{symington}に先行し，
+ここでの役割は所定のfocus blockとそのcollarを保つ明示的な相対構成である．
+新たなelliptic faceは，compact ambient上でwhole fibersと近傍の葉層を保つ限り消せない．
+
+同節ではHopf商からsmooth round handleを直接構成し，
+$V_0$ を保つhomotopy pushoutとminimalな相対handle数を求める．
+Weinstein handlesのindex制限 \cite[Section~1.1]{cieliebak-eliashberg-flexible-local}
+は閉曲線全体のnormal移行には使えないことを示す．
+さらに相対crossed moduleの標準理論 \cite[Section~2]{brown-relative-pi2}を適用して，
+normal $b$-diskの一階差分が $a$-disk，二階差分がsphere classになることを計算する．
+全補集合ではcurve disk liftsが $\prod_i[A_i,B_i]=eh$ を満たす．
+これらはsmooth framingやLagrangian diskの存在を主張するものではなく，
+clean normal diskには別に $\mu(a)=0,\mu(b)=2$ の制約がある．
+この具体的な相対データの包括的新規性は未確認である．
 
 \paragraph{既知の構成との関係.}
 四次元の $|yz-c|^2$ と逆位相の circle moment は
@@ -295,6 +322,7 @@ geometric corner 全体の相対構成を行う必要がある。
 \input{sections/threefold/local_blocks/focus_hyperbolic_region.tex}
 \input{sections/threefold/local_blocks/trivial_normal_curve.tex}
 \input{sections/threefold/local_blocks/focus_exterior_topology.tex}
+\input{sections/threefold/local_blocks/focus_relative_filling.tex}
 \input{sections/threefold/local_blocks/twisted_focus_cap.tex}
 \input{sections/threefold/local_blocks/return_scaling.tex}
 
@@ -302,13 +330,18 @@ geometric corner 全体の相対構成を行う必要がある。
 \label{lc:next}
 
 第\ref{tnc:section}節により、任意の所定 $X_d$ に、閉曲線全体を含み negative Euler fibers を持つ
-actual block ができた。次の中心課題は、この block の normal faces の相対接続である。
+actual block ができた。第\ref{ncc:section}節でそのnormal ball全体への補完も得た．
+次の中心課題は，そのelliptic faceの処理と $V_0$ への接続である．
 
 \begin{enumerate}
-\item $\partial R\times\Gamma$ の一つの face を選び、whole torus と hyperbolic fibers、
-boundary coorientation、primitive periods を含む対向領域を actual に構成する。
+\item 構成済みのtoric outer collarに適合する $V_0$ 側の領域をactualに作る．
+同時に，境界のないbaseを得るには $H=0$ のelliptic fiberの近傍自体を変更する必要がある．
+Whole torusとhyperbolic fibers，boundary coorientation，primitive periodsを照合する．
 新しい $C'$ の normal bundle は trivial なので、旧 generic plane section の degree $2d$ の障害は適用しない。
 一方、全域へ同じ非零 periodic generator を延長することは第\ref{gc:section}節によりできない。
+閉曲線全体の移行をWeinstein handlesだけで構成する方法は
+系\ref{tnc:no-weinstein-normal-transition}により排除される．
+曲線を切った場合は相対 $H_4$ が消えるが，新しい側面の接続を別に構成する必要がある．
 \item 新しい graph の cycles を nice global base 内で縮め、circle-valued label を変更する領域を作る。
 六次では構成済み block の Euler 数は $-4$、compact complement は $-512$ である。
 この値を特異 fibers の個数と同一視せず、complement の全層と接続を構成する。
@@ -343,6 +376,6 @@ M. Symington,
 \emph{Four dimensions from two in symplectic topology},
 Topology and Geometry of Manifolds, Proc. Sympos. Pure Math. \textbf{71} (2003), 153--208.
 \url{https://arxiv.org/abs/math/0210033}.
-Sections 4.2, 8.1.
+Sections 4.2, 8.1; Section 6.1, Lemma 6.3 and Theorem 6.5 の nodal trade．
 \end{thebibliography}
 \end{document}

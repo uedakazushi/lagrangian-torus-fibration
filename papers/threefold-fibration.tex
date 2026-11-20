@@ -9,10 +9,10 @@
 \usepackage{amsmath,amssymb,amsthm,mathtools}
 \usepackage{booktabs,tabularx,array,enumitem}
 \usepackage{xcolor,titlesec,fancyhdr}
-\usepackage{graphicx}
+\usepackage{graphicx,tikz}
 \graphicspath{{sections/threefold/local_blocks/}}
 \usepackage[unicode,colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
-\hypersetup{pdftitle={一般型三次元超曲面と境界を持たない Lagrangian fibration 第12稿},pdfauthor={研究ノート},pdfsubject={Trivial-normal symplectic curves・compact focus-hyperbolic blocks・intrinsic Cartan obstruction}}
+\hypersetup{pdftitle={一般型三次元超曲面と境界を持たない Lagrangian fibration 第13稿},pdfauthor={研究ノート},pdfsubject={Normal ballへの相対補完・相対円板群・大域接着の障害}}
 \definecolor{ink}{HTML}{18374A}
 \definecolor{accent}{HTML}{276B79}
 \titleformat{\section}{\large\sffamily\bfseries\color{ink}}{\thesection}{0.7em}{}
@@ -56,7 +56,7 @@
 {\LARGE\sffamily\bfseries\color{ink}一般型三次元超曲面と\\[0.3em]
 境界を持たない Lagrangian fibration}\\[0.8em]
 {\large $X_d\subset\PP^4$, $d\ge6$}\\[0.45em]
-{\small 第12稿：Trivial-normal curves と actual focus--hyperbolic blocks}\\[0.6em]
+{\small 第13稿：Normal ballへの相対補完と接着の障害}\\[0.6em]
 2026年11月21日
 \end{center}
 
@@ -72,7 +72,9 @@ Special algebraic member 上の curve を、smooth hypersurface family と Moser
 曲線方向の自由端も elliptic 成分もない fibration を作る。
 Whole focus--hyperbolic fibers は $(d-2)(d-5)$ 個、各 Euler 数は $-1$ である。
 六次では4個、block の Euler 数は $-4$、compact complement は $-512$。
-Normal faces と complement の fibration は未構成である。
+このblockを開近傍ごと固定し，normal ball全体へfibrationを延長する．
+Outer normal collarは標準toricで，新たにelliptic base boundaryが現れる．
+$V_0$への延長と境界を消す構成は未完成である．
 \item Actual focus 補集合の基本群 $\mathbb Z$ と，
 両側の境界包含が誘導する全整数 homology 写像を決定する．
 二次境界像の cokernel は $\mathbb Z/(d-2)$ であり，
@@ -80,6 +82,12 @@ normal face の三次基本類は補集合の位数 $d-2$ の torsion を生成�
 さらに $\Lambda=\mathbb Z[\tau,\tau^{-1}]$ 上の第二 homotopy 群を
 $\Lambda^{2g+1}\oplus\Lambda/((d-2)(\tau-1))$ と求める．
 $m$ 重巡回被覆の $H_2$ には $(\mathbb Z/(d-2))^{m-1}$ の torsion が現れる．
+\item Normal exteriorのsmooth round handle表示と，$V_0$ を保つ相対homotopy模型を求める．
+閉曲線との積の移行はどちら向きにもWeinstein cobordismにならない．
+Normal pairの相対円板群は $\Lambda B$，境界は
+$\partial(fB)=f(1)b+f'(1)a$ である．
+全補集合の相対円板群のcentral extensionは，curve relation
+$\prod_i[A_i,B_i]=(d-2)h$ により非分裂となる．
 \item 任意の smooth normal focus Cartan family は $2c_1(N)=0$ を要求する。
 固定 circle や splitting を外しても generic plane section の normal degree $2d$ は障害として残る。
 Boundary の squared determinant phase の総 winding は $4d$ である。
@@ -107,11 +115,13 @@ $m=1$ の正則性、$m=2$ の非退化 hyperbolic 型、$m>2$ の nonelliptic r
 \medskip
 \noindent\textbf{読み方。}
 本版の主結果は第\ref{tnc:section}節の trivial-normal symplectic curve と closed actual block である。
+第\ref{ncc:section}節にnormal ballへの相対補完，smooth handles，
+相対円板の関係とWeinstein・clean diskの障害をまとめる．
 Product construction の全証明は第\ref{fhr:section}節、
 元の曲線に対する intrinsic obstruction は第\ref{fnc:section}節、
 weighted collars の局所分類は第\ref{tcf:section}節にある。
 既存の正 normal shell、membrane families、fixed-collar caps と相対 pants は別の入力として保持する。
-局所部分は第\ref{lc:construction}--\ref{rs:section}節にあり、共通ソースから局所原稿 第10版も組版する。
+局所部分は第\ref{lc:construction}--\ref{rs:section}節にあり、共通ソースから局所原稿 第11版も組版する。
 曲面版第4稿は内容を変更せず同梱する。
 本文の存在主張は仮定を明記した直接証明に基づき、有限検算と区別する。
 
@@ -835,6 +845,7 @@ fiber は moment level 内にあり、$\omega$ の制限は quotient map によ�
 \input{sections/threefold/local_blocks/focus_hyperbolic_region.tex}
 \input{sections/threefold/local_blocks/trivial_normal_curve.tex}
 \input{sections/threefold/local_blocks/focus_exterior_topology.tex}
+\input{sections/threefold/local_blocks/focus_relative_filling.tex}
 \input{sections/threefold/local_blocks/twisted_focus_cap.tex}
 \input{sections/threefold/local_blocks/return_scaling.tex}
 
@@ -1026,15 +1037,31 @@ ironing coefficientsとconvex but not strictly convexなpotentialによる
 四次元 fishtail の補集合を利用する既知の構成には
 Akbulut \cite[Introduction]{akbulut-double-fishtail}が先行する．
 本稿はこの具体的な product 埋込みの gluing data を計算するものであり，
-所定の K\"ahler 形式に対する relative filling の存在や
-包括的な新規性を結論しない．
+任意のrelative fillingや包括的な新規性を結論しない．
+
+第\ref{ncc:section}節のnormal ballへの延長は，この位相計算とは別に
+標準symplectic形式のまま $H=|\psi_A(XY)|^2$ を作って証明する．
+標準nodal tradeはSymington \cite[Section~6.1, Lemma~6.3 and Theorem~6.5]{symington}
+に先行する．本稿は所定のwhole focus blockとそのcollarを固定する相対構成を明示する．
+Round handleの概念 \cite{asimov-round}，Weinstein index制限
+\cite[Section~1.1]{cieliebak-eliashberg-flexible-local}，
+relative crossed module \cite[Section~2]{brown-relative-pi2}，
+central extensionの分類 \cite[Section~2]{conrad-group-extensions}
+は標準理論を用いる．具体的なnormal pairでは
+$\pi_2(E,Y)=\Lambda B$，$\partial(fB)=f(1)b+f'(1)a$ となり，
+全補集合ではcurve relation $\prod_i[A_i,B_i]=eh$ が残る．
+これらの相対データの包括的新規性は未確認である．
 
 現在の最も直接的な出発点は、第\ref{tnc:section}節の closed trivial-normal curve $C'$ である。
 この曲線全体と full normal neighborhood を含む compact actual block を、任意の所定 $X_d$ に構成した。
 六次では genus-three curve と4個の rank-zero focus--hyperbolic fibers を持ち、
-曲線方向の自由端はなく、normal faces が残る。
-次に一つの normal face について、whole fibers、primitive periods、境界向き、
-actual embedding domain と非交差を同時に満たす対向領域を作る。
+曲線方向の自由端はない．Normal ballへの延長によりinner normal facesの接続は得たが，
+新たなelliptic faceとtoric outer collarが残る．
+次には $V_0$ 側との接続に加え，elliptic fibersの近傍自体を変更して
+境界のないbaseを得る構成が必要である．
+Whole fibers，primitive periods，境界向き，actual embedding domainと非交差を同時に照合する．
+閉曲線全体のnormal移行には相対 $H_4$ が残り，Weinstein cobordismによる実現はできない．
+曲線を切ればこの次数の障害は消えるが，新しい側面の接着は別問題である．
 全域で同じ periodic circle を維持することは第\ref{gc:section}節の制約に反するため、
 その延長がどこで失われるかも接続データに含める。
 
@@ -1053,7 +1080,7 @@ $m=1,2$ へ分散する方式でも、原点、他の faces、whole-fiber compon
 action offsets、coorientation、全 block の chart 内包含と既存 assembly との非交差が別途必要である。
 新しい $C'$ の block をこれらの完成や同一 assembly の一部とはしていない。
 
-大域化では、構成済み block の normal faces に加え、compact complement 全体を扱う。
+大域化では，構成済みnormal補完のelliptic faceと，管状補集合 $V_0$ 全体を扱う．
 六次の complement の Euler 数は $-512$ だが、これはその領域の位相的不変量であり、
 未構成の singular fibers の数ではない。
 第\ref{bct:section}節の nice-base 仮定の下で、graph cycles を全体の基底内で縮める必要がある。
@@ -1062,6 +1089,12 @@ action offsets、coorientation、全 block の chart 内包含と既存 assembly
 
 \appendix
 \section{検算の内容}
+
+\texttt{verification/verify\_focus\_relative\_models.py} は，Laurent多項式の
+有限標本に対する境界のevaluation/derivative表示，$(\tau-1)^2$ による整数除法，
+deck action，閉曲線と有境界曲線の相対K\"unneth公式および双対性を照合する．
+相対handleの幾何，crossed moduleと相対Hurewiczの仮定，symplectic補完の存在は
+第\ref{ncc:section}節の証明による．有限検算から大域fibrationやframing適合を結論しない．
 
 
 \texttt{verify\_focus\_normal\_and\_regions.py} は、punctured multigraph の連結性・頂点次数、

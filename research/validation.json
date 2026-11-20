@@ -1,108 +1,233 @@
 {
-  "date": "2026-11-20",
-  "engine": "LuaHBTeX 1.24.0 / TeX Live 2026",
+  "date": "2026-11-21",
+  "version": "1.9",
+  "scope": "Current verification status. Mathematical proof, independent reading, finite algebra, typesetting, publication novelty and repository saving are distinct.",
+  "engine": "LuaHBTeX 1.18.0 / TeX Live 2025/dev/Debian; user-local TeX packages and HaranoAji fonts",
   "manuscripts": [
     {
+      "source": "papers/threefold-blocks.tex",
+      "revision": 11,
+      "date": "2026-11-21",
+      "status": "built and selected new-section pages visually reviewed",
+      "pages": 190,
+      "source_sha256": "f5c88d9c1c6e482ae232ec7d5999593f2ba06f14aaefd4707a80e51d1c698414",
+      "pdf_sha256": "cd9fbd10c96429040ead3575f309b5cfb725d843b9d6aed93ab5eb210a125a52",
+      "pdf_tracked": false,
+      "synctex_generated": true,
+      "unresolved_references_or_citations": false,
+      "overfull_boxes": [
+        "Inherited 2.26894pt in exceptional_membranes.tex, lines 39-41; none in the new section."
+      ],
+      "visual_pages": [
+        173,
+        175,
+        176,
+        179,
+        180,
+        182,
+        183
+      ]
+    },
+    {
+      "source": "papers/threefold-fibration.tex",
+      "revision": 13,
+      "date": "2026-11-21",
+      "status": "built and selected new-section pages visually reviewed",
+      "pages": 211,
+      "source_sha256": "894cc49b01fb2528606700b26e70cdcb74a3aa3cfc196f94c89776cddc97b331",
+      "pdf_sha256": "93f5761af91515f566df3d281fd739d3d7e3df1c4d2d0edaebdb0ffa8cc0fc38",
+      "pdf_tracked": false,
+      "synctex_generated": true,
+      "unresolved_references_or_citations": false,
+      "overfull_boxes": [
+        "Inherited 2.26894pt in exceptional_membranes.tex, lines 39-41; none in the new section."
+      ],
+      "visual_pages": [
+        192
+      ]
+    }
+  ],
+  "unchanged_manuscripts": [
+    {
       "source": "papers/lagrangian-torus-fibration.tex",
-      "pages": 96,
-      "pdf_sha256": "d3c263b390c95550d4ac8f4444961e719bd756ef1e9be16c2068f4359f2bb197",
-      "unresolved_or_box_warnings": [],
-      "other_warnings": "Font substitution/scaling and PDF bookmark math warnings may remain."
+      "revision": 8,
+      "pages": 130,
+      "status": "Prior successful build record retained; not modified or rebuilt in this continuation."
     },
     {
       "source": "papers/meridian-surgery.tex",
       "pages": 18,
-      "pdf_sha256": "67a4d8cc3f5d45132b7a9b03f04d57da20b1df2d33b892d2f61e568ad34c2079",
-      "unresolved_or_box_warnings": [],
-      "other_warnings": "Font substitution/scaling and PDF bookmark math warnings may remain."
+      "status": "Prior successful build record retained; not rebuilt in this continuation."
     },
     {
       "source": "papers/quintic-integer-gluing.tex",
       "pages": 201,
-      "pdf_sha256": "ace41dc85be64daa59b1850d63239ae8a5d03eaf1d4af28ef017f302a272b2fa",
-      "unresolved_or_box_warnings": [],
-      "other_warnings": "Font substitution/scaling and PDF bookmark math warnings may remain."
+      "status": "Prior successful build record retained; not rebuilt in this continuation."
     },
     {
       "source": "papers/research-notes.tex",
       "pages": 65,
-      "pdf_sha256": "dd1b0172d639cd0e244a56d82459f68e26d558dc1dd8dce2565fe0023b09e406",
-      "unresolved_or_box_warnings": [],
-      "other_warnings": "Font substitution/scaling and PDF bookmark math warnings may remain."
-    },
-    {
-      "source": "papers/threefold-blocks.tex",
-      "pages": 2,
-      "pdf_sha256": "4344d44e39d1bdece90c41341fb61c017c82dc00d9c351966c5b518d0f735e34",
-      "unresolved_or_box_warnings": [],
-      "other_warnings": "Font substitution/scaling and PDF bookmark math warnings may remain."
+      "status": "Prior successful build record retained; not rebuilt in this continuation."
     }
   ],
-  "scope": "Build and representative-page visual checks; not independent mathematical validation.",
-  "certificate_runs": [
-    {
-      "name": "four-ray",
-      "exit_code": 0
-    },
-    {
-      "name": "five-node",
-      "exit_code": 0
-    },
-    {
-      "name": "central",
-      "exit_code": 0
-    },
-    {
-      "name": "axis",
-      "exit_code": 0
-    },
-    {
-      "name": "divisor",
-      "exit_code": 0
-    },
-    {
-      "name": "audit-four-ray",
-      "exit_code": 0
-    },
-    {
-      "name": "audit-five-node",
-      "exit_code": 0
-    },
-    {
-      "name": "audit-central",
-      "exit_code": 0
-    },
-    {
-      "name": "audit-axis",
-      "exit_code": 0
-    },
-    {
-      "name": "audit-divisor",
-      "exit_code": 0
-    }
-  ],
-  "visual_check": {
-    "sample": "First, middle and last pages of each manuscript (38 distinct pages across the three repositories).",
-    "result": "Reviewed rendered contact sheets; no visible clipping or overlap in sampled pages.",
-    "full_page_review": false
-  },
-  "vscode": "Settings parsed and root search limited to papers/*.tex. UI not tested.",
-  "current_math_audit_2026_11_20": {
-    "proven_in_current_manuscript": "For the closed normal-trivial curve degree e=d−2 in smooth X_d⊂P^4: H3 of tubular complement is Z^{b_d}⊕Z/e; explicit K_c deformation retract is S1∨S2; actual focus complement has H1=Z, H2=Z^{2g+2}, H3=Z^{b_d+2g+1}⊕Z/e, H4=Z^{2g+1}. Focus boundary is one-unipotent-monodromy torus bundle with integral Heisenberg π1, and the closed-curve face Betti numbers are (1,2g+2,4g+3,4g+3,2g+2,1). The focus base-boundary loop constructed by an explicit section is the primitive generator of ker(H1(∂U)→H1(U)); Mayer–Vietoris forces its image to generate H1(V)=Z (tnc:focus-boundary-primitive).",
-    "key_proofs": [
-      "papers/sections/threefold/local_blocks/trivial_normal_curve.tex#tnc:tubular-homology",
-      "tnc:focus-homotopy",
-      "tnc:actual-complement-homology",
-      "tnc:focus-boundary-homology",
-      "tnc:focus-boundary-betti",
-      "tnc:focus-boundary-primitive"
+  "current_mathematical_review": {
+    "proof_source": "papers/sections/threefold/local_blocks/focus_relative_filling.tex",
+    "independently_read": [
+      "Relative toric outer completion fixing the whole inner focus block and its neighborhood",
+      "Persistence of the elliptic half-space base germ for a compact-to-Hausdorff whole-fiber extension",
+      "Round handle and reversed attaching homotopy class; relative pushout under V0 and cofiber",
+      "Minimal product relative handle counts and the two-direction Weinstein obstruction",
+      "Normal relative crossed module, vanishing central extension class, relative Hurewicz action quotient and second-difference formula",
+      "Global relative disk central extension, curve relation and degree quotient",
+      "Normal Maslov marking and clean Lagrangian disk obstruction"
     ],
-    "independently_calculated": "Symbolic Euler formulas and finite substitutions d=6..10, including b3(X6)=520, g=3, actual complement free Betti (1,1,8,527,7,0) and torsion order 4; Wang Smith normal form of M−I= [[0,1],[0,0]] yielding no boundary torsion.",
-    "primary_source": "Oscar Randal-Williams, Monodromy and mapping class groups of 3-dimensional hypersurfaces, Math. Ann. 391 (2025), 1965-2003, §2.1, DOI 10.1007/s00208-024-02951-4, checked for integral cohomology of smooth hypersurface threefold X_d. Standard focus monodromy from the paper's existing cited Zung source.",
-    "scope_limits": "Higher H2/H3/π1 boundary inclusion homomorphisms, action periods, Maslov/whole-foliation matching, global relative filling and global threefold Lagrangian fibration remain open. Algebraic topology theorems do not prove their existence.",
-    "committed_regression": "verification/verify_ke_base_topology.py includes arithmetic consistency checks, but the exact latest GitHub version was not executed in this turn.",
-    "lualatex": "Full post-edit compilation has NOT been run in this turn; historical Work validation applies only to its earlier source snapshot.",
-    "git": "Main branch commits made; source-manifest will track current SHA-256 separately from Library original.",
-    "computational_checks": "Independent SymPy checks of Euler polynomial and ranks in degrees 6..10; Smith normal form of focus monodromy M-I=[[0,1],[0,0]] yields primitive rank-one image; no formal proof assistant. The latest GitHub Python regression and LuaLaTeX compilation were not executed."
-  }
+    "additional_direct_calculation": "Punctured-curve relative Kunneth formula; the side boundary is not included in the relative subspace.",
+    "prior_results_retained": "Actual focus exterior boundary maps, equivariant pi2, cyclic-cover H2 and surface short-circle averaging retain their existing proofs and prior independent-reading records. They were not all re-audited in this continuation.",
+    "unresolved": [
+      "Boundary-free global Lagrangian fibration of X_d",
+      "V0-side fibration and modification of internal elliptic neighborhoods",
+      "Full t action on individual curve-disk lifts and smooth attaching framings",
+      "Whole-fiber, action-period and coorientation compatibility on the new side boundaries after cutting C"
+    ],
+    "formal_proof_assistant": false,
+    "external_peer_review": false,
+    "comprehensive_novelty_verification": false
+  },
+  "current_computational_check": {
+    "command": "python3 verification/verify_focus_relative_models.py --json",
+    "arithmetic": "exact integer; Python standard library only",
+    "laurent_boundary": {
+      "boundary_convention": "(a,b)=(f'(1),f(1)); tau acts by (a+b,b)",
+      "coefficient_values": [
+        -1,
+        0,
+        1
+      ],
+      "deck_action_checks": 1701,
+      "deck_power_range": [
+        -3,
+        3
+      ],
+      "exact_divisions_after_canonical_remainder": 243,
+      "exponent_range": [
+        -2,
+        2
+      ],
+      "kernel_samples": 7,
+      "samples_checked": 243
+    },
+    "not_checked": [
+      "round-handle decomposition or attaching framings",
+      "relative Hurewicz hypotheses and crossed-module topology",
+      "symplectic or Lagrangian disk/handle realization",
+      "existence of a Weinstein structure after puncturing",
+      "global Lagrangian fibration or boundary-free completion"
+    ],
+    "relative_product_betti": {
+      "closed_curve_cases": 15,
+      "degree_range": [
+        6,
+        20
+      ],
+      "puncture_range": [
+        1,
+        4
+      ],
+      "punctured_curve_cases": 60,
+      "sextic_examples": {
+        "closed_inner_relative_betti": {
+          "2": 1,
+          "3": 7,
+          "4": 7,
+          "5": 1
+        },
+        "closed_outer_relative_betti": {
+          "1": 1,
+          "2": 7,
+          "3": 7,
+          "4": 1
+        },
+        "one_boundary_circle_outer_relative_betti": {
+          "1": 1,
+          "2": 7,
+          "3": 6
+        }
+      }
+    },
+    "scope": "Finite algebra checks of stated models; not proofs of geometric identifications.",
+    "status": "passed"
+  },
+  "retained_checks": {
+    "scope": "Previously executed exact certificate suites; not rerun as a whole in this continuation. Original reproducible scripts and certificates remain in verification/.",
+    "certificate_runs": [
+      {
+        "name": "four-ray",
+        "exit_code": 0
+      },
+      {
+        "name": "five-node",
+        "exit_code": 0
+      },
+      {
+        "name": "central",
+        "exit_code": 0
+      },
+      {
+        "name": "axis",
+        "exit_code": 0
+      },
+      {
+        "name": "divisor",
+        "exit_code": 0
+      },
+      {
+        "name": "audit-four-ray",
+        "exit_code": 0
+      },
+      {
+        "name": "audit-five-node",
+        "exit_code": 0
+      },
+      {
+        "name": "audit-central",
+        "exit_code": 0
+      },
+      {
+        "name": "audit-axis",
+        "exit_code": 0
+      },
+      {
+        "name": "audit-divisor",
+        "exit_code": 0
+      }
+    ],
+    "threefold_suite_status_file": "research/threefold-validation.json",
+    "focus_exterior_command": "python3 verification/verify_focus_exterior_topology.py --json"
+  },
+  "build_method": {
+    "commands": [
+      "latexmk -norc -r .latexmkrc papers/threefold-blocks.tex",
+      "latexmk -norc -r .latexmkrc papers/threefold-fibration.tex"
+    ],
+    "dependencies": [
+      "LuaLaTeX format",
+      "LuaTeX-ja and Japanese outline font",
+      "TikZ/PGF",
+      "standard LaTeX mathematics packages",
+      "latexmk"
+    ],
+    "output_directory": "build/",
+    "new_section_overfull_boxes": false,
+    "bitmap_type3_fonts": 0,
+    "vscode_ui_tested": false
+  },
+  "primary_sources_checked": [
+    "Symington, arXiv:math/0210033, section 6.1, Lemma 6.3 and Theorem 6.5",
+    "Cieliebak-Eliashberg, arXiv:1305.1635, section 1.1, pp.2-3",
+    "Brown, JLMS (2) 22 (1980), 146-152, author PDF section 2",
+    "Conrad, Group cohomology and group extensions, section 2",
+    "Hatcher, Algebraic Topology, Propositions 0.18-0.19 and Theorems 4.37,4.57",
+    "Asimov, Annals 102 (1975), 41-54: official bibliography only; the handle decomposition used here is proved directly"
+  ],
+  "repository_status": "The git commit history and remote main are authoritative for saving; no prediction of successful push is encoded in this file."
 }

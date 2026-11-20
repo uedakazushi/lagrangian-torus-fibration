@@ -1,5 +1,5 @@
 # 研究ノートの入口
-更新：2026-11-21 / v1.8 / 曲面改訂8・三次元局所稿10・全体稿12
+更新：2026-11-21 / v1.9 / 曲面改訂8・三次元局所稿11・全体稿13
 
 詳細な現行ノートは `papers/research-notes.tex`（曲面第25版、65頁）に移行した。証明を短い要約で置き換えない。
 
@@ -257,7 +257,7 @@ d\binom{d-3}{2}+d\binom d2=d(d^2-4d+6)=c_2(X_d).
 **目標の新規性の正確な位置**：smooth general type X_d⊂P^4, d≥6, 指定ω=aHについて、全regular T^3 fibersがLagrangianで、明示されたsingular local modelsをもち、全X_dを覆い、境界なし、連結fiber、Hausdorff baseとなるglobal mapを構成する。Mikhalkinのtopological fibrationとLeung–Wanの部分的special性より強い。しかし「初めての一般型torus fibration」「一般型のLagrangian torusが未知られ」などの主張は誤り。新規性の網羅的な保証は未完了。より弱いgeneral singular setを許しても大域存在を優先する。現在未完成の相対filling、curvature-flat normal lifts、reduced surfaceの両端葉層一致、actual coverageの証明を必要とする。
 
 ## 三次元：局所稿の参照先
-`papers/threefold-blocks.tex`第25・33節：positive normal shell、membrane/focus collars。第26節：smooth focus Cartanとnormal degreeの障害。第34–35節：compact focus blockとnormal-trivial closed curve。第36節：actual補集合の境界写像・equivariant π₂・巡回被覆。第37節：weighted collars。旧48 portsの接着、normal facesを保つ補集合上のLagrangian fibrationと大域boundary-free接着は未完成。全体稿は `papers/threefold-fibration.tex`。
+`papers/threefold-blocks.tex`第25・33節：positive normal shell、membrane/focus collars。第26節：smooth focus Cartanとnormal degreeの障害。第34–35節：compact focus blockとnormal-trivial closed curve。第36節：actual補集合の境界写像・equivariant π₂・巡回被覆。第37節：normal ballへの相対補完・relative handlesとdisk group・接着の障害。第38節：weighted collars。Normal exterior Eのfibrationは構成済み。旧48 ports、V₀への延長、elliptic faceを消すboundary-free接着は未完成。全体稿は `papers/threefold-fibration.tex`。
 
 ## 人工的基底計量の鋭い収束速度と幾何学的比較の核心
 $p_T:B_d(T)\to\mathcal C_d$ に補助piecewise Euclidean metric $h$ を固定し、$|v|_\varepsilon^2=|dp_T(v)|_\square^2+\varepsilon^2|v|_h^2$ の内在距離を考える。graph correspondenceのdistortion $\mathcal D_\varepsilon$ は、$d=5$ で $\Theta(\varepsilon^2)$、$d\ge6$ で $\Theta(\varepsilon)$ と鋭く決まる（主原稿に読み込む base_topology.tex の topo:metric-collapse-sharp）。$d\ge6$ の下界は同一fiber内の正の $h$-距離に由来するが、**GH距離の下界ではない**。
@@ -304,9 +304,31 @@ H_4(\mathcal V)=\mathbb Z^{2g+1}.
 
 **再現と先行研究：** `python3 verification/verify_focus_exterior_topology.py --json` は17個のSmith algorithm自己照合、d6–20の60境界行列、m1–12の180被覆関係行列と180群環coinvariant行列を整数演算で確認する。一般の式は原稿の証明による。Auroux arXiv:0706.3207 §5.1のnodal model、Akbulut arXiv:1103.3137v2 Introduction/Figure 1のS⁴のfishtail分解、Hatcher Theorems 4.32/4.41・Example 4.45を一次資料で確認した。既知の模型・道具と今回の具体計算を区別し、包括的新規性は未確認。
 
-**残る構成：** EとV₀の相対handleを境界表とΛ-moduleに適合させ、a,bを殺してtを残す部分とe(τ−1)hの関係を幾何学的に実現する。その上でMaslov・作用周期・unipotent monodromy・whole boundary foliationを同時に照合する。位相的条件は必要条件であり、relative fillingと三次元大域fibrationは未完成。
+## 三次元：normal補完と相対円板の現在の知識
+
+証明は `papers/sections/threefold/local_blocks/focus_relative_filling.tex` に集約する。
+
+**Positive construction。** `ncc:normal-ball-completion` は、K_c⊂int D⁴の余裕 a_*²+4π²(c+√q₊)²<L²を使い、商平面上のcompactly supported flowでψ_Aを作る。Inner blockを含むfilled diskではw−c、outer collarではidentityであり、H=|ψ_A(XY)|²はAとPoisson可換になる。ψ_A自体にsymplectic性を要求しない点が重要。全fiberの連結性とĜ⁻¹(R)=K_cは各reduced sliceのdiffeomorphism性から従う。C′との積は既存focus–hyperbolic fibersを保存する。商座標の図はintegral-affine図ではない。
+
+**大域化の障害。** H=0は真のelliptic faceであり、そのwhole T² fiberと近傍のpartitionをcompact X_d上で保つと半空間germが残る（`ncc:elliptic-face-limitation`）。外側S³への接着だけでこのgermを消すことはできない。これはnormal exteriorのfibrationが存在するという成果と、境界のないglobal baseの未完成を分ける点である。
+
+**相対handles。** Eはouter S³からHopf linkに沿う一つのround 1-handleで得られ、ordinary 1+2 handlesへ分けられる。逆向きは2+3で、唯一の2-handleのbased attaching wordはwhiskerと向きでbにできる。Knot isotopyやframingの自由な選択は主張しない。V≃V₀∪_i(C′×(S¹∨S²))はV₀からの写像を保ち、i=f_e∘q、q:C′→S²、[f_e]=e hである。CofiberはwedgeだがV自体はV₀とのwedgeではない。Curve 2-cell×normal 1-cellがe(τ−1)hの関係を担う。
+
+C′×Eのouter側のminimal relative handle数は(1,2g+1,2g+1,1)、index1–4。H₄=Z、reverseではH₅=Zのため、どちら向きにも全二境界を保つWeinstein cobordismにならない（`tnc:no-weinstein-normal-transition`）。C°のboundary componentsがr≥1ならouter relative Betti数はindex1–3で(1,2g+r,2g+r−1)となる。これは側面∂C°×Eをrelative subspaceに含めない計算であり、puncture後のWeinstein構造の存在は未証明。
+
+**Normal disk module。** `tnc:normal-relative-disk-module` はπ₂(E,Y)=ΛB、∂(fB)=f(1)b+f′(1)a、sphere subgroup=(τ−1)²ΛBを与える。Bは適切に選んだ唯一のreverse 2-handleのcore。任意のb-capではなく、B+(τ−1)²gBは係数がunitでなければΛ-basisにならない。Yの誘導被覆T²×RでFが実際のsolid torusで埋まるためcentral extension classは零。AbeliannessとPeiffer identityが境界kernelの作用を消し、一般relative Hurewiczで必要な作用quotientを正当化する。ν_relは旧sphere generatorとunit ±τⁿだけ異なり、marked orientationとの同一視は別途指定する。
+
+**Curve disksの非可換関係。** `tnc:relative-disk-central-extension` でπ₂(V,∂U)はM=π₂(V)によるπ₁(C′)×Z²のcentral extensionとなり、∏[A_i,B_i]=e h。Curve diskを変更してもcommutator積は変わらず、t作用との整合性がe(τ−1)h=0を再現する。Hyperplane degree ℓでMをZへ押し出すとEuler数eのcircle bundle P_eのπ₁とZ²の積になる。全三次元pairの各curve diskへのt作用、embedded disksとsmooth framingはまだ決定していない。∂UはLagrangianでないので相対群全体へsymplectic areaを定義しない。Sphere subgroupではarea=aℓ、c₁=(5−d)ℓ。
+
+**Clean diskの制約。** Ω=dX∧dYについてμ(a)=0, μ(b)=2（`ncc:normal-maslov-marking`）。Normal C²内のLagrangian diskがregular torusと境界でcleanに交わるなら、境界ma+nbはn=0かつmA=0。逆向き2-handleのword b+kaをこの種のcoreで実現する案は使えない。Elliptic collapseのtransverse diskはsymplecticなので矛盾しない。Curve方向へ動くdiskやnonclean/singular diskの非存在には拡張しない。
+
+**一次資料と位置づけ。** M. Symington, *Four dimensions from two in symplectic topology*, Proc. Sympos. Pure Math. 71 (2003), 153–208, arXiv:math/0210033, §6.1 Lemma 6.3 / Theorem 6.5は標準nodal trade。D. Asimov, *Round handles and non-singular Morse–Smale flows*, Ann. of Math. 102 (1975), 41–54, DOI 10.2307/1970972はround handleの出典（公式書誌を確認、本稿のhandle分解は直接証明）。K. Cieliebak–Y. Eliashberg, *Flexible Weinstein manifolds*, arXiv:1305.1635, §1.1 pp.2–3はisotropic stable manifoldsとindex制限。R. Brown, JLMS (2) 22 (1980), 146–152, DOI 10.1112/jlms/s2-22.1.146, [author PDF](https://www.groupoids.org.uk/pdffiles/whiteheadthm.pdf) §2はrelative crossed module。B. Conrad, [Group cohomology and group extensions](https://math.stanford.edu/~conrad/210BPage/handouts/gpext.pdf), §2はH²によるcentral extension分類。Hatcher *Algebraic Topology*, Props.0.18–0.19、Thms.4.37,4.57はhomotopy pushout、relative Hurewicz、cohomology表現。これらの道具自体と本研究の具体計算を区別し、包括的新規性は未確認。
+
+**次の着手。** Toric outer collarとV₀側を接続し、内部elliptic faceの近傍を変える。C′を有境界曲面へ切る案では、上のH₄障害を除いた後に側面のwhole fibers・action periods・coorientationを定める。Normal diskの二階差分とcurve relationを保ち、global circle actionの障害を避けるgenerator変更領域が必要である。
 
 ## 検証
-今回の相互点検対象は、新節のHopf商・normal exterior・全境界写像・equivariant π₂・有限巡回被覆と、曲面主稿のshort-circle averagingおよびimage bufferである。原稿の証明と独立点検を行い、上記の整数行列検算を実行した。これを既存大域接着全体の独立監査、外部査読、形式証明とは扱わない。既存のKE局所解析・closed-corner GH・fiber保存の証明と点検記録は保持し、今回は全体を再監査していない。
+今回の相互点検対象はnormal ballへの明示的補完、elliptic base germ、round handlesとrelative pushout、normal relative crossed module、全補集合のcentral extension、Weinsteinおよびclean normal diskの障害である。原稿の証明と独立点検を行った。既存の補集合位相・short-circle averaging・KE局所解析の証明と点検記録は保持するが、大域接着全体を再監査したものではない。
 
-曲面主稿130頁、三次元局所稿179頁、三次元全体稿201頁を2026-11-21にLuaLaTeXとlatexmkで組版した。参照・引用の未解決はなく、追加した三次元の節と曲面の補題・系はPDFを画像化して表示も点検した。他の原稿と保存済みの検算suite全体は今回再実行していない。保存済みverification/の旧証明書は今回の実行結果ではない。計算は解析的symplectic gluingや新規性の証明を代替しない。
+`python3 verification/verify_focus_relative_models.py --json` を実行し、243 Laurent多項式の境界・整数除法、1,701 deck作用、15 closed-curveと60 punctured-curveのKünneth計算を正確な整数演算で確認した。有限代数検算は相対Hurewiczの仮定・handle geometry・symplectic補完の証明を代替しない。外部査読と形式証明は未実施。
+
+2026-11-21に三次元局所稿190頁・全体稿211頁をLuaLaTeXとlatexmkで組版し、未解決の参照・引用がないことを確認した。新節の代表頁と図はPDFを画像化して表示を点検した。曲面主稿改訂8の130頁は保持した組版記録で、今回再組版していない。既存節の2.27ptのOverfull警告一件は残るが、新節にはない。GitHub反映は組版と別に確認する。
