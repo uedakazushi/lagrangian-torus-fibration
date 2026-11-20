@@ -29,3 +29,18 @@ LuaLaTeXで幾何96頁、整数接着201頁、局所置換18頁、ノート65頁
 元bundleの検算15本はすべて成功した。うち三次元13本は `python3 verification/run_threefold_checks.py` で再実行できる。
 
 LuaLaTeXで局所稿166頁・全体稿187頁を生成し、最終ログで未解決の参照・引用がないことを確認した。
+
+## 曲面v4の検算の回収
+
+三次元研究継続用bundle第10版の `surface_v4/` を照合した。相対Moserと輸送の現行の参照先は `papers/sections/paper/global_gluing.tex`、整数鎖収縮と六次のPetersenリンクは `base_topology.tex`。旧稿の具体例を再現する二つの検算コードは `verification/surface_v4/` に収録した。五次の50節点・交点回避・面積・境界の検算と、次数5–12の構成データの検算が正常終了した。
+
+再実行するには、リポジトリ直下から以下を実行する。
+
+```sh
+mkdir -p build/surface-v4-checks
+cp verification/surface_v4/*.py build/surface-v4-checks/
+python3 build/surface-v4-checks/verify_data.py
+python3 build/surface-v4-checks/verify_general_degree.py
+```
+
+旧曲面稿の全証明の逐条照合は継続課題。
