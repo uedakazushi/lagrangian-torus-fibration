@@ -125,6 +125,22 @@ def check_petersen_factorizations():
     print("K6: 15 matchings, 6 one-factorizations, one S6 orbit, "
           "stabilizer order 120 PASS")
 
+
+def check_threefold_euler_budget():
+    """Check Chern/Euler and complement subtraction; not a fibration existence test."""
+    for d in range(6, 13):
+        euler_threefold = d * (10 - 10*d + 5*d*d - d**3)
+        local_block = -(d - 2) * (d - 5)
+        complement = euler_threefold - local_block
+        negative_complement = d**4 - 5*d**3 + 9*d*d - 3*d - 10
+        assert complement == -negative_complement
+        assert negative_complement > 0
+        assert (d - 2) * (d - 5) % 2 == 0
+        if d == 6:
+            assert (euler_threefold, local_block, complement) == (-516, -4, -512)
+        print(f"d={d}: chi(X)={euler_threefold}, chi(U)={local_block}, "
+              f"chi(V)={complement} PASS")
+
 def main():
     for d in range(5, 9):
         e, f, b1, b2 = lagrangian_base(d)
@@ -138,6 +154,7 @@ def main():
         print(f"d={d}: B=(V={d}, E={e}, F={f}, b1={b1}, b2={b2}), "
               f"C=(V={v_c}, E={e_c}, F={f_c}, b1={h1}, b2={h2}) PASS")
     check_petersen_factorizations()
+    check_threefold_euler_budget()
     print("Finite mod-p checks and exact K6 enumeration passed; "
           "general proof and metric collapse are in the manuscripts.")
 
