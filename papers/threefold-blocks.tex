@@ -1,0 +1,106 @@
+% LuaLaTeX, run "latexmk" in repository root
+\documentclass[a4paper,11pt]{ltjsarticle}
+\usepackage[margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage[unicode,colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\theoremstyle{plain}
+\newtheorem{proposition}{命題}[section]
+\newtheorem{lemma}[proposition]{補題}
+\theoremstyle{definition}
+\newtheorem{definition}[proposition]{定義}
+\newtheorem{conjecture}[proposition]{予想}
+\theoremstyle{remark}
+\newtheorem{remark}[proposition]{注意}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\T}{\mathbb T}
+\DeclareMathOperator{\Ric}{Ric}
+\title{一般型三次元超曲面のclosed-curve Lagrangian blocks\\focus--hyperbolic fibersと大域接着の障害}
+\author{}
+\date{2026年11月20日 / GitHub移行用再構成草稿 v0.1}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+一般型三次元超曲面$X_d\subset\PP^4$（$d\ge6$）上に
+closed symplectic curveを埋め込み、そのfull normal neighborhoodで
+Lagrangian $\T^3$-blockを作る研究を整理する。
+2026年10月28日付第9版（166頁）の原PDFに局所構成が記録される。
+本再構成稿はその完全な証明ソースの転記ではない。
+normal faces、complement、およびboundary-free global fibrationは未完成である。
+\end{abstract}
+\section{設定と幾何学的入力}
+\begin{proposition}
+滑らかな超曲面$X_d\subset\PP^4$の標準束は
+\[
+ K_{X_d}=\mathcal O_{X_d}(d-5)
+\]
+である。$d\ge6$なら$X_d$は一般型である。
+\end{proposition}
+\begin{proof}
+$K_{\PP^4}=\mathcal O_{\PP^4}(-5)$と
+adjunction formulaから従う。
+\end{proof}
+\begin{lemma}
+$\PP^2$内の次数$q$の滑らかな平面曲線$C_q$の種数は
+$g(C_q)=(q-1)(q-2)/2$である。
+従って$q=d-2$なら$g=(d-3)(d-4)/2$である。
+\end{lemma}
+\begin{proof}
+adjunctionにより$K_{C_q}=\mathcal O_{C_q}(q-3)$、
+ゆえに$2g-2=q(q-3)$。
+\end{proof}
+\section{Closed symplectic curve}
+元原稿には、任意のsmooth $X_d$と指定Kähler formについて
+degree $d-2$、genus $(d-3)(d-4)/2$を持つ
+closed symplectic curve $C'\subset X_d$を、
+symplectically trivial normal bundleとともに構成する議論がある。
+Special algebraic member上のplane curveからsmooth familyに沿って
+Moser transportするため、固定のsymplectic formとの整合が重要となる。
+単に上のgenus calculationだけではnormal trivialityは従わない。
+\begin{remark}
+generic plane sectionのnormal degreeは元原稿では$2d$と計算され、
+smooth focus Cartan familyを単純に接続する方法への障害となる。
+必要なのはnormal degreeを零にできる特別な曲線である。
+\end{remark}
+\section{Local $\T^3$-fibration}
+元原稿のlocal modelでは閉曲線全体とfull normal neighborhoodを含む
+actual blockに$\T^3$-fibrationを構成し、whole focus--hyperbolic fibers
+の個数を
+\[
+ N_{\mathrm{fh}}=(d-2)(d-5)
+\]
+とする。$d=6$の場合$N_{\mathrm{fh}}=4$である。
+\begin{proposition}
+上式から$d\ge6$で$N_{\mathrm{fh}}>0$かつ
+$N_{\mathrm{fh}}=d^2-7d+10$である。
+\end{proposition}
+\begin{proof}
+二次式を展開する。両因子は$d\ge6$で正である。
+\end{proof}
+ここに含まれる命題は数値式の算術的帰結に限る。
+個々のwhole fiberが実際にLagrangianであるという幾何学的な証明は
+原PDFに依存し、今回の再構成稿では再確認していない。
+\section{Global completionへの障害}
+求めるのはfree codimension-one boundaryを持たないbranched base上の
+global fibrationである。局所blockのnormal faces、positive normal shell、
+relative caps、complementを、prescribed symplectic formを変えずに
+whole fibersを保持しつつ接続しなければならない。
+\begin{conjecture}
+closed-curve local blockに対し、normal facesとcomplementの
+Lagrangian fibersを整合させ、境界なしの全$X_d$上の
+branched $\T^3$-fibrationへ拡張できる。
+\end{conjecture}
+既存草稿の48 regular portsの旧接続案、area/Maslov constraints、
+boundary windingはこの予想に対する有用な障害と検算である。
+local blockの存在だけからglobal statementを導くことはできない。
+Strict tropical atlas、special Lagrangian性、Kähler--Einstein collapse
+の対応もこの再構成稿の結論ではない。
+\section{最優先の検証}
+元PDF第9版の閉曲線構成、normal triviality、whole-fiberの
+symplectic transportを一つずつ再現する。
+次にnormal facesとcomplementについて、作用座標・
+monodromy・Maslov indexをそろえた接着を構成する。
+
+\end{document}
