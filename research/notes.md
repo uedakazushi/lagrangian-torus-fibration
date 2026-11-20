@@ -1,14 +1,28 @@
 # 研究ノートの入口
-更新：2026-11-20 / v1.4
+更新：2026-11-20 / v1.5
 
 詳細な現行ノートは `papers/research-notes.tex`（曲面第25版、65頁）に移行した。証明を短い要約で置き換えない。
 
+## 全深部三重点の actual semi-flat 比較と閉corner
+任意の固定次数 d≥5 の一般位置全平面退化で、三重点の全深度比・全角度に一様な actual KE 比較を証明した。正確な座標 ζ0ζ1ζ2=t、ell_i=−log|ζ_i|²、L=−log|t|²、R=log L とし、k_Lをlogarithmic simplex上のcomplete toric KE form、その実計量をg_L^sfとする。十分大きい固定m1と各qのCqについて、m≥m1、min ell_i≥mで
+\[
+\left|\log\frac{\omega_t^2}{k_L^2}\right|\le C/m,\qquad
+\|g_t-g_L^{sf}\|_{C^q}\le C_q/m.
+\]
+定数は固定dと族に依存してよい。次数一様性は主張しない。証明の正本はKE主稿 `coarse:thm:full-triple-tensor`。
+
+固定toric模型の存在・完備性にはZhang (2015), §2.1, Theorem 2.1 / Proposition 2.2を用いる（退化族のTheorem 2.4とQ-factorial仮定は使わない）。ψ_L=log L−Σlog ell_iに対してψ_L−(log3)/2≤φ_L≤ψ_L、V_L/3≤k_L²≤V_Lを内外にずらした障壁で証明する。Complete模型から三つの半平面へのYau Schwarz lemma、determinant比較、内部正則性により一様cusp geometryを得る。凸性からfacet shiftのlog-density差をO(1/min ell)とし、actual計量を内外のsimplex KE metricsでvolume比較する。Savinの小摂動定理でtensor・全高階誤差へ移る。Actual metric bufferや(TC)/(PBE)を前提としない。
+
+Actual側の大域入力は `coarse:cor:degree-d-volume-lower`。Adjunction residueでcanonical densityを固定し、backgroundによるHermitian frame errorの吸収と各正のcap方向のminorから六型のdeterminant下界を証明する。Sourceでは元のplane coordinatesを保つexact xy=tzとrescalingにより二つのcap係数≥c_d/Lを使う。Compact minimum原理からactual volume下界を得る。今回この依存部分も再点検して明示化した。
+
+Lagrangian主稿 `ke:actual-closed-corner` により、m=Rでは三枚の閉square全体を一つのactual Lagrangian torus bundleで実現できる。全fiberのintrinsic/ambient diameterはO(1/R)、R^−2 g_tに正規化後はO(1/R²)、raw cubical mapとの誤差はO(log R/R)。Squareの継目でもfiberはregular T²であり、既存大域fibrationのsource・branch・coreのsingular fibersと同定したわけではない。閉corner全体の鋭い距離のGH同定、大域相対接着とshortcut制御は残る。新規性の網羅的確認と外部査読・形式証明は未実施。
+
 ## 開正方形上のactual KE–Lagrangian collapse
-主稿の `papers/sections/paper/ke_open_cell_collapse.tex` に、五次族のactual KE計量に対する局所結果を加えた。関連KE主稿 `coarse:cor:open-square-tensor` は、三重点独立深度 a,b∈[L^η/2,2L^(1−η)]、0<η<1/2 上のproduct-cusp比較を全固定階で O(L^(−η/4)) と証明する。依存するのは既存のglobal capped volume下界と、明示的な上下KE barriers、Savin (2007), Theorem 1.3であり、(TC)_5や(PBE)_5を追加仮定しない。
+主稿の `papers/sections/paper/ke_open_cell_collapse.tex` に、任意の固定次数d≥5のactual KE計量に対する局所結果を置く。関連KE主稿 `coarse:cor:open-square-tensor` は、三重点独立深度 a,b∈[L^η/2,2L^(1−η)]、0<η<1/2 上のproduct-cusp比較を全固定階で O(L^(−η/4)) と証明する。依存するのは既存のglobal capped volume下界と、明示的な上下KE barriers、Savin (2007), Theorem 1.3であり、(TC)_5や(PBE)_5を追加仮定しない。
 
 `ke:open-cell-moser-c1` は平均化のprimitiveとMoser場のC1 normをO(L^−η)とし、flowのpullback metricを制御する。`ke:open-cell-collapse` はKη=[η,1−η]²上のactual KE–Lagrangian T² fibrationを構成し、fiberのintrinsic/ambient diameter O(L^−η)、raw mapとの誤差O(1/R)を与える。Moser像領域に内在長さ距離を入れると、R^−2 g_tは平坦KηへGH収束し、projection distortionはO(L^(−η/4)+L^−η/R)。これらの証明と一次資料の適用条件を今回点検した。一般的新規性は未確認。
 
-これは固定ηの局所定理である。曲面全体のambient shortcut、η→0での一様性、全閉corner、source・branch・coreのsingular fibersとの接着、既存の大域fibrationとの同定は未解決。一般次数d≥5への適用には対応するglobal capped volume下界を明示的に確認する必要がある。
+開正方形のGH結論は固定ηの局所定理である。全閉cornerのfiber構成は上記の系で解決したが、η→0での鋭い距離の一様性、曲面全体のambient shortcut、source・branch・coreのsingular fibersとの接着、既存の大域fibrationとの同定は未解決。
 
 ## 負KE計量のGH極限とfiber収縮（2026-11-20）
 
@@ -41,7 +55,7 @@ KE研究の `papers/cubical-gh-limit.tex` では $R_t=\log(-\log|t|^2)$、$\math
 
 これらは条件と証明を今回点検した局所結果である。Averaging–Moserの基本方法はRuan, arXiv:math/0309177v2, §3に先行し、一般的新規性は未確認。H-minimal/special Lagrangian性、大域接着、singular fibersの計量評価は結論しない。
 
-**解析入力の区別：** 関連KE主稿の `coarse:prop:density-counterexample` により、負KE計量であってもbounded volume densityから一様tensor比較は導けない。五次coarse metric packageには独立な $(\mathrm{TC})_5$ が必要であり、その無条件な検証は未完成である。これは対象compact familyの反例ではない。本稿の局所応用でもfull-orbit moving tensor比較を未証明の仮定として保持する。
+**解析入力の区別：** 関連KE主稿の `coarse:prop:density-counterexample` により、負KE計量であってもbounded volume densityから一様tensor比較は導けない。五次coarse metric packageには独立な $(\mathrm{TC})_5$ が必要であり、その無条件な検証は未完成である。これは対象compact familyの反例ではない。全深部三重点のfull-orbit moving tensor比較は全固定d≥5で検証した。Source等を含むexterior全体への拡張は未解決である。
 
 ### Averaging–Moserの先行研究
 W.-D. Ruan, *H-minimal Lagrangian fibrations in Kähler manifolds and minimal Lagrangian vanishing tori in Kähler–Einstein manifolds*, arXiv:math/0309177v2, https://arxiv.org/abs/math/0309177v2 。§3 Proposition 3.1はpotentialのtorus平均、Lemma 3.3はHamiltonian-gradient flowを扱い、Theorem 3.1はhomothetic toric potentialと一様 $C^\infty$ quasi-isometryの下でH-minimal fibrationを構成する。Theorem 4.2はsimple toroidal canonical degenerationの最大退化点へ消えるminimal torusの存在を示す。

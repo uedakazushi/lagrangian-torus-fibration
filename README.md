@@ -1,6 +1,6 @@
 # Lagrangian torus fibrations
 
-**2026-11-20 / v1.4：五次の開正方形上でactual KE–Lagrangian collapseを証明。** [主稿](papers/lagrangian-torus-fibration.tex)の `ke:open-cell-collapse` は、関連KE稿の明示barrier＋Savinによるtensor漸近を用い、固定Kη=[η,1−η]²上でfiber intrinsic diameter O(L^−η)、raw-map誤差O(1/R)、内在距離で平坦KηへのGH収束を与える。全曲面のshortcut、全閉corner、singular fibersと既存大域fibrationの接着は未解決。証明・適用条件を点検し、新規性は未確認。現行改訂はLuaLaTeX基本資産不足により未組版。
+**2026-11-20 / v1.5：全固定次数d≥5で三重点のactual KE–Lagrangian fibersを構成。** [主稿](papers/lagrangian-torus-fibration.tex)の `ke:actual-closed-corner` は、complete simplex KE模型との解析比較を用い、三枚の閉square全体を一つのtorus bundleで実現する。m=Rならfiber intrinsic/ambient diameter O(1/R)、正規化後O(1/R²)、raw-map誤差O(log R/R)。`ke:open-cell-collapse` は開正方形の固定compact部分で内在距離の平坦長方形へのGH収束も与える。大域shortcut、singular fibersと既存fibrationへの接着、閉corner全体の鋭い距離同定は未解決。新規性は未確認。現行改訂はLuaLaTeX基本資産不足により未組版。
 
 
 曲面側の第25版ソースを回収し、全文原稿と必要な検証資産を移行した。
@@ -22,7 +22,7 @@
 
 **現行の数学的到達点：** [基底の位相・人工計量](papers/sections/paper/base_topology.tex)ではKE候補へのcell-like写像、次数5と6以上で異なる収縮速度、portal/no-shortcut条件と反例を証明。[三次元局所稿](papers/threefold-blocks.tex)ではnormal-trivial曲線とfocus–hyperbolic blockの構成に加え、**小さい管状補集合**の整数ホモロジーをLefschetz–Thom列から計算した（六次ではH₃にZ/4 torsion）。**実際のfocus blockの補集合**も整数homologyを計算し、六次では H₁=Z、H₂=Z⁸、H₃=Z⁵²⁷⊕Z/4、H₄=Z⁷ と得た。管状補集合とのfree rankの違いも説明した。Focus normal faceはunipotent torus bundleで基本群は整数Heisenberg群、六次closed-curve faceのBetti数は(1,8,15,15,8,1)。Focus基底の境界を回るloopはH₁(U)では消えるがH₁(V)=Zの原始生成元へ写ると証明した。**higher homology・基本群の境界包含写像、relative fillingとglobal Lagrangian接着は未解決**。補集合のEuler数は六次で−512だが、孤立非零Euler fiberが全て−1という仮定なしに「512個必要」とは主張しない。
 
-**局所Lagrangian collapseへの前進（2026-11-20 / v1.3）：** [主稿の新節](papers/sections/paper/ke_fiber_compatibility.tex)で、短いtorus作用の平均化とMoser法から、$C^0$ tensor比較だけで局所Lagrangian fibrationのambient fiber diameterを制御した。三重点の全閉cubical cornerをhexagonで実現し、raw-depth mapとの誤差も評価した。Actual KEへの応用は全phaseを含むmoving領域でのtensor比較付きであり、大域collapseの証明は未完成。関連KE研究ではbounded densityからtensor比較への推論を反例により訂正したため、その比較を別途証明することが現在の解析課題である。方法の先行研究はRuan (arXiv:math/0309177v2, §3)。
+**局所構成の一般原理：** [定量的averaging–Moser](papers/sections/paper/ke_fiber_compatibility.tex)は短いtorus作用とC0 tensor比較から局所Lagrangian fibersを作る。三枚の閉squareはhexagonで一度に実現する。Actual適用は上記のcomplete simplex比較で検証した。方法の先行研究はRuan (arXiv:math/0309177v2, §3)であり、一般的な新規性は主張しない。
 
 **KE極限との関係：** 径の尺度 $R_t=\log(-\log|t|^2)$ での候補は $X_t\to B_d(T)\to\mathcal C_d$。KE側の解析仮定に加え、GH近似写像とLagrangian fibrationの一様な適合性が必要。[基底比較の命題](papers/sections/paper/base_topology.tex)はその条件から全fiberのambient直径収縮を導く。Actual適合性は未証明。Zhangの局所負KE collapseと我々の非Q-factorial sourceの違いを[研究ノート](research/notes.md)・主稿序論に明記。
 

@@ -1,27 +1,34 @@
 % !TeX root = ../../lagrangian-torus-fibration.tex
-% 2026-11-20 / v1.0: open square 上の actual KE--Lagrangian collapse．
-\section{Open square 上の actual KE--Lagrangian collapse}
+% 2026-11-20 / v1.2: 固定 d>=5 の open square の局所 GH 極限と全閉 triple corner の actual Lagrangian tori．
+\section{三重点領域の actual KE--Lagrangian tori と局所収縮}
 \label{ke:open-cell-section}
 
 本節では，三重点に対応する一枚の open square の任意の固定 compactum 上で，
 actual 負 KE 計量の収縮を Lagrangian $T^2$ fibers の収縮として実現する．
-解析の入力は，関連 KE 主稿\cite{KECubicalCurrent}の Part~IV，
+解析の入力は，関連 KE 主稿\cite{KELocalCurrent}の Part~IV，
 定理 \texttt{coarse:thm:moving-triple-tensor} と
 系 \texttt{coarse:cor:open-square-tensor} である．
-これらは五次の全平面退化について，global capped volume 下界と局所上界を合わせ，
+これらは任意の固定 $d\ge5$ の全平面退化について，global capped volume 下界と局所上界を合わせ，
 小さい volume discrepancy に対する摂動正則性から，
 以下に記す full-phase moving sector の tensor 近似を与える．
 本節はその解析結果を入力として，Lagrangian 化と局所の GH 収束を導く．
-全閉 corner に対する定義\ref{ke:moving-comparison}の仮定，
-および大域 GH 収束の仮定を検証したことにはならない．
+さらに同稿の全 triple 領域に対する比較定理を用い，
+最後に各固定 $d\ge5$ について定義\ref{ke:moving-comparison}の追加仮定を解除する．
+これにより三枚の閉 square を同時に覆う actual Lagrangian fibration を得るが，
+閉 corner 全体の距離の GH 極限や大域 GH 収束はまだ結論しない．
 
 \subsection{解析入力と square の正確な parameter 化}
 
-まず
+まず整数 $d\ge5$ を固定し，
 \[
- X_t=\left\{\prod_{r=1}^{5}L_r+tF_5=0\right\}\subset\PP^3
+ X_t=\left\{\prod_{r=0}^{d-1}L_r+tF_d=0\right\}\subset\PP^3
 \]
-を，上記 KE 主稿の五次族および genericity 仮定の下で考える．
+を考える．平面は一般位置にあり，$F_d$ は各三重点で非零，
+各二重線上では三重点を避けた単純零点のみを持ち，
+$0<|t|\ll1$ で $X_t$ は滑らかとする．
+これらは上記 KE 主稿の固定次数の全平面退化に対する genericity 仮定である．
+本節の定数は $d$，固定した族と Hermitian data，および固定 chart に依存してよい．
+次数や族全体にわたる一様性は主張しない．
 その actual KE form と Riemannian metric を
 $\omega_t$，$g_t=\omega_t(\,\cdot\,,J\,\cdot\,)$ とし，
 $\operatorname{Ric}(\omega_t)=-\omega_t$ と正規化する．
@@ -31,7 +38,7 @@ $\operatorname{Ric}(\omega_t)=-\omega_t$ と正規化する．
  \ell_r=-\log|\zeta_r|^2,\qquad
  L=-\log|t|^2,\qquad R=\log L
 \]
-と書く．以下で $0<\eta<1/2$ は固定し，定数は $\eta$ と固定 chart に依存してよい．
+と書く．以下で $0<\eta<1/2$ は固定し，定数はさらに $\eta$ に依存してよい．
 \[
  a=\ell_j,\qquad b=\ell_k,\qquad \ell_i=L-a-b
 \]
@@ -57,9 +64,9 @@ $t$ が十分小さければ $a+b\le4L^{1-\eta}<L/2$ なので，
 \end{equation}
 を取る．これは torus 不変 Kähler 計量である．
 
-\begin{proposition}[五次の moving-sector tensor 近似：KE 主稿からの入力]
+\begin{proposition}[固定次数の moving-sector tensor 近似：KE 主稿からの入力]
 \label{ke:open-cell-analytic-input}
-上記の五次族では，任意の固定非負整数 $q$ に対して
+上記の固定 $d\ge5$ の族では，任意の固定非負整数 $q$ に対して
 \begin{equation}\label{ke:eq:open-tensor-input}
  \sup_{\mathcal U_t^{\mathrm{out}}}
  \left|\nabla_{h_t^{\mathrm{prod}}}^{q}
@@ -72,9 +79,10 @@ $t$ が十分小さければ $a+b\le4L^{1-\eta}<L/2$ なので，
 \end{proposition}
 \begin{proof}[出典と本節で使用する範囲]
 \cite[Part~IV, \texttt{coarse:thm:moving-triple-tensor},
-\texttt{coarse:cor:open-square-tensor}]{KECubicalCurrent}
+\texttt{coarse:cor:open-square-tensor}]{KELocalCurrent}
 を，固定した $\eta$ と上記の外側領域に適用する．
-その入力には同稿で五次について証明した global capped volume 下界を含む．
+その入力には，同稿の系 \texttt{coarse:cor:degree-d-volume-lower} で
+各固定 $d\ge5$ について証明した global capped volume 下界を含む．
 同稿の \texttt{coarse:lem:small-volume-tensor} は，
 負 KE 計量同士の volume ratio の対数が固定正規化 chart 上で零へ収束するとき，
 小さい摂動の正則性から tensor 近似を導く補題である．
@@ -85,7 +93,7 @@ $t$ が十分小さければ $a+b\le4L^{1-\eta}<L/2$ なので，
 固定 square とその labelled embedding を
 \[
  K_\eta=[\eta,1-\eta]^2,\qquad
- \iota_{ijk}(u,v)=e_i+u e_j+v e_k\in\mathcal C_5
+ \iota_{ijk}(u,v)=e_i+u e_j+v e_k\in\mathcal C_d
 \]
 と書く．元の torus bundle の parameter 化は
 \begin{equation}\label{ke:eq:open-square-parameter}
@@ -219,7 +227,7 @@ $|\mathcal L_{Y_{t,s}}h|_h\le Ce_t$ である．
 
 \begin{theorem}[Open square の compactum 上の actual KE--Lagrangian collapse]
 \label{ke:open-cell-collapse}
-上記の五次族と固定 $0<\eta<1/2$ に対し，十分小さい $t\ne0$ で
+上記の固定 $d\ge5$ の族と固定 $0<\eta<1/2$ に対し，十分小さい $t\ne0$ で
 \[
  F_t^{\mathrm{Lag}}=\phi_t\circ F_t,
  \qquad \mathcal W_{t,\eta}=F_t^{\mathrm{Lag}}(K_\eta\times\TT^2),
@@ -367,7 +375,9 @@ $\mathcal W_{t,\eta}$ に内在距離を入れた局所結果である．
 本稿の既存の大域 fibration の全 fibers による GH 収縮はまだ従わない．
 
 また $\eta$ は固定であり，constants は $\eta\downarrow0$ に対して一様とは主張しない．
-Square の境界，異なる distinguished component の領域の接合，
+三枚の square の共通 face を含む Lagrangian bundle の構成は，
+次の系\ref{ke:actual-closed-corner}で別の解析入力から得る．
+しかし閉 corner 全体の距離の極限，異なる三重点 chart の接合，
 source・branch・core の singular fibers の計量評価，
 および大域 fibration への相対接着は未解決である．
 本定理は $\omega_t$-Lagrangian 性を結論し，special Lagrangian 性や
@@ -376,15 +386,172 @@ Averaging--Moser の先行研究は節\ref{ke:fiber-compatibility}のとおり�
 本節の定量的系を含む新規性の包括的確認は未完了である．
 \end{remark}
 
-\begin{remark}[固定した一般次数への条件付き拡張]
+\subsection{全閉 triple corner への適用}
+
+Open square の product model では，二つの深度が $L$ より十分小さいことを使った．
+全閉 corner を一つの領域で扱うには，三つの深度の比を制限しない比較が必要である．
+その入力は \cite[Part~IV, \texttt{coarse:thm:full-triple-tensor}]{KELocalCurrent}
+である．同定理は上記の各固定 $d\ge5$ の族について，$m\to\infty$ のとき
+全 $\ell_a\ge m$，$\sum_{a\in J}\ell_a=L$ の領域上で
+\[
+ g_t-g_L^{\mathrm{sf}}=O(m^{-1})
+\]
+を任意の固定次数の正規化された $C^q$ norm で与える．
+ここで $k_L$ は三角形
+$\{\ell_a>0,\ \sum\ell_a=L\}$ の tube 上の complete torus-invariant 負 KE form，
+$g_L^{\mathrm{sf}}$ はその Riemannian metric である．
+同稿は，$g_L^{\mathrm{sf}}$ と\eqref{ke:eq:cusp-model}の constrained cusp metric $h_t$ の
+一様な二側比較と，cusp により正規化した固定 holomorphic boxes 上での
+$g_L^{\mathrm{sf}}$ の全 $C^q$ 評価も与える．
+これらの定数は全 phase と全ての深度比について一様である．
+従って $m_t\to\infty$，$L\ge6m_t$ なら，定義\ref{ke:moving-comparison}の外側領域上で
+\begin{equation}\label{ke:eq:full-corner-input}
+ c h_t\le g_t\le C h_t,
+ \qquad |\nabla^{h_t}g_t|_{h_t}\le C
+\end{equation}
+が $t$ に一様に成立する．外側領域では同定理を深度 $m_t/2$ で用いる．
+ここで $h_t$ 自身も上記の固定正規化 boxes 上で一様な全 $C^q$ 評価を持つので，
+座標微分による評価から\eqref{ke:eq:full-corner-input}の共変微分評価へ移れる．
+
+\begin{corollary}[固定次数の全閉 corner 上の actual KE--Lagrangian fibers]
+\label{ke:actual-closed-corner}
+本節の固定 $d\ge5$ の族と，各三重点の label $J=\{i,j,k\}$ を取る．
+十分小さい $t\ne0$ に対して $m_t=R=\log L$ と置くと，
+定理\ref{ke:triple-moving-fibration}および
+系\ref{ke:closed-corner-fibration}の moving tensor comparison は成立する．
+従って，$D_{L,R}=\{\ell_a>R,\ \sum_{a\in J}\ell_a=L\}$ 上の
+一つの滑らかな proper actual $\omega_t$-Lagrangian $T^2$ fibration を選べる．
+これを命題\ref{ke:triple-hexagon}の六角形 $H_{L,R}$ に制限し，softmax で引き戻すと
+\[
+ F_{t,R}^{\mathrm{Lag}}=\phi_t\circ F_{t,R},\qquad
+ \mathcal W_{t,J}=F_{t,R}^{\mathrm{Lag}}(\mathcal C_J\times\TT^2),\qquad
+ \pi_{t,J}
+ =\operatorname{pr}_{\mathcal C_J}\circ(F_{t,R}^{\mathrm{Lag}})^{-1}
+\]
+という全閉 corner 上の一つの $T^2$-bundle を得る．以下が成り立つ．
+\begin{enumerate}
+\item
+全 fibers は actual $\omega_t$-Lagrangian であり，元の phase torus からの
+$h_t$-変位は $O(R^{-1})$ である．Fiber 自身の誘導 $g_t$-計量に関する
+intrinsic diameter と，$X_t$ 内の ambient diameter はともに $O(R^{-1})$ である．
+従って $R^{-2}g_t$ に関する両方の fiber diameter は $O(R^{-2})$ である．
+
+\item
+Raw map とその固定 retraction は，全閉 corner 上で
+\begin{equation}\label{ke:eq:actual-closed-corner-target}
+ \sup_{w\in\mathcal C_J,\,\vartheta\in\TT^2}
+ \left(
+ |q_t(F_{t,R}^{\mathrm{Lag}}(w,\vartheta))-w|
+ +d_\square\bigl(\Phi_t^{\mathrm{alg}}
+       (F_{t,R}^{\mathrm{Lag}}(w,\vartheta)),w\bigr)
+ \right)
+ \le C\frac{\log R}{R}
+\end{equation}
+を満たす．
+
+\item
+$F_{t,R}^{\mathrm{Lag}}$ は全体で連続な embedding，各 square の内部で滑らかであり，
+三枚の square の共通 face でも同じ滑らかな $T^2$ fiber を与える．
+この source を含まない局所 corner のセルの辺と頂点は singular values ではない．
+これらの fibers は，$H_{L,R}$ の開近傍上の滑らかな fibration の regular fibers である．
+\end{enumerate}
+\end{corollary}
+\begin{proof}
+$R\to\infty$ かつ $L\ge6R$ なので，\eqref{ke:eq:full-corner-input}が適用できる．
+これが定義\ref{ke:moving-comparison}の全 phase と buffer を含む仮定を満たす．
+補題\ref{ke:negative-exact}による period の消滅と合わせ，
+定理\ref{ke:triple-moving-fibration}から $D_{L,R}$ 全体上の
+$\phi_t$ と Lagrangian fibration を得る．
+変位と ambient diameter は同定理から従う．
+
+Intrinsic diameter のために，ここでは一次微分も確かめる．
+普遍被覆上で $w_a=\ell_a-2\sqrt{-1}\theta_a$ と書けば，$h=h_t$ は
+\[
+ \widetilde h=\sum_{a\in J}\frac{|dw_a|^2}{(\operatorname{Re}w_a)^2}
+\]
+の複素超平面 $\sum_a w_a=L-2\sqrt{-1}\arg t$ への誘導 K\"ahler 計量である．
+周期 $1$ の作用生成場は
+$V_b=2\pi(\partial_{\theta_b}-\partial_{\theta_i})$，$b=j,k$ である．
+一因子における\eqref{ke:eq:open-generator-c1}の計算と
+誘導接続が周囲の接続の接方向成分であることから
+\begin{equation}\label{ke:eq:full-corner-generator-c1}
+ |V_b|_h+|\nabla^hV_b|_h
+ \le C\sqrt{\ell_i^{-2}+\ell_b^{-2}}
+ \le C/R
+ \quad\text{on }\mathcal U_t(\ell_a>R/2).
+\end{equation}
+$h$ は K\"ahler なので，\eqref{ke:eq:full-corner-input}は
+$|\omega_t|_h+|\nabla^h\omega_t|_h\le C$ も与える．
+Torus 作用は $h$ の isometry であるから，
+補題\ref{ke:open-cell-moser-c1}の averaging primitive の微分計算を適用して
+\[
+ |\beta_t|_h+|\nabla^h\beta_t|_h\le C/R
+\]
+を得る．平均と $\omega_t$ の凸結合 $\omega_{t,s}$ は一様な非退化性と
+一次微分の上界を持つので，
+$\iota_{Y_{t,s}}\omega_{t,s}=\beta_t$ とその共変微分から
+\begin{equation}\label{ke:eq:full-corner-moser-c1}
+ |Y_{t,s}|_h+|\nabla^hY_{t,s}|_h\le C/R,
+ \qquad e^{-C/R}h\le\phi_{t,s}^*h\le e^{C/R}h
+\end{equation}
+が従う．後半は $|\mathcal L_{Y_{t,s}}h|_h\le C/R$ を flow に沿って積分したものである．
+Flow は定理\ref{ke:triple-moving-fibration}の buffer に留まるので，
+全ての評価は $D_{L,R}$ 上の全 phase に一様である．
+
+元の phase torus の intrinsic $h$-diameter は
+\eqref{ke:eq:circle-generator-norm}から $4\pi\sqrt2/R$ 以下である．
+一方，\eqref{ke:eq:full-corner-input}と\eqref{ke:eq:full-corner-moser-c1}により
+\[
+ \phi_t^*g_t\le Ce^{C/R}h.
+\]
+この不等式を元の torus 内の経路に適用すると，像の fiber 自身の
+intrinsic $g_t$-diameter も $O(R^{-1})$ となる．
+距離は計量 $R^{-2}g_t$ の下で $R^{-1}$ 倍になるので，正規化後の評価を得る．
+
+命題\ref{ke:triple-hexagon}により $H_{L,R}\subset D_{L,R}$ であり，
+全閉 corner の bundle はこの一つの fibration の制限である．
+系\ref{ke:closed-corner-fibration}に $m_t=R$ を代入すると，
+raw target 誤差は
+\[
+ \frac{C(1+\log(R+1))}{R}+\frac{C}{R^2}
+ =O\!\left(\frac{\log R}{R}\right)
+\]
+となる．これは零へ収束するので固定 retraction の定義域に入り，
+その Lipschitz 性から\eqref{ke:eq:actual-closed-corner-target}を得る．
+最後に，softmax の共有 face での一致と $\phi_t$ の滑らかさから，
+三枚の square の継目でも fiber は同一の regular torus である．
+六角形の閉境界も $D_{L,R}$ の内部にあり，そこを含む開近傍上の
+滑らかな fibration が存在するので，セル分解は singular fiber を生じさせない．
+\end{proof}
+
+\begin{remark}[全閉 corner の系が与える範囲]
+\label{ke:actual-closed-corner-scope}
+系\ref{ke:actual-closed-corner}により，各固定 $d\ge5$ について
+定理\ref{ke:triple-moving-fibration}と系\ref{ke:closed-corner-fibration}の
+moving tensor comparison を追加仮定として課す必要がなくなった．
+これは三重点 chart 内の一つの actual Lagrangian fibration と，
+fiber diameter および raw target の評価である．
+全閉 corner における距離の distortion や GH 極限，
+本稿の既存の大域 fibration への相対接着，
+source・branch・core の singular fibers の記述と計量評価は結論していない．
+特に三枚の square のセルの継目を，大域 fibration の singular locus と同一視しない．
+\end{remark}
+
+\begin{remark}[次数依存と残る大域問題]
 \label{ke:open-cell-general-degree}
-固定 $d\ge5$ の全平面退化にも，三重点 chart，period の消滅，
-Moser flow の評価，raw map の比較，および内在距離の議論はそのまま適用される．
-したがって，その次数で命題\ref{ke:open-cell-analytic-input}と同じ
-full-phase moving-sector estimate を得れば，
-$\mathcal C_5$ を $\mathcal C_d$ に替えた同じ結論が成立する．
-KE 主稿で用いる六つの局所型に対する global capped volume 下界を，
-同じ正規化と $t$ に一様な定数でその次数にも証明することが，
-この解析入力を得るための追加課題である．
-本節ではその一般次数の下界を検証しておらず，無条件の actual 適用は五次に限る．
+KE 主稿\cite[Part~IV, \texttt{coarse:cor:degree-d-volume-lower}]{KELocalCurrent}は，
+六つの局所型の評価を各固定 $d\ge5$ の全平面退化に適用し，
+$t$ に一様な global capped volume 下界を与える．
+従って本節の open square の局所 GH 極限と全閉 corner の Lagrangian bundle は，
+上記 genericity 仮定の下で各固定次数の actual KE 計量に適用できる．
+三重点の積座標，period の消滅，二つの円作用，
+および averaging--Moser の局所構成には，次数に関する追加条件を要しない．
+ただし解析定数と十分小さい $|t|$ の閾値は $d$ と固定した族に依存し，
+$d\to\infty$ や族の parameter が動く場合の一様評価は含まない．
+
+残る問題は，異なる chart と大域 fibration への相対接着，
+source・branch・core の singular fibers の制御，
+および大域の距離 distortion と shortcut の評価である．
+全閉 corner の fiber diameter と raw target の収束から，
+これらの大域評価を結論することはできない．
 \end{remark}
