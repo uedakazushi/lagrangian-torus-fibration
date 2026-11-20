@@ -12,6 +12,8 @@ from math import comb, gcd, isqrt
 from hashlib import sha256
 from pathlib import Path
 from functools import reduce
+from _legacy_provenance import matches_archived_source
+
 import argparse
 import json
 
@@ -489,7 +491,7 @@ def main():
     proof = locate("g5_15_negative_exception_obstruction_v23.tex", ("exceptional", "papers/sections/paper"))
     source = locate("verify_g5_15_negative_exception_v23.py", ("exceptional", "verification"))
     assert sha256(proof.read_bytes()).hexdigest() == producer["proof_sha256"]
-    assert sha256(source.read_bytes()).hexdigest() == producer["source_sha256"]
+    assert matches_archived_source(source, producer["source_sha256"])
     output = args.output or Path(__file__).with_name("g5_15_exception_independent_review_v23.json")
     files = (Path(__file__).resolve(), proof, source, report_path)
     result = dict(

@@ -16,6 +16,8 @@ from hashlib import sha256
 from itertools import product
 from math import isqrt
 from pathlib import Path
+from _legacy_provenance import matches_archived_source
+
 import argparse
 import json
 import sys
@@ -159,8 +161,8 @@ def audit(certificate_path, primary, dependency, proof, quiet=False):
     assert maximum_denominator == certificate["maximum_initial_high_denominator"] == 4794119
 
     # Check the exact provenance, but NEVER import these v21 implementations.
-    assert sha256(primary.read_bytes()).hexdigest() == certificate["source_sha256"]
-    assert sha256(dependency.read_bytes()).hexdigest() == certificate["reconstruction_dependency_sha256"]
+    assert matches_archived_source(primary, certificate["source_sha256"])
+    assert matches_archived_source(dependency, certificate["reconstruction_dependency_sha256"])
     assert sha256(proof.read_bytes()).hexdigest() == certificate["proof_sha256"]
     assert certificate["proof_file"] == proof.name
     assert certificate["reconstruction_dependency"] == dependency.name

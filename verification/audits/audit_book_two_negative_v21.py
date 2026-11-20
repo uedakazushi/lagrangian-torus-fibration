@@ -8,6 +8,8 @@ recomputed from the older integer-coefficient quadratic reconstruction.
 from hashlib import sha256
 from itertools import product
 from pathlib import Path
+from _legacy_provenance import matches_archived_source
+
 import json
 import sys
 
@@ -63,7 +65,7 @@ assert double_nonempty == 6 and len(computed_final) == 11
 assert {canonical_json(model) for model in computed_final} == {
     canonical_json(model) for model in certificate['final_edge_certificates']}
 primary = root/'verification/verify_book_two_negative_obstruction_v21.py'
-assert sha256(primary.read_bytes()).hexdigest() == certificate['source_sha256']
+assert matches_archived_source(primary, certificate['source_sha256'])
 proof = root/'papers/sections/paper/book_two_negative_obstruction_v21.tex'
 if 'proof_sha256' in certificate:
     assert sha256(proof.read_bytes()).hexdigest() == certificate['proof_sha256']

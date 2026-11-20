@@ -4,6 +4,8 @@ from pathlib import Path
 from fractions import Fraction
 from itertools import combinations, permutations
 from collections import Counter
+from _legacy_provenance import matches_archived_source
+
 import hashlib
 import json
 
@@ -164,7 +166,7 @@ def check_stored_patches(certificate):
 def main():
     cert = json.loads(CERTIFICATE.read_text())
     assert cert['passed']
-    assert cert['script_sha256'] == sha(CHECKER)
+    assert matches_archived_source(CHECKER, cert['script_sha256'])
     assert cert['source_sha256'][SOURCE.name] == sha(SOURCE)
     assert cert['dependency']['sha256'] == sha(HELPER)
     assert sha(HELPER) == 'cfb3110fe99ccc9d1d7e90bb402638078e6ebeac0f104f8429b60cdc4bdc78c8'

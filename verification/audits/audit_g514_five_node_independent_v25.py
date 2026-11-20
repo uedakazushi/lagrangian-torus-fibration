@@ -93,7 +93,7 @@ def main():
                         default=here / 'g514_five_node_independent_audit_v25.json')
     args = parser.parse_args()
     candidates = [here.parent / 'unit_gluing/g514_five_node_exclusion_v25.tex',
-                  here.parent / 'papers/sections/paper/g514_five_node_exclusion_v25.tex',
+                  here.parents[1] / 'papers/sections/paper/g514_five_node_exclusion_v25.tex',
                   here / 'g514_five_node_exclusion_v25.tex']
     source = args.source or next(p for p in candidates if p.exists())
     variable = Polynomial([0, 1])

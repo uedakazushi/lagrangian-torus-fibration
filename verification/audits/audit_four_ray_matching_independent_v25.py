@@ -210,6 +210,6 @@ def main(proof, output):
 if __name__=='__main__':
     here=Path(__file__).resolve().parent
     p=argparse.ArgumentParser()
-    p.add_argument('--proof',type=Path,default=here.parent/'four_high'/'four_ray_matching_v25.tex')
+    p.add_argument('--proof',type=Path,default=here.parents[1]/'papers/sections/paper/four_ray_matching_v25.tex')
     p.add_argument('--output',type=Path,default=here/'four_ray_matching_independent_audit_v25.json')
     a=p.parse_args();main(a.proof,a.output)

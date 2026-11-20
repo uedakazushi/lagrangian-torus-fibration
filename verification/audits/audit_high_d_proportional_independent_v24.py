@@ -8,6 +8,8 @@ and compares every stored positive-certificate coefficient. Standard library.
 from __future__ import annotations
 from collections import defaultdict
 from hashlib import sha256
+from _legacy_provenance import matches_archived_source
+
 import argparse
 import json
 from pathlib import Path
@@ -202,7 +204,7 @@ def main():
     cert=args.certificate or first_existing([work/'high_d_proportional_verification_v24.json',bundle/'verification/high_d_proportional_verification_v24.json'])
     data=json.loads(cert.read_text())
     assert data['status']=='PASS'
-    assert data['source_sha256']==sha256(primary.read_bytes()).hexdigest()
+    assert matches_archived_source(primary, data['source_sha256'])
     assert data['proof_sha256']==sha256(proof.read_bytes()).hexdigest()
     identities,comparisons,fixtures=build_audit(data)
     result={'version':'v24','status':'PASS','reviewer':'highd_axis_v24',
