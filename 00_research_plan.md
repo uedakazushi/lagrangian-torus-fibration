@@ -15,6 +15,8 @@
 ## 独立に確認した幾何・位相
 主原稿が読み込むbase_topology.texでB_d(T)からKE候補C_dへのcell-like homotopy equivalenceとd≥6での非同相性を証明し、さらに任意の固定Tについて人工的な区分的長さ距離d_epsilonのGH収束を誤差O(epsilon)で証明した（topo:metric-collapse）。これは実際の作用計量やKE計量の収束ではない。d=5,6,7,8の鎖階数は独立に有理数体上で検算し、有限体の回帰コードもverification/verify_ke_base_topology.pyに保管した。三次元のtrivial_normal_curve.texでは、normal-trivialな閉symplectic曲線のdegree eとgenus gに2g-2=(d-5)eが必要で、d偶数ならe偶数という制約と、三価Reeb graphのsaddle数が(d-5)eとなることを証明した（tnc:degree-genus-parity）。これらはnormal faces/complementの大域Lagrangian接着を完成させるものではない。メトリック収縮の一般的な先行研究に対する新規性は未確認。
 
+六次の同時Petersen系は6通りでS6の一軌道、固定した系の安定化群は位数120・指数6。ラベル付きで全S6対称な比較には一つの固定Tでは足りない。これは組合せ論的結論であり、実際のfibrationの対称性や存在の不可能性ではない。
+
 ## 次の一手
 1. G5_14の中央matchingと二{4,1,0}・分母三の位置を同時に課す。G5_16のnode5、G5_17全matchingも別に扱う。
 2. 三高Dの比例零軸・退化面の固定入力有限復元を、一般入力の上界や不存在へ外挿しない。
