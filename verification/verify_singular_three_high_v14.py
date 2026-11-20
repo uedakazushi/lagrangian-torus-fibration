@@ -110,7 +110,7 @@ def main():
                          'D':[int(ev(x)) for x in D],'positive_weights':[str(x) for x in weights],
                          'minimum_basin_gap':str(min(gaps))})
     here=Path(__file__).resolve().parent
-    candidates=[here/'quintic_three_high_singular_v14.tex',here.parent/'paper/quintic_three_high_singular_v14.tex']
+    candidates=[here/'quintic_three_high_singular_v14.tex',here.parent/'papers/sections/paper/quintic_three_high_singular_v14.tex']
     source=next(p for p in candidates if p.is_file())
     result={
         'version':'v14','passed':True,'scope':'Complete fixed slice (s,t,alpha,beta,k)=(3,12,12,-4,1); no classification of other singular systems or global gluing.',

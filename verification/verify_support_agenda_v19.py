@@ -124,10 +124,10 @@ def main():
     assert len(shapes) == 6
     by_edges = Counter(len(x['edges']) for x in remaining)
     assert dict(by_edges) == {7:70,8:45,9:10,10:1}
-    source_paths = [HERE.parent/'paper'/name for name in (
+    source_paths = [HERE.parent/'papers/sections/paper'/name for name in (
         'g5_7_obstruction_v19.tex','g5_9_obstruction_v19.tex',
         'book_low_triangle_finiteness_v19.tex','quintic_support_frontier_v19.tex')]
-    source_paths.append(HERE.parent/'notes/notes_support_agenda_v19.tex')
+    source_paths.append(HERE.parent/'papers/sections/notes/notes_support_agenda_v19.tex')
     result = {
         'version':'v19', 'passed':True,
         'scope':'Necessary support graphs for the specified quintic K5 integer gluing problem; no existence or geometric classification claim.',

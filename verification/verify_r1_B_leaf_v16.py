@@ -173,7 +173,7 @@ def main():
 
     source = HERE / 'r1_exceptional_leaf_v16.tex'
     if not source.exists():
-        source = HERE.parent / 'paper' / source.name
+        source = HERE.parent / 'papers/sections/paper' / source.name
     result = {
         'version': 'v16', 'passed': True,
         'script_sha256': sha(Path(__file__).resolve()),

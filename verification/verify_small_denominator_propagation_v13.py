@@ -121,7 +121,7 @@ def main():
         polynomial_checks.append(f'fixed {n} resonance D_B identity')
 
     source_name = 'small_denominator_propagation_v13.tex'
-    source = next((p for p in (HERE/source_name, HERE.parent/'paper'/source_name)
+    source = next((p for p in (HERE/source_name, HERE.parent/'papers/sections/paper'/source_name)
                    if p.exists()), None)
     result = {
         'status': 'passed',

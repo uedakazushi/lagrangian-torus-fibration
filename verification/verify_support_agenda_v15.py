@@ -129,10 +129,10 @@ def main():
 
     source_hashes = {}
     for name, folders in {
-        "k23_obstruction_v15.tex": (HERE, HERE.parent / "paper"),
-        "diamond_obstruction_v15.tex": (HERE.parent / "diamond", HERE.parent / "paper", HERE),
-        "quintic_support_frontier_v15.tex": (HERE, HERE.parent / "paper"),
-        "notes_support_agenda_v15.tex": (HERE, HERE.parent / "notes"),
+        "k23_obstruction_v15.tex": (HERE, HERE.parent / "papers/sections/paper"),
+        "diamond_obstruction_v15.tex": (HERE.parent / "diamond", HERE.parent / "papers/sections/paper", HERE),
+        "quintic_support_frontier_v15.tex": (HERE, HERE.parent / "papers/sections/paper"),
+        "notes_support_agenda_v15.tex": (HERE, HERE.parent / "papers/sections/notes"),
     }.items():
         candidates = [folder / name for folder in folders]
         source = next((p for p in candidates if p.is_file()), None)

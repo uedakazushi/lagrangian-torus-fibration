@@ -245,12 +245,12 @@ def main():
             {'high_edge':edge,'common_low_core':k} for edge,k in pairs]
 
     sources = {
-        'quintic_support_frontier_v18.tex': HERE.parent/'paper/quintic_support_frontier_v18.tex',
-        'notes_support_agenda_v18.tex': HERE.parent/'notes/notes_support_agenda_v18.tex',
-        'three_high_matching_v18.tex': HERE.parent/'paper/three_high_matching_v18.tex',
-        'house_support_obstruction_v18.tex': HERE.parent/'paper/house_support_obstruction_v18.tex',
-        'g5_10_obstruction_v18.tex': HERE.parent/'paper/g5_10_obstruction_v18.tex',
-        'k4_leaf_obstruction_v18.tex': HERE.parent/'paper/k4_leaf_obstruction_v18.tex'}
+        'quintic_support_frontier_v18.tex': HERE.parent/'papers/sections/paper/quintic_support_frontier_v18.tex',
+        'notes_support_agenda_v18.tex': HERE.parent/'papers/sections/notes/notes_support_agenda_v18.tex',
+        'three_high_matching_v18.tex': HERE.parent/'papers/sections/paper/three_high_matching_v18.tex',
+        'house_support_obstruction_v18.tex': HERE.parent/'papers/sections/paper/house_support_obstruction_v18.tex',
+        'g5_10_obstruction_v18.tex': HERE.parent/'papers/sections/paper/g5_10_obstruction_v18.tex',
+        'k4_leaf_obstruction_v18.tex': HERE.parent/'papers/sections/paper/k4_leaf_obstruction_v18.tex'}
     result = {
         'version':'v18', 'passed':True,
         'scope':'Complete finite graph audit of necessary support conditions. Remaining graphs are not asserted to admit simultaneous integer charts, atlases, or fibrations.',

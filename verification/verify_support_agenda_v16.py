@@ -185,11 +185,11 @@ def main():
     assert triples["G5_10"]==[dict(high_edge=[0,1],common_low_core=4)]
 
     sources={
-        "quintic_support_frontier_v16.tex":locate("quintic_support_frontier_v16.tex","paper"),
-        "notes_support_agenda_v16.tex":locate("notes_support_agenda_v16.tex","notes"),
-        "two_leaf_global_obstruction_v16.tex":locate("two_leaf_global_obstruction_v16.tex","paper","root"),
-        "common_low_node_bound_v16.tex":locate("common_low_node_bound_v16.tex","paper","small_r"),
-        "k4_low_hub_reduction_v16.tex":locate("k4_low_hub_reduction_v16.tex","paper","k4"),
+        "quintic_support_frontier_v16.tex":locate("quintic_support_frontier_v16.tex","papers/sections/paper"),
+        "notes_support_agenda_v16.tex":locate("notes_support_agenda_v16.tex","papers/sections/notes"),
+        "two_leaf_global_obstruction_v16.tex":locate("two_leaf_global_obstruction_v16.tex","papers/sections/paper","root"),
+        "common_low_node_bound_v16.tex":locate("common_low_node_bound_v16.tex","papers/sections/paper","small_r"),
+        "k4_low_hub_reduction_v16.tex":locate("k4_low_hub_reduction_v16.tex","papers/sections/paper","k4"),
     }
     result={
         "version":"v16","passed":True,

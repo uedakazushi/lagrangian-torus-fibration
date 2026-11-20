@@ -214,13 +214,13 @@ def main():
         (0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (2, 3)}
 
     source_names = [
-        ('quintic_support_frontier_v17.tex', 'paper'),
-        ('notes_support_agenda_v17.tex', 'notes'),
-        ('k4_two_exception_obstruction_v17.tex', 'paper'),
-        ('k4_four_exception_obstruction_v17.tex', 'paper'),
-        ('k4_global_obstruction_v17.tex', 'paper'),
-        ('k4_low_hub_reduction_v16.tex', 'paper'),
-        ('common_low_node_bound_v16.tex', 'paper')]
+        ('quintic_support_frontier_v17.tex', 'papers/sections/paper'),
+        ('notes_support_agenda_v17.tex', 'papers/sections/notes'),
+        ('k4_two_exception_obstruction_v17.tex', 'papers/sections/paper'),
+        ('k4_four_exception_obstruction_v17.tex', 'papers/sections/paper'),
+        ('k4_global_obstruction_v17.tex', 'papers/sections/paper'),
+        ('k4_low_hub_reduction_v16.tex', 'papers/sections/paper'),
+        ('common_low_node_bound_v16.tex', 'papers/sections/paper')]
     sources = {name: locate(name, folder) for name, folder in source_names}
     result = {
         'version': 'v17', 'passed': True,

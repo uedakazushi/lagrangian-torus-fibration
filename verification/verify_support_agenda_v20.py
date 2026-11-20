@@ -80,10 +80,10 @@ def main():
         shapes.append(s | {'degree_two_neighbors_all_degree_four':True})
     by_edges=Counter(len(x['edges']) for x in remaining)
     assert dict(by_edges)=={7:10,8:45,9:10,10:1}
-    source_paths=[HERE.parent/'paper'/n for n in (
+    source_paths=[HERE.parent/'papers/sections/paper'/n for n in (
         'g5_11_obstruction_v20.tex','book_all_negative_obstruction_v20.tex',
         'book_low_D_cycle_v20.tex','quintic_support_frontier_v20.tex')]
-    source_paths.append(HERE.parent/'notes/notes_support_agenda_v20.tex')
+    source_paths.append(HERE.parent/'papers/sections/notes/notes_support_agenda_v20.tex')
     report={'version':'v20','passed':True,
         'scope':'Necessary support graphs under the prescribed quintic K5 arithmetic gluing assumptions. Candidate counts are not existence or geometric-isomorphism counts.',
         'labelled_K5_graphs_checked':1024,'labelled_nonempty_supports_remaining':66,
