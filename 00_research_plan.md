@@ -13,7 +13,7 @@
 - `papers/threefold-fibration.tex`：原版187頁の全体稿第11稿。
 
 ## 今回の横断検証
-主稿 \`papers/lagrangian-torus-fibration.tex\` から参照される \`papers/sections/paper/base_topology.tex\` に、\(\mathcal C_d\) との明示的なcell-like homotopy equivalenceと \(d\ge6\) の非同相性を証明した。独立に \(d=5,\dots,8\) の鎖複体の階数を有理数体で確認し、有限体での回帰コードも \`verification/verify_ke_base_topology.py\` に保存した。この結果は位相・整数ホモロジーに関するもので、fibrationそのものの存在やKE距離との同定を新たに証明したわけではない。
+主稿 `papers/lagrangian-torus-fibration.tex` から参照される `papers/sections/paper/base_topology.tex` に、\(\mathcal C_d\) との明示的なcell-like homotopy equivalenceと \(d\ge6\) の非同相性を証明した。独立に \(d=5,\dots,8\) の鎖複体の階数を有理数体で確認し、有限体での回帰コードも `verification/verify_ke_base_topology.py` に保存した。この結果は位相・整数ホモロジーに関するもので、fibrationそのものの存在やKE距離との同定を新たに証明したわけではない。
 
 ## 次の一手
 1. G5_14の中央matchingと二{4,1,0}・分母三の位置を同時に課す。G5_16のnode5、G5_17全matchingも別に扱う。
