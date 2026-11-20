@@ -26,5 +26,19 @@ F=q_eR_2+z_3G_{d-1}+z_4H_{d-1}
 ## 三次元：局所稿の参照先
 `papers/threefold-blocks.tex`第25・33節：positive normal shell、membrane/focus collars。第26節：smooth focus Cartanとnormal degreeの障害。第34–35節：compact focus blockとnormal-trivial closed curve。第36節：weighted collars。旧48 ports、normal faces、complement、大域boundary-free fibrationは未完成。全体稿は `papers/threefold-fibration.tex`。
 
+## 分岐基底の人工的な定量的metric collapse
+papers/sections/paper/base_topology.tex の topo:metric-collapse において、B_d(T)の二次元セル上の区分的長さ計量
+\[
+|v|_\varepsilon^2=|dp_T(v)|_\square^2+\varepsilon^2|v|_h^2
+\]
+が C_d へ d_GH=O_{d,T,h}(\varepsilon) で収束することを証明。木fiber径は O(\varepsilon)、square galleryは有限で、各三角形上の逆写像は区分的Lipschitz。d≥6での非同相性は人工計量のGH収束の障害でない。Lagrangian作用アフィン計量やactual KE計量との比較は別問題で未解決。新規性は未確認。
+
+## Symplectic normalが自明な閉曲線の次数・種数制約
+papers/sections/threefold/local_blocks/trivial_normal_curve.tex の tnc:degree-genus-parity に、任意のsmooth X_d⊂P^4 (d≥6)のclosed embedded symplectic S がnormal-trivialでhyperplane degree e>0を持てば
+\[
+2g(S)-2=(d-5)e
+\]
+であり、特にdが偶数ならeは偶数、と証明した。極大・極小のないcircle-valued Morse mapで三価Reeb graphを作ると、頂点数は必ず (d-5)e。既存構成e=d-2は数値条件を満たすが、これのみでは曲線の存在やglobal fibrationは従わない。
+
 ## 検証
 v25の五主検算と五独立監査を今回再実行。保存済みの旧verification/証明書全体を今回の実行結果とは扱わない。詳細はmigration.md。計算は解析的symplectic gluingや新規性の証明を代替しない。
