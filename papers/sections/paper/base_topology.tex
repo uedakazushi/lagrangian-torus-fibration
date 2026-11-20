@@ -209,6 +209,100 @@ $d\ge6$ の非同相性は，両基底をそのまま同じ位相空間として
 \end{remark}
 
 
+\subsection{分岐基底の立方体距離への定量的収縮}
+
+上の $p_T$ は同相でなくても，基底上に\emph{人工的な}長さ距離を
+入れると KE 側の候補立方体複体へ収束させられる．
+これは収縮する方向を正確に特定する位相幾何学的な模型であり，
+実際の Lagrangian fibration が誘導する action metric の収束ではない．
+
+\begin{theorem}[有限分岐基底の立方体計量への収縮]
+\label{topo:metric-collapse}
+$d\ge5$ と三価木の系 $T=(T_{ij})$ を固定する．
+$\mathcal C_d$ に各 unit square の Euclidean length metric
+$d_\square$ を入れ，$p_T:B(T)\to\mathcal C_d$ を
+系\ref{topo:KE-cubical-comparison} の全射とする．
+$B(T)$ の，セルと $p_T$ に適合する有限細分上に
+任意の補助 piecewise Euclidean metric $h$ を固定する．
+$\varepsilon\in(0,1]$ に対して，各細分セルの接ベクトル $v$ に
+\[
+ |v|_\varepsilon^2
+ =|d p_T(v)|_\square^2+\varepsilon^2|v|_h^2
+\]
+を与え，これを貼った内在的長さ距離を $d_\varepsilon$ とする．
+このとき $C=C(d,T,h)<\infty$ が存在し，任意の
+$x,y\in B(T)$ について
+\[
+ 0\le d_\varepsilon(x,y)
+       -d_\square(p_Tx,p_Ty)\le C\varepsilon .
+\]
+従って
+\[
+ d_{\mathrm{GH}}\bigl((B(T),d_\varepsilon),
+                  (\mathcal C_d,d_\square)\bigr)
+ \le \frac{C\varepsilon}{2}\longrightarrow0 .
+\]
+$d\ge6$ では各 $\varepsilon>0$ の分岐基底は
+$\mathcal C_d$ と同相ではないにもかかわらず，この収束は成立する．
+\end{theorem}
+
+\begin{proof}
+$\rho_d\circ p_T=q$ は各三角形セル $\tau_{ijk}\subset B(T)$
+から $S_d$ の三角形 $[ijk]$ への homeomorphism である．
+$\rho_d^{-1}$ は $x\mapsto x/\max_i x_i$ なので，
+$[ijk]$ を三つの最大座標領域に分ければ smooth かつ Lipschitz である．
+したがって $p_T|_{\tau_{ijk}}$ の逆写像は
+$\mathcal C_d$ の対応する三つの unit squares 上で
+区分的 Lipschitz となり，補助 metric $h$ に関する
+一様定数 $L=L(d,T,h)$ を持つ．
+$p_T^{-1}(z)$ は，$z$ が support 二の辺の内部にあるとき，
+対応する $T_{ij}^{\rm int}$ の有限木（longitudinal 座標を固定した
+各二角形の横断部分）であり，それ以外は一点である．
+従って全ての fiber の内在的な $h$-直径は一様に
+$D=D(d,T,h)$ 以下である．Fiber 内の任意の接続曲線の
+$d_\varepsilon$-長は高々 $\varepsilon D$ にできる．
+
+各 unit square は ambient $\mathbb R^d$ 内の凸集合である．
+$\mathcal C_d$ の長さ最短路が同じ square を離れて再び戻るなら，
+その間を square 内の線分で置き換えると短くなる
+（元の任意の曲線の長さは ambient Euclidean chord 以上）．
+従って最短路は，少なくとも一つの選択では，
+有限個の square の gallery として記述でき，
+その訪問数は全 maximal squares の数
+$N_d=d\binom{d-1}{2}$ 以下に取れる．
+Edge に沿う部分もそれを含む任意の square に割り当てればよい．
+
+$p_Tx$ と $p_Ty$ を結ぶこの gallery の各 square 内の線分を，
+対応する $\tau_{ijk}$ の $p_T$ による逆像へ持ち上げる．
+その $h$-長は元の線分長の $L$ 倍以下なので，
+\[
+ L_\varepsilon(\widetilde\gamma_{\rm square})
+ \le L_\square(\gamma_{\rm square})
+      +\varepsilon L\,L_\square(\gamma_{\rm square}).
+\]
+異なる square に移る点では，持ち上げた端点同士は
+同じ $p_T$-fiber にある．この二点をその木の中で
+$\varepsilon D$ 以下の費用で接続する．
+最初と最後にも同様の fiber connector を使う．
+全誤差は
+\[
+ \varepsilon\bigl(L\operatorname{diam}(\mathcal C_d)
+                          +(N_d+1)D\bigr)
+\]
+以下である．逆向きの不等式は
+$|dp_T(v)|_\square\le |v|_\varepsilon$ から従う．
+$p_T$ は全射なので，その graph correspondence の distortionは
+$C\varepsilon$ 以下となり，GH評価を得る．
+\end{proof}
+
+\begin{remark}[計量収縮の範囲と新規性]
+これは $T$ を固定した有限 PL/CW 複体に対する直接構成で，
+$\varepsilon$ は幾何から導いた parameter ではなく任意に入れた値である．
+従って actual action-affine metric，KE計量，symplectic transport の
+いずれについても新たな収束定理を主張しない．
+この種の有限複体のcollapse自体の先行研究との新規性は未確認である．
+\end{remark}
+
 \section{六次の場合の同時 Petersen 化}\label{topo:petersen-section}
 
 $d=6$ のとき，各 $T_{ij}$ は四つの葉を二組に分けるだけで定まり，
