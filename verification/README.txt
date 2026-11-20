@@ -1,6 +1,6 @@
 第25版の数学検算・独立監査
 
-最初にbundle直下の00_CONTINUATION_POLICY_ja.txtを読み、主張の量化を確認する。
+最初にrepo直下の00_research_plan.mdとAGENTS.mdを読み、主張の量化を確認する。
 このディレクトリは主検算89本と数学的結果JSON89件を含む。
 audits/には追加の実行可能監査24本を含む。
 旧v24の84主検算・84数学的結果・19監査scriptおよび保持した旧TeXは内容不変。
