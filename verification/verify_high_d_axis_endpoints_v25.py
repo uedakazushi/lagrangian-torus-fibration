@@ -433,7 +433,7 @@ def main():
     args = parser.parse_args()
     if args.proof is None:
         candidates = [Path(__file__).with_name('high_d_axis_endpoints_v25.tex'),
-                      Path(__file__).parent.parent / 'paper' / 'high_d_axis_endpoints_v25.tex']
+                      Path(__file__).parent.parent / 'papers/sections/paper' / 'high_d_axis_endpoints_v25.tex']
         args.proof = next((path for path in candidates if path.exists()), None)
     if args.proof is None or not args.proof.is_file():
         parser.error('The complete proof TeX must be supplied using --proof.')

@@ -271,7 +271,7 @@ assert D_example[-1] == -231
 
 script = Path(__file__).resolve()
 proof_candidates = [script.with_name("g5_15_resonance_boundary_v22.tex"),
-                    script.parent.parent/"paper/g5_15_resonance_boundary_v22.tex"]
+                    script.parent.parent/"papers/sections/paper/g5_15_resonance_boundary_v22.tex"]
 proof = next(path for path in proof_candidates if path.is_file())
 report = dict(
     version="v22", status="PASS", method="Exact polynomial coefficient identities and finite divisor certificates",

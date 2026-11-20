@@ -292,7 +292,7 @@ def main():
     parser=argparse.ArgumentParser()
     here=Path(__file__).resolve().parent
     possible=[here/'high_d_axis_and_degenerate_obstruction_v24.tex',
-              here.parent/'paper/high_d_axis_and_degenerate_obstruction_v24.tex']
+              here.parent/'papers/sections/paper/high_d_axis_and_degenerate_obstruction_v24.tex']
     parser.add_argument('--proof',type=Path,default=next((p for p in possible if p.exists()),possible[0]))
     parser.add_argument('--output',type=Path,default=here/'high_d_axis_degenerate_verification_v24.json')
     parser.add_argument('--fixed-s',nargs='+',type=int,default=[3,4,5])

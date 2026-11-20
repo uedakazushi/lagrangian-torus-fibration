@@ -365,8 +365,8 @@ def run():
                              completed_ordinary_models=0))
     assert len(cache) == 11
     final_point = last_point_obstruction()
-    source_files = [find_source("g5_15_ordinary_outer_pair_obstruction_v23.tex", "paper"),
-                    find_source("notes_g5_15_ordinary_outer_pair_v23.tex", "notes"),
+    source_files = [find_source("g5_15_ordinary_outer_pair_obstruction_v23.tex", "papers/sections/paper"),
+                    find_source("notes_g5_15_ordinary_outer_pair_v23.tex", "papers/sections/notes"),
                     Path(__file__).resolve()]
     return dict(
         status="PASS",

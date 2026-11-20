@@ -376,7 +376,7 @@ def sha256(path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, default=Path(__file__).with_name("high_d_asymmetry_verification_v23.json"))
-    parser.add_argument("--proof", type=Path, default=next(p for p in [Path(__file__).with_name("high_d_asymmetry_lattice_obstruction_v23.tex"), Path(__file__).resolve().parent.parent/"paper/high_d_asymmetry_lattice_obstruction_v23.tex"] if p.is_file()))
+    parser.add_argument("--proof", type=Path, default=next(p for p in [Path(__file__).with_name("high_d_asymmetry_lattice_obstruction_v23.tex"), Path(__file__).resolve().parent.parent/"papers/sections/paper/high_d_asymmetry_lattice_obstruction_v23.tex"] if p.is_file()))
     parser.add_argument("--axis", nargs=2, type=int, metavar=("B_PARAMETER","Z"),
                         help="Optionally reconstruct the entire remaining axis for fixed b,z.")
     args = parser.parse_args()

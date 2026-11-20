@@ -273,7 +273,7 @@ def resolve_proof_path(override=None):
         assert path.is_file()
         return path
     candidates = (Path(__file__).with_name('g5_15_reduction_v21.tex'),
-                  Path(__file__).parent.parent/'paper'/'g5_15_reduction_v21.tex')
+                  Path(__file__).parent.parent/'papers/sections/paper'/'g5_15_reduction_v21.tex')
     return next(path for path in candidates if path.is_file())
 
 
@@ -306,7 +306,7 @@ def main_data(proof_path=None):
                 positive='T=S+2 and r<S<2*r')),
         corollary='If q34>=7, the central two-high core is one of the four ordinary models. Its two high denominators are at most 43 in the canonical orientation.',
         not_claimed=['G5_15 exclusion', 'a global arithmetic lift', 'a Lagrangian torus fibration existence or nonexistence result beyond the arithmetic setting'],
-        proof_file='paper/g5_15_reduction_v21.tex',
+        proof_file='papers/sections/paper/g5_15_reduction_v21.tex',
         proof_sha256=hashlib.sha256(proof.read_bytes()).hexdigest(),
         script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest())
 

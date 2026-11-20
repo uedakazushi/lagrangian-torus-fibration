@@ -369,7 +369,7 @@ def main():
     parity=parity_certificates()
     certificates,zeros=coefficient_certificates()
     here=Path(__file__).resolve().parent
-    proof=next((p for p in (here/'g5_15_negative_exception_obstruction_v23.tex',here.parent/'paper/g5_15_negative_exception_obstruction_v23.tex') if p.exists()),None)
+    proof=next((p for p in (here/'g5_15_negative_exception_obstruction_v23.tex',here.parent/'papers/sections/paper/g5_15_negative_exception_obstruction_v23.tex') if p.exists()),None)
     report={
       'version':'v23','status':'PASS','scope':'Both G5_15 negative exceptional templates, with all positive integer scales and no numerical search cutoff.',
       'proof_dependency':'v21 negative templates, v22 complete two-high L=1,3,4 scale families, and the v23 outer-core single-pair transfer identity.',
