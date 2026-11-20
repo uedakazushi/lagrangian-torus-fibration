@@ -292,9 +292,15 @@ $\mathcal V$に，compact triangulable base $B_{\mathcal V}$への
 proper continuous map
 $f:\mathcal V\to B_{\mathcal V}$があり，
 有限CW型のfiberを持つ有限stratificationに関して局所自明であると仮定する．
-そのときすべてのfiberのEuler数が非負なら矛盾する．
-さらに，Euler数が零でないfiberの存在するbase pointsが
-有限集合$S$に限られ，それらが一様にEuler数$-1$を持つなら，
+\emph{Euler数が非零のfiberが存在するbase pointsが有限集合
+$S\subset B_{\mathcal V}$に限られる}なら，必ず
+\[
+ \boxed{\sum_{b\in S}\chi(f^{-1}(b))=-\mathcal N_d<0}
+\]
+を満たす．従ってその有限集合のfiberのEuler数がすべて
+非負ということはあり得ない．
+さらに，すべての$b\in S$に対して
+$\chi(f^{-1}(b))=-1$なら
 \[
  \boxed{|S|=\mathcal N_d}.
 \]
@@ -305,9 +311,9 @@ $f:\mathcal V\to B_{\mathcal V}$があり，
 $\chi(\mathcal V)=-\mathcal N_d$である．
 その符号は$d\ge6$で
 $d(d^3-5d^2+10d-10)>(d-2)(d-5)$
-から直ちに従う．
-例えば$d^3-5d^2+10d-10=
-(d-2)(d^2-3d+4)-2$であり，この不等式は$d\ge6$で明らかである．
+から従う．実際
+$d^3-5d^2+10d-10=
+(d-2)(d^2-3d+4)-2$と書ける．
 
 有限stratificationの各stratum $S_\alpha$での典型fiberを
 $F_\alpha$とすると，compact支えEuler数の積公式と加法性から
@@ -316,19 +322,15 @@ $F_\alpha$とすると，compact支えEuler数の積公式と加法性から
    =\sum_\alpha
        \chi_c(S_\alpha)\,\chi(F_\alpha).
 \]
-すべてのfiberのEuler数が非負の場合，一般には
-$\chi_c(S_\alpha)$が負であり得るため，
-この式だけから非負性は結論できない．
-従って最初の文の結論を主張するには
-\emph{各正次元stratum上の$\chi_c$が非負}
-という追加条件が必要であり，
-以下ではこの追加条件の下に限って最初の文を用いる．
-一方，$S$以外のすべてのfiberのEuler数が零なら
-正次元strataからの寄与は零で，
+ここで正次元stratumのcompact支えEuler数は負になり得るため，
+\emph{全fiberのEuler数が非負}というだけでは
+$\chi(\mathcal V)<0$に矛盾しないことに注意する．
+本命題では$S$以外のfiberのEuler数が零なので，
+それらのstrataの寄与は全て消え，
 \[
- \chi(\mathcal V)=\sum_{b\in S}\chi(f^{-1}(b))=-|S|
+ \chi(\mathcal V)=\sum_{b\in S}\chi(f^{-1}(b))
 \]
-となるので第二の結論は追加条件なしに従う．
+となる．残る結論は直ちに従う．
 \end{proof}
 
 \begin{remark}[適用範囲と実際の課題]
