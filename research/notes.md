@@ -1,7 +1,7 @@
-# 研究ノートの入口
-更新：2026-11-21 / v1.9 / 曲面改訂8・三次元局所稿11・全体稿13
+# 現行研究ノート：一般型曲面のLagrangian torus fibration
+更新：2026-11-21 / v2.0
 
-詳細な現行ノートは `papers/research-notes.tex`（曲面第25版、65頁）に移行した。証明を短い要約で置き換えない。
+主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
 ## 二段階平均によるnormal actionとperiodsの接続
 
@@ -23,6 +23,7 @@
 
 残るactual入力は、neck全体のnormal Moser flowの生存・一様buffer、triple endsでの同一正則作用とreduced foliationの同時一致、source/coreとの接着である。KE側 `neck:lem:rank-one-circle` はresidual rank-one下界とvolume上界だけでnormal circle長を抑えるが、その下界とactual bufferを証明する必要がある。固定residual境界の影響が消えないexact negative KE productの例があるため、normal深度だけからproduct asymptoticsを推論しない。
 
+
 ## 全深部三重点の actual semi-flat 比較
 任意の固定次数 d≥5 の一般位置全平面退化で、三重点の全深度比・全角度に一様な actual KE 比較を証明した。正確な座標 ζ0ζ1ζ2=t、ell_i=−log|ζ_i|²、L=−log|t|²、R=log L とし、k_Lをlogarithmic simplex上のcomplete toric KE form、その実計量をg_L^sfとする。十分大きい固定m1と各qのCqについて、m≥m1、min ell_i≥mで
 \[
@@ -34,6 +35,7 @@
 固定toric模型の存在・完備性にはZhang (2015), §2.1, Theorem 2.1 / Proposition 2.2を用いる（退化族のTheorem 2.4とQ-factorial仮定は使わない）。ψ_L=log L−Σlog ell_iに対してψ_L−(log3)/2≤φ_L≤ψ_L、V_L/3≤k_L²≤V_Lを内外にずらした障壁で証明する。Complete模型から三つの半平面へのYau Schwarz lemma、determinant比較、内部正則性により一様cusp geometryを得る。凸性からfacet shiftのlog-density差をO(1/min ell)とし、actual計量を内外のsimplex KE metricsでvolume比較する。Savinの小摂動定理でtensor・全高階誤差へ移る。Actual metric bufferや(TC)/(PBE)を前提としない。
 
 Actual側の大域入力は `coarse:cor:degree-d-volume-lower`。Adjunction residueでcanonical densityを固定し、backgroundによるHermitian frame errorの吸収と各正のcap方向のminorから六型のdeterminant下界を証明する。Sourceでは元のplane coordinatesを保つexact xy=tzとrescalingにより二つのcap係数≥c_d/Lを使う。Compact minimum原理からactual volume下界を得る。今回この依存部分も再点検して明示化した。
+
 
 ## Complete simplex模型の境界での鋭い比較
 KE主稿 `papers/sections/simplex_boundary_geometry.tex` が正本。`simplex:lem:rank-one-schwarz` は、complete模型から各半平面への正則写像にYau Schwarz lemmaを適用して
@@ -58,6 +60,7 @@ C\bigl((b/\beta)^2+\beta/d_*\bigr)
 \]
 を固定p_L-ball全体で評価する。Actual側にはO(1/b)を加える。`simplex:cor:active-cogram` はell_i≤L e^−Aのactive covectorsについて、二方向ならco-Gram誤差O(e^−2A)、一方向を含む一様評価ならO(e^−A/2)を与える。Actual側はO(1/min ell)を加える。閉cornerの距離下界には、一方向のexact Schwarz評価と二方向のdominant比較だけで足り、facet比較を追加依存としない。
 
+
 ## 同じactual Lagrangian bundleによる全閉cornerのGH極限
 正本は `papers/sections/paper/ke_closed_corner_gh.tex`。Lagrangian主稿 `ke:actual-closed-corner` で構成した同じMoser flow φ_tと同じbundleを用いる。m=Rとし、
 \[
@@ -77,12 +80,14 @@ Actual/model比較O(1/R)に加え、Moser場のC1評価からmodel計量のLie d
 
 全fiberのintrinsic/ambient diameterはO(1/R)、正規化後はO(1/R²)、raw-map誤差はO(log R/R)。Squareの共通辺と共通頂点でも同じregular T² fiberである。これらを既存大域fibrationのsource・branch・coreのsingular fibersとは同定しない。V_t外を通る全曲面のshortcut、異なるtriple chartの接合、大域相対接着は未解決。新規性の網羅的確認と外部査読・形式証明は未実施。
 
+
 ## 開正方形上のactual KE–Lagrangian collapse
 主稿 `papers/sections/paper/ke_open_cell_collapse.tex` は、任意の固定次数d≥5、固定0<η<1/2についてKη=[η,1−η]²上の局所結果を与える。関連KE主稿 `simplex:cor:actual-dominant-product` により、独立深度a,b∈[L^η/2,2L^(1−η)]ではproduct-cuspとの誤差は全固定階でO(L^−η)である。模型側O(((a+b)/L)²)とactual側O(1/min ell)を合わせた率であり、global capped volume下界、complete模型の上下比較、Savin正則性に依存する。(TC)_dや(PBE)_dは追加仮定しない。
 
 `ke:open-cell-moser-c1` はchain primitiveとMoser場のC1 normをO(L^−η)とし、flowのpullback metricを制御する。`ke:open-cell-collapse` はactual Lagrangian T² fibration、fiberのintrinsic/ambient diameter O(L^−η)、raw-map誤差O(1/R)を与える。Moser像領域に内在長さ距離を入れると、R^−2 g_tは平坦KηへGH収束し、projection distortionはO(L^−η+L^−η/R)=O(L^−η)。定数は固定ηに依存する。
 
 開正方形の局所結果と、前節の全閉cornerの局所結果を区別する。閉cornerまでの距離同定は証明したが、全曲面のambient shortcut、source・branch・coreへの相対接着、既存大域fibrationとの同定は残る。
+
 
 ## 負KE計量のGH極限とfiber収縮（2026-11-20）
 
@@ -105,6 +110,7 @@ KE研究の `papers/cubical-gh-limit.tex` では $R_t=\log(-\log|t|^2)$、$\math
 主稿 `base_topology.tex` の `topo:ke-map-compatibility` に、$\operatorname{dis}(\Phi_t)\le a_t$ と $\sup_xd_\square(\Phi_t(x),p_T\pi_t(x))\le b_t$ から $\operatorname{dis}(p_T\pi_t)\le a_t+2b_t$ を得る比較命題と証明を置いた。Ambient fiber diametersは同じ量以下、GH距離はその半分以下である。一般的新規性は主張しない。証明を今回三角不等式で点検したことと、actual $a_t,b_t\to0$ が未証明であることを区別する。
 
 **具体的な次の課題：** 全phaseのmoving triple比較と閉cornerの内在・保護領域内のGH同定を入力として、actual neck collarのorbit partition、action periods、定量的bufferを一致させる。`ke:relative-fiber-preserving` を適用できる開overlapを構成し、sourceのpinched torus、branchのS¹×figure-eight、coreへ相対的に接着する。必要なのは全特異領域を含む一様評価と大域no-shortcutであり、regular fibersの点ごとの収縮では不足する。Action-affine structureだけからcanonicalなRiemannian基底計量は決まらない。
+
 
 ## 局所fibrationの証明と解析入力
 曲面側の着手対象は複素次元2でのKE極限とLagrangian fibrationの適合性である。主稿の `papers/sections/paper/ke_fiber_compatibility.tex` に次の証明を置いた。
@@ -130,6 +136,7 @@ W.-D. Ruan, *H-minimal Lagrangian fibrations in Kähler manifolds and minimal La
 `ke:relative-neck-matching` は、別のactual Lagrangian fibrationがこの開overlap上で同じorbit partitionを持つなら、基底collarを同定して写像を接着できるという局所系である。各点の固定や単一境界上の一致だけを用いた接着は主張しない。点ごとの固定が必要なら、既存の `ke:relative-averaging` のcentered kernel 1/2−sと作用不変collarを使える。Actual neckで必要なorbit一致・action periods・bufferを同時に実現することは未解決。
 
 定数係数monomial変更ζ'=c(t)ζ^A、A∈GL(2,Z)はphase orbit partitionを保つ。一方、非定数holomorphic unitを含む変更ζ'=ζ^A u(ζ,t)は一般に保存しない。二つのtorus actionsが同じoverlapに存在するだけでは相対補題の仮定にならない。Sourceのcritical valuesについても `ke:source-marking` のcore交差仮定の下でp_T(b_t)→e_i+e_jが必要であり、固定された任意の内部markingは使えない。
+
 
 ## 相対接着の補助計算：primitiveの選択と障害
 
@@ -211,6 +218,7 @@ d^c(AF-F)(\partial_{\theta_1})
 
 **着手方法。** 二段階平均とexact primitive transportは主稿 `ke:staged-neck-averaging` に証明した。Source-free固定base上のprimitiveと共通moment intervalも関連KE稿で確保した。次はactual familyでの全neck flow bufferと、複数endsの同一正則作用・reduced-circle foliationsを具体的に合わせる。Critical actionの直線性とsourceを含む接着は残り、既存の固定symplectic neck模型のtaming/cutoff評価をactual KE familyへ一様に移す証明はまだない。
 
+
 ## 複素次元2：先行研究・singular fibersの確定事項（2026-11-20）
 本研究の曲面X_d⊂P³, d≥5の一般SNC gluingと、全平面模型の明示的なsingular fiber型を区別する。主要な定理は papers/sections/paper/geometry_main_statements_v17.tex の main:global、nodeの線型monodromyは invariants_examples.tex、より詳しい先行比較は geometry_introduction_v25.tex。
 
@@ -236,28 +244,16 @@ d\binom{d-3}{2}+d\binom d2=d(d^2-4d+6)=c_2(X_d).
 \]
 **Singular fiberは一般にsmooth embedded Lagrangianではなく、各smooth stratumがisotropicなstratified fiber**として定義している。Core skeletonも一般のdで一つの固定したpants型ではない。この基本的なlocal topology、個数、Euler数の証明は原稿に既存、今回の作業は出典・適用範囲との照合であり、幾何学的gluing証明全体の独立監査ではない。
 
+
 ## 曲面：現在の核心
 全pair productsが狭義正の四ray整数データの正weightsはmatchingと同値。G5_14両単位枝の{5,0,0}を排除し、{4,1,0}に限定したと原稿は記録する。必要支持はG5_14、G5_16、G5_17の3型26標識。存在・幾何的非同型類の個数とは異なる。三高Dの一般同時非負性と一般分母剛性は残る。
+
 
 ## KE退化との分岐基底の位相的比較（新たに証明）
 曲面基底 \(B_d(T)\) の三価木 \(T_{ij}\) を収縮する既存の \(q:B_d(T)\to\operatorname{Sk}_2\Delta^{d-1}\) と、KE候補 \(\mathcal C_d\) の正規化同相の逆を合成すると、**labelを保ち点逆像が可縮な** \(p_T:B_d(T)\to\mathcal C_d\) を得る。一般次数の厳密な証明は `papers/sections/paper/base_topology.tex` の `topo:KE-cubical-comparison`。\(d=5\) では同相、\(d\ge6\) では両者は同相ではない（辺の局所分岐次数が異なる）。KEのGH極限や作用アフィン計量との一致は主張しない。
 
 整数鎖複体の主張を検査するため、\(d=5,\dots,8\) の \(B_d(T)\) と \(\operatorname{Sk}_2\Delta^{d-1}\) の \(\partial_1,\partial_2\) の階数を独立に計算して、\(b_1=0\)、\(b_2=\binom{d-1}{3}\) と一致した。再現コードは `verification/verify_ke_base_topology.py`。これは有限体 \(\mathbb F_{1000003}\) 上の有限検算であり、整数係数の一般定理の証明は本文のexplicit chain contractionが担当する。
 
-## 三次元一般型のLagrangian torus fibration：一次文献比較（2026-11-20）
-最重要の先行結果は以下。**位相的stratified torus fibration**、**選んだLagrangian fiber**、**全regular fibersがLagrangianな大域fibration**、**SNC degenerationの部分領域のLagrangian fibration**を混同しない。
-
-- G. Mikhalkin, *Decomposition into pairs-of-pants for complex algebraic hypersurfaces*, Topology 43 (2004), 1035–1065, DOI 10.1016/j.top.2003.11.006, arXiv:math/0205011。**Theorem 1**は全次数・全次元のsmooth hypersurface X_dにstratified topological T^n-fibrationを作り、底はwedge of p_g(X_d) spheres S^nのhomotopy型を持つ。**Lagrangian性は各maximal n-cell内の少なくとも一点のfiberに限る**。特に一般型threefold d≥6のtopological torus decompositionは既知。全regular fibersが所定ωでLagrangianという結論はない。
-- N. C. Leung and T. Y. H. Wan, *Calabi-Yau components in general type hypersurfaces*, J. Differential Geom. 83 (2009), 43–74, DOI 10.4310/jdg/1253804351, arXiv:0807.1784。**Theorem 2.4**がMikhalkinの定理を再掲し、**Theorem 3.3**は選ばれたLagrangian fibersが正則n形式に関してasymptotically specialになることを示す。全正則fiberのLagrangian性は証明しない。
-- J. D. Evans and M. Mauri, *Constructing local models for Lagrangian torus fibrations*, Ann. Henri Lebesgue 4 (2021), 537–570, DOI 10.5802/ahl.80。Affine SNC complementのlocal model、3-fold negative vertex、one-dimensional stratum近傍。Projective general type X_dのglobal fibrationではない。
-- M. Abouzaid, D. Auroux and L. Katzarkov, *Lagrangian fibrations on blowups of toric varieties and mirror symmetry for hypersurfaces*, Publ. Math. IHÉS 123 (2016), 199–282, DOI 10.1007/s10240-016-0081-9。Affine hypersurfaces of general typeへ応用するが、blowup of V×C along H×0のfibrationを、compact H⊂P^4そのものへのglobal fibrationと同一視できない。
-- J. Fernández de Bobadilla and T. Pełka, *Fibrations by Lagrangian Tori for Maximal Calabi–Yau Degenerations and Beyond*, Commun. Pure Appl. Math., first published 8 July 2026, article e70060, DOI 10.1002/cpa.70060, arXiv:2312.13248v4。A'Campo boundaryから近傍fiberへsymplectic transportをする一般Kähler degeneration方法。Maximal CYではgeneric regionのLagrangian torus fibrationであり、一般型compact threefoldのglobal coverageには直接至らない。本研究のthreefold-fibration.texにTheorem 6.14の部分適用が既にある。
-- C. Y. Mak, D. Matessi, H. Ruddat and I. ZharkovのCalabi–Yau hypersurfaceへのglobal Lagrangian fibrationは2026年1月/6月/11月の公的**講演要旨**で発表。2026年11月12日のMak講演要旨（IMJ-PRG）はiron coefficientsとconvex non-strict potential、Liouville flowを明示している。確認した範囲でcomplete published proof/preprintは未取得。対象はCY/anticanonicalであり一般型には自動適用できない。公式要旨 https://www.imj-prg.fr/gestion/evenement/affEvenement/45 と https://www.mittag-leffler.se/seminar/helge-ruddat-tba/ 。
-
-**目標の新規性の正確な位置**：smooth general type X_d⊂P^4, d≥6, 指定ω=aHについて、全regular T^3 fibersがLagrangianで、明示されたsingular local modelsをもち、全X_dを覆い、境界なし、連結fiber、Hausdorff baseとなるglobal mapを構成する。Mikhalkinのtopological fibrationとLeung–Wanの部分的special性より強い。しかし「初めての一般型torus fibration」「一般型のLagrangian torusが未知られ」などの主張は誤り。新規性の網羅的な保証は未完了。より弱いgeneral singular setを許しても大域存在を優先する。現在未完成の相対filling、curvature-flat normal lifts、reduced surfaceの両端葉層一致、actual coverageの証明を必要とする。
-
-## 三次元：局所稿の参照先
-`papers/threefold-blocks.tex`第25・33節：positive normal shell、membrane/focus collars。第26節：smooth focus Cartanとnormal degreeの障害。第34–35節：compact focus blockとnormal-trivial closed curve。第36節：actual補集合の境界写像・equivariant π₂・巡回被覆。第37節：normal ballへの相対補完・relative handlesとdisk group・接着の障害。第38節：weighted collars。Normal exterior Eのfibrationは構成済み。旧48 ports、V₀への延長、elliptic faceを消すboundary-free接着は未完成。全体稿は `papers/threefold-fibration.tex`。
 
 ## 人工的基底計量の鋭い収束速度と幾何学的比較の核心
 $p_T:B_d(T)\to\mathcal C_d$ に補助piecewise Euclidean metric $h$ を固定し、$|v|_\varepsilon^2=|dp_T(v)|_\square^2+\varepsilon^2|v|_h^2$ の内在距離を考える。graph correspondenceのdistortion $\mathcal D_\varepsilon$ は、$d=5$ で $\Theta(\varepsilon^2)$、$d\ge6$ で $\Theta(\varepsilon)$ と鋭く決まる（主原稿に読み込む base_topology.tex の topo:metric-collapse-sharp）。$d\ge6$ の下界は同一fiber内の正の $h$-距離に由来するが、**GH距離の下界ではない**。
@@ -268,67 +264,9 @@ $p_T:B_d(T)\to\mathcal C_d$ に補助piecewise Euclidean metric $h$ を固定し
 \]
 二枚のunit squareを一頂点で貼り、二枚を一枚に折る反例では(N),(S)が誤差零でも(F)が成立せず、$d_{\rm GH}\ge\sqrt2/2$（topo:portal-counterexample）。したがって局所模型だけでは大域収束は言えない。実際のLagrangian action metricの長さ完備化、枝・coreへの延長、および(N),(S),(F)の確認は未解決。新規性は未確認。
 
+
 ## 六次Petersen分岐基底の対称性
 $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木系はちょうど六つであり、$S_6$ はこの集合に推移的に作用する。固定した一系の安定化群は位数 $6!/6=120$、指数6。従ってその一系の選択は座標置換の全 $S_6$ 対称性を保たない。KE候補 $\mathcal C_6$ は自然に $S_6$ 対称なので、Petersen分岐基底とのラベル付き比較を対称に行うには六つの木系全体を管理する必要がある。証明は base_topology.tex の topo:petersen-symmetry、全15 perfect matchingsと六one-factorizationsの有限列挙・安定化群位数は別に確認した。これは任意の別構成やラベル忘却後のシンプレクティックな対称性の不存在ではない。
 
-## 三次元：管状補集合とfocus境界の整数位相
-**曲線の構成：** d≥6、e=d−2。平面曲線C_eを含むsmooth hypersurfaceはF=q_eR_2+z_3G_{d−1}+z_4H_{d−1}のfirst-jet生成から取れる。Normal完全列より det N_{C_e/Y_d}=O_{C_e}(e+2−d)=O_{C_e}。Ehresmann–Moser移送したC'⊂X_dのsymplectic normalは自明、genusはg=(d−3)(d−4)/2。一般のnormal-trivial symplectic curve（degree e, genus g）には2g−2=(d−5)eが必要で、d偶数ならe偶数（主稿の tnc:degree-genus-parity）。Holomorphic normal rank-two bundleそのものの自明性は主張しない。
-
-**管状補集合の整数homology：** 小さいnormal disk bundle N(C')の補集合V_0=X_d＼int N(C')では、Lefschetz・Thom長完全列により
-\[
-H_3(V_0;\mathbb Z)\simeq \mathbb Z^{b_d}\oplus\mathbb Z/(d-2),\qquad
-H_4(V_0;\mathbb Z)\simeq\mathbb Z^{2g},\qquad
-b_d=d^4-5d^3+10d^2-10d+4.
-\]
-Torsionはnormal meridian S³のclassから生じる（tnc:tubular-homology）。六次ではH_3(V_0)=Z^{520}⊕Z/4、H_4(V_0)=Z^6。X_dの整数cohomologyの一次資料はO. Randal-Williams, Math. Ann. 391 (2025), 1965–2003, §2.1, DOI 10.1007/s00208-024-02951-4。
-
-**Actual focus blockの整数homology（証明済み）：** $K_c$の座標を$w=XY$、$A=P_X-P_Y$とすると、$w$を保持して$A\to0$へ変形収縮できる。$A=0$は$w$-annulusと円周の積で、$w=0$の一円周を潰したものだから
-\[
-K_c\simeq S^1\vee S^2
-\]
-（tnc:focus-homotopy）。従って実際のblockの補集合$\mathcal V=\overline{X_d\setminus\operatorname{int}(C'\times K_c)}$に相対Poincaré–Lefschetz双対性を適用すると
-\[
-H_1(\mathcal V)=\mathbb Z,\quad H_2(\mathcal V)=\mathbb Z^{2g+2},\quad
-H_3(\mathcal V)=\mathbb Z^{b_d+2g+1}\oplus\mathbb Z/(d-2),\quad
-H_4(\mathcal V)=\mathbb Z^{2g+1}.
-\]
-六次では$(b_1,b_2,b_3^{\rm free},b_4)=(1,8,527,7)$、$H_3$のtorsionは$\mathbb Z/4$（tnc:actual-complement-homology）。Torsionを表す3-cycleは固定した曲線上の一点での$\partial K_c$。管状補集合$V_0$と$\mathcal V$は同じEuler数だが自由rankが異なる（tnc:complement-distinction）。Ambientの$\pi_3(X_d)$に現れる既知の$\mathbb Z/d$は別の不変量。
-
-**Actual normal face：** $\partial K_c$はfocus点一つのmonodromy $\left(\begin{smallmatrix}1&1\\0&1\end{smallmatrix}\right)$を持つtorus bundleで、$\pi_1$は整数Heisenberg群、$H_1=H_2=\mathbb Z^2$（tnc:focus-boundary-homology）。$\partial\mathcal U=C'\times\partial K_c$のBetti数は$(1,2g+2,4g+3,4g+3,2g+2,1)$、六次では$(1,8,15,15,8,1)$（tnc:focus-boundary-betti）。
-
-**Euler予算：** χ(U)=−(d−2)(d−5)、χ(V)=−(d⁴−5d³+9d²−3d−10)。六次ではχ(V)=−512。Euler数非零fiberが有限個の孤立基底点にだけ存在してすべて−1なら512個必要（tnc:complement-singularity-budget）。正次元特異strataではcompact-support Euler数で重み付けし、一般のglobal Lagrangian fibrationの実現数には外挿しない。
-
-**境界包含・被覆空間の現在の到達点：** 証明の正本は `papers/sections/threefold/local_blocks/focus_exterior_topology.tex`。Hopf商によってnormal exterior E≃S¹∨S²∨S³を同定し、V=V₀∪_{C'×S³}(C'×E)を用いてπ₁(V)=Zを証明した。境界のcurve loopsとa,bはVで消え、focus基底boundary lift tは生成元。両側への同時π₁写像のkernelはHeisenberg中心〈a〉である。全整数境界表も決定した（`tnc:all-boundary-homology-maps`）。F=regular torusはU側、T=aをt沿いにtransportしたtorusはV側に残る。H₂ boundary→VのcokernelはZ/e、[∂K_c]はH₃(V)の位数eのtorsion、H₃(V)/im boundary=H₃(X_d)、H₄ boundary→Vは全射。Framing・orientationを固定するが、H₃(X_d)のliftは非標準的なのでcanonicalなsplittingと混同しない。
-
-Λ=Z[τ,τ⁻¹]に対し `tnc:equivariant-pi2` はπ₂(V)=Λ^(2g+1)⊕Λ/(e(τ−1))を与える。Universal coverのMVで[C']=e hとなり、deck不変性からe(τ−1)h=0が生じる。残りのaugmentation ideal (τ−1)Λはfreeなのでextensionがsplitする。整数torsion部分はΛ/eΛだが、coinvariants H₂(V)=Z^(2g+2)はfreeである。`tnc:cyclic-cover-h2` は全m≥1についてH₂(V_m)=Z^{m(2g+1)+1}⊕(Z/e)^{m−1}を証明する。有限coverではH₁(C')⊗H₁(E_m)=Z^(2g)の項を落としてはいけない。六次二重被覆はZ¹⁵⊕Z/4。
-
-**再現と先行研究：** `python3 verification/verify_focus_exterior_topology.py --json` は17個のSmith algorithm自己照合、d6–20の60境界行列、m1–12の180被覆関係行列と180群環coinvariant行列を整数演算で確認する。一般の式は原稿の証明による。Auroux arXiv:0706.3207 §5.1のnodal model、Akbulut arXiv:1103.3137v2 Introduction/Figure 1のS⁴のfishtail分解、Hatcher Theorems 4.32/4.41・Example 4.45を一次資料で確認した。既知の模型・道具と今回の具体計算を区別し、包括的新規性は未確認。
-
-## 三次元：normal補完と相対円板の現在の知識
-
-証明は `papers/sections/threefold/local_blocks/focus_relative_filling.tex` に集約する。
-
-**Positive construction。** `ncc:normal-ball-completion` は、K_c⊂int D⁴の余裕 a_*²+4π²(c+√q₊)²<L²を使い、商平面上のcompactly supported flowでψ_Aを作る。Inner blockを含むfilled diskではw−c、outer collarではidentityであり、H=|ψ_A(XY)|²はAとPoisson可換になる。ψ_A自体にsymplectic性を要求しない点が重要。全fiberの連結性とĜ⁻¹(R)=K_cは各reduced sliceのdiffeomorphism性から従う。C′との積は既存focus–hyperbolic fibersを保存する。商座標の図はintegral-affine図ではない。
-
-**大域化の障害。** H=0は真のelliptic faceであり、そのwhole T² fiberと近傍のpartitionをcompact X_d上で保つと半空間germが残る（`ncc:elliptic-face-limitation`）。外側S³への接着だけでこのgermを消すことはできない。これはnormal exteriorのfibrationが存在するという成果と、境界のないglobal baseの未完成を分ける点である。
-
-**相対handles。** Eはouter S³からHopf linkに沿う一つのround 1-handleで得られ、ordinary 1+2 handlesへ分けられる。逆向きは2+3で、唯一の2-handleのbased attaching wordはwhiskerと向きでbにできる。Knot isotopyやframingの自由な選択は主張しない。V≃V₀∪_i(C′×(S¹∨S²))はV₀からの写像を保ち、i=f_e∘q、q:C′→S²、[f_e]=e hである。CofiberはwedgeだがV自体はV₀とのwedgeではない。Curve 2-cell×normal 1-cellがe(τ−1)hの関係を担う。
-
-C′×Eのouter側のminimal relative handle数は(1,2g+1,2g+1,1)、index1–4。H₄=Z、reverseではH₅=Zのため、どちら向きにも全二境界を保つWeinstein cobordismにならない（`tnc:no-weinstein-normal-transition`）。C°のboundary componentsがr≥1ならouter relative Betti数はindex1–3で(1,2g+r,2g+r−1)となる。これは側面∂C°×Eをrelative subspaceに含めない計算であり、puncture後のWeinstein構造の存在は未証明。
-
-**Normal disk module。** `tnc:normal-relative-disk-module` はπ₂(E,Y)=ΛB、∂(fB)=f(1)b+f′(1)a、sphere subgroup=(τ−1)²ΛBを与える。Bは適切に選んだ唯一のreverse 2-handleのcore。任意のb-capではなく、B+(τ−1)²gBは係数がunitでなければΛ-basisにならない。Yの誘導被覆T²×RでFが実際のsolid torusで埋まるためcentral extension classは零。AbeliannessとPeiffer identityが境界kernelの作用を消し、一般relative Hurewiczで必要な作用quotientを正当化する。ν_relは旧sphere generatorとunit ±τⁿだけ異なり、marked orientationとの同一視は別途指定する。
-
-**Curve disksの非可換関係。** `tnc:relative-disk-central-extension` でπ₂(V,∂U)はM=π₂(V)によるπ₁(C′)×Z²のcentral extensionとなり、∏[A_i,B_i]=e h。Curve diskを変更してもcommutator積は変わらず、t作用との整合性がe(τ−1)h=0を再現する。Hyperplane degree ℓでMをZへ押し出すとEuler数eのcircle bundle P_eのπ₁とZ²の積になる。全三次元pairの各curve diskへのt作用、embedded disksとsmooth framingはまだ決定していない。∂UはLagrangianでないので相対群全体へsymplectic areaを定義しない。Sphere subgroupではarea=aℓ、c₁=(5−d)ℓ。
-
-**Clean diskの制約。** Ω=dX∧dYについてμ(a)=0, μ(b)=2（`ncc:normal-maslov-marking`）。Normal C²内のLagrangian diskがregular torusと境界でcleanに交わるなら、境界ma+nbはn=0かつmA=0。逆向き2-handleのword b+kaをこの種のcoreで実現する案は使えない。Elliptic collapseのtransverse diskはsymplecticなので矛盾しない。Curve方向へ動くdiskやnonclean/singular diskの非存在には拡張しない。
-
-**一次資料と位置づけ。** M. Symington, *Four dimensions from two in symplectic topology*, Proc. Sympos. Pure Math. 71 (2003), 153–208, arXiv:math/0210033, §6.1 Lemma 6.3 / Theorem 6.5は標準nodal trade。D. Asimov, *Round handles and non-singular Morse–Smale flows*, Ann. of Math. 102 (1975), 41–54, DOI 10.2307/1970972はround handleの出典（公式書誌を確認、本稿のhandle分解は直接証明）。K. Cieliebak–Y. Eliashberg, *Flexible Weinstein manifolds*, arXiv:1305.1635, §1.1 pp.2–3はisotropic stable manifoldsとindex制限。R. Brown, JLMS (2) 22 (1980), 146–152, DOI 10.1112/jlms/s2-22.1.146, [author PDF](https://www.groupoids.org.uk/pdffiles/whiteheadthm.pdf) §2はrelative crossed module。B. Conrad, [Group cohomology and group extensions](https://math.stanford.edu/~conrad/210BPage/handouts/gpext.pdf), §2はH²によるcentral extension分類。Hatcher *Algebraic Topology*, Props.0.18–0.19、Thms.4.37,4.57はhomotopy pushout、relative Hurewicz、cohomology表現。これらの道具自体と本研究の具体計算を区別し、包括的新規性は未確認。
-
-**次の着手。** Toric outer collarとV₀側を接続し、内部elliptic faceの近傍を変える。C′を有境界曲面へ切る案では、上のH₄障害を除いた後に側面のwhole fibers・action periods・coorientationを定める。Normal diskの二階差分とcurve relationを保ち、global circle actionの障害を避けるgenerator変更領域が必要である。
-
-## 検証
-今回の相互点検対象はnormal ballへの明示的補完、elliptic base germ、round handlesとrelative pushout、normal relative crossed module、全補集合のcentral extension、Weinsteinおよびclean normal diskの障害である。原稿の証明と独立点検を行った。既存の補集合位相・short-circle averaging・KE局所解析の証明と点検記録は保持するが、大域接着全体を再監査したものではない。
-
-`python3 verification/verify_focus_relative_models.py --json` を実行し、243 Laurent多項式の境界・整数除法、1,701 deck作用、15 closed-curveと60 punctured-curveのKünneth計算を正確な整数演算で確認した。有限代数検算は相対Hurewiczの仮定・handle geometry・symplectic補完の証明を代替しない。外部査読と形式証明は未実施。
-
-2026-11-21に三次元局所稿190頁・全体稿211頁をLuaLaTeXとlatexmkで組版し、未解決の参照・引用がないことを確認した。新節の代表頁と図はPDFを画像化して表示を点検した。曲面主稿改訂8の130頁は保持した組版記録で、今回再組版していない。既存節の2.27ptのOverfull警告一件は残るが、新節にはない。GitHub反映は組版と別に確認する。
+## 検証状態
+組版記録、既存の整数計算の証明書、今回の証明の再監査は異なる。曲面主稿改訂8の130頁、整数接着201頁、meridian18頁は分割前の記録であり、分離後の再組版を意味しない。計算の入口は `verification/run_current_checks.py`。局所KEの証明と全曲面actual GH適合性も区別する。

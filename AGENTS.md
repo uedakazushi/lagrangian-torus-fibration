@@ -1,9 +1,9 @@
-# lagrangian-torus-fibration — 研究・保存指示
+# surface-lagrangian-torus-fibration — 研究・保存指示
 2026-11-20 / v1.0
 
 ## 入口と正本
 - 研究全体の入口は https://github.com/uedakazushi/research-hub 。再開時はhubの該当項目を確認し、最初にこのrepoの `00_research_plan.md`、次に本書、`research/notes.md` と必要な原稿を読む。
-- 本研究の現行資料の正本はGitHub `main`。主たる公表用原稿は `papers/lagrangian-torus-fibration.tex`（本文のある主原稿）であり、節分割可。独立論文は記述的な別名を付け、READMEと研究方針に役割を明記する。
+- 本研究の現行資料の正本はGitHub `main`。主たる公表用原稿は `papers/surface-lagrangian-torus-fibration.tex`（本文のある主原稿）であり、節分割可。独立論文は記述的な別名を付け、READMEと研究方針に役割を明記する。
 - 一般原則と研究固有の目標を区別する。研究で使う文献、証明、再現入力の正本は当該repoに置く。
 
 ## 研究の方針と確実性
@@ -28,3 +28,6 @@
 
 ## 回収した原資料の扱い
 `research/source-manifest.json`と`research/migration.md`で全文・要約・未回収を区別する。移行完了の判定に短い要約を使わない。取得した最新版の訂正・追加仮定を旧稿の強い記述より優先する。保存済みの証明書と今回の再実行を混同しない。
+
+## 複素次元3の正本との区別
+三次元のfocus block・補集合の位相・全域存在問題は `https://github.com/uedakazushi/threefold-lagrangian-torus-fibration` を正本とする。曲面の主原稿、五次整数接着、KE適合は本repoで管理する。相互の結果は定理番号・適用仮定を明示して引用し、正本を二重化しない。
