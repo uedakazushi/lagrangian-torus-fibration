@@ -9,22 +9,22 @@
 
 固定 source-free compact 基底上の moving normal strip では、actual 計量で一定の buffer と $O(m_t^{-1})$ の短円を証明した（主稿 `ke:fixed-base-neck-moser`）。$\varphi_t=\log(\omega_t^2/\Omega_{t,d}^{\rm low})$ とし、大域の $\varphi_t\ge-C$ と $dd^c\log\Omega_{t,d}^{\rm low}\ge c\omega_{\rm FS}$ を、正則包含の Chern–Lu 不等式に組み合わせる。最大値原理から $\operatorname{tr}_{\omega_t}\omega_{\rm FS}\le C e^{A\varphi_t}$。固定 pair chart では体積包絡が $\varphi_t\le C$ を与える。入れ子座標間の固定射影幅から actual 球を確保し、局所 Chern–Lu を complete annulus–disc に適用して actual 二側比較を得る。法線深度を $m_t$ から $m_t/2$ に広げ、残余基底にも固定した余裕を取ることで、Moser map の source と像の両方が同じ内側 strip を覆う。
 
-次は residual collar 自体を三重点へ動かす場合の束表示・短円・buffer と、triple action との開 overlap 上の整合である。Source gate の $|x|\asymp |t|^{1/2}$ では固定射影座標の距離下界は法線の rescaling 幅を検出しない。 一方、source 模型 $xy=tz$ の法線円は gate まで残余方向の rank-one 下界と annulus–disc の体積上界で短くなる。正則ベクトル場 $x\partial_x-y\partial_y$ の Bochner 不等式で gate の $O(L_t^{-1})$ 評価を central bidisc に伝播できる（主稿 `ke:source-short-circle`）。固定 shell 上の成分KE収束と cusp 下界を使い、対角選択で十分遅く縮む source 領域に限り、共通 Moser source・像と actual focus–focus germ を構成した（`ke:source-diagonal-moser`）。所定の速さで動く法線境界の下界は別問題である。固定残余領域内の閉じた pinched torus は次の共通neckで構成する。
+Residual collarを三重点へ動かす共通flow領域と葉の一致は、以下の遅いexhaustionで確保した。Source gate の $|x|\asymp |t|^{1/2}$ では固定射影座標の距離下界は法線の rescaling 幅を検出しない。 一方、source 模型 $xy=tz$ の法線円は gate まで残余方向の rank-one 下界と annulus–disc の体積上界で短くなる。正則ベクトル場 $x\partial_x-y\partial_y$ の Bochner 不等式で gate の $O(L_t^{-1})$ 評価を central bidisc に伝播できる（主稿 `ke:source-short-circle`）。固定 shell 上の成分KE収束と cusp 下界を使い、対角選択で十分遅く縮む source 領域に限り、共通 Moser source・像と actual focus–focus germ を構成した（`ke:source-diagonal-moser`）。所定の速さで動く法線境界の下界は別問題である。固定残余領域内の閉じた pinched torus は次の共通neckで構成する。
 
-Source と通常 pair の共通化を主稿 `ke:projected-source-normal-form`, `ke:projected-source-neck` で証明した。固定残余基底で射影を保つ正則 Morse 座標 $x'y'=t h_t(p)$ を用いる。capped density と短円評価は $O(t)$ 座標変更で保たれ、固定 shell の対角選択で source を含む一つの actual Moser map を得る。共通 primitive の moment と基底射影の組で商は $I_t\times P$。指定した残余葉の持ち上げから、閉じた一重 pinched torus と saddle fiber が得られる。次の接着課題は三重点側との開 overlap で同じ fiber partition を得ること。
+Source と通常 pair の共通化を主稿 `ke:projected-source-normal-form`, `ke:projected-source-neck` で証明した。固定残余基底で射影を保つ正則 Morse 座標 $x'y'=t h_t(p)$ を用いる。capped density と短円評価は $O(t)$ 座標変更で保たれ、固定 shell の対角選択で source を含む一つの actual Moser map を得る。共通 primitive の moment と基底射影の組で商は $I_t\times P$。指定した残余葉の持ち上げから、閉じた一重 pinched torus と saddle fiber が得られる。三重点側との共通開領域と全intersectionのfiber一致は、以下の部分fibrationで実現する。
 
 三重点と射影neckの座標接続の正本は `papers/sections/paper/ke_neck_corner_transition.tex`。全三重点を避ける共通の無限遠超平面内に各二重線の射影補空間を選び、三平面の式 $q_0q_1q_2=tU$ のunitを三乗根で対称に除く。射影Morse変換の後にbase-only gaugeを施すことで、三つの端を同じexact triple chartと比較できる。固定 $\sigma>0$ のarm $\ell_i,\ell_j\ge(1+\sigma)\ell_k$ では、座標比の主枝対数 $e_{ka}$ が全phase・全固定階で $\|e_{ka}\|_{C^q(h)}\le C_{q,\sigma}e^{-c_\sigma m}$ を満たす。深度の相対幅が一定の正規化正則chartでCauchy評価を使い、$L_t$ に依存する微分損失を避ける。
 
 三つの分離したarmで積を保つsmooth補間を行うと、一つのtorus作用が各端の射影neckのnormal circleに厳密に一致する（`ke:three-arm-coordinate-interpolation`）。補間帯では非正則なのでKähler性を主張せず、共通toric模型との小摂動から平均と凸pathのtame symplectic性を証明する。Canonical primitiveの差はbase-only closed formと一価関数のexact differentialに分かれ、normal periodは一致する（`ke:transition-normal-primitive`）。残余cycleのperiodは同じとは限らない。
 
-`papers/sections/paper/ke_relative_corner_patch.tex` はcentered averagingの順序比較を定量化する。模型に近いprimitiveを選ぶと、比較Hamiltonianそのものが $O(e\delta)$ であり、領域の直径を掛けずにcutoffできる。Actual tripleでは $e,\delta=O(m^{-1})$ なので $O(m^{-2})$。三つの端にそれぞれ指定したnormal-first構成を、一つのactual corner bundleへ組み込める。小さいreduced circle graphを固定collarの外で恒等なdiffeomorphismへ延長する明示式も `ke:reduced-collar-graph` に置く。単一armでは、共通moment stripと外側marginを指定すればactual reduced葉のgraph評価も証明した（`ke:single-arm-reduced-graph`）。Normal生成場の長さを $a$ とするとmoment差が $O(a b^{-2})$、normal微分が $\ge ca$ なので、normal深度が極端に大きくても逆係数 $a^{-1}$ の損失は相殺される。Graphの $C^1$ はmomentを固定した残余座標に関するものとし、無重みのmoment微分には同じ一様性を主張しない。Source-inclusive neck全体との共通moment stripと共通被覆は別に確認する。
+`papers/sections/paper/ke_relative_corner_patch.tex` はcentered averagingの順序比較を定量化する。模型に近いprimitiveを選ぶと、比較Hamiltonianそのものが $O(e\delta)$ であり、領域の直径を掛けずにcutoffできる。Actual tripleでは $e,\delta=O(m^{-1})$ なので $O(m^{-2})$。三つの端にそれぞれ指定したnormal-first構成を、一つのactual corner bundleへ組み込める。小さいreduced circle graphを固定collarの外で恒等なdiffeomorphismへ延長する明示式も `ke:reduced-collar-graph` に置く。単一armでは、共通moment stripと外側marginを指定すればactual reduced葉のgraph評価も証明した（`ke:single-arm-reduced-graph`）。Normal生成場の長さを $a$ とするとmoment差が $O(a b^{-2})$、normal微分が $\ge ca$ なので、normal深度が極端に大きくても逆係数 $a^{-1}$ の損失は相殺される。Graphの $C^1$ はmomentを固定した残余座標に関するものとし、無重みのmoment微分には同じ一様性を主張しない。Source-inclusive neckとの共通moment stripとflow領域は、`ke:neck-corner-diagonal-matching` で別途確保する。
 
 単一armで必要なmoment区間の存在も `ke:arm-common-moment-strip` で実証した。残余深度 $b\asymp b_0\to\infty$、$b_0/L\to0$ とし、normal端を $\ell_i=Kb$ または $\ell_j=Kb$（固定 $K>1+2\sigma$）に取ると、canonical momentは
 \[
  \mu,\nu=\pm\frac{4\pi}{Kb}
  +O\!\left(b_0^{-2}+\frac{(b_0/L)^2}{b_0}\right).
 \]
-従って $I_t=[-c_*/b_0,c_*/b_0]$ の各levelが全残余annulusで一意に存在し、固定比のarm marginを持つ。これはSource-inclusive neck全体との共通区間・共通flow domainの構成とは区別する。
+従って $I_t=[-c_*/b_0,c_*/b_0]$ の各levelが全残余annulusで一意に存在し、固定比のarm marginを持つ。Source-inclusive neckとの共通区間・共通flow domainには、下記の固定段階の選択を追加して使う。
 
 微分評価の障害：単に $\ell_i-\ell_k\to\infty$ では足りない。例えば $f=\zeta_i/\zeta_k$、深度 $(N+\log N,N+\log N,N)$ では $|f|=N^{-1/2}$ だが、cusp単位ベクトルでの微分は $N^{1/2}$ と増大する（`ke:coordinate-czero-obstruction`）。座標比の値が1に近いことを、Moserの正値性に必要な微分小摂動へ読み替えない。
 
@@ -42,9 +42,25 @@ Moser 流では軌道全体の最大速度を軌道平均エネルギーの平�
 
 主稿のラベル `ke:normal-flow-naturality` が自然性の正本。全円軌道を含む共通plateauで同じcentered kernelを選ぶと、$G^*K_N\omega_N=K_\alpha G^*\omega_N$ であり、全trajectoryがそこに留まる限り $\phi_NG=G\phi_\alpha$ が厳密に成立する。Primitive $\lambda$ の一致を仮定せず、flowを決める $K\omega$ を比較する。Canonical normal momentの一致と合わせれば、corner torusはneckの同じmoment reduction上の円の全逆像として一致する。
 
-主稿 `ke:neck-corner-diagonal-matching` は、残余cut $b_j$ と固定compact $P_j\Subset P_j^+$、それらの定数を支配するnormal cutoff $n_j\gg b_j$、共通moment区間 $I_j$、最後に $t_j$ の順で選ぶ。三重点側の $a=4n_j$ と $c=4n_j$ におけるmomentはそれぞれ $\pm\pi/n_j$ と比較でき、$I_j$ を狭くして全levelをdeep normal stripへ収める。全circle orbit・第二段の像・第一段の全trajectoryを共通plateauとneckの内側tubeに含められる。得られるのはsource/saddleを含むneckのend germsと、cornerの指定deep stripの厳密なfiber一致であり、全cornerとの全intersectionやcoreを含む全曲面の被覆は未主張。
+主稿 `ke:neck-corner-diagonal-matching` は、残余cut $b_j$ と固定compact $P_j\Subset P_j^+$、それらの定数を支配するnormal cutoff $n_j\gg b_j$、共通moment区間 $I_j$、最後に $t_j$ の順で選ぶ。三重点側の $a=4n_j$ と $c=4n_j$ におけるmomentはそれぞれ $\pm\pi/n_j$ と比較でき、$I_j$ を狭くして全levelをdeep normal stripへ収める。全circle orbit・第二段の像・第一段の全trajectoryを共通plateauとneckの内側tubeに含められる。この共通collarの一致を、次の全intersectionの制御へ用いる。
 
 Reduced graphに合わせて残余foliationをmomentに滑らかに依存させることは `ke:moment-dependent-neck-foliation` で許される。変更をsource・saddleの近傍とcollar外で恒等にすれば、閉pinched torusとsaddle fiberの型を保つ。固定 $t$ ごとの滑らかさでよく、無重みのmoment微分の一様な小ささは不要。残余基底は元の射影点 $p$ であり、$h_t(p)$ はsource近傍以外でglobal座標としない。Endのradial座標は $Z_{k,t}=C_D^2/h_{k,t}$ を使う。
+
+`ke:neck-corner-saturated-union` はcorner cut $m_t=6b_j$ とneckの境界葉 $B=7b_j$ を分離する。先に $5b_j\le b\le9b_j$、normal深度 $\ge n_j/2$ の広い領域でnormal-first構成へ補正する。Neckの全normal trajectoriesはouter tube内にあり、frame差を引いてもlocal normal深度 $\ge3n_j/4$。そこで $|d\log b(Y_N)|\le C/(n_jb_j)$ を使うfirst-exitにより、neck imageは $b<8b_j$ に留まる。Cornerの最小深度と元の射影の線形性から交点で $b\ge6b_j-C$ を得る。逆normal flowの自然性でmomentを同定した後にnormal深度 $\ge4n_j$ を結論する順序で、循環を避ける。Reduced graphと葉でのtrimから全intersectionが全torusで飽和し、source・saddleを含むactual部分fibrationとなる。End markingは共通torus同定に合わせて選び、任意に独立な第二periodの一致を含めない。全曲面被覆とcore接着は残る。
+
+## Source中央部の体積・momentとactual接続
+
+正本は `papers/sections/paper/ke_source_connectors.tex`。$xy=tz$、$t=\tau^2$、$(x,y,z)=(\tau X,\tau Y,XY)$ として固定bidiscを使う。`ke:source-central-density` はdensityを $L^{-2}|dX\wedge dY|^2$ と両側比較する。下界はcapped canonical density、上界は正しいoriented gateのannulus–disc volume上界と中央の最大値原理による。Canonical potential $u_t=\log(\omega_t^2/|dX\wedge dY|^2)+2\log L$ は有界で $dd^cu_t=\omega_t$。射影を保つMorse座標にも適用できる。
+
+`ke:source-central-moment` は同じcanonical primitiveで $|\mu_t|\le C/L$、固定点で $\mu_t=0$ を与える。Normal平均potentialの凸性と中央からoriented arm断面までの割線を用いる。Base-only変更はnormal momentを変えず、独立な加法定数の調整を行わない。`ke:source-central-mean-distance` は固定Euclidean体積に関するtrace積分と平均二乗ambient距離を $O(1)$ に抑える。部分積分と線分の二点積分による。ほとんどの点からなる部分集合の径は得られるが、全点・固定点・特定moment levelの径にはならない。
+
+`ke:source-central-short-escape` はactual inradiusを $O(L^{-1/2})$ に抑える。Density上界から $\operatorname{tr}_{g_t}g_{\rm E}\ge cL$ を得て、大きさ $O(1/L)$ の非負Laplacian barrierを作る。Ricci下界による距離二乗のLaplacian comparisonと最大値原理で、全中央点からあるgateへの短い退出を得る。`ke:source-central-arm-connectors` はgateから正しいarm内を $s_x=\kappa L$ 又は $s_y=\kappa L$ まで進め、全費用を $O(1)$ とする。終点の残余座標・momentは指定しない。
+
+固定連結source-free compact基底では `ke:fixed-base-central-band` により、固定 $A>0$、$m_t\to\infty$、$m_t=o(M_t)$ の下、$|\mu|\le A/M_t$ のcentral band全体がactual径 $O_{P,A}(1)$ を持つ。異なるmomentも含み、Moser像には $O(m_t^{-1})$ の端点費用だけを加える。両normal深度 $\ge\kappa_A M_t$ をmomentの片側下界から導き、水平・動径・円弧を組み合わせる。
+
+Source側の `ke:source-central-band-reduction` は、固定residual disc、人工境界からの余裕、normal最小深度の下で、$|\mu|\le A/L$ の全点を固定rescaled coreへ $O(1)$ で接続する。従って中央帯の残る径問題はcore全点の径、またはcoreからsource-free shellの $|\mu|\le A'/L$ への $o(R)$ 接続に帰着する。一般の同一moment集合については、指定した残余境界への退出条件 `ke:eq:source-moment-exit-input` が十分であるが、これは未証明。Central inradius、平均距離、全source fiberの径、長いnormal armsを含むneck全体の径を区別する。
+
+`ke:source-potential-modulus` はGuedj–Guenancia–Zeriahi（参考文献キー `GGZDiameter`、Proposition 1.4）の局所距離評価を用いる十分条件を記す。Potential $u_t$ に一様な連続度 $m$ があり $\int_0^{r_0}\sqrt{m(r)}\,dr/r<\infty$ なら、固定coreのambient径は $O(1)$。このsquare-root-Dini modulusや一様Hölder評価自体はまだ証明していない。有界potentialから自動的に導いたり、同論文の大域Kähler class仮定を局所族へ無条件に適用したりしない。
 
 ## 二段階平均によるnormal actionとperiodsの接続
 
@@ -64,7 +80,7 @@ Reduced graphに合わせて残余foliationをmomentに滑らかに依存させ�
 
 `ke:short-circle-actual-buffer` は不変背景を不要にする。g_a=ρ_a*g_ω、η=Aω、b=ε||w||₂とすると|β(X)|≤b|X|_{g_η}。Moser場は(1−s)|Y|²_η+s|Y|²_ω≤b|Y|_ηを満たし、平方完成で|Y|_ω≤b/(2√(s(1−s)))となる。両向きtrajectory長はc_w ε、通常kernelでc_w=π/(2√3)、centeredでπ/(4√3)。Exactnessは長さ評価に不要。`ke:short-circle-image-buffer` はδ>(2c_w+1/2)εから、同じcompact飽和集合Kを含むsource Oとimage φ(O)を得る。Backward c_w ε＋半orbit ε/2＋forward c_w εの予算であり、conjugated actionを元のK上で使うための像の条件を明示した。C¹制御やintrinsic径、全neckでの仮定検証とは別。
 
-残るactual入力は、neck全体のnormal Moser flowの生存・一様buffer、triple endsでの同一正則作用とreduced foliationの同時一致、source/coreとの接着である。KE側 `neck:lem:rank-one-circle` はresidual rank-one下界とvolume上界だけでnormal circle長を抑えるが、その下界とactual bufferを証明する必要がある。固定residual境界の影響が消えないexact negative KE productの例があるため、normal深度だけからproduct asymptoticsを推論しない。
+遅いexhaustionでflow生存・共通bufferとtriple endsの葉の一致は実証した。残るactual入力は、部分fibrationの外を含む全域被覆・core接着と全点の距離評価である。KE側 `neck:lem:rank-one-circle` はresidual rank-one下界とvolume上界だけでnormal circle長を抑えるが、その下界とactual bufferを証明する必要がある。固定residual境界の影響が消えないexact negative KE productの例があるため、normal深度だけからproduct asymptoticsを推論しない。
 
 
 ## 全深部三重点の actual semi-flat 比較
@@ -121,9 +137,9 @@ C\bigl((b/\beta)^2+\beta/d_*\bigr)
 
 Actual/model比較O(1/R)に加え、Moser場のC1評価からmodel計量のLie derivativeを直接抑え、φ_t^*g_t=(1+O(1/R))g_L^sfを得る。保護領域内の全経路を扱うときは、Moser trajectoryのmodel長さO(1/R)とΨのLipschitz定数O(1/R)から、端点誤差d_J(Ψφ_t(z),Ψ(z))=O(R^−2)を用いる。これにより、閉cornerのfibrationの射影そのものがGH approximationになる。
 
-全fiberのintrinsic/ambient diameterはO(1/R)、正規化後はO(1/R²)、raw-map誤差はO(log R/R)。Squareの共通辺と共通頂点でも同じregular T² fiberである。これらを既存大域fibrationのsource・branch・coreのsingular fibersとは同定しない。V_t外を通る全曲面のshortcut、異なるtriple chartの接合、大域相対接着は未解決。新規性の網羅的確認と外部査読・形式証明は未実施。
+全fiberのintrinsic/ambient diameterはO(1/R)、正規化後はO(1/R²)、raw-map誤差はO(log R/R)。Squareの共通辺と共通頂点でも同じregular T² fiberである。これらを既存大域fibrationのsource・branch・coreのsingular fibersとは同定しない。V_t外を通る全曲面のshortcut、部分fibrationの外を含む被覆とcore接着は未解決。新規性の網羅的確認と外部査読・形式証明は未実施。
 
-一般のcut $m_t\to\infty,\ \log m_t=o(R_t)$ についても、同じsoftmaxとMoser mapの射影が局所GH近似になることを `ke:slow-cut-closed-corner-gh` で証明した。内在・protected距離のdistortionは $C[m_t^{-1}+(\log(m_t+1)+\log R_t)/R_t]$、fiberの元の尺度の内在径は $C/m_t$。内部squareを幅 $\delta=(\log(m+1)+4\log R)/R$ だけ縮め、pruningでは $S=R-\log m-\log R$ を使う。$m_t$のparameter微分を使わず、stepwiseな遅いexhaustionにも適用できる。次の構成候補は、各固定残余compactの定数と必要なnormal cutoffを先に選び、その後 $t$ を小さくして共通moment stripを三重点armへ配置することである。実際の共通被覆・葉の一致を証明するまでは大域接着と扱わない。
+一般のcut $m_t\to\infty,\ \log m_t=o(R_t)$ についても、同じsoftmaxとMoser mapの射影が局所GH近似になることを `ke:slow-cut-closed-corner-gh` で証明した。内在・protected距離のdistortionは $C[m_t^{-1}+(\log(m_t+1)+\log R_t)/R_t]$、fiberの元の尺度の内在径は $C/m_t$。内部squareを幅 $\delta=(\log(m+1)+4\log R)/R$ だけ縮め、pruningでは $S=R-\log m-\log R$ を使う。$m_t$のparameter微分を使わず、stepwiseな遅いexhaustionにも適用できる。この遅いcutを `ke:neck-corner-saturated-union` の対角選択へ用いて部分fibrationを構成した。全曲面への延長は別課題である。
 
 
 ## 開正方形上のactual KE–Lagrangian collapse
@@ -178,14 +194,14 @@ W.-D. Ruan, *H-minimal Lagrangian fibrations in Kähler manifolds and minimal La
 
 主稿 `ke:relative-fiber-preserving` は、torus-saturatedな**開**collar N上で元のorbitsが既にactual ω-Lagrangianであれば、β=Hω、H=K_1+A_1K_2というchain primitiveがvertical vectorsを消すことを用いる。ω_sも同じvertical distributionをLagrangianに保つため、Moser場はverticalであり、各fiberと基底値が保存される。ωの作用不変性は不要。Centered chain primitiveでも同じ証明が成立するが、同じdβを持つ任意のprimitiveへの置換では消滅条件が保存されるとは限らない。
 
-`ke:relative-neck-matching` は、別のactual Lagrangian fibrationがこの開overlap上で同じorbit partitionを持つなら、基底collarを同定して写像を接着できるという局所系である。各点の固定や単一境界上の一致だけを用いた接着は主張しない。点ごとの固定が必要なら、既存の `ke:relative-averaging` のcentered kernel 1/2−sと作用不変collarを使える。Actual neckで必要なorbit一致・action periods・bufferを同時に実現することは未解決。
+`ke:relative-neck-matching` は、別のactual Lagrangian fibrationがこの開overlap上で同じorbit partitionを持つなら、基底collarを同定して写像を接着できるという局所系である。各点の固定や単一境界上の一致だけを用いた接着は主張しない。点ごとの固定が必要なら、既存の `ke:relative-averaging` のcentered kernel 1/2−sと作用不変collarを使える。許容射影と遅い対角選択では共通葉・normal moment・bufferを `ke:neck-corner-saturated-union` で実証した。独立な第二periodの一致は含まない。
 
 定数係数monomial変更ζ'=c(t)ζ^A、A∈GL(2,Z)はphase orbit partitionを保つ。一方、非定数holomorphic unitを含む変更ζ'=ζ^A u(ζ,t)は一般に保存しない。二つのtorus actionsが同じoverlapに存在するだけでは相対補題の仮定にならない。Sourceのcritical valuesについても `ke:source-marking` のcore交差仮定の下でp_T(b_t)→e_i+e_jが必要であり、固定された任意の内部markingは使えない。
 
 
 ## 相対接着の補助計算：primitiveの選択と障害
 
-以下はregular torus領域での補助計算であり、仮定と証明をこのノートに保持する。主稿の `ke:relative-fiber-preserving` の証明を重複させず、primitiveの変更、整数基底の変更、collarの点固定に関する情報を整理する。Actual neck全体でのorbit partition・action periods・bufferの整合は未証明であり、これらの補助計算の新規性も未確認である。
+以下はregular torus領域での補助計算であり、仮定と証明をこのノートに保持する。主稿の `ke:relative-fiber-preserving` の証明を重複させず、primitiveの変更、整数基底の変更、collarの点固定に関する情報を整理する。選んだneckとcornerの共通葉・normal moment・bufferは上記部分fibrationで実証した。独立な第二periodとcore接着には追加確認が必要であり、補助計算の新規性も未確認である。
 
 ### Centered primitiveの整数基底変更
 
@@ -261,7 +277,7 @@ d^c(AF-F)(\partial_{\theta_1})
 
 特にU=B×T²、Bは可縮なcorridor、N=N_-⊔N_+は両端のfull torus collarsとする。RestrictionはR²→R²⊕R²の対角写像なので、両端の二つのtorus period vectorsの一致が条件になる。その差は対応するS¹を運んだcylinder上のσ_sの積分である。これは指定したmarkingとaction originを保つ相対同定の条件であり、自由なbase relabellingを許すfibrationの存在障害と同一視しない。
 
-**着手方法。** 二段階平均とexact primitive transportは主稿 `ke:staged-neck-averaging` に証明した。Source-free固定base上のprimitiveと共通moment intervalも関連KE稿で確保した。固定残余baseではsourceを含むactual neckと閉pinched torusまで構成した。三重点の単一armでは座標接続・normal moment一致・共通moment区間・reduced graphを得たので、次は遅い残余exhaustionの各段階でneck側とtriple側の共通開領域を具体的に選ぶ。全endの葉と必要なcritical actionsの同時整合、core接着、全曲面距離の評価は残る。
+**着手方法。** `ke:neck-corner-saturated-union` を出発点とし、残るnormal領域とcoreを含む全域への相対延長を調べる。距離側ではsource中央coreの全点径・shellへの接続、または `ke:eq:source-moment-exit-input` の同一momentでの退出を扱う。Potential連続度の十分条件は未検証入力として保持する。全source fiberの径を既証明と扱わず、全曲面のno-shortcutと木上のfiber合併の費用を別に構成する。
 
 
 ## 複素次元2：先行研究・singular fibersの確定事項（2026-11-20）

@@ -18,7 +18,7 @@
     },
     {
       "path": "papers/sections/paper/ke_staged_neck_averaging.tex",
-      "role": "二段階平均・固定baseのactual neck・source模型・同一momentの有界接続"
+      "role": "二段階平均・source-inclusive actual neck・同一momentとsource-free central bandの有界接続"
     },
     {
       "path": "papers/sections/paper/ke_closed_corner_gh.tex",
@@ -106,7 +106,11 @@
     },
     {
       "path": "papers/sections/paper/ke_neck_corner_exhaustion.tex",
-      "role": "遅い残余exhaustionによるsource-inclusive neckとtripleの共通開collar"
+      "role": "遅い残余exhaustion・全交わりが共通葉で飽和したneck–corner部分fibration"
+    },
+    {
+      "path": "papers/sections/paper/ke_source_connectors.tex",
+      "role": "Central sourceのdensity・potential・moment・平均距離・短い退出、中央帯のcore還元と条件付き連続度評価"
     }
   ],
   "source_roots": [

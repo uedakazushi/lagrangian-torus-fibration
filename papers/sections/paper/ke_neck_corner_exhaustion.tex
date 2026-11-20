@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.0: Source-inclusive neck と triple end の遅い共通 exhaustion．
+% 2026-11-21 / v1.1: Source-inclusive neck と closed corner の全交わりの制御．
 \section{Source を含む neck と三重点 end の共通 exhaustion}
 \label{ke:neck-corner-exhaustion-section}
 
@@ -8,8 +8,9 @@ moving arm の命題\ref{ke:arm-common-moment-strip}を接続する．
 選択の順序は，残余 compact 領域，normal cutoff，moment interval，
 最後に退化 parameter の閾値である．この順序によって，固定 compact の定理を
 未証明の moving-base 一様評価として用いることを避ける．
-以下で得るのは source と saddle を含む neck の end germs と，
-三重点 bundle の指定された深い normal strip との一致である．
+最初に source と saddle を含む neck の end germs を三重点 bundle と合わせ，
+さらに cut の位置を離して選ぶことで，closed corner と切詰めた neck の
+全ての実際の交わりで fiber partition を一致させる．
 Core への延長や，全曲面を通る経路の距離比較は含まない．
 
 \subsection{残余基底と end 座標の区別}
@@ -285,3 +286,241 @@ Source の $\mu=0$ を含む全商では $(\mu_N,p)$ の位相同定を用い，
 残る浅い normal 領域，component core，および曲面全体を覆う domain の選択は別の課題である．
 Source を含む全 fiber の径や全曲面の no-shortcut も，
 局所 flow の小さい変位と区別して検証する必要がある．
+
+\subsection{Closed corner と切詰めた neck の全交わり}
+
+Germ の一致から二つの実際の領域の和集合上の fibration を得るには，
+指定した collar 以外の交点も除外する必要がある．そのため normal-first の相対化を，
+最終的に使う moment strip より先に，少し浅い normal 領域まで施す．
+以下の証明では，交点の moment を同定した後に初めて深い normal 下界を使う．
+
+\begin{corollary}[全交わりが共通の葉で飽和した部分 fibration]
+\label{ke:neck-corner-saturated-union}
+定理\ref{ke:neck-corner-diagonal-matching}の有限個の二重線と三重点について，
+diagonal 選択と cut の位置を取り直せば，次を同時に実現できる．
+三重点側では
+\[
+ m_t=6b_j,\qquad t_{j+1}<|t|\le t_j
+\]
+とした全 softmax domain $\mathcal H_{t,m_t}$ を使い，
+三つの arm の normal-first 構成を相対化した actual corner bundle を
+$\mathcal C_{t,J}$ とする．Neck の各 end は，対応する $\kappa$-torus の残余深度
+$b=7b_j$ によって指定される moment-dependent reduced 葉で切り詰める．
+その actual 像を $\mathcal N_{t,D}$ とする．
+
+各 $\mathcal C_{t,J}\cap\mathcal N_{t,D}$ は双方の全 torus fibers の和であり，
+そこで二つの fiber partition と向き付き normal circle は厳密に一致する．
+End の第二 cycle はこの共通 torus 同定で移送して標識する．独立に先指定した
+全整数基底同士の一致や第二 period の一致を主張するものではない．
+各 end には空でない開 overlap がある．小さい開近傍を用いて同じ構成を行えるので，
+これらの和集合上に一つの actual $\omega_t$-Lagrangian 部分 fibration が得られる．
+Neck 内部の sources と simple saddles の局所モデルは変わらない．
+
+この選択も $m_t\to\infty$，$\log m_t=o(R_t)$ を満たす．
+従って各 closed corner について，定理\ref{ke:slow-cut-closed-corner-gh}の
+内在・protected GH 評価は保持される．和集合が曲面全体を覆うこと，
+component core への延長，およびこの和集合の外を通る shortcut の評価は，
+本系の結論には含まれない．
+\end{corollary}
+
+\begin{proof}
+\emph{定数と cut の位置を選ぶ．}
+前定理の残余領域を
+\[
+ P_j=D\setminus\bigcup_k\{s_{k,0}>12b_j\},\qquad
+ P_j^+=D\setminus\bigcup_k\{s_{k,0}>16b_j\}
+\]
+に替える．Frame 差 $M_j$ は少なくとも $3b_j<s_{k,0}<12b_j$ を含む固定 annuli で取り，
+$n_j>4M_j$，$n_j>1000(1+2\sigma)b_j$ とする．
+固定段階の全 buffer 条件，$C_j/n_j<1/j$，および有限個の outer neck tubes の
+分離も，必要なら $n_j$ をさらに大きくして満たす．
+実際，異なる二重線上の固定 compact $P_j^+$ は三重点を除いているので互いに素であり，
+まずその十分細い束近傍を互いに素に選び，最後に $t$ を小さくすればよい．
+Moment 幅は前定理と同じく
+\[
+ 0<\iota_j<\min\{c_j/(16n_j),\pi/(64n_j)\}
+\]
+とし，$|\mu|<2\iota_j$ 上で構成する．
+式\eqref{ke:eq:exhaustion-normal-cut-moment}は残余 annulus を
+$4b_j<b<10b_j$ に替えても成立する．
+$t_j$ を最後に小さくして，この annulus 上の全 $\mu,\nu$-levels が
+$a,c>4n_j$ にあること，および $P_j^+$ の各 end 上で
+$Z_{k,t}/Z_{k,0}$ の必要な $C^3$ 比較を確保する．
+ここで $a,c$ は $\Xi_k$ の normal 深度，$b=-\log|Z_{k,t}|^2$ である．
+
+\emph{Moment の制限より広い領域で先に平均順序を合わせる．}
+新しい triple 座標の torus 飽和領域として
+\[
+ E_k^-=\{5b_j\le b\le9b_j,\quad a,c\ge n_j/2\}
+\]
+を取り，その少し広い $E_k^0$ と，さらに広い
+\[
+ E_k^+\Subset\{4b_j<b<10b_j,\quad a,c>n_j/4\}
+\]
+を取る．最初の不等式には必要に応じて小さい開近傍を付ける．
+例えば残余の中間 cut を $4.5b_j,9.5b_j$，normal の中間 cut を $2n_j/5$
+に取れば，入れ子領域の buffer は正の定数で下から抑えられる．
+$\log(b/b_j),\log(a/n_j),\log(c/n_j)$ の滑らかな関数で作る
+cutoffs の固定階の $h$-norms も一様である．
+三つの $E_k^+$ は互いに素で，全て最小深度 $m_t/2=3b_j$ より深い．
+
+座標接続の逆写像を $G$ とし，$\alpha=G^*\omega_t$ に対して，
+一段階 map $\Phi$ も各 normal-first map $\phi_{\alpha,k}\psi_k$ も
+centered kernel を用いて選ぶ．
+定理\ref{ke:relative-corner-patch}を上の領域へ適用し，
+\[
+ C_t=G\Upsilon\Phi,\qquad
+ C_t(z)=G\phi_{\alpha,k}\psi_k(z)\quad(z\in E_k^-)
+\]
+を得る．$C_t(\mathcal H_{t,m_t})=\mathcal C_{t,J}$ と置く．
+$\Upsilon\Phi$ の変位と一次微分の変化は $O(b_j^{-2})$，
+$G$ は指数的小摂動である．
+従って，source と像のどちらでも各正規化 log 深度は $O(b_j^{-2})$ しか変わらない．
+この相対化は moment を $I_j$ に制限する前に行っている．
+
+\emph{Neck を共通の reduced 葉で切る．}
+$4b_j<b<10b_j$ と $|\mu|<2\iota_j$ の共通 strip に
+命題\ref{ke:single-arm-reduced-graph}を適用する．
+$B$ を source の $\kappa$-torus の残余深度とし，
+その第二段の像の reduced 葉を $\gamma_{\mu,B}$ と書く．
+$B$ は torus 全体で一定であり，像の点ごとの残余深度 $b$ と区別する．
+Graph 評価から
+\[
+ b=B\bigl(1+O(b_j^{-2})\bigr)
+ \quad\text{on }\gamma_{\mu,B},
+\]
+またこれらの円は $B$ の順序を保つ．
+補題\ref{ke:reduced-collar-graph}による foliation の移送を，
+$5b_j<B<9b_j$ 上ではこの全 family と一致し，
+source・saddle の近傍では恒等となるように取る．
+Neck source を $\gamma_{\mu,7b_j}$ で切り，残余内部を残す．
+その内側では，end 座標が定義される範囲で
+$b\le7b_j+O(b_j^{-1})$ である．
+実際の neck はこの領域を global normal Moser map $\phi_N$ で移したものとし，
+その moment 座標は
+\[
+ \widehat\mu_N=\mu_N\circ\phi_N^{-1}
+\]
+である．平均前の点における $\mu_N$ と混同しない．
+
+\emph{Neck の全 normal path の残余方向を閉じ込める．}
+Global normal flow の全 trajectories は outer tube 内にあり，
+global frame での二つの normal 深度は $n_j$ より大きい．
+$4b_j<b<10b_j$ にいる間は frame 差から local normal 深度は
+$n_j-M_j>3n_j/4$ である．
+従ってその全 normal circle は正則な $\Xi_k$ plateau に含まれる．
+補題\ref{ke:normal-flow-naturality}をここでは vector field の段階で用いると，
+$q=\log(b/b_j)$ に対して
+\begin{equation}\label{ke:eq:neck-residual-first-exit}
+ |Y_N|_h\le\frac{C}{n_jb_j},\qquad
+ |dq(Y_N)|\le\frac{C}{n_jb_j}
+\end{equation}
+を得る．この評価には global と local の endpoint maps の一致は使わない．
+Centered homotopy が不変模型を消すこと，normal generator の長さが $C/n_j$ 以下で
+actual/model 誤差が $C/b_j$ 以下であることから直接従う．
+
+Source の residual cut と $8b_j$ の間には固定の $q$-幅がある．
+従って最初に $b=8b_j$ に到達する時刻があると仮定すると，
+その直前の annulus を通る $q$-変位が
+\eqref{ke:eq:neck-residual-first-exit}の時間 $1$ の積分より大きくなり矛盾する．
+よって neck の全 image と全途中像は $b<8b_j$ にある．
+Source が end の外にある場合も，同じ annulus を横切る必要があるので同じ議論になる．
+
+\emph{実際の交点を先に広い plateau に入れる．}
+$x\in\mathcal C_{t,J}\cap\mathcal N_{t,D}$ とする．
+Corner の source は全深度 $\ell_a>6b_j$ を持つので，
+小さい変位により $x$ の旧 triple 深度は
+$\ell_a(x)\ge6b_j-O(b_j^{-1})$ である．
+元の射影座標 $p$ は固定 affine triple 座標 $q_i,q_j,q_k$ の線形式であり，
+それらと $\zeta_a$ の比は固定 unit である．従って
+$|p(x)|\le C e^{-3b_j}$，すなわち
+\[
+ b(x)\ge6b_j-C>\tfrac{11}{2}b_j
+\]
+となる．ここでは $F=\Xi_k$ をまだ用いず，
+固定 end 上の $Z_{k,t}/Z_{k,0}$ の比較だけを用いている．
+既に得た neck の上界と合わせて
+$11b_j/2<b(x)<8b_j$ を得る．
+
+$x$ から global neck の逆 normal trajectory を時刻 $0$ まで追う．
+全軌道は outer tube 内にあり，帯内では local normal 深度が $3n_j/4$ より大きい．
+\eqref{ke:eq:neck-residual-first-exit}と固定幅の margin によって，
+逆軌道も全時刻で $5b_j<b<9b_j$ に留まる．
+従って全軌道と全 normal orbits 上で $F=\Xi_k$ が成立する．
+特に $F(x)$ の残余深度は実際の $b(x)$ と同じである．
+
+$x=C_t(z)$ と書く．$\Upsilon\Phi$ の小変位から，
+$z$ の残余深度は $(5b_j,9b_j)$ 内，normal 深度は $n_j/2$ より大きい．
+従って $z\in E_k^-$ であり，
+$x=G\phi_{\alpha,k}\psi_k(z)$ という staged 表示を使える．
+Global neck の逆軌道を $F$ で移すと local normal の逆方程式を満たすので，
+ODE の一意性から
+\begin{equation}\label{ke:eq:intersection-inverse-normal}
+ \phi_N^{-1}(x)=G\psi_k(z)
+\end{equation}
+を得る．この時点までは，$z$ の normal 深度が $4n_j$ より大きいことを
+仮定していない．
+
+\emph{Moment と全 fiber を同定する．}
+式\eqref{ke:eq:intersection-inverse-normal}，
+系\ref{ke:transition-normal-primitive}，および第二段の moment の保存から
+\[
+ \widehat\mu_N(x)=\mu_N(G\psi_k(z))
+                =\mu_\alpha(\psi_k(z))=\nu_k(z)
+\]
+が厳密に成立する．
+$x$ が neck の目標 moment interval にあるので $\nu_k(z)\in I_j$ であり，
+ここで初めて normal 単調性を使って $a(z),c(z)>4n_j$ と結論する．
+
+$z$ を含む全 $\kappa$-torus を $T_z$ とし，その残余深度を $B$ とする．
+Reduced graph の同定から，$p(G\psi_k(T_z))$ は
+$\gamma_{\widehat\mu_N(x),B}$ そのものである．
+Neck は $B=7b_j$ の葉で切られており，graph family は $B$ の順序を保つから，
+交点が存在すれば $B\le7b_j$ である．
+その全 torus 上で第二段と第一段の trajectories は
+$a,c>3n_j$ と $4b_j<b<10b_j$ にあり，global inner tube 内に含まれる．
+従って全 torus に自然性を適用でき，
+\[
+ C_t(T_z)=G\phi_{\alpha,k}\psi_k(T_z)
+          =\phi_NG\psi_k(T_z)
+\]
+は neck の一つの全 fiber と一致する．
+$\mathcal H_{t,m_t}$ は全 phase tori の和なので，
+この torus の一部だけが corner に含まれることもない．
+これで交わりが双方で飽和していることと fiber partition の一致が従う．
+
+$|\mu|<\iota_j$ と，例えば $6.4b_j<B<6.6b_j$ の共通 levels は空でない．
+Normal 深度は $4n_j$ より大きく，
+$\min_a(\ell_a-m_t)\ge0.4b_j>1$ なので softmax の全比条件を厳密に満たす．
+従ってこれは両側の内部に含まれる開 overlap である．
+Closed corner の source を，全最小深度が $23b_j/4$ より大きい
+小さい torus 飽和開近傍へ広げても，上の交点の下界と first-exit の余裕は保たれる．
+Neck 側でも少し広い moment interval を使える．
+こうして開領域の fiber partitions が接着する．
+その overlap の基底座標は $(\nu_k,B)=(\widehat\mu_N,B)$ であり，
+normal 単調性と reduced graph の順序保存により座標同定は滑らかである．
+まず閉領域の基底を用いると，各基底は compact Hausdorff であり，
+飽和した交わりの像は閉である．同じ全 fiber による同定は，proper quotient を介して
+これらの閉集合の間の同相写像を与える．同定の graph は閉であり，
+異なる corner 同士と異なる neck 同士は交わらないので，同値類の元は高々二つである．
+従って有限 compact 空間上の同値関係は閉で，貼合せ基底は Hausdorff となる．
+上の小さい開 collar を同じ $(\nu_k,B)$ 座標で延長すれば，
+開領域の部分 fibration もこの基底の近傍上で得られる．
+
+向き付き normal cycle は作用の同変性により一致する．第二 cycle は共通 torus
+同定で移送する．Base-only frame unit の winding により，別に選んだ residual cycle
+とは normal cycle の整数倍だけ異なる場合があるので，その二つの基底を同一視しない．
+Source・saddle の内部標識は end の補正の支持外にあるため保たれる．
+
+異なる三重点 chart は互いに素に選ぶ．異なる neck images は，最初に互いに素にした
+outer tubes の中に留まる．従って有限個を同時に貼り合わせられる．
+内部の singular fibers と marking は end の変形の支持外にある．
+
+最後に $t_j$ の選択に
+$R_t\ge j(1+\log(6b_j)+\log(n_j+1))$ を追加すれば，
+$m_t=6b_j$ に対しても $\log m_t/R_t\le1/j$ である．
+相対化の変位と $C^1$ 誤差は $O(b_j^{-2})$ なので，
+節\ref{ke:relative-corner-section}の pullback metric の評価により
+同じ closed-corner GH distortion bound が成立する．
+この距離評価を neck，core，または保護領域の外まで延長してはいない．
+\end{proof}

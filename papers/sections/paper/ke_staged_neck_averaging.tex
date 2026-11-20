@@ -651,9 +651,52 @@ $d(s)^{-1}$ 倍される．同じ二側比較から，固定残余点・固定�
 葉の選択や葉内での長さに依存しない．
 \end{proof}
 
-この命題は，固定した source-free 基底上で異なる残余点を結ぶ
+\begin{corollary}[異なる moment を含む固定基底の中央帯]
+\label{ke:fixed-base-central-band}
+命題\ref{ke:fixed-base-moment-connectors}と同じ固定連結 source-free 基底 $P$，
+canonical moment $\mu_t$，normal Moser map $\phi_t$ を用いる．
+$A>0$ を固定し，$m_t\to\infty$，$m_t=o(M_t)$ とする．
+十分小さい $t$ について
+\[
+ E_{t,A}=\{p\in P,\ m_t\le s\le M_t-m_t,\ |\mu_t|\le A/M_t\}
+\]
+と置くと，$t$ に依存しない $C_{P,A}$ が存在して
+\[
+ \operatorname{diam}_{d_{g_t}}E_{t,A}\le C_{P,A},\qquad
+ \operatorname{diam}_{d_{g_t}}\phi_t(E_{t,A})
+ \le C_{P,A}+O(m_t^{-1})
+\]
+が成り立つ．異なる normal moment に属する点も同時に含み，
+正規化した ambient diameter は $O_{P,A}(R_t^{-1})$ である．
+\end{corollary}
+
+\begin{proof}
+$m_t\to\infty$ により，十分小さい $t$ では前命題の片側 moment 評価に
+必要な固定最小深度を超える．また $m_t=o(M_t)$ から
+$m_t\le\vartheta M_t$ および $A/M_t\le c/(2m_t)$ が最終的に成立するので，
+中央帯の moment 値は同じ共通 interval に入る．
+$s\le\vartheta M_t$ での $\mu_t\ge c_0/s$ と
+$|\mu_t|\le A/M_t$ を合わせれば $s\ge c_0M_t/A$ を得る．
+右側では符号を逆にした評価を用いる．従って
+\[
+ \kappa_A=\min\{\vartheta,c_0/A,1/4\}>0
+\]
+と置けば，中央帯の全点で
+$\kappa_A M_t\le s\le(1-\kappa_A)M_t$ である．
+特に，異なる moment に属する任意の二点の深度 $s_1,s_2$ に対しても
+\[
+ \left|\int_{s_1}^{s_2}\frac{ds}{\min(s,M_t-s)}\right|
+ \le 2\log\frac{1}{2\kappa_A}
+\]
+となる．前命題の固定深度での水平 lift，終点の残余点での動径弧，
+最後の phase 弧を用いれば，この二点を一様な長さで結べる．
+経路は深部 neck 内に留まるが，中央帯や moment level 内に留まる必要はない．
+両端に長さ $O(m_t^{-1})$ の Moser trajectories を加えれば像の評価も従う．
+\end{proof}
+
+以上の命題と系は，固定した source-free 基底上で異なる残余点を結ぶ
 portal 費用を扱う．Source を通る pinched fibre，三重点へ動く残余 collar，
-または異なる normal moment をまたぐ木全体の直径評価は含まない．
+またはこの中央帯に限られない normal moment をまたぐ木全体の直径評価は含まない．
 従って全曲面の no-shortcut と大域 GH 実現はなお別の問題である．
 
 \begin{corollary}[Central source を含む深部での短い円]

@@ -51,14 +51,18 @@ moving normal strip の actual 二側比較と共通 Moser source・像を得る
 さらに同じ normal moment 上の残余基底全体を，有界な actual 長さの経路で結ぶ．
 従ってその level に属する複数 fibres の合併の正規化 ambient 直径は $O(R_t^{-1})$ である．
 固定基底上では source を含む共通 neck と一重 pinched torus も構成する．
-三重点へ動く領域での定量的接着と，複数 ends の同時整合はなお追加の課題である．
 三重点では固定した深度比で分離した三つの端を用い，射影 neck 座標との比の対数を
 全固定階で指数的に評価する．積を保つ滑らかな座標補間の後も平均の symplectic 性を保ち，
 比較 Hamiltonian の直接評価により，端ごとに指定した平均順序を一つの局所 bundle に統合する．
 また切断深度 $m_t\to\infty$，$\log m_t=o(R_t)$ の一般の選択に対しても，
-同じ閉 corner の局所 GH 評価を与える．これにより遅い compact exhaustion と接続できるが，
-neck 側の共通 moment strip と reduced 葉の同定は別に検証する必要がある．
-曲面全体の shortcut 制御と，既存の大域 fibration への特異領域を含む相対接着は未証明である．
+同じ閉 corner の局所 GH 評価を与える．遅い compact exhaustion と centered normal flow の
+自然性により，共通 moment strip と moment に依存する reduced 葉を同定し，
+全ての交わりが全 fibers で飽和した source-inclusive neck と closed corner の
+actual KE--Lagrangian 部分 fibration を構成する．
+Source の固定中央 rescaling では volume density は $L_t^{-2}$ と二側比較可能であり，
+有界な canonical potential と actual inradius $O(L_t^{-1/2})$ を得る．
+中央点から oriented arm への有界長の接続も得るが，source 全 fiber の径，
+component core への延長と曲面全体の shortcut 制御は未証明である．
 これらを統合する問題として，actual 負 KE 形式に関する大域 fibration の射影と
 標識付き基底収縮の合成が，全曲面の正規化距離に対して一様に距離歪みを消す，
 という大域的な幾何学的実現を定式化する．この問題は未解決であり，
@@ -80,6 +84,7 @@ neck 側の共通 moment strip と reduced 葉の同定は別に検証する必�
 \input{sections/paper/ke_neck_corner_transition.tex}
 \input{sections/paper/ke_relative_corner_patch.tex}
 \input{sections/paper/ke_neck_corner_exhaustion.tex}
+\input{sections/paper/ke_source_connectors.tex}
 \input{sections/paper/degree_partitions.tex}
 \input{sections/paper/partition_topology.tex}
 \input{sections/paper/tropical_obstructions.tex}

@@ -576,13 +576,13 @@ $O((\log R_t)/R_t)$ と評価する．
 これに有限 square gallery の持ち上げを合わせ，model metric の Lie derivative 評価で
 actual Lagrangian bundle へ移す．
 標的の距離は閉 corner 自身のものであり，全複体 $\mathcal C_d$ の他の cells を通る距離ではない．
-異なる三重点・source・branch・core にわたる相対接着と，全曲面の shortcut の制御は残る．
+この局所距離評価だけから全曲面の shortcut の制御は得られない．
 
 その相対接着に向け，命題\ref{ke:relative-fiber-preserving}は，
 元の phase tori が既に actual Lagrangian である飽和 collar 上で
 averaging の chain primitive による Moser flow が fiber 分割を保つことを示す．
 Metric の torus 不変性は不要である．
-ただし actual neck との orbit partition の一致と quantitative buffer は未検証であり，
+Actual neck との orbit partition と quantitative buffer は後述の別の構成で検証し，
 この命題だけから既存の大域 fibration への接着を結論しない．
 
 同じ normal circle を持つ neck と triple collar を扱うため，
@@ -624,8 +624,23 @@ normal period の厳密な一致も得る．第二 period は別の条件であ�
 定理\ref{ke:slow-cut-closed-corner-gh}は
 $m_t\to\infty$，$\log m_t=o(R_t)$ の遅い cut に対しても，
 同じ corner 射影の局所 GH 近似を保証する．
-Moving neck との共通 moment strip，reduced foliation germs の実際の同定，
-core への接着と全曲面の距離比較は，引き続き証明すべき課題である．
+節\ref{ke:neck-corner-exhaustion-section}では，固定残余 compact，normal cut，
+共通 moment 幅，退化 parameter の閾値の順に選ぶ．Centered normal flow の自然性と
+moment-dependent reduced foliation により，moving end の全軌道を共通領域に収める．
+系\ref{ke:neck-corner-saturated-union}は，closed corner と切詰めた neck の
+全ての実際の交わりで全 fiber が一致することを示し，それらの和集合上の
+actual KE--Lagrangian 部分 fibration を与える．Core への延長と全曲面の距離比較は残る．
+
+Source の計量的な問題については，節\ref{ke:source-connectors-section}で
+固定中央 rescaling の volume density を $L_t^{-2}$ と両側から比較する．
+Canonical potential は一様に有界で，中央 moment は $O(L_t^{-1})$ にある．
+Ricci 下界と Laplacian の障壁により actual inradius $O(L_t^{-1/2})$ を得て，
+中央点を oriented arm の断面へ有界長で接続する．
+系\ref{ke:fixed-base-central-band}は source-free な中央 moment 帯の全点を，
+命題\ref{ke:source-central-band-reduction}は source 近傍の中央帯を固定 core へ，
+それぞれ有界長で結ぶ．ただし source 全 fiber の径は未証明である．
+Potential の一様連続度による局所径評価\cite[Proposition~1.4]{GGZDiameter}は，
+残る core 接続を扱う一つの十分条件を与えるが，必要な連続度はまだ得ていない．
 
 
 開いた二次元セルの固定 compact 部分では，さらに明示的な product model と局所 GH 極限を得る．

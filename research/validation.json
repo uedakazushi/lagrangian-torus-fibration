@@ -15,13 +15,15 @@
       "Centered平均の順序比較HamiltonianのO(m^-2)評価と、三端で指定したstaged bundleの相対統合",
       "単一moving armでの共通moment intervalと、固定momentでのactual reduced circle graphのC1評価",
       "分岐基底とcubical候補のcell-like収縮",
-      "Centered normal Moser flowの自然性、moment依存の残余葉、および遅いexhaustionでのsource-inclusive neckとtriple deep stripのend germ一致"
+      "Centered normal Moser flowの自然性、moment依存の残余葉、遅いexhaustionによるsource-inclusive neckとclosed cornerの全交わりで飽和したactual部分fibration",
+      "固定source-free基底の異なるmomentを含む中央帯のactual ambient径O(1)",
+      "中央sourceのvolume densityのL^-2二側比較、有界canonical potential、moment O(L^-1)、traceと平均二点距離の積分評価",
+      "中央sourceのactual inradius O(L^-1/2)、oriented armへのO(1)接続、および中央moment帯の固定rescaled coreへのO(1)帰着"
     ],
     "not_proved": [
-      "三重点へ動く残余exhaustionにおけるsource-inclusive neckとtripleの共通moment区間・共通開領域・全flowの同時被覆",
-      "全neckのreduced葉と必要な第二period・critical actionの整合、およびcoreへのactual KE相対接着",
-      "source・core・異なるmomentをまたぐ木上の複数fiberの合併全体の一様な正規化ambient直径収縮",
-      "全曲面ambient距離でのno-shortcut、square lifts、portal connectorsとP0の一様distortion",
+      "Neck–corner部分fibrationのcomponent coreへの延長、必要な第二period・critical actionの整合、および全曲面被覆",
+      "Source中央coreの全点径、所定residual shellへの経路、全source-inclusive moment levelとpinched fiberの一様な正規化ambient径収縮",
+      "中央帯に限られないmomentをまたぐ木上の複数fiberの合併の径、全曲面ambient距離でのno-shortcut、square lifts、portal connectorsとP0の一様distortion",
       "KE側のCP/PBE（および必要時のTC5）の対象族での証明、またはそれらの直接評価による代替",
       "一般次数のP0達成に必要な既存全証明と先行研究の独立点検"
     ],
@@ -48,20 +50,24 @@
     },
     "this_audit": {
       "date": "2026-11-21",
-      "scope": "追加した局所的解析・座標接続・Hamiltonian補正・reduced graphとmoment区間の証明の内部点検、静的構成検査、主稿組版と変更頁表示",
+      "scope": "Centered normal flow自然性、全neck–corner交わりの飽和・Hausdorff基底、中央sourceのvolume・moment・平均距離・短い退出・中央帯帰着の証明を内部点検。静的検査を再実行。最終組版・表示確認は下記状態で区別する。",
       "reexecuted_build": true,
       "reexecuted_static_checks": true,
       "reexecuted_python_suite": false,
       "independent_internal_proof_review": [
-        "ke:fixed-base-moment-connectors",
-        "ke:slow-cut-closed-corner-gh",
-        "ke:arm-log-derivatives",
-        "ke:three-arm-coordinate-interpolation",
-        "ke:transition-normal-primitive",
-        "ke:quantitative-order-hamiltonian",
-        "ke:relative-corner-patch",
-        "ke:single-arm-reduced-graph",
-        "ke:arm-common-moment-strip"
+        "ke:normal-flow-naturality",
+        "ke:corner-leaves-in-neck-reduction",
+        "ke:moment-dependent-neck-foliation",
+        "ke:neck-corner-diagonal-matching",
+        "ke:neck-corner-saturated-union",
+        "ke:fixed-base-central-band",
+        "ke:source-central-density",
+        "ke:source-central-moment",
+        "ke:source-central-mean-distance",
+        "ke:source-central-short-escape",
+        "ke:source-central-arm-connectors",
+        "ke:source-central-band-reduction",
+        "ke:source-potential-modulus"
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false
@@ -78,7 +84,12 @@
   "external_inputs": {
     "ke_repo": "uedakazushi/kaehler-einstein-degeneration",
     "verified_ke_main_commit": "74ba687f67e1f87a4d308bf868fcdef98db441df",
-    "status": "最新mainのコミットをGitHubで照合。必要箇所のラベル・仮定・規格化と本repoでの適用を点検したが、外部原稿全証明や引用一次文献の全再精読は行っていない。解析的な全域仮定は未解決。"
+    "status": "最新mainのコミットをGitHubで照合。必要箇所のラベル・仮定・規格化と本repoでの適用を点検したが、外部原稿全証明や引用一次文献の全再精読は行っていない。解析的な全域仮定は未解決。",
+    "GGZ_local_diameter": {
+      "source": "Guedj–Guenancia–Zeriahi, arXiv:2310.20482v1, Proposition 1.4 (p.5)",
+      "url": "https://arxiv.org/abs/2310.20482v1",
+      "verified": "一次PDFの局所連続度による距離評価の仮定と証明を確認。一様Dini型連続度は本source族では未証明で、条件付き十分入力としてのみ使用。"
+    }
   },
   "other_papers": {
     "papers/quintic-integer-gluing.tex": "旧201頁の組版記録のみ。本監査では未再組版。",

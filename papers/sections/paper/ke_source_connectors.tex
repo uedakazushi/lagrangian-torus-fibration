@@ -1,0 +1,328 @@
+% !TeX root = ../../surface-lagrangian-torus-fibration.tex
+% 2026-11-21 / v1.0: Central source の volume・短い退出と残る接続条件．
+\section{Central source の体積評価と接続経路}
+\label{ke:source-connectors-section}
+
+同じ normal moment を持つ source-free neck の点は，
+命題\ref{ke:fixed-base-moment-connectors}によって有界費用で接続できる．
+Source では短い円作用が固定点を持つため，その評価だけから固定点までの
+動径経路を積分したり，pinched torus 全体の直径を結論したりすることはできない．
+本節ではまず中央 rescaling 領域の体積を両側から評価し，
+実際の計量に関する短い退出経路を構成する．同一 moment 上の残余方向への
+接続は，最後に独立した条件として明示する．
+
+\subsection{中央の canonical volume potential}
+
+固定した source chart を $xy=tz$ と書き，$t=\tau^2$ の枝を一つ選んで
+\[
+ (x,y,z)=(\tau X,\tau Y,XY),\qquad
+ B(c)=\{|X|<c,\ |Y|<c\},\qquad B_t(c)=\Psi_t(B(c))
+\]
+と置く．以下では $0<c_0<c_1<c_2$ を固定し，$c_2^2$ が source chart の
+残余半径より十分小さいとする．$L=-\log|t|^2$，$R=\log L$ とし，
+計量・形式は必要に応じて $\Psi_t$ により引き戻す．
+$\omega_{\rm E}$ は $(X,Y)$ の固定 Euclidean K\"ahler 形式である．
+すべての定数は固定した次数，族，chart，$c_i$ に依存してよい．
+
+\begin{proposition}[中央 source の鋭い体積比較]
+\label{ke:source-central-density}
+十分小さい $|t|$ に対して
+\begin{equation}\label{ke:eq:source-central-density}
+ cL^{-2}|dX\wedge dY|^2
+ \le (\Psi_t^*\omega_t)^2
+ \le CL^{-2}|dX\wedge dY|^2
+ \qquad\text{on }B(c_2)
+\end{equation}
+が成り立つ．特に
+\[
+ F_t=\log\frac{(\Psi_t^*\omega_t)^2}{|dX\wedge dY|^2},
+ \qquad u_t=F_t+2R
+\]
+は
+\begin{equation}\label{ke:eq:source-central-potential}
+ dd^c u_t=\Psi_t^*\omega_t,
+ \qquad \|u_t\|_{L^\infty(B(c_2))}\le C
+\end{equation}
+を満たす．射影を保つ補題\ref{ke:projected-source-normal-form}の座標にも
+同じ評価が成り立つ．
+\end{proposition}
+
+\begin{proof}
+下界には関連 KE 主稿\cite[
+\texttt{coarse:cor:degree-d-volume-lower}]{KELocalCurrent}を用いる．
+中央領域では二つの vanishing plane labels の caps が $L/2+O(1)$，
+残りの caps が正の固定定数の間にある．Adjunction residue は
+\[
+ -\frac{dx\wedge dy}{t}=-dX\wedge dY
+\]
+の一様に有界な非零倍である．従って同稿の中央 source の determinant 計算と同じく，
+capped density は $L^{-2}|dX\wedge dY|^2$ と一様比較可能であり，所要下界を得る．
+
+上界は中央での tensor 比較を使わずに得られる．境界面 $|X|=c_2$ では
+$|x|=c_2|t|^{1/2}$ なので，系\ref{ke:source-short-circle}の証明で用いた
+正しい $x$-oriented annulus--disc extension に入る．その complete volume
+上界と capped pair-arm の比較から，$s_x=-\log|x|^2=L/2+O(1)$ と
+$|z|\le c_2^2$ を用いて
+\[
+ \omega_t^2\le CL^{-2}|d\log x\wedge dz|^2
+ =CL^{-2}|dX\wedge dY|^2
+\]
+となる．最後の等式は $z=XY$ による．$|Y|=c_2$ の面も対称である．
+ここで用いた外部入力は同稿の
+\texttt{coarse:lem:pair-arm-density} と
+\texttt{coarse:lem:complete-volume-upper} である．
+
+一方，$\operatorname{Ric}(\omega_t)=-\omega_t$ より $dd^c F_t=\Psi_t^*\omega_t>0$．
+従って $F_t$ に固定 bidisc 上の最大値原理を適用すると，境界の
+$F_t\le-2R+C$ が内部へ延びる．これで上界と
+\eqref{ke:eq:source-central-potential}を得る．
+
+射影的 normal form では $x',y'$ と元の plane coordinates の差が $O(t)$ である．
+Rescaled 領域ではこれは $O(|t|^{1/2})$ の差であり，各 cap の比較を保つ．
+また $z=h_t(p)$ の微分と canonical residue の unit は一様に非退化である．
+従って下界・境界上界・最大値原理の全てが同じ定数の種類で適用できる．
+\end{proof}
+
+\begin{corollary}[中央の canonical normal moment の局在]
+\label{ke:source-central-moment}
+Source を含む共通 primitive を
+$\lambda_t=d^c\log(\omega_t^2/|d\log x\wedge dz|^2)$ とし，
+$\eta_t=\mathcal A\omega_t$，$\mu_t=(\mathcal A\lambda_t)(V)$ とする．
+$z=h_t(p)$ を用いた場合，neck 全体の $d\log x\wedge dp$ からの変更は
+残余基底のみの項 $-d^c\log|h'_t(p)|^2$ であり，normal moment を変えない．
+$B_t(c_1)$ 上で
+\[
+ |\mu_t|\le C/L.
+\]
+Source 固定点では $\mu_t=0$ である．これは moment の加法定数を
+独立に変更した主張ではない．
+\end{corollary}
+
+\begin{proof}
+任意の固定 $0<\kappa<1/4$ を取る．$z\ne0$ の normal annulus で
+$s=-\log|x|^2$，$M=L-\log|z|^2$ とすると，反対の深度は $M-s$ である．
+Normal 平均した potential を $\overline F(s,z)$ と書けば
+\[
+ \mu_t=-2\pi\overline F_s,
+ \qquad \overline F_{ss}>0.
+\]
+この potential は $dX\wedge dY=d\log x\wedge dz$ を用いたものと同じである．
+中央の点では $s,M-s\ge L/2-O(1)$ であり，前命題から
+$\overline F=-2R+O(1)$ である．一方，$s=\kappa L$ と
+$M-s=\kappa L$ では正しい oriented arm の volume 上下界から
+$\overline F=-2\log(\kappa L)+O(1)=-2R+O_\kappa(1)$ を得る．
+凸関数の割線による微分の上下評価を，中央の点とこの二端に適用する．
+二つの分母はともに $(1/2-\kappa)L-O(1)$ 以上なので
+$|\overline F_s|\le C/L$ となる．
+
+$z=0$ では二本の軸を別々に扱う．$x$ 軸では $s\to\infty$ で固定点に達し，
+滑らかな primitive と $V=0$ により $\mu_t\to0$ である．
+厳密な単調性から $\mu_t\ge0$ であり，上の左側割線で $\mu_t\le C/L$ を得る．
+$y$ 軸は対称である．固定点での値も primitive の定義から直接零となる．
+\end{proof}
+
+\subsection{平均距離と短い actual 退出}
+
+\begin{proposition}[固定 rescaling における trace と平均二点距離]
+\label{ke:source-central-mean-distance}
+固定 Euclidean 体積を $dV_{\rm E}$ とすると
+\[
+ \int_{B(c_1)}\operatorname{tr}_{g_{\rm E}}\Psi_t^*g_t\,dV_{\rm E}\le C,
+ \qquad
+ \int_{B(c_0)\times B(c_0)}
+ d_{g_t}(\Psi_t p,\Psi_t q)^2\,dV_{\rm E}(p)dV_{\rm E}(q)\le C.
+\]
+従って各 $A>0$ に対し，Euclidean 体積が
+$\operatorname{vol}_{\rm E}(B(c_0))-C/A^2$ 以上で，actual ambient diameter が
+$2A$ 以下の部分集合を取れる．この主張は全ての点の直径や特定の moment level の
+直径を評価するものではない．
+\end{proposition}
+
+\begin{proof}
+$B(c_1)$ 上で $1$，$B(c_2)$ 内に support を持つ固定 cutoff $\chi$ を取る．
+命題\ref{ke:source-central-density}の有界な potential と部分積分により
+\[
+ \int\chi\,\Psi_t^*\omega_t\wedge\omega_{\rm E}
+ =\int u_t\,dd^c\chi\wedge\omega_{\rm E}\le C
+\]
+を得る．これは第一式と固定定数倍を除き同じである．
+
+$p,q\in B(c_0)$ を Euclidean 線分 $\gamma_{p,q}(v)=(1-v)p+vq$ で結ぶ．
+Bidisc は凸であり，その Euclidean 直径は固定なので
+\[
+ \operatorname{Length}_{g_t}(\Psi_t\gamma_{p,q})^2
+ \le C\int_0^1
+    \operatorname{tr}_{g_{\rm E}}\Psi_t^*g_t((1-v)p+vq)\,dv.
+\]
+$0\le v\le1/2$ では $q$ を固定して $p$ を，$1/2\le v\le1$ では
+$p$ を固定して $q$ を変数変換する．Jacobian の逆数は $2^4$ 以下であるから，
+二点について積分した右辺は第一式で一様に抑えられる．
+これで第二式を得る．Fubini により平均二乗距離が有界な基点を一つ選び，
+その基点からの距離が $A$ 以下の集合に Chebyshev の不等式を適用すれば最後の主張となる．
+基点を source 固定点として選べるとは主張していない．
+\end{proof}
+
+\begin{proposition}[中央 source から gate への短い退出]
+\label{ke:source-central-short-escape}
+固定 rescaling 領域に対し
+\begin{equation}\label{ke:eq:source-central-short-escape}
+ \sup_{p\in B_t(c_1)}d_{g_t}(p,X_t\setminus B_t(c_1))
+ \le CL^{-1/2}
+\end{equation}
+が成り立つ．従って各中央点から，正しい $x$-gate 又は $y$-gate の
+ある点へ至る actual 経路を長さ $CL^{-1/2}$ 以下で取れる．
+退出点の残余座標や normal moment は指定しない．
+\end{proposition}
+
+\begin{proof}
+命題\ref{ke:source-central-density}の体積上界から，
+Euclidean frame での逆行列の算術幾何平均により
+\[
+ \operatorname{tr}_{g_t}g_{\rm E}\ge cL,
+ \qquad \Delta_{g_t}\frac{|X|^2+|Y|^2}{L}\ge c
+\]
+となる．実 Laplacian と complex trace の固定係数は $c$ に吸収する．従って
+\[
+ w_t=\frac{2c_1^2-|X|^2-|Y|^2}{cL}
+\]
+は $B_t(c_1)$ 上で非負で，$-\Delta_{g_t}w_t\ge1$，$w_t\le C/L$ を満たす．
+
+$D=d_{g_t}(p,X_t\setminus B_t(c_1))$ とし，$0<\rho<\min(D,1)$ を取る．
+Actual ball $B_{g_t}(p,\rho)$ の閉包は source chart 内に入る．
+$r=d_{g_t}(p,\cdot)$ とすると，$\operatorname{Ric}(g_t)=-g_t$ と
+距離の Laplacian comparison により，この球で
+\[
+ \Delta_{g_t}r^2\le C(1+\rho)
+\]
+が barrier，従って分布の意味で成り立つ．そこで
+\[
+ q=\frac{\rho^2-r^2}{C(1+\rho)}
+\]
+は $q=0$ on $\partial B_{g_t}(p,\rho)$，$-\Delta q\le1$ を満たす．
+$\Delta(q-w_t)\ge0$ と境界上の $q-w_t\le0$ に弱い最大値原理を適用して
+\[
+ \frac{\rho^2}{C(1+\rho)}=q(p)\le w_t(p)\le C/L
+\]
+を得る．Cut locus では上の barrier comparison を用い，球の境界を滑らかに
+仮定する必要はない．まず $D\ge1$ が十分大きい $L$ で不可能となり，
+次に $\rho\uparrow D$ として $D\le CL^{-1/2}$ を得る．
+Compact な $X_t$ 上で最短の最初の退出経路を取れば，その終点は
+$|X|=c_1$ 又は $|Y|=c_1$ にある．これらはそれぞれ正しい oriented gate である．
+\end{proof}
+
+\begin{corollary}[中央点から oriented arm の断面への接続]
+\label{ke:source-central-arm-connectors}
+固定 $0<\kappa<1/4$ に対して
+\[
+ \Gamma^x_{t,\kappa}
+ =\{s_x=\kappa L,\ |z|\le c_1^2\},\qquad
+ \Gamma^y_{t,\kappa}
+ =\{s_y=\kappa L,\ |z|\le c_1^2\}
+\]
+と置く．各 $p\in B_t(c_1)$ は，この二断面の合併のある点へ
+actual 長さ $C_\kappa+CL^{-1/2}$ 以下の経路で接続できる．
+経路のうち gate を出た後の部分は残余座標を保つ．
+\end{corollary}
+
+\begin{proof}
+前命題で $x$-gate に退出した場合を考える．退出点の $z$ と位相を固定し，
+$s_x=L/2-\log c_1^2$ から $\kappa L$ まで動かす．
+この経路では $|x|$ が増加して $|y|$ が減少するため，全体が正しい
+$x$-oriented arm に留まる．$\partial_{s_x}=JV/(4\pi)$ と K\"ahler 性，
+系\ref{ke:source-short-circle}により，長さは
+\[
+ C\int_{\kappa L}^{L/2-\log c_1^2}\frac{ds}{s}
+ \le C_\kappa
+\]
+である．$y$-gate も対称である．この証明で固定点へ向かう
+$\int^\infty ds/L$ を積分していないことに注意する．
+\end{proof}
+
+\begin{proposition}[Source 中央帯の固定 rescaled core への帰着]
+\label{ke:source-central-band-reduction}
+固定 $A>0$ と $0<b<c_1^2$ を取る．Source chart の人工境界から固定の余裕を取り，
+短円・volume 比較の固定最小深度 $m_0$ に対し $s_x,s_y\ge m_0$ とする．この normal tube 内で
+$|z|\le b$，$|\mu_t|\le A/L$ を満たす全ての点は，
+$\overline{B_t(c_1)}$ のある点へ長さ $C_A$ 以下の actual 経路で接続できる．
+経路は normal moment を保つ必要はない．
+\end{proposition}
+
+\begin{proof}
+Core の外なら，例えば $|x|>c_1|t|^{1/2}$ であり，
+$|y|=|tz/x|<c_1|t|^{1/2}$ となる．正しい $x$-oriented arm 上で
+$s=-\log|x|^2$ と置く．Capped volume 下界と complete volume 上界は
+$|z|\le b$ に一様な
+$\overline F(s,z)=-2\log s+O(1)$ を与える．
+誤差を支配する固定 $q>1$ を選ぶと，$qs\le L/3$ の場合
+\[
+ \overline F(qs,z)-\overline F(s,z)\le-1,
+ \qquad
+ \overline F_s(s,z)\le-\frac{1}{(q-1)s}.
+\]
+第二式は凸性による．従って $\mu_t\ge c/s$ であり，
+$|\mu_t|\le A/L$ から $s\ge\kappa_A L$ を得る．
+$qs>L/3$ の場合も $s>L/(3q)$ なので，同じ種類の下界が成り立つ．
+$z=0$ の軸も同じ片側の割線評価で扱える．
+
+残余点と位相を固定し，$s$ を $L/2-\log c_1^2$ まで増やす．
+終点では $|X|=c_1$，$|Y|\le b/c_1<c_1$ であり，全経路は正しい arm にある．
+短円評価からその長さは
+$C\int_{\kappa_A L}^{L/2-\log c_1^2}ds/s\le C_A$ である．
+$y$-oriented arm は対称である．
+\end{proof}
+
+\subsection{同一 moment の全点接続に残る条件}
+
+上の退出は短いが，断面 $\Gamma^x_{t,\kappa}\cup\Gamma^y_{t,\kappa}$ 内の
+全点を結ぶものではない．とくに residual direction の tensor 上界を得ておらず，
+\eqref{ke:eq:source-central-short-escape}を source-core diameter の上界へ
+読み替えることはできない．また有界な canonical potential と trace の積分上界から，
+各 moment level 又は固定点での長さを直接結論しない．
+
+残る入力は，tensor 二側比較全体より弱い経路条件として述べられる．
+連結な $P$ に対する定理\ref{ke:projected-source-neck}の円平均後の
+同一 moment 集合を $E_t(a)$ とし，
+各 source の互いに素な固定 residual discs を $\Delta_j$ とする．
+その境界を含む source-free compact の上では
+命題\ref{ke:fixed-base-moment-connectors}が使えるよう，必要なら
+$I_t$ をその共通深部 strip の interval へ縮める．必要なのは
+\begin{equation}\label{ke:eq:source-moment-exit-input}
+ \sup_{a\in I_t}\sup_{p\in E_t(a)\cap\pi_D^{-1}(\Delta_j)}
+ d_{g_t}\!\left(p,E_t(a)\cap\pi_D^{-1}(\partial\Delta_j)\right)
+ \le e_t,\qquad e_t=o(R_t)
+\end{equation}
+という，各点から\emph{同じ canonical moment の residual 境界}への接続である．
+経路自体が moment level に留まることは要求しない．
+$e_t=O(1)$ が得られれば同一 moment 集合全体の径も $O(1)$ となり，
+$e_t=o(R_t)$ で十分なら正規化した径の消失を得る．
+実際，二点をそれぞれ source-free 部分へ移し，そこで既存の connector を用いればよい．
+Source discs の数は有限であり，残る compact を連結に取れる．
+Normal Moser map の像へ移す際は，両端に既存の短い trajectories を加える．
+従ってこの条件は閉じた pinched torus，saddle fibres，および同じ moment 上の
+複数 fibres の合併にも十分である．
+
+本節は\eqref{ke:eq:source-moment-exit-input}を証明していない．
+中央から得た任意の gate への退出点に，所定の residual 境界と同一 moment の両条件を
+追加する段階が残る．非常に遅い residual exhaustion を用いる場合も，
+既存 source-free connector の定数とこの退出費用を別々に対角選択する必要がある．
+また $|x|,|y|\le r_t^2$ という source-inclusive neck 全体は二本の長い normal arms を含むため，
+その全体の直径を中央 rescaled core 又は同一 moment 集合の直径と同一視しない．
+
+中央帯に限れば，系\ref{ke:fixed-base-central-band}により退出先の moment を
+厳密に保存する必要はない．固定 source-free residual shell の
+$|\mu_t|\le A'/L$ 内へ $o(R)$ の費用で接続すれば十分である．
+命題\ref{ke:source-central-band-reduction}から，この問題は中央 core の径，
+又は core からその shell への接続に帰着する．
+
+\begin{remark}[Potential の連続度を用いる十分条件]
+\label{ke:source-potential-modulus}
+Guedj--Guenancia--Zeriahi\cite[Proposition~1.4]{GGZDiameter}は，局所 K\"ahler potential の
+連続度 $m$ が $\int_0^{r_0}\sqrt{m(r)}\,dr/r<\infty$ を満たすとき，
+固定 compact 上の計量距離をこの積分で評価する．本節では固定 Euclidean potential
+$v_{\rm E}$ を用いて $\varphi_t=u_t-v_{\rm E}$ とすれば適用形になる．
+従って，$u_t$ に $t$ に依らないこの種の連続度（例えば一様 H\"older 評価）を
+さらに証明できれば，$\overline{B_t(c_1)}$ の ambient 径は $O(1)$ となる．
+これは本節の $L^\infty$ 評価だけからは得ていない追加条件である．
+同論文の大域定理の compact K\"ahler class に関する仮定も，
+本局所 rescaling 族に自動的に成立するとして用いていない．
+\end{remark}
