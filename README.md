@@ -8,9 +8,10 @@
 | [整数接着](papers/quintic-integer-gluing.tex) | 201 | 指定K5データの整数条件と障害 |
 | [局所置換](papers/meridian-surgery.tex) | 18 | meridian・四pants置換の障害 |
 | [研究ノート](papers/research-notes.tex) | 65 | 証明素材・現在の残余 |
-| [三次元原資料](sources/threefold-blocks-v9.pdf) | 166 | PDF全文を確保。元TeXは未取得 |
+| [三次元局所稿](papers/threefold-blocks.tex) | 166（原版） | 第9版の全文TeX |
+| [三次元全体稿](papers/threefold-fibration.tex) | 187（原版） | 第11稿の全文TeX |
 
-三次元の[短い要約](papers/threefold-blocks.tex)を全文と取り違えない。大域接着は研究上も未完成。
+三次元の大域接着は研究上の未解決課題。三次元の検算は `python3 verification/run_threefold_checks.py`。
 
 最初に[研究方針](00_research_plan.md)、[移行範囲](research/migration.md)、[ソース対応](research/source-manifest.json)を確認する。
 

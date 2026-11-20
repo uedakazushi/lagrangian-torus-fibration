@@ -3158,11 +3158,6 @@
       "changes": "TeX input paths and input search paths only"
     }
   ],
-  "threefold_pdf": {
-    "library_url": "https://chatgpt.com/space/file/libfile_2ca019277ecc8191b94cfaccc66bcfe9",
-    "pages": 166,
-    "sha256": "5badc1c5677f35d3da21046838425a38dd38065491bb35046650df2a1f7c682d"
-  },
   "omitted": {
     "reason": "Unreferenced obsolete TeX fragments, PDFs and transient build outputs excluded; original Library and local bundle preserved. All current TeX dependencies and historical proof files referenced by retained verifiers/certificates preserved.",
     "tex": [
@@ -3305,5 +3300,11 @@
       "verification/audits/inherited_byte_identity_v21.json",
       "verification/audits/v14_overview_consistency_audit.json"
     ]
+  },
+  "threefold_bundle": {
+    "version": 10,
+    "library_url": "https://chatgpt.com/space/file/libfile_47c5d4044694819192c28e687c95557f",
+    "local_blocks/focus_curve_blocks_and_obstructions_ja.tex": "papers/threefold-blocks.tex",
+    "threefold_v11/threefold_fibration_note.tex": "papers/threefold-fibration.tex"
   }
 }

@@ -1,0 +1,264 @@
+\section{一般の $X_d$ に存在する trivial-normal symplectic curve}
+\label{tnc:section}
+
+第\ref{fnc:section}節の障害は、generic plane section の normal degree が $2d$ であることに由来する。
+一方、normal degree が零となる別の symplectic curve を選べば、
+第\ref{fhr:section}節の focus--hyperbolic block を閉曲線全体に適用できる。
+本節では、そのような曲線が任意の smooth $X_d$ と所定の K\"ahler form に対して存在することを示す。
+曲線は special algebraic hypersurface 上で作り、symplectic deformation によって所定の $X_d$ へ移す。
+移送後の曲線が、所定の complex structure に関して holomorphic であるとは主張しない。
+
+\subsection{Plane curve を含む smooth hypersurface の構成}
+
+\begin{lemma}[Degree $d-2$ の plane curve を含む smooth member]\label{tnc:special-member}
+$d\ge6$、$e=d-2$ とする。
+Smooth plane curve $C_e\subset\mathbb P^2\subset\mathbb P^4$ と、
+それを含む smooth degree-$d$ hypersurface $Y_d$ を選べる。
+このとき
+\begin{equation}\label{tnc:algebraic-data}
+ \deg C_e=e,\qquad
+ g(C_e)=\frac{(e-1)(e-2)}2,\qquad
+ \det N_{C_e/Y_d}\simeq\mathcal O_{C_e}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Plane を $z_3=z_4=0$ とし、その上の任意の smooth degree-$e$ polynomial
+$q_e(z_0,z_1,z_2)$ を取る。例えば Fermat polynomial が使える。
+$C_e=\{z_3=z_4=q_e=0\}$ は complete intersection of degrees $(1,1,e)$ である。
+Degree-$d$ polynomials の vector space
+\[
+ V=q_e H^0(\mathbb P^4,\mathcal O(2))
+   +z_3 H^0(\mathbb P^4,\mathcal O(d-1))
+   +z_4 H^0(\mathbb P^4,\mathcal O(d-1))
+\]
+を考える。その base locus はちょうど $C_e$ である。
+以下、general $F\in V$ の hypersurface が全点で smooth となることを、first jets から確認する。
+
+$p\notin C_e$ では、$q_e,z_3,z_4$ の少なくとも一つが非零である。
+対応する coefficient の degree は $2$ または $d-1$ で、いずれも正である。
+Projective space 上の $\mathcal O(m)$、$m\ge1$ の global sections は任意の点で
+value と四つの first derivatives を独立に指定できる。
+非消失 generator の乗法は first-jet space 上で可逆なので、
+\[
+ V\longrightarrow J_p^1\mathcal O(d)
+\]
+は全射である。従って $F=0$ が $p$ で singular となる条件は $V$ における五つの独立な linear conditions である。
+$N=\dim\mathbb P(V)$ とすれば、$p\notin C_e$ にわたる singular-member incidence の次元は高々
+$N-5+4=N-1$ である。
+
+$p\in C_e$ では $F(p)=0$ と tangent derivative の消失は自動的である。
+Normal derivatives の基底は $dq_e,dz_3,dz_4$ であり、
+\[
+ F=q_eR_2+z_3G_{d-1}+z_4H_{d-1}
+\]
+における三つの値 $R_2(p),G_{d-1}(p),H_{d-1}(p)$ は独立に指定できる。
+従って singular 条件の codimension は三で、$C_e$ 上の incidence の次元は高々
+$N-3+1=N-2$ である。
+Singular pairs の全 incidence は $\mathbb P(V)\times\mathbb P^4$ 内で closed であり、
+projective projection により singular members の集合も closed である。
+上の次元評価からそれは proper subset なので、その外の $F$ を選べば $Y_d=\{F=0\}$ は smooth である。
+これはこの linear system に対する Bertini smoothness の直接的な first-jet 証明である。
+
+Plane curve の adjunction により $K_{C_e}\simeq\mathcal O_{C_e}(e-3)$ なので、genus formula を得る。
+また smooth inclusions の normal exact sequence は
+\[
+ 0\longrightarrow N_{C_e/Y_d}
+ \longrightarrow
+ \mathcal O_{C_e}(e)\oplus\mathcal O_{C_e}(1)\oplus\mathcal O_{C_e}(1)
+ \longrightarrow\mathcal O_{C_e}(d)\longrightarrow0.
+\]
+最後の arrow が全射なのは $Y_d$ が $C_e$ に沿って smooth であるためである。
+Determinant を取ると
+\[
+ \det N_{C_e/Y_d}
+ \simeq\mathcal O_{C_e}(e+2-d)
+ =\mathcal O_{C_e},
+\]
+となる。
+\end{proof}
+
+\subsection{所定の hypersurface と K\"ahler form への移送}
+
+\begin{lemma}[Smooth hypersurfaces 間の symplectic 移送]\label{tnc:transport}
+任意の二つの smooth degree-$d$ hypersurfaces $Y_d,X_d\subset\mathbb P^4$ は、
+restricted Fubini--Study forms に関して symplectomorphic であり、その symplectomorphism は
+hyperplane cohomology class を保つよう選べる。
+さらに $[\omega]=\mathfrak a\mathsf H$ を満たす所定の K\"ahler form $\omega$ に対して
+\[
+ (Y_d,\mathfrak a\omega_{\rm FS}|_{Y_d})
+ \simeq (X_d,\omega)
+\]
+という symplectomorphism が存在する。
+ここでは $[\omega_{\rm FS}]=\mathsf H$ と規格化する。
+\end{lemma}
+
+\begin{proof}
+Degree-$d$ hypersurfaces の projective parameter space における discriminant は proper algebraic subset である。
+二つの smooth members を結ぶ projective line は discriminant に含まれず、その交わりは有限集合である。
+従ってその有限集合を避ける smooth path を選べる。
+Path 上の universal hypersurface family $\mathcal X_I\to[0,1]$ は proper smooth submersion である。
+任意の horizontal lift of $\partial_t$ を取り、compactness を使って流せば、
+smooth identifications $\psi_t:Y_d\to X_t$ を得る。
+これはこの場合の Ehresmann trivialization の直接の flow construction である。
+
+Restricted Fubini--Study forms の pullback
+$\omega_t=\psi_t^*(\omega_{\rm FS}|_{X_t})$ は symplectic forms の smooth path である。
+Ambient Fubini--Study form は closed なので、Cartan formula により
+\[
+ \frac{d}{dt}\omega_t=d\beta_t
+\]
+となる smooth one-forms $\beta_t$ がある。
+同じ事実は、ambient hyperplane class が whole family 上で定まることからも分かる。
+従って Moser theorem を $Y_d$ 上で適用すると、
+$h_t^*\omega_t=\omega_0$ となる isotopy $h_t$ を得る。
+$\psi_1\circ h_1$ が最初の symplectomorphism である。
+Hyperplane class は family に沿って保たれ、Moser isotopy もその class を変えない。
+
+次に所定の $X_d$ 上で
+\[
+ \omega_t'=(1-t)\mathfrak a\omega_{\rm FS}|_{X_d}+t\omega
+\]
+を取る。両端は同じ complex structure の K\"ahler forms なので、全ての $\omega_t'$ が K\"ahler である。
+また cohomology class は一定である。
+再び Moser theorem を適用し、最初の symplectomorphism と合成すれば結論を得る。
+用いた Moser argument は \cite[Section 7.2]{cds-local} の標準的なものと同じである。
+\end{proof}
+
+\begin{theorem}[任意の $X_d$ における closed trivial-normal curve]\label{tnc:actual-curve}
+$d\ge6$、$X_d\subset\mathbb P^4$ を任意の smooth hypersurface、
+$\omega$ を所定の K\"ahler form、$[\omega]=\mathfrak a\mathsf H$ とする。
+このとき $(X_d,\omega)$ 内に closed embedded symplectic surface $C'$ が存在し、
+\begin{equation}\label{tnc:actual-data}
+ \begin{split}
+ \langle\mathsf H,[C']\rangle&=d-2,\qquad
+ \operatorname{Area}_\omega(C')=(d-2)\mathfrak a,\\
+ g(C')&=\frac{(d-3)(d-4)}2,\qquad
+ N_{C'/X_d}\simeq C'\times\mathbb R^4
+ \quad\text{as symplectic bundles}.
+ \end{split}
+\end{equation}
+特に $C'$ 全体に沿う actual product neighborhood が存在する。
+\end{theorem}
+
+\begin{proof}
+補題\ref{tnc:special-member}の pair $(Y_d,C_e)$、$e=d-2$ を取り、
+補題\ref{tnc:transport}の symplectomorphism で $C_e$ を $C'$ へ移す。
+Genus、hyperplane degree、面積は式\eqref{tnc:actual-data}の通りである。
+Symplectomorphism は symplectic normal bundles を同型に移す。
+Complex curve $C_e\subset Y_d$ の symplectic normal bundle の $c_1$ は、その holomorphic normal bundle の $c_1$ と一致する。
+補題\ref{tnc:special-member}によりそれは零である。
+
+Closed surface 上の complex rank-two bundle は $c_1=0$ なら smooth に自明である。
+これは定理\ref{fnc:surface-criterion}の十分性の証明で示した unit section と complement line の議論である。
+Unitary frame を取れば symplectic trivialization となる。
+最後に補題\ref{fhr:product-neighborhood}を $r=0$ で適用する。
+ここでは holomorphic normal bundle 自体の holomorphic triviality は必要なく、また主張していない。
+\end{proof}
+
+\paragraph{曲線を選ぶための数値条件.}
+任意の closed embedded symplectic surface $S\subset X_d$ について、
+$e=\langle\mathsf H,[S]\rangle$ とすれば tangent--normal splitting から
+\begin{equation}\label{tnc:adjunction-balance}
+ \langle c_1(N_{S/X_d}),[S]\rangle
+ =(5-d)e-(2-2g(S))=2g(S)-2-(d-5)e.
+\end{equation}
+従って閉曲線全体で normal focus Cartan を保つための線形条件は
+$2g(S)-2=(d-5)e$ である。今回の $e=d-2$ の曲線はこれを満たす。
+この等式だけから曲線の存在を推論したのではなく、前の二補題で実際に構成した。
+
+\subsection{曲線方向の自由端を持たない actual focus--hyperbolic block}
+
+\begin{corollary}[Closed curve 上の non-elliptic block]\label{tnc:closed-block}
+定理\ref{tnc:actual-curve}の $C'\subset(X_d,\omega)$ に対し、
+$C'$ 全体とその十分小さい full normal neighborhood を含む compact domain with corners
+$\mathcal U\subset X_d$ と、connected Lagrangian fibers を持つ quotient
+\[
+ \Pi:\mathcal U\longrightarrow R\times\Gamma
+\]
+が存在する。$R$ は補題\ref{fhr:focus-block}の compact rectangle、
+$\Gamma$ は一価頂点のない finite trivalent graph である。
+$n=(d-2)(d-5)$ と置けば
+\begin{equation}\label{tnc:block-counts}
+ \#V(\Gamma)=n,\qquad \#E(\Gamma)=\frac{3n}{2},\qquad
+ b_1(\Gamma)=\frac{(d-3)(d-4)}2,
+ \qquad \chi(\mathcal U)=-n.
+\end{equation}
+Regular fibers は $T^3$ である。
+各 vertex $v$ と normal focus value $o\in\operatorname{int}R$ の組 $(o,v)$ 上には、
+whole fiber $\mathcal N\times(S^1\vee S^1)$ があり、Euler 数は $-1$、
+唯一の rank-zero point の Williamson type は $(0,1,1)$ である。
+従ってこの block にはちょうど $n$ 個の rank-zero fibers がある。
+全 singularities は nondegenerate で elliptic 成分を持たない。
+曲線方向の自由境界はなく、残る境界は $\partial R\times\Gamma$ に沿う normal faces である。
+\end{corollary}
+
+\begin{proof}
+定理\ref{fhr:actual-block}を $C'$ と $r=0$ に適用する。
+式\eqref{tnc:actual-data}より
+\[
+ 2g(C')-2=(d-3)(d-4)-2=(d-2)(d-5)=n.
+\]
+Graph の数と whole fibers、特異型、Euler 数、境界の記述は全て同定理から従う。
+\end{proof}
+
+六次では $C'$ は symplectic plane-quartic image で、genus $3$、area $4\mathfrak a$、normal degree $0$ である。
+Graph は $4$ 頂点、$6$ 辺、$b_1=3$ を持ち、block 内の rank-zero fibers は $4$ 個である。
+これらは既存の正 normal shell の18 hyperbolic families とは別の構成であり、
+以前の24 caps や48 regular ports と同じ assembly に含めた計数ではない。
+
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.73\textwidth]{trivial_normal_curve_graph.png}
+ \caption{六次超曲面内の trivial-normal symplectic curve $C'$ に用いる genus-three Reeb graph。
+ 曲線は degree $4$、genus $3$ で、graph は4頂点・6辺・$b_1=3$を持つ。
+ Actual base は $R\times\Gamma_3$ であり、normal focus value $o\in\operatorname{int}R$ と
+ 各 graph vertex の組の上に、Euler 数 $-1$ の whole focus--hyperbolic fiber がある。
+ $\partial R$ の normal faces は残る。}
+ \label{tnc:graph-figure}
+\end{figure}
+
+\begin{corollary}[残りの compact domain の Euler 数]\label{tnc:complement-euler}
+上の $\mathcal U$ に対して
+$\mathcal V=\overline{X_d\setminus\operatorname{int}\mathcal U}$ と置くと
+\begin{equation}\label{tnc:complement-number}
+ \chi(\mathcal V)
+ =d(10-10d+5d^2-d^3)+(d-2)(d-5).
+\end{equation}
+特に六次では $\chi(\mathcal V)=-512$ である。
+\end{corollary}
+
+\begin{proof}
+$\mathcal U\simeq C'\times K_c$ であり、$C'$ は closed なので
+$\partial\mathcal U\simeq C'\times\partial K_c$ である。
+$\partial K_c$ は corners を丸めれば closed oriented three-manifold となり、Euler 数は零である。
+従って $\chi(\partial\mathcal U)=0$。
+$\mathcal U$ の corners を小さい collar 内で丸める操作は、領域と complement の Euler 数を変えない。
+丸めた collared boundary に沿って有限 CW 型の Euler 数の加法性を適用すると
+\[
+ \chi(X_d)=\chi(\mathcal U)+\chi(\mathcal V)-\chi(\partial\mathcal U)
+          =-(d-2)(d-5)+\chi(\mathcal V).
+\]
+第\ref{bct:section}節の $\chi(X_d)$ の式を代入する。
+\end{proof}
+
+この $-512$ は、構成済みの actual domain を除いた compact complement の Euler 数である。
+Complement 上の fibration はまだないため、残る singular fibers の個数とは解釈しない。
+
+\paragraph{閉還元面の収支との整合.}
+$\nu=\mathfrak a/(d-5)$ とすれば
+\[
+ \operatorname{Area}(C')+\nu\chi(C')
+ =(d-2)\mathfrak a-\frac{\mathfrak a}{d-5}(d-2)(d-5)=0.
+\]
+従って closed reduction の section が存在する場合の面積条件とも整合する。
+Generic plane section $C$ の normal degree $2d$ を零へ変えたわけではなく、
+degree と genus の異なる $C'$ を選んでいる。
+
+\paragraph{大域化との距離.}
+この結果は、所定の $X_d$ の actual symplectic form の下で、閉曲線全体を含む
+non-elliptic focus--hyperbolic block を与える。
+既存 shell の fiber relation、指定された旧 annular germs、旧48 ports の接続は保持していない。
+$\partial R\times\Gamma$ の接続、残りの $X_d$ の被覆、および global base における graph cycles の処理は未構成である。
+従って境界を持たない全体 fibration の存在は、引き続き未証明である。

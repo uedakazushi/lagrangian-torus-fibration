@@ -24,5 +24,3 @@
 *.zip
 .DS_Store
 
-# Original proof-bearing PDF retained until editable source is recovered.
-!/sources/threefold-blocks-v9.pdf
