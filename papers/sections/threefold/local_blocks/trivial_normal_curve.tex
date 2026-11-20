@@ -569,6 +569,123 @@ K\"unneth formulaにより表示が得られる．
 基本群はproductのvan Kampen定理による．
 \end{proof}
 
+\begin{lemma}[Normal focus domain のhomotopy型]
+\label{tnc:focus-homotopy}
+補題\ref{fhr:focus-block}の$K_c$は
+\[
+ K_c\simeq S^1\vee S^2,\qquad
+ H^j(K_c;\mathbb Z)=
+ \begin{cases}\mathbb Z&(j=0,1,2),\\0&(j\ge3).\end{cases}
+\]
+\end{lemma}
+\begin{proof}
+$w=XY$，$A=P_X-P_Y$とし，
+$W=\{w:q_-\le|w-c|^2\le q_+\}$と書く．
+$W$は$w=0$を内部に含むclosed annulusである．
+$w$を固定したまま，$A$を$(1-s)A$へ変形する．
+式\eqref{fhr:radii}によって，その都度
+\[
+ P_X(s)=\frac{\sqrt{(1-s)^2A^2+4\pi^2|w|^2}+(1-s)A}{2},
+ \quad
+ P_Y(s)=\frac{\sqrt{(1-s)^2A^2+4\pi^2|w|^2}-(1-s)A}{2}
+\]
+とし，$w\ne0$なら$X,Y$の位相を保つ．
+$w=0$では非零の方の座標を$\sqrt{1-s}$倍して，
+もう一方は零のままとする．これは$w=0$にも連続に延び，
+$Q=|w-c|^2$を保持して$|A_s|\le a_*$なので，
+$A=0$へのstrong deformation retractionを与える．
+
+$A=0$では$|X|=|Y|=\sqrt{|w|}$であり，
+$w\ne0$のfiberは$S^1$，$w=0$のfiberは一点となる．
+従って
+\[
+ \{A=0\}\cong(W\times S^1)/(\{0\}\times S^1\text{ を潰す}).
+\]
+$W$を，$w=0$を固定して中央の円$\{|w-c|=c\}$
+へradial deformation retractすると，右辺は
+$(S^1\times S^1)/(\{*\}\times S^1)$とhomotopy equivalentである．
+TorusのCW表示の一つの1-cellを潰すと，
+二次cellのcommutator attaching wordは自明になるため，
+$S^1\vee S^2$を得る．
+\end{proof}
+
+\begin{theorem}[Actual focus block補集合の整数homology]
+\label{tnc:actual-complement-homology}
+定理\ref{tnc:actual-curve}のclosed curve
+$C'\subset X_d$について
+$e=d-2$，$g=(d-3)(d-4)/2$，
+$\mathcal U=C'\times K_c$，
+$\mathcal V=\overline{X_d\setminus\operatorname{int}\mathcal U}$とおく．
+$b_d=d^4-5d^3+10d^2-10d+4$とすれば
+\begin{equation}\label{tnc:actual-complement-groups}
+\begin{aligned}
+ H_0(\mathcal V)&\simeq\mathbb Z,&
+ H_1(\mathcal V)&\simeq\mathbb Z,&
+ H_2(\mathcal V)&\simeq\mathbb Z^{2g+2},\\
+ H_3(\mathcal V)&\simeq
+  \mathbb Z^{b_d+2g+1}\oplus\mathbb Z/e\mathbb Z,&
+ H_4(\mathcal V)&\simeq\mathbb Z^{2g+1},&
+ H_k(\mathcal V)&=0\ (k\ge5).
+\end{aligned}
+\end{equation}
+Torsion summandの生成元は，固定した$p\in C'$上の
+focus normal face $\{p\}\times\partial K_c$の有向3-cycleである．
+特に六次では
+\[
+ H_1(\mathcal V)=\mathbb Z,\quad
+ H_2(\mathcal V)=\mathbb Z^8,\quad
+ H_3(\mathcal V)=\mathbb Z^{527}\oplus\mathbb Z/4,\quad
+ H_4(\mathcal V)=\mathbb Z^7,\quad
+ \chi(\mathcal V)=-512.
+\]
+\end{theorem}
+\begin{proof}
+補題\ref{tnc:focus-homotopy}，K\"unnethより
+$H^j(\mathcal U;\mathbb Z)$は$j=0,4$で$\mathbb Z$，
+$j=1,3$で$\mathbb Z^{2g+1}$，
+$j=2$で$\mathbb Z^{2g+2}$，他では零である．
+Excisionと，cornersを丸めたcompact oriented
+six-manifoldに対するPoincar\'e--Lefschetz双対性により
+\[
+ H_k(X_d,\mathcal V)\simeq
+ H_k(\mathcal U,\partial\mathcal U)
+ \simeq H^{6-k}(\mathcal U).
+\]
+この同型の下で$H_k(X_d)\to H_k(X_d,\mathcal V)$は
+cohomologyの制限$H^{6-k}(X_d)\to H^{6-k}(\mathcal U)$に対応する．
+$\mathcal U$は小さいnormal disk bundle
+$N(C')\simeq C'$に含まれるので，次数3以上の制限は零である．
+次数2ではhyperplane classの制限が
+$H^2(\mathcal U)\simeq H^2(C')\oplus
+(H^1(C')\otimes H^1(K_c))\oplus H^2(K_c)$
+の第一因子に$e$倍で入る．
+
+定理\ref{tnc:tubular-homology}で記した
+$H_2(X_d)=H_4(X_d)=\mathbb Z$，
+$H_3(X_d)=\mathbb Z^{b_d}$，
+$H_1(X_d)=H_5(X_d)=0$を用いる．
+次数4,3の長完全列は
+\[
+ 0\to H^1(\mathcal U)\to H_4(\mathcal V)
+ \to\mathbb Z\xrightarrow{\times e}H^2(\mathcal U)
+ \to H_3(\mathcal V)\to\mathbb Z^{b_d}\to0
+\]
+となる．$\times e$は第一summandへの単射であり，
+そのcokernelは$\mathbb Z^{2g+1}\oplus\mathbb Z/e$である．
+$\mathbb Z^{b_d}$は自由なのでextensionは群としてsplitし，
+$H_3,H_4$の表示を得る．
+$\mathbb Z/e$の生成元は$H^2(C')$の基本classを
+relative dualityで表す
+$\{p\}\times[K_c,\partial K_c]$のboundary
+$\{p\}\times\partial K_c$に対応する．
+同様に次数3,2の制限が零なので
+$H_2(\mathcal V)\simeq H^3(\mathcal U)\oplus\mathbb Z$
+および$H_1(\mathcal V)\simeq H^4(\mathcal U)$が従う．
+最上次数では$H_6(X_d)\to H^0(\mathcal U)$が同型で，
+$H_k(\mathcal V)=0$ ($k\ge5$)を得る．
+六次の数値とEuler数は式への代入である．
+\end{proof}
+
 \begin{remark}[補集合のどちらを意味するか]
 \label{tnc:complement-distinction}
 系\ref{tnc:complement-euler}の
