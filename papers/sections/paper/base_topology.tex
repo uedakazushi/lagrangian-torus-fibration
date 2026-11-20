@@ -209,6 +209,290 @@ $d\ge6$ の非同相性は，両基底をそのまま同じ位相空間として
 \end{remark}
 
 
+\subsection{座標部分複体の非伸長 retraction}
+
+以後，各 unit square の Euclidean 長さを貼り合わせた距離を $d_\square$ とし，
+$Q_{p;qr}=e_p+[0,1]e_q+[0,1]e_r$ と書く．
+非空な $I\subset\{1,\ldots,d\}$ に対して
+\[
+ \mathcal C_I=\{w\in\mathcal C_d:\operatorname{supp}(w)\subset I\}
+\]
+とし，その cubical cells の Euclidean 長さから定まる内在距離を $d_I$ と書く．
+$|I|=1$ の場合は一点，$|I|=2$ の場合は二本の unit intervals の和である．
+$|I|\ge3$ の場合は各 unit square を貼り合わせた有限長さ空間となる．
+この定義だけでは $d_I$ は $d_\square$ の制限を意味しないが，
+以下の直接構成によって両者は等しい．
+
+\begin{proposition}[座標部分複体の非伸長 retraction]
+\label{topo:coordinate-retraction}
+$a\in I$ を一つ選び，$r_{I,a}:\mathcal C_d\to\mathbb R^d$ を
+\[
+ \bigl(r_{I,a}(w)\bigr)_b=
+ \begin{cases}
+  \min\!\left\{1,
+   \left(w_a^2+\displaystyle\sum_{\ell\notin I}w_\ell^2\right)^{1/2}
+       \right\},&b=a,\\
+  w_b,&b\in I\setminus\{a\},\\
+  0,&b\notin I
+ \end{cases}
+\]
+で定める．これは $(\mathcal C_d,d_\square)$ から
+$(\mathcal C_I,d_I)$ への $1$-Lipschitz retraction である．特に
+\begin{equation}\label{topo:eq:coordinate-distance}
+ d_I(x,y)=d_\square(x,y)\qquad(x,y\in\mathcal C_I).
+\end{equation}
+さらに，各 unit square $Q\subset\mathcal C_d$ 自身も
+非伸長 retraction の像であり，$Q$ 上で $d_\square$ は
+その Euclidean 距離に等しい．
+\end{proposition}
+\begin{proof}
+外側の全座標と $a$ 座標を一つの非負座標にまとめるので，
+非零座標の個数は増えず，像の support は $I$ に含まれる．
+入力の値 $1$ を取る座標が $I\setminus\{a\}$ にあればそのまま残り，
+それ以外なら像の $a$ 座標が $1$ となる．
+したがって像は $\mathcal C_I$ に入る．
+$w\in\mathcal C_I$ では $w_a\le1$ より $r_{I,a}(w)=w$ である．
+
+写像 $u\mapsto\min\{1,\|u\|_2\}$ は Euclidean 距離に関して
+$1$-Lipschitz である．これは逆三角不等式と，実数の clipping が
+$1$-Lipschitz であることから従い，$u=0$ と $\|u\|_2=1$ でも成立する．
+その微分が存在する点では勾配の長さは $1$ 以下であり，
+clipping の外側では零である．変更しない他の座標はこの $u$ と直交するから
+\[
+ \|r_{I,a}(w)-r_{I,a}(w')\|_2^2
+ \le\sum_{b\in I\setminus\{a\}}|w_b-w'_b|^2
+       +|w_a-w'_a|^2+\sum_{\ell\notin I}|w_\ell-w'_\ell|^2
+ =\|w-w'\|_2^2.
+\]
+
+ここでは target の内在距離も確認する必要がある．
+一つの source square の固定座標を $p$ とする．
+$p\in I\setminus\{a\}$ なら像でも $p$ 座標が $1$ であり，
+$p=a$ または $p\notin I$ なら像では $a$ 座標が $1$ である．
+残る可変座標は高々二つで，その label は元の square と $I,a$ から固定される．
+従って各 source square は一つの target cell（square，辺，または点）に写る．
+上の Euclidean 評価から，その square 内の任意の曲線の長さは増えない．
+有限個の cell 内線分をつないだ経路に適用して長さを足し，
+piecewise Euclidean 距離の定義に従って下限を取れば
+\[
+ d_I(r_{I,a}(x),r_{I,a}(y))\le d_\square(x,y)
+\]
+を得る．従って任意の rectifiable curve についても，距離空間の
+$1$-Lipschitz 写像の一般的性質として長さは増加しない．
+包含写像による逆向きの不等式と retraction 性から
+\eqref{topo:eq:coordinate-distance} が従う．
+
+最後に，$Q=\{w_p=1,\ 0\le w_q,w_r\le1,\ w_b=0
+\text{ for }b\notin\{p,q,r\}\}$ に対して
+\[
+ P_Q(w)=e_p+w_qe_q+w_re_r
+\]
+を取る．これは $Q$ 上恒等な Euclidean 非伸長写像で，
+target の $Q$ 自身は凸な Euclidean square なので
+$P_Q:(\mathcal C_d,d_\square)\to Q$ も非伸長である．
+従って $Q$ 上の全体距離と Euclidean 距離は等しい．
+\end{proof}
+
+\begin{corollary}[六つ以下の label による最短路]
+\label{topo:six-label-gallery}
+$d\ge3$ とする．任意の二点 $x,y\in\mathcal C_d$ は，
+高々六つの label を持つ座標部分複体内の最短路で結べる．
+その最短路は
+\[
+ N_d^*=3\binom{\min\{d,6\}}{3}
+\]
+本以下の unit-square 内線分からなる gallery として取れる．
+特に $d=5$ では $N_d^*=30$，$d\ge6$ では $N_d^*=60$ である．
+また $D_d=\operatorname{diam}(\mathcal C_d,d_\square)$ とすれば
+$D_d=D_6$ for $d\ge6$．
+\end{corollary}
+\begin{proof}
+$\operatorname{supp}(x)\cup\operatorname{supp}(y)$ は高々六元である．
+これを含み，$3\le|I|\le\min\{d,6\}$ となる $I$ を選ぶ．
+有限連結 cubical length space $\mathcal C_I$ は compact であり，最短路を持つ．
+命題\ref{topo:coordinate-retraction}によって，その最短路は全体でも最短である．
+
+全体の最短路が同じ unit square の二点を通れば，その間の長さは
+両端間の Euclidean 距離に等しい．Euclidean 空間の三角不等式の等号条件より，
+その区間は square 内の線分である．従って各 square の逆像は閉区間であり，
+同じ square を出て再訪することはない．有限個のこれらの区間を使って
+parameter interval を順に覆えば，各 square を高々一度用いる gallery を得る．
+$\mathcal C_I$ の square の個数は $|I|\binom{|I|-1}{2}=3\binom{|I|}{3}$
+なので所望の上界を得る．
+
+$d\ge6$ のとき，任意の二点間距離は label の置換により
+$\mathcal C_6$ 内の二点間距離に等しいから $D_d\le D_6$．
+逆向きは $\mathcal C_6\subset\mathcal C_d$ の等長性から従う．
+\end{proof}
+
+
+\subsection{六次以上の cubical target の厳密直径}
+
+\begin{lemma}[三 label corner の singleton からの距離]
+\label{topo:corner-singleton-radius}
+$J=\{i,j,k\}$ とし，$x\in\mathcal C_J$ とする．すると
+\[
+ d_J(e_i,x)\le\sqrt5.
+\]
+等号は $x=e_j+e_k$ の場合に限る．特に $x_i>0$ なら不等号は真である．
+\end{lemma}
+\begin{proof}
+$x_i=1$ なら，同じ square 内の線分を使って距離は $\sqrt2$ 以下である．
+それ以外では $j,k$ を交換して $x_j=1$ とできる．
+$u=x_i$，$v=x_k$ と置く．$w_i=1$ の square と $w_j=1$ の square を
+共有辺で開いて $2\times1$ rectangle にすると，両点の差は $(2-u,v)$ となる．
+この rectangle 内の線分を戻して
+\[
+ d_J(e_i,x)^2\le(2-u)^2+v^2\le5
+\]
+を得る．最後の等号には $u=0$，$v=1$ が必要である．
+
+$x=e_j+e_k$ の下界も直接確認できる．各 square を singleton--triple
+対角線で二分し，頂点値
+\[
+\begin{array}{c|ccccc}
+z&e_i&e_j,e_k&e_i+e_j,e_i+e_k&e_j+e_k&e_i+e_j+e_k\\\hline
+\sqrt5\,h(z)&0&4&2&5&3
+\end{array}
+\]
+を affine に延長する．各三角形の二つの直交辺方向の増分は，
+符号を除いて $1/\sqrt5$ と $2/\sqrt5$ である．
+従って $h$ は $1$-Lipschitz であり，
+$h(e_j+e_k)-h(e_i)=5/\sqrt5=\sqrt5$ が所望の下界を与える．
+\end{proof}
+
+\begin{theorem}[六 label からの直径の安定値]
+\label{topo:diameter-six-labels}
+任意の $d\ge6$ に対し
+\[
+ \operatorname{diam}(\mathcal C_d,d_\square)=2\sqrt5=\sqrt{20}.
+\]
+距離が $2\sqrt5$ に等しい点対は，互いに素な三元集合 $A,B$ による
+\[
+ v_A=\sum_{i\in A}e_i,\qquad v_B=\sum_{i\in B}e_i
+\]
+の対に限る．従ってこの直径と等号点対の記述は，KE の解析的な仮定と独立である．
+\end{theorem}
+\begin{proof}
+まず $S=\operatorname{supp}(x)$，$T=\operatorname{supp}(y)$ とし，
+$|S\cup T|\le5$ の場合を考える．
+$S\cap T\ne\varnothing$ なら $i\in S\cap T$ を選び，
+$S,T$ をそれぞれ含む三元集合 $J,K$ を取る．
+$S\cap T=\varnothing$ なら少なくとも一方の大きさは二以下なので，
+必要なら $x,y$ を交換して $|S|\le2$ とする．
+$i\in T$ を選び，$J\supset S\cup\{i\}$，$K\supset T$ を三元集合に補う．
+どちらの場合も $i\in J\cap K$ であり，少なくとも一方の実際の support に $i$ が属する．
+補題\ref{topo:corner-singleton-radius}と包含を用いると
+\[
+ d_\square(x,y)
+ \le d_J(x,e_i)+d_K(e_i,y)<2\sqrt5.
+\]
+片方の評価が真の不等式になることが，ここで必要である．
+従って残るのは，両点の support がそれぞれ三元で互いに素な場合である．
+座標を置換し，値 $1$ の座標をそれぞれ $1,4$ として
+\[
+ x=e_1+a e_2+b e_3\in Q_{1;23},\qquad
+ y=e_4+c e_5+e e_6\in Q_{4;56},\qquad
+ 0\le a,b,c,e\le1
+\]
+と書く．
+
+\emph{四通りの展開による上界．}
+始点 square を平面の $[0,1]^2$ とし，終点 square を
+$[-3,-2]\times[-1,0]$ に置く．三回の left step と一回の down step の
+四つの順序は，次の edge-adjacent galleries として全て存在する：
+\begin{align*}
+ LLLD:&\quad Q_{1;23},\ Q_{1;34},\ Q_{4;13},\ Q_{4;36},\ Q_{4;56},\\
+ LLDL:&\quad Q_{1;23},\ Q_{1;34},\ Q_{4;13},\ Q_{4;15},\ Q_{4;56},\\
+ LDLL:&\quad Q_{1;23},\ Q_{1;34},\ Q_{1;45},\ Q_{4;15},\ Q_{4;56},\\
+ DLLL:&\quad Q_{1;23},\ Q_{1;25},\ Q_{1;45},\ Q_{4;15},\ Q_{4;56}.
+\end{align*}
+各共有辺に沿う反転で展開すると，始点と終点の座標はそれぞれ
+$(a,b)$ と $(-2-e,-c)$ となる．
+この二点を結ぶ Euclidean segment が直線 $u=0,-1,-2$ と $v=0$ を横切る順序を取れば，
+上の四つの gallery の少なくとも一つに segment 全体が含まれる．
+格子頂点を通る場合は，二つの横切りのどちらを先に取ってもよい．
+各 square 上の展開は等長なので
+\begin{equation}\label{topo:eq:disjoint-square-upper}
+ d_\square(x,y)^2
+ \le (a+e+2)^2+(b+c)^2
+ \le 4^2+2^2=20.
+\end{equation}
+最後の等号には $a=b=c=e=1$ が必要である．
+したがって全体の直径は $2\sqrt5$ 以下で，等号点対は定理の候補に限られる．
+
+\emph{八種類の三角形による下界．}
+$d=6$，$A=\{1,2,3\}$，$B=\{4,5,6\}$ とする．
+空でない $S\subset A\cup B$，$|S|\le3$ に対応する頂点に対し，
+$a(S)=|S\cap A|$，$b(S)=|S\cap B|$ と置く．
+各 square を singleton と triple の頂点を結ぶ対角線で二分し，
+次の頂点値を各三角形上 affine に延長する：
+\[
+\begin{array}{c|rrrrrrrrr}
+ (a,b)&(3,0)&(2,0)&(1,0)&(2,1)&(1,1)&(1,2)&(0,1)&(0,2)&(0,3)\\\hline
+ \sqrt5\,h&-5&-3&-2&-1&0&1&2&3&5.
+\end{array}
+\]
+三角形は singleton から pair，triple への subset chain であり，
+加える label の $A/B$ 型は八通りである．
+対応する $\sqrt5\,h$ の二つの直交辺方向の増分は
+\[
+\begin{array}{c|rrrrrrrr}
+ \text{型}&AAA&AAB&ABA&ABB&BAA&BAB&BBA&BBB\\\hline
+ \text{増分}&(-1,-2)&(-1,2)&(2,-1)&(2,1)&(-2,-1)&(-2,1)&(1,-2)&(1,2).
+\end{array}
+\]
+従って全三角形上で $|\nabla h|^2=(1^2+2^2)/5=1$ であり，
+$h$ は貼合せの長さ距離に関して $1$-Lipschitz である．
+しかし
+\[
+ h(v_B)-h(v_A)=\frac{10}{\sqrt5}=2\sqrt5
+\]
+なので $d_\square(v_A,v_B)\ge2\sqrt5$ となる．
+命題\ref{topo:coordinate-retraction}の等長性により，この下界は
+$d>6$ の中の任意の六 label にも保たれる．
+上界と座標置換対称性を合わせると，直径と全等号点対の記述を得る．
+\end{proof}
+
+\begin{corollary}[六次以上の直径対の線形安定性]
+\label{topo:diameter-six-stability}
+$d\ge6$，$0\le\delta<\sqrt{20}-\sqrt{13}$ とし，
+$d_\square(x,y)\ge\sqrt{20}-\delta$ とする．
+すると $A=\operatorname{supp}(x)$ と $B=\operatorname{supp}(y)$ は
+互いに素な三元集合であり，
+\[
+ d_\square(x,v_A)+d_\square(y,v_B)
+ \le\sqrt{20}\,\delta-\frac{\delta^2}{2}
+ \le\sqrt{20}\,\delta.
+\]
+\end{corollary}
+\begin{proof}
+命題\ref{topo:coordinate-retraction}と，既存の五次の直径定理
+\cite[\texttt{thm:intro-diameter-C5}, \texttt{sec:finite-diameter}]{KECubicalCurrent}
+により，support の和が五元以下なら距離は $\sqrt{13}$ 以下となるので，
+両 support は互いに素な三元集合である．上の座標を用い，
+$u=2-a-e$，$v=2-b-c$ とすると $0\le u,v\le2$ であり，
+\[
+ 20-\bigl((a+e+2)^2+(b+c)^2\bigr)
+ =(8u-u^2)+(4v-v^2)\ge2(u+v).
+\]
+\eqref{topo:eq:disjoint-square-upper}から
+$u+v\le(20-d_\square(x,y)^2)/2$ となる．
+各点から対応する頂点までの square 内の線分の長さは，
+それぞれ $2-a-b$，$2-c-e$ 以下なので，その和は $u+v$ 以下である．
+距離の仮定を代入すれば結論を得る．
+\end{proof}
+
+\begin{remark}[五次の直径の使用範囲]
+定理\ref{topo:diameter-six-labels}の直径と全等号点対の証明は，
+上の展開・calibration と座標 retraction だけで自己完結し，五次の厳密直径を使わない．
+既存の五次の $\sqrt{13}$ を使用するのは，
+系\ref{topo:diameter-six-stability}の明示的な gap
+$\sqrt{20}-\sqrt{13}$ の箇所に限る．
+Actual KE 曲面の直径漸近を得るには，全曲面の distortion が消えることを
+別に証明しなければならない．
+\end{remark}
+
 \subsection{分岐基底の立方体距離への定量的収縮}
 
 上の $p_T$ は同相でなくても，基底上に\emph{人工的な}長さ距離を
@@ -268,8 +552,8 @@ $\mathcal C_d$ の長さ最短路が同じ square を離れて再び戻るなら
 （元の任意の曲線の長さは ambient Euclidean chord 以上）．
 従って最短路は，少なくとも一つの選択では，
 有限個の square の gallery として記述でき，
-その訪問数は全 maximal squares の数
-$N_d=d\binom{d-1}{2}$ 以下に取れる．
+系\ref{topo:six-label-gallery}により，その訪問数は
+$N_d=3\binom{\min\{d,6\}}{3}$ 以下に取れる．
 Edge に沿う部分もそれを含む任意の square に割り当てればよい．
 
 $p_Tx$ と $p_Ty$ を結ぶこの gallery の各 square 内の線分を，
@@ -379,7 +663,7 @@ rectifiable lift $\widetilde\gamma$が存在し，
 $\operatorname{diam}_{d_t}p_T^{-1}(z)\le\kappa_t$
 （分岐木fiber・portalの接続費用）．
 \end{enumerate}
-$N_d=d\binom{d-1}{2}$, $D_d=\operatorname{diam}(\mathcal C_d,d_\square)$
+$N_d=3\binom{\min\{d,6\}}{3}$, $D_d=\operatorname{diam}(\mathcal C_d,d_\square)$
 とすると
 \[
  \sup_{x,y\in B(T)}
@@ -393,8 +677,7 @@ Gromov--Hausdorff収束する．
 \end{proposition}
 \begin{proof}
 下界は\textup{(N)}．上界には$p_Tx$と$p_Ty$を結ぶ
-$\mathcal C_d$の最短路を取り，同じsquareの再訪を
-ambient Euclidean線分で置き換えて，$N_d$個以下の
+系\ref{topo:six-label-gallery}の最短路を取り，$N_d$個以下の
 square内線分からなるgalleryを選ぶ．
 各線分を\textup{(S)}で持ち上げ，隣り合う線分の持ち上げ端点が
 属する同一fiber内を\textup{(F)}で接続し，
@@ -427,6 +710,55 @@ $Y$での距離は$2\sqrt2$である．
 \]
 特に有限個の局所的なsquare isometriesと大域no-shortcutだけから
 global GH収束は導けない．
+\end{example}
+
+\begin{example}[飽和した局所領域の外側を通る薄い shortcut]
+\label{topo:protected-thin-bypass}
+局所の protected distance，square の持上げ上界，小さい全 fibers だけでは，
+全域 no-shortcut は従わない．この点を一般の compact length space で確認する．
+Target を二枚の unit square からなる Euclidean rectangle
+\[
+ Y=[0,1]_s\times[-1,1]_u
+\]
+とし，$0<\varepsilon<1/4$ に対して source は同じ集合に
+\[
+ g_\varepsilon=du^2+a_\varepsilon(u)^2ds^2
+\]
+を入れた $X_\varepsilon$ とする．$a_\varepsilon$ は
+$\varepsilon\le a_\varepsilon\le1$ を満たす滑らかな関数で，
+$u\le\varepsilon/3$ と $u\ge4\varepsilon/3$ では $1$，
+$2\varepsilon/3\le u\le\varepsilon$ では $\varepsilon$ に等しいものを取る．
+境界と corner を許した Riemannian length metric を用い，
+$f_\varepsilon:X_\varepsilon\to Y$ は集合としての恒等写像とする．
+
+全 fibers は一点なので，その ambient 径は零である．
+$g_\varepsilon\le g_Y$ より，target の各 square 内線分は恒等写像で
+長さを増やさず持ち上がる．従って\textup{(S)}の誤差と\textup{(F)}の誤差は共に零である．
+また
+\[
+ W=[0,1]\times[-1,0],\qquad
+ V_\varepsilon=[0,1]\times[-1,\varepsilon/3]
+\]
+は $f_\varepsilon$-飽和であり，その上では metric は Euclidean なので
+\[
+ d_W^{\rm int}(x,y)=d_{V_\varepsilon}^{\rm int}(x,y)
+ =d_Y(f_\varepsilon(x),f_\varepsilon(y))
+ \qquad(x,y\in W).
+\]
+しかし $x=(0,0)$，$y=(1,0)$ を，上端の $u=\varepsilon$ まで上がり，
+そこで水平移動して下りる経路で結ぶと
+\[
+ d_{X_\varepsilon}(x,y)\le2\varepsilon+\varepsilon=3\varepsilon,
+ \qquad d_Y(f_\varepsilon(x),f_\varepsilon(y))=1.
+\]
+従って全域 no-shortcut の誤差は零へ行かない．
+
+これは actual KE 退化の反例ではなく，局所的な protected 比較と
+全域の\textup{(S),(F)}から\textup{(N)}を形式的に推論できないことを示す例である．
+局所領域 $W$ 自体の飽和性も満たすが，上半分には同じ protected 比較を与えていない．
+従って，飽和した\emph{全域被覆}上の局所距離比較と十分な overlap 制御を
+さらに仮定した命題を否定する例とは扱わない．
+本研究でも，全域被覆・全 overlap・actual 下界の確認を省略しない．
 \end{example}
 
 \begin{remark}[実際の幾何計量への接続に残るもの]

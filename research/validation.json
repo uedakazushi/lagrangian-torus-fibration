@@ -1,6 +1,6 @@
 {
   "date": "2026-11-21",
-  "version": "2.7",
+  "version": "2.8",
   "scope": "複素次元2の現行研究状態。旧三次元稿の組版・監査記録ではない。数学的な証明と、その再監査、組版、整数計算、GitHub保存、Cloudタスク起動を区別する。",
   "priority": "P0: actual負Kähler–Einstein形式での大域Lagrangian torus fibrationの射影 p_T∘π_t が、各固定 d≥5 の全曲面ambient距離に関する正規化GH近似を与えること。",
   "priority_status": "open",
@@ -23,10 +23,13 @@
       "Canonical potentialの正のPoisson方程式・対数勾配と固定physical tubeから、中央点のactual小球を深部normal帯へ局在",
       "Complex Sobolev Moser–Trudingerとlogarithmic coverの周期数から、固定source-free shellへの距離のactual Gaussian tail CL^-1 exp(-cA²)",
       "Bishop–Gromov比較により、固定点を含むcentral sourceの全点ambient径O(sqrt(R))、固定基底のsource-inclusive中央moment帯と閉pinched torus全体の正規化径収縮",
-      "固定component coreの小さいactual Moser移送、collarの相対flux条件とexact equivariant germ。極限KE形式のfillingを追加入力とする相対接着"
+      "固定component coreの小さいactual Moser移送、collarの相対flux条件とexact equivariant germ。極限KE形式のfillingを追加入力とする相対接着",
+      "固定compactと全collar上でKE形式・primitiveに厳密一致するsmooth Kähler正則化、正residueの有限型KE coreとその小さい飽和近傍のmarked Lagrangian filling",
+      "Cubical座標部分複体への非伸長retraction、六label最短路、gallery数は五次30・六次以上60",
+      "六次以上のcubical targetの厳密直径2sqrt(5)、最大対の完全記述、直径近似対の線形安定性（後者のgapのみ既存C5定理に依存）"
     ],
     "not_proved": [
-      "極限complete component KE形式そのものに対する所要のcore filling、全collarの同時整合、および全曲面被覆",
+      "局所KE core fillingから既存neck/cornerの全collar葉を指定した相対延長、全overlapの同時整合、および全曲面被覆",
       "Source中央帯を超える共通moment interval全体での同一moment接続と、moving残余領域への一様性",
       "中央帯に限られないmomentをまたぐ木上の複数fiberの合併の径、全曲面ambient距離でのno-shortcut、square lifts、portal connectorsとP0の一様distortion",
       "KE側のCP/PBE（および必要時のTC5）の対象族での証明、またはそれらの直接評価による代替",
@@ -55,42 +58,28 @@
     },
     "this_audit": {
       "date": "2026-11-21",
-      "scope": "改訂17のEuler/central Gaussian/positive potential buffer/wide Gaussian/Bishop–Gromov全点径/固定component移送を内部点検。改訂17の静的検査と組版は未実施。",
+      "scope": "固定compactのcusp正則化、正residue core、局所飽和filling、target retraction・六label還元・厳密直径を論理点検。新四gallery・120三角形を有理数で独立検算。現行の全旧証明を再監査したものではない。",
       "reexecuted_build": false,
-      "reexecuted_static_checks": false,
+      "reexecuted_static_checks": true,
       "reexecuted_python_suite": false,
+      "six_label_finite_command": "python3 verification/verify_cubical_six_label_geometry.py",
+      "six_label_finite_result": "PASS: four unfolded galleries; all 120 calibration triangles; exact squared endpoint gap 20",
       "independent_internal_proof_review": [
-        "ke:normal-flow-naturality",
-        "ke:corner-leaves-in-neck-reduction",
-        "ke:moment-dependent-neck-foliation",
-        "ke:neck-corner-diagonal-matching",
-        "ke:neck-corner-saturated-union",
-        "ke:fixed-base-central-band",
-        "ke:source-central-density",
-        "ke:source-central-moment",
-        "ke:source-central-mean-distance",
-        "ke:source-central-short-escape",
-        "ke:source-central-arm-connectors",
-        "ke:source-central-band-reduction",
-        "ke:source-potential-modulus",
-        "ke:source-euler-bound",
-        "ke:source-sublog-residual-connectors",
-        "ke:source-shell-gaussian-tail",
-        "ke:source-tube-potential",
-        "ke:positive-poisson-log-gradient",
-        "ke:source-potential-buffer",
-        "ke:source-wide-gaussian-tail",
-        "ke:source-central-diameter",
-        "ke:fixed-base-source-central-band",
-        "ke:fixed-component-transfer",
-        "ke:component-relative-flux",
-        "ke:component-exact-collar-germ",
-        "ke:conditional-component-core-filling"
+        "ke:fixed-compact-cusp-regularization",
+        "ke:positive-residue-finite-type",
+        "ke:actual-limit-weinstein-core",
+        "ke:local-limit-core-filling",
+        "topo:coordinate-retraction",
+        "topo:six-label-gallery",
+        "topo:corner-singleton-radius",
+        "topo:diameter-six-labels",
+        "topo:diameter-six-stability",
+        "ke:closed-corner-global-target"
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false
     },
-    "current_revision_pending_build": 17
+    "current_revision_pending_build": 18
   },
   "cloud_codex": {
     "repository_instructions_present": true,
@@ -112,6 +101,11 @@
       "source": "Dinh–Marinescu–Vu, Ann. Sc. Norm. Super. Pisa (5) 24 (2023), 927–954, Theorem 1.2, pp.928–929",
       "url": "https://www.mi.uni-koeln.de/~gmarines/PREPRINTS/Dinh_Marinescu_Vu_ASNP_2023.pdf",
       "verified": "掲載版一次PDFのW_* normと定理の仮定を確認。固定Euclidean補助potentialとactual距離函数への適用を本稿で証明。"
+    },
+    "Rochon_Zhang_cusp": {
+      "source": "Rochon–Zhang, Adv. Math. 231 (2012), 2892–2952, arXiv:1106.0873v2, §5 (5.3)–(5.6), Theorem 5.1",
+      "url": "https://arxiv.org/abs/1106.0873v2",
+      "verified": "一次PDFでSNCのampleness条件・bounded cusp potentialとd^c規約を照合。Smooth divisor専用のfull expansionは使用しない。"
     }
   },
   "other_papers": {

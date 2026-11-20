@@ -1,5 +1,5 @@
 # Lagrangian torus fibrations on general-type surfaces
-2026-11-21 / v2.7 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
+2026-11-21 / v2.8 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
 
 **最優先目標は、本研究の大域Lagrangian torus fibrationが、負Kähler–Einstein計量のGromov–Hausdorff極限を幾何学的に実現すること。現時点では未解決である。** 対象は各固定次数 \(d\ge5\) の一般位置全平面退化 \(X_t\subset\mathbb P^3\)。**このリポジトリは複素次元2専用**。三次元の研究は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とする。
 
@@ -15,7 +15,7 @@
 
 ## Cloud Codexから再開する
 
-最新mainで [研究方針](00_research_plan.md) → [AGENTS.md](AGENTS.md) → [依存関係](research/ke-dependencies.md) → [研究ノート](research/notes.md) を読む。遅い残余exhaustionにより、closed cornerとsource-inclusive neckの全交わりで葉が一致するactual部分fibrationを得た。中央sourceの全点径と固定基底中央帯・閉pinched torusの収縮まで得た。次は極限component KE形式上のcore filling、中央帯外のsource接続と全曲面の距離比較を進める。
+最新mainで [研究方針](00_research_plan.md) → [AGENTS.md](AGENTS.md) → [依存関係](research/ke-dependencies.md) → [研究ノート](research/notes.md) を読む。遅い残余exhaustionにより、closed cornerとsource-inclusive neckの全交わりで葉が一致するactual部分fibrationを得た。中央sourceの全点径と固定基底中央帯・閉pinched torusの収縮まで得た。極限KE coreの小さい飽和近傍のfillingと、六次以上のtarget直径 $2\sqrt5$ も得た。次はcore fillingを既存の全collar葉へ相対延長し、中央帯外のsource接続と全曲面の距離比較を進める。
 
 ```sh
 python3 scripts/research_check.py setup --require-tex
@@ -28,7 +28,7 @@ python3 scripts/research_check.py tex
 ## 論文と役割
 | 原稿 | 役割 | 組版の確認範囲 |
 | --- | --- | ---: |
-| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、局所KE収束と大域実現問題（改訂17） | 直近の改訂16は167頁、改訂17の追加証明は組版待ち |
+| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、局所KE収束と大域実現問題（改訂18） | 直近の改訂16は167頁、改訂18を組版確認中 |
 | [五次整数接着](papers/quintic-integer-gluing.tex) | 指定K5データの整数条件・高分母支持・未解決の大域接着 | 201頁 |
 | [Meridian surgery](papers/meridian-surgery.tex) | 閉corner circuitsの局所置換の障害 | 18頁 |
 | [TeX研究ノート](papers/research-notes.tex) | 証明素材・残る条件の整理 | 65頁 |
@@ -38,7 +38,7 @@ python3 scripts/research_check.py tex
 
 五次整数アフィン接着では、四rayの完全matching条件等を証明し、高分母の必要支持候補を \(G_{5,14},G_{5,16},G_{5,17}\) の3型・26標識まで絞った。ただし26は実現数ではなく、一般分母の剛性・三高係数の同時非負性や全支持型の大域接着は未解決。
 
-KE退化との関連では、全閉triple cornerのactual局所GH収束、定量的二段階平均、固定残余基底のactual neckとsourceのpinched torusを得ている。現行改訂17の主要結果は次の通り。
+KE退化との関連では、全閉triple cornerのactual局所GH収束、定量的二段階平均、固定残余基底のactual neckとsourceのpinched torusを得ている。現行改訂18の主要結果は次の通り。
 
 - **同じnormal moment上の接続：** 固定source-free基底の残余点全体をactual長さ $O(1)$ で結ぶ。Moser像と、同じlevel上の複数fiberの合併も、正規化ambient径 $O(R_t^{-1})$ を持つ（`ke:fixed-base-moment-connectors`）。
 - **三つの端の座標と作用：** 固定深度比で分離したarmで、射影neck座標との比の対数を全固定階で指数的に評価。積を保つsmooth補間で三端のnormal circlesを同時に合わせ、canonical normal periodの厳密な一致を示す。非正則な補間帯ではtame symplectic性を使う（`ke_neck_corner_transition.tex`）。
@@ -48,14 +48,20 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 - **全交わりで葉が一致する部分fibration：** 残余compact、normal cutoff、moment区間、parameter閾値の順に選び、全flowの共通開領域を構成する。Corner cut $m_t=6b_j$ とneckの葉でのtrim $B=7b_j$ を離して選び、first-exitと逆normal flowの自然性により、全intersectionが双方の全fibersで飽和することを証明した。Source・saddleの局所型を保って貼り合わせられる（`ke:neck-corner-saturated-union`）。
 - **Central sourceのactual経路評価：** 固定rescalingでdensityは $L_t^{-2}$、canonical potentialは有界、normal momentは $O(L_t^{-1})$。Traceと平均二乗距離は $O(1)$、全中央点からgateへの退出は $O(L_t^{-1/2})$、oriented arm断面へは $O(1)$ で接続できる（`ke_source_connectors.tex`）。Source-freeな $|\mu|\le A/M_t$ のcentral band全体もactual径 $O(1)$。Source側では正のpotentialの対数勾配でactual球を深部に閉じ込め、complex SobolevのGaussian積分とBishop–Gromov比較から、固定点を含む中央coreの全点径 $O(\sqrt{R_t})$ を証明した。固定基底のsource-inclusive中央帯と閉pinched torus全体も正規化ambient径で収縮する。Potentialの一様square-root-Dini modulusを仮定する十分条件も示し、そのmodulus自体は未検証と区別する。
 
-固定source chartのEuler場による明示的なresidual接続も保持する。成分coreではcanonical primitiveの差から固定領域のactual移送を構成し、境界を固定する相対flux条件とexactな平均化germを明示した（`ke_component_core_transfer.tex`）。極限KE形式そのものに対する所要のfillingは追加条件である。
+固定source chartのEuler場による明示的なresidual接続も保持する。成分coreではcanonical primitiveの差から固定領域のactual移送を構成し、境界を固定する相対flux条件とexactな平均化germを明示した（`ke_component_core_transfer.tex`）。`ke_component_core_geometry.tex` は任意固定compactと全collar上でKE形式・primitiveを保つsmooth正則化、正residueの有限型KE core、その小さい飽和近傍のmarked Lagrangian fillingを与える。既存neck/cornerの全collar葉を指定した相対fillingは追加条件である。
 
-**P0は未解決。** 部分fibrationの外を含む全曲面の被覆、coreへの相対接着、中央帯外のsource接続と木上のfiber合併の径、全曲面のshortcutとportal費用が残る。局所GH近似の標的は同一tripleの三枚のsquare自身であり、全曲面や全cubical複体の距離と同一視しない。先行研究の仮定と新規性の未確認点は主原稿序論と[研究ノート](research/notes.md)を参照。
+**P0は未解決。** 部分fibrationの外を含む全曲面の被覆、coreへの相対接着、中央帯外のsource接続と木上のfiber合併の径、全曲面のshortcutとportal費用が残る。局所GH近似のtargetの距離は非伸長retractionにより全cubical複体の距離の制限に等しい。Source側のprotected距離を全曲面ambient距離に置換した下界は未証明。先行研究の仮定と新規性の未確認点は主原稿序論と[研究ノート](research/notes.md)を参照。
+
+## 極限候補の有限距離幾何
+
+座標部分複体への明示的な非伸長retractionにより、全targetの最短路を六つ以下のlabelへ還元できる。Closed-cornerの三枚のsquareは全targetに等長に埋め込まれ、portal比較のgallery数は五次30、六次以上60で足りる。
+
+六次以上では **$\operatorname{diam}(\mathcal C_d,d_\square)=2\sqrt5$**。最大対は互いに素な三元supportのall-ones頂点対に限る。四つのsquare galleryによる上界と120三角形のPL calibrationによる下界を証明し、有限部分を有理数演算で独立検算した。主定理は既存の五次の直径 $\sqrt{13}$ に依存しない。これは候補targetの結果であり、actual KE曲面の直径漸近は未解決の全域距離比較を要する。
 
 ## ビルドと再現
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-2026-11-21 / v2.7：主稿改訂17に中央source全点径と固定component移送の証明を統合し、追加証明を別担当と内部点検した。Dinh–Marinescu–VuのTheorem 1.2とcomplex Sobolev normを掲載版の一次PDFで確認。改訂17の静的検査・LuaLaTeX組版・変更頁の表示確認は実行待ち。直近の完了済み組版は改訂16・167頁。形式証明・外部査読、包括的新規性確認、整数検算suiteや他三稿の再組版は今回未実施。P0は未解決。
+2026-11-21 / v2.8：固定compactのKE正則化と局所core filling、targetの非伸長retraction・六次以上の厳密直径を統合した。Rochon–ZhangのSNC cusp potentialを一次資料で確認し、新しい有限計算 `python3 verification/verify_cubical_six_label_geometry.py` と構成の静的検査を実行した。改訂18のLuaLaTeX組版・変更頁表示は確認中。直近の記録済み組版は改訂16・167頁。形式証明・外部査読、包括的新規性確認、旧整数検算suiteや他三稿の再組版は今回未実施。P0は未解決。
 
 **再現用パス：** 現行の分割TeXと検算入力は `papers/sections/` 以下を直接参照する。ルートの旧互換性symlink（`paper`, `paper_arithmetic`, `paper_surgery`, `notes`）は不要になり撤去した。構成の静的検査は `python3 verification/verify_repository_layout.py`、数学的な既定検算は `python3 verification/run_current_checks.py`。既存監査JSONの旧相対パスは出典記録として保持する。

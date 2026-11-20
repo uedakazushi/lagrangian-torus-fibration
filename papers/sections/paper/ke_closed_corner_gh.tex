@@ -28,7 +28,8 @@ $L=-\log|t|^2$，$R=\log L$，$m=R$ とする．
 に，三枚の unit Euclidean square を共有 faces に沿って貼り合わせた
 \emph{この corner 自身の内在長さ距離} $d_J$ を入れる．
 この記号は，$\mathcal C_d$ 全体の距離 $d_\square$ を
-$\mathcal C_J$ に制限したものを意味しない．
+$\mathcal C_J$ に制限するという定義ではない．
+ただし命題\ref{topo:coordinate-retraction}により，その値は全体距離の制限と等しい．
 
 命題\ref{ke:triple-hexagon}の softmax を
 \[
@@ -275,15 +276,44 @@ $\mathcal W_{t,J}$ 内の経路を用い，
 系\ref{ke:closed-corner-protected-gh}の $d_{t,J}^{\mathrm{Lag,out}}$ には
 $\mathcal V_t$ 内の経路を全て許す．
 $X_t$ 内で $\mathcal V_t$ の外へ出る経路は，いずれにも含めていない．
-また標的の $d_J$ も $\mathcal C_J$ 内の経路だけを用いる．
-Full complex $\mathcal C_d$ の他の cells を通る経路との比較は，
-本節のいずれの distortion bound にも含めていない．
+標的の $d_J$ は $\mathcal C_J$ 内の経路で定義したが，
+命題\ref{topo:coordinate-retraction}により $d_\square$ の制限に等しい．
+したがって target の他の cells による短縮はなく，全体 target の距離で同じ評価を述べられる．
+この target 側の事実は，source 側の許される経路を全 $X_t$ に広げるものではない．
 
 従って異なる三重点 chart の接合，neck・source・branch・core を含む
 既存の大域 fibration への相対接着，および大域 shortcut の評価は残る．
 本節の regular fibers と既存大域 fibration の singular fibers を同一視しない．
 解析入力の新規性の包括的確認も引き続き必要である．
 \end{remark}
+
+\begin{corollary}[全体の target 距離を用いた closed-corner 比較]
+\label{ke:closed-corner-global-target}
+定理\ref{ke:closed-corner-gh}と
+系\ref{ke:closed-corner-protected-gh}の右辺に現れる
+$d_J(\pi_{t,J}(x),\pi_{t,J}(y))$ は，
+$d_\square(\pi_{t,J}(x),\pi_{t,J}(y))$ に置き換えられる．
+同じ置換は定理\ref{ke:slow-cut-closed-corner-gh}の全ての許容 cut に成立する．
+すなわち，各 closed corner の射影を $\mathcal C_d$ に値を取る写像と見ても，
+その像上で同じ distortion bound が成立する．
+ただし source 側の距離はそれぞれの内在距離または保護領域内距離のままであり，
+全曲面 $X_t$ の ambient distance に置換した下界を主張しない．
+\end{corollary}
+\begin{proof}
+$|J|=3$ の場合に命題\ref{topo:coordinate-retraction}を適用すると
+$d_J=d_\square|_{\mathcal C_J\times\mathcal C_J}$ である．
+既存の各 distortion inequality にこの等式を代入すればよい．
+Source の許される経路の集合には変更を加えていない．
+\end{proof}
+
+\begin{remark}[残る actual shortcut の問題]
+この target 側の等長性により，異なる三重点を経由する target 経路が
+一つの $\mathcal C_J$ 内の距離をさらに短くする可能性は排除された．
+一方，actual $X_t$ の経路が対応する保護領域を出て短くなる可能性は，
+この retraction では制御されない．
+Actual の全域 no-shortcut，portal 接続，core の全域被覆は引き続き独立の課題である．
+\end{remark}
+
 
 \subsection{任意の遅い深度 cut に対する閉 corner の極限}
 

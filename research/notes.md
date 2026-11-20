@@ -81,7 +81,7 @@ Source側の `ke:source-central-band-reduction` は、固定residual disc、人�
 
 境界germを点ごとに保存するには、primitive差のcollar $H^1$ classがcoreの $H^1$ から延びることが必要となる。Fiber periodsが全て零でもbase-circle fluxが残る例を `ke:core-relative-flux-example` に保持する。これはfiber partitionの不存在例ではない。平均形式にもparameter方向の同変Moserを入れる $A_t b_t A_0^{-1}$ はexact symplectic germとなり、normal momentの加法定数も保つ。
 
-未解決なのはcomplete limit KE形式そのものに対する、指定full collarsを持つcore fillingと全patchの同時整合である。`comp:finite` は選び直したsmooth compactifying formの定理であり、この入力を自動的には与えない。条件付き系 `ke:conditional-component-core-filling` は、その入力があればactual移送・接着・十分遅い対角選択でcore全体の正規化径を消せることを示す。
+`ke_component_core_geometry.tex` により、任意の固定compactと全collarでKE形式・primitiveに厳密一致するsmooth compactification、正residueの有限型KE core、その小さい飽和近傍のLagrangian fillingを得た。未解決なのは、この局所core fillingを既存の指定full collarsへ延長し全patchを同時整合させることである。`comp:finite` の出力葉が指定葉に一致することは、二形式の一致だけからは従わない。条件付き系 `ke:conditional-component-core-filling` は、その入力があればactual移送・接着・十分遅い対角選択でcore全体の正規化径を消せることを示す。
 
 ## Source の residual cutoff と Euler 場
 
@@ -342,10 +342,18 @@ d\binom{d-3}{2}+d\binom d2=d(d^2-4d+6)=c_2(X_d).
 整数鎖複体の主張を検査するため、\(d=5,\dots,8\) の \(B_d(T)\) と \(\operatorname{Sk}_2\Delta^{d-1}\) の \(\partial_1,\partial_2\) の階数を独立に計算して、\(b_1=0\)、\(b_2=\binom{d-1}{3}\) と一致した。再現コードは `verification/verify_ke_base_topology.py`。これは有限体 \(\mathbb F_{1000003}\) 上の有限検算であり、整数係数の一般定理の証明は本文のexplicit chain contractionが担当する。
 
 
+## Cubical targetの非伸長retraction・六次以上の厳密直径
+
+正本は `base_topology.tex` の `topo:coordinate-retraction`、`topo:six-label-gallery`、`topo:diameter-six-labels`。非空Iとanchor a∈Iを選び、外側座標を $r_a=\min(1,\sqrt{w_a^2+\sum_{\ell\notin I}w_\ell^2})$ へまとめる。Euclidean非伸長性に加え、各source squareが一つのtarget cellへ写ることから、内在距離に対する非伸長retractionを得る。したがって $d_I=d_\square|_{\mathcal C_I}$。両端のsupportの和へ縮約できるので、最短路には六label以下で十分。Gallery上限は $3\binom{\min(d,6)}3$ である。
+
+六次以上の直径 $2\sqrt5$ の上界は、共通labelを持つ場合の二square展開と、disjointな三元supportの場合の3L+1Dの四shuffleで証明する。後者の下界は、二組の三labelの個数に応じた9頂点型の値を120個の三角形へaffineに延長するcalibration。四galleryの共有辺・全展開座標、全120三角形の勾配二乗を有理数演算で再実行した。`verification/verify_cubical_six_label_geometry.py` がその再現コードであり、retractionの解析的証明やKE推定の検証ではない。新規性の網羅的確認は未了。
+
+`ke:closed-corner-global-target` は既存closed-cornerのtarget距離を全 $\mathcal C_d$ のものへ置換する。Source側の全曲面ambient下界は依然残る。`topo:protected-thin-bypass` は、一般の二square長さ空間で局所の飽和したprotected距離と全域(S),(F)が誤差零でも、細い外側帯によるshortcutが起こる例である。Actual KE族や、十分な局所比較を持つ全域被覆の反例ではない。
+
 ## 人工的基底計量の鋭い収束速度と幾何学的比較の核心
 $p_T:B_d(T)\to\mathcal C_d$ に補助piecewise Euclidean metric $h$ を固定し、$|v|_\varepsilon^2=|dp_T(v)|_\square^2+\varepsilon^2|v|_h^2$ の内在距離を考える。graph correspondenceのdistortion $\mathcal D_\varepsilon$ は、$d=5$ で $\Theta(\varepsilon^2)$、$d\ge6$ で $\Theta(\varepsilon)$ と鋭く決まる（主原稿に読み込む base_topology.tex の topo:metric-collapse-sharp）。$d\ge6$ の下界は同一fiber内の正の $h$-距離に由来するが、**GH距離の下界ではない**。
 
-実際の基底長さ計量 $d_t$ に対する十分条件（topo:finite-portal-criterion）は、(N) global no-shortcut誤差 $\alpha_t$、(S) square segment liftの乗法誤差 $\sigma_t$・加法誤差 $\lambda_t$、(F) 同じfiberの接続費用 $\kappa_t$。最大square数 $N_d=d\binom{d-1}{2}$、直径 $D_d$ について
+実際の基底長さ計量 $d_t$ に対する十分条件（topo:finite-portal-criterion）は、(N) global no-shortcut誤差 $\alpha_t$、(S) square segment liftの乗法誤差 $\sigma_t$・加法誤差 $\lambda_t$、(F) 同じfiberの接続費用 $\kappa_t$。十分なsquare数 $N_d=3\binom{\min(d,6)}3$、直径 $D_d$ について
 \[
 \operatorname{dis}(p_T)\le\max\{\alpha_t,\ \sigma_tD_d+N_d\lambda_t+(N_d+1)\kappa_t\}.
 \]

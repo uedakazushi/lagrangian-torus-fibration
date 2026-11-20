@@ -1,0 +1,235 @@
+% !TeX root = ../../surface-lagrangian-torus-fibration.tex
+% 2026-11-21 / v1.0: 固定 KE 形式上の core と固定 compact の正則化．
+\section{成分極限の KE core と固定 compact 正則化}
+\label{ke:component-core-geometry-section}
+
+\subsection{固定 compact を変えない cusp 形式の正則化}
+
+以下では $m=d-1\ge4$, $M=\PP^2$, $D=\bigcup_{a=1}^mD_a$ とし，
+$D_a$ は一般位置の直線である．$W=M\setminus D$ と置く．
+$\vartheta$ は $2\pi c_1(K_M+D)=2\pi(m-3)H$ の smooth K\"ahler 代表とする．
+Complete finite-volume KE 形式の標準 cusp potential 表現は
+\begin{equation}\label{ke:eq:core-cusp-potential}
+ \omega_\infty=\vartheta+dd^c u,\qquad
+ u=-2\sum_a\log s_a+v,\qquad
+ s_a=-\log\|s_{D_a}\|^2>1,
+\end{equation}
+の形である．本稿の $d^c=(\sqrt{-1}/2)(\bar\partial-\partial)$ の規約を用いる．
+$v$ とその cusp covariant derivatives は有界である．
+Smooth な reference potential の差は $v$ に吸収する．
+本節で必要なのは $u\to-\infty$ が $D$ の全近傍で一様に成り立つことと，
+正則化だけには零階，有限型 core には一階の cusp bound である．
+これは divisor が smooth な場合だけの polyhomogeneous expansion を要しない．
+Rochon--Zhang\cite[\S5, (5.3)--(5.6), Theorem~5.1]{RochonZhang}の
+標準 cusp background と bounded $C^\infty_{\mathrm{fc}}$ potential を用いる．
+同論文の $\sqrt{-1}\partial\bar\partial=dd^c$ と照合した表式であり，
+$K_M+D=\mathcal O_{\PP^2}(m-3)$ が ample なのでその仮定を満たす．
+退化の成分極限との同定は\cite[\texttt{pair:thm:fixed-end-moment}の証明]{KELocalCurrent}による．
+
+\begin{proposition}[固定 compact と全 collar 上の完全な一致]
+\label{ke:fixed-compact-cusp-regularization}
+任意の $K\Subset W$ とその相対コンパクトな開近傍 $U$ に対して，
+$M$ 上の smooth K\"ahler form $\widehat\omega$ を
+\[
+ [\widehat\omega]=[\vartheta],\qquad
+ \widehat\omega=\omega_\infty\quad\text{on }U
+\]
+となるように取れる．$U$ は有限個の full collars とその全 overlaps を
+含んでよい．さらに $\vartheta=d\lambda_\vartheta$ on $W$ と書いたとき，
+\[
+ \lambda_\infty=\lambda_\vartheta+d^cu,\qquad
+ \widehat\lambda=\lambda_\vartheta+d^c\widehat u
+\]
+を $U$ 上で厳密に一致させられる．従ってこの正則化自体は，
+collar の二形式・既存 Lagrangian 葉・選んだ primitive の全 periods と
+相対 flux class を変えない．
+\end{proposition}
+
+\begin{proof}
+$\epsilon>0$ を固定する．$\chi_\epsilon$ を smooth convex function で，
+$\chi_\epsilon(r)=|r|$ for $|r|\ge\epsilon$，
+$|\chi_\epsilon'|\le1$，$\chi_\epsilon(r)\ge|r|$ を満たすものとし，
+\[
+ \operatorname{Max}_\epsilon(a,c)
+ =\frac{a+c+\chi_\epsilon(a-c)}2
+\]
+とする．$A$ を十分大きく取ると，
+$\widehat u=\operatorname{Max}_\epsilon(u,-A)$ は $U$ 上で $u$ に等しい．
+一方 $u\to-\infty$ だから，$D$ を含む開集合上では $\widehat u=-A$ である．
+従って $\widehat u$ は $M$ 上の smooth function に延びる．
+
+$a(r)=\tfrac12(1+\chi_\epsilon'(r+A))\in[0,1]$ と置くと，
+\[
+ \vartheta+dd^c\widehat u
+  =a(u)(\vartheta+dd^cu)+(1-a(u))\vartheta
+    +a'(u)\,du\wedge d^cu.
+\]
+最後の項は半正で，最初の二項は正の二形式の凸結合である．
+よって全点で K\"ahler であり，$D$ 近傍では $\vartheta$ に等しい．
+Cohomology と primitive の主張は上の明示式から従う．
+$K$ が単なる点集合でなく，collar の全軌道と overlaps を含む場合にも
+同じ一つの $\widehat u$ を用いるので，patch 間に新しい period 差を作らない．
+\end{proof}
+
+\paragraph{正則化の結論の範囲．}
+この命題は $\widehat\omega$ に対する任意の fibration が
+$\omega_\infty$ の所定の collar 葉に一致することを意味しない．
+特に定理\ref{snc:main}は，構成中に collar charts と connection を選び直し，
+外側の葉を Liouville flow で内側へ運ぶ．
+入力の二形式が固定 collar 上で一致しているだけでは，その出力の
+fiber partition の一致は導けない．この区別は，
+\ref{ke:conditional-component-core-filling}の相対条件を残したまま保つ．
+
+\subsection{正の residues を持つ KE primitive と有限型 core}
+
+$w_a>0$ を $\sum_aw_a=m-3$ となるように選ぶ．
+$\vartheta=dd^c\psi_\vartheta$ on $W$ で，
+\[
+ \psi_\vartheta=-\sum_aw_a\log\|s_{D_a}\|^2+h,
+ \qquad h\in C^\infty(M)
+\]
+となる smooth Hermitian metrics と $h$ を取れる．
+そこで
+\begin{equation}\label{ke:eq:positive-residue-ke-potential}
+ \Psi=\psi_\vartheta+u
+      =\sum_aw_as_a-2\sum_a\log s_a+h+v
+\end{equation}
+と置く．$dd^c\Psi=\omega_\infty$ であり，$\Psi$ は proper で下に有界な
+strictly plurisubharmonic exhaustion である．
+その primitive $d^c\Psi$ の meridian periods は，
+式\eqref{snc:residues}と同じ規約で $-2\pi w_a$ へ収束する．
+Affine volume frame から得る canonical primitive は，無限遠直線で負の residue
+を持つことがあるので，それ自体を proper Weinstein potential の primitive と
+同一視してはならない．ただし両 primitive の差は $W$ 上の closed one-form である．
+従ってその差は既存の相対 flux 条件では $H^1(W)$ に由来し，
+独立な collar-local flux 障害ではない．
+
+この補正は直線配置では明示できる．$D_m$ を無限遠直線とし，
+$W\subset\CC^2$ の affine coordinates を $(z_1,z_2)$，
+残る直線の affine defining functions を $\ell_a$ とする．
+\[
+ F=\log\frac{\omega_\infty^2}{|dz_1\wedge dz_2|^2},\qquad
+ \Psi_w=F+\sum_{a<m}(1-w_a)\log|\ell_a|^2
+\]
+と置ける．$dd^c\Psi_w=\omega_\infty$ である．
+$d^cF$ の residues は有限直線で $1$，無限遠直線で $-2$ であり，
+上の closed logarithmic correction はそれを全て $w_a$ に変える．
+実際，無限遠での補正 residue は
+$\sum_{a<m}(1-w_a)=2+w_m$ である．
+ここで $\sum_aw_a=m-3$ を使った．
+この明示式と\eqref{ke:eq:positive-residue-ke-potential}は同じ end の
+線型対数項を持つ．Bounded smooth/reference terms は有限型性に影響しない．
+
+\begin{lemma}[正則化に一様な有限型性]
+\label{ke:positive-residue-finite-type}
+$\Psi$ の全 critical points は一つの固定 compact に含まれる．
+前命題で得る
+$\widehat\Psi_A=\psi_\vartheta+\operatorname{Max}_\epsilon(u,-A)$ に対しても，
+十分大きい全 $A$ に共通の compact の外では critical points がない．
+適切な一つの compactly supported Morse perturbation を共通に行えば，
+全ての $\widehat\Psi_A$ と $\Psi$ の Weinstein skeleton を同一にできる．
+ここで skeleton は，全 critical values より高い固定 regular sublevel 内で，
+正時間の Liouville flow がその境界へ達しない点の集合である．
+End における正時間 flow の完備性は要求しない．
+\end{lemma}
+
+\begin{proof}
+各 SNC chart で，$z_a=0$ を深い divisor component とし，
+$V_a=-\tfrac12(z_a\partial_{z_a}+\bar z_a\partial_{\bar z_a})$ を取る．
+この規約では $V_a(-\log|z_a|^2)=1$ である．
+Smooth metric の寄与は $O(|z_a|)$ であり，
+cusp metric に関して $|V_a|=O(s_a^{-1})$ である．
+従って一階 cusp bound から，交叉する他の divisor の深度に一様に
+\[
+ V_a\psi_\vartheta=w_a+O(|z_a|),\qquad
+ V_a u=O(s_a^{-1})+O(|z_a|)
+\]
+を得る．十分深い $s_a$ に対し $V_a\Psi\ge w_a/2>0$ である．
+有限個の SNC charts を使えば，critical set は compact に閉じ込められる．
+
+正則化後は
+$V_a\widehat\Psi_A=V_a\psi_\vartheta+a(u)V_au$ であり，
+$0\le a\le1$ だから同じ下界が $A$ に一様に成立する．
+この議論では $a'$ を評価する必要がない．
+
+Critical set を含む固定 compact 内で potential を十分小さく perturb して Morse にする．
+Strict plurisubharmonicity はこの perturbation で保たれる．
+$A$ が大きければ，全 potential はその compact の近傍で等しい．
+さらに $\widehat\Psi_A\ge\Psi$ で，両者の相違する領域は，
+全 critical values より高い $\Psi$ の end に含められる．
+全 potential が一致する共通 regular sublevel を，全 critical values より高く選ぶ．
+各 Liouville field は自身の potential を critical points 以外で厳密に増加させる．
+従って変更領域から正時間で低い critical region に入る orbit はなく，
+そこで新しい critical point もない．
+この skeleton は共通の低い領域の同じ Liouville dynamics だけで決まり，
+全 $A$ で一致する．
+Morse indices は複素次元以下であり，十分高い regular sublevel が
+Weinstein domain を与える．その core が所要の skeleton である．
+\end{proof}
+
+\begin{corollary}[固定 KE 形式そのものに対する有限型 Weinstein core]
+\label{ke:actual-limit-weinstein-core}
+$\omega_\infty$ 自体の primitive を，end の $d^c\Psi$ を変えずに
+compactly supported exact differential だけ補正して，有限型 Weinstein core を持つように
+選べる．Core の smooth stable strata は $\omega_\infty$-isotropic である．
+これは prescribed collar fibration の filling を主張するものではない．
+\end{corollary}
+
+\begin{proof}
+前補題の Morse perturbation を $\rho\in C_c^\infty(W)$ と書く．
+$\omega_s=\omega_\infty+sdd^c\rho$ は十分小さい $\rho$ に対して K\"ahler である．
+$\iota_{Y_s}\omega_s=-d^c\rho$ を解くと，生成場は固定 compact に支持されるため
+全時間 $s\in[0,1]$ の flow $F_s$ がある．
+$F_1^*\omega_1=\omega_\infty$ であり，primitive transport の公式から
+\[
+ F_1^*d^c(\Psi+\rho)=d^c\Psi+dQ,
+ \qquad Q\in C_c^\infty(W)
+\]
+を得る．$F_1$ は end 上で恒等である．
+Perturbed Weinstein structure とその Lyapunov function を $F_1$ で引き戻せばよい．
+この操作は compactly supported symplectic 同定であり，
+$\omega_\infty$ に新しい end の仮定を課さない．
+\end{proof}
+
+\begin{corollary}[KE core の小さい飽和近傍の Lagrangian filling]
+\label{ke:local-limit-core-filling}
+定理\ref{snc:main}の marked trees を任意に一組固定する．
+上で得た $\omega_\infty$-Weinstein core の，ある compact な飽和近傍
+$K_{\mathrm{small}}\Subset W$ 上には，対応する
+$\operatorname{Cone}_{\rm cl}(\Gamma)$ への連結 fiber の Lagrangian fibration がある．
+Core fiber と開放射分岐辺上の singular fibers は同定理のものと同じ型を持つ．
+ここで境界 collar の \emph{embedding 又は actual fiber partition} を
+既存 neck/corner のものに指定しているわけではない．
+\end{corollary}
+
+\begin{proof}
+共通の Morse core を含む固定 compact $K\Subset W$ を取り，
+命題\ref{ke:fixed-compact-cusp-regularization}の正則化を $K$ の近傍で恒等にする．
+定理\ref{snc:main}の証明における product germs への変更，connection の変更，
+primitive の cutoff は，全て十分高い end に置けるので $K$ の外で行う．
+ただし Morse 化の compact perturbation は $K$ 内にあり，
+その部分は前系の exact Moser で元の KE 形式へ戻す．
+この同定後，得られた smooth compactification の形式は $K$ 上で
+$\omega_\infty$ と一致し，cone point の fiber は上の同じ core である．
+
+Compactification 上の continuous proper fibration を $\pi$ とする．
+$\pi^{-1}(0)$ は $\operatorname{int}K$ に含まれる compact core である．
+その補集合 $M\setminus\operatorname{int}K$ の像は compact で $0$ を含まないので，
+十分小さい閉 cone neighborhood $C_\delta$ に対し
+$\pi^{-1}(C_\delta)\subset\operatorname{int}K$ である．
+$K_{\mathrm{small}}=\pi^{-1}(C_\delta)$ とすればよい．
+外側の正則 cone level では boundary は全 fibers で飽和しており，
+基底の radial coordinate を rescale すれば同じ closed cone に写る．
+Lagrangian 性と singular strata の isotropic 性は，
+その近傍での形式の厳密一致と symplectic pullback から従う．
+\end{proof}
+
+\paragraph{残る相対問題．}
+これにより，cusp singularity そのものと KE 形式上の compact core の不存在は，
+K3 の未解決点ではなくなる．残るのは，この core を含む saturated domain の
+Lagrangian cone fibration を，既存の neck/corner の全 collar 葉・第二 period・
+saddle germs と同時に一致させることである．
+Smooth compactification と core の共通化だけから，その相対 filling を
+無条件化してはいけない．Component 端での reduced 葉層の相対補間を使う場合にも，
+全 overlap，prescribed periods，Liouville transversality と
+全交わりの飽和を別に証明する必要がある．

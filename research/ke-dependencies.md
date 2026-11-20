@@ -1,6 +1,6 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-21 / v1.5。目標・優先順位は [研究方針](../00_research_plan.md)、数学的な目標の定式化は主原稿の `ke:global-realization-section` 節を正本とする。本書は外部入力の所在・適用範囲と、次に証明すべき接続条件を保持する。
+2026-11-21 / v1.6。目標・優先順位は [研究方針](../00_research_plan.md)、数学的な目標の定式化は主原稿の `ke:global-realization-section` 節を正本とする。本書は外部入力の所在・適用範囲と、次に証明すべき接続条件を保持する。
 
 ## 確認した正本と規格化
 
@@ -33,7 +33,7 @@ L_t=-\log|t|^2,\quad R_t=\log L_t.
 | Sourceのoriented volume比較 | IV `coarse:lem:pair-arm-density`, `coarse:lem:complete-volume-upper` | $xy=tz$ の正しいorientationのannulus–disc上で用いる。中央gateのvolume上界を得て最大値原理で中央へ延長する。中央のtensor比較は入力にしない。 |
 | 全深部tripleのactual/model比較 | `full_triple_comparison.tex`, `coarse:thm:full-triple-tensor` | $m_1\le m<L_t/3$、$\min\ell_i\ge m$ で全phase・全深度比に $C^q$ 誤差 $O_d(m^{-1})$。追加のTC/PBE仮定を用いない。Source・pair全域の結論ではない。 |
 | 係数1・境界の積漸近 | `simplex_boundary_geometry.tex`, `simplex:lem:rank-one-schwarz`, `simplex:prop:dominant-product`, `simplex:cor:active-cogram` | Complete simplex模型とそのactual tripleへの適用。三重点の外の全raw-active領域へ拡張した結果ではない。 |
-| 閉cornerの距離評価 | `closed_triple_metric.tex`, `simplex:thm:closed-corner-model`, `simplex:cor:actual-closed-corner-metric` | 同一tripleの三枚のsquare自身の距離。内在距離と保護領域内の経路について $O(\log R_t/R_t)$。全 $X_t$ のambient距離は未処理。 |
+| 閉cornerの距離評価 | `closed_triple_metric.tex`, `simplex:thm:closed-corner-model`, `simplex:cor:actual-closed-corner-metric` | 同一tripleの三枚のsquare自身の距離（本repo `topo:coordinate-retraction` により全target距離の制限と等しい）。Sourceの内在距離と保護領域内の経路について $O(\log R_t/R_t)$。全 $X_t$ のambient距離は未処理。 |
 | Source-free束座標と一つのprimitive | `source_free_neck_coordinates.tex`, `pair:prop:bundle-conic`, `pair:cor:global-primitive` | Source・tripleを除いた二重線 $D^\circ$ の**固定**compact base上のexact $uv=t$ とnormal action。$\Omega=d\log v\wedge\tau$、$\lambda_t=d^c\log(\omega_t^2/\lvert\Omega\rvert^2)$ を固定。Moving baseへの一様性は未証明。 |
 | 共通moment interval | 同上 `pair:thm:fixed-end-moment`, `pair:cor:actual-common-moment` | Period 1のnormal generator、$\iota_V\eta_t=-d\mu_t$。固定endで $\mu_t=\pm4\pi/s_r+O(s_r^{-1-\delta})+o_t(1)$、$s_r=-\log r^2$。**先に $r$ を固定し、その後 $t\to0$**。Average $\eta_t$ の結果で、actual formへのMoser flow生存を含まない。 |
 | Normal circle上界の十分条件 | `source_free_neck_comparison.tex`, `neck:lem:rank-one-circle`, `neck:cor:buffer-circle` | $p^*h_D\le A\omega_t$、$\omega_t^2\le B(h_A+h_D)^2$ からvertical方向 $g_t\le ABg_A$。Actual ball bufferを別に仮定して円の長さ $O(1/\min(s,M_t-s))$。Mixed termsを許す。Buffer自体は未解決。 |
@@ -64,7 +64,13 @@ L_t=-\log|t|^2,\quad R_t=\log L_t.
 
 主稿 `ke_source_potential_buffer.tex` はcapped/actual density比較を固定source tube全体へ統合し、射影下界と正のcanonical potentialのPoisson方程式からactual球の深部局在を証明する。`ke_source_global_distance.tex` はDinh–Marinescu–Vu, Ann. Sc. Norm. Super. Pisa (5) 24 (2023), Theorem 1.2（[掲載版PDF](https://www.mi.uni-koeln.de/~gmarines/PREPRINTS/Dinh_Marinescu_Vu_ASNP_2023.pdf)、pp.928–929で仮定確認）を距離函数に適用し、logarithmic coverの周期数を除してactual Gaussian tailを得る。`ke_source_diameter.tex` は同じactual球へのBishop–Gromov比較から全点径を導く。Actual potentialのHölder性、TC、局所tensor二側比較は追加仮定しない。
 
-`ke_component_core_transfer.tex` はfixed-gauge smooth KE収束のcanonical primitive差から固定compactのactual移送を構成する。相対flux条件とexact collar germは証明したが、complete limit KE形式に対する所要のfillingと全overlapのcompatibilityは `ke:conditional-component-core-filling` の追加入力である。Smooth compactifying formの `comp:finite` をこの極限形式の定理と読み替えない。
+`ke_component_core_transfer.tex` はfixed-gauge smooth KE収束のcanonical primitive差から固定compactのactual移送を構成する。相対flux条件とexact collar germは証明した。`ke_component_core_geometry.tex` は任意固定compactで厳密一致するsmooth正則化、正residueの有限型KE coreとその小さい飽和近傍のfillingを与えるが、既存の全collar葉を指定した相対fillingと全overlapのcompatibilityは `ke:conditional-component-core-filling` の追加入力である。Smooth compactifying formの `comp:finite` をこの極限形式の定理と読み替えない。
+
+## 固定成分coreのcusp入力と有限target幾何
+
+Rochon–Zhang, *Adv. Math.* 231 (2012), 2892–2952, [arXiv:1106.0873v2](https://arxiv.org/abs/1106.0873v2), §5 (5.3)–(5.6), Theorem 5.1を一次資料で確認した。SNC全体におけるbounded $C^\infty_{fc}$ potentialを用い、smooth divisor専用のfull expansionは使わない。$K_{\mathbf P^2}+D=\mathcal O(d-4)$ のamplenessと本稿の $dd^c=i\partial\bar\partial$ を照合し、$u=-2\sum\log s_a+v$ を使用する。正則化・有限型性・compact exact Moserと局所core fillingの証明は本repoの `ke_component_core_geometry.tex` が正本。
+
+`topo:coordinate-retraction` によりclosed-cornerのtargetの内在距離は全複体距離の制限と等しい。六labelのgallery還元と `topo:diameter-six-labels` の $D_d=2\sqrt5$（d≥6）は解析仮定から独立。直径対の線形安定性 `topo:diameter-six-stability` だけはVの `thm:intro-diameter-C5`・`sec:finite-diameter`（確認commitは上記と同じ）の $D_5=\sqrt{13}$ を使用する。四galleryと120三角形を本repoの有理数検算で確認。Actual曲面の直径漸近と全域distortionは未証明。
 
 ## 最初に閉じる三つの証明課題
 
