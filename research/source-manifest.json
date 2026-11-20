@@ -367,7 +367,9 @@
       "source": "paper/geometry_bibliography_v25.tex",
       "destination": "papers/sections/paper/geometry_bibliography_v25.tex",
       "source_sha256": "31caa6116b46ace8c04ca0d86351d38506f7d3b12e835cf66b4bd21abde9ce73",
-      "sha256": "31caa6116b46ace8c04ca0d86351d38506f7d3b12e835cf66b4bd21abde9ce73"
+      "sha256": "b70385041dd5406c55cc3cb13416beffd442d30a5abcd117c4067c9a98857868",
+      "bytes": 17330,
+      "current_blob_sha": "dc0036f8d01c9a43c4d849209ef5c7bd67211a3d"
     },
     {
       "source": "paper/quintic_monochromatic_support_v11.tex",
@@ -801,7 +803,9 @@
       "source": "paper/geometry_introduction_v25.tex",
       "destination": "papers/sections/paper/geometry_introduction_v25.tex",
       "source_sha256": "383354c4d141117cd75eaed52fdfa7bbd3b5bbbf70ef5fdd85e7f3fd29ec447c",
-      "sha256": "383354c4d141117cd75eaed52fdfa7bbd3b5bbbf70ef5fdd85e7f3fd29ec447c"
+      "sha256": "ef48c3019cba06f17aa5c65b0e399d55e00d80475dc5e26621bfa9a5d527d888",
+      "bytes": 37122,
+      "current_blob_sha": "ae4b5e80b1947ac4f3f2a75b8ecc0c1a9d0aad7c"
     },
     {
       "source": "paper/quintic_support_frontier_v19.tex",
