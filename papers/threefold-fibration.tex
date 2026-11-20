@@ -958,11 +958,40 @@ fixed foliation を保つ filling はできない。
 
 \section{既存の大域結果との関係と研究の優先順位}\label{sec:literature}
 
-Mikhalkin \cite[Theorem 1]{mikhalkin} は任意次元の超曲面に stratified topological torus fibration を与える。
-しかし Lagrangian 性に関する主張は、各 maximal cell に少なくとも一つ Lagrangian fiber があるというものなので、
-全 regular fibers が Lagrangian である結論に置き換えられない。
-同様に、topological または PL な phase-tropical model と実 hypersurface の比較から、
-所定の fiber 分解の symplectic 性が自動的に従うわけではない。
+Mikhalkin \cite[Theorem~1, Corollary~3.1]{mikhalkin} は，
+\emph{一般型を含む任意の次数・次元のsmooth projective hypersurface}
+上に stratified topological $T^n$-fibration を構成する．
+その底のhomotopy型は$\bigvee^{p_g(X_d)}S^n$であり，
+$n=3$ なら$p_g(X_d)=\binom{d-1}{4}$である．
+特に\emph{一般型三次元超曲面上の位相的トーラス分解の存在は既知}である．
+しかしこの定理が保証するLagrangian性は，
+\emph{各maximal $n$-cellの少なくとも一点上にLagrangian $T^n$ fiberが存在する}
+という限定的な主張である．
+Mikhalkinの一般のstratified fibrationの\emph{全regular fibers}が
+所定のsymplectic formに関してLagrangianだとは主張されていない．
+従って本研究が目指すglobal Lagrangian fibrationの存在との
+相違は，この全regular torus leavesのsymplecticな同時実現と
+singular/gluing regionの制御にある．
+
+Leung--Wan \cite[Theorem~2.4, Theorem~3.3]{leung-wan}
+はまさにこのMikhalkinのstratified torus fibrationを用いて，
+一般型hypersurfaceのCalabi--Yau-like成分とholomorphic
+top formsを研究し，\emph{上記の選ばれたLagrangian fibers}が
+漸近的にspecial Lagrangianになることを証明する．
+これは一般型三次元にも適用する重要な一次資料だが，
+全regular fibersをLagrangianに変える大域的定理ではない．
+「一般型への適用例が文献にない」という広すぎる新規性の
+主張は避ける．
+
+Fernández de Bobadilla--Pełka \cite[Theorem~6.14]{fbp}
+の2026年刊行論文は，任意のK\"ahler退化のA'Campo space
+とboundaryからのLagrangian toriのtransportを扱う，
+この問題に直接有効な\emph{部分領域}構成である．
+Maximal Calabi--Yau degenerationについてはgeneric regionの
+fibrationが得られるが，この結果だけで
+今回の一般型compact $X_d$の\emph{全域}のfibrationは
+結論できない．本稿の定理\ref{thm:partial}は
+一般SNCへの適用範囲を明示した部分構成である．
 
 Castaño-Bernard--Matessi \cite[Theorem 8.2]{cbm} の global compactification theorem は、
 simple integral-affine 3-\emph{manifold} を入力とする。
@@ -970,9 +999,14 @@ simple integral-affine 3-\emph{manifold} を入力とする。
 また同論文の quintic に対する結論は、quintic に homeomorphic な symplectic total space であり、
 その論文だけでは指定された Kähler hypersurface との symplectomorphism を与えない。
 
-2026年6月の Mak--Matessi--Ruddat--Zharkov の講演発表は、reflexive polytope に付随する
+2026年6月・11月の Mak--Matessi--Ruddat--Zharkov の講演発表は、reflexive polytope に付随する
 toric Fano manifold 内の compact Calabi--Yau hypersurfaces に対する Lagrangian torus fibration、
-球面基底、余次元2 discriminant、半次元の singular fibers を掲げている\cite{ruddat-talk}。
+球面基底、余次元2 discriminant、半次元の singular fibers を掲げている\cite{ruddat-talk,mak-2026-talk}。
+2026年11月12日のMakの講演要旨は
+ironing coefficientsとconvex but not strictly convexなpotentialによる
+分割，Evans--Mauri型Liouville flowを構成の要点としている．
+これは一次資料としては\emph{講演要旨}であり，
+完成した公表論文の証明を今回確認したものではない．
 この発表の対象は Calabi--Yau であり、
 一般型の分岐基底と今回の相対 gluing を証明した定理としては扱わない。
 
@@ -1113,6 +1147,23 @@ Sections 4.2, 8.1 の nodal fiber と飽和近傍の位相を参照。
 B. Gammage, \emph{Local mirror symmetry via SYZ}, arXiv:2105.12863v2, 22 July 2024.
 \url{https://arxiv.org/abs/2105.12863v2}.
 Remark 3.10、Proposition 3.14 を区別して用いる。
+
+\bibitem{leung-wan}
+N. C. Leung and T. Y. H. Wan,
+\emph{Calabi--Yau components in general type hypersurfaces},
+J. Differential Geom. \textbf{83} (2009), no.~1, 43--74.
+\url{https://doi.org/10.4310/jdg/1253804351}.
+Theorem 2.4（Mikhalkinのstratified fibrationの再掲）と
+Theorem 3.3（選ばれたLagrangian fibersの漸近的special性）を参照．
+
+\bibitem{mak-2026-talk}
+C. Y. Mak,
+\emph{Lagrangian torus fibration on Calabi--Yau hypersurfaces},
+IMJ--PRG algebraic geometry seminar, 12 November 2026,
+official abstract (joint work with D. Matessi, H. Ruddat and I. Zharkov).
+\url{https://www.imj-prg.fr/gestion/evenement/affEvenement/45}.
+Calabi--Yau hypersurfaceの講演要旨であり，
+未公開の完全証明を既知定理として引用しない．
 
 \bibitem{mikhalkin}
 G. Mikhalkin,
