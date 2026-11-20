@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.1: 共通 normal circle を保つ二段階平均と exact period matching．
+% 2026-11-21 / v1.2: 二段階平均，固定残余領域の法線エネルギーと接続上界．
 \section{共通の normal circle に適合する二段階平均}
 \label{ke:staged-neck-section}
 
@@ -238,6 +238,171 @@ source-free neck 全体でこれらの入力が一様であることを別に証
 複数の triple end における同一作用，reduced leaves，markings の同時整合，
 source・branch・core への接着や全曲面の GH 収束は，この補題の結論ではない．
 \end{remark}
+
+\subsection{固定残余領域上の法線作用の平均エネルギー}
+
+\begin{proposition}[法線方向の積分評価と短い円軌道]
+\label{ke:neck-integrated-normal-energy}
+Source と三重点から離れた固定座標で $uv=t$，$z\in D$ とし，
+$|u|,|v|<r$ に対して $s=-\log(|u|^2/r^2)\in(0,M_t)$ と置く．
+ここで $M_t=-\log(|t|^2/r^4)$ である．
+固定した $Q\Subset D$ 上で，actual negative KE form $\omega_t$ の体積が
+annulus--disc complete KE 積計量の体積と $a_0\le s\le M_t-a_0$ で
+一様に二側比較可能とする（$a_0>0$ は固定）．
+$V=2\pi\partial_{\arg u}$，$\rho$ をその周期 $1$ の作用とし，
+\[
+ E_t(s,z)=\int_0^1 |V|_{g_t}^2(\rho_a(u,z))\,da
+\]
+と置く．$2a_0\le m\le M_t/2$ ならば，全 $z\in Q$ について
+\begin{equation}\label{ke:eq:normal-energy-mass}
+ \int_m^{M_t-m} E_t(s,z)\,ds\le C/m .
+\end{equation}
+定数 $C$ は $t,m,z$ に依存しない．任意の $A>0$ について
+$[m,M_t-m]$ 内で $E_t>A/m^2$ となる深度の Lebesgue 測度は
+$Cm/A$ 以下である．それ以外の深度では actual 円軌道の長さは
+$\sqrt A/m$ 以下である．
+\end{proposition}
+
+\begin{proof}
+$\Omega=du/u\wedge dz$，$F_t=\log(\omega_t^2/|\Omega|^2)$ とし，
+$\bar F_t$ を $u$ の角度について平均する．$|\Omega|^2$ は
+$\Omega$ の定める正の体積形式で，その定数規格化は以下に影響しない．
+$d^c=\tfrac{\sqrt{-1}}2(\bar\partial-\partial)$ の規格化では
+$dd^cF_t=\omega_t$ である．$d(s)=\min(s,M_t-s)$ とすると，
+積計量の体積密度は $z\in Q$ 上で
+$(\pi/M_t)^2\csc^2(\pi s/M_t)\asymp d(s)^{-2}$ に比較可能だから
+\[
+ \bigl|\bar F_t(s,z)+2\log d(s)\bigr|\le C_0 .
+\]
+局所対数座標 $\xi=\log u$ で $s=-2\Re\xi+2\log r$ である．
+$\mathcal A\omega_t=dd^c\bar F_t$ の $\xi\bar\xi$ 係数から
+$E_t=8\pi^2\partial_s^2\bar F_t$ を得る．特に $\bar F_t$ は $s$ の凸関数である．
+
+$s\in[m,M_t-m]$ で $s\pm m/2$ を取ると，三点の $d$ の値の比は
+$1/2$ と $3/2$ の間にある（$d(s)$ を分母とする）．
+従って前進・後退の差商は絶対値 $C_1/m$ 以下であり，
+凸性から $|\partial_s\bar F_t|\le C_1/m$ を得る．
+両端における導関数の差を取れば
+\eqref{ke:eq:normal-energy-mass} が従う．
+測度評価は Markov の不等式，長さ評価は
+$\int_0^1 |V|_{g_t}(\rho_a x)\,da\le E_t(s,z)^{1/2}$ による．
+\end{proof}
+
+上の体積仮定は，一般位置全平面退化の固定 source-free pair 座標では，
+関連 KE 主稿の \texttt{neck:prop:volume-envelope} から従う．
+例えば $m=R_t$，$A=R_t$ とすれば，各固定残余点で中央 strip のうち
+深度の測度 $O(1)$ の例外を除いて円軌道長は $O(R_t^{-1/2})$ である．
+この例外集合は残余点と $t$ に依存する．
+
+\begin{corollary}[鋭い係数を持つ同一残余点での法線接続上界]
+\label{ke:neck-axial-upper}
+命題\ref{ke:neck-integrated-normal-energy}の座標で $z\in Q$ を固定する．
+$2a_0\le a\le b\le M_t-2a_0$ とする．ある一定の角度で深度 $a$ から $b$ へ
+進む動径弧の actual 長さは
+\[
+ \int_a^b \frac{ds}{d(s)}+C
+\]
+以下である．従って両端円の任意の点を，同じ $z$ を保つ経路で
+この上界に $\tfrac12(\sqrt{E_t(a,z)}+\sqrt{E_t(b,z)})$ を加えた
+長さ以下で結べる．
+\end{corollary}
+
+\begin{proof}
+まず $b\le M_t/2$ とする．$\bar F_t=-2\log s+O(1)$ で，
+命題の差商評価に各点で $m=d(s)=s$ を用いると $|s\partial_s\bar F_t|\le C_1$
+である．部分積分して
+\[
+ \int_a^b s\partial_s^2\bar F_t\,ds
+ =[s\partial_s\bar F_t]_a^b-[\bar F_t]_a^b
+ \le 2\log(b/a)+C_2 .
+\]
+$JV=4\pi\partial_s$ と $J$ 不変性から，
+$g_t(\partial_s,\partial_s)$ の角度平均は
+$E_t/(16\pi^2)=\tfrac12\partial_s^2\bar F_t$ である．
+従って Cauchy--Schwarz により動径弧長の角度平均は
+\[
+ \int_a^b \sqrt{\tfrac12\partial_s^2\bar F_t}\,ds
+ \le \sqrt{\log(b/a)\bigl(\log(b/a)+C_2/2\bigr)}
+ \le \log(b/a)+C_2/4 .
+\]
+上側半区間では $s$ を $M_t-s$ に置き換える．
+中点を横切る場合は角度平均を取った後で両半区間の上界を加えるので，
+全区間に共通する一つの角度を選べる．
+両端では円の短い方の弧を付加する．
+\end{proof}
+
+この接続上界は正規化前の距離に対し加法誤差 $O(1)$ を持つ．
+両端の円エネルギーも有界な場合は，正規化した法線接続費用が
+$R_t^{-1}\int_a^b ds/d(s)+O(R_t^{-1})$ 以下となる．
+この評価だけでは異なる残余点間の portal 接続費用や，全曲面を通る経路の下界は得られない．
+
+\begin{corollary}[軌道平均エネルギーを用いる Moser 速度評価]
+\label{ke:neck-averaged-speed}
+補題\ref{ke:short-circle-actual-buffer} の Moser 方程式において，
+点 $x$ で
+$E(x)=\int_0^1 |V|_{g_\omega}^2(\rho_a x)\,da$ とすると，
+\[
+ |Y_\tau(x)|_{g_\omega}
+ \le \frac{\|w\|_{L^\infty}\sqrt{E(x)}}{2\sqrt{\tau(1-\tau)}} ,
+ \qquad 0<\tau<1 .
+\]
+作用不変な開集合上で $E\le e^2$ が一様に成り立てば，
+補題\ref{ke:short-circle-actual-buffer} と
+系\ref{ke:short-circle-image-buffer} の長さ・buffer の結論は
+$\varepsilon=e$，$c_w=(\pi/2)\|w\|_{L^\infty}$ で成り立つ．
+\end{corollary}
+
+\begin{proof}
+$g_a=\rho_a^*g_\omega$ とすると
+\[
+ |\beta(X)|\le
+ \left(\int_0^1 |w(a)|^2 g_a(V,V)\,da\right)^{1/2}
+ |X|_{g_\eta}\le \|w\|_{L^\infty}\sqrt{E(x)}\,|X|_{g_\eta}.
+\]
+この定数を補題\ref{ke:short-circle-actual-buffer} の平方完成に用いる．
+また $E\le e^2$ 上で一周の長さが $e$ 以下なので，
+二点間の短い方の軌道弧の長さは $e/2$ 以下である．
+これを使って両向きの軌道追跡と飽和近傍の証明をそのまま適用できる．
+\end{proof}
+
+積分評価\eqref{ke:eq:normal-energy-mass}は所与の深度での点ごとの上界や，
+内側集合から小エネルギー領域の境界までの actual 距離下界を与えない．
+例えば残余方向を固定しても凸関数の二階微分は小さい区間に集中し得る．
+次に必要なのは，所要の開 collar を含む一様な $E$ の上界と actual buffer，
+または軌道ごとに速度評価を積分して同じ被覆を保証する変位評価である．
+
+\begin{corollary}[縮小する actual buffer からの Moser 被覆]
+\label{ke:neck-shrinking-buffer}
+上記の annulus--disc 座標で，compact な飽和集合 $K_t$ を含む飽和開集合
+$U_t\subset\{d(s)>m_t\}$ を取る．$g_t$ に関する全曲面の距離で
+\[
+ \delta_t=\min\bigl(1,\operatorname{dist}_{g_t}(K_t,X_t\setminus U_t)\bigr)
+\]
+と置く．$m_t\delta_t^2\to\infty$ ならば，十分小さい $t$ で
+$K_t$ を source と像の双方に含む飽和 source を持つ normal Moser map が存在する．
+その円軌道像の ambient 直径は $O((m_t\delta_t)^{-1})$ である．
+\end{corollary}
+
+\begin{proof}
+$N_t=\{\operatorname{dist}_{g_t}(\cdot,K_t)<\delta_t/2\}$ と置く．
+各 $q\in N_t$ の actual $\delta_t/4$-ball の閉包は $U_t$ に含まれる．
+残余射影への localized Chern--Lu 評価を半径 $\delta_t/4$ で用いると，
+中心で $p^*h_D\le C\delta_t^{-2}\omega_t$ を得る．
+この半径依存性は，距離 cutoff の勾配二乗と Laplacian の下界を
+$O(\delta_t^{-2})$ で制御する Ricci 下界による距離比較から従う．
+関連 KE 主稿の \texttt{neck:lem:rank-one-circle} と体積上界により
+$N_t$ 上で $|V|_{g_t}\le\varepsilon_t=C'/(m_t\delta_t)$ となる．
+
+$D_t=\{\operatorname{dist}_{g_t}(\cdot,K_t)<\delta_t/4\}$ とする．
+$\overline D_t$ から任意の位相まで周期の半分以下で円軌道を辿るとき，
+$N_t$ の最初の退出までの長さは $\varepsilon_t/2$ 以下である．
+これは $\delta_t/4$ より短いので，$\overline D_t$ を通る全軌道が $N_t$ に留まる．
+従って $N_t$ に含まれる最大の飽和開集合に $\overline D_t$ が含まれ，
+そこで同じ短円上界を使える．$K_t$ から $\partial D_t$ までの actual 距離は
+$\delta_t/4$ 以上であり，$m_t\delta_t^2\to\infty$ により
+$(2c_w+1/2)\varepsilon_t$ を上回る．系\ref{ke:short-circle-image-buffer}と
+補題\ref{ke:short-circle-actual-buffer}の直径評価を適用する．
+\end{proof}
 
 \subsection{残る円の平均と同一 normal moment}
 

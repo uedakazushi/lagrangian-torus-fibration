@@ -1,5 +1,5 @@
 # 現行研究方針：一般型曲面のLagrangian torus fibration
-更新：2026-11-21 / v2.1（複素次元2専用、曲面主稿改訂9・五次整数接着第25稿）
+更新：2026-11-21 / v2.2（複素次元2専用、曲面主稿改訂10・五次整数接着第25稿）
 
 ## 現在の目標と優先順位
 **最優先目標P0：本研究の大域Lagrangian torus fibrationによって、負Kähler–Einstein計量の径の尺度でのGromov–Hausdorff極限を幾何学的に実現する。現時点では未解決である。** 以下の達成条件を満たすまで、Cloud Codexはこの目標に必要な証明・計算・文献確認・原稿整備を自律的に進める。具体的な実行手順は [AGENTS.md](AGENTS.md) と [Cloud Codexの再開手順](research/cloud-codex.md) に置く。
@@ -41,16 +41,16 @@ KE側の \((\mathrm{G})_d+(\mathrm{CP})_d+(\mathrm{PBE})_d\) を満たすこと�
 | 課題 | 最初に行うこと | この課題の達成条件・現在の状態 |
 | --- | --- | --- |
 | K0：入力の監査 | `main:global`、`ke:global-realization` とKE依存表を読み、採用する族・木系・form・marked collarsを固定する。 | P0に実際に使う大域接着・外部定理の仮定と証明を照合。資料と入力の所在は整備済み、全証明の独立監査は未了。 |
-| K1：actual neckの短円とbuffer | `ke:short-circle-image-buffer` とKE側 `neck:lem:rank-one-circle` を接続する。Movingな作用不変領域 \(U_t\supset K_t\) を指定し、period-1生成場の上界 \(\varepsilon_t^{\rm circ}\) とactual境界距離 \(\delta_t\) を別々に評価する。 | \(\delta_t>(2c_w+1/2)\varepsilon_t^{\rm circ}\) と必要な誤差消失を全neckで証明し、sourceとMoser像の双方が同じ \(K_t\) を覆う。固定base・固定endだけの結果では未達。 |
+| K1：actual neckの短円とbuffer | `ke:short-circle-image-buffer` とKE側 `neck:lem:rank-one-circle` を接続する。Movingな作用不変領域 \(U_t\supset K_t\) を指定し、period-1生成場の上界 \(\varepsilon_t^{\rm circ}\) とactual境界距離 \(\delta_t\) を別々に評価する。 | \(\delta_t>(2c_w+1/2)\varepsilon_t^{\rm circ}\) と必要な誤差消失を全neckで証明し、sourceとMoser像の双方が同じ \(K_t\) を覆う。固定残余点の積分短円と係数1の法線接続上界を証明。実計量での縮小buffer $m_t\delta_t^2\to\infty$ は十分だが、所要領域での下界は未達。 |
 | K2：複数endの同時整合 | `ke:staged-neck-averaging`、`ke:staged-reduced-extension`、`ke:relative-neck-matching` を使い、単一primitive・全marked action periods・reduced leaves・critical actions・overlapを合わせる。 | 実際の開collarsで同一fiber partitionを得るか、制御された相対同定を構成。Normal actionの一致だけでは未達。K1の局所結果に続けて進める。 |
 | K3：source・branch・coreの相対接着 | `global_gluing.tex` / `neck_models.tex` / `relative_compactification.tex` をactual KE形式と計量の下で監査する。特に \(xy=tz\) のsourceとcoreを覆う領域・接続路を指定する。 | 全域を覆う連結fiberの \(\pi_t\) と、特異fiberおよび木fiber全体の正規化ambient接続費用の消失。既存の定性的構成だけでは未達。K1と独立な局所解析も行う。 |
 | K4：全曲面の距離比較 | K1–K3と閉corner評価を用い、全曲面を通る経路の下界とsquare lift・portal connectorによる上界を別々に作る。 | \(f_t\) に対する全点対distortionを \(o(1)\) とする。基底側の(N),(S),(F)を使う場合もactual全空間への比較を証明し、局所保護領域外のshortcutを含める。現状未証明。 |
 | K5：主定理と独立点検 | 五次の完結した証明を節目に、全固定 \(d\ge5\) へ一般化し、全ての入力と定数依存を追う。 | 主稿の問題を仮定未残の定理と十分な証明へ置換し、別の読み手による論理点検、一次文献比較、再現・組版を完了。現在未着手。 |
 
-K1の最初の成果物は「定義したmoving領域上の残余方向rank-one下界とnormal generatorの一様上界を結ぶ補題」、またはそれを妨げる具体的な反例・追加仮定の特定とする。文書の整理だけを研究の進展と数えず、各研究単位で補題の証明、反例、仮定の検証、障害の明確化のいずれかを現行資料へ残す。
+K1の次の補題は、固定残余compact上から始めて、所要のコンパクト飽和集合から外側の深部領域の境界までの実計量距離 $\delta_t$ に対し $m_t\delta_t^2\to\infty$ を示すこと（主稿 `ke:neck-shrinking-buffer`）。または開collar全体で軌道平均エネルギーを抑え、変位と境界までの距離を直接比較する。深度方向の積分評価だけでは十分でない。同一残余点の法線接続上界はK4の上界に使えるが、残余点を変える portal と全曲面 no-shortcut は別に必要である。
 
 ## 原稿・ノートの正本と公表単位
-- `papers/surface-lagrangian-torus-fibration.tex`：このrepoの主たる公表用本文。相対SNC構成、次数分割、分岐底、作用適合atlasとKE–fibrationの大域実現問題（現行改訂9・132頁、2026-11-21組版確認）。
+- `papers/surface-lagrangian-torus-fibration.tex`：このrepoの主たる公表用本文。相対SNC構成、次数分割、分岐底、作用適合atlasとKE–fibrationの大域実現問題（現行改訂10・134頁、2026-11-21組版確認）。
 - `papers/quintic-integer-gluing.tex`：五次整数アフィン接着、高分母支持グラフの独立論文（第25稿、201頁の記録）。指定SNC cores・K5 graph・標準cones・marked puncturesを保つ候補が対象。必要支持3型26標識は**実現数ではない**。G5_14の中央matching、一般分母剛性、三高Dの同時非負性が未解決。
 - `papers/meridian-surgery.tex`：四pantsのmeridian局所置換と閉corner circuitsの障害（18頁の記録）。
 - `papers/research-notes.tex`：各種補題・証明素材のTeXノート（65頁の記録）。
@@ -141,3 +141,5 @@ Lagrangian主稿 `ke:actual-closed-corner` の同じ averaging–Moser flow と�
 
 ## 共通研究原則と保存許可（研究固有方針から独立）
 数学的重要性・新規性・理解の深化・応用可能性・正確性・実現可能性を総合し方針を見直す。証明済み・仮定付き・未完成・予想・計算観察、既知成果と新規性、草稿の証明と今回の独立監査を区別する。重要な先行研究は一次資料の仮定と参照箇所を確認する。日本語LuaLaTeXで十分な証明を保ち、有効な着想・反例・障害は現行ノートへ整理する。再現資産を保持し、旧版ZIP/ログの集積を避ける。研究の区切りには承諾なしで通常コミットを `main` へpushし、15–30分ごとに区切って保存する。force push・GitHub Actions追加/起動をしない。Library旧資料を削除せず、GitHub管理後の定常二重保存は行わない。対象repo保存後にresearch-hubの到達点・核心・次の一手・依存と再開先を更新し、数学検証・組版・push・hub反映を区別する。
+
+2026-11-21 / v2.2の確認：主稿改訂10（134頁）を組版し、静的構成検査と追加の命題・系の参照解決を確認。法線方向の積分エネルギー、動径接続上界とMoser速度の規格化を独立に点検した。全neckの実計量buffer、特異領域接着と全域比較は未解決。

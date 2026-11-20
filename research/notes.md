@@ -1,5 +1,5 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-21 / v2.1
+更新：2026-11-21 / v2.2
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
@@ -14,6 +14,10 @@
  \delta_t>(2c_w+1/2)\varepsilon_t^{\mathrm{circ}}
 \]
 を確認する。\(K_t\) はcompactな作用飽和集合とする。この不等式は `ke:short-circle-image-buffer` のforward/backwardの像を含む条件であり、normal depthの大きさだけから距離bufferが従うと仮定しない。残余方向rank-one下界とvolume上界から短円上界を得る方法はKE側 `neck:lem:rank-one-circle` にある。求める補題の正確な領域・residual下界・境界距離を同時に書くことが最初の着手である。元の尺度で \(\varepsilon_t^{\mathrm{circ}}\to0\) を得るのは有用な十分条件だが、P0に最終的に必要なのは正規化後の誤差消失であり、より弱い十分な評価があれば採用できる。
+
+固定残余compactの各座標では、`neck:prop:volume-envelope` から法線方向の積分評価を得た（主稿 `ke:neck-integrated-normal-energy`）。$s=-\log(|u|^2/r^2)$、$d(s)=\min(s,M_t-s)$ とし、周期1生成場の軌道平均エネルギーを $E_t$ とする。$\Omega=du/u\wedge dz$ に対する対数体積の角度平均 $\bar F_t$ は $-2\log d(s)+O(1)$、かつ $E_t=8\pi^2\partial_s^2\bar F_t$。よって $\int_m^{M_t-m}E_t(s,z)\,ds=O(m^{-1})$ が残余点 $z$ に一様に成立する。例外深度の測度は $E_t>A/m^2$ に対し $O(m/A)$ であり、例外集合の位置は $z$ に依存する。
+
+同じ $z$ に沿う動径経路には一つの角度を選んで長さ $\int_a^b ds/d(s)+O(1)$ を得る（`ke:neck-axial-upper`）。両端円が短ければ任意の端点を結べる。この評価は局所の上界であり、異なる残余点を結ぶ portal 費用と全曲面の距離下界は残る。Moser 流では軌道全体の最大速度を軌道平均エネルギーの平方根で置き換えられる（`ke:neck-averaged-speed`）。外側の深部領域の実計量での境界距離 $\delta_t$（上限1）が $m_t\delta_t^2\to\infty$ を満たせば、局所 Chern–Lu と体積上界から共通の source・像を得る（`ke:neck-shrinking-buffer`）。所要の全 collar を含む $E_t$ の一様上界と actual buffer、またはこの縮小境界距離の下界が次の課題である。
 
 固定compact base上の共通moment intervalは、このmoving領域の一様性をまだ含まない。K1の局所的な成功後も、第二periodとreduced葉の同時整合、source・branch・coreの被覆、全曲面のshortcutとportalを別々に検証する。任意のMoser移送による定性的存在と、\(p_T\pi_t\) の距離歪み消失も区別する。
 
