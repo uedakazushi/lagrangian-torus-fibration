@@ -3317,15 +3317,21 @@
   "current_post_migration_sources": [
     {
       "destination": "papers/sections/threefold/local_blocks/trivial_normal_curve.tex",
-      "sha256": "b78f50d5231d1184f026e024759428eec5d760fec6f3e7f2cad65ef1e13a3d35",
-      "bytes": 17806,
-      "current_blob_sha": "2cfa54484ac2d70e9bc6b80a7473523f3101aaa6"
+      "sha256": "5d132c497fa513c8ba5d17aeefddb8dad3b45abd1b032d84469f8361165e7123",
+      "bytes": 31469,
+      "current_blob_sha": "88b6fe43070c629c150a85922209a44ed29460a7"
     },
     {
       "destination": "verification/verify_ke_base_topology.py",
-      "sha256": "20ae1a6464cde234999d262279e0a603b1144ee0e26b221e3c6ab93eb97b2c1c",
-      "bytes": 6106,
-      "current_blob_sha": "9a924ee75317ad48b06e4d3967fd57e1337b8fa8"
+      "sha256": "da0de15e4e8241b896c6981c201303167b231829d1764ba57eba9edb68b5f210",
+      "bytes": 8416,
+      "current_blob_sha": "d04bea2a3da069f289d6ec0000cabedb1c806232"
+    },
+    {
+      "destination": "papers/sections/threefold/local_blocks/references_extra.tex",
+      "sha256": "9d89f3fd81652002f8285146d3cb4f5aea18b666b046b97b386b443b9ad5e8bc",
+      "bytes": 6192,
+      "current_blob_sha": "0c176ad367977d0ab8d56a2a7889e94081bf9eeb"
     }
   ]
 }
