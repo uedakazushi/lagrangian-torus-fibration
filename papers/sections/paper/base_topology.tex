@@ -295,6 +295,132 @@ $p_T$ は全射なので，その graph correspondence の distortionは
 $C\varepsilon$ 以下となり，GH評価を得る．
 \end{proof}
 
+\begin{proposition}[収縮速度の次数による鋭い差]\label{topo:metric-collapse-sharp}
+定理\ref{topo:metric-collapse}と同じ$p_T,h,d_\varepsilon$を固定し，
+$p_T$に付随するgraph correspondenceのdistortionを
+\[
+ \mathcal D_\varepsilon=
+ \sup_{x,y\in B(T)}
+ \left|d_\varepsilon(x,y)-d_\square(p_Tx,p_Ty)\right|
+\]
+とする．$\varepsilon\downarrow0$に対し，
+\[
+ \mathcal D_\varepsilon=
+ \begin{cases}
+  \Theta_{T,h}(\varepsilon^2),&d=5,\\
+  \Theta_{d,T,h}(\varepsilon),&d\ge6.
+ \end{cases}
+\]
+従って五次では
+$d_{\mathrm{GH}}((B(T),d_\varepsilon),(\mathcal C_5,d_\square))
+=O_h(\varepsilon^2)$ に改善できる．
+$d\ge6$ での下界は\emph{このgraph correspondenceのdistortion}に
+対するものであり，別のcorrespondenceによって定義される
+$d_{\mathrm{GH}}$の同じ次数の下界を主張しない．
+\end{proposition}
+\begin{proof}
+任意の$h$-rectifiable曲線$\gamma$について積分の三角不等式を用いると，
+\[
+ L_\varepsilon(\gamma)
+ =\int\sqrt{|(p_T\gamma)'|_\square^2
+                  +\varepsilon^2|\gamma'|_h^2}
+ \ge\sqrt{L_\square(p_T\gamma)^2+
+                          \varepsilon^2L_h(\gamma)^2}.
+\]
+従って全$x,y$に対し
+\begin{equation}\label{topo:metric-lower-mixed}
+ d_\varepsilon(x,y)
+ \ge\sqrt{d_\square(p_Tx,p_Ty)^2+\varepsilon^2d_h(x,y)^2}.
+\end{equation}
+$d\ge6$なら$d-4\ge2$であり，少なくとも一つの内部木
+$T_{ij}^{\rm int}$ は正の長さを持つ．同じ$p_T$-fiberの相異なる
+$x,y$を固定すると，\eqref{topo:metric-lower-mixed}により
+$\mathcal D_\varepsilon\ge\varepsilon d_h(x,y)>0$である．
+上界は定理\ref{topo:metric-collapse}による．
+
+$d=5$では全ての内部木は一点であり，$p_T$は同相である．
+有限細分上で$p_T$の逆はpiecewise Lipschitzなので，ある$L<\infty$に対し
+$|v|_h\le L|dp_T(v)|_\square$が全細分セルで成り立つ．
+$\mathcal C_5$内の測地線をこの同相の逆で持ち上げれば
+\[
+ d_\varepsilon(x,y)\le
+   \sqrt{1+\varepsilon^2L^2}\,d_\square(p_Tx,p_Ty)
+\]
+となる．この上界と$d_\square$の直径の有限性から
+$\mathcal D_\varepsilon=O(\varepsilon^2)$を得る．
+また任意の相異なる$x,y$を固定すると，
+\eqref{topo:metric-lower-mixed}と
+$d_\square(p_Tx,p_Ty)>0,\ d_h(x,y)>0$により
+$\mathcal D_\varepsilon\ge c_{x,y,h}\varepsilon^2$
+が十分小さい$\varepsilon$に対して成立する．
+\end{proof}
+
+\begin{proposition}[有限squareに対するthree-input比較原理]
+\label{topo:finite-portal-criterion}
+$T$を固定し，$p_T:B(T)\to\mathcal C_d$を上の写像とする．
+$B(T)$上の任意の長さ距離$d_t$に対し，非負の定数
+$\alpha_t,\sigma_t,\lambda_t,\kappa_t$が次を満たすと仮定する．
+\begin{enumerate}
+\item[\textup{(N)}]
+任意の$x,y\in B(T)$に対し
+$d_t(x,y)\ge d_\square(p_Tx,p_Ty)-\alpha_t$
+（大域no-shortcut）．
+\item[\textup{(S)}]
+任意のunit square $Q\subset\mathcal C_d$と任意の線分
+$\gamma\subset Q$に対し，$p_T$の下で$\gamma$に一致する
+rectifiable lift $\widetilde\gamma$が存在し，
+\[
+ L_{d_t}(\widetilde\gamma)\le
+ (1+\sigma_t)L_\square(\gamma)+\lambda_t
+\]
+（各squareの水平持ち上げ）．
+\item[\textup{(F)}]
+全ての$z\in\mathcal C_d$で
+$\operatorname{diam}_{d_t}p_T^{-1}(z)\le\kappa_t$
+（分岐木fiber・portalの接続費用）．
+\end{enumerate}
+$N_d=d\binom{d-1}{2}$, $D_d=\operatorname{diam}(\mathcal C_d,d_\square)$
+とすると
+\[
+ \sup_{x,y\in B(T)}
+ |d_t(x,y)-d_\square(p_Tx,p_Ty)|
+ \le\max\{\alpha_t,\,
+       \sigma_tD_d+N_d\lambda_t+(N_d+1)\kappa_t\}.
+\]
+右辺が零へ行けば
+$(B(T),d_t)\to(\mathcal C_d,d_\square)$ が
+Gromov--Hausdorff収束する．
+\end{proposition}
+\begin{proof}
+下界は\textup{(N)}．上界には$p_Tx$と$p_Ty$を結ぶ
+$\mathcal C_d$の最短路を取り，同じsquareの再訪を
+ambient Euclidean線分で置き換えて，$N_d$個以下の
+square内線分からなるgalleryを選ぶ．
+各線分を\textup{(S)}で持ち上げ，隣り合う線分の持ち上げ端点が
+属する同一fiber内を\textup{(F)}で接続し，
+最初と最後も$x,y$へ接続する．
+長さの総和は
+\[
+ (1+\sigma_t)d_\square(p_Tx,p_Ty)
+   +N_d\lambda_t+(N_d+1)\kappa_t
+\]
+以下である．$p_T$は全射なので，graph correspondenceの
+distortion boundからGH収束が従う．
+\end{proof}
+
+\begin{remark}[実際の幾何計量への接続に残るもの]
+定理\ref{topo:metric-collapse}の人工計量では
+\textup{(N)}が$\alpha=0$で成り立ち，
+\textup{(S)}の誤差は$O(\varepsilon)$，
+\textup{(F)}も$O(\varepsilon)$である．
+しかしactual Lagrangian action metricやKE退化計量が
+\textup{(N),(S),(F)}を満たすことは未証明である．
+特に局所モデルの各squareに距離比較があるだけでは
+分岐木fiber全体とportalを短く接続できるとは限らない．
+この一般原理の新規性は主張せず，対象研究の未解決な
+幾何学的入力を明確化するために用いる．
+\end{remark}
+
 \begin{remark}[計量収縮の範囲と新規性]
 これは $T$ を固定した有限 PL/CW 複体に対する直接構成で，
 $\varepsilon$ は幾何から導いた parameter ではなく任意に入れた値である．
