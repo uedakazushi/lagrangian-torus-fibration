@@ -88,11 +88,12 @@
   },
   "vscode": "Settings parsed and root search limited to papers/*.tex. UI not tested.",
   "current_math_audit_2026_11_20": {
-    "mathematical_results": "Proved artificial intrinsic length metric collapse of B_d(T) onto C_d with GH O(epsilon); proved normal-trivial symplectic curve degree-genus parity and trivalent graph saddle count; deduced six labelled Petersen models form one S6 orbit with stabilizer order 120.",
-    "independent_computation": "SymPy rational ranks of cellular complexes at d=5..8 checked; exhaustive K6 one-factorisation enumeration yielded 15 matchings, 6 factorisations, orbit size 6, stabilizer 120. The committed standard-library regression was extended with the enumeration.",
-    "reproducibility": "verification/verify_ke_base_topology.py contains finite-field chain checks plus exact K6 enumeration. The exact updated GitHub script was not rerun in this chat after modification.",
-    "full_lualatex_after_edits": "not run; previous Work build records predate modified fragments",
-    "source_hashes": "research/source-manifest.json updates current hashes without changing original source provenance",
-    "cleanup": "No versioned fragment or verification file deleted; complete dependency audit for past-version scripts still outstanding"
+    "mathematics_verified": "Sharp graph-correspondence distortion Θ(epsilon^2) for d=5 and Θ(epsilon) for d>=6 for the synthetic metric; GH upper bounds only. Proved finite no-shortcut/square-lifts/fibre-connector criterion and a two-squares-wedged-at-origin counterexample showing connector necessity. Proved conditional Euler singular-fibre budget N_d=d^4-5d^3+9d^2-3d-10 for the threefold complement, with isolated nonzero Euler fibres as an indispensable hypothesis (N_6=512). Existing degree/genus and Petersen results retained.",
+    "independent_computations_executed": "Independent Python modular rank computations for d=5,6,7,8 gave (rank d1,rank d2)=(4,6),(5,25),(6,57),(7,105). Exhaustive K6 matching enumeration gave 15 perfect matchings, six one-factorizations, a single S6 orbit and stabilizer size 120. Independent Euler polynomial checks for d=6..11 gave chi(V)=-512,-1096,-2078,-3608,-5860,-9032.",
+    "repo_script_currently_executed": false,
+    "repo_script_reproduction": "verification/verify_ke_base_topology.py includes modular rank, exact K6 orbit and Euler polynomial checks. The exact latest committed copy was not executed in this chat.",
+    "post_edit_lualatex_rerun": false,
+    "build_note": "Work's recorded TeX compilation predates this set of source edits; no claim of recompilation or rendered-PDF audit for the new sections.",
+    "claims_not_established": "Actual action/KE metric comparison, (N)/(S)/(F) on the geometric base, analytic singular-fibre classifications, global threefold fibration, and originality in the literature remain open."
   }
 }
