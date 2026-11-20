@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.1: Euler 場と sublog residual cutoff からの接続を含む．
+% 2026-11-21 / v1.2: Gaussian tail と potential buffer による中央全点径を含む．
 \section{Central source の体積評価と接続経路}
 \label{ke:source-connectors-section}
 
@@ -8,8 +8,10 @@
 Source では短い円作用が固定点を持つため，その評価だけから固定点までの
 動径経路を積分したり，pinched torus 全体の直径を結論したりすることはできない．
 本節ではまず中央 rescaling 領域の体積を両側から評価し，
-実際の計量に関する短い退出経路を構成する．同一 moment 上の残余方向への
-接続は，最後に独立した条件として明示する．
+実際の計量に関する短い退出経路を構成する．さらに canonical potential による
+actual 球の局在と Gaussian tail を組み合わせ，固定点を含む中央領域の全点径を
+$O(\sqrt{R_t})$ に抑える．中央帯の外も含む同一 moment 上の接続は，
+最後に独立した条件として明示する．
 
 \subsection{中央の canonical volume potential}
 
@@ -373,13 +375,125 @@ $z$ を保存するので，戻した点も $K_t(a_t)$ に属する．第一の�
 pinched fibre 全体の直径を結論していない．$W_+$ の有界性を
 無限の logarithmic flow time に積分してはならない．
 
+\subsection{固定 shell への距離の Gaussian tail}
+
+有界 potential から一様な連続度を導く代わりに，距離函数そのものの
+complex Sobolev norm を評価できる．これにより全点接続を仮定せず，
+固定 shell から遠い点の体積を平均二乗距離より鋭く抑える．
+
+\begin{proposition}[Source-free shell への接続費用の Gaussian tail]
+\label{ke:source-shell-gaussian-tail}
+命題\ref{ke:source-central-density}の固定半径
+$0<c_0<c_1<c_2$ と，補題\ref{ke:source-euler-bound}の固定 tube を用いる．
+$c_1^2<\beta<b_+$ を固定し，十分小さい $t$ に対して
+\[
+ \Sigma_t=\{|z|=\beta,\quad s_x,s_y\ge L_t/4\},
+ \qquad s_x=-\log|x|^2,\quad s_y=-\log|y|^2
+\]
+を source chart 内の閉集合として取る．この集合は source-free であり，
+$\operatorname{diam}_{d_{g_t}}\Sigma_t\le C$ を満たす．
+$p\in B(c_1)$ に対し
+\[
+ v_t(p)=d_{g_t}\bigl(\Psi_t(p),\Sigma_t\bigr)
+\]
+と置く．ここで距離は曲面全体の経路を許す actual ambient 距離である．
+$t$ に依らない $a,C>0$ が存在して
+\begin{equation}\label{ke:eq:source-shell-gaussian-tail}
+ \int_{\overline{B(c_0)}}\exp\bigl(a v_t^2\bigr)\,dV_{\rm E}\le C
+\end{equation}
+が成り立つ．従って任意の $A\ge0$ に対し
+\[
+ \operatorname{vol}_{\rm E}\{p\in B(c_0):v_t(p)>A\}
+ \le C e^{-aA^2},
+\]
+またその actual 像の体積は $CL_t^{-2}e^{-aA^2}$ 以下である．
+$\{v_t\le A\}\cap B(c_0)$ の actual ambient diameter は $2A+C$ 以下である．
+\end{proposition}
+
+\begin{proof}
+$|z|=\beta$ 上では $s_x+s_y=L_t-\log\beta^2$ である．
+したがって $\Sigma_t$ の両側 normal 深度は $L_t$ と比較可能であり，
+固定 source-free annulus における canonical moment の差商上界から
+$|\mu_t|\le C/L_t$ を得る．系\ref{ke:fixed-base-central-band}を，
+例えば $m_t=L_t^{1/2}$ として適用すれば $\Sigma_t$ の径の上界が従う．
+
+固定 Euclidean 正体積を持つ compact 集合
+\[
+ E\Subset\{(X,Y)\in B(c_1):0<|XY|<c_1^2\}
+\]
+を選ぶ．$E$ 上では $|XY|$ が正の固定定数から離れているため，
+前命題の Euler flow は全ての $\Psi_t(E)$ を $\Sigma_t$ へ一様な $O(1)$ の
+費用で結ぶ．実際，必要な flow time は固定有界であり，終点の二つの深度は
+$L_t/2+O(1)$ である．固定半径の余裕を取り直し，
+命題\ref{ke:source-central-mean-distance}の二点平均評価を
+$B(c_1)\times B(c_1)$ 上に用いると
+\[
+ \int_{B(c_1)} v_t^2\,dV_{\rm E}
+ \le \frac{C}{\operatorname{vol}_{\rm E}(E)}
+       \int_{E\times B(c_1)}
+       d_{g_t}(\Psi_t p,\Psi_t q)^2\,dV_{\rm E}(p)dV_{\rm E}(q)+C
+ \le C.
+\]
+ここで必要な trace の積分上界は $B(c_2)$ の有界 potential から得られ，
+半径を $t$ とともに動かしていない．
+
+距離函数は actual 計量について $1$-Lipschitz である．各固定 $t$ では
+引戻し計量が $B(c_2)$ 上で滑らかなので，$v_t$ は Euclidean 座標で局所 Lipschitz
+であり，ほとんど至る所で
+\[
+ |dv_t|_{\Psi_t^*g_t}\le1,\qquad
+ \sqrt{-1}\,\partial v_t\wedge\bar\partial v_t
+ \le C\,\Psi_t^*\omega_t
+\]
+を満たす．右辺は正の閉 $(1,1)$-current であり，その固定 Euclidean 質量は
+\[
+ \int_{B(c_1)}\Psi_t^*\omega_t\wedge\omega_{\rm E}\le C
+\]
+である．従って Dinh--Sibony の complex Sobolev space における norm
+\[
+ \|v_t\|_*^2
+ =\|v_t\|_{L^2(B(c_1))}^2+
+ \inf_{T\ge\sqrt{-1}\partial v_t\wedge\bar\partial v_t}\|T\|
+\]
+は一様有界である．Infimum は正の閉 $(1,1)$-currents $T$ 全体について取り，
+$\|T\|$ は固定 Euclidean 質量を表す．また上の current 支配を trace に取れば通常の
+$W^{1,2}(B(c_1))$ norm も有界なので，同空間への所属も満たされる．
+
+Dinh--Marinescu--Vu\cite[Theorem~1.2]{DMVMT}の局所 Moser--Trudinger 不等式を，
+$\Omega=B(c_1)$，$K=\overline{B(c_0)}$ に適用する．同定理の積分測度を与える
+二つの H\"older psh 函数には，固定 Euclidean potential の十分小さい定数倍を取る．
+これらの Monge--Amp\`ere 積は $dV_{\rm E}$ の固定正定数倍であり，
+ここで H\"older 性を要求しているのはこの固定補助函数だけである．
+$u_t$ 自身の H\"older 性は使わない．$\|v_t\|_*$ の一様上界を規格化に吸収すると
+\eqref{ke:eq:source-shell-gaussian-tail}を得る．
+
+Euclidean tail は Chebyshev の不等式，actual volume の tail は
+命題\ref{ke:source-central-density}の密度上界から従う．
+$v_t\le A$ の二点をそれぞれ $\Sigma_t$ に結び，その中の ambient 径上界を
+用いれば最後の主張を得る．距離を達成する経路の選択が必要な場合は
+長さ $A+\epsilon$ の経路を取り，最後に $\epsilon\downarrow0$ とすればよい．
+\end{proof}
+
+この評価は，例えば $A_t=\sqrt{R_t}$ とすると，ambient 径 $O(\sqrt{R_t})=o(R_t)$
+の部分集合の外を Euclidean 体積 $O(e^{-aR_t})$ に抑える．ただし固定点や
+特定の moment level がその部分集合に含まれるとは限らない．
+全点の径へ昇格するには，遠い点の actual ball がこの Gaussian 評価の領域内に
+留まること，またはその交わりに十分な体積があることを別に示す必要がある．
+Ricci 下界による全曲面の球の体積比較だけでは，その球と固定 rescaled core の
+交わりの体積下界は得られない．
+
+\input{sections/paper/ke_source_potential_buffer.tex}
+\input{sections/paper/ke_source_global_distance.tex}
+\input{sections/paper/ke_source_diameter.tex}
+
 \subsection{同一 moment の全点接続に残る条件}
 
-上の退出は短いが，断面 $\Gamma^x_{t,\kappa}\cup\Gamma^y_{t,\kappa}$ 内の
-全点を結ぶものではない．とくに residual direction の tensor 上界を得ておらず，
-\eqref{ke:eq:source-central-short-escape}を source-core diameter の上界へ
-読み替えることはできない．また有界な canonical potential と trace の積分上界から，
-各 moment level 又は固定点での長さを直接結論しない．
+定理\ref{ke:source-central-diameter}と
+系\ref{ke:fixed-base-source-central-band}により，中央領域と
+$|\mu_t|\le A/L_t$ の固定基底中央帯の全点径は制御できた．
+この結論は短い退出だけから得たものではなく，potential による球の局在，
+Gaussian tail と Ricci 下界の体積比較を併用する．
+中央帯より広い moment interval の全体に一様な接続は，以下の別入力である．
 
 残る入力は，tensor 二側比較全体より弱い経路条件として述べられる．
 連結な $P$ に対する定理\ref{ke:projected-source-neck}の円平均後の
@@ -404,8 +518,8 @@ Normal Moser map の像へ移す際は，両端に既存の短い trajectories �
 複数 fibres の合併にも十分である．
 
 本節は\eqref{ke:eq:source-moment-exit-input}を証明していない．
-中央から得た任意の gate への退出点に，所定の residual 境界と同一 moment の両条件を
-追加する段階が残る．非常に遅い residual exhaustion を用いる場合も，
+中央帯の外も含め，所定の residual 境界と同一 moment の両条件を
+一様に保つ段階が残る．非常に遅い residual exhaustion を用いる場合も，
 既存 source-free connector の定数とこの退出費用を別々に対角選択する必要がある．
 また $|x|,|y|\le r_t^2$ という source-inclusive neck 全体は二本の長い normal arms を含むため，
 その全体の直径を中央 rescaled core 又は同一 moment 集合の直径と同一視しない．
@@ -413,8 +527,8 @@ Normal Moser map の像へ移す際は，両端に既存の短い trajectories �
 中央帯に限れば，系\ref{ke:fixed-base-central-band}により退出先の moment を
 厳密に保存する必要はない．固定 source-free residual shell の
 $|\mu_t|\le A'/L$ 内へ $o(R)$ の費用で接続すれば十分である．
-命題\ref{ke:source-central-band-reduction}から，この問題は中央 core の径，
-又は core からその shell への接続に帰着する．
+この中央帯の接続は定理\ref{ke:source-central-diameter}と
+系\ref{ke:source-central-band-collapse}により $O(\sqrt{R_t})$ で解決した．
 
 \begin{remark}[Potential の連続度を用いる十分条件]
 \label{ke:source-potential-modulus}

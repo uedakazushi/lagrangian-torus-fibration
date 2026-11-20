@@ -1,5 +1,5 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-21 / v2.6
+更新：2026-11-21 / v2.7
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
@@ -30,7 +30,7 @@ Source と通常 pair の共通化を主稿 `ke:projected-source-normal-form`, `
 
 固定残余compactの各座標では、`neck:prop:volume-envelope` から法線方向の積分評価を得た（主稿 `ke:neck-integrated-normal-energy`）。$s=-\log(|u|^2/r^2)$、$d(s)=\min(s,M_t-s)$ とし、周期1生成場の軌道平均エネルギーを $E_t$ とする。$\Omega=du/u\wedge dz$ に対する対数体積の角度平均 $\bar F_t$ は $-2\log d(s)+O(1)$、かつ $E_t=8\pi^2\partial_s^2\bar F_t$。よって $\int_m^{M_t-m}E_t(s,z)\,ds=O(m^{-1})$ が残余点 $z$ に一様に成立する。例外深度の測度は $E_t>A/m^2$ に対し $O(m/A)$ であり、例外集合の位置は $z$ に依存する。
 
-同じ $z$ に沿う動径経路には一つの角度を選んで長さ $\int_a^b ds/d(s)+O(1)$ を得る（`ke:neck-axial-upper`）。両端円が短ければ任意の端点を結べる。固定 source-free 基底で同じ normal moment を持つ点については、残余点を変える接続も原稿 `ke:fixed-base-moment-connectors` で解決した。深度は、$|\mu|=O(M_t^{-1})$ なら両側とも $M_t$ と比較可能、それ以外は符号に応じた片側深度が $|\mu|^{-1}$ と比較可能である。一定深度の水平持ち上げ・動径弧・短い円弧を合わせると、level全体の actual ambient 直径は $O(1)$、Moser像でも同じ、正規化後は $O(R_t^{-1})$ となる。葉内経路やMoserの $C^1$ 評価は使わない。Sourceを含むlevel、moving residual collar、異なるmomentをまたぐ木全体と全曲面の下界は残る。
+同じ $z$ に沿う動径経路には一つの角度を選んで長さ $\int_a^b ds/d(s)+O(1)$ を得る（`ke:neck-axial-upper`）。両端円が短ければ任意の端点を結べる。固定 source-free 基底で同じ normal moment を持つ点については、残余点を変える接続も原稿 `ke:fixed-base-moment-connectors` で解決した。深度は、$|\mu|=O(M_t^{-1})$ なら両側とも $M_t$ と比較可能、それ以外は符号に応じた片側深度が $|\mu|^{-1}$ と比較可能である。一定深度の水平持ち上げ・動径弧・短い円弧を合わせると、level全体の actual ambient 直径は $O(1)$、Moser像でも同じ、正規化後は $O(R_t^{-1})$ となる。葉内経路やMoserの $C^1$ 評価は使わない。Sourceを含む中央levelは以下の全点径で扱える。中央帯外のsource level、moving residual collar、異なるmomentをまたぐ木全体と全曲面の下界は残る。
 
 Moser 流では軌道全体の最大速度を軌道平均エネルギーの平方根で置き換えられる（`ke:neck-averaged-speed`）。外側の深部領域の実計量での境界距離 $\delta_t$（上限1）が $m_t\delta_t^2\to\infty$ を満たせば、局所 Chern–Lu と体積上界から共通の source・像を得る（`ke:neck-shrinking-buffer`）。この縮小条件は残余 collar を動かす場合にも候補となる。
 
@@ -58,13 +58,34 @@ Reduced graphに合わせて残余foliationをmomentに滑らかに依存させ�
 
 固定連結source-free compact基底では `ke:fixed-base-central-band` により、固定 $A>0$、$m_t\to\infty$、$m_t=o(M_t)$ の下、$|\mu|\le A/M_t$ のcentral band全体がactual径 $O_{P,A}(1)$ を持つ。異なるmomentも含み、Moser像には $O(m_t^{-1})$ の端点費用だけを加える。両normal深度 $\ge\kappa_A M_t$ をmomentの片側下界から導き、水平・動径・円弧を組み合わせる。
 
-Source側の `ke:source-central-band-reduction` は、固定residual disc、人工境界からの余裕、normal最小深度の下で、$|\mu|\le A/L$ の全点を固定rescaled coreへ $O(1)$ で接続する。従って中央帯の残る径問題はcore全点の径、またはcoreからsource-free shellの $|\mu|\le A'/L$ への $o(R)$ 接続に帰着する。一般の同一moment集合については、指定した残余境界への退出条件 `ke:eq:source-moment-exit-input` が十分であるが、これは未証明。Central inradius、平均距離、全source fiberの径、長いnormal armsを含むneck全体の径を区別する。
+Source側の `ke:source-central-band-reduction` は、固定residual disc、人工境界からの余裕、normal最小深度の下で、$|\mu|\le A/L$ の全点を固定rescaled coreへ $O(1)$ で接続する。この帰着と下記のGaussian体積比較により、中央帯の全点径は $O(\sqrt R)$ となる。一般の同一moment集合については、指定した残余境界への退出条件 `ke:eq:source-moment-exit-input` が十分であるが、これは未証明。Central inradius、平均距離、全source fiberの径、長いnormal armsを含むneck全体の径を区別する。
 
 `ke:source-potential-modulus` はGuedj–Guenancia–Zeriahi（参考文献キー `GGZDiameter`、Proposition 1.4）の局所距離評価を用いる十分条件を記す。Potential $u_t$ に一様な連続度 $m$ があり $\int_0^{r_0}\sqrt{m(r)}\,dr/r<\infty$ なら、固定coreのambient径は $O(1)$。このsquare-root-Dini modulusや一様Hölder評価自体はまだ証明していない。有界potentialから自動的に導いたり、同論文の大域Kähler class仮定を局所族へ無条件に適用したりしない。
 
+## Source中央全点径：potential bufferとGaussian体積比較
+
+正本は主稿の `ke:source-central-diameter` と `ke:fixed-base-source-central-band`。固定した $d$・族・residual基底について、固定点と座標軸を含む中央source全体のambient径は $O(\sqrt{R_t})$、正規化後は $O(R_t^{-1/2})$。Source-inclusiveな $|\mu_t|\le A/L_t$ の全中央帯と閉pinched torus全体にも拡張できる。追加のTCや一様Hölder仮定は使わない。
+
+証明の依存順は次の通り。
+
+1. `ke:source-tube-potential`：固定physical tubeをcentral coreと正しい二half-armsで覆い、actual densityとcapped densityを二側比較する。射影Chern–Luから $g_t\ge c g_{FS}$、nested physical tubesから固定actual bufferを得る。
+2. `ke:positive-poisson-log-gradient`, `ke:source-potential-buffer`：非零正則frame $dx\wedge dy/t$ を固定した $u=\log(\omega_t^2/|\Omega|^2)+2R+C\ge1$ は $\Delta u=c_4$。Bochnerと距離cutoffで $|\nabla\log u|\le C$。中央点の固定小球では $u$ が有界となり、capsの積下界から両normal深度が $\kappa L$ 以上となる。縮小するrescaled bidisc内に球を閉じ込める必要はない。
+3. `ke:source-shell-gaussian-tail`, `ke:source-wide-gaussian-tail`：固定source-free shellへのambient距離の $W_*^{1,2}$ normを有界potentialから抑える。Dinh–Marinescu–Vu, Theorem 1.2（参考文献 `DMVMT`）は固定補助Euclidean potentialに適用するので、actual potentialのHölder性は不要。$x=e^{Lw}$ の固定サイズcoverでは約 $L$ 個の周期を除して、広い中央帯のactual体積tailを $CL^{-1}e^{-aA^2}$ とする。
+4. `ke:source-central-diameter`：距離 $D$ の中央点の小球はこの広い帯に入り、体積上界は $CL^{-1}e^{-a(D-\delta)_+^2}$。良いcore部分の体積 $cL^{-2}$ と全曲面のRicci下界によるBishop–Gromov比較から、同じ球の体積下界 $cL^{-2}e^{-C(D+1)}$。従って $D^2\le C(R+D+1)$、全点で $D=O(\sqrt R)$。
+
+固定基底の残りはsource-free中央帯の $O(1)$ 接続でつなぐ。Canonical primitiveのbase-only変更はnormal momentを変えず、actual Moser像には両端の短いtrajectoryだけを加える。経路はfiber又はmoment level内に留まらなくてよく、intrinsic fiber径の主張ではない。中央帯外の一般moment接続、木上の異なるmomentの合併、全曲面のno-shortcutは残る。Gaussian tailだけ、短円の長さだけ、又はMoser像のorbit直径だけで全点評価を結論しない。
+
+## Component coreの固定段階移送と相対条件
+
+正本は `ke_component_core_transfer.tex`。成分極限 $\omega_i^\infty$ へのfixed-gauge smooth収束から、$\beta_t=d^c\log((E_t^*\omega_t)^2/(\omega_i^\infty)^2)\to0$、$d\beta_t=E_t^*\omega_t-\omega_i^\infty$ を得る。固定compact上のMoserはactual変位・$C^1$誤差を $o_t(1)$ とする。$\beta_t$そのものがd-exactという主張ではない。
+
+境界germを点ごとに保存するには、primitive差のcollar $H^1$ classがcoreの $H^1$ から延びることが必要となる。Fiber periodsが全て零でもbase-circle fluxが残る例を `ke:core-relative-flux-example` に保持する。これはfiber partitionの不存在例ではない。平均形式にもparameter方向の同変Moserを入れる $A_t b_t A_0^{-1}$ はexact symplectic germとなり、normal momentの加法定数も保つ。
+
+未解決なのはcomplete limit KE形式そのものに対する、指定full collarsを持つcore fillingと全patchの同時整合である。`comp:finite` は選び直したsmooth compactifying formの定理であり、この入力を自動的には与えない。条件付き系 `ke:conditional-component-core-filling` は、その入力があればactual移送・接着・十分遅い対角選択でcore全体の正規化径を消せることを示す。
+
 ## Source の residual cutoff と Euler 場
 
-`ke:source-euler-bound` は固定source tube上のEuler場 $W_+=x\partial_x+y\partial_y$ をactual norm $O(1)$ に抑える。固定normal境界はcomponent KE収束、固定residual境界はsource-free tensor比較で評価し、内部へBochner最大値原理で延ばす。中央点で $|z|\ge e^{-a_t}$、$a_t=o(R_t)$ なら正の同時scalingを $O(a_t+1)$ 時間で固定residual shellまで進められ、終点はcanonical central moment帯にある（`ke:source-sublog-residual-connectors`）。全点径の残余は $z=0$ と $|z|<e^{-a_t}$ である。無限のscaling時間を有界な経路長に読み替えない。
+`ke:source-euler-bound` は固定source tube上のEuler場 $W_+=x\partial_x+y\partial_y$ をactual norm $O(1)$ に抑える。固定normal境界はcomponent KE収束、固定residual境界はsource-free tensor比較で評価し、内部へBochner最大値原理で延ばす。中央点で $|z|\ge e^{-a_t}$、$a_t=o(R_t)$ なら正の同時scalingを $O(a_t+1)$ 時間で固定residual shellまで進められ、終点はcanonical central moment帯にある（`ke:source-sublog-residual-connectors`）。この経路だけでは $z=0$ と $|z|<e^{-a_t}$ を制御しない。以下の別の体積比較で全点評価へ進む。無限のscaling時間を有界な経路長に読み替えない。
 
 ## 二段階平均によるnormal actionとperiodsの接続
 

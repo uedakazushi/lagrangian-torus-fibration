@@ -638,9 +638,27 @@ Ricci 下界と Laplacian の障壁により actual inradius $O(L_t^{-1/2})$ を
 中央点を oriented arm の断面へ有界長で接続する．
 系\ref{ke:fixed-base-central-band}は source-free な中央 moment 帯の全点を，
 命題\ref{ke:source-central-band-reduction}は source 近傍の中央帯を固定 core へ，
-それぞれ有界長で結ぶ．ただし source 全 fiber の径は未証明である．
-Potential の一様連続度による局所径評価\cite[Proposition~1.4]{GGZDiameter}は，
-残る core 接続を扱う一つの十分条件を与えるが，必要な連続度はまだ得ていない．
+それぞれ有界長で結ぶ．さらに固定 source tube 上の正の canonical potential の
+局所対数勾配から，中央点の actual 球が normal 深度 $\kappa L_t$ 以上に留まることを示す．
+距離函数の complex Sobolev norm に Dinh--Marinescu--Vu の
+Moser--Trudinger 不等式\cite[Theorem~1.2]{DMVMT}を適用し，
+logarithmic cover の周期数 $\asymp L_t$ を用いると，この広い中央帯で
+actual 体積の Gaussian tail を得る．Bishop--Gromov 比較と合わせて，
+定理\ref{ke:source-central-diameter}は固定点を含む中央 source の全点径を
+$O(\sqrt{R_t})$ に抑える．固定残余基底では中央 moment 帯と閉じた pinched torus
+全体にも適用できる（系\ref{ke:fixed-base-source-central-band}）．
+用いた Moser--Trudinger 不等式自体は既存結果であり，ここで検証するのは
+退化する実計量の距離函数への一様な適用，周期因子と actual 球の領域条件である．
+Potential の一様連続度による局所径評価\cite[Proposition~1.4]{GGZDiameter}は
+さらに $O(1)$ の径を与える別の十分条件だが，その連続度はまだ得ていない．
+
+成分 core については節\ref{ke:component-core-transfer-section}で，
+fixed-gauge smooth KE 収束から canonical primitive の差を明示し，
+固定 compact から actual KE 形式への小さい symplectic 移送を構成する．
+境界の点を固定する相対移送には $H^1$ の制限写像で記述される flux 条件があり，
+normal fiber periods だけではこれを検出できない．平均形式も parameter 方向に
+Moser 移送することで exact collar germ を得るが，極限 complete KE 形式上の
+所要の core filling と複数 collars の同時整合は未解決である．
 
 
 開いた二次元セルの固定 compact 部分では，さらに明示的な product model と局所 GH 極限を得る．

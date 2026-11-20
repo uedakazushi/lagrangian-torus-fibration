@@ -1,6 +1,6 @@
 {
   "date": "2026-11-21",
-  "version": "2.6",
+  "version": "2.7",
   "scope": "複素次元2の現行研究状態。旧三次元稿の組版・監査記録ではない。数学的な証明と、その再監査、組版、整数計算、GitHub保存、Cloudタスク起動を区別する。",
   "priority": "P0: actual負Kähler–Einstein形式での大域Lagrangian torus fibrationの射影 p_T∘π_t が、各固定 d≥5 の全曲面ambient距離に関する正規化GH近似を与えること。",
   "priority_status": "open",
@@ -19,11 +19,15 @@
       "固定source-free基底の異なるmomentを含む中央帯のactual ambient径O(1)",
       "中央sourceのvolume densityのL^-2二側比較、有界canonical potential、moment O(L^-1)、traceと平均二点距離の積分評価",
       "中央sourceのactual inradius O(L^-1/2)、oriented armへのO(1)接続、および中央moment帯の固定rescaled coreへのO(1)帰着",
-      "固定source chartのEuler場の一様上界と、central |z|>=exp(-a_t), a_t=o(R_t) の全点の固定shellへのO(a_t+1)接続"
+      "固定source chartのEuler場の一様上界と、central |z|>=exp(-a_t), a_t=o(R_t) の全点の固定shellへのO(a_t+1)接続",
+      "Canonical potentialの正のPoisson方程式・対数勾配と固定physical tubeから、中央点のactual小球を深部normal帯へ局在",
+      "Complex Sobolev Moser–Trudingerとlogarithmic coverの周期数から、固定source-free shellへの距離のactual Gaussian tail CL^-1 exp(-cA²)",
+      "Bishop–Gromov比較により、固定点を含むcentral sourceの全点ambient径O(sqrt(R))、固定基底のsource-inclusive中央moment帯と閉pinched torus全体の正規化径収縮",
+      "固定component coreの小さいactual Moser移送、collarの相対flux条件とexact equivariant germ。極限KE形式のfillingを追加入力とする相対接着"
     ],
     "not_proved": [
-      "Neck–corner部分fibrationのcomponent coreへの延長、必要な第二period・critical actionの整合、および全曲面被覆",
-      "Source中央coreの全点径、所定residual shellへの経路、全source-inclusive moment levelとpinched fiberの一様な正規化ambient径収縮",
+      "極限complete component KE形式そのものに対する所要のcore filling、全collarの同時整合、および全曲面被覆",
+      "Source中央帯を超える共通moment interval全体での同一moment接続と、moving残余領域への一様性",
       "中央帯に限られないmomentをまたぐ木上の複数fiberの合併の径、全曲面ambient距離でのno-shortcut、square lifts、portal connectorsとP0の一様distortion",
       "KE側のCP/PBE（および必要時のTC5）の対象族での証明、またはそれらの直接評価による代替",
       "一般次数のP0達成に必要な既存全証明と先行研究の独立点検"
@@ -51,9 +55,9 @@
     },
     "this_audit": {
       "date": "2026-11-21",
-      "scope": "Centered normal flow自然性、全neck–corner交わりの飽和・Hausdorff基底とmarkingの範囲、中央sourceのvolume・moment・平均距離・短い退出・中央帯帰着の証明を内部点検。静的検査・主稿組版を再実行し、上記変更頁を表示確認。",
-      "reexecuted_build": true,
-      "reexecuted_static_checks": true,
+      "scope": "改訂17のEuler/central Gaussian/positive potential buffer/wide Gaussian/Bishop–Gromov全点径/固定component移送を内部点検。改訂17の静的検査と組版は未実施。",
+      "reexecuted_build": false,
+      "reexecuted_static_checks": false,
       "reexecuted_python_suite": false,
       "independent_internal_proof_review": [
         "ke:normal-flow-naturality",
@@ -68,7 +72,20 @@
         "ke:source-central-short-escape",
         "ke:source-central-arm-connectors",
         "ke:source-central-band-reduction",
-        "ke:source-potential-modulus"
+        "ke:source-potential-modulus",
+        "ke:source-euler-bound",
+        "ke:source-sublog-residual-connectors",
+        "ke:source-shell-gaussian-tail",
+        "ke:source-tube-potential",
+        "ke:positive-poisson-log-gradient",
+        "ke:source-potential-buffer",
+        "ke:source-wide-gaussian-tail",
+        "ke:source-central-diameter",
+        "ke:fixed-base-source-central-band",
+        "ke:fixed-component-transfer",
+        "ke:component-relative-flux",
+        "ke:component-exact-collar-germ",
+        "ke:conditional-component-core-filling"
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false
@@ -90,6 +107,11 @@
       "source": "Guedj–Guenancia–Zeriahi, arXiv:2310.20482v1, Proposition 1.4 (p.5)",
       "url": "https://arxiv.org/abs/2310.20482v1",
       "verified": "一次PDFの局所連続度による距離評価の仮定と証明を確認。一様Dini型連続度は本source族では未証明で、条件付き十分入力としてのみ使用。"
+    },
+    "DMV_complex_sobolev": {
+      "source": "Dinh–Marinescu–Vu, Ann. Sc. Norm. Super. Pisa (5) 24 (2023), 927–954, Theorem 1.2, pp.928–929",
+      "url": "https://www.mi.uni-koeln.de/~gmarines/PREPRINTS/Dinh_Marinescu_Vu_ASNP_2023.pdf",
+      "verified": "掲載版一次PDFのW_* normと定理の仮定を確認。固定Euclidean補助potentialとactual距離函数への適用を本稿で証明。"
     }
   },
   "other_papers": {

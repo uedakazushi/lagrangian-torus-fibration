@@ -1,0 +1,338 @@
+% !TeX root = ../../surface-lagrangian-torus-fibration.tex
+% 2026-11-21 / v1.0: 固定 component core の actual KE 移送と相対 flux の条件．
+\section{固定成分 core の actual KE 移送}
+\label{ke:component-core-transfer-section}
+
+系\ref{ke:neck-corner-saturated-union}は，source と saddle を含む neck と
+closed corner の部分 fibration を与える．それを component core へ延長する際には，
+固定成分上の filling と，その filling を nearby fiber へ運ぶ操作を区別する必要がある．
+本節では後者を actual KE 計量について定量化し，
+境界を相対的に扱うための条件を明示する．
+前者の存在を，定性的な compactification から無条件に結論するものではない．
+
+\subsection{正則 graph gauge と小さい primitive}
+
+中心成分を $H_i\simeq\PP^2$，その boundary divisor を
+$D_i=\bigcup_{k\ne i}D_{ik}$，$W_i=H_i\setminus D_i$ とする．
+$\omega_i^\infty$ は $W_i$ 上の complete finite-volume 負 KE 極限形式である．
+以下の $K\Subset U\Subset V\Subset W_i$ は全て $t$ に依存しない．
+$K$ は連結な compact domain とし，境界に corners を許す．
+各包含には固定した正の buffer を取る．
+
+固定 component の正則 tubular projection を選ぶと，
+十分小さい $|t|$ に対し $V$ から $X_t$ への正則 graph embedding
+\[
+ E_t:V\longrightarrow X_t
+\]
+を構成できる．実際，中心成分の法線方向に退化方程式を微分すると，
+$W_i$ 上では残る平面の defining functions の積が非零である．
+陰関数定理を有限個の bundle charts で適用し，一意な小さい解を貼り合わせればよい．
+この構成は固定 compact の外での一様な graph representation を主張しない．
+
+関連 KE 主稿\cite[\texttt{pair:thm:fixed-end-moment}の証明]{KELocalCurrent}で確認した
+stable degeneration の fixed-gauge smooth convergence により，
+\begin{equation}\label{ke:eq:component-fixed-convergence}
+ \sigma_t:=E_t^*\omega_t\longrightarrow\omega_i^\infty
+ \quad\text{in }C^\infty(V)
+\end{equation}
+となる．必要なら $V$ を少し小さくして，閉包上の評価として用いる．
+この入力は source 又は divisor を横切る収束ではない．
+
+$D_i$ の一つの直線を無限遠に取り，その affine chart の非零正則 $2$-form
+$\Omega$ を $V$ に制限する．
+\[
+ \lambda_t=d^c\log\frac{\sigma_t^2}{|\Omega|^2},
+ \qquad
+ \lambda_0=d^c\log\frac{(\omega_i^\infty)^2}{|\Omega|^2}
+\]
+とすれば，負 KE 方程式から $d\lambda_t=\sigma_t$，
+$d\lambda_0=\omega_i^\infty$ である．従って
+\begin{equation}\label{ke:eq:component-small-primitive}
+ v_t=\log\frac{\sigma_t^2}{(\omega_i^\infty)^2},\qquad
+ \beta_t=\lambda_t-\lambda_0=d^cv_t,\qquad
+ d\beta_t=\sigma_t-\omega_i^\infty .
+\end{equation}
+$v_t$ は正の体積形式の比の実対数なので大域的な一価関数であり，
+holomorphic Jacobian の対数の枝を選ぶ必要はない．
+$\beta_t$ が $d$-exact であるとは主張していない．
+これは二形式の差の，明示的な小さい primitive である．
+
+\begin{proposition}[固定 core の小さい actual symplectic 移送]
+\label{ke:fixed-component-transfer}
+上の設定で，固定 $q\ge2$ に対し
+$\varepsilon_t=\|v_t\|_{C^{q+2}(V)}\to0$ と置く．
+十分小さい $t$ で $K$ の開近傍から $X_t$ への embedding
+$\Theta_t=E_t\circ\varphi_t$ があり，
+\[
+ \Theta_t^*\omega_t=\omega_i^\infty,\qquad
+ \|\varphi_t-\id\|_{C^q}\le C_K\varepsilon_t,\qquad
+ \varphi_t^*\lambda_t=\lambda_0+dQ_t,\quad
+ \|Q_t\|_{C^{q-1}}\le C_K\varepsilon_t
+\]
+を満たす．同じ固定 gauge 上で
+\[
+ d_{g_t}(E_t(x),\Theta_t(x))\le C_K\varepsilon_t,\qquad
+ (1-C_K\varepsilon_t)g_i^\infty
+ \le\Theta_t^*g_t\le
+ (1+C_K\varepsilon_t)g_i^\infty
+\]
+が成立する．定数は固定領域とその buffer に依存してよい．
+従って $\omega_i^\infty$ に対する $K$ 上の Lagrangian fibration が与えられていれば，
+その全 fibers と isotropic singular strata を actual $\omega_t$ へ移送できる．
+\end{proposition}
+
+\begin{proof}
+$\sigma_s=\omega_i^\infty+s\,d\beta_t$ とする．同じ複素構造上の K\"ahler forms の
+凸結合であり，固定領域上で逆行列は一様に有界である．
+\[
+ \iota_{Y_{t,s}}\sigma_s=-\beta_t
+\]
+の解は $C^q$ で $O_K(\varepsilon_t)$ となる．
+固定 buffer と，forward/backward 双方の長さの評価により，
+時間 $0\le s\le1$ の flow $\varphi_{t,s}$ が $K$ の近傍に存在する．
+変分方程式からその $C^q$ 差も $O_K(\varepsilon_t)$ である．
+Moser の公式により $\varphi_t^*\sigma_t=\omega_i^\infty$ を得る．
+
+$\lambda_s=\lambda_0+s\beta_t$ とすると
+\[
+ \frac{d}{ds}\varphi_{t,s}^*\lambda_s
+ =d\!\left(\varphi_{t,s}^*(\lambda_s(Y_{t,s}))\right).
+\]
+従って $Q_t=\int_0^1\varphi_{t,s}^*(\lambda_s(Y_{t,s}))\,ds$ が使える．
+固定 $V$ 上では $\lambda_0$ とその必要な微分が有界なので表示された率を得る．
+これは領域を divisor へ動かしても $\lambda_0$ の norm が一様であるという主張ではない．
+
+Actual 計量での trajectory 長は，\eqref{ke:eq:component-fixed-convergence}と
+生成場の上界を組み合わせて評価する．
+また $E_t$ は正則なので $\sigma_t$ の計量は $E_t^*g_t$ である．
+その $C^1$ 収束と $\varphi_t$ の $C^1$ 評価から pullback metric の両側比較を得る．
+Symplectic embedding は Lagrangian 性と各 stratum の isotropic 性を保つ．
+\end{proof}
+
+\subsection{指定した collar germ の相対拡張}
+
+境界上で指定された写像を保存することは，上の absolute Moser とは異なる条件である．
+固定 collar $N\Subset U$ と，少し小さい $N'\Subset N$ を取る．
+全て有限個の compact collars の開近傍とし，その de Rham cohomology を用いる．
+
+\begin{proposition}[相対移送の flux 条件]
+\label{ke:component-relative-flux}
+$g_t:N\to V$ を恒等写像に $C^{q+1}$ で収束する diffeomorphism germ とし，
+$g_t^*\sigma_t=\omega_i^\infty$ と仮定する．
+$g_t$ を $U$ 上の小さい diffeomorphism $B_t$ へ延長し，
+$B_t=g_t$ on $N'$ とする．
+\[
+ \gamma_t=B_t^*\lambda_t-\lambda_0
+\]
+は $N'$ 上で閉じている．相対 Moser が存在するための条件は
+\begin{equation}\label{ke:eq:core-relative-flux}
+ [\gamma_t|_{N'}]\in
+ \operatorname{im}\bigl(H^1(U;\RR)\longrightarrow H^1(N';\RR)\bigr)
+\end{equation}
+である．この条件が成り立てば，$N'$ を一度縮めた collar 上で $g_t$ と一致し，
+命題\ref{ke:fixed-component-transfer}と同じ型の小変位評価を持つ
+$\omega_i^\infty$ から $\sigma_t$ への symplectic embedding を構成できる．
+ここで誤差の尺度は
+$\varepsilon_t+\|g_t-\id\|_{C^{q+1}}$ であり，
+$g_t$ の収束速度を $\varepsilon_t$ と同じとは仮定しない．
+特に $g_t^*\lambda_t-\lambda_0$ が collar 上で exact なら条件は満たされ，
+全移送も exact に選べる．
+
+逆に，$B_t^{-1}$ で直した移送が $N'$ を固定する isotopy によって
+恒等写像と結ばれるなら，\eqref{ke:eq:core-relative-flux}は必要である．
+これは点を固定する相対 symplectic 移送の条件であり，
+同じ fiber partition を延長できないことを意味しない．
+\end{proposition}
+
+\begin{proof}
+小さい $g_t$ は固定 chart 又は exponential chart で恒等写像と結べる．
+その isotopy の生成場を少し広い collar 内で cutoff すれば，
+小さい $B_t$ が得られる．この補助的な延長を symplectic と仮定する必要はない．
+
+\eqref{ke:eq:core-relative-flux}の下で，$U$ 上の closed form $\zeta_t$ を取り，
+$\gamma_t-\zeta_t=df_t$ on $N'$ とする．
+固定領域の有限次元 cohomology に基底を固定して選べば，
+$\zeta_t$ の norm を $\gamma_t$ の norm の固定倍で抑えられる．
+$f_t$ は各 collar 成分の一点で正規化し，固定した積分経路を使って同じ評価を得る．
+$\chi=1$ on a smaller collar，$\operatorname{supp}\chi\Subset N'$ とし，
+\[
+ \widetilde\gamma_t=\gamma_t-\zeta_t-d(\chi f_t)
+\]
+を用いる．これは小さい collar 上で零で，
+$d\widetilde\gamma_t=B_t^*\sigma_t-\omega_i^\infty$ である．
+二形式の差は小さいので，その凸 path は共通の複素構造を tame し非退化である．
+$\iota_Z\omega_s=-\widetilde\gamma_t$ を解くと，flow は当該 collar を点ごとに固定し，
+固定 buffer 内に留まる．その endpoint を $\psi_t$ とすれば $B_t\psi_t$ が求める移送である．
+$\zeta_t=0$ を選べる場合，primitive transport の差は全て exact である．
+
+必要性は対 $(U,N')$ の de Rham 完全列による．
+$B_t^*\sigma_t-\omega_i^\infty=d\gamma_t$ は $N'$ 上で零であり，
+その相対 $H^2(U,N')$ class は $[\gamma_t|_{N'}]$ の connecting class である．
+Collar を固定する symplectic isotopy があればこの相対 class は零なので，
+完全性から\eqref{ke:eq:core-relative-flux}が従う．
+\end{proof}
+
+\begin{example}[Fiber periods だけでは点固定の相対条件を検出しない]
+\label{ke:core-relative-flux-example}
+$U=D^2_I\times\TT^2_\theta$，
+$\omega_0=dI_1\wedge d\theta_1+dI_2\wedge d\theta_2$ とする．
+$r=|I|$ に対し，原点近くで $0$，境界近くで $1$ の smooth cutoff $\chi(r)$ を取り，
+\[
+ \gamma_\epsilon=\epsilon\chi(r)d\arg(I_1+\sqrt{-1}I_2),
+ \qquad \omega_\epsilon=\omega_0+d\gamma_\epsilon
+\]
+と置く．$d\gamma_\epsilon$ は二つの $I$ 方向だけの形式なので，
+$\omega_\epsilon^2=\omega_0^2$ であり全て symplectic である．
+各 $\{I\}\times\TT^2$ は両方に対して Lagrangian で，
+$\gamma_\epsilon$ の全 fiber periods は零である．
+境界 collar では二形式自体も一致する．
+しかし $\gamma_\epsilon$ はそこで base circle の非零 class を持ち，
+$H^1(U)$ からは延びない．実際，
+$\int_{D^2\times\{\theta\}}d\gamma_\epsilon=2\pi\epsilon$ である．
+従って境界を点ごとに固定する小さい相対 Moser は存在しない．
+既に同じ torus fibers が存在しているので，これは fibration の不存在例ではない．
+\end{example}
+
+\subsection{平均形式を介した exact collar germs}
+
+実際の averaging maps の比だけでは symplectic germ にならない．
+その source にある平均形式も $t$ とともに変化するからである．
+以下ではこの差を parameter 方向の equivariant Moser で補う．
+
+\begin{lemma}[Parameter 方向の同変 Moser と collar の exactness]
+\label{ke:component-exact-collar-germ}
+固定 collar に自由な $T^r$ 作用（$r=1$ 又は $2$）を与え，平均を $\mathcal A$ とする．
+$\sigma_t=d\lambda_t$，$\sigma_0=d\lambda_0$ とし，
+primitive 自体が必要な固定階で $\lambda_t\to\lambda_0$ と収束すると仮定する．
+二形式だけの収束では，primitive に非小な closed $1$-form を足せるため不十分である．
+上の graph-canonical gauge では\eqref{ke:eq:component-small-primitive}がこの仮定を保証する．
+$\kappa_t=d(\mathcal A\lambda_t)$ は symplectic であり，
+同じ chain homotopy の averaging maps $A_t$ が共通 source/image buffer 上で
+\[
+ A_t^*\sigma_t=\kappa_t,\qquad
+ A_t^*\lambda_t=\mathcal A\lambda_t+dQ_t
+\]
+を満たすと仮定する．十分小さい $t$ で，より小さい共通 collar 上に
+$g_t^*\sigma_t=\sigma_0$，$g_t^*\lambda_t-\lambda_0$ が exact である germ が存在し，
+$g_t\to\id$ は必要な固定階で成立する．
+$r=2$ では $A_0$ の全 torus fibers を $A_t$ の全 torus fibers へ写す．
+$r=1$ では actual normal actions と，同じ primitive から定義した
+normal moments を加法定数も含めて同定する．
+\end{lemma}
+
+\begin{proof}
+$\bar\lambda_s=\mathcal A\lambda_0+s\mathcal A(\lambda_t-\lambda_0)$，
+$\kappa_s=d\bar\lambda_s$ と置く．
+$\kappa_t\to\kappa_0$ と固定した非退化性の下界により，全 $\kappa_s$ は非退化である．
+\[
+ \iota_{Z_s}\kappa_s=-\mathcal A(\lambda_t-\lambda_0)
+\]
+の解は作用不変で小さく，共通 buffer 内の flow $b_t$ を持つ．
+Exact transport の計算から
+\[
+ b_t^*\kappa_t=\kappa_0,\qquad
+ b_t^*\mathcal A\lambda_t=\mathcal A\lambda_0+df_t
+\]
+を得る．全ての入力が作用不変なので $b_t$ は同変であり，
+$f_t$ も作用不変に選べる．従って全 torus orbits を全 torus orbits へ写す．
+$A_0$ の像上で
+\[
+ g_t=A_t\,b_t\,A_0^{-1}
+\]
+と置けば，所要の symplectic 性と exactness が従う．
+固定 domain 上で averaging の生成場は入力形式に滑らかに依存するため，
+$A_t\to A_0$，$b_t\to\id$，従って $g_t\to\id$ となる．
+$A_0$ 自体が恒等写像に近いと仮定する必要はない．
+
+$r=1$ で period-$1$ generator を $V$，
+$\mu_t=(\mathcal A\lambda_t)(V)$ とする．
+$b_t$ の同変性と $Vf_t=0$ から $\mu_t\circ b_t=\mu_0$ である．
+$A_t$ による actual action と moment の移送を合わせれば最後の主張を得る．
+\end{proof}
+
+本補題は，固定段階の component 側 collar に限れば，既存の normal/triple
+averaging の全 trajectories と buffer を固定して用いられる．
+座標・作用が $t$ に依存する場合は，射影 Morse 座標と
+節\ref{ke:neck-corner-transition-section}の gauge により固定作用へ戻して適用する．
+各固定 compact でこれらの gauges は $t=0$ のものへ滑らかに収束する．
+同じ $\lambda_t$ を各 patch で制限して使うことが必要であり，
+独立に選んだ primitive の第二 period の一致を結論しているのではない．
+
+Normal のみを持つ部分では，$b_t$ の reduced diffeomorphism で
+基準の marked foliation を移せばよい．固定 $t$ での滑らかさと
+marked relative isotopy class が保たれる．この自由を用いれば，
+第二 action を独立に指定してから一致させる必要はない．
+ただし triple overlap では移した葉が既存 corner の全 torus と一致すること，
+複数 patch の germs が一つの germ へ貼り合わさることを確認する必要がある．
+Normal action の一致だけでこの確認を省略しない．
+共通の normal-equivariant exact path があり支持を離して取れる場合には，
+節\ref{ke:relative-corner-section}と同じ Hamiltonian 比較を適用できる．
+Hamiltonian を normal 平均し，不変 cutoff を用いれば normal action も保たれる．
+
+\subsection{Component filling を追加入力とする部分延長}
+
+\begin{corollary}[固定段階の core filling から actual filling への移送]
+\label{ke:conditional-component-core-filling}
+系\ref{ke:neck-corner-saturated-union}の第 $j$ 段階を固定し，各 component に
+次のデータがあると仮定する．
+\begin{enumerate}
+\item $W_i$ 内の固定 compact saturated domain $K_{i,j}$ と，
+  その近傍上の $\omega_i^\infty$-Lagrangian fibration．
+  $K_{i,j}$ は選んだ logarithmic Weinstein core の全体を含み，
+  境界の full collar の型と marking は指定した neck/corner の component 極限に一致する．
+\item Compatible symplectic germs $g_{i,j,t}\to\id$ があり，
+  極限の境界 fibers を実際の部分 fibration の全 fibers へ写す．
+  その primitive の差は exact，または\eqref{ke:eq:core-relative-flux}を満たす．
+  単独 patch では補題\ref{ke:component-exact-collar-germ}を使えるが，
+  全 overlaps 上の compatibility もこの仮定に含める．
+\item 切断の前後に共通の固定 buffer があり，移送後の component domain と
+  既存部分 fibration の全交わりは，共通 collar 内の全 fibers の和になる．
+  異なる component cores は互いに素とし，切断は有限個とする．
+\end{enumerate}
+このとき $t$ を十分小さくすれば，$K_{i,j}$ の全体を actual $\omega_t$ に関して
+filling し，既存の neck/corner 部分 fibration と接着できる．
+Core の特異 fiber と isotropic strata は移送され，fiber の分断は起こらない．
+さらに $j$ ごとの領域と germs を先に選び，最後に $t_j$ を小さくする対角選択により，
+core 全体の正規化 ambient diameter と移送の正規化変位を零へ収束させられる．
+全曲面の被覆又は全点対 GH distortion を仮定なしに結論するものではない．
+\end{corollary}
+
+\begin{proof}
+命題\ref{ke:component-relative-flux}を各固定 $K_{i,j}$ に適用する．
+Embedding は共通 collar で $g_{i,j,t}$ に一致するため，
+移送した境界の葉は既存の実際の葉そのものである．
+全交わりの飽和により，有限個の compact 基底を共通の閉部分に沿って貼り合わせられる．
+各 fiber は compact で，貼合せの同値関係は有限個の閉 graph の和であるから
+Hausdorff な基底を得る．小さい開 collars により局所 fibration も接着する．
+Symplectic 移送は singular strata の isotropic 性を保つ．
+
+固定計量に関する $K_{i,j}$ の intrinsic diameter を $D_{i,j}<\infty$ とする．
+命題\ref{ke:fixed-component-transfer}と相対版の pullback 比較から，
+actual image の ambient diameter は，十分小さい $t$ で $2D_{i,j}$ 以下である．
+相対版の移送誤差を $\delta_{i,j,t}\to0$ と書く．有限個の $i$ に対し
+\[
+ R_t\ge j\left(1+\max_iD_{i,j}\right),\qquad
+ \max_i\delta_{i,j,t}<1/j\quad(0<|t|\le t_j)
+\]
+となるよう既存の $t_j$ をさらに小さくする．
+Core の normalized diameter は $2/j$ 以下となり，移送変位も消える．
+この追加条件は $\log m_t=o(R_t)$ と既存の固定段階の flow 条件に両立する．
+所定の速度で動く core 全体の一様比較は使っていない．
+\end{proof}
+
+\paragraph{既存 compactification と残る入力．}
+定理\ref{snc:main}と系\ref{comp:finite}は，compactifying pair 上の
+適切に選んだ smooth K\"ahler form と正の residues に対する有限相対構成である．
+一方，$\omega_i^\infty$ は divisor に cusp singularity を持つ complete KE form であり，
+その form 自体は当該定理の入力ではない．同じ cohomological class に由来するだけで，
+固定 full collar を保つ symplectic 同定が得られるとは限らない．
+命題\ref{snc:orthogonality}，\ref{snc:residue-change}，
+および注意\ref{snc:fixed-holonomy}の制約も保持する必要がある．
+
+従って系\ref{ke:conditional-component-core-filling}の第一入力，すなわち
+$\omega_i^\infty$ 自体に対する所要の core filling と境界 germ の存在は未解決である．
+その後の actual 移送の費用は，本節により固定段階の問題として処理できる．
+また動く cuts による全曲面の被覆は，固定した全空間の開近傍に対する
+補題\ref{glue:transport}と properness の議論だけからは従わない．
+Component image の小さい径も，source/neck の全 fibers の径，標的の基底値との適合性，
+および全曲面を通る shortcut の下界とは別の入力である．

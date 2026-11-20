@@ -1,0 +1,187 @@
+% !TeX root = ../../surface-lagrangian-torus-fibration.tex
+% 2026-11-21 / v1.0: 正の canonical potential による actual 球の深部局在．
+\subsection{Canonical potential と actual 球の深部局在}
+
+中央 rescaling 領域そのものの inradius は小さくなり得る．
+ここでは固定された physical source tube の中で正の potential を使い，
+中央の点を中心とする actual 球が，より広い深部 source 領域から出ないことを示す．
+中央 bidisc の内在的な buffer を仮定するものではない．
+
+固定 source 正規形 $xy=tz$ において
+\[
+ U_t(r,b)=\{|x|<r,\ |y|<r,\ |z|<b,\ xy=tz\}
+\]
+と置く．以下の半径は全て $t$ に依存せず，必要な source chart の中に
+正の余裕を持って含まれるように選ぶ．
+$t=\tau^2$ とし，chart 全体の非零正則 $2$-form を
+\[
+ \Omega_t=\frac{dx\wedge dy}{t}=dX\wedge dY,
+ \qquad (X,Y)=(x/\tau,y/\tau)
+\]
+に固定する．$x\ne0$ では $\Omega_t=d\log x\wedge dz$ であり，
+$y\ne0$ では $\Omega_t=-d\log y\wedge dz$ である．
+従ってこの frame は二つの座標軸を含めて一つの canonical potential を定める．
+
+\begin{lemma}[固定 source tube 上の正の potential]
+\label{ke:source-tube-potential}
+十分小さい固定 $r_+,b_+>0$ に対し，その少し外側の固定 chart を用意する．
+二つの active plane labels の caps を $\alpha_{x,t},\alpha_{y,t}$ と書くと，
+$U_t(r_+,b_+)$ 上で
+\begin{equation}\label{ke:eq:source-tube-density}
+ c\,\frac{L_t^2}{\alpha_{x,t}^2\alpha_{y,t}^2}|\Omega_t|^2
+ \le\omega_t^2\le
+ C\,\frac{L_t^2}{\alpha_{x,t}^2\alpha_{y,t}^2}|\Omega_t|^2
+\end{equation}
+が成り立つ．また $g_t\ge c\,g_{\mathrm{FS}}|_{X_t}$ である．
+ある固定 $C_0$ を選べば
+\begin{equation}\label{ke:eq:source-positive-potential}
+ u_t=\log\frac{\omega_t^2}{|\Omega_t|^2}+2R_t+C_0\ge1,
+ \qquad dd^c u_t=\omega_t,
+ \qquad \Delta_{g_t}u_t=c_4>0
+\end{equation}
+となる．最後の $c_4$ は実 Laplacian と K\"ahler 計量の規約だけで決まる定数である．
+さらに，tube 内の固定 rescaled bidisc $B_t(c)$ 上で $u_t\le C_c$ である．
+\end{lemma}
+
+\begin{proof}
+固定 chart では inactive caps と adjunction residue の unit は上下に一様有界である．
+関連 KE 主稿の capped density の定義と
+\texttt{coarse:cor:degree-d-volume-lower} により
+\[
+ \Omega_{t,d}^{\mathrm{low}}\asymp
+ \frac{L_t^2}{\alpha_{x,t}^2\alpha_{y,t}^2}|\Omega_t|^2,
+ \qquad \omega_t^2\ge c\Omega_{t,d}^{\mathrm{low}}.
+\]
+ここでは元の二つの plane representatives を保つ exact source 座標を用いている．
+Cap の定義から，$s_x=-\log|x|^2$，$s_y=-\log|y|^2$ として
+\begin{equation}\label{ke:eq:source-cap-depth}
+ \alpha_{x,t}\asymp A_0+\min\{s_x,L_t/2\},\qquad
+ \alpha_{y,t}\asymp A_0+\min\{s_y,L_t/2\},
+ \qquad \alpha_{x,t},\alpha_{y,t}\le C L_t
+\end{equation}
+である．軸上では対応する $s$ を $+\infty$ と解釈する．
+固定 Hermitian frame による有界な深度のずれは比較定数に含める．
+
+上界のため，固定 rescaled 中央 bidisc と，二つの正しい oriented half-arms
+によって $U_t(r_+,b_+)$ を覆う．中央部分では命題\ref{ke:source-central-density}，
+half-arm では関連 KE 主稿の
+\texttt{coarse:lem:pair-arm-density} と
+\texttt{coarse:lem:complete-volume-upper} を用いる．
+外側 normal 半径と residual 半径を先に大きく取り，
+これらの評価をその内部の固定 nested domains 上で適用する．
+Half-arm の比較定数は中央 gate まで一様であり，中央では両 caps が
+$L_t$ と比較可能なので，三領域の評価は
+\eqref{ke:eq:source-tube-density}に統合される．
+この被覆には誤った向きの arm の tensor 比較を用いない．
+
+従って $\log(\omega_t^2/\Omega_{t,d}^{\mathrm{low}})$ は tube 全体で上下有界であり，
+補題\ref{ke:capped-projective-lower}から射影計量の下界を得る．
+\eqref{ke:eq:source-tube-density}の下界と
+$\alpha_{x,t},\alpha_{y,t}\le CL_t$ により
+$\log(\omega_t^2/|\Omega_t|^2)+2R_t\ge-C$ である．
+これで $C_0$ を一度固定して $u_t\ge1$ とできる．
+$\Omega_t$ は非零正則 frame なので負 KE 方程式から $dd^c u_t=\omega_t$，
+その trace から正定数の Poisson 方程式を得る．
+中央 bidisc での上界は命題\ref{ke:source-central-density}そのものである．
+\end{proof}
+
+\begin{lemma}[正の Poisson 解の局所対数勾配]
+\label{ke:positive-poisson-log-gradient}
+実次元 $n$ の Riemannian 多様体で，閉包が定義域に compact に含まれる actual 球
+$B_g(p,2\rho)$ 上に
+\[
+ \operatorname{Ric}(g)\ge-(n-1)K g,\qquad
+ u\ge1,\qquad \Delta_g u=c_0>0
+\]
+が成り立つとする．このとき
+\begin{equation}\label{ke:eq:positive-poisson-log-gradient}
+ \sup_{B_g(p,\rho)}|\nabla\log u|_g^2
+ \le C_n\bigl(\rho^{-2}+K+c_0\bigr).
+\end{equation}
+球の体積下界，injectivity radius，および $u$ の上界を仮定しない．
+\end{lemma}
+
+\begin{proof}
+$f=\log u$，$Q=|\nabla f|^2$，$h=c_0/u$ と置くと
+\[
+ 0<h\le c_0,\qquad \Delta f=h-Q,\qquad \nabla h=-h\nabla f.
+\]
+Bochner の公式と $|\nabla^2 f|^2\ge(\Delta f)^2/n$ により
+\begin{align*}
+ \Delta Q
+ &\ge \frac2n(h-Q)^2
+      -2\bigl(h+(n-1)K\bigr)Q
+      -2\langle\nabla f,\nabla Q\rangle\\
+ &\ge \frac1n Q^2
+      -C_n(c_0+K)Q-C_nc_0^2
+      -2\langle\nabla f,\nabla Q\rangle.
+\end{align*}
+Distance cutoff $0\le\chi\le1$ を $B(p,\rho)$ 上で $1$，
+$B(p,2\rho)$ の境界近くで $0$ とし，
+\[
+ \frac{|\nabla\chi|^2}{\chi}\le C_n\rho^{-2},\qquad
+ \Delta\chi\ge-C_n(\rho^{-2}+K)
+\]
+と取る．これは Ricci 下界の Laplacian comparison による．
+Cut locus では距離の barrier，または通常の Calabi の小移動を用いる．
+$G=\chi Q$ の正の最大点で $\nabla Q=-Q\nabla\chi/\chi$ を代入し，
+$\Delta G\le0$ にさらに $\chi$ を掛けると
+\[
+ 0\ge \frac1n G^2-C_n\rho^{-1}G^{3/2}
+       -C_n(c_0+K+\rho^{-2})G-C_nc_0^2.
+\]
+Young の不等式で $G^{3/2}/\rho$ を $G^2/(2n)+C_n\rho^{-4}$ に吸収すると
+$G\le C_n(\rho^{-2}+K+c_0)$ を得る．$\chi=1$ の内球で結論となる．
+\end{proof}
+
+\begin{proposition}[中央 source の actual 球は深部に留まる]
+\label{ke:source-potential-buffer}
+固定した $c_1$ と
+\[
+ c_1^2<b<\beta
+\]
+を取り，これらを含む固定 source tube とさらに外側の tube を用意する．
+$\beta$ は命題\ref{ke:source-shell-gaussian-tail}の shell の半径でよい．
+ある $\delta,\kappa>0$ が存在し，十分小さい全ての $t$ と
+全ての $p\in\overline{B_t(c_1)}$ に対して
+\begin{equation}\label{ke:eq:source-potential-buffer}
+ B_{g_t}(p,\delta)
+ \subset\mathcal D_{t,\kappa}(b)
+ :=\{s_x\ge\kappa L_t,\ s_y\ge\kappa L_t,\ |z|<b\}
+\end{equation}
+が成り立つ．右辺は上で固定した source chart 内の集合である．
+球は全曲面の ambient 距離で定義し，軸上の深度は $+\infty$ とする．
+定数は固定半径，族と次数に依存してよいが，$p,t$ に依存しない．
+\end{proposition}
+
+\begin{proof}
+正の固定幅を持つ三つの nested physical tubes を取り，最内側の residual 半径を
+$b$ とし，その中に $\overline{B_t(c_1)}$ を入れる．
+固定 ambient 座標 $x,y,z$ の微分は Fubini--Study 計量について有界であり，
+外側 tube 上で前補題の $g_t\ge c g_{\mathrm{FS}}$ が成り立つ．
+従って，ある $\rho>0$ に対し，中間 tube の各点の $B_{g_t}(q,2\rho)$ は
+外側 tube に留まる．実際，最初の退出までに $x,y,z$ の一つが固定正幅だけ
+変化するため，その部分だけで固定正の長さを要する．
+同じ理由により $\delta>0$ を十分小さく取ると，中央の各 $p$ から長さ
+$2\delta$ 未満の曲線は最内側 tube に留まり，特に $|z|<b$ を保つ．
+
+外側 tube の $u_t\ge1$，$\Delta u_t=c_4$ と
+$\operatorname{Ric}(g_t)=-g_t$ に補題\ref{ke:positive-poisson-log-gradient}を用いると，
+中間 tube 上で $|\nabla\log u_t|\le C$ である．
+中央では $u_t(p)\le C$ なので，$q\in B_{g_t}(p,\delta)$ へ至る長さ
+$2\delta$ 未満の経路に沿って積分して
+\[
+ u_t(q)\le u_t(p)e^{2C\delta}\le C'
+\]
+を得る．経路は上の first-exit 評価により勾配評価の領域内にある．
+
+一方，\eqref{ke:eq:source-tube-density}の下界から
+\[
+ u_t(q)\ge
+ 2\log\frac{L_t^2}{\alpha_{x,t}(q)\alpha_{y,t}(q)}-C.
+\]
+従って $\alpha_{x,t}(q)\alpha_{y,t}(q)\ge cL_t^2$．
+各 cap が $CL_t$ 以下なので，両方とも $c'L_t$ 以上である．
+\eqref{ke:eq:source-cap-depth}を用い，必要なら $\kappa$ を小さくすると
+$s_x(q),s_y(q)\ge\kappa L_t$ を得る．これで全 actual 球について包含が従う．
+\end{proof}

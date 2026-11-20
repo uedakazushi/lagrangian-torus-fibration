@@ -1,0 +1,182 @@
+% !TeX root = ../../surface-lagrangian-torus-fibration.tex
+% 2026-11-21 / v1.0: Logarithmic cover 上の Gaussian 評価と一周期への下降．
+\subsection{広い source 中央帯の Gaussian tail}
+\label{ke:source-wide-gaussian-section}
+
+固定 rescaled core の距離評価を actual 球に用いるには，球が core を出た場合も
+扱う必要がある．そこで normal 深度が $L_t$ の固定正割合以上である領域全体へ，
+同じ source-free shell を基準とした Gaussian 評価を延長する．
+Logarithmic cover の imaginary 方向には $L_t$ 個程度の同じ周期が含まれ，
+その周期数が actual volume の係数 $L_t^{-1}$ を与える．
+
+\begin{proposition}[広い中央帯の Gaussian 積分]
+\label{ke:source-wide-gaussian-tail}
+補題\ref{ke:source-tube-potential}の固定 source tube と，
+命題\ref{ke:source-shell-gaussian-tail}の shell $\Sigma_t$ を用いる．
+固定した $0<\kappa<1/4$ と $c_1^2<b<\beta$ に対し
+\[
+ D_{t,\kappa,b}
+ =\{|z|\le b,\quad s_x,s_y\ge\kappa L_t,\quad xy=tz\}
+\]
+と置く．零の座標の深度は $+\infty$ とする．十分小さい $t$ ではこの集合は
+固定 source tube 内に含まれる．曲面全体の actual ambient 距離に対して
+\[
+ v_t(q)=d_{g_t}(q,\Sigma_t)
+\]
+と定めると，$t$ に依らない $a_\kappa,C_\kappa>0$ が存在して
+\begin{equation}\label{ke:eq:source-wide-gaussian-tail}
+ \int_{D_{t,\kappa,b}}\exp(a_\kappa v_t^2)\,\omega_t^2
+ \le C_\kappa L_t^{-1}
+\end{equation}
+が成り立つ．特に任意の $A\ge0$ について
+\[
+ \operatorname{vol}_{g_t}
+ \{q\in D_{t,\kappa,b}:d_{g_t}(q,\Sigma_t)>A\}
+ \le C_\kappa L_t^{-1}\exp(-a_\kappa A^2).
+\]
+定数は固定半径と tube，族，次数，$\kappa$ に依存してよい．
+\end{proposition}
+
+\begin{proof}
+以下では $L=L_t$ と略記する．中央 core $\overline{B_t(c_1)}$ と二つの集合
+\[
+ A^x_t=D_{t,\kappa,b}\cap\{|x|\ge c_1|t|^{1/2}\},\qquad
+ A^y_t=D_{t,\kappa,b}\cap\{|y|\ge c_1|t|^{1/2}\}
+\]
+が $D_{t,\kappa,b}$ を覆う．Core には
+命題\ref{ke:source-shell-gaussian-tail}を少し広い固定半径で適用できる．
+その actual Gaussian 積分は $CL^{-2}$ 以下なので，以下では $A^x_t$ を扱う．
+
+\emph{固定サイズの logarithmic cover を取る．}
+$0<\epsilon<\kappa/12$，$b<b_1<b_2<\beta$ を固定する．
+$(w,z)\in\mathbb C^2$ に対して
+\[
+ \Phi^x_t(w,z)=(e^{Lw},tze^{-Lw},z)
+\]
+と置く．固定された凸領域を
+\[
+ \begin{split}
+ \Omega^+={}&\{-1/4-3\epsilon<\Re w<-\kappa/2+3\epsilon,
+                \ |\Im w|<3,\ |z|<b_2\},\\
+ \Omega={}&\{-1/4-2\epsilon<\Re w<-\kappa/2+2\epsilon,
+                \ |\Im w|<2,\ |z|<b_1\}
+ \end{split}
+\]
+とし，その内部の compact を
+\[
+ K=\{-1/4-\epsilon\le\Re w\le-\kappa/2+\epsilon,
+          \ |\Im w|\le1,\ |z|\le b\}
+\]
+とする．これらは $t$ に依存しない．
+外側領域 $\Omega^+$ では
+\[
+ (\kappa-6\epsilon)L<s_x<(1/2+6\epsilon)L,
+ \qquad
+ s_y=L-s_x-\log|z|^2
+       \ge(1/2-6\epsilon)L-\log b_2^2
+\]
+である．$z=0$ では後者を $+\infty$ と解釈する．
+従って $x,y$ は固定 tube の normal 半径より十分小さく，
+二つの capped 深度はいずれも $L$ と一様比較可能である．
+ここでは $x$-oriented の条件を outer cover 全体に要求していない．
+Outer cover の一部が反対の oriented arm 又は core に入っても，
+補題\ref{ke:source-tube-potential}の tube 全体の評価を使える．
+
+正則 volume frame $\Omega_N=d\log x\wedge dz$ に対し
+$F_t=\log(\omega_t^2/|\Omega_N|^2)$ と書く．同補題から
+\[
+ |F_t\circ\Phi^x_t+2\log L|\le C_\kappa
+ \quad\text{on }\Omega^+.
+\]
+また
+\[
+ (\Phi^x_t)^*\Omega_N=L\,dw\wedge dz
+\]
+なので，$\widetilde\omega_t=(\Phi^x_t)^*\omega_t$ および
+$\widetilde u_t=F_t\circ\Phi^x_t+2\log L$ は
+\[
+ dd^c\widetilde u_t=\widetilde\omega_t,
+ \quad \|\widetilde u_t\|_{L^\infty(\Omega^+)}\le C_\kappa,
+ \quad c_\kappa|dw\wedge dz|^2
+       \le\widetilde\omega_t^2
+       \le C_\kappa|dw\wedge dz|^2
+\]
+を満たす．Cover の大域的単射性は用いず，$x\ne0$ 上での局所正則同型性だけを使う．
+
+\emph{同じ shell を基準に complex Sobolev norm を抑える．}
+$\widetilde v_t=v_t\circ\Phi^x_t$ とする．固定 cutoff と部分積分により
+\[
+ \int_{\Omega}\widetilde\omega_t\wedge\omega_{\rm E}\le C_\kappa
+\]
+である．$\Omega$ の凸性を用いる
+命題\ref{ke:source-central-mean-distance}と同じ線分積分により，
+\[
+ \int_{\Omega\times\Omega}
+ d_{g_t}(\Phi^x_t p,\Phi^x_t q)^2\,dV_{\rm E}(p)dV_{\rm E}(q)
+ \le C_\kappa
+\]
+となる．Ambient 距離は，cover 上の線分を $X_t$ に写した経路の長さ以下であるため，
+cover の非単射性はこの不等式を妨げない．
+
+正の固定 Euclidean 体積を持つ $E\Subset\Omega$ を，その $z$ 座標が
+$0<\delta_1\le|z|\le\delta_2<b_1$ を満たすように取る．
+$\Phi^x_t(E)$ と $\Sigma_t$ は，$\delta_1/2<|z|<\beta+\delta_3$ という
+一つの固定連結 source-free annulus 上にある．ここで $\delta_3>0$ は固定で，
+source chart の中に取る．両者では二つの normal 深度が $L$ の固定正割合以上なので，
+canonical moment は $C_\kappa/L$ 以下である．
+系\ref{ke:fixed-base-central-band}から
+\[
+ \sup_E\widetilde v_t\le C_\kappa
+\]
+を得る．従って上の二点平均を $E\times\Omega$ 上で用いると
+$\|\widetilde v_t\|_{L^2(\Omega)}\le C_\kappa$ である．
+Ambient 距離の Lipschitz 性から
+\[
+ \sqrt{-1}\partial\widetilde v_t\wedge\bar\partial\widetilde v_t
+ \le C\widetilde\omega_t
+\]
+もほとんど至る所で成り立つ．よって $\Omega$ 上の $W_*^{1,2}$ norm は
+$t$ に一様である．Dinh--Marinescu--Vu\cite[Theorem~1.2]{DMVMT}を
+固定 Euclidean potential が与える測度と $K\Subset\Omega$ に適用し，
+さらに $\widetilde\omega_t^2\le C_\kappa dV_{\rm E}$ を用いると
+\begin{equation}\label{ke:eq:source-cover-gaussian}
+ \int_K\exp(a_\kappa\widetilde v_t^2)\,\widetilde\omega_t^2
+ \le C_\kappa
+\end{equation}
+を得る．ここでも $\widetilde u_t$ の一様 H\"older 性は仮定しない．
+
+\emph{一周期に降ろす．}
+$T_L=2\pi/L$ とすると
+\[
+ \Phi^x_t(w+\sqrt{-1}T_L,z)=\Phi^x_t(w,z)
+\]
+である．従って $\widetilde v_t$ と $\widetilde\omega_t^2$ の係数は
+$\Im w$ に関して同じ周期 $T_L$ を持つ．区間 $[-1,1]$ は
+$N_L=\lfloor2/T_L\rfloor\ge cL$ 個の連続する全周期を含む．
+固定した $(\Re w,z)$ ごとの一周期積分は全周期で等しいから，
+\eqref{ke:eq:source-cover-gaussian}を $N_L$ で割ると
+\[
+ \int_{J\times[0,T_L)\times\overline\Delta_b}
+       \exp(a_\kappa\widetilde v_t^2)\,\widetilde\omega_t^2
+ \le C_\kappa L^{-1},
+ \qquad J=[-1/4-\epsilon,-\kappa/2+\epsilon]
+\]
+となる．ここでは $J$ が $\Re w$，$[0,T_L)$ が $\Im w$ の区間を表す．
+この基本領域は，境界の零測度集合を除いて $\Phi^x_t$ の像を一度ずつ覆う．
+
+$A^x_t$ の全ての点では
+\[
+ \kappa L\le s_x\le L/2-\log c_1^2
+\]
+なので，十分大きい $L$ に対し $\Re w\in J$ となる．
+従って $A^x_t$ 上の actual Gaussian 積分は $C_\kappa/L$ 以下である．
+$y$-chart には $\Phi^y_t(w,z)=(tze^{-Lw},e^{Lw},z)$ を使う．
+$d\log x\wedge dz=-d\log y\wedge dz$ なので同じ canonical potential を用いることができ，
+全く同じ評価を得る．二つの arm と core の上界を加えれば
+\eqref{ke:eq:source-wide-gaussian-tail}が従う．
+体積 tail はこの不等式から直ちに得られる．
+\end{proof}
+
+この命題自体は actual ball が $D_{t,\kappa,b}$ に留まることを主張しない．
+球の領域制御には命題\ref{ke:source-potential-buffer}を，球の体積下界には
+Ricci 下界の比較定理を別々に用いる．
