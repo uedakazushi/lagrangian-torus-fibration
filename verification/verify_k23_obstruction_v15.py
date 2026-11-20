@@ -252,7 +252,7 @@ def main():
 
     here = Path(__file__).resolve().parent
     source_name = "k23_obstruction_v15.tex"
-    source = next(p for p in (here / source_name, here.parent / "paper" / source_name) if p.is_file())
+    source = next(p for p in (here / source_name, here.parent / "papers/sections/paper" / source_name) if p.is_file())
     out = here / "k23_obstruction_verification_v15.json"
     result = {
         "version": "v15", "passed": True,

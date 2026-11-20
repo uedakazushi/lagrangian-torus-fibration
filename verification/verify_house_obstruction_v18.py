@@ -233,7 +233,7 @@ def main():
         small.append({'s_plus_one':d,'s':s,'T':T,'accepted':ok})
     assert [(r['s'],r['T']) for r in small if r['accepted']]==[(1,6)]
     assert [(S2,S3) for S2 in range(2,5) for S3 in range(2,5) if S2+S3<=4]==[(2,2)]
-    proof=HERE.parent/'paper/house_support_obstruction_v18.tex'
+    proof=HERE.parent/'papers/sections/paper/house_support_obstruction_v18.tex'
     result={'scope':'Unbounded G5_5 support exclusion in the standard quintic arithmetic gluing problem',
         'status':'PASS','denominator_cutoff':None,
         'assumptions':['integer row sums','integer pair products','positive local weights',

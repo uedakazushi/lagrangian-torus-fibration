@@ -304,7 +304,7 @@ def main():
         print(json.dumps(reconstruct_axis(*args.axis),ensure_ascii=False,indent=2));return
     checks,cert_x2,small,cert_width=symbolic_certificates()
     root=Path(__file__).resolve().parent
-    proof=args.proof or next(p for p in [root/'high_d_proportional_reduction_v24.tex',root.parent/'paper/high_d_proportional_reduction_v24.tex'] if p.is_file())
+    proof=args.proof or next(p for p in [root/'high_d_proportional_reduction_v24.tex',root.parent/'papers/sections/paper/high_d_proportional_reduction_v24.tex'] if p.is_file())
     fixtures=[reconstruct_axis(s,z) for s,z in [(1,1),(1,2),(2,1),(3,2),(4,3),(8,4)]]
     data={'version':'v24','status':'PASS','scope':'Unbounded proportional-sector reduction: x=y=0 and 0<=n<=z; complete fixed-(s,z) axis reconstruction.',
           'global_three_high_nonexistence_claim':False,'global_proportional_nonexistence_claim':False,

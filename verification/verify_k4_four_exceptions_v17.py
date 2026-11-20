@@ -112,7 +112,7 @@ def sha(p):
  return hashlib.sha256(p.read_bytes()).hexdigest()
 
 def source_file(name):
- return next(p for p in [HERE/name,HERE.parent/'paper'/name,
+ return next(p for p in [HERE/name,HERE.parent/'papers/sections/paper'/name,
                         HERE.parents[1]/'deliverables/general_type_surface_fibration_v16/paper'/name]
              if p.is_file())
 

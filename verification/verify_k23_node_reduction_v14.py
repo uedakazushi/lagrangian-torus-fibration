@@ -123,7 +123,7 @@ def main():
     assert D_sums==[7,-10,5]
     assert all(d!=0 for d in D_sums)
     source_name='k23_node_reduction_v14.tex'
-    source=next(p for p in (HERE/source_name,HERE.parent/'notes'/source_name) if p.exists())
+    source=next(p for p in (HERE/source_name,HERE.parent/'papers/sections/notes'/source_name) if p.exists())
     result={
         'version':'v14','passed':True,
         'scope':'Necessary node constraints for K2,3 high support; no complete K2,3 exclusion or geometric existence is claimed.',

@@ -117,7 +117,7 @@ def main():
     assert {k:(groups[k],node_groups[k]) for k in groups}==EXPECTED
     assert sources=={0:120,1:168,2:333,3:333}
     source=HERE/'k4_two_exception_obstruction_v17.tex'
-    if not source.is_file():source=HERE.parent/'paper'/source.name
+    if not source.is_file():source=HERE.parent/'papers/sections/paper'/source.name
     result={
         'version':'v17','passed':True,
         'scope':'Complete finite supplement to the general exclusion of exactly two exceptional edges in K4 high support with an all-low hub.',

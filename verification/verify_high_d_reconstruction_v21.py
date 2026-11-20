@@ -346,7 +346,7 @@ def main():
     proof_name = "high_d_eisenstein_reconstruction_v21.tex"
     proof_path = next(path for path in (
         Path(__file__).with_name(proof_name),
-        Path(__file__).parent.parent / "paper" / proof_name,
+        Path(__file__).parent.parent / "papers/sections/paper" / proof_name,
     ) if path.is_file())
     result = {
         "status": "PASS",

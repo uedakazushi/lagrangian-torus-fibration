@@ -368,7 +368,7 @@ def main():
         parser.error("use --fixed or --scan, not both")
     proof_name = "high_d_fixed_low_row_finiteness_v22.tex"
     here = Path(__file__).resolve().parent
-    proof_candidates = (here / proof_name, here.parent / "paper" / proof_name)
+    proof_candidates = (here / proof_name, here.parent / "papers/sections/paper" / proof_name)
     proof_path = next((path for path in proof_candidates if path.is_file()), None)
     result = dict(status="PASS", version=22,
                   theorem="finite reconstruction for a fixed two-integer low row, and exclusion of the symmetric sector",

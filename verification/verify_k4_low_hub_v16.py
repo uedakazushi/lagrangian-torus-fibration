@@ -201,7 +201,7 @@ def main():
     path = Path(__file__).resolve()
     source = path.with_name('k4_low_hub_reduction_v16.tex')
     if not source.exists():
-        source = path.parent.parent/'paper'/source.name
+        source = path.parent.parent/'papers/sections/paper'/source.name
     assert source.exists(), source
     result = {
         'version': 'v16', 'passed': True,

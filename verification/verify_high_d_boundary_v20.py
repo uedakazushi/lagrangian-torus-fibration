@@ -213,7 +213,7 @@ assert known_singular_example['D'] == ['-997', '-4007', '4671', '333']
 
 script = Path(__file__).resolve()
 proof_candidates = [script.with_name('high_d_nonsingular_reduction_v20.tex'),
-                    script.parent.parent/'paper/high_d_nonsingular_reduction_v20.tex']
+                    script.parent.parent/'papers/sections/paper/high_d_nonsingular_reduction_v20.tex']
 proof = next(path for path in proof_candidates if path.is_file())
 report = {
     'version': 'v20', 'status': 'PASS',
