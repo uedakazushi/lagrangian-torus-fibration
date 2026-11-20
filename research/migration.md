@@ -4,7 +4,7 @@
 
 ## 原資料と配置
 
-第25版の4本の現行TeX（幾何、整数接着、meridian置換、研究ノート）をpapers/直下の全文主原稿にし、input先と探索パスだけを変更した。必要な分割ソースと過去の検証器・証明書が参照する証明をpapers/sections/へ保持した。ソース対応とhashはsource-manifest.json。原稿・証明のバイト一致と、主原稿のinputパス変換を区別する。
+第25版の4本の現行TeX（幾何、整数接着、meridian置換、研究ノート）をpapers/直下の全文主原稿にし、移行時にはinput先と探索パスを変更した。その後の基底の位相比較と研究再開先の修正があるため、`source-manifest.json` では `source_sha256`（元資料）と `sha256`（現行）を分ける。必要な分割ソースと過去の検証器・証明書が参照する証明をpapers/sections/へ保持した。ソース対応とhashはsource-manifest.json。原稿・証明のバイト一致と、主原稿のinputパス変換を区別する。
 
 証明書の相対パスを保つため、ルートpaper/、paper_arithmetic/、paper_surgery/、notes/は分割原稿ディレクトリへのsymlinkである。実体の重複はない。移行前の旧TeXのうち、現行原稿と保存した検証器・証明書から参照されない6断片は持ち込まなかった。元資料は手元にも残している。
 
