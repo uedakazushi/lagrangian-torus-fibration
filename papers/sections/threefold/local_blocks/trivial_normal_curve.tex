@@ -167,6 +167,39 @@ $e=\langle\mathsf H,[S]\rangle$ とすれば tangent--normal splitting から
 $2g(S)-2=(d-5)e$ である。今回の $e=d-2$ の曲線はこれを満たす。
 この等式だけから曲線の存在を推論したのではなく、前の二補題で実際に構成した。
 
+\begin{corollary}[Trivial-normal 曲線の次数と焦点ブロック数の数値制約]
+\label{tnc:degree-genus-parity}
+$d\ge6$ とし，$X_d\subset\mathbb P^4$ を smooth degree-$d$ hypersurface，
+$S\subset X_d$ を connected closed embedded symplectic surface とする．
+$e=\langle\mathsf H,[S]\rangle>0$，$g=g(S)$ とおく．
+Symplectic normal bundle $N_{S/X_d}$ が自明なら
+\[
+ 2g-2=(d-5)e.
+\]
+従って $d$ が偶数の場合には $e$ は偶数である．
+さらに，$S$ に極大・極小のない circle-valued Morse map を選び，
+その Reeb graph が一価頂点のない三価graphであるなら，
+graphの頂点数，従って曲線方向の saddle の数は
+\[
+ n=2g-2=(d-5)e
+\]
+に限られる．この制約は埋め込みの実現可能性を十分に特徴付けるものではない．
+\end{corollary}
+
+\begin{proof}
+Adjunction は
+$c_1(TX_d)=(5-d)\mathsf H$ を与える．
+Symplectic bundle の分解 $TX_d|_S=TS\oplus N_{S/X_d}$ から
+\[
+ 0=\langle c_1(N_{S/X_d}),[S]\rangle
+  =(5-d)e-(2-2g)
+\]
+となる．$2g-2$ は偶数なので $d-5$ が奇数なら $e$ は偶数である．
+最後に，closed surface上のMorse関数のEuler公式は，
+極大・極小がなくsaddleだけなら
+$\chi(S)=-n$ を与える．三価graphの頂点はこれらのsaddlesに対応する．
+\end{proof}
+
 \subsection{曲線方向の自由端を持たない actual focus--hyperbolic block}
 
 \begin{corollary}[Closed curve 上の non-elliptic block]\label{tnc:closed-block}
