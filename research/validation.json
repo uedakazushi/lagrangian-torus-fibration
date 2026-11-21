@@ -1,13 +1,13 @@
 {
   "date": "2026-11-21",
-  "version": "3.4",
+  "version": "3.5",
   "scope": "複素次元2の現行研究状態。旧三次元稿の組版・監査記録ではない。数学的な証明と、その再監査、組版、整数計算、GitHub保存、Cloudタスク起動を区別する。",
   "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。次の優先課題は公表前の包括的依存監査・一次文献比較・新規性確認・主稿構成整理。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
   "mathematics": {
     "documented_local_results": [
-      "全閉triple cornerの局所actual KE–Lagrangian GH比較と、任意の遅いcut m→∞, log(m)=o(R)への拡張",
+      "全閉triple cornerの局所actual KE–Lagrangian比較：m≥m_*, R≥R_*, log(m+1)+4logR≤R/8 の有限cutで一様な誤差 C[m^-1+(log(m+1)+logR)/R]。固定m後にt small可。m→∞, logm=o(R)でGH収束。",
       "二段階平均・共通normal circleと作用周期・短円からのMoser buffer",
       "ke:source-reduction-pinched-fiber, ke:projected-source-neck: 固定残余base上のsource-inclusive actual neck。固定点でsmooth exact transport、canonical moment=0、位相商I×P、閉一重pinched torusとprimitive消滅cycle、明示symplectic線形変換によるfocus二次型。零reductionの通常の滑らかさは仮定しない。",
       "固定source-free baseの同一normal moment level全体のactual ambient直径O(1)、Moser像と正規化後O(R^-1)",
@@ -94,67 +94,29 @@
     },
     "this_audit": {
       "date": "2026-11-21",
-      "scope": "改訂24：共通anchorの全保持neck区間、cap/core分割とfirst-exit、同一momentのcorner参照torus、有限cut版と同じf_tの全域値比較を独立内部点検。Corner移送・cutoffsの段階一様性と残余接続定数のcutへの吸収を確認し、上下両側の固定族係数によるbudgetを整備。全既存証明・全外部入力の包括的監査ではない。",
-      "reexecuted_build": true,
+      "scope": "改訂25：finite-cut closed-cornerの量化、全target端点の共通moment portalと全fiber合併、raw/actual momentとtail buffer、有限galleryのambient端点距離を独立内部点検。FBPの構成計量とFHJの孤立楕円特異点の負KE cusp閉鎖を一次資料の指定箇所で比較。全主稿・外部入力の包括的再監査ではない。",
+      "reexecuted_build": false,
       "reexecuted_static_checks": true,
       "reexecuted_python_suite": false,
       "six_label_finite_command": "python3 verification/verify_cubical_six_label_geometry.py",
-      "six_label_finite_result": "既存の有限検算PASSを保持。改訂24では計算箇所を変更せず再実行していない。",
+      "six_label_finite_result": "既存の有限検算PASSを保持。改訂25では計算箇所を変更せず再実行していない。",
       "independent_internal_proof_review": [
-        "ke:fixed-base-neck-moser (finite cut)",
-        "ke:fixed-base-moment-connectors (finite cut)",
-        "ke:fixed-base-central-band (finite cut)",
-        "ke:anchor-trimmed-neck-domain",
-        "ke:core-depth-upper (boundary first exit)",
-        "ke:removed-corner-target-cap",
-        "ke:common-edge-moment-profile",
-        "ke:common-neck-longitude",
-        "ke:corner-cap-disk",
-        "ke:global-base-parameterization",
+        "ke:slow-cut-closed-corner-gh (uniform finite-cut formulation and external input quantifiers)",
+        "topo:coordinate-retraction",
+        "topo:six-label-gallery",
+        "topo:finite-endpoint-comparison",
+        "ke:component-neck-tail-depth (raw/actual moments and buffer)",
         "ke:collapsed-tree-common-moment",
-        "ke:neck-base-value-control",
-        "ke:global-depth-lipschitz (domain and normalization)",
-        "ke:same-moment-corner-reference",
-        "ke:global-depth-base-comparison",
-        "ke:global-ambient-lower",
-        "ke:eq:global-realization-explicit-cut-budget (fixed-family coefficient)"
+        "ke:collapsed-tree-full-fiber-collapse",
+        "ke:coherent-corner-portals (closed endpoints and fixed anchor points)",
+        "ke:point-to-corner-portal",
+        "ke:global-ambient-upper (finite gallery error budget)",
+        "ke:actual-global-fibration (whole-fiber relation used in support-3 classification)"
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
-      "visual_pages_reviewed": [
-        1,
-        17,
-        18,
-        81,
-        82,
-        83,
-        84,
-        148,
-        149,
-        163,
-        164,
-        165,
-        167,
-        168,
-        169,
-        170,
-        171,
-        172,
-        173,
-        179,
-        180,
-        181,
-        182,
-        183,
-        184,
-        185,
-        186,
-        187,
-        190,
-        191,
-        192
-      ],
-      "current_build_status": "Revision 24 final source compiled successfully to 254 pages; 31 selected pages from the final PDF visually inspected. No unresolved references/citations, duplicate labels, missing glyphs, or overfull boxes. Static repository checks passed."
+      "visual_pages_reviewed": [],
+      "current_build_status": "Revision 25 sources updated; compilation and visual review pending. Latest completed build remains revision 24."
     }
   },
   "cloud_codex": {
@@ -223,6 +185,18 @@
       "Maksymenko": "Comment. Math. Helv. 80 (2005), 655–690, DOI 10.4171/CMH/30. Published PDF https://ems.press/content/serial-article-files/43060 : Main Theorem p.658, Lemma 4.1 p.665, §6.1 Lemma 6.4 p.668 checked.",
       "Vu_Ngoc": "Topology 42 (2003), 365–380, Theorem 2.1. Primary arXiv:math/0208245, PDF p.4 checked; semiglobal formal power series invariant distinguished from node monodromy.",
       "scope": "既知の局所型・Morse mapping空間と本稿のactual neckへの適用を区別。固定Tは明示的isotopiesで構成し、一般分類のみから推論しない。"
+    },
+    "publication_metric_comparison": {
+      "FBP": {
+        "source": "Fernández de Bobadilla–Pełka, arXiv:2312.13248v4; Theorem 6.14, Example 5.8, Introduction, Remark 7.4",
+        "url": "https://arxiv.org/html/2312.13248v4",
+        "verified": "一次HTMLの指定箇所で部分領域・構成Kähler形式・GH収束の範囲を確認。Actual KE形式との同一視はせず、証明入力にしない。"
+      },
+      "FHJ": {
+        "source": "Fu–Hein–Jiang, A continuous cusp closing process for negative Kähler–Einstein metrics, GAFA 35 (2025), 542–632, §1.1 Main Theorem",
+        "url": "https://doi.org/10.1007/s00039-025-00708-y",
+        "verified": "掲載版一次HTMLで具体的sexticの孤立楕円特異点・負KE cusp閉鎖・Tian–Yau bubbleの主張を確認。全gluing証明の再監査なし。本稿への解析入力ではない。"
+      }
     }
   },
   "other_papers": {

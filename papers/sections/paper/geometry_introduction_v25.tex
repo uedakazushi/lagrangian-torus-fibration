@@ -187,6 +187,9 @@ component の内部に対応する残余領域を埋めることは追加の問�
 同論文の Example 5.8 もこの差を説明している．
 本稿では，この残余領域に core を含む finite compactification を入れ，
 double-curve necks および triple-point models と有限の overlaps 上で接着する．
+同論文の Theorem 6.14 は，構成した Kähler 計量について適切な規格化の下での
+GH 収束も与えている．その計量と本稿の actual 負 KE 計量の区別は
+第\ref{intro:ke-collapse}節で述べる．
 
 central fiber から symplectic parallel transport で fibration を移す考え方には，
 Ruan の Calabi--Yau hypersurface の構成\cite{Ruan}がある．
@@ -531,6 +534,24 @@ $\PP^2$ から $d-1$ 本の直線を除いた $d$ 個の完備 KE 曲面とな�
 同定理の相対 ample 仮定をそのまま使えない．
 Mandel\cite{MandelNegativeKE}の負 KE neck の構成も，
 我々の compact family との全域的な計量比較を自動的には与えない．
+
+Fu--Hein--Jiang\cite[\S1.1, Main Theorem]{FuHeinJiangCusp}は，
+孤立楕円特異点へ退化する六次曲面の actual 負 KE 計量を接着により解析し，
+形成される complex hyperbolic cusp の先端に Tian--Yau gravitational instanton が
+bubble として現れることを証明している．これは負 KE 退化の実際の計量を扱う
+先行結果であり，全平面 SNC 退化の全曲面を同じ Lagrangian 射影で比較する
+本稿の主張とは，退化模型と極限の尺度を区別して比較する．
+
+Fernández de Bobadilla--Pełka\cite[Theorem 6.14]{FBP}の GH 定理で使われるのは，
+選んだ Kähler 形式への exact な補正から作る $\omega_q^\varepsilon$ である．
+Calabi--Yau の場合にも，これと Ricci-flat 形式は区別されている
+\cite[Introduction, Remark 7.4]{FBP}．同じ cohomology class の形式を各固定 $t$ で
+Moser 移送できても，その移送の計量的な一様性は別に必要である．
+実際，$\phi_t^*\omega_t'=\omega_t$ から従うのは
+$\phi_t^*g_t'=\omega_t(\,\cdot\,,\phi_t^*J\,\cdot\,)$ であり，
+これを $g_t=\omega_t(\,\cdot\,,J\,\cdot\,)$ と比較する評価は自動ではない．
+本稿では局所移送の変位，全域 scalar 下界と portal 上界を直接評価し，
+指定された actual 負 KE 計量と同じ $f_t=p_T\pi_t$ を比較する．
 
 局所 torus fibration により近い先行結果は，
 Ruan\cite[Proposition~3.1, Lemma~3.3, Theorem~3.1]{RuanHMinimal}である．

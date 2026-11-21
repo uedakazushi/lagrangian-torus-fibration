@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.4: 下界と共通の固定残余基底および許容 cut による全域上界．
+% 2026-11-21 / v1.5: 固定 anchor tori による portal の選択と全境界の整合．
 \section{全 fiber 合併の収縮と actual 全曲面距離の上界}
 \label{ke:global-ambient-upper-section}
 
@@ -20,6 +20,9 @@ $d_{g_t}$ である．保持 corner 自身の内在距離は用いない．
 \end{equation}
 と書く．以下では $C$ は固定した次数・退化族・有限 chart 系のみに依存し，
 有限定数 $C_j$ は stage $j$ に依存してよい．
+固定した $m_j\ge m_*$ に対して，$R_t\ge R_*$ と
+$\log(m_j+1)+4\log R_t\le R_t/8$ を最後の $t$ 閾値に課し，
+定理\ref{ke:slow-cut-closed-corner-gh}の有限 cut 評価を用いる．
 
 \subsection{同一 moment の接続費用と全 fiber 合併}
 
@@ -44,20 +47,29 @@ $C(1+\log(N_j+1))$ 以下である．
 \end{lemma}
 
 \begin{proof}
-Component に向く正の moment を $q=\pm\widehat\mu_N$ とすると，尾部は
-$q\ge\delta=4\pi/N_j$ の側にある．
+同じ normal Moser map を $\phi_N$ とし，component に向く正の moments を
+\[
+ q_{\rm raw}=\pm\mu_N,\qquad
+ q_{\rm act}=\pm\widehat\mu_N=q_{\rm raw}\circ\phi_N^{-1}
+\]
+と書く．尾部は $q_{\rm act}\ge\delta=4\pi/N_j$ の側にあり，その裸の逆像は
+$q_{\rm raw}\ge\delta$ を満たす．この transport は source 中心でも滑らかで，
+source 軸の点ごとの保存を要求しない．固定点は moment が零なので尾部に属さない．
 補題\ref{ke:component-meridian-normalization}，\ref{ke:closed-component-link}の
 fixed-end 評価を，固定した $P^+_{ab,j}$ の全 phase に適用する．
 裸の normal 深度 $s=2N_j$ では
 \[
- q=\frac{2\pi}{N_j}+o_j(N_j^{-1})+o_t(1)<\frac{4\pi}{N_j}
+ q_{\rm raw}=\frac{2\pi}{N_j}+o_j(N_j^{-1})+o_t(1)<\frac{4\pi}{N_j}
 \]
 となるよう，先に $N_j$，最後に $t$ を選べる．Normal 動径に沿う単調性から，
-$q\ge\delta$ の component 側の尾部は $s\le2N_j$ に入る．
-Source 軸でも同じ向きの正則 normal coordinate を使う．
+$q_{\rm raw}\ge\delta$ の component 側の裸の尾部は $s\le2N_j$ に入る．
+裸の source 軸でも同じ向きの正則 normal coordinate を使う．
 
 この評価を同じ actual normal Moser map の像へ移す．
-まず $N_j$ より先に固定深度 $M_j$ を取り，固定基底の定数について
+さらに広い residual buffer を先に固定し，
+補題\ref{ke:fixed-stage-source-neck}の有限下限 $N_P$ を $P^+_{ab,j}$ に適用したものを
+$N_{P^+_j}$ と記す．$N_j$ より先に固定深度
+$M_j\ge\max\{n_j,N_{P^+_j}\}$ を取り，固定基底の定数について
 $C_{P^+_j}/M_j<\epsilon_0$ を課す．この長さは残余方向の固定 buffer の半分よりも
 小さくする．$2M_j\le s\le2N_j$ では，反対側の normal depth は
 $L_t-s-O_j(1)\ge L_t-2N_j-O_j(1)$ なので，最後に $t$ を小さくして
@@ -118,11 +130,14 @@ $P_{ab,j}$ 上の同一 moment 集合に含まれる．
 従って\eqref{ke:eq:global-connector-budget}で径が抑えられる．
 両端の $0<u\le\kappa$ 又は $2-\kappa\le u<2$ では，逆像全体が対応する
 一つの component の固定 compact core と変更 collar に含まれ，その接続費用を使う．
+境界 $u=\kappa,2-\kappa$ は，core cone の radial level $1$ と neck の
+$\mu=-\delta,\delta$ を貼った同じ全 fibers の合併であり，両分類はそこで一致する．
 $z=e_a$ の場合も同じ component compact 内にある．
 
 $|\operatorname{supp}z|=3$ の場合，$p_T$ の逆像は一つの triangle cell の一点で
 あり，$f_{j,t}^{-1}(z)$ は一つの構成後の $\pi_{j,t}$-fiber である．
-全域構成の pieces とその overlaps は全 fibers で飽和しているので，この fiber は
+定理\ref{ke:actual-global-fibration}の閉 fiber 関係の証明のとおり，交わる局所 fibers は
+同じ ambient subset である．従ってこの global fiber は
 一つの保持 corner，neck，または component core・変更 collar に含まれる．
 保持 corner なら旧 fiber と同じ全 torus であり，
 定理\ref{ke:slow-cut-closed-corner-gh}の非正規化 intrinsic diameter $C/m_j$ を使う．
@@ -138,7 +153,8 @@ normal moment が $\mu\in[-\delta,\delta]$ である全 torus を
 \[
  \Lambda_{ab,J,t}(\mu)\subset A_{t,J}
 \]
-と書く．補題\ref{ke:common-edge-moment-profile}によりこれは存在し，
+と書く．補題\ref{ke:common-edge-moment-profile}と
+\ref{ke:same-moment-corner-reference}によりこれは存在し，
 \[
  P^{\rm old}_{t,J}(\Lambda_{ab,J,t}(\mu))
        =E_{ab}(u_{J,t}(\mu)).
@@ -149,6 +165,28 @@ normal moment が $\mu\in[-\delta,\delta]$ である全 torus を
 \end{equation}
 この評価は全 labelled ends に同じ $\sigma_t$ を用いている．
 各 phase の選択は任意でよく，その違いも同一 moment の接続費用に含める．
+
+ここで旧辺の保持部分は，端点を含めて正確に
+\[
+ A_{t,J}\cap(P^{\rm old}_{t,J})^{-1}(E_{ab}([0,2]))
+ =\bigcup_{|\mu|\le\delta}\Lambda_{ab,J,t}(\mu)
+\]
+である．実際，補題\ref{ke:corner-cap-disk}の成分 $a,b$ の proper cap arcs は旧辺と
+$\mu=-\delta,\delta$ で一度ずつ交わり，除去側はそれぞれ $e_a,e_b$ を含む．
+残る中央閉区間の全 tori は $N_j\gg n_j$ により K2 の共通 plateau 内にあり，
+補題\ref{ke:same-moment-corner-reference}の exact transport が同じ canonical moment を与える．
+両端の tori はそれぞれ $S_{a,j,t}\cap A_{t,J}$，$S_{b,j,t}\cap A_{t,J}$ に属する．
+小さい平行 link で接着した場合にも，補題\ref{ke:anchor-trimmed-neck-domain}の
+anchor 再分割と corner collar の全 torus 保存により，この記述は変わらない．
+
+各 $a\in J$ について $b\in J\setminus\{a\}$ を一つ固定し，この辺の $a$ 側の
+anchor torus から一点 $p_{a,J}$ を固定する．$a$ から $b$ へ向きを取る記法では
+$p_{a,J}\in\Lambda_{ab,J,t}(-\delta)$ である．従って
+\[
+ p_{a,J}\in S_{a,j,t}\cap A_{t,J},\qquad
+ d_\square(P^{\rm old}_{t,J}(p_{a,J}),e_a)\le C\eta .
+\]
+最後の評価は補題\ref{ke:removed-corner-target-cap}による．
 
 \begin{lemma}[隣接 corner 間で整合する portals]
 \label{ke:coherent-corner-portals}
@@ -179,18 +217,18 @@ $a_J(z)\in\Lambda_{ab,J,t}(\mu)$ を選ぶ．
 \eqref{ke:eq:portal-profile-error}が target 誤差を与え，
 全ての $a_J(z)$ は同じ $P_{ab,j}$ の同一 moment 集合に属するので
 \eqref{ke:eq:global-connector-budget}が接続費用を与える．
-$u=1$，すなわち $\mu=0$ でも全 moment 退出定理が適用されるため，
-source の pinched fibers があることによる例外はない．
+$u=1$ では $\mu=0$ であり，portal は source を含まない triple の regular torus 上にある．
+同じ moment 集合には source の pinched fibers も含められ，全 moment 退出定理により
+それらとの接続にも例外はない．
 
-$0<u<\kappa$ なら，component $a$ の link と各保持 corner の交わりから
-$a_J(z)\in S_{a,j,t}\cap W_{t,J}$ を一つ選ぶ．
-補題\ref{ke:corner-cap-disk}の proper cap arc によりこの交わりは空でなく，
-補題\ref{ke:removed-corner-target-cap}により
-$P^{\rm old}(a_J(z))$ は $e_a$ の $C\eta$ 近傍にある．
+$0<u<\kappa$ なら，上で固定した $a_J(z)=p_{a,J}$ を用いる．
+$P^{\rm old}(p_{a,J})$ は $e_a$ の $C\eta$ 近傍にある．
 $d_\square(z,e_a)=u<\kappa=\eta$ なので target 誤差を得る．
 各 $a_J(z)$ は同じ component compact に属するため，対数接続費用 $H$ を使える．
-$2-\kappa<u<2$ も component $b$ を使って同様であり，
-$z=e_a$ もこの link 上の選択で扱える．
+$2-\kappa<u<2$ では $p_{b,J}$ を，$z=e_a$ では $p_{a,J}$ を用いる．
+$u=\kappa,2-\kappa$ は前段の closed moment interval に含め，それぞれ
+$\mu=-\delta,\delta$ の境界 torus から選ぶ．Portal の連続性は要らないので，
+端の開区間での固定点選択との不一致は問題にならない．
 以上は target の全 support 型を尽くす．
 \end{proof}
 
@@ -235,8 +273,8 @@ Core cut により残る旧辺の interval は正確に $\mu\in[-\delta,\delta]$
 
 残る点は一つの component $a$ の core 又は変更 collar に含まれる．
 $q_x=e_a$ とすれば，命題\ref{ke:global-base-parameterization}の core-image 評価が
-target 誤差を与える．各 $J\ni a$ の portal を
-$S_{a,j,t}\cap W_{t,J}$ に選べば，$x$ と同じ固定 component compact に属するので
+target 誤差を与える．各 $J\ni a$ について
+$a_J(q_x)=p_{a,J}$ とすれば，$x$ と同じ固定 component compact に属するので
 接続費用は $H$ 以下である．
 Anchor moment interval の外側の neck 尾部は
 補題\ref{ke:component-neck-tail-depth}により同じ対数予算で扱える．
@@ -343,6 +381,9 @@ actual ambient 距離の上界と，junction portals の同一 moment 接続で�
 \emph{厳密に}写る rectifiable lift を要求する．Inset と core cap の再 parameter 化の
 後では，旧 corner の lift がこの条件を満たすとは限らない．
 上の証明はその \textup{(S)} を引用せず，必要な endpoint 版の条件を
-有限 gallery に直接適用している．\textup{(F)} に相当する actual 全 fiber 合併径は
+有限 gallery に直接適用している．注意\ref{topo:finite-endpoint-comparison}の
+anchor 誤差，square の端点比較誤差，junction と始終点の接続費用は，この適用では
+順に $C\eta$，$E+2C\eta$，$H/R_t$ である．
+\textup{(F)} に相当する actual 全 fiber 合併径は
 命題\ref{ke:collapsed-tree-full-fiber-collapse}で独立に証明した．
 全曲面を通る任意の経路に対する下界 \textup{(N)} は本節の結論に含めない．

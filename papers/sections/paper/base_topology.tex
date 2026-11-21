@@ -698,9 +698,9 @@ Gromov--Hausdorff収束する．
 系\ref{topo:six-label-gallery}の最短路を取り，$N_d$個以下の
 square内線分からなるgalleryを選ぶ．
 各線分を\textup{(S)}で持ち上げ，隣り合う線分の持ち上げ端点が
-属する同一fiber内を\textup{(F)}で接続し，
-最初と最後も$x,y$へ接続する．
-長さの総和は
+属する同一fiberの二点を，\textup{(F)}で評価される ambient 距離を
+任意の正誤差で近似する経路で接続し，最初と最後も$x,y$へ接続する．
+これらの経路が fiber 内に留まる必要はない．近似の誤差を零へ送れば，$d_t(x,y)$ は
 \[
  (1+\sigma_t)d_\square(p_Tx,p_Ty)
    +N_d\lambda_t+(N_d+1)\kappa_t
@@ -708,6 +708,33 @@ square内線分からなるgalleryを選ぶ．
 以下である．$p_T$は全射なので，graph correspondenceの
 distortion boundからGH収束が従う．
 \end{proof}
+
+\begin{remark}[端点だけを用いる有限 gallery の上界]
+\label{topo:finite-endpoint-comparison}
+上界には target 線分へ厳密に写る lift を必要としない．一般の距離空間
+$(X,d_X)$，写像 $F:X\to\mathcal C_d$ と非負定数 $a,\lambda,\kappa$ に対し，
+各 $x$ の anchor $q_x$ を
+$d_\square(F(x),q_x)\le a$ となるように選ぶ．各 unit square $Q$ と $z\in Q$ に
+portal $p_Q(z)\in X$ を選び，
+\[
+ \begin{aligned}
+ d_X(p_Q(z),p_Q(z'))&\le |z-z'|+\lambda &&(z,z'\in Q),\\
+ d_X(p_Q(z),p_{Q'}(z))&\le\kappa &&(z\in Q\cap Q'),\\
+ d_X(x,p_Q(q_x))&\le\kappa &&(q_x\in Q)
+ \end{aligned}
+\]
+が成立するとする．点の選択に連続性は不要であり，一つの比較に必要な有限個の
+端点に対して整合的に選べれば足りる．このとき，前命題と同じ $N_d$ に対し
+\[
+ d_X(x,y)\le d_\square(F(x),F(y))
+       +N_d\lambda+(N_d+1)\kappa+2a .
+\]
+実際，$q_x,q_y$ を結ぶ $M\le N_d$ 本の最短 gallery に第一の不等式を使い，
+$M-1$ 個の junction と初め・終わりに残る二つの不等式を使う．
+最後に anchor の誤差 $2a$ を加えればよい．$q_x=q_y$ の場合は一つの square の
+定値線分を用いる．全て ambient 距離に対する三角不等式なので，
+portal 間の経路を fiber 又は局所領域の中へ閉じ込める仮定も不要である．
+\end{remark}
 
 \begin{example}[各squareの局所モデルだけでは不十分]
 \label{topo:portal-counterexample}

@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.2: 全閉 corner の GH 極限，遅い cut，相対 averaging と全域比較への接続．
+% 2026-11-21 / v1.3: 有限 cut に一様な全閉 corner 比較と遅い cut の GH 極限．
 \section{全閉 triple corner の内在的 GH 極限}
 \label{ke:closed-corner-gh-section}
 
@@ -325,16 +325,19 @@ core を含む全域被覆は定理\ref{ke:actual-global-fibration}で，
 
 Neck の固定 compact exhaustion と接続する際には，三重点の cut を
 $m_t=R_t$ に固定する必要はない．以下では同じ softmax と averaging を用い，
-深度 cut が十分遅く発散する場合にも，射影自体の距離歪みを評価する．
+十分大きい固定 cut にも一様な距離評価を示す．深度 cut を十分遅く発散させる
+場合の GH 収束は，この有限 cut 評価から従う．
 
-\begin{theorem}[遅い深度 cut による actual closed-corner GH 近似]
+\begin{theorem}[有限 cut に一様な closed-corner 比較と GH 近似]
 \label{ke:slow-cut-closed-corner-gh}
 本節の固定次数・族・三重点 chart を保ち，$L=-\log|t|^2$，$R=\log L$ とする．
-正数 $m=m_t$ が
+固定した次数・族・chart のみに依存する定数 $m_*,R_*,C>0$ が存在し，
+正数 $m$ と $t\ne0$ が
 \[
- m_t\longrightarrow\infty,\qquad \log m_t=o(R_t)
+ m\ge m_*,\qquad R\ge R_*,\qquad
+ \log(m+1)+4\log R\le R/8
 \]
-を満たすとする．十分小さい $t$ では $L\ge6m$ であり，
+を満たすとき，以下が成立する．これらの条件は $L\ge6m$ を含意し，
 $\mathcal H_{t,m}=\mathcal U_t(H_{L,m})$ を含む開近傍上に，
 定理\ref{ke:triple-moving-fibration}と同じ chain primitive による
 Moser map $\phi_{t,m}$ を構成できる．通常の kernel $1-s$ と
@@ -355,15 +358,19 @@ $d_{t,m}^{\rm out}$ と書く．$\ast\in\{{\rm int},{\rm out}\}$ の双方につ
  \le C\left(\frac1m+\frac{\log(m+1)+\log R}{R}\right)
 \end{equation}
 が成り立つ．定数は固定した次数・族・chart に依存してよいが，$m,t$ には依存しない．
-従って同じ actual Lagrangian bundle の全射な射影が $\mathcal C_J$ への
-GH 近似を与える．全 fiber の非正規化 intrinsic diameter は $C/m$ 以下，
+従って任意の $m\ge m_*$ を先に固定した後，$|t|$ を十分小さくしても同じ評価を使える．
+全 fiber の非正規化 intrinsic diameter は $C/m$ 以下，
 正規化後は $C/(mR)$ 以下であり，raw target 誤差は
 \[
  \sup_{w,\vartheta}d_\square\bigl(
  \Phi_t^{\rm alg}(\phi_{t,m}F_{t,m}(w,\vartheta)),w\bigr)
  \le C\frac{1+\log(m+1)}R+\frac C{mR}
 \]
-となる．$m_t$ の $t$ に関する連続性や微分可能性は仮定しない．
+となる．特に $m=m_t\to\infty$，$\log m_t=o(R_t)$ と選べば，十分小さい $t$ で
+上の有限条件を全て満たし，\eqref{ke:eq:slow-cut-distortion}の右辺は零へ行く．
+このとき同じ actual Lagrangian bundle の全射な射影が，内在距離と protected
+距離の双方について $\mathcal C_J$ への GH 近似を与える．
+$m_t$ の $t$ に関する連続性や微分可能性は仮定しない．
 \end{theorem}
 
 \begin{proof}
@@ -373,7 +380,8 @@ GH 近似を与える．全 fiber の非正規化 intrinsic diameter は $C/m$ �
  \delta=\frac{\log B}{R},\qquad
  S=R-\log m-\log R
 \]
-と置く．仮定から，十分小さい $t$ で $\delta<1/4$，$S>R/2$ となる．
+と置く．有限条件から $B\le L^{1/8}$，$\delta\le1/8$，$S>R/2$ となる．
+$R_*$ を一度大きくすれば，$L\ge6m$ も全ての許容される $m,t$ で成立する．
 Softmax の $r_a=\ell_a-m$，$\lambda_a=r_a/(L-3m)$，
 $\sigma_a=r_a/\ell_a$ を用いる．Square $Q_i$ の独立座標が
 $w_j,w_k\in[\delta,1-\delta]$ を満たすとき，
@@ -447,6 +455,9 @@ $d_J(\Psi(z),P_{t,m}(z))\le C\delta$ である．
 $C\delta+C/(mR)$ 以下，normalized diameter は一様有界である．
 
 Actual form への移送には，全深部 triple 比較を最小深度 $m/2$ で使う．
+関連 KE 主稿の \texttt{coarse:thm:full-triple-tensor} は，固定した下限以上の
+全 cut に一様であり，cut 自体の発散を仮定していない．$m_*$ をその下限の二倍
+以上に取り，必要な Moser buffer と以下の pullback 下界も正となるように大きくする．
 式\eqref{ke:eq:full-corner-input}が同じ定数で成立し，さらに
 $|g_t-\gamma_t|_{h_t}\le C/m$ である．
 系\ref{ke:actual-closed-corner}の一次微分の証明では，生成場の評価
@@ -478,8 +489,28 @@ $\gamma_t$-長さ $C/m$ から
 この係数と $1$ の差は $O(m^{-1}+\delta)$ であり，端点の誤差は
 $C\delta+C/(mS)$ 以下である．従って protected 版も従う．
 全射性は softmax と Moser embedding から得られる．
-Fiber の intrinsic 径には上の pullback 比較を元の torus 内の経路に適用し，
-raw 誤差には系\ref{ke:closed-corner-fibration}を用いればよい．
+Fiber の intrinsic 径には上の pullback 比較を元の torus 内の経路に適用する．
+Raw 値と元の $w$ の差は，補題\ref{ke:raw-values}の評価と，
+補題\ref{ke:raw-lipschitz}を長さ $C/m$ の trajectory に積分した評価の和である．
+固定 retraction の定義域への包含も，許容される全 $m$ に一様に確認できる．
+式\eqref{ke:eq:capped-depth}と $\max_{a\in J}\ell_a\ge L/3$ より，
+$a\in J$ では $-C/R\le q_{a,t}\le1+C/R$，
+$\max_{a\in J}q_{a,t}=1+O(R^{-1})$ であり，
+$a\notin J$ では $q_{a,t}=O(R^{-1})$ である．
+Active coordinates を $[0,1]$ に clip してその最大値を $1$ に合わせれば，
+$q_t(z)$ と $\mathcal C_J$ の Euclidean 距離は $C/R$ 以下となる．
+従って同じ trajectory 評価から
+\[
+ \sup_{z\in\mathcal H_{t,m}}
+ \operatorname{dist}_{\RR^d}\bigl(q_t(\phi_{t,m}z),\mathcal C_J\bigr)
+ \le C/R+C/(mR)
+\]
+を得る．$R_*$ を一度大きくすれば，全ての許容 cut で
+$q_t(\mathcal W_{t,J}^{(m)})\subset N_\epsilon(\mathcal C_d)$ となる．
+その上で固定 retraction の Lipschitz 性を上の raw 値誤差に適用すれば，
+表示した $\Phi_t^{\mathrm{alg}}$ の評価を得る．
+ここまでで用いた小ささは $m\ge m_*$ と表示した $m,R$ の有限条件だけである．
+特に $m\to\infty$ は距離誤差の消失のためにのみ用いる．
 証明では各 $t$ の領域上の微分だけを用い，$m_t$ を $t$ で微分していない．
 \end{proof}
 

@@ -1,5 +1,5 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-21 / v3.4
+更新：2026-11-21 / v3.5
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
@@ -58,6 +58,35 @@ Capped volume下界の六型determinant、full-triple比較の固定境界面で
 正本は `papers/sections/paper/ke_global_ambient_upper.tex`。`ke:global-ambient-upper` は、保持corner内の旧経路を全曲面の経路として用い、同一momentのneck接続、source退出、各componentの固定stage費用を有限のtarget galleryでつなぐ。保持corner自体の新しい内在距離評価は要求しない。対象ごとに固定した有限定数は最後の遅い対角選択で $o(R_t)$ とする。
 
 `ke:collapsed-tree-common-moment` により、辺内点での $p_T$-fiberは同じcanonical moment上の内部木全体である。`ke:collapsed-tree-full-fiber-collapse` は一つのtorusだけでなく、その木上の全 $\pi_t$-fibersの合併を評価する。Sourceの中央帯・非中央armとcore側endpointを含めてこの評価を行い、全域上下界を `ke:global-metric-realization` へ統合する。経路がfiber又はmoment level内に留まるという主張ではない。
+
+### 端点の選択と全fiberの分類
+
+旧辺の保持部分は正確に $|\mu|\le\delta_j$ の全toriである。$u=\kappa,2-\kappa$ は境界toriを含み、$u=1$ のportalは $\mu=0$ のregular corner torus上に取る。Sourceやbranchとの接続には同一moment集合全体のambient評価を使う。各 $(a,J)$ でanchor torus上の点 $p_{a,J}\in S_{a,j,t}\cap A_{t,J}$ を一つ先に固定し、頂点とその近くの辺ではその点を使う。Portalの連続選択は要求しない。
+
+| Target点 | 全 $f_{j,t}$-fiberの位置と接続 |
+| --- | --- |
+| Support 3、inset disk | 保持cornerの一つの旧全torus。非正規化内在径 $C/m_j$。 |
+| Support 3、neck panel又はcore sector | 一つの構成後fiber。対応する同一moment集合又は一つのcomponent compactで評価。 |
+| $E_{ab}(u)$、$\kappa<u<2-\kappa$ | 厳密に $\mu=\sigma_t^{-1}(u)$ の内部木上の全neck fibersの合併。 |
+| $E_{ab}(u)$、$0<u\le\kappa$ 又は $2-\kappa\le u<2$ | 一つのcomponent core・変更collar。等号の端点ではcore coneのlevel 1とneck anchorが同じ全fibers。 |
+| 頂点 $e_a$ | Component $a$ のskeleton。 |
+
+K2の全交わりの飽和、whole-fiber trim、開collarでの全葉の一致により、交わる局所fibersは同じambient subsetである。従って局所fiber関係の有限和が既に推移的であり、support 3で異なる局所fibersを継ぎ足した余分なglobal fiberは生じない。
+
+`topo:finite-endpoint-comparison` は、anchor誤差 $a$、squareの端点距離誤差 $\lambda$、junctionと初終点の接続費用 $\kappa'$ から
+\[
+ d_X(x,y)\le d_\square(Fx,Fy)+M_d\lambda+(M_d+1)\kappa'+2a,
+ \qquad M_d=3\binom{\min(d,6)}3\le60
+\]
+を与える。Actual上界では $a=C\eta$、$\lambda=E+2C\eta$、$\kappa'=H/R_t$。旧full corner内の経路は全曲面の経路として有効であり、保持corner内へ閉じ込める必要はない。抽象的な(F)もambient fiber径の条件であり、fiber内在経路の長さを仮定しない。
+
+### Closed cornerの有限cutと収束の区別
+
+`ke:slow-cut-closed-corner-gh` は $m\ge m_*$、$R\ge R_*$、$\log(m+1)+4\log R\le R/8$ の有限条件で
+\[
+ \operatorname{dis}(P_{t,m})\le C\left\{m^{-1}+\frac{\log(m+1)+\log R}{R}\right\}
+\]
+を内在距離・protected距離の双方に与える。全fiberの非正規化内在径は $C/m$。証明では $B=(m+1)R^4\le L^{1/8}$、$\delta=\log B/R\le1/8$、$S=R-\log m-\log R>R/2$ とし、full-triple比較を深度 $m/2$ で用いる。同じ有限下限でMoser bufferとpullbackの正値性を得る。固定 $m$ の後に $t$ を小さくする適用は許されるが、誤差消失にはさらに $m_t\to\infty$、$\log m_t=o(R_t)$ が必要である。これは固定族についての評価であり、次数一様性や最適rateを示すものではない。
 
 ## 有限の飽和全被覆でも局所加法誤差だけでは足りない
 
@@ -228,7 +257,7 @@ Skeletonの連結性は $\Sigma=\bigcap_{T\ge0}\varphi_{-T}(K)$ というnested 
 
 ### 全接続予算の選択順序
 
-旧softmax辺の全体で $B=m_j+r_c$、$0\le r_c<1$ なので、全marked tree・source discs・portal端を含む $P_{ab,j}\Subset P^+_{ab,j}$ は $N_j$ より先に固定できる。同一moment接続定数を $C_j^{\rm neck}$ とする。`ke:component-neck-tail-depth` は $q\ge4\pi/N_j$ の成分側尾部に $s\le2N_j$ を与え、同じcentered flowの浅い固定compactと深いtubeへの制限を分けて、actual像も深度 $CN_j$ に入れる。深い側のfirst-exitには固定componentの $|d\log s_a|\le K$ と全normal/residual buffersを用いる。
+旧softmax辺の全体で $B=m_j+r_c$、$0\le r_c<1$ なので、全marked tree・source discs・portal端を含む $P_{ab,j}\Subset P^+_{ab,j}$ は $N_j$ より先に固定できる。同一moment接続定数を $C_j^{\rm neck}$ とする。`ke:component-neck-tail-depth` は $q_{\rm act}=q_{\rm raw}\circ\phi_N^{-1}\ge4\pi/N_j$ の成分側尾部に $s\le2N_j$ を与え、同じcentered flowの浅い固定compactと深いtubeへの制限を分けて、actual像も深度 $CN_j$ に入れる。深い側のfirst-exitには固定componentの $|d\log s_a|\le K$ と全normal/residual buffersを用いる。
 
 従って、まず $H_j\le C(1+\log(N_j+1))+C_j^{\rm neck}$ が得られる。許容cutの下限に $C_j^{\rm neck}\le1+\log(N_j+1)$ を加えれば
 \[
@@ -360,6 +389,12 @@ Song, arXiv:1706.01518v1, Theorem 1.2（https://arxiv.org/abs/1706.01518 ）の�
 Zhang, *Collapsing of negative Kähler–Einstein metrics*, MRL 22 (2015), 1843–1869, DOI 10.4310/MRL.2015.v22.n6.a16, arXiv:1505.04728v2, Theorems 1.1/2.4は、Q-factorialなsimple toroidal total spaceと相対canonicalのamplenessの下で、stratumへ動かす基点における局所torus collapseを示す。曲面では二重曲線でS¹、三重点でT²が縮む。主稿 `intro:ke-collapse` に比較を収録した。我々のsourceの局所環 $\mathbf C[x,y,z,t]/(xy-tz)$ はQ-factorialでない。Small resolutionはcrepantなのでexceptional $\mathbf P^1$ 上の相対canonicalの次数は0となる。従って「小解消すればZhangをそのまま適用できる」とは言えない。
 
 Mandel, *Degenerations of negative Kähler–Einstein surfaces*, JLMS 109 (2024), e12818, DOI 10.1112/jlms.12818, arXiv:2206.09792, Theorems 1.1–1.2は負KE neckとその尺度別模型を構成するが、我々のcompact family全体へのgluingを完了した定理として引用しない。K3での対照例はGross–Tosatti–Zhang, CAG 24 (2016), 93–113, DOI 10.4310/CAG.2016.v24.n1.a4, arXiv:1304.1820, Theorem 1.1。楕円K3の適切なRicci-flat metric族が底へ崩壊し、hyperkähler rotationでspecial Lagrangianの解釈を得る。負KEに同じ結論を移す証拠にはしない。
+
+Fu–Hein–Jiang, *A continuous cusp closing process for negative Kähler–Einstein metrics*, GAFA **35** (2025), 542–632, DOI [10.1007/s00039-025-00708-y](https://doi.org/10.1007/s00039-025-00708-y), §1.1 Main Theorem は、孤立楕円特異点へ退化する六次曲面のactual負KE計量とTian–Yau bubbleを扱う。掲載本文の定理と対象族を確認した。全平面SNC退化の全域Lagrangian射影による径の尺度の比較とは区別し、本稿の解析入力には用いない。91頁の接着証明全体を再監査したものではない。
+
+Fernández de Bobadilla–Pełka の [最終preprint arXiv:2312.13248v4](https://arxiv.org/html/2312.13248v4), Theorem 6.14・Example 5.8・Introduction・Remark 7.4を照合した。境界・角付きの部分領域にivy-like fibrationを構成し、exact補正で作るKähler形式についてGH収束も与える。ここで使う形式はactual KE形式とは別である。公表用比較では、全域へのcore fillingと、指定されたactual計量への定量的な比較をそれぞれ明示する。
+
+同一classのMoser移送 $\phi_t^*\omega_t'=\omega_t$ は、複素構造を固定した計量の比較を含意しない。$\phi_t^*g_t'=\omega_t(\cdot,\phi_t^*J\cdot)$ と $g_t=\omega_t(\cdot,J\cdot)$ の差を制御する必要がある。本稿は小さい局所移送とscalar/portalの直接評価を用いる。文献間でKähler class・Lagrangian性・actual距離の三条件をまとめて同一視しない。
 
 ### Diameter-scale極限とactual fibrationによる実現
 KE研究の `papers/cubical-gh-limit.tex` では $R_t=\log(-\log|t|^2)$、$\mathcal C_d=\{w\in[0,1]^d:\max w_i=1,\ |\operatorname{supp}w|\le3\}$ とし、$(X_t,R_t^{-2}g_t)\to(\mathcal C_d,d_\square)$ を **(G)$_d$+(CP)$_d$+(PBE)$_d$の下**で述べる。これらの条件付き定理の正本は関連repoの現行方針・Part IV–Vである。本稿の `ke:global-metric-realization` はscalar下界とportal上界による別の直接証明を与え、CP/PBE/TCを検証したとはしない。
@@ -543,4 +578,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 ## 検証状態
 
 
-2026-11-21 / v3.4：主稿改訂24では、共通anchorによる保持neckの正確なmoment範囲、同一momentの旧corner辺参照torusによる全域基底値比較、有限cutに一様なMoser被覆・接続を明示した。Core境界のfirst-exitとcorner移送の段階一様性を補強し、上下両側のdistortionを固定族の係数と明示的cut budgetで評価した。これらの追加証明と接続を複数担当で独立内部点検した。現行改訂24はLuaLaTeXで254頁に組版し、第1・17・18・81–84・148・149・163–165・167–173・179–187・190–192頁の計31頁を最終PDFから個別画像で表示確認した。未解決参照・文献引用、重複label、欠字、overfull boxは0。静的構成検査も成功。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は未実施。
+2026-11-21 / v3.5：主稿改訂25では、closed-cornerの有限cut一様評価、全target端点でのportal選択と全fiber合併、有限galleryのambient端点比較を明示した。Raw/actual momentとtailの共通bufferを分離し、これらの証明と接続を複数担当で独立内部点検した。Fernández de Bobadilla–Pełkaの構成計量によるGH収束と、Fu–Hein–Jiangの孤立楕円特異点の負KE cusp閉鎖を一次資料の指定箇所と照合した。改訂25の組版・表示確認は未実行であり、直近の完了した組版は改訂24（254頁、指定31頁の表示確認）である。現行の実行状態は research/validation.json に記す。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は未実施。

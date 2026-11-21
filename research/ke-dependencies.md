@@ -1,6 +1,6 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-21 / v2.4。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-21 / v2.5。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
 ## 確認した正本と規格化
 
@@ -63,7 +63,7 @@ L_t=-\log|t|^2,\quad R_t=\log L_t.
 | 入力・障害 | 原稿の所在 | 使用上の区別 |
 | --- | --- | --- |
 | 実際のLagrangian closed corner | [ke_closed_corner_gh.tex](../papers/sections/paper/ke_closed_corner_gh.tex), `ke:closed-corner-gh`, `ke:closed-corner-protected-gh` | 同じMoser像・同じfibrationに対する局所結果。Protected distanceを全曲面距離と同一視しない。 |
-| 遅いcutのclosed corner | 同上 `ke:slow-cut-closed-corner-gh` | $m\to\infty,\ \log m=o(R)$ ならdistortionは $C[m^{-1}+(\log(m+1)+\log R)/R]$。Stepwiseな対角選択可。外部のfull-triple比較、rank-one Schwarz、dominant-product比較と有限galleryを使用し、$m=R$ の定理を単に代入し直した結果ではない。 |
+| 有限cutと遅いcutのclosed corner | 同上 `ke:slow-cut-closed-corner-gh` | $m\ge m_*,\ R\ge R_*,\ \log(m+1)+4\log R\le R/8$ でdistortionは $C[m^{-1}+(\log(m+1)+\log R)/R]$、非正規化fiber内在径は $C/m$。固定cut後のparameter選択が可能。$m\to\infty,\ \log m=o(R)$ でGH収束を得る。Full-triple比較は深度 $m/2$ の有限下限以上で一様、rank-one Schwarz・dominant-product・有限galleryも使用。 |
 | 固定baseの同一moment上の接続 | [ke_staged_neck_averaging.tex](../papers/sections/paper/ke_staged_neck_averaging.tex), `ke:fixed-base-moment-connectors` | Source-freeな固定連結基底に限り、level全体とMoser像のactual ambient径 $O(1)$、正規化後 $O(R^{-1})$。異なる残余点を結ぶ。`ke:fixed-base-central-band` は固定 $A>0$ に対する $\lvert\mu\rvert\le A/M_t$ のband全体を、異なるmomentも含めactual径 $O(1)$ とする。Source・moving collar・全曲面の下界は含まない。 |
 | 三armの座標・normal period | [ke_neck_corner_transition.tex](../papers/sections/paper/ke_neck_corner_transition.tex), `ke:arm-log-derivatives`, `ke:three-arm-coordinate-interpolation`, `ke:transition-normal-primitive` | 共通の許容射影を選び、固定深度比で分離したarmに限る。全固定階で指数的小摂動、積保存smooth補間、canonical normal periodの厳密一致。非正則補間帯はtame symplecticでありKähler性を仮定しない。第二periodの一致は含まない。 |
 | 三端の平均順序の相対統合 | [ke_relative_corner_patch.tex](../papers/sections/paper/ke_relative_corner_patch.tex), `ke:quantitative-order-hamiltonian`, `ke:relative-corner-patch`, `ke:single-arm-reduced-graph`, `ke:arm-common-moment-strip` | 小さいprimitiveを固定し、centered平均の比較Hamiltonianを $O(m^{-2})$ で評価。Common source/imageとcutoff buffersの下で端ごとのstaged bundleを一つのactual corner bundleへ統合。単一moving armでは共通moment stripとactual reduced graphを証明。Source-inclusive neckとの共通flow領域と全交わりは、下のexhaustionの結果で別途確保する。 |
@@ -76,7 +76,7 @@ L_t=-\log|t|^2,\quad R_t=\log L_t.
 | 固定残余compactの法線エネルギーと接続 | [ke_staged_neck_averaging.tex](../papers/sections/paper/ke_staged_neck_averaging.tex), `ke:neck-integrated-normal-energy`, `ke:neck-axial-upper`, `ke:neck-averaged-speed`, `ke:neck-shrinking-buffer` | KE側 `neck:prop:volume-envelope` から積分短円と同一残余点の係数1の接続上界。実計量の境界距離（上限1） $\delta_t$ が $m_t\delta_t^2\to\infty$ なら共通source・像。この十分条件と、K1–K2の固定段階で実証したbuffer・遅いexhaustionを区別する。 |
 | Normal平均の双方向buffer | [ke_staged_neck_averaging.tex](../papers/sections/paper/ke_staged_neck_averaging.tex), `ke:short-circle-actual-buffer`, `ke:short-circle-image-buffer` | Actual短円とactual bufferを入力とする。像のambient直径を与えるが、$C^1$ 制御・intrinsic fiber径・base projection保存は与えない。 |
 | Endsとneckの接着 | 同上 `ke:staged-neck-averaging`, `ke:staged-reduced-extension`, `ke:staged-neck-scope`; `ke_closed_corner_gh.tex`, `ke:relative-neck-matching` | 共通primitive・marked periodsを追跡できる。Reduced foliation germsの同時延長、開overlapの同じfiber partition、actual flowの生存は別に確認する。 |
-| 距離の全域化 | [base_topology.tex](../papers/sections/paper/base_topology.tex), `topo:finite-portal-criterion`, `topo:portal-counterexample`, `topo:ke-map-compatibility` | (N) no-shortcut、(S) square lifts、(F) fiber/portal connectorsは別入力。(F)は(N)+(S)から従わない。現行の上界は、再parameter化後のexact square liftを仮定せず、旧cornerのendpoint距離と共通momentの接続を有限galleryに直接適用する。下界は全域scalar mapで別途証明する。 |
+| 距離の全域化 | [base_topology.tex](../papers/sections/paper/base_topology.tex), `topo:finite-portal-criterion`, `topo:finite-endpoint-comparison`, `topo:portal-counterexample`, `topo:ke-map-compatibility` | (N) no-shortcut、(S) square lifts、(F) fiber/portal connectorsは別入力。(F)は(N)+(S)から従わない。現行の上界は、再parameter化後のexact square liftを仮定せず、旧cornerのendpoint距離と共通momentの接続を有限galleryに直接適用する。下界は全域scalar mapで別途証明する。 |
 
 ## 中央sourceの全点径とcomponent移送の追加入力
 
@@ -186,8 +186,15 @@ Target最短路は `topo:six-label-gallery` により高々60本のsquare線分�
 
 Complete simplex模型の存在はZhang [arXiv:1505.04728v2](https://arxiv.org/abs/1505.04728v2) Theorem 2.1・Proposition 2.2を一次資料で確認した。同Theorem 2.1が引用するCheng–Yau (1982), Theorem 4.4の原論文の証明そのものは今回再精読していない。Zhangの退化族に関するTheorem 2.4のQ-factorial仮定をsourceを持つ本族に適用してはいない。DMVのTheorem 1.2についても、固定Euclidean補助測度、正閉current、$L^2$ 規格化、周期coverの個数とBishop比較の実次元4を照合した。ただし現行の有界source退出はこのGaussian経路から独立である。
 
+## 公表用比較とactual計量の区別
+
+Fernández de Bobadilla–Pełka, arXiv:2312.13248v4 の Theorem 6.14、Example 5.8、Introduction、Remark 7.4を一次HTMLで照合した。境界・角付き部分領域のivy-like fibrationと、exact補正で構成するKähler計量についてのGH収束を扱う。本稿の全域core fillingとactual負KE距離の評価への依存入力としては使わない。Fu–Hein–Jiang, GAFA 35 (2025), 542–632, DOI 10.1007/s00039-025-00708-y の掲載版 §1.1 Main Theoremを確認し、孤立楕円特異点を持つ具体的sexticのactual負KE cusp閉鎖・Tian–Yau bubbleという範囲をIntroductionで比較した。両者の全証明の再監査ではない。
+
+同一classのMoser同値 $\phi_t^*\omega'_t=\omega_t$ だけでは、$\phi_t^*g'_t=\omega_t(\cdot,\phi_t^*J\cdot)$ と $g_t=\omega_t(\cdot,J\cdot)$ の差を評価できない。Actual距離の結論には本稿の小さい局所移送とscalar/portal評価が必要である。
+
 ## 内部点検済みの範囲と残る確認
 
+- 有限cutのclosed-corner定理と、全target端点のportal選択、$\mu=0,\pm\delta$ のtori、全fiber合併、六label galleryの費用を独立点検した。Raw/actual momentとtail bufferの選択、固定anchor点、ambient端点比較の適用を明記した。
 - 共通anchorでの全保持neckの正確なmoment区間、全domainを含むcap/core分割、core境界のfirst-exit、marked graphの明示自明化を独立点検した。同一momentのcorner参照torus、有限cutに一様なMoser被覆・接続・中央帯と、全域値比較の非循環性も確認した。Cornerの座標補間・全平均・相対Hamiltonianの定数とcutoffsが段階一様であることを照合し、残余接続費用のcutへの吸収から上下両側の固定族係数を得た。
 - Source中心のsmooth centered Moser、canonical momentの零、位相商、閉pinched torus、primitive cycleとfocus二次型を独立に点検した。K2のfirst-exit→逆flow→moment→全torusの順序、inverse Morse領域と非incident piecesの分離、全stageと全複素parameterでの固定marked treeも再点検した。
 - K2–K3の接続に必要な全intersection saturation、fixed-stage stratum coverage、whole-fiber trim、actual Lagrangian性、compact Hausdorff quotientへの全射とconnected fibers、固定 $d\ge5$ の範囲、core・変更collarの固定compact費用を点検した。
