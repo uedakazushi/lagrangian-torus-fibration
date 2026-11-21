@@ -122,6 +122,13 @@ circle-bundle lift に必要な curvature の vanishing condition が自動的�
 Lemma 2.16 の completion は contact form の正の関数倍を許すため，
 固定した finite collar，normal moment，divisor 上の foliation，
 core 近傍の primitive を同時に指定するには追加の構成が必要である．
+同じ contact 構造を保つ正の rescaling でも既存の葉の Lagrangian 性は一般に変わる
+（注意\ref{ke:contact-rescaling-collar-scope}）．
+一方，\cite[\S\S2.3--2.4]{EM}の Hermitian metric の変更は選んだ Kähler class を，
+exact symplectic deformation は de Rham class を保つので，
+固定 cohomology class 自体を本稿固有の特徴とはしない．
+ここでの相対条件は，Kähler representative と指定 product germs，
+marked full leaves，選択する holonomy と periods，有限 endpoint の同時制御である．
 SNC symplectic neighborhoods とその relative regularizations には
 Tehrani--McLean--Zinger\cite[Definitions 2.11--2.12, Theorem 2.13]{TMZ}を用いる．
 正の weighted divisor に適合する primitive の存在は
@@ -412,8 +419,10 @@ circle の作用が ambient-affine ならその条件が成立することを示
 focus--focus points では作用格子の monodromy が非自明である\cite[Remark~3.1]{VuNgoc}ため，
 atlas はその有限集合を除いた底空間に与え，除いた点には実際の focus affine singularities を残す．
 
-Evans--Mauri の Proposition~6.13 と Theorem~6.15 は，one-dimensional strata に沿う
-log Calabi--Yau 仮定の下で toric neighborhoods と大域 monodromy を比較する\cite{EM}．
+Evans--Mauri の掲載版 Propositions~6.11--6.12 と Theorem~6.14 は，
+Assumption~1 の下で toric neighborhoods と双対 monodromy を比較する\cite{EM}．
+この仮定は各一次元 stratum が $\PP^1$ で零次元 stratum と正確に二点で交わることを要求し，
+各直線に $m-1\ge3$ 個の交点を持つ本稿の一般位置 $m$ 直線配置には直接適用できない．
 本稿の三穴・四穴 sphere とその saddle branches には，critical actions を直線に保つ別の接着が必要である．
 このため，actual neck の全空間上で一つの primitive を取り，三重点の toric reference actions
 と両側の作用の加法定数を同時に固定する．
@@ -727,8 +736,18 @@ Gaussian 体積評価は独立な補助結果として保持する．
 fixed-gauge smooth KE 収束から canonical primitive の差を明示し，
 固定 compact から actual KE 形式への小さい symplectic 移送を構成する．
 境界の点を固定する相対移送には $H^1$ の制限写像で記述される flux 条件があり，
-normal fiber periods だけではこれを検出できない．平均形式も parameter 方向に
-Moser 移送することで exact collar germ も得る．
+normal fiber periods だけではこれを検出できない．
+一般位置の $m=d-1$ 直線補空間の compact core $K$ と $S=\partial K$ については，
+Cohen--Suciu\cite[Proposition~2.5 and \S6.9]{CohenSuciuBoundary}の既知の境界 cohomology を用い，
+\[
+ H^1(S;\RR)/\operatorname{im}H^1(K;\RR)
+ \cong H^2(K,S;\RR),\qquad
+ \dim H^2(K,S;\RR)=\binom{d-2}{2}
+\]
+と計算できる．命題\ref{ke:component-flux-space}はこれを有限個の boundary periods による
+相対 Moser の判定へ適用する．系\ref{ke:nonextendible-small-core-germ}では，
+同じ actual KE 二形式を保つ小さい collar germs でも各非零障害方向を実現する．
+平均形式も parameter 方向に Moser 移送することで exact collar germ も得る．
 一方，定理\ref{ke:actual-global-fibration}の構成では，actual link の葉を先に固定し，
 同じ actual 二形式の primitive を相対不変化して内部へ延ばすため，
 点固定の相対 germ を追加入力とする必要はない．

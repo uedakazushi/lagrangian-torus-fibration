@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.1: 固定 component core の actual KE 移送，相対 flux と実際の filling の区別．
+% 2026-11-21 / v1.2: 固定 core の移送，直線配置の相対 flux 空間と指定 collar の拡張障害．
 \section{固定成分 core の actual KE 移送}
 \label{ke:component-core-transfer-section}
 
@@ -153,8 +153,10 @@ $g_t$ の収束速度を $\varepsilon_t$ と同じとは仮定しない．
 
 \eqref{ke:eq:core-relative-flux}の下で，$U$ 上の closed form $\zeta_t$ を取り，
 $\gamma_t-\zeta_t=df_t$ on $N'$ とする．
-固定領域の有限次元 cohomology に基底を固定して選べば，
-$\zeta_t$ の norm を $\gamma_t$ の norm の固定倍で抑えられる．
+有限次元空間 $\operatorname{im}(H^1(U)\to H^1(N'))$ の基底と，
+その $U$ 上の closed representatives を固定して選べば，
+必要な固定 compact 上で $\zeta_t$ の norm を $\gamma_t$ の norm の固定倍で抑えられる．
+$U$ 全体の cohomology の有限次元性は必要ない．
 $f_t$ は各 collar 成分の一点で正規化し，固定した積分経路を使って同じ評価を得る．
 $\chi=1$ on a smaller collar，$\operatorname{supp}\chi\Subset N'$ とし，
 \[
@@ -194,6 +196,112 @@ $\int_{D^2\times\{\theta\}}d\gamma_\epsilon=2\pi\epsilon$ である．
 従って境界を点ごとに固定する小さい相対 Moser は存在しない．
 既に同じ torus fibers が存在しているので，これは fibration の不存在例ではない．
 \end{example}
+
+\begin{proposition}[直線配置 core の相対 flux 空間]
+\label{ke:component-flux-space}
+$D\subset\PP^2$ を一般位置の $m\ge4$ 本の直線の和とし，
+$W=\PP^2\setminus D$ と置く．$K\Subset W$ は有限型 exhaustion の
+十分高い正則値で切った滑らかな compact core，$S=\partial K$ とする．
+特に $K\hookrightarrow W$ は homotopy equivalence で，外側は積 end である．
+相対 flux の障害空間を
+\[
+ \mathcal O(K,S)=H^1(S;\RR)/
+ \operatorname{im}\bigl(H^1(K;\RR)\longrightarrow H^1(S;\RR)\bigr)
+\]
+と置くと，connecting map と Poincar\'e--Lefschetz 双対により
+\begin{equation}\label{ke:eq:line-core-flux-sequence}
+ 0\longrightarrow H^1(K;\RR)\longrightarrow H^1(S;\RR)
+ \xrightarrow{\delta} H^2(K,S;\RR)\longrightarrow0,
+ \qquad \mathcal O(K,S)\cong H_2(K;\RR)
+\end{equation}
+を得る．従って
+\begin{equation}\label{ke:eq:line-core-flux-dimension}
+ b_1(K)=m-1,\qquad b_1(S)=\binom m2,\qquad
+ \dim\mathcal O(K,S)=\binom{m-1}{2}.
+\end{equation}
+さらに $\ker(H_1(S;\RR)\to H_1(K;\RR))$ の基底
+$c_{ab}$，$1\le a<b\le m-1$ を選べる．
+$U$ を $K$ とその両側境界 collar を含み，包含 $K\hookrightarrow U$ が
+homotopy equivalence となる固定開近傍とすると，
+命題\ref{ke:component-relative-flux}の条件は，境界 collar 上の closed form
+$\gamma$ に対する有限個の等式
+\begin{equation}\label{ke:eq:line-core-flux-periods}
+ \int_{c_{ab}}\gamma=0\qquad(1\le a<b\le m-1)
+\end{equation}
+と同値である．ここで $c_{ab}$ は境界の homology classes であり，
+指定 fibration の fiber 内の cycles であるとは限らない．
+\end{proposition}
+
+\begin{proof}
+境界 cohomology の短完全列と一般位置配置の Betti 数は既知である
+\cite[Proposition~2.5, Corollary~2.6 and \S6.9]{CohenSuciuBoundary}．
+ここでは相対 period 条件に用いる intersection map も明示する．
+一つの直線を無限遠に置けば，$W$ は $\CC^2$ から
+$n=m-1$ 本の一般位置 affine lines $\ell_a=0$ を除いた空間である．
+その cohomology は次数 $2$ より上を除いた外積代数であり，
+$e_a=(2\pi)^{-1}d\arg\ell_a$ が $H^1(W;\RR)$ の基底，
+$e_a\wedge e_b$ が $H^2(W;\RR)$ の基底を与える．
+従って $b_1(W)=n$，$b_2(W)=\binom n2$，$H_3(W;\RR)=0$ である．
+
+各 affine intersection の十分小さい meridian torus $T_{ab}$ は互いに素に取れ，
+向きを合わせれば $\int_{T_{ab}}e_c\wedge e_d=\delta_{(a,b),(c,d)}$ となる．
+これらは $H_2(W;\RR)$ の基底であり，二つの radial normal directions による
+自明な normal framing を持つ．有限個の tori を含む高い truncation から
+積 end を内向きに縮めれば，互いに素な嵌込みと framing を保ったまま
+$\operatorname{int}K$ に運べる．従って $K$ の intersection form は零であり，
+$H^2(K,S)\to H^2(K)$ も零である．
+$H^1(K,S)\cong H_3(K)=0$ と対の長完全列から
+\eqref{ke:eq:line-core-flux-sequence}を得る．次元を取れば
+\eqref{ke:eq:line-core-flux-dimension}となる．
+
+同じ双対性と homology の長完全列は
+\[
+ 0\longrightarrow H_2(K,S;\RR)\xrightarrow{\partial}H_1(S;\RR)
+ \longrightarrow H_1(K;\RR)\longrightarrow0
+\]
+を与える．$T_{ab}$ に intersection pairing で双対な relative cycles
+$A_{ab}$ を選び，$c_{ab}=\partial A_{ab}$ と置けばよい．
+$H^1(K)$ の像はこの kernel を消す linear functionals に一致するので，
+\eqref{ke:eq:line-core-flux-periods}との同値が従う．
+この命題の位相的な短完全列と次元は既知結果の適用であり，
+ここで区別している点は，指定した collar の相対 Moser を判定する全 periods である．
+\end{proof}
+
+\begin{corollary}[二形式を変えない小さい指定 collar の障害]
+\label{ke:nonextendible-small-core-germ}
+前命題の $U$ とその近傍に exact symplectic form $\omega=d\lambda$ を固定する．
+これは本稿の固定 component 上の actual KE form でもよい．
+$\mathcal O(K,S)$ の任意の非零方向は，恒等写像へ滑らかに収束する
+局所 symplectic collar germs $g_\epsilon$ の
+$[g_\epsilon^*\lambda-\lambda]$ によって実現できる．
+$\epsilon\ne0$ が十分小さいとき，この germ は同じ $\omega$ を保つ
+$U$ 全体の embedding へは延長できない．
+ここで image も $\lambda$ が定義された近傍に含まれるものとする．
+\end{corollary}
+
+\begin{proof}
+非零方向を表す $S$ 上の closed form $a$ を両側 collar に引き戻し，
+$\iota_Y\omega=a$ と定める．$da=0$ と $a(Y)=\omega(Y,Y)=0$ により
+$\mathcal L_Y\omega=0$，$\mathcal L_Ya=0$ である．
+固定 buffer を持つ小さい collar 上で，時間 $\epsilon$ の flow $g_\epsilon$ が存在し，
+\[
+ g_\epsilon^*\lambda-\lambda
+ =\epsilon a+d\!\int_0^\epsilon g_s^*(\lambda(Y))\,ds
+\]
+を満たす．従ってその障害 class は $\epsilon[a]$ である．
+仮に $G:U\to W$ が指定 collar で $g_\epsilon$ と一致し，
+$G^*\omega=\omega$ ならば，$G^*\lambda-\lambda$ は $U$ 上の closed form である．
+その collar への制限は $g_\epsilon^*\lambda-\lambda$ なので，
+その class が $H^1(U)$ の像にないことに矛盾する．
+この直接的な必要性には，$G$ に対する相対 isotopy の仮定は不要である．
+\end{proof}
+
+本稿の全平面退化では $m=d-1$ なので，この障害空間の次元は成分ごとに
+$\binom{d-2}{2}$，五次・六次・七次ではそれぞれ $3,6,10$ となる．
+上の germs は指定された fiber partition を保つとは仮定していない．
+従ってこの結果は fibration の不存在を意味せず，
+actual link の既存葉から構成する定理\ref{ke:actual-global-fibration}に
+新たな flux 消滅仮定を課すものでもない．
 
 \subsection{平均形式を介した exact collar germs}
 

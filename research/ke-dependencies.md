@@ -1,6 +1,6 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-21 / v2.5。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-21 / v2.6。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
 ## 確認した正本と規格化
 
@@ -119,6 +119,8 @@ Leung–Symingtonの分類は掲載版 JSG 8 (2010) のTheorem 2.1（pp.148–14
 
 以上の指定箇所と本稿の適用は複数担当で読み合わせた。PrimitiveのC1評価・全cutoff support・nontrapping、relative reduced foliation、whole-fiber trim、閉quotient、core/collar費用も重点監査済み。全旧局所証明・全一次資料の包括的監査とは区別する。
 
+`ke:component-flux-space` はCohen–Suciuの既知のboundary cohomology（Proposition 2.5、Corollary 2.6、§6.9、主稿の参考文献 `CohenSuciuBoundary`）を一般位置直線配置へ適用する。各componentの相対障害空間は $H^1(S;\mathbb R)/\operatorname{im}H^1(K;\mathbb R)\cong H_2(K;\mathbb R)$、次元は $\binom{d-2}{2}$。`ke:nonextendible-small-core-germ` は固定actual形式で非零障害を小さいsymplectic collar flowとして実現する。既知cohomologyの新規性や任意の指定germの延長を主張しない。
+
 ## 固定成分coreのcusp入力と有限target幾何
 
 Rochon–Zhang, *Adv. Math.* 231 (2012), 2892–2952, [arXiv:1106.0873v2](https://arxiv.org/abs/1106.0873v2), §5 (5.3)–(5.6), Theorem 5.1を一次資料で確認した。SNC全体におけるbounded $C^\infty_{fc}$ potentialを用い、smooth divisor専用のfull expansionは使わない。$K_{\mathbf P^2}+D=\mathcal O(d-4)$ のamplenessと本稿の $dd^c=i\partial\bar\partial$ を照合し、$u=-2\sum\log s_a+v$ を使用する。正則化・有限型性・compact exact Moserと局所core fillingの証明は本repoの `ke_component_core_geometry.tex` が正本。
@@ -194,6 +196,8 @@ Fernández de Bobadilla–Pełka, arXiv:2312.13248v4 の Theorem 6.14、Example 
 
 ## 内部点検済みの範囲と残る確認
 
+- Core正則化→固定actual形式へのexact Moser→actual作用での平均→同じmoment link→相対葉族→全域fibrationの接続について、支持・量化・構成の同一性に限定した独立内部監査を完了した。恒等end collarsは全K2交わりを含み、全fiber trimは補間後partitionに適用する。元のcoreと内側平行linkの共通collarで一致し、被覆を保つ。SNC構成にも閉isotropic filtrationを明示した。`ke:contact-rescaling-collar-scope` の反例は固定contact formとcontact構造だけの一致を区別する。
+
 - 有限cutのclosed-corner定理と、全target端点のportal選択、$\mu=0,\pm\delta$ のtori、全fiber合併、六label galleryの費用を独立点検した。Raw/actual momentとtail bufferの選択、固定anchor点、ambient端点比較の適用を明記した。
 - 共通anchorでの全保持neckの正確なmoment区間、全domainを含むcap/core分割、core境界のfirst-exit、marked graphの明示自明化を独立点検した。同一momentのcorner参照torus、有限cutに一様なMoser被覆・接続・中央帯と、全域値比較の非循環性も確認した。Cornerの座標補間・全平均・相対Hamiltonianの定数とcutoffsが段階一様であることを照合し、残余接続費用のcutへの吸収から上下両側の固定族係数を得た。
 - Source中心のsmooth centered Moser、canonical momentの零、位相商、閉pinched torus、primitive cycleとfocus二次型を独立に点検した。K2のfirst-exit→逆flow→moment→全torusの順序、inverse Morse領域と非incident piecesの分離、全stageと全複素parameterでの固定marked treeも再点検した。
@@ -204,4 +208,4 @@ Fernández de Bobadilla–Pełka, arXiv:2312.13248v4 の Theorem 6.14、Example 
 
 ## 再開時の確認
 
-外部repoの最新 `main`、AGENTSと方針を確認し、上表のラベルの存在と追加仮定を照合する。未取得・アクセス不能なら、確認済みコミットと未確認範囲を残し、利用可能な独立課題を進める。解析的結果を外部repoへ追加した場合は、そちらを先に保存してから、この表の参照版と本repoの依存箇所を更新する。外部入力の更新・本repoでの適用証明・組版・計算検証は別々に記録する。
+次はSNC構成の指定normal holonomy・periods・marked full leafの相対実現と、actual KE定理の適用範囲を絞った一次文献比較を優先する。外部repoの最新 `main`、AGENTSと方針を確認し、上表のラベルの存在と追加仮定を照合する。未取得・アクセス不能なら、確認済みコミットと未確認範囲を残し、利用可能な独立課題を進める。解析的結果を外部repoへ追加した場合は、そちらを先に保存してから、この表の参照版と本repoの依存箇所を更新する。外部入力の更新・本repoでの適用証明・組版・計算検証は別々に記録する。

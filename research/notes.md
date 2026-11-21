@@ -1,5 +1,5 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-21 / v3.5
+更新：2026-11-21 / v3.6
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
@@ -207,6 +207,8 @@ Source側の `ke:source-central-band-reduction` は、固定residual disc、人�
 
 境界germを点ごとに保存するには、primitive差のcollar $H^1$ classがcoreの $H^1$ から延びることが必要となる。Fiber periodsが全て零でもbase-circle fluxが残る例を `ke:core-relative-flux-example` に保持する。これはfiber partitionの不存在例ではない。平均形式にもparameter方向の同変Moserを入れる $A_t b_t A_0^{-1}$ はexact symplectic germとなり、normal momentの加法定数も保つ。
 
+`ke:component-flux-space` は $\mathcal O(K,S)=H^1(S;\mathbb R)/\operatorname{im}H^1(K;\mathbb R)\cong H_2(K;\mathbb R)$ を同定する。一般位置 $m=d-1$ 直線で $b_1(K)=m-1$、$b_1(S)=\binom m2$、$\dim\mathcal O=\binom{m-1}{2}=\binom{d-2}{2}$。Cohen–Suciuの既知のboundary cohomology（Proposition 2.5、Corollary 2.6、§6.9）の適用であり、独立の新規性は主張しない。境界でcoreへ消えるcycleのperiodが相対延長条件を検出する。`ke:nonextendible-small-core-germ` では非零障害を表すclosed form $a$ に対して $\iota_Y\omega=a$ と置く。小さいflowのfluxは $\epsilon[a]$ なので、同じactual KE形式を固定してもcore全体へ延長できないgermが恒等写像に任意に近く存在する。この障害は、自由に構成するfibration又は全葉partitionの不存在を意味しない。
+
 `ke_component_core_geometry.tex` により、任意の固定compactと全collarでKE形式・primitiveに厳密一致するsmooth compactification、正residueの有限型KE core、その小さい飽和近傍のLagrangian fillingを得た。この局所core fillingの存在と、既存full collarの葉を保つことは別条件である。後述のactual link構成はその相対問題を解く。`comp:finite` の出力葉が指定葉に一致することは、二形式の一致だけからは従わない。条件付き系 `ke:conditional-component-core-filling` は、その入力があればactual移送・接着・十分遅い対角選択でcore全体の正規化径を消せることを示す。
 
 ## Saddle を動かす相対葉族補間
@@ -249,7 +251,11 @@ Actual symplectic circleのcentered kernelについて
 
 正本は `ke_actual_core_gluing.tex`。各linkのquotientは、normal facesの木 $T_{ij}$ の標識endをcorner annuliでつないだgraph $\Gamma_i$。Contact formを変更せず、compact Liouville domainの $K\setminus\Sigma\simeq(-\infty,0]\times S$ に対し $\Pi(\varphi_s(y))=[e^s,\pi_S(y)]$ とする。有限退出時間とcompactnessがcone pointでの連続性を与える。これはEvans–Mauri Lemma 2.16のcompact版であり、既存のcone原理自体を新成果とはしない。
 
+`ke:contact-rescaling-collar-scope` は、contact構造の一致と指定葉の一致を分ける。$\beta=\cos z\,dx+\sin z\,dy$ on $T^3$、$F=\{z=\pi/2\}$、$h=\sin x$ では $d\beta|_F=0$ だが $d(e^h\beta)|_F=e^{\sin x}\cos x\,dx\wedge dy\not\equiv0$。Evans–Mauriのcompletion間の点依存radial shiftは固定linkを保つ主張ではない。本稿のcompact coneは入力のcontact form自体を保つ。
+
 外向きcollarのLiouville葉族は一般には旧neck葉族と異なるため、前節の相対補間を $q_a=\delta_j\ne0$ の小帯へ適用する。全corner葉とsource近傍を保ち、saddleは動かせる。全fiber trim後のclosed piecesでlocal fiber relationsの有限和は既に推移的なので、閉同値関係となりHausdorff基底を得る。基底は同じ $B_d(T)$。
+
+相対補間の恒等end collarsは全K2交わりを含む。Source labelの切替が $B\le5.4b_j$ で終わり、全交わりが $b_{\rm res}>5.5b_j$ にある余裕を使う。切詰め対象は補間後の $\widetilde f$ である。共通Liouville band内に $S^-=\partial K^-$ を取り、coreは元の $K$、外側は $U\setminus\operatorname{int}K^-$ とする。平行moment linkは補間後も全fiberで飽和し、重なるcollarでは同じ全葉になる。指定component compactsを $\operatorname{int}K^-$ に残すことで全域被覆も保つ。基底分割は元の共通anchorへ戻せる。
 
 `ke:component-logarithmic-connectors` により、各componentのcore・変更collarの接続費用とambient径は $C(1+\log(N_j+1))$ で抑えられる。$C$ は固定した族・charts・weightsのみに依存する。全深度が $CN_j$ 以下であることと固定componentのcusp上比較を使い、normal動径の積分 $\int ds/s$ で固定compactへ結ぶ。全経路は $\{\Psi_i\le AN_j\}$ に入り、この拡大compactを先に固定してからactual metricを比較する。これは**各componentごとのambient評価**であり、異なるcores全部の合併径や任意Liouville軌道の全長、fiber内在径は結論しない。
 
@@ -268,7 +274,7 @@ U_{j,t}\le C_d\left\{b_j^{-1}+\frac{1+\log R_t+\log(N_j+1)}{R_t}\right\}
 
 ### 主要接着依存の点検範囲
 
-Centered averageの $K\omega=0$、二作用の $F=K_1\lambda+A_1K_2\lambda$、common normal上の $V(F_C-F_N)=0$ を直接確認した。GeneratorのC1評価にはmapのC2が必要であり、既存C5入力からの微分階数を確認した。切替え帯 $5.2b_j$–$5.4b_j$ は広い構成域 $\min\ell>3b_j$ とnormal-first plateau $5b_j$–$9b_j$ に入り、実交点 $5.5b_j$–$8b_j$ までにfull torus gaugeへ移る。支持全体の被覆、先行するexact Moserとperiod保存、$Zq=q-\rho<0$ の向き、全fiber trim、相対葉族の境界germとcritical-leaf marking、閉quotientを読み合わせた。これは全旧局所証明の包括的再監査ではない。
+Centered averageの $K\omega=0$、二作用の $F=K_1\lambda+A_1K_2\lambda$、common normal上の $V(F_C-F_N)=0$ を直接確認した。GeneratorのC1評価にはmapのC2が必要であり、既存C5入力からの微分階数を確認した。切替え帯 $5.2b_j$–$5.4b_j$ は広い構成域 $\min\ell>3b_j$ とnormal-first plateau $5b_j$–$9b_j$ に入り、実交点 $5.5b_j$–$8b_j$ までにfull torus gaugeへ移る。支持全体の被覆、先行するexact Moserとperiod保存、$Zq=q-\rho<0$ の向き、全fiber trim、相対葉族の境界germとcritical-leaf marking、閉quotientを読み合わせた。今回のcore経路の監査は、正則化・exact Moser・actual平均・同じmoment cut・相対補間・補間後trimの構成の同一性と量化に範囲を限定して完了した。SNC構成にも同じcompact-relative Morse–Smale補題を適用し、閉isotropic filtrationを明示した。これは全旧局所証明の包括的再監査ではない。
 
 ### 切り取った cap と旧 softmax 値
 
@@ -578,4 +584,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 ## 検証状態
 
 
-2026-11-21 / v3.5：主稿改訂25では、closed-cornerの有限cut一様評価、全target端点でのportal選択と全fiber合併、有限galleryのambient端点比較を明示した。Raw/actual momentとtailの共通bufferを分離し、これらの証明と接続を複数担当で独立内部点検した。Fernández de Bobadilla–Pełkaの構成計量によるGH収束と、Fu–Hein–Jiangの孤立楕円特異点の負KE cusp閉鎖を一次資料の指定箇所と照合した。改訂25をLuaLaTeXで255頁に組版し、第1・10・14・15・47–49・73–75・187–192・255頁の計17頁を同じ最終PDFから個別画像で表示確認した。未解決参照・文献引用、重複label、欠字、overfull boxは0。静的構成検査も成功。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は未実施。
+2026-11-21 / v3.6：主稿改訂26では、core正則化・固定形式への移送・指定actual collar・全域fibrationの仮定と構成の同一性を、範囲を限定して複数担当で独立内部監査した。全K2交わりを含む恒等collar、補間後の葉族に対する全fiber trim、SNC側の閉isotropic filtrationを明示した。Contact rescalingによる固定葉の非保存例と、直線配置coreの相対flux空間・固定形式で延長不能な小さいcollar germを本文に統合した。改訂26は今回編集し、組版・表示確認は作業中。直前の改訂25の255頁・指定17頁の表示確認と静的検査の記録は research/validation.json に保持する。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は未実施。

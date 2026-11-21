@@ -82,6 +82,36 @@ Skeleton の連結性は flow から直接従う．実際，
 最後に compact から Hausdorff 空間への連続全射なので proper である．
 \end{proof}
 
+\begin{remark}[Contact form の変更と指定された境界葉]
+\label{ke:contact-rescaling-collar-scope}
+前補題の Liouville flow による延長は，Evans--Mauri の既知の cone-extension
+argument を，指定された境界へ相対化したものである．同論文の
+Lemma~2.16 と Remark~2.18\cite[pp.~543--544]{EM}は symplectic completion
+$\overline W$ を扱い，link の元の形式 $\beta=\lambda|_{\mathrm{Link}(W)}$ と異なる
+$\alpha=e^h\beta$ に関する fibration も許す．このとき二つの symplectizations は，
+$d(e^r\alpha)$ 側から $d(e^s\beta)$ 側への写像
+$(r,x)\mapsto(r+h(x),x)$ で同定される．一般には元の固定 link は保たれない．
+
+また，元の $d\beta$-Lagrangian fiber $F$ に対して
+\[
+ d(e^h\beta)|_F=e^h\,dh|_F\wedge\beta|_F
+\]
+だから，同じ $F$ が変更後も Lagrangian であるためには右辺の消滅が必要である．
+例えば $\TT^3=(\RR/2\pi\ZZ)^3$ の座標を $(x,y,z)$ とし，
+\[
+ \beta=\cos z\,dx+\sin z\,dy,\qquad h=\sin x
+\]
+と置く．$\beta$ は contact form で，各 $z$-level torus は $d\beta$-Lagrangian である．
+しかし $F=\{z=\pi/2\}$ では
+\[
+ d(e^h\beta)|_F=e^{\sin x}\cos x\,dx\wedge dy\not\equiv0 .
+\]
+これは contact 構造を変えない rescaling でも，固定された葉を保つとは限らない
+という比較例である．本稿では $\beta=\lambda|_S$ 自体に関する既存の全境界葉を
+入力とし，その形式を変更せず compact domain 内へ延長する．
+Contactomorphism 型の一致だけから，この相対的な葉の保存を結論していない．
+\end{remark}
+
 \subsection{外向き collar と既存 neck 葉の整合}
 
 \begin{proposition}[Actual link を起点とする相対 collar 接着]
@@ -130,6 +160,11 @@ Corner では $Z$ が全 $T^2$ action と可換なので，flow は torus orbits
 Reduction の座標を共通 corner partition に適合させて取る．
 そのために固定した一つの moment level から regular annular end charts を続ければよく，
 parameter ごとに first integral の表示値を揃える必要はない．
+End collars はこの band 内の全 neck--corner intersections を含むように選ぶ．
+実際，節\ref{ke:core-invariant-primitive-section}の切替は source label
+$B\in[5.2b_j,5.4b_j]$ で終わり，全交わりでは
+$b_{\rm res}>11b_j/2$，$B=b_{\rm res}(1+O(b_j^{-2}))$ なので，
+恒等域の内側境界を切替帯と全交わりの間に取れる．
 定理\ref{ke:saddle-moving-relative-interpolation}と
 系\ref{ke:actual-saddle-moving-neck-interpolation}を用い，
 $q_a=\delta_j$ の近くでは Liouville 葉族，band の外側では旧葉族となるよう補間する．
@@ -207,11 +242,21 @@ corner rounding の quotient は対応する labelled ends を結ぶ interval �
 Link 自身の葉は既存部分 fibration の全 fibers なので，
 補題\ref{ke:actual-link-cone-filling}を用いて内部を充填する．
 命題\ref{ke:link-relative-collar-gluing}により，外向き collar で旧葉族へ戻す．
-補題\ref{ke:whole-fiber-core-trim}の飽和した並行 link を使って
-旧部分 fibration を全 fibers ごとに切り，
-新しい core domain との交わりを共通 Liouville collar にする．
-元の部分 fibration の外部は既に core domain の内部にあるため，
-この操作の前後で全 $X_t$ の被覆が成立する．
+この補間後の部分葉族を $\widetilde f_{j,t}$ と書く．
+切詰めは，補間前の partition ではなく，この $\widetilde f_{j,t}$ に対して行う．
+両葉族が Liouville 葉族に一致する band 内で，$S_{i,j,t}$ の少し内側に
+平行 moment link $S^-_{i,j,t}=\partial K^-_{i,j,t}$ を取る．
+Normal face は同じ moment の level，corner face は同じ全 $T^2$ orbits の和なので，
+$S^-_{i,j,t}$ は補間後も全 fibers で飽和している．
+従って補題\ref{ke:whole-fiber-core-trim}の連結 fiber による議論をそのまま適用し，
+$\widetilde f_{j,t}$ を
+$U_{j,t}\setminus\bigcup_i\operatorname{int}K^-_{i,j,t}$ へ制限する．
+Core 側は元の $K_{i,j,t}$ のままとすれば，その交わりは両 partition が厳密に一致する
+共通 Liouville collar となる．$X_t\setminus U_{j,t}$ を覆う各指定 component compact は
+対応する $\operatorname{int}K_{i,j,t}$ に入っているので，平行 link を十分近く選べば
+$\operatorname{int}K^-_{i,j,t}$ にも入り，全 $X_t$ の被覆が保たれる．
+共通 collar 内での基底の分割は，補題\ref{ke:anchor-trimmed-neck-domain}のとおり
+元の anchor $S_{i,j,t}$ へ取り直せる．
 
 全 pieces の fibers は連結で，全 overlaps 上で同じ全 fiber として一致する．
 閉じた飽和 pieces を $K_\alpha$ とすると，その各 fiber relation

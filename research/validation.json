@@ -1,6 +1,6 @@
 {
   "date": "2026-11-21",
-  "version": "3.5",
+  "version": "3.6",
   "scope": "複素次元2の現行研究状態。旧三次元稿の組版・監査記録ではない。数学的な証明と、その再監査、組版、整数計算、GitHub保存、Cloudタスク起動を区別する。",
   "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。次の優先課題は公表前の包括的依存監査・一次文献比較・新規性確認・主稿構成整理。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
@@ -94,47 +94,28 @@
     },
     "this_audit": {
       "date": "2026-11-21",
-      "scope": "改訂25：finite-cut closed-cornerの量化、全target端点の共通moment portalと全fiber合併、raw/actual momentとtail buffer、有限galleryのambient端点距離を独立内部点検。FBPの構成計量とFHJの孤立楕円特異点の負KE cusp閉鎖を一次資料の指定箇所で比較。全主稿・外部入力の包括的再監査ではない。",
-      "reexecuted_build": true,
+      "scope": "改訂26：固定coreの正則化・小さいexact Moser・actual primitiveから指定collarと全域fillingへの接続を独立内部点検。直線配置の相対flux空間とfixed-form collar拡張障害を追加。Cohen–SuciuとEvans–Mauri掲載版の指定箇所を一次資料で確認。",
+      "reexecuted_build": false,
       "reexecuted_static_checks": true,
       "reexecuted_python_suite": false,
       "six_label_finite_command": "python3 verification/verify_cubical_six_label_geometry.py",
-      "six_label_finite_result": "既存の有限検算PASSを保持。改訂25では計算箇所を変更せず再実行していない。",
+      "six_label_finite_result": "既存の有限検算PASSを保持。改訂26では計算箇所を変更せず再実行していない。",
       "independent_internal_proof_review": [
-        "ke:slow-cut-closed-corner-gh (uniform finite-cut formulation, external input quantifiers, and fixed raw retraction domain)",
-        "topo:coordinate-retraction",
-        "topo:six-label-gallery",
-        "topo:finite-endpoint-comparison",
-        "ke:component-neck-tail-depth (raw/actual moments and buffer)",
-        "ke:collapsed-tree-common-moment",
-        "ke:collapsed-tree-full-fiber-collapse",
-        "ke:coherent-corner-portals (closed endpoints and fixed anchor points)",
-        "ke:point-to-corner-portal",
-        "ke:global-ambient-upper (finite gallery error budget)",
-        "ke:actual-global-fibration (whole-fiber relation used in support-3 classification)"
+        "ke:fixed-compact-cusp-regularization",
+        "ke:fixed-component-transfer",
+        "ke:component-relative-flux (finite-dimensional restriction image)",
+        "ke:actual-link-cone-filling",
+        "ke:contact-rescaling-collar-scope",
+        "ke:link-relative-collar-gluing (all K2 intersections)",
+        "ke:actual-global-fibration (trim of the post-interpolation partition)",
+        "snc:main (closed isotropic filtration via independent compact relative lemma)",
+        "ke:component-flux-space (pair sequences, intersection form, complete boundary period test)",
+        "ke:nonextendible-small-core-germ (fixed two-form realization and direct extension obstruction)"
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
-      "visual_pages_reviewed": [
-        1,
-        10,
-        14,
-        15,
-        47,
-        48,
-        49,
-        73,
-        74,
-        75,
-        187,
-        188,
-        189,
-        190,
-        191,
-        192,
-        255
-      ],
-      "current_build_status": "Revision 25 final TeX sources compiled successfully to 255 pages; 17 selected pages from the same final PDF visually inspected. No unresolved references/citations, duplicate labels, missing glyphs, or overfull boxes. Static repository checks passed."
+      "visual_pages_reviewed": [],
+      "current_build_status": "Revision 26 first LuaLaTeX build passed (257 pages, no unresolved references or overfull boxes). Final header/bibliography rebuild and visual review in progress. Latest fully reviewed build record remains revision 25."
     }
   },
   "cloud_codex": {
@@ -164,9 +145,9 @@
       "verified": "一次PDF pp38–39、式(5.3)–(5.6)直後のbounded C∞_fcとTheorem 5.1を再確認。SNCに適用、smooth divisor専用full expansionは不使用。"
     },
     "Evans_Mauri_cone_extension": {
-      "source": "Evans–Mauri, Ann. Henri Lebesgue 4 (2021), 537–570, Lemma 2.16 and Remark 2.18; arXiv:1905.09229v3, §2.3",
-      "url": "https://arxiv.org/abs/1905.09229v3",
-      "verified": "掲載版pp.543–544のLemma 2.16とRemark 2.18、Definition 2.1、arXiv v3を確認。指定contact formを変えないcompact cone fillingを直接証明し、prescribed actual collarの相対補間・弱いcore filtrationは本稿で別に構成。"
+      "source": "Evans–Mauri, Ann. Henri Lebesgue 4 (2021), 537–570, Definitions 2.1/2.5, Lemma 2.16, Remark 2.18; Assumption 1, Propositions 6.11–6.12, Theorem 6.14 (published numbering).",
+      "url": "https://doi.org/10.5802/ahl.80",
+      "verified": "掲載版pp.540–545、561、565–566の指定内容を確認。Contact rescalingと指定全葉の差を例で明示。固定class自体を新規性にせず、point-prescribed collarとactual-link fillingの相対条件を区別する。"
     },
     "cubical_barycentric_subdivision": {
       "source": "E. K. Babson, L. J. Billera, C. S. Chan, Neighborly cubical spheres and a cubical lower bound conjecture, Israel J. Math. 102 (1997), 297–315, DOI 10.1007/BF02773804. Text checked in the April 10, 1996 preprint, §2.3, Proposition 2.2 and Corollary 2.4.",
@@ -215,6 +196,11 @@
         "url": "https://doi.org/10.1007/s00039-025-00708-y",
         "verified": "掲載版一次HTMLで具体的sexticの孤立楕円特異点・負KE cusp閉鎖・Tian–Yau bubbleの主張を確認。全gluing証明の再監査なし。本稿への解析入力ではない。"
       }
+    },
+    "Cohen_Suciu_boundary": {
+      "source": "Cohen–Suciu, Advances in Mathematics 206 (2006), 538–566; DOI 10.1016/j.aim.2005.10.003. Proposition 2.5, Corollary 2.6, §6.9 in arXiv:math/0502506v2, pp.6–7,28.",
+      "url": "https://arxiv.org/abs/math/0502506v2",
+      "verified": "一次PDFの短完全列・一般位置配置のBetti数を複数担当で確認。本稿は既知の境界cohomologyを相対Moserの有限period条件へ適用する。"
     }
   },
   "other_papers": {
