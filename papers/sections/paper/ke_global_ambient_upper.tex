@@ -1,0 +1,289 @@
+% !TeX root = ../../surface-lagrangian-torus-fibration.tex
+% 2026-11-21 / v1.0: 共通 moment の全 fiber 合併と有限 gallery による全域上界．
+\section{全 fiber 合併の収縮と actual 全曲面距離の上界}
+\label{ke:global-ambient-upper-section}
+
+命題\ref{ke:global-base-parameterization}で構成した
+$f_{j,t}=p_T\pi_{j,t}:X_t\to\mathcal C_d$ を用いる．
+本節の全ての source 側の距離は，\emph{全曲面の経路を許す actual ambient 距離}
+$d_{g_t}$ である．保持 corner 自身の内在距離は用いない．
+十分大きい固定 stage $j$ の後に $|t|$ を小さくし，記号を
+\[
+ \bar d_t=R_t^{-1}d_{g_t},\qquad m=m_j=6b_j,\qquad
+ \delta=4\pi/N_j,\qquad
+ \eta=\eta_{j,t}=A\frac{1+\log(N_j+1)}{R_t},\qquad\kappa=\eta
+\]
+とする．旧 corner theorem の誤差を
+\begin{equation}\label{ke:eq:global-upper-corner-error}
+ E=E_{j,t}=C\left(\frac1{m_j}
+       +\frac{\log(m_j+1)+\log R_t}{R_t}\right)
+\end{equation}
+と書く．以下では $C$ は固定した次数・退化族・有限 chart 系のみに依存し，
+有限定数 $C_j$ は stage $j$ に依存してよい．
+
+\subsection{同一 moment の接続費用と全 fiber 合併}
+
+各 pair $ab$ について，neck の全 marked tree と全 source discs を含む連結な
+固定残余基底 $P_{ab,j}$ を取る．Source discs を除いた部分も連結に取れる．
+さらに，各 labelled end の旧 softmax boundary $w_c=0$ の residual image を
+全 $\mu\in[-\delta,\delta]$ について含むようにする．この boundary は
+$B=m_j+O(1)$ にあり，既存 K2 の trim $B=7b_j$ より内側にあるので，
+既に用意した広い fixed-stage residual domain の中でこの選択を行える．
+新しい exhaustion uniformity は要求しない．
+
+系\ref{ke:source-inclusive-same-moment-collapse}と
+定理\ref{ke:actual-global-fibration}を使い，$C_j$ を増大させれば
+\begin{equation}\label{ke:eq:global-connector-budget}
+ H=H_{j,t}:=C_j+C\sqrt{\log(R_t+2)}
+\end{equation}
+により次の費用を同時に抑えられる：同一 pair の同一 actual normal moment 上の
+任意の二点の接続，各 component の core と変更 collar 内の任意の二点の接続，
+および必要な actual normal Moser trajectories．
+第一の場合の二点は，異なる reduced 葉又は source・saddle の特異葉に属してよい．
+経路自体が moment level 又は一つの fiber 内に留まるとは主張しない．
+第二の場合には一つの component ごとに，少し広い固定連結 compact image 内の
+経路を使う．異なる component cores 全体の径を $C_j$ で抑えるわけではない．
+
+\begin{proposition}[潰される木上の全 fiber 合併を含む一様収縮]
+\label{ke:collapsed-tree-full-fiber-collapse}
+定数 $C_j,C$ を十分大きく選べば，全 $z\in\mathcal C_d$ に対し
+\begin{equation}\label{ke:eq:full-fiber-diameter-upper}
+ \operatorname{diam}_{d_{g_t}} f_{j,t}^{-1}(z)\le H_{j,t}.
+\end{equation}
+特に，$d\ge6$ で $p_T$ が潰す内部木上の\emph{全ての}
+$\pi_{j,t}$-fibers の合併に同じ評価が成立する．
+\end{proposition}
+
+\begin{proof}
+$\operatorname{supp}z=\{a,b\}$ とし，$z=E_{ab}(u)$ と書く．
+$\kappa<u<2-\kappa$ なら，
+命題\ref{ke:collapsed-tree-common-moment}により
+$f_{j,t}^{-1}(z)$ は共通の
+$\mu=\sigma_t^{-1}(u)$ を持つ構成後の neck fibers の合併である．
+相対補間後も normal moment は保たれるので，この合併は
+$P_{ab,j}$ 上の同一 moment 集合に含まれる．
+従って\eqref{ke:eq:global-connector-budget}で径が抑えられる．
+両端の $0<u\le\kappa$ 又は $2-\kappa\le u<2$ では，逆像全体が対応する
+一つの component の固定 compact core と変更 collar に含まれ，その接続費用を使う．
+$z=e_a$ の場合も同じ component compact 内にある．
+
+$|\operatorname{supp}z|=3$ の場合，$p_T$ の逆像は一つの triangle cell の一点で
+あり，$f_{j,t}^{-1}(z)$ は一つの構成後の $\pi_{j,t}$-fiber である．
+全域構成の pieces とその overlaps は全 fibers で飽和しているので，この fiber は
+一つの保持 corner，neck，または component core・変更 collar に含まれる．
+保持 corner なら旧 fiber と同じ全 torus であり，
+定理\ref{ke:slow-cut-closed-corner-gh}の非正規化 intrinsic diameter $C/m_j$ を使う．
+Neck なら同一 moment 集合の部分集合として上の評価を使い，
+core・変更 collar なら固定 compact の費用を使う．
+$H\ge C/m_j$ となるよう定数を増やせば全ての場合を得る．
+\end{proof}
+
+\subsection{共通 moment を持つ corner portals}
+
+三元集合 $J=\{a,b,c\}$ について，旧 softmax 辺 $w_c=0$ 上で
+normal moment が $\mu\in[-\delta,\delta]$ である全 torus を
+\[
+ \Lambda_{ab,J,t}(\mu)\subset A_{t,J}
+\]
+と書く．補題\ref{ke:common-edge-moment-profile}によりこれは存在し，
+\[
+ P^{\rm old}_{t,J}(\Lambda_{ab,J,t}(\mu))
+       =E_{ab}(u_{J,t}(\mu)).
+\]
+系\ref{ke:common-neck-longitude}の endpoint rescaling と共通 profile の評価から
+\begin{equation}\label{ke:eq:portal-profile-error}
+ \sup_{|\mu|\le\delta}|u_{J,t}(\mu)-\sigma_t(\mu)|\le C\eta .
+\end{equation}
+この評価は全 labelled ends に同じ $\sigma_t$ を用いている．
+各 phase の選択は任意でよく，その違いも同一 moment の接続費用に含める．
+
+\begin{lemma}[隣接 corner 間で整合する portals]
+\label{ke:coherent-corner-portals}
+任意の $z\in\mathcal C_J$ に対し $a_J(z)\in A_{t,J}$ を選び，
+\begin{equation}\label{ke:eq:corner-portal-target-error}
+ d_\square(P^{\rm old}_{t,J}(a_J(z)),z)\le C\eta
+\end{equation}
+とできる．さらに，$z\in\mathcal C_J\cap\mathcal C_{J'}$ なら
+\begin{equation}\label{ke:eq:corner-portal-junction-cost}
+ d_{g_t}(a_J(z),a_{J'}(z))\le H
+\end{equation}
+となるよう同時に選べる．同じ $J$ を連続して使う場合は，同じ点を使ってよい．
+この選択の連続性は主張せず，必要な有限個の gallery endpoints のみに用いる．
+\end{lemma}
+
+\begin{proof}
+$|\operatorname{supp}z|=3$ なら，この support を含む三元集合は $J$ 自身しかない．
+$z\in P^{\rm old}(A_{t,J})$ なら，その旧 fiber から一点を選ぶ．それ以外では
+$P^{\rm old}(A_{t,J})$ が $\mathcal C_J$ の $2\eta$-net であることを使って
+\eqref{ke:eq:corner-portal-target-error}を満たす一点を選ぶ．
+特に $z=P^{\rm old}(x)$ となる指定済みの $x\in A_{t,J}$ があれば，
+その $x$ を選んでもよい．異なる corner への接続はこの場合には生じない．
+
+$z=E_{ab}(u)$，$0<u<2$ の場合を考える．
+$\kappa\le u\le2-\kappa$ なら
+$\mu=\sigma_t^{-1}(u)$ とし，各 $J\supset\{a,b\}$ に対し
+$a_J(z)\in\Lambda_{ab,J,t}(\mu)$ を選ぶ．
+\eqref{ke:eq:portal-profile-error}が target 誤差を与え，
+全ての $a_J(z)$ は同じ $P_{ab,j}$ の同一 moment 集合に属するので
+\eqref{ke:eq:global-connector-budget}が接続費用を与える．
+$u=1$，すなわち $\mu=0$ でも全 moment 退出定理が適用されるため，
+source の pinched fibers があることによる例外はない．
+
+$0<u<\kappa$ なら，component $a$ の link と各保持 corner の交わりから
+$a_J(z)\in S_{a,j,t}\cap W_{t,J}$ を一つ選ぶ．
+補題\ref{ke:corner-cap-disk}の proper cap arc によりこの交わりは空でなく，
+補題\ref{ke:removed-corner-target-cap}により
+$P^{\rm old}(a_J(z))$ は $e_a$ の $C\eta$ 近傍にある．
+$d_\square(z,e_a)=u<\kappa=\eta$ なので target 誤差を得る．
+各 $a_J(z)$ は同じ component compact に属するため，接続費用は $C_j\le H$ である．
+$2-\kappa<u<2$ も component $b$ を使って同様であり，
+$z=e_a$ もこの link 上の選択で扱える．
+以上は target の全 support 型を尽くす．
+\end{proof}
+
+\begin{lemma}[任意点から gallery の最初の corner への接続]
+\label{ke:point-to-corner-portal}
+任意の $x\in X_t$ に対し $q_x\in\mathcal C_d$ を選び，
+\begin{equation}\label{ke:eq:point-anchor-target-error}
+ d_\square(f_{j,t}(x),q_x)\le C\eta
+\end{equation}
+とできる．さらに $q_x\in\mathcal C_J$ を満たす\emph{どの}三元集合 $J$ についても，
+前補題の選択に整合する $a_J(q_x)$ を取り
+\begin{equation}\label{ke:eq:point-to-portal-cost}
+ d_{g_t}(x,a_J(q_x))\le H
+\end{equation}
+とできる．
+\end{lemma}
+
+\begin{proof}
+全域構成の被覆を用いて，次の三つの場合に分ける．
+
+まず $x\in A_{t,J_0}$ かつ
+$|\operatorname{supp}P^{\rm old}_{t,J_0}(x)|=3$ なら
+$q_x=P^{\rm old}_{t,J_0}(x)$ とする．保持 corner 上の基底値比較により
+\eqref{ke:eq:point-anchor-target-error}を得る．
+$q_x$ を含む三元集合は $J_0$ に限られ，前補題で選んだ $a_{J_0}(q_x)$ は
+$x$ と同じ旧 torus に属する．その径 $C/m_j\le H$ により接続できる．
+この選択により，異なる endpoints が同じ anchor を持つ場合にも一つの portal を使える．
+
+次に $x$ が pair $ab$ の保持 neck 上にあり，
+$\mu(x)\in[-\delta,\delta]$ であるときは
+\[
+ q_x=E_{ab}(\sigma_t(\mu(x)))
+\]
+とする．系\ref{ke:neck-base-value-control}が target 誤差を与える．
+任意の $J\supset\{a,b\}$ で
+$a_J(q_x)\in\Lambda_{ab,J,t}(\mu(x))$ と選べば，
+両点は同じ $P_{ab,j}$ の同一 moment 集合に属し，接続費用は $H$ 以下である．
+保持 corner 上で旧 $P^{\rm old}$ の support が二元になる点もこの場合に含まれる．
+実際，その全 torus は $B=m_j+O(1)$ の旧辺上にあり，
+K2 の共通 plateau overlap 内の同じ neck fiber である．
+Core cut により残る旧辺の interval は正確に $\mu\in[-\delta,\delta]$ である．
+
+残る点は一つの component $a$ の core 又は変更 collar に含まれる．
+$q_x=e_a$ とすれば，命題\ref{ke:global-base-parameterization}の core-image 評価が
+target 誤差を与える．各 $J\ni a$ の portal を
+$S_{a,j,t}\cap W_{t,J}$ に選べば，$x$ と同じ固定 component compact に属するので
+接続費用は $C_j$ 以下である．
+Anchor moment interval の外側の neck 尾部も，この component compact に含めてある．
+
+複数の場合が重なる点はどちらで扱ってもよい．この分類の役割は，
+gallery の最初の square の label が元の corner の label と異なるときにも，
+同じ moment 又は同じ component 内で最初の portal へ到達できることにある．
+\end{proof}
+
+\subsection{有限 gallery による全域上界}
+
+\begin{theorem}[Actual 全曲面距離の一様上界]
+\label{ke:global-ambient-upper}
+任意の固定 $d\ge5$ と上の actual fibration に対し
+\[
+ M_d=3\binom{\min\{d,6\}}3\le60
+\]
+と置く．固定 stage の全条件を満たす十分小さい $t$ に対して，全 $x,y\in X_t$ で
+\begin{equation}\label{ke:eq:global-ambient-upper}
+ \bar d_t(x,y)
+ \le d_\square(f_{j,t}(x),f_{j,t}(y))+U_{j,t},
+\end{equation}
+ただし
+\begin{equation}\label{ke:eq:global-ambient-upper-error}
+ U_{j,t}=M_dE_{j,t}
+       +C(M_d+1)\eta_{j,t}
+       +(M_d+1)\frac{C_j+C\sqrt{\log(R_t+2)}}{R_t}.
+\end{equation}
+従って既存の遅い対角選択を十分小さくすれば，$j=j(t)\to\infty$ に沿って
+$U_{j(t),t}\to0$ である．同じ選択で，全 $f_t$-fibers の正規化 ambient 径も
+一様に零へ収束する．
+\end{theorem}
+
+\begin{proof}
+前補題の anchors $q_x,q_y$ を取る．
+系\ref{topo:six-label-gallery}により，両者を結ぶ最短路を
+$M\le M_d$ 本の unit-square 内線分に分ける：
+\[
+ z_0=q_x,\ z_1,\ldots,z_M=q_y,
+ \qquad[z_{r-1},z_r]\subset Q_r\subset\mathcal C_{J_r}.
+\]
+その Euclidean 長さを $\ell_r$ とすれば
+$\sum_r\ell_r=d_\square(q_x,q_y)$ である．
+両 anchors が等しい場合は，その点を含む一つの square の定値線分を使えばよい．
+
+第 $r$ 線分の両端に対応する portals
+\[
+ p_r^-=a_{J_r}(z_{r-1}),\qquad p_r^+=a_{J_r}(z_r)
+\]
+を取る．初めと終わりでは補題\ref{ke:point-to-corner-portal}の指定点を使う．
+\eqref{ke:eq:retained-protected-estimates}から得られる actual ambient 上界と
+\eqref{ke:eq:corner-portal-target-error}により
+\begin{align*}
+ \bar d_t(p_r^-,p_r^+)
+ &\le d_\square(P^{\rm old}_{t,J_r}(p_r^-),
+                         P^{\rm old}_{t,J_r}(p_r^+))+E\\
+ &\le \ell_r+2C\eta+E .
+\end{align*}
+ここで使う経路は旧 full corner $W_{t,J_r}$ の中の経路であり，
+core cut で除いた cap を通っても $X_t$ 内の正当な経路である．
+保持領域 $A_{t,J_r}$ の中に経路を閉じ込める必要はない．
+
+隣接する $J_r,J_{r+1}$ が同じなら共通 portal を使える．
+異なる場合，$z_r$ の support は二元以下である．
+二元の中央 interval なら両 portals は同じ $\sigma_t^{-1}(u)$ を持つので，
+\eqref{ke:eq:corner-portal-junction-cost}で費用 $H$ 以下の接続を得る．
+Vertex に近い端 interval と一元 support では，同じ component compact の費用を使う．
+最初と最後の $x,y$ への接続も各 $H$ 以下である．
+従って全ての接続を足し合わせると
+\[
+ \bar d_t(x,y)
+ \le d_\square(q_x,q_y)+M(E+2C\eta)+(M+1)H/R_t.
+\]
+さらに\eqref{ke:eq:point-anchor-target-error}を両端に用いれば
+\[
+ d_\square(q_x,q_y)
+ \le d_\square(f_{j,t}(x),f_{j,t}(y))+2C\eta .
+\]
+$M\le M_d$ と合わせ，定数をまとめれば
+\eqref{ke:eq:global-ambient-upper}--\eqref{ke:eq:global-ambient-upper-error}を得る．
+距離の上界を実際の経路長で書く場合には，各距離の infimum を任意の正の誤差で
+近似する有限個の経路を選び，最後にその誤差を零へ送ればよい．
+
+最後に全ての fixed-stage 定数を先に $C_j$ に含め，既存の parameter 閾値とともに
+\[
+ R_t\ge j\bigl(1+C_j+\log(N_j+1)\bigr)
+\]
+を課す．$m_j\to\infty$，$N_j\ge m_j$ であり，
+$\log R_t/R_t\to0$ と $\sqrt{\log(R_t+2)}/R_t\to0$ も成立するので
+$E_{j(t),t},\eta_{j(t),t},H_{j(t),t}/R_t\to0$ である．
+これは既存の有限個の stage 条件を強めるだけの遅い対角選択である．
+全 fiber 合併径については\eqref{ke:eq:full-fiber-diameter-upper}を使う．
+\end{proof}
+
+\paragraph{平方の lift 条件との区別．}
+本節で実測した局所条件は，近い旧 target 値を持つ endpoints の
+actual ambient 距離の上界と，junction portals の同一 moment 接続である．
+命題\ref{topo:finite-portal-criterion}の \textup{(S)} は，target 線分へ
+\emph{厳密に}写る rectifiable lift を要求する．Inset と core cap の再 parameter 化の
+後では，旧 corner の lift がこの条件を満たすとは限らない．
+上の証明はその \textup{(S)} を引用せず，必要な endpoint 版の条件を
+有限 gallery に直接適用している．\textup{(F)} に相当する actual 全 fiber 合併径は
+命題\ref{ke:collapsed-tree-full-fiber-collapse}で独立に証明した．
+全曲面を通る任意の経路に対する下界 \textup{(N)} は本節の結論に含めない．

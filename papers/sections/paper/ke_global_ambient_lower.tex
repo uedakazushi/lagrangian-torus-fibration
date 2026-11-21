@@ -1,0 +1,537 @@
+% !TeX root = ../../surface-lagrangian-torus-fibration.tex
+% 2026-11-21 / v1.0: 全域 co-Gram と同じ fibration の値の比較．
+\section{切り詰めた対数深度による全曲面の距離下界}
+\label{ke:global-scalar-lower-section}
+
+本節では $L=-\log|t|^2$，$R=\log L$，$\bar g_t=R^{-2}g_t$ とする．
+Actual 全域 fibration の存在と component cap の評価は
+定理\ref{ke:actual-global-fibration}および
+補題\ref{ke:removed-corner-target-cap}を入力とする．
+以下では clipped map を構成し，triple 外の単一 scalar 評価へ還元する．
+その scalar 評価は節\ref{ke:sharp-normal-section}で証明した
+normal Schwarz barrier によって供給される．さらに actual fibration の
+基底値との全域比較を行い，同じ写像に対する全曲面の距離下界を得る．
+外部 KE 研究の $\mathrm{(CP)}_d$，$\mathrm{(PBE)}_d$ を仮定しない．
+以下の定数 $C_d$ は固定した次数と退化族に依存してよく，
+$C_j$ はさらに固定 stage に依存してよい．
+
+\subsection{全曲面上の clipped logarithmic map}
+
+$\mathcal O_{\mathbf P^3}(1)$ に固定 Hermitian metric を取り，
+各 $L_i$ を定数倍して
+\[
+ \ell_i=-\log\|L_i\|^2>1
+\]
+とする．$L_i=0$ では $\ell_i=+\infty$ と解釈する．
+定数倍の積は defining equation の $F_d$ に吸収する．
+$b_j$ を K2 の residual exhaustion scale，$m_{\rm old}=6b_j$ を旧 corner cut とする．
+これとは独立に，固定 stage の全定数と core depth $N_j$ を決めた後で
+lower clipping depth $m=\mathfrak m_j\gg m_{\rm old}+N_j+n_j$ と
+plateau 定数 $K=K_j>2d$ を選ぶ．
+いずれも stage とともに無限大へ発散させ，最後の slow diagonal に
+$\log\mathfrak m_j+\log K_j=o(R_t)$ を課す．以下では $m=\mathfrak m_j$，$K=K_j$ と略記し，
+\[
+ M=\frac{L}{K},\qquad S=\log(M/m)=R-\log K-\log m,
+ \qquad
+ \Theta_i=\left[\frac{\log(\ell_i/m)}S\right]_0^1
+\]
+と置く．$[q]_0^1=\max(0,\min(q,1))$ である．
+
+\begin{lemma}[Source 軸も含む大域的な cubical map]
+\label{ke:global-clipped-depth-map}
+十分小さい $|t|$ に対し
+\[
+ \Theta_t=(\Theta_1,\ldots,\Theta_d):X_t\longrightarrow\mathcal C_d
+\]
+は well-defined な continuous map で，固定 $t$ ごとに locally Lipschitz である．
+少なくとも一つの coordinate は $1$ に等しく，非零 coordinate は高々三つである．
+従って微分が非零となり得る active coordinates
+\[
+ A_t(x)=\{i:m<\ell_i(x)<M\}
+\]
+は高々二つである．Source 軸上でも $L_i=0$ の coordinate は plateau $1$ に入り，
+その対数の発散による不連続性はない．
+\end{lemma}
+
+\begin{proof}
+族の積方程式と誘導 Hermitian metric により，零でない点では
+\[
+ \sum_i\ell_i=L-\log\|F_d\|^2\ge L-C.
+\]
+従って $\max_i\ell_i\ge(L-C)/d>M$ である．
+いずれかの $L_i$ が零ならこの結論は自明である．
+一方，一般位置の任意の四平面には共通点がない．
+各四元集合 $I$ について $\sum_{i\in I}\|L_i\|^2$ は
+$\mathbf P^3$ 上で正の最小値を持つので，四番目に大きい $\ell_i$ は一様に有界である．
+有限個の $I$ に共通の定数を越えて $m$ を取れば，$\ell_i>m$ は高々三つとなる．
+Clip 関数は局所 Lipschitz であり，$L_i=0$ の開近傍では $\Theta_i=1$ である．
+これで全主張が従う．
+\end{proof}
+
+\begin{lemma}[Co-Gram による全経路の長さ評価]
+\label{ke:global-clipped-cogram-lower}
+ある $\epsilon_t\to0$ に対し，clipping levels を除いた各開領域上で，
+active covectors の co-Gram matrix がほとんど至る所で
+\begin{equation}\label{ke:eq:global-active-upper}
+ \left(\langle d\log\ell_i,d\log\ell_j\rangle_{g_t^{-1}}
+       \right)_{i,j\in A_t(x)}\le(1+\epsilon_t)\mathrm{Id}
+\end{equation}
+を満たすとする．このとき $X_t$ の任意の rectifiable curve $\gamma$ について
+\[
+ L_\square(\Theta_t\circ\gamma)
+ \le\frac{R\sqrt{1+\epsilon_t}}S\,L_{\bar g_t}(\gamma).
+\]
+特に全点対で
+\begin{equation}\label{ke:eq:global-raw-lower}
+ R^{-1}d_{g_t}(x,y)
+ \ge d_\square(\Theta_t x,\Theta_t y)
+ -C_d\left(\epsilon_t+\frac{\log m+\log K}{R}\right).
+\end{equation}
+さらに $f_t=p_T\pi_t$ と
+$\sup_xd_\square(f_t(x),\Theta_t(x))\le a_t$ なら，
+右辺を $d_\square(f_t(x),f_t(y))$ に置き換えて誤差 $2a_t$ を加えられる．
+\end{lemma}
+
+\begin{proof}
+各 active index set を固定した開領域では co-Gram は smooth なので，
+ほとんど至る所の不等式は連続性によりその全点へ延びる．
+Clipping level 上で strict に active な残りの covectors に対しても，
+隣接する開領域からの極限と principal submatrix の不等式を使える．
+従って ambient measure zero の集合に曲線が含まれる場合を除外していない．
+Active region では $d\Theta_i=S^{-1}d\log\ell_i$ である．
+Clip levels に沿って動く区間ではその coordinate の微分は零であり，
+一般の absolutely continuous curve でもその level set 上でほとんど至る所同じことが成り立つ．
+従って\eqref{ke:eq:global-active-upper}は
+\[
+ |(\Theta_t\circ\gamma)'|_{\ell^2}
+ \le S^{-1}\sqrt{1+\epsilon_t}|\gamma'|_{g_t}
+\]
+を与える．有限 Euclidean cubical complex の curve の長さは，各 face の
+Euclidean speed の積分である．これは relative interiors の逆像で計算し，
+seams 上ではその法線 coordinate の微分がほとんど至る所零になることを用いればよい．
+従って square seams や clipping levels の往復を含めて同じ積分評価が成り立つ．
+全経路の長さについて下限を取り，$\mathcal C_d$ の有限な直径を使えば
+\eqref{ke:eq:global-raw-lower}を得る．最後は端点の三角不等式である．
+領域間の往復回数を数えず，加法誤差も経路の各部分へ配分していない．
+\end{proof}
+
+\subsection{二つの active directions は既存 triple 比較で制御できる}
+
+\begin{proposition}[大域下界の rank-one 評価への還元]
+\label{ke:global-lower-rank-one-reduction}
+$\mathcal T_{j,t}$ を，三つの異なる global depths が $b_j/2$ 以上となる領域とする．
+この領域上では，既存 full-triple comparison と rank-one Schwarz estimate により
+\eqref{ke:eq:global-active-upper}が
+\[
+ \epsilon_{j,t}=C(b_j^{-1}+K_j^{-2})
+\]
+で成立する．$X_t\setminus\mathcal T_{j,t}$ では active coordinate は高々一つである．
+従って大域長さ下界のために新たに十分な解析入力は，次だけである：
+\begin{equation}\label{ke:eq:single-active-normal-input}
+ \sup_{\substack{x\notin\mathcal T_{j,t}\\\mathfrak m_j<\ell_i(x)<L/K_j}}
+       |d\log\ell_i|_{g_t}(x)\le1+\varepsilon_t,
+ \qquad \varepsilon_t\longrightarrow0.
+\end{equation}
+この入力は source を含む pair 領域の \emph{一方向の上 co-gradient bound} であり，
+全 tensor の二側比較，angular derivatives，あるいは portal 上界を要求していない．
+\end{proposition}
+
+\begin{proof}
+三つの $L_i$ が十分小さい点は，対応する一つの三重点の固定近傍に入る．
+そこで exact triple coordinates $\zeta_i\zeta_j\zeta_k=t$ を取り，
+$s_a=-\log|\zeta_a|^2$ とする．固定 smooth units と Hermitian factors の差により
+\[
+ \ell_a=s_a+h_a,
+ \qquad |h_a|+|dh_a|_{g_t}\le C.
+\]
+この微分評価には，当該 triple 内での full-triple tensor 比較と
+complete simplex model の $g_L^{\rm sf}\ge c g_{\rm FS}$ を使う．
+ここで全曲面上の一様 projective lower bound を新たな入力にしていない．
+従って active directions について
+\[
+ d\log\ell_a=d\log s_a+O_{g_t}(b_j^{-1}).
+\]
+ここで $|d\log s_a|_{g_t}\le1+O(b_j^{-1})$ は，
+関連 KE 主稿 \texttt{simplex:lem:rank-one-schwarz} と
+\texttt{coarse:thm:full-triple-tensor}から得る．
+
+二つの active depths は $s_a,s_b\le L/K_j+O(1)$，
+残る一つは $L-s_a-s_b$ である．
+同稿 \texttt{simplex:prop:dominant-product} 又は
+\texttt{simplex:cor:active-cogram} により，二方向の co-Gram の上界は
+$\mathrm{Id}+O(b_j^{-1}+K_j^{-2})$ となる．
+一方向だけの場合は上述の rank-one upper bound で十分で，
+co-Gram が $1$ に近いという両側の結論まで要求する必要はない．
+Smooth unit の誤差を加えて所要の上界を得る．
+
+二つの active coordinates があれば，それらと plateau $1$ を持つ別の coordinate
+の三つが全て $\mathfrak m_j\gg b_j$ より深い．従って必ず $\mathcal T_{j,t}$ に属する．
+その補集合では一方向だけが残り，式\eqref{ke:eq:single-active-normal-input}で十分となる．
+\end{proof}
+
+\begin{corollary}[全域 co-Gram と actual 距離に関する Lipschitz 評価]
+\label{ke:global-depth-lipschitz}
+定理\ref{ke:sharp-global-one-active}の順序でパラメータを選ぶ．
+このとき全 $X_t$ で，補題\ref{ke:global-clipped-cogram-lower}の仮定は
+\[
+ \epsilon_{j,t}\le C\bigl(\varepsilon_j+b_j^{-1}+K_j^{-2}\bigr)
+\]
+で成立する．特に任意の二点について
+\begin{equation}\label{ke:eq:global-depth-lipschitz}
+ d_\square(\Theta_t(x),\Theta_t(y))
+ \le\frac{\sqrt{1+\epsilon_{j,t}}}{S}\,d_{g_t}(x,y).
+\end{equation}
+この主張は以下の fibration の値との比較を入力にしていない．
+\end{corollary}
+
+\begin{proof}
+$\mathcal T_{j,t}$ 内では前命題を用い，外では active coordinate が高々一つ
+なので定理\ref{ke:sharp-global-one-active}を用いる．境界では連続性と
+principal submatrix によって同じ不等式を得る．
+補題\ref{ke:global-clipped-cogram-lower}の全曲線評価で下限を取ればよい．
+\end{proof}
+
+\subsection{同じ大域 fibration の基底値との比較}
+
+本項では命題\ref{ke:global-base-parameterization}で選んだ parameter 化を用い，
+$f_{j,t}=p_T\pi_{j,t}$ とする．辺の向きを同節に合わせて
+\[
+ E_{ik}(u)=
+ \begin{cases}e_i+u e_k,&0\le u\le1,\\
+ (2-u)e_i+e_k,&1\le u\le2
+ \end{cases}
+\]
+とする．Normal generator は $(1,-1)$ であり，component $i$ の側は
+$\mu<0$，component $k$ の側は $\mu>0$ である．
+
+\begin{lemma}[共通 profile と reciprocal moment の対数]
+\label{ke:common-profile-log-depth}
+系\ref{ke:common-neck-longitude}の共通 profile $\sigma_t$ について，
+各固定 stage に対して十分大きい有限な $A_j$ を取ると，
+$|\mu|\le\delta_j$ で
+\[
+\begin{array}{ll}
+ \displaystyle
+ \sigma_t(\mu)=\frac{\log(1/|\mu|)}R
+       +O(\eta_{j,t}+R^{-1}),
+       & \mu<-A_j/L,\\[4pt]
+ \displaystyle
+ \sigma_t(\mu)=2-\frac{\log(1/\mu)}R
+       +O(\eta_{j,t}+R^{-1}),
+       & \mu>A_j/L,\\[4pt]
+ \displaystyle
+ \sigma_t(\mu)=1+O_j(R^{-1}),
+       &|\mu|\le A_j/L,
+\end{array}
+\]
+となる．ここで $\eta_{j,t}=C(1+\log(N_j+1))/R$ であり，
+最初の二式の定数は固定族と degree に依存してよい．
+\end{lemma}
+
+\begin{proof}
+補題\ref{ke:common-edge-moment-profile}の $v$ を用いる．
+$\mu\in[-\delta_j,\delta_j]$ に対応する model levels では
+両 normal depths が $N_j$ と固定比以上に深く，
+$N_j\gg m_{\rm old}$ である．
+式\eqref{ke:eq:hexagon-edge-profile}と
+式\eqref{ke:eq:edge-moment-weighted-derivative}から
+\[
+ \frac{d\nu_0}{dv}\asymp
+ \frac1a+\frac1c\asymp\frac{1+e^{|v|}}L,
+ \qquad \nu_0(0)=0.
+\]
+従って $|v|\ge1$ では $|\nu_0(v)|\asymp e^{|v|}/L$ であり，
+$|\nu_0(v)|\le A_j/L$ では $|v|\le C_{A_j}$ である．
+$u_{0,t}=1+v/R$ を用いれば表示式を得る．
+Endpoints の rescaling は $O(\eta_{j,t})$ しか値を動かさず，
+中央の固定区間では恒等なので最後の式も保たれる．
+\end{proof}
+
+\begin{proposition}[Clipped depth と actual 基底値の全域比較]
+\label{ke:global-depth-base-comparison}
+Sharp normal 評価の下側 cut $\mathfrak m_j$ を，
+固定 stage の core と変更 collar の非成分深度の全上界，
+および保持 neck の残余 compact 上の非 pair 深度の全上界より
+大きく取る．また $K_j$ を下の proof の有限な中央帯定数より大きくしてよい．
+この選択は定理\ref{ke:sharp-global-one-active}のパラメータ順序と両立する．
+ある有限な固定 stage 定数 $C_j$ に対して
+\begin{equation}\label{ke:eq:global-depth-base-comparison}
+ \sup_{x\in X_t}d_\square(\Theta_t(x),f_{j,t}(x))
+ \le \frac{C_j\{1+\log\mathfrak m_j+\log K_j+\log(N_j+1)\}}R
+\end{equation}
+となる．$\Theta_t$ 自体が Lagrangian fibers 上で一定である必要はない．
+\end{proposition}
+
+\begin{proof}
+\emph{Corner．}
+旧 corner の source softmax は
+\[
+ s_a=m_{\rm old}+
+     (L-3m_{\rm old})\frac{L^{w_a}}{\sum_bL^{w_b}}.
+\]
+$0\le w_a\le1$，$\max w_a=1$ より，その全域で
+$|\log s_a-Rw_a|\le C\log(m_{\rm old}+1)$ である．
+Global section norm との差は固定 smooth units なので有界である．
+Dominant coordinate は旧写像と $\Theta_t$ の双方で $1$ となり，
+他の coordinates は同じ三つの labels に限られる．
+従って同じ square 内の線分を用いて，Moser--Hamiltonian 補正前の点 $y$ では
+\[
+ d_\square(\Theta_t(y),w)
+ \le C\frac{\log\mathfrak m_j+\log K_j}R.
+\]
+旧 corner map を与える Moser と相対 Hamiltonian patch の
+actual ambient displacement は固定 stage で有界である
+（命題\ref{ke:relative-corner-patch}，
+定理\ref{ke:slow-cut-closed-corner-gh}）．
+補正前後の点を式\eqref{ke:eq:global-depth-lipschitz}で比較すると，
+その追加誤差は $C_j/R$ 以下である．この順序により，
+補正の像で raw physical depth の微分を別に評価する必要はない．
+命題\ref{ke:global-base-parameterization}を用いれば，
+全保持 corner で所要の値比較が従う．
+
+\emph{Core と変更 collar．}
+補題\ref{ke:core-depth-upper}と固定 compact の graph convergence により，
+component $i$ のこの領域では
+\[
+ \ell_a\le D_j\quad(a\ne i),\qquad \ell_i\ge L-D_j
+\]
+となる有限な $D_j$ がある．$\mathfrak m_j>D_j$，
+$K_j>2$，その後 $t$ を十分小さく取れば $\Theta_t=e_i$ が厳密に成立する．
+同じ基底 parameter 化の cap 評価より
+$d_\square(f_{j,t},e_i)\le C\eta_{j,t}$ である．
+
+\emph{補正前の neck．}
+残る pair $ik$ の raw neck 上で projected holomorphic normal coordinates
+$x'_g,y'_g$ を用い，深度を $s_x,s_y$ とする．固定残余 compact は
+source を含んでよい．非 pair 深度は全て $D_j$ 以下であり，
+$\mathfrak m_j>D_j$ によって $\Theta_a=0$ ($a\notin\{i,k\}$) となる．
+補題\ref{ke:source-arm-moment-depth}と source-free の同じ convex secant 評価を
+有限 residual cover で用いる．十分大きい $A_j$ とある
+$\theta_j,\kappa_j>0$ に対して，$\mu>A_j/L$ では
+\[
+  s_x<\theta_j L,\qquad s_x\asymp_j1/\mu,\qquad
+  s_y\ge(1-\theta_j)L-D_j .
+\]
+$\theta_j<1/4$ とでき，$y'_g=0$ の軸もこの表示に含まれる．
+Physical normal coordinate との $O(t)$ 誤差は，
+$|x'_g|\ge e^{-\theta_jL/2}$ に比べ小さいので，
+$\ell_i=s_x+O_j(1)$，$\ell_k\ge(1-\theta_j)L-D_j$ である．
+従って $\Theta_t$ は同じ edge 上にあり，
+\[
+ \Theta_t=E_{ik}(2-q_x),\qquad
+ q_x=\left[\frac{\log(\ell_i/\mathfrak m_j)}S\right]_0^1 .
+\]
+$s_x\asymp_j1/\mu$ から
+\[
+ \left|q_x-\frac{\log(1/\mu)}R\right|
+ \le C_j\frac{1+\log\mathfrak m_j+\log K_j}R .
+\]
+この式は $q_x=0$ 又は $1$ の clipping 部分でも成立する．
+実際，clipping を $1$-Lipschitz に使い，
+clipping 前の $\log(1/\mu)/R$ の $[0,1]$ 外への超過は
+$C_j/R$ 以下であることを使えばよい．
+$\mu<-A_j/L$ は $x,y$ を交換して同様である．
+
+一方，$|\mu|\le A_j/L$ では
+$s_x,s_y\ge\kappa_jL$ である．これは一方が
+$\theta_jL$ 以下なら同じ arm 下界 $|\mu|\ge c_j/s$ を用い，
+そうでなければ自明な下界を用いることで従う．
+Source 固定点では両深度を $+\infty$ と読む．
+$O(t)$ の座標差を含めても $\ell_i,\ell_k\ge\kappa_jL/2$ なので，
+$K_j>4/\kappa_j$ と選べば $\Theta_t=e_i+e_k$ である．
+前補題の中央式と合わせると，raw neck 全域で
+\[
+ d_\square\bigl(\Theta_t(y),E_{ik}(\sigma_t(\mu(y)))\bigr)
+ \le \frac{C_j\{1+\log\mathfrak m_j+\log K_j+\log(N_j+1)\}}R .
+\]
+
+\emph{Actual neck と全被覆．}
+保持 neck の actual point を $x=\Phi^N_t(y)$ とし，
+actual canonical moment を $\widehat\mu(x)=\mu(y)$ と書く．
+定理\ref{ke:fixed-stage-source-neck}の
+固定 stage の共通 source/image に対する短円 Moser 評価から
+$d_{g_t}(x,y)\le D_j$ である．
+再び式\eqref{ke:eq:global-depth-lipschitz}によって
+$d_\square(\Theta_t(x),\Theta_t(y))\le C_j/R$ を得る．
+系\ref{ke:neck-base-value-control}は同じ $\widehat\mu(x)$ に対して
+\[
+ d_\square\bigl(f_{j,t}(x),
+            E_{ik}(\sigma_t(\widehat\mu(x)))\bigr)\le C\eta_{j,t}
+\]
+を与える．Corner との全交わりでは K2 の normal action と moment が
+同じであり，既に core と変更 collar は別に扱った．
+定理\ref{ke:actual-global-fibration}の全域被覆を用いれば，
+以上の三種類の領域で全 $X_t$ が尽くされる．
+有限個の定数を $C_j$ にまとめて結論を得る．
+\end{proof}
+
+\begin{theorem}[Actual fibration に対する全曲面の距離下界]
+\label{ke:global-ambient-lower}
+任意の固定 $d\ge5$ と本稿の一般性条件を満たす族を考える．
+定理\ref{ke:actual-global-fibration}と
+命題\ref{ke:global-base-parameterization}の同じ写像
+$f_{j,t}=p_T\pi_{j,t}$ を用いる．
+固定 stage のパラメータを上述の順序で選べば，
+全 $x,y\in X_t$ に対して
+\begin{equation}\label{ke:eq:global-ambient-lower}
+\begin{split}
+ R^{-1}d_{g_t}(x,y)\ge {}&
+ d_\square(f_{j,t}(x),f_{j,t}(y))
+ -C_d\bigl(\varepsilon_j+b_j^{-1}+K_j^{-2}\bigr)\\
+ &-\frac{C_j\{1+\log\mathfrak m_j+\log K_j+\log(N_j+1)\}}R .
+\end{split}
+\end{equation}
+従って $j=j(t)\to\infty$ を十分遅く選ぶと右辺の全誤差が消える．
+左辺は $X_t$ 全体の任意の経路を許す ambient 距離であり，
+protected-corner 距離ではない．
+\end{theorem}
+
+\begin{proof}
+系\ref{ke:global-depth-lipschitz}で得た co-Gram 上界を
+補題\ref{ke:global-clipped-cogram-lower}へ代入し，
+命題\ref{ke:global-depth-base-comparison}で両端点を比較する．
+全域の長さ評価を先に証明しているので，neck，corner，core 間の
+経路の出入りの回数による加法誤差は生じない．
+各固定 stage の全定数を決めた後，
+\[
+ R_t\ge jC_j\{1+\log\mathfrak m_j+\log K_j+\log(N_j+1)\}
+\]
+となるまで $t$ 閾値を小さくしてよい．
+$\varepsilon_j\to0$，$b_j,K_j\to\infty$ と合わせれば最後の主張を得る．
+この下界から fibration の全射性や距離上界を逆に推論してはいない．
+\end{proof}
+
+\subsection{任意回の出入りを扱う protected-buffer 原理}
+
+\begin{lemma}[加法誤差を持つ局所下界の正しい大域化]
+\label{ke:buffered-local-lower-globalization}
+$(X,d_X)$ を length space，$(Y,d_Y)$ を直径 $D$ の metric space とし，
+$f:X\to Y$ を continuous map とする．$U_\alpha\subset V_\alpha$ を
+$X=\bigcup_\alpha U_\alpha$ なる cover とし，$V_\alpha$ は開とする．
+全 $V_\alpha$ 内の曲線 $c$ に対し
+\[
+ d_Y(f(c(0)),f(c(1)))\le\lambda L_X(c)+\epsilon,
+ \qquad \lambda\ge1,
+\]
+かつ $U_\alpha$ から $X\setminus V_\alpha$ への first-exit curve の長さは
+$b>0$ 以上と仮定する．このとき
+\[
+ d_X(x,y)\ge
+ \frac{d_Y(fx,fy)-\epsilon}{\lambda+\epsilon/b}
+ \ge d_Y(fx,fy)-D(\lambda-1+\epsilon/b)-\epsilon.
+\]
+従って局所誤差 $\epsilon\to0$ に加えて，
+$\lambda\to1$ と $\epsilon/b\to0$ が十分である．
+\end{lemma}
+
+\begin{proof}
+有限長の任意の曲線 $\gamma$ の出発点を含む $U_\alpha$ を選び，
+最初に $V_\alpha$ を出る時刻までを一つの部分曲線とする．
+その時刻の点を含む次の $U_\beta$ を選んで繰り返す．
+完了した部分曲線はそれぞれ長さ $b$ 以上なので，その個数は
+$L_X(\gamma)/b$ 以下である．無限回の first exits が有限長の中で起きることも
+この下界により排除される．最後の一片を含めて局所不等式を加えると
+\[
+ d_Y(fx,fy)\le(\lambda+\epsilon/b)L_X(\gamma)+\epsilon.
+\]
+全経路で下限を取ればよい．元の曲線が二領域間を実際に何回往復したかは制限していない．
+また $f(U_\alpha)$ と $f(\partial V_\alpha)$ の target separation が $b_0>\epsilon$
+なら，局所不等式から $b=(b_0-\epsilon)/\lambda$ を得られる．
+\end{proof}
+
+既存の corner protection は，inner cut $m_{\rm old}$ と
+outer cut $m_{\rm old}/2$ の差だけなら
+正規化した幅が $O(R^{-1})$ である．一方，局所 distortion には
+$(\log m_{\rm old}+\log R)/R$ が含まれる．従ってこのままでは
+$\epsilon/b\to0$ は導けない．本節では，上記の scalar differential によって
+全曲線に対する乗法的な長さ評価を先に得ることで，この問題を避けた．
+
+\subsection{有限個の飽和した全被覆でも，加法誤差だけでは足りない}
+
+\begin{example}[全被覆上の protected 比較が大域下界を与えない例]
+\label{ke:full-cover-oscillating-bypass}
+$Y=[0,1]\times[-1,1]$ に Euclidean metric を入れる．
+$0<c<1$，整数 $N\to\infty$，$h_N=N^{-3}$ とし
+\[
+ a_\pm(x)=1\pm c\sin(2\pi Nx),\qquad
+ A_\pm(x)=\int_0^x a_\pm(r)\,dr
+\]
+とする．$|A_\pm(x)-x|\le c/(\pi N)$ である．
+$X_N$ は同じ rectangle に smooth metric
+$g_N=dy^2+a_N(x,y)^2dx^2$ を入れたものとする．
+$y\ge h_N$ では $a_N=a_+$，$y\le-h_N$ では $a_N=a_-$，
+$|y|\le h_N/2$ では $a_N=1+c$ とし，間を単調に滑らかに補間する．
+従って上半分では $a_N\ge a_+$，下半分では $a_N\ge a_-$ である．
+$f_N:X_N\to Y$ は恒等写像とする．
+
+$U_\pm=\{\pm y\ge0\}$ は $f_N$-飽和した二つの閉集合による全被覆で，
+共通部分は一本の連結な interval である．全 fibers は一点なので径は零である．
+上半分では
+\[
+ g_N\ge dA_+^2+dy^2.
+\]
+逆に transformed coordinates $(A_+(x),y)$ の線分を $y\ge h_N$ へ押し上げ，
+両端に垂直線分を付ければ，追加費用は $2h_N$ 以下である．
+従って全点対 $p,q\in U_+$ で
+\[
+ \big|d_{U_+}^{\rm int}(p,q)-d_Y(p,q)\big|
+ \le C/N+2h_N.
+\]
+下半分も同様である．さらに protected regions
+$V_+=\{y>-h_N/4\}$，$V_-=\{y<h_N/4\}$ 内でも，
+対応する lower bound は同じ calibration $(A_\pm,y)$ によって成立する．
+従って各 $U_\pm$ には誤差 $O(N^{-1})$ の protected distance 比較がある．
+
+しかし $(0,0)$ から $(1,0)$ へ，$\sin(2\pi Nx)$ の符号ごとに
+$y=-h_N$ と $y=h_N$ の安い側を使い，符号が変わるたびに垂直移動すると
+\[
+ d_{X_N}((0,0),(1,0))
+ \le\int_0^1\min(a_+,a_-)\,dx+O(Nh_N)
+ =1-\frac{2c}{\pi}+o(1).
+\]
+Target distance は $1$ なので大域下界の誤差は消えない．
+この例では full cover，飽和性，connected overlap，zero fiber diameter，
+および局所 protected distortion の全てが成立する．
+不足するのは誤差を支配する protection であり，$\epsilon_N/b_N\asymp N^2$ である．
+Actual KE family の反例ではなく，有限個の局所加法誤差を形式的に有限回だけ
+足してよいとする推論への反例である．
+\end{example}
+
+\subsection{Scalar Chern--Lu の境界制御を省略できない理由}
+
+局所正則 coordinate $z$ に対し，$s=-\log|z|^2$ と置くと
+半平面への rank-one Chern--Lu は
+$\Delta\log Q\ge Q-1$ という logistic inequality を与える．
+Global section norm では $dd^c\ell_i$ が固定 projective curvature である．
+当該 tube 上で $g_t\ge c g_{\rm FS}$ を別途確認できれば，その trace は有界となる．
+ただしこの事実だけで\eqref{ke:eq:single-active-normal-input}は従わない．
+微分不等式の誤差を $O(1/\ell_i)$ に整理することと，
+その領域の全境界から最大原理を適用できることは別の条件である．
+
+この区別は固定した smooth negative KE manifold の smooth divisor 近傍でも見える．
+Metric が非退化な点の正則 defining coordinate を $z$ とすると
+\[
+ |d\log(-\log|z|^2)|_g
+ \asymp\frac{1}{|z|\,|\log|z|^2|}\longrightarrow\infty.
+\]
+$dd^c(-\log|z|^2)=0$ であり，局所 Schwarz の微分不等式そのものも成立するが，
+punctured domain の source metric は complete ではない．
+最大原理の boundary control がないことが破綻の理由である．
+これは本稿の退化族に対する否定例ではない．
+節\ref{ke:sharp-normal-section}では，正則 projected normal frame を用いて
+$\Delta s=0$ を保ち，source を含む比較領域を
+$n_j\le s\le\kappa L$ として，その三種類の境界を全て評価した．
+外側 $s=n_j$ の粗い有限上界 $A_j$ と内側 $s=\kappa L$ の上界 $C_j$ は，
+\[
+ B(s)=1+\varepsilon_j+A_jn_j/s+C_js/(\kappa L)
+\]
+という明示的な障壁により吸収される．残余境界では
+full-triple の係数一の評価を用いる．
+最終 active band を
+$\mathfrak m_j\gg A_jn_j/\varepsilon_j$，
+$s\le L/K_j$，$K_j\gg C_j/(\kappa\varepsilon_j)$ に取ることで
+両境界の寄与が小さくなる．$s=\kappa L$ の比較境界と，
+写像 $\Theta_t$ の plateau $L/K_j$ は区別している．
+この境界評価と rank-two triple 比較を合わせたものが
+系\ref{ke:global-depth-lipschitz}であり，局所 logistic inequality
+だけから大域 Schwarz bound を推論したのではない．

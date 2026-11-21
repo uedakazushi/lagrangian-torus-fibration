@@ -36,7 +36,7 @@
       "一般次数のP0達成に必要な既存全証明と先行研究の独立点検"
     ],
     "scope_warning": "原稿に証明が書かれていることを、今回全定理を独立に再検証したことと混同しない。",
-    "research_note_strategy": "中央全点径O(1)、全moment source退出、全域基底parameter化を統合済み。全曲面距離上界とsharp scalar normal barrierによる下界を構成・監査中。",
+    "research_note_strategy": "中央全点径O(1)、全moment source退出、全域基底parameter化を統合済み。Sharp scalar normal barrier、全曲面上下界と同一fとの比較の証明を追加し、別担当の数学的点検を完了。統合主定理・現行文書の整理と改訂20の組版は未完了。",
     "documented_global_results": [
       "ke:actual-global-fibration: 全固定d>=5、既存一般性条件の族に対し、K2の保持corner葉/source近傍に相対的な全Xtのactual KE–Lagrangian fibrationを構成。",
       "ke:component-meridian-normalization: q_a=M_a+2πw_aを向き付きcanonical normal momentと整数winding・exact transportで厳密同定。",
@@ -98,7 +98,7 @@
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
       "visual_pages_reviewed": [],
-      "current_build_status": "revision20 source updated; compilation pending; latest verified build is revision19 (211 pages)"
+      "current_build_status": "revision20: source, base, sharp normal, global lower and upper proofs included; combined theorem and current-document revision in progress; compilation pending. Latest verified build is revision19 (211 pages)."
     }
   },
   "cloud_codex": {

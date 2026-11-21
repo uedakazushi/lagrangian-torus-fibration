@@ -1,0 +1,429 @@
+% !TeX root = ../../surface-lagrangian-torus-fibration.tex
+% 2026-11-21 / v1.0: Source を含む法線方向の係数一と正則深度障壁．
+\section{Source を含む法線方向の係数一の評価}
+\label{ke:sharp-normal-section}
+
+本節では actual KE 計量に対する一方向の評価を示す．
+固定した残余 compact 上で正則な normal frame を用い，
+source を除かずに最大値原理を適用する．外側の固定 shell では
+有限な上界だけを用いる．その値の大きさは，最後に選ぶ
+global depth の下側 cut に吸収する．従って成分 KE 計量の
+sharp normal asymptotic は本節の追加入力ではない．
+全ての評価は平均化前の actual $\omega_t$ に対するものであり，
+非正則な Moser map を介して正則性を移す議論は用いない．
+
+\subsection{規格化と一変数の障壁}
+
+$\operatorname{Ric}(\omega_t)=-\omega_t$，
+$L=-\log|t|^2$，$R=\log L$ とする．
+$\omega_t=\sqrt{-1}g_{a\bar b}\,dz^a\wedge d\bar z^b$ に対し，
+\[
+ \Delta_{\omega_t}=g^{a\bar b}\partial_a\partial_{\bar b},
+ \qquad |df|_{g_t}^2=2|\partial f|_{\omega_t}^2
+\]
+を用いる．非零正則関数 $x$ が $0<|x|<1$ を満たす領域で
+\[
+ s=-\log|x|^2>0,\qquad
+ h_{\mathrm{cusp}}=dd^c(-2\log s)
+ =\frac{2\sqrt{-1}\,dx\wedge d\bar x}{|x|^2s^2},
+ \qquad U=\operatorname{tr}_{\omega_t}(x^*h_{\mathrm{cusp}})
+       =|d\log s|_{g_t}^2
+       =\frac{2|\partial s|_{\omega_t}^2}{s^2}
+\]
+と置く．$h_{\mathrm{cusp}}$ は Ricci curvature $-1$ の
+punctured-disc 計量である．Rank-one Chern--Lu の計算\cite[Theorem~2およびその証明]{YauSchwarz}は
+\begin{equation}\label{ke:eq:sharp-normal-logistic}
+ \Delta_{\omega_t}\log U\ge U-1,
+ \qquad \Delta_{\omega_t}U\ge U(U-1)
+\end{equation}
+を与える．$dx\ne0$ の場合は $U>0$ なので通常の微分不等式である．
+この係数は本稿の $d^c=\frac{\sqrt{-1}}2(\bar\partial-\partial)$ と
+$\operatorname{Ric}(\omega_t)=-\omega_t$ の規格化による．
+実際，$\partial s=-dx/x$ は正則 one-form なので，
+Bochner 計算と Cauchy--Schwarz から
+$\Delta\log|\partial s|_{\omega_t}^2\ge-1$ となる．
+また $\Delta s=0$ より
+$\Delta(-2\log s)=2|\partial s|_{\omega_t}^2/s^2=U$ である．
+両式を加えると第一不等式，さらに
+$\Delta U=U\Delta\log U+|\partial U|^2/U$ から第二不等式を得る．
+
+\begin{lemma}[二つの端の粗い上界を吸収する障壁]
+\label{ke:normal-harmonic-depth-barrier}
+比較的 compact な領域 $\mathcal A$ で上記の $x,s,U$ を考える．
+境界を $s=n$，$s=T$，および残余境界 $\Gamma$ に分け，
+$0<n<T$ とする．境界が corners を持つことを許す．
+ある $\varepsilon,A,C>0$ に対して
+\[
+ U|_{s=n}\le A,\qquad U|_{s=T}\le C,
+ \qquad U|_\Gamma\le1+\varepsilon
+\]
+ならば，全 $\mathcal A$ で
+\begin{equation}\label{ke:eq:normal-harmonic-depth-barrier}
+ U\le1+\varepsilon+A\frac ns+C\frac sT
+\end{equation}
+が成り立つ．
+\end{lemma}
+
+\begin{proof}
+$s$ は pluriharmonic なので $\Delta s=0$ である．
+\[
+ B(s)=1+\varepsilon+A\frac ns+C\frac sT
+\]
+と置くと，$B\ge U$ が境界で成立し，
+\[
+ \Delta B=B''(s)|\partial s|_{\omega_t}^2
+          =\frac{An}{s}U
+\]
+である．$U-B$ が正の最大値を内点で取ると，その点で
+\[
+ 0\ge\Delta(U-B)
+ \ge U\left(U-1-\frac{An}{s}\right)
+ >U\left(\varepsilon+C\frac sT\right)>0
+\]
+となり矛盾する．境界の corners は内点の最大値原理に影響しない．
+\end{proof}
+
+\subsection{Source を除かない正則な比較領域}
+
+二重線 $D=D_{ik}$ と，節\ref{ke:neck-corner-transition-section}で
+選んだ許容射影を固定する．三重点の集合を $Q\subset D$ とする．
+一つの $Q$ の点を無限遠とする affine 座標を取り，
+$D\setminus Q$ 上の二つの normal line bundles を自明化する．
+これは定理\ref{ke:projected-source-neck}の証明，および
+節\ref{ke:neck-corner-exhaustion-section}の global frame と同じ選択である．
+射影 Morse 変換により
+\begin{equation}\label{ke:eq:sharp-normal-global-chart}
+ x'_g y'_g=t h_t(p),\qquad p\in D\setminus Q
+\end{equation}
+と書ける．Frame は $t$ に依存せず，Morse 変換は固定残余 compact
+上の固定幅で恒等写像から全固定階で $O(t)$ ずれる．
+
+$b_j\to\infty$ を取り，三重点近傍の固定座標
+$Z_{a,0}$ を使って，境界が
+$-\log|Z_{a,0}|^2=b_j$ となる残余 compact $P_j$ を取る．
+有限個の初期段階を除き，全 source は $P_j$ の内部にある．
+実際の construction に使うより大きい残余領域とは区別し，
+本節の $P_j$ は最大値原理の補助領域とする．
+少し広い $P_j^+$ も先に固定する．
+
+固定した $0<\kappa<1/4$ は，補題\ref{ke:source-arm-scale-buffer}の
+$\theta$ より十分小さく取る．$n_j$ を後に大きく選び，
+\begin{equation}\label{ke:eq:sharp-normal-domain}
+ \mathcal A^x_{j,t}
+ =\{p\in P_j,\ n_j\le s=-\log|x'_g|^2\le\kappa L\},
+ \qquad y'_g=\frac{t h_t(p)}{x'_g}
+\end{equation}
+とする．$n_j$ が十分大きく，その後 $|t|$ が十分小さければ，
+これは全角度を含む annulus と $P_j$ の積である．
+実際，$|x'_g|\le e^{-n_j/2}$ であり，
+\[
+ |y'_g|\le\sup_{P_j}|h_t|\,e^{-(1-\kappa)L/2}\longrightarrow0.
+\]
+従って全領域が固定幅の normal chart 内に入り，
+$y'_g$ の別の境界は現れない．$h_t(p)=0$ でも $x'_g\ne0$ なので，
+$(x'_g,p)$ は正則座標であり，source の零点を $P_j$ から除く必要はない．
+対称な $y$-arm の領域 $\mathcal A^y_{j,t}$ も同様に定める．
+
+\begin{lemma}[比較領域の三種類の境界評価]
+\label{ke:sharp-normal-boundary-inputs}
+任意の $\varepsilon_j\downarrow0$ に対し，$b_j$ を十分大きく，
+次に $n_j$ を十分大きく選べる．その後に有限な定数 $A_j,C_j$ があり，
+$|t|$ が十分小さければ $\mathcal A^x_{j,t}$ 上の $U$ は
+\begin{equation}\label{ke:eq:sharp-normal-boundaries}
+ U|_{s=n_j}\le A_j,\qquad
+ U|_{s=\kappa L}\le C_j,\qquad
+ U|_{p\in\partial P_j}\le1+\varepsilon_j
+\end{equation}
+を満たす．有限個の二重線と両向きの arm に対して同時に選べる．
+\end{lemma}
+
+\begin{proof}
+\emph{外側の固定 shell.}
+$P_j$ と $n_j$ を固定すると，$s=n_j$ は $t=0$ の成分の smooth locus
+の compact 部分へ収束する．Source の基底点でも $x'_g\ne0$ なので同じである．
+固定 gauge における KE 計量の smooth convergence と
+Morse 座標の $O(t)$ 収束から有限な $A_j$ を得る．
+$A_j$ が $j$ 又は $n_j$ とともに有界である必要はない．
+
+\emph{残余境界.}
+三重点 end の一つで，局所 normal frame と global frame の比を
+非零正則 base-only function $a_j(p)$ と書く．
+補題\ref{ke:arm-coordinate-ratio}と命題\ref{ke:arm-log-derivatives}により
+\[
+ x'_g=a_j(p)C_D(p,t)\zeta_i\exp(e_{ki}),
+ \qquad
+ s=\ell_i^{\rm tr}+f_{j,t}(p)-2\Re e_{ki},
+ \quad f_{j,t}=-\log|a_jC_D|^2.
+\]
+$\partial P_j$ の固定した少し広い annuli 上で，
+$|f_{j,t}|+|df_{j,t}|_{g_t}\le D_j$ となる有限な $D_j$ を取れる．
+ここで関数自体の微分は固定 ambient coordinates で有界であり，
+定理\ref{ke:fixed-base-neck-moser}の証明の射影下界によって
+actual covector norm も一様に抑えられる．この定数は $n_j,L$ に依存しない．
+
+まず $n_j\gg b_j+D_j$ とする．固定 end annulus の frame 定数も $n_j$ に吸収すると，
+元の射影座標で $|x|+|y|\ll|p|$ となる．また $|t|\ll|p|^3$ は最後の $t$ 閾値で
+満たせるため，座標比の補題を arm の深度比較に先立って適用できる．$\partial P_j$ では
+$\ell_k^{\rm tr}=b_j+o_t(1)+O(e^{-c b_j})$ であり，
+$n_j\le s\le\kappa L$ から残りの二深度は
+$\ell_i^{\rm tr},\ell_k^{\rm tr}$ の関係を固定比で分離する．
+より正確には，端の残余添字を $k$ とし，他方の normal 添字を $i'$ とすると
+\[
+ \ell_i^{\rm tr},\ell_{i'}^{\rm tr}
+ \ge(1+\sigma)\ell_k^{\rm tr}
+\]
+がある固定 $\sigma>0$ について成立する．第二の不等式には
+$\ell_{i'}^{\rm tr}=L-\ell_i^{\rm tr}-\ell_k^{\rm tr}$ と，
+$t$ を最後に小さくすることを用いる．
+従って上記の座標比と全固定階の評価をこの領域全体で使える．
+
+関連 KE 主稿\cite{KELocalCurrent}の
+\texttt{simplex:lem:rank-one-schwarz} と
+\texttt{coarse:thm:full-triple-tensor} は
+\[
+ |d\log\ell_i^{\rm tr}|_{g_t}\le1+O(b_j^{-1})
+\]
+を与える．また同主稿の complete-simplex と cusp reference metric の
+一様比較により，命題\ref{ke:arm-log-derivatives}の誤差を
+$C^1(g_t)$ でも $O(e^{-c b_j})$ と評価できる．
+従って
+\[
+ |d\log s|_{g_t}
+ \le \left(1+\frac{D_j+Ce^{-c b_j}}{n_j}\right)
+             (1+Cb_j^{-1})
+       +\frac{D_j+Ce^{-c b_j}}{n_j}.
+\]
+$b_j$，次に $n_j$ を選べば，この二乗を $1+\varepsilon_j$ 以下にできる．
+これは正則な座標間の比較であり，三つの arm の smooth 補間を用いていない．
+
+\emph{内側の moving shell.}
+Source の固定した小円板の外では，
+定理\ref{ke:fixed-base-neck-moser}の annulus--disc 二側比較から，
+$s=\kappa L$ 上で $U\le C_j$ を得る．
+Source の内側では $z=h_t(p)$ を局所座標に取り，
+同じ normal frame において $x'_g y'_g=tz$ を使う．
+必要な固定 rescaling のため深度に有界な定数が加わることを許す．
+補題\ref{ke:source-arm-scale-buffer}の positive function は，
+$S=s+O_j(1)=\kappa L+O_j(1)$ で
+\[
+ u_t=F_t+2R+C_*
+     =2\log(L/S)+O(1)=2\log(1/\kappa)+O_j(1).
+\]
+従って同補題は，中心を $s=\kappa L$ に取った全ての点で，
+ある $\rho_j>0$ を半径とする actual 球が，正しい arm の
+$0<|x'_g|<1$ の領域に含まれることを与える．
+これは min-depth の下界だけでなく，source の中央 barrier を横切らない
+orientation の保持を含む．
+この球上で正則写像 $x'_g$ への rank-one localized Chern--Lu を適用する．
+ここで必要なのは，同 KE 主稿 \texttt{coarse:lem:localized-chern-lu} の
+cutoff 証明を \eqref{ke:eq:sharp-normal-logistic} に適用することであり，
+rank-one pullback を非退化な K\"ahler form とみなすことではない．
+半径 $\rho_j$ の球内に支持され，半径 $\rho_j/2$ で $1$ となる
+actual-distance cutoff $\chi$ を取る．Ricci 下界と Laplacian comparison により
+$|\partial\chi|^2\le C\rho_j^{-2}$，
+$\Delta\chi\ge-C(\rho_j^{-2}+\rho_j^{-1})$ を barrier の意味で満たせる．
+$\chi^2U$ の正の最大点で
+\[
+ 0\ge\Delta\log(\chi^2U)
+ \ge U-1+2\frac{\Delta\chi}{\chi}
+                  -2\frac{|\partial\chi|^2}{\chi^2}
+\]
+に $\chi^2$ を掛けると，この最大点で
+\[
+ \chi^2U\le\chi^2-2\chi\Delta\chi+2|\partial\chi|^2
+       \le C(1+\rho_j^{-2})
+\]
+となるので $U\le C(1+\rho_j^{-2})$ を得る．
+Cut locus では同じ support-function argument
+を用いる．
+Source は有限個なので上界を一つの $C_j$ にまとめられる．
+\end{proof}
+
+\begin{proposition}[Source を含む sharp scalar normal bound]
+\label{ke:sharp-scalar-normal-barrier}
+上記の選択で，$|t|$ が十分小さければ
+\begin{equation}\label{ke:eq:sharp-scalar-normal-barrier}
+ |d\log s|_{g_t}^2
+ \le1+\varepsilon_j+A_j\frac{n_j}{s}
+                  +C_j\frac{s}{\kappa L}
+ \quad\text{on }\mathcal A^x_{j,t}.
+\end{equation}
+同じ評価は $y$-arm にも成立する．
+\end{proposition}
+
+\begin{proof}
+補題\ref{ke:sharp-normal-boundary-inputs}を
+補題\ref{ke:normal-harmonic-depth-barrier}に適用する．
+\end{proof}
+
+\subsection{Global physical depth と active cut}
+
+Global Hermitian norm で定めた
+$\ell_i=-\log\|L_i\|^2$ と，正則 frame の $s$ を区別する．
+下側 cut $\mathfrak m_j$ は旧 closed-corner の cut $6b_j$ と別に選ぶ．
+上側 cut を $M_{j,t}=L/K_j$ とする．
+
+\begin{lemma}[Active band 上の physical depth と正則深度]
+\label{ke:sharp-normal-physical-unit}
+各固定 $j$ について有限な $D'_j$ がある．
+$K_j>4$，$\mathfrak m_j$ が十分大きいとき，
+対応する pair neighborhood 内の
+\[
+ \mathfrak m_j\le\ell_i\le L/K_j
+\]
+では，$t$ を十分小さくすれば
+\begin{equation}\label{ke:eq:sharp-normal-physical-unit}
+ |\ell_i-s|+|d(\ell_i-s)|_{g_t}\le D'_j.
+\end{equation}
+定数は $t,\mathfrak m_j,K_j$ に依存せず，固定した残余 compact と
+frame に依存してよい．
+\end{lemma}
+
+\begin{proof}
+固定残余 compact 上では，global bundle frame の元の法線座標 $x_g$ と
+平面 section の局所表示の間は，非零な固定 base factor と smooth
+Hermitian norm の項だけ異なる．これらの対数と微分は固定領域で有界である．
+射影 Morse 変換について $x'_g=x_g+O(t)$ が全固定階で成立する．
+Active upper cut より $|x_g|\ge c_j|t|^{1/K_j}$ なので
+\[
+ \left|\frac{x'_g-x_g}{x_g}\right|
+       \le C_j|t|^{1-1/K_j},\qquad
+ \left|d\log\frac{x'_g}{x_g}\right|_{g_{\mathrm{FS}}}
+       \le C_j|t|^{1-2/K_j}=o_t(1).
+\]
+固定 residual 部分の射影下界
+$g_t\ge c_jg_{\mathrm{FS}}|_{X_t}$ は，source-free 部分では
+定理\ref{ke:fixed-base-neck-moser}の証明，source 近傍では
+\eqref{ke:eq:source-global-positive-u}から得る．
+従って上の誤差の actual covector norm も有界であり，
+Hermitian frame 項と合わせて所要の $D'_j$ を得る．
+$O(t)$ という絶対誤差を深度にそのまま代入せず，
+active upper cut による相対誤差の評価をここで使用した．
+\end{proof}
+
+\begin{lemma}[深い三重点域の外側の active 点の配置]
+\label{ke:sharp-active-pair-cover}
+$\mathcal T_{j,t}$ を，三つ以上の global physical depths が
+$b_j/2$ 以上である領域とする．$j$ が十分大きく，$K_j>2d$ とする．
+$\mathfrak m_j\gg b_j$ を固定して，最後に $t$ を十分小さくすると，
+$\mathcal T_{j,t}$ の外で
+$\mathfrak m_j<\ell_i<L/K_j$ を満たす点は，ある $k\ne i$ に対する
+上記 $D_{ik}$ の pair neighborhood に入り，その射影は $P_j$ にある．
+その点の正則深度は
+\[
+ s\ge\mathfrak m_j-D'_j,\qquad s\le L/K_j+D'_j.
+\]
+\end{lemma}
+
+\begin{proof}
+族の方程式と固定 Hermitian norm から
+\[
+ \sum_{a=1}^d\ell_a=L-\log\|F_d\|^2\ge L-C
+\]
+である．従ってある $k$ で $\ell_k\ge(L-C)/d>L/K_j$ となる．
+$\ell_i<L/K_j$ なので $k\ne i$ である．
+一方 $\mathcal T_{j,t}$ の外では他の全深度が $b_j/2$ 未満であり，
+点は $D_{ik}$ の近傍にあるが，三重点の小さい端には入らない．
+
+この最後の包含を定量的に確認する．有限個の fixed projective charts
+上で二つの normal 座標の大きさは
+$O(e^{-\mathfrak m_j/2})$ と $O(e^{-cL})$ である．
+第三平面の section の，点における値と射影点における値の差は
+この和の定数倍以下である．第三深度が $b_j/2$ 未満なので，
+その値は固定 frame で $c e^{-b_j/4}$ 以上である．
+$\mathfrak m_j$ を $b_j$ より十分大きく取れば，相対誤差は小さい．
+したがって射影点の end depth は $b_j/2+O(1)$ 以下であり，
+cut を $b_j$ に置いた $P_j$ の内側にある．
+固定 projective charts と end 座標の単位による誤差は有界で，
+$b_j/2$ と $b_j$ の余裕に吸収できる．
+これにより fixed pair chart とその projection が定義される．
+正則深度の二つの評価は
+補題\ref{ke:sharp-normal-physical-unit}による．
+\end{proof}
+
+\begin{theorem}[Global one-active covector の係数一の上界]
+\label{ke:sharp-global-one-active}
+任意の $\varepsilon_j\downarrow0$ に対し，固定段階の選択を
+\[
+ b_j\ ,\ P_j\ ,\ n_j\ ,\ A_j,C_j,D'_j\ ,\
+ \mathfrak m_j\ ,\ K_j\ ,\ t_j
+\]
+の順に行える．ここで $\mathfrak m_j\to\infty$，$K_j\to\infty$ とし，
+例えば
+\begin{equation}\label{ke:eq:sharp-normal-parameter-order}
+ \frac{A_jn_j+D'_j+n_j}{\mathfrak m_j}\le\varepsilon_j,
+ \qquad \frac{C_j}{\kappa K_j}\le\varepsilon_j,
+ \qquad K_j>\max\{2d,4,4/\kappa\}
+\end{equation}
+を課す．さらに $\mathfrak m_j$ を固定 stage の component core の
+non-dominant depth 上界より大きくしてよい．
+$|t|\le t_j$ とすると，全ての点と添字に対して
+\begin{equation}\label{ke:eq:sharp-global-one-active}
+ \mathfrak m_j<\ell_i<L/K_j
+ \quad\Longrightarrow\quad
+ |d\log\ell_i|_{g_t}\le1+C\varepsilon_j+C/b_j
+\end{equation}
+が成立する．定数 $C$ は固定 $d$ と族に依存し，$j,t$ に依存しない．
+\end{theorem}
+
+\begin{proof}
+$\mathcal T_{j,t}$ の外では
+補題\ref{ke:sharp-active-pair-cover}により，対応する pair chart を取る．
+$t$ を最後に小さくすれば
+\[
+ n_j\le s\le2L/K_j<\kappa L,
+ \qquad s\ge\mathfrak m_j/2.
+\]
+命題\ref{ke:sharp-scalar-normal-barrier}から
+\[
+ |d\log s|_{g_t}^2
+ \le1+\varepsilon_j+\frac{2A_jn_j}{\mathfrak m_j}
+                    +\frac{2C_j}{\kappa K_j}
+ \le1+5\varepsilon_j.
+\]
+補題\ref{ke:sharp-normal-physical-unit}により
+\[
+ |d\log\ell_i|_{g_t}
+ \le\left(1+\frac{D'_j}{\mathfrak m_j}\right)|d\log s|_{g_t}
+       +\frac{D'_j}{\mathfrak m_j},
+\]
+なので所要の上界を得る．
+
+$\mathcal T_{j,t}$ の中では，平面の一般位置性により，
+$b_j$ が十分大きければ一つの固定三重点 chart に入る．
+三つの正確な深度は $b_j/2-O(1)$ 以上であり，
+physical depth は正確な深度と，固定 smooth unit の対数だけ異なる．
+Complete-simplex の係数一の rank-one Schwarz 評価と
+actual/model $O(b_j^{-1})$ 比較を用いる．
+固定 smooth unit の微分は cusp reference metric の covector norm で
+有界であり，同 reference metric と actual metric の一様比較により
+その actual norm も有界である．Active depth で割れば誤差は
+$O(\mathfrak m_j^{-1})$ となり，同じ結論を得る．
+有限個の全 charts で定数と最後の $t$ 閾値を共通に取る．
+\end{proof}
+
+\begin{remark}[遅い対角選択と適用範囲]
+\label{ke:sharp-normal-diagonal-remark}
+Stage $j$ の全定数を先に選んだ後で，
+\[
+ R_t\ge j\bigl(1+\log\mathfrak m_j+\log K_j\bigr)
+\]
+を追加してよい．従って $j=j(t)\to\infty$ を十分遅く選べば
+\[
+ \frac{\log\mathfrak m_{j(t)}+\log K_{j(t)}}{R_t}\longrightarrow0,
+ \qquad
+ S_{j,t}=\log\frac{L/K_j}{\mathfrak m_j}\sim R_t.
+\]
+これは \eqref{ke:eq:sharp-global-one-active} を clipped logarithmic map
+\[
+ \Theta_{i,t}
+ =\left[\frac{\log(\ell_i/\mathfrak m_j)}{S_{j,t}}\right]_0^1
+\]
+へ適用するための選択である．二つの active covectors の同時評価は
+full-triple の dominant-product 比較で別に行う．
+本節の係数一の評価は，source を含む moving neck に対する
+full tensor comparison，TC，PBE を仮定しない．
+全曲面の距離下界は，この scalar 評価と二方向 co-Gram 評価を用いて
+全曲線に沿って $\Theta_t$ の長さを評価することで得られる．
+Fibration の値との整合と距離上界はそれぞれ別の主張である．
+\end{remark}
