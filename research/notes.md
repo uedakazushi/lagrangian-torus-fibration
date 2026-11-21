@@ -42,7 +42,7 @@ J_-=k\mu_-+\varepsilon J_+\circ h+c
 \]
 と同値である。固定primitiveに関するexact matchingはさらに $c=0$ と同値。Normal actionだけでは第二作用を決めない。`neck:normal-action-counterexample` の定数shiftはsymplecticだがexactではなく、非線形shiftは指定base同定と整数shearを保つsymplectic matchingを妨げる。Base同定を変更すれば同じ物理的torus partitionにもなり得るため、fibrationの不存在とは異なる。一般のbaseではprimitive差にbaseの $H^1$ が残り得るので、この局所判定を無条件な大域exactnessへ拡張しない。
 
-この判定は既知のaction-angle理論のspecializationである。Evans, *Lectures on Lagrangian Torus Fibrations*, [arXiv:2110.08643v4](https://arxiv.org/abs/2110.08643v4) のTheorem 1.42（p.16）、Lemma 2.10・Theorem 2.12（pp.24–25）、Lemma 2.15・Remark 2.17（pp.25–26）、Lemma 2.25（pp.28–29）を一次資料で照合する。番号・頁は掲載書籍と混同せず同arXiv版に固定する。Theorem 2.26（p.29）の大域fiber-preserving同値にはglobal Lagrangian sectionsの仮定がある。
+この判定は既知のaction-angle理論のspecializationである。Evans, *Lectures on Lagrangian Torus Fibrations*, [arXiv:2110.08643v4](https://arxiv.org/abs/2110.08643v4) のTheorem 1.42（p.16）、Lemma 2.10・Theorem 2.12（pp.24–25）、Lemma 2.15・Remark 2.17（pp.25–26）、Lemma 2.25（pp.28–29）を一次資料で照合した。番号・頁は掲載書籍と混同せず同arXiv版に固定する。Theorem 2.26（p.29）の大域fiber-preserving同値にはglobal Lagrangian sectionsの仮定がある。
 
 Canonical primitiveの規格化にも独立の差がある。`ke:transition-residual-period` は、volume framesの比 $a(p)$ による残余cycleのperiod差を $-2\pi\operatorname{wind}(a_t\circ p\circ\gamma)$ と記録する。Normal cycleでは差が零でも、残余cycleでは非零になり得る。Exact模型 $xyp=t$ のlogarithmic frameとneck frameでは、比が $1/p$ ならprimitive差は $d\arg p$、正の一周の差は $2\pi$（作用を $1/(2\pi)$ 倍で測れば差は $1$）である。同一physical leafの接着を妨げるものではなく、別々のcanonical primitivesを無条件に同じ作用原点として扱うことを禁じる。
 
@@ -631,4 +631,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 ## 検証状態
 
 
-2026-11-21 / v3.8：主稿改訂28には、正則bandの第二作用・exact matching判定、normal action単独では不十分な例、critical actionの有理直線性の必要条件と固定形式の非直線branch反例、canonical frameの残余period差を整理した。新証明・接続の独立内部点検とEvans arXiv v4の指定箇所の一次資料照合を完了した。改訂28の組版・表示確認は未実行。直前に検証した改訂27（261頁・指定16頁の表示確認）の詳細と今回の各確認の完了範囲は [検証状態](validation.json) を参照する。数学的点検・組版・保存は別々に記録する。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。
+2026-11-21 / v3.8：主稿改訂28には、正則bandの第二作用・exact matching判定、normal action単独では不十分な例、critical actionの有理直線性の必要条件と固定形式の非直線branch反例、canonical frameの残余period差を整理した。新証明・接続の独立内部点検とEvans arXiv v4の指定箇所の一次資料照合を完了した。改訂28をLuaLaTeXで264頁に組版し、同じ最終PDFの指定21頁（第1・10・11・13・37–41・43・44・101–103・234–237・240・241・259頁）を個別画像で表示確認した。未解決参照・引用、重複ラベル、欠字、overfull boxは零。Preflightと静的検査も成功した。今回の各確認の完了範囲は [検証状態](validation.json) を参照する。数学的点検・組版・保存は別々に記録する。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。
