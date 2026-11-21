@@ -1,5 +1,5 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-21 / v2.9
+更新：2026-11-21 / v3.0
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
@@ -58,20 +58,21 @@ Reduced graphに合わせて残余foliationをmomentに滑らかに依存させ�
 
 固定連結source-free compact基底では `ke:fixed-base-central-band` により、固定 $A>0$、$m_t\to\infty$、$m_t=o(M_t)$ の下、$|\mu|\le A/M_t$ のcentral band全体がactual径 $O_{P,A}(1)$ を持つ。異なるmomentも含み、Moser像には $O(m_t^{-1})$ の端点費用だけを加える。両normal深度 $\ge\kappa_A M_t$ をmomentの片側下界から導き、水平・動径・円弧を組み合わせる。
 
-Source側の `ke:source-central-band-reduction` は、固定residual disc、人工境界からの余裕、normal最小深度の下で、$|\mu|\le A/L$ の全点を固定rescaled coreへ $O(1)$ で接続する。この帰着と下記のGaussian体積比較により、中央帯の全点径は $O(\sqrt R)$ となる。一般の同一moment集合については、指定した残余境界への退出条件 `ke:eq:source-moment-exit-input` が十分であるが、これは未証明。Central inradius、平均距離、全source fiberの径、長いnormal armsを含むneck全体の径を区別する。
+Source側の `ke:source-central-band-reduction` は、固定residual disc、人工境界からの余裕、normal最小深度の下で、$|\mu|\le A/L$ の全点を固定rescaled coreへ $O(1)$ で接続する。この帰着と下記のGaussian体積比較により、中央帯の全点径は $O(1)$ となる。一般の同一moment集合については、指定した残余境界への退出条件 `ke:eq:source-moment-exit-input` が十分であるが、これは未証明。Central inradius、平均距離、全source fiberの径、長いnormal armsを含むneck全体の径を区別する。
 
-`ke:source-potential-modulus` はGuedj–Guenancia–Zeriahi（参考文献キー `GGZDiameter`、Proposition 1.4）の局所距離評価を用いる十分条件を記す。Potential $u_t$ に一様な連続度 $m$ があり $\int_0^{r_0}\sqrt{m(r)}\,dr/r<\infty$ なら、固定coreのambient径は $O(1)$。このsquare-root-Dini modulusや一様Hölder評価自体はまだ証明していない。有界potentialから自動的に導いたり、同論文の大域Kähler class仮定を局所族へ無条件に適用したりしない。
+`ke:source-potential-modulus` はGuedj–Guenancia–Zeriahi（参考文献キー `GGZDiameter`、Proposition 1.4）の局所距離評価を用いる十分条件を記す。Potential $u_t$ に一様な連続度 $m$ があり $\int_0^{r_0}\sqrt{m(r)}\,dr/r<\infty$ なら、固定coreのambient径は $O(1)$。このsquare-root-Dini modulusや一様Hölder評価自体はまだ証明していない。現行の $O(1)$ 径定理は下記のslab/Gaussian比較により無条件で得ており、このmodulusを必要としない。有界potentialから自動的に導いたり、同論文の大域Kähler class仮定を局所族へ無条件に適用したりしない。
 
 ## Source中央全点径：potential bufferとGaussian体積比較
 
-正本は主稿の `ke:source-central-diameter` と `ke:fixed-base-source-central-band`。固定した $d$・族・residual基底について、固定点と座標軸を含む中央source全体のambient径は $O(\sqrt{R_t})$、正規化後は $O(R_t^{-1/2})$。Source-inclusiveな $|\mu_t|\le A/L_t$ の全中央帯と閉pinched torus全体にも拡張できる。追加のTCや一様Hölder仮定は使わない。
+正本は主稿の `ke:source-central-diameter` と `ke:fixed-base-source-central-band`。固定した $d$・族・residual基底について、固定点と座標軸を含む中央source全体のambient径は $O(1)$、正規化後は $O(R_t^{-1})$。Source-inclusiveな $|\mu_t|\le A/L_t$ の全中央帯と閉pinched torus全体にも拡張できる。追加のTCや一様Hölder仮定は使わない。
 
 証明の依存順は次の通り。
 
 1. `ke:source-tube-potential`：固定physical tubeをcentral coreと正しい二half-armsで覆い、actual densityとcapped densityを二側比較する。射影Chern–Luから $g_t\ge c g_{FS}$、nested physical tubesから固定actual bufferを得る。
 2. `ke:positive-poisson-log-gradient`, `ke:source-potential-buffer`：非零正則frame $dx\wedge dy/t$ を固定した $u=\log(\omega_t^2/|\Omega|^2)+2R+C\ge1$ は $\Delta u=c_4$。Bochnerと距離cutoffで $|\nabla\log u|\le C$。中央点の固定小球では $u$ が有界となり、capsの積下界から両normal深度が $\kappa L$ 以上となる。縮小するrescaled bidisc内に球を閉じ込める必要はない。
 3. `ke:source-shell-gaussian-tail`, `ke:source-wide-gaussian-tail`：固定source-free shellへのambient距離の $W_*^{1,2}$ normを有界potentialから抑える。Dinh–Marinescu–Vu, Theorem 1.2（参考文献 `DMVMT`）は固定補助Euclidean potentialに適用するので、actual potentialのHölder性は不要。$x=e^{Lw}$ の固定サイズcoverでは約 $L$ 個の周期を除して、広い中央帯のactual体積tailを $CL^{-1}e^{-aA^2}$ とする。
-4. `ke:source-central-diameter`：距離 $D$ の中央点の小球はこの広い帯に入り、体積上界は $CL^{-1}e^{-a(D-\delta)_+^2}$。良いcore部分の体積 $cL^{-2}$ と全曲面のRicci下界によるBishop–Gromov比較から、同じ球の体積下界 $cL^{-2}e^{-C(D+1)}$。従って $D^2\le C(R+D+1)$、全点で $D=O(\sqrt R)$。
+4. `ke:source-central-volume-anchor`：固定source-free residual annulusと $L/4\le s_x\le L/3$ のslabを取る。Density $L^{-2}$、logarithmic normal幅 $\asymp L$、一周期の角度から体積は $cL^{-1}$。Source-free中央帯の既存接続によりshellへの距離は $O(1)$ であり、sourceの全点径を入力にしない。
+5. `ke:source-central-diameter`：距離 $D$ の中央点の小球は広い中央帯に入り、体積上界は $CL^{-1}e^{-a(D-\delta)_+^2}$。前項のslabと全曲面のRicci下界によるBishop–Gromov比較から、同じ球の体積下界 $cL^{-1}e^{-C(D+1)}$。係数 $L^{-1}$ が相殺し、$D^2\le C(D+1)$、全点で $D=O(1)$。
 
 固定基底の残りはsource-free中央帯の $O(1)$ 接続でつなぐ。Canonical primitiveのbase-only変更はnormal momentを変えず、actual Moser像には両端の短いtrajectoryだけを加える。経路はfiber又はmoment level内に留まらなくてよく、intrinsic fiber径の主張ではない。中央帯外の一般moment接続、木上の異なるmomentの合併、全曲面のno-shortcutは残る。Gaussian tailだけ、短円の長さだけ、又はMoser像のorbit直径だけで全点評価を結論しない。
 
@@ -426,4 +427,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 
 ## 検証状態
 
-2026-11-21 / v2.9：K3の全域構成とcore capの評価を主稿改訂19へ統合し、追加証明を別担当と内部点検した。Rochon–Zhang §5とEvans–Mauri Lemma 2.16を一次PDFで再確認。LuaLaTeXで211頁、PDF/SyncTeXを生成し、参照・引用・overfull警告なし。追加節・要約・序論を中心に28頁を表示確認。形式証明・外部査読・包括的新規性確認・旧整数検算suiteと他三稿の再組版は未実施。P0の距離条件は未解決。
+2026-11-21 / v3.0：中央sourceの体積anchorをsource-free slabへ取り、全点ambient径 $O(1)$ を主稿改訂20へ統合した。体積尺度・領域・非循環性とBishop–Gromov比較を別担当と点検した。現行改訂20の組版は未実施（直前の改訂19は211頁で組版・28頁の表示確認済み）。形式証明・外部査読・包括的新規性確認・旧整数検算suiteと他三稿の再組版は未実施。P0の距離条件は未解決。

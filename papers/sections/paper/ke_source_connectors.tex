@@ -10,7 +10,7 @@ Source では短い円作用が固定点を持つため，その評価だけか�
 本節ではまず中央 rescaling 領域の体積を両側から評価し，
 実際の計量に関する短い退出経路を構成する．さらに canonical potential による
 actual 球の局在と Gaussian tail を組み合わせ，固定点を含む中央領域の全点径を
-$O(\sqrt{R_t})$ に抑える．中央帯の外も含む同一 moment 上の接続は，
+ $O(1)$ に抑える．中央帯の外も含む同一 moment 上の接続は，
 最後に独立した条件として明示する．
 
 \subsection{中央の canonical volume potential}
@@ -528,7 +528,7 @@ Normal Moser map の像へ移す際は，両端に既存の短い trajectories �
 厳密に保存する必要はない．固定 source-free residual shell の
 $|\mu_t|\le A'/L$ 内へ $o(R)$ の費用で接続すれば十分である．
 この中央帯の接続は定理\ref{ke:source-central-diameter}と
-系\ref{ke:source-central-band-collapse}により $O(\sqrt{R_t})$ で解決した．
+系\ref{ke:source-central-band-collapse}により $O(1)$ で解決した．
 
 \begin{remark}[Potential の連続度を用いる十分条件]
 \label{ke:source-potential-modulus}
@@ -538,7 +538,9 @@ Guedj--Guenancia--Zeriahi\cite[Proposition~1.4]{GGZDiameter}は，局所 K\"ahle
 $v_{\rm E}$ を用いて $\varphi_t=u_t-v_{\rm E}$ とすれば適用形になる．
 従って，$u_t$ に $t$ に依らないこの種の連続度（例えば一様 H\"older 評価）を
 さらに証明できれば，$\overline{B_t(c_1)}$ の ambient 径は $O(1)$ となる．
-これは本節の $L^\infty$ 評価だけからは得ていない追加条件である．
+この連続度自体は本節の $L^\infty$ 評価だけからは得ていない追加条件である．
+定理\ref{ke:source-central-diameter}では，source-free slab の体積と Gaussian tail を
+比較する別の証明で同じ $O(1)$ 径を得ており，この modulus を仮定していない．
 同論文の大域定理の compact K\"ahler class に関する仮定も，
 本局所 rescaling 族に自動的に成立するとして用いていない．
 \end{remark}

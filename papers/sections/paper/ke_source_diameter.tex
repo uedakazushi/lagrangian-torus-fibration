@@ -1,35 +1,73 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.0: potential buffer と Gaussian tail による中央全点径．
+% 2026-11-21 / v1.1: source-free slab の体積を用いた中央全点の一様有界径．
 \subsection{固定点を含む中央 source の全点接続}
 
-\begin{theorem}[中央 source の sublinear ambient 径]
+\begin{lemma}[中央 source-free slab の体積と接続]
+\label{ke:source-central-volume-anchor}
+命題\ref{ke:source-shell-gaussian-tail}の source-free shell $\Sigma_t$ に対し，
+その固定 chart 内に compact な集合 $G_t$ と $t$ に依らない $c,C>0$ を取って
+\[
+ \operatorname{Vol}_{g_t}(G_t)\ge cL_t^{-1},\qquad
+ \sup_{q\in G_t}d_{g_t}(q,\Sigma_t)\le C,
+ \qquad \operatorname{diam}_{g_t}\Sigma_t\le C
+\]
+とできる．
+\end{lemma}
+
+\begin{proof}
+$\Sigma_t$ の residual 半径を $\beta$ とし，
+$0<\beta_-<\beta_+<\beta$ を固定する．正しい $x$-chart で
+\[
+ G_t=\{\beta_-\le|z|\le\beta_+,\quad
+                  L_t/4\le s_x=-\log|x|^2\le L_t/3,\quad y=tz/x\}
+\]
+と置き，全ての angles を含める．$s_y=L_t-s_x-\log|z|^2$ なので両側の normal 深度は
+$L_t$ と比較可能であり，$G_t$ は小さい $t$ で固定 physical source chart 内に入る．
+補題\ref{ke:source-tube-potential}から，この集合上で
+\[
+ \omega_t^2\asymp L_t^{-2}|d\log x\wedge dz|^2.
+\]
+一周期の $\arg x$ と幅 $L_t/12$ の $s_x$ 区間，正の固定面積を持つ residual annulus を
+積分することで，$\operatorname{Vol}_{g_t}(G_t)\asymp L_t^{-1}$ を得る．
+体積の固定規格化係数は定数に吸収する．
+
+$G_t$ と $\Sigma_t$ を含む一つの固定 source-free residual annulus を取る．
+束 frame の深度との差は有界で，normal annulus の長さは $M_t=L_t+O(1)$ である．
+両集合では $\min(s,M_t-s)\ge cL_t$ だから，canonical moment の差商上界により
+$|\mu_t|\le C/L_t$ となる．系\ref{ke:fixed-base-central-band}を，例えば
+$m_t=L_t^{1/2}$ としてこの annulus に適用すると，
+$G_t\cup\Sigma_t$ の actual ambient 径は $t$ に一様に有界である．
+ここでは source を含む中央領域の径を入力にしていない．
+\end{proof}
+
+\begin{theorem}[中央 source の一様有界な ambient 径]
 \label{ke:source-central-diameter}
 本節の固定 source chart と固定半径 $c_1$，および
 命題\ref{ke:source-shell-gaussian-tail}の source-free shell $\Sigma_t$ に対し，
 十分小さい $t$ で
 \begin{equation}\label{ke:eq:source-central-diameter}
  \sup_{p\in\overline{B_t(c_1)}}d_{g_t}(p,\Sigma_t)
- \le C\sqrt{R_t+1},\qquad
+ \le C,\qquad
  \operatorname{diam}_{d_{g_t}}\overline{B_t(c_1)}
- \le C\sqrt{R_t+1}
+ \le C
 \end{equation}
 が成立する．これは source 固定点と二本の座標軸を含む全点の評価であり，
-正規化した ambient 径は $O(R_t^{-1/2})$ で消失する．
+正規化した ambient 径は $O(R_t^{-1})$ で消失する．
 追加の tensor 比較仮定や potential の一様連続度は要求しない．
 \end{theorem}
 
 \begin{proof}
 以下 $L=L_t$，$R=\log L$ と書き，actual Riemannian 体積を $\operatorname{Vol}_t$
 で表す．K\"ahler 体積との固定係数は定数に吸収する．
-命題\ref{ke:source-shell-gaussian-tail}と中央の密度二側比較から，
-ある固定 $A_0,C_0,c_0>0$ と可測集合 $G_t$ を選んで
+補題\ref{ke:source-central-volume-anchor}により，
+ある固定 $A_0,C_0,c_0>0$ と compact な集合 $G_t$ を選んで
 \[
  G_t\subset\{d_{g_t}(\cdot,\Sigma_t)\le A_0\},\qquad
- \operatorname{Vol}_t(G_t)\ge c_0L^{-2},\qquad
+ \operatorname{Vol}_t(G_t)\ge c_0L^{-1},\qquad
  \operatorname{diam}_{d_{g_t}}\Sigma_t\le C_0
 \]
-とできる．実際，固定 rescaled bidisc で Euclidean 体積の少なくとも半分が
-残るように $A_0$ を固定し，密度下界を用いればよい．
+とできる．$G_t$ は固定 source-free residual annulus 上の central normal slab である．
+比較に用いる体積は $L^{-1}$ の尺度であり，以下の広い中央帯の Gaussian tail と一致する．
 
 $p\in\overline{B_t(c_1)}$ とし，$D=d_{g_t}(p,\Sigma_t)$ と置く．
 命題\ref{ke:source-potential-buffer}により，固定した $\delta,\kappa,b>0$ が存在して
@@ -56,7 +94,7 @@ $\operatorname{Ric}(g_t)=-g_t$ であるから，Bishop--Gromov 体積比較を
 $C\exp(Cr)$ 以下なので，定数を取り直して
 \begin{equation}\label{ke:eq:source-ball-bishop-lower}
  \operatorname{Vol}_t B_{g_t}(p,\delta)
- \ge c L^{-2}\exp\bigl(-C(D+1)\bigr)
+ \ge c L^{-1}\exp\bigl(-C(D+1)\bigr)
 \end{equation}
 を得る．大きい方の球や $G_t$ への接続が source chart 内に留まる必要はない．
 全曲面の Ricci 下界と ambient 距離を同じ規約で用いている．
@@ -64,9 +102,9 @@ $C\exp(Cr)$ 以下なので，定数を取り直して
 \eqref{ke:eq:source-ball-gaussian-upper}と
 \eqref{ke:eq:source-ball-bishop-lower}の対数を取ると
 \[
- a(D-\delta)_+^2\le R+C(D+1)+C.
+ a(D-\delta)_+^2\le C(D+1)+C.
 \]
-従って $D\le C\sqrt{R+1}$ であり，第一式を得る．
+従って $D\le C$ であり，第一式を得る．
 二点をそれぞれ $\Sigma_t$ に接続し，その ambient 径 $C_0$ を加えると
 第二式も従う．全ての定数は $p,t$ に依存せず，測度零の点を除いていない．
 \end{proof}
@@ -83,8 +121,8 @@ $A>0$ と十分小さい固定残余半径 $b_0<c_1^2$ を固定する．
  \mathcal E_{t,A,b_0}
  =\{|z|\le b_0,\ |\mu_t|\le A/L_t\}
 \]
-の全点は $\Sigma_t$ へ actual 長さ $C_A\sqrt{R_t+1}$ 以下で接続でき，
-同集合の ambient 径も $C_A\sqrt{R_t+1}$ 以下である．
+の全点は $\Sigma_t$ へ actual 長さ $C_A$ 以下で接続でき，
+同集合の ambient 径も $C_A$ 以下である．
 命題\ref{ke:fixed-stage-source-neck}の共通 normal Moser map の像についても，
 両端の trajectory の長さを加えた同じ評価が成立する．
 従ってこの中央帯に含まれる pinched fiber と，同じ範囲の複数 fibers の合併は
@@ -114,7 +152,7 @@ $\overline{B_t(c_1)}$ へ $O_A(1)$ の費用で結ぶ．
 \[
  \operatorname{diam}_{d_{g_t}}
  \{p\text{ in this neck}:|\mu_t(p)|\le A/L_t\}
- \le C_{P,A}\sqrt{R_t+1}
+ \le C_{P,A}
 \]
 となる．Actual normal Moser 像についても同じ結論が成立する．
 従ってこの固定段階で構成した $\mu_t=0$ の閉じた pinched torus は，
@@ -129,6 +167,6 @@ Shell 上の canonical moment は $O(L_t^{-1})$ である．
 残る固定 source-free 基底と全ての shells を含む連結 compact 部分には，
 定数 $A$ を一度大きくして系\ref{ke:fixed-base-central-band}を用いる．
 Source 数は有限であり，各点からこの共通部分への費用は
-$O_{P,A}(\sqrt{R_t+1})$，共通部分内の接続費用は $O_{P,A}(1)$ である．
+$O_{P,A}(1)$，共通部分内の接続費用は $O_{P,A}(1)$ である．
 Moser 像へは両端の短い trajectories を加える．
 \end{proof}
