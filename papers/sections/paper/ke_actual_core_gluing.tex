@@ -1,0 +1,248 @@
+% !TeX root = ../../surface-lagrangian-torus-fibration.tex
+% 2026-11-21 / v1.0: Actual KE 形式上の相対 core 接着．
+\section{Actual KE 形式上の全域 core 接着}
+\label{ke:actual-core-gluing-section}
+
+本節では，閉じた component link，その全 collar 上の invariant primitive，
+および saddle を動かす相対葉族を組み合わせる．
+有限型 Weinstein core の存在だけから既存葉との一致を推論せず，
+actual link の既存葉を出発点に Liouville flow で内部を充填する．
+固定 collar を点ごとに保存する symplectic germ は指定しない．
+従って命題\ref{ke:component-relative-flux}の相対 flux 条件を
+新たな未証明仮定として加える必要はない．
+
+\subsection{固定した Liouville domain の cone filling}
+
+次の補題は Evans--Mauri の cone extension
+\cite[Lemma~2.16 and Remark~2.18]{EM}の compact-domain 版を，
+境界の contact form を変更しない形で記すものである．
+正時間の flow を finite-volume end の無限遠まで延ばすことは使わない．
+
+\begin{lemma}[実際の境界葉を保つ compact cone filling]
+\label{ke:actual-link-cone-filling}
+$(K,\omega=d\lambda)$ を compact connected Liouville domain とし，
+$Z$ を $\iota_Z\omega=\lambda$ によって定める．
+$Z$ は $S=\partial K$ に厳密に外向きであり，内側の固定 Weinstein subdomain
+$K_0\Subset\operatorname{int}K$ の外では proper Lyapunov function を厳密に増加させるとする．
+内側では有限型 Weinstein structure と一致するものとし，その connected skeleton を
+$\Sigma\subset\operatorname{int}K_0$ と書く．
+
+$S$ 上に compact graph $\Gamma$ への connected-fiber continuous surjection
+$\pi_S:S\to\Gamma$ があり，regular fibers は $\omega$-Lagrangian $T^2$，
+三価頂点上の fibers は smooth strata が isotropic な $S^1\times\figeight$ とする．
+このとき $\pi_S$ を境界上でそのまま保つ proper continuous surjection
+\[
+ \Pi:K\longrightarrow\operatorname{Cone}_{[0,1]}(\Gamma)
+\]
+があり，cone point の逆像は $\Sigma$，その他の fibers は上記の regular または
+branch fibers の Liouville images である．全 fibers は連結であり，
+全 smooth strata は isotropic である．
+\end{lemma}
+
+\begin{proof}
+正時間に $S$ へ達しない点の集合は $\Sigma$ である．
+実際，$K_0$ の外で新しい critical point 又は trapping はなく，
+外側の任意の compact shell 上で Lyapunov function の増加率は正の下界を持つ．
+また $\partial K_0$ は外向きであるので，その外から正時間に $K_0$ へ戻れない．
+従って $K\setminus\Sigma$ の各点は有限正時間で $S$ に到達する．
+
+負時間の flow は $K$ の中に留まり，compactness により全負時間で存在する．
+境界での横断性と ODE の一意性により，
+\[
+ (-\infty,0]\times S\longrightarrow K\setminus\Sigma,
+ \qquad(s,y)\longmapsto\varphi_s(y)
+\]
+は diffeomorphism である．$\mathcal L_Z\lambda=\lambda$ より
+\[
+ \varphi_s^*\lambda=e^s\lambda|_S,\qquad
+ \varphi^*\omega=d(e^s\lambda|_S).
+\]
+従って
+\[
+ \Pi(\varphi_s(y))=[e^s,\pi_S(y)],\qquad \Pi(\Sigma)=\{0\}
+\]
+と定義する．各正の radial level の fiber は $\pi_S$ の一つの全 fiber の像であり，
+flow の conformally symplectic 性から Lagrangian 性と isotropic strata が保たれる．
+
+連続性を確認する．任意の有限 $T>0$ について，
+$\{\varphi_s(y):-T\le s\le0,\ y\in S\}$ は $\Sigma$ と交わらない compact set である．
+従って $\Sigma$ へ近づく点列の退出時間は無限大に発散し，$e^s\to0$ となる．
+逆に compactness と上の表示から，radial coordinate が零に近づく点列の集積点は
+$\Sigma$ に含まれる．これで cone point における連続性が従う．
+Skeleton の連結性は connected Weinstein domain の deformation retraction による．
+最後に compact から Hausdorff 空間への連続全射なので proper である．
+\end{proof}
+
+\subsection{外向き collar と既存 neck 葉の整合}
+
+\begin{proposition}[Actual link を起点とする相対 collar 接着]
+\label{ke:link-relative-collar-gluing}
+閉 link $S_{i,j,t}$ と，その近傍で既存 normal circle および corner $T^2$ action に
+不変な primitive $\lambda^{\rm ad}_{i,j,t}$ を取る．
+$S_{i,j,t}$ は既存部分 fibration の領域内にあり，その全 fibers で飽和しているとする．
+Normal face は corrected moment
+\[
+ M_a=q_a-\rho_a,\qquad q_a=\delta_j>0,\qquad
+ 0<\delta_j<\min(\iota_j/8,\rho_a/8)
+\]
+で指定し，$q_a=\pm\widehat\mu_N$ とする．
+Corner の丸めは同じ moment functions の smooth monotone minimum を用いる．
+内部に新しい trapping がなく，内側では固定 Weinstein core の actual 移送と一致するとする．
+
+このとき既存部分 fibration の葉族を source critical moment から離れた小さい
+normal bands 内だけで変形し，前補題の core filling と全開 collar 上で一致させられる．
+保持する collar 内の全 corner torus fibers は保ち，source の全 pinched tori とその近傍，
+normal marking，saddle fibers の型および Reeb marking を保つ．
+Saddle の位置，第二 action および critical values の数値は固定しない．
+\end{proposition}
+
+\begin{proof}
+$Z$ を $\lambda^{\rm ad}_{i,j,t}$ の Liouville field とする．
+各 invariant generator $V_a$ について
+\[
+ [Z,V_a]=0,\qquad ZM_a=M_a
+\]
+である．前者は $\mathcal L_{V_a}\lambda^{\rm ad}=0$ と
+$\mathcal L_{V_a}\omega_t=0$，後者は $\mathcal L_Z\lambda^{\rm ad}=\lambda^{\rm ad}$ による．
+全 $M_a$ は link とその小さい collar 上で負である．
+従って normal face で Liouville time と $q_a$ は
+\[
+ q_a(s)=\rho_a+e^s(\delta_j-\rho_a)
+\]
+によって互いに滑らかに対応する．
+
+各 normal face の既存 reduced 葉を anchor の葉として取り，
+Liouville flow により $q_a=\delta_j$ の両側の小さい band へ運ぶ．
+Compactness と transverse moment の非消滅から共通 flow buffer がある．
+これは simple-saddle foliation の smooth family であり，全葉は連結なままである．
+Corner では $Z$ が全 $T^2$ action と可換なので，flow は torus orbits を torus orbits へ写す．
+従って end collars 上の新旧二族は同じ full torus partition である．
+
+Reduction の座標を共通 corner partition に適合させて取る．
+そのために固定した一つの moment level から regular annular end charts を続ければよく，
+parameter ごとに first integral の表示値を揃える必要はない．
+定理\ref{ke:saddle-moving-relative-interpolation}と
+系\ref{ke:actual-saddle-moving-neck-interpolation}を用い，
+$q_a=\delta_j$ の近くでは Liouville 葉族，band の外側では旧葉族となるよう補間する．
+Band は例えば $|q_a-\delta_j|<\delta_j/4$ の中へさらに縮める．
+Source critical moment は $\widehat\mu_N=0$ なので，その全 fiber と近傍は支持外である．
+同じ double line の反対側 component には opposite moment sign の band を使うため，
+二つの補間の支持は互いに素である．
+
+Corner rounding 部分の collar では torus orbits をそのまま使える．
+各 normal band の補間は end collars で恒等なので，これらの局所変更は全 overlaps 上で一致する．
+全て actual $\omega_t$ の Hamiltonian reduction の中で行うため，
+補間後の fibers は actual Lagrangian である．
+内側 cone filling とは一つの Liouville 葉族として開 collar 全体で一致する．
+\end{proof}
+
+\subsection{全曲面上の actual fibration と固定段階の費用}
+
+\begin{theorem}[全平面退化の actual KE--Lagrangian 全域構成]
+\label{ke:actual-global-fibration}
+問題\ref{ke:global-realization}の任意の固定 $d\ge5$ と退化族を取る．
+十分大きい各固定 exhaustion stage $j$ について，$|t|$ を十分小さくすれば，
+一つの admissible marked tree system $T$ と connected-fiber continuous surjection
+\[
+ \pi_{j,t}:(X_t,\omega_t)\longrightarrow B_d(T)
+\]
+を構成できる．Regular fibers は actual $\omega_t$-Lagrangian $T^2$，
+source fibers は一重 pinched tori，branch fibers は $S^1\times\figeight$ であり，
+$d$ 個の core fibers は成分極限 KE 形式の finite-type Weinstein skeletons の
+symplectic images である．全 smooth singular strata は isotropic である．
+
+構成は系\ref{ke:neck-corner-saturated-union}の部分 fibration を，
+component link より内側で全 fibers ごと切り詰めて core と接着する．
+各 corner の保持された全 torus fibers と source の近傍は変えない．
+Normal bands 内の saddle positions と基底の parameterization は $t$ とともに動かしてよい．
+木系の組合せ型と component labels は固定できる．
+
+また，core と今回変更した collar の全体は，各 $j$ に対して固定した component compacts の
+actual images に含められる．各 component ごとの領域の actual ambient diameter と，
+その少し広い固定された連結 compact domain の actual image 内で選ぶ接続経路，
+および小さい Moser 移送の費用は
+$t$ に一様な有限定数 $C_j$ で抑えられる．
+従って十分遅い対角選択 $j=j(t)\to\infty$ により，それらの
+$R_t^{-1}$-正規化費用は零へ収束する．
+全曲面の uniform distance distortion は本定理の結論ではない．
+異なる components の core domains を全部合わせた集合の diameter が
+$O(C_j)$ であるとは主張していない．
+\end{theorem}
+
+\begin{proof}
+K2 の fixed stage を取り，補題\ref{ke:fixed-stage-stratum-coverage}を使う．
+既存部分 fibration の外部は，各成分の互いに素な固定 compact graph images に含まれる．
+それらの compact set と全 finite-type cores を内部に含むほど深く normal cuts を選び，
+補題\ref{ke:closed-component-link}の閉じた飽和 link $S_{i,j,t}$ を作る．
+選択の順序は $b_j$，$n_j$，$\iota_j$，その後に component 深度 $N_j$，最後に $t$ の閾値である．
+特に $N_j\iota_j\gg1$ を課す．
+
+各成分の固定 compact neighborhood 上で先に exact Moser 移送を行い，
+finite-type Weinstein primitive を actual form $\omega_t$ の primitive として移す．
+これを actual circle actions で centered 平均し，normal-invariant cutoffs を用いて貼り合わせる．
+Primitive 補正は exact であり，component core の近傍では零である．
+生成場の $C^1$ 評価と正 residue potential の coercive bound により，
+新しい trapping を作らず，全 link 上で指定された invariance を得る．
+必要な cutoff support 全体の被覆と flow buffers は
+系\ref{ke:component-shell-primitive-support}による．
+補題\ref{ke:component-meridian-normalization}の厳密な period 規格化の下で，
+negative corrected moments と monotone rounding によって $Z$ は各 link に外向きである．
+
+Link の quotient も具体的に同定できる．各 normal face の quotient は $T_{ij}$ であり，
+corner rounding の quotient は対応する labelled ends を結ぶ interval である．
+後者には新しい branch point はない．従って link quotient $\Gamma_i$ は，
+各 $T_{ij}$ の対応する葉を交点ごとに貼り，二価点を除いた graph であり，
+補題\ref{topo:counts}の $G_i$ と同じ labelled graph である．
+
+Link 自身の葉は既存部分 fibration の全 fibers なので，
+補題\ref{ke:actual-link-cone-filling}を用いて内部を充填する．
+命題\ref{ke:link-relative-collar-gluing}により，外向き collar で旧葉族へ戻す．
+補題\ref{ke:whole-fiber-core-trim}の飽和した並行 link を使って
+旧部分 fibration を全 fibers ごとに切り，
+新しい core domain との交わりを共通 Liouville collar にする．
+元の部分 fibration の外部は既に core domain の内部にあるため，
+この操作の前後で全 $X_t$ の被覆が成立する．
+
+全 pieces の fibers は連結で，全 overlaps 上で同じ全 fiber として一致する．
+閉じた飽和 pieces を $K_\alpha$ とすると，その各 fiber relation
+$R_\alpha\subset K_\alpha\times K_\alpha$ は閉である．
+有限和 $R=\bigcup_\alpha R_\alpha\subset X_t\times X_t$ はすでに推移的である．
+実際，二つの local fibers が一つの点で交われば，overlap の全 fiber 飽和と葉の一致により，
+それらは同じ ambient subset である．従って $R$ は閉同値関係であり，
+compact Hausdorff 空間 $X_t$ の quotient も compact Hausdorff となる．
+開 collars 上の一致から一つの continuous fibration を得る．
+単に有限個の閉貼合せであることだけから Hausdorff 性を結論しているわけではない．
+基底の combinatorics は，component に cone over $\Gamma_i$，double line に
+interval times $T_{ij}$，triple point に regular two-dimensional block を置いたものとなる．
+Saddle tracks は対応する二つの core vertices を結び，
+$T_{ij}$ の内部辺は bigons，labelled ends は三重点の triangle に接続する．
+相対葉族補間は continuation marking を変えないので，この基底は
+定義\ref{topo:definition}の cellular $B_d(T)$ と同相である．
+Source の nodal values は，その二次元 cells の内部の標識点として残る．
+実数値 actions を合わせる追加条件又は大域 matroidal atlas は使わない．
+
+固定 $j$ で用いた component 領域と全補間 supports は，
+一つの固定 $V_{i,j}\Subset W_i$ の中にある．
+必要なら連結な少し広い compact を取る．
+Fixed-gauge smooth convergence と命題\ref{ke:fixed-component-transfer}により，
+各 component image 内の任意の二点を結ぶ経路を，長さが有限な $C_j$ 以下となるよう選べる．
+従って各 component ごとの ambient diameter と接続費用も同じ定数で抑えられる．
+ここで用いるのは固定 compact 内で選んだ経路であり，任意の Liouville trajectory の
+全長の評価ではない．Reduced diffeomorphisms の moment 微分について
+$j$ 一様の bound を仮定する必要はない．
+
+最後に $t_j\downarrow0$ を取り，既存 K1--K2 の全条件とともに
+\[
+ R_t\ge j\bigl(1+C_j+\log(N_j+1)\bigr)
+ \qquad(0<|t|\le t_j)
+\]
+を課す．$t_{j+1}<|t|\le t_j$ では第 $j$ 段階を使えば，
+core と補間領域の正規化費用は $1/j$ 以下となる．
+この選択は各固定次数・固定族について行い，次数一様性は主張しない．
+\end{proof}
+
+本定理は問題\ref{ke:global-realization}の第一条件を満たす構成を与える．
+第二条件には，中央帯外の source 接続，$d\ge6$ で潰される木の上の
+全 fiber 合併の径，および全曲面の経路を許す no-shortcut 下界がなお必要である．
+閉 corner から core 側へ切り取った部分の intrinsic GH 評価を，
+新しい全曲面上の距離評価と同一視しない．

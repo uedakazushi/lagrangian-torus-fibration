@@ -1,6 +1,6 @@
 {
   "date": "2026-11-21",
-  "version": "2.8",
+  "version": "2.9",
   "scope": "複素次元2の現行研究状態。旧三次元稿の組版・監査記録ではない。数学的な証明と、その再監査、組版、整数計算、GitHub保存、Cloudタスク起動を区別する。",
   "priority": "P0: actual負Kähler–Einstein形式での大域Lagrangian torus fibrationの射影 p_T∘π_t が、各固定 d≥5 の全曲面ambient距離に関する正規化GH近似を与えること。",
   "priority_status": "open",
@@ -23,20 +23,27 @@
       "Canonical potentialの正のPoisson方程式・対数勾配と固定physical tubeから、中央点のactual小球を深部normal帯へ局在",
       "Complex Sobolev Moser–Trudingerとlogarithmic coverの周期数から、固定source-free shellへの距離のactual Gaussian tail CL^-1 exp(-cA²)",
       "Bishop–Gromov比較により、固定点を含むcentral sourceの全点ambient径O(sqrt(R))、固定基底のsource-inclusive中央moment帯と閉pinched torus全体の正規化径収縮",
-      "固定component coreの小さいactual Moser移送、collarの相対flux条件とexact equivariant germ。極限KE形式のfillingを追加入力とする相対接着",
+      "固定component coreの小さいactual Moser移送、collarの相対flux条件とexact equivariant germ。点固定germの延長とfiber partitionの構成を区別。",
       "固定compactと全collar上でKE形式・primitiveに厳密一致するsmooth Kähler正則化、正residueの有限型KE coreとその小さい飽和近傍のmarked Lagrangian filling",
       "Cubical座標部分複体への非伸長retraction、六label最短路、gallery数は五次30・六次以上60",
       "六次以上のcubical targetの厳密直径2sqrt(5)、最大対の完全記述、直径近似対の線形安定性（後者のgapのみ既存C5定理に依存）"
     ],
     "not_proved": [
-      "既存neck/cornerの全collar葉へのcore fillingの相対延長。特に閉link全被覆、actual generator一階評価と全overlap gauge、saddleを動かす相対葉族、新normal cutの全fiber飽和。全曲面被覆も未解決。",
       "Source中央帯を超える共通moment interval全体での同一moment接続と、moving残余領域への一様性",
       "中央帯に限られないmomentをまたぐ木上の複数fiberの合併の径、全曲面ambient距離でのno-shortcut、square lifts、portal connectorsとP0の一様distortion",
       "KE側のCP/PBE（および必要時のTC5）の対象族での証明、またはそれらの直接評価による代替",
       "一般次数のP0達成に必要な既存全証明と先行研究の独立点検"
     ],
     "scope_warning": "原稿に証明が書かれていることを、今回全定理を独立に再検証したことと混同しない。",
-    "research_note_strategy": "Actual circleのcentered平均によるexact primitive補正、微分仮定付きnontrapping、Liouville moment facesとwhole-fiber trimを研究ノートへ整理。相対構成全体は証明未完成。"
+    "research_note_strategy": "K3の四項目を主稿の証明へ統合。現在の核心は中央帯外source接続、木上の全fiber合併、保持cornerとcore capの写像整合、全曲面no-shortcut/portal比較。",
+    "documented_global_results": [
+      "ke:actual-global-fibration: 全固定d>=5、既存一般性条件の族に対し、K2の保持corner葉/source近傍に相対的な全Xtのactual KE–Lagrangian fibrationを構成。",
+      "ke:component-meridian-normalization: q_a=M_a+2πw_aを向き付きcanonical normal momentと整数winding・exact transportで厳密同定。",
+      "ke:closed-component-link, ke:fixed-stage-stratum-coverage, ke:whole-fiber-core-trim: 閉moment link、固定stage全特異層近傍の被覆、compact complement、全fiber切詰め。",
+      "Actual generator C1、centered scalar平均、whole cutoff shellのbuffer、relative invariant primitiveのnontrapping。",
+      "Saddle-moving relative familyとactual自由normal bandへのlift、Liouville compact cone fillingと全collar接着。",
+      "各componentのcoreと変更collarのambient径・選んだ接続費用は固定stageで有界。遅い対角選択で正規化費用は零。異なるcore全体の合併径を主張しない。"
+    ]
   },
   "reproduction": {
     "repository_tree": "main（現行Gitツリーで旧ルートsymlinkなし、主要ソースと入力参照の存在を確認）",
@@ -46,59 +53,46 @@
     "arithmetic_command": "python3 scripts/research_check.py arithmetic",
     "latest_reported_main_build": {
       "date": "2026-11-21",
-      "revision": 18,
-      "pages": 188,
+      "revision": 19,
+      "pages": 208,
       "pdf_and_synctex": true,
       "refs_citations_checked": true,
       "overfull_box_warnings": 0,
       "missing_glyphs": false,
       "duplicate_labels": false,
-      "visual_review": "最終188頁版の序論・target距離・closed corner・core・追加文献の変更箇所を中心に18頁を表示確認（16,40–47,69–70,120–124,187–188頁）。全188頁の視覚的再監査ではない。",
-      "mathematical_source_commit": "006b79a3ba152e6a997ba7fafe69bec7873ec38d",
-      "source": "新しい数学節を保存した上記commitに、序論・target距離記述の整合修正と既知cubical細分の先行研究比較を加えた改訂18をこの作業で組版。PDFはGitで追跡しない。"
+      "visual_review": "変更頁の表示確認前。",
+      "mathematical_source_commit": "current revision19 source tree",
+      "source": "K3の追加証明を統合した現行改訂19をLuaLaTeXで組版。PDFはGitで追跡しない。"
     },
     "this_audit": {
       "date": "2026-11-21",
-      "scope": "固定compactのcusp正則化、正residue core、局所飽和filling、target retraction・六label還元・厳密直径を論理点検。新四gallery・120三角形を有理数で独立検算。現行の全旧証明を再監査したものではない。",
+      "scope": "K3のclosed link・exact period・固定stage被覆・generator C1・adapted primitive/nontrapping・saddle-moving family・whole-fiber trim・actual全域接着を分担して証明し、追加証明を相互点検。外部KE入力の該当箇所とRZ/EMの一次PDFも再確認。全旧証明の再監査ではない。",
       "reexecuted_build": true,
       "reexecuted_static_checks": true,
       "reexecuted_python_suite": false,
       "six_label_finite_command": "python3 verification/verify_cubical_six_label_geometry.py",
-      "six_label_finite_result": "PASS: four unfolded galleries; all 120 calibration triangles; exact squared endpoint gap 20",
+      "six_label_finite_result": "改訂18でPASSを確認。改訂19では有限計算箇所を変更せず再実行していない。",
       "independent_internal_proof_review": [
-        "ke:fixed-compact-cusp-regularization",
-        "ke:positive-residue-finite-type",
-        "ke:actual-limit-weinstein-core",
-        "ke:local-limit-core-filling",
-        "topo:coordinate-retraction",
-        "topo:six-label-gallery",
-        "topo:corner-singleton-radius",
-        "topo:diameter-six-labels",
-        "topo:diameter-six-stability",
-        "ke:closed-corner-global-target"
+        "ke:component-meridian-normalization",
+        "ke:closed-component-link",
+        "ke:fixed-stage-stratum-coverage",
+        "ke:whole-fiber-core-trim",
+        "ke:component-normal-generator-c1",
+        "ke:relative-corner-patch-c2",
+        "ke:actual-centered-primitive-weighted",
+        "ke:star-cover-adapted-primitive",
+        "ke:component-shell-primitive-support",
+        "ke:simple-saddle-family-trivialization",
+        "ke:saddle-moving-relative-interpolation",
+        "ke:actual-saddle-moving-neck-interpolation",
+        "ke:actual-link-cone-filling",
+        "ke:link-relative-collar-gluing",
+        "ke:actual-global-fibration"
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
-      "visual_pages_reviewed": [
-        16,
-        40,
-        41,
-        42,
-        43,
-        44,
-        45,
-        46,
-        47,
-        69,
-        70,
-        120,
-        121,
-        122,
-        123,
-        124,
-        187,
-        188
-      ]
+      "visual_pages_reviewed": [],
+      "current_build_status": "revision19 built, 208 pages; visual review pending"
     }
   },
   "cloud_codex": {
@@ -125,12 +119,12 @@
     "Rochon_Zhang_cusp": {
       "source": "Rochon–Zhang, Adv. Math. 231 (2012), 2892–2952, arXiv:1106.0873v2, §5 (5.3)–(5.6), Theorem 5.1",
       "url": "https://arxiv.org/abs/1106.0873v2",
-      "verified": "一次PDFでSNCのampleness条件・bounded cusp potentialとd^c規約を照合。Smooth divisor専用のfull expansionは使用しない。"
+      "verified": "一次PDF pp38–39、式(5.3)–(5.6)直後のbounded C∞_fcとTheorem 5.1を再確認。SNCに適用、smooth divisor専用full expansionは不使用。"
     },
     "Evans_Mauri_cone_extension": {
       "source": "Evans–Mauri, Ann. Henri Lebesgue 4 (2021), 537–570, Lemma 2.16 and Remark 2.18; arXiv:1905.09229v3, §2.3",
       "url": "https://arxiv.org/abs/1905.09229v3",
-      "verified": "一次PDFでcompletionとcontact formの変更による時間座標shiftを確認。指定full collarのfiber partitionを保つ相対定理とは区別。"
+      "verified": "一次PDF第8頁 Lemma 2.16/Remark 2.18を再読。Compact Liouville domainで同じcontact formを使う版を直接証明し、prescribed actual collarの相対補間は本稿で別に構成。"
     },
     "cubical_barycentric_subdivision": {
       "source": "E. K. Babson, L. J. Billera, C. S. Chan, Neighborly cubical spheres and a cubical lower bound conjecture, Israel J. Math. 102 (1997), 297–315, DOI 10.1007/BF02773804. Text checked in the April 10, 1996 preprint, §2.3, Proposition 2.2 and Corollary 2.4.",

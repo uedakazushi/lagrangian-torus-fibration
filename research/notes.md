@@ -5,7 +5,7 @@
 
 ## 最優先目標への接続と最初の未解決補題
 
-現在の目標は、主稿 `ke:global-realization` のactual KE–Lagrangian fibrationによる全曲面GH極限の実現である。対象・達成条件・K0–K5の着手順は [研究方針](../00_research_plan.md)、外部定理の正確なpath・label・確認commit・残る仮定は [KE依存表](ke-dependencies.md) を参照する。ここには証明を進めるための知識を残し、課題一覧を重複させない。
+現在の目標は、主稿 `ke:global-realization` のactual KE–Lagrangian fibrationによる全曲面GH極限の実現である。対象・達成条件・K0–K5の着手順は [研究方針](../00_research_plan.md)、外部定理の正確なpath・label・確認commit・残る仮定は [KE依存表](ke-dependencies.md) を参照する。ここには証明を進めるための知識を残し、課題一覧を重複させない。`ke:actual-global-fibration` によりK3の全域actual構成を得たため、現在の核心はK4の全曲面距離比較である。
 
 固定 source-free compact 基底上の moving normal strip では、actual 計量で一定の buffer と $O(m_t^{-1})$ の短円を証明した（主稿 `ke:fixed-base-neck-moser`）。$\varphi_t=\log(\omega_t^2/\Omega_{t,d}^{\rm low})$ とし、大域の $\varphi_t\ge-C$ と $dd^c\log\Omega_{t,d}^{\rm low}\ge c\omega_{\rm FS}$ を、正則包含の Chern–Lu 不等式に組み合わせる。最大値原理から $\operatorname{tr}_{\omega_t}\omega_{\rm FS}\le C e^{A\varphi_t}$。固定 pair chart では体積包絡が $\varphi_t\le C$ を与える。入れ子座標間の固定射影幅から actual 球を確保し、局所 Chern–Lu を complete annulus–disc に適用して actual 二側比較を得る。法線深度を $m_t$ から $m_t/2$ に広げ、残余基底にも固定した余裕を取ることで、Moser map の source と像の両方が同じ内側 strip を覆う。
 
@@ -46,7 +46,7 @@ Moser 流では軌道全体の最大速度を軌道平均エネルギーの平�
 
 Reduced graphに合わせて残余foliationをmomentに滑らかに依存させることは `ke:moment-dependent-neck-foliation` で許される。変更をsource・saddleの近傍とcollar外で恒等にすれば、閉pinched torusとsaddle fiberの型を保つ。固定 $t$ ごとの滑らかさでよく、無重みのmoment微分の一様な小ささは不要。残余基底は元の射影点 $p$ であり、$h_t(p)$ はsource近傍以外でglobal座標としない。Endのradial座標は $Z_{k,t}=C_D^2/h_{k,t}$ を使う。
 
-`ke:neck-corner-saturated-union` はcorner cut $m_t=6b_j$ とneckの境界葉 $B=7b_j$ を分離する。先に $5b_j\le b\le9b_j$、normal深度 $\ge n_j/2$ の広い領域でnormal-first構成へ補正する。Neckの全normal trajectoriesはouter tube内にあり、frame差を引いてもlocal normal深度 $\ge3n_j/4$。そこで $|d\log b(Y_N)|\le C/(n_jb_j)$ を使うfirst-exitにより、neck imageは $b<8b_j$ に留まる。Cornerの最小深度と元の射影の線形性から交点で $b\ge6b_j-C$ を得る。逆normal flowの自然性でmomentを同定した後にnormal深度 $\ge4n_j$ を結論する順序で、循環を避ける。Reduced graphと葉でのtrimから全intersectionが全torusで飽和し、source・saddleを含むactual部分fibrationとなる。End markingは共通torus同定に合わせて選び、任意に独立な第二periodの一致を含めない。全曲面被覆とcore接着は残る。
+`ke:neck-corner-saturated-union` はcorner cut $m_t=6b_j$ とneckの境界葉 $B=7b_j$ を分離する。先に $5b_j\le b\le9b_j$、normal深度 $\ge n_j/2$ の広い領域でnormal-first構成へ補正する。Neckの全normal trajectoriesはouter tube内にあり、frame差を引いてもlocal normal深度 $\ge3n_j/4$。そこで $|d\log b(Y_N)|\le C/(n_jb_j)$ を使うfirst-exitにより、neck imageは $b<8b_j$ に留まる。Cornerの最小深度と元の射影の線形性から交点で $b\ge6b_j-C$ を得る。逆normal flowの自然性でmomentを同定した後にnormal深度 $\ge4n_j$ を結論する順序で、循環を避ける。Reduced graphと葉でのtrimから全intersectionが全torusで飽和し、source・saddleを含むactual部分fibrationとなる。End markingは共通torus同定に合わせて選び、任意に独立な第二periodの一致を含めない。この部分構成を `ke:actual-global-fibration` でcoreへ接着し、全曲面を覆った。
 
 ## Source中央部の体積・momentとactual接続
 
@@ -81,91 +81,51 @@ Source側の `ke:source-central-band-reduction` は、固定residual disc、人�
 
 境界germを点ごとに保存するには、primitive差のcollar $H^1$ classがcoreの $H^1$ から延びることが必要となる。Fiber periodsが全て零でもbase-circle fluxが残る例を `ke:core-relative-flux-example` に保持する。これはfiber partitionの不存在例ではない。平均形式にもparameter方向の同変Moserを入れる $A_t b_t A_0^{-1}$ はexact symplectic germとなり、normal momentの加法定数も保つ。
 
-`ke_component_core_geometry.tex` により、任意の固定compactと全collarでKE形式・primitiveに厳密一致するsmooth compactification、正residueの有限型KE core、その小さい飽和近傍のLagrangian fillingを得た。未解決なのは、この局所core fillingを既存の指定full collarsへ延長し全patchを同時整合させることである。`comp:finite` の出力葉が指定葉に一致することは、二形式の一致だけからは従わない。条件付き系 `ke:conditional-component-core-filling` は、その入力があればactual移送・接着・十分遅い対角選択でcore全体の正規化径を消せることを示す。
+`ke_component_core_geometry.tex` により、任意の固定compactと全collarでKE形式・primitiveに厳密一致するsmooth compactification、正residueの有限型KE core、その小さい飽和近傍のLagrangian fillingを得た。この局所core fillingの存在と、既存full collarの葉を保つことは別条件である。後述のactual link構成はその相対問題を解く。`comp:finite` の出力葉が指定葉に一致することは、二形式の一致だけからは従わない。条件付き系 `ke:conditional-component-core-filling` は、その入力があればactual移送・接着・十分遅い対角選択でcore全体の正規化径を消せることを示す。
 
 ## Saddle を動かす相対葉族補間
 
 `ke_relative_reduced_foliations.tex` の `ke:simple-saddle-family-trivialization` と `ke:saddle-moving-relative-interpolation` を証明した。Compact reduced surface上のsmooth first-integral族を対象とし、各connected critical leafが一つのsimple saddleを含み、boundary collarの葉partitionとcontinuation markingが固定されると仮定する。全critical valuesの相異性は不要。各critical pants上でcritical-value速度に一致するglobal basic関数ζを作り、∂μf+df(Y)=ζ、dζ=a dfを解く。これにより全critical leavesと全regular annuliを同時に同定し、anchorで一致する二族をmoment cutoffで補間できる。異なる値のfirst integral表示を一致させる必要はない。
 
-`ke:actual-saddle-moving-neck-interpolation` は自由Hamiltonian normal bandへ持ち上げ、actual Lagrangian性とS¹×figure-eight、全corner葉、normal markingを保つ。補間はsourceのcritical momentから離して行うためcentral pinched torusを変えない。Liouville moment M=μ−ρの場合、時間は s(μ)=log((μ−ρ)/(μ*−ρ)) で再parameterizeする。この葉族補題は別担当と内部点検済み。全link被覆・primitive補正・coreの全域接着は以下の残課題であり、この補題だけで解決したとはしない。
+`ke:actual-saddle-moving-neck-interpolation` は自由Hamiltonian normal bandへ持ち上げ、actual Lagrangian性とS¹×figure-eight、全corner葉、normal markingを保つ。補間はsourceのcritical momentから離して行うためcentral pinched torusを変えない。Liouville moment M=μ−ρの場合、時間は s(μ)=log((μ−ρ)/(μ*−ρ)) で再parameterizeする。この葉族補題は別担当と内部点検済み。全link被覆・primitive補正・coreの全域接着は次節の別の証明で確認した。この葉族補題単独の帰結ではない。
 
-## KE core と既存 neck/corner の相対接着：未完成の証明方針
+## Actual core の全域相対接着
 
-2026-11-21。**以下の相対構成全体は証明未完成である。** 正の residues を持つ KE primitive、有限型 core、小さい飽和近傍の filling は `ke_component_core_geometry.tex` の `ke:positive-residue-finite-type`、`ke:actual-limit-weinstein-core`、`ke:local-limit-core-filling` を参照する。残るのは指定された actual collar の全葉との接着であり、core 自体の存在とは区別する。
+**主稿 `ke:actual-global-fibration` に証明を統合し、追加証明を別担当と内部点検した。** 任意の固定 $d\ge5$ と既存一般性条件の族について、K2の部分fibrationから全 $X_t$ 上のactual KE–Lagrangian fibrationを構成する。Markingの組合せ型を保ち、第二作用やcritical valuesの数値は先指定しない。全曲面の距離歪みは別の未解決条件である。
 
-### Actual circle に沿う exact 平均
+### 正確な period と閉 link
 
-正の residues を持つ primitive を $\lambda_0$、$d\lambda_0=\omega_\infty$ とする。既に得た actual symplectic circle action $R_s$ の周期を $T$、generator を $V$ とし、
+正本は `ke_component_link_cover.tex`。Positive-residue primitiveの周期1 meridian積分を $M_a$ とすると、$q_a=M_a+2\pi w_a$ は既存canonical normal momentの向き付き値と**厳密に**一致する。有限直線ではlog volume frameとの比の単純極、無限遠ではaffine volumeの3重極とlog volumeの単純極の差を使う。Holomorphic unitのwindingは固定collar上のhomotopyで零。非正則な座標補間では $G^*\lambda$ を使い、$G^*d^c=d^cG^*$ としない。
+
+残余尺度 $b_j$、normal cutoff $n_j$、共通幅 $\iota_j$ の後で $N_j\iota_j\gg1$ と $N_j\gg n_j$ を選ぶ。$\delta_j=4\pi/N_j$ のnormal moment facesを取り、cornerでは $(q_a-\delta_j,q_c-\delta_j)$ のsmooth monotone minimumで丸める。Corner momentは全深度比に一様に $4\pi/s_a$ と比較できる。重複帯ではresidual momentが $1/b_j\gg\delta_j$ なので丸めは作動せず、normal faceと厳密に一致する。深さを近似的に合わせた切断ではない。正のresiduesにより $M_a=q_a-2\pi w_a<0$、不変primitiveのLiouville場はこのlinkを外向きに横断する。
+
+### 固定段階でも全特異層を覆う理由
+
+`ke:fixed-stage-stratum-coverage` は、同じcentered normal Moser flowをさらに深い**固定**tubeへ制限する。FlowはODE一意性で元のものと同一である。Fixed-shell momentの下界だけでは足りず、$|\mu|\le C_P/M<\iota_j$ の上界と逆像bufferを用いる。Source基底点もcomponent側cusp shellでは通常の滑らかな点なので含む。残余は $6.5b_j$ まで、cornerのactual imageはphysical最小深度 $6.3b_j$ から覆い、端のgapをなくす。粗い $\min\ell>2m=12b_j$ の包含だけではneck cut $7b_j$ との間が残る。
+
+中央の全特異locusの固定ambient近傍を覆うので、部分fibrationの外部は各 $W_i$ の互いに素な固定compactのgraph imagesに入る。閉linkをその外側へ置けば全域被覆を得る。境界が全fiberで飽和し旧fiberが連結なら、そのfiberは内外を横切れない。これが `ke:whole-fiber-core-trim` の全fiber単位の切詰めである。
+
+### Invariant primitive と nontrapping
+
+正本は `ke_core_invariant_primitive.tex`。短円の0次評価からgeneratorの一階評価は出ない。Normal logarithmic chartでbare generatorを深度逆数の定数場として書き、RZの全cusp微分からMoser mapをC2まで制御する。Cornerも比較Hamiltonianを一階高めてC2flowを得る。必要なactual actionsで $|V|+|\nabla V|\le\varepsilon_j$、$\varepsilon_j=C_*/b_j+C_j/N_0$ となる。
+
+Actual symplectic circleのcentered kernelについて
 \[
- \mathcal A\eta=T^{-1}\int_{-T/2}^{T/2}R_s^*\eta\,ds,\qquad
- K\eta=T^{-1}\int_{-T/2}^{T/2}\int_0^sR_r^*(\iota_V\eta)\,dr\,ds
+ F=\int_0^1(1/2-s)\lambda(V)\circ R_s\,ds,
+ \qquad\mathcal A\lambda-\lambda=dF,
+ \qquad |F|+|dF|\le C\varepsilon_j H
 \]
-と置く。Cartan の公式から $\mathcal A-\mathrm{id}=dK+Kd$。作用が symplectic なので $R_r^*(\iota_V\omega_\infty)=\iota_V\omega_\infty$、平均時刻が零なので $K\omega_\infty=0$。従って
-\[
- \mathcal A\lambda_0-\lambda_0=dF,\qquad F=K\lambda_0.
-\]
-これは global primitive に対する明示的な exact 補正であり、Poincaré lemma による局所 primitive の選択ではない。可換な二円作用には逐次平均を使える。
+が成り立つ。$K\omega=0$ がexactnessの理由である。Common normal action上では $F_C-F_N$ が不変なので、source torus label $B/b_j\in[5.2,5.4]$ の帯でnormal-invariantに貼る。Retained cornerに達する前にfull torus gaugeへ切り替える。$\eta(\Psi/N)$ の零延長支持全体は広いnormal/corner construction domainsで覆える。保持されたsoftmax領域だけを作用の定義域と誤認しない。
 
-### 微分仮定付きの nontrapping 評価
+正residue potentialは $|d\Psi|\asymp H$、$Z_0\Psi\ge cH^2$ を満たすため、補正後も $Z^{\rm ad}\Psi\ge(c-C\varepsilon_j)H^2>0$。Core外に新しいtrappingを作らない。Actual形式では先に固定compactのexact Moserを行い、$\lambda_{\rm int,t}=(\varphi_t^{-1})^*\lambda_0$ をactual actionsで平均する。Canonical positive-residue gaugeとの差はexactなのでperiodsを保つ。二形式を合わせる前のprimitive差をexactとみなしてcutoffしない。
 
-Cusp 計量で $H=1+\sum\ell_a$ と置く。正の residues により end で $|d\Psi|\ge cH$、$|\lambda_0|+|\nabla\lambda_0|\le CH$ が得られる。Actual generator と全 circle flow に
-\[
- |V|+|\nabla V|\le\delta,\qquad \|R_s\|_{C^1}\le C
-\]
-があれば、上の積分式を微分して $|F|+|dF|\le C\delta H$ を得る。$|d\log H|\le C$ により一周の間で $H$ は比較可能である。**短円の零階評価だけではこの一階評価を代用しない。** 深度比が大きいので補正を一律 $O(1)$ とも扱わない。
+### Cone filling、相対補間、費用
 
-共通 normal action を保つ二つの invariant primitives の contraction は同じ orbit period である。従って局所補正 $F_\alpha-F_\beta$ は共通 circle に不変となり、normal-invariant cutoff で補間できる。実際に保持する corner overlap の全体より手前で corner gauge への補間を終え、そこで full $T^2$ invariance を保つ必要がある。
+正本は `ke_actual_core_gluing.tex`。各linkのquotientは、normal facesの木 $T_{ij}$ の標識endをcorner annuliでつないだgraph $\Gamma_i$。Contact formを変更せず、compact Liouville domainの $K\setminus\Sigma\simeq(-\infty,0]\times S$ に対し $\Pi(\varphi_s(y))=[e^s,\pi_S(y)]$ とする。有限退出時間とcompactnessがcone pointでの連続性を与える。これはEvans–Mauri Lemma 2.16のcompact版であり、既存のcone原理自体を新成果とはしない。
 
-こうした貼合せと core 外での cutoff を、cusp 一階微分が有界な関数で実行できれば、$\lambda^{\rm ad}=\lambda_0+dF$ は
-\[
- Z^{\rm ad}\Psi\ge cH^2-C\delta H^2>0,\qquad
- \iota_{Z^{\rm ad}}\omega_\infty=\lambda^{\rm ad}
-\]
-を満たす。内側の core を変えずに新しい trapping を防げる。候補の尺度は $\delta_j=C(C_j/n_j+1/b_j)\to0$。ただし必要な actual generators の微分評価と全 overlap 上の cutoff は未確認の適用条件である。
+外向きcollarのLiouville葉族は一般には旧neck葉族と異なるため、前節の相対補間を $q_a=\delta_j\ne0$ の小帯へ適用する。全corner葉とsource近傍を保ち、saddleは動かせる。全fiber trim後のclosed piecesでlocal fiber relationsの有限和は既に推移的なので、閉同値関係となりHausdorff基底を得る。基底は同じ $B_d(T)$。
 
-### Contact link と reduced 葉族
-
-各 component の正の meridian generator を $V_a$ とし、invariant primitive に対して $M_a=\lambda^{\rm ad}(V_a)$ と置く。Hamiltonian convention から
-\[
- [Z^{\rm ad},V_a]=0,\qquad dM_a=-\iota_{V_a}\omega_\infty,\qquad
- Z^{\rm ad}M_a=M_a.
-\]
-深い end では $M_a<0$ となる。正確な cusp 展開 $M_a=-w_a+2/\ell_a+O(\ell_a^{-1-\nu})$ は averaging source gauge の深度での式であり、別の physical depth へ無条件に移さない。
-
-Normal moment faces と corner の torus moments による単調 rounding が閉じた飽和 link $S$ を作れば、上の符号で Liouville 横断性を得る。Normal face では $\ker(\omega_\infty|_{TS})$ が normal circle なので、reduced surface の任意の一次元葉を持ち上げた $T^2$ 又は $S^1\times(S^1\vee S^1)$ は presymplectic Lagrangian である。Corner では full torus orbits を使う。
-
-$S$ 上の marked 葉を内向き Liouville flow で運べば core への cone filling の候補になる。外向きの短い collar では、$[Z,V_a]=0$ により moment に依存する reduced 葉族が生じる。**元の neck 葉族が Liouville flow に保存されるとは限らない。** Anchor moment では元の葉そのものを選び、source のない非零 moment 帯で旧葉族へ相対補間する。
-
-既存 `ke:moment-dependent-neck-foliation` は source と saddle の固定近傍で diffeomorphism が恒等である場合を扱う。今回必要な補間は saddle の位置も動かし得るため、parametric Morse lemma と relative isotopy extension により別途示す。Anchor で一致する二葉族を境界固定の小さい $h_\mu$ で同定し、その identity からの isotopy を moment cutoff する。各 moment で diffeomorphism の像だから葉の連結性と simple-saddle 型は保たれる。Central source germ は支持外に置く。Corner では両者とも同じ $T^2$ partition とし、補間支持を外す。第二 action period や critical action の独立指定を保存する主張ではない。
-
-### Actual 形式への移送の順序
-
-Graph gauge では $\sigma_t=E_t^*\omega_t$、$d(\lambda_t-\lambda_0)=\sigma_t-\omega_\infty$ であり、primitive 差は一般に closed ですらない。先に `ke:fixed-component-transfer` の exact Moser を使って
-\[
- \varphi_t^*\sigma_t=\omega_\infty,\qquad
- \varphi_t^*\lambda_t=\lambda_0+dQ_t,\qquad
- \lambda_t^{\rm int}=(\varphi_t^{-1})^*\lambda_0
-\]
-とする。この後に初めて $\lambda_t-\lambda_t^{\rm int}=d(Q_t\circ\varphi_t^{-1})$ が得られる。外側の actual 平均 primitive $\lambda_t+dF_t$ と内側を exact cutoff で接続し、固定 compact 上の smooth 収束と buffer を使う。同じ global closed logarithmic correction を両方に加えることはできる。
-
-### Whole-fiber trim と幾何的費用
-
-Core domain は既存 closed corner の component 側部分まで含み得る。境界 germ の一致だけで元の部分 fibration 全体の点ごとの延長としない。新しい normal moment cuts と torus rounding で既存領域を **全 fiber 単位で外側へ trim** し、共通 collar を残して filling を接着する。全交わりの飽和はこの新しい cut に対して再確認する。
-
-固定 stage $j$ の変更を一つの component compact $V_j$ に閉じ込めれば、actual 径と変位費用は有限の $C_j$。$R_t\ge j(1+C_j+\log N_j)$ という遅い対角選択で正規化費用は消える。深度が $N_j$ 以下の成分領域の raw cubical image は component vertex の $O((1+\log N_j)/R_t)$ 近傍である。これは全曲面の no-shortcut を与えない。
-
-### 未検証の四項目と次の着手
-
-1. **閉 link の全体被覆。** `ke:neck-corner-diagonal-matching` と `ke:neck-corner-saturated-union` は $I_j$ 上の neck/corner を接着するが、component を囲む全 link は構成していない。$\iota_j$ の選択後に $N_j\gg n_j$ を取り、残余深度 $<6b_j$ は neck、$>6b_j$ は corner、$6b_j$--$7b_j$ は共通 plateau で覆うことを actual moment cuts で証明する。
-2. **Actual generators の一階評価と global gauge。** Component 側の固定 end で Rochon--Zhang の cusp 微分評価を使い、corner で既存の全固定階 tensor 入力と averaging/相対 Hamiltonian flow を必要な階まで微分する。`ke:relative-corner-patch` と `ke:normal-flow-naturality` の正確な作用同定を保ち、補間支持が全保持 overlap の外にあることを確かめる。
-3. **Source を避け、saddle を動かす葉族補間。** 上述の parametric Morse 議論を補題にし、corner 固定・marked isotopy class・全 critical leaf の接続を示す。既存の saddle 固定版との区別を保つ。
-4. **新しい normal cuts の全 fiber 飽和。** `ke:neck-corner-saturated-union` が証明したのは corner cut $6b_j$ と neck の残余葉 cut $7b_j$ に対する飽和である。新しい component cut と rounding について全交わりを調べ、共通 collar の外で意図しない交点がないことを示す。
-
-この四項目を閉じること、全 $X_t$ の被覆、全域距離比較は別の達成段階である。
-
-### Evans--Mauri の使用範囲
-
-[Evans--Mauri, AHL 4 (2021), pp.543--544, Lemma 2.16 and Remark 2.18](https://ahl.centre-mersenne.org/item/10.5802/ahl.80.pdf) は、link 上の別の contact form $\alpha=e^f\lambda|_S$ も許し、symplectization の時間変数を $t\mapsto t+f(x)$ と移して completion 上の cone fibration を得る。従って contactomorphic であることだけでは固定 link の指定 fiber partition を保存しない。本方針は actual $\alpha=\lambda^{\rm ad}|_S$ 上で $d\alpha$-Lagrangian 葉を直接作る。有限体積側の指定 collar への接着や全曲面被覆は同補題の結論ではない。
+各componentのcore・変更collarは固定の少し広い連結compact内にあり、そこを通る選択した接続路とambient径は有限な $C_j$ で抑えられる。$R_t\ge j(1+C_j+\log(N_j+1))$ の対角選択で正規化費用を消す。**各componentごとの評価**であり、異なるcores全部の合併径や任意Liouville軌道の全長、fiber内在径は結論しない。次は中央帯外source、木上のfiber合併、全曲面no-shortcut/portalを扱う。
 
 ## Source の residual cutoff と Euler 場
 
@@ -189,7 +149,7 @@ Core domain は既存 closed corner の component 側部分まで含み得る。
 
 `ke:short-circle-actual-buffer` は不変背景を不要にする。g_a=ρ_a*g_ω、η=Aω、b=ε||w||₂とすると|β(X)|≤b|X|_{g_η}。Moser場は(1−s)|Y|²_η+s|Y|²_ω≤b|Y|_ηを満たし、平方完成で|Y|_ω≤b/(2√(s(1−s)))となる。両向きtrajectory長はc_w ε、通常kernelでc_w=π/(2√3)、centeredでπ/(4√3)。Exactnessは長さ評価に不要。`ke:short-circle-image-buffer` はδ>(2c_w+1/2)εから、同じcompact飽和集合Kを含むsource Oとimage φ(O)を得る。Backward c_w ε＋半orbit ε/2＋forward c_w εの予算であり、conjugated actionを元のK上で使うための像の条件を明示した。C¹制御やintrinsic径、全neckでの仮定検証とは別。
 
-遅いexhaustionでflow生存・共通bufferとtriple endsの葉の一致は実証した。残るactual入力は、部分fibrationの外を含む全域被覆・core接着と全点の距離評価である。KE側 `neck:lem:rank-one-circle` はresidual rank-one下界とvolume上界だけでnormal circle長を抑えるが、その下界とactual bufferを証明する必要がある。固定residual境界の影響が消えないexact negative KE productの例があるため、normal深度だけからproduct asymptoticsを推論しない。
+遅いexhaustionでflow生存・共通bufferとtriple endsの葉の一致は実証した。全域被覆・core接着は `ke:actual-global-fibration` で証明した。残るactual入力は特異領域を含む全点の距離評価である。KE側 `neck:lem:rank-one-circle` はresidual rank-one下界とvolume上界だけでnormal circle長を抑えるが、その下界とactual bufferを証明する必要がある。固定residual境界の影響が消えないexact negative KE productの例があるため、normal深度だけからproduct asymptoticsを推論しない。
 
 
 ## 全深部三重点の actual semi-flat 比較
@@ -246,7 +206,7 @@ C\bigl((b/\beta)^2+\beta/d_*\bigr)
 
 Actual/model比較O(1/R)に加え、Moser場のC1評価からmodel計量のLie derivativeを直接抑え、φ_t^*g_t=(1+O(1/R))g_L^sfを得る。保護領域内の全経路を扱うときは、Moser trajectoryのmodel長さO(1/R)とΨのLipschitz定数O(1/R)から、端点誤差d_J(Ψφ_t(z),Ψ(z))=O(R^−2)を用いる。これにより、閉cornerのfibrationの射影そのものがGH approximationになる。
 
-全fiberのintrinsic/ambient diameterはO(1/R)、正規化後はO(1/R²)、raw-map誤差はO(log R/R)。Squareの共通辺と共通頂点でも同じregular T² fiberである。これらを既存大域fibrationのsource・branch・coreのsingular fibersとは同定しない。V_t外を通る全曲面のshortcut、部分fibrationの外を含む被覆とcore接着は未解決。新規性の網羅的確認と外部査読・形式証明は未実施。
+全fiberのintrinsic/ambient diameterはO(1/R)、正規化後はO(1/R²)、raw-map誤差はO(log R/R)。Squareの共通辺と共通頂点でも同じregular T² fiberである。これらを既存大域fibrationのsource・branch・coreのsingular fibersとは同定しない。全曲面の被覆・core接着は得たが、V_t外を通るshortcut評価は未解決。新規性の網羅的確認と外部査読・形式証明は未実施。
 
 一般のcut $m_t\to\infty,\ \log m_t=o(R_t)$ についても、同じsoftmaxとMoser mapの射影が局所GH近似になることを `ke:slow-cut-closed-corner-gh` で証明した。内在・protected距離のdistortionは $C[m_t^{-1}+(\log(m_t+1)+\log R_t)/R_t]$、fiberの元の尺度の内在径は $C/m_t$。内部squareを幅 $\delta=(\log(m+1)+4\log R)/R$ だけ縮め、pruningでは $S=R-\log m-\log R$ を使う。$m_t$のparameter微分を使わず、stepwiseな遅いexhaustionにも適用できる。この遅いcutを `ke:neck-corner-saturated-union` の対角選択へ用いて部分fibrationを構成した。全曲面への延長は別課題である。
 
@@ -256,7 +216,7 @@ Actual/model比較O(1/R)に加え、Moser場のC1評価からmodel計量のLie d
 
 `ke:open-cell-moser-c1` はchain primitiveとMoser場のC1 normをO(L^−η)とし、flowのpullback metricを制御する。`ke:open-cell-collapse` はactual Lagrangian T² fibration、fiberのintrinsic/ambient diameter O(L^−η)、raw-map誤差O(1/R)を与える。Moser像領域に内在長さ距離を入れると、R^−2 g_tは平坦KηへGH収束し、projection distortionはO(L^−η+L^−η/R)=O(L^−η)。定数は固定ηに依存する。
 
-開正方形の局所結果と、前節の全閉cornerの局所結果を区別する。閉cornerの距離同定とsource・saddleを含むneckとの部分fibrationへの接着は証明したが、全曲面のambient shortcut、coreへの相対延長・全域被覆、既存大域fibrationとの同定は残る。
+開正方形の局所結果と、前節の全閉cornerの局所結果を区別する。閉cornerの距離同定とsource・saddleを含むneckとの部分fibrationへの接着は証明したが、Coreへの相対延長・全域被覆は証明したが、全曲面のambient shortcutと距離歪みは残る。
 
 
 ## 負KE計量のGH極限とfiber収縮（2026-11-20）
@@ -279,7 +239,7 @@ KE研究の `papers/cubical-gh-limit.tex` では $R_t=\log(-\log|t|^2)$、$\math
 
 主稿 `base_topology.tex` の `topo:ke-map-compatibility` に、$\operatorname{dis}(\Phi_t)\le a_t$ と $\sup_xd_\square(\Phi_t(x),p_T\pi_t(x))\le b_t$ から $\operatorname{dis}(p_T\pi_t)\le a_t+2b_t$ を得る比較命題と証明を置いた。Ambient fiber diametersは同じ量以下、GH距離はその半分以下である。一般的新規性は主張しない。この初等比較の証明の点検と、actual $a_t,b_t\to0$ が未証明であることを区別する。
 
-**具体的な次の課題：** 全交わりで飽和したneck/cornerの部分fibrationと、KE coreの小さい飽和fillingを入力とする。上記「相対接着」の四項目を検証し、component link全体の被覆・actual invariant primitive・saddleを動かす相対葉族・新しいnormal cutの飽和を証明する。必要なのは全特異領域を含む一様評価と大域no-shortcutであり、regular fibersの点ごとの収縮では不足する。Action-affine structureだけからcanonicalなRiemannian基底計量は決まらない。
+**具体的な次の課題：** `ke:actual-global-fibration` を入力として、中央帯外のsource同一moment接続と、core近傍へ切り取ったtarget capの扱いを全曲面no-shortcut/portal比較へつなぐ。必要なのは全特異領域を含む一様評価と大域no-shortcutであり、regular fibersの点ごとの収縮では不足する。Action-affine structureだけからcanonicalなRiemannian基底計量は決まらない。
 
 
 ## 局所fibrationの証明と解析入力
@@ -310,7 +270,7 @@ W.-D. Ruan, *H-minimal Lagrangian fibrations in Kähler manifolds and minimal La
 
 ## 相対接着の補助計算：primitiveの選択と障害
 
-以下はregular torus領域での補助計算であり、仮定と証明をこのノートに保持する。主稿の `ke:relative-fiber-preserving` の証明を重複させず、primitiveの変更、整数基底の変更、collarの点固定に関する情報を整理する。選んだneckとcornerの共通葉・normal moment・bufferは上記部分fibrationで実証した。独立な第二periodとcore接着には追加確認が必要であり、補助計算の新規性も未確認である。
+以下はregular torus領域での補助計算であり、仮定と証明をこのノートに保持する。主稿の `ke:relative-fiber-preserving` の証明を重複させず、primitiveの変更、整数基底の変更、collarの点固定に関する情報を整理する。選んだneckとcornerの共通葉・normal moment・bufferは上記部分fibrationで実証した。任意に独立先指定した第二periodの一致には追加確認が必要であり、補助計算の新規性も未確認である。
 
 ### Centered primitiveの整数基底変更
 
@@ -386,7 +346,7 @@ d^c(AF-F)(\partial_{\theta_1})
 
 特にU=B×T²、Bは可縮なcorridor、N=N_-⊔N_+は両端のfull torus collarsとする。RestrictionはR²→R²⊕R²の対角写像なので、両端の二つのtorus period vectorsの一致が条件になる。その差は対応するS¹を運んだcylinder上のσ_sの積分である。これは指定したmarkingとaction originを保つ相対同定の条件であり、自由なbase relabellingを許すfibrationの存在障害と同一視しない。
 
-**着手方法。** `ke:neck-corner-saturated-union` を出発点とし、残るnormal領域とcoreを含む全域への相対延長を調べる。距離側では既証明のsource中央全点径を入力とし、中央帯外の `ke:eq:source-moment-exit-input` の同一momentでの退出を扱う。Potential連続度の十分条件は未検証入力として保持する。全source fiberの径を既証明と扱わず、全曲面のno-shortcutと木上のfiber合併の費用を別に構成する。
+**着手方法。** `ke:actual-global-fibration` の全域構成を出発点とし、保持cornerと変更component領域の間で距離近似写像を整合させる。距離側では既証明のsource中央全点径を入力とし、中央帯外の `ke:eq:source-moment-exit-input` の同一momentでの退出を扱う。Potential連続度の十分条件は未検証入力として保持する。全source fiberの径を既証明と扱わず、全曲面のno-shortcutと木上のfiber合併の費用を別に構成する。
 
 
 ## 複素次元2：先行研究・singular fibersの確定事項（2026-11-20）
@@ -451,6 +411,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 
 ## 検証状態
 
-2026-11-21 / v2.8：固定compactのKE正則化、正residue coreと局所飽和filling、targetの非伸長retraction・六label最短路・六次以上の厳密直径を主稿改訂18へ統合し、追加証明を別担当と内部点検した。Rochon–ZhangのSNC cusp表示、Evans–Mauriのcone extension、Babson–Billera–Chanの既知cubical細分との関係を一次資料で確認した。主稿はLuaLaTeX/latexmkで188頁、PDF/SyncTeXを生成し、未解決の参照・引用、重複ラベル、欠落字形、overfull boxはない。序論・target距離・closed corner・core・文献の変更箇所を中心に18頁を表示確認した。四galleryと120三角形の有理数検算、静的構成検査も通過。形式証明・外部査読、包括的新規性確認、旧整数検算suiteや他三稿の再組版は今回未実施。P0と研究ノートの相対接着四課題は未解決。
-
-検証の機械可読な現状は `research/validation.json`。再現の入口は `scripts/research_check.py`、今回追加した有限幾何は `python3 verification/verify_cubical_six_label_geometry.py`。既存整数計算の入力・証明書は保持するが、今回再実行した有限計算と混同しない。旧稿の組版頁数はREADMEで参照し、変更履歴をここに蓄積しない。
+2026-11-21 / v2.9：K3の追加証明を主稿改訂19へ統合し、別担当と内部点検した。Rochon–Zhang §5とEvans–Mauri Lemma 2.16を一次PDFで再確認。LuaLaTeXで208頁、PDF/SyncTeXを生成し、参照・引用・overfull警告なし。変更頁の表示確認前。形式証明・外部査読・包括的新規性確認・旧整数検算suiteと他三稿の再組版は未実施。P0の距離条件は未解決。

@@ -75,7 +75,9 @@ collar の位置，作用座標の表示，および基底の parameter 化に�
 この問題の達成条件に含めない．
 \end{problem}
 
-問題\ref{ke:global-realization}は未解決である．
+問題\ref{ke:global-realization}の第一条件は，定理\ref{ke:actual-global-fibration}で
+既存 neck/corner に相対的な全域構成として実現する．
+第二条件の全曲面 uniform distortion は未解決であり，問題全体は未解決である．
 $d=5$ を最初に解くことは自然な中間目標であるが，最終的な次数範囲は各固定 $d\ge5$ とする．
 また，正則部分の action--angle structure を超えて全基底に matroidal atlas があることや，
 special Lagrangian 性はこの問題の仮定にも結論にも加えない．
@@ -153,14 +155,18 @@ actual $g_t$ に対する\eqref{ke:eq:global-realization-distortion}の両側評
 系\ref{ke:neck-corner-saturated-union}では，遅い exhaustion 上の全 end で
 normal moment と reduced leaves を合わせ，source と branch を含む neck と
 closed corner の和集合上に actual 部分 fibration を構成する．
-残るのは，この部分 fibration の component core への延長，必要な第二作用周期と
-critical actions の整合，および全曲面の被覆である．
+定理\ref{ke:actual-global-fibration}は actual moment cuts による closed component links，
+primitive の相対不変化と nontrapping，saddle を動かす葉族補間，および
+全 fiber 単位の切詰めにより，この部分 fibration を全 $X_t$ へ接着する．
+独立に先指定した第二 periods や critical values の数値を合わせることは
+問題の達成条件に含めず，continuation marking を保つ．
 Source の中央領域は定理\ref{ke:source-central-diameter}により
 actual ambient 径 $O(\sqrt{R_t})$ を持ち，固定残余基底の中央 moment 帯と
 閉じた pinched torus 全体も収縮する．中央帯外の同一 moment 接続は残る．
-成分 core の小さい actual 移送は節\ref{ke:component-core-transfer-section}で扱うが，
-極限 KE 形式の小さい飽和 core 近傍は系\ref{ke:local-limit-core-filling}で filling できる．
-既存の full collars までの相対延長と全 collars の同時整合は追加入力である．
+成分 core の小さい actual 移送は節\ref{ke:component-core-transfer-section}で扱う．
+新しい全域構成では，各 component の core と補間 collar は固定 compact の image に入り，
+その正規化 ambient 径と選んだ接続経路の費用は十分遅い対角選択で零となる．
+異なる components の全 cores の合併径を小さいとする主張ではない．
 さらに，局所保護領域の外を通る全曲面の shortcut と，
 異なる pieces を結ぶ短い接続路を制御しなければならない．
 命題\ref{topo:finite-portal-criterion}の抽象的な距離条件は，

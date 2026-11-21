@@ -1,12 +1,12 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-21 / v1.6。目標・優先順位は [研究方針](../00_research_plan.md)、数学的な目標の定式化は主原稿の `ke:global-realization-section` 節を正本とする。本書は外部入力の所在・適用範囲と、次に証明すべき接続条件を保持する。
+2026-11-21 / v1.7。目標・優先順位は [研究方針](../00_research_plan.md)、数学的な目標の定式化は主原稿の `ke:global-realization-section` 節を正本とする。本書は外部入力の所在・適用範囲と、次に証明すべき接続条件を保持する。
 
 ## 確認した正本と規格化
 
 関連する [kaehler-einstein-degeneration](https://github.com/uedakazushi/kaehler-einstein-degeneration) の確認コミットは `74ba687f67e1f87a4d308bf868fcdef98db441df`。以下の **IV** は同repoの [papers/kaehler-einstein-degeneration.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/74ba687f67e1f87a4d308bf868fcdef98db441df/papers/kaehler-einstein-degeneration.tex)、**V** は [papers/cubical-gh-limit.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/74ba687f67e1f87a4d308bf868fcdef98db441df/papers/cubical-gh-limit.tex) を表す。外部の分割原稿は同repoの `papers/sections/` にある。この確認版を固定した参照として保持し、再開時に最新 `main` と比較して、訂正・追加仮定を優先する。外部原稿本文をこのrepoへ複製しない。
 
-今回確認したのは、該当する定理文・証明の所在・依存仮定・規格化である。下表の「証明あり」は原稿の状態を表し、全証明の独立再監査・形式証明・一次文献の再精読・組版の再実行を意味しない。本repoの参照元は分割後の `0cfab9239636739899859c9657c01a7dcff54b8c` と照合した。
+今回確認したのは、該当する定理文・証明の所在・依存仮定・規格化である。下表の「証明あり」は原稿の状態を表し、全証明の独立再監査・形式証明・一次文献の再精読・組版の再実行を意味しない。現行追加証明では上記mainを再取得し、`simplex:prop:dominant-product`、`simplex:cor:actual-dominant-product`、`pair:thm:fixed-end-moment` の定理文と必要な証明を再読した。
 
 IV の `ass:Gd` は、一般位置の $d$ 平面、非零小parameterでの滑らかさ、各二重線上の $F_d$ の相異なる $d$ 個の単純零点、全三重点での $F_d\ne0$ を仮定する。各固定 $d\ge5$ と固定族を扱い、次数や族全体に一様な定数を要求しない。
 
@@ -64,7 +64,17 @@ L_t=-\log|t|^2,\quad R_t=\log L_t.
 
 主稿 `ke_source_potential_buffer.tex` はcapped/actual density比較を固定source tube全体へ統合し、射影下界と正のcanonical potentialのPoisson方程式からactual球の深部局在を証明する。`ke_source_global_distance.tex` はDinh–Marinescu–Vu, Ann. Sc. Norm. Super. Pisa (5) 24 (2023), Theorem 1.2（[掲載版PDF](https://www.mi.uni-koeln.de/~gmarines/PREPRINTS/Dinh_Marinescu_Vu_ASNP_2023.pdf)、pp.928–929で仮定確認）を距離函数に適用し、logarithmic coverの周期数を除してactual Gaussian tailを得る。`ke_source_diameter.tex` は同じactual球へのBishop–Gromov比較から全点径を導く。Actual potentialのHölder性、TC、局所tensor二側比較は追加仮定しない。
 
-`ke_component_core_transfer.tex` はfixed-gauge smooth KE収束のcanonical primitive差から固定compactのactual移送を構成する。相対flux条件とexact collar germは証明した。`ke_component_core_geometry.tex` は任意固定compactで厳密一致するsmooth正則化、正residueの有限型KE coreとその小さい飽和近傍のfillingを与えるが、既存の全collar葉を指定した相対fillingと全overlapのcompatibilityは `ke:conditional-component-core-filling` の追加入力である。Smooth compactifying formの `comp:finite` をこの極限形式の定理と読み替えない。
+`ke_component_core_transfer.tex` はfixed-gauge smooth KE収束のcanonical primitive差から固定compactのactual移送を構成する。相対flux条件とexact collar germは証明した。`ke_component_core_geometry.tex` は任意固定compactで厳密一致するsmooth正則化、正residueの有限型KE coreとその小さい飽和近傍のfillingを与えるが、その存在だけから全collar葉の一致は従わない。現行の全域接着は下記四節によりactual linkから直接構成する。Smooth compactifying formの `comp:finite` をこの極限形式の定理と読み替えない。
+
+
+Actual全域構成の追加証明は次を用いる。
+
+| 入力・結論 | 主稿の節・ラベル | 検証範囲 |
+| --- | --- | --- |
+| 正residue period、閉link、固定段階の被覆とtrim | `ke_component_link_cover.tex`、`ke:component-meridian-normalization`、`ke:closed-component-link`、`ke:fixed-stage-stratum-coverage`、`ke:whole-fiber-core-trim` | Cornerのdominant-productは全深度比に一様。Source基底点を含むfixed-shell上界はRZの通常component cusp上で証明。整数windingとexact transportでmoment定数も同定。 |
+| Actual invariant primitive | `ke_core_invariant_primitive.tex`、`ke:component-normal-generator-c1`、`ke:relative-corner-patch-c2`、`ke:component-shell-primitive-support` | RZの全cusp derivatives、triple全固定階比較、広いK2 construction domainsを使用。追加の全域tensor仮定なし。 |
+| Saddle-moving relative family | `ke_relative_reduced_foliations.tex`、`ke:saddle-moving-relative-interpolation` | 各connected critical leafに一つのsimple saddle、boundaryのleaf partition固定。Global vector fieldの直接証明。非零moment bandのactual Lagrangian lift。 |
+| 全域core接着 | `ke_actual_core_gluing.tex`、`ke:actual-global-fibration` | Evans–Mauri Lemma 2.16のcompact-domain版と上記入力。各componentごとの固定compact費用。全曲面uniform distortionは未証明。 |
 
 ## 固定成分coreのcusp入力と有限target幾何
 
@@ -80,7 +90,7 @@ Rochon–Zhang, *Adv. Math.* 231 (2012), 2892–2952, [arXiv:1106.0873v2](https:
 
 ### 2. 同じglobal fibrationへの相対接着
 
-第一課題で得た一つのnormal actionとprimitiveを用い、各triple collarの二段階平均、reduced circle foliation、critical actionsとmarkingを同時に合わせる。非定数holomorphic unitはfull $T^2$-orbit partitionを変え得るため、整数基底変更だけで処理しない。三armの定量的座標接続・normal periodの厳密一致と、平均順序の相対Hamiltonian補正は本repoで証明した。さらに単一moving armでは `ke:arm-common-moment-strip` と `ke:single-arm-reduced-graph` により共通moment区間とactual reduced graphを構成した。`ke:neck-corner-saturated-union` はsource-inclusive neck側のmoment区間・開領域を合わせ、全交わりの飽和を証明した。次はこの部分fibrationの外に残る領域を覆う。Sourceの $xy=tz$ とbranchは部分fibrationに含まれる。Coreを含む全域へactual $\omega_t$-Lagrangian fibrationを延長し、使用した相対isotopyのraw map誤差または $g_t$-変位 $o(R_t)$ を明記する。単なる同じcohomology classやMoser同相はGH適合の証明にならない。
+`ke:actual-global-fibration` により固定stageの全域接着を証明した。K2の全intersection saturationを入力とし、閉moment link・actual invariant primitive・非零moment帯のsaddle-moving補間・whole-fiber trimを実証する。全曲面被覆はfixed-shellの上界と同じnormal flowの逆像bufferを使い、部分fibrationの外を各componentの固定compactへ閉じ込める。各componentのcoreと変更collarのactual ambient径・選択した接続費用は $C_j<\infty$ であり、遅い対角選択で $C_j/R_t\to0$ とできる。独立に先指定した全periodやcritical valuesを合わせる定理ではない。全曲面GH適合は次の距離課題で扱う。
 
 ### 3. 全曲面の距離歪みとportal費用
 

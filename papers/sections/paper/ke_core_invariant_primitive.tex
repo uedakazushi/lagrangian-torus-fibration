@@ -1,0 +1,479 @@
+% !TeX root = ../../surface-lagrangian-torus-fibration.tex
+% 2026-11-21 / v1.0: Actual invariant primitive の定量評価と nontrapping．
+\section{固定成分 end における actual invariant primitive の評価}
+\label{ke:core-invariant-primitive-section}
+
+本節では actual circle generator の一階微分を評価し，
+primitive の相対不変化が core 外に新しい trapping を作らないことを証明する．
+対象は，固定段階の後に選ぶ \emph{成分側の固定 compact collar} である．
+Source の critical moment を通る moving central neck 全体について
+同じ一階評価を主張するものではない．
+閉じた component link の被覆，その全 fiber による cut，および
+Liouville 葉族の大域接着は，本節の結論に含めない．
+
+\subsection{重み付き cusp bounds と順序を固定した選択}
+
+正の residues を持つ potential は，成分の affine volume frame を用いた
+式\eqref{ke:eq:positive-residue-ke-potential}の明示形
+$\Psi_w=F+\sum_{a<m}(1-w_a)\log|\ell_a|^2$ を選ぶ．
+End では $\lambda_0=d^c\Psi_w$，$d\lambda_0=\omega_\infty$ とする．
+Core の近傍で必要な compactly supported exact 補正と対応する Lyapunov
+function の変更は，系\ref{ke:actual-limit-weinstein-core}で既に行ったものとする．
+すなわち全体では $\lambda_0=d^c\Psi_w+dQ_{\rm core}$，
+$Q_{\rm core}\in C_c^\infty(W_i)$ であり，Lyapunov function を $\Psi$ と書く．
+その外側では $\Psi=\Psi_w$ とする．
+$s_a=-\log\|s_{D_a}\|^2>1$，$H=1+\sum_a s_a$ とし，
+標準 cusp background を $h$ と書く．十分高い end では
+\begin{equation}\label{ke:eq:weighted-core-input}
+ \begin{split}
+ cH\le |d\Psi|_h\le CH,&\qquad
+ |\lambda_0|_h+|\nabla^h\lambda_0|_h\le CH,\\
+ |d\log H|_h\le C,&\qquad Z_0\Psi\ge cH^2,
+ \qquad \iota_{Z_0}\omega_\infty=\lambda_0.
+ \end{split}
+\end{equation}
+また $\omega_\infty$，その逆，およびそれらの全固定階の cusp derivatives
+は一様に有界である．これらは
+Rochon--Zhang\cite[\S5, (5.3)--(5.6) と直後の段落]{RochonZhang}の
+bounded $C^\infty_{\mathrm{fc}}$ potential と cusp metric の二側比較から従う．
+同論文の Theorem~5.1 の decay を用いてもよいが，以下には bounded derivatives
+で十分であり，smooth divisor に対する \S7 の polyhomogeneous expansion は不要である．
+各 SNC chart で $|\nabla^r s_a|_h\le C_r s_a$ を用いると上界が従う．
+最大の $s_a$ に対する normalized radial direction では
+$d\Psi$ の主項が $w_a s_a$，残りが $O(1)$ であるから下界を得る．
+固定された正の weights の最小値を使えば，深度比には依存しない．
+
+選択の順序は次のとおりである．まず K2 の残余段階 $b=b_j$ と
+$P_j\Subset P_j^+$，次に $n=n_j$ と共通 moment interval
+$[-\iota_j,\iota_j]$ を固定する．さらに
+$N_0\gg n_j+\iota_j^{-1}$ を選び，その後に必要な上限深度も有限に固定する．
+最後に $|t|$ の閾値を小さくする．
+深さ $N_0$ の選択後に取るすべての領域，円軌道，Moser trajectories，
+および cutoff supports は一つの $V_j\Subset W_i$ に入れる．
+この順序では $t\to0$ の fixed-gauge smooth convergence を任意の固定階で使える．
+
+\subsection{短い軌道からではなく，正規化座標から一階評価を得る}
+
+\begin{lemma}[固定残余 compact 上の actual normal generator]
+\label{ke:component-normal-generator-c1}
+$P\Subset P^+$ を固定する．成分極限の normal end で
+centered normal averaging により得る symplectic circle action の
+周期 $1$ の生成場を $V_N$ とする．
+全円軌道と全 averaging trajectories が固定した外側 buffer に含まれる領域では，
+任意の固定 $r$ に対して
+\[
+ \|V_N\|_{C^r(h)}\le C_{P,r}/N_0\qquad(s\ge N_0)
+\]
+となる．特に $r=1$ が成り立つ．
+深度の有限上限を固定した後には，既存の actual neck の同じ作用について
+\[
+ \|V_{N,t}\|_{C^1(h)}\le 2C_{P,1}/N_0
+\]
+が十分小さい $|t|$ に対して成り立つ．
+ここでは $h$ を graph gauge で用いる．
+\end{lemma}
+
+\begin{proof}
+局所的な normal coordinate を $v$，$s=-\log|v|^2$ とする．
+$s_0=s(v_0)$ の点で，角度の universal cover 上に
+\[
+ \xi=\frac{\log v-\log v_0}{s_0}
+\]
+を取り，$P^+$ の固定座標と組み合わせる．固定半径の小さい $\xi$-chart 上で
+$s/s_0$ は二側比較可能であり，$h,h^{-1}$ と全固定階の係数微分は有界である．
+Bare rotation $v\mapsto e^{2\pi\sqrt{-1}\tau}v$ の生成場は
+\[
+ V_{\mathrm{bare}}=\frac{2\pi}{s_0}\partial_{\operatorname{Im}\xi}.
+\]
+従ってその全固定階の covariant derivatives は $O_P(s_0^{-1})$ である．
+この結論は軌道長から微分を推測したものではなく，座標表示と connection bounds
+から得ている．一周の移動も $O(s_0^{-1})$ なので，全 orbit は外側 chart に留まる．
+
+Bare circle の平均を $\mathcal A_N$，centered homotopy を $K_N$ とすると，
+$\beta_N=K_N\omega_\infty$ の $C^q(h)$ norm は
+$C_{P,q}/s_0$ 以下である．
+ここでは $\omega_\infty$ の全固定階 bounds と，回転の明示的な translation
+表示を使う．$\Omega_\tau=(1-\tau)\mathcal A_N\omega_\infty+
+\tau\omega_\infty$ は一様に非退化である．
+Bare action が正則な normal bundle chart では K\"ahler forms の凸結合であり，
+同値に $\mathcal A_N\omega_\infty-\omega_\infty=d\beta_N=O_{C^q}(s_0^{-1})$
+という小摂動だけでも非退化性を示せる．
+\[
+ \iota_{Y_\tau}\Omega_\tau=\beta_N
+\]
+で定める Moser field は全固定階で $O_P(s_0^{-1})$ である．
+Flow 方程式を二回微分すると，averaging map $A_N$ とその逆は
+$C^2$ で一様に有界であり，実際に $\id$ との差は $O_P(s_0^{-1})$ である．
+高階にも同じ議論を適用できる．
+
+Actual generator は $(A_N)_*V_{\mathrm{bare}}$ である．座標微分は
+\[
+ D\bigl((A_N)_*V_{\mathrm{bare}}\bigr)
+ =D^2A_N\,V_{\mathrm{bare}}\,DA_N^{-1}
+   +DA_N\,DV_{\mathrm{bare}}\,DA_N^{-1}
+\]
+の形なので，$A_N$ の $C^2$ bound と bare generator の $C^1$ smallness から
+所要の $C^1$ smallness を得る．$C^1$ の conjugating map だけでは，
+この式の第一項を評価できない．
+
+有限個の固定残余 charts と外側 buffers を使えば $P$ 全体で同じ結論となる．
+Source の残余点を $P$ に含めても，今扱う成分側では $v\ne0$ であり，
+$x'y'=t h(p)$ の反対側の座標を $x'=t h(p)/y'$ と解ける．
+従って projected source coordinates は固定 compact 上で $C^\infty$ に収束する．
+Metric，averaging forms，Moser fields と flows も同じ kernel の下で収束するので，
+最後の actual $t$ の評価を得る．Central fixed point を含む moving rescaled
+source 領域にこの fixed-compact 議論を適用してはいない．
+\end{proof}
+
+\begin{lemma}[Corner の相対補正に必要な一階高い評価]
+\label{ke:relative-corner-patch-c2}
+命題\ref{ke:quantitative-order-hamiltonian}の入力を $C^5$ に，
+定理\ref{ke:relative-corner-patch}の cutoff bound を $C^4$ に上げれば，
+比較 Hamiltonian と相対化 flow に
+\[
+ \|H_r\|_{C^3(h)}+\|W_r\|_{C^2(h)}\le Ce\delta,
+ \qquad \|\Upsilon-\id\|_{C^2(h)}\le C_Be\delta
+\]
+が成り立つ．従って K2 の actual corner torus action の各固定整数生成場は
+\[
+ \|V_{C,a}\|_{C^1(h)}\le C/b
+\]
+を満たす．定数は $n/b$ 又は component 側の二つの深度比には依存しない．
+\end{lemma}
+
+\begin{proof}
+既存証明の $B_{r,s},C_{r,s},Y_{r,s}$ を同じ式で用いる．
+入力を一階増やせば $K_j\omega,K_j\lambda$ は $C^4$ で $O(e\delta)$，
+従って $Y_{r,s},\partial_rY_{r,s}$ も $C^4$ で同じ bound を持つ．
+Flow は $C^4$ で制御し，その $r$ 変分を三回まで空間微分して Gronwall を使う．
+変分方程式の三階空間微分には $D^4Y$ が現れるので，
+$Y$ の $C^3$ bound だけでこの parameter derivative を処理してはならない．
+明示的な primitive
+\[
+ Q_r=\int_0^1F_{r,s}^*
+       \bigl(\Lambda_{u_r,v_r}(Y_{r,s})-C_{r,s}\bigr)\,ds,
+ \qquad
+ H_r=(\partial_rQ_r)\circ F_r^{-1}-\lambda(W_r)
+\]
+を三回微分すると，両項とも $O_{C^3}(e\delta)$ である．
+従って $d(\chi H_r)$ は $C^2$ で $O_B(e\delta)$，
+その Hamiltonian field と flow は $C^2$ で同じ評価を満たす．
+基点からの積分は使わず，領域の直径に依存する定数は生じない．
+
+Actual triple の canonical primitive は full-triple tensor estimate の
+determinant と一回の $d^c$ 微分から全固定階で模型に $O(b^{-1})$-近い．
+必要な $C^5$ 入力は，既存の \emph{全固定階}の結果から供給される．
+$G$ による座標補間も補題\ref{ke:arm-log-derivatives}の全固定階の評価を用い，
+ここでは $C^6$ まで取れば十分である．
+Cutoffs は $\log(b/b_j),\log(a/n_j),\log(c/n_j)$ の固定滑らかな関数なので，
+固定整数基底に対する normalized charts で $C^4$ bound が一様である．
+
+Bare torus generator は各 logarithmic chart で深度の逆数を係数とする定数場で，
+$C^r$ norm は $C_r/b$ 以下である．
+K2 の actual parametrization $G\Upsilon\Phi$ とその逆は，上の補強により
+$C^2$ で一様に有界である．前補題の pushforward の式を用いれば結論を得る．
+これは既存の $C^1$ map estimate だけを引用して得た結論ではない．
+\end{proof}
+
+以上より，固定成分側の必要な有限個の patches で
+\begin{equation}\label{ke:eq:actual-generator-delta}
+ |V|_h+|\nabla^hV|_h\le\delta_j,
+ \qquad \delta_j=C_*/b_j+C_j/N_0
+\end{equation}
+を得る．$C_*$ は corner の一様定数，$C_j$ は固定残余 compact の定数である．
+$b_j$ を選んだ後に $N_0$ を大きくするため，$C_j$ の増大は障害にならない．
+同じ normal-first plateau 上の二つの normal actions は
+補題\ref{ke:normal-flow-naturality}により \emph{同じ parameterized action} である．
+同じ無向 orbit を持つというだけの意味ではない．
+
+\subsection{Actual symplectic action に対する exact 平均}
+
+\begin{lemma}[Centered scalar primitive と重み付き一階評価]
+\label{ke:actual-centered-primitive-weighted}
+$d\lambda=\omega$ とし，$R_s$ を周期 $1$ の actual symplectic circle action，
+$V$ をその generator とする．全 orbit を含む領域上で
+\[
+ \mathcal A\eta=\int_0^1R_s^*\eta\,ds,
+ \qquad K\eta=\int_0^1(1/2-s)R_s^*(\iota_V\eta)\,ds
+\]
+と置く．このとき
+\begin{equation}\label{ke:eq:actual-centered-exact}
+ \mathcal A\lambda-\lambda=dF,
+ \qquad F=K\lambda
+   =\int_0^1(1/2-s)\lambda(V)\circ R_s\,ds.
+\end{equation}
+$|\lambda|+|\nabla\lambda|\le CH$，$|d\log H|\le C$，
+$|V|+|\nabla V|\le\delta\le1$ なら
+\begin{equation}\label{ke:eq:centered-F-weighted-bound}
+ |F|+|dF|\le C'\delta H.
+\end{equation}
+可換な二つの円では
+$F=K_1\lambda+\mathcal A_1(K_2\lambda)$ とすれば，
+$\mathcal A_1\mathcal A_2\lambda-\lambda=dF$ と同じ評価を得る．
+\end{lemma}
+
+\begin{proof}
+Cartan の公式を部分積分すると
+$dK+Kd=\mathcal A-\id$ となる．
+作用が symplectic なので $R_s^*(\iota_V\omega)=\iota_V\omega$ であり，
+centered kernel の積分が零だから $K\omega=0$ である．
+これが \eqref{ke:eq:actual-centered-exact} を与える．
+特に flux の消滅を仮定して局所 primitive を選んでいるのではない．
+
+$|d(\lambda(V))|\le|\nabla\lambda||V|+|\lambda||\nabla V|
+\le C\delta H$ である．
+Flow の変分方程式から $\|DR_s\|\le\exp(C\delta)$，
+$|d\log H(V)|\le C\delta$ から
+$H\circ R_s\le e^{C\delta}H$ を得る．
+明示積分を一回微分すれば所要の評価となる．
+Rank two でも $K_1\lambda$ と $K_2\lambda$ の scalar $C^1$ bounds，
+および scalar の $\mathcal A_1$ 平均の $C^1$ bound だけで十分である．
+逐次平均した one-form の一階微分を新たに評価して $C^2F$ を要求する必要はない．
+この選択は積分定数も固定しており，領域の直径や深度比に由来する定数を持ち込まない．
+\end{proof}
+
+\subsection{共通 action 上の貼合せと nontrapping}
+
+次の補題は解析的な貼合せ結果であり，入力の end atlas が閉じた link の全点を
+覆うことを自動的に主張しない．K2 の normal-first plateau を使う際の
+着手条件を明示しておく．
+
+\begin{proposition}[深い star cover 上の adapted primitive]
+\label{ke:star-cover-adapted-primitive}
+固定成分の compact end 領域を，normal patches $\mathcal N_a$ と
+互いに素な corner patches $\mathcal C_{ab}$ で扱う．
+Normal patch は一つの global normal circle action を持ち，
+corner patch は actual $T^2$ action を持つとする．
+必要な全 overlaps と全 orbits を含む外側 buffers を取り，次を仮定する．
+\begin{enumerate}
+\item 各 normal--corner overlap は全 torus で飽和し，normal action は
+corner の指定 primitive subgroup と厳密に同じである．
+同じ corner に至る二つの interpolation bands は互いに素であり，
+二つの normal patches が交わる箇所は corner gauge の plateau に含まれる．
+\item Normal だけの領域から full corner gauge へ移る cutoffs は common normal
+action に不変で，$|d\chi|_h\le C$ を満たす．
+保持したい全 corner collars では補間が既に終わり，corner gauge がそのまま成立する．
+\item この union 上で組み立てる scalar function を，その外へ零で延長するための
+cutoff $\eta$ があり，$|d\eta|_h\le C$，
+$\eta=1$ on the retained collars，かつ支持は core の外の固定 compact に含まれる．
+$\eta$ の支持近傍全体が上の union に含まれる．
+\end{enumerate}
+これらの cutoffs の定数と patches の数は段階によらず有界とする．
+\eqref{ke:eq:weighted-core-input} と \eqref{ke:eq:actual-generator-delta} が成り立ち，
+$\delta_j$ が十分小さければ，$F\in C_c^\infty(W_i)$ を取って
+\[
+ \lambda^{\mathrm{ad}}=\lambda_0+dF
+\]
+を retained normal collars 上で normal-invariant，
+retained corner collars 上で $T^2$-invariant にできる．
+全 cutoff 支持上で $|F|+|dF|\le C\delta_jH$ であり，
+\begin{equation}\label{ke:eq:adapted-nontrapping}
+ Z^{\mathrm{ad}}\Psi\ge(c-C\delta_j)H^2>0,
+ \qquad \iota_{Z^{\mathrm{ad}}}\omega_\infty=\lambda^{\mathrm{ad}}.
+\end{equation}
+特に元の core の近傍を変えず，その外に新しい trapped compact dynamics を作らない．
+\end{proposition}
+
+\begin{proof}
+同じ一つの $\lambda_0$ を，各 normal action と各 corner action に沿って平均する．
+前補題の明示積分で得る scalar primitives をそれぞれ $F_N,F_C$ とする．
+共通 normal generator $V$ に対し，
+両 one-forms $\lambda_0+dF_N$ と $\lambda_0+dF_C$ は不変である．
+従って $d(V(F_C-F_N))=0$．各連結成分で $V(F_C-F_N)$ は定数で，
+周期 orbit に沿う積分が零なのでその定数は零である．
+すなわち $F_C-F_N$ 自体が common normal action に不変である．
+
+共通 band 上で
+\[
+ F_{NC}=F_N+\chi(F_C-F_N)
+\]
+と置く．$\lambda_0+dF_{NC}$ は normal-invariant であり，
+$\chi=1$ の plateau 上では full corner average と厳密に一致する．
+各 corner への二つの bands は互いに素で，他の重なりでは既に $F_C$ だから，
+この処方は全 union 上に一つの smooth scalar $F_*$ を定める．
+局所 primitive を別々に基点正規化していないため，
+$|F_*|+|dF_*|\le C\delta_jH$ がそのまま保たれる．
+最後に $F=\eta F_*$ とし，零で延長する．
+Normal/Torus invariance を使う retained collars 上では $\eta=1$ である．
+他の cutoff bands には不変性を要求せず，重み付き smallness を使う．
+
+$\omega_\infty^{-1}$ の一様 bound により
+$|Z^{\mathrm{ad}}-Z_0|_h\le C|dF|_h$ である．
+\eqref{ke:eq:weighted-core-input} と組み合わせれば
+\eqref{ke:eq:adapted-nontrapping} を得る．
+支持の外では元の field と同じであり，支持を core より高い $\Psi$ の領域に取ったので，
+新しい forward-trapped orbit が高い end から低い critical region へ入ることもない．
+ここで end における正時間 flow の完備性は必要としていない．
+\end{proof}
+
+\paragraph{K2 で使える具体的な cut の位置．}
+定理\ref{ke:neck-corner-saturated-union}では retained corner の深度 cut は $6b_j$，
+全 actual neck--corner intersections は $11b_j/2<b<8b_j$ に入り，
+normal-first plateau は $5b_j\le b\le9b_j$ に広げてある．
+Corner の構成写像自体は retained domain より外側の
+$\min\ell_a>3b_j$ 上に存在する．
+その source torus の残余深度を $B$ とし，
+$B/b_j\in[5.2,5.4]$ に補間支持を取ればよい．
+$b=B(1+O(b_j^{-2}))$ なので，十分大きい $b_j$ では，
+全 actual intersections に入る前に full corner gauge へ切り替わる．
+この band は normal-first plateau の内部にあり，
+normal 深度を $N_0\gg n_j$ に取れば両側の全 trajectories にも余裕がある．
+$B$ は \emph{corner source torus の label} であり，
+actual image point の見かけの残余深度で代用しない．
+また $B$ の cutoff は corner action に不変なので common normal action にも不変である．
+
+一つの corner の二つの bands はそれぞれ
+$(s_a,s_b)\sim(N_0,5.3b_j)$ と $(5.3b_j,N_0)$ に位置するため，
+$N_0\gg b_j$ なら互いに素である．
+深い double overlap では両方とも corner gauge へ切替済みとなる．
+Cutoffs を $\log(B/b_j)$ の固定関数として選べば，
+その cusp 一階微分は一様に有界である．
+このように global normal patch ごとに一つの平均を使い，
+任意の chartwise partition of unity は導入しない．
+そのため残余 compact の大きな定数 $C_j$ を corner 誤差 $b_j^{-1}$ に掛ける必要がない．
+
+最後の零延長 cutoff の一案は，高い固定 shell を先に atlas で覆い，
+$\eta=\eta_0(\Psi/N)$ を使うことである．
+保持する link collar の $\Psi/N$ の範囲を $\eta_0=1$ の内部に取り，
+その外側の固定範囲で零にする．$\Psi\asymp H$，$|d\Psi|\le CH$ なので
+その cutoff の微分は一様に有界である．
+ただし \emph{支持する shell 全体が actual atlas の source と像の共通領域に
+入ること}を別途確かめる必要がある．
+閉じた link の存在から，この buffer を省略してよいわけではない．
+Retained closed corner の境界 $6b_j$ だけを構成領域の境界とみなすと，
+上の補間支持は取れないので，既存の外側 construction domain を明示して使う．
+
+\begin{corollary}[固定 component shell 上の cutoff supports]
+\label{ke:component-shell-primitive-support}
+K2 の広い construction domains を用い，固定段階の後で $N$ を十分大きくする．
+補題\ref{ke:closed-component-link}の link とその小さい collar には，
+命題\ref{ke:star-cover-adapted-primitive}の全仮定を満たす star cover と
+零延長 cutoff を取れる．従ってこの適用では，cutoff support の全点被覆を
+追加の未証明仮定として残す必要はない．
+\end{corollary}
+
+\begin{proof}
+Link の normal depths は $[N/2,2N]$，corner rounding の二つの depths はともに
+$N$ と比較可能であり，残余 directions の depths は $3N$ 以下でよい．
+正の weights と $\Psi\asymp H$ から，$N$ に依存しない $0<c_S<C_S$ があって
+link と小さい collar 上で
+$c_SN\le\Psi\le C_SN$ となる．
+$\eta_0=1$ on $[c_S/2,2C_S]$，
+$\operatorname{supp}\eta_0\Subset(c_S/4,4C_S)$ とし，
+$\eta=\eta_0(\Psi/N)$ を選ぶ．
+支持を含む少し広い shell $c_-N<\Psi<c_+N$ を先に取る．
+ここで $c_-,c_+$ は固定した正の定数である．
+
+この shell の全点は，$N\to\infty$ で component divisor に近づく．
+有限個の SNC charts では，一つ以上の active depth が $c'N$ 以上であり，
+全 depths は $C'N$ 以下である．$N$ を固定段階の frame constants より十分大きく
+取れば，それらは projected normal coordinate でも同じ二側比較を満たす．
+At most two divisors が交わることを用い，深い方を normal direction とする．
+他方の残余 depth が $5.3b_j$ より浅い領域は，
+固定 residual compact $P_j^+$ の内部に十分な余裕を持って入り，
+normal depth は $c'N$ 以上である．
+前補題の component normal Moser map は normalized $C^2$ で
+$O(C_j/N)$-近いので，その source と像は，少し小さい shell と residual region
+をともに含む．同じことは actual $t$ でも最後の閾値選択により成立する．
+また $N\iota_j\gg1$ により，この shell の canonical normal moments は
+既存の共通 interval の内部にある．
+
+残余 depth が $5.3b_j$ より深い領域では，二つの component depths がともに
+$5.3b_j-O(1)$ より大きく，従属 triple depth は固定 $N$ の後で $t\to0$ により
+無限大へ発散する．$G\Upsilon\Phi$ とその逆の normalized $C^2$ smallness から，
+source の全 depths は $5.1b_j$ より大きいとできる．
+従って点とその全 torus orbit，および必要な forward/backward trajectories は
+corner の広い construction domain $\min\ell_a>3b_j$ に含まれる．
+これは retained softmax domain の内部に入る，という主張ではなく，
+primitive の平均と補間に使う \emph{同じ作用の外側の定義域} に入る，という主張である．
+
+境界値 $5.3b_j$ の両側には固定比の余裕を取れる．
+その共通領域では source residual label $B$ を使い，
+$B/b_j\in[5.2,5.4]$ の band で前述の切替えを行う．
+Normal depth は $c'N\gg n_j$ なので全 band が既存 normal-first plateau に入り，
+補題\ref{ke:normal-flow-naturality}の全 orbit と trajectory 条件も満たす．
+同じ corner の反対側の band は互いに素であり，
+深い double overlap は pure corner plateau に入る．
+この処方で上の少し広い shell 全体を覆う．
+
+すべての上限 depths は固定した $N$ の定数倍以下であり，
+有限個の full orbits と flow buffers も有限上限を増やすだけで含められる．
+従って一つの fixed component compact に入る．
+$|d\eta|\le C$ は既述の重み付き評価による．
+Normal/corner 切替えの微分も，source log-depths の固定幅の関数と
+normalized $C^2$ bounds から一様である．
+ここで $N$ をさらに大きくすれば，normal generator の評価の
+$N_0$ は $c'N/2$ と取れ，$C_j/N_0$ を所要の小ささにできる．
+先に取った compact exact Moser による $\Psi$ の $C^1$-小変形を用いる場合も，
+同じ strict margins と最後の $t$ 閾値選択により全主張が保たれる．
+\end{proof}
+
+\subsection{Graph gauge の exact Moser を先に行う}
+
+Graph gauge の $\sigma_t=E_t^*\omega_t$ と
+式\eqref{ke:eq:component-positive-gauge}の positive-residue primitive $\lambda_t^w$
+を取る．Closed logarithmic correction は $W_i$ 上の同じ形式として選ぶ．
+Core の compact exact 補正を両側に共通に加え，
+$\lambda_t=\lambda_t^w+dQ_{\rm core}$，
+$\lambda_0=d^c\Psi_w+dQ_{\rm core}$ として比較する．
+一般に $d(\lambda_t-\lambda_0)=\sigma_t-\omega_\infty$ であり，
+その差を直接 exact differential とみなして cutoff することはできない．
+固定 compact 移送\ref{ke:fixed-component-transfer}を先に用いて
+\[
+ \varphi_t^*\sigma_t=\omega_\infty,
+ \qquad \varphi_t^*\lambda_t=\lambda_0+dQ_t
+\]
+とする．必要な全 flow buffers を含めて $V_j$ を先に広く取る．
+\[
+ \lambda_{\mathrm{int},t}=(\varphi_t^{-1})^*\lambda_0,
+ \qquad \Psi_t=\Psi\circ\varphi_t^{-1}
+\]
+と置けば，$d\lambda_{\mathrm{int},t}=\sigma_t$ であり，
+\begin{equation}\label{ke:eq:transported-core-primitive-periods}
+ \lambda_t-\lambda_{\mathrm{int},t}
+   =d(Q_t\circ\varphi_t^{-1}).
+\end{equation}
+従って元の period gauge についても
+$\lambda_t^w-\lambda_{\mathrm{int},t}
+=d(Q_t\circ\varphi_t^{-1}-Q_{\rm core})$ である．
+従って $\lambda_{\mathrm{int},t}$ に対し，既存の \emph{actual} circle/torus actions
+で前節の平均を直接行えばよい．
+その結果
+\[
+ \lambda^{\mathrm{ad}}_t=\lambda_{\mathrm{int},t}+dF_t
+\]
+を得る．内側と外側に別の primitive を用意する追加の gluing は不要である．
+Exact difference により，canonical positive-residue primitive の全 orbit periods
+は保たれる．$\varphi_t\to\id$ の全固定階収束を使えば，
+式\eqref{ke:eq:weighted-core-input}の transported 版と
+\eqref{ke:eq:adapted-nontrapping}の actual 版は，最後の $t$ 閾値を小さくして成立する．
+支持外の transported core は変更されない．
+
+Retained invariant collar 上で，周期 $1$ の正の meridian を $V_a$，
+$M_a=\lambda^{\mathrm{ad}}_t(V_a)$ とすると
+\[
+ dM_a=-\iota_{V_a}\sigma_t,
+ \qquad [Z^{\mathrm{ad}}_t,V_a]=0,
+ \qquad Z^{\mathrm{ad}}_tM_a=M_a.
+\]
+また $M_a$ は orbit period そのものだから，
+補題\ref{ke:component-meridian-normalization}の厳密な規格化により
+$M_a=-\rho_a+q_a$，$\rho_a=2\pi w_a>0$ となる．
+Component 側の固定深い cut では $q_a\to0$ なので $M_a<0$ である．
+精密な $q_a\asymp s_a^{-1}$ 展開を用いる場合の $s_a$ は averaging source gauge
+の深度であり，別の image-depth coordinate へ無条件に移してはならない．
+
+\paragraph{この節で解消する条件と残る条件．}
+Actual generator の $C^1$ smallness は，fixed component collar に限定すれば
+上の normal lemma と corner の高階化により，追加の解析仮定ではなくなる．
+Centered scalar average の exactness，weighted $C^1$ bound，
+適合 star cover 上の全 overlap の primitive gluing と nontrapping も証明される．
+補題\ref{ke:closed-component-link}の link については，
+系\ref{ke:component-shell-primitive-support}が零延長 cutoff の支持全体の
+source/image buffers も与える．一方，閉じた link 自体と
+新しい cuts が全 fiber の和であること，および
+相対 filling が全 $X_t$ を覆うことは独立に確認する必要がある．
+本節の定性的 fixed-stage 評価だけで大域距離歪みの消失も結論しない．
+
+% Primary source checked: https://arxiv.org/pdf/1106.0873v2,
+% pp.38--39, (5.3)--(5.6) and the paragraph after (5.6), Theorem 5.1.

@@ -1,0 +1,447 @@
+% !TeX root = ../../surface-lagrangian-torus-fibration.tex
+% 2026-11-21 / v1.0
+% 前提：ke:neck-corner-saturated-union と本文中に明示する既存評価．
+\section{成分 link の moment cut と固定段階の全域被覆}
+\label{ke:component-link-cover-section}
+
+本節では段階 $j$ を先に固定する．$b=b_j$, $n=n_j$, $I=[-\iota_j,\iota_j]$
+と書き，系\ref{ke:neck-corner-saturated-union}の部分 fibration を
+\[
+ f^{\rm old}_{j,t}:U_{j,t}\longrightarrow B^{\rm old}_{j,t}
+\]
+と表す．以下で $t$ の閾値を小さくすることは許すが，$j$ を $t$ と同時に動かした
+一様評価は用いない．Normal cut の新しい深度 $N$ は，$n$ と $\iota_j$ を固定した
+\emph{後}に選ぶ．特に $N\gg n$ だけでなく $N\iota_j\gg1$ が必要である．
+
+\subsection{正の residue gauge と actual action periods}
+
+成分 $H_i$ の complement を $W_i=H_i\setminus D_i$ とし，
+$D_i=\bigcup_{a=1}^{m}D_a$, $m=d-1$ とする．
+正の数 $w_a$ を $\sum_aw_a=m-3$ となるように選ぶ．
+$D_m$ を無限遠直線とした affine coordinates の体積形式を
+$\Omega_{\rm aff}$，有限直線の defining functions を $\ell_a$ と置く．
+固定した component graph gauge $E_t$ 上で
+\begin{equation}\label{ke:eq:component-positive-gauge}
+ \lambda_t^w
+ =d^c\log\frac{(E_t^*\omega_t)^2}{|\Omega_{\rm aff}|^2}
+   +\gamma_w,
+ \qquad
+ \gamma_w=\sum_{a<m}(1-w_a)d^c\log|\ell_a|^2
+\end{equation}
+と定める．以下では必要に応じて $E_t$ で actual 空間へ押し出して同じ記号を使う．
+$\gamma_w$ は $W_i$ 上の固定した閉形式である．
+同じ gauge の $t=0$ primitive の meridian period は
+$\rho_a:=2\pi w_a$ に対して $-\rho_a$ へ収束する．
+本節の全 circle generators は周期 $1$ とする．
+
+\begin{lemma}[Actual meridian period の厳密な規格化]
+\label{ke:component-meridian-normalization}
+固定段階の component 側 collars と，それらの averaging trajectories を含む
+一つの固定 compact の上で\eqref{ke:eq:component-positive-gauge}を用いる．
+$\Gamma_a$ は $D_a$ の正の meridian を標識した actual circle とする．
+Corner torus の場合には同じ標識の cycle を用いる．
+\[
+ M_a=\int_{\Gamma_a}\lambda_t^w,\qquad q_a=M_a+\rho_a
+\]
+と置く．Neck の normal generator の向きと正の meridian の向きの差を
+$\epsilon_a\in\{1,-1\}$ とすると，
+\begin{equation}\label{ke:eq:component-exact-action-normalization}
+ q_a=\epsilon_a\widehat\mu_N
+ \quad\text{on a neck collar},\qquad
+ (q_a,q_c)=(\nu_a,\nu_c)
+ \quad\text{on a component corner collar}.
+\end{equation}
+ここで $\widehat\mu_N$ は既存の actual canonical normal moment，
+$\nu_a,\nu_c$ は小さい triple primitive を全平均して得る moments である．
+Corner の source primitive は，非正則な座標補間帯でも必ず
+$G^*\lambda_{\log,t}$ として定義する．
+
+これらの等式は加法定数までの等式ではない．また $q_a$ は既存 fibration の全葉上で
+一定であり，neck--corner overlap では同じ全 torus 上の同じ function を与える．
+独立に先指定した残余 cycle の period が一致する，という主張は含まない．
+\end{lemma}
+
+\begin{proof}
+まず平均前の形式を同じ正則 graph gauge に置く．有限直線二本が交わる chart で
+局所 defining functions を $z_a,z_c$ とすれば，$t=0$ では
+\[
+ \frac{\Omega_{\log,0}}{\Omega_{\rm aff}}
+   =\frac{u_0}{z_az_c}
+\]
+であり，$u_0$ は corner を跨いで非零の正則 unit である．
+固定した punctured collar 上では，$t$ を十分小さくすると
+\[
+ \frac{E_t^*\Omega_{\log,t}}{\Omega_{\rm aff}}
+   =\frac{u_t}{z_az_c},\qquad u_t\longrightarrow u_0
+\]
+となる．$u_t$ 自体の $z_a=z_c=0$ への延長を仮定する必要はない．
+固定 collar 上の非零関数の homotopy により，$u_t$ の二つの meridian winding は
+厳密に零である．$d^c\log|z_a|^2$ の正の meridian period は $2\pi$ なので，
+\[
+ \int_{\Gamma_a^{\rm bare}}(\lambda_t^w-E_t^*\lambda_{\log,t})
+ =2\pi(1-w_a)-2\pi=-\rho_a .
+\]
+同じ計算は $c$ にも成立する．他の defining functions は局所 unit であり，
+その meridian winding は零である．
+
+無限遠直線を含む chart では，$\Omega_{\rm aff}$ の pole order が $3$，
+logarithmic form の pole order は $1$ である．従って両 canonical primitives の
+\emph{差} $\lambda_{{\rm aff},t}-E_t^*\lambda_{\log,t}$ の無限遠 meridian period
+は厳密に $4\pi$ である．$\gamma_w$ のその period は
+\[
+ -2\pi\sum_{a<m}(1-w_a)=-2\pi(2+w_m)
+\]
+だから，和は $-2\pi w_m$ となる．これにより全直線について同じ式を得る．
+この計算が用いるのは固定した divisor の整数 winding であり，
+$t\to0$ の近似から未知の加法定数を零と置いているのではない．
+
+Neck の logarithmic volume form は，component の meridian に対して単純対数極を
+持つ．従って同じ一変数の計算が成立する．Base-only frame の変更は normal
+meridian period を変えず，系\ref{ke:transition-normal-primitive}の Jacobian unit
+も winding を持たない．Source の点を含む residual compact でも，
+$\mu\ne0$ の branch 上では，例えば
+$d\log x'\wedge dp=-d\log y'\wedge dp$ という表示で logarithmic form が延びる．
+閉形式 $\lambda_t^w-\lambda_N$ の meridian period は，連結 collar 内の isotopy に
+沿って Stokes の定理により一定である．従って一つの source-free chart で確認した
+定数が source を含む全 residual collar で同じになる．
+
+次に actual cycles へ移す．Centered averaging map は
+\[
+ \Phi^*\lambda=\mathcal A\lambda+dQ
+\]
+を満たし，relative corner patch の Hamiltonian map は
+$\Upsilon^*\lambda-\lambda$ を exact にする．従って
+$C_t=G\Upsilon\Phi$ による全 marked cycles の period は source の
+$\mathcal A(G^*\lambda_{\log,t})$ の period と厳密に同じである．
+一方 $\lambda_t^w-\lambda_{\log,t}$ は閉形式なので，その period は
+$G$，Moser flow，Hamiltonian flow による meridian isotopy で変わらない．
+これが corner 側の等式を与える．Normal averaging について同じ exact transport を
+使えば neck 側の等式を得る．非正則な $G$ に対して $G^*d^c=d^cG^*$ を用いていない．
+特に $d^c\log((G^*\omega_t)^2/|\Omega|^2)$ を新しい primitive として作り直さない．
+
+最後に，Lagrangian torus 上では primitive の制限は閉形式である．
+その period は cycle の同一 torus 内の代表に依存しない．
+Neck の全葉では normal moment が一定であり，corner の全葉では全 moments が一定で
+ある．系\ref{ke:neck-corner-saturated-union}は共通 normal cycle を厳密に同定し，
+第二 cycle は共通 torus を通じて移送するので，全ての表示は compatible である．
+\end{proof}
+
+\paragraph{二つの meridians の整数基底．}
+Triple chart を $\zeta_i\zeta_a\zeta_c=t$ とし，component $H_i$ 側では
+\[
+ V_a=(-1,1,0),\qquad V_c=(-1,0,1)
+ \quad\text{in }\ker(\mathbb Z^3\xrightarrow{\sum}\mathbb Z)
+\]
+を取る．これは整数基底であり，それぞれ二つの component boundary lines の正の
+meridian である．残る normal subgroup は $V_c-V_a$ である．
+別の residual cycle を選んで $V_c$ を $V_c+kV_a$ に変える場合には，
+period vector と residue vector の双方を同じ整数行列で変換する．
+片方だけを変えて独立な第二 moment の加法定数を零と置くことはしない．
+
+\subsection{深度比に一様な corner moments と閉じた link}
+
+Corner の component 側で二つの独立深度を $a,c$，従属深度を
+$L-a-c$ とする．$m_*=\min\{a,c,L-a-c\}$ と置く．
+関連 KE 主稿の \texttt{simplex:prop:dominant-product} と
+\texttt{simplex:cor:actual-dominant-product} は，$a/c$ に依存しない全固定階の
+product-cusp 比較を与える．Canonical volume potentials の差に $d^c$ を施し，
+周期 $1$ の meridian の product 長さ $O(a^{-1})$, $O(c^{-1})$ を掛けると，
+\begin{equation}\label{ke:eq:component-two-action-estimate}
+ \begin{split}
+ \nu_a&=\frac{4\pi}{a}
+   +O\!\left(\frac{m_*^{-1}+((a+c)/L)^2}{a}\right),\\
+ \nu_c&=\frac{4\pi}{c}
+   +O\!\left(\frac{m_*^{-1}+((a+c)/L)^2}{c}\right)
+ \end{split}
+\end{equation}
+を得る．ここで $a/c$ の上下界を仮定しない．
+正則な plateau での Jacobian unit の exact 項は全平均 period を変えない．
+非正則な補間が実際に変化する帯では該当する二つの小深度は固定比の間にあり，
+$G-\id$ の指数的な全固定階評価を上の誤差に吸収できる．
+正則 plateau の不均衡な領域では normal action の厳密な同変性と
+weighted generator 評価を用いる．従って\eqref{ke:eq:component-two-action-estimate}は
+相対化された source の moments にも成立する．
+
+この議論は RZ の smooth-divisor expansion を角へ輸入するものではない．
+固定 $a,c$ の後に $t\to0$ とすれば，component limit でも相対誤差
+$O(1/\min(a,c))$ が得られる．一方，残余基底の固定 compact 上で片方の深度だけを
+深くする領域では，既存の fixed-end moment 評価を用いる．
+
+\begin{lemma}[Actual moment cuts による閉 component link]
+\label{ke:closed-component-link}
+$j$ を十分大きく固定する．各 component の任意の指定 compact を先に与えてよい．
+その後 $N$ を十分大きく選び
+\[
+ \delta=\frac{4\pi}{N}<\frac{\iota_j}{4},\qquad
+ N\gg n_j,\qquad N\iota_j\gg1
+\]
+とする．$|t|$ を十分小さくすれば，各 component graph の中に滑らかな閉じた
+三次元 link $S_{i,j,t}$ と，それを境界とする compact domain $K_{i,j,t}$ が存在する．
+指定 compact の graph image は $\operatorname{int}K_{i,j,t}$ に含まれ，異なる
+components の $K_{i,j,t}$ は互いに素にできる．
+
+Link とその小さい両側 collar は $U_{j,t}$ に含まれる．Neck 部分では
+$q_a=\delta$，corner 部分では二つの moment cuts の滑らかな丸めで定義され，
+各 link は $f^{\rm old}_{j,t}$ の全 fibers の和である．同じことは collar の平行な
+level hypersurfaces にも成立する．Sources の fixed points は link に含まれない．
+Residual simple saddles を含む葉は全体として link に含まれてよい．
+
+さらに $\lambda_t^w$ と exact に異なる primitive が，該当する actual normal
+actions と corner $T^2$ actions に不変となるように作られているならば，その
+Liouville 場は link に外向きに横断する．この最後の主張だけが primitive の
+相対不変化を必要とする．
+\end{lemma}
+
+\begin{proof}
+残余基底の end 深度を $b_{\rm res}$ と書く．各二重線で
+$b_{\rm res}<6.5b_j$ までの固定 residual compact を用い，その少し広い compact
+も先に固定する．$q_a=\delta$ は
+補題\ref{ke:component-meridian-normalization}により
+$\widehat\mu_N=\epsilon_a\delta$ そのものであり，$I$ の内部にある．
+Fixed-end moment 評価と normal radial 単調性により，$N$ を大きくした後に $t$ を
+小さくすれば，この level は normal 深度 $[N/2,2N]$ の間にただ一つ存在する．
+この評価は固定 residual compact の全点と全 phase に一様であり，source の基底点も
+含む．$\delta\ne0$ なので circle action はこの level 上で自由である．
+
+二つの component boundary lines が交わる corner では，
+$a,c\ge6.2b_j$，$a,c\le3N$，$L-a-c\to\infty$ の領域を用いる．
+\eqref{ke:eq:component-two-action-estimate}から，各 normal cut は深度
+$[N/2,2N]$ に位置し，$a/c$ が大きい場合にもこの範囲は変わらない．
+Moments が同時座標になることも確認する．Source の平均形式を $\kappa$ とし，
+標準複素構造を $J_0$ とすると，既存の tame 評価から
+$\kappa(V,J_0V)>0$ である．深度座標に対して
+\[
+ \frac{\partial\nu_r}{\partial s_q}
+ =-\frac1{4\pi}\kappa(V_r,J_0V_q),\qquad (s_1,s_2)=(a,c).
+\]
+従って $D\nu$ の対称部分は負定値である．深度の凸領域上で直線を積分すると
+\[
+ (\nu(s)-\nu(s'))\cdot(s-s')<0\qquad(s\ne s')
+\]
+となり，$\nu$ は単射で，Jacobian も非退化である．
+特に二つの cut の交点は高々一つである．積 moment への相対的な $C^1$ 比較から，
+矩形 $[N/2,2N]^2$ の対向する各 face では，$\nu_r-\delta$ はそれぞれ正と負である．
+$(4\pi/a,4\pi/c)$ への線型 homotopy はこの境界符号を保つので，degree は $1$ で
+あり，$(\delta,\delta)$ の逆像が存在する．同じ符号に固定相対幅の余裕があるため，
+moment image は $(\delta,\delta)$ の固定相対幅の近傍を含む．
+
+$0<\varepsilon<\delta/20$ を取り，滑らかな凸関数
+$\chi_\varepsilon\ge|\cdot|$ を
+$\chi_\varepsilon(r)=|r|$ for $|r|\ge\varepsilon$，
+$|\chi_\varepsilon'|\le1$ となるように選ぶ．
+\[
+ F_{ac}(q_a,q_c)
+ =\frac{(q_a-\delta)+(q_c-\delta)
+       -\chi_\varepsilon(q_a-q_c)}2
+\]
+とし，corner の link を $F_{ac}=0$，core 側を $F_{ac}\ge0$ とする．
+$\partial_{q_a}F_{ac},\partial_{q_c}F_{ac}\ge0$ で，和は $1$ だから
+$dF_{ac}\ne0$ であり，滑らかな丸めになる．
+丸めが変化するのは両 moment が $\delta+O(\varepsilon)$ になる領域であり，
+そこで二つの深度はいずれも $N$ と比較可能である．
+
+Neck--corner の共通帯 $5b_j<b_{\rm res}<9b_j$ にある link では，一方の
+moment が $\delta$，他方は\eqref{ke:eq:component-two-action-estimate}により
+$4\pi/b_{\rm res}$ と比較可能である．$N/b_j$ を十分大きく選べば後者は
+$\delta+2\varepsilon$ より大きい．従ってこの開帯では
+\[
+ F_{ac}=q_a-\delta
+\]
+が\emph{厳密に}成立する．補題\ref{ke:component-meridian-normalization}の
+period 同定により，これは neck の同じ actual normal moment cut である．
+同じ等式は小さい平行 levels でも成立する．
+従って cut を物理的な深度で近似的に貼る必要はない．
+
+Neck end は source torus の $B=7b_j$ で切られている．
+$B$ と actual reduced graph の順序保存および $O(b_j^{-2})$ の相対誤差から，
+例えば $b_{\rm res}<6.5b_j$ の face はその内側に含まれる．
+Corner 側では source の最小深度が $6.2b_j$ より大きければ
+\[
+ r_{\min}:=\min(\ell_r-6b_j)>0.2b_j>1,\qquad r_{\max}<L
+\]
+なので $r_{\max}/r_{\min}<L$ である．これは full softmax domain の内点条件
+そのものである．$6.4b_j<b_{\rm res}<6.5b_j$ を共通帯に用いれば，neck faces と
+corner faces は開集合上で接続し，欠けた annulus は残らない．
+
+こうして得る link は，通常の SNC divisor の深度 $N$ における丸めた tubular
+boundary と同じ組合せで貼り合わさる．Normal level の一意性，corner の moment
+座標の単射性，および averaging maps の embeddings により自己交差はない．
+Normal faces は標準 circle bundle の radial level の graphs であり，corner faces は
+正規化した log-depth 座標における小さい $C^1$ 変形と滑らかな丸めである．
+既存の $G$，Moser map，Hamiltonian patch は恒等写像からの isotopies を持ち，
+共通帯では同じ normal action と同じ cut を保って貼り合わされる．
+従ってこの変形は SNC の plumbing の incidence と meridian framings を変えず，
+得られた閉 hypersurface は標準 tubular boundary に isotopic である．
+固定 $N$ に対する全 charts，元の tori，Moser trajectories は一つの
+component compact の graph image に含められる．Link は通常の丸めた boundary に
+isotopic なので，その内側の compact domain を $K_{i,j,t}$ と定める．
+指定した compact は $N$ をさらに大きくしてこの内側に含められる．
+異なる components の固定 compact graph images は，$t$ を小さくすれば互いに素で
+ある．
+
+Moment functions は全 fibers 上で一定であり，neck--corner の全交わりは
+系\ref{ke:neck-corner-saturated-union}により共通の全 fibers の和である．
+従って得られた link と平行 levels は全 fibers の和である．
+Source の fixed point では $\widehat\mu_N=0$ なので link 上にない．
+Residual foliation の saddle は $q_a=\delta$ の正則性を妨げない．
+
+最後に，相対不変 primitive を $\lambda^{\rm ad}$，その Liouville 場を $Z$ と
+する．Exact gauge の変更は periods を変えず，不変性から
+\[
+ \lambda^{\rm ad}(V_a)=M_a=q_a-\rho_a,\qquad Zq_a=M_a.
+\]
+したがって normal face では $Z(q_a-\delta)=\delta-\rho_a<0$ であり，corner では
+\[
+ ZF_{ac}
+ =\partial_{q_a}F_{ac}(q_a-\rho_a)
+  +\partial_{q_c}F_{ac}(q_c-\rho_c)<0.
+\]
+ここでは必要なら $N$ を大きくして，丸め部分の全 moments を全 $\rho_a$ より
+小さくした．Core 側は $F\ge0$ なので，これは外向き横断性である．
+\end{proof}
+
+\subsection{固定段階で残る領域の compact 性}
+
+\begin{lemma}[中央の全特異 strata の固定段階被覆]
+\label{ke:fixed-stage-stratum-coverage}
+十分大きい各固定 $j$ に対し，中央 fiber の特異 locus の $t$ に依存しない ambient
+開近傍 $\mathcal O_j$ と $\tau_j>0$ があり，
+\[
+ X_t\cap\mathcal O_j\subset U_{j,t}
+ \qquad(0<|t|<\tau_j)
+\]
+となる．従って各 component の固定 compact $K^*_{i,j}\Subset W_i$ を選んで
+\begin{equation}\label{ke:eq:fixed-stage-compact-complement}
+ X_t\setminus U_{j,t}\subset\bigcup_i E_{i,t}(K^*_{i,j})
+\end{equation}
+とできる．この結論には source を含む全二重線と全三重点が含まれる．
+\end{lemma}
+
+\begin{proof}
+まず二重線の residual compact を取る．各 end の深度が $6.5b_j$ 以下の compact
+を $P^0$ とし，それを end 深度 $6.7b_j$ 未満の少し広い compact $P^1$ の内部に
+含める．Source は $P^0$ の内部に含める．
+既存の normal circle と centered chain homotopy をそのまま用い，
+補題\ref{ke:fixed-stage-source-neck}をさらに深い固定 normal cutoff $M$ に適用する．
+$M$ は $n_j$，$\iota_j^{-1}$，残余 buffer の逆数より十分大きく選ぶ．
+この補題の source/image buffer は
+\[
+ K_{t,M}\subset\operatorname{image}\phi_{N,t}^{(M)},\qquad
+ (\phi_{N,t}^{(M)})^{-1}(K_{t,M})\subset U_{t,M}
+\]
+を与え，forward/backward の actual 長さは $C_{P^1}/M$ 以下である．
+Normal circle，平均形式の path，centered kernel は元の $n_j$-tube の制限と同じ
+なので，両方が定義された点では ODE の一意性により
+\[
+ \phi_{N,t}^{(M)}=\phi_{N,t}
+\]
+である．深い cutoff ごとに別の actual action を選び直してはいない．
+
+ここでは fixed-shell moments の\emph{上界}も必要である．
+既存の fixed-end 証明は，深度 $M$ の二つの shell において，全 residual points と
+全 phase に一様に
+\[
+ \mu_N=\frac{4\pi}{M}+O_{P^1}(M^{-1-\nu})+o_{t\to0;M}(1),
+ \quad
+ \mu_N=-\frac{4\pi}{M}+O_{P^1}(M^{-1-\nu})+o_{t\to0;M}(1)
+\]
+を与える．従って $M$ を固定した後に $t$ を小さくすれば，両 shell の絶対値は
+$C_{P^1}/M$ 以下である．$P^1$ は三重点を避けた固定 compact であり，source の
+残余点は成分極限の cusp shell 上で特別な特異点ではないので，同じ評価に含まれる．
+Normal radial 単調性により $U_{t,M}$ の全点で
+\[
+ |\mu_N|\le C_{P^1}/M<\iota_j
+\]
+となる．Source fiber では二軸上の単調性と固定点で $\mu_N=0$ を使えばよい．
+
+Residual 方向の射影下界と $C_{P^1}/M$ の trajectory 長さによって，$P^0$ 上の
+点の逆像は $P^1$ 上に留まる．End の reduced leaves の順序保存と
+$b_{\rm res}=B(1+O(b_j^{-2}))$ から，$P^1$ は $B=7b_j$ の end cut の内側にある．
+従って $K_{t,M}$ の $P^0$ 部分は\emph{既存の，切り詰め済み} neck に含まれる．
+座標の小さい固定 polydisc を取れば，中央二重線の $P^0$ 部分の固定 ambient
+近傍の $X_t$ との交わりをこの $K_{t,M}$ に入れられる．
+
+三重点では $m=6b_j$ を用いる．Corner map $C_t=G\Upsilon\Phi$ とその逆の
+model 正規化座標での変位は $O(b_j^{-2})$，座標接続の寄与は指数的に小さい．
+Clipped depth の議論と同じ $|d\log\ell_r|_h\le C$ の評価により，physical
+depths が全て $6.3b_j$ より大きい点の逆像では，$j$ を十分大きく取れば
+\[
+ \min_r\ell_r(C_t^{-1}x)>6.2b_j
+\]
+となる．必要な inverse image buffer は $\min\ell_r>m/2$ の既存の開領域内に
+ある．従って
+\[
+ \min_r(\ell_r-m)>0.2b_j>1,\qquad
+ \max_r(\ell_r-m)<L
+\]
+であり，逆像は full softmax domain の\emph{内部}に属する．
+この議論により，三つの physical depths が $6.3b_j$ より大きい固定 ambient
+近傍と $X_t$ の交わりが actual closed corner に含まれる．
+
+Neck 側の $6.5b_j$ と corner 側の $6.3b_j$ の間には正の幅がある．
+End coordinate と triple coordinate の固定 frame 差，および $t$ による小さい
+差はこの幅に吸収できる．従って上で作った ambient neighborhoods は中央の全二重線
+を三重点まで切れ目なく覆う．粗い条件 $\min\ell_r>2m$ だけを用いると
+$7b_j$ と $12b_j$ の間に被覆の gap が残り得るため，ここではそれを用いなかった．
+有限個の二重線・三重点について閾値を共通化すると $\mathcal O_j$ を得る．
+
+最後に，中央 fiber の $\mathcal O_j$ の外側は，各 $W_i$ の互いに素な固定 compact
+の和に含まれる．族は射影的であり，この部分では fixed component graph が存在する．
+従って少し広い固定 compact $K^*_{i,j}\Subset W_i$ を取れば，小さい全 $t$ について
+$X_t\setminus\mathcal O_j$ はその graph images に含まれる．
+これは，もし反例列があれば射影空間内で中央 fiber の regular point へ収束し，
+その点の一意な graph 表示に反することからも分かる．
+これで\eqref{ke:eq:fixed-stage-compact-complement}を得る．
+\end{proof}
+
+\begin{lemma}[全 fibers による core 外側への切詰め]
+\label{ke:whole-fiber-core-trim}
+補題\ref{ke:closed-component-link}で，
+補題\ref{ke:fixed-stage-stratum-coverage}の各 $K^*_{i,j}$ の graph image を
+$\operatorname{int}K_{i,j,t}$ に含めるように $N$ を選ぶ．このとき
+\[
+ X_t=U_{j,t}\cup\bigcup_i K_{i,j,t}.
+\]
+また
+\[
+ U^{\rm ext}_{j,t}
+ :=U_{j,t}\setminus\bigcup_i\operatorname{int}K_{i,j,t}
+\]
+は既存 fibration の全 fibers の和であり，その restriction は全旧 patch 間の
+saturation と既存の fiber partition を保つ．各 core との交わりは $S_{i,j,t}$
+全体であり，これは双方に用いる全 boundary fibers の和である．
+
+小さい平行 moment levels を用いると，境界の両側に開いた共通 collars を取れる．
+従って各 core 側の fibration がこの collar 上で旧 fiber partition と一致するように
+構成されているならば，有限個の compact bases を貼り合わせて actual 曲面全体の
+Lagrangian fibration を得る．この最後の仮定は相対 filling の課題であり，本補題は
+それ自体の存在を主張しない．
+\end{lemma}
+
+\begin{proof}
+最初の被覆は\eqref{ke:eq:fixed-stage-compact-complement}と $K^*_{i,j}$ の包含から
+従う．次に旧 fibration の一つの fiber $L$ を取る．旧 fibers は regular tori，
+一重 pinched tori，または saddle 型の連結な fibers である．
+$L$ がある $K_{i,j,t}$ の内側と外側の両方に点を持てば，連結性から
+$L\cap\partial K_{i,j,t}\ne\varnothing$ となる．
+しかし $\partial K_{i,j,t}=S_{i,j,t}$ は全旧 fibers の和だから，この場合
+$L\subset S_{i,j,t}$ でなければならず，内外に点があることと矛盾する．
+従って各 $L$ は一つの core 内部，その境界，または全 cores の外側のいずれかに
+全体として含まれる．これが切詰めの saturation を証明する．
+
+旧 patch の任意の交わりは，既に系\ref{ke:neck-corner-saturated-union}により
+共通の全 fibers の和であった．全 fiber 単位の restriction はこの性質を保つ．
+新しい境界で別の half-torus や residual circle segment が現れることはない．
+平行 moment levels についても同じ議論を適用できるので，小さい開 common collars
+を用意できる．相対 filling がその collar partition を実現すれば，有限 compact
+bases の閉じた同値関係による貼合せは Hausdorff であり，局所 fibration の記述も
+collar 上で一致する．これで条件付きの最後の主張を得る．
+\end{proof}
+
+\paragraph{本節で閉じた部分と残る入力．}
+本節は，period の加法定数，共通整数基底，二つの moment cuts の丸め，固定段階の
+中央特異 locus の被覆，および core 外側への全 fiber 単位の切詰めを，既存 K2 の
+maps と quantitative buffers から導いた．Primitive の相対不変化と非捕捉性，
+その Liouville flow による相対 filling，および collar 上の葉族の補間は別に証明する
+必要がある．また全曲面の ambient metric に関する no-shortcut 比較や，標的への
+normalized distortion の消滅は，本節の固定段階被覆・接着だけからは従わない．
