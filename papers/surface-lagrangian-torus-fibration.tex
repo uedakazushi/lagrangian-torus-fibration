@@ -1,11 +1,11 @@
 \documentclass[11pt,a4paper]{article}
 \makeatletter\def\input@path{{sections/paper/}{sections/paper/}}\makeatother
 \input{sections/common.tex}
-\fancyhead[R]{\small v30}
+\fancyhead[R]{\small v31}
 \hypersetup{pdftitle={一般型射影曲面のLagrangian torus fibrationと負Kähler--Einstein極限},pdfauthor={}}
 \title{一般型射影曲面の\\Lagrangian torus fibrationと\\負Kähler--Einstein極限\\[0.5em]\large 相対SNC構成、分岐底空間、作用適合matroidal atlas}
 \author{}
-\date{2026年11月21日\quad 第30稿・現行改訂30}
+\date{2026年11月21日\quad 第31稿・現行改訂31}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -41,10 +41,12 @@ $C(1+\log(N_j+1))$ であり，残余基底を先に選ぶことで全 fiber 合
 関連 KE 原稿の未検証の大域比較仮説を用いず，明記した局所解析入力から
 同じ $f_t$ の全域評価を直接証明する．
 
-一般の symplectic 構成としては，任意 genus の SNC divisor に対する
-有限相対 compactification を与える．$k\ge3$ の次数分割 $d=\sum e_i$ から，
+一般の symplectic 構成としては，正の weighted Kähler 表示を持ち，各成分に二つ以上の交点がある
+任意 genus の SNC divisor に対する有限相対 compactification を与える．
+$k\ge3$ の次数分割 $d=\sum e_i$ から，
 $k$ 個の cores と $d\sum_{i<j}e_i e_j$ 個の nodes を持つ fibration を得て，
-基底の整数位相と順序付き小解消の vertical Kähler slice を記述する．
+$[\omega]=aH$，$a>0$ の指定 Kähler 形式への適用，基底の整数位相，
+順序付き小解消の vertical Kähler slice を記述する．
 全平面の五次・六次では，focus singularities を許す大域作用適合 matroidal atlas を構成する．
 この選択で五次の各 triangle に五 nodes，六次の各 triangle に三 nodes，各 bigon に二 nodes が入り，
 全 branch の正規化長さは $a/(\pi(d-1))$ である．
@@ -52,7 +54,8 @@ $k$ 個の cores と $d\sum_{i<j}e_i e_j$ 個の nodes を持つ fibration を�
 四 puncture neck の分母剛性と法円作用の分岐係数により大域 atlas を持たない．
 比例曲率 SNC cores と branch graph を保ち追加の branch singularities を入れない範囲では，
 作用適合 matroidal atlas が可能な次数分割は全平面の五次・六次に限られる．
-この atlas の分類と，任意の固定 $d\ge5$ における上記の KE 計量実現は異なる結論である．
+五次・六次で atlas と KE 計量実現を同じ射影により同時に達成することは未証明である．
+七次以上では，上記の actual KE 極限を実現する fibration の基底の各 core 頂点近傍も位相的に非 matroidal である．
 \end{abstract}
 \tableofcontents
 \input{sections/paper/geometry_introduction_v25.tex}

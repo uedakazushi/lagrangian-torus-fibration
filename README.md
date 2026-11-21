@@ -1,5 +1,5 @@
 # Lagrangian torus fibrations on general-type surfaces
-2026-11-21 / v3.10 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
+2026-11-21 / v3.11 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
 
 **各固定次数 \(d\ge5\) の一般位置全平面退化について、actual負Kähler–Einstein形式の大域Lagrangian torus fibrationが、径の尺度のGH極限を実現する定理の証明を主稿に置いている。** 同じ写像 \(f_t=p_T\pi_t\) の全曲面ambient距離に関する一様distortionと、特異fiberを含む全fiber合併の収縮を扱う。今回の新証明と接続を複数担当で内部点検した。形式証明、全主稿・全外部入力の包括的再監査、外部査読、新規性の網羅的確認は未実施である。**このリポジトリは複素次元2専用**。三次元の研究は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とする。
 
@@ -13,9 +13,19 @@
 
 証明は十分遅い対角選択と一つの許容された標識付き木系を用いる。最適収束速度、任意に先指定した木系への適合、次数一様性、全次数のmatroidal atlas、special Lagrangian性は結論に含めない。関連KE研究のCP/PBE/TCを証明したとはせず、本稿ではscalar Schwarz障壁による下界とportal接続による上界で代替する。必要な外部入力の所在と仮定は [依存関係表](research/ke-dependencies.md) にまとめる。従来の大域構成・作用適合atlas・整数接着の有効な成果も保持する。
 
+### 三つの存在主張の量化
+
+| 主張 | 選択と結論 |
+| --- | --- |
+| 一般のsymplectic存在 `main:global` | 固定した $[\omega]=aH$ のKähler形式と、任意に選んだmarked pants treesに対して全域Lagrangian fibrationを構成する。計量崩壊を結論しない。 |
+| P0 `ke:global-metric-realization` | 固定した次数・退化族ごとに一つの木系 $T$ を選び、全ての十分小さい $t\ne0$ に対してactual負KE形式の $\pi_t$ と同じ $p_T\pi_t$ のdistortion消失を得る。$t$ に関する滑らかなfibration族や任意指定 $T$ への適合は結論しない。 |
+| 作用atlas `main:action-atlas` | $d=5,6$ では、critical areas・第二作用等を合わせた別の選択で大域作用適合matroidal atlasを持たせる。P0の同じ $\pi_t$ がこのatlasも持つとは証明していない。 |
+
+五次・六次の同時atlas＋GH実現を進めるには、P0で保持するcorner・source近傍に相対的なcritical-area調整と、調整前後のGH比較写像の一様な変化の制御が必要であり、現状は未解決である。個別の存在定理や定性的なMoser移送を同時実現の証明に代用しない。
+
 ## Cloud Codexから再開する
 
-最新mainで [研究方針](00_research_plan.md) → [AGENTS.md](AGENTS.md) → [依存関係](research/ke-dependencies.md) → [研究ノート](research/notes.md) を読む。主定理 `ke:global-metric-realization` から依存証明をたどる。Coreの正則化から指定actual collar、全域fibrationへ至る経路は、構成の同一性・支持・選択順序に範囲を限定して独立内部監査した。全K2交わりを恒等collarに含め、補間後の葉族を全fiber単位で切り詰めることを明示した。Sourceのfocus判定・全飽和近傍の移送と、nodal blow-upの面積・支持・選択順序を本文に明示し、必要箇所を内部点検した。有限閉whole-fiber quotient、同じ合成写像の連結fibers、fiber Euler関数の有限支持とcoarse fiberのEuler公式を本文に整理した。次はIntroductionと主定理のscopeを全域構成から逆向きに照合し、既知結果の適用範囲・独自の適用証明・未確認の新規性を公表用に点検する。無限個のbranch fibersと有限個のbranch strata、πのLagrangian fibersと合成写像のfiber合併を区別する。既存P0の範囲と優先順位を保ち、任意のfocus不変量への先指定を追加しない。有限cut・portal・全fiber合併の成果と一次文献比較は現行本文に保持する。全依存証明の包括的再監査・新規性確認は未完。組版・表示確認の状態は末尾を参照。
+最新mainで [研究方針](00_research_plan.md) → [AGENTS.md](AGENTS.md) → [依存関係](research/ke-dependencies.md) → [研究ノート](research/notes.md) を読む。主定理 `ke:global-metric-realization` から依存証明をたどる。Coreの正則化から指定actual collar、全域fibrationへ至る経路は、構成の同一性・支持・選択順序に範囲を限定して独立内部監査した。全K2交わりを恒等collarに含め、補間後の葉族を全fiber単位で切り詰めることを明示した。Sourceのfocus判定・全飽和近傍の移送と、nodal blow-upの面積・支持・選択順序を本文に明示し、必要箇所を内部点検した。有限閉whole-fiber quotient、同じ合成写像の連結fibers、fiber Euler関数の有限支持とcoarse fiberのEuler公式を本文に整理した。一般存在・P0・作用atlasの量化を分けて点検した。次は公表前監査を続け、Introduction・主定理のscopeを全域構成から逆向きに照合する。五次・六次の同じπによるatlas＋GHの同時実現には、相対critical-area調整とGH比較写像の変化の制御が未解決条件として残る。無限個のbranch fibersと有限個のbranch strata、πのLagrangian fibersと合成写像のfiber合併を区別する。既存P0の範囲と優先順位を保ち、任意のfocus不変量への先指定を追加しない。有限cut・portal・全fiber合併の成果と一次文献比較は現行本文に保持する。全依存証明の包括的再監査・新規性確認は未完。組版・表示確認の状態は末尾を参照。
 
 ```sh
 python3 scripts/research_check.py setup --require-tex
@@ -29,7 +39,7 @@ python3 scripts/research_check.py tex
 
 | 原稿 | 役割 | 組版の確認範囲 |
 | --- | --- | ---: |
-| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域fibrationによるGH実現定理（改訂30） | 改訂30を269頁に組版・指定21頁を表示確認（全頁再点検ではない） |
+| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域fibrationによるGH実現定理（改訂31） | 改訂31の組版・表示確認は未実行。直前の改訂30は269頁・指定21頁を表示確認 |
 | [五次整数接着](papers/quintic-integer-gluing.tex) | 指定K5データの整数条件・高分母支持・未解決の大域接着 | 201頁 |
 | [Meridian surgery](papers/meridian-surgery.tex) | 閉corner circuitsの局所置換の障害 | 18頁 |
 | [TeX研究ノート](papers/research-notes.tex) | 証明素材・残る条件の整理 | 現行65頁、第1・4頁を表示確認 |
@@ -74,6 +84,10 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 **固定形式でもcritical actionは曲がる：** `atl:fixed-form-bent-branch` は、同じactual $\Omega$、normal action、両端・toric collars・saddle点のgerms、marked treeを保つLagrangian葉族でも、critical actionを非直線にできることを示す。`atl:critical-action-obstruction` により、二階微分が非零のbranch点には任意のdenominatorを許しても局所作用適合matroidal chartがない。既存の五次・六次atlas構成は、共通embedded marked classでcritical-region areasと切片を指定してこの障害を避ける。一般のLagrangian存在、P0のactual計量実現、選んだfibrationの作用atlasは別の主張である。
 
+**七次以上のP0基底のcore障害：** `ke:global-core-nonmatroidal` は、$d\ge7$ の同じP0基底の各coreに、本稿の意味での局所作用適合matroidal chartが存在しないことを示す。Core linkの $b_1=\binom{d-2}{2}\ge10$ と三価matroidal linkの上限8による位相障害であり、同じcore・木系を保つ範囲の結論である。P0のactual Lagrangian性、同じ $p_T\pi_t$ によるGH実現と全fiber合併の収縮は維持される。別の基底や特異fiber型を許す全fibrationの不存在ではない。
+
+**既存GH定理との比較：** Fernández de Bobadilla–Pełkaの [Theorem 6.14](https://arxiv.org/pdf/2312.13248v4) は、(b)で近傍fiberの余次元零部分のLagrangian fibrationを与え、(c)ではproperな族なら全nearby fiberについて補助Kähler計量のGH収束を与える。本稿との違いはGHが局所か全域かという一点ではなく、指定されたactual負KE形式での全域 $\pi_t$ と、同じ合成写像の全曲面ambient距離比較にある。形式のcohomology classの一致だけでは必要な計量制御は従わない。
+
 **Focus近傍全体と作用の保存：** `ke:source-focus-transversality` は指定した写像 $(\mu,A(\mu,p))$ の非退化focus型を $d_pA(0,q)\ne0$ と判定する。`ke:focus-neighborhood-period` は一重pinched torusの小さい飽和近傍でnormal cycleが消え、残余cycle一つのperiodがclosed primitive差のexactnessを判定することを示す。Node primitiveを固定しても残余作用の原点は変えられるが、外側regular torusでも固定すれば差はexactとなる。`ke:focus-whole-neighborhood-transport` は構成したfibrationを全近傍で運び、通常のTaylor不変量 $S$ を保存し、exact transportなら追加定数 $S_0$ も保存する。これは既知の半大域不変量の本稿への適用であり、独立に指定したfocus模型の同値や、異なる $t$・stage間での不変量一定は主張しない。
 
 **Nodal surgeryの面積と支持：** `glue:area-normalized-blowup` は例外曲線の実面積 $e$ を用いて指定複素blow-up上のradial Kähler形式を直接構成する。Chakravarthy–Gromanの比較写像は選んだ飽和affine-convex patchの外で恒等とし、球の外まで恒等とはしない。固定patch、容量を決める $\epsilon$、compact nodal neighborhoods全体、collarsとcuts、最後に $t$ の順に選ぶ。既知の相対surgeryをactual成分へ適用する証明であり、任意の独立primitiveの一致を付け加えない。
@@ -88,4 +102,4 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-2026-11-21 / v3.10：主稿改訂30に、有限閉whole-fiber quotient、同じ合成写像の全fiber連結性、fiber Euler関数の有限支持とcoarse fiber公式を統合した。Quotientと基底同定の非循環性を重点点検し、例示した面ごとのnode配分と一般存在の総数公式を区別し、作用適合atlasの追加仮定下における六次bigonの剛性も保持した。**改訂30をLuaLaTeXで269頁に組版し、変更箇所を含む指定21頁を表示確認した。最終修正後は変更5頁を再表示し、残り16頁は確認済み画像とpixel単位で同一であることを確認した。未解決参照・引用、重複ラベル、欠字、overfull boxはない。全269頁の逐頁再点検ではない。** 実行範囲は [検証状態](research/validation.json) を参照する。数学的点検・組版・保存は別々に記録する。整数検算suite・他論文・TeX研究ノートの再組版は今回未実行。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。
+2026-11-21 / v3.11：主稿改訂31では一般存在・P0・作用atlasの量化を区別し、同じπでのatlas＋GH実現を未証明と明記した。七次以上の同じP0基底に対する局所matroidal coreの障害と、FBPの部分fibration／全fiber補助計量GHの比較を整理した。P0に新しい仮定は加えていない。**改訂31の組版・表示確認は未実行。直前に確認済みの改訂30は269頁、指定21頁を表示確認した。最終修正後は変更5頁を再表示し、残り16頁は確認済み画像とpixel単位で同一であることを確認した。未解決参照・引用、重複ラベル、欠字、overfull boxはなかった。全269頁の逐頁再点検ではない。** 実行範囲は [検証状態](research/validation.json) を参照する。数学的点検・組版・保存は別々に記録する。整数検算suite・他論文・TeX研究ノートの再組版は今回未実行。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。

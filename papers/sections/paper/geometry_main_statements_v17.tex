@@ -115,7 +115,8 @@ branch denominator $q$ は，primitive branch tangent に対する正 normal act
 微分の絶対値であり，以下の構成は全 branch で $q=1$ を満たす．
 
 \begin{theorem}[五次・六次の大域作用適合 atlas]\label{main:action-atlas}
-$d=5,6$，$X_d\subset\PP^3$ smooth，$[\omega]=aH$，$a>0$ とする．
+$d=5,6$，$X_d\subset\PP^3$ smooth とし，$\omega$ を
+$[\omega]=aH$，$a>0$ を満たす Kähler form とする．
 定理~\ref{main:global} の全平面 fibration を，focus affine singularities を許す
 大域作用適合 matroidal atlas を持つように選べる．
 core charts は五次では標準 $K_4$，六次では標準 Petersen fans である．
@@ -123,7 +124,18 @@ core charts は五次では標準 $K_4$，六次では標準 Petersen fans で�
 nodal values が入る．全 branch の正規化された affine length は $a/(\pi(d-1))$ である．
 \end{theorem}
 
-その証明は，局所作用座標，整数 framing，critical-area を指定した actual neck 接着を
+\begin{remark}[作用 atlas と KE 計量実現の選択]\label{main:atlas-ke-scope}
+定理\ref{main:action-atlas}は，指定された Kähler form ごとに fibration を選ぶ存在定理である．
+従って $d=5,6$ の全平面退化の各十分小さい $t\ne0$ では，actual 負 KE form
+$\omega_t$ に関しても atlas を持つ fibration が存在する．
+一方，それを定理\ref{ke:global-realization}の計量制御された $\pi_t$ と同じ射影に選べること，
+または atlas を持つ別の射影について同じ一様 distortion の消失を得ることは，本稿では証明しない．
+定理\ref{main:action-atlas}の面ごとの node 配分や affine branch lengths も，
+定理\ref{ke:global-realization}の追加条件ではない．
+同時実現へ向けた十分条件は，注意\ref{ke:atlas-ke-value-criterion}の全域基底値比較である．
+\end{remark}
+
+定理\ref{main:action-atlas}の証明は，局所作用座標，整数 framing，critical-area を指定した actual neck 接着を
 まとめる定理~\ref{ga8:global} で与える．
 個別の core charts を並べるだけでは，作用の加法定数と atlas transitions は決まらない．
 本稿は固定 nonzero moments 上の exact symplectic transport と相対 Moser により

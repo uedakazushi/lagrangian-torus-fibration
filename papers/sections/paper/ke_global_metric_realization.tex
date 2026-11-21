@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.4: 共通 anchor・同一 moment 参照点と対角選択による全域 GH 実現．
+% 2026-11-21 / v1.5: 全域 GH 実現の量化と七次以上の同じ基底の局所位相障害．
 \section{Actual Lagrangian fibration による負 KE 極限の実現}
 \label{ke:global-metric-realization-section}
 
@@ -31,6 +31,7 @@ $R_t=\log(-\log|t|^2)$ であり，$d_{g_t}$ は全曲面の ambient 距離で�
 従って定理\ref{ke:global-realization}の二条件が成立する．
 木系の組合せ型と成分 labels は固定し，critical values と基底の
 parameter 化には $t$ 依存を許す．定数の次数一様性又は族一様性は主張しない．
+各 $\pi_t$ の連続性を結論するが，$t$ 方向に連続又は滑らかな fibration 族の選択は主張しない．
 \end{theorem}
 
 \begin{proof}
@@ -117,11 +118,34 @@ $j(t)=\max\{j:|t|<r_j\}$ と置けば $j(t)\to\infty$ であり，
 従って $U_{j(t),t},V_{j(t),t}\to0$ となる．
 $\pi_t=\pi_{j(t),t}$ と選び，両側評価から
 $\operatorname{dis}(f_t)\le\max\{U_{j(t),t},V_{j(t),t}\}\to0$ を得る．
-この定理は $t$ に関する fibration 族の滑らかさや，
+この定理は $t$ に関する fibration 族の連続性・滑らかさや，
 あらかじめ指定した速さの対角化を結論に含めない．
 明示的な cut budget は，$C_j^{\rm neck}$ の増大率，scalar 障壁に必要な
 $\mathfrak m_j,K_j$ の成長，又は fixed-compact convergence の有効な閾値を
 与えるものではない．従って $R_t$ だけによる最適な全域収束速度の証明とは区別する．
+\end{proof}
+
+\begin{corollary}[七次以上の同じ基底における core の局所位相障害]
+\label{ke:global-core-nonmatroidal}
+$d\ge7$ のとき，定理\ref{ke:global-metric-realization}で選んだ $\pi_t$ の基底
+$B_d(T)$ のどの core 頂点の近傍にも，二次元 matroidal local model への chart は存在しない．
+従って，core 頂点を含むこの同じ基底に作用適合 matroidal atlas を入れることはできない．
+これは定理\ref{trop:degree-classification}の既存の位相障害を，上の計量実現で選んだ基底に適用した帰結である．
+\end{corollary}
+\begin{proof}
+定理\ref{ke:actual-global-fibration}の構成では，各 core 頂点 $v_i$ の近傍は，
+同じ木系 $T$ から作る graph $G_i$ の cone である．命題\ref{topo:counts}より
+$G_i$ は連結三価であり，
+\[
+ b_1(G_i)=\binom{d-2}{2}\ge10.
+\]
+この rank は $v_i$ における二次の局所 homology の rank でもあり，局所同相で不変である．
+穿孔近傍の分岐が三価だけであることも局所位相から判定される．
+一方，定理\ref{trop:cubic-classification}によれば，その分岐条件を満たす二次元
+matroidal local model の link は，非連結 matroids と Euclidean factors を許しても
+$b_1\le8$ を満たす．従ってそのような chart は存在しない．
+ここでは作用格子や計量の収束を追加仮定せず，収縮後の $\mathcal C_d$ についての
+atlas の有無も結論していない．
 \end{proof}
 
 \begin{corollary}[GH 収束と全特異 fiber 合併の収縮]

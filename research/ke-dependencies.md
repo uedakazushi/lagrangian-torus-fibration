@@ -1,6 +1,6 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-21 / v3.0。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-21 / v3.1。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
 ## 確認した正本と規格化
 
@@ -37,6 +37,23 @@ L_t=-\log|t|^2,\quad R_t=\log L_t.
 を与える。正則fiberはLagrangian $T^2$、source・branch・coreの特異fiberは本稿の相対構成による。左辺は全曲面の任意の経路を許すambient距離である。$d\ge6$ で $p_T$ が潰す内部木上の全fiber合併も一様に収縮する。木系の組合せ型は固定するが、critical values・collar・基底parameter化と遅い段階選択は $t$ に依存してよい。
 
 この結論は `ke:actual-global-fibration`、`ke:global-base-parameterization`、`ke:global-ambient-lower`、`ke:global-ambient-upper` を同じ写像で組み合わせたものである。**外部のCP/PBE/TCは未検証のままであり、本稿がそれらの全packageを証明したとは主張しない。** 本稿では、sourceを含むsharp scalar normal評価と全域clipped logarithmic mapによる下界、共通momentの接続と有限galleryによる上界で、P0に十分な距離評価を直接証明する。最適収束速度、次数一様性、任意に先指定されたcritical valuesの実現は含まない。
+
+### 一般存在・P0・作用atlasの量化
+
+`main:global` は任意のmarked pants treesを指定した固定形式上の存在定理である。P0は固定した次数・退化族から一つの許容木系 $T$ を選び、その後の全stageと全ての十分小さい複素parameterに共通に使う。定数は固定した次数・族・補助データに依存し、$t$ に関するfibration族の滑らかさ、任意指定 $T$、任意速度の対角化は結論しない。$R_t^{-2}g_t$ はtensorの規格化、$R_t^{-1}d_{g_t}$ は距離の規格化であり、径一の極限は $D_d^{-1}d_\square$ である。
+
+`main:action-atlas` の $d=5,6$ の存在は別のfibrationの選択による。各固定 $t$ のactual負KE形式がその偏極範囲に入っても、P0の同じ $\pi_t$ にatlasがあるとは限らない。同時実現には、保持corner・source近傍に相対的なcritical-area／第二作用の調整と、変更後の同じGH比較写像が $o(1)$ の一様誤差を保つ証明が必要であり、未解決である。`ke:global-core-nonmatroidal` は $d\ge7$ の同じP0基底の各core linkの $b_1=\binom{d-2}{2}>8$ から局所matroidal chartを排除する。これは同じcore・木系を保つ範囲の位相障害で、actual Lagrangian性とmetric結論には新仮定を課さない。
+
+## 既存GH結果との一次資料比較
+
+| 一次資料・確認位置 | 既知の結論と本稿で別に証明する内容 |
+| --- | --- |
+| Fernández de Bobadilla–Pełka, [arXiv:2312.13248v4](https://arxiv.org/pdf/2312.13248v4), Proposition 5.6 p.24、Proposition 6.13 p.30、Theorem 6.14 p.31、Remark 7.4 p.34；CPAM (2026), e70060, [DOI](https://doi.org/10.1002/cpa.70060) | 6.14(b)は補助形式 $\omega_q^\varepsilon$ に対する余次元零部分のfibration。(c)はproperなら全nearby fiberと残余領域のpairのGH収束であり、部分領域だけのGHではない。補助計量を径で再規格化する。Actual負KE計量や全域Lagrangian core fillingをそのまま与える結果とは区別する。同じclassのMoser同定から距離制御は自動ではない。 |
+| Fu–Hein–Jiang, GAFA 35 (2025), 542–632, [掲載版PDF](https://link.springer.com/content/pdf/10.1007/s00039-025-00708-y.pdf), §1.1 pp.543–544、Main Theorem p.544 | 孤立楕円特異点を持つ明示六次族のactual負KE計量を扱い、$\lvert\log\lvert\sigma\rvert\rvert^{3/2}$ のtensor再尺度でTian–Yau bubbleを得る。全平面SNC退化の $R_t^{-1}$ 距離によるcubical極限と、同じLagrangian射影への適合とは退化模型・尺度・結論が異なる。 |
+| Y. Zhang, MRL 22 (2015), 1843–1869, [arXiv:1505.04728v2](https://arxiv.org/pdf/1505.04728v2), Theorem 1.1 p.3、Theorem 2.4 p.8、Theorem 2.6 p.10 | Q-factorial simple toroidal canonically polarized degenerationで、動く基点による元のKE尺度のpointed collapseと、最大退化点の局所semi-flat比較を与える。2.6は追加の非消失volume form条件下のgeneralized special Lagrangian torusの存在。本稿のsource全空間 $xy=tz$ とsmall resolution後のrelative ample性はそのまま仮定を満たさず、全曲面の径尺度・同じ射影の比較は別に証明する。 |
+| J. Song, [arXiv:1706.01518v1](https://arxiv.org/pdf/1706.01518v1), Theorem 1.2 p.4 | Stable degenerationの元の負KE尺度で、成分内部に基点を取る非崩壊極限を与える。本全平面族では各 $\mathbb P^2$ から $d-1$ 本の直線を除いた完備KE成分であり、径尺度のcubical極限やLagrangian射影を与える定理とは区別する。 |
+
+ここでの確認は指定定理・規格化・適用範囲の一次照合であり、各論文の全証明の再検証や網羅的新規性確認ではない。
 
 ## 外部解析入力の状態
 
@@ -235,8 +252,8 @@ Fernández de Bobadilla–Pełka, arXiv:2312.13248v4 の Theorem 6.14、Example 
 - YauのTheorems 1–2、Savinのsmall perturbation、Songのfixed-gauge収束、DMVの掲載版Theorem 1.2、Rochon–ZhangのSNCに関する指定箇所は一次資料で確認した。外部KE原稿の全証明や旧主稿全体の独立再監査、公表前の網羅的な先行研究・新規性調査、形式証明を完了したという意味ではない。
 - 解析証明の数学的点検、保存された有限有理数検算、その再実行、組版、GitHubへの反映は別の確認である。各実行状態は現行の検証資料を参照し、本書の「証明あり」を計算・組版による証明の検証と読み替えない。
 
-改訂30をLuaLaTeXで269頁に組版し、変更箇所を含む指定21頁を表示確認した。最終修正後は変更5頁を再表示し、残り16頁は確認済み画像とpixel単位で同一であることを確認した。未解決参照・引用、重複ラベル、欠字、overfull boxはない。全269頁の逐頁再点検ではない。実行状態は [検証状態](validation.json) を参照する。
+改訂31の組版・表示確認は未実行。直前に確認済みの改訂30はLuaLaTeXで269頁に組版し、指定21頁を表示確認した。最終修正後は変更5頁を再表示し、残り16頁は確認済み画像とpixel単位で同一であることを確認した。そこで未解決参照・引用、重複ラベル、欠字、overfull boxはなかった。全269頁の逐頁再点検ではない。実行状態は [検証状態](validation.json) を参照する。
 
 ## 再開時の確認
 
-Sourceのfocus判定・全飽和近傍の移送と、nodal blow-upの面積・支持・選択順序を本文に明示し、必要箇所を内部点検した。有限閉whole-fiber quotient、同じ合成写像の連結fibers、fiber Euler関数の有限支持とcoarse fiberのEuler公式を本文に整理した。次はIntroductionと主定理のscopeを全域構成から逆向きに照合し、既知結果の適用範囲・独自の適用証明・未確認の新規性を公表用に点検する。無限個のbranch fibersと有限個のbranch strata、πのLagrangian fibersと合成写像のfiber合併を区別する。既存P0の範囲と優先順位を保ち、任意のfocus不変量への先指定を追加しない。外部repoの最新 `main`、AGENTSと方針を確認し、上表のラベルの存在と追加仮定を照合する。未取得・アクセス不能なら、確認済みコミットと未確認範囲を残し、利用可能な独立課題を進める。解析的結果を外部repoへ追加した場合は、そちらを先に保存してから、この表の参照版と本repoの依存箇所を更新する。外部入力の更新・本repoでの適用証明・組版・計算検証は別々に記録する。
+Sourceのfocus判定・全飽和近傍の移送と、nodal blow-upの面積・支持・選択順序を本文に明示し、必要箇所を内部点検した。有限閉whole-fiber quotient、同じ合成写像の連結fibers、fiber Euler関数の有限支持とcoarse fiberのEuler公式を本文に整理した。一般存在・P0・作用atlasの量化を分けて点検した。次は公表前監査を続け、Introduction・主定理のscopeを全域構成から逆向きに照合する。五次・六次の同じπによるatlas＋GHの同時実現には、相対critical-area調整とGH比較写像の変化の制御が未解決条件として残る。無限個のbranch fibersと有限個のbranch strata、πのLagrangian fibersと合成写像のfiber合併を区別する。既存P0の範囲と優先順位を保ち、任意のfocus不変量への先指定を追加しない。外部repoの最新 `main`、AGENTSと方針を確認し、上表のラベルの存在と追加仮定を照合する。未取得・アクセス不能なら、確認済みコミットと未確認範囲を残し、利用可能な独立課題を進める。解析的結果を外部repoへ追加した場合は、そちらを先に保存してから、この表の参照版と本repoの依存箇所を更新する。外部入力の更新・本repoでの適用証明・組版・計算検証は別々に記録する。

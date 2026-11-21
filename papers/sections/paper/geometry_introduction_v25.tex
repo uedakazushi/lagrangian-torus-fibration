@@ -3,7 +3,10 @@
 滑らかな射影曲面を Lagrangian torus の族として記述する問題では，
 正則部分の action coordinates と，退化に現れる divisor の組合せ論を
 大域的に結び付ける必要がある．
-本稿では，正の重み付き SNC divisor を持つ射影曲面の有限相対 compactification を構成し，
+本稿の中心結果は，一般位置の全平面退化において，actual 負 Kähler--Einstein 形式に関する
+大域 Lagrangian fibration と，その射影に標識付き基底収縮を合成した
+同じ写像によって，径の尺度での計量極限を実現することである．
+この構成を支える相対幾何として，正の重み付き SNC divisor を持つ射影曲面の有限相対 compactification を構成し，
 それを一般型超曲面の退化へ適用する．
 曲線成分には任意の genus を許し，divisor 上の marked Morse 葉層，
 core 近傍の primitive，交点の product germs を同時に制御する．
@@ -18,7 +21,7 @@ node 数，および底空間の homotopy type を変更できる．
 共有 branch に沿う大域的な算術制約は，companion 論文
 \cite{QuinticArithmetic}で扱う．
 
-さらに，固定した一般位置の全平面退化に対し，actual 負 Kähler--Einstein 形式で
+固定した一般位置の全平面退化に対し，actual 負 Kähler--Einstein 形式で
 同じ相対構成を計量的に制御する．$R_t=\log(-\log|t|^2)$ とすると，
 標識付き基底収縮と fibration の合成 $f_t=p_T\pi_t$ が
 \[
@@ -32,6 +35,32 @@ node 数，および底空間の homotopy type を変更できる．
 一般の symplectic 存在構成と，この特定退化族に対する KE 計量実現は，
 仮定と証明を分けて記述する．関連する局所 KE 崩壊および
 Lagrangian 構成との比較は第\ref{intro:ke-collapse}節で行う．
+
+\paragraph{三つの存在主張の量化．}\label{intro:existence-scopes}
+本稿で用いる選択の自由度は，次の三つで異なる．
+\begin{enumerate}
+\item \emph{指定 Kähler 形式での一般存在．}
+滑らかな $X_d$ と $[\omega]=aH$ の Kähler 形式を先に固定し，
+実際の punctured curves 上の所定の型の marked Morse 葉層の相対 isotopy class
+（全平面分割では marked pants trees）を先に指定して
+fibration を構成する（定理\ref{main:global}，定理\ref{part:global}）．
+SNC 相対定理では，正の weighted divisor 表示と各成分の二つ以上の交点を仮定し，
+同じ Kähler class の代表 $\omega'$ と normal holonomy を構成中に選ぶ
+（定理\ref{snc:main}）．
+\item \emph{Actual KE 計量による実現．}
+次数と一般性条件を満たす退化族を先に固定し，一つの木系 $T$ と
+全ての十分小さい複素 $t\ne0$ に対する射影 $\pi_t$ を選ぶ．
+各 $\pi_t$ は連続であり，$f_t=p_T\pi_t$ の全域 distortion が零へ向かう．
+この選択は $t$ 方向に連続又は滑らかな fibration 族を与えるとは限らず，
+任意の先指定木系・critical values への適合も主張しない．
+\item \emph{作用適合 matroidal atlas．}
+五次・六次では，各指定 Kähler 形式に対して atlas を持つ fibration を選べる
+（定理\ref{main:action-atlas}）．しかし，これと KE 計量実現を
+\emph{同じ} $\pi_t$ で同時に達成することは未証明である
+（注意\ref{main:atlas-ke-scope}）．七次以上では，実際に GH 極限を実現する
+$\pi_t$ の基底の各 core 近傍が位相的に非 matroidal となる
+（系\ref{ke:global-core-nonmatroidal}）．
+\end{enumerate}
 
 基底は，自由な辺を持たないコンパクトな分岐二次元複体である．
 「境界がない」とはこの自由辺の不存在を意味し，分岐辺の内点には三枚の sheets が接する．
@@ -104,8 +133,11 @@ asymptotically special となる性質を示す．
 
 Zhang\cite[Theorem 1.1]{Zhang}は，次数 $d$ の超曲面と微分同相な四次元多様体を，
 $d(d-4)^2$ 個の四次元 pants と K3 に由来する領域などに分解している．
-その境界には，torus と $S^1\times(S^1\vee S^1)$ を fibers とする graph への
-fibration が構成される．同論文の Introduction には，
+その pants 領域の境界には，torus を一般 fiber とする graph への fibration が構成される．
+参照した preprint の Figure~1.1 と Theorem~1.1(ii) における特異 fiber は
+$\Theta\times S^1$ であり，$\Theta$ は二つの三価頂点を持つ theta graph である．
+これは本稿の一つの四価頂点を持つ $(S^1\vee S^1)\times S^1$ と同相ではない．
+同論文の Introduction には，
 五次曲面の五平面退化から五個の pants を得る記述もある．
 本稿の五次の場合は，この既存の幾何学的構図を踏まえている．
 一方，torus に対する積分 $\int_T\omega=0$ と，
@@ -229,8 +261,10 @@ component の内部に対応する残余領域を埋めることは追加の問�
 同論文の Example 5.8 もこの差を説明している．
 本稿では，この残余領域に core を含む finite compactification を入れ，
 double-curve necks および triple-point models と有限の overlaps 上で接着する．
-同論文の Theorem 6.14 は，構成した Kähler 計量について適切な規格化の下での
-GH 収束も与えている．その計量と本稿の actual 負 KE 計量の区別は
+同論文の Theorem~6.14(b) の fibration の定義域はこの部分領域だが，
+同定理(c) の GH 収束は構成した Kähler 計量を入れた $W_z$ 全体を扱い，
+退化写像が proper なら $W=X$ と取れる．従って同論文の GH 結論まで
+部分領域だけのものとは解釈しない．その計量と本稿の actual 負 KE 計量の区別は
 第\ref{intro:ke-collapse}節で述べる．
 
 central fiber から symplectic parallel transport で fibration を移す考え方には，
@@ -575,7 +609,7 @@ focus values 自体に matroidal chart を延長する主張ではない．
 
 \subsection{負 Kähler--Einstein 退化との計量的な比較}\label{intro:ke-collapse}
 
-定理\ref{ke:global-realization}は，Lagrangian fibration の射影自体によって，
+定理\ref{ke:global-realization}は，Lagrangian fibration の射影に標識付き基底収縮を合成した写像によって，
 負 KE 計量の径の尺度での Gromov--Hausdorff 極限を実現する．
 Actual KE 形式に関する fibration $\pi_t:X_t\to B_d(T)$ と
 標識付き収縮 $p_T$ の合成について，全曲面の ambient 距離に対する
@@ -614,8 +648,11 @@ bubble として現れることを証明している．これは負 KE 退化の
 先行結果であり，全平面 SNC 退化の全曲面を同じ Lagrangian 射影で比較する
 本稿の主張とは，退化模型と極限の尺度を区別して比較する．
 
-Fernández de Bobadilla--Pełka\cite[Theorem 6.14]{FBP}の GH 定理で使われるのは，
-選んだ Kähler 形式への exact な補正から作る $\omega_q^\varepsilon$ である．
+Fernández de Bobadilla--Pełka\cite[Theorem 6.14(b),(c)]{FBP}では，
+部分領域上の ivy-like fibration と，proper な場合の全 nearby fiber の GH 収束が得られる．
+その計量は，選んだ Kähler 形式への exact な補正から作る $\omega_q^\varepsilon$ による．
+Proposition~6.13 と Theorem~6.14(c) はこの計量を再尺度化して双対複体へ収束させる．
+本稿との比較では，領域の全域性だけでなく，二形式・尺度・射影を同時に区別する．
 Calabi--Yau の場合にも，これと Ricci-flat 形式は区別されている
 \cite[Introduction, Remark 7.4]{FBP}．同じ cohomology class の形式を各固定 $t$ で
 Moser 移送できても，その移送の計量的な一様性は別に必要である．

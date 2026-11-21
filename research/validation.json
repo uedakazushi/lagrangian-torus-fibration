@@ -1,8 +1,8 @@
 {
   "date": "2026-11-21",
-  "version": "3.10",
+  "version": "3.11",
   "scope": "複素次元2の現行研究状態。旧三次元稿の組版・監査記録ではない。数学的な証明と、その再監査、組版、整数計算、GitHub保存、Cloudタスク起動を区別する。",
-  "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。全域quotientと全fiber連結性・Euler予算を対象限定で内部点検した。次はIntroduction・主定理のscopeと既知結果比較を全域構成から逆向きに確認し、包括的依存監査・新規性確認・主稿構成整理を進める。",
+  "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。一般存在・P0・作用atlasの量化と主要な一次比較を対象限定で点検した。包括的依存監査と新規性確認を継続し、d=5,6の同時atlas/GHは既存P0から区別した追加課題として扱う。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
   "mathematics": {
@@ -82,7 +82,9 @@
       "glue:closed-whole-fiber-quotient: compact Hausdorff空間の有限閉被覆、各local mapのcompact Hausdorff base、全overlapの双方のwhole-fiber飽和とpartition一致から、local fiber relationsの有限和が閉同値関係であると直接証明。各globalfiberはlocalfiberそのもので、各local baseはquotientへ閉埋込み。一般存在とactual全域構成に適用。",
       "ke:global-base-parameterization: finite closed pieces上の写像をまずXt上で貼り、quotientの普遍性からhの連続性を得ると明示。QのHausdorff性、corner capのdisk判定、hの同相性は循環せず成立。",
       "topo:connected-preimages / topo:cubical-composite-connected: compact Hausdorffからの連結fiber連続全射は全連結部分集合を連結な逆像へ送る。同じf_t=p_Tπ_tの全fibersも連結。内部木上の合併は三次元部分を含み得て、可縮性やLagrangian性は結論しない。",
-      "inv:euler-pushforward / inv:cubical-fiber-euler: 有理定数層のcompact-support Euler数、有限base cell分割と局所product、coreの閉stable-cell filtrationから、π_*1はnodesとcoresのみを支持に持つ。各node1、各coreC(d−3,2)、総数dC(d,2)とd。CoarsefiberのEuler数はそのcubical値へ写るnodesの重複度とcore寄与の和。Whitney/subanalytic性は追加しない。"
+      "inv:euler-pushforward / inv:cubical-fiber-euler: 有理定数層のcompact-support Euler数、有限base cell分割と局所product、coreの閉stable-cell filtrationから、π_*1はnodesとcoresのみを支持に持つ。各node1、各coreC(d−3,2)、総数dC(d,2)とd。CoarsefiberのEuler数はそのcubical値へ写るnodesの重複度とcore寄与の和。Whitney/subanalytic性は追加しない。",
+      "ke:global-core-nonmatroidal: d>=7ではP0の同じB_d(T)の全core linkのb1=binom(d-2,2)>=10が三価matroidal linkの上限8を超える。既存位相分類と全域構成の直接系。",
+      "main:atlas-ke-scope, ke:atlas-ke-value-criterion: d=5,6で各actual KE formにatlas fibrationは存在するがP0のπ_tとの同時選択は未証明。別のatlas射影のcubical値差δ_t→0ならdistortion<=既存distortion+2δ_t。"
     ],
     "publication_review_pending": [
       "統合定理から逆にたどる外部KE結果・既存局所証明・一次文献の包括的な再点検",
@@ -115,45 +117,23 @@
     },
     "this_audit": {
       "date": "2026-11-21",
-      "scope": "改訂30：有限閉whole-fiber quotient、一般/actual全域構成への適用、hの非循環な同相性、同じcubical合成の全fiber連結性を内部点検。Finite-support Euler関数とcoarsefiberのEuler数を証明し、一般node総数・面ごとの配置・作用atlas下の剛性を区別。",
-      "reexecuted_build": true,
+      "scope": "改訂31：一般存在・SNC相対構成・P0・作用atlasの量化を本文から照合。d>=7の同じP0基底のcore非matroidal性を既存結果の直接系として統合し、d=5,6同時atlas/GHの未証明条件と値比較を明示。FBPの全fiber補助metricGHとZhangのtheta型を一次資料で確認。",
+      "reexecuted_build": false,
       "reexecuted_static_checks": true,
       "reexecuted_python_suite": false,
       "six_label_finite_command": "python3 verification/verify_cubical_six_label_geometry.py",
-      "six_label_finite_result": "既存の有限検算PASSを保持。改訂30では関連計算箇所を変更せず再実行していない。",
+      "six_label_finite_result": "既存の有限検算PASSを保持。改訂31では関連計算箇所を変更・再実行していない。",
       "independent_internal_proof_review": [
-        "glue:closed-whole-fiber-quotient: finite relationの推移性、U#によるHausdorff分離、各local baseの閉埋込み、globalfiber=localfiberを独立内部点検。",
-        "ke:whole-fiber-core-trim / ke:actual-global-fibration: 補間後partition、共通Liouville collar、固定stage全被覆、compact closed neck/corner pieces、core skeleton連結性を点検。",
-        "ke:global-base-parameterization: Qの閉商、corner capのdisk証明、explicit hとfinite-pasting/quotientの依存に循環がないことを独立内部点検。",
-        "topo:connected-preimages / topo:cubical-composite-connected: 相対閉写像の証明と内部木の逆像への適用を独立内部点検。",
-        "inv:euler-pushforward / inv:cubical-fiber-euler: finite local products、constant sheaf χ_cの閉開加法性、c_k閉filtration/Morse handle、node counts、coarsefiberの重複度、面別配分とatlas剛性の適用範囲を独立内部点検。"
+        "一般存在main:global/part:globalとSNC相対定理のform・holonomy・marked葉の量化を本文のMoser経路と照合。",
+        "ke:global-realization / ke:global-metric-realizationの固定族→一つのT→stage→全小複素parameterの順序、各π_tの連続性、t方向の連続性未主張、R^-2gとR^-1dの規格化を照合。",
+        "ke:global-core-nonmatroidal: coreの局所H2 rankと三価matroidal linkの上限による直接系を内部点検。",
+        "main:atlas-ke-scope / ke:atlas-ke-value-criterion: 別々の存在命題を同時存在に読み替えず、既存値比較不等式の適用を点検。",
+        "追加3節・Introduction・abstractを独立担当が読み合わせ、local H2のrank、既存値比較への代入、isotopy classの指定と固定した実葉層の区別を点検。"
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
-      "visual_pages_reviewed": [
-        1,
-        5,
-        6,
-        7,
-        8,
-        45,
-        46,
-        49,
-        50,
-        173,
-        174,
-        175,
-        182,
-        183,
-        184,
-        185,
-        260,
-        261,
-        262,
-        263,
-        266
-      ],
-      "current_build_status": "Revision 30 final PDF compiled to 269 pages with PDF/SyncTeX present; no unresolved references/citations, duplicate labels, missing glyphs or overfull boxes. All 21 selected pages reviewed: 5 changed pages re-viewed after final edits, 16 remaining renders pixel-identical to the reviewed build. Full-page visual audit not performed.",
+      "visual_pages_reviewed": [],
+      "current_build_status": "Revision 31 source updated; build and visual QA not yet performed. Latest completed main build remains revision 30.",
       "source_nodal_focus_audit": {
         "status": "targeted_internal_review_completed",
         "scope": "Source quadratic and proper saturated focus neighborhood, residual primitive period, existing exact Moser application; area-normalized relative blow-up and whole nodal-neighborhood transport. No new P0 analytic hypothesis. Comprehensive proof and novelty audit remains pending."
@@ -162,6 +142,10 @@
       "topology_euler_audit": {
         "status": "targeted_internal_review_completed",
         "scope": "No new P0 hypothesis or invalid global quotient found in the inspected construction. General closed-piece wording strengthened with explicit whole-fiber conditions. Previous note on uniform facewise node counts restricted to the chosen atlas recipes; the existing sextic atlas rigidity under its additional hypotheses is retained."
+      },
+      "publication_scope_audit": {
+        "status": "targeted_internal_review_completed",
+        "scope": "No new hypothesis added to P0. Simultaneous atlas/GH is not claimed. Prior-literature scope corrected without treating citation corrections as a failure of the constructed fibration. Full proof/novelty audit remains pending."
       }
     }
   },
@@ -236,7 +220,7 @@
       "FBP": {
         "source": "Fernández de Bobadilla–Pełka, arXiv:2312.13248v4; Theorem 6.14, Example 5.8, Introduction, Remark 7.4",
         "url": "https://arxiv.org/html/2312.13248v4",
-        "verified": "一次HTMLの指定箇所で部分領域・構成Kähler形式・GH収束の範囲を確認。Actual KE形式との同一視はせず、証明入力にしない。"
+        "verified": "arXiv v4 Theorem6.14(b)は部分領域上のivy-like fibration、(c)はproperならW=Xとして全nearbyfiberの構成Kähler計量のGH収束。Proposition6.13 pp30–31/Thm6.14 p31、Remark7.4を確認。Actual負KE計量との同一視や本稿への解析入力には用いない。"
       },
       "FHJ": {
         "source": "Fu–Hein–Jiang, A continuous cusp closing process for negative Kähler–Einstein metrics, GAFA 35 (2025), 542–632, §1.1 Main Theorem",
@@ -275,6 +259,14 @@
       "Papadima_Suciu": "Higher homotopy groups of complements of complex hyperplane arrangements, Advances in Mathematics165 (2002), 71–100, DOI10.1006/aima.2001.2023. Published PDF https://pages.uoregon.edu/njp/PS02.pdf, section1.1 p.72 (PDF p.2) read directly: generic n hyperplanes in C^ell, n>ell, complement homotopy equivalent to the ell-skeleton of T^n. For m projective lines use ell=2,n=m−1.",
       "Hattori": "Original record https://repository.dl.itc.u-tokyo.ac.jp/records/39761 returned HTTP429 during this audit; original proof not rechecked. Statement matched against the specified Papadima–Suciu passage.",
       "scope": "Euler budget itself also follows directly from inclusion-exclusion, finite Morse handle decomposition, and the manuscript closed stable-cell filtration. The homotopy classification is known; no novelty claim is made for it or for Euler additivity."
+    },
+    "publication_fibration_comparison": {
+      "Mikhalkin": "arXiv:math/0205011v3 Theorems1/1prime pp17–18, Definition7 pp13–14。Compact hypersurfaceのstratified torus fibration、各maximal cellで少なくとも一つのLagrangian fiber。",
+      "Matessi": "arXiv:1802.02993v1 Theorem1.1 pp1–2 と arXiv:1804.01469v1 Theorem1.1 pp1–3。標準cotangent形式に関する半次元のembedded Lagrangian lift。Pants全体のtorus fibrationではない。",
+      "Ruan": "arXiv:math/9904012v2 Theorem3.1 p15, §§2/6 pp6–7/36–37。Fubini–StudyのFermat quintic CY3。arXiv:math/0309177v2 Theorems3.1 p9/4.2 p11 は局所H-minimal fibrationとminimal vanishing tori。",
+      "Evans_Mauri": "掲載版Ann.Henri.Lebesgue4(2021), Lemma2.16 pp543–544, Remark2.18 p544, Lemma2.22/Remark2.23 p545, Lemma3.1/§3.1 pp546–547。Completionのcone extensionと四直線補集合のfigure-eight型。",
+      "Zhang": "arXiv:2102.10037v1 p2 Figure1.1を画像確認、p4 Theorem1.1(ii),(iv)。境界fiberはTheta×S1でfigure-eight×S1とは非同相、積分zeroとpointwise Lagrangianを区別。掲載版公開PDFはHTTP403で本文未再確認。",
+      "scope": "記載した一次資料の定理・対象・図の確認であり、全原典の証明再監査や網羅的新規性確認ではない。"
     }
   },
   "other_papers": {

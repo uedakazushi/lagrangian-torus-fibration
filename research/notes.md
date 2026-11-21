@@ -1,5 +1,5 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-21 / v3.10
+更新：2026-11-21 / v3.11（主稿改訂31）
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
@@ -8,6 +8,8 @@
 主稿 `ke:global-realization` と統合証明 `ke:global-metric-realization` は、任意の固定 $d\ge5$ と既存一般性条件の全平面退化について、actual負KE形式の全域fibrationと、同じ $f_t=p_T\pi_t$ の全曲面ambient距離に関するdistortion消失を与える。潰される内部木上の全fiber合併も一様に収縮する。**原稿に証明があり、必要な証明箇所と接続を複数担当で内部点検している。** 形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的な新規性確認は未実施である。現在は公表に向けた一次文献・依存結果・主稿構成の点検を優先する。
 
 対象・結論の範囲と優先順位は [研究方針](../00_research_plan.md)、外部定理のpath・label・確認commitは [KE依存表](ke-dependencies.md) を参照する。ここには証明全文を複製せず、核心、入力の区別、有効な障害を残す。十分遅い対角選択と一つの許容された木系を使う結論であり、最適rate、任意の先指定木系への適合、全次数のmatroidal atlasは含まない。
+
+一般存在定理、P0、作用適合atlasでは存在量化されるfibrationが異なる。一般存在は各所定Kähler形式に対するあるfibration、P0はactual KE形式に対し同じ $p_T\pi_t$ の距離を制御するある族、五次・六次のatlasは作用period・critical-region areasを合わせて選んだfibrationの結論である。五次・六次でも、P0を実現する同じ $\pi_t$ が大域作用適合matroidal atlasを持つことは未証明であり、別々の存在命題をその同時実現へ読み替えない。さらに $d\ge7$ のP0構成では、core頂点の局所基底そのものにmatroidal chartが存在しない（`ke:global-core-nonmatroidal`）。これは当該構成のcoreに対する結論であり、一般型曲面上の任意の別fibrationの不存在ではない。
 
 ## 閉whole-fiber quotientと合成写像のEuler関数
 
@@ -476,7 +478,7 @@ Mandel, *Degenerations of negative Kähler–Einstein surfaces*, JLMS 109 (2024)
 
 Fu–Hein–Jiang, *A continuous cusp closing process for negative Kähler–Einstein metrics*, GAFA **35** (2025), 542–632, DOI [10.1007/s00039-025-00708-y](https://doi.org/10.1007/s00039-025-00708-y), §1.1 Main Theorem は、孤立楕円特異点へ退化する六次曲面のactual負KE計量とTian–Yau bubbleを扱う。掲載本文の定理と対象族を確認した。全平面SNC退化の全域Lagrangian射影による径の尺度の比較とは区別し、本稿の解析入力には用いない。91頁の接着証明全体を再監査したものではない。
 
-Fernández de Bobadilla–Pełka の [最終preprint arXiv:2312.13248v4](https://arxiv.org/html/2312.13248v4), Theorem 6.14・Example 5.8・Introduction・Remark 7.4を照合した。境界・角付きの部分領域にivy-like fibrationを構成し、exact補正で作るKähler形式についてGH収束も与える。ここで使う形式はactual KE形式とは別である。公表用比較では、全域へのcore fillingと、指定されたactual計量への定量的な比較をそれぞれ明示する。
+Fernández de Bobadilla–Pełka の [最終preprint arXiv:2312.13248v4](https://arxiv.org/html/2312.13248v4), Theorem 6.14・Example 5.8・Introduction・Remark 7.4を照合した。Theorem 6.14(b)のivy-like Lagrangian fibrationは境界・角付きの余次元零部分領域に定義される。一方、(c)のGH収束は $W_h$ 全体を扱い、退化写像がproperなら $W=X$ と取れるため、全nearby fiberと未被覆部分の対の収束である。従ってGHの結論まで部分領域だけに限定しない。そこでのKähler形式 $\omega_q^\varepsilon$ はexact補正で構成する補助形式であり、actual KE形式とは同一視されない。本稿との比較では、全域へのcore fillingと、指定されたactual計量への定量的比較をそれぞれ明示する。
 
 同一classのMoser移送 $\phi_t^*\omega_t'=\omega_t$ は、複素構造を固定した計量の比較を含意しない。$\phi_t^*g_t'=\omega_t(\cdot,\phi_t^*J\cdot)$ と $g_t=\omega_t(\cdot,J\cdot)$ の差を制御する必要がある。本稿は小さい局所移送とscalar/portalの直接評価を用いる。文献間でKähler class・Lagrangian性・actual距離の三条件をまとめて同一視しない。
 
@@ -504,7 +506,7 @@ KE研究の `papers/cubical-gh-limit.tex` では $R_t=\log(-\log|t|^2)$、$\math
 **解析入力の区別：** 関連KE主稿の `coarse:prop:density-counterexample` により、負KE計量であってもbounded volume densityから一様tensor比較は導けない。五次coarse metric packageには独立な $(\mathrm{TC})_5$ が必要であり、その無条件な検証は未完成である。これは対象compact familyの反例ではない。全深部三重点のfull-orbit moving tensor比較は全固定d≥5で検証した。Source等を含むexterior全体への一様tensor二側比較の拡張は未解決である。本稿の全域距離比較は別のscalar/portal評価により得た。
 
 ### Averaging–Moserの先行研究
-W.-D. Ruan, *H-minimal Lagrangian fibrations in Kähler manifolds and minimal Lagrangian vanishing tori in Kähler–Einstein manifolds*, arXiv:math/0309177v2, https://arxiv.org/abs/math/0309177v2 。§3 Proposition 3.1はpotentialのtorus平均、Lemma 3.3はHamiltonian-gradient flowを扱い、Theorem 3.1はhomothetic toric potentialと一様 $C^\infty$ quasi-isometryの下でH-minimal fibrationを構成する。Theorem 4.2はsimple toroidal canonical degenerationの最大退化点へ消えるminimal torusの存在を示す。
+W.-D. Ruan, *H-minimal Lagrangian fibrations in Kähler manifolds and minimal Lagrangian vanishing tori in Kähler–Einstein manifolds*, [arXiv:math/0309177v2](https://arxiv.org/abs/math/0309177v2)。§3 Proposition 3.1（PDF p.7）はpotentialのtorus平均、Lemma 3.3（p.8）はHamiltonian-gradient flowを扱う。Theorem 3.1（p.9）はhomothetic toric potentialと一様 $C^\infty$ quasi-isometryの下で、局所領域 $D_{\Delta_{c\tau}}$ に全正則fibersがH-minimal Lagrangianであるfibrationを構成する。Theorem 4.2（p.11）はsimple toroidal canonical degenerationの最大退化点へ消えるminimal torusの族であり、全域fibrationの定理ではない。関連する [math/0311098v2](https://arxiv.org/abs/math/0311098v2), Theorems 6.2・8.2（pp.15, 19–20）は、complex torus内の非compact hypersurfacesのcomplete KE Cheeger–Gromov極限とminimal vanishing toriを扱う。
 
 本研究の補題はperiod-zero、$C^0$ tensor比較、短い生成場だけを用いてprimitiveとambient diameterを直接評価する。Ruanの高階幾何とH-minimal性の結論は求めない。既存方法の定量化として位置付け、新規性は未確認。ZhangのTheorem 2.6の個別generalized special Lagrangian torusの存在とも、全域のsingular fibrationとも区別する。
 
@@ -604,13 +606,16 @@ d^c(AF-F)(\partial_{\theta_1})
 
 **一次資料の比較：**
 - I. Smith, *Torus fibrations on symplectic four-manifolds*, Turkish J. Math. **25** (2001), 69–96, https://journals.tubitak.gov.tr/math/vol25/iss1/4/ 。Homologically essential Lagrangian toriとtame singularitiesという追加条件下での閉四次元多様体の制限定理。本研究の分岐・core特異ファイバーへの直接適用は、tamenessとregular torusのhomology classの検証なしにしない。
-- G. Mikhalkin, *Decomposition into pairs-of-pants for complex algebraic hypersurfaces*, Topology **43** (2004), 1035–1065, DOI 10.1016/j.top.2003.11.006、Theorem 1。任意次数・次元のstratified topological torus fibrationは既知。各maximal cellで少なくとも一つのLagrangian torusを与えるが全regular torusがLagrangianとはいわない。
+- G. Mikhalkin, *Decomposition into pairs-of-pants for complex algebraic hypersurfaces*, Topology **43** (2004), 1035–1065, DOI 10.1016/j.top.2003.11.006。[math/0205011v3](https://arxiv.org/abs/math/0205011v3) のDefinition 7（PDF pp.13–14）、Theorems 1・1′（pp.17–18）を確認。射影・toric hypersurface全域のstratified torus fibrationを構成し、ambientから誘導する形式に対して各maximal cellで少なくとも一つのLagrangian torusを保証する。全regular fibersのLagrangian性を定理から読み取らず、他のfibersが非Lagrangianだとも断定しない。
+- D. Matessi, *Lagrangian pairs of pants*, IMRN **2021**, 11306–11356, DOI 10.1093/imrn/rnz126、および *Lagrangian submanifolds from tropical hypersurfaces*, Int. J. Math. **32** (2021), 2150046。[1802.02993v1](https://arxiv.org/abs/1802.02993v1) のTheorem 1.1と直後（PDF pp.1–2）、標準cotangent形式（p.6）、[1804.01469v1](https://arxiv.org/abs/1804.01469v1) のTheorem 1.1と§1.2（pp.1–3）を確認。前者はtropical curves in $\mathbb R^2$、後者はtropical hypersurfaces in $\mathbb R^3$ のPL liftを滑らかなembedded Lagrangian部分多様体へ近似する。標準形式を持つ $(\mathbb C^*)^n$ 内の半次元部分多様体の構成であり、symplectic pants全体のtorus fibrationではない。後者のtoric compactificationの完全な構成は同Introductionで今後の課題とされる。
+- W.-D. Ruan, *Lagrangian torus fibration of quintic hypersurfaces. I. Fermat quintic case*, AMS/IP Studies in Advanced Mathematics **23** (2001), 297–332。[math/9904012v2](https://arxiv.org/abs/math/9904012v2) の§2（PDF pp.6–7）、Theorem 3.1（p.15）、§6（pp.36–37）を確認。Fubini–Study形式でcompact Fermat型Calabi–Yau三次元多様体の全regular fibersをLagrangian $T^3$ とする。Discriminantは厚みを持つ二次元集合で、写像はpiecewise smooth・大域Lipschitzと説明される。本稿の $\mathbb P^3$ 内の一般型五次曲面とは次元もcanonical classも異なる。負KEに対する局所構成は上記「Averaging–Moserの先行研究」を参照。
 - N. C. Leung and M. Symington, *Almost toric symplectic four-manifolds*, J. Symplectic Geom. **8** (2010), 143–187, DOI 10.4310/JSG.2010.v8.n2.a2、**Theorem 2.1**, Table 1。閉almost toric 4-foldの全空間を分類し、一般型曲面X_dは含まれない。通常のalmost toricはsmooth surface base、ellipticと孤立focus singularitiesが許される。本研究はbranched baseとlog-Weinstein coreを許し、仮定が異なる。
-- J. D. Evans and M. Mauri, *Constructing local models for Lagrangian torus fibrations*, Ann. Henri Lebesgue **4** (2021), 537–570, DOI 10.5802/ahl.80、§3.1。P²から一般位置4直線を除く4-dimensional pair of pantsのLagrangian fibrationを構成し、cone over K₄のbranch/coreモデルを与える。曲面の「core singular fiberの局所模型」の直接的先行結果。
+- J. D. Evans and M. Mauri, *Constructing local models for Lagrangian torus fibrations*, Ann. Henri Lebesgue **4** (2021), 537–570, [DOI 10.5802/ahl.80](https://doi.org/10.5802/ahl.80)、[1905.09229v3](https://arxiv.org/abs/1905.09229v3)。掲載版Lemma 2.16（pp.543–544）、Remark 2.18（p.544）、Lemma 2.22・Remark 2.23（p.545）、Lemma 3.1と§3.1（pp.546–547）を確認。四直線補集合のsymplectic completion上に、cone over $K_4$ を基底とする全regular fibersがLagrangianなfibrationを構成し、branch fiberを明示的に $S^1\times(S^1\vee S^1)$、cone fiberをskeletonとする。形式の構成・変形とcontact formの正の関数倍を許すため、所定finite collarと全葉を同時に保存する相対延長とは分ける。曲面core模型の直接的先行結果である。
 - M. Golla and B. Martelli, *Pair of pants decomposition of 4-manifolds*, Algebr. Geom. Topol. **17** (2017), 1407–1444, DOI 10.2140/agt.2017.17.1407。四次元pants decompositionの微分位相。
-- Y. Zhang, *Pair-of-Pants Decompositions of 4-Manifolds Diffeomorphic to General Type Hypersurfaces*, J. Math. Study **58** (2025), 211–252, DOI 10.4208/jms.v58n2.25.06、Theorem 1.1。X_dと微分同相な四次元多様体にd(d−4)²個のpantsとK3由来の部分領域を用いる分解。境界にS¹×(S¹∨S¹)などの位相的な分岐模型を含む。所定のωの下で**全regular torus fibersをLagrangianにする大域構成**とは区別する。
-- J. Fernández de Bobadilla and T. Pełka, *Fibrations by Lagrangian Tori for Maximal Calabi–Yau Degenerations and Beyond*, CPAM (2026), DOI 10.1002/cpa.70060、Theorem 6.14。一般Kähler SNC退化のmaximal/submaximal strataに対応する部分領域のLagrangian fibrationを構成する。本研究は未充填のcomponent-core領域のfinite compactificationと実際のoverlap gluingを必要とする。
-Leung–Wan (JDG **83** (2009))の一般型での漸近special性はMikhalkinが選んだLagrangian fibersに関するもので、全regular fibersではない。これらの結果を踏まえ、「一般型で初めてtorus fibrationを構成する」といわず、所定のKähler formで**全regular fibersがLagrangianな閉曲面上のglobal construction**を本稿独自の主張として、証明監査と先行研究の網羅性を引き続き検証する。
+- Y. Zhang, *Pair-of-Pants Decompositions of 4-Manifolds Diffeomorphic to General Type Hypersurfaces*, J. Math. Study **58** (2025), 211–252, [DOI 10.4208/jms.v58n2.25.06](https://doi.org/10.4208/jms.v58n2.25.06)。[2102.10037v1](https://arxiv.org/abs/2102.10037v1) のFigure 1.1（PDF p.2、実画像確認）とTheorem 1.1(ii),(iv)（p.4）を確認。$d\ge5$ の $X_d$ と微分同相な四次元多様体を $d(d-4)^2$ 個のpantsとK3由来の領域などへ分解し、pants側境界にgraph fibrationを与える。その特異fiberは $\Theta\times S^1$（$\Theta$ は二つの三価頂点を三辺で結ぶtheta graph）であり、本稿の $(S^1\vee S^1)\times S^1$ とは同相でない。Hyperplane classに対する $\int_T\omega=0$ を示すが、点ごとの $\omega|_T=0$ や閉曲面全域のLagrangian fibrationは結論しない。掲載版PDFは公開URLでHTTP 403となり、今回の図・定理本文の照合は2021 preprintに限定する。
+- J. Fernández de Bobadilla and T. Pełka, *Fibrations by Lagrangian Tori for Maximal Calabi–Yau Degenerations and Beyond*, CPAM (2026), DOI 10.1002/cpa.70060。[2312.13248v4](https://arxiv.org/html/2312.13248v4) のTheorem 6.14(b)は一般Kähler SNC退化のmaximal/submaximal strataに対応する部分領域のivy-like Lagrangian fibration、(c)はproperな場合には全nearby fiberの補助Kähler計量によるGH収束を与える。全域core fillingの不足とactual KE計量への比較の不足は異なる論点である。詳細は本ノート「二つの尺度と先行定理」を参照。
+
+Leung–Wan (JDG **83** (2009))の一般型での漸近special性はMikhalkinが選んだLagrangian fibersに関するもので、全regular fibersではない。これらの結果を踏まえ、「一般型で初めてtorus fibrationを構成する」といわず、所定のKähler formで**全regular fibersがLagrangianな閉曲面上のglobal construction**を本稿で証明する主張として、証明監査と先行研究の網羅性を引き続き検証する。
 
 **全平面分割における主定理のfiber一覧：**
 - 2D top stratum: 正則Lagrangian T²、Euler数0。
@@ -664,4 +669,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 ## 検証状態
 
 
-2026-11-21 / v3.10：主稿改訂30に、有限閉whole-fiber quotient、同じ合成写像の全fiber連結性、fiber Euler関数の有限支持とcoarse fiber公式を統合した。Quotientと基底同定の非循環性を重点点検し、例示した面ごとのnode配分と一般存在の総数公式を区別し、作用適合atlasの追加仮定下における六次bigonの剛性も保持した。**改訂30をLuaLaTeXで269頁に組版し、変更箇所を含む指定21頁を表示確認した。最終修正後は変更5頁を再表示し、残り16頁は確認済み画像とpixel単位で同一であることを確認した。未解決参照・引用、重複ラベル、欠字、overfull boxはない。全269頁の逐頁再点検ではない。** 実行範囲は [検証状態](validation.json) を参照する。数学的点検・組版・保存は別々に記録する。整数検算suite・他論文・TeX研究ノートの再組版は今回未実行。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。
+2026-11-21 / v3.11：主稿改訂31のIntroduction・先行研究比較と定理の量化を点検し、Zhangのtheta graphと本稿のMorse saddle全葉、FBPの部分fibrationとproper時の全fiber GH収束を区別した。一般存在・P0・作用atlasの別々の存在量化と、$d\ge7$ のP0 coreの非matroidal性を現行資料へ統合している。**改訂31の組版・表示確認は未実行。直前に完了した改訂30はLuaLaTeXで269頁に組版し、指定21頁を表示確認済みで、未解決参照・引用、重複ラベル、欠字、overfull boxはなかった。** 詳しい実行範囲と最終PDFの識別情報は [検証状態](validation.json) に保持する。数学的点検・組版・保存は別々に記録する。整数検算suite・他論文・TeX研究ノートの再組版は今回未実行。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。

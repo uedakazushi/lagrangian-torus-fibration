@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v2.0: 大域 KE--Lagrangian 実現の主張と証明の構成．
+% 2026-11-21 / v2.1: 大域 KE--Lagrangian 実現の量化と作用 atlas との適合条件．
 \section{負 KE 極限を実現する大域 fibration}
 \label{ke:global-realization-section}
 
@@ -72,6 +72,8 @@ $p_T:B_d(T)\to\mathcal C_d$ に対し，$f_t=p_T\circ\pi_t$ と置くと，
 collar の位置，作用座標の表示，および基底の parameter 化には $t$ 依存を許す．
 任意に既定の $T$ や任意に固定した critical values に対する実現は，
 この定理の結論に含めない．
+連続性は各固定 $t$ の写像 $\pi_t:X_t\to B_d(T)$ についての条件であり，
+$t$ 方向に連続又は滑らかな fibration 族を与えるという主張ではない．
 \end{theorem}
 
 第一条件は定理\ref{ke:actual-global-fibration}，第二条件は
@@ -80,6 +82,27 @@ collar の位置，作用座標の表示，および基底の parameter 化に�
 定理\ref{ke:global-metric-realization}が共通の遅い対角選択を与える．
 次数範囲は各固定 $d\ge5$ であり，正則部分の action--angle structure を超える
 全基底の matroidal atlas や special Lagrangian 性は結論に含めない．
+
+\begin{remark}[Atlas との同時実現に十分な値比較]\label{ke:atlas-ke-value-criterion}
+$d=5,6$ とし，本定理の $f_t=p_T\pi_t$ に加えて，一つの固定木系 $\widehat T$ に対し，
+atlas を持つ別の actual Lagrangian fibration
+$\widehat\pi_t:X_t\to B_d(\widehat T)$ を選べたとする．
+対応する labelled 収縮を用いて $\widehat f_t=p_{\widehat T}\widehat\pi_t$ と置く．
+もし
+\[
+ \delta_t:=\sup_{x\in X_t}d_\square(f_t(x),\widehat f_t(x))\longrightarrow0
+\]
+を証明できれば，命題\ref{topo:ke-map-compatibility}の直接の適用により
+\[
+ \operatorname{dis}(\widehat f_t)
+ \le\operatorname{dis}(f_t)+2\delta_t\longrightarrow0
+\]
+となる．これは新たな比較原理ではなく，既存の一様基底値比較をこの二つの射影へ適用したものである．
+未解決なのは，atlas に必要な core と neck の critical-area 調整を，保持 corner の
+葉と基底値の相対制御と両立させ，上の $\delta_t\to0$ を保証することである．
+定理\ref{main:action-atlas}の各固定 $t$ における存在だけではこの条件は得られず，
+一般の symplectic conjugacy だけで critical-action の障害が消えるとも主張しない．
+\end{remark}
 
 $f_t$ は全射なので，\eqref{ke:eq:global-realization-distortion}により，
 その graph correspondence，または命題\ref{topo:ke-map-compatibility}により
