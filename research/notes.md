@@ -1,5 +1,5 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-21 / v3.2
+更新：2026-11-21 / v3.3
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
@@ -85,6 +85,16 @@ Moser 流では軌道全体の最大速度を軌道平均エネルギーの平�
 Reduced graphに合わせて残余foliationをmomentに滑らかに依存させることは `ke:moment-dependent-neck-foliation` で許される。変更をsource・saddleの近傍とcollar外で恒等にすれば、閉pinched torusとsaddle fiberの型を保つ。固定 $t$ ごとの滑らかさでよく、無重みのmoment微分の一様な小ささは不要。残余基底は元の射影点 $p$ であり、$h_t(p)$ はsource近傍以外でglobal座標としない。Endのradial座標は $Z_{k,t}=C_D^2/h_{k,t}$ を使う。
 
 `ke:neck-corner-saturated-union` はcorner cut $m_t=6b_j$ とneckの境界葉 $B=7b_j$ を分離する。先に $5b_j\le b\le9b_j$、normal深度 $\ge n_j/2$ の広い領域でnormal-first構成へ補正する。Neckの全normal trajectoriesはouter tube内にあり、frame差を引いてもlocal normal深度 $\ge3n_j/4$。そこで $|d\log b(Y_N)|\le C/(n_jb_j)$ を使うfirst-exitにより、neck imageは $b<8b_j$ に留まる。Cornerの最小深度と元の射影の線形性から交点で $b\ge6b_j-C$ を得る。逆normal flowの自然性でmomentを同定した後にnormal深度 $\ge4n_j$ を結論する順序で、循環を避ける。Reduced graphと葉でのtrimから全intersectionが全torusで飽和し、source・saddleを含むactual部分fibrationとなる。End markingは共通torus同定に合わせて選び、任意に独立な第二periodの一致を含めない。この部分構成を `ke:actual-global-fibration` でcoreへ接着し、全曲面を覆った。
+
+## Source reductionと全段階に共通なmarked tree
+
+Sourceの幾何学的入力を `ke:source-reduction-pinched-fiber` にまとめる。固定 $t\ne0$ の $x'y'=th_t(p)$ では、canonical volume frameはsourceでも非零に延びる。Centered homotopyのchain primitiveは固定点で零なので、Moser場とflowもその点を固定する。正規化したnormal momentはそこで厳密に零であり、actual座標での商は $(\mu,p)\circ\phi_N^{-1}$ を用いる。Moser map自体が元の射影 $p$ を保存するとは仮定しない。
+
+零momentの商は位相的には残余曲面であっても、source点で通常の滑らかなsymplectic曲面とは扱えない。標準product模型では $m=(|u|^2-|v|^2)/2$, $w=uv$ として reduced form は $\sqrt{m^2+|w|^2}^{-1}$ に比例し、$m=0$ で特異になる。この模型のDarboux座標がactual残余射影を保つとは主張しない。葉のliftのLagrangian性はambient接空間で直接示す。相異なるregular leavesにsourceを置く条件が、閉じたcritical fiberを一重pinched torusとし、branch fiberとの混在を除く。Normal orbitはprimitiveな消滅cycleである。Focusの局所型とmonodromy自体は既知であり、Zung, *A note on focus-focus singularities*, Differential Geom. Appl. 7 (1997), 123–130, §§2–4, Corollary 1（[一次原稿](https://arxiv.org/abs/math/0110147)）と照合する。異なる $t$ やstageのsemi-global symplectic不変量の一致は結論しない。
+
+`ke:fixed-marked-tree-exhaustion` は $D\setminus Q$ 上の一つのembedded marked pants foliationを最初に固定する。単純sourceは $t=0$ を含むparameter disc上で一価に追跡し、その小円板に支持を持つisotopyで運ぶ。全source葉とcritical pantsを含む固定compactの外にend graph補正を置くため、全stageと全ての十分小さい複素 $t$ で同じ標識付き木を使える。K3の相対葉族補間と全fiber単位のtrimもこの木を変えない。これは抽象木・source・成分labelsの固定であり、全torusの二つのcycleの族全体での自明化や、$t$ に滑らかな全域fibration族を与える主張ではない。
+
+一般のMorse関数のpath componentが同じことだけから固定Reeb treeは従わない。Maksymenko, Comment. Math. Helv. 80 (2005), Main Theorem p.658 はpath components、Lemma 4.1 p.665 はgeneric KR-mapの同値を扱う。Regular annulusの葉を保つDehn twistは§6.1, Lemma 6.4 p.668（[掲載版](https://ems.press/content/serial-article-files/43060)）。本稿の固定木には、既に構成した実際の葉層のdiffeomorphismによる移送を使う。
 
 ## Source中央部の体積・momentとactual接続
 
@@ -505,5 +515,7 @@ $p_T:B_d(T)\to\mathcal C_d$ に補助piecewise Euclidean metric $h$ を固定し
 $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木系はちょうど六つであり、$S_6$ はこの集合に推移的に作用する。固定した一系の安定化群は位数 $6!/6=120$、指数6。従ってその一系の選択は座標置換の全 $S_6$ 対称性を保たない。KE候補 $\mathcal C_6$ は自然に $S_6$ 対称なので、Petersen分岐基底とのラベル付き比較を対称に行うには六つの木系全体を管理する必要がある。証明は base_topology.tex の topo:petersen-symmetry、全15 perfect matchingsと六one-factorizationsの有限列挙・安定化群位数は別に確認した。これは任意の別構成やラベル忘却後のシンプレクティックな対称性の不存在ではない。
 
 ## 検証状態
+
+現行改訂23の追加はsource reductionと固定marked treeの補題、およびK2の座標領域と非incident piecesの分離である。独立内部点検中。静的構成検査とdiff検査は通過したが、改訂23の組版・表示確認は未実行である。
 
 2026-11-21 / v3.2：主稿改訂22にcomponentの対数接続、全fiber/portal予算、compact-relative Morse–Smale化と弱い層別構造を統合した。追加証明と主要接着依存を複数担当で内部点検済み。改訂22はLuaLaTeXで246頁に組版済み。第1・2・17・18・132–134・155–160・179–184・241–243・246頁の計23頁を表示確認した。未解決参照・引用、重複ラベル、欠字、overfull警告はない。書誌は掲載版に照合し、Leung–Symingtonの分類定理番号を2.1へ統一、Evans–Mauriのcontact-formに関するRemark 2.18を明記した。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は未実施。整数計算と他論文の組版は今回は再実行していない。

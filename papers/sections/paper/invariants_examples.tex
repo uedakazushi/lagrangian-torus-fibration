@@ -47,7 +47,7 @@ $d$ & core一つの$\chi$ & node総数 & $\chi(X_d)$ & $K_{X_d}^2$ & $b_2(B_d)$\
 \end{tabular}
 \end{center}
 
-\subsection{nodal monodromy}
+\subsection{nodal monodromy}\label{inv:nodal-monodromy}
 節点の局所機構は、annulus上のconic model
 \[
 xy=t(z-z_0),\qquad z_0\ne0,
@@ -57,7 +57,7 @@ xy=t(z-z_0),\qquad z_0\ne0,
 critical pointで$z=z_0+xy/t$を代入すると第二成分の二次部分は
 $\operatorname{Re}(\overline{z_0}xy/t)$であり、第一成分とともにfocus--focus pairをなす。
 annular circle全体を含めれば、その特異fiberはcompactなpinched torusになる。
-大域の構成では、このmodelの全体をactual collarへ同定する代わりに、局所nodal blow-upとcompact transportを用いた。
+定理\ref{main:global}の相対SNC構成では、このmodelの全体をactual collarへ同定する代わりに、局所nodal blow-upとcompact transportを用いる。
 
 line-bundle framingsの下で$xy=t\,s(z)$と書き、regular leaf $\gamma$に沿う$s$のwindingを$k$とする。
 両側のangular identificationsの線形部分は
@@ -68,9 +68,19 @@ A_k=\begin{pmatrix}-1&k\\0&1\end{pmatrix}.
 \[
 A_{k+1}A_k^{-1}=\begin{pmatrix}1&1\\0&1\end{pmatrix}.
 \]
-この計算はnodeのlinear monodromyを記述する。
+この計算はnodeのlinear monodromyを記述し、既知のfocus--focus monodromy
+\cite[\S3, Corollary~1]{ZungFocus}に一致する。
 semi-globalなsymplectic同値を判定するには追加不変量がある\cite{VuNgoc}。
-本稿では同じcompact nodal neighborhoodをsymplectically運ぶので、その不変量も保持される。
+定理\ref{main:global}で同じcompact nodal neighborhoodをsymplectically運ぶときは、
+その不変量も保持される。
+
+Actual KE形式に対する定理\ref{ke:projected-source-neck}では、一つの正則normal circleを
+平均し、source中心で滑らかなMoser mapを用いて別にfibrationを構成する。
+補題\ref{ke:source-reduction-pinched-fiber}により、normal orbitはprimitiveな消滅cycleであり、
+単純sourceのcritical fiberにはfocus--focus点がちょうど一つある。
+従って同じ行列がこのactual neckの局所monodromyにも適用できる。
+これは零momentの商がsource点で滑らかなsymplectic曲面であるという主張でも、
+異なる$t$又はexhaustion段階のnodal neighborhoodsのsemi-global不変量が等しいという主張でもない。
 
 \subsection{解消後のopen componentはexactとは限らない}
 \begin{proposition}\label{inv:nonexact}

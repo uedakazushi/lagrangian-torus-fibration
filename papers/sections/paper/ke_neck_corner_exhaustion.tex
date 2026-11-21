@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.2: Source-inclusive neck と closed corner の全交わり，後続の全域構成への入力．
+% 2026-11-21 / v1.3: 全 stage に共通な reduced marking と source-inclusive な飽和被覆．
 \section{Source を含む neck と三重点 end の共通 exhaustion}
 \label{ke:neck-corner-exhaustion-section}
 
@@ -94,6 +94,146 @@ Moment の radial 単調性と source の二軸の記述は
 この段階では $P$ を動かした定数の一様性を主張していない．
 \end{proof}
 
+\subsection{全 stage に共通な reduced marking}
+
+\begin{lemma}[一つの marked pants 木系の共通選択]
+\label{ke:fixed-marked-tree-exhaustion}
+固定した退化族の各二重線 $D=D_{ab}$ に対し，一つの embedded marked
+simple-saddle foliation $\mathcal F_D^0$ を $D\setminus Q$ 上に選べる．
+これは固定 compact $K_D$ の外で $|Z_{k,0}|=\mathrm{constant}$ の円を葉とし，
+各 source は互いに異なる full regular circle leaves に属する．
+全 critical leaves の小さい飽和 pants neighborhoods と，これらの source leaves の
+小さい飽和 annuli は $K_D$ の内部に入る．
+
+本節の全ての十分大きい exhaustion stages と，それぞれの閾値以下の全ての
+複素 $t\ne0$ について，この一つの葉層を基準として neck を構成できる．
+各 end の全 regular circle で切った compact reduction の Reeb tree は，
+葉の labels $k\notin\{a,b\}$，saddle labels，および $\mu=0$ の source marks を保って，
+一つの固定した $T_{ab}=T_{ba}$ に同定される．後続の
+命題\ref{ke:link-relative-collar-gluing}の相対補間と
+補題\ref{ke:whole-fiber-core-trim}の切詰めを行っても，この木系の組合せ型は変わらない．
+これは一つの許容された木系の存在であり，任意に指定した木系又は作用周期への
+適合を主張しない．
+\end{lemma}
+
+\begin{proof}
+\emph{固定した pants と full leaves．}
+三重点の互いに素な小円板を除いた球面を取り，一つの labelled boundary を root とする．
+三つ穴球面を木に沿って貼り，各 pants に saddle 一個の標準 Morse function を置く．
+Regular annuli 上で単調に接続し，saddle の値を互いに異なるよう選ぶと，
+内部の critical points が $d-4$ 個の index-one points だけである first integral
+$h_D^0$ を得る．各 end へ radial に延長する．
+有限個の source 点の近傍で，boundary-relative な小さい diffeomorphism により
+葉層を動かし，全 source 値を互いに異なる regular values にできる．
+実際，各 source の互いに素な小円板内に，既に選んだ有限個の値と全 critical values を
+避ける regular point を一つずつ取り，それを source 点へ移す bump isotopy を使えばよい．
+その後の first integral を改めて $h_D^0$，その葉層を $\mathcal F_D^0$ とする．
+
+Source 点 $q_r(0)$ を含む full regular circle を $L_r$ と書く．
+各 $L_r$ の小さい飽和 annulus $A_r$ と，各 full critical leaf の飽和 pants
+$Q_v$ を互いに素に取れる．これら全体と，その間の有限個の regular annuli を
+一つの固定 compact $K_D$ の内部へ入れる．$K_D$ の外では end の radial 葉を使う．
+End collars を長くしても新しい vertex は加わらず，その外端で切った Reeb tree は，
+leaf edges の長さを変えるだけで同じ labelled $T_{ab}$ になる．
+$D_{ab}=D_{ba}$ は同じ実際の曲線なので，二方向に別の pants 分解を選ばない．
+
+\emph{Moving sources の一価な標識．}
+補題\ref{ke:projected-source-normal-form}の $h_t$ は，$t=0$ を含む円板上で
+正則である．同補題の臨界断面は陰関数定理による一意な断面であり，行列の平方根は
+恒等行列の近傍の級数で定められている．従って $t^{1/2}$ の枝を選ぶ操作はない．
+$h_0$ の単純零点 $q_r(0)$ ごとに，$\overline U_r\subset\operatorname{int}A_r$ となる
+互いに素な座標円板 $U_r$ を固定する．正則陰関数定理と $\partial U_r$ 上の非消滅により，
+ある一つの円板 $|t|<\epsilon_D$ 上で，各 $U_r$ 内の唯一の零点
+$q_r(t)$ が正則かつ一価に定まる．特に source labels の置換は起こらない．
+この選択は $K_D$ 上で先に行うので，後の exhaustion stage に依存しない．
+
+$z_r(q_r(0))=0$ とし，$\chi_r$ を $0$ の近傍で $1$，$U_r$ の境界近傍で
+$0$ となる固定 bump function とする．$a_r(t)=z_r(q_r(t))$ と置き，
+\[
+ z_r(S_t(p))=z_r(p)+\chi_r(z_r(p))a_r(t)\quad(p\in U_r),
+ \qquad S_t(p)=p\quad(p\notin\textstyle\bigcup_r U_r)
+\]
+と定める．$|t|$ を小さくすれば微分は恒等写像に十分近く，境界近くで恒等なので
+これは diffeomorphism である．$a_r(t)$ を $u a_r(t)$，$0\le u\le1$ と置き換えると
+同じ支持を持つ isotopy を得る．従って $S_t\in\operatorname{Diff}_0(D\setminus Q)$，
+$S_0=\mathrm{id}$ であり，実二変数 $(\operatorname{Re}t,\operatorname{Im}t)$ に滑らかに依存する．
+全 $Q_v$ と boundary/end collars は点ごとに固定する．
+また $S_t(A_r)=A_r$ であり，$S_t(L_r)$ は $q_r(t)$ を含み，
+他の source を含まない full regular circle である．
+
+\emph{全 stage の end 補正．}
+$b_j$ を十分大きいところから始め，$K_D\subset\operatorname{int}P_j$ とし，
+本節で使う end の補正 annuli を全て $K_D$ の外に置く．
+命題\ref{ke:single-arm-reduced-graph}と
+補題\ref{ke:reduced-collar-graph}で使う normalized coordinates では，
+指定された reduced 葉は $a=Q_{j,\mu,t}(c,\theta)$ という小さい circle graph である．
+同補題の明示的な写像
+\[
+ D_{j,\mu,t}(c,\theta)
+ =\bigl(c+\chi(c)(Q_{j,\mu,t}(c,\theta)-c),\theta\bigr)
+\]
+を使い，外へ恒等写像で延長する．第一成分の $c$ 微分は正であり，
+$\chi$ を $u\chi$ に変える isotopy も同じ支持を持つ．
+Graph の小ささ，共通 moment interval，全 trajectories の余裕は，
+次の定理\ref{ke:neck-corner-diagonal-matching}で選ぶ既存の stage 条件そのものである．
+ここで新しい moving-base 一様評価は必要ない．
+
+従って neck の reduced 葉族を
+\[
+ \mathcal F_{j,\mu,t}
+   =(D_{j,\mu,t}\circ S_t)_*\mathcal F_D^0
+\]
+と選べる．二つの補正の支持は互いに素である．全 full critical leaves は
+同じ $Q_v$ にあり，source leaves は全 $\mu$ で $S_t(L_r)$ のままである．
+End の cut は $D_{j,\mu,t}$ による radial circle の像で行うので，
+内側の葉を切断せず，その Reeb tree は同じ $T_{ab}$ である．
+特に $\mu=0$ で一つの source だけを含む閉じた円葉を丸ごと持ち上げられる．
+これは点の近傍の marking だけを保つ主張ではない．
+
+\emph{Core collars と critical values．}
+後続の相対接着では $q_a=\delta_j=4\pi/N_j$ の葉を anchor に取り，
+Liouville flow による葉族との比較を
+定理\ref{ke:saddle-moving-relative-interpolation}の
+boundary-relative な diffeomorphisms によって行う．
+各 moment の全 partition が一つの diffeomorphism の像なので，
+full critical leaf の連結性と一 saddle の性質，regular annuli の接続順序が保たれる．
+支持は $\mu=0$ を避けるため，source の full pinched fibers とその marking は変わらない．
+Source 点 $q_r(t)$ を非零 moment の reduced 曲面上でも marked points として指定する．
+Anchor では全て相異なる regular leaves 上にあるので，小さい飽和 annuli 内で
+regularity と分離を保つよう band を縮め，同定理の fixed-marked-point 版を用いる．
+全 fibers ごとの trim と cone filling は，この同じ labelled end を corner annuli で
+接続するため，$N_j$ の変更によって別の木を選ぶ操作にはならない．
+
+初期の $h_D^0$ では source 値と critical values を分離して選んだ．
+その後も葉の partition は上の diffeomorphisms によって同定されるので，
+異なる source leaves が合体したり，source が saddle の full leaf に入ったりしない．
+別々の connected leaves に与える数値が，first integral の再表示により一致しても，
+それだけでは quotient の点は同一視されない．
+同じ connected leaf に二つの saddle が生じる変形は用いていない．
+ここで固定した補助 first integral の値は，第二 action の値を指定する条件ではない．
+
+\emph{Parameter を一周するときの範囲．}
+$S_t$ は $t=0$ を含む円板上の一価な公式であり，
+end では各固定 annulus 上の $Z_{k,t}/Z_{k,0}$ が恒等に近い正則 unit なので，
+その対数も $t=0$ で $0$ となる枝で取れる．
+Collar graph の補正は circle 座標 $\theta$ に関して周期的で，
+labelled end を入れ替えない．各 $t$ でこの基準から marking を移すため，
+$\arg t$ を一周させても source labels と抽象的な pants 木系を同じものに選べる．
+これは $X_t$ 全体の parameter monodromy の自明化ではない．
+K2 で共通にする周期 $1$ の normal circle とその向きは保つが，
+torus の全 $H_1$ 基底を punctured parameter 円板全体で固定するとは主張しない．
+第二 cycle は各固定 $t$ の共通 torus 上で選ぶ従来の範囲に留める．
+相対 core 補間も各 $t$ で同じ anchor marking から行えばよく，
+stage 間又は $t$ 全体で滑らかな fibration 族を作る必要はない．
+有限個の二重線についてこれらの選択を同時に行い，木系 $T=(T_{ab})$ を得る．
+\end{proof}
+
+この補題は，既知の Morse 葉層の isotopy 一般論を新たな分類定理として主張するものではない．
+Morse mapping space の path components の分類
+\cite[Main Theorem]{Maksymenko}だけからは，指定した full critical leaves 又は
+embedded pants marking の不変性は従わない．
+ここでは小円板と互いに素な end annuli に支持を持つ具体的な isotopies を用いた．
+
 \subsection{三つの尺度を分ける diagonal 選択}
 
 \begin{theorem}[Source-inclusive neck と全 end の開 collar の一致]
@@ -135,6 +275,8 @@ neck が覆うとは主張しない．
 
 \begin{proof}
 \emph{残余領域を最初に固定する．}
+初期葉層と動く source の標識には，補題\ref{ke:fixed-marked-tree-exhaustion}の
+一つの共通選択を用いる．
 十分大きい $b_j\uparrow\infty$ を取り，各 end の
 $s_{k,0}=-\log|Z_{k,0}|^2$ を用いて
 \[
@@ -340,6 +482,12 @@ $n_j>4M_j$，$n_j>1000(1+2\sigma)b_j$ とする．
 分離も，必要なら $n_j$ をさらに大きくして満たす．
 実際，異なる二重線上の固定 compact $P_j^+$ は三重点を除いているので互いに素であり，
 まずその十分細い束近傍を互いに素に選び，最後に $t$ を小さくすればよい．
+各三重点 $q_J$ の固定 chart の閉包は，他の三重点と，
+$D_{ab}$，$\{a,b\}\not\subset J$ なる非 incident な二重線からも離して選ぶ．
+一般位置条件により $q_J$ を通る二重線は $J$ 内の三本だけである．
+固定段階の outer neck tubes を細くし，最後に $t_j$ を小さくすれば，
+非 incident な $\mathcal C_{t,J}$ と $\mathcal N_{t,D_{ab}}$ は交わらない．
+従って以下では対応する end の交点だけを扱えばよい．
 Moment 幅は前定理と同じく
 \[
  0<\iota_j<\min\{c_j/(16n_j),\pi/(64n_j)\}
@@ -412,7 +560,28 @@ Global normal flow の全 trajectories は outer tube 内にあり，
 global frame での二つの normal 深度は $n_j$ より大きい．
 $4b_j<b<10b_j$ にいる間は frame 差から local normal 深度は
 $n_j-M_j>3n_j/4$ である．
-従ってその全 normal circle は正則な $\Xi_k$ plateau に含まれる．
+Projected 深度から旧座標の arm 条件へ戻す粗評価も確認する．
+補題\ref{ke:arm-coordinate-ratio}の scaled Morse 写像の逆写像は，
+$|x'|+|y'|<c|p|$，$|t|<c|p|^3$ 上で
+\[
+ |x|+|y|\le C\bigl(|x'|+|y'|+|t|/|p|^2\bigr)
+\]
+を満たす．これは臨界断面 $a_t=O(t/p^2)$，行列平方根
+$S-I=O(t/p^3)$ と固定幅の逆写像定理から従う．
+現在の固定 annulus を含む $A_j\Subset D\setminus Q$ 上で，
+最後の $t_j$ の選択に
+\[
+ |t|\sup_{A_j}|p|^{-2}\le e^{-n_j/2},\qquad
+ |t|\sup_{A_j}|p|^{-3}<c
+\]
+を追加する．固定 unit の上下界と $n_j\gg b_j$ により逆写像の領域条件が満たされ，
+$|x'|,|y'|\le C e^{-3n_j/8}$ から旧 normal 深度は
+$3n_j/4-O(1)$ 以上となる．$q_k=p+\alpha x+\beta y$ と
+$Z_{k,t}/Z_{k,0}\to1$ から旧 residual 深度は $b+O(1)$ である．
+従って旧最小深度は $3b_j$ より大きく，旧 normal/residual 深度比は
+$1+2\sigma$ より大きい．この評価は projected normal circle 全体で保たれるので，
+座標補間の cutoff は全 orbit 上で $\chi_k=1$ となる．
+よってその全 normal circle は正則な $\Xi_k$ plateau に含まれる．
 補題\ref{ke:normal-flow-naturality}をここでは vector field の段階で用いると，
 $q=\log(b/b_j)$ に対して
 \begin{equation}\label{ke:eq:neck-residual-first-exit}

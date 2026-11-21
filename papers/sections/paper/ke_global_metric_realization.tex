@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.2: 対数接続費用と共通の対角選択による全域 GH 実現．
+% 2026-11-21 / v1.3: 固定 marked 木系と共通の対角選択による全域 GH 実現．
 \section{Actual Lagrangian fibration による負 KE 極限の実現}
 \label{ke:global-metric-realization-section}
 
@@ -38,8 +38,12 @@ parameter 化には $t$ 依存を許す．定数の次数一様性又は族一�
 定理\ref{ke:actual-global-fibration}により，固定 stage $j$ の後で
 $|t|$ を十分小さくすれば，全 $X_t$ 上に actual fibration を得る．
 全被覆，連結 fibers，actual Lagrangian 性はこの定理で証明されている．
-各 piece の相対 marking と continuation により，木系の組合せ型 $T$ は
-stage と $t$ に依存せず固定できる．
+補題\ref{ke:fixed-marked-tree-exhaustion}の共通選択により，
+木系の組合せ型，labelled ends，および source markings は stage と $t$ に依存せず固定できる．
+ここでは各固定二重線の一つの embedded pants foliation から構成し，
+動く source を小円板内で，end germs をその外の annuli で相対的に調整している．
+Normal circle の向きは共通にするが，全 torus cycles の parameter-monodromy を
+自明化する主張ではない．
 命題\ref{ke:global-base-parameterization}を用いて，その同じ fiber partition の
 基底を $B_d(T)$ と parameter 化し，$f_{j,t}=p_T\pi_{j,t}$ とする．
 これは距離比較のために別の fiber partition を採用する操作ではない．

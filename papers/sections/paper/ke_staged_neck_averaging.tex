@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.6: Centered 二段階平均，actual neck，同一 moment 接続と全域定理への適用．
+% 2026-11-21 / v1.7: Source 固定点での exact transport，零 moment 商と閉 pinched fibre．
 \section{共通の normal circle に適合する二段階平均}
 \label{ke:staged-neck-section}
 
@@ -25,7 +25,7 @@ end collar 上の残る circle の平均に分ける．
 \subsection{一つの円の平均と primitive の正確な輸送}
 
 $U$ を複素曲面，$\omega=d\lambda$ を K\"ahler form とし，
-$\rho_s$ を $U$ 上の自由な正則円作用とする．
+$\rho_s$ を $U$ 上の正則円作用とする（固定点を許す）．
 生成場を $V$，平均と chain homotopy を
 \[
  \mathcal A\xi=\int_0^1\rho_s^*\xi\,ds,\qquad
@@ -770,6 +770,123 @@ $\Delta_{\omega_t}|W|^2=|\nabla^{1,0}W|^2-\operatorname{Ric}(W,\bar W)\ge0$
 Source 中央帯の全点径は定理\ref{ke:source-central-diameter}，
 全共通 interval の同一 moment 退出は定理\ref{ke:source-all-moment-exit}で別に評価する．
 
+\begin{lemma}[Source の零 moment 商と閉じた pinched fibre]
+\label{ke:source-reduction-pinched-fiber}
+$t\ne0$ を固定し，境界付き compact 残余曲面 $P$ の近傍に
+\[
+ X=\{xy=t h(p)\},\qquad
+ \rho_a(x,y,p)=(e^{2\pi\sqrt{-1}a}x,e^{-2\pi\sqrt{-1}a}y,p)
+\]
+を取る．$h$ の零点は $P$ の内点にある単純零点とし，
+$\omega=d\lambda$ は $X$ 上で滑らかな K\"ahler form とする．
+$\eta=\mathcal A\omega$，$\bar\lambda=\mathcal A\lambda$，
+$\mu=\bar\lambda(V)$ と置く．固定 $R>0$ と
+$0\in\operatorname{int}I$ なる閉区間 $I$ を選び，
+$|t|\sup_P|h|<R^2$，および全 $p\in P$ で
+\[
+ \left.\mu\right|_{|y|=R}<\inf I<\sup I
+       <\left.\mu\right|_{|x|=R}
+\]
+を仮定する．$K=\{p\in P,\ |x|,|y|\le R,\ \mu\in I\}$ の
+飽和開近傍で centered normal Moser flow が全時刻存在するとする．
+このとき次が成り立つ．
+\begin{enumerate}
+ \item 各 source $o=(0,0,q)$ で $\mu(o)=0$ であり，
+ centered Moser flow は $o$ を固定する滑らかな微分同相である．
+ Actual circle の symplectic isotropy representation は weights $(1,-1)$ を保ち，actual moment は
+ $\widehat\mu=\mu\circ\phi^{-1}$ である．その値は actual 軌道の
+ $\lambda$-周期に等しく，source ごとに加法定数を選び直す必要はない．
+ \item $(\mu,p)$ は $K/S^1\cong I\times P$ を与える．
+ $(0,q)$ 以外ではこれは滑らかな orbit space の座標で，
+ $K\setminus\{o:h(q)=0\}$ 上の作用は自由である．
+ \item $P$ の marked Morse foliation で，各 source が
+ saddle を含まない相異なる閉 regular leaves 上にあるとする．
+ $\mu$ を固定して葉を持ち上げた閉 fibre は，通常 $T^2$，
+ 単純 saddle leaf では $S^1\times\figeight$，
+ $\mu=0$ で source を一つ含む葉では一重 pinched torus となる．
+ 二次元 smooth strata は Lagrangian で，各 source は
+ nondegenerate focus--focus point である．近傍の regular torus 上の
+ normal circle は primitive な vanishing cycle を与える．
+ これらの結論は $\phi$ によって actual $\omega$ へ移される．
+\end{enumerate}
+ここでの滑らかさは各固定 $t\ne0$ に対する主張であり，
+$t\to0$ での flow の導関数や正規形の一様性は含めない．
+\end{lemma}
+\begin{proof}
+Source の近くでは $h'(q)\ne0$ により $(x,y)$ が $X$ の正則座標である．
+平均 $\eta,\bar\lambda$ と
+$\beta=\int_0^1(1/2-a)\rho_a^*(\iota_V\omega)\,da$ はここでも滑らかである．
+$V(o)=0$ なので $\mu(o)=\beta(o)=0$．
+$\omega_s=(1-s)\eta+s\omega$ は全時刻で K\"ahler form であり，
+$\iota_{Y_s}\omega_s=\beta$ は滑らかな場 $Y_s$ を与え，$Y_s(o)=0$ となる．
+補題\ref{ke:circle-exact-transport}の証明は自由性を使わないので，
+固定点を含めてその exact identity と周期の結論が成立する．
+共役によって固定点での円表現も変わらない．
+
+$h(p)\ne0$ の fibre では，$x\mapsto e^r x$，$y\mapsto e^{-r}y$ の
+実動径場は $-JV/(2\pi)$ である．従って
+\[
+ d\mu\bigl(-JV/(2\pi)\bigr)=|V|_\eta^2/(2\pi)>0.
+\]
+各 moment level はただ一つの円となる．$h(p)=0$ では二軸が原点を共有し，
+$x$ 軸で $\mu$ は零から正へ，$y$ 軸で零から負へ狭義単調に変化する．
+Cut の仮定により各 $(\mu,p)\in I\times P$ の逆像は一軌道である．
+$K/S^1$ の compact 性から連続全単射は同相となる．
+固定点の外では $dp$ は complex rank $1$ を持ち，
+$dp(JV)=0$，$d\mu(JV)=-|V|_\eta^2\ne0$ であるから，
+$(\mu,p)$ は滑らかな submersion である．Weights が $(1,-1)$ なので
+固定点以外に有限 stabilizer もない．
+
+持ち上げた葉の smooth 二次元接空間は $V$ と
+$\ker d\mu$ 内の一方向で張られ，$\iota_V\eta=-d\mu$ より isotropic である．
+固定点を含まない円及び saddle graph 上の主円束は，
+基底の $H^2$ が零なので自明であり，所記の fibre 型を得る．
+Source $q$ を一つ含む円葉 $\gamma$ では，
+$\gamma\setminus\{q\}$ 上の主円束は $S^1\times(0,1)$ である．
+閉 fibre は compact Hausdorff で，その補集合はただ一つの固定点である．
+従ってこれは cylinder の一点 compactification，すなわち
+$S^2$ の二点を同一視した一重 pinched torus である．
+
+残余葉の局所 submersion を $a(p)$ とする．
+これは円不変なので $\mu$ と Poisson 可換である．
+Source で $\eta(o)$ は正の Hermitian 形式であり，円不変性から
+$(x,y)$ の二つの異なる weights に関して対角である．
+複素線形 rescaling 後，moment の二次項は
+$\pi(|u|^2-|v|^2)$ となる．
+$da(q)\ne0$ と $p-q=xy/(t h'(q))+O((xy)^2)$ により，
+$a(p)-a(q)$ の二次項は $\Re(cuv)$，$c\ne0$ である．
+この可換な二次型の組は focus--focus の標準二次型である
+\cite[Section~2]{ZungFocus}．従って局所的な node は非退化であり，
+零次元 stratum は固定点そのものである．
+Regular torus は円上の主円束なので，normal 軌道はその
+$H_1(T^2;\mathbb Z)$ の primitive class を表す．
+$p=q$ 上で $\mu\to0$ とすると軸上のこの円が固定点へ縮むため，
+それが vanishing cycle である．重複被覆による multiple cycle は生じない．
+最後に $\phi^*\omega=\eta$ を用いて全ての strata と circle を移す．
+\end{proof}
+
+\begin{remark}[零 reduction の標準模型と ambient の滑らかさ]
+標準 product
+$\omega_0=(\sqrt{-1}/2)(du\wedge d\bar u+dv\wedge d\bar v)$，
+$\mu=\pi(|u|^2-|v|^2)$，$w=uv$ では，$w\ne0$ 上の reduced form は
+\[
+ \omega_{\mathrm{red},\mu}
+ =\frac{\sqrt{-1}\,dw\wedge d\bar w}
+        {2\sqrt{(\mu/\pi)^2+4|w|^2}}.
+\]
+実際，$m=\mu/(2\pi)$，$\rho=|w|$ とすれば
+$(|u|^2+|v|^2)/2=\sqrt{m^2+\rho^2}$ であり，
+reduction は $\frac12 d\sqrt{m^2+\rho^2}\wedge d\arg w$ となる．
+$\mu=0$ の商は位相的には $w$-平面だが，その symplectic density は
+$w=0$ で $|w|^{-1}$ の特異性を持つ．この商を通常の滑らかな
+symplectic 曲面とみなす必要はなく，前補題は ambient の
+滑らかな形式と接空間を用いて Lagrangian 性を証明している．
+この明式は標準模型の計算であり，任意の平均された $\eta$ に対して
+Darboux 座標が元の residual 座標 $p$ 又は $w=t h(p)$ を保つとは主張しない．
+Focus--focus の局所型と monodromy は既知の理論であり，ここで行ったことは
+固定点を含む actual KE neck の exact transport と閉 fibre への適用である．
+\end{remark}
+
 \begin{corollary}[Source を含む遅い exhaustion 上の actual 円作用]
 \label{ke:source-diagonal-moser}
 上の source chart で固定した十分小さい $b>0$ を取る．
@@ -811,18 +928,11 @@ $|V_{\rm src}|=O(1/|\log r|)$ に適用できる．
 $K_{t,r}$ の十分小さい actual 距離近傍を用いて取れる．
 $r_n\downarrow0$ と，各 $r_n$ に対する閾値 $t_n\downarrow0$ を選び，
 $t_{n+1}<|t|\le t_n$ では $r_t=r_n$ とする．
-これで被覆と変位上界を得る．原点では $V=0$ で Moser の $\beta$ も零なので，
-Moser map は固定点を保つ．
-
-$(x,y)$ は $X_t$ 上の正則座標であり，$dx\wedge dy$ に対する
-対数体積は $dd^c$-primitive を与える．円平均後を $(\eta,\mu)$ とすると，
-$(\mu,\Re z)$ は Poisson 可換である．原点以外では $dz$ が実 rank $2$ を持ち，
-$dz(JV)=0$，$d\mu(JV)=-|V|^2_\eta\ne0$ なので rank は $2$ である．
-原点では円作用の weights $(1,-1)$ により $\eta(0)$ は $(x,y)$ で対角である．
-各複素座標を線形に正規化すると，二次項は非零定数倍を除き
-$(|x|^2-|y|^2,\Re(xy))$ になり，これは focus--focus の二次正規形
-（位相と実線形 symplectic 座標の変更を許す）である．
-Moser map でこの germ を actual form へ移す．
+これで被覆と変位上界を得る．$(x,y)$ は $X_t$ 上の正則座標であり，
+$dx\wedge dy$ に対する対数体積は滑らかな $dd^c$-primitive を与える．
+補題\ref{ke:source-reduction-pinched-fiber}の固定点での transport と
+局所二次型の議論を $h(p)=p=z$，残余 submersion $\Re z$ に適用すれば，
+固定点の保存と actual focus--focus germ を得る．
 \end{proof}
 
 この diagonal 選択は所定の $t$ 依存の速さを保証しない．
@@ -930,22 +1040,12 @@ cutoff でも boundary divisor が滑らかなため有効であり，
 さらに対角閾値を縮めて $|t|\sup_{P^+}|h_t|<r_t^4$ とし，
 $I_t$ は両 cutoff の値の間にある $0$ を含む閉区間に取る．
 
-各 $p$ で $h_t(p)\ne0$ なら，$\mu$ は annulus の半径に沿って
-狭義単調なので各 $I_t$ level に唯一の円がある．
-$h_t(p)=0$ では二軸上で原点を共有し，原点の $\mu$ は零で，
-各半径に沿って逆方向に狭義単調である．従って $\mu\ne0$ では
-一方の軸に一つの円，$\mu=0$ では原点のみを得る．
-この compact な領域の円作用による商は，連続全単射
-$(\mu,p)$ によって $I_t\times P$ と同相である．
-この上で残余 foliation の葉を逆像に取り，さらに actual form へ Moser 移送する．
-正則 stratum の二次元接空間は $V$ と $\ker d\mu$ 内の葉方向で
-張られるため isotropic である．固定点では
-系\ref{ke:source-diagonal-moser}と同じ focus--focus 二次型を持つ．
-実際，残余葉の局所 submersion の一次項は $dp$ の非零実線形汎関数である．
-固定点を含まない円葉及び saddle graph 上の主円束は自明である．
-固定点を一つ含む円葉では，点を除いた開区間上では円束が自明であり，
-区間の両端の円が同じ一点へ収縮する．Compactness からこの
-compactification は一重 pinched torus である．
+これで補題\ref{ke:source-reduction-pinched-fiber}の仮定が
+$R=r_t^2$，$h=h_t$，$I=I_t$ に対して満たされる．
+同補題の商 $I_t\times P$ 上で残余 foliation の葉を取り，
+exact Moser map で移せば，閉 fibre 全体の Lagrangian strata，
+連結性と三種類の位相型を得る．各 source の vanishing cycle は
+共通 normal circle の primitive class であり，その critical moment は正確に零である．
 \end{proof}
 
 ここで構成した neck は三重点を除く固定残余基底に沿う．

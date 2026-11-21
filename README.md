@@ -1,5 +1,5 @@
 # Lagrangian torus fibrations on general-type surfaces
-2026-11-21 / v3.2 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
+2026-11-21 / v3.3 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
 
 **各固定次数 \(d\ge5\) の一般位置全平面退化について、actual負Kähler–Einstein形式の大域Lagrangian torus fibrationが、径の尺度のGH極限を実現する定理の証明を主稿に置いている。** 同じ写像 \(f_t=p_T\pi_t\) の全曲面ambient距離に関する一様distortionと、特異fiberを含む全fiber合併の収縮を扱う。今回の新証明と接続を複数担当で内部点検した。形式証明、全主稿・全外部入力の包括的再監査、外部査読、新規性の網羅的確認は未実施である。**このリポジトリは複素次元2専用**。三次元の研究は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とする。
 
@@ -15,7 +15,7 @@
 
 ## Cloud Codexから再開する
 
-最新mainで [研究方針](00_research_plan.md) → [AGENTS.md](AGENTS.md) → [依存関係](research/ke-dependencies.md) → [研究ノート](research/notes.md) を読む。次に `ke:global-metric-realization` から依存する接着・source・scalar・portalの証明をたどる。現在の優先課題は、公表に向けた一次文献と依存結果の包括的再点検、新規性の確認、主稿構成の整頓である。改訂22ではcomponentの対数接続費用と全fiber予算を強め、coreの弱い層別構造を明示した。組版・表示確認の現在の状態は末尾を参照。
+最新mainで [研究方針](00_research_plan.md) → [AGENTS.md](AGENTS.md) → [依存関係](research/ke-dependencies.md) → [研究ノート](research/notes.md) を読む。次に `ke:global-metric-realization` から依存する接着・source・scalar・portalの証明をたどる。現在の優先課題は、公表に向けた一次文献と依存結果の包括的再点検、新規性の確認、主稿構成の整頓である。改訂23ではsourceの特異reductionと全段階に共通な標識付き木の補題を明示し、K2の全交わりの証明を補強した。追加証明は独立点検中で、改訂23は未組版。改訂22ではcomponentの対数接続費用と全fiber予算を強め、coreの弱い層別構造を明示した。組版・表示確認の現在の状態は末尾を参照。
 
 ```sh
 python3 scripts/research_check.py setup --require-tex

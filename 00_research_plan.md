@@ -1,5 +1,5 @@
 # 現行研究方針：一般型曲面のLagrangian torus fibration
-更新：2026-11-21 / v3.2（複素次元2専用、曲面主稿改訂22・五次整数接着第25稿）
+更新：2026-11-21 / v3.3（複素次元2専用、曲面主稿改訂23・五次整数接着第25稿）
 
 ## 現在の成果と優先順位
 
@@ -28,6 +28,8 @@
 証明は十分遅い固定段階の対角選択を用い、各固定次数・固定族について一つの許容された標識付き木系を選ぶ。最適収束速度、任意に先指定した木系・作用・critical valuesへの一様な適合、次数一様の評価、全次数のmatroidal atlas、special Lagrangian性は結論に含めない。五次だけの結果ではない。新たな誤りが見つかった場合は、依存する主張・方針・hubを含めて訂正する。
 
 ### 証明の状態と外部KE仮定との区別
+
+現行改訂23では、source固定点でのexact transport・零moment商・primitive vanishing cycleと閉pinched torusを `ke:source-reduction-pinched-fiber` にまとめ、全stage・全ての小さい複素parameterに共通な木を `ke:fixed-marked-tree-exhaustion` で明示した。K2の全intersection saturationを再点検し、inverse Morse座標から旧plateauへの粗評価と非incident近傍の分離を補った。追加証明は独立内部点検中であり、改訂23の組版はまだ実行していない。
 
 Actual全域構成、sourceの全点評価、同じ基底値に対する全域上下界を主稿に保持する。現行改訂22ではcomponentの対数接続費用、anchor interval外のneck尾部の深度、残余基底→cut→parameterの非循環な選択を証明した。Coreのcompact-relative Morse–Smale化と閉isotropic filtrationも明示し、primitive・nontrapping・collar補間・全fiber trim・閉quotientを重点監査した。追加証明は別担当と独立に内部点検済み。改訂22は246頁に組版し、変更箇所を含む23頁を表示確認済みであり、数学的点検、形式証明、組版、有限計算、GitHub保存は区別する。
 
