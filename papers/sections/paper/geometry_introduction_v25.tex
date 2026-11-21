@@ -747,8 +747,14 @@ Liouville field を得る．Saddle を動かす相対葉族補間は，
 actual link の既存葉，normal/corner overlaps，source を避けた相対補間，
 全 fiber 単位の切詰めを合わせて検証する．
 従って全 $X_t$ を覆う actual KE--Lagrangian fibration が得られる．
-各 component の変更領域は固定 compact の image 内にあるので，
-十分遅い対角選択でその正規化 ambient 径を消せる．
+内側の primitive は compactly supported exact correction により Morse--Smale に選び，
+index 順の閉 filtration によって skeleton の弱い isotropic stratification を確保する
+（補題\ref{ke:compact-relative-morse-smale}）．
+境界の contact form と既存 normal/corner actions は変えない．
+各 component の変更領域は深度 $CN_j$ 以下の固定 compact image にあり，
+cusp の動径経路により接続費用を $C(1+\log(N_j+1))$ と評価できる
+（命題\ref{ke:component-logarithmic-connectors}）．
+従って十分遅い対角選択でその正規化 ambient 径を消せる．
 この定理自体の結論は保持 corner の局所構成を伴う全域の存在であり，
 距離歪みの消失には次の追加評価を用いる．
 この相対構成全体の一般的新規性は未確認である．
@@ -788,10 +794,15 @@ $\sup_{X_t}d_\square(\Theta_t,p_T\pi_t)=o(1)$ を示す．
 命題\ref{ke:global-base-parameterization}は保持 corner を少し内側へ写し，
 その外周に neck strips と component sectors を配置する．
 旧 softmax 値との差を $o(1)$ に保ち，内部木の全枝に一つの canonical moment を使う．
-この同じ moment 上の source を含む接続は
-固定 stage で $C_j$ の費用を持ち，各 component core の費用も同じ定数に含められる．
+この同じ moment 上の source を含む接続定数 $C_j^{\rm neck}$ は，
+component cut $N_j$ より先に固定できる．Neck の component 側の尾部も深度
+$CN_j$ 以下に入ることを別に示す．従って
+$C_j^{\rm neck}\le1+\log(N_j+1)$ となるよう cut を選べば，
+全接続に一つの予算 $H_j=C(1+\log(N_j+1))$ を使える．
 Target の最短路を高々 $60$ 本の square 線分に分け，共通 moment の portals で繋ぐと
-同じ $f_t$ の全曲面距離上界を得る．
+同じ $f_t$ の全曲面距離上界を得る．その誤差は
+$C_d\{b_j^{-1}+(1+\log R_t+\log(N_j+1))/R_t\}$ 以下である．
+これは許容 cut の下での評価であり，残余定数の増大率や最適収束速度を主張しない．
 定理\ref{ke:global-metric-realization}では有限個の stage 定数を先に選び，
 共通の遅い対角化で上下両側の誤差を零にする．
 これらの source 評価，scalar 障壁，基底の相対 parameter 化と全域距離比較が，

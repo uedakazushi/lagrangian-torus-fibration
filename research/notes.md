@@ -190,7 +190,22 @@ Actual symplectic circleのcentered kernelについて
 
 `ke:component-logarithmic-connectors` により、各componentのcore・変更collarの接続費用とambient径は $C(1+\log(N_j+1))$ で抑えられる。$C$ は固定した族・charts・weightsのみに依存する。全深度が $CN_j$ 以下であることと固定componentのcusp上比較を使い、normal動径の積分 $\int ds/s$ で固定compactへ結ぶ。全経路は $\{\Psi_i\le AN_j\}$ に入り、この拡大compactを先に固定してからactual metricを比較する。これは**各componentごとのambient評価**であり、異なるcores全部の合併径や任意Liouville軌道の全長、fiber内在径は結論しない。
 
-Skeletonの連結性は $\Sigma=\bigcap_{T\ge0}\varphi_{-T}(K)$ というnested compact connected setsの表示から直接従う。保持cornerのquotientがdiskであることとproper cap arcsは `ke:corner-cap-disk` を用い、$B_d(T)$ の同定との循環を避ける。対数接続補題は別担当も独立に導出・点検済み。この追加を含む組版と、全fiber予算への定量的統合は作業中であり、直近の確認済みPDFは改訂21である。
+Skeletonの連結性は $\Sigma=\bigcap_{T\ge0}\varphi_{-T}(K)$ というnested compact connected setsの表示から直接従う。保持cornerのquotientがdiskであることとproper cap arcsは `ke:corner-cap-disk` を用い、$B_d(T)$ の同定との循環を避ける。対数接続補題は別担当も独立に導出・点検済み。`ke:compact-relative-morse-smale` は境界とcritical germsを保つ小さいcontact holonomy変更とexact Moserにより、同じKE二形式上のprimitiveをMorse–Smaleにする。Stable manifoldsのclosureは低いindexにのみ落ちるため、次元順の閉isotropic filtrationが得られる。Whitney条件は主張しない。Cone fillingでは開辺上のsmooth submersionも明記した。
+
+### 全接続予算の選択順序
+
+旧softmax辺の全体で $B=m_j+r_c$、$0\le r_c<1$ なので、全marked tree・source discs・portal端を含む $P_{ab,j}\Subset P^+_{ab,j}$ は $N_j$ より先に固定できる。同一moment接続定数を $C_j^{\rm neck}$ とする。`ke:component-neck-tail-depth` は $q\ge4\pi/N_j$ の成分側尾部に $s\le2N_j$ を与え、同じcentered flowの浅い固定compactと深いtubeへの制限を分けて、actual像も深度 $CN_j$ に入れる。深い側のfirst-exitには固定componentの $|d\log s_a|\le K$ と全normal/residual buffersを用いる。
+
+従って、まず $H_j\le C(1+\log(N_j+1))+C_j^{\rm neck}$ が得られる。許容cutの下限に $C_j^{\rm neck}\le1+\log(N_j+1)$ を加えれば
+\[
+H_j=C(1+\log(N_j+1)),\qquad
+U_{j,t}\le C_d\left\{b_j^{-1}+\frac{1+\log R_t+\log(N_j+1)}{R_t}\right\}
+\]
+とできる。これは残余定数のexhaustion増大率の解析評価ではなく、選択順序による吸収である。下界の段階定数とfixed-compact収束の閾値も残るため、最適な全域rateは結論しない。経路はambientであり、同一momentやfiberの内部を通る必要はない。
+
+### 主要接着依存の点検範囲
+
+Centered averageの $K\omega=0$、二作用の $F=K_1\lambda+A_1K_2\lambda$、common normal上の $V(F_C-F_N)=0$ を直接確認した。GeneratorのC1評価にはmapのC2が必要であり、既存C5入力からの微分階数を確認した。切替え帯 $5.2b_j$–$5.4b_j$ は広い構成域 $\min\ell>3b_j$ とnormal-first plateau $5b_j$–$9b_j$ に入り、実交点 $5.5b_j$–$8b_j$ までにfull torus gaugeへ移る。支持全体の被覆、先行するexact Moserとperiod保存、$Zq=q-\rho<0$ の向き、全fiber trim、相対葉族の境界germとcritical-leaf marking、閉quotientを読み合わせた。これは全旧局所証明の包括的再監査ではない。
 
 ### 切り取った cap と旧 softmax 値
 
@@ -491,4 +506,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 
 ## 検証状態
 
-2026-11-21 / v3.1：主稿改訂21にP0の統合定理 `ke:global-metric-realization` と証明を保持する。今回の新証明と接続を複数担当で内部点検した。現行改訂21はLuaLaTeXで243頁に組版済み。未解決参照・引用・重複ラベル・欠字・overfull警告はなく、変更箇所を含む第1・16・18・52–54・122・124–130・166–171・178–181頁の計24頁を表示確認した。三境界のsource-arm tensor比較と全momentの有界退出は複数担当で内部点検した。TeX研究ノートも現状の記述を直して65頁に再組版し、変更した第1・4頁を表示確認した。形式証明、全主稿と全外部入力の包括的再監査、外部査読、網羅的新規性確認、旧整数検算suiteと他二論文の再組版は未実施。
+2026-11-21 / v3.2：主稿改訂22にcomponentの対数接続、全fiber/portal予算、compact-relative Morse–Smale化と弱い層別構造を統合した。追加証明と主要接着依存を複数担当で内部点検済み。改訂22はLuaLaTeXで246頁に組版済み。第1・2・17・18・132–134・155–160・179–184・241–243・246頁の計23頁を表示確認した。未解決参照・引用、重複ラベル、欠字、overfull警告はない。書誌は掲載版に照合し、Leung–Symingtonの分類定理番号を2.1へ統一、Evans–Mauriのcontact-formに関するRemark 2.18を明記した。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は未実施。整数計算と他論文の組版は今回は再実行していない。

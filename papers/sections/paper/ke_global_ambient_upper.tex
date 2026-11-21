@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.1: 固定 stage で有界な共通 moment 費用による全域上界．
+% 2026-11-21 / v1.2: Component の対数費用と残余基底の先行選択による全域上界．
 \section{全 fiber 合併の収縮と actual 全曲面距離の上界}
 \label{ke:global-ambient-upper-section}
 
@@ -26,27 +26,87 @@ $d_{g_t}$ である．保持 corner 自身の内在距離は用いない．
 各 pair $ab$ について，neck の全 marked tree と全 source discs を含む連結な
 固定残余基底 $P_{ab,j}$ を取る．Source discs を除いた部分も連結に取れる．
 さらに，各 labelled end の旧 softmax boundary $w_c=0$ の residual image を
-全 $\mu\in[-\delta,\delta]$ について含むようにする．この boundary は
-$B=m_j+O(1)$ にあり，既存 K2 の trim $B=7b_j$ より内側にあるので，
-既に用意した広い fixed-stage residual domain の中でこの選択を行える．
-新しい exhaustion uniformity は要求しない．
+その辺全体について含むようにする．\eqref{ke:eq:hexagon-edge-profile}より
+$B=m_j+r_c$，$0\le r_c<1$ なので，この選択は $N_j$ と
+$[-\delta,\delta]$ を決める前に行える．既存 K2 の trim $B=7b_j$ より内側にあり，
+既に用意した広い fixed-stage residual domain に
+$P_{ab,j}\Subset P^+_{ab,j}$ を選べる．
+相対葉族補間もこの固定基底の境界 collar を保つので，後から基底を拡大し直さない．
 
-系\ref{ke:source-inclusive-same-moment-collapse}と
-定理\ref{ke:actual-global-fibration}を使い，$C_j$ を増大させれば
+$C_j^{\rm neck}$ を，系\ref{ke:source-inclusive-same-moment-collapse}の
+この有限個の固定基底に対する接続定数の最大とする．これは $N_j$ より先に固定できる．
+成分側に残る短い neck 尾部にも，次の深度評価がある．
+
+\begin{lemma}[Component 側の neck 尾部の深度]
+\label{ke:component-neck-tail-depth}
+$N_j$ の下限を大きくした後に $t$ を小さくすれば，共通 anchor interval の外側にある
+各 neck 尾部は，対応する一つの component graph 上の
+$\max_as_a\le CN_j$ に含まれる．$C$ は stage に依存しない．
+従って尾部と同じ component の core・変更 collar・link の任意の二点の接続費用は
+$C(1+\log(N_j+1))$ 以下である．
+\end{lemma}
+
+\begin{proof}
+Component に向く正の moment を $q=\pm\widehat\mu_N$ とすると，尾部は
+$q\ge\delta=4\pi/N_j$ の側にある．
+補題\ref{ke:component-meridian-normalization}，\ref{ke:closed-component-link}の
+fixed-end 評価を，固定した $P^+_{ab,j}$ の全 phase に適用する．
+裸の normal 深度 $s=2N_j$ では
+\[
+ q=\frac{2\pi}{N_j}+o_j(N_j^{-1})+o_t(1)<\frac{4\pi}{N_j}
+\]
+となるよう，先に $N_j$，最後に $t$ を選べる．Normal 動径に沿う単調性から，
+$q\ge\delta$ の component 側の尾部は $s\le2N_j$ に入る．
+Source 軸でも同じ向きの正則 normal coordinate を使う．
+
+この評価を同じ actual normal Moser map の像へ移す．
+まず $N_j$ より先に固定深度 $M_j$ を取り，固定基底の定数について
+$C_{P^+_j}/M_j<\epsilon_0$ を課す．この長さは残余方向の固定 buffer の半分よりも
+小さくする．$2M_j\le s\le2N_j$ では，反対側の normal depth は
+$L_t-s-O_j(1)\ge L_t-2N_j-O_j(1)$ なので，最後に $t$ を小さくして
+これも $2M_j$ 以上にする．Source 軸では反対側の深度は無限大である．従って
+補題\ref{ke:fixed-stage-stratum-coverage}の flow 制限と ODE 一意性により，
+元と同じ centered flow の軌跡長を $C_{P^+_j}/M_j$ 以下にできる．
+Fixed frame 差と残余深度 $O(b_j)$ を $N_j$ の下限に吸収すると，
+初期点の全 component depths は $3N_j$ 以下である．
+固定 cusp 比較により，stage に依存しない $K$ で
+$|d\log s_a|_{g_{\infty,i}}\le K$ である．
+$\max s_a\le6N_j$ の拡大 graph compact 上で
+$E_{i,t}^*g_t\ge g_{\infty,i}/2$ を課し，
+$\sqrt2K\epsilon_0<\log2$ とする．
+すると first-exit argument により軌跡は深度 $6N_j$ の境界へ達しない．
+残余方向の退出も，予め確保した $P_{ab,j}\Subset P^+_{ab,j}$ の buffer で防げる．
+
+浅い部分 $s\le2M_j$ の flow 像は，固定 component 上の flow convergence により
+先に一つの固定 compact に入る．その全深度の有限上界 $A_j$ を決め，
+$N_j\ge A_j+M_j$ を追加する．従って浅い部分にも同じ $CN_j$ 上界がある．
+ここまでの右辺の定数は全て $N_j$ より先に固定されている．
+最後に命題\ref{ke:component-logarithmic-connectors}を用いれば，接続費用を得る．
+Core の深度上界を neck 尾部へ無条件に延長する議論ではない．
+\end{proof}
+
+以上から，全接続の予算はまず
+$C(1+\log(N_j+1))+C_j^{\rm neck}$ と取れる．
+既存の $N_j$ の下限に
+\begin{equation}\label{ke:eq:neck-constant-depth-choice}
+ C_j^{\rm neck}\le1+\log(N_j+1)
+\end{equation}
+を加える．これは許容される cut の選択条件であり，$C_j^{\rm neck}$ 自体の
+exhaustion に関する増大率を推定した結果ではない．定数 $C$ を一度増やせば
 \begin{equation}\label{ke:eq:global-connector-budget}
- H=H_{j,t}:=C_j
+ H=H_{j,t}:=C\bigl(1+\log(N_j+1)\bigr)
 \end{equation}
 により次の費用を同時に抑えられる：同一 pair の同一 actual normal moment 上の
-任意の二点の接続，各 component の core と変更 collar 内の任意の二点の接続，
+任意の二点の接続，各 component の core・変更 collar・neck 尾部内の任意の二点の接続，
 および必要な actual normal Moser trajectories．
 第一の場合の二点は，異なる reduced 葉又は source・saddle の特異葉に属してよい．
 経路自体が moment level 又は一つの fiber 内に留まるとは主張しない．
 第二の場合には一つの component ごとに，少し広い固定連結 compact image 内の
-経路を使う．異なる component cores 全体の径を $C_j$ で抑えるわけではない．
+経路を使う．異なる component cores 全体の径を $H$ で抑えるわけではない．
 
 \begin{proposition}[潰される木上の全 fiber 合併を含む一様収縮]
 \label{ke:collapsed-tree-full-fiber-collapse}
-定数 $C_j$ を十分大きく選べば，全 $z\in\mathcal C_d$ に対し
+定数 $C$ を十分大きく選べば，全 $z\in\mathcal C_d$ に対し
 \begin{equation}\label{ke:eq:full-fiber-diameter-upper}
  \operatorname{diam}_{d_{g_t}} f_{j,t}^{-1}(z)\le H_{j,t}.
 \end{equation}
@@ -135,7 +195,7 @@ $a_J(z)\in S_{a,j,t}\cap W_{t,J}$ を一つ選ぶ．
 補題\ref{ke:removed-corner-target-cap}により
 $P^{\rm old}(a_J(z))$ は $e_a$ の $C\eta$ 近傍にある．
 $d_\square(z,e_a)=u<\kappa=\eta$ なので target 誤差を得る．
-各 $a_J(z)$ は同じ component compact に属するため，接続費用は $C_j\le H$ である．
+各 $a_J(z)$ は同じ component compact に属するため，対数接続費用 $H$ を使える．
 $2-\kappa<u<2$ も component $b$ を使って同様であり，
 $z=e_a$ もこの link 上の選択で扱える．
 以上は target の全 support 型を尽くす．
@@ -184,8 +244,9 @@ Core cut により残る旧辺の interval は正確に $\mu\in[-\delta,\delta]$
 $q_x=e_a$ とすれば，命題\ref{ke:global-base-parameterization}の core-image 評価が
 target 誤差を与える．各 $J\ni a$ の portal を
 $S_{a,j,t}\cap W_{t,J}$ に選べば，$x$ と同じ固定 component compact に属するので
-接続費用は $C_j$ 以下である．
-Anchor moment interval の外側の neck 尾部も，この component compact に含めてある．
+接続費用は $H$ 以下である．
+Anchor moment interval の外側の neck 尾部は
+補題\ref{ke:component-neck-tail-depth}により同じ対数予算で扱える．
 
 複数の場合が重なる点はどちらで扱ってもよい．この分類の役割は，
 gallery の最初の square の label が元の corner の label と異なるときにも，
@@ -209,7 +270,12 @@ gallery の最初の square の label が元の corner の label と異なると
 \begin{equation}\label{ke:eq:global-ambient-upper-error}
  U_{j,t}=M_dE_{j,t}
        +C(M_d+1)\eta_{j,t}
-       +(M_d+1)\frac{C_j}{R_t}.
+       +(M_d+1)\frac{H_{j,t}}{R_t}.
+\end{equation}
+特に上の許容 cut 選択と $N_j\ge m_j=6b_j$ の下で
+\begin{equation}\label{ke:eq:global-upper-explicit-depth-error}
+ U_{j,t}\le C_d\left\{\frac1{b_j}
+       +\frac{1+\log R_t+\log(N_j+1)}{R_t}\right\}.
 \end{equation}
 従って既存の遅い対角選択を十分小さくすれば，$j=j(t)\to\infty$ に沿って
 $U_{j(t),t}\to0$ である．同じ選択で，全 $f_t$-fibers の正規化 ambient 径も

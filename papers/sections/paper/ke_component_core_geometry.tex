@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.0: 固定 KE 形式上の core と固定 compact の正則化．
+% 2026-11-21 / v1.1: 固定 KE core，compact-relative Morse--Smale 選択と弱い等方層構造．
 \section{成分極限の KE core と固定 compact 正則化}
 \label{ke:component-core-geometry-section}
 
@@ -152,7 +152,8 @@ $V_a\widehat\Psi_A=V_a\psi_\vartheta+a(u)V_au$ であり，
 $0\le a\le1$ だから同じ下界が $A$ に一様に成立する．
 この議論では $a'$ を評価する必要がない．
 
-Critical set を含む固定 compact 内で potential を十分小さく perturb して Morse にする．
+Critical set を含む固定 compact 内で potential を十分小さく perturb して，
+critical values が相異なる Morse function にする．
 Strict plurisubharmonicity はこの perturbation で保たれる．
 $A$ が大きければ，全 potential はその compact の近傍で等しい．
 さらに $\widehat\Psi_A\ge\Psi$ で，両者の相違する領域は，
@@ -167,16 +168,127 @@ Morse indices は複素次元以下であり，十分高い regular sublevel が
 Weinstein domain を与える．その core が所要の skeleton である．
 \end{proof}
 
+\begin{lemma}[compact core の相対 Morse--Smale 選択]
+\label{ke:compact-relative-morse-smale}
+$(K,\omega=d\lambda,Z,\Phi)$ を四次元の compact Weinstein domain とし，
+$\Phi$ は相異なる critical values を持つ Morse Lyapunov function とする．
+境界 collar と各 critical point の十分小さい近傍を固定したまま，
+$Q\in C_c^\infty(\operatorname{int}K)$ を選び，
+同じ二形式 $d\lambda$ に対する $\lambda+dQ$ の Liouville field を
+Morse--Smale にできる．新しい Lyapunov function も境界 collar で $\Phi$ に等しい．
+その skeleton $\Sigma$ には，閉部分集合の filtration
+\[
+ \varnothing=\Sigma^{(-1)}\subset\Sigma^{(0)}
+ \subset\Sigma^{(1)}\subset\Sigma^{(2)}=\Sigma
+\]
+があり，$\Sigma^{(k)}\setminus\Sigma^{(k-1)}$ は smooth な
+$k$ 次元 isotropic submanifold である．空の差を許す．
+この主張は Whitney 条件を含まない．
+\end{lemma}
+
+\begin{proof}
+必要な小さい holonomy 変更を，両端の primitive を厳密に固定して実現する．
+Critical points を含まない小さい Liouville slab の座標を $(r,y)$ とし，
+$\lambda=e^r\alpha$, $Z=\partial_r$ と書く．
+$h_s$ を十分小さい contact isotopy，$h_s^*\alpha=e^{f_s}\alpha$，
+$h_0=\mathrm{id}$ とする．下端で $0$，上端で $1$ となる cutoff $\chi(r)$ を取り，
+$u\in[0,1]$ に対し
+\[
+ F_u(r,y)=\bigl(r-f_{u\chi(r)}(y),\,h_{u\chi(r)}(y)\bigr),
+ \qquad \lambda_u=F_u^*(e^r\alpha)
+\]
+と置く．$F_u$ の値域には少し広い slab を用いる．
+Isotopy が十分小さければ $F_u$ は embedding で，$d\lambda_u$ は symplectic である．
+下端では $F_u=\mathrm{id}$，上端では contact map の symplectization lift
+なので $\lambda_u=\lambda$ である．従って $\lambda_u-\lambda$ は slab 内部に支持される．
+新しい Liouville field は $F_u$ により $\partial_r$ へ写り，
+元の $\Phi$ を厳密に増加させる．実際，各 compact slab では
+$\min d\Phi(Z)>0$ なので，isotopy を十分小さくすれば $\min d\Phi(Z_u)>0$ が保たれる．
+下端から上端への holonomy は，
+元の積表示で $h_u^{-1}$ となる．これは Weinstein holonomy の変形
+\cite[\S4A, Lemma~4.1]{CEFlexible}の，本稿に必要な小さい両端固定版の直接構成である．
+
+Critical values の小さい順に，各 critical point の直下にこの slab を置く．
+その critical point の stable disk が上側の section に切り出す attaching sphere を，
+下側へ流したときに，全ての低い critical points の unstable manifolds と
+横断的になるように contact isotopy を選ぶ．
+Contact Hamiltonian の値と contact hyperplane 上の一階微分は，
+各点で contact vector field の全接方向を生成する．
+Compact section の有限被覆でこの生成子を選べば，
+小さい有限次元 contact isotopy 族の evaluation map は submersion になる．
+従って parametric transversality が適用できる．
+Section 上の unstable manifolds が非閉でも，その可算 compact exhaustion に対する
+横断性の開稠密条件を交わらせればよい．
+この選択は任意に小さくでき，既に扱った低い critical values の領域を変えない．
+有限個の critical points に対して繰り返すと，critical germs と境界 collar を固定した
+Weinstein homotopy $(d\lambda_u,Z_u,\Phi)$ で $Z_1$ を Morse--Smale にできる．
+
+次に $\iota_{Y_u}d\lambda_u=-\dot\lambda_u$ を解く．
+$Y_u$ は固定 compact に支持されるためその flow $G_u$ は全 $u\in[0,1]$ で存在し，
+\[
+ G_1^*d\lambda_1=d\lambda,\qquad
+ G_1^*\lambda_1=\lambda+dQ,
+\]
+\[
+ Q=\int_0^1G_u^*\bigl(\lambda_u(Y_u)\bigr)\,du
+ \in C_c^\infty(\operatorname{int}K).
+\]
+これで二形式を元に戻し，Morse--Smale 性と critical germs を保つ．
+Lyapunov function は $G_1^*\Phi$ とする．
+この exact Moser transport は\cite[\S1]{EliashbergWeinsteinRevisited}でも述べられる．
+
+最後に，正時間 flow の stable manifold を $W^s(p)$ とし，
+$\Sigma^{(k)}=\bigcup_{\operatorname{ind}(p)\le k}W^s(p)$ と置く．
+$\dim W^s(p)=\operatorname{ind}(p)$ である．
+Stable manifold 上の接ベクトル $v,w$ は正時間 flow $\phi_t$ で収縮するので，
+\[
+ e^t\omega(v,w)=
+ \omega_{\phi_t(x)}\bigl(D\phi_t(v),D\phi_t(w)\bigr)\longrightarrow0.
+\]
+従って $W^s(p)$ は isotropic で，その次元は $2$ 以下である．
+
+閉 filtration の確認には Morse--Smale 条件を使う．
+境界での外向き横断性と負時間 flow の完備性から
+$\Sigma=\bigcap_{T\ge0}\phi_{-T}(K)$ は $\operatorname{int}K$ 内の compact 集合である．
+従って以下の軌道列と極限は，全て退出のない同じ compact 集合内にある．
+$W^s(p)$ の点列がその外の $x$ へ収束するとき，compact domain 内の
+正時間軌道の極限は，$x$ からある critical point $q$ への軌道と，
+$q$ から $p$ への非自明な有限 broken trajectory からなる．
+これは相隣る critical values の間に regular sections を取り，
+各 section の compactness と flow の連続性を用いて順に部分列を選べば得られる．
+無限時間を要する部分の極限は critical point であり，
+$\Phi$ の単調性と critical points の有限性により break は有限個である．
+非定常な接続 $q_0\to q_1$ では，
+$W^u(q_0)\pitchfork W^s(q_1)$ の次元が
+$\operatorname{ind}(q_1)-\operatorname{ind}(q_0)$ で，
+その交わりは一次元の flow direction を含む．
+従って index は接続ごとに厳密に増加し，
+\[
+ \overline{W^s(p)}\setminus W^s(p)
+ \subset\bigcup_{\operatorname{ind}(q)<\operatorname{ind}(p)}W^s(q).
+\]
+これは closed manifold 上の Morse--Smale gradient-like flow の closure 関係
+\cite[Introduction]{AbbondandoloMajerMS}と同じ議論であり，
+ここでは上記の compact trapping 集合の内部だけで行った．
+有限個の stable manifolds からなるので各 $\Sigma^{(k)}$ は閉じており，
+同じ index の stable manifolds は互いに集積しない．
+従って各差は smooth な isotropic submanifold となる．
+必要なのは\cite[Definition~2.1]{EM}のこの弱い filtration だけである．
+\end{proof}
+
 \begin{corollary}[固定 KE 形式そのものに対する有限型 Weinstein core]
 \label{ke:actual-limit-weinstein-core}
 $\omega_\infty$ 自体の primitive を，end の $d^c\Psi$ を変えずに
 compactly supported exact differential だけ補正して，有限型 Weinstein core を持つように
-選べる．Core の smooth stable strata は $\omega_\infty$-isotropic である．
+選べる．さらに core 内の Liouville field を Morse--Smale に選び，
+補題\ref{ke:compact-relative-morse-smale}の閉 filtration により，
+core を $\omega_\infty$-isotropic な smooth strata に分けられる．
 これは prescribed collar fibration の filling を主張するものではない．
 \end{corollary}
 
 \begin{proof}
-前補題の Morse perturbation を $\rho\in C_c^\infty(W)$ と書く．
+補題\ref{ke:positive-residue-finite-type}の Morse perturbation を
+$\rho\in C_c^\infty(W)$ と書く．
 $\omega_s=\omega_\infty+sdd^c\rho$ は十分小さい $\rho$ に対して K\"ahler である．
 $\iota_{Y_s}\omega_s=-d^c\rho$ を解くと，生成場は固定 compact に支持されるため
 全時間 $s\in[0,1]$ の flow $F_s$ がある．
@@ -187,6 +299,10 @@ $F_1^*\omega_1=\omega_\infty$ であり，primitive transport の公式から
 \]
 を得る．$F_1$ は end 上で恒等である．
 Perturbed Weinstein structure とその Lyapunov function を $F_1$ で引き戻せばよい．
+全 critical values より高い固定 regular sublevel 内で
+補題\ref{ke:compact-relative-morse-smale}を適用し，その exact correction を $dQ$ に加える．
+この選択も，全ての大きい $A$ の正則化に共通な領域だけで行えるので，
+補題\ref{ke:positive-residue-finite-type}の共通 skeleton の選択と両立する．
 この操作は compactly supported symplectic 同定であり，
 $\omega_\infty$ に新しい end の仮定を課さない．
 \end{proof}
@@ -207,7 +323,7 @@ Core fiber と開放射分岐辺上の singular fibers は同定理のものと�
 命題\ref{ke:fixed-compact-cusp-regularization}の正則化を $K$ の近傍で恒等にする．
 定理\ref{snc:main}の証明における product germs への変更，connection の変更，
 primitive の cutoff は，全て十分高い end に置けるので $K$ の外で行う．
-ただし Morse 化の compact perturbation は $K$ 内にあり，
+ただし Morse 化と補題\ref{ke:compact-relative-morse-smale}の perturbation は $K$ 内にあり，
 その部分は前系の exact Moser で元の KE 形式へ戻す．
 この同定後，得られた smooth compactification の形式は $K$ 上で
 $\omega_\infty$ と一致し，cone point の fiber は上の同じ core である．

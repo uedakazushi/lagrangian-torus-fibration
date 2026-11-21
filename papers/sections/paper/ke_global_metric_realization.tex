@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.1: 固定 stage の有界な source 費用による全域 GH 実現．
+% 2026-11-21 / v1.2: 対数接続費用と共通の対角選択による全域 GH 実現．
 \section{Actual Lagrangian fibration による負 KE 極限の実現}
 \label{ke:global-metric-realization-section}
 
@@ -72,8 +72,11 @@ stage と $t$ に依存せず固定できる．
 
 \emph{パラメータの選択順序と対角化．}
 まず $b_j\to\infty$，$\varepsilon_j\downarrow0$ を選び，旧 corner の cut を
-$m_j=6b_j$ とする．各 stage の residual domains，component core，
-相対 collars，$N_j$，および有限個の比較定数を先に固定する．
+$m_j=6b_j$ とする．各 stage の residual domains とその接続定数
+$C_j^{\rm neck}$ を先に固定する．次に component cut $N_j$ を，既存の下限および
+\eqref{ke:eq:neck-constant-depth-choice}を満たすよう選び，core と相対 collars を作る．
+この順序で $H_{j,t}=C(1+\log(N_j+1))$ となり，
+上界には\eqref{ke:eq:global-upper-explicit-depth-error}が使える．
 定理\ref{ke:sharp-global-one-active}と
 命題\ref{ke:global-depth-base-comparison}の順序に従い，
 Scalar 障壁専用の補助 cut $\mathfrak n_j$ とその境界定数を決めてから，
@@ -99,6 +102,9 @@ $\pi_t=\pi_{j(t),t}$ と選び，両側評価から
 $\operatorname{dis}(f_t)\le\max\{U_{j(t),t},V_{j(t),t}\}\to0$ を得る．
 この定理は $t$ に関する fibration 族の滑らかさや，
 あらかじめ指定した速さの対角化を結論に含めない．
+特に上界の明示的な深度依存は，$C_j^{\rm neck}$ の増大率や fixed-compact
+convergence の有効な閾値を与えるものではなく，下界の $C_j$ も残る．
+従って最適な全域収束速度の証明とは区別する．
 \end{proof}
 
 \begin{corollary}[GH 収束と全特異 fiber 合併の収縮]
