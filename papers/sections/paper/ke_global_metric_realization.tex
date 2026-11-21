@@ -62,8 +62,8 @@ canonical moment を用いている．
 \]
 とする．下界の誤差を
 \begin{equation}\label{ke:eq:global-realization-lower-budget}
- V_{j,t}=C_d\bigl(\varepsilon_j+b_j^{-1}+K_j^{-2}\bigr)
- +\frac{C_j\{1+\log\mathfrak m_j+\log K_j+\log(N_j+1)\}}{R_t}
+ V_{j,t}=C_d\left\{\varepsilon_j+b_j^{-1}+K_j^{-2}
+ +\frac{1+\log\mathfrak m_j+\log K_j+\log(N_j+1)}{R_t}\right\}
 \end{equation}
 と書く．定理\ref{ke:global-ambient-lower}と
 定理\ref{ke:global-ambient-upper}は，\emph{同じ} $f_{j,t}$ に対し
@@ -78,6 +78,16 @@ canonical moment を用いている．
 下界では global clipped-depth map の長さ評価を全ての経路に直接積分する．
 従って局所 protected 距離を ambient 距離に読み替える段階も，
 経路の領域出入りの回数を有限と仮定する段階もない．
+上界の式\eqref{ke:eq:global-upper-explicit-depth-error}と合わせると，
+許容 cut の下で固定族の定数 $C_d$ により
+\begin{equation}\label{ke:eq:global-realization-explicit-cut-budget}
+ \operatorname{dis}(f_{j,t})\le C_d\left\{
+ \varepsilon_j+b_j^{-1}+K_j^{-2}
+ +\frac{1+\log R_t+\log\mathfrak m_j+\log K_j+\log(N_j+1)}{R_t}
+ \right\}.
+\end{equation}
+ここには独立の stage-dependent な乗法係数を残していない．
+Stage の定数は，cut の下限と最後の parameter 閾値へ入っている．
 
 \emph{パラメータの選択順序と対角化．}
 まず $b_j\to\infty$，$\varepsilon_j\downarrow0$ を選び，旧 corner の cut を
@@ -92,18 +102,16 @@ Scalar 障壁専用の補助 cut $\mathfrak n_j$ とその境界定数を決め�
 新しい lower cut $\mathfrak m_j$ と upper cut factor $K_j\to\infty$ を選ぶ．
 $\mathfrak n_j$ は既存 neck/corner 構成の $n_j$ とは独立の記号である．
 この $\mathfrak m_j$ は旧 corner cut $m_j$ と同じ量ではない．
-全固定 stage 定数を一つの $C_j\ge1$ に含め，
 構成・比較の有限個の条件に加えて
 \begin{equation}\label{ke:eq:global-realization-diagonal}
- R_t\ge jC_j\{1+\log\mathfrak m_j+\log K_j+\log(N_j+1)\}
+ R_t\ge j\{1+\log\mathfrak m_j+\log K_j+\log(N_j+1)\}
 \end{equation}
 を満たす閾値 $r_j>0$ を取る．$r_{j+1}<r_j/2$ としてよく，
 $0<|t|<r_j$ なら stage $j$ の全条件が成り立つようにする．
 $j(t)=\max\{j:|t|<r_j\}$ と置けば $j(t)\to\infty$ であり，
 \[
  \frac{\log(m_{j(t)}+1)+\log R_t}{R_t}\to0,
- \quad \frac{1+\log(N_{j(t)}+1)}{R_t}\to0,
- \quad \frac{C_{j(t)}}{R_t}\to0.
+ \quad \frac{1+\log(N_{j(t)}+1)}{R_t}\to0.
 \]
 ここでは $N_j\ge m_j$ と，$\log R_t/R_t\to0$ を用いた．
 従って $U_{j(t),t},V_{j(t),t}\to0$ となる．
@@ -111,9 +119,9 @@ $\pi_t=\pi_{j(t),t}$ と選び，両側評価から
 $\operatorname{dis}(f_t)\le\max\{U_{j(t),t},V_{j(t),t}\}\to0$ を得る．
 この定理は $t$ に関する fibration 族の滑らかさや，
 あらかじめ指定した速さの対角化を結論に含めない．
-特に上界の明示的な深度依存は，$C_j^{\rm neck}$ の増大率や fixed-compact
-convergence の有効な閾値を与えるものではなく，下界の $C_j$ も残る．
-従って最適な全域収束速度の証明とは区別する．
+明示的な cut budget は，$C_j^{\rm neck}$ の増大率，scalar 障壁に必要な
+$\mathfrak m_j,K_j$ の成長，又は fixed-compact convergence の有効な閾値を
+与えるものではない．従って $R_t$ だけによる最適な全域収束速度の証明とは区別する．
 \end{proof}
 
 \begin{corollary}[GH 収束と全特異 fiber 合併の収縮]

@@ -15,7 +15,7 @@
 
 ## Cloud Codexから再開する
 
-最新mainで [研究方針](00_research_plan.md) → [AGENTS.md](AGENTS.md) → [依存関係](research/ke-dependencies.md) → [研究ノート](research/notes.md) を読む。次に `ke:global-metric-realization` から依存する接着・source・scalar・portalの証明をたどる。現在の優先課題は、公表に向けた一次文献と依存結果の包括的再点検、新規性の確認、主稿構成の整頓である。改訂24では共通anchorでの保持neckの正確なmoment範囲と、同一momentのcorner参照torusによる全域値比較を明示した。固定残余基底のMoser被覆と接続は十分大きい有限cutに一様な形へ整理した。今回の追加箇所を独立点検し、全域実現へ至る同じ基底値の接続を確認している。組版・表示確認の現在の状態は末尾を参照。
+最新mainで [研究方針](00_research_plan.md) → [AGENTS.md](AGENTS.md) → [依存関係](research/ke-dependencies.md) → [研究ノート](research/notes.md) を読む。次に `ke:global-metric-realization` から依存する接着・source・scalar・portalの証明をたどる。現在の優先課題は、公表に向けた一次文献と依存結果の包括的再点検、新規性の確認、主稿構成の整頓である。改訂24では共通anchorでの保持neckの正確なmoment範囲と、同一momentのcorner参照torusによる全域値比較を明示した。固定残余基底のMoser被覆と接続は十分大きい有限cutに一様な形へ整理した。今回の追加箇所を独立点検し、全域実現へ至る同じ基底値の接続を確認した。Corner移送とcutoffsの段階一様性により下界の係数も固定族に依存する定数へ整理し、上下両側の明示的なcut budgetを得た。次は全target端点における共通moment portalsとfinite galleryの接続を監査する。組版・表示確認の現在の状態は末尾を参照。
 
 ```sh
 python3 scripts/research_check.py setup --require-tex
@@ -29,7 +29,7 @@ python3 scripts/research_check.py tex
 
 | 原稿 | 役割 | 組版の確認範囲 |
 | --- | --- | ---: |
-| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域fibrationによるGH実現定理（改訂24） | 改訂24は組版未実行。直近確認は改訂23：251頁・指定23頁 |
+| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域fibrationによるGH実現定理（改訂24） | 改訂24：254頁・指定31頁を表示確認 |
 | [五次整数接着](papers/quintic-integer-gluing.tex) | 指定K5データの整数条件・高分母支持・未解決の大域接着 | 201頁 |
 | [Meridian surgery](papers/meridian-surgery.tex) | 閉corner circuitsの局所置換の障害 | 18頁 |
 | [TeX研究ノート](papers/research-notes.tex) | 証明素材・残る条件の整理 | 現行65頁、第1・4頁を表示確認 |
@@ -60,7 +60,7 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 **全曲面の距離下界：** `ke:sharp-global-one-active` はsourceを含む正則normal frameに対する係数 $1+o(1)$ のscalar評価を与える。二active方向は既存full-triple比較で扱い、`ke:global-depth-lipschitz` で全曲線の長さを先に評価する。`ke:anchor-trimmed-neck-domain` で保持neckのmoment範囲を閉じ、`ke:same-moment-corner-reference` の同じmomentのcorner境界torusへ比較を移す。これにより `ke:global-depth-base-comparison` で同じ $f_t$ と一様に比較し、`ke:global-ambient-lower` を得る。経路の領域間往復回数を仮定しない。
 
-**全曲面の距離上界とfiber合併：** `ke:global-ambient-upper` は、旧cornerの経路、全moment source退出、同じmomentのneck全体、各componentの対数費用と有限portal galleryを組み合わせる。Anchor interval外のneck尾部にも深度 $CN_j$ を証明し、残余基底の接続定数を先に選んで $1+\log(N_j+1)$ に吸収する。全接続予算は $H_{j,t}=C(1+\log(N_j+1))$、上界誤差は $C_d\{b_j^{-1}+(1+\log R_t+\log(N_j+1))/R_t\}$。このcut選択から最適収束速度は結論しない。`ke:collapsed-tree-full-fiber-collapse` は六次以上の内部木上の全fiber合併も評価する。各componentのcore径評価を、異なるcore全部の合併径やfiber内在径と取り違えない。これらを `ke:global-metric-realization` で同じ全射 $f_t=p_T\pi_t$ のdistortion消失へ統合した。
+**全曲面の距離上界とfiber合併：** `ke:global-ambient-upper` は、旧cornerの経路、全moment source退出、同じmomentのneck全体、各componentの対数費用と有限portal galleryを組み合わせる。Anchor interval外のneck尾部にも深度 $CN_j$ を証明し、残余基底の接続定数を先に選んで $1+\log(N_j+1)$ に吸収する。全接続予算は $H_{j,t}=C(1+\log(N_j+1))$、上界誤差は $C_d\{b_j^{-1}+(1+\log R_t+\log(N_j+1))/R_t\}$。このcut選択から最適収束速度は結論しない。`ke:collapsed-tree-full-fiber-collapse` は六次以上の内部木上の全fiber合併も評価する。各componentのcore径評価を、異なるcore全部の合併径やfiber内在径と取り違えない。これらを `ke:global-metric-realization` で同じ全射 $f_t=p_T\pi_t$ のdistortion消失へ統合した。`ke:eq:global-realization-explicit-cut-budget` は下界も合わせて、固定族の $C_d$ による $C_d\{\varepsilon_j+b_j^{-1}+K_j^{-2}+(1+\log R_t+\log\mathfrak m_j+\log K_j+\log(N_j+1))/R_t\}$ の一様評価を与える。Stageの定数はcutの下限とparameter閾値へ入り、これらの有効な成長率は未評価である。
 
 公表前には、依存する既存証明と一次文献の包括的再点検、新規性確認、主稿の全体点検が必要である。確認済みの範囲は [検証状態](research/validation.json) に分けて記録する。
 
@@ -74,4 +74,4 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-2026-11-21 / v3.4：主稿改訂24では、共通anchorによる保持neckの正確なmoment範囲と、同一momentの旧corner辺参照torusによる全域基底値比較を明示した。固定残余基底のMoser被覆・同一moment接続・中央帯評価を、十分大きい有限cutにも一様に適用できる定理文へ整理した。追加証明と接続を内部点検中。現行改訂24の組版・表示確認は未実行で、直近に確認したPDFは改訂23の251頁・指定23頁である。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は未実施。
+2026-11-21 / v3.4：主稿改訂24では、共通anchorによる保持neckの正確なmoment範囲、同一momentの旧corner辺参照torusによる全域基底値比較、有限cutに一様なMoser被覆・接続を明示した。Core境界のfirst-exitとcorner移送の段階一様性を補強し、上下両側のdistortionを固定族の係数と明示的cut budgetで評価した。これらの追加証明と接続を複数担当で独立内部点検した。現行改訂24はLuaLaTeXで254頁に組版し、第1・17・18・81–84・148・149・163–165・167–173・179–187・190–192頁の計31頁を最終PDFから個別画像で表示確認した。未解決参照・文献引用、重複label、欠字、overfull boxは0。静的構成検査も成功。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は未実施。

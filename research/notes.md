@@ -42,6 +42,17 @@ Capped volume下界の六型determinant、full-triple比較の固定境界面で
 
 `ke:common-profile-log-depth` の $\sigma_t(\mu)=\log(1/|\mu|)/R$（向きにより $2-$ を付ける）という解釈も保持する。直接の座標比較を要する用途では、`ke:source-arm-moment-depth` の $s\asymp_j|\mu|^{-1}$、中央帯の $s_x,s_y\ge\kappa_jL$、projected coordinatesの $O(t)$ 差を使える。全域値比較自体は上の参照torusによる移送で証明する。CP/PBE/TC全体を証明したのではなく、本稿の下界に必要な入力を直接与える。
 
+### 固定族の係数で書ける上下両側の誤差
+
+同一momentの参照点を使うと、基底値比較の定数の依存も整理できる。K2のcutoffsは $\log(b/b_j),\log(a/n_j),\log(c/n_j)$ の固定幅の関数であり、正規化した全固定階のnormは段階に依存しない。Cornerの座標補間、全平均Moser、相対Hamiltonianのactual変位は $C/b_j$ 以下、global section normsのunit差も有限個の固定triple chartsで一様である。Coreでは下側clipを非成分深度上界より大きく取ると $\Theta_t=e_i$ なので、coreの段階定数は値の誤差の係数に入らない。
+
+残る $C_j^{\rm neck}/R_t$ は、残余基底を先に固定してから既存の許容cut条件 $C_j^{\rm neck}\le1+\log(N_j+1)$ を課すことで吸収できる。従って `ke:global-depth-base-comparison` の係数は固定次数・固定族にのみ依存する $C$ とできる。主稿の `ke:eq:global-realization-explicit-cut-budget` は、上下両側を合わせて
+\[
+\operatorname{dis}(f_{j,t})\le C_d\left\{\varepsilon_j+b_j^{-1}+K_j^{-2}
+ +\frac{1+\log R_t+\log\mathfrak m_j+\log K_j+\log(N_j+1)}{R_t}\right\}
+\]
+を与える。残余接続定数、scalar障壁の境界定数、fixed-compact convergenceは、cutの下限と最後のparameter閾値を決める際に依然必要である。これらの有効な増大率を評価しておらず、$R_t$ のみの最適収束速度とは区別する。
+
 ## Portal上界と潰される木の全fiber合併
 
 正本は `papers/sections/paper/ke_global_ambient_upper.tex`。`ke:global-ambient-upper` は、保持corner内の旧経路を全曲面の経路として用い、同一momentのneck接続、source退出、各componentの固定stage費用を有限のtarget galleryでつなぐ。保持corner自体の新しい内在距離評価は要求しない。対象ごとに固定した有限定数は最後の遅い対角選択で $o(R_t)$ とする。
@@ -155,6 +166,8 @@ Source側の `ke:source-central-band-reduction` は、固定residual disc、人�
 
 `ke:corner-cap-disk` は小さいtarget像だけからdisk構造を推論しない。閉linkのnormal facesとroundingを列挙し、joint momentの単調性で各cap境界が一本のproper arcであることを示す。この三capを取り除いたdiskを、各vertexの $O(\eta)$ 近傍内の境界延長でuncapする。さらにsimplex座標で一様にinsetし、残るannulusを3vertex panelsと3edge stripsへ分ける。Stripでは全枝共通profileと各end profileの単調補間を用い、core sectorでは境界homeomorphismをdiskへ延長する。
 
+`ke:anchor-trimmed-neck-domain` は、共通anchorで残るneckを正確に $|\widehat\mu|\le\delta$ と同定する。Endでは残余momentが $\asymp b_j^{-1}\gg\delta$ なのでroundingが同じnormal cutへ厳密に戻り、真のrounding領域は残余深度 $\asymp N_j$ にあって旧neckの外である。各moment側の連結性から、区間外の尾部は対応するcoreの内部に全体として入る。平行linkとの差は変更collarに含める。これで $\sigma_t$ の定義域と全域被覆が一致する。
+
 結果は `ke:global-base-parameterization` の全保持cornerにおける旧softmaxとの誤差 $C\eta$、各component core/変更collar像の頂点への $C\eta$ 近接である。$\eta=A(1+\log(N_j+1))/R_t$。`ke:collapsed-tree-common-moment` はcore近傍以外の $p_T$-fiberが厳密に同一moment上の内部木全体となることを別に保証する。`ke:neck-base-value-control` は全保持neckで辺値との $C\eta$ 近接、source critical valuesでは $e_i+e_j$ への近接を与える。
 
 旧softmaxの閉辺にはregular torus fibersがある一方、全域基底のcellular辺はbranch locusである。従って全保持cornerでの厳密な値の一致は一般に不可能であり、insetによる一様に小さい誤差が適切である。位相同定だけからこの値の制御を結論しない。
@@ -222,7 +235,7 @@ Skeletonの連結性は $\Sigma=\bigcap_{T\ge0}\varphi_{-T}(K)$ というnested 
 H_j=C(1+\log(N_j+1)),\qquad
 U_{j,t}\le C_d\left\{b_j^{-1}+\frac{1+\log R_t+\log(N_j+1)}{R_t}\right\}
 \]
-とできる。これは残余定数のexhaustion増大率の解析評価ではなく、選択順序による吸収である。下界の段階定数とfixed-compact収束の閾値も残るため、最適な全域rateは結論しない。経路はambientであり、同一momentやfiberの内部を通る必要はない。
+とできる。これは残余定数のexhaustion増大率の解析評価ではなく、選択順序による吸収である。Scalar補助cutの増大率とfixed-compact収束の閾値も未評価であるため、最適な全域rateは結論しない。経路はambientであり、同一momentやfiberの内部を通る必要はない。
 
 ### 主要接着依存の点検範囲
 
@@ -231,6 +244,8 @@ Centered averageの $K\omega=0$、二作用の $F=K_1\lambda+A_1K_2\lambda$、co
 ### 切り取った cap と旧 softmax 値
 
 `ke:core-depth-upper` は、固定componentのstrictly plurisubharmonic potential $\Psi_i=\sum_aw_as_a-2\sum_a\log s_a+O(1)$ を使う。Link上の深度が $CN_j$ 以下なら、$E_{i,t}^{-1}(K_{i,j,t})$ における最大原理と $\Psi_i\ge c\sum_as_a-C$ からcore全体でも同じ上界が得られる。ここではLiouville補正後のpotentialを要求しない。Graph gaugeはこの固定compact上で最後に $t$ を小さく選び、corner逆写像のlog-depth変位から乗法的に比較する。
+
+境界のactual移送はnormal facesとcorner roundingを分ける。Normal facesでは先に得たMoser長 $C_{P_j}/N_j$ と、拡大した固定graph compact上の $|d\log s_a|\le\sqrt2K$ により、深度が初めて倍になる退出を排除する。$N_j$ は $C_{P_j}$ の後、graph比較に必要な $t$ 閾値は $N_j$ の後で選ぶ。Cornerでは既存のlog-depth変位を使う。境界の上界の証明にcore全体の上界を先取りしていない。
 
 `ke:removed-corner-target-cap` は、$x\in K_{i,j,t}\cap W_{t,J}$ に対して
 \[
@@ -528,4 +543,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 ## 検証状態
 
 
-2026-11-21 / v3.4：主稿改訂24では、共通anchorによる保持neckの正確なmoment範囲と、同一momentの旧corner辺参照torusによる全域基底値比較を明示した。固定残余基底のMoser被覆・同一moment接続・中央帯評価を、十分大きい有限cutにも一様に適用できる定理文へ整理した。追加証明と接続を内部点検中。現行改訂24の組版・表示確認は未実行で、直近に確認したPDFは改訂23の251頁・指定23頁である。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は未実施。
+2026-11-21 / v3.4：主稿改訂24では、共通anchorによる保持neckの正確なmoment範囲、同一momentの旧corner辺参照torusによる全域基底値比較、有限cutに一様なMoser被覆・接続を明示した。Core境界のfirst-exitとcorner移送の段階一様性を補強し、上下両側のdistortionを固定族の係数と明示的cut budgetで評価した。これらの追加証明と接続を複数担当で独立内部点検した。現行改訂24はLuaLaTeXで254頁に組版し、第1・17・18・81–84・148・149・163–165・167–173・179–187・190–192頁の計31頁を最終PDFから個別画像で表示確認した。未解決参照・文献引用、重複label、欠字、overfull boxは0。静的構成検査も成功。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は未実施。

@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.3: 共通 anchor・参照 torus と同じ残余基底による全域上界．
+% 2026-11-21 / v1.4: 下界と共通の固定残余基底および許容 cut による全域上界．
 \section{全 fiber 合併の収縮と actual 全曲面距離の上界}
 \label{ke:global-ambient-upper-section}
 
@@ -30,8 +30,8 @@ source discs，および全 labelled ends の旧 softmax 辺の残余像を含�
 選択は $[-\delta,\delta]$ に依存しない．相対葉族補間もこの固定基底の境界 collar
 を保つため，上界のために後から基底を拡大し直さない．
 
-$C_j^{\rm neck}$ を，同補題と系\ref{ke:source-inclusive-same-moment-collapse}の
-この有限個の固定基底に対する接続定数の最大とする．これは $N_j$ より先に固定できる．
+接続定数 $C_j^{\rm neck}$ も下界節と同じものを用い，
+式\eqref{ke:eq:neck-constant-depth-choice}を課してある．これは $N_j$ より先に固定できる．
 成分側に残る短い neck 尾部にも，次の深度評価がある．
 
 \begin{lemma}[Component 側の neck 尾部の深度]
@@ -84,12 +84,8 @@ Core の深度上界を neck 尾部へ無条件に延長する議論ではない
 
 以上から，全接続の予算はまず
 $C(1+\log(N_j+1))+C_j^{\rm neck}$ と取れる．
-既存の $N_j$ の下限に
-\begin{equation}\label{ke:eq:neck-constant-depth-choice}
- C_j^{\rm neck}\le1+\log(N_j+1)
-\end{equation}
-を加える．これは許容される cut の選択条件であり，$C_j^{\rm neck}$ 自体の
-exhaustion に関する増大率を推定した結果ではない．定数 $C$ を一度増やせば
+下界節で選んだ同じ cut 条件\eqref{ke:eq:neck-constant-depth-choice}により
+第二項を吸収する．定数 $C$ を一度増やせば
 \begin{equation}\label{ke:eq:global-connector-budget}
  H=H_{j,t}:=C\bigl(1+\log(N_j+1)\bigr)
 \end{equation}

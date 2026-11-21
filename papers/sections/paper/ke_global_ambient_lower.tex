@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.1: 全域 co-Gram と同一 moment の corner 参照点による基底値比較．
+% 2026-11-21 / v1.2: 同一 moment 参照点と許容 cut による固定族の全域下界予算．
 \section{切り詰めた対数深度による全曲面の距離下界}
 \label{ke:global-scalar-lower-section}
 
@@ -334,17 +334,30 @@ trajectories の費用を加えれば，actual 像にも一つの $C_j^{\rm neck
 旧辺の projection 値は定義通り表示された $E_{ik}(u_{J,t}(\mu))$ である．
 \end{proof}
 
+以下では，この有限個の pair に対する参照点の定数と，
+系\ref{ke:source-inclusive-same-moment-collapse}の同じ固定基底上の接続定数の
+最大を $C_j^{\rm neck}$ とする．これを $N_j$ より先に固定し，component cut の
+既存の下限に
+\begin{equation}\label{ke:eq:neck-constant-depth-choice}
+ C_j^{\rm neck}\le1+\log(N_j+1)
+\end{equation}
+を加える．これは許容される cut の選択条件であり，$C_j^{\rm neck}$ の
+exhaustion に関する増大率を評価した結果ではない．後節の距離上界でも，
+この同じ固定基底，定数，および cut 条件を用いる．
+
 \begin{proposition}[Clipped depth と actual 基底値の全域比較]
 \label{ke:global-depth-base-comparison}
+式\eqref{ke:eq:neck-constant-depth-choice}を満たすよう $N_j$ を選ぶ．
 Sharp normal 評価の下側 cut $\mathfrak m_j$ を，
 固定 stage の core と変更 collar の非成分深度の全上界，
 および保持 neck の残余 compact 上の非 pair 深度の全上界より
 大きく取る．
 この選択は定理\ref{ke:sharp-global-one-active}のパラメータ順序と両立する．
-ある有限な固定 stage 定数 $C_j$ に対して
+固定した次数・退化族と予め固定した chart・weights にのみ依存し，
+$j,t$ に依存しない定数 $C$ に対して
 \begin{equation}\label{ke:eq:global-depth-base-comparison}
  \sup_{x\in X_t}d_\square(\Theta_t(x),f_{j,t}(x))
- \le \frac{C_j\{1+\log\mathfrak m_j+\log K_j+\log(N_j+1)\}}R
+ \le \frac{C\{1+\log\mathfrak m_j+\log K_j+\log(N_j+1)\}}R
 \end{equation}
 となる．$\Theta_t$ 自体が Lagrangian fibers 上で一定である必要はない．
 \end{proposition}
@@ -366,13 +379,30 @@ Dominant coordinate は旧写像と $\Theta_t$ の双方で $1$ となり，
  d_\square(\Theta_t(y),w)
  \le C\frac{\log\mathfrak m_j+\log K_j}R.
 \]
-旧 corner map を与える座標補間 $G$，Moser と相対 Hamiltonian patch の
-actual ambient displacement は固定 stage で有界である
-（命題\ref{ke:three-arm-coordinate-interpolation}，
-定理\ref{ke:relative-corner-patch}，
-定理\ref{ke:slow-cut-closed-corner-gh}）．
+ここまでの定数は有限個の固定 triple charts の unit bounds によるもので，
+stage に依存しない．旧 corner map $C_{t,J}=G\Upsilon\Phi$ の変位にも
+同じ一様性がある．実際，系\ref{ke:neck-corner-saturated-union}の証明では
+入れ子領域の cutoffs を
+$\log(b/b_j),\log(a/n_j),\log(c/n_j)$ の固定した滑らかな関数で作り，
+その全固定階の模型 norm は一様である．相対化は moment interval に制限する前に
+行われ，$\iota_j^{-1}$ による微分損失は生じない．
+命題\ref{ke:quantitative-order-hamiltonian}と
+定理\ref{ke:relative-corner-patch}の小摂動量を $\delta_{\rm av}$ と書くと，
+$e=O(b_j^{-1})$，$\delta_{\rm av}=O(b_j^{-1})$ であり，
+相対 Hamiltonian flow の軌跡長は模型計量で $O(b_j^{-2})$ となる．
+全平均の Moser flow には定理\ref{ke:slow-cut-closed-corner-gh}の
+生成場評価 $C/b_j$ を使えば十分である．また
+命題\ref{ke:three-arm-coordinate-interpolation}の $G_s$ の軌跡長は
+$O(e^{-cb_j}/b_j)$ である．全軌跡は最小深度が $c'b_j$ 以上の三重点域に留まり，
+full-triple 比較はそこで actual 計量と模型計量の一様な二側比較を与える．従って
+定理\ref{ke:slow-cut-closed-corner-gh}と同じ全 phase の領域で
+\begin{equation}\label{ke:eq:corner-uniform-actual-displacement}
+ \sup_{z\in\mathcal H_{t,m_{\rm old}}}
+ d_{g_t}(z,C_{t,J}(z))\le C/b_j
+\end{equation}
+と評価でき，この $C$ も $j,t$ に依存しない．
 補正前後の点を式\eqref{ke:eq:global-depth-lipschitz}で比較すると，
-その追加誤差は $C_j/R$ 以下である．この順序により，
+その追加誤差は $C/(b_jR)$ 以下である．この順序により，
 補正の像で raw physical depth の微分を別に評価する必要はない．
 命題\ref{ke:global-base-parameterization}を用いれば，
 全保持 corner で所要の値比較が従う．
@@ -394,16 +424,17 @@ $\mu=\widehat\mu(x)\in[-\delta_j,\delta_j]$ とする．
 補題\ref{ke:same-moment-corner-reference}により，任意の incident triple $J$ の
 旧 corner 辺の torus から参照点 $y$ を選べる．既証の
 式\eqref{ke:eq:global-depth-lipschitz}と
-$S=R-\log\mathfrak m_j-\log K_j\ge R/2$ により
+$S=R-\log\mathfrak m_j-\log K_j\ge R/2$，および
+式\eqref{ke:eq:neck-constant-depth-choice}により
 \[
  d_\square(\Theta_t(x),\Theta_t(y))
  \le\frac{\sqrt{1+\epsilon_{j,t}}}{S}C_j^{\rm neck}
- \le\frac{C_j}R .
+ \le\frac{C\{1+\log(N_j+1)\}}R .
 \]
 上の corner の議論は $y$ において
 \[
  d_\square(\Theta_t(y),P^{\rm old}_{t,J}(y))
- \le C_j\frac{1+\log\mathfrak m_j+\log K_j}R
+ \le C\frac{1+\log\mathfrak m_j+\log K_j}R
 \]
 を与える．さらに $P^{\rm old}_{t,J}(y)=E_{ik}(u_{J,t}(\mu))$ であり，
 系\ref{ke:common-neck-longitude}の endpoint rescaling を含めた比較から
@@ -430,7 +461,9 @@ Corner との全交わりでは K2 の normal action と moment が同じであ�
 後節の全曲面距離上界又はその connector 予算は入力にしていない．
 また $\Theta_t$ の Lipschitz 評価は本命題に先立って証明済みなので，
 基底値比較と全域下界の間にも循環はない．
-有限個の定数を $C_j$ にまとめて結論を得る．
+Core の深度上界 $D_j$ は lower cut と最後の $t$ 閾値にだけ用い，値誤差には
+残らない．Neck の接続定数は既に $1+\log(N_j+1)$ に吸収したので，
+有限個の固定 chart の定数を一つの $C$ にまとめれば結論を得る．
 \end{proof}
 
 \begin{theorem}[Actual fibration に対する全曲面の距離下界]
@@ -439,6 +472,7 @@ Corner との全交わりでは K2 の normal action と moment が同じであ�
 定理\ref{ke:actual-global-fibration}と
 命題\ref{ke:global-base-parameterization}の同じ写像
 $f_{j,t}=p_T\pi_{j,t}$ を用いる．
+式\eqref{ke:eq:neck-constant-depth-choice}を含め，
 固定 stage のパラメータを上述の順序で選べば，
 全 $x,y\in X_t$ に対して
 \begin{equation}\label{ke:eq:global-ambient-lower}
@@ -446,9 +480,10 @@ $f_{j,t}=p_T\pi_{j,t}$ を用いる．
  R^{-1}d_{g_t}(x,y)\ge {}&
  d_\square(f_{j,t}(x),f_{j,t}(y))
  -C_d\bigl(\varepsilon_j+b_j^{-1}+K_j^{-2}\bigr)\\
- &-\frac{C_j\{1+\log\mathfrak m_j+\log K_j+\log(N_j+1)\}}R .
+ &-\frac{C\{1+\log\mathfrak m_j+\log K_j+\log(N_j+1)\}}R .
 \end{split}
 \end{equation}
+ここで $C_d,C$ は固定した次数・族と構成 data にのみ依存し，$j,t$ に依存しない．
 従って $j=j(t)\to\infty$ を十分遅く選ぶと右辺の全誤差が消える．
 左辺は $X_t$ 全体の任意の経路を許す ambient 距離であり，
 protected-corner 距離ではない．
@@ -462,11 +497,15 @@ protected-corner 距離ではない．
 経路の出入りの回数による加法誤差は生じない．
 各固定 stage の全定数を決めた後，
 \[
- R_t\ge jC_j\{1+\log\mathfrak m_j+\log K_j+\log(N_j+1)\}
+ R_t\ge j\{1+\log\mathfrak m_j+\log K_j+\log(N_j+1)\}
 \]
-となるまで $t$ 閾値を小さくしてよい．
+を課すまで $t$ 閾値を小さくしてよい．これとは別に，各固定 compact の比較や
+構成に必要な既存の全ての閾値も満たすようにする．
 $\varepsilon_j\to0$，$b_j,K_j\to\infty$ と合わせれば最後の主張を得る．
 この下界から fibration の全射性や距離上界を逆に推論してはいない．
+表示された評価は許容された cut の下での誤差予算であり，
+$\mathfrak m_j,K_j,N_j$ の有効な増大率，又は固定 compact の収束閾値は評価していない．
+従って最適な収束速度を結論するものではない．
 \end{proof}
 
 \subsection{任意回の出入りを扱う protected-buffer 原理}

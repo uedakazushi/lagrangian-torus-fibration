@@ -34,7 +34,10 @@
       "ke:compact-relative-morse-smale: compact contact holonomy変更とexact MoserによりKE二形式・critical germs・境界primitiveを保ってMorse–Smale化し、次元順の閉isotropic filtrationを得る。Whitneyは主張しない。",
       "ke:component-logarithmic-connectors: componentの全depth≤CNから拡大compact内の接続費用C(1+log(N+1))。固定cusp上比較とnormal動径経路を用いる。",
       "ke:component-neck-tail-depth: anchor外のcomponent-facing neck尾部もmoment単調性と浅いcompact/深いtubeの分割によりactual depth≤CN。残余基底定数とM_j,A_jはNより先に固定。",
-      "ke:fixed-marked-tree-exhaustion: 単純sourceをt=0を含む円板上で一価に追跡し、共通compact外のend補正と相対core補間で、全stage・全ての小さい複素tに一つのlabelled pants木を保つ。全torus cycleのparameter monodromyの自明化は主張しない。"
+      "ke:fixed-marked-tree-exhaustion: 単純sourceをt=0を含む円板上で一価に追跡し、共通compact外のend補正と相対core補間で、全stage・全ての小さい複素tに一つのlabelled pants木を保つ。全torus cycleのparameter monodromyの自明化は主張しない。",
+      "ke:fixed-base-neck-moser, ke:fixed-base-moment-connectors, ke:fixed-base-central-band: 固定残余近傍の有限下限以上のcutに一様。固定actual bufferと短円C_P/m、convex secant定数で、固定stage後のt→0にも直接適用できる。",
+      "ke:anchor-trimmed-neck-domain: 共通anchorで保持neckは正確に|mu|≤delta。全overlapのroundingは同じnormal faceに退化し、interval外の連結な各側は対応coreへ入る。",
+      "ke:same-moment-corner-reference: N前に固定したsource-inclusive residual compact上で、全phase・source・branchを含む任意のneck点と、同じmomentの旧corner辺torus全体のambient距離をC_j^neckで制御。"
     ],
     "not_proved": [
       "外部KE研究側のCP/PBE/TC自体の対象族での検証。本稿のP0ではこれらを仮定せず、直接のscalar下界とportal上界で必要な全域評価を代替した。",
@@ -55,10 +58,10 @@
       "ke:global-base-parameterization, ke:collapsed-tree-common-moment, ke:neck-base-value-control: 全保持cornerの旧softmax値とのO((1+log N_j)/R)整合、各core/collarの小target像、内部木全体の共通moment、source valuesのedge midpoint近接。",
       "ke:sharp-scalar-normal-barrier, ke:sharp-global-one-active: sourceを除かない正則normal比較領域で三種類の境界を制御し、B=1+epsilon+A*n/s+C*s/(kappa*L)による係数1+o(1)のscalar上界を証明。",
       "ke:global-depth-lipschitz: 一activeはnormal Schwarz障壁、二activeはfull-triple dominant-product比較で扱い、全曲面上のclipped-depth mapの全曲線Lipschitz評価を証明。",
-      "ke:global-depth-base-comparison, ke:global-ambient-lower: clipped-depthと同じactual基底値を全域で比較し、全曲面ambient距離のno-shortcut下界を証明。",
+      "ke:global-depth-base-comparison, ke:global-ambient-lower: 共通anchorの領域分割と同一momentのcorner参照点により、同じactual基底値を全域比較。Corner移送の段階一様性とC_j^neck≤1+log(N_j+1)からprefactorを固定族Cに整理。",
       "ke:global-ambient-upper: 同一moment接続、source退出、各componentの固定stage費用と有限portal galleryにより、同じf_tの全曲面ambient距離上界を証明。",
       "ke:collapsed-tree-full-fiber-collapse: d>=6でp_Tが潰す内部木上の全π_t-fibersの合併を含め、残余基底の定数を先に固定した許容cut条件の下で、全f_t-fiberのambient径をC(1+log(N_j+1))と評価。",
-      "ke:global-realization, ke:global-metric-realization: 全固定d>=5・既存一般性条件、一つの許容marked treeと十分遅い対角選択の下で、actual全域π_tと同じf_t=p_Tπ_tの一様distortion消失を統合。"
+      "ke:global-realization, ke:global-metric-realization: 全固定d>=5・既存一般性条件、一つの許容marked treeと十分遅い対角選択の下で、actual全域π_tと同じf_t=p_Tπ_tの一様distortion消失を統合。 ke:eq:global-realization-explicit-cut-budget は上下両側の誤差をepsilon_j,b_j,mfrak_j,K_j,N_j,R_tの明示式と固定族C_dで評価。Cutの成長率・t閾値・最適rateは未評価。"
     ],
     "publication_review_pending": [
       "統合定理から逆にたどる外部KE結果・既存局所証明・一次文献の包括的な再点検",
@@ -76,32 +79,82 @@
     "arithmetic_command": "python3 scripts/research_check.py arithmetic",
     "latest_reported_main_build": {
       "date": "2026-11-21",
-      "revision": 23,
-      "pages": 251,
+      "revision": 24,
+      "pages": 254,
       "pdf_and_synctex": true,
       "refs_citations_checked": true,
       "overfull_box_warnings": 0,
       "missing_glyphs": false,
       "duplicate_labels": false,
-      "visual_review": "第1・16・17・84–89・107–115・187・188・244・247・248頁の計23頁を個別画像で表示確認。Source補題・fixed tree・K2領域補強・Introduction・統合定理・nodal monodromy・書誌を含む。全251頁の逐頁再点検ではない。",
-      "source": "Source reduction・固定marked treeとK2の領域補強を統合した改訂23をLuaLaTeXで組版。PDFはGit追跡しない。",
-      "source_revision": "第25稿・現行改訂23（2026-11-21）",
-      "pdf_bytes": 2494074,
-      "pdf_sha256": "b3ac52925b0a477583accec226d73863bd680d4d5ab234ca907df5f6c980c958"
+      "visual_review": "第1・17・18・81–84・148・149・163–165・167–173・179–187・190–192頁の計31頁を最終PDFから個別画像で表示確認。有限cut・anchor・core first-exit・基底構成・同一moment参照点・固定族係数の上下界・統合定理を含む。全254頁の逐頁再点検ではない。",
+      "source": "共通anchor、同一moment参照点、有限cut版と固定族係数の両側cut budgetを統合した改訂24をLuaLaTeXで組版。PDFはGit追跡しない。",
+      "source_revision": "第25稿・現行改訂24（2026-11-21）",
+      "pdf_bytes": 2523207,
+      "pdf_sha256": "a6710390760aab3abbab8fbbc058e3e1a291556e027297ed686fc170d1b35251"
     },
     "this_audit": {
       "date": "2026-11-21",
-      "scope": "改訂24：共通anchorでの保持neck moment範囲、同一momentのcorner参照点、固定残余基底の有限cut版と同じf_tの値比較を内部点検中。全既存証明・全外部入力の包括的監査ではない。",
-      "reexecuted_build": false,
-      "reexecuted_static_checks": false,
+      "scope": "改訂24：共通anchorの全保持neck区間、cap/core分割とfirst-exit、同一momentのcorner参照torus、有限cut版と同じf_tの全域値比較を独立内部点検。Corner移送・cutoffsの段階一様性と残余接続定数のcutへの吸収を確認し、上下両側の固定族係数によるbudgetを整備。全既存証明・全外部入力の包括的監査ではない。",
+      "reexecuted_build": true,
+      "reexecuted_static_checks": true,
       "reexecuted_python_suite": false,
       "six_label_finite_command": "python3 verification/verify_cubical_six_label_geometry.py",
       "six_label_finite_result": "既存の有限検算PASSを保持。改訂24では計算箇所を変更せず再実行していない。",
-      "independent_internal_proof_review": [],
+      "independent_internal_proof_review": [
+        "ke:fixed-base-neck-moser (finite cut)",
+        "ke:fixed-base-moment-connectors (finite cut)",
+        "ke:fixed-base-central-band (finite cut)",
+        "ke:anchor-trimmed-neck-domain",
+        "ke:core-depth-upper (boundary first exit)",
+        "ke:removed-corner-target-cap",
+        "ke:common-edge-moment-profile",
+        "ke:common-neck-longitude",
+        "ke:corner-cap-disk",
+        "ke:global-base-parameterization",
+        "ke:collapsed-tree-common-moment",
+        "ke:neck-base-value-control",
+        "ke:global-depth-lipschitz (domain and normalization)",
+        "ke:same-moment-corner-reference",
+        "ke:global-depth-base-comparison",
+        "ke:global-ambient-lower",
+        "ke:eq:global-realization-explicit-cut-budget (fixed-family coefficient)"
+      ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
-      "visual_pages_reviewed": [],
-      "current_build_status": "Revision 24 source is being reviewed; not yet built. The latest verified main PDF is revision 23 (251 pages)."
+      "visual_pages_reviewed": [
+        1,
+        17,
+        18,
+        81,
+        82,
+        83,
+        84,
+        148,
+        149,
+        163,
+        164,
+        165,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        190,
+        191,
+        192
+      ],
+      "current_build_status": "Revision 24 final source compiled successfully to 254 pages; 31 selected pages from the final PDF visually inspected. No unresolved references/citations, duplicate labels, missing glyphs, or overfull boxes. Static repository checks passed."
     }
   },
   "cloud_codex": {
@@ -175,7 +228,7 @@
   "other_papers": {
     "papers/quintic-integer-gluing.tex": "旧201頁の組版記録のみ。本監査では未再組版。",
     "papers/meridian-surgery.tex": "旧18頁の組版記録のみ。本監査では未再組版。",
-    "papers/research-notes.tex": "既存65頁の組版・第1/4頁の表示確認記録を維持。改訂23の数学的追加は主稿とresearch/notes.mdに収め、今回このTeXノートは変更・再組版していない。"
+    "papers/research-notes.tex": "既存65頁の組版・第1/4頁の表示確認記録を維持。今回の数学的追加は主稿とresearch/notes.mdに収め、今回このTeXノートは変更・再組版していない。"
   },
   "formal_proof_assistant": false,
   "comprehensive_novelty_check": false

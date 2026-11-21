@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.2: Compact cone filling と component 接続費用の対数評価．
+% 2026-11-21 / v1.3: Core の深度上界における移送の first-exit と対数接続費用．
 \section{Actual KE 形式上の全域 core 接着}
 \label{ke:actual-core-gluing-section}
 
@@ -307,15 +307,31 @@ Corner face と丸め部分では，二つの独立深度がともに $O(N_j)$ �
 これは\eqref{ke:eq:component-two-action-estimate}と
 補題\ref{ke:closed-component-link}の moment-level graphs による．
 
-この評価を actual link の深度へ移す．Normal map は同じ centered flow をより深い
-固定 tube へ制限して用いられるので，その trajectory 長さは $C_{P_j}/N_j$ 以下に
-できる．固定 residual compact 上の cusp 比較と $N_j$ の下限を大きくする操作により，
-normal log-depth の変化を固定の小さい量以下にできる．Corner maps の log-depth
-変位は $O(b_j^{-2})$ である．Fixed frame 差も $N_j$ に吸収する．
-従って global depth functions は actual link 上で全て $C N_j$ 以下となる．
-同じ議論は $q_a\in[\delta_j/2,2\delta_j]$ の平行 levels とその小さい collars に
-適用できる．ここでは $N_j$ を $b_j,n_j,\iota_j$ および固定 residual compact の
-定数を決めた後に選ぶことを用いた．
+この評価を actual link へ移す．Normal faces では，同じ centered normal flow を，
+normal 深度が $N_j$ と固定比の間にある source 上へ制限する．
+補題\ref{ke:fixed-stage-source-neck}の短円評価と ODE の一意性により，
+各 trajectory の actual 長さは $C_{P_j}/N_j$ 以下である．
+初期点の全 component depths は，固定 frame 差と残余深度の上界を $N_j$ に吸収して，
+固定した $C_0$ に対し $C_0N_j$ 以下にできる．固定 component の cusp 比較から
+全 $W_i$ 上で $|d\log s_a|_{g_{\infty,i}}\le K$ と取れる．
+拡大 compact $\{\max s_a\le2C_0N_j\}$ の少し広い graph gauge を用意し，
+最後の $t$ の閾値で $E_{i,t}^*g_t\ge g_{\infty,i}/2$ を課す．先に
+\[
+ \sqrt2 K C_{P_j}/N_j<\log2
+\]
+としておけば，いずれかの深度が初めて $2C_0N_j$ に達するまでの
+$\log s_a$ の変化は $\log2$ 未満となり矛盾する．Graph gauge は拡大 compact の
+近傍に定義してあるので，その像からの最初の退出にも同じ議論を適用できる．
+従って normal faces の全 image で深度は $2C_0N_j$ 以下である．
+
+Corner faces と rounding には，この短円長評価を流用せず，corner map とその
+逆写像の既存の log-depth 変位 $O(b_j^{-2})$ を使う．Source の二つの独立深度は
+$O(N_j)$ 以下なので，actual physical depths も固定倍の $N_j$ 以下である．
+Graph gauge と global divisor norms の unit 差を固定段階で吸収すれば，
+component depths にも同じ上界が成立する．この議論は
+$q_a\in[\delta_j/2,2\delta_j]$ の平行 levels と小さい collars にも適用できる．
+全ての $N_j$ の下限は固定 residual compact の定数を決めた後に課し，その後で
+拡大 compact の graph convergence に必要な $t$ の閾値を取っている．
 
 境界上の評価を domain 全体へ移すため，成分極限の固定 strictly plurisubharmonic
 potential を用いる：
