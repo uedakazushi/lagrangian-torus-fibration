@@ -1,0 +1,369 @@
+% !TeX root = ../../surface-lagrangian-torus-fibration.tex
+% 2026-11-21 / v1.0: Full critical leaves を保つ相対葉族補間．
+\section{Saddle を動かす reduced 葉族の相対補間}
+\label{ke:relative-reduced-foliations-section}
+
+本節では source の critical moment から離れた自由な normal-circle 領域を扱う．
+Saddle の位置を固定する補題\ref{ke:moment-dependent-neck-foliation}とは異なり，
+full critical leaf と Reeb graph の型を保ちながら saddle を動かす．
+二つの first integral の値，critical values，reduced 面積又は第二作用周期を
+一致させることは要求しない．
+
+\subsection{必要な葉族と marking の仮定}
+
+$P$ を連結な compact oriented smooth surface with boundary とし，
+各境界成分 $C_a$ に互いに素な固定 collar
+$A_a\simeq[0,\epsilon)_r\times S^1$ を取る．
+$J$ は実開区間，$\mu_*\in J$ は anchor とする．
+本節の smooth simple-saddle family とは，smooth function
+\[
+ f:J\times P\longrightarrow\RR,\qquad f_\mu=f(\mu,\cdot)
+\]
+の connected-level-set partition $\mathcal F_\mu$ で，次を満たすものとする．
+\begin{enumerate}
+\item Interior critical points は全て非退化な index-one critical points である．
+  一つの connected critical leaf に含まれる critical point は一つだけである．
+  Critical leaf は $\figeight$，その小さい飽和近傍は pair of pants となる．
+\item 境界 collar 上の葉は固定された circles $r=\mathrm{constant}$ である．
+  従ってそこで $f_\mu=b_a(\mu,r)$，$\partial_rb_a\ne0$ と書けるが，
+  $b_a$ 自体が $\mu$ に依存しないとは仮定しない．
+\item Boundary components，saddles，およびその間の regular annuli の marking は，
+  anchor の marking から smooth continuation したものとする．
+  任意に別の Reeb-graph permutation を parameter ごとに指定する意味ではない．
+\end{enumerate}
+Boundary の角を用いる場合は，固定した toric collar 内で先に丸めてから適用する．
+必要な操作の支持はその小さい collar の外に取る．
+
+異なる connected critical leaves の critical values が等しくてもよい．
+全 critical values の相異性は仮定しない．
+ただし同じ connected leaf に二つの saddle がある場合には，その saddle connection が
+摂動で解け得るため，以下の定理の対象ではない．
+一つの固定 $J$ 全体での無条件の trivialization も主張せず，
+常に anchor の近くへ区間を縮めて用いる．
+
+必要に応じて有限個の fixed marked points $q_1,\ldots,q_N\in\operatorname{int}P$ を
+追加できる．その場合は，anchor でこれらが互いに異なる regular leaves 上にあり，
+boundary collars と critical leaves から離れていると仮定する．
+区間を縮めれば，各点の regularity とこの分離を保てる．
+この条件は本研究の distinct regular source markings に適合する．
+
+\subsection{一族の全葉を同時に同定する vector field}
+
+\begin{lemma}[Boundary-relative な simple-saddle 葉族の局所自明化]
+\label{ke:simple-saddle-family-trivialization}
+上の smooth family に対し，$\mu_*$ を含む小さい $J_0\Subset J$ と
+smooth diffeomorphisms $\Phi_\mu:P\to P$ が存在し，
+\[
+ \Phi_{\mu_*}=\id,\qquad
+ \Phi_\mu(\mathcal F_{\mu_*})=\mathcal F_\mu
+\]
+を満たす．$\Phi_\mu$ は小さい全 boundary collars 上で恒等であり，
+上記の fixed marked points を指定した場合はそれらも点ごとに固定する．
+Full critical leaves，saddle labels，boundary labels，および全 regular annuli の
+continuation marking を保存する．各固定 $k$ について
+\[
+ \|\Phi_\mu-\id\|_{C^k(P)}\le C_k|\mu-\mu_*|
+\]
+となる．定数は固定 family と anchor に依存してよく，動く stage に一様とはしない．
+\end{lemma}
+
+\begin{proof}
+Parameter を移して $\mu_*=0$ とする．以下の区間は必要に応じて縮める．
+Critical points は非退化なので，implicit function theorem により
+互いに交わらない smooth paths $p_v(\mu)$ をなし，
+\[
+ c_v(\mu)=f_\mu(p_v(\mu)),\qquad
+ \dot c_v(\mu)=\partial_\mu f_\mu(p_v(\mu))
+\]
+である．Compactness と $df_0\ne0$ on the complement of small critical neighborhoods により，
+これら以外の critical points は生じない．
+
+まず anchor の各 full critical leaf $L_v$ を，互いに素な小さい飽和領域 $Q_v$ に入れる．
+具体的には $f_0^{-1}([c_v(0)-\eta_v,c_v(0)+\eta_v])$ の，$L_v$ を含む成分を取る．
+十分小さい $\eta_v>0$ に対して，$Q_v$ は一つの saddle だけを含み，
+全 boundary components は regular level circles である．
+この領域の存在には，$L_v$ が一つの connected critical leaf であることを使う．
+もし全ての $\eta_v\downarrow0$ でその成分が $L_v$ の指定近傍から出るなら，
+nested compact connected components の共通部分が，$f_0^{-1}(c_v(0))$ の中で
+$L_v$ より大きい connected set になるからである．
+異なる $L_v$ の critical values が同じでも，それらの成分は別々に選べる．
+
+$Q_v$ の各 boundary circle に implicit function theorem を適用し，
+level $f_\mu=c_v(\mu)\pm\eta_v$ の小さい normal graph に置き換える．
+これにより smooth domains $Q_{v,\mu}$ を得る．
+Boundary は level circles，内部の critical point は $p_v(\mu)$ のみなので，
+内部の各 level の connected component はその boundary を横切らない．
+Boundary と同じ level に属する connected leaf も，regular collar の局所積構造により
+当該 boundary circle 自体であり，その外へ別の枝が付くことはない．
+従って $Q_{v,\mu}$ は必要な範囲で全葉の和である．
+これらの pair-of-pants neighborhoods の外には regular annuli だけが残る．
+実際，regular component 上の $\nabla f_\mu/|\nabla f_\mu|^2$ の流れを用いれば，
+その component は circle と interval の積になる．
+従って以下で構成する全体の vector field は，各 annulus の両端も同時に同定する．
+
+次に $P$ 上の smooth basic function $\zeta_\mu$ を作る．
+ここで basic は，各 connected leaf 上で定数という意味である．
+$Q_{v,\mu}$ 内で
+\[
+ \zeta_{v,\mu}
+ =\dot c_v(\mu)\,\chi_v(f_\mu-c_v(\mu))
+\]
+とする．$\chi_v$ は $0$ の近傍で $1$，
+$(-\eta_v,\eta_v)$ 内に支持された固定 cutoff とする．
+Boundary の近くで零なので，$Q_{v,\mu}$ の外へ零で延長しても smooth である．
+これは full critical leaf の近傍全体で $\dot c_v(\mu)$ に等しい．
+
+境界 collar では，より小さい collar で $1$ となる radial cutoff $\beta_a(r)$ を用い，
+\[
+ \zeta_{a,\mu}=\beta_a(r)\,\partial_\mu b_a(\mu,r)
+\]
+とし，その外へ零で延長する．従って小さい collar 上では
+$\zeta_\mu=\partial_\mu f_\mu$ となる．
+これは collar 上の first integral の\emph{表示値}を固定せず，葉だけを固定するために必要である．
+
+Fixed marked points を指定した場合は，それぞれの full regular leaf に
+互いに素な飽和 annular neighborhoods $A_{i,\mu}$ を取る．
+$d_i(\mu)=f_\mu(q_i)$ とし，その内部で
+\[
+ \zeta_{i,\mu}=\dot d_i(\mu)\,\chi_i(f_\mu-d_i(\mu))
+\]
+を加える．$\chi_i=1$ near $0$ とし，支持を当該 annulus 内に取る．
+これらの supports は critical neighborhoods と boundary collars から離して取れる．
+その結果 $\zeta_\mu(q_i)=\partial_\mu f_\mu(q_i)$ となる．
+
+有限個の上の functions の和を $\zeta_\mu$ とする．
+その構成から，全 $P$ 上の smooth function $a_\mu$ があり
+\begin{equation}\label{ke:eq:basic-critical-velocity}
+ d\zeta_\mu=a_\mu\,df_\mu
+\end{equation}
+となる．Critical points の近傍では $\zeta_\mu$ は定数なので $a_\mu=0$ と取れる．
+Boundary collar では
+\[
+ a_\mu=
+ \frac{\partial_r(\beta_a\partial_\mu b_a)}{\partial_rb_a}
+\]
+であり，分母は零でない．その他の各 support でも，$f_\mu$ の一変数関数を微分すればよい．
+Supports の外では $a_\mu=0$ とする．
+
+今度は
+\begin{equation}\label{ke:eq:foliation-transport-equation}
+ \partial_\mu f_\mu+df_\mu(Y_\mu)=\zeta_\mu
+\end{equation}
+を満たす smooth vector field を構成する．
+各 $p_v(\mu)$ の近くで parameter-dependent Morse coordinates を取り，
+\[
+ f_\mu\circ\kappa_{v,\mu}=c_v(\mu)+x^2-y^2
+\]
+とする．$Y_{v,\mu}\circ\kappa_{v,\mu}=\partial_\mu\kappa_{v,\mu}$ と置けば，
+$\zeta_\mu=\dot c_v(\mu)$ の小さい近傍で
+\eqref{ke:eq:foliation-transport-equation}を満たす．
+Parameter-dependent Morse coordinates の存在は，critical point を先に移した上で
+Taylor の積分剰余を
+$f_\mu-c_v(\mu)=\tfrac12 x^{\mathsf T}H_\mu(x)x$
+と書き，signature が一定の symmetric matrix $H_\mu(x)$ を smooth congruence で
+$\operatorname{diag}(1,-1)$ に直すことから従う．
+Congruence は，$A\mapsto A^{\mathsf T}\operatorname{diag}(1,-1)A$ の微分が
+symmetric matrices へ全射であることに implicit function theorem を適用して取れる．
+従ってここで新しい parameter-trivialization theorem を外部入力にしてはいない．
+
+Critical neighborhoods の外では固定補助計量の gradient を使い，
+\[
+ Y^{\rm reg}_\mu
+   =\frac{\zeta_\mu-\partial_\mu f_\mu}{|\nabla f_\mu|^2}\nabla f_\mu
+\]
+とする．Saddle charts と regular region の partition of unity でこれらを貼り合わせる．
+式\eqref{ke:eq:foliation-transport-equation}は $Y_\mu$ に関して線型なので，
+各局所解を貼り合わせても同じ式を保つ．
+Critical points の近傍では regular formula を使わず，Morse chart の解だけを用いる．
+小さい boundary collars では numerator が零なので $Y_\mu=0$ であり，
+fixed marked points においても $Y_\mu(q_i)=0$ となる．
+
+この parameter-dependent vector field の flow を $\Phi_\mu$ とする．
+Compactness と boundary 近傍での消滅により，小さい共通区間で全 $P$ 上に存在する．
+\eqref{ke:eq:foliation-transport-equation}と\eqref{ke:eq:basic-critical-velocity}から
+\[
+ \frac{d}{d\mu}\Phi_\mu^*(df_\mu)
+   =\Phi_\mu^*(d\zeta_\mu)
+   =(a_\mu\circ\Phi_\mu)\,\Phi_\mu^*(df_\mu)
+\]
+であり，従って
+\begin{equation}\label{ke:eq:foliation-covector-transport}
+ \Phi_\mu^*(df_\mu)
+ =\exp\!\left(\int_0^\mu a_s\circ\Phi_s\,ds\right)df_0.
+\end{equation}
+係数は全点で正である．この式は critical points でも成立し，
+regular tangent distributions と critical sets を同時に同定する．
+Critical leaf の各 smooth arc とその唯一の vertex を合わせると，
+connected critical leaf 全体も一つの connected leaf に写る．
+逆 flow にも同じことを適用すれば，像が単なる leaf の真部分集合ではなく
+全 connected leaf であることが分かる．
+Boundary，saddles，regular annuli の marking は identity からの smooth continuation で保たれる．
+最後の $C^k$ 評価は $\Phi_0=\id$ と，固定 compact 上での flow の smooth dependence による．
+\end{proof}
+
+\subsection{二つの葉族の比較と moment cutoff}
+
+\begin{theorem}[Full critical leaves を保つ相対葉族補間]
+\label{ke:saddle-moving-relative-interpolation}
+同じ $P$ と boundary collars 上に，二つの smooth simple-saddle families
+$\mathcal F^0_\mu,\mathcal F^1_\mu$ を与える．
+全 boundary collars では両者の leaf partition が同じ固定 radial partition であり，
+anchor では $\mathcal F^0_{\mu_*}=\mathcal F^1_{\mu_*}$ が
+\emph{同じ marked partition} として成り立つとする．
+各族は上で定めた smooth first integral を持つが，その値が相互に等しい必要はない．
+Fixed marked points を保存したい場合には，上記の distinct-regular-leaf 条件を課す．
+
+十分小さい $\mu_*$ の近傍 $J_0$ 上で，boundary-relative な小さい diffeomorphism 族
+$h_\mu$ があり，
+\[
+ h_{\mu_*}=\id,\qquad
+ h_\mu(\mathcal F^0_\mu)=\mathcal F^1_\mu.
+\]
+さらに $\mu_*$ の近傍で $1$，$J_0$ の外で $0$ の smooth moment cutoff $\chi$ に対して，
+\[
+ \mathcal F^{\rm new}_\mu=\mathcal F^1_\mu
+ \quad\text{near }\mu_*,\qquad
+ \mathcal F^{\rm new}_\mu=\mathcal F^0_\mu
+ \quad\text{outside }J_0
+\]
+となる smooth simple-saddle family を構成できる．
+Boundary/corner の全葉，full critical leaves の連結性と型，
+および指定した fixed marked points を保持する．
+Saddle の位置と critical values は動いてよい．
+\end{theorem}
+
+\begin{proof}
+前補題を二つの family に別々に適用し，trivializations
+$\Phi^0_\mu,\Phi^1_\mu$ を得る．
+Anchor の partitions が同じなので
+\[
+ h_\mu=\Phi^1_\mu\circ(\Phi^0_\mu)^{-1}
+\]
+が所要の比較となる．それぞれの first integral の anchor での表示値も，
+boundary での表示値も揃える必要はない．
+$h_\mu$ は境界と指定点を固定し，$\mu\to\mu_*$ で全固定階に恒等写像へ収束する．
+
+固定補助計量を用いて $h_\mu(p)=\exp_p v_\mu(p)$ と書き，
+$h^r_\mu(p)=\exp_p(rv_\mu(p))$，$0\le r\le1$ とする．
+区間を縮めれば全 $h^r_\mu$ が恒等写像に $C^1$ で十分近く，
+boundary を固定する diffeomorphisms となる．
+実際，local diffeomorphism であり，compactness と boundary-relative な
+identity homotopy から degree-one covering なので global diffeomorphism である．
+固定点では $v_\mu=0$ なので isotopy 全体もその点を固定する．
+
+\[
+ \mathcal F^{\rm new}_\mu
+   =h^{\chi(\mu)}_\mu(\mathcal F^0_\mu)
+\]
+と置く．First integral として
+$f^{\rm new}_\mu=f^0_\mu\circ(h^{\chi(\mu)}_\mu)^{-1}$ を使える．
+各 moment で一つの diffeomorphism の像なので，新しい critical points，
+critical-leaf の分裂，regular circles の切断，又は Reeb-graph の組合せ変化は起こらない．
+Reeb graph の parameterization は相互に異なってよいが，marked quotient と
+fiber partition は指定どおりに一致する．
+\end{proof}
+
+\paragraph{Marking の仮定が必要な理由．}
+同じ connected critical leaf に複数 saddle がある場合，small perturbation は
+その critical values を分離して別々の critical leaves にし得る．
+また固定した二点が anchor では同じ leaf 上にあり，別 parameter では異なる leaves 上に
+移る family は，その二点を固定する diffeomorphism では自明化できない．
+本定理はこれらの変化を許す意味での単なる ``Morse family'' を対象にしない．
+他方，互いに無関係な critical leaves の数値としての critical values の一致は障害でない．
+証明中の basic drift $\zeta_\mu$ を各 connected critical neighborhood で別々に選んだためである．
+
+点固定の障害は annulus $P=[-1,1]_r\times S^1_\theta$ 上ですでに現れる．
+$\beta(r)=1$ near $0$，$\beta=0$ near $\partial P$ とし，
+\[
+ f_\mu(r,\theta)=r+\mu\beta(r)\cos\theta
+\]
+と置く．十分小さい $\mu$ では critical point はなく，boundary 葉も固定される．
+しかし $q_1=(0,0)$，$q_2=(0,\pi)$ は $\mu=0$ で同じ葉にあり，
+$\mu\ne0$ では $f_\mu(q_1)=\mu$，$f_\mu(q_2)=-\mu$ により異なる葉にある．
+従って両点を固定する葉族の自明化は存在しない．
+これは moment-dependent な Lagrangian 葉族そのものの不存在ではない．
+
+\subsection{Hamiltonian circle reduction への持ち上げ}
+
+\begin{corollary}[自由 normal band 上の actual Lagrangian 補間]
+\label{ke:actual-saddle-moving-neck-interpolation}
+$(E^4,\omega)$ に自由な Hamiltonian $S^1$ 作用を与え，
+$\iota_V\omega=-d\mu$ とする．$J_0$ の閉包は source の critical moments を避けるとする．
+その商の対象領域に固定した smooth trivialization
+\[
+ q:E\longrightarrow E/S^1\simeq J_0\times P
+\]
+があり，boundary collars は既存の共通 toric germs と一致すると仮定する．
+各 fiber に用いる二葉族が前定理の条件を満たせば，
+\[
+ q^{-1}(\{\mu\}\times L),\qquad L\in\mathcal F^{\rm new}_\mu
+\]
+は actual $\omega$ に対する Lagrangian torus fibration を与える．
+Critical leaves の逆像は $S^1\times\figeight$ で，その smooth strata は isotropic である．
+Normal circle とその向き，boundary/corner の全 torus fibers を保ち，
+cutoff の支持外では既存 fibration と一致する．
+従って支持を非零 moment の小区間に取れば，central source の pinched torus germs は変更しない．
+\end{corollary}
+
+\begin{proof}
+Regular leaf の逆像は principal $S^1$ bundle over $S^1$ なので $T^2$ である．
+Full critical leaf は一つの saddle を持つ $\figeight$ であり，その上の principal circle
+bundle も trivial なので，逆像は $S^1\times\figeight$ である．
+これらは connected fibers である．
+
+各二次元 smooth stratum の tangent space は $V$ と，
+reduced 一次元葉の tangent vector の lift $W$ で張られる．
+$d\mu(W)=0$ より
+\[
+ \omega(V,W)=-d\mu(W)=0.
+\]
+従って regular torus は Lagrangian であり，singular fiber の二次元 strata も isotropic である．
+Critical orbit は一次元なので同じ結論を持つ．
+この計算は，葉族が $\mu$ に依存していても各 fixed moment 上で成立する．
+同値に，$f^{\rm new}(\mu,p)$ を $E$ へ引き戻すと $S^1$-invariant なので，
+その函数は $\mu$ と Poisson commute する．
+
+Normal-cycle marking を明示するには，$h^r_\mu$ の generating vector field を
+principal bundle の connection で horizontal lift する．
+Moment を保つ equivariant isotopy が得られ，boundary と cutoff 支持外では恒等に取れる．
+これは symplectic isotopy であるとは主張しない．
+Lagrangian 性は上の actual-form の計算で別に示したものであり，
+reduced diffeomorphism の面積保存又は作用周期保存を必要としない．
+全葉の逆像を用いるため，saddle fiber を部分的に切ることもない．
+\end{proof}
+
+\subsection{Liouville link の葉族への適用と moment の再 parameterization}
+
+Actual な invariant primitive $\lambda$ と
+$\iota_Z\omega=\lambda$ を取り，$[Z,V]=0$ とする．
+同じ period と向きの normal generator を使えば，
+$M=\lambda(V)$ と元の normal moment は
+\[
+ M=\mu-\rho
+\]
+という定数差を持つ．$ZM=M$ とし，anchor を $\mu=\mu_*$，
+$M_*:=\mu_*-\rho\ne0$ とする．
+Liouville time $s$ と実際の normal moment は
+\[
+ M(s)=e^sM_*,\qquad
+ \mu(s)=\rho+e^s(\mu_*-\rho),\qquad
+ s(\mu)=\log\frac{\mu-\rho}{\mu_*-\rho}
+\]
+で対応する．右辺は anchor の小さい近傍で smooth である．
+Period 又は向きを変えて比較する場合は，対応する affine moment change を先に行う．
+Liouville time を元の $\mu$ と同じ parameter として扱ってはいけない．
+
+Anchor link の reduced 葉を既存の $\mathcal F^0_{\mu_*}$ そのものとする．
+Liouville flow は normal action と可換なので，$s(\mu)$ を用いて
+reduced surfaces の smooth diffeomorphism 族を誘導し，
+それによって $\mathcal F^1_\mu$ を得る．
+対象の compact reduced domains と全 boundary collars を含む共通 buffer 上に
+flow が定義されていることを適用条件とする．
+Corner では両者が同じ full $T^2$ orbit partition であることを別に確認する．
+その下で前定理と前系により，source moments を避けた小区間で
+Liouville 葉族から既存 neck 葉族へ相対補間できる．
+
+本節で解いたのはこの葉族補間である．
+閉じた link 全体の存在・被覆，actual generators の微分評価，
+新しい component cut の全 fiber 飽和，および全曲面の距離比較は，
+ここでの smooth-family 入力から自動的には従わない．

@@ -15,7 +15,7 @@
 
 ## Cloud Codexから再開する
 
-最新mainで [研究方針](00_research_plan.md) → [AGENTS.md](AGENTS.md) → [依存関係](research/ke-dependencies.md) → [研究ノート](research/notes.md) を読む。遅い残余exhaustionにより、closed cornerとsource-inclusive neckの全交わりで葉が一致するactual部分fibrationを得た。中央sourceの全点径と固定基底中央帯・閉pinched torusの収縮まで得た。極限KE coreの小さい飽和近傍のfillingと、六次以上のtarget直径 $2\sqrt5$ も得た。次はcore fillingを既存の全collar葉へ相対延長し、中央帯外のsource接続と全曲面の距離比較を進める。
+最新mainで [研究方針](00_research_plan.md) → [AGENTS.md](AGENTS.md) → [依存関係](research/ke-dependencies.md) → [研究ノート](research/notes.md) を読む。遅い残余exhaustionにより、closed cornerとsource-inclusive neckの全交わりで葉が一致するactual部分fibrationを得た。中央sourceの全点径と固定基底中央帯・閉pinched torusの収縮まで得た。極限KE coreの小さい飽和近傍のfillingと、六次以上のtarget直径 $2\sqrt5$ も得た。Saddleを動かす相対葉族補間を証明した。次は閉じたcomponent linkとinvariant primitiveを構成してcoreを既存の全collar葉へ接続し、中央帯外のsource接続と全曲面の距離比較を進める。
 
 ```sh
 python3 scripts/research_check.py setup --require-tex
@@ -49,6 +49,8 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 - **Central sourceのactual経路評価：** 固定rescalingでdensityは $L_t^{-2}$、canonical potentialは有界、normal momentは $O(L_t^{-1})$。Traceと平均二乗距離は $O(1)$、全中央点からgateへの退出は $O(L_t^{-1/2})$、oriented arm断面へは $O(1)$ で接続できる（`ke_source_connectors.tex`）。Source-freeな $|\mu|\le A/M_t$ のcentral band全体もactual径 $O(1)$。Source側では正のpotentialの対数勾配でactual球を深部に閉じ込め、complex SobolevのGaussian積分とBishop–Gromov比較から、固定点を含む中央coreの全点径 $O(\sqrt{R_t})$ を証明した。固定基底のsource-inclusive中央帯と閉pinched torus全体も正規化ambient径で収縮する。Potentialの一様square-root-Dini modulusを仮定する十分条件も示し、そのmodulus自体は未検証と区別する。
 
 固定source chartのEuler場による明示的なresidual接続も保持する。成分coreではcanonical primitiveの差から固定領域のactual移送を構成し、境界を固定する相対flux条件とexactな平均化germを明示した（`ke_component_core_transfer.tex`）。`ke_component_core_geometry.tex` は任意固定compactと全collar上でKE形式・primitiveを保つsmooth正則化、正residueの有限型KE core、その小さい飽和近傍のmarked Lagrangian fillingを与える。既存neck/cornerの全collar葉を指定した相対fillingは追加条件である。
+
+`ke_relative_reduced_foliations.tex` に、full critical leavesとReeb markingを保つboundary-relativeな葉族補間と自由Hamiltonian bandへのLagrangian liftを追加した。内部点検済み、現行追加分の再組版前。
 
 **P0は未解決。** 部分fibrationの外を含む全曲面の被覆、coreへの相対接着、中央帯外のsource接続と木上のfiber合併の径、全曲面のshortcutとportal費用が残る。局所GH近似のtargetの距離は非伸長retractionにより全cubical複体の距離の制限に等しい。Source側のprotected距離を全曲面ambient距離に置換した下界は未証明。先行研究の仮定と新規性の未確認点は主原稿序論と[研究ノート](research/notes.md)を参照。
 

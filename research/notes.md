@@ -1,5 +1,5 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-21 / v2.8
+更新：2026-11-21 / v2.9
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
@@ -82,6 +82,12 @@ Source側の `ke:source-central-band-reduction` は、固定residual disc、人�
 境界germを点ごとに保存するには、primitive差のcollar $H^1$ classがcoreの $H^1$ から延びることが必要となる。Fiber periodsが全て零でもbase-circle fluxが残る例を `ke:core-relative-flux-example` に保持する。これはfiber partitionの不存在例ではない。平均形式にもparameter方向の同変Moserを入れる $A_t b_t A_0^{-1}$ はexact symplectic germとなり、normal momentの加法定数も保つ。
 
 `ke_component_core_geometry.tex` により、任意の固定compactと全collarでKE形式・primitiveに厳密一致するsmooth compactification、正residueの有限型KE core、その小さい飽和近傍のLagrangian fillingを得た。未解決なのは、この局所core fillingを既存の指定full collarsへ延長し全patchを同時整合させることである。`comp:finite` の出力葉が指定葉に一致することは、二形式の一致だけからは従わない。条件付き系 `ke:conditional-component-core-filling` は、その入力があればactual移送・接着・十分遅い対角選択でcore全体の正規化径を消せることを示す。
+
+## Saddle を動かす相対葉族補間
+
+`ke_relative_reduced_foliations.tex` の `ke:simple-saddle-family-trivialization` と `ke:saddle-moving-relative-interpolation` を証明した。Compact reduced surface上のsmooth first-integral族を対象とし、各connected critical leafが一つのsimple saddleを含み、boundary collarの葉partitionとcontinuation markingが固定されると仮定する。全critical valuesの相異性は不要。各critical pants上でcritical-value速度に一致するglobal basic関数ζを作り、∂μf+df(Y)=ζ、dζ=a dfを解く。これにより全critical leavesと全regular annuliを同時に同定し、anchorで一致する二族をmoment cutoffで補間できる。異なる値のfirst integral表示を一致させる必要はない。
+
+`ke:actual-saddle-moving-neck-interpolation` は自由Hamiltonian normal bandへ持ち上げ、actual Lagrangian性とS¹×figure-eight、全corner葉、normal markingを保つ。補間はsourceのcritical momentから離して行うためcentral pinched torusを変えない。Liouville moment M=μ−ρの場合、時間は s(μ)=log((μ−ρ)/(μ*−ρ)) で再parameterizeする。この葉族補題は別担当と内部点検済み。全link被覆・primitive補正・coreの全域接着は以下の残課題であり、この補題だけで解決したとはしない。
 
 ## KE core と既存 neck/corner の相対接着：未完成の証明方針
 
