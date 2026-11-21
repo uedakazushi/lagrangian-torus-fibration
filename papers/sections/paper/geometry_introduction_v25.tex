@@ -260,6 +260,11 @@ $\{\mu,h_\mu\}=0$ によって Lagrangian 性を保ち，
 既に構成した nodal fiber はその compact fiber 全体と近傍を transport する．
 この方法は測度や period の不変量を無視するものではなく，
 同じ実際の form 上で leaves と action differentials が一致するように作るものである．
+正則 torus band の既定 base 同定については，normal moment の一致に加え，
+第二作用が整数 shear と定数 translation を除いて一致することが必要十分である
+（命題\ref{neck:regular-period-matching}）．固定 primitive に関する exact 同定では
+その translation も零を要求する．これは action--angle theorem の局所的な帰結であり，
+独立な第二作用の自動一致や，任意の先指定 collar map の大域延長を主張しない．
 circle-invariant nodal fibrations の reduction による記述には
 Groman--Varolgunes\cite[\S7.3]{GV}を用いる．
 
@@ -444,6 +449,14 @@ Assumption~1 の下で toric neighborhoods と双対 monodromy を比較する\c
 この仮定は各一次元 stratum が $\PP^1$ で零次元 stratum と正確に二点で交わることを要求し，
 各直線に $m-1\ge3$ 個の交点を持つ本稿の一般位置 $m$ 直線配置には直接適用できない．
 本稿の三穴・四穴 sphere とその saddle branches には，critical actions を直線に保つ別の接着が必要である．
+実際，作用適合 matroidal chart が存在すれば，各 incident sheet の critical action は
+normal moment の有理勾配の affine function でなければならない
+（命題\ref{atl:critical-action-obstruction}）．
+固定した exact symplectic neck 上で，normal action，両端の open germs，toric collars，
+saddle 点の局所 germ，marked tree を全て保ちながら，critical leaf の regular arc だけを動かして
+この作用を非直線にできる（例\ref{atl:fixed-form-bent-branch}）．
+その点には任意の分母を許しても作用適合 matroidal chart はなく，
+Lagrangian 性と atlas の存在が別の条件であることを示す．
 このため，actual neck の全空間上で一つの primitive を取り，三重点の toric reference actions
 と両側の作用の加法定数を同時に固定する．
 固定した正負の normal moments における symplectic transport はこの primitive を exact 差まで保つ．

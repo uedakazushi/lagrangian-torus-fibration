@@ -1,5 +1,5 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-21 / v3.7
+更新：2026-11-21 / v3.8
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
@@ -31,7 +31,30 @@ Connection/gauge固定とunitary holonomy phases固定は異なる。Periodsが 
 - **TMZ：** Farajzadeh Tehrani–McLean–Zinger, *Normal crossings singularities for symplectic topology*, Adv. Math. 339 (2018), 672–748, [DOI 10.1016/j.aim.2018.09.035](https://doi.org/10.1016/j.aim.2018.09.035)。確認版 [arXiv:1410.0609v3](https://arxiv.org/abs/1410.0609v3) のDefinitions 2.11–2.12（p.16）、Theorem 2.13（p.17）はHermitian structures・connectionsを含むcompatible regularizationsをexact deformationの後に与える。固定された元の二形式・任意指定connectionの同時実現や、固定複素構造に対するKähler性の保存をそのまま主張する定理ではない。
 - **BSV：** Borman–Sheridan–Varolgunes, *Quantum cohomology as a deformation of symplectic cohomology*, J. Fixed Point Theory Appl. 24 (2022), article 48, [DOI 10.1007/s11784-022-00965-6](https://doi.org/10.1007/s11784-022-00965-6)。掲載版Propositions 2.5・2.7（p.30）はorthogonalityとcommuting normal Hamiltonians、Proposition 2.10・Remark 2.11（p.31）はpositive real divisor coefficientsからadapted primitiveとscHの存在を扱う。この命題には $H^1(M)=0$ やmonotonicityは不要だが、任意に先指定したconnection・holonomy・core germ・marked Morse全葉の実現は結論しない。Remark 2.2のdivisor isotopyは、固定divisorの下で形式を変形する経路と区別する。
 
-次は `snc:output-data` と全域atlas・作用period接着の対応を点検する。Divisor-relative Moserでnormal actionsを移すことと、独立な第二period・critical valuesを指定することは別条件である。既存P0の優先順位を維持する。
+`snc:output-data` と作用period接着の関係は次節に整理する。Divisor-relative Moserでnormal actionsを移すことと、独立な第二period・critical valuesを指定することは別条件である。
+
+## 正則bandの第二作用と非直線critical action
+
+`neck:regular-period-matching` は、可縮な正則action chart上のexact $T^2$ bundlesについての判定である。Normal cycle $\alpha$ を保ち、$\beta_-\mapsto k\alpha_++\varepsilon\beta_+$（$k\in\mathbb Z,\ \varepsilon=\pm1$）とする既定base同定 $h$ の上のsymplectic matchingは、ある定数 $c$ に対する
+\[
+\mu_+\circ h=\mu_-,\qquad
+J_-=k\mu_-+\varepsilon J_+\circ h+c
+\]
+と同値である。固定primitiveに関するexact matchingはさらに $c=0$ と同値。Normal actionだけでは第二作用を決めない。`neck:normal-action-counterexample` の定数shiftはsymplecticだがexactではなく、非線形shiftは指定base同定と整数shearを保つsymplectic matchingを妨げる。Base同定を変更すれば同じ物理的torus partitionにもなり得るため、fibrationの不存在とは異なる。一般のbaseではprimitive差にbaseの $H^1$ が残り得るので、この局所判定を無条件な大域exactnessへ拡張しない。
+
+この判定は既知のaction-angle理論のspecializationである。Evans, *Lectures on Lagrangian Torus Fibrations*, [arXiv:2110.08643v4](https://arxiv.org/abs/2110.08643v4) のTheorem 1.42（p.16）、Lemma 2.10・Theorem 2.12（pp.24–25）、Lemma 2.15・Remark 2.17（pp.25–26）、Lemma 2.25（pp.28–29）を一次資料で照合する。番号・頁は掲載書籍と混同せず同arXiv版に固定する。Theorem 2.26（p.29）の大域fiber-preserving同値にはglobal Lagrangian sectionsの仮定がある。
+
+Canonical primitiveの規格化にも独立の差がある。`ke:transition-residual-period` は、volume framesの比 $a(p)$ による残余cycleのperiod差を $-2\pi\operatorname{wind}(a_t\circ p\circ\gamma)$ と記録する。Normal cycleでは差が零でも、残余cycleでは非零になり得る。Exact模型 $xyp=t$ のlogarithmic frameとneck frameでは、比が $1/p$ ならprimitive差は $d\arg p$、正の一周の差は $2\pi$（作用を $1/(2\pi)$ 倍で測れば差は $1$）である。同一physical leafの接着を妨げるものではなく、別々のcanonical primitivesを無条件に同じ作用原点として扱うことを禁じる。
+
+### 固定した形式と端のgermsからも直線性は従わない
+
+`atl:critical-action-obstruction` によれば、branch上でnormal action $\mu$ が非定数なら、作用適合matroidal chartの存在には $J^{\rm crit}(\mu)=p\mu/q+c$ が必要である。各regular sheetの作用座標からfan faceへの変換が整数affineであり、fanのbranch rayが有理直線であるためである。これは $q=1$ に限らない。
+
+`atl:fixed-form-bent-branch` は $\Omega=d\mu\wedge d\theta+\omega_P$ を固定し、critical leafのregular arcだけを動かしてbasin面積を $A_0+\epsilon b(\mu)$ にする。変更はnormal action、両端のopen germs、全toric collars、saddle点近傍のMorse germ、marked treeを保つ。得る葉族はLagrangianだが、$J^{\rm crit}=J_0^{\rm crit}+\epsilon b(\mu)/(2\pi)$ なので $b''(\mu_0)\ne0$ の点には任意のdenominatorを許しても局所作用適合matroidal chartがない。既知の局所正規形だけではfull critical leafの作用を制御できないことを示す。
+
+既存の五次・六次atlas構成はこの障害を避けるため、同じembedded marked class内でcritical-region areasを指定し、framingの整数slopeと作用の切片を合わせる。`ng8:straight-neck` の両端は同じ $\operatorname{Diff}_0(P\operatorname{rel}\text{ collars})$-orbitに取る。`ga8:affine-persistence` はfibration・cycles・primitiveを同時に運び、`ng8:transport-intercept` は一つの全空間primitiveを使う固定非零moment上のexact transportで値を保存する。これはnormal action単独による第二period一致ではない。既存の一般symplectic存在、選んだ五次・六次fibrationの作用atlas、全固定次数のP0は異なる結論として保持する。
+
+次はsourceのnodal surgery・focus germsと全域singular fibersの移送を点検する。任意focus不変量の先指定ではなく、actual compact fiberとその飽和近傍全体を運ぶこと、局所surgery支持と外側collarの一致を確認する。
 
 ## 主要解析入力の確認範囲
 
@@ -608,4 +631,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 ## 検証状態
 
 
-2026-11-21 / v3.7：主稿改訂27には、固定coupling chartsの葉period判定、障害次元と最小holonomy調整、有限endpointのactual座標での連続性の証明を統合した。IKM・TMZ・BSVの指定箇所を一次資料で照合し、既知の成分原理・exact deformation・存在定理と本稿の相対適用を区別した。改訂27をLuaLaTeXで261頁へ組版し、追加証明・finite endpoint・Introductionと一次文献を含む指定16頁を同じ最終PDFから個別表示確認した。未解決の参照・引用、重複ラベル、欠字、overfullはなく、静的構成検査も成功した。確認頁とPDFの同一性は [検証状態](validation.json) を参照する。新証明と接続は複数担当で独立に内部点検した。数学的点検・組版・保存の完了範囲は別々に記録する。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。
+2026-11-21 / v3.8：主稿改訂28には、正則bandの第二作用・exact matching判定、normal action単独では不十分な例、critical actionの有理直線性の必要条件と固定形式の非直線branch反例、canonical frameの残余period差を整理した。新証明・接続の独立内部点検とEvans arXiv v4の指定箇所の一次資料照合を完了した。改訂28の組版・表示確認は未実行。直前に検証した改訂27（261頁・指定16頁の表示確認）の詳細と今回の各確認の完了範囲は [検証状態](validation.json) を参照する。数学的点検・組版・保存は別々に記録する。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。

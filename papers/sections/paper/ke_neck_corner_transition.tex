@@ -306,6 +306,36 @@ $\lambda_{\mathrm{out}}$
 非正則な cutoff 帯では $G^*$ と $d^c$ の可換性を使わない．
 \end{proof}
 
+\begin{corollary}[Canonical frame の残余 winding と第二 period]
+\label{ke:transition-residual-period}
+系\ref{ke:transition-normal-primitive}の内側 arm の任意の closed loop $\gamma$ に対し，
+\begin{equation}\label{ke:eq:residual-winding-period}
+ \int_\gamma(\lambda_\zeta-\lambda_N)
+ =-2\pi\operatorname{wind}(a_t\circ p\circ\gamma).
+\end{equation}
+特に normal period の差は零であるが，第二 cycle 上では零とは限らない．
+正確な積模型 $xyp=t$ に対し
+\[
+ \Omega_\zeta=d\log x\wedge d\log p,\qquad
+ \Omega_N=d\log x\wedge dp
+\]
+を用いると，$\lambda_\zeta-\lambda_N=d\arg p$ であり，
+正向き residual $p$-circle 上の period 差は $2\pi$ となる．
+\end{corollary}
+\begin{proof}
+$a_t$ は非零の正則関数なので，$d^c\log|a_t|^2=d\arg a_t$ である．
+\eqref{ke:eq:transition-primitive-decomposition}の第二項は一価関数の完全微分で，
+任意の closed loop 上で積分が零となる．これで\eqref{ke:eq:residual-winding-period}を得る．
+積模型では $C_D=1$，$h_t(p)=1/p$，$J_k=1$，従って $a_t(p)=1/p$ であり，
+表示された $d\arg p$ とその period が従う．
+\end{proof}
+
+これは同じ二形式に対する primitive の第二作用の原点の差である．
+作用微分や物理的な torus の不一致，または fibration の不存在を意味しない．
+周期 $2\pi$ の作用を一周積分の $1/(2\pi)$ 倍で測る第\ref{sec:necks}節の規約では，
+積模型の差は $1$ である．以後の exact transport と staged averaging では，
+一つの primitive と一緒に cycles を運ぶことでこの原点の選択を保持する．
+
 \subsection{非正則な補間の後の symplectic 正値性}
 
 \begin{corollary}[平均と凸補間の tame 性]

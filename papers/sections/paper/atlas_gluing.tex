@@ -1,8 +1,4 @@
-% v8: atlas definitions and branch-transition audit.
-% Independent source.  No v7 file is changed.
-% New bibliography keys: ShawSurfaces, JellRauShaw, LRSChern, CartwrightComplexes.
-% Existing keys: EM, VuNgoc.  Existing labels: per:chart-definition,
-% per:k4-realization, per:branch-duality.
+% 2026-11-21 / v1.1: 実際の作用格子と branch critical action の有理直線性．
 
 \section{作用適合 atlas と分岐辺での整数アフィン延長}
 \label{atl:section}
@@ -31,7 +27,8 @@ focus--focus values とする．$B\setminus\Delta_{\mathrm{ff}}$ 上の
 \emph{作用適合 matroidal atlas}とは，二次元 matroidal fans の開集合への
 stratum-preserving homeomorphisms からなる atlas で，次を満たすものである．
 各 transition とその逆は，局所的に ambient integer affine map の制限である．
-各正則 face の整数余接線格子は，Lagrangian fibration の作用一形式が定める格子と一致する．
+各正則 face 上で chart は滑らかで，その整数余接線格子は，
+Lagrangian fibration の作用一形式が定める格子と一致する．
 各 focus point の punctured neighborhood では，実際の focus--focus fibration の
 作用アフィン構造を用いる．
 \end{definition}
@@ -164,6 +161,75 @@ simple saddle からの通常の action coordinates では，最後の half-plan
 transverse action の連続性と strict monotonicity によって確認できる．
 これに対し，critical action curve の直線性は，Lagrangian 葉層の補間からは従わない．
 その条件は実際の parametric area calculation で証明する必要がある．
+
+\begin{proposition}[Critical action の有理直線性は必要である]
+\label{atl:critical-action-obstruction}
+三価 branch の一つの incident sheet で，周期 $2\pi$ の共通 normal circle に対応する
+作用を $\mu$，独立な第二作用を $J$ とする．
+Branch は $\mu$ で局所的に parameter 化され，第二作用が
+$J^{\rm crit}(\mu)$ へ連続に延びるとする．
+その branch 点の近傍に作用適合 matroidal chart が存在するなら，
+\begin{equation}\label{atl:critical-rational-line}
+ J^{\rm crit}(\mu)=\frac{p}{q}\mu+c,
+ \qquad p,q\in\ZZ,\quad q\ne0,
+\end{equation}
+が近傍で成り立つ．特に $J^{\rm crit}$ が $C^2$ で
+$(J^{\rm crit})''(\mu_0)\ne0$ なら，分母に制限を加えなくても，その点の作用適合 chart は存在しない．
+\end{proposition}
+
+\begin{proof}
+Chart の対応する regular face の整数 affine 座標を $u$ とする．
+作用格子の一致から $\dd u=A\dd(\mu,J)^{\mathsf T}$，$A\in\operatorname{GL}(2,\ZZ)$ であり，
+$A$ は連結な sheet 上で定数である．従って $u=A(\mu,J)^{\mathsf T}+b$ となる．
+Fan の branch ray を含む affine line は整数法線で切られるので，critical limit では
+\[
+ a\mu+b_1J^{\rm crit}(\mu)=c_0,
+ \qquad (a,b_1)\in\ZZ^2\setminus\{0\}
+\]
+である．$\mu$ は branch 上で非定数なので $b_1\ne0$ であり，結論を得る．
+整数 shear $J\mapsto\varepsilon J+k\mu+c_1$ も二階微分の非消滅を変えない．
+\end{proof}
+
+\begin{example}[形式・normal action・両端 germs を固定した非直線 branch]
+\label{atl:fixed-form-bent-branch}
+境界付き三つ穴球面 $P$ に正の面積形式 $\omega_P=\dd\beta$ と，境界で radial な
+一 saddle の Morse 葉層 $\mathcal F_0$ を取る．
+固定した $\mu$-interval $I$ 上の exact symplectic neck
+\[
+ I\times S^1\times P,
+ \qquad \Omega=\dd\mu\wedge\dd\theta+\omega_P,
+ \qquad \lambda=\mu\dd\theta+\beta
+\]
+を考える．次の変更では $\Omega$，normal action $\partial_\theta$ と moment $\mu$，
+両端の open germs，puncture collars，saddle 点の小近傍を全て固定する．
+
+Critical leaf の regular arc を一つ選び，その小近傍に支持された vector field $V$ を取る．
+隣接する critical basin $D_0$ の境界の向きに対し
+$\int_{\partial D_0}\iota_V\omega_P\ne0$ とできる．
+その flow を $\psi_s$，$A(s)=\int_{\psi_s(D_0)}\omega_P$ とすると，
+Stokes の定理により $A'(0)\ne0$ である．
+この計算では saddle 点の固定小円板を除いてから極限を取ればよく，
+その近傍で $V=0$ なので人工境界の寄与は零である．
+$I$ の内部に支持された smooth function $b$ を，ある $\mu_0$ で $b''(\mu_0)\ne0$ となるように選ぶ．
+十分小さい $\epsilon\ne0$ に対し inverse function theorem によって
+\[
+ s(\mu)=A^{-1}\bigl(A(0)+\epsilon b(\mu)\bigr)
+\]
+を定義できる．$\mathcal F_\mu=\psi_{s(\mu)}(\mathcal F_0)$ とすれば，同じ marked class の
+滑らかな葉族となり，指定した全固定領域では元の葉族と一致する．
+Normal circle lifts は補題\ref{neck:lift}により Lagrangian fibration を与える．
+
+固定 puncture reference から $D_0$ の critical boundary へ向かう cycle の作用は，
+reduced area の Stokes 公式により，向きを選べば
+\[
+ J^{\rm crit}(\mu)=J^{\rm crit}_0+\frac{\epsilon}{2\pi}b(\mu).
+\]
+従って命題\ref{atl:critical-action-obstruction}により，$\mu_0$ に対応する branch 点に
+作用適合 matroidal chart は存在しない．
+Saddle の局所 Morse germ まで保っているので，その局所型，normal action，両端の接着だけでは
+この障害を検出できない．節\ref{ng8:section}の critical-region areas の指定は，
+この非直線性を避けるための実質的な追加条件である．
+\end{example}
 
 \subsection{大域貼り合わせの条件と scope}
 

@@ -1,5 +1,5 @@
 # 現行研究方針：一般型曲面のLagrangian torus fibration
-更新：2026-11-21 / v3.7（複素次元2専用、曲面主稿改訂27・五次整数接着第25稿）
+更新：2026-11-21 / v3.8（複素次元2専用、曲面主稿改訂28・五次整数接着第25稿）
 
 ## 現在の成果と優先順位
 
@@ -41,7 +41,7 @@ K1–K3はactual全域fibrationを、K4は同じ写像の全曲面distortionと�
 
 | 課題 | 最初に行うこと | この課題の達成条件・現在の状態 |
 | --- | --- | --- |
-| K0：入力の監査 | 固定coupling chartsの葉period障害と最小holonomy調整を本文に証明した。次は全域atlas・作用period接着とSNC出力データを照合し、divisor-relative Moserが同定するnormal actionsと独立第二periodを分けて公表用に点検する。Core経路の構成の同一性・支持・量化の既存監査は保持する。 | 共通anchor・同一momentによる基底値比較、有限cutのcorner比較、全target端点のportal、全fiber合併とgalleryを重点点検済み。Capped・full-triple/Savin・complete volume比較・Song/RZ、source特異reduction、K2全intersection、core primitive・nontrapping・relative collar・whole-fiber trim・閉isotropic filtrationの既存点検を保持する。全既存証明・全入力の包括的再監査と外部査読は未了。 |
+| K0：入力の監査 | 固定coupling chartsの葉period障害に加え、正則bandの第二作用判定、canonical frameの残余period差、固定形式の非直線critical action反例を本文に整理した。次はsourceのnodal surgery・focus germsとcompact singular fiber近傍全体の移送を点検する。Core・atlas接続の既存監査は保持し、一般存在・P0・作用atlasを区別する。 | 共通anchor・同一momentによる基底値比較、有限cutのcorner比較、全target端点のportal、全fiber合併とgalleryを重点点検済み。Capped・full-triple/Savin・complete volume比較・Song/RZ、source特異reduction、K2全intersection、core primitive・nontrapping・relative collar・whole-fiber trim・閉isotropic filtrationの既存点検を保持する。全既存証明・全入力の包括的再監査と外部査読は未了。 |
 | K1：actual neckの短円とbuffer | `ke:fixed-stage-source-neck`、`ke:neck-corner-diagonal-matching` の残余compact→normal cutoff→moment区間→parameter閾値の選択を用いる。 | 固定source-free基底の二側比較、source中心を含む短円、共通source/像、source-inclusive neckを証明。十分遅い残余exhaustionでは全flow・全円orbitを含むtripleとの共通開領域も確保した。任意に指定した縮小速度や曲面全体の被覆への一様性は主張しない。 |
 | K2：複数endの同時整合 | `ke:neck-corner-saturated-union` の部分fibrationを全域構成への入力として使う。 | 三armの座標接続、normal period一致、相対Hamiltonian補正、共通moment区間とreduced graphにより、closed cornerと切詰めたneckの**全交わり**でfiber partition・向き付きnormal cycle・内部source/saddle markingを一致させた。Endの第二cycleは共通torus同定で移送して選ぶ。Source・saddleを含むactual部分fibrationを得た。独立に選んだ第二periodの一致は自動ではない。Core接着と全曲面被覆はK3で別途証明した。 |
 | K3：component coreの相対接着 | `ke:actual-global-fibration` と四つの追加節を距離評価の入力とする。 | **固定段階の全域構成を証明。** 正residue periodの厳密同定、閉moment link、固定stageでの全特異層近傍の被覆とcompact complement、actual generator C1・adapted primitive/nontrapping、saddleを動かす相対葉族、全fiber単位のtrimを経て、全 $X_t$ をactual Lagrangian fibrationで覆った。各componentのcore・変更collar・neck尾部のambient接続費用は $C(1+\log(N_j+1))$、遅い対角選択で正規化径が消える。全曲面distortionは含まない。 |
@@ -58,8 +58,14 @@ Source全体のEuler場 $W_+=x\partial_x+y\partial_y$ のactual normを固定cha
 
 固定normal connection・coupling chartsと同じresiduesの下で、basic補正とcoreを保つexact cutoffによる接着は、各成分の $g_a$ 個の独立正則葉periodが零であることと同値である（`snc:fixed-holonomy`）。障害 $H^1(D;\mathbb R)/q^*H^1(\Gamma;\mathbb R)$ の次元、必要なholonomy調整のrankはいずれも $\sum_a g_a$ であり、全 $2g_a$ component periodsを消す必要はない（`snc:reeb-leaf-kernel`、`snc:minimal-holonomy-controls`）。Basic補正は全critical collarsの外に支持できる一方、非零障害のholonomy補正は一般に元のfull saddle collarsを変える。Unitary phasesだけを固定する場合の整数period自由は、固定connection/gaugeの命題の外である。有限endpointはactual collar座標によるcone座標 $r$ の式で連続性を確認した。IKMの既知の成分上の原理と本稿のSNC統合を区別し、TMZのexact deformationおよびBSVの存在定理から任意指定connectionの実現を結論しない。証明・一次資料は主稿 `relative_compactification.tex` と研究ノートを参照。
 
+### 第二作用の接着とmatroidal chartの障害
+
+`neck:regular-period-matching` は、可縮な正則action chartと既定base同定の下で、第二作用の整数shear・符号・定数を含む一致をsymplectic matchingの必要十分条件とする。Exact matchingには固定primitiveの定数差も零であることが必要であり、normal actionだけでは決まらない（`neck:normal-action-counterexample`）。既知のaction-angle theoremのspecializationであって、その一般原理の新規性は主張しない。Canonical frame差による残余periodの整数windingは `ke:transition-residual-period` で区別する。
+
+`atl:critical-action-obstruction` は作用適合matroidal chartの存在にcritical actionの有理直線性が必要であることを示す。`atl:fixed-form-bent-branch` は同じactual形式・normal action・両端とtoric/saddle点germs・marked treeを固定し、非直線critical actionを作る。従ってdenominatorを任意に許しても、その非零二階微分を持つ点には局所chartがない。五次・六次の既存atlas構成は、共通のembedded marked class、実面積、整数framing、切片を別々に合わせる。`ng8:straight-neck` の補間には同じ $\operatorname{Diff}_0(P\operatorname{rel}\text{ collars})$-orbitを用い、抽象的な木の同型だけで済ませない。一般symplectic存在とP0の計量実現の範囲は変更しない。
+
 ## 原稿・ノートの正本と公表単位
-- `papers/surface-lagrangian-torus-fibration.tex`：このrepoの主たる公表用本文。相対SNC構成、次数分割、分岐底、作用適合atlasとactual KE–fibrationの全域GH実現定理（現行改訂27）。統合証明は `papers/sections/paper/ke_global_metric_realization.tex`。組版・表示確認の実施状態は末尾と `research/validation.json` に記す。
+- `papers/surface-lagrangian-torus-fibration.tex`：このrepoの主たる公表用本文。相対SNC構成、次数分割、分岐底、作用適合atlasとactual KE–fibrationの全域GH実現定理（現行改訂28）。統合証明は `papers/sections/paper/ke_global_metric_realization.tex`。組版・表示確認の実施状態は末尾と `research/validation.json` に記す。
 - `papers/quintic-integer-gluing.tex`：五次整数アフィン接着、高分母支持グラフの独立論文（第25稿、201頁の記録）。指定SNC cores・K5 graph・標準cones・marked puncturesを保つ候補が対象。必要支持3型26標識は**実現数ではない**。G5_14の中央matching、一般分母剛性、三高Dの同時非負性が未解決。
 - `papers/meridian-surgery.tex`：四pantsのmeridian局所置換と閉corner circuitsの障害（18頁の記録）。
 - `papers/research-notes.tex`：各種補題・証明素材のTeXノート（現行65頁、変更した第1・4頁を表示確認）。
@@ -159,7 +165,7 @@ Lagrangian主稿 `ke:actual-closed-corner` の同じ averaging–Moser flow と�
 
 ## 優先する次の一手
 
-1. **全域atlas・作用period接着とSNC出力の照合。** 固定coupling chartsでのbasic＋exact-cutoff経路の必要十分条件、葉period障害の次元と最小holonomy調整は本文に証明した。次は `snc:output-data` が与えるnormal actions・標識付き全葉・period補正を、全域atlasと別個のsymplectic piecesの接着条件へ一つずつ対応させる。Divisor-relative Moserによるnormal actionの同定から独立第二periodの一致を自動的に結論せず、connection/gaugeの固定とunitary holonomy phasesの固定も分ける。`ke:component-flux-space` と `ke:nonextendible-small-core-germ` を制約として用い、任意germの延長を仮定しない。既存P0の範囲・優先順位を維持し、今回の一次資料照合を全依存証明の再監査と読み替えない。
+1. **Sourceのnodal surgery・focus germsと特異fiber全体の移送。** 実際のcompact singular fiberとその飽和近傍を、一つのsymplectic transportで全体として運ぶ経路を公表用に点検する。局所focus二次型・normal cycle・monodromyの確認と、compact pinched torus全体の保持を分け、surgeryの支持、外側collarとの一致、作用の規格化を確認する。任意に先指定したfocus不変量の実現や、point germだけからcompact fiber近傍を分類する主張へ広げない。`snc:output-data`、`neck:regular-period-matching`、`ke:transition-residual-period` と既存の全fiber transportの対応を使い、一般存在・作用atlas・P0のactual計量実現の範囲を維持する。
 2. **新規性と公表範囲の確認。** 一般型曲面の既存torus分解、所定Kähler形式での全regular fiberのLagrangian性、負KEの径の尺度でのGH収束、source・branch・coreを含む全域実現を分けて比較する。関連repo側のCP/PBE/TCの条件付き結果との関係を明示する。
 3. **主稿の構成と再現。** 統合定理を軸に本文の説明順・参照・要約を整え、有効な既存証明と独立成果を保持する。必要な組版・表示確認を行い、通常commitで研究repo、続いてhubを更新する。旧版の追記や重複した証明を増やさない。
 
@@ -172,7 +178,7 @@ Lagrangian主稿 `ke:actual-closed-corner` の同じ averaging–Moser flow と�
 現行のTeX分割節と検証スクリプトは `papers/sections/` を直接参照し、旧ルートsymlinkに依存しない。静的な構成検査は `python3 verification/verify_repository_layout.py`、現行の五主検算・五独立監査は `python3 verification/run_current_checks.py`。旧JSONやmanifestの相対パス・記録時点のSHA-256は出典情報として保持し、パス正規化後の現行実行パスと区別する。
 組版はrepo直下の `latexmk papers/surface-lagrangian-torus-fibration.tex`、整数接着は `latexmk papers/quintic-integer-gluing.tex`。LuaLaTeXとLuaTeX-ja／TikZ／日本語フォントが必要、PDFとSyncTeXはbuild/へ出力しGitで追跡しない。段階別の実行は `scripts/research_check.py` と [Cloud Codexの再開手順](research/cloud-codex.md) を参照する。元の計算コード、入力、証明書は保持する。
 
-2026-11-21 / v3.7：主稿改訂27には、固定coupling chartsの葉period判定、障害次元と最小holonomy調整、有限endpointのactual座標での連続性の証明を統合した。IKM・TMZ・BSVの指定箇所を一次資料で照合し、既知の成分原理・exact deformation・存在定理と本稿の相対適用を区別した。改訂27をLuaLaTeXで261頁へ組版し、追加証明・finite endpoint・Introductionと一次文献を含む指定16頁を同じ最終PDFから個別表示確認した。未解決の参照・引用、重複ラベル、欠字、overfullはなく、静的構成検査も成功した。確認頁とPDFの同一性は [検証状態](research/validation.json) を参照する。新証明と接続は複数担当で独立に内部点検した。数学的点検・組版・保存の完了範囲は別々に記録する。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。
+2026-11-21 / v3.8：主稿改訂28には、正則bandの第二作用・exact matching判定、normal action単独では不十分な例、critical actionの有理直線性の必要条件と固定形式の非直線branch反例、canonical frameの残余period差を整理した。新証明・接続の独立内部点検とEvans arXiv v4の指定箇所の一次資料照合を完了した。改訂28の組版・表示確認は未実行。直前に検証した改訂27（261頁・指定16頁の表示確認）の詳細と今回の各確認の完了範囲は [検証状態](research/validation.json) を参照する。数学的点検・組版・保存は別々に記録する。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。
 
 ## 共通研究原則と保存許可（研究固有方針から独立）
 数学的重要性・新規性・理解の深化・応用可能性・正確性・実現可能性を総合し方針を見直す。証明済み・仮定付き・未完成・予想・計算観察、既知成果と新規性、草稿の証明と今回の独立監査を区別する。重要な先行研究は一次資料の仮定と参照箇所を確認する。日本語LuaLaTeXで十分な証明を保ち、有効な着想・反例・障害は現行ノートへ整理する。再現資産を保持し、旧版ZIP/ログの集積を避ける。研究の区切りでは承諾なしで通常コミットを `main` へpushし、Cloud Codexの長時間作業は切りのよいところ、遅くとも前回成功pushから約15分を目安に現行の有効な成果と未解決箇所を保存する（詳細はAGENTS.md）。force push・GitHub Actions追加/起動をしない。Library旧資料を削除せず、GitHub管理後の定常二重保存は行わない。対象repo保存後にresearch-hubの到達点・核心・次の一手・依存と再開先を更新し、数学検証・組版・push・hub反映を区別する。

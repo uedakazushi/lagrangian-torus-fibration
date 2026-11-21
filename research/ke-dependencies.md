@@ -1,6 +1,6 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-21 / v2.7。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-21 / v2.8。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
 ## 確認した正本と規格化
 
@@ -119,6 +119,17 @@ Maksymenko, Comment. Math. Helv. 80 (2005), 655–690, DOI [10.4171/CMH/30](http
 
 Basic補正は全critical collarsの外へ支持を取れるが、全full critical-leaf collarsで零のclosed connection補正は障害空間に作用しない（`snc:saddle-support-obstruction`）。非零障害のholonomy補正は一般に元のfull saddle collarsを変更し、$D$ 上のmarked full leavesを固定して新しいcoupling chartsでliftする。Unitary phasesだけの固定には整数periodのgauge自由があり、固定connection/gaugeの命題と同一視しない。有限endpointはactual collar座標による $r$ の明示式で連続性を確認する。既知の成分上の原理と本稿のSNC統合・coupling適用を区別する。書誌・一次URL・正確な頁は [研究ノート](notes.md#sncの固定coupling-chartsと葉のperiod障害)、証明は `relative_compactification.tex` を参照する。
 
+## Normal action・第二period・作用atlasの接続
+
+| 結果・入力 | 適用範囲 |
+| --- | --- |
+| `neck:regular-period-matching`、`neck:normal-action-counterexample` | 可縮な正則bandと既定base同定の下で、第二作用は整数shear・符号・定数までの一致が必要十分。Exact matchingでは固定primitiveの定数差も零。既知action-angle理論の適用であり、normal momentだけからは従わない。 |
+| `ke:transition-residual-period` | Canonical frameの比 $a(p)$ は残余periodを $-2\pi\operatorname{wind}(a_t\circ p\circ\gamma)$ だけ変え得る。Normal periodの一致と作用原点の一致を区別する。 |
+| `atl:critical-action-obstruction`、`atl:fixed-form-bent-branch` | Critical actionの有理直線性は任意denominatorのmatroidal chartにも必要。固定actual形式・normal action・両端/toric/saddle点germs・marked treeを保つ非線形面積変更で破れ得る。 |
+| `ga8:affine-persistence`、`ng8:central-criterion`、`ng8:straight-neck` | 同時symplectic transport、共通primitive・reference、実面積と整数framing、切片を個別に確認する。葉の補間には同じ $\operatorname{Diff}_0(P\operatorname{rel}\text{ collars})$-orbitを使う。抽象木やnormal actionだけでは不十分。 |
+
+Evans arXiv:2110.08643v4 のTheorem 1.42、Lemma 2.15・Remark 2.17、Lemma 2.25が正則bandの入力である。一次URLと頁は [研究ノート](notes.md#正則bandの第二作用と非直線critical-action)。一般baseでのexactnessや、特異fiber近傍の分類をこれらの正則定理だけから導かない。新証明の独立内部点検、一次資料照合、組版の完了範囲は検証資料へ分けて記録する。
+
 ## Coreの層別構造と相対fillingの一次資料
 
 - Evans–Mauri, *Constructing local models for Lagrangian torus fibrations*, Ann. Henri Lebesgue **4** (2021), 537–570, Definition 2.1、Lemma 2.16、Remark 2.18。[掲載PDF](https://ahl.centre-mersenne.org/item/10.5802/ahl.80.pdf)、[arXiv:1905.09229v3](https://arxiv.org/abs/1905.09229v3)。本稿は指定contact formを固定したcompact cone fillingを直接証明し、任意contact rescalingが既存葉を保つとは仮定しない。
@@ -219,4 +230,4 @@ Fernández de Bobadilla–Pełka, arXiv:2312.13248v4 の Theorem 6.14、Example 
 
 ## 再開時の確認
 
-次は、全域の作用適合atlas・action periodsの接着と `snc:output-data` の対応を公表用に点検する。特にdivisor-relative Moserで同定するnormal actionsと、別途一致を確認すべき独立な第二periodを区別し、指定形式・全域への定義・距離尺度に関する既存P0の優先順位を保つ。外部repoの最新 `main`、AGENTSと方針を確認し、上表のラベルの存在と追加仮定を照合する。未取得・アクセス不能なら、確認済みコミットと未確認範囲を残し、利用可能な独立課題を進める。解析的結果を外部repoへ追加した場合は、そちらを先に保存してから、この表の参照版と本repoの依存箇所を更新する。外部入力の更新・本repoでの適用証明・組版・計算検証は別々に記録する。
+次は、sourceのnodal surgery・focus germsと全域singular fibersの移送を公表用に点検する。任意のfocus不変量を先指定する問題とは分け、実際のcompact singular fiberとその飽和近傍全体を同じsymplectic transportで運ぶこと、支持・normal action・作用の規格化・全fiberの接着を確認する。既存P0の範囲と優先順位を保つ。外部repoの最新 `main`、AGENTSと方針を確認し、上表のラベルの存在と追加仮定を照合する。未取得・アクセス不能なら、確認済みコミットと未確認範囲を残し、利用可能な独立課題を進める。解析的結果を外部repoへ追加した場合は、そちらを先に保存してから、この表の参照版と本repoの依存箇所を更新する。外部入力の更新・本repoでの適用証明・組版・計算検証は別々に記録する。

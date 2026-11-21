@@ -13,7 +13,7 @@ $C_{ij}^{\circ}=C_{ij}\setminus\{p_{ijk}:k\ne i,j\}$は$d-2$穴の球面であ�
 $P$を境界を持つcompact oriented surface、$\mathcal F_0$を境界近傍でradialで内部にはsimple saddlesのみを持つmarked Morse葉層とする。
 両端に指定した滑らかなparameter germs $\mathcal F^-_u,\mathcal F^+_u$が、
 boundary collarsを固定する$\Diff_0(P)$による$\mathcal F_0$のorbitに属すると仮定する。
-そのとき、両端のgermsとopen overlap上で一致する滑らかな補間を、同じmarked Reeb treeと一critical-leaf一saddleの性質を保って構成できる。
+そのとき、両端のgermsとopen overlap上で一致する滑らかな補間を、同じmarked Reeb graphと一critical-leaf一saddleの性質を保って構成できる。球面からのpunctureの場合、このgraphはtreeである。
 \end{lemma}
 \begin{proof}
 端のparameterを、端の近くでは変更せず、少し内側では一定にする。
@@ -73,6 +73,93 @@ leafのvariation fieldを$U$とすれば
 \mathrm dI_\gamma(v)=\frac1{2\pi}\int_{\gamma}\iota_{\widetilde v}\Omega
 \]
 も一致する。linear monodromyだけからこの結論を出しているのではない。
+
+\subsection{正則 torus band の第二作用と exact 接着}
+
+以下は action--angle theorem と作用積分の標準的な帰結を，本稿の normal-circle marking
+に合わせて明記したものである\cite[Theorem~1.42, Lemma~2.15, Remark~2.17, Lemma~2.25]{Evans}．
+ここでの番号は arXiv:2110.08643v4 に従う．
+
+\begin{proposition}[共通 normal moment を持つ正則接着の判定]
+\label{neck:regular-period-matching}
+$\pi_\pm:(U_\pm,\omega_\pm=\dd\lambda_\pm)\to B_\pm$ を，十分小さい可縮な
+正則 action chart 上の Lagrangian $T^2$ bundles とする．
+周期 $2\pi$ の向き付き normal circle の cycle を $\alpha_\pm$，
+それを含む整数基底を $(\alpha_\pm,\beta_\pm)$ とし，作用を
+\[
+ I_\pm=(\mu_\pm,J_\pm)^{\mathsf T},\qquad
+ \mu_\pm=\frac1{2\pi}\int_{\alpha_\pm}\lambda_\pm,
+ \quad J_\pm=\frac1{2\pi}\int_{\beta_\pm}\lambda_\pm
+\]
+と正規化する．既定の base diffeomorphism $h:B_-\to B_+$ は
+$\mu_+\circ h=\mu_-$ を満たすとする．$k\in\ZZ$，$\varepsilon\in\{1,-1\}$ を固定する．
+$h$ を覆い，
+\[
+ \Phi_*\alpha_-=\alpha_+,
+ \qquad \Phi_*\beta_-=k\alpha_++\varepsilon\beta_+
+\]
+を満たす fiber-preserving symplectomorphism が存在するための必要十分条件は，
+ある定数 $c\in\RR$ に対して
+\begin{equation}\label{neck:second-action-test}
+ J_-=k\mu_-+\varepsilon J_+\circ h+c
+\end{equation}
+が成り立つことである．同じ条件で $\Phi^*\lambda_+-\lambda_-$ が exact となるための
+必要十分条件は $c=0$ である．これらの maps は normal circle actions も共役する．
+第二 cycle も固定する場合は $k=0,\varepsilon=1$ とする．
+\end{proposition}
+
+\begin{proof}
+Symplectomorphism があれば $\Phi^*\lambda_+-\lambda_-$ は closed である．
+Base path 上で同じ marked cycle を運ぶ cylinder に Stokes の定理を適用すると，
+その period は base に依らない．Normal period は正規化により零であり，
+第二 period は $-2\pi c$ となる．これで必要性と exact の場合の $c=0$ を得る．
+
+逆に action--angle coordinates を取り，$\theta_\pm\in(\RR/2\pi\ZZ)^2$ として
+\[
+ \omega_\pm=\sum_{j=1}^2\dd I_{\pm,j}\wedge\dd\theta_{\pm,j},
+ \qquad \lambda_\pm=I_\pm^{\mathsf T}\dd\theta_\pm+\dd S_\pm
+\]
+と書く．最後の exact 項は，差が closed で全 fiber periods が零であり，
+$U_\pm\simeq T^2$ であることから得る．
+$P=\left(\begin{smallmatrix}1&k\\0&\varepsilon\end{smallmatrix}\right)$ とし，
+\[
+ \Phi(b,\theta_-)=(h(b),P\theta_-)
+\]
+と置く．条件は $I_-=P^{\mathsf T}(I_+\circ h)+(0,c)^{\mathsf T}$ なので，
+$\Phi^*\omega_+=\omega_-$ であり，
+\[
+ \Phi^*\lambda_+-\lambda_-
+ =-c\dd\theta_{-,2}+\dd(S_+\circ\Phi-S_-).
+\]
+従って $c=0$ なら exact である．Symplectic 性と moment の等式から normal generators
+も一致し，作用の共役が従う．
+\end{proof}
+
+\begin{example}[Normal moment だけでは指定した第二作用は決まらない]
+\label{neck:normal-action-counterexample}
+$\omega=\dd\mu\wedge\dd\theta_1+\dd y\wedge\dd\theta_2$，
+$\lambda=\mu\dd\theta_1+y\dd\theta_2$ を固定し，十分小さい二つの bands 上で
+$\pi_0=(\mu,y)$，$\pi_a=(\mu,y-a(\mu))$ とする．
+Base labels $(\mu,s)$ を恒等に同定すると，作用はそれぞれ $(\mu,s)$ と
+$(\mu,s+a(\mu))$ である．Normal circle と moment は同じである．
+$a=a_0\ne0$ が定数なら $y\mapsto y+a_0$ は fiber-preserving symplectomorphism だが，
+primitive の差は $a_0\dd\theta_2$ であり，指定 primitive に関する exact matching は存在しない．
+$a(\mu)=\epsilon\mu^2$，$\epsilon\ne0$ なら，\eqref{neck:second-action-test}の $s$ 係数から
+$\varepsilon=1$，さらに $\mu$ の二階微分から $2\epsilon=0$ という矛盾が生じる．
+従って整数 shear と定数 translation を許しても，既定の base 同定を覆う symplectic matching はない．
+どちらも任意に小さい $a_0$ または $\epsilon$ で起こる．
+Base 同定を $h(\mu,s)=(\mu,s-a(\mu))$ に変えれば物理的な恒等写像で同じ torus partition
+となるので，これは fibration 自体の不存在ではなく，先指定した matching の制約である．
+\end{example}
+
+本命題は一つの正則 action chart での判定である．一般の base 上の既定 symplectic map では，
+fiber periods が全て零でも primitive 差に base の $H^1$ class が残り得る．
+これを global exactness の判定へ無条件に拡張しない．また，SNC の
+命題\ref{snc:fixed-holonomy}は一つの collar primitive の basic 補正を扱うものであり，
+独立に選んだ二つの pieces の第二作用を自動的に一致させるものではない．
+整数 shear は許す cycle 同定の選択であり，恒等写像からの Hamiltonian isotopy が
+非自明な $H_1$ marking の変更を実行するという意味ではない．
+この局所存在判定は，先指定した端 collar map への点ごとの一致も保証しない．
 
 \subsection{実際の半安定族上の正確なneck座標}
 小解消後の$C_{ij}^{\circ}$は、他の中心成分を除いた全空間のclosed Stein submanifoldである。
