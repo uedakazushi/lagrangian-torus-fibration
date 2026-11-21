@@ -1,5 +1,6 @@
 \section{SNC 因子と connection holonomy による有限相対 compactification}
 \label{snc:section}
+% 2026-11-21 / v1.2: 固定 connection の全 leaf-period 条件と最小 holonomy 自由度．
 
 直線配置に対する構成の本質は，個々の成分が ample であることではない．
 必要なのは，Kähler class が divisor 全体の正の重み付き和で表されることである．
@@ -198,6 +199,13 @@ angular pole の差を引いた remainder は有界である．
 この regularization と以下の connection の変更は，
 標準的な SNC symplectic neighborhoods の枠組みに属する
 \cite[\S2.4, Appendix A]{EM}\cite{TMZ}．
+ただし\cite[Theorem 2.13]{TMZ}は一般には symplectic form の変形を許す．
+ここで固定した $\omega'$ に対する charts は，既に product とした crossing germs に
+相対的な tubular Moser により得る．実際，normal derivative を complex-linear かつ
+symplectic に選べば，tubular pullback と coupling form は zero section 上で二形式として一致する．
+その差の radial homotopy primitive は二次以上で消え，固定 product charts では零に取れる．
+十分薄い近傍で両形式の線分は非退化なので，Moser field は zero section と normal first jet，
+および crossing charts を固定する．従ってこの段階で actual $\omega'$ をさらに変形しない．
 
 \subsection{任意の自己交点数に対する curvature balance}
 
@@ -339,6 +347,62 @@ $D\to\Gamma$ は $H_1$ の全射を誘導するが，正の genus の成分が�
 一般には同型でない．component 上の $2g_a$ 個の periods 全てを消すには，
 graph から引き戻した basic forms だけでは不足し得る．
 この不足は次の holonomy の自由度で解消する．
+
+\begin{lemma}[Reeb 商で消える正則葉の cycles]
+\label{snc:reeb-leaf-kernel}
+Cap へ radial に延長した Reeb graph を，辺を延ばす前の graph と同じ位相型で同定し，
+商写像を $q_a:D_a\to T_a$，$q:D\to\Gamma$ とする．
+整数格子
+\[
+ L_a=\ker\bigl((q_a)_*:H_1(D_a;\ZZ)\longrightarrow H_1(T_a;\ZZ)\bigr)
+\]
+は rank $g_a$ の primitive Lagrangian sublattice である．
+$T_a$ の maximal subtree の外の $g_a$ 本の辺から正則葉を一つずつ選ぶと，
+その向き付き円周 $\ell_{a,1},\ldots,\ell_{a,g_a}$ が $L_a$ の基底になる．
+また，次は完全列である：
+\begin{equation}\label{snc:reeb-homology-sequence}
+ 0\longrightarrow\bigoplus_aL_a\longrightarrow H_1(D;\ZZ)
+ \xrightarrow{q_*}H_1(\Gamma;\ZZ)\longrightarrow0.
+\end{equation}
+従って実係数では
+\begin{equation}\label{snc:leaf-obstruction-space}
+ \mathcal O_{\mathcal F}(D):=
+ H^1(D;\RR)/q^*H^1(\Gamma;\RR)
+ \cong\bigoplus_a\operatorname{Hom}(L_a,\RR),
+ \qquad \dim\mathcal O_{\mathcal F}(D)=\sum_a g_a.
+\end{equation}
+$q^*H^1(\Gamma;\RR)$ の各 class は，regular annuli 内に支持され，
+全 critical leaves と crossing points の近傍で零の smooth closed basic form で表せる．
+\end{lemma}
+
+\begin{proof}
+閉曲面の simple Morse function に対する，level periods の消滅と smooth basic
+representative の対応は既知である\cite[Lemma~4.8, p.~2421; \S5, pp.~2424--2425]{IKM}．
+ここでは本節の marked pants decomposition に対し，整数格子と SNC 接続を直接確認する．
+選んだ $g_a$ 本の正則円周で $D_a$ を切ると，pants と cap disks を貼る graph は tree
+になるため，切断曲面は連結で genus 零である．切断後の各円周の両岸を結ぶ arcs を
+戻せば，これらの円周に intersection pairing で双対な cycles が得られる．
+従って円周の classes は独立で primitive であり，互いに素なので交点数は全て零である．
+Rank は $g_a$ なので Lagrangian sublattice を張る．
+一方，graph の各 loop は pants 内の arcs で閉曲面上へ lift できるから $(q_a)_*$ は全射である．
+$b_1(T_a)=g_a$ と rank を比較すれば，選んだ格子がその kernel 全体である．
+
+$H_1(D)$ の列\eqref{snc:divisor-homology}と，$T_a$ を交点ごとに貼る graph の列
+\[
+ 0\longrightarrow\bigoplus_aH_1(T_a;\ZZ)
+ \longrightarrow H_1(\Gamma;\ZZ)\longrightarrow H_1(G;\ZZ)\longrightarrow0
+\]
+を比較する．右端の写像は恒等であり，左端は全射なので，kernel の列から
+\eqref{snc:reeb-homology-sequence}を得る．実係数で双対化すれば
+\eqref{snc:leaf-obstruction-space}が従う．
+
+最後に，$\Gamma$ 上の cellular $1$-cochain で class を表す．各辺の内部に短い interval
+を取り，その cochain の値を積分に持つ bump form $g(u)\dd u$ を置く．
+全 vertices と指定された有限個の regular values を避けて支持を選べる．
+葉の商へ引き戻し，支持の外で零に延ばせば，crossings と全 critical leaves の近傍でも
+滑らかな closed basic form が得られる．同じ式を normal direction に一定に延ばせば，
+plumbing collar 上でも全 fibers の tangent spaces を消す closed form となる．
+\end{proof}
 
 \begin{lemma}[connection holonomy による periods の制御]
 \label{snc:holonomy}
@@ -528,6 +592,18 @@ base は $-\infty<t\leq T(q)$ に cone point を加えたものとなり，
  (t,q)\longmapsto(e^{t-T(q)},q)
 \]
 で $\operatorname{Cone}_{\rm cl}(\Gamma)$ と同相になる．
+この同相による閉端での連続性も actual collar 座標で確認できる．
+$r=e^{t-T(q)}$ と置くと，component face と transition cap では
+$r=1-\mu_a/w_a$，product crossing では
+\[
+ r=\max\{1-\mu_a/w_a,\,1-\mu_b/w_b\}
+\]
+である．従って $D$ への任意の接近で $r\to1$ となる．
+Graph coordinate は component 上では固定葉の quotient，transition cap では
+\eqref{snc:endpoint}の厳密単調な endpoint coordinate により連続に延びる．
+Product crossing では不変量 $R$ を用い，交点への接近で $R\to w_a/w_b$ となるため，
+同じ crossing value へ収束する．Normal charts の同定は zero section で恒等なので，
+この延長は実際の $D$ 上の指定された全葉に一致する．
 collapse は全て fiber ごとに行われるので，新しい fiber の切断や連結成分は生じない．
 outer graph の逆像は正確に $D$ となり，boundary fibers の記述も従う．
 以上で定理\ref{snc:main}を証明した．
@@ -699,16 +775,115 @@ $H^1(\Gamma;\RR)$ の dimension は十であり，
 foliation を固定した basic forms だけでは任意の period 差を補正できないことが分かる．
 補題\ref{snc:holonomy}は，二つの elliptic components の holonomy を選んでこれを解消する．
 
-\begin{remark}[holonomy を固定する場合]
+\subsection{固定 connection と全 leaf-period 条件}
+
+以下で固定するのは unitary holonomy の値だけでなく，normal connections と
+actual collar への coupling charts，およびその full fiber partition である．
+許す補正は closed foliation-basic form と，core を保つ exact cutoff である．
+この範囲で，先の period 補正の必要十分条件を記述できる．
+
+\begin{proposition}[固定 coupling charts に対する相対 primitive 接着]
 \label{snc:fixed-holonomy}
-既に全 normal connections と collar foliation を固定し，変更を
-foliation-basic な closed one-forms に限るなら，primitive の差の class は
-同じ residues の下で $H^1(D;\RR)$ のうち $D\to\Gamma$ から
-引き戻した部分に属する必要がある．
-正の genus の成分がある場合，その cokernel の dimension は $\sum_a g_a$ である．
-これは固定済み holonomy を保つ追加条件であり，定理\ref{snc:main}の障害ではない．
-同定を変える自由を消した設定では，この条件を落としてはいけない．
+本節の logarithmic models の下で，$\lambda_0$ と $\lambda_{\rm col}$ は
+同じ二形式 $\omega'$ の primitive であり，同じ residues $-2\pi w_a$ を持つとする．
+同じ angular poles を引いた remainders が有界であることも，この model の条件に含める．
+Plumbing retraction の境界への制限を $\rho:S\to D$ と書くと，
+命題\ref{snc:integer-sequence}により一意な $c\in H^1(D;\RR)$ があり，
+$[\lambda_{\rm col}-\lambda_0]=\rho^*c$ となる．次は同値である．
+\begin{enumerate}
+\item Collar の closed basic form $\eta$ と有界関数 $f$ により
+  $\lambda_{\rm col}-\eta-\lambda_0=\dd f$ とできる．
+  $\eta$ は全 critical leaves と crossing germs の近傍で零に選べる．
+\item $c\in q^*H^1(\Gamma;\RR)$，すなわち $[c]=0$ in $\mathcal O_{\mathcal F}(D)$．
+\item 補題\ref{snc:reeb-leaf-kernel}の各 $\ell_{a,k}$ に対して
+  \begin{equation}\label{snc:fixed-leaf-period-test}
+   \int_{\widetilde\ell_{a,k}}(\lambda_{\rm col}-\lambda_0)=0
+   \qquad(1\le k\le g_a)
+  \end{equation}
+  が成り立つ．ここで $\widetilde\ell_{a,k}$ は collar 上の任意の circle-bundle lift である．
+\end{enumerate}
+必要なら固定 charts を十分薄い共通 subcollar に制限する．これらの条件の下で，
+core の primitive germ，その固定 collar の全葉，normal moments，
+full saddle collars と crossing germs を保つ本節の exact-cutoff 構成を実行できる．
+Finite endpoint で得られる $D$ 上の全葉も元の指定と一致する．
+\end{proposition}
+
+\begin{proof}
+Meridian periods が零なので，\eqref{snc:fixed-leaf-period-test}は lift の選び方に依存せず，
+$c([\ell_{a,k}])$ に等しい．補題\ref{snc:reeb-leaf-kernel}より (2) と (3) は同値である．
+各 $\widetilde\ell_{a,k}$ は一つの full torus fiber 内に取れるので，
+basic $\eta$ と $\dd f$ の積分は零である．従って (1) なら (3) である．
+逆に (2) の下では同補題の edge-bump representatives を collar に延ばして $\eta$ を取る．
+差は exact となり，同じ angular poles を引いた remainder の有界性と
+有限 plumbing cover の経路による議論から，$\dd f$ と $f$ を有界に取れる．
+従って (1) が成立する．
+
+Core へ接ぐ cutoff の nontrapping 評価は\eqref{snc:cutoff-estimate}と同じである．
+ここでは一般の basic $\eta$ を $P_a$ の regular annuli にも置くので，
+curve 上の点を固定することと，全葉を保つことを区別する．
+$\lambda_{\rm col}-\eta$ の Liouville field を $Z$ とすると
+\[
+ Z\mu_a=\mu_a-w_a,\qquad \alpha_a(Z)=0,\qquad
+ (1-\mu_a/w_a)\iota_{Z^{\rm horizontal}}\omega'|_{D_a}=-\eta.
+\]
+$\eta$ は葉の tangent を消すから，horizontal part は葉の tangent である．
+さらに $\mu_a\le\eps_a<w_a/2$ では滑らかに有界である．
+従って有限時刻\eqref{snc:time}までの base flow は同じ全正則葉上の diffeomorphism を与え，
+normal circle を潰す endpoint も同じ全葉である．
+Critical collars では $\eta=0$ なので full saddle leaves をそのまま保つ．
+Cap の basic form $g(I)\dd I$ は angular components だけを変えるため，
+\eqref{snc:cap-dynamics}と\eqref{snc:endpoint}も変わらない．
+Crossing germs も支持の外であり，既存の閉端への連続性が使える．
+\end{proof}
+
+\begin{corollary}[必要な holonomy 調整の独立方向]
+\label{snc:minimal-holonomy-controls}
+固定された葉層に対し，$\sum_a g_a$ 本の closed real one-forms を用いる connection
+変更と basic correction で，任意の $c\in H^1(D;\RR)$ の障害を消せる．
+Holonomy 変更から $\mathcal O_{\mathcal F}(D)$ への線形写像の rank は正確に $\sum_a g_a$ である．
+従って全ての可能な障害を制御する線形 family には，これだけの独立方向が必要十分である．
+ここで holonomy 変更後の lift は新しい coupling charts を用いる．
+\end{corollary}
+
+\begin{proof}
+各 $a$ で，$\int_{\ell_{a,j}}\eta_{a,k}=\delta_{jk}$ となる closed forms を選ぶ．
+補題\ref{snc:reeb-leaf-kernel}の primitive lattice とその双対 cycles により選択でき，
+局所 primitive の cutoff により全 crossing disks と指定 flat patches の近傍で零にできる．
+$p_{a,k}=c([\ell_{a,k}])$ とし，connection を
+\[
+ \alpha_a\longmapsto\alpha_a+
+       \sum_{k=1}^{g_a}(p_{a,k}/w_a)\pi^*\eta_{a,k}
+\]
+と変える．補題\ref{snc:holonomy}により障害の各座標は
+$p_{a,k}-w_a(p_{a,k}/w_a)=0$ となる．残りは $q^*H^1(\Gamma)$ の class なので，
+命題\ref{snc:fixed-holonomy}の basic correction で処理できる．
+全 real directions に対する行列は重み $-w_a$ の非零対角行列であり，rank の主張も従う．
+\end{proof}
+
+\begin{remark}[Connection 補正の支持の制約]\label{snc:saddle-support-obstruction}
+Closed form $\eta_a$ が全ての full critical-leaf collars と crossing collars の近傍で零なら，
+$[\eta_a]|_{L_a}=0$ である．実際，regular annulus 上の葉の period は Stokes の定理により一定で，
+端の critical collar または cap で零になる．従って，このような支持の connection 変更は
+$\mathcal O_{\mathcal F}(D)$ を変えない．非零障害を消す際には，一般に全ての full saddle collars を
+同時に固定することはできない．Saddle 点だけの小さい disks を固定する条件はこれより弱い．
+Holonomy 補正後も $D$ 上の指定 full leaves は保たれるが，actual collar での lift は新しい
+coupling charts による．障害消去後の basic graph correction は，これとは異なり
+全 critical-leaf collars を支持外にできる．
 \end{remark}
+
+二本の smooth plane cubics の例では，$\dim H^1(D)=12$，$b_1(\Gamma)=10$ であり，
+固定 coupling charts の障害は二つの elliptic components 上の正則葉の period 一つずつである．
+各成分の二つの periods 全てを holonomy で消すことは十分だが，必要な独立調整は計二つで足りる．
+全成分が有理なら $\mathcal O_{\mathcal F}(D)=0$ であり，この段階には holonomy 変更を要しない．
+一方，命題\ref{ke:component-flux-space}の点固定 collar germ の障害空間とは異なる quotient
+であり，その消滅を意味しない．また，任意の fibration の存在に対する必要条件や，
+全ての foliation-preserving Liouville fields の分類を主張しているわけではない．
+
+Unitary holonomy の位相値だけを固定する場合にも注意が必要である．
+$\eta_a$ の全 periods が $2\pi\ZZ$ に入る変更は holonomy phases を変えないが，
+\eqref{snc:holonomy-variation}の real primitive class は $-w_a[\eta_a]$ だけ動く．
+この変更は normal gauge を変えるので，上の固定 coupling charts の条件には含めない．
+位相値だけを固定する問題では，この整数 period の自由を別途扱う必要がある．
 
 \subsection{実際の成分へ移す際に保持されるデータ}
 \label{snc:output-data}

@@ -1,6 +1,6 @@
 {
   "date": "2026-11-21",
-  "version": "3.6",
+  "version": "3.7",
   "scope": "複素次元2の現行研究状態。旧三次元稿の組版・監査記録ではない。数学的な証明と、その再監査、組版、整数計算、GitHub保存、Cloudタスク起動を区別する。",
   "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。次の優先課題は公表前の包括的依存監査・一次文献比較・新規性確認・主稿構成整理。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
@@ -96,46 +96,23 @@
     },
     "this_audit": {
       "date": "2026-11-21",
-      "scope": "改訂26：固定coreの正則化・小さいexact Moser・actual primitiveから指定collarと全域fillingへの接続を独立内部点検。直線配置の相対flux空間とfixed-form collar拡張障害を追加。Cohen–SuciuとEvans–Mauri掲載版の指定箇所を一次資料で確認。",
-      "reexecuted_build": true,
-      "reexecuted_static_checks": true,
+      "scope": "改訂27：SNC normal connection と固定 coupling charts の全leaf-period条件、整数primitive Lagrangian kernel、最小holonomy調整方向、full saddle collar支持の制約、有限endpointの連続性を原稿に統合。新証明を複数担当で独立内部点検。IKM/BSV/TMZ一次資料の指定箇所を確認。",
+      "reexecuted_build": false,
+      "reexecuted_static_checks": false,
       "reexecuted_python_suite": false,
       "six_label_finite_command": "python3 verification/verify_cubical_six_label_geometry.py",
-      "six_label_finite_result": "既存の有限検算PASSを保持。改訂26では計算箇所を変更せず再実行していない。",
+      "six_label_finite_result": "既存の有限検算PASSを保持。改訂27では計算箇所を変更せず再実行していない。",
       "independent_internal_proof_review": [
-        "ke:fixed-compact-cusp-regularization",
-        "ke:fixed-component-transfer",
-        "ke:component-relative-flux (finite-dimensional restriction image)",
-        "ke:actual-link-cone-filling",
-        "ke:contact-rescaling-collar-scope",
-        "ke:link-relative-collar-gluing (all K2 intersections)",
-        "ke:actual-global-fibration (trim of the post-interpolation partition)",
-        "snc:main (closed isotropic filtration via independent compact relative lemma)",
-        "ke:component-flux-space (pair sequences, intersection form, complete boundary period test)",
-        "ke:nonextendible-small-core-germ (fixed two-form realization and direct extension obstruction)"
+        "snc:reeb-leaf-kernel (integral primitive lattice and SNC exact sequence)",
+        "snc:fixed-holonomy (finite leaf-period criterion, bounded primitive, whole-leaf finite endpoints)",
+        "snc:minimal-holonomy-controls (sign, rank, and new coupling-chart lifts)",
+        "snc:saddle-support-obstruction (closed form support and regular-annulus period constancy)",
+        "snc:main (fixed actual form, relative tubular Moser, core cutoff, and finite endpoint continuity)"
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
-      "visual_pages_reviewed": [
-        1,
-        9,
-        13,
-        17,
-        18,
-        27,
-        140,
-        141,
-        142,
-        143,
-        162,
-        163,
-        164,
-        165,
-        166,
-        252,
-        253
-      ],
-      "current_build_status": "Revision 26 final TeX sources compiled successfully to 257 pages; 17 selected pages from the same final PDF visually inspected. No unresolved references/citations, duplicate labels, missing glyphs, or overfull boxes. Static repository checks passed."
+      "visual_pages_reviewed": [],
+      "current_build_status": "Revision 27 source checkpoint; build and visual review pending. Latest completed PDF remains revision 26 (257 pages)."
     }
   },
   "cloud_codex": {
@@ -221,6 +198,12 @@
       "source": "Cohen–Suciu, Advances in Mathematics 206 (2006), 538–566; DOI 10.1016/j.aim.2005.10.003. Proposition 2.5, Corollary 2.6, §6.9 in arXiv:math/0502506v2, pp.6–7,28.",
       "url": "https://arxiv.org/abs/math/0502506v2",
       "verified": "一次PDFの短完全列・一般位置配置のBetti数を複数担当で確認。本稿は既知の境界cohomologyを相対Moserの有限period条件へ適用する。"
+    },
+    "SNC_leaf_period_primary_sources": {
+      "IKM": "Ann. Inst. Fourier 66 (2016), Lemma 4.8 p.2421, proof of Theorem 4.6 p.2423, §5 pp.2424–2425; https://doi.org/10.5802/aif.3066",
+      "BSV": "J. Fixed Point Theory Appl.24 (2022), article48, Remark2.2 and Propositions2.5/2.7/2.10, pp.28–31; https://doi.org/10.1007/s11784-022-00965-6",
+      "TMZ": "Adv. Math.339 (2018), 672–748; arXiv:1410.0609v3 pp.13–17, (2.9)–(2.10), Definitions2.8–2.12, Theorem2.13; https://doi.org/10.1016/j.aim.2018.09.035",
+      "scope": "Specified primary passages checked. IKM provides the known component-level principle; the integral SNC sequence and relative primitive/collapse application are proved in the manuscript. Comprehensive novelty confirmation remains pending."
     }
   },
   "other_papers": {

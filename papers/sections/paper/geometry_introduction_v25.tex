@@ -130,9 +130,14 @@ exact symplectic deformation は de Rham class を保つので，
 ここでの相対条件は，Kähler representative と指定 product germs，
 marked full leaves，選択する holonomy と periods，有限 endpoint の同時制御である．
 SNC symplectic neighborhoods とその relative regularizations には
-Tehrani--McLean--Zinger\cite[Definitions 2.11--2.12, Theorem 2.13]{TMZ}を用いる．
+Tehrani--McLean--Zinger\cite[Definitions 2.11--2.12, Theorem 2.13]{TMZ}の枠組みを用いる．
+同定理は一般には symplectic form の変形を許すため，本稿の固定 $\omega'$ に対する
+charts は，product crossing germs を準備した後の相対 tubular Moser で構成する．
 正の weighted divisor に適合する primitive の存在は
-Borman--Sheridan--Varolgunes\cite[Proposition 2.10]{BSV}に関係し，
+Borman--Sheridan--Varolgunes\cite[Propositions 2.7, 2.10]{BSV}に関係する．
+同結果の重みは正の実数でよく，$H^1(M)=0$ を要求しないが，先指定した normal connection，
+core primitive germ，full Morse leaves の同時保存までは結論していない．
+同論文の period-one 規約とは $r_a=2\pi\mu_a$，$\kappa_a=2\pi w_a$ で対応する．
 normal directions の対称化は Pascaleff\cite[\S4.2]{Pascaleff}の構成と関係する．
 Kähler class の実数係数の表示から global logarithmic potential を作る段階では，
 compact Kähler manifold の $\dd\dd^c$-lemma\cite[\S5]{DGMS}を用いる．
@@ -168,8 +173,23 @@ crossing disks で零の closed one-form $\eta_a$ により normal connection �
 actual collar 上の Kähler form $\omega'$ は固定される．
 最後に bounded primitive の cutoff を用いて，
 core 近傍の primitive germ を保ったまま end の model と接続する．
-fixed holonomy を追加要求する場合の period 制約は，
-この選択可能な holonomy を用いる定理とは分けて記述する．
+さらに connection と coupling charts を固定し，closed basic correction と exact cutoff
+に限る場合の必要十分条件を命題\ref{snc:fixed-holonomy}で与える．
+Reeb 商 $q:D\to\Gamma$ に対し，障害は
+\[
+ H^1(D;\RR)/q^*H^1(\Gamma;\RR)
+ \cong\bigoplus_a\operatorname{Hom}(L_a,\RR),\qquad
+ \operatorname{rank}L_a=g_a
+\]
+であり，各成分から $g_a$ 本ずつ選んだ正則葉の period の消滅で判定できる．
+曲面一枚での leaf-period と basic representative の関係は
+Izosimov--Khesin--Mousavi\cite[Lemma 4.8, \S5]{IKM}の既知結果である．
+本稿では整数格子の証明と SNC 全体の exact sequence を記述し，有限時刻の全葉 collapse と
+core に相対的な接着へ適用する．任意の障害の消去には $\sum_a g_a$ 個の独立な holonomy
+調整方向が必要十分である（系\ref{snc:minimal-holonomy-controls}）．
+非零障害を消す connection 変更は一般に全 full saddle collars を支持外にできない
+（注意\ref{snc:saddle-support-obstruction}）．これらは指定した補正方法の条件であり，
+任意の Lagrangian fibration の存在を分類するものではない．
 
 固定した元の form が交点で nonorthogonal な場合には，
 commuting normal-circle actions の product model をそのまま要求できない．

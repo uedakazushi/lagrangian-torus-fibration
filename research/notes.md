@@ -1,5 +1,5 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-21 / v3.6
+更新：2026-11-21 / v3.7
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
@@ -8,6 +8,30 @@
 主稿 `ke:global-realization` と統合証明 `ke:global-metric-realization` は、任意の固定 $d\ge5$ と既存一般性条件の全平面退化について、actual負KE形式の全域fibrationと、同じ $f_t=p_T\pi_t$ の全曲面ambient距離に関するdistortion消失を与える。潰される内部木上の全fiber合併も一様に収縮する。**原稿に証明があり、今回の新証明と接続を複数担当で内部点検した。** 形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的な新規性確認は未実施である。現在は公表に向けた一次文献・依存結果・主稿構成の点検を優先する。
 
 対象・結論の範囲と優先順位は [研究方針](../00_research_plan.md)、外部定理のpath・label・確認commitは [KE依存表](ke-dependencies.md) を参照する。ここには証明全文を複製せず、核心、入力の区別、有効な障害を残す。十分遅い対角選択と一つの許容された木系を使う結論であり、最適rate、任意の先指定木系への適合、全次数のmatroidal atlasは含まない。
+
+## SNCの固定coupling chartsと葉のperiod障害
+
+正本は `relative_compactification.tex` の `snc:reeb-leaf-kernel`、`snc:fixed-holonomy`、`snc:minimal-holonomy-controls`。Capを含むReeb商 $q_a:D_a\to T_a$ のkernel $L_a\subset H_1(D_a;\mathbb Z)$ はrank $g_a$ のprimitive Lagrangian格子であり、maximal subtreeの外の辺から選ぶ正則葉円周で生成される。SNC全体では
+\[
+H^1(D;\mathbb R)/q^*H^1(\Gamma;\mathbb R)
+\cong\bigoplus_a\operatorname{Hom}(L_a,\mathbb R),\qquad
+\dim=\sum_a g_a.
+\]
+固定normal connections・actual coupling charts・full fiber partitionの下で、同じ二形式とresiduesを持つprimitive差をbasic formとexact cutoffで処理できるための必要十分条件は、この商classが零であること、すなわち各成分の選んだ $g_a$ 個の正則葉periodの消滅である。Normal meridianのperiod差が零なのでcircle-bundle liftの選び方には依存しない。これは指定された補正経路の判定であり、任意のfibrationの不存在判定でも点固定core germのflux障害の消滅でもない。
+
+残るbasic classはregular annuliのedge bumpsで表せ、全critical leaves・crossingsの近傍と有限個の指定値を避けて支持を取れる。Basic補正後のLiouville場の曲線方向は同じ葉に接するため、点ごとの固定ではなく全葉の保存を得る。非零障害は正則葉periodに双対な $\sum_a g_a$ 本のclosed formsで消せる。全 $2g_a$ component periodsの消去は十分だが過剰であり、二本のelliptic cubicsでは必要な独立方向は計二つ。これらのholonomy変更はcrossing disks・指定flat patchesを避けられるが、一般に元のfull saddle collarsまで全て固定はできない。`snc:saddle-support-obstruction` により、全full critical-leaf collarsで零のclosed connection補正は障害空間に作用しないからである。$D$ 上のmarked full leavesは固定し、変更後のpositive-normal葉は新しいcoupling chartsでliftする。
+
+Connection/gauge固定とunitary holonomy phases固定は異なる。Periodsが $2\pi\mathbb Z$ のclosed form $\eta_a$ はphasesを変えずにreal primitive classを $-w_a[\eta_a]$ だけ動かす。これはlarge gaugeに伴うnormal framing変更であり、固定coupling chartsの命題に含めない。位相値だけを指定する問題の整数格子自由は別途扱う。
+
+有限endpointの連続性はflowの位相同定だけに依存させない。Actual collarのcone座標 $r=e^{t-T(q)}$ はcomponent face・transition capで $r=1-\mu_a/w_a$、product crossingで $r=\max\{1-\mu_a/w_a,1-\mu_b/w_b\}$。これにより $D$ への任意の接近で $r\to1$ となる。Graph座標はcapの厳密単調endpoint式とcrossing invariantで連続に延び、実際の $D$ 上の指定全葉へ到達する（`snc:time`、`snc:endpoint`）。
+
+一次資料との関係は次の通り。既知の原理と本稿での適用証明を区別し、網羅的新規性は未確認とする。
+
+- **IKM：** Izosimov–Khesin–Mousavi, *Coadjoint orbits of symplectic diffeomorphisms of surfaces and ideal hydrodynamics*, Ann. Inst. Fourier 66 (2016), 2385–2433, [DOI 10.5802/aif.3066](https://doi.org/10.5802/aif.3066)。掲載版Lemma 4.8（p.2421）、Theorem 4.6の証明（p.2423）、§5（pp.2424–2425）を確認。成分上のlevel periods消滅とsmooth basic representativeの対応は既知であり、本稿では整数格子、SNC graphへの完全列、固定coupling chartsへの適用を証明する。
+- **TMZ：** Farajzadeh Tehrani–McLean–Zinger, *Normal crossings singularities for symplectic topology*, Adv. Math. 339 (2018), 672–748, [DOI 10.1016/j.aim.2018.09.035](https://doi.org/10.1016/j.aim.2018.09.035)。確認版 [arXiv:1410.0609v3](https://arxiv.org/abs/1410.0609v3) のDefinitions 2.11–2.12（p.16）、Theorem 2.13（p.17）はHermitian structures・connectionsを含むcompatible regularizationsをexact deformationの後に与える。固定された元の二形式・任意指定connectionの同時実現や、固定複素構造に対するKähler性の保存をそのまま主張する定理ではない。
+- **BSV：** Borman–Sheridan–Varolgunes, *Quantum cohomology as a deformation of symplectic cohomology*, J. Fixed Point Theory Appl. 24 (2022), article 48, [DOI 10.1007/s11784-022-00965-6](https://doi.org/10.1007/s11784-022-00965-6)。掲載版Propositions 2.5・2.7（p.30）はorthogonalityとcommuting normal Hamiltonians、Proposition 2.10・Remark 2.11（p.31）はpositive real divisor coefficientsからadapted primitiveとscHの存在を扱う。この命題には $H^1(M)=0$ やmonotonicityは不要だが、任意に先指定したconnection・holonomy・core germ・marked Morse全葉の実現は結論しない。Remark 2.2のdivisor isotopyは、固定divisorの下で形式を変形する経路と区別する。
+
+次は `snc:output-data` と全域atlas・作用period接着の対応を点検する。Divisor-relative Moserでnormal actionsを移すことと、独立な第二period・critical valuesを指定することは別条件である。既存P0の優先順位を維持する。
 
 ## 主要解析入力の確認範囲
 
@@ -584,4 +608,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 ## 検証状態
 
 
-2026-11-21 / v3.6：主稿改訂26では、core正則化・固定形式への移送・指定actual collar・全域fibrationの仮定と構成の同一性を、範囲を限定して複数担当で独立内部点検した。全K2交わりを含む恒等collar、補間後の葉族に対する全fiber trim、SNC側の閉isotropic filtrationを明示した。Contact rescalingによる固定葉の非保存例と、直線配置coreの相対flux空間・固定形式で延長不能な小さいcollar germの証明も独立に点検した。Cohen–Suciuの既知の境界cohomologyを適用し、Evans–Mauriの掲載版の仮定・番号を一次資料で照合した。改訂26をLuaLaTeXで257頁に組版し、第1・9・13・17・18・27・140–143・162–166・252・253頁の計17頁を同じ最終PDFから個別画像で表示確認した。未解決参照・文献引用、重複label、欠字、overfull boxは0。静的構成検査も成功。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は未実施。
+2026-11-21 / v3.7：主稿改訂27には、固定coupling chartsの葉period判定、障害次元と最小holonomy調整、有限endpointのactual座標での連続性の証明を統合した。IKM・TMZ・BSVの指定箇所を一次資料で照合し、既知の成分原理・exact deformation・存在定理と本稿の相対適用を区別した。改訂27の組版・表示確認は未実行であり、直前の改訂26（257頁・指定17頁の表示確認）の詳細は [検証状態](validation.json) を参照する。新証明の独立点検・組版・保存の完了範囲は別々に記録する。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。

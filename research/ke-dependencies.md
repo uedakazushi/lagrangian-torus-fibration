@@ -1,6 +1,6 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-21 / v2.6。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-21 / v2.7。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
 ## 確認した正本と規格化
 
@@ -108,6 +108,17 @@ Zung, *A note on focus-focus singularities*, Differential Geometry and its Appli
 
 Maksymenko, Comment. Math. Helv. 80 (2005), 655–690, DOI [10.4171/CMH/30](https://doi.org/10.4171/CMH/30) の[掲載版](https://ems.press/content/serial-article-files/43060)で、Main Theorem p.658、Lemma 4.1 p.665、§6.1 Lemma 6.4 p.668を確認した。Path-component分類だけからfixed Reeb treeは従わず、本稿では支持を明示した葉層のdiffeomorphismsを使う。第二cycleのparameter monodromyと、abstract labelled treeの固定は区別する。
 
+## SNC相対primitiveとnormal holonomyの入力
+
+| 入力・本稿の結果 | 確認した範囲と制限 |
+| --- | --- |
+| IKM 掲載版Lemma 4.8、Theorem 4.6の証明、§5 | 成分上の正則葉period消滅とsmooth basic representativeの対応は既知。本稿 `snc:reeb-leaf-kernel` は整数格子とSNC完全列を確認し、障害の次元を $\sum_a g_a$ とする。 |
+| TMZ Definitions 2.11–2.12、Theorem 2.13（arXiv:1410.0609v3, pp.16–17） | Compatible regularizationはexact deformation後の結論。固定された元の形式・任意指定connection/holonomyの同時実現や固定複素構造でのKähler性を自動的に与えない。 |
+| BSV 掲載版Propositions 2.5・2.7・2.10、Remark 2.11（pp.30–31） | OrthogonalityとscH、positive real divisor coefficientsに対するadapted primitiveの存在。Prop.2.10に $H^1(M)=0$ やmonotonicityは不要。指定core germ・normal connection・marked full leavesの相対実現は別途証明する。 |
+| `snc:fixed-holonomy`、`snc:minimal-holonomy-controls` | 固定connection・coupling chartsのbasic＋exact-cutoff経路は各成分の $g_a$ 個の独立葉periodが零 iff 実行可能。全障害を消すholonomy調整のrankは $\sum_a g_a$。全 $2g_a$ periods消去は過剰な十分条件。 |
+
+Basic補正は全critical collarsの外へ支持を取れるが、全full critical-leaf collarsで零のclosed connection補正は障害空間に作用しない（`snc:saddle-support-obstruction`）。非零障害のholonomy補正は一般に元のfull saddle collarsを変更し、$D$ 上のmarked full leavesを固定して新しいcoupling chartsでliftする。Unitary phasesだけの固定には整数periodのgauge自由があり、固定connection/gaugeの命題と同一視しない。有限endpointはactual collar座標による $r$ の明示式で連続性を確認する。既知の成分上の原理と本稿のSNC統合・coupling適用を区別する。書誌・一次URL・正確な頁は [研究ノート](notes.md#sncの固定coupling-chartsと葉のperiod障害)、証明は `relative_compactification.tex` を参照する。
+
 ## Coreの層別構造と相対fillingの一次資料
 
 - Evans–Mauri, *Constructing local models for Lagrangian torus fibrations*, Ann. Henri Lebesgue **4** (2021), 537–570, Definition 2.1、Lemma 2.16、Remark 2.18。[掲載PDF](https://ahl.centre-mersenne.org/item/10.5802/ahl.80.pdf)、[arXiv:1905.09229v3](https://arxiv.org/abs/1905.09229v3)。本稿は指定contact formを固定したcompact cone fillingを直接証明し、任意contact rescalingが既存葉を保つとは仮定しない。
@@ -208,4 +219,4 @@ Fernández de Bobadilla–Pełka, arXiv:2312.13248v4 の Theorem 6.14、Example 
 
 ## 再開時の確認
 
-次はSNC構成の指定normal holonomy・periods・marked full leafの相対実現と、actual KE定理の適用範囲を絞った一次文献比較を優先する。外部repoの最新 `main`、AGENTSと方針を確認し、上表のラベルの存在と追加仮定を照合する。未取得・アクセス不能なら、確認済みコミットと未確認範囲を残し、利用可能な独立課題を進める。解析的結果を外部repoへ追加した場合は、そちらを先に保存してから、この表の参照版と本repoの依存箇所を更新する。外部入力の更新・本repoでの適用証明・組版・計算検証は別々に記録する。
+次は、全域の作用適合atlas・action periodsの接着と `snc:output-data` の対応を公表用に点検する。特にdivisor-relative Moserで同定するnormal actionsと、別途一致を確認すべき独立な第二periodを区別し、指定形式・全域への定義・距離尺度に関する既存P0の優先順位を保つ。外部repoの最新 `main`、AGENTSと方針を確認し、上表のラベルの存在と追加仮定を照合する。未取得・アクセス不能なら、確認済みコミットと未確認範囲を残し、利用可能な独立課題を進める。解析的結果を外部repoへ追加した場合は、そちらを先に保存してから、この表の参照版と本repoの依存箇所を更新する。外部入力の更新・本repoでの適用証明・組版・計算検証は別々に記録する。

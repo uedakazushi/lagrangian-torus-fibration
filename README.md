@@ -1,5 +1,5 @@
 # Lagrangian torus fibrations on general-type surfaces
-2026-11-21 / v3.6 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
+2026-11-21 / v3.7 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
 
 **各固定次数 \(d\ge5\) の一般位置全平面退化について、actual負Kähler–Einstein形式の大域Lagrangian torus fibrationが、径の尺度のGH極限を実現する定理の証明を主稿に置いている。** 同じ写像 \(f_t=p_T\pi_t\) の全曲面ambient距離に関する一様distortionと、特異fiberを含む全fiber合併の収縮を扱う。今回の新証明と接続を複数担当で内部点検した。形式証明、全主稿・全外部入力の包括的再監査、外部査読、新規性の網羅的確認は未実施である。**このリポジトリは複素次元2専用**。三次元の研究は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とする。
 
@@ -15,7 +15,7 @@
 
 ## Cloud Codexから再開する
 
-最新mainで [研究方針](00_research_plan.md) → [AGENTS.md](AGENTS.md) → [依存関係](research/ke-dependencies.md) → [研究ノート](research/notes.md) を読む。主定理 `ke:global-metric-realization` から依存証明をたどる。Coreの正則化から指定actual collar、全域fibrationへ至る経路は、構成の同一性・支持・選択順序に範囲を限定して独立内部監査した。全K2交わりを恒等collarに含め、補間後の葉族を全fiber単位で切り詰めることを明示した。次は、SNC構成の指定normal holonomy・periods・marked full leafの相対実現を点検し、actual KE定理の指定形式・全域への定義・距離尺度を絞って一次文献と比較する。有限cut・portal・全fiber合併の成果と一次文献比較は現行本文に保持する。全依存証明の包括的再監査・新規性確認は未完。組版・表示確認の状態は末尾を参照。
+最新mainで [研究方針](00_research_plan.md) → [AGENTS.md](AGENTS.md) → [依存関係](research/ke-dependencies.md) → [研究ノート](research/notes.md) を読む。主定理 `ke:global-metric-realization` から依存証明をたどる。Coreの正則化から指定actual collar、全域fibrationへ至る経路は、構成の同一性・支持・選択順序に範囲を限定して独立内部監査した。全K2交わりを恒等collarに含め、補間後の葉族を全fiber単位で切り詰めることを明示した。次は、全域の作用適合atlas・action periodsの接着と `snc:output-data` の対応を公表用に点検する。特にdivisor-relative Moserで同定するnormal actionsと、別途一致を確認すべき独立な第二periodを区別し、指定形式・全域への定義・距離尺度に関する既存P0の優先順位を保つ。有限cut・portal・全fiber合併の成果と一次文献比較は現行本文に保持する。全依存証明の包括的再監査・新規性確認は未完。組版・表示確認の状態は末尾を参照。
 
 ```sh
 python3 scripts/research_check.py setup --require-tex
@@ -29,7 +29,7 @@ python3 scripts/research_check.py tex
 
 | 原稿 | 役割 | 組版の確認範囲 |
 | --- | --- | ---: |
-| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域fibrationによるGH実現定理（改訂26） | 257頁、指定17頁を表示確認 |
+| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域fibrationによるGH実現定理（改訂27） | 組版・表示確認は未実行（直前記録は検証資料参照） |
 | [五次整数接着](papers/quintic-integer-gluing.tex) | 指定K5データの整数条件・高分母支持・未解決の大域接着 | 201頁 |
 | [Meridian surgery](papers/meridian-surgery.tex) | 閉corner circuitsの局所置換の障害 | 18頁 |
 | [TeX研究ノート](papers/research-notes.tex) | 証明素材・残る条件の整理 | 現行65頁、第1・4頁を表示確認 |
@@ -66,6 +66,8 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 公表前には、依存する既存証明と一次文献の包括的再点検、新規性確認、主稿の全体点検が必要である。確認済みの範囲は [検証状態](research/validation.json) に分けて記録する。
 
+**SNCの固定collarとperiod障害：** `snc:reeb-leaf-kernel`、`snc:fixed-holonomy`、`snc:minimal-holonomy-controls` は、固定normal connection・coupling chartsの下でbasic formとexact cutoffによる相対接着が可能であることを、各成分の $g_a$ 個の独立な正則葉periodの消滅と同値にする。障害空間と必要なholonomy調整のrankはともに $\sum_a g_a$。全 $2g_a$ component periodsの消去は十分だが過剰である。Basic補正は全critical collarsの外に支持できるが、非零障害を消すconnection変更では一般に元のfull saddle collarsを動かす必要がある。Unitary holonomyの位相値だけの固定とconnection・normal gaugeの固定は異なる。既知のIKMの成分上の原理と、本稿の整数格子・SNC統合・couplingへの適用を区別する。詳細と一次資料は [研究ノート](research/notes.md#sncの固定coupling-chartsと葉のperiod障害) を参照。
+
 ## 極限候補の有限距離幾何
 
 座標部分複体への明示的な非伸長retractionにより、全targetの最短路を六つ以下のlabelへ還元できる。Closed-cornerの三枚のsquareは全targetに等長に埋め込まれ、portal比較のgallery数は五次30、六次以上60で足りる。
@@ -76,4 +78,4 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-2026-11-21 / v3.6：主稿改訂26では、core正則化・固定形式への移送・指定actual collar・全域fibrationの仮定と構成の同一性を、範囲を限定して複数担当で独立内部点検した。全K2交わりを含む恒等collar、補間後の葉族に対する全fiber trim、SNC側の閉isotropic filtrationを明示した。Contact rescalingによる固定葉の非保存例と、直線配置coreの相対flux空間・固定形式で延長不能な小さいcollar germの証明も独立に点検した。Cohen–Suciuの既知の境界cohomologyを適用し、Evans–Mauriの掲載版の仮定・番号を一次資料で照合した。改訂26をLuaLaTeXで257頁に組版し、第1・9・13・17・18・27・140–143・162–166・252・253頁の計17頁を同じ最終PDFから個別画像で表示確認した。未解決参照・文献引用、重複label、欠字、overfull boxは0。静的構成検査も成功。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は未実施。
+2026-11-21 / v3.7：主稿改訂27には、固定coupling chartsの葉period判定、障害次元と最小holonomy調整、有限endpointのactual座標での連続性の証明を統合した。IKM・TMZ・BSVの指定箇所を一次資料で照合し、既知の成分原理・exact deformation・存在定理と本稿の相対適用を区別した。改訂27の組版・表示確認は未実行であり、直前の改訂26（257頁・指定17頁の表示確認）の詳細は [検証状態](research/validation.json) を参照する。新証明の独立点検・組版・保存の完了範囲は別々に記録する。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。
