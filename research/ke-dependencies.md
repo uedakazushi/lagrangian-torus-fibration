@@ -1,6 +1,6 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-21 / v2.8。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-21 / v2.9。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
 ## 確認した正本と規格化
 
@@ -101,10 +101,15 @@ Actual全域構成の追加証明は次を用いる。
 | 全域scalar mapとambient下界 | [ke_global_ambient_lower.tex](../papers/sections/paper/ke_global_ambient_lower.tex), `ke:global-depth-lipschitz`, `ke:same-moment-corner-reference`, `ke:global-depth-base-comparison`, `ke:global-ambient-lower` | 下側cut $\mathfrak m_j$ とplateau $L/K_j$ を用いる全域 $\Theta_t$。一方向はsharp normal、二方向はfull-tripleのco-Gramで評価し、任意の全曲面経路に沿って長さを抑える。同一momentのcorner参照点で全域値比較を証明。Corner移送の段階一様性と既存の許容cut条件で係数は固定族の $C$ とできる。経路の領域往復回数を有限と仮定しない。 |
 | 内部木の全fiber合併とambient上界 | [ke_global_ambient_upper.tex](../papers/sections/paper/ke_global_ambient_upper.tex), `ke:collapsed-tree-full-fiber-collapse`, `ke:coherent-corner-portals`, `ke:global-ambient-upper` | 残余基底を先に選び、許容cut条件の下で全 $f_t$-fiberのambient径を $C(1+\log(N_j+1))$ で評価。全endsで同じmomentのportalsを選び、旧full-cornerのendpoint上界を高々60本のsquare galleryで接続する。除去capを通る曲線もambient上界には使用できる。 |
 | 同じactual写像による大域実現 | [ke_global_metric_realization.tex](../papers/sections/paper/ke_global_metric_realization.tex), `ke:global-metric-realization` | 上記の同じ $\pi_t$ と $f_t=p_T\pi_t$ に、全固定段階の条件を満たす一つの遅い対角選択を適用。全射性、uniform ambient distortion消失、GH収束、全fiber合併の一様収縮を得る。許容cut下の上下両側の明示budgetを固定族の一つの係数で与える。Cutの成長と閾値は未評価。外部CP/PBE/TCの結論を入力にしない。 |
+| Focus写像の判定と全飽和近傍の作用 | `ke_staged_neck_averaging.tex`、`ke:source-focus-transversality`、`ke:focus-neighborhood-period`、`ke:focus-whole-neighborhood-transport` | 一つの残余periodでclosed primitive差のexactnessを判定。Symplectic push-forwardでTaylor不変量、exact transportで追加定数項も保存。任意先指定模型とのmatchingやparameter間の不変量一定は含まない。 |
 
 ## Sourceとmarked葉層の一次資料
 
 Zung, *A note on focus-focus singularities*, Differential Geometry and its Applications 7 (1997), 123–130, DOI [10.1016/S0926-2245(96)00042-3](https://doi.org/10.1016/S0926-2245(96)00042-3)、[一次原稿 math/0110147](https://arxiv.org/pdf/math/0110147) の§2、§3 Proposition 3・Corollary 1、§4を確認した。Focusの局所二次型・pinched fibre・monodromyは既知結果である。本稿では明示的なsymplectic線形変換と閉fibreのcompactificationを直接計算し、actual neckの固定点・canonical moment・Moser存在域との接続を確認する。既知の局所分類から退化族に一様な解析評価を推論しない。Vũ Ngọc, Topology 42 (2003), Theorem 2.1（[一次原稿](https://arxiv.org/pdf/math/0208245), PDF p.4）のsemi-global分類も照合し、単純nodeの同じ線形monodromyからformal power series不変量の一致を導かない。
+
+Vũ Ngọcの同一次原稿§3（PDF pp.6–8）、Lemma 4.1と§4（pp.9–11）、§6（pp.14–16）、§7 “Exact version”（p.18）を照合した。通常のconstant-zero Taylor不変量と、primitiveをデータに加えた残余作用の定数項を区別する。ZungのPDF p.4のerratumは位相分類をhomeomorphicと訂正しており、smooth foliated equivalenceの根拠にはしない。本稿のblock/Mayer–Vietorisとsourceへのexact transport適用を独立点検した。Nodal surgeryのCG/Flemingの適用範囲、例外面積による容量規約、支持と選択順序は [研究ノート](notes.md#nodal-blow-upの実面積と比較写像の支持) に整理する。
+
+一般symplectic存在構成の `glue:area-normalized-blowup` と `glue:components` は、例外面積によるradial Kähler構成とCGの局所比較を用いる。全compact nodal neighborhoodsを確保後にnormal collarsを離し、独立primitiveのexact一致を仮定しない。これは `global_gluing.tex` の構成経路の入力であり、actual KE距離比較の追加解析仮定ではない。
 
 Maksymenko, Comment. Math. Helv. 80 (2005), 655–690, DOI [10.4171/CMH/30](https://doi.org/10.4171/CMH/30) の[掲載版](https://ems.press/content/serial-article-files/43060)で、Main Theorem p.658、Lemma 4.1 p.665、§6.1 Lemma 6.4 p.668を確認した。Path-component分類だけからfixed Reeb treeは従わず、本稿では支持を明示した葉層のdiffeomorphismsを使う。第二cycleのparameter monodromyと、abstract labelled treeの固定は区別する。
 
@@ -228,6 +233,8 @@ Fernández de Bobadilla–Pełka, arXiv:2312.13248v4 の Theorem 6.14、Example 
 - YauのTheorems 1–2、Savinのsmall perturbation、Songのfixed-gauge収束、DMVの掲載版Theorem 1.2、Rochon–ZhangのSNCに関する指定箇所は一次資料で確認した。外部KE原稿の全証明や旧主稿全体の独立再監査、公表前の網羅的な先行研究・新規性調査、形式証明を完了したという意味ではない。
 - 解析証明の数学的点検、保存された有限有理数検算、その再実行、組版、GitHubへの反映は別の確認である。各実行状態は現行の検証資料を参照し、本書の「証明あり」を計算・組版による証明の検証と読み替えない。
 
+改訂29は267頁で組版済み、表示QAは進行中である。直近の表示確認済み主稿PDFは改訂28である。実行状態は [検証状態](validation.json) を参照する。
+
 ## 再開時の確認
 
-次は、sourceのnodal surgery・focus germsと全域singular fibersの移送を公表用に点検する。任意のfocus不変量を先指定する問題とは分け、実際のcompact singular fiberとその飽和近傍全体を同じsymplectic transportで運ぶこと、支持・normal action・作用の規格化・全fiberの接着を確認する。既存P0の範囲と優先順位を保つ。外部repoの最新 `main`、AGENTSと方針を確認し、上表のラベルの存在と追加仮定を照合する。未取得・アクセス不能なら、確認済みコミットと未確認範囲を残し、利用可能な独立課題を進める。解析的結果を外部repoへ追加した場合は、そちらを先に保存してから、この表の参照版と本repoの依存箇所を更新する。外部入力の更新・本repoでの適用証明・組版・計算検証は別々に記録する。
+Sourceのfocus判定・全飽和近傍の移送と、nodal blow-upの面積・支持・選択順序を本文に明示し、必要箇所を内部点検した。次は全域quotientのHausdorff性・全射性・連結fibersを、全intersectionの飽和とwhole-fiber trimから公表用に再点検する。特異fiberの種類・個数とEuler数の予算を同じ構成に照合し、無限個のbranch fibersと有限個のbranch strataを区別する。既存P0の範囲と優先順位を保ち、任意のfocus不変量への先指定を追加しない。外部repoの最新 `main`、AGENTSと方針を確認し、上表のラベルの存在と追加仮定を照合する。未取得・アクセス不能なら、確認済みコミットと未確認範囲を残し、利用可能な独立課題を進める。解析的結果を外部repoへ追加した場合は、そちらを先に保存してから、この表の参照版と本repoの依存箇所を更新する。外部入力の更新・本repoでの適用証明・組版・計算検証は別々に記録する。

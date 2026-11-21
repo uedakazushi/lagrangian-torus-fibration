@@ -1,5 +1,5 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-21 / v3.8
+更新：2026-11-21 / v3.9
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
@@ -54,7 +54,23 @@ Canonical primitiveの規格化にも独立の差がある。`ke:transition-resi
 
 既存の五次・六次atlas構成はこの障害を避けるため、同じembedded marked class内でcritical-region areasを指定し、framingの整数slopeと作用の切片を合わせる。`ng8:straight-neck` の両端は同じ $\operatorname{Diff}_0(P\operatorname{rel}\text{ collars})$-orbitに取る。`ga8:affine-persistence` はfibration・cycles・primitiveを同時に運び、`ng8:transport-intercept` は一つの全空間primitiveを使う固定非零moment上のexact transportで値を保存する。これはnormal action単独による第二period一致ではない。既存の一般symplectic存在、選んだ五次・六次fibrationの作用atlas、全固定次数のP0は異なる結論として保持する。
 
-次はsourceのnodal surgery・focus germsと全域singular fibersの移送を点検する。任意focus不変量の先指定ではなく、actual compact fiberとその飽和近傍全体を運ぶこと、局所surgery支持と外側collarの一致を確認する。
+## Focusの半大域不変量と全飽和近傍の移送
+
+正本は `ke_staged_neck_averaging.tex` の `ke:source-focus-transversality`、`ke:focus-neighborhood-period`、`ke:focus-local-primitive-shift`、`ke:focus-whole-neighborhood-transport`。指定写像 $(\mu,A(\mu,p))$ がsourceで非退化focus型である条件は $d_pA(0,q)\ne0$。$A=(a-a(q))^3$ は同じ葉の分割を持つが二次項が退化するため、foliationの型だけで指定写像の非退化性を結論しない。
+
+一重pinched torusの十分小さい飽和近傍 $N$ は、可縮node blockとregular annulus blockの二つのcollarsによる貼合せであり、$H_1(N;\mathbb Z)=H_2(N;\mathbb Z)=\mathbb Z$。正則torusのnormal vanishing cycle $\alpha$ は消え、残余cycle $\beta$ が $H_1(N)$ を生成する。Closed primitive差 $\zeta$ のexactnessは $\int_\beta\zeta=0$ と同値で、normal periodは自動的に零。Annulusの縦座標に沿う $f(s)ds$ はnode近傍を固定した非零残余periodを作れるが、外側regular torusの近傍まで零にはできない。
+
+全飽和近傍で同じfibrationをsymplectic map $\Phi$ によりpush-forwardすると、compact fiber、strata、cycles、return periodsと通常のTaylor不変量 $S$ が保存される。さらに $\Phi^*\lambda'-\lambda=dQ$ なら全作用積分と追加定数 $S_0=\int_{\gamma_0}\lambda$ も保存される。Primitiveのclosed変更は $S_0$ を動かし得るが、$A(c)-A(0)$ で定義する $S$ には影響しない。周期1 normal momentは $c_2=\mu/(2\pi)$ とし、Eliasson基底座標・向き・return cycle・log branchを一緒に運ぶ。独立chartのflat自由度と、$2\pi k c_2$ のcycle/branch自由を区別する。Sourceでは $(\eta,\mathcal A\lambda_t)$ から $(\omega_t,\lambda_t)$ へ同じexact Moser mapで運ぶ。別canonical frameへの置換は `ke:transition-residual-period` のwindingを別に確認する。
+
+一次比較：Vũ Ngọc, *Topology* 42 (2003), 365–380, [DOI 10.1016/S0040-9383(01)00026-X](https://doi.org/10.1016/S0040-9383(01)00026-X)。確認版 [math/0208245v1](https://arxiv.org/pdf/math/0208245v1) のTheorem 2.1（PDF p.4）、Proposition 3.1・Definition 3.1（pp.6–8）、Lemma 4.1・§4（pp.9–11）、§6（pp.14–16）、§7 “Exact version”（p.18）を用いる。$S=0$ と $S=X^2$ の実現は同じ線形focus型・vanishing cycle・一重monodromyでも半大域同値でない既知の具体例。$S_0$ の追加も既知であり、本稿の新規な分類結果とはしない。Zung [math/0110147](https://arxiv.org/pdf/math/0110147) のPDF p.4脚注は、同じfocus数のfoliationについて旧文言を「homeomorphic, not necessarily diffeomorphic」へ訂正している。一般のsmooth foliated equivalenceをこの位相分類から推論しない。異なる $t$・stageの不変量一定や任意指定focus不変量は本稿の結論に含めない。
+
+## Nodal blow-upの実面積と比較写像の支持
+
+`global_gluing.tex` の `glue:area-normalized-blowup` は、指定された複素blow-up上で例外曲線の面積 $e$ を直接実現する。$dd^c=i\partial\bar\partial$、$\omega_{\rm st}=\sum dx_j\wedge dy_j$ の下でlogarithmic potentialの係数は $e/(2\pi)$、標準球の半径は $\sqrt{e/\pi}$。Classは $\pi^*[\omega]-e\operatorname{PD}[E]$ である。Fleming, *Kähler packings of projective complex manifolds*, European J. Math. 7 (2021), 1382–1400, [DOI 10.1007/s40879-021-00491-8](https://doi.org/10.1007/s40879-021-00491-8), [arXiv:1905.03140](https://arxiv.org/abs/1905.03140), Lemmas 4.4–4.5、Proposition 4.6、Construction 4.7のradial原理を適用する。容量の文字やFubini–Studyの規約をそのまま流用せず、$e=\int_E\omega$ で照合する。
+
+Chakravarthy–Groman, *Almost toric fibrations on symplectic blow ups*, [arXiv:2510.00994v1](https://arxiv.org/abs/2510.00994v1), Theorem 1.1、Propositions 3.1・3.6、§4の相対比較は、選んだaffine-convex領域の全逆像の外で恒等とする。球の外全体で恒等という強い支持条件には置き換えない。固定Delzant rectangleの人工三辺をcutし、人工divisor chainの近傍を固定した比較を元patchへ戻す。全boundaryの和がanticanonicalであることを本稿全体に要求する適用ではない。
+
+選択順序は、互いに素な飽和patchとaffine-convex領域を固定し、容量triangleがその内部に収まるよう $\epsilon$ を選び、全compact nodal neighborhoodsを確保し、これらを避けてnormal-conjugacy collars・cutsを選び、最後に $t$ を小さくする。既知のradial blow-upと相対surgeryの本稿への適用であり、任意の独立primitiveのexact matchingを追加しない。次は全域quotientのHausdorff性・全射性・connected fibersと特異fiber数・Euler予算を同じ構成で公表用に再点検する。
 
 ## 主要解析入力の確認範囲
 
@@ -631,4 +647,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 ## 検証状態
 
 
-2026-11-21 / v3.8：主稿改訂28には、正則bandの第二作用・exact matching判定、normal action単独では不十分な例、critical actionの有理直線性の必要条件と固定形式の非直線branch反例、canonical frameの残余period差を整理した。新証明・接続の独立内部点検とEvans arXiv v4の指定箇所の一次資料照合を完了した。改訂28をLuaLaTeXで264頁に組版し、同じ最終PDFの指定21頁（第1・10・11・13・37–41・43・44・101–103・234–237・240・241・259頁）を個別画像で表示確認した。未解決参照・引用、重複ラベル、欠字、overfull boxは零。Preflightと静的検査も成功した。今回の各確認の完了範囲は [検証状態](validation.json) を参照する。数学的点検・組版・保存は別々に記録する。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。
+2026-11-21 / v3.9：主稿改訂29は、sourceのtransversality判定、一つの残余periodによるexactness、Taylor不変量とprimitiveの定数項、全飽和近傍の移送、面積を規格化した相対Kähler blow-upを本文に統合した。新focus節と接続を独立に内部点検し、Vũ Ngọc・Zungの指定一次資料を照合した。**改訂29は267頁で組版済み、表示QAは進行中。直近の表示確認済みPDFは改訂28（264頁、指定21頁）である。** 実行範囲は [検証状態](validation.json) を参照する。数学的点検・組版・保存は別々に記録する。整数検算suite・他論文・TeX研究ノートの再組版は今回未実行。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。

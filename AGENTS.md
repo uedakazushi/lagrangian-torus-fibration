@@ -1,5 +1,5 @@
 # surface-lagrangian-torus-fibration — 研究・保存指示
-2026-11-21 / v1.9
+2026-11-21 / v2.0
 
 ## 入口と正本
 - 研究全体の入口は https://github.com/uedakazushi/research-hub 。再開時はhubの該当項目を確認し、最初にこのrepoの `00_research_plan.md`、次に本書、`research/notes.md` と必要な原稿を読む。
@@ -8,7 +8,7 @@
 
 ## この研究の最優先目標と自走指示
 
-最優先は `00_research_plan.md` のP0、すなわち**本研究のactual Lagrangian fibrationが負KE計量のGH極限を幾何学的に実現すること**である。精密な主張は主稿の `ke:global-realization`、統合証明は `ke:global-metric-realization`。任意の固定次数d≥5について、実際のKE形式に関する大域fibrationと、合成写像p_Tπ_tの全曲面ambient距離に対する一様distortionの消失を証明する。現行主稿では全固定d≥5に対する証明を統合し、新証明と接続に必要な箇所を内部点検している。共通anchorでの保持neckのmoment範囲と、同一momentのcorner参照点による全域値比較を明示し、固定残余基底の有限cutに一様なMoser被覆・接続を用いる。Closed-cornerは有限cutの明示条件で一様に比較し、全target端点のportalと全fiber合併をambient距離で扱う。Sourceの全moment退出は三境界Schwarzから得るarm tensor比較によりO(1)であり、中央点の直接退出もGaussian可積分性に依存せず証明した。Componentのcore・collarとneck尾部の費用をC(1+log(N_j+1))で評価し、残余基底の先行選択から全fiber合併・portalにも同じ予算を得た。Compact-relative Morse–Smale化でcore skeletonの閉isotropic filtrationを明示し、primitive・nontrapping・相対補間・全fiber trimも重点監査した。Core経路の構成の同一性・支持・量化に限定した独立内部監査を完了し、全K2交わりの恒等collarと補間後partitionの全fiber trimを明示した。相対flux空間と小さい非延長germ、contact rescalingの固定葉非保存例は任意指定germの延長とfibration構成を区別するために使う。固定coupling chartsでのbasic＋exact-cutoff経路は各成分のg_a個の正則葉periodの消滅と同値であり、障害次元・最小holonomy調整rankはいずれもΣg_aと本文に証明した。正則bandの第二作用判定とcanonical frameの残余period差、同じ形式・normal action・端とsaddle点のgermsでもcritical actionが曲がる反例を本文に保持する。次はsourceのnodal surgery・focus germsと、actual compact singular fiberの飽和近傍全体の移送を点検する。任意focus不変量の先指定へ広げず、既存P0を優先し、形式証明・外部査読や新規性確認と混同しない。
+最優先は `00_research_plan.md` のP0、すなわち**本研究のactual Lagrangian fibrationが負KE計量のGH極限を幾何学的に実現すること**である。精密な主張は主稿の `ke:global-realization`、統合証明は `ke:global-metric-realization`。任意の固定次数d≥5について、実際のKE形式に関する大域fibrationと、合成写像p_Tπ_tの全曲面ambient距離に対する一様distortionの消失を証明する。現行主稿では全固定d≥5に対する証明を統合し、新証明と接続に必要な箇所を内部点検している。共通anchorでの保持neckのmoment範囲と、同一momentのcorner参照点による全域値比較を明示し、固定残余基底の有限cutに一様なMoser被覆・接続を用いる。Closed-cornerは有限cutの明示条件で一様に比較し、全target端点のportalと全fiber合併をambient距離で扱う。Sourceの全moment退出は三境界Schwarzから得るarm tensor比較によりO(1)であり、中央点の直接退出もGaussian可積分性に依存せず証明した。Componentのcore・collarとneck尾部の費用をC(1+log(N_j+1))で評価し、残余基底の先行選択から全fiber合併・portalにも同じ予算を得た。Compact-relative Morse–Smale化でcore skeletonの閉isotropic filtrationを明示し、primitive・nontrapping・相対補間・全fiber trimも重点監査した。Core経路の構成の同一性・支持・量化に限定した独立内部監査を完了し、全K2交わりの恒等collarと補間後partitionの全fiber trimを明示した。相対flux空間と小さい非延長germ、contact rescalingの固定葉非保存例は任意指定germの延長とfibration構成を区別するために使う。固定coupling chartsでのbasic＋exact-cutoff経路は各成分のg_a個の正則葉periodの消滅と同値であり、障害次元・最小holonomy調整rankはいずれもΣg_aと本文に証明した。正則bandの第二作用判定とcanonical frameの残余period差、同じ形式・normal action・端とsaddle点のgermsでもcritical actionが曲がる反例を本文に保持する。Sourceのtransversality判定、一重focus近傍の一つの残余periodによるexactness、通常のTaylor不変量とprimitiveの定数項、全飽和近傍の移送を本文に統合した。例外面積を規格化したradial Kähler blow-upと、CG比較の飽和patch外恒等・全compact nodal neighborhoodsの保持も明示した。次は全域quotientのHausdorff性・全射性・連結fibersと、特異fiber数・Euler予算の整合を公表用に点検する。任意focus不変量の先指定へ広げず、既存P0を優先し、形式証明・外部査読や新規性確認と混同しない。
 
 - 本目標の解決へ向けた証明、反例の探索、必要な計算、一次文献確認、現行文書と再現手順の更新は継続して実行する。通常の研究上の選択ごとに「続けてよいか」と確認せず、計画だけを作って終了しない。独立した五次整数接着分類・三次元研究へ、P0との依存理由なく優先対象を移さない。
 - 再開時は最新mainと作業ツリー・並行変更を確認し、研究方針 → 本書 → `research/ke-dependencies.md` → `research/notes.md` → 必要な原稿の順に読む。環境の具体的な入口は `research/cloud-codex.md`。会話履歴、旧bundle、前回の一時ディレクトリを前提にしない。
@@ -26,7 +26,7 @@
 - KE側の(G)_d・(CP)_d・(PBE)_d、五次coarse packageの(TC)_5は実際の仮定を確認する。未解決入力は証明するか、同等に十分な別の全域評価で置き換える。Bounded volume densityはtensor二側比較を含意しない。
 - d≥6ではp_Tが潰す木の上の全fiberの合併を制御する。Normal circleの一致とreduced葉・第二periodの一致、位相的同型と計量的一様性も区別する。P0に大域matroidal atlasや最適収束速度を追加要求しない。
 - SNCではconnection/gauge固定とunitary holonomy phasesのみ固定を区別する。Basic補正を全critical collars外へ置けることから、非零葉periodを消すholonomy補正まで元のfull saddle collarsを固定できるとは結論しない。既知のIKMの成分原理とSNC統合、TMZのexact deformationとBSVのadapted primitive存在の適用範囲を分ける。
-- 正則bandの第二作用の一致、primitiveに関するexact matching、critical actionの有理直線性を区別する。Normal actionと局所saddle germの一致から作用atlasを結論しない。Sourceのfocus局所型とcompact singular fiber近傍全体の同時移送も区別し、任意の半大域focus不変量を指定できるとは主張しない。
+- 正則bandの第二作用の一致、primitiveに関するexact matching、critical actionの有理直線性を区別する。Normal actionと局所saddle germの一致から作用atlasを結論しない。Sourceのfocus局所型とcompact singular fiber近傍全体の同時移送も区別する。通常のTaylor不変量はsymplecticな全葉移送で保存され、primitiveの残余定数項にはexactnessが必要である。Node primitiveの固定だけでexactnessを推論せず、outer regular torusのperiodも確認する。Surgeryの比較写像は固定した飽和affine-convex patch外で恒等とし、球の外全体の恒等と取り違えない。任意の半大域focus不変量を指定できるとは主張しない。
 - 解析入力の正本は `uedakazushi/kaehler-einstein-degeneration`、多重スケールの背景は `uedakazushi/multiscale-kaehler-einstein`。必要な定理のpath・label・確認commit・仮定を依存表で確認し、sourceを読んで使う。外部repoで作業するときはそちらの最新方針・AGENTSを先に読み、証明を二重管理しない。
 
 ## 研究の方針と確実性

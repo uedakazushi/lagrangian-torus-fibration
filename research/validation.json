@@ -1,8 +1,8 @@
 {
   "date": "2026-11-21",
-  "version": "3.8",
+  "version": "3.9",
   "scope": "複素次元2の現行研究状態。旧三次元稿の組版・監査記録ではない。数学的な証明と、その再監査、組版、整数計算、GitHub保存、Cloudタスク起動を区別する。",
-  "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。次の優先課題は公表前の包括的依存監査・一次文献比較・新規性確認・主稿構成整理。",
+  "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。次の重点は全域quotientのHausdorff性・全射性・連結fibersと、特異fiber数・Euler予算の公表前監査。包括的依存監査・新規性確認・主稿構成整理も継続する。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
   "mathematics": {
@@ -47,7 +47,12 @@
       "neck:regular-period-matching: 十分小さい可縮regular action chartsと指定base同定の下で、normal actionを保つ指定cycle matchingのsymplectic実現は J_-=kμ_-+εJ_+∘h+c と同値。指定primitiveに関するexact実現はc=0と同値。既知action-angle理論の局所的適用。",
       "neck:normal-action-counterexample: 固定Ω上のπ_a=(μ,y−a(μ))。aが非零定数ならsymplectic matchingはあるが指定primitiveへのexact matchingはなく、a=epsilon μ²なら指定base同定を覆うsymplectic matchingもない。Base同定を自由にしたfibration不存在ではない。",
       "atl:critical-action-obstruction, atl:fixed-form-bent-branch: 作用適合matroidal chartにはcritical actionの有理affine直線性が必要。固定Ω・normal action・両端germs・puncture collars・saddle点germ・embedded marked classを保ちながらcritical actionを非直線にでき、任意denominatorの局所chartを阻害する。",
-      "ke:transition-residual-period: canonical frameのprimitive差のclosed-loop periodは−2π wind(a_t∘p∘γ)。xyp=tで差はd arg p、残余circle上2π。Normal periodの零と第二作用の原点を区別。"
+      "ke:transition-residual-period: canonical frameのprimitive差のclosed-loop periodは−2π wind(a_t∘p∘γ)。xyp=tで差はd arg p、残余circle上2π。Normal periodの零と第二作用の原点を区別。",
+      "ke:source-focus-transversality: sourceでF=(mu,A(mu,p))が非退化focus写像であることはd_p A(0,q)≠0と同値。葉のpartitionのfocus型と、指定した写像の非退化性を区別。",
+      "ke:focus-neighborhood-period: 一つのcompact一重focus fiberの十分小さいproper飽和近傍NではH1(N;Z)=H2(N;Z)=Z、omega|Nはexact。H1(T)/Z alpha≅H1(N)で、closed primitive差のexactnessは一つの残余cycle betaのperiod消滅と同値。閉annulus blockとlocal node blockのMayer–Vietorisで証明。",
+      "ke:focus-local-primitive-shift: node近傍のprimitive germを固定するclosed差でも残余periodは任意に動く。外側の正則fiber全体で差を零に固定すればこの障害は消える。既知のVũ Ngọc exact定数を本稿のmarked近傍で具体化。",
+      "ke:focus-whole-neighborhood-transport: 全飽和近傍に既にあるsymplectomorphismのpush-forwardはfocus Taylor不変量を保ち、primitive差の一残余periodが零なら作用の定数項も保つ。任意の局所mapの延長存在や独立に先指定したfocus不変量への適合は結論しない。",
+      "glue:area-normalized-blowup: 実例外面積e、球半径sqrt(e/pi)で相対Kähler blow-upをradial potentialから直接構成。固定飽和affine-convex patch後にeを小さくし、CG比較はpatch外恒等として適用。全nodal fiber近傍を先に確保し、その後collars・cuts・tを選ぶ。"
     ],
     "not_proved": [
       "外部KE研究側のCP/PBE/TC自体の対象族での検証。本稿のP0ではこれらを仮定せず、直接のscalar下界とportal上界で必要な全域評価を代替した。",
@@ -106,46 +111,26 @@
     },
     "this_audit": {
       "date": "2026-11-21",
-      "scope": "改訂28：正則bandの第二作用/exact matching判定と反例、critical actionの有理直線性の必要条件と固定形式の非直線branch反例、canonical frameの残余windingを統合。一般存在接着のreduced family・toric partition保存、straight neckの共通embedded Diff0相対classを明確化。",
+      "scope": "改訂29：source focus写像のtransversality、一重focus近傍のhomology・exactness・残余period、node germと外側正則fiberのprimitive固定、Taylor不変量とexact定数、全飽和近傍の移送を統合。Nodal blow-upの実面積と比較支持、全compact fiber近傍を保つ選択順を点検。",
       "reexecuted_build": true,
       "reexecuted_static_checks": true,
       "reexecuted_python_suite": false,
       "six_label_finite_command": "python3 verification/verify_cubical_six_label_geometry.py",
-      "six_label_finite_result": "既存の有限検算PASSを保持。改訂28では計算箇所を変更せず再実行していない。",
+      "six_label_finite_result": "既存の有限検算PASSを保持。改訂29では計算箇所を変更せず再実行していない。",
       "independent_internal_proof_review": [
-        "neck:regular-period-matching / neck:normal-action-counterexample: cycle matrixの転置、closed primitive periods、exactness、constantとnonlinear例、local/globalおよびgiven-end-mapの適用範囲を独立内部点検。",
-        "atl:critical-action-obstruction / atl:fixed-form-bent-branch: latticeからconstant GL(2,Z)、critical limit、任意denominator、固定Ω上のbasin-area変形、端・puncture・saddle germ保存を独立内部点検。",
-        "glue:pair-moser, glue:circle, glue:components, glue:transport: relative reduced family、normal conjugacy、toric radial partition、全compact singular fiber近傍移送の既存接続を対象限定で点検。",
-        "ng8:transport-intercept, ng8:relative-dh, ng8:straight-neck, ga8:affine-persistence, ga8:global: 共通primitive・toric reference・critical areas・embedded marked classの入力と結論の範囲を対象限定で点検。",
-        "ke:transition-normal-primitive / ke:transition-residual-period: frame比とd^c規約、−2π windingの符号、積模型xyp=tを式から確認。"
+        "ke:source-focus-transversality: 二次型の独立性、d_p Aの条件、写像とfoliationの区別を独立内部点検。",
+        "ke:focus-neighborhood-period / ke:focus-local-primitive-shift: proper閉annulus blockの局所自明化、Mayer–Vietoris、vanishing/residual cycles、node collarの零延長と外側正則fiberの条件を独立内部点検。",
+        "ke:focus-whole-neighborhood-transport: Vũ Ngọcのregularized actionの符号・2pi規約、normal momentの原点、Eliasson座標とphysical残余座標の区別、push-forwardとexactnessの範囲を独立内部点検。",
+        "glue:area-normalized-blowup / glue:transport: radial potentialのpositivity、例外面積とcohomology class、ball radius、CGのsaturated patch外恒等、cut/uncutと全nodal近傍を保持する選択順を独立内部点検。"
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
-      "visual_pages_reviewed": [
-        1,
-        10,
-        11,
-        13,
-        37,
-        38,
-        39,
-        40,
-        41,
-        43,
-        44,
-        101,
-        102,
-        103,
-        234,
-        235,
-        236,
-        237,
-        240,
-        241,
-        259
-      ],
-      "current_build_status": "Revision 28 final TeX sources compiled successfully to 264 pages; 21 selected pages from the same final PDF visually inspected. No unresolved references/citations, duplicate labels, missing glyphs, or overfull boxes. Preflight and static repository checks passed; the arithmetic suite and other manuscripts were not reexecuted.",
-      "source_nodal_focus_audit": "次の重点課題。Sourceのnodal surgery・focus germとactual compact singular fiberの飽和近傍全体の移送の包括的点検は未完了。",
+      "visual_pages_reviewed": [],
+      "current_build_status": "Revision 29 compiled successfully to 267 pages. Targeted visual QA is in progress; latest fully checked build record below remains revision 28 until QA completes. No unresolved references/citations, duplicate labels, missing glyphs, or overfull boxes. Preflight and static checks passed. Arithmetic suite and other manuscripts not rerun.",
+      "source_nodal_focus_audit": {
+        "status": "targeted_internal_review_completed",
+        "scope": "Source quadratic and proper saturated focus neighborhood, residual primitive period, existing exact Moser application; area-normalized relative blow-up and whole nodal-neighborhood transport. No new P0 analytic hypothesis. Comprehensive proof and novelty audit remains pending."
+      },
       "reexecuted_preflight": true
     }
   },

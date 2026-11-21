@@ -49,15 +49,64 @@ Hamiltonianを$C$上で0に正規化し、crossing近傍では恒等とする。
 \end{proof}
 
 \subsection{nodal blow-upを含む実際の成分}
+
+\begin{lemma}[例外曲線の面積で正規化した相対 K\"ahler blow-up]
+\label{glue:area-normalized-blowup}
+複素曲面の holomorphic flat ball $B_R\subset\CC^2$ 上で
+$\omega_{\rm st}=\sum_{j=1}^2dx_j\wedge dy_j$ とし，指定 divisor は $z_2=0$ とする．
+任意の十分小さい $e>0$ に対し，実際の複素 blow-up 上に K\"ahler form $\widetilde\omega_e$ があり，
+固定した $B_{R_0}$，$0<R_0<R$ の外で元の形式に一致し，
+\[
+ \int_E\widetilde\omega_e=e,\qquad
+ [\widetilde\omega_e]=\pi^*[\omega]-e\operatorname{PD}[E]
+\]
+となる．これは半径 $\sqrt{e/\pi}$ の球の symplectic blow-up と，
+$B_{R_0}$ の外で恒等な divisor-compatible な同定を持つ．
+\end{lemma}
+\begin{proof}
+これは\cite[Lemmas 4.4--4.5, Proposition 4.6, Construction 4.7]{Fleming}の
+radial 構成を，容量の文字ではなく実面積 $e$ で書いたものである．
+$d^c=(\sqrt{-1}/2)(\bar\partial-\partial)$，$s=|z|^2$，$a=e/(2\pi)$ とする．
+$\chi(s)$ は原点近傍で $1$，$s\ge R_0^2$ で $0$ となる非負の滑らかな cutoff とし，
+\[
+ L(s)=-\int_s^{R_0^2}\frac{\chi(u)}u\,du,
+ \qquad \varphi(s)=\frac{s}{2}+aL(s)
+\]
+と置く．$s\ge R_0^2$ では $L=0$ と延長する．
+十分小さい $a>0$ に対し
+\[
+ s\varphi'(s)=\frac{s}{2}+a\chi(s)>0,
+ \qquad (s\varphi'(s))'=\frac12+a\chi'(s)>0
+\]
+なので $dd^c\varphi$ は正の radial K\"ahler form である．
+原点近傍では $L(s)=\log s+\text{const}$ であり，
+blow-up chart $(z_1,z_2)=(w,wv)$ で potential の pluriharmonic 項を除けば
+\[
+ \frac{|w|^2(1+|v|^2)}2+a\log(1+|v|^2)
+\]
+となる．従って $E=\{w=0\}$ へ滑らかかつ正に延びる．
+$\int_{\PP^1}dd^c\log(1+|v|^2)=2\pi$ より例外曲線の面積は $e$ であり，
+$E^2=-1$ と外側の一致から cohomology class の式を得る．
+
+$f(r)^2=2r^2\varphi'(r^2)$ と置くと $f'>0$，原点近傍で
+$f(r)^2=r^2+e/\pi$，外側で $f(r)=r$ である．
+$z\mapsto f(|z|)z/|z|$ は $dd^c\varphi$ を標準形式へ移し，
+内側の Hopf circles を潰すことで通常の symplectic blow-up と同定する．
+座標平面を保存するので strict divisor との両立も得る．
+\end{proof}
+
 各$D_i$のblow-downである$\PP^2$上に、系\ref{comp:finite}のfibrationを置く。
 crossing product germsは、前節で固定した全空間の形式の制限と同じに取る。
 各$q_{ijr}$を相異なるregular boundary leavesに乗せ、有限個の互いに素なregular elliptic-boundary patchesを選ぶ。
-各点のholomorphic座標でboundary lineを一方の座標軸とし、Kähler potentialのlogarithmic cutoffによりflat ballを作る。
-この変更のsupportはcoreと全critical leavesから離せる。
+各点の flat ball は系\ref{comp:finite}の指定 flat-patch 出力として，形式と fibration と同時に準備する．
+Holomorphic 座標で boundary line を一方の座標軸とし，その support を core と全 critical leaves から離す．
 ballはdivisor-compatible、すなわち少し大きいballまで延び、その中でdivisorが複素座標平面の像となる。
+先にこれらを含む互いに素な飽和 patches と，その action charts 内の affine-convex 領域を固定する．
+次に球と nodal surgery の容量 triangle がその領域の内部に収まるよう面積を小さくする．
 
 十分小さい$\eps$を選び、$q_{ijr}$で面積$(j-i)\eps$のKähler blow-upを行う。
-これは指定された実際の複素blow-upであり、局所patch外の形式を変えずに行える\cite{Fleming}。
+補題\ref{glue:area-normalized-blowup}により，これは指定された実際の複素 blow-up 上で，
+局所 patch 外の形式を変えずに行える．以後の容量は $e=\int_E\omega=(j-i)\eps$ で測る．
 classは
 \[
 [\omega_i^{\rm mod}]=a_iH_i-\sum_{j>i,r}(j-i)\eps E_{ij,r}
@@ -65,6 +114,11 @@ classは
 となる。
 各patchのaffine-convexな領域にChakravarthy--Gromanの相対比較定理を適用する\cite[Theorem 1.1]{CGblowup}。
 得られるsymplectomorphismはpatch外で恒等であり、divisor-compatibleなballの場合にはstrict boundary divisorも保存する。
+ここでの恒等域は球の外ではなく，選んだ affine-convex 領域の全逆像の外である．
+局所化を明示するには，一辺が元の elliptic boundary 上にある固定 Delzant rectangle を取り，
+他の三辺で symplectic cut を行う．球と容量 triangle を人工辺から離して置き，
+同文献の Propositions~3.1, 3.6 と \S4 を適用する．人工 divisor の chain 近傍で
+比較写像が恒等なので，人工辺を除いて元の patch 外へ恒等延長できる．
 従って実際のKähler blow-up上に、一個ずつfocus--focus fiberを持つfibrationを移せる。
 これは\emph{局所的な}almost toric patchでの適用であり、全てのboundary linesの和をanticanonical divisorとする仮定は要らない。
 
@@ -75,7 +129,12 @@ classは
 補題\ref{glue:pair-moser}でlabelled divisorを保つ同定を得た後、補題\ref{glue:circle}でactual neckのnormal actionと一致させる。
 成分側で必要なら作用を反転し、weightを$+1$、momentを$\rho=\pm\mu$として比較する。
 momentはdivisor上で0に正規化するので、共役後の加法定数も一致する。
-supportを薄いdivisor collarに取れば、coreと全compact nodal fibersを避けられる。
+各 nodal value の小さい閉円板の全逆像を先に取り，pair-Moser で同時に運ぶ．
+これは strict divisor と交わらない compact set で，pinched torus 全体と近傍の正則 tori を含む．
+その後に normal conjugacy の support を薄い divisor collar へ縮めれば，
+core とこれら全 compact nodal neighborhoods を避けられる．
+上の比較は symplectic pairs と葉の分割を扱い，独立に先指定された二つの primitives や
+点ごとに指定された全 collar map の exact な一致を追加してはいない．
 
 \begin{proposition}\label{glue:components}
 以上により実際の$(D_i,\Omega_i)$上に、一個のcore fiberと$d(d-i)$個のnodal fibersを持つfibrationが得られる。
@@ -121,6 +180,9 @@ W\mu_a=-\Omega(V_a,W)=0.
 各成分を、normal momentsが正の小定数以上となる領域で切断する。
 全coreと全compact nodal fibersを含むcompact saturated region $K_i$と、その少し大きいbufferを選ぶ。
 nodeのcritical pointだけを残すのではなく、pinched torus全体とその飽和近傍を$K_i$に入れる。
+先にこれらの compact sets，次に divisor collars と moment cuts，最後に transport の
+parameter 閾値を選ぶ．Focus の半大域不変量はこの全近傍の葉の分割と一緒に運ばれ，
+命題\ref{ke:focus-whole-neighborhood-transport}の symplectic な部分が適用される．
 補題\ref{glue:transport}で、$K_i$上のfibrationをactual $X_t$へ移す。
 境界のreduced foliationsは、同じHamiltonian neckの上の滑らかなparameter germsとなる。
 三重点端では二つの toric moments と radial circle partition が保存される．

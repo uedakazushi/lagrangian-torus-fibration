@@ -253,11 +253,21 @@ double curves と triple points の中心部分を正確な $xy=t$，$uvw=t$ の
 曲面上の Morse systems には weighted または measured Reeb graph の情報があり
 \cite{DMT,IKM}，compact focus--focus fiber の近傍には
 semi-global invariant がある\cite[Theorem 2.1]{VuNgoc}．
+一重 focus の十分小さい飽和近傍では $H_1\cong\ZZ$ であり，
+正則 torus の normal vanishing cycle は消え，残余 cycle が generator となる．
+従って既に存在する全近傍の symplectic map が指定 primitive に関して exact であることは，
+その一つの残余 period の一致と同値である（補題\ref{ke:focus-neighborhood-period}）．
+Node 上の primitive germ だけを固定してもこの period は変えられるが，
+一つの外側正則 fibre 上の primitive まで固定すれば障害は零となる
+（例\ref{ke:focus-local-primitive-shift}）．これは constant-zero Taylor 不変量と，
+\cite[\S7]{VuNgoc}の exact 版に現れる作用の定数項との区別を具体化する．
 そこで，本稿は actual family 上の同じ Hamiltonian circle action と
 normal moment $\mu$ を用い，reduced surface 上の functions $h_\mu$ を
 marked foliation に相対的に補間する．
 $\{\mu,h_\mu\}=0$ によって Lagrangian 性を保ち，
 既に構成した nodal fiber はその compact fiber 全体と近傍を transport する．
+その際に葉の分割と Eliasson 座標・cycles を同時に運べば Taylor 不変量が保存され，
+exact 移送では作用の定数項も保存される（命題\ref{ke:focus-whole-neighborhood-transport}）．
 この方法は測度や period の不変量を無視するものではなく，
 同じ実際の form 上で leaves と action differentials が一致するように作るものである．
 正則 torus band の既定 base 同定については，normal moment の一致に加え，
@@ -273,6 +283,11 @@ Chakravarthy--Groman\cite[Theorem 1.1]{CGblowup}の almost toric comparison と�
 Fleming\cite[Proposition 4.6, Construction 4.7]{Fleming}の Kähler blow-up を用いる．
 これらは regular elliptic-boundary patches 内で適用し，
 core と crossing germs を固定する．
+容量は例外曲線の実面積 $e$ で測り，実際の複素 blow-up 上の radial K\"ahler form と
+半径 $\sqrt{e/\pi}$ の symplectic blow-up の相対同定を直接構成する
+（補題\ref{glue:area-normalized-blowup}）．先に飽和した affine-convex patch を取り，
+その内部へ球と容量 triangle が入るよう $e$ を小さくする．比較写像の恒等域はその
+飽和 patch の外であり，球の外全体ではない．
 その後の divisor-relative Moser と normal-circle conjugacy は，
 曲線の genus に依存しない．
 positive genus の場合も，同じ実際の marked curve 上の isotopies を用い，
@@ -698,6 +713,9 @@ actual 二側比較・短円・共通 Moser source と像を与える．
 canonical moment の零への規格化を確認し，位相的な零 reduction と ambient の
 滑らかな Lagrangian strata を区別する．Normal orbit は primitive な消滅cycleであり，
 閉じた source fibre は focus--focus 点を一つ持つ pinched torus となる．
+Moment に依存する残余関数 $A(\mu,p)$ を用いた写像の非退化条件は
+$d_pA(0,q)\ne0$ である（系\ref{ke:source-focus-transversality}）．
+この写像の条件と葉の分割の型を分け，後続の相対補間では source の submersion germ を保つ．
 Focus の局所型と monodromy 自体は既知の結果\cite[\S\S2--4]{ZungFocus}であり，
 ここでは actual KE neck の共通作用・buffer・全閉 fibre へ適用する条件を実証する．
 

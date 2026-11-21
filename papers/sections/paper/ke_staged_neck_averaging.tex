@@ -912,6 +912,28 @@ Focus--focus の局所型と monodromy は既知の理論であり，ここで�
 固定点を含む actual KE neck の exact transport と閉 fibre への適用である．
 \end{remark}
 
+\begin{corollary}[Moment に依存する残余関数の focus 判定]
+\label{ke:source-focus-transversality}
+前補題の固定 source $o=(0,0,q)$ で，$A(\mu,p)$ を通常の実座標
+$(\mu,\Re p,\Im p)$ の滑らかな関数とする．
+可換な写像 $F=(\mu,A(\mu,p))$ 自身が $o$ で非退化 focus--focus 型であるための
+必要十分条件は $d_pA(0,q)\ne0$ である．
+\end{corollary}
+\begin{proof}
+前補題の正規化を用いると，二次項は
+\[
+ Q_\mu=\pi(|u|^2-|v|^2),\qquad
+ Q_A=A_\mu(0,q)Q_\mu+\Re(cuv)
+\]
+であり，$c\ne0$ と $d_pA(0,q)\ne0$ は同値である．
+このとき $Q_\mu$ の倍を引いて前補題の focus 二次型を得る．
+$c=0$ なら二次形式の span は高々一次元なので非退化ではない．
+\end{proof}
+
+この系は指定した momentum map の判定である．例えば残余 submersion $a$ に対し
+$A=(a-a(q))^3$ と置くと同じ葉の分割を与えるが，写像の二次項は退化する．
+本稿の source 近傍では $a$ 自身を用い，その germ を後続の相対補間で固定する．
+
 \begin{corollary}[Source を含む遅い exhaustion 上の actual 円作用]
 \label{ke:source-diagonal-moser}
 上の source chart で固定した十分小さい $b>0$ を取る．
@@ -1078,6 +1100,151 @@ exact Moser map で移せば，閉 fibre 全体の Lagrangian strata，
 系\ref{ke:neck-corner-saturated-union}，
 特異 fibers を含む全 fiber 合併の正規化 ambient 直径評価は
 命題\ref{ke:collapsed-tree-full-fiber-collapse}で別に与える．
+
+\subsection{閉じた focus fibre の period と近傍全体の移送}
+
+Focus 点の局所正規形と，compact singular fibre の飽和近傍全体の
+symplectic germ を区別する．後者の Taylor 不変量と，primitive を指定した場合の
+追加の定数項は V\~u Ng\d{o}c\cite[\S\S3, 7]{VuNgoc}の既知の不変量である．
+以下では本稿の exact transport に必要な period 条件を直接記す．
+
+\begin{lemma}[一重 focus 近傍での一つの残余 period]
+\label{ke:focus-neighborhood-period}
+$F:N\to D$ を円板上の proper な Lagrangian torus fibration とし，
+唯一の特異 fibre $\Lambda=F^{-1}(0)$ は一つの非退化 focus 点 $o$ を持つ
+compact connected pinched torus とする．$D$ を十分小さく取れば
+\[
+ H_1(N;\ZZ)\cong\ZZ,\qquad H_2(N;\ZZ)\cong\ZZ.
+\]
+また $\omega|_N$ は exact である．
+正則 torus $T$ 上で，primitive な vanishing cycle を $\alpha$，
+それを含む整数基底を $(\alpha,\beta)$ とすると，包含写像は
+\[
+ H_1(T;\ZZ)/\ZZ\alpha\ \xrightarrow{\ \sim\ }\ H_1(N;\ZZ)
+\]
+を誘導する．従って $N$ 上の滑らかな closed one-form $\zeta$ に対し
+\begin{equation}\label{ke:eq:focus-residual-exactness}
+ \zeta\text{ が exact}\quad\Longleftrightarrow\quad
+ \int_\beta\zeta=0.
+\end{equation}
+Normal period $\int_\alpha\zeta$ は自動的に零である．
+特に一つの外側の正則 fibre $T=F^{-1}(c)$，$c\ne0$ の近傍で $\zeta=0$ なら，
+$\zeta$ は $N$ 全体で exact である．
+\end{lemma}
+\begin{proof}
+Eliasson の局所正規形に適合する複素表示で
+$q_1+\sqrt{-1}q_2=\bar z_1z_2$ とする
+\cite[\S2]{ZungFocus}．局所の base 座標変更を用い，
+$|z_1|,|z_2|<r$，$|\bar z_1z_2|<\delta\ll r^2$ で定める node block $B$ を取る．
+同時の radial contraction が $B$ を原点へ縮めるので $B$ は可縮である．
+二つの boundary faces はそれぞれ円板上の circle bundle であり，
+corner $|z_1|=|z_2|=r$ は $|q|<\delta$ に現れない．
+これらに沿って少し重ねた外側の regular block を $C$ とする．
+$\Lambda$ の $B$ 外の部分は compact annulus である．
+Base をさらに縮め，閉じた annulus block 上の boundary を含む proper submersion に
+Ehresmann の議論を適用する．その collar を少し厚くした開集合を $C$ とすれば，
+円板上の自明な annulus bundle と同じ homotopy type を持つ．従って
+\[
+ B\simeq\{*\},\qquad C\simeq S^1,
+ \qquad B\cap C\simeq S^1\sqcup S^1.
+\]
+Mayer--Vietoris の写像 $H_1(B\cap C)\to H_1(C)$ は，
+向きを揃えれば $(m,n)\mapsto m-n$ という全射である．
+その kernel と，$H_0(B\cap C)\to H_0(B)\oplus H_0(C)$ の kernel はともに $\ZZ$ なので，
+表示した $H_2$ と $H_1$ を得る．
+$H_2$ の generator は，$B$ 内の二つの局所 Lagrangian discs と
+$C$ 内の annulus からなる pinched fibre の二次 cycle である．
+その上の $\omega$ の積分は零なので，de Rham の定理より $\omega|_N$ は exact である．
+Normal circle は $B$ 内で潰れ，$\beta$ は二つの overlap components を
+$B$ と $C$ を通って一周するので後者の kernel の generator へ写る．
+これで包含写像の主張と，de Rham の定理による\eqref{ke:eq:focus-residual-exactness}が従う．
+外側の任意の regular torus 上でも同じ $\beta$ が generator である．
+\end{proof}
+
+\begin{example}[Node の primitive germ を固定しても残る定数]
+\label{ke:focus-local-primitive-shift}
+前補題の regular block を $C\cong S^1\times(0,1)\times D$ と書き，
+$(0,1)$ の座標を $s$ とする．両端近傍で零で $\int_0^1f(s)\,ds=1$ となる
+滑らかな関数を取り，さらに $B\cap C$ の二つの collars 上で $f=0$ として，
+$\zeta=f(s)\,ds$ を $B$ 側へ零延長する．
+これは node 近傍で零の closed form で，$\int_\beta\zeta=1$ である．
+従って $\lambda_c=\lambda+c\zeta$ は同じ $d\lambda$ と node 上の同じ primitive germ を持つが，
+恒等写像の primitive 差は $c\ne0$ なら exact ではない．
+この変更は fibration 自体と constant-zero Taylor 不変量を保ち，残余作用の原点だけを $c$ 変える．
+非零の $c$ について，この closed 補正を base の外周 collar でも零にはできない．
+そこには $H_1(N)$ の generator を持つ regular torus があり，前補題に反するからである．
+\end{example}
+
+\begin{proposition}[全飽和近傍の移送と focus 不変量]
+\label{ke:focus-whole-neighborhood-transport}
+前補題の $N$ 上で $\omega=d\lambda$ とし，
+$\Phi:N\to N'$ が $\Phi^*\omega'=\omega$ を満たす微分同相であるとする．
+$N'$ の葉の分割を $F'=F\circ\Phi^{-1}$ と定める．
+全 compact fibre，その Lagrangian strata，primitive vanishing cycle と monodromy は
+$\Phi$ によって移される．向き，Eliasson 座標，base cut と return cycle も一緒に運べば，
+正則化作用の smooth germ $S$ が保存される．
+さらに $\omega'=d\lambda'$ なら，
+\[
+ \Phi^*\lambda'-\lambda\text{ が exact}
+ \quad\Longleftrightarrow\quad
+ \int_{\Phi\beta}\lambda'=\int_\beta\lambda.
+\]
+この場合，全 closed cycles の作用積分と残余作用の定数項も保存される．
+\end{proposition}
+\begin{proof}
+各 fibre は厳密に $\Phi(F^{-1}(c))$ なので，その位相型・連結性・strata が移る．
+適合する Hamiltonians とその flows も共役されるため，return periods が一致する．
+規格化を明示すると，normal の向きを固定し，周期 $1$ の moment を $\mu(o)=0$ と正規化する．
+Eliasson 基底座標 $(c_1,c_2)$ を $c_2=\mu/(2\pi)$ と取り，
+$c=c_1+\sqrt{-1}c_2$，$\alpha$ を normal cycle とする．
+$c_1$ は一般には元の residual submersion そのものではない．
+同じ slit disk と logarithm の枝，return cycle $\beta_c$ を選び，
+$A(c)=\int_{\beta_c}\lambda$ と置く．V\~u Ng\d{o}c の規約では
+\begin{align}
+ dA&=\tau_1\,dc_1+\tau_2\,dc_2,\notag\\
+ dS&=(\tau_1+\log|c|)\,dc_1+(\tau_2-\arg c)\,dc_2,\notag\\
+ S(c)&=A(c)-A(0)+\Re(c\operatorname{Log}c-c),\qquad S(0)=0.
+ \label{ke:eq:focus-regularized-action}
+\end{align}
+$dS$ は原点を越えて滑らかな閉形式となる\cite[Proposition 3.1, Definition 3.1]{VuNgoc}．
+Return periods と正則化の選択が一致するので $S'=S$ である．
+独立の向きを揃えた Eliasson 座標を使う際の flat な自由度については，
+同文献の Lemma~4.1 と \S4 により Taylor series の一致を得る．
+
+$\zeta=\Phi^*\lambda'-\lambda$ は closed なので，前補題が exactness の同値を与える．
+一般には $A'(c)-A(c)=\int_\beta\zeta$ は定数であり，
+$A'(0)-A(0)$ も同じ値なので $S$ では相殺される．
+Exact の場合は任意の closed cycle 上の積分差が零となり，$A(0)$ も保存される．
+これは\cite[\S7, ``Exact version'']{VuNgoc}の追加定数項である．
+\end{proof}
+
+Return cycle の変更 $\beta\mapsto\beta+k\alpha$ は $A$ を $2\pi k c_2$，
+logarithm の枝の変更 $\operatorname{Log}c\mapsto\operatorname{Log}c+2\pi\sqrt{-1}\ell$ は
+正則化項を $-2\pi\ell c_2$ だけ変える．両方を共通に運び，
+$\partial_{c_2}S(0)\in[0,2\pi)$ の規格化を揃える．
+作用を $J=A/(2\pi)$ で測る場合には，正則化も $S/(2\pi)$ とする．
+上の命題は既に構成した葉の分割の push-forward を扱い，
+独立に先指定した別の focus fibration との同値を与えるものではない．
+実際，\cite[Theorem 2.1, \S6]{VuNgoc}により，規格化した Taylor series が
+$0$ と $X^2$ の模型を実現できる．両者は同じ局所 focus 型と一重 monodromy を持つが，
+その半大域不変量は異なる．この既知の実現原理の具体例と，
+例\ref{ke:focus-local-primitive-shift}の primitive 原点だけの変更は別の現象である．
+
+定理\ref{ke:projected-source-neck}への適用では，source を含む閉 residual leaf の
+annular 近傍に submersion $a(p)$ を取り，$F=(\mu,a(p)-a(q))$ とする．
+Source が相異なる regular leaves 上にあることから，他の source と saddle を避ける
+小さい base disk と，その全逆像 $N$ を取れる．
+Annulus の両境界と normal cuts の像を避けて base disk を縮めると，
+任意の compact base subset の逆像は元の compact $K$ 内で閉じるので $F|_N$ は proper である．
+共通 Moser domain はこの $N$ の全開近傍を含み，
+補題\ref{ke:circle-exact-transport}は
+$(\eta,\mathcal A\lambda_t)$ から $(\omega_t,\lambda_t)$ への
+$\phi^*\lambda_t=\mathcal A\lambda_t+dQ$ を与えるので，
+命題\ref{ke:focus-whole-neighborhood-transport}を適用できる．
+別の canonical volume frame で primitive を作り直す場合は，
+系\ref{ke:transition-residual-period}の残余 winding を別に確認する．
+以上は各固定 $t$ と固定 stage の移送に関する保存則であり，
+異なる $t$ や stage の focus 不変量が一定であるとは主張しない．
 
 \subsection{残る円の平均と同一 normal moment}
 
