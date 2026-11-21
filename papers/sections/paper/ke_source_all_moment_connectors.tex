@@ -377,7 +377,7 @@ $s=\kappa L$ 上では式\eqref{ke:eq:source-min-depth-envelope}から
 \]
 である．補題\ref{ke:source-arm-scale-buffer}の証明を，
 $|z|\le\beta$ を内部に含む，少し大きい固定 nested radii で適用する．
-同補題の定数 $B_0$ に対し $B_0\kappa<1/8$ となるよう $\kappa$ を先に選ぶ．
+同補題の $B_0$ を先に固定し，次に $B_0\kappa<1/8$ となるよう $\kappa$ を選ぶ．
 ある $\rho>0$ を $t$ と中心に依存せずに取り，全てのこの境界点 $p$ で
 \[
  B_{g_t}(p,2\rho)\subset\{x\ne0,\ 0<|x|<1\}
@@ -558,6 +558,8 @@ Projected source coordinates と元の plane coordinates の差は $O(t)$ であ
 
 最後に normal Moser map の同じ parameterized flow を用い，
 両端に既存の短い actual trajectories を加える．
+既存 exhaustion では stage $j$ の変位を $1/j$ 以下に取ってあるので，
+この追加費用にも stage に依存しない上界を取れる．
 Moment と residual labels は source の同じ quotient から運ぶため，
 独立な moment の原点又は異なる normal action を導入していない．
 \end{proof}

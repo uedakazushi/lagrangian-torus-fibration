@@ -15,7 +15,7 @@
 
 ## Cloud Codexから再開する
 
-最新mainで [研究方針](00_research_plan.md) → [AGENTS.md](AGENTS.md) → [依存関係](research/ke-dependencies.md) → [研究ノート](research/notes.md) を読む。次に `ke:global-metric-realization` から依存する接着・source・scalar・portalの証明をたどる。現在の優先課題は、公表に向けた一次文献と依存結果の包括的再点検、新規性の確認、主稿構成の整頓である。改訂21は243頁に組版済みで、変更箇所の表示確認を進めている。
+最新mainで [研究方針](00_research_plan.md) → [AGENTS.md](AGENTS.md) → [依存関係](research/ke-dependencies.md) → [研究ノート](research/notes.md) を読む。次に `ke:global-metric-realization` から依存する接着・source・scalar・portalの証明をたどる。現在の優先課題は、公表に向けた一次文献と依存結果の包括的再点検、新規性の確認、主稿構成の整頓である。改訂21は243頁に組版済みで、変更箇所を含む第1・16・18・52–54・122・124–130・166–171・178–181頁の計24頁を表示確認した。
 
 ```sh
 python3 scripts/research_check.py setup --require-tex
@@ -29,7 +29,7 @@ python3 scripts/research_check.py tex
 
 | 原稿 | 役割 | 組版の確認範囲 |
 | --- | --- | ---: |
-| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域fibrationによるGH実現定理（改訂21） | 改訂21：243頁、表示確認中 |
+| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域fibrationによるGH実現定理（改訂21） | 改訂21：243頁、変更箇所を含む24頁を表示確認 |
 | [五次整数接着](papers/quintic-integer-gluing.tex) | 指定K5データの整数条件・高分母支持・未解決の大域接着 | 201頁 |
 | [Meridian surgery](papers/meridian-surgery.tex) | 閉corner circuitsの局所置換の障害 | 18頁 |
 | [TeX研究ノート](papers/research-notes.tex) | 証明素材・残る条件の整理 | 現行65頁、第1・4頁を表示確認 |
@@ -74,4 +74,4 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-2026-11-21 / v3.1：主稿改訂21にP0の統合定理と証明を保持する。今回の新証明・接続は複数担当で内部点検済み。改訂21では三境界Schwarzによるsource-arm tensor比較と全momentの $O(1)$ 退出を本文へ統合し、別担当が依存の非循環性とsource軸を点検した。改訂21はLuaLaTeXで243頁に組版済み。未解決参照・引用・重複ラベル・欠字・overfull警告はなく、変更箇所の表示確認を進めている。TeX研究ノートも現状の記述を直して65頁に再組版し、変更した第1・4頁を表示確認した。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認・旧整数検算suiteと他二論文の再組版は未実施。
+2026-11-21 / v3.1：主稿改訂21にP0の統合定理と証明を保持する。今回の新証明・接続は複数担当で内部点検済み。改訂21では三境界Schwarzによるsource-arm tensor比較と全momentの $O(1)$ 退出を本文へ統合し、別担当が依存の非循環性とsource軸を点検した。改訂21はLuaLaTeXで243頁に組版済み。未解決参照・引用・重複ラベル・欠字・overfull警告はなく、変更箇所を含む第1・16・18・52–54・122・124–130・166–171・178–181頁の計24頁を表示確認した。TeX研究ノートも現状の記述を直して65頁に再組版し、変更した第1・4頁を表示確認した。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認・旧整数検算suiteと他二論文の再組版は未実施。

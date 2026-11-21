@@ -29,7 +29,7 @@
 
 ### 証明の状態と外部KE仮定との区別
 
-Actual全域構成、sourceの全点評価、同じ基底値に対する全域上下界を主稿に保持し、新証明とそれらの接続を内部点検した。原稿に証明があること、今回の数学的点検、形式証明、組版、有限計算、GitHub保存は別の状態として報告する。現行改訂21では全momentのsource退出を $O(1)$ に強め、三境界のnormal covector評価からoriented armのtensor比較を証明した。中央にも短いgate退出を使う直接証明があり、この接続はGaussian可積分性を必要としない。改訂21は243頁に組版済みで、変更箇所の表示確認は進行中。
+Actual全域構成、sourceの全点評価、同じ基底値に対する全域上下界を主稿に保持し、新証明とそれらの接続を内部点検した。原稿に証明があること、今回の数学的点検、形式証明、組版、有限計算、GitHub保存は別の状態として報告する。現行改訂21では全momentのsource退出を $O(1)$ に強め、三境界のnormal covector評価からoriented armのtensor比較を証明した。中央にも短いgate退出を使う直接証明があり、この接続はGaussian可積分性を必要としない。改訂21は243頁に組版済みで、変更箇所を含む第1・16・18・52–54・122・124–130・166–171・178–181頁の計24頁を表示確認済み。
 
 本研究は、正則normal frameのscalar Schwarz障壁とglobal clipped-depth mapでno-shortcut下界を、同一moment接続と有限portal galleryで上界を直接証明する。**関連KE研究の \((\mathrm{CP})_d\)、\((\mathrm{PBE})_d\)、\((\mathrm{TC})_5\) を証明したという主張ではない。** これらを対象族で検証する課題は関連研究側に残り、本稿の全域実現定理では仮定として使わない。`topo:ke-map-compatibility` による既存GH近似との条件付き比較は、有効な補助結果として保持する。
 
@@ -39,21 +39,21 @@ K1–K3はactual全域fibrationを、K4は同じ写像の全曲面distortionと�
 
 | 課題 | 最初に行うこと | この課題の達成条件・現在の状態 |
 | --- | --- | --- |
-| K0：入力の監査 | `ke:global-metric-realization` から依存表を逆にたどり、一次資料・外部KE証明・定数と領域を包括的に再点検する。 | 今回の新証明と接続は複数担当で内部点検済み。外部KE入力・既存局所証明・全主稿の包括的再監査、外部査読は未了。Actual全域構成は旧 `main:global` の定性的Moser移送を入力にしない。 |
+| K0：入力の監査 | 次は `ke:actual-global-fibration` からactual invariant primitive・nontrapping・whole-fiber trimを逆にたどり、Evans–Mauriのcompact-domain fillingの仮定とcollar接着を包括的に点検する。解析入力の今回の重点監査は依存表を参照する。 | 新証明と接続に加え、capped下界・full-triple/Savin・complete volume上比較・Song/RZを重点点検済み。一般のcomplete volume比較の仮定とLaplacian最大値原理を外部正本で明記した。全入力・既存局所証明・全主稿の包括的再監査、外部査読は未了。Actual全域構成は旧 `main:global` の定性的Moser移送を入力にしない。 |
 | K1：actual neckの短円とbuffer | `ke:fixed-stage-source-neck`、`ke:neck-corner-diagonal-matching` の残余compact→normal cutoff→moment区間→parameter閾値の選択を用いる。 | 固定source-free基底の二側比較、source中心を含む短円、共通source/像、source-inclusive neckを証明。十分遅い残余exhaustionでは全flow・全円orbitを含むtripleとの共通開領域も確保した。任意に指定した縮小速度や曲面全体の被覆への一様性は主張しない。 |
 | K2：複数endの同時整合 | `ke:neck-corner-saturated-union` の部分fibrationを全域構成への入力として使う。 | 三armの座標接続、normal period一致、相対Hamiltonian補正、共通moment区間とreduced graphにより、closed cornerと切詰めたneckの**全交わり**でfiber partition・向き付きnormal cycle・内部source/saddle markingを一致させた。Endの第二cycleは共通torus同定で移送して選ぶ。Source・saddleを含むactual部分fibrationを得た。独立に選んだ第二periodの一致は自動ではない。Core接着と全曲面被覆はK3で別途証明した。 |
 | K3：component coreの相対接着 | `ke:actual-global-fibration` と四つの追加節を距離評価の入力とする。 | **固定段階の全域構成を証明。** 正residue periodの厳密同定、閉moment link、固定stageでの全特異層近傍の被覆とcompact complement、actual generator C1・adapted primitive/nontrapping、saddleを動かす相対葉族、全fiber単位のtrimを経て、全 $X_t$ をactual Lagrangian fibrationで覆った。各componentのcoreと変更collarのambient径は固定stageで有界、遅い対角選択で正規化径が消える。全曲面distortionは含まない。 |
 | K4：全曲面の距離比較 | `ke:sharp-global-one-active` → `ke:global-depth-lipschitz` → `ke:global-depth-base-comparison` → `ke:global-ambient-lower` と、`ke:global-ambient-upper` の接続を点検する。 | 原稿に全域上下界の証明あり。中央sourceの全点径 $O(1)$、全moment退出 $O(1)$、保持cornerの基底値整合、全内部木の共通momentを用いる。`ke:collapsed-tree-full-fiber-collapse` は潰される全fiber合併を評価する。新証明と接続を複数担当で内部点検済み。 |
-| K5：統合主定理と公表準備 | `ke:global-metric-realization` の全固定 \(d\ge5\) の主張から、一次文献比較・新規性確認・本文の説明順を整える。 | `ke:global-realization` を定理として提示し、同じ $f_t=p_T\pi_t$ のdistortion消失を統合。最適rateや任意の先指定木系を追加しない。包括的依存監査・全主稿再監査・外部査読・形式証明は未実施、現行改訂21は243頁に組版済みで、表示確認中。 |
+| K5：統合主定理と公表準備 | `ke:global-metric-realization` の全固定 \(d\ge5\) の主張から、一次文献比較・新規性確認・本文の説明順を整える。 | `ke:global-realization` を定理として提示し、同じ $f_t=p_T\pi_t$ のdistortion消失を統合。最適rateや任意の先指定木系を追加しない。包括的依存監査・全主稿再監査・外部査読・形式証明は未実施、現行改訂21は243頁に組版済みで、第1・16・18・52–54・122・124–130・166–171・178–181頁の計24頁を表示確認済み。 |
 
 K1–K2の正本は `ke_neck_corner_exhaustion.tex`。残余compactの定数を先に固定し、それを支配するnormal cutoffと共通moment区間を選び、最後にparameter閾値を取る。`ke:normal-flow-naturality` とmoment依存のreduced葉により共通開collarを構成する。さらにcorner cut $m_t=6b_j$、neckの葉でのtrim $B=7b_j$、広いnormal-first patchを用い、first-exit評価で全intersectionを共通plateauへ閉じ込める。逆normal flowの自然性からmomentを同定した後に深いnormal下界を使う（`ke:neck-corner-saturated-union`）。
 
-この部分fibrationはsourceのpinched torusとsaddle fiberを含み、各closed cornerの内在・protected GH評価を持つ。`ke:actual-global-fibration` は保持されたcorner葉とsource近傍を保って全域へ接着する。中央全点径は正のpotentialによるactual球の局在とGaussian tail・Bishop–Gromov比較で得る。全intervalのsource接続と基底値の整合を用い、全曲面のshortcut下界と木上のfiber合併・portal上界を別々に証明した。局所protected距離をそのまま全曲面距離に読み替えてはいない。
+この部分fibrationはsourceのpinched torusとsaddle fiberを含み、各closed cornerの内在・protected GH評価を持つ。`ke:actual-global-fibration` は保持されたcorner葉とsource近傍を保って全域へ接着する。中央全点径にはGaussian tail・Bishop–Gromov比較による証明と、短いgate退出・source-arm tensor比較による直接証明がある。全intervalのsource接続と基底値の整合を用い、全曲面のshortcut下界と木上のfiber合併・portal上界を別々に証明した。局所protected距離をそのまま全曲面距離に読み替えてはいない。
 
 Source全体のEuler場 $W_+=x\partial_x+y\partial_y$ のactual normを固定chart上で一様に抑えた（`ke:source-euler-bound`）。中央sourceの $|z|\ge e^{-a_t}$、$a_t=o(R_t)$ の部分は、固定residual shellへ $O(a_t+1)$ で接続でき、正規化ambient径が消える（`ke:source-sublog-residual-connectors`）。Euler経路だけでは軸に届かないが、`ke:source-central-diameter` は別のGaussian体積比較で $z=0$ と極小residual点も含む全点径を $O(1)$ に抑える。`ke:fixed-base-source-central-band` により、固定基底の全中央帯と閉pinched torus全体も収縮する。
 
 ## 原稿・ノートの正本と公表単位
-- `papers/surface-lagrangian-torus-fibration.tex`：このrepoの主たる公表用本文。相対SNC構成、次数分割、分岐底、作用適合atlasとactual KE–fibrationの全域GH実現定理（現行改訂21）。統合証明は `papers/sections/paper/ke_global_metric_realization.tex`。改訂21は243頁に組版済みで、変更箇所の表示確認は進行中。
+- `papers/surface-lagrangian-torus-fibration.tex`：このrepoの主たる公表用本文。相対SNC構成、次数分割、分岐底、作用適合atlasとactual KE–fibrationの全域GH実現定理（現行改訂21）。統合証明は `papers/sections/paper/ke_global_metric_realization.tex`。改訂21は243頁に組版済みで、変更箇所を含む第1・16・18・52–54・122・124–130・166–171・178–181頁の計24頁を表示確認済み。
 - `papers/quintic-integer-gluing.tex`：五次整数アフィン接着、高分母支持グラフの独立論文（第25稿、201頁の記録）。指定SNC cores・K5 graph・標準cones・marked puncturesを保つ候補が対象。必要支持3型26標識は**実現数ではない**。G5_14の中央matching、一般分母剛性、三高Dの同時非負性が未解決。
 - `papers/meridian-surgery.tex`：四pantsのmeridian局所置換と閉corner circuitsの障害（18頁の記録）。
 - `papers/research-notes.tex`：各種補題・証明素材のTeXノート（現行65頁、変更した第1・4頁を表示確認）。
@@ -92,7 +92,7 @@ Source全体のEuler場 $W_+=x\partial_x+y\partial_y$ のactual normを固定cha
 
 固定toric模型の存在・完備性にはZhang (2015), §2.1, Theorem 2.1 / Proposition 2.2を用いる（退化族のTheorem 2.4とQ-factorial仮定は使わない）。ψ_L=log L−Σlog ell_iに対してψ_L−(log3)/2≤φ_L≤ψ_L、V_L/3≤k_L²≤V_Lを内外にずらした障壁で証明する。Complete模型から三つの半平面へのYau Schwarz lemma、determinant比較、内部正則性により一様cusp geometryを得る。凸性からfacet shiftのlog-density差をO(1/min ell)とし、actual計量を内外のsimplex KE metricsでvolume比較する。Savinの小摂動定理でtensor・全高階誤差へ移る。Actual metric bufferや(TC)/(PBE)を前提としない。
 
-Actual側の大域入力は `coarse:cor:degree-d-volume-lower`。Adjunction residueでcanonical densityを固定し、backgroundによるHermitian frame errorの吸収と各正のcap方向のminorから六型のdeterminant下界を証明する。Sourceでは元のplane coordinatesを保つexact xy=tzとrescalingにより二つのcap係数≥c_d/Lを使う。Compact minimum原理からactual volume下界を得る。この依存部分の証明と適用条件はKE側の原稿に明示されている。現行整備ではその所在と仮定を確認し、全証明の独立再監査は行っていない。
+Actual側の大域入力は `coarse:cor:degree-d-volume-lower`。Adjunction residueでcanonical densityを固定し、backgroundによるHermitian frame errorの吸収と各正のcap方向のminorから六型のdeterminant下界を証明する。Sourceでは元のplane coordinatesを保つexact xy=tzとrescalingにより二つのcap係数≥c_d/Lを使う。Compact minimum原理からactual volume下界を得る。この依存部分の証明と適用条件はKE側の原稿に明示されている。このcapped下界とfull-triple比較の必要な証明を重点点検し、固定境界面の下界だけで足りる箇所も明示した。監査範囲は依存表に記し、外部主稿全体の独立再監査は行っていない。
 
 Lagrangian主稿 `ke:actual-closed-corner` の同じ averaging–Moser flow と同じactual Lagrangian torus bundleに対し、`ke:closed-corner-gh` と `ke:closed-corner-protected-gh` が全閉cornerのGH極限を与える。m=Rでsoftmax hexagonのMoser像をW_{t,J}、その射影をπ_{t,J}とすると、R^−2 g_tによる距離について
 \[
@@ -162,7 +162,7 @@ Lagrangian主稿 `ke:actual-closed-corner` の同じ averaging–Moser flow と�
 現行のTeX分割節と検証スクリプトは `papers/sections/` を直接参照し、旧ルートsymlinkに依存しない。静的な構成検査は `python3 verification/verify_repository_layout.py`、現行の五主検算・五独立監査は `python3 verification/run_current_checks.py`。旧JSONやmanifestの相対パス・記録時点のSHA-256は出典情報として保持し、パス正規化後の現行実行パスと区別する。
 組版はrepo直下の `latexmk papers/surface-lagrangian-torus-fibration.tex`、整数接着は `latexmk papers/quintic-integer-gluing.tex`。LuaLaTeXとLuaTeX-ja／TikZ／日本語フォントが必要、PDFとSyncTeXはbuild/へ出力しGitで追跡しない。段階別の実行は `scripts/research_check.py` と [Cloud Codexの再開手順](research/cloud-codex.md) を参照する。元の計算コード、入力、証明書は保持する。
 
-2026-11-21 / v3.1：主稿改訂21にactual全域fibration、全moment source接続、基底parameter化、sharp scalar normal評価、同じ $f_t=p_T\pi_t$ の全域距離上下界と全fiber合併収縮の証明を保持する。統合定理は `ke:global-metric-realization`。今回の新証明と接続を複数担当で内部点検した。改訂21では三境界Schwarzによるsource-arm tensor比較と全momentの $O(1)$ 退出を本文へ統合し、別担当が依存の非循環性とsource軸を点検した。改訂21はLuaLaTeXで243頁に組版済み。未解決参照・引用・重複ラベル・欠字・overfull警告はなく、変更箇所の表示確認を進めている。TeX研究ノートも現状の記述を直して65頁に再組版し、変更した第1・4頁を表示確認した。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認・旧整数検算suiteと他二論文の再組版は未実施。
+2026-11-21 / v3.1：主稿改訂21にactual全域fibration、全moment source接続、基底parameter化、sharp scalar normal評価、同じ $f_t=p_T\pi_t$ の全域距離上下界と全fiber合併収縮の証明を保持する。統合定理は `ke:global-metric-realization`。今回の新証明と接続を複数担当で内部点検した。改訂21では三境界Schwarzによるsource-arm tensor比較と全momentの $O(1)$ 退出を本文へ統合し、別担当が依存の非循環性とsource軸を点検した。改訂21はLuaLaTeXで243頁に組版済み。未解決参照・引用・重複ラベル・欠字・overfull警告はなく、変更箇所を含む第1・16・18・52–54・122・124–130・166–171・178–181頁の計24頁を表示確認した。TeX研究ノートも現状の記述を直して65頁に再組版し、変更した第1・4頁を表示確認した。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認・旧整数検算suiteと他二論文の再組版は未実施。
 
 ## 共通研究原則と保存許可（研究固有方針から独立）
 数学的重要性・新規性・理解の深化・応用可能性・正確性・実現可能性を総合し方針を見直す。証明済み・仮定付き・未完成・予想・計算観察、既知成果と新規性、草稿の証明と今回の独立監査を区別する。重要な先行研究は一次資料の仮定と参照箇所を確認する。日本語LuaLaTeXで十分な証明を保ち、有効な着想・反例・障害は現行ノートへ整理する。再現資産を保持し、旧版ZIP/ログの集積を避ける。研究の区切りでは承諾なしで通常コミットを `main` へpushし、Cloud Codexの長時間作業は切りのよいところ、遅くとも前回成功pushから約15分を目安に現行の有効な成果と未解決箇所を保存する（詳細はAGENTS.md）。force push・GitHub Actions追加/起動をしない。Library旧資料を削除せず、GitHub管理後の定常二重保存は行わない。対象repo保存後にresearch-hubの到達点・核心・次の一手・依存と再開先を更新し、数学検証・組版・push・hub反映を区別する。

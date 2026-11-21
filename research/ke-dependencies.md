@@ -1,10 +1,10 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-21 / v2.0。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-21 / v2.1。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
 ## 確認した正本と規格化
 
-関連する [kaehler-einstein-degeneration](https://github.com/uedakazushi/kaehler-einstein-degeneration) の確認コミットは `74ba687f67e1f87a4d308bf868fcdef98db441df`。以下の **IV** は同repoの [papers/kaehler-einstein-degeneration.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/74ba687f67e1f87a4d308bf868fcdef98db441df/papers/kaehler-einstein-degeneration.tex)、**V** は [papers/cubical-gh-limit.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/74ba687f67e1f87a4d308bf868fcdef98db441df/papers/cubical-gh-limit.tex) を表す。外部の分割原稿は同repoの `papers/sections/` にある。この確認版を固定した参照として保持し、再開時に最新 `main` と比較して、訂正・追加仮定を優先する。外部原稿本文をこのrepoへ複製しない。
+関連する [kaehler-einstein-degeneration](https://github.com/uedakazushi/kaehler-einstein-degeneration) の確認コミットは `1abc96cea3d9c369410e0e9d2a57414276e7c776`。以下の **IV** は同repoの [papers/kaehler-einstein-degeneration.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/1abc96cea3d9c369410e0e9d2a57414276e7c776/papers/kaehler-einstein-degeneration.tex)、**V** は [papers/cubical-gh-limit.tex](https://github.com/uedakazushi/kaehler-einstein-degeneration/blob/1abc96cea3d9c369410e0e9d2a57414276e7c776/papers/cubical-gh-limit.tex) を表す。外部の分割原稿は同repoの `papers/sections/` にある。この確認版を固定した参照として保持し、再開時に最新 `main` と比較して、訂正・追加仮定を優先する。外部原稿本文をこのrepoへ複製しない。
 
 外部入力について確認したのは、該当する定理文・証明の所在・依存仮定・規格化と、本稿の接続に必要な証明箇所である。下表の「証明あり」は原稿の状態を表し、全旧証明の独立再監査・形式証明・全一次文献の再精読・組版の再実行を意味しない。現行証明では上記mainを再取得し、full-triple比較、`simplex:lem:rank-one-schwarz`、`simplex:prop:dominant-product`、`simplex:cor:active-cogram`、`pair:thm:fixed-end-moment` と関連するvolume入力の定理文・必要な証明・規格化を照合した。今回の新証明と大域接続の内部点検範囲は末尾に記す。
 
@@ -43,7 +43,7 @@ L_t=-\log|t|^2,\quad R_t=\log L_t.
 | 入力 | 正本・ラベル | 適用範囲と残る条件 |
 | --- | --- | --- |
 | 全次数のcapped volume下界 | IV `coarse:cor:degree-d-volume-lower` | 固定 $d\ge5$、`ass:Gd` の下で証明あり。体積比からtensor二側比較を推論しない。 |
-| Sourceのoriented volume比較 | IV `coarse:lem:pair-arm-density`, `coarse:lem:complete-volume-upper` | $xy=tz$ の正しいorientationのannulus–disc上で用いる。中央gateのvolume上界を得て最大値原理で中央へ延長する。中央のtensor比較は入力にしない。 |
+| Sourceのoriented volume比較 | IV `coarse:lem:pair-arm-density`, `coarse:lem:complete-volume-upper` | $xy=tz$ の正しいorientationのannulus–disc上で用いる。一般のcomplete域では対数体積比の上有界性を明示的に仮定する。本稿の有限annulus–discでは固定 $t$ のcompact closureへの延長とmodel densityの境界発散で確認できる。中央gateからvolume上界だけを中央へ延長し、中央のtensor比較は入力にしない。 |
 | 全深部tripleのactual/model比較 | `full_triple_comparison.tex`, `coarse:thm:full-triple-tensor` | $m_1\le m<L_t/3$、$\min\ell_i\ge m$ で全phase・全深度比に $C^q$ 誤差 $O_d(m^{-1})$。追加のTC/PBE仮定を用いない。Source・pair全域の結論ではない。 |
 | 係数1・境界の積漸近 | `simplex_boundary_geometry.tex`, `simplex:lem:rank-one-schwarz`, `simplex:prop:dominant-product`, `simplex:cor:active-cogram` | Complete simplex模型とそのactual tripleへの適用。三重点の外の全raw-active領域へ拡張した結果ではない。 |
 | 閉cornerの距離評価 | `closed_triple_metric.tex`, `simplex:thm:closed-corner-model`, `simplex:cor:actual-closed-corner-metric` | 同一tripleの三枚のsquare自身の距離（本repo `topo:coordinate-retraction` により全target距離の制限と等しい）。Sourceの内在距離と保護領域内の経路について $O(\log R_t/R_t)$。この局所結果だけでは全 $X_t$ のambient下界を結論しない。 |
@@ -69,7 +69,7 @@ L_t=-\log|t|^2,\quad R_t=\log L_t.
 | 三端の平均順序の相対統合 | [ke_relative_corner_patch.tex](../papers/sections/paper/ke_relative_corner_patch.tex), `ke:quantitative-order-hamiltonian`, `ke:relative-corner-patch`, `ke:single-arm-reduced-graph`, `ke:arm-common-moment-strip` | 小さいprimitiveを固定し、centered平均の比較Hamiltonianを $O(m^{-2})$ で評価。Common source/imageとcutoff buffersの下で端ごとのstaged bundleを一つのactual corner bundleへ統合。単一moving armでは共通moment stripとactual reduced graphを証明。Source-inclusive neckとの共通flow領域と全交わりは、下のexhaustionの結果で別途確保する。 |
 | Source-inclusive neckとcornerの全交わり | [ke_neck_corner_exhaustion.tex](../papers/sections/paper/ke_neck_corner_exhaustion.tex), `ke:fixed-stage-source-neck`, `ke:neck-corner-diagonal-matching`, `ke:neck-corner-saturated-union` | 残余compact→normal cutoff→moment区間→parameter閾値の順に選ぶ。Corner cut $6b_j$ とneckの葉でのtrim $7b_j$、first-exitと逆flow自然性により全交わりを同じ全fibersで飽和させる。Source・saddleを含む部分fibration。全曲面被覆・core・global GHは含まない。 |
 | Central sourceの体積・moment・経路 | [ke_source_connectors.tex](../papers/sections/paper/ke_source_connectors.tex), `ke:source-central-density`, `ke:source-central-moment`, `ke:source-central-mean-distance`, `ke:source-central-short-escape`, `ke:source-central-arm-connectors` | 固定rescalingでdensity $L^{-2}$、有界potential、moment $O(L^{-1})$、平均二乗距離 $O(1)$、inradius $O(L^{-1/2})$、arm断面への接続 $O(1)$。Capped volume下界・oriented pair-arm density・complete volume上界を使用。全点径は結論しない。 |
-| Source中央帯の全点径 | 同上 `ke:source-central-band-reduction`, `ke:source-potential-modulus` | $\lvert\mu\rvert\le A/L$ のsource中央帯を固定rescaled coreへ $O(1)$ で結ぶ。`ke:source-central-diameter` と `ke:fixed-base-source-central-band` により、固定点を含むcoreと固定基底中央帯・閉pinched torus全体のactual ambient径は $O(1)$。一様square-root-Dini modulusは**未証明**だが、この結論はGaussian体積評価とBishop比較により得られ、そのmodulusを用いない。全intervalには `ke:source-all-moment-exit` を用いる。 |
+| Source中央帯の全点径 | 同上 `ke:source-central-band-reduction`, `ke:source-potential-modulus` | $\lvert\mu\rvert\le A/L$ のsource中央帯を固定rescaled coreへ $O(1)$ で結ぶ。`ke:source-central-diameter` と `ke:fixed-base-source-central-band` により、固定点を含むcoreと固定基底中央帯・閉pinched torus全体のactual ambient径は $O(1)$。一様square-root-Dini modulusは**未証明**だが、Gaussian体積評価とBishop比較による証明に加え、`ke:source-direct-central-exit` のgate・arm・水平経路による直接証明がある。いずれもそのmodulusを用いない。全intervalには `ke:source-all-moment-exit` を用いる。 |
 | Source-inclusive全moment退出とlevel合併 | `ke_source_all_moment_connectors.tex`, `ke:source-arm-uniform-tensor`, `ke:source-direct-central-exit`, `ke:source-all-moment-exit` | Source軸・固定点を含む全intervalで同じmomentの残余境界へ $O(1)$。三境界のrank-one Schwarz、射影下界、volume上界からarm tensor比較を導き、水平・動径経路で接続。中央点は短いgate退出を併用し、Gaussian可積分性を入力にしない。Target parameter化・全域下界は含まない。 |
 | 固定残余compactの法線エネルギーと接続 | [ke_staged_neck_averaging.tex](../papers/sections/paper/ke_staged_neck_averaging.tex), `ke:neck-integrated-normal-energy`, `ke:neck-axial-upper`, `ke:neck-averaged-speed`, `ke:neck-shrinking-buffer` | KE側 `neck:prop:volume-envelope` から積分短円と同一残余点の係数1の接続上界。実計量の境界距離（上限1） $\delta_t$ が $m_t\delta_t^2\to\infty$ なら共通source・像。この十分条件と、K1–K2の固定段階で実証したbuffer・遅いexhaustionを区別する。 |
 | Normal平均の双方向buffer | [ke_staged_neck_averaging.tex](../papers/sections/paper/ke_staged_neck_averaging.tex), `ke:short-circle-actual-buffer`, `ke:short-circle-image-buffer` | Actual短円とactual bufferを入力とする。像のambient直径を与えるが、$C^1$ 制御・intrinsic fiber径・base projection保存は与えない。 |
@@ -78,7 +78,7 @@ L_t=-\log|t|^2,\quad R_t=\log L_t.
 
 ## 中央sourceの全点径とcomponent移送の追加入力
 
-主稿 `ke_source_potential_buffer.tex` はcapped/actual density比較を固定source tube全体へ統合し、射影下界と正のcanonical potentialのPoisson方程式からactual球の深部局在を証明する。`ke_source_global_distance.tex` はDinh–Marinescu–Vu, Ann. Sc. Norm. Super. Pisa (5) 24 (2023), Theorem 1.2（[掲載版PDF](https://www.mi.uni-koeln.de/~gmarines/PREPRINTS/Dinh_Marinescu_Vu_ASNP_2023.pdf)、pp.928–929で仮定確認）を距離函数に適用し、logarithmic coverの周期数を除してactual Gaussian tailを得る。`ke_source_diameter.tex` は同じactual球へのBishop–Gromov比較から全点径を導く。Actual potentialのHölder性、TC、局所tensor二側比較は追加仮定しない。
+主稿 `ke_source_potential_buffer.tex` はcapped/actual density比較を固定source tube全体へ統合し、射影下界と正のcanonical potentialのPoisson方程式からactual球の深部局在を証明する。`ke_source_global_distance.tex` はDinh–Marinescu–Vu, Ann. Sc. Norm. Super. Pisa (5) 24 (2023), Theorem 1.2（[掲載版PDF](https://www.mi.uni-koeln.de/~gmarines/PREPRINTS/Dinh_Marinescu_Vu_ASNP_2023.pdf)、pp.928–929で仮定確認）を距離函数に適用し、logarithmic coverの周期数を除してactual Gaussian tailを得る。`ke_source_diameter.tex` は同じactual球へのBishop–Gromov比較から全点径を導く。Actual potentialのHölder性、TC、局所tensor二側比較は追加仮定しない。このGaussian経路は独立な補助結果として保持し、現行の全moment退出と中央径には `ke:source-direct-central-exit` の直接経路を使える。
 
 `ke_component_core_transfer.tex` はfixed-gauge smooth KE収束のcanonical primitive差から固定compactのactual移送を構成する。相対flux条件とexact collar germは証明した。`ke_component_core_geometry.tex` は任意固定compactで厳密一致するsmooth正則化、正residueの有限型KE coreとその小さい飽和近傍のfillingを与えるが、その存在だけから全collar葉の一致は従わない。現行の全域接着は下記四節によりactual linkから直接構成する。Smooth compactifying formの `comp:finite` をこの極限形式の定理と読み替えない。
 
@@ -116,7 +116,7 @@ Rochon–Zhang, *Adv. Math.* 231 (2012), 2892–2952, [arXiv:1106.0873v2](https:
 
 ### 3. 全曲面のscalar下界
 
-Sharp normal比較領域は、sourceを除かない固定残余compact上の正則annulus bundleである。固定した $\kappa>0$ に対する $s=\kappa L$ の粗い上界は、positive potentialから得たactual球bufferとlocalized rank-one Chern–Luで供給する。残余境界はfull-triple、固定外側shellはcomponent smooth convergenceを用いる。全境界を明示した最大値原理により
+Sharp normal比較領域は、sourceを除かない固定残余compact上の正則annulus bundleである。固定した $\kappa>0$ に対する $s=\kappa L$ の粗い上界は、独立に証明したsource-arm tensor比較で供給する。その前段はpositive-Poisson bufferとlocalized rank-one Schwarzであり、global scalar障壁へ依存しない。残余境界はfull-triple、固定外側shellは射影下界と座標微分の上界を用いる。全境界を明示した最大値原理により
 
 \[
 |d\log s|_{g_t}^2
@@ -153,11 +153,23 @@ Target最短路は `topo:six-label-gallery` により高々60本のsquare線分�
 
 を課してよい。これにより上下界、各componentの費用、全fiber合併径を同じ $j(t)$ と同じ $f_t$ で制御する。固定triple内の $O(\log R_t/R_t)$ をそのまま大域の収束速度とする主張ではない。
 
+## 主要な外部解析入力の重点監査
+
+以下は本稿の接続に必要な証明を読み合わせた範囲であり、外部主稿全体の独立再検証を意味しない。
+
+1. **Capped volume下界。** IV `coarse:cor:degree-d-volume-lower` のadjunction規格化、smooth Hermitian frameの誤差吸収、六種類の局所determinant下界を点検した。Sourceでは射影Morse座標だけに置き換えず、元のplane coordinatesのcap項を保持して、rescaling後の二方向の係数が $c/L$ 以上になることを使う。正のminorの和なので相殺は起こらない。これをcompact minimum原理へ入れる順序であり、先にactual tensor比較を要求しない。
+2. **Full-triple比較の最小入力。** `full_triple_comparison.tex` の `coarse:rem:full-triple-face-input` に、固定深度 $m_0$ の境界面全phaseでの $\omega_t^2\ge c_*V_L$ がvolume障壁の下側に十分なことを明記した。固定 $t$ のradial closureと角度torusはexact triple chart内でcompactである。拡大simplexが下側、縮小simplexが上側の障壁となり、後者は人工境界で発散する。深部内部全体のdensity floor、actual距離buffer、actual metricの完備性をこの段階で入力にしない。$v=\log(\omega_t^2/k_L^2)$ と $dd^cv=\omega_t-k_L$ の同じRicci規格化も照合した。
+3. **Small perturbationからtensor比較へ。** O. Savin, *Comm. Partial Differential Equations* 32 (2007), 557–578, Theorem 1.3・§4 Proposition 4.1、[掲載版PDF](https://www.math.columbia.edu/~savin/Small_pert.pdf)、[doi:10.1080/03605300500394405](https://doi.org/10.1080/03605300500394405) を一次資料で確認した。Complete模型のcoarse tensor下界は半平面へのSchwarz、上界はdeterminant比較から先に得る。全深度比のnormalized windowsで模型係数の高階評価を確保した上で、determinant作用素の単調な拡張、零近傍の一様楕円性と $C^2$ bound、$\|v\|_{C^0}=O(m^{-1})$ を照合した。Small $C^{2,\alpha}$ の後にbootstrapと線形化を使って $C^q$ 誤差 $O(m^{-1})$ に進む。模型側のdominant-product squeezeとfacet幅 $\beta=(b^2d_*)^{1/3}$ も点検し、active co-Gramの係数1がこの順序で得られることを確認した。
+4. **Complete volume上比較。** IV `coarse:lem:complete-volume-upper` の一般形は $u=\log((\pi_D^*\omega_t)^2/h^2)$ の $\sup_Du<\infty$ を仮定する。Ricci下界から使えるLaplacian型最大値原理とAM–GMにより $\Delta_hu\le\epsilon$ の点で $e^u\le(1+\epsilon/2)^2$、従って $\omega_t^2\le h^2$ となる。Hessian型原理や、完備性だけによる $u$ の上有界性は用いない。実際のfinite ball・annulus–disc・product windowsとangular coversでは、固定 $t$ のclosureへの延長、model densityの境界発散、deck周期性を各適用で確認した。この点は外部正本の一般形にも反映してある。
+5. **Component極限とSNC cusp。** Song [arXiv:1706.01518](https://arxiv.org/abs/1706.01518) のDefinition 2.3・Lemmas 4.4–4.5と、Rochon–Zhang [arXiv:1106.0873v2](https://arxiv.org/abs/1106.0873v2) §5 (5.3)–(5.6)・Theorem 5.1を一次資料で照合した。Total-space source $xy+tz=0$ のcanonical特異点、stable family、$K_{\mathbf P^2}+D=\mathcal O(d-4)$ のampleness、fixed-gauge収束を区別する。SNC上の $x^\nu C^\infty_{fc}$ remainderとradial cusp微分から固定endのmoment漸近を得ており、smooth divisor専用のfull polyhomogeneous expansionは使わない。本稿の新しいsource-arm tensor比較とscalar外側境界はこのcomponent収束を使わないが、core移送等の既存入力から除いたわけではない。
+
+Complete simplex模型の存在はZhang [arXiv:1505.04728v2](https://arxiv.org/abs/1505.04728v2) Theorem 2.1・Proposition 2.2を一次資料で確認した。同Theorem 2.1が引用するCheng–Yau (1982), Theorem 4.4の原論文の証明そのものは今回再精読していない。Zhangの退化族に関するTheorem 2.4のQ-factorial仮定をsourceを持つ本族に適用してはいない。DMVのTheorem 1.2についても、固定Euclidean補助測度、正閉current、$L^2$ 規格化、周期coverの個数とBishop比較の実次元4を照合した。ただし現行の有界source退出はこのGaussian経路から独立である。
+
 ## 今回の内部点検と残る確認範囲
 
 - K2–K3の接続に必要な全intersection saturation、fixed-stage stratum coverage、whole-fiber trim、actual Lagrangian性、compact Hausdorff quotientへの全射とconnected fibers、固定 $d\ge5$ の範囲、core・変更collarの固定compact費用を点検した。
 - 新しい中央 $O(1)$ 径、全moment source退出、sharp scalar barrier、global physical-depth補正とactive cover、全域co-Gramと $\Theta_t$–$f_t$ 比較、共通moment portals、全fiber合併、有限gallery上下界を、作成担当以外の読み手が内部点検した。特に全境界、source軸、同じcanonical moment、依存の非循環性、固定段階から遅い対角選択への順序を照合した。
-- YauのTheorem 2と証明、DMVの掲載版Theorem 1.2、Rochon–ZhangのSNCに関する指定箇所は一次資料で確認した。外部KE原稿の全証明や旧主稿全体の独立再監査、公表前の網羅的な先行研究・新規性調査、形式証明を完了したという意味ではない。
+- YauのTheorems 1–2、Savinのsmall perturbation、Songのfixed-gauge収束、DMVの掲載版Theorem 1.2、Rochon–ZhangのSNCに関する指定箇所は一次資料で確認した。外部KE原稿の全証明や旧主稿全体の独立再監査、公表前の網羅的な先行研究・新規性調査、形式証明を完了したという意味ではない。
 - 解析証明の数学的点検、保存された有限有理数検算、その再実行、組版、GitHubへの反映は別の確認である。各実行状態は現行の検証資料を参照し、本書の「証明あり」を計算・組版による証明の検証と読み替えない。
 
 ## 再開時の確認

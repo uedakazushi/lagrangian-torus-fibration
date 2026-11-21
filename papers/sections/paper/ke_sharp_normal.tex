@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.0: Source を含む法線方向の係数一と正則深度障壁．
+% 2026-11-21 / v1.1: Source-arm 積比較を用いる係数一の正則深度障壁．
 \section{Source を含む法線方向の係数一の評価}
 \label{ke:sharp-normal-section}
 
@@ -108,8 +108,8 @@ $-\log|Z_{a,0}|^2=b_j$ となる残余 compact $P_j$ を取る．
 本節の $P_j$ は最大値原理の補助領域とする．
 少し広い $P_j^+$ も先に固定する．
 
-固定した $0<\kappa<1/4$ は，補題\ref{ke:source-arm-scale-buffer}の
-$\theta$ より十分小さく取る．以下の $\mathfrak n_j$ は scalar 障壁専用の
+固定した $0<\kappa<1/4$ は，有限個の source charts に対する
+命題\ref{ke:source-arm-uniform-tensor}の upper depth 比の最小値の半分より小さく取る．以下の $\mathfrak n_j$ は scalar 障壁専用の
 補助 cut であり，neck/corner 構成の $n_j$ とは別に選ぶ．
 $\mathfrak n_j$ を後に大きく選び，
 \begin{equation}\label{ke:eq:sharp-normal-domain}
@@ -143,11 +143,17 @@ $|t|$ が十分小さければ $\mathcal A^x_{j,t}$ 上の $U$ は
 
 \begin{proof}
 \emph{外側の固定 shell.}
-$P_j$ と $\mathfrak n_j$ を固定すると，$s=\mathfrak n_j$ は $t=0$ の成分の smooth locus
-の compact 部分へ収束する．Source の基底点でも $x'_g\ne0$ なので同じである．
-固定 gauge における KE 計量の smooth convergence と
-Morse 座標の $O(t)$ 収束から有限な $A_j$ を得る．
+固定 $P_j$ 上の source-free 部分では定理\ref{ke:fixed-base-neck-moser}の証明，
+source 近傍では式\eqref{ke:eq:source-global-positive-u}により，
+固定幅の normal chart 全体で $g_t\ge c_jg_{\mathrm{FS}}|_{X_t}$ となる．
+Global normal frame と射影 Morse 変換は固定残余 compact 上で一様な
+ambient $C^1$ bound を持つため，$|dx'_g|_{g_t}\le C_j$ である．
+従って $s=\mathfrak n_j$ 上で
+\[
+ U\le C_j e^{\mathfrak n_j}/\mathfrak n_j^2=:A_j.
+\]
 $A_j$ が $j$ 又は $\mathfrak n_j$ とともに有界である必要はない．
+この粗い境界値には成分への smooth KE 収束を追加しない．
 
 \emph{残余境界.}
 三重点 end の一つで，局所 normal frame と global frame の比を
@@ -202,46 +208,29 @@ $b_j$，次に $\mathfrak n_j$ を選べば，この二乗を $1+\varepsilon_j$ 
 
 \emph{内側の moving shell.}
 Source の固定した小円板の外では，
-定理\ref{ke:fixed-base-neck-moser}の annulus--disc 二側比較から，
+定理\ref{ke:fixed-base-neck-moser}の annulus--disc 二側比較から
 $s=\kappa L$ 上で $U\le C_j$ を得る．
 Source の内側では $z=h_t(p)$ を局所座標に取り，
-同じ normal frame において $x'_g y'_g=tz$ を使う．
-必要な固定 rescaling のため深度に有界な定数が加わることを許す．
-補題\ref{ke:source-arm-scale-buffer}の positive function は，
-$S=s+O_j(1)=\kappa L+O_j(1)$ で
+同じ normal frame の $x'_g y'_g=tz$ に
+命題\ref{ke:source-arm-uniform-tensor}を用いる．
+必要な固定 rescaling による深度の差は $O_j(1)$ であり，
+$\kappa$ の上記の選択から，全 moving shell は十分小さい $t$ で
+同命題の $n_*\le s_x\le\kappa_{\mathrm{src}}L$ に入る．
+Base-only frame を併用する場合には
+$x_{\rm src}=a(p,t)x'_g$，$f=-\log|a|^2$ と書く．
+固定 source disc 上で $s_{\rm src}=s+f$，$|f|+|df|_{g_t}\le D_j$ であり，
+$L>2D_j/\kappa$ なら
+$\kappa L/2\le s_{\rm src}\le3\kappa L/2<\kappa_{\rm src}L$ となる．
+従って積比較から
 \[
- u_t=F_t+2R+C_*
-     =2\log(L/S)+O(1)=2\log(1/\kappa)+O_j(1).
+ |d\log s|_{g_t}
+ \le\frac{s_{\rm src}}s|d\log s_{\rm src}|_{g_t}
+                  +\frac{D_j}s\le C_j
 \]
-従って同補題は，中心を $s=\kappa L$ に取った全ての点で，
-ある $\rho_j>0$ を半径とする actual 球が，正しい arm の
-$0<|x'_g|<1$ の領域に含まれることを与える．
-これは min-depth の下界だけでなく，source の中央 barrier を横切らない
-orientation の保持を含む．
-この球上で正則写像 $x'_g$ への rank-one localized Chern--Lu を適用する．
-ここで必要なのは，同 KE 主稿 \texttt{coarse:lem:localized-chern-lu} の
-cutoff 証明を \eqref{ke:eq:sharp-normal-logistic} に適用することであり，
-rank-one pullback を非退化な K\"ahler form とみなすことではない．
-半径 $\rho_j$ の球内に支持され，半径 $\rho_j/2$ で $1$ となる
-actual-distance cutoff $\chi$ を取る．Ricci 下界と Laplacian comparison により
-$|\partial\chi|^2\le C\rho_j^{-2}$，
-$\Delta\chi\ge-C(\rho_j^{-2}+\rho_j^{-1})$ を barrier の意味で満たせる．
-$\chi^2U$ の正の最大点で
-\[
- 0\ge\Delta\log(\chi^2U)
- \ge U-1+2\frac{\Delta\chi}{\chi}
-                  -2\frac{|\partial\chi|^2}{\chi^2}
-\]
-に $\chi^2$ を掛けると，この最大点で
-\[
- \chi^2U\le\chi^2-2\chi\Delta\chi+2|\partial\chi|^2
-       \le C(1+\rho_j^{-2})
-\]
-となる．最大値の上界を $\chi=1$ の中心へ戻すと，
-その中心でも $U\le C(1+\rho_j^{-2})$ を得る．
-Cut locus では同じ support-function argument
-を用いる．
-Source は有限個なので上界を一つの $C_j$ にまとめられる．
+を得る．
+Source は有限個なので一つの境界上界 $C_j$ にまとめられる．
+ここで参照した arm 比較は，positive-Poisson buffer と局所 Schwarz から
+独立に証明されており，本節の scalar 障壁又は全 moment 退出を入力にしない．
 \end{proof}
 
 \begin{proposition}[Source を含む sharp scalar normal bound]

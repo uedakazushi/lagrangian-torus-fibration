@@ -9,11 +9,15 @@
 
 対象・結論の範囲と優先順位は [研究方針](../00_research_plan.md)、外部定理のpath・label・確認commitは [KE依存表](ke-dependencies.md) を参照する。ここには証明全文を複製せず、核心、入力の区別、有効な障害を残す。十分遅い対角選択と一つの許容された木系を使う結論であり、最適rate、任意の先指定木系への適合、全次数のmatroidal atlasは含まない。
 
+## 主要解析入力の確認範囲
+
+Capped volume下界の六型determinant、full-triple比較の固定境界面でのdensity下界、模型側SchwarzとSavinの小摂動定理、Songのfixed-gauge収束、Rochon–ZhangのSNC remainderを重点点検した。一般のcomplete volume上比較では、対数体積比の上有界性を明示し、Ricci下界から得るLaplacian型最大値原理とAM–GMで証明する。有限窓・angular coverでの実適用は、固定parameterのcompact closureとmodelの境界発散からこの上有界性を確認する。外部正本にも同じ仮定を明記した。定理ラベル・一次資料・監査の限界は [KE依存表](ke-dependencies.md#主要な外部解析入力の重点監査) にまとめる。Cheng–Yau (1982)原論文の証明の再精読、全旧証明・全先行研究の包括的確認は未了である。
+
 ## Sourceを含むsharp scalar評価から全曲面の下界へ
 
 正本は `papers/sections/paper/ke_sharp_normal.tex` と `ke_global_ambient_lower.tex`。正則global normal frameで $s=-\log|x'_g|^2$、$U=|d\log s|_{g_t}^2$ とすると、$\Delta s=0$ とrank-one Bochner計算から $\Delta\log U\ge U-1$ を得る。Source-inclusive方程式 $x'_gy'_g=th_t(p)$ に対し、$\mathfrak n_j\le s\le\kappa L$ の比較領域は $h_t(p)=0$ でもannulusと固定残余compactの積であり、sourceを除く人工境界を必要としない。
 
-補助cut $\mathfrak n_j$ は、neck/corner構成の $n_j$ とは独立の記号とする。三種類の境界を分ける。残余境界は既存full-tripleの係数1評価、外側固定shellはsmooth component収束による有限上界 $A_j$、内側 $s=\kappa L$ はsourceのactual bufferとlocalized rank-one Chern–Luによる有限上界 $C_j$ を使う。明示的な障壁
+補助cut $\mathfrak n_j$ は、neck/corner構成の $n_j$ とは独立の記号とする。三種類の境界を分ける。残余境界は既存full-tripleの係数1評価、外側固定shellは射影下界と固定座標微分からの有限上界 $A_j$、内側 $s=\kappa L$ は既証のsource-arm tensor比較による有限上界 $C_j$ を使う。Arm比較はpositive-Poisson bufferとlocalized Schwarzから独立に得られ、このscalar障壁を入力にしない。明示的な障壁
 \[
  B(s)=1+\varepsilon_j+A_j\mathfrak n_j/s+C_js/(\kappa L)
 \]
@@ -485,4 +489,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 
 ## 検証状態
 
-2026-11-21 / v3.1：主稿改訂21にP0の統合定理 `ke:global-metric-realization` と証明を保持する。今回の新証明と接続を複数担当で内部点検した。現行改訂21はLuaLaTeXで243頁に組版済み。未解決参照・引用・重複ラベル・欠字・overfull警告はなく、変更箇所の表示確認を進めている。三境界のsource-arm tensor比較と全momentの有界退出は複数担当で内部点検した。TeX研究ノートも現状の記述を直して65頁に再組版し、変更した第1・4頁を表示確認した。形式証明、全主稿と全外部入力の包括的再監査、外部査読、網羅的新規性確認、旧整数検算suiteと他二論文の再組版は未実施。
+2026-11-21 / v3.1：主稿改訂21にP0の統合定理 `ke:global-metric-realization` と証明を保持する。今回の新証明と接続を複数担当で内部点検した。現行改訂21はLuaLaTeXで243頁に組版済み。未解決参照・引用・重複ラベル・欠字・overfull警告はなく、変更箇所を含む第1・16・18・52–54・122・124–130・166–171・178–181頁の計24頁を表示確認した。三境界のsource-arm tensor比較と全momentの有界退出は複数担当で内部点検した。TeX研究ノートも現状の記述を直して65頁に再組版し、変更した第1・4頁を表示確認した。形式証明、全主稿と全外部入力の包括的再監査、外部査読、網羅的新規性確認、旧整数検算suiteと他二論文の再組版は未実施。
