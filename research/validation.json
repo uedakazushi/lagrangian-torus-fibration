@@ -79,29 +79,29 @@
     "arithmetic_command": "python3 scripts/research_check.py arithmetic",
     "latest_reported_main_build": {
       "date": "2026-11-21",
-      "revision": 24,
-      "pages": 254,
+      "revision": 25,
+      "pages": 255,
       "pdf_and_synctex": true,
       "refs_citations_checked": true,
       "overfull_box_warnings": 0,
       "missing_glyphs": false,
       "duplicate_labels": false,
-      "visual_review": "第1・17・18・81–84・148・149・163–165・167–173・179–187・190–192頁の計31頁を最終PDFから個別画像で表示確認。有限cut・anchor・core first-exit・基底構成・同一moment参照点・固定族係数の上下界・統合定理を含む。全254頁の逐頁再点検ではない。",
-      "source": "共通anchor、同一moment参照点、有限cut版と固定族係数の両側cut budgetを統合した改訂24をLuaLaTeXで組版。PDFはGit追跡しない。",
-      "source_revision": "第25稿・現行改訂24（2026-11-21）",
-      "pdf_bytes": 2523207,
-      "pdf_sha256": "a6710390760aab3abbab8fbbc058e3e1a291556e027297ed686fc170d1b35251"
+      "visual_review": "第1・10・14・15・47–49・73–75・187–192・255頁の計17頁を同じ最終PDFから個別画像で表示確認。有限cut・raw retraction・ambient端点比較・tailと全fiber分類・固定anchor portals・gallery・統合証明・Introductionと文献を含む。全255頁の逐頁再点検ではない。",
+      "source": "有限cutの一様corner評価、全端点portalとambient gallery、一次文献比較を統合した改訂25をLuaLaTeXで組版。PDFはGit追跡しない。",
+      "source_revision": "第25稿・現行改訂25（2026-11-21）",
+      "pdf_bytes": 2539713,
+      "pdf_sha256": "6e70391f01b7026127c94d6c38ba6307aceed54e1cf7813eb598c4fb96d915d3"
     },
     "this_audit": {
       "date": "2026-11-21",
       "scope": "改訂25：finite-cut closed-cornerの量化、全target端点の共通moment portalと全fiber合併、raw/actual momentとtail buffer、有限galleryのambient端点距離を独立内部点検。FBPの構成計量とFHJの孤立楕円特異点の負KE cusp閉鎖を一次資料の指定箇所で比較。全主稿・外部入力の包括的再監査ではない。",
-      "reexecuted_build": false,
+      "reexecuted_build": true,
       "reexecuted_static_checks": true,
       "reexecuted_python_suite": false,
       "six_label_finite_command": "python3 verification/verify_cubical_six_label_geometry.py",
       "six_label_finite_result": "既存の有限検算PASSを保持。改訂25では計算箇所を変更せず再実行していない。",
       "independent_internal_proof_review": [
-        "ke:slow-cut-closed-corner-gh (uniform finite-cut formulation and external input quantifiers)",
+        "ke:slow-cut-closed-corner-gh (uniform finite-cut formulation, external input quantifiers, and fixed raw retraction domain)",
         "topo:coordinate-retraction",
         "topo:six-label-gallery",
         "topo:finite-endpoint-comparison",
@@ -115,8 +115,26 @@
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
-      "visual_pages_reviewed": [],
-      "current_build_status": "Revision 25 sources updated; compilation and visual review pending. Latest completed build remains revision 24."
+      "visual_pages_reviewed": [
+        1,
+        10,
+        14,
+        15,
+        47,
+        48,
+        49,
+        73,
+        74,
+        75,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        255
+      ],
+      "current_build_status": "Revision 25 final TeX sources compiled successfully to 255 pages; 17 selected pages from the same final PDF visually inspected. No unresolved references/citations, duplicate labels, missing glyphs, or overfull boxes. Static repository checks passed."
     }
   },
   "cloud_codex": {

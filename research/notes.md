@@ -57,7 +57,7 @@ Capped volume下界の六型determinant、full-triple比較の固定境界面で
 
 正本は `papers/sections/paper/ke_global_ambient_upper.tex`。`ke:global-ambient-upper` は、保持corner内の旧経路を全曲面の経路として用い、同一momentのneck接続、source退出、各componentの固定stage費用を有限のtarget galleryでつなぐ。保持corner自体の新しい内在距離評価は要求しない。対象ごとに固定した有限定数は最後の遅い対角選択で $o(R_t)$ とする。
 
-`ke:collapsed-tree-common-moment` により、辺内点での $p_T$-fiberは同じcanonical moment上の内部木全体である。`ke:collapsed-tree-full-fiber-collapse` は一つのtorusだけでなく、その木上の全 $\pi_t$-fibersの合併を評価する。Sourceの中央帯・非中央armとcore側endpointを含めてこの評価を行い、全域上下界を `ke:global-metric-realization` へ統合する。経路がfiber又はmoment level内に留まるという主張ではない。
+`ke:collapsed-tree-common-moment` により、中央辺区間 $\kappa<u<2-\kappa$ では、$p_T$ の潰す内部木上の全fibersが同じcanonical momentを持つ。`ke:collapsed-tree-full-fiber-collapse` は一つのtorusだけでなく、その木上の全 $\pi_t$-fibersの合併を評価する。Sourceの中央帯・非中央armとcore側endpointを含めてこの評価を行い、全域上下界を `ke:global-metric-realization` へ統合する。経路がfiber又はmoment level内に留まるという主張ではない。
 
 ### 端点の選択と全fiberの分類
 
@@ -84,9 +84,9 @@ K2の全交わりの飽和、whole-fiber trim、開collarでの全葉の一致�
 
 `ke:slow-cut-closed-corner-gh` は $m\ge m_*$、$R\ge R_*$、$\log(m+1)+4\log R\le R/8$ の有限条件で
 \[
- \operatorname{dis}(P_{t,m})\le C\left\{m^{-1}+\frac{\log(m+1)+\log R}{R}\right\}
+ \operatorname{dis}(\pi_{t,J}^{(m)})\le C\left\{m^{-1}+\frac{\log(m+1)+\log R}{R}\right\}
 \]
-を内在距離・protected距離の双方に与える。全fiberの非正規化内在径は $C/m$。証明では $B=(m+1)R^4\le L^{1/8}$、$\delta=\log B/R\le1/8$、$S=R-\log m-\log R>R/2$ とし、full-triple比較を深度 $m/2$ で用いる。同じ有限下限でMoser bufferとpullbackの正値性を得る。固定 $m$ の後に $t$ を小さくする適用は許されるが、誤差消失にはさらに $m_t\to\infty$、$\log m_t=o(R_t)$ が必要である。これは固定族についての評価であり、次数一様性や最適rateを示すものではない。
+をactual像上の射影 $\pi_{t,J}^{(m)}=P_{t,m}\circ\phi_{t,m}^{-1}$ と内在距離・protected距離の双方に与える。全fiberの非正規化内在径は $C/m$。証明では $B=(m+1)R^4\le L^{1/8}$、$\delta=\log B/R\le1/8$、$S=R-\log m-\log R>R/2$ とし、full-triple比較を深度 $m/2$ で用いる。同じ有限下限でMoser bufferとpullbackの正値性を得る。Raw座標と $\mathcal C_J$ の距離は全許容cutで $C/R+C/(mR)$ 以下となり、固定retractionの定義域にも一様に入る。固定 $m$ の後に $t$ を小さくする適用は許されるが、誤差消失にはさらに $m_t\to\infty$、$\log m_t=o(R_t)$ が必要である。これは固定族についての評価であり、次数一様性や最適rateを示すものではない。
 
 ## 有限の飽和全被覆でも局所加法誤差だけでは足りない
 
@@ -257,7 +257,7 @@ Skeletonの連結性は $\Sigma=\bigcap_{T\ge0}\varphi_{-T}(K)$ というnested 
 
 ### 全接続予算の選択順序
 
-旧softmax辺の全体で $B=m_j+r_c$、$0\le r_c<1$ なので、全marked tree・source discs・portal端を含む $P_{ab,j}\Subset P^+_{ab,j}$ は $N_j$ より先に固定できる。同一moment接続定数を $C_j^{\rm neck}$ とする。`ke:component-neck-tail-depth` は $q_{\rm act}=q_{\rm raw}\circ\phi_N^{-1}\ge4\pi/N_j$ の成分側尾部に $s\le2N_j$ を与え、同じcentered flowの浅い固定compactと深いtubeへの制限を分けて、actual像も深度 $CN_j$ に入れる。深い側のfirst-exitには固定componentの $|d\log s_a|\le K$ と全normal/residual buffersを用いる。
+旧softmax辺の全体で $B=m_j+r_c$、$0\le r_c<1$ なので、全marked tree・source discs・portal端を含む $P_{ab,j}\Subset P^+_{ab,j}$ は $N_j$ より先に固定できる。同一moment接続定数を $C_j^{\rm neck}$ とする。`ke:component-neck-tail-depth` は $q_{\rm act}=q_{\rm raw}\circ\phi_N^{-1}\ge4\pi/N_j$ の成分側尾部の裸の逆像に $s\le2N_j$ を与え、同じcentered flowの浅い固定compactと深いtubeへの制限を分けて、actual像も深度 $CN_j$ に入れる。深い側のfirst-exitには固定componentの $|d\log s_a|\le K$ と全normal/residual buffersを用いる。
 
 従って、まず $H_j\le C(1+\log(N_j+1))+C_j^{\rm neck}$ が得られる。許容cutの下限に $C_j^{\rm neck}\le1+\log(N_j+1)$ を加えれば
 \[
@@ -578,4 +578,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 ## 検証状態
 
 
-2026-11-21 / v3.5：主稿改訂25では、closed-cornerの有限cut一様評価、全target端点でのportal選択と全fiber合併、有限galleryのambient端点比較を明示した。Raw/actual momentとtailの共通bufferを分離し、これらの証明と接続を複数担当で独立内部点検した。Fernández de Bobadilla–Pełkaの構成計量によるGH収束と、Fu–Hein–Jiangの孤立楕円特異点の負KE cusp閉鎖を一次資料の指定箇所と照合した。改訂25の組版・表示確認は未実行であり、直近の完了した組版は改訂24（254頁、指定31頁の表示確認）である。現行の実行状態は research/validation.json に記す。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は未実施。
+2026-11-21 / v3.5：主稿改訂25では、closed-cornerの有限cut一様評価、全target端点でのportal選択と全fiber合併、有限galleryのambient端点比較を明示した。Raw/actual momentとtailの共通bufferを分離し、これらの証明と接続を複数担当で独立内部点検した。Fernández de Bobadilla–Pełkaの構成計量によるGH収束と、Fu–Hein–Jiangの孤立楕円特異点の負KE cusp閉鎖を一次資料の指定箇所と照合した。改訂25をLuaLaTeXで255頁に組版し、第1・10・14・15・47–49・73–75・187–192・255頁の計17頁を同じ最終PDFから個別画像で表示確認した。未解決参照・文献引用、重複label、欠字、overfull boxは0。静的構成検査も成功。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は未実施。

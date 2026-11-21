@@ -29,7 +29,7 @@ python3 scripts/research_check.py tex
 
 | 原稿 | 役割 | 組版の確認範囲 |
 | --- | --- | ---: |
-| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域fibrationによるGH実現定理（改訂25） | 改訂25は組版待ち。直近は改訂24：254頁・指定31頁を表示確認 |
+| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域fibrationによるGH実現定理（改訂25） | 改訂25：255頁・指定17頁を表示確認 |
 | [五次整数接着](papers/quintic-integer-gluing.tex) | 指定K5データの整数条件・高分母支持・未解決の大域接着 | 201頁 |
 | [Meridian surgery](papers/meridian-surgery.tex) | 閉corner circuitsの局所置換の障害 | 18頁 |
 | [TeX研究ノート](papers/research-notes.tex) | 証明素材・残る条件の整理 | 現行65頁、第1・4頁を表示確認 |
@@ -74,4 +74,4 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-2026-11-21 / v3.5：主稿改訂25では、closed-cornerの有限cut一様評価、全target端点でのportal選択と全fiber合併、有限galleryのambient端点比較を明示した。Raw/actual momentとtailの共通bufferを分離し、これらの証明と接続を複数担当で独立内部点検した。Fernández de Bobadilla–Pełkaの構成計量によるGH収束と、Fu–Hein–Jiangの孤立楕円特異点の負KE cusp閉鎖を一次資料の指定箇所と照合した。改訂25の組版・表示確認は未実行であり、直近の完了した組版は改訂24（254頁、指定31頁の表示確認）である。現行の実行状態は research/validation.json に記す。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は未実施。
+2026-11-21 / v3.5：主稿改訂25では、closed-cornerの有限cut一様評価、全target端点でのportal選択と全fiber合併、有限galleryのambient端点比較を明示した。Raw/actual momentとtailの共通bufferを分離し、これらの証明と接続を複数担当で独立内部点検した。Fernández de Bobadilla–Pełkaの構成計量によるGH収束と、Fu–Hein–Jiangの孤立楕円特異点の負KE cusp閉鎖を一次資料の指定箇所と照合した。改訂25をLuaLaTeXで255頁に組版し、第1・10・14・15・47–49・73–75・187–192・255頁の計17頁を同じ最終PDFから個別画像で表示確認した。未解決参照・文献引用、重複label、欠字、overfull boxは0。静的構成検査も成功。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は未実施。
