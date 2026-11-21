@@ -29,7 +29,7 @@ python3 scripts/research_check.py tex
 
 | 原稿 | 役割 | 組版の確認範囲 |
 | --- | --- | ---: |
-| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域fibrationによるGH実現定理（改訂29） | 改訂29は267頁で組版済み・表示QA中。直近表示確認済みは改訂28 |
+| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域fibrationによるGH実現定理（改訂29） | 改訂29・267頁。指定21頁を表示確認 |
 | [五次整数接着](papers/quintic-integer-gluing.tex) | 指定K5データの整数条件・高分母支持・未解決の大域接着 | 201頁 |
 | [Meridian surgery](papers/meridian-surgery.tex) | 閉corner circuitsの局所置換の障害 | 18頁 |
 | [TeX研究ノート](papers/research-notes.tex) | 証明素材・残る条件の整理 | 現行65頁、第1・4頁を表示確認 |
@@ -86,4 +86,4 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-2026-11-21 / v3.9：主稿改訂29は、sourceのtransversality判定、一つの残余periodによるexactness、Taylor不変量とprimitiveの定数項、全飽和近傍の移送、面積を規格化した相対Kähler blow-upを本文に統合した。新focus節と接続を独立に内部点検し、Vũ Ngọc・Zungの指定一次資料を照合した。**改訂29は267頁で組版済み、表示QAは進行中。直近の表示確認済みPDFは改訂28（264頁、指定21頁）である。** 実行範囲は [検証状態](research/validation.json) を参照する。数学的点検・組版・保存は別々に記録する。整数検算suite・他論文・TeX研究ノートの再組版は今回未実行。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。
+2026-11-21 / v3.9：主稿改訂29は、sourceのtransversality判定、一つの残余periodによるexactness、Taylor不変量とprimitiveの定数項、全飽和近傍の移送、面積を規格化した相対Kähler blow-upを本文に統合した。新focus節と接続を独立に内部点検し、Vũ Ngọc・Zungの指定一次資料を照合した。**改訂29をLuaLaTeXで267頁に組版し、指定21頁の表示を確認した。未解決参照・引用、重複ラベル、欠字、overfull boxはない。** 実行範囲は [検証状態](research/validation.json) を参照する。数学的点検・組版・保存は別々に記録する。整数検算suite・他論文・TeX研究ノートの再組版は今回未実行。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。

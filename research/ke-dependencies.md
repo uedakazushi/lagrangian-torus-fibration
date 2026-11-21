@@ -233,7 +233,7 @@ Fernández de Bobadilla–Pełka, arXiv:2312.13248v4 の Theorem 6.14、Example 
 - YauのTheorems 1–2、Savinのsmall perturbation、Songのfixed-gauge収束、DMVの掲載版Theorem 1.2、Rochon–ZhangのSNCに関する指定箇所は一次資料で確認した。外部KE原稿の全証明や旧主稿全体の独立再監査、公表前の網羅的な先行研究・新規性調査、形式証明を完了したという意味ではない。
 - 解析証明の数学的点検、保存された有限有理数検算、その再実行、組版、GitHubへの反映は別の確認である。各実行状態は現行の検証資料を参照し、本書の「証明あり」を計算・組版による証明の検証と読み替えない。
 
-改訂29は267頁で組版済み、表示QAは進行中である。直近の表示確認済み主稿PDFは改訂28である。実行状態は [検証状態](validation.json) を参照する。
+改訂29はLuaLaTeXで267頁に組版し、指定21頁の表示を確認した。未解決参照・引用、重複ラベル、欠字、overfull boxはない。実行状態は [検証状態](validation.json) を参照する。
 
 ## 再開時の確認
 

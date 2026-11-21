@@ -96,18 +96,18 @@
     "arithmetic_command": "python3 scripts/research_check.py arithmetic",
     "latest_reported_main_build": {
       "date": "2026-11-21",
-      "revision": 28,
-      "pages": 264,
+      "revision": 29,
+      "pages": 267,
       "pdf_and_synctex": true,
       "refs_citations_checked": true,
       "overfull_box_warnings": 0,
       "missing_glyphs": false,
       "duplicate_labels": false,
-      "visual_review": "第1・10・11・13・37–41・43・44・101–103・234–237・240・241・259頁の計21頁を同じ最終PDFから個別画像で表示確認。新第二作用判定・反例、critical actionの有理直線性・固定形式の非直線branch、canonical winding、SNC出力・一般接着・straight-neckの共通embedded class、IntroductionとEvans文献を含む。全264頁の逐頁再点検ではない。",
-      "source": "正則bandの第二作用/exact接着判定、固定形式の非直線critical action反例、canonical frameの残余winding、一般接着とatlasの適用範囲を統合した改訂28をLuaLaTeXで組版。PDFはGit追跡しない。",
-      "source_revision": "第28稿・現行改訂28（2026-11-21）",
-      "pdf_bytes": 2606330,
-      "pdf_sha256": "f6de514f6fc6c5661ce224c6d308fd25eceb2b4bc0f2a596f7863ff3083f4602"
+      "visual_review": "第1・10–13・41–45・92–99・261・262・264頁の計21頁を個別画像で表示確認。Fleming頁範囲のみ訂正して再組版した最終PDFでは、第262頁を再表示し、他20頁の同解像度renderが訂正前の確認画像とpixel単位で同一であることをSHA-256で確認。最終PDFの第43・96・97頁も再表示。全267頁の逐頁再点検ではない。",
+      "source": "Focus transversality、一残余periodのexactness、primitive定数とTaylor不変量、全飽和近傍移送、実面積で正規化した相対blow-upとCG支持範囲を統合した改訂29。PDFはGit追跡しない。",
+      "source_revision": "第29稿・現行改訂29（2026-11-21）",
+      "pdf_bytes": 2637379,
+      "pdf_sha256": "c974f4751b3ad4571a3fb62a55ba3083bb72f6ec9c3c23c44be07e2e66987341"
     },
     "this_audit": {
       "date": "2026-11-21",
@@ -125,8 +125,30 @@
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
-      "visual_pages_reviewed": [],
-      "current_build_status": "Revision 29 compiled successfully to 267 pages. Targeted visual QA is in progress; latest fully checked build record below remains revision 28 until QA completes. No unresolved references/citations, duplicate labels, missing glyphs, or overfull boxes. Preflight and static checks passed. Arithmetic suite and other manuscripts not rerun.",
+      "visual_pages_reviewed": [
+        1,
+        10,
+        11,
+        12,
+        13,
+        41,
+        42,
+        43,
+        44,
+        45,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        261,
+        262,
+        264
+      ],
+      "current_build_status": "Revision 29 final TeX sources compiled successfully to 267 pages; 21 selected pages visually inspected. Following the bibliography-only correction, page 262 was re-rendered and viewed, and the other 20 reviewed pages were confirmed pixel-identical at the same resolution; pages 43, 96, 97 were also viewed again from the final PDF. No unresolved references/citations, duplicate labels, missing glyphs, or overfull boxes. Preflight and static repository checks passed. Arithmetic suite and other manuscripts were not rerun.",
       "source_nodal_focus_audit": {
         "status": "targeted_internal_review_completed",
         "scope": "Source quadratic and proper saturated focus neighborhood, residual primitive period, existing exact Moser application; area-normalized relative blow-up and whole nodal-neighborhood transport. No new P0 analytic hypothesis. Comprehensive proof and novelty audit remains pending."
@@ -229,6 +251,16 @@
       "url": "https://arxiv.org/pdf/2110.08643v4",
       "verified": "Theorem 1.42 (p.16), Lemma 2.10/Theorem 2.12 (pp.24–25), Lemma 2.15/Remark 2.17 (pp.25–26), Lemma 2.25 (pp.28–29)の一次PDFを照合。局所action-angle、整数affine遷移、primitiveの定数translation、局所fibred liftに用いる。全域uniquenessのTheorem 2.26はglobal Lagrangian sectionsを仮定するため、無条件の大域接着根拠には用いない。",
       "scope": "本文は既知理論の適用と具体的な相対障害の構成を区別する。反例構成の網羅的新規性確認は未実施。"
+    },
+    "focus_semiglobal_exact_primary_sources": {
+      "Vu_Ngoc": "S. Vũ Ngọc, Topology 42 (2003), 365–380, DOI 10.1016/S0040-9383(01)00026-X; https://arxiv.org/pdf/math/0208245v1. Theorem2.1 (arXiv PDF p.4), Proposition3.1/Definition3.1/Remark3.2 (pp.6–8), Lemma4.1 and section4 (pp.9–11), realization section6 (pp.14–16), Exact version section7 (p.18)を一次確認。",
+      "Zung_erratum": "https://arxiv.org/pdf/math/0110147, PDF p.4脚注を確認。同じfocus数の位相分類はhomeomorphicであり、一般のdiffeomorphic equivalenceは結論しない。",
+      "scope": "Taylor invariantと追加primitive定数は既知。本稿はblock/Mayer–Vietorisの直接証明でexact transportに必要な一periodを同定し、既存actual Moser mapへ適用する。新しい一般分類定理とはしない。"
+    },
+    "nodal_blowup_primary_sources": {
+      "Chakravarthy_Groman": "https://arxiv.org/html/2510.00994v1, Theorem1.1, Definition2.2, section2.4, Propositions3.1/3.6, Lemma3.7, section4。比較写像は所定のaffine-convex saturated patch外で恒等。Local cut/uncutには人工divisor chainの相対性を用いる。",
+      "Fleming": "Kähler packings of projective complex manifolds, European J. Math.7 (2021), 1382–1400, https://doi.org/10.1007/s40879-021-00491-8. 掲載版Lemma4.4 p.1394–1395、Lemma4.5/Proposition4.6 p.1395、Construction4.7 p.1396を確認。",
+      "scope": "容量記号を同一視せず、実面積eと球半径sqrt(e/pi)をradial potentialから本文で直接証明。固定patch→容量→全compact nodal近傍→collars/cuts→tの順に選ぶ。P0に外部の新解析仮定を追加しない。"
     }
   },
   "other_papers": {
