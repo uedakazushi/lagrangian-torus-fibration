@@ -39,13 +39,18 @@
       "ke:anchor-trimmed-neck-domain: 共通anchorで保持neckは正確に|mu|≤delta。全overlapのroundingは同じnormal faceに退化し、interval外の連結な各側は対応coreへ入る。",
       "ke:same-moment-corner-reference: N前に固定したsource-inclusive residual compact上で、全phase・source・branchを含む任意のneck点と、同じmomentの旧corner辺torus全体のambient距離をC_j^neckで制御。",
       "ke:component-flux-space: 一般位置m=d−1直線の十分高いcompact core K, S=∂Kについて、O(K,S)=H¹(S)/imH¹(K)≅H²(K,S)≅H₂(K)、dim O=binom(d−2,2)。Cohen–Suciuの既知cohomologyを相対Moserの全boundary period testへ適用。",
-      "ke:nonextendible-small-core-germ: 同じactual exact二形式を固定し、任意の非零相対flux方向を恒等写像へ収束するcollar symplectic flowで実現。指定したcore全体の近傍への延長不存在をclosed primitive差で直接証明。Fibrationの不存在ではない。"
+      "ke:nonextendible-small-core-germ: 同じactual exact二形式を固定し、任意の非零相対flux方向を恒等写像へ収束するcollar symplectic flowで実現。指定したcore全体の近傍への延長不存在をclosed primitive差で直接証明。Fibrationの不存在ではない。",
+      "snc:reeb-leaf-kernel: L_a=ker(H₁(D_a;Z)→H₁(T_a;Z))は正則葉で生成されるrank g_aのprimitive Lagrangian格子。0→⊕L_a→H₁(D;Z)→H₁(Γ;Z)→0から、固定葉の障害商の次元Σg_aを得る。成分原理はIKMの既知結果で、整数格子とSNC接続を本文で証明。",
+      "snc:fixed-holonomy: 同じ形式・residues・bounded angular remainders、固定normal connectionとcoupling chartsの下で、basic＋exact cutoffによる相対primitive接着は各成分のg_a個の正則葉periodの消滅と同値。十分薄い共通subcollarで全葉・normal moments・full saddle/crossing germsと有限endpointを保つ。任意のfibrationの不存在判定ではない。",
+      "snc:minimal-holonomy-controls, snc:saddle-support-obstruction: 全障害の消去にΣg_a個の独立なreal holonomy方向が必要十分。全full critical-leaf collars外に支持されるclosed connection変更は障害に作用しない。D上のmarked全葉を保つが変更後のactual liftには新coupling chartsを用いる。",
+      "snc:main finite endpoint continuity: component/capではr=1−μ_a/w_a、crossingではr=max(1−μ_a/w_a,1−μ_b/w_b)。actual collar座標でDへの任意の接近とgraph endpointの連続性を確認。固定ω′のrelative tubular Moserは二次以上で消えるradial primitiveから構成。"
     ],
     "not_proved": [
       "外部KE研究側のCP/PBE/TC自体の対象族での検証。本稿のP0ではこれらを仮定せず、直接のscalar下界とportal上界で必要な全域評価を代替した。",
       "最適収束速度、次数一様の定数、任意に先指定した木系・作用・critical valuesへの適合、全次数のmatroidal atlas、special Lagrangian性は本定理の結論外。",
       "独立のLagrangian action metricの長さ完備化と特異層への延長。本稿は全空間のactual ambient距離を直接扱う。",
-      "五次整数接着の一般分母剛性・三高係数の同時非負性・全支持型の大域実現分類。"
+      "五次整数接着の一般分母剛性・三高係数の同時非負性・全支持型の大域実現分類。",
+      "Unitary holonomy phasesだけを固定する問題の整数period自由を含む分類、任意のfibrationや全foliation-preserving Liouville fieldsの分類。固定chartsのbasic＋exact-cutoff判定とは区別。"
     ],
     "scope_warning": "原稿に証明があること、今回の新証明と接続を複数担当で内部点検したこと、形式証明・全主稿再監査・外部査読・組版・整数計算を区別する。包括的な全依存証明の再監査と網羅的新規性確認は未実施。",
     "research_note_strategy": "証明全文は主稿を正本とする。現行ノートには共通anchorと保持neckの領域分解、同一momentの参照torusによる値比較、有限cutでのMoserと接続、source特異商とfixed tree、既存の対数費用・scalar/portal評価の入力と障害を保持する。",
@@ -81,24 +86,24 @@
     "arithmetic_command": "python3 scripts/research_check.py arithmetic",
     "latest_reported_main_build": {
       "date": "2026-11-21",
-      "revision": 26,
-      "pages": 257,
+      "revision": 27,
+      "pages": 261,
       "pdf_and_synctex": true,
       "refs_citations_checked": true,
       "overfull_box_warnings": 0,
       "missing_glyphs": false,
       "duplicate_labels": false,
-      "visual_review": "第1・9・13・17・18・27・140–143・162–166・252・253頁の計17頁を同じ最終PDFから個別画像で表示確認。新flux命題と小さいgermの系、contact rescaling、全overlapと補間後trim、SNC閉filtration、IntroductionとCS/EM文献を含む。全257頁の逐頁再点検ではない。",
-      "source": "相対flux空間と固定形式の非延長collar germ、core接着の精密化、一次文献比較を統合した改訂26をLuaLaTeXで組版。PDFはGit追跡しない。",
-      "source_revision": "第26稿・現行改訂26（2026-11-21）",
-      "pdf_bytes": 2558418,
-      "pdf_sha256": "d1b07f0a4e4b4427b07585fe25bce40586322348f6b60b0196523cef0f1a13ac"
+      "visual_review": "第1・8–10・27・28・30・31・33–37・255・257・258頁の計16頁を同じ最終PDFから個別画像で表示確認。SNC整数leaf kernel、固定chartsのperiod判定、最小holonomy調整、支持制約、relative tubular Moser、finite endpoint連続性、IntroductionとIKM/BSV/TMZ文献を含む。全261頁の逐頁再点検ではない。",
+      "source": "SNCの固定coupling chartsに対する全leaf-period条件と最小holonomy調整、有限endpoint・固定actual形式の明確化、一次文献比較を統合した改訂27をLuaLaTeXで組版。PDFはGit追跡しない。",
+      "source_revision": "第27稿・現行改訂27（2026-11-21）",
+      "pdf_bytes": 2584816,
+      "pdf_sha256": "654807d4cbf78cd0be0868a7eb01db348f7d4012df970ddfd1d88d7fe6a80241"
     },
     "this_audit": {
       "date": "2026-11-21",
       "scope": "改訂27：SNC normal connection と固定 coupling charts の全leaf-period条件、整数primitive Lagrangian kernel、最小holonomy調整方向、full saddle collar支持の制約、有限endpointの連続性を原稿に統合。新証明を複数担当で独立内部点検。IKM/BSV/TMZ一次資料の指定箇所を確認。",
-      "reexecuted_build": false,
-      "reexecuted_static_checks": false,
+      "reexecuted_build": true,
+      "reexecuted_static_checks": true,
       "reexecuted_python_suite": false,
       "six_label_finite_command": "python3 verification/verify_cubical_six_label_geometry.py",
       "six_label_finite_result": "既存の有限検算PASSを保持。改訂27では計算箇所を変更せず再実行していない。",
@@ -111,8 +116,25 @@
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
-      "visual_pages_reviewed": [],
-      "current_build_status": "Revision 27 source checkpoint; build and visual review pending. Latest completed PDF remains revision 26 (257 pages)."
+      "visual_pages_reviewed": [
+        1,
+        8,
+        9,
+        10,
+        27,
+        28,
+        30,
+        31,
+        33,
+        34,
+        35,
+        36,
+        37,
+        255,
+        257,
+        258
+      ],
+      "current_build_status": "Revision 27 final TeX sources compiled successfully to 261 pages; 16 selected pages from the same final PDF visually inspected. No unresolved references/citations, duplicate labels, missing glyphs, or overfull boxes. Static repository checks passed."
     }
   },
   "cloud_codex": {
