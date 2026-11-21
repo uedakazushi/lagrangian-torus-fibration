@@ -27,17 +27,16 @@
       "固定compactと全collar上でKE形式・primitiveに厳密一致するsmooth Kähler正則化、正residueの有限型KE coreとその小さい飽和近傍のmarked Lagrangian filling",
       "Cubical座標部分複体への非伸長retraction、六label最短路、gallery数は五次30・六次以上60",
       "六次以上のcubical targetの厳密直径2sqrt(5)、最大対の完全記述、直径近似対の線形安定性（後者のgapのみ既存C5定理に依存）",
-      "ke:source-central-volume-anchor: source-free slabの体積c/LとshellへのO(1)接続。Gaussian upperとBishop lowerのL^-1を相殺し、中央全点径を一様有界にする。"
+      "ke:source-central-volume-anchor: source-free slabの体積c/LとshellへのO(1)接続。Gaussian upperとBishop lowerのL^-1を相殺し、中央全点径を一様有界にする。",
+      "ke:source-all-moment-exit, ke:source-inclusive-same-moment-collapse: 全共通intervalでsourceの同一canonical moment境界への退出 C sqrt(log(R+2))、固定基底の同一moment全fiber合併径 C sqrt(log(R+2))+C_P。"
     ],
     "not_proved": [
-      "保持cornerの旧softmax値と p_T∘π_t を整合させる全域の相対parameterization。各core capの旧target像が小さいことは証明したが、任意の基底parameterizationの整合性を意味しない。",
-      "Source中央帯を超える共通moment interval全体での同一moment接続と、moving残余領域への一様性",
       "中央帯に限られないmomentをまたぐ木上の複数fiberの合併の径、全曲面ambient距離でのno-shortcut、square lifts、portal connectorsとP0の一様distortion",
       "KE側のCP/PBE（および必要時のTC5）の対象族での証明、またはそれらの直接評価による代替",
       "一般次数のP0達成に必要な既存全証明と先行研究の独立点検"
     ],
     "scope_warning": "原稿に証明が書かれていることを、今回全定理を独立に再検証したことと混同しない。",
-    "research_note_strategy": "K3の四項目を主稿の証明へ統合。現在の核心は中央帯外source接続、木上の全fiber合併、保持cornerとcore capの写像整合、全曲面no-shortcut/portal比較。",
+    "research_note_strategy": "中央全点径O(1)、全moment source退出、全域基底parameter化を統合済み。全曲面距離上界とsharp scalar normal barrierによる下界を構成・監査中。",
     "documented_global_results": [
       "ke:actual-global-fibration: 全固定d>=5、既存一般性条件の族に対し、K2の保持corner葉/source近傍に相対的な全Xtのactual KE–Lagrangian fibrationを構成。",
       "ke:component-meridian-normalization: q_a=M_a+2πw_aを向き付きcanonical normal momentと整数winding・exact transportで厳密同定。",
@@ -45,7 +44,8 @@
       "Actual generator C1、centered scalar平均、whole cutoff shellのbuffer、relative invariant primitiveのnontrapping。",
       "Saddle-moving relative familyとactual自由normal bandへのlift、Liouville compact cone fillingと全collar接着。",
       "各componentのcoreと変更collarのambient径・選んだ接続費用は固定stageで有界。遅い対角選択で正規化費用は零。異なるcore全体の合併径を主張しない。",
-      "ke:core-depth-upper, ke:removed-corner-target-cap: strict psh最大原理で各coreの深度≤CN_j、各capの旧softmax像は成分頂点のsqrt(2)log(CN_j)/R_t近傍。保持cornerのprotected距離を制限したGH誤差≤E/2+2ηと、全曲面距離の上界を維持。"
+      "ke:core-depth-upper, ke:removed-corner-target-cap: strict psh最大原理で各coreの深度≤CN_j、各capの旧softmax像は成分頂点のsqrt(2)log(CN_j)/R_t近傍。保持cornerのprotected距離を制限したGH誤差≤E/2+2ηと、全曲面距離の上界を維持。",
+      "ke:global-base-parameterization, ke:collapsed-tree-common-moment, ke:neck-base-value-control: 全保持cornerの旧softmax値とのO((1+log N_j)/R)整合、各core/collarの小target像、内部木全体の共通moment、source valuesのedge midpoint近接。"
     ]
   },
   "reproduction": {
@@ -69,7 +69,7 @@
     },
     "this_audit": {
       "date": "2026-11-21",
-      "scope": "中央sourceのslab体積c/L、source-free中央帯によるanchor接続、Gaussian/Bishop比較の係数相殺、全点O(1)と中央moment帯への帰結を独立に点検。DMV掲載版Theorem 1.2とW_* normを再確認。全旧証明の再監査ではない。",
+      "scope": "中央sourceのslab体積c/L、source-free中央帯によるanchor接続、Gaussian/Bishop比較の係数相殺、全点O(1)と中央moment帯への帰結を独立に点検。DMV掲載版Theorem 1.2とW_* normを再確認。全旧証明の再監査ではない。 全momentのsource退出について可変S cover、周期因子、ρ≳1/Rのactual球局在、orientation、Bishop相殺と厳密moment補正を別担当と点検。 基底parameter化についてweighted inverse、moment cutのproper arc、inset、6panels、neck strip、core cone、内部木の共通momentをrootが点検。",
       "reexecuted_build": false,
       "reexecuted_static_checks": true,
       "reexecuted_python_suite": false,
@@ -79,7 +79,21 @@
         "ke:source-central-volume-anchor",
         "ke:source-central-diameter",
         "ke:source-central-band-collapse",
-        "ke:fixed-base-source-central-band"
+        "ke:fixed-base-source-central-band",
+        "ke:source-arm-moment-depth",
+        "ke:source-scale-shell-good-set",
+        "ke:source-scaled-arm-gaussian-tail",
+        "ke:source-arm-scale-buffer",
+        "ke:source-noncentral-shell-exit",
+        "ke:source-noncentral-same-moment-exit",
+        "ke:source-all-moment-exit",
+        "ke:source-inclusive-same-moment-collapse",
+        "ke:common-edge-moment-profile",
+        "ke:common-neck-longitude",
+        "ke:corner-cap-disk",
+        "ke:global-base-parameterization",
+        "ke:collapsed-tree-common-moment",
+        "ke:neck-base-value-control"
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,

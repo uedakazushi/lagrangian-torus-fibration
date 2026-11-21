@@ -1,0 +1,489 @@
+% !TeX root = ../../surface-lagrangian-torus-fibration.tex
+% 2026-11-21 / v1.0: 旧 corner 値に近い全域基底と共通 moment の parameter 化．
+\section{旧 softmax 値に適合する全域基底の parameter 化}
+\label{ke:global-base-compatibility-section}
+
+定理\ref{ke:actual-global-fibration}で得た actual fiber partition の quotient を
+$Q_{j,t}$ とし，まだ $B_d(T)$ との同相写像を選ばずに
+$\pi^0_{j,t}:X_t\to Q_{j,t}$ と書く．
+以下の操作はこの fiber partition を変えず，quotient の parameter 化だけを選ぶ．
+十分大きい固定 $j$ に対して
+\[
+ m=6b_j,\qquad N=N_j,\qquad \delta=4\pi/N,
+ \qquad L=-\log|t|^2,\quad R=\log L
+\]
+とする．各 component の normal face の anchor level を同じ $q_a=\delta$ に取り，
+相対葉族の補間支持を $q_a\in[\delta/2,2\delta]$ の中に取る．
+Core filling を少し外まで延ばした場合にも，基底の分割にはこの anchor level を使える．
+既存の選択順序の中で $N$ を大きくし，最後に $t$ を小さくすることを許す．
+
+三重点 $J$ の旧 corner と旧 projection を $W_{t,J}$，$P^{\rm old}_{t,J}$ とし，
+その保持部分を $A_{t,J}$ とする．その quotient の旧 target 像を
+\[
+ D_{t,J}:=P^{\rm old}_{t,J}(A_{t,J})\subset\mathcal C_J
+\]
+と書く．補題\ref{ke:removed-corner-target-cap}の誤差より大きい
+\begin{equation}\label{ke:eq:base-compatibility-small-scale}
+ \eta=\eta_{j,t}=A\frac{1+\log(N+1)}R<\frac1{100}
+\end{equation}
+を取り，$A$ は固定した次数・族・chart のみに依存する十分大きい定数とする．
+
+\subsection{全 ends に共通な normal longitude の定量的構成}
+
+Target の二 label 部分を長さ $2$ の区間として
+\[
+ E_{ij}(u)=
+ \begin{cases}
+  e_i+u e_j,&0\le u\le1,\\
+  (2-u)e_i+e_j,&1\le u\le2
+ \end{cases}
+\]
+と表す．Normal moment の向きは，component $i$ の face が $\mu=-\delta$，
+component $j$ の face が $\mu=\delta$ となるように一度だけ固定する．
+この規約では generator は triple lattice の $(1,-1,0)$ に対応する．
+
+\begin{lemma}[旧 corner 辺での共通 model profile]
+\label{ke:common-edge-moment-profile}
+同じ pair $ij$ に接する各三重点 $J=\{i,j,k\}$ について，旧 softmax 辺
+$w_k=0$ のうち $\mu\in[-\delta,\delta]$ の部分は，$\mu$ で一対一に
+parameter 化される．その旧辺 longitude を $u_{J,t}(\mu)$ と書く．
+Complete simplex model のみによる一つの strictly increasing profile
+$u_{0,t}(\mu)$ があり，全 ends に一様に
+\begin{equation}\label{ke:eq:common-edge-profile-error}
+ \sup_{|\mu|\le\delta}|u_{J,t}(\mu)-u_{0,t}(\mu)|
+ \le\frac C{mR}.
+\end{equation}
+その endpoints は
+\[
+ u_{J,t}(-\delta)=\frac{\log N+O(1)}R,
+ \qquad 2-u_{J,t}(\delta)=\frac{\log N+O(1)}R
+\]
+を満たし，model profile についても同様である．
+特に $u_{0,t}(0)=1$ である．
+\end{lemma}
+
+\begin{proof}
+$r_a=\ell_a-m$，$S=L-3m$ と置く．旧 softmax 辺は
+$r_k=\max(r_i,r_j)/L$ である．その全体を
+$v=\log(r_j/r_i)\in[-R,R]$ により
+\begin{equation}\label{ke:eq:hexagon-edge-profile}
+ r_i=\frac{S}{1+e^v+\max(1,e^v)/L},\quad
+ r_j=e^v r_i,\quad r_k=\frac{\max(r_i,r_j)}L
+\end{equation}
+と明示できる．旧辺 longitude は正確に $u=1+v/R$ である．
+$B=\ell_k=m+O(1)$ と書くと，$v=0$ の両側で
+\[
+ \frac{dB}{d\ell_i}=
+ \begin{cases}1/L,&r_i\ge r_j,\\-1/(L+1),&r_j\ge r_i\end{cases}
+\]
+が成立する．以下の微分は $v=0$ で片側微分として読み，そこで連続につなぐ．
+
+Normal generator を $V$，$\mathfrak a=|V|_h$ とすると，normal 深度
+$a=\ell_i,c=\ell_j\gg m$ 上で
+\[
+ \mathfrak a\asymp a^{-1}+c^{-1},\qquad
+ |\nabla_h^rV|_h\le C_r\mathfrak a
+\]
+である．$\partial_v$ の normal 成分の長さは上下から正定数で抑えられる．
+その residual 成分の長さは $C/m$ 以下である．実際，
+$|da/dv|\asymp\mathfrak a^{-1}$ と上の $dB/da$ から
+\[
+ \frac{|dB/dv|}B\le\frac C{\mathfrak a BL}\le\frac C m .
+\]
+Model moment を $\nu_0$，実際の全平均 moment を $\nu_J$ とする．
+Tame 下界と
+$d\nu(V')=-\kappa(V,V')$ により，向きを上のように取ると
+\begin{equation}\label{ke:eq:edge-moment-weighted-derivative}
+ c\mathfrak a\le\frac{d\nu_0}{dv}\le C\mathfrak a,
+ \qquad
+ c\mathfrak a\le\frac{d\nu_J}{dv}\le C\mathfrak a
+\end{equation}
+となる．Residual 成分の寄与は normal 成分の正の主項に対し $O(m^{-1})$ なので，
+大きい $j$ で吸収できる．$\log\mathfrak a$ の $v$ 微分も有界である．
+
+ここで加法定数を無視してはいけない．
+補題\ref{ke:component-meridian-normalization}および
+系\ref{ke:transition-normal-primitive}によって，この $\nu_J$ は全 ends で
+同じ canonical normal moment $\mu$ である．
+命題\ref{ke:relative-corner-patch}の証明で用いた full-triple comparison と
+相対座標接続の primitive 評価，および系\ref{ke:relative-corner-patch-c2}から
+\[
+ \|G^*\lambda_{\log,t}-\lambda_{0,L}\|_{C^2(h)}\le C/m.
+\]
+Model primitive は全平均で変わらないので，generator の重みを保持して評価すると
+\begin{equation}\label{ke:eq:edge-moment-weighted-error}
+ |\nu_J-\nu_0|+
+ \left|\frac d{dv}(\nu_J-\nu_0)\right|
+ \le\frac C m\,\mathfrak a .
+\end{equation}
+全三重点で同じ $L,m$ と同じ complete simplex model を使うため，$\nu_0$ は
+$k$ に依存しない．非正則な補間帯でも source primitive は $G^*\lambda$ である．
+
+Dominant-product moment 評価により，$\mu=\pm\delta$ の model levels は
+片方の normal 深度が $N$ と固定比の間，他方が $L-O(N+m)$ の領域にある．
+$N\gg n_j\gg m$ とし，その後 $L/N$ を大きく選べば，両端とその固定相対幅の
+buffer は全て上の estimates の範囲に入る．単調性により，その間の
+$\mu\in[-\delta,\delta]$ の levels も同じ normal 下界を持つ．
+
+$\nu_0(v_0)=\mu$ とする．$v_0\pm K/m$ において
+\eqref{ke:eq:edge-moment-weighted-derivative}を積分し，
+$\mathfrak a$ の比の有界性と\eqref{ke:eq:edge-moment-weighted-error}を用いる．
+$K$ を固定して十分大きくすると，$\nu_J(v_0-K/m)<\mu<\nu_J(v_0+K/m)$ となる．
+従って唯一の actual solution $v_J(\mu)$ は $|v_J-v_0|\le C/m$ を満たす．
+これを $R$ で割れば\eqref{ke:eq:common-edge-profile-error}である．
+端では小さい normal 深度が $N(1+O(m^{-1})+o_{t\to0}(1))$，大きい方が
+$L-O(N+m)$ なので，endpoint の式も従う．
+Model の $i,j$ 交換対称性により $\nu_0(0)=0$ であり，最後の主張を得る．
+\end{proof}
+
+\begin{corollary}[共通 endpoints を持つ全枝共通の profile]
+\label{ke:common-neck-longitude}
+$\kappa=\eta$ とする．前補題の profiles の endpoints を，target の
+$4\eta$-vertex neighborhoods 内だけの increasing piecewise smooth rescaling に
+よって揃えられる．その結果，
+\[
+ \sigma_t:[-\delta,\delta]\longrightarrow[\kappa,2-\kappa],\qquad
+ \widetilde u_{J,t}:[-\delta,\delta]\longrightarrow[\kappa,2-\kappa]
+\]
+という increasing homeomorphisms を取り，
+\[
+ \sigma_t(0)=1,\qquad
+ \sup_\mu|\widetilde u_{J,t}(\mu)-\sigma_t(\mu)|\le C/(mR)
+\]
+とできる．さらに $\mu\in[-\delta,-\delta/2]$ では両 profile は $C\eta$ 以下，
+$\mu\in[\delta/2,\delta]$ では $2$ との差が $C\eta$ 以下である．
+\end{corollary}
+
+\begin{proof}
+$\alpha_-=u(-\delta)$，$\alpha_+=2-u(\delta)$ と置く．
+$[0,2]$ の increasing piecewise linear homeomorphism $\psi$ を，
+\[
+ 0\mapsto0,\quad\alpha_-\mapsto\kappa,\quad
+ 4\eta\mapsto4\eta,\quad2-4\eta\mapsto2-4\eta,
+ \quad2-\alpha_+\mapsto2-\kappa,\quad2\mapsto2
+\]
+で定め，中央区間では恒等とする．$\alpha_\pm\asymp\log N/R$，
+$\eta=A(1+\log(N+1))/R$ だから，slopes と endpoints に関するこの式の
+Lipschitz constants は一様に抑えられる．
+Model と各 end にこの規則を適用し，$\sigma_t=\psi_0\circ u_{0,t}$，
+$\widetilde u_{J,t}=\psi_J\circ u_{J,t}$ とする．
+前補題の endpoint 誤差を含めて評価すれば表示された誤差が従う．
+$\mu\in[-\delta,-\delta/2]$ の独立深度は $O(N)$ なので，元の longitude は
+$O((1+\log N)/R)$ である．Rescaling の支持も同じ尺度だから最後の主張を得る．
+\end{proof}
+
+\subsection{実際の cap 境界と保持 corner の disk 構造}
+
+\begin{lemma}[Moment cut の境界は一本の proper arc である]
+\label{ke:corner-cap-disk}
+上の $N$ と $t$ の選択をさらに強くすれば，各 $J=\{i,a,c\}$ について
+core $i$ の quotient 境界と旧 corner の交わりは，$e_i$ に接する二つの旧境界辺を
+結ぶ一本の proper embedded arc である．除かれる部分はその arc と $e_i$ 側の
+二つの境界辺で囲まれた disk であり，$e_i$ を含む．
+異なる三つの core の caps は互いに素である．従って $D_{t,J}$ は閉 disk であり，
+その境界は三本の cap arcs と三本の旧境界 arcs が交互に並ぶ．
+
+さらに $D_{t,J}$ から $\mathcal C_J$ への homeomorphism $r_{t,J}$ を，
+旧 target からの変位 $C\eta$ 以下となるように取れる．
+この写像は各 vertex の $[0,4\eta]^2$ の外で恒等であり，cap arc を
+その vertex に接する二つの境界辺の長さ $\kappa$ の部分へ写す．
+旧境界 arc での longitude は前系の $\psi_J$ による rescaling と一致する．
+\end{lemma}
+
+\begin{proof}
+小さい target cap に含まれることだけでは，前半の位相的主張は従わない．
+ここでは補題\ref{ke:closed-component-link}の境界の明示式を使う．
+Core $i$ 側の source で独立深度を $a,c$ とすると，boundary の二つの normal
+faces は $q_a=\delta$，$q_c=\delta$ であり，両者は monotone smooth minimum
+$F(q_a-\delta,q_c-\delta)=0$ によって接続される．
+Joint moment map の derivative の対称部分は負定値であるため，
+$\partial_aq_a<0$，$\det Dq>0$ である．
+従って $q_a=\delta$ 上では
+\[
+ \frac{dq_c}{dc}\bigg|_{q_a=\delta}
+ =\frac{\det Dq}{\partial_aq_a}<0.
+\]
+Normal level は $a\asymp N$ の唯一の graph であり，$c$ が旧 boundary の
+$m+O(1)$ から $2N$ へ増える間に，$q_c$ は $\delta$ より十分大きい値から
+小さい値へ移る．従って二つの faces は唯一の joint-moment 近傍で接続する．
+Smooth minimum の zero set はその moment coordinates で一本の滑らかな arc であり，
+余分な component は生じない．
+
+旧 boundary が $6.2b_j$ より浅い部分では，共通 plateau 上の neck face を用いる．
+そこで同じ normal moment cut と厳密に一致するので，上の arc の続きを与える．
+旧 softmax 境界との交点の一意性は，補題\ref{ke:common-edge-moment-profile}の
+strict monotonicity による．その交点はそれぞれ $\mu=\pm\delta$ の指定された端で
+ある．Fixed compact core の深度上界により，当該 corner の交点は component $i$ の
+dominant chart に含まれる．この chart では他の boundary divisor の defining
+functions は非零 unit であり，その $N$-level faces は入ってこない．
+従って当該 chart 内での boundary は，いま列挙した二つの normal faces と一つの
+rounding で尽くされる．これが余分な boundary component を排除する理由である．
+旧 $e_i$ の source では二つの独立深度は $m+O(1)\ll N$ であり，これは
+link の内側にある．従って除かれる側は $e_i$ を含む disk である．
+三つの caps は\ref{ke:removed-corner-target-cap}の互いに素な vertex neighborhoods
+に含まれるので，残る $D_{t,J}$ は表示された六つの boundary arcs を持つ disk である．
+
+変位を制御した homeomorphism を具体的に作る．
+$e_i$ を原点とする square の二座標を用い，$U_i=[0,4\eta]^2$ とする．
+$A$ を大きく選んだので cap は $[0,\eta/2]^2$ の中にある．
+$D_{t,J}\cap U_i$ は一つの corner を上の arc で切った閉 disk である．
+その境界上で，外側の二辺は固定し，旧 coordinate-axis の二部分は
+前系の $\psi_J$ によって parameter 化する．残る cap arc を，
+$(\kappa,0)$ から原点を通り $(0,\kappa)$ へ至る二本の axis segments へ
+orientation を保って写す．これで boundary circles の homeomorphism を得る．
+
+ここで disk extension を仮定として残す必要はない．両方の curvilinear disks を
+有限個の boundary arcs に適合する閉 disk 座標で表し，boundary circle の写像を
+$e^{i\theta}\mapsto e^{i\varphi(\theta)}$ と lift する．
+$\varphi(\theta+2\pi)=\varphi(\theta)+2\pi$ で狭義単調である．
+\[
+ (r,e^{i\theta})\longmapsto
+ \left(r,e^{i[\theta+\chi(r)(\varphi(\theta)-\theta)]}\right)
+\]
+を用いれば，$\chi=0$ near $0$，$\chi=1$ near $1$ として boundary map を disk
+全体へ延長できる．各 $r$ で angular map は狭義単調だから homeomorphism である．
+ここで用いる disk 構造は上で確認した一本の proper arc による切断から得られるもの
+であり，未知の global extension property ではない．有限の piecewise smooth
+refinement を使えば regular strata 上の smoothness も保てる．
+
+この extension の source と image はともに $U_i$ 内にあるので，変位は
+$4\sqrt2\eta$ 以下である．三つの $U_i$ は互いに素で，外側の二辺を固定したため
+その外の恒等写像と貼り合わさる．これが $r_{t,J}$ である．
+\end{proof}
+
+\subsection{全域 parameter 化の構成と旧 corner 値の近似}
+
+\begin{proposition}[旧 softmax 値に近い全域基底値]
+\label{ke:global-base-parameterization}
+固定した marked tree system $T$ と map $p_T:B_d(T)\to\mathcal C_d$ を用いる．
+上の $j,N,t$ の選択の下で，labels と core vertices を保つ homeomorphism
+\[
+ h_{j,t}:Q_{j,t}\longrightarrow B_d(T)
+\]
+を取り，$\pi_{j,t}=h_{j,t}\pi^0_{j,t}$，$f_{j,t}=p_T\pi_{j,t}$ とすると，次を
+同時に満たすようにできる．
+\begin{enumerate}
+\item 全ての保持 corner について
+\begin{equation}\label{ke:eq:global-base-old-corner-error}
+ \sup_{x\in A_{t,J}}d_\square
+ \bigl(f_{j,t}(x),P^{\rm old}_{t,J}(x)\bigr)\le C\eta_{j,t}.
+\end{equation}
+\item Component $i$ の core および相対葉族を変更した collar の像は
+\[
+ f_{j,t}(K_{i,j,t}\cup\text{変更 collar})
+ \subset B_{d_\square}(e_i,C\eta_{j,t})
+\]
+に含まれる．
+\item 三重点に向かう各 neck leaf arm の外側部分は，その end の旧 softmax
+辺と共通の normal moment を用いて parameter 化される．その longitudinal
+coordinate と，全枝共通の $\sigma_t(\mu)$ の差は $C\eta_{j,t}$ 以下である．
+\end{enumerate}
+Fiber partition，actual Lagrangian 性，連結性，source・branch・core の fiber 型は
+変わらない．Parameter 化を有限の piecewise smooth strata に適合させられる．
+\end{proposition}
+
+\begin{proof}
+\emph{Target triangle の明示的な inset と panels．}
+各 $J$ で $\rho_J(w)=w/\sum_{a\in J}w_a$ とし，$0<\varepsilon=\eta<1/100$ に対して
+\[
+ H_s(w)=\rho_J^{-1}\bigl((1-3s\varepsilon)\rho_J(w)
+                   +s\varepsilon(1,1,1)\bigr),\qquad0\le s\le1
+\]
+と置く．$H_1$ は $\mathcal C_J$ をその内部の閉 disk へ写す embedding であり，
+$\sup_wd_J(H_s(w),w)\le C\varepsilon$ である．
+この評価は表示された path の piecewise smooth length を積分すれば従う．
+
+外周と inset disk の間の closed annulus は，正確に
+$H_s(w)$，$w\in\partial\mathcal C_J$，$0\le s\le1$ で parameter 化される．
+実際，simplex 座標 $\lambda$ では
+$s=\min_a\lambda_a/\varepsilon$ であり，元の boundary point は
+$(\lambda-s\varepsilon\mathbf1)/(1-3s\varepsilon)$ で回復できる．
+従って annulus の存在やその trivialization を追加仮定していない．
+
+Outer boundary を六つの arcs に分ける．Vertex $e_i$ の arc $I_i$ は，隣接する
+二つの辺上で $e_i$ からの長さが $\kappa$ 以下の部分の和とする．
+残る三つの edge arcs は $I_{ij}=E_{ij}([\kappa,2-\kappa])$ である．
+これらの arcs と $s\in[0,1]$ の積の像を target panels とする．
+Vertex panel $H([0,1]\times I_i)$ は
+$B_{d_J}(e_i,C(\kappa+\varepsilon))$ に含まれる．
+
+\emph{保持 corner 全体を中央 disk として使う．}
+$Q_{j,t}$ 内の $A_{t,J}$ の quotient は $D_{t,J}$ と同一視できる．
+この\emph{全体}に対して
+\[
+ g_{J,t}=H_1\circ r_{t,J}
+\]
+を用いる．補題\ref{ke:corner-cap-disk}により，これは inset disk への
+homeomorphism であり，旧 $P^{\rm old}$ との差は $C\eta$ 以下である．
+保持 corner をさらに狭い $B=6.5b_j$ の帯などへ切り直してはいないので，
+\eqref{ke:eq:global-base-old-corner-error}は全保持点で成立する．
+
+\emph{Actual quotient の残りの pieces．}
+一つの triangle cell $\tau_J$ から $D_{t,J}$ の内部を除いた領域は，三つの core
+sectors と三つの neck leaf-arm rectangles に分かれる．
+Core sector は core cone の link graph における該当 edge の cone である．
+その境界 link edge は，二つの branch vertices からの neck tails と，中央の cap arc
+からなる．Leaf-arm rectangle は，pair $ij$ の marked tree の葉 $k$ に向かう arm
+を，branch vertex と旧 softmax 辺の間で切ったものに対応する．
+
+この分割を actual quotient 内で行える理由を確認する．
+旧辺 $w_k=0$ は $B=m+O(1)$ の graph で，normal 深度は
+$\mu\in[-\delta,\delta]$ に一様に $cN$ 以上である．
+$N\gg n_j$ なので，この graph の全 fibers は K2 の共通 plateau overlap 内にある．
+そこで normal moment は同じ $\mu$ で，reduced 葉は順序を保った同じ全 tori である．
+Marked Reeb continuation により，branch vertex からこの boundary graph までの
+arm は $[-\delta,\delta]\times[0,1]$ と parameter 化できる．
+最後の座標 $r$ は branch で $0$，旧 corner boundary で $1$ となる．
+各 $\mu$ で端の長さを再 parameter 化するだけであり，foliation の変更ではない．
+Source がこの rectangle 内にあっても quotient は同じ product であり，対応する
+一つの base value の fiber が pinched torus になるだけである．
+
+\emph{Leaf-arm rectangles の具体的な写像．}
+該当する rectangle に対して
+\begin{equation}\label{ke:eq:leaf-arm-base-interpolation}
+ U(\mu,r)=(1-r)\sigma_t(\mu)+r\widetilde u_{J,t}(\mu),\qquad
+ F_J(\mu,r)=H_r(E_{ij}(U(\mu,r)))
+\end{equation}
+と定める．各 $r$ で $U$ は $[-\delta,\delta]$ から
+$[\kappa,2-\kappa]$ への increasing homeomorphism である．
+従ってこれは rectangle から該当 edge panel への homeomorphism である．
+$r=1$ では $g_{J,t}$ と一致し，$r=0$ では $E_{ij}(\sigma_t(\mu))$ となる．
+$\mu=\pm\delta$ では $U$ がそれぞれ $\kappa,2-\kappa$ に等しいため，
+core sector との二本の共通 sides も既に指定される．
+全 ends の longitude の共通選択と endpoint の一致は前系が保証する．
+
+\emph{Core sectors の extension．}
+Component $i$ の core cone の radial coordinate を $r_i\in[0,1]$ とする．
+各 branch ray 上では，$i$ から出発する target edge の longitude を
+$\kappa r_i$ と指定する．Core sector の残りの境界では，二つの neck tails に
+\eqref{ke:eq:leaf-arm-base-interpolation}の $\mu=\pm\delta$ での値を，cap arc に
+$g_{J,t}$ の値を用いる．これらは core sector の boundary circle を vertex panel
+の boundary circle へ orientation を保って一対一に写す．
+補題\ref{ke:corner-cap-disk}の証明に記した angular lift の式を用いて，この境界写像
+を disk 全体へ延長する．従って core sector 全体の像は該当 vertex panel に入り，
+その全点は $e_i$ から $C\eta$ 以下である．
+
+\emph{内部木と bigons．}
+Pair $ij$ に属する全 branch edges と bigons の和集合は
+\[
+ \bigl(T_{ij}^{\rm int}\times[0,1]\bigr)/
+ \bigl(T_{ij}^{\rm int}\times\{0\}\sim v_i,
+       T_{ij}^{\rm int}\times\{1\}\sim v_j\bigr)
+\]
+である．Actual quotient にも，中央の $\mu\in[-\delta,\delta]$ の product と，
+両端の core cones による同じ表示がある．
+中央の全内部木で longitude を共通の $\sigma_t(\mu)$ とし，両 core cones では
+それぞれ $\kappa r_i$，$2-\kappa r_j$ とする．内部木の座標は変えない．
+$p_T$ の定義で使う simplex-edge coordinate は
+\[
+ \Theta(u)=\bigl(\rho_d(E_{ij}(u))\bigr)_j
+ =\begin{cases}u/(1+u),&u\le1,\\1/(3-u),&u\ge1\end{cases}
+\]
+だから，target の上の表示の第二因子には $\Theta(u)$ を用いる．
+これにより全 bigons と branch edges の homeomorphism を得る．
+その branch 上の値は，隣接する全 triangle panels で指定した値と同じである．
+
+\emph{全域への貼合せと $p_T$ との関係．}
+各 triangle では，上で構成した写像は全 $\mathcal C_J$ への homeomorphism である．
+その後に $(p_T|_{\tau_J})^{-1}$ を合成し，bigons と branch edges では直前の
+product-coordinate map を用いる．全共通 boundaries で一致し，core vertices を
+正しく同定しているので，これらは $h_{j,t}:Q_{j,t}\to B_d(T)$ に貼り合わさる．
+各 labelled cell の内部で一対一かつ全射であり，boundary の identifications も同じ
+だから，この写像は一対一の連続全射である．Compact から Hausdorff への写像なので
+homeomorphism である．これで $f_{j,t}=p_Th_{j,t}\pi^0_{j,t}$ が，構成中の値と
+厳密に同じであることが確認できた．
+
+Regular strata の座標には有限の piecewise smooth refinement を用いる．
+これは quotient の座標だけの変更であり，全 actual fibers とその isotropic strata
+を保存する．必要なら angular extension の cutoff を中心近傍で零として，
+各 open two-dimensional piece 上で smooth な座標を選べる．
+
+最後に quantitative assertions を確認する．保持 corner の誤差は
+$r_{t,J}$ と $H_1$ の変位を加えれば $C\eta$ 以下である．
+Core の triangle sectors は vertex panels に，bigon sectors と branch rays は
+$e_i$ から長さ $\kappa$ 以下の edge parts に入る．
+変更 collar の外側部分では，normal moment が $\delta$ と固定比の間にあるため，
+前系の最後の評価から $\sigma_t$ と $\widetilde u_{J,t}$ は該当する endpoint の
+$C\eta$ 近傍にある．\eqref{ke:eq:leaf-arm-base-interpolation}もその近傍を保ち，
+$H_r$ による追加変位は $C\eta$ 以下である．Corner の変更 collar は既存の target
+cap estimate と保持 corner の比較で扱える．これで全ての主張を得る．
+\end{proof}
+
+\subsection{内部木の共通 moment と neck 全体の値}
+
+\begin{proposition}[潰される内部木上では共通 normal moment を保てる]
+\label{ke:collapsed-tree-common-moment}
+命題\ref{ke:global-base-parameterization}の parameter 化を用いる．
+$u\in(\kappa,2-\kappa)$ とし，$\mu=\sigma_t^{-1}(u)$ と置く．
+このとき
+\[
+ f_{j,t}^{-1}(E_{ij}(u))
+\]
+は，pair $ij$ の neck において，同じ normal moment $\mu$ 上で
+$T_{ij}^{\rm int}$ 全体に属する構成後の neck fibers を合併した集合に等しい．
+相対補間の支持外では，これらは旧 K2 fibers そのものである．
+Core に近い $u\in[0,\kappa]$ 又は $u\in[2-\kappa,2]$ の部分は，それぞれ
+component $i$ 又は $j$ の固定 compact core と変更 collar に含まれる．
+前者の厳密な同一 moment の主張は，corner 値の $O(\eta)$ 近似とは別の性質である．
+\end{proposition}
+
+\begin{proof}
+$p_T$ の $E_{ij}(u)$ 上の逆像は，定義通り一つの $T_{ij}^{\rm int}$ である．
+Triangle の内部は三 label の support を持つ target 内部へ homeomorphically 写るので，
+そこから追加の fiber は来ない．中央の book の全内部木では longitude を
+$\sigma_t(\mu)$ と共通に選んだため，その逆像は同じ $\mu$ の slice に厳密に一致する．
+両端の longitude ranges には各 component の core cones を対応させたので，残りの
+主張も従う．変更 collar の境界を別の平行 level に取った場合は，例外をその
+component の固定 compact collar に拡大すれば同じ結論を使える．
+\end{proof}
+
+\begin{corollary}[旧 neck と source critical values の target control]
+\label{ke:neck-base-value-control}
+保持された pair $ij$ の neck 上で，normal moment を $\mu$ とすると，
+\[
+ d_\square\bigl(f_{j,t}(x),E_{ij}(\sigma_t(\mu))\bigr)\le C\eta_{j,t}.
+\]
+Core collars の外にある内部木の部分では左辺は零である．
+特に全 source critical values の像は
+$B_{d_\square}(e_i+e_j,C\eta_{j,t})$ に含まれる．
+\end{corollary}
+
+\begin{proof}
+内部木では前命題を使う．旧 corner の外の leaf-arm rectangle では
+\eqref{ke:eq:leaf-arm-base-interpolation}と
+$|\widetilde u_{J,t}-\sigma_t|\le C/(mR)$ を使えばよい．
+残る old neck--corner overlap では $B\in[m+O(1),7b_j]$ である．
+固定 $\mu$ の source level を $a=a(B)$ と書くと，weighted normal estimates より
+\[
+ |\partial_B\nu|\le C\mathfrak a/B,
+ \qquad -\partial_a\nu\ge c\mathfrak a^2.
+\]
+従って $|da/d\log B|\le C/\mathfrak a$ であり，
+\[
+ \left|\frac{d}{d\log B}\log\frac{r_j}{r_i}\right|\le C.
+\]
+この $B$-interval の ratio は有界なので，旧 boundary $w_k=0$ と同じ $\mu$ で比較
+した longitude の差は $C/R$ 以下である．また当該 overlap の第三座標は
+\[
+ 0\le w_k=1+R^{-1}\log(r_k/r_{\max})
+ \le C(1+\log b_j)/R\le C\eta_{j,t}.
+\]
+第三座標を零にする線分と，辺に沿う longitude の差を合わせ，保持 corner 上の
+\eqref{ke:eq:global-base-old-corner-error}を用いれば求める評価を得る．
+Source の critical moment は $\mu=0$ であり，$\sigma_t(0)=1$，
+$E_{ij}(1)=e_i+e_j$ だから最後の主張が従う．
+\end{proof}
+
+\paragraph{厳密一致の障害と，得られた結論の範囲．}
+旧 softmax 辺 $w_k=0$ の torus は actual quotient では triangle の regular
+interior にあり，対応する cellular boundary は branch locus である．
+$p_T$ は triangle interior を target triangle interior へ写すので，保持 corner
+全体で $p_T\pi=P^{\rm old}$ とすることは一般に不可能である．
+上の inset はこの障害を $O(\eta)$ の誤差で解消する．
+
+既存の slow diagonal によって $\log N_{j(t)}=o(R_t)$ とすれば
+$\eta_{j(t),t}\to0$ である．従って保持 corner の旧 target 値，component の小さい
+target caps，および潰される内部木の共通 moment は，全域の一つの
+$f_t=p_T\pi_t$ に対して同時に実現される．
+本節は target の parameter 化を構成したものであり，normal levels 又はその全木の
+actual ambient 径，全曲面経路に対する no-shortcut 下界を証明したものではない．

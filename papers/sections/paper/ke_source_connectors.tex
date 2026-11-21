@@ -10,8 +10,8 @@ Source では短い円作用が固定点を持つため，その評価だけか�
 本節ではまず中央 rescaling 領域の体積を両側から評価し，
 実際の計量に関する短い退出経路を構成する．さらに canonical potential による
 actual 球の局在と Gaussian tail を組み合わせ，固定点を含む中央領域の全点径を
- $O(1)$ に抑える．中央帯の外も含む同一 moment 上の接続は，
-最後に独立した条件として明示する．
+$O(1)$ に抑える．末尾で同一 moment の退出条件を定式化し，
+節\ref{ke:source-all-moment-connectors-section}で共通 interval 全体に対して証明する．
 
 \subsection{中央の canonical volume potential}
 
@@ -486,16 +486,17 @@ Ricci 下界による全曲面の球の体積比較だけでは，その球と�
 \input{sections/paper/ke_source_global_distance.tex}
 \input{sections/paper/ke_source_diameter.tex}
 
-\subsection{同一 moment の全点接続に残る条件}
+\subsection{同一 moment の退出条件と全 interval 上の接続}
 
 定理\ref{ke:source-central-diameter}と
 系\ref{ke:fixed-base-source-central-band}により，中央領域と
 $|\mu_t|\le A/L_t$ の固定基底中央帯の全点径は制御できた．
 この結論は短い退出だけから得たものではなく，potential による球の局在，
 Gaussian tail と Ricci 下界の体積比較を併用する．
-中央帯より広い moment interval の全体に一様な接続は，以下の別入力である．
+中央帯より広い moment interval の全体に一様な接続は，
+以下の経路条件として表し，定理\ref{ke:source-all-moment-exit}で証明する．
 
-残る入力は，tensor 二側比較全体より弱い経路条件として述べられる．
+この条件は，tensor 二側比較全体より弱い経路条件である．
 連結な $P$ に対する定理\ref{ke:projected-source-neck}の円平均後の
 同一 moment 集合を $E_t(a)$ とし，
 各 source の互いに素な固定 residual discs を $\Delta_j$ とする．
@@ -517,10 +518,10 @@ Normal Moser map の像へ移す際は，両端に既存の短い trajectories �
 従ってこの条件は閉じた pinched torus，saddle fibres，および同じ moment 上の
 複数 fibres の合併にも十分である．
 
-本節は\eqref{ke:eq:source-moment-exit-input}を証明していない．
-中央帯の外も含め，所定の residual 境界と同一 moment の両条件を
-一様に保つ段階が残る．非常に遅い residual exhaustion を用いる場合も，
-既存 source-free connector の定数とこの退出費用を別々に対角選択する必要がある．
+定理\ref{ke:source-all-moment-exit}は，中央帯外も含めて
+$e_t=C\sqrt{\log(R_t+2)}=o(R_t)$ を与える．
+非常に遅い residual exhaustion では，既存 source-free connector の段階依存の定数も
+正規化後に零となるように対角選択する．
 また $|x|,|y|\le r_t^2$ という source-inclusive neck 全体は二本の長い normal arms を含むため，
 その全体の直径を中央 rescaled core 又は同一 moment 集合の直径と同一視しない．
 

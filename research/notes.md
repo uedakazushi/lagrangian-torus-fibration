@@ -30,7 +30,7 @@ Source と通常 pair の共通化を主稿 `ke:projected-source-normal-form`, `
 
 固定残余compactの各座標では、`neck:prop:volume-envelope` から法線方向の積分評価を得た（主稿 `ke:neck-integrated-normal-energy`）。$s=-\log(|u|^2/r^2)$、$d(s)=\min(s,M_t-s)$ とし、周期1生成場の軌道平均エネルギーを $E_t$ とする。$\Omega=du/u\wedge dz$ に対する対数体積の角度平均 $\bar F_t$ は $-2\log d(s)+O(1)$、かつ $E_t=8\pi^2\partial_s^2\bar F_t$。よって $\int_m^{M_t-m}E_t(s,z)\,ds=O(m^{-1})$ が残余点 $z$ に一様に成立する。例外深度の測度は $E_t>A/m^2$ に対し $O(m/A)$ であり、例外集合の位置は $z$ に依存する。
 
-同じ $z$ に沿う動径経路には一つの角度を選んで長さ $\int_a^b ds/d(s)+O(1)$ を得る（`ke:neck-axial-upper`）。両端円が短ければ任意の端点を結べる。固定 source-free 基底で同じ normal moment を持つ点については、残余点を変える接続も原稿 `ke:fixed-base-moment-connectors` で解決した。深度は、$|\mu|=O(M_t^{-1})$ なら両側とも $M_t$ と比較可能、それ以外は符号に応じた片側深度が $|\mu|^{-1}$ と比較可能である。一定深度の水平持ち上げ・動径弧・短い円弧を合わせると、level全体の actual ambient 直径は $O(1)$、Moser像でも同じ、正規化後は $O(R_t^{-1})$ となる。葉内経路やMoserの $C^1$ 評価は使わない。Sourceを含む中央levelは以下の全点径で扱える。中央帯外のsource level、moving residual collar、異なるmomentをまたぐ木全体と全曲面の下界は残る。
+同じ $z$ に沿う動径経路には一つの角度を選んで長さ $\int_a^b ds/d(s)+O(1)$ を得る（`ke:neck-axial-upper`）。両端円が短ければ任意の端点を結べる。固定 source-free 基底で同じ normal moment を持つ点については、残余点を変える接続も原稿 `ke:fixed-base-moment-connectors` で解決した。深度は、$|\mu|=O(M_t^{-1})$ なら両側とも $M_t$ と比較可能、それ以外は符号に応じた片側深度が $|\mu|^{-1}$ と比較可能である。一定深度の水平持ち上げ・動径弧・短い円弧を合わせると、level全体の actual ambient 直径は $O(1)$、Moser像でも同じ、正規化後は $O(R_t^{-1})$ となる。葉内経路やMoserの $C^1$ 評価は使わない。Sourceを含む中央levelは以下の全点径で扱える。Sourceを含む全intervalへの拡張は以下のscaleごとの退出評価で得た。Moving residual collarと全域基底値の対応、および全曲面の下界は別に扱う。
 
 Moser 流では軌道全体の最大速度を軌道平均エネルギーの平方根で置き換えられる（`ke:neck-averaged-speed`）。外側の深部領域の実計量での境界距離 $\delta_t$（上限1）が $m_t\delta_t^2\to\infty$ を満たせば、局所 Chern–Lu と体積上界から共通の source・像を得る（`ke:neck-shrinking-buffer`）。この縮小条件は残余 collar を動かす場合にも候補となる。
 
@@ -58,7 +58,7 @@ Reduced graphに合わせて残余foliationをmomentに滑らかに依存させ�
 
 固定連結source-free compact基底では `ke:fixed-base-central-band` により、固定 $A>0$、$m_t\to\infty$、$m_t=o(M_t)$ の下、$|\mu|\le A/M_t$ のcentral band全体がactual径 $O_{P,A}(1)$ を持つ。異なるmomentも含み、Moser像には $O(m_t^{-1})$ の端点費用だけを加える。両normal深度 $\ge\kappa_A M_t$ をmomentの片側下界から導き、水平・動径・円弧を組み合わせる。
 
-Source側の `ke:source-central-band-reduction` は、固定residual disc、人工境界からの余裕、normal最小深度の下で、$|\mu|\le A/L$ の全点を固定rescaled coreへ $O(1)$ で接続する。この帰着と下記のGaussian体積比較により、中央帯の全点径は $O(1)$ となる。一般の同一moment集合については、指定した残余境界への退出条件 `ke:eq:source-moment-exit-input` が十分であるが、これは未証明。Central inradius、平均距離、全source fiberの径、長いnormal armsを含むneck全体の径を区別する。
+Source側の `ke:source-central-band-reduction` は、固定residual disc、人工境界からの余裕、normal最小深度の下で、$|\mu|\le A/L$ の全点を固定rescaled coreへ $O(1)$ で接続する。この帰着と下記のGaussian体積比較により、中央帯の全点径は $O(1)$ となる。一般の同一moment集合についても、`ke:source-all-moment-exit` が指定した残余境界への退出条件 `ke:eq:source-moment-exit-input` を証明する。Central inradius、平均距離、全source fiberの径、長いnormal armsを含むneck全体の径を区別する。
 
 `ke:source-potential-modulus` はGuedj–Guenancia–Zeriahi（参考文献キー `GGZDiameter`、Proposition 1.4）の局所距離評価を用いる十分条件を記す。Potential $u_t$ に一様な連続度 $m$ があり $\int_0^{r_0}\sqrt{m(r)}\,dr/r<\infty$ なら、固定coreのambient径は $O(1)$。このsquare-root-Dini modulusや一様Hölder評価自体はまだ証明していない。現行の $O(1)$ 径定理は下記のslab/Gaussian比較により無条件で得ており、このmodulusを必要としない。有界potentialから自動的に導いたり、同論文の大域Kähler class仮定を局所族へ無条件に適用したりしない。
 
@@ -74,7 +74,25 @@ Source側の `ke:source-central-band-reduction` は、固定residual disc、人�
 4. `ke:source-central-volume-anchor`：固定source-free residual annulusと $L/4\le s_x\le L/3$ のslabを取る。Density $L^{-2}$、logarithmic normal幅 $\asymp L$、一周期の角度から体積は $cL^{-1}$。Source-free中央帯の既存接続によりshellへの距離は $O(1)$ であり、sourceの全点径を入力にしない。
 5. `ke:source-central-diameter`：距離 $D$ の中央点の小球は広い中央帯に入り、体積上界は $CL^{-1}e^{-a(D-\delta)_+^2}$。前項のslabと全曲面のRicci下界によるBishop–Gromov比較から、同じ球の体積下界 $cL^{-1}e^{-C(D+1)}$。係数 $L^{-1}$ が相殺し、$D^2\le C(D+1)$、全点で $D=O(1)$。
 
-固定基底の残りはsource-free中央帯の $O(1)$ 接続でつなぐ。Canonical primitiveのbase-only変更はnormal momentを変えず、actual Moser像には両端の短いtrajectoryだけを加える。経路はfiber又はmoment level内に留まらなくてよく、intrinsic fiber径の主張ではない。中央帯外の一般moment接続、木上の異なるmomentの合併、全曲面のno-shortcutは残る。Gaussian tailだけ、短円の長さだけ、又はMoser像のorbit直径だけで全点評価を結論しない。
+固定基底の残りはsource-free中央帯の $O(1)$ 接続でつなぐ。Canonical primitiveのbase-only変更はnormal momentを変えず、actual Moser像には両端の短いtrajectoryだけを加える。経路はfiber又はmoment level内に留まらなくてよく、intrinsic fiber径の主張ではない。全intervalの同一moment接続は次の結果で与える。木上のfiberとのtarget対応と全曲面のno-shortcutは別に扱う。Gaussian tailだけ、短円の長さだけ、又はMoser像のorbit直径だけで全点評価を結論しない。
+
+## 全moment intervalのsource退出
+
+正本は `ke_source_all_moment_connectors.tex` の `ke:source-all-moment-exit` と `ke:source-inclusive-same-moment-collapse`。中央帯の外も含めて、同じcanonical momentを持つ指定残余境界への退出費用は $C\sqrt{\log(R_t+2)}=o(R_t)$。経路自体はlevelに留まらなくてよい。固定stageの同一moment集合全体の径はこの費用とsource-free基底の接続定数 $C_P$ の和で抑えられる。
+
+非中央の正しいarmではnormal平均potentialの凸性と固定比の割線から $|\mu|\asymp s^{-1}$ を得る。$S=s(p)$ を尺度とする $x=e^{Sw}$ の固定coverで $F+2\log S$ は一様有界、volumeはEuclidean体積と比較可能。約 $S$ 周期を除したGaussian tailの係数は $S^{-1}$ で、source-free slab $S\le s\le2S$ の体積も同じ尺度になる。正のpotentialの対数勾配から半径 $\rho_p=c/(1+u(p))\gtrsim R^{-1}$ のactual球で $F$ の変動を固定幅以下に抑え、小さい深度を $S$ と比較する。Orientationの切替には両深度 $\ge L/2$ が必要なので、この球内で正しいarmが保たれる。
+
+Bishop下界は $cS^{-1}\rho_p^4e^{-C(D+1)}$、Gaussian上界は $CS^{-1}e^{-a(D-\rho_p)_+^2}$。尺度を相殺して $D^2\le C(D+1)+C\log(R+2)$ を得る。Shell上で元のmomentを持つ円の深度は元の深度と固定比内にあり、最後の動径補正は $O(1)$。Projected source座標のbase-only frame変更はmoment原点を変えず、actual Moser像には両端の短いtrajectoryだけを加える。中央momentでは前節の $O(1)$ を使う。可変scaleの定数、source軸、全actual球、出口の厳密なmoment一致を独立に点検済みであり、形式証明ではない。
+
+## 旧corner値と全域基底のparameter化
+
+正本は `ke_global_base_compatibility.tex`。`ke:common-edge-moment-profile` は全triple endsのcanonical momentを共通simplex profileと比較する。Moment誤差はnormal生成場の長さ $\mathfrak a$ を含む $O(\mathfrak a/m)$、normal longitude微分は $\asymp\mathfrak a$ なので、逆写像で重みが相殺し辺座標誤差 $O(1/(mR))$ となる。Momentの加法定数は既存primitive periodの厳密同定で固定する。
+
+`ke:corner-cap-disk` は小さいtarget像だけからdisk構造を推論しない。閉linkのnormal facesとroundingを列挙し、joint momentの単調性で各cap境界が一本のproper arcであることを示す。この三capを取り除いたdiskを、各vertexの $O(\eta)$ 近傍内の境界延長でuncapする。さらにsimplex座標で一様にinsetし、残るannulusを3vertex panelsと3edge stripsへ分ける。Stripでは全枝共通profileと各end profileの単調補間を用い、core sectorでは境界homeomorphismをdiskへ延長する。
+
+結果は `ke:global-base-parameterization` の全保持cornerにおける旧softmaxとの誤差 $C\eta$、各component core/変更collar像の頂点への $C\eta$ 近接である。$\eta=A(1+\log(N_j+1))/R_t$。`ke:collapsed-tree-common-moment` はcore近傍以外の $p_T$-fiberが厳密に同一moment上の内部木全体となることを別に保証する。`ke:neck-base-value-control` は全保持neckで辺値との $C\eta$ 近接、source critical valuesでは $e_i+e_j$ への近接を与える。
+
+旧softmaxの閉辺にはregular torus fibersがある一方、全域基底のcellular辺はbranch locusである。従って全保持cornerでの厳密な値の一致は一般に不可能であり、insetによる一様に小さい誤差が適切である。位相同定だけからこの値の制御を結論しない。
 
 ## Component coreの固定段階移送と相対条件
 
@@ -126,7 +144,7 @@ Actual symplectic circleのcentered kernelについて
 
 外向きcollarのLiouville葉族は一般には旧neck葉族と異なるため、前節の相対補間を $q_a=\delta_j\ne0$ の小帯へ適用する。全corner葉とsource近傍を保ち、saddleは動かせる。全fiber trim後のclosed piecesでlocal fiber relationsの有限和は既に推移的なので、閉同値関係となりHausdorff基底を得る。基底は同じ $B_d(T)$。
 
-各componentのcore・変更collarは固定の少し広い連結compact内にあり、そこを通る選択した接続路とambient径は有限な $C_j$ で抑えられる。$R_t\ge j(1+C_j+\log(N_j+1))$ の対角選択で正規化費用を消す。**各componentごとの評価**であり、異なるcores全部の合併径や任意Liouville軌道の全長、fiber内在径は結論しない。次は中央帯外source、木上のfiber合併、全曲面no-shortcut/portalを扱う。
+各componentのcore・変更collarは固定の少し広い連結compact内にあり、そこを通る選択した接続路とambient径は有限な $C_j$ で抑えられる。$R_t\ge j(1+C_j+\log(N_j+1))$ の対角選択で正規化費用を消す。**各componentごとの評価**であり、異なるcores全部の合併径や任意Liouville軌道の全長、fiber内在径は結論しない。同一moment source退出は得た。次は基底parameter化と木上のfiber合併、全曲面no-shortcut/portalを統合する。
 
 ### 切り取った cap と旧 softmax 値
 
@@ -255,7 +273,7 @@ KE研究の `papers/cubical-gh-limit.tex` では $R_t=\log(-\log|t|^2)$、$\math
 
 主稿 `base_topology.tex` の `topo:ke-map-compatibility` に、$\operatorname{dis}(\Phi_t)\le a_t$ と $\sup_xd_\square(\Phi_t(x),p_T\pi_t(x))\le b_t$ から $\operatorname{dis}(p_T\pi_t)\le a_t+2b_t$ を得る比較命題と証明を置いた。Ambient fiber diametersは同じ量以下、GH距離はその半分以下である。一般的新規性は主張しない。この初等比較の証明の点検と、actual $a_t,b_t\to0$ が未証明であることを区別する。
 
-**具体的な次の課題：** `ke:actual-global-fibration` を入力として、中央帯外のsource同一moment接続と、core近傍へ切り取ったtarget capの扱いを全曲面no-shortcut/portal比較へつなぐ。必要なのは全特異領域を含む一様評価と大域no-shortcutであり、regular fibersの点ごとの収縮では不足する。Action-affine structureだけからcanonicalなRiemannian基底計量は決まらない。
+**具体的な次の課題：** `ke:actual-global-fibration` を入力として、証明した全interval source同一moment接続と、core近傍のtarget cap・基底parameter化を全曲面no-shortcut/portal比較へつなぐ。必要なのは全特異領域を含む一様評価と大域no-shortcutであり、regular fibersの点ごとの収縮では不足する。Action-affine structureだけからcanonicalなRiemannian基底計量は決まらない。
 
 
 ## 局所fibrationの証明と解析入力
@@ -362,7 +380,7 @@ d^c(AF-F)(\partial_{\theta_1})
 
 特にU=B×T²、Bは可縮なcorridor、N=N_-⊔N_+は両端のfull torus collarsとする。RestrictionはR²→R²⊕R²の対角写像なので、両端の二つのtorus period vectorsの一致が条件になる。その差は対応するS¹を運んだcylinder上のσ_sの積分である。これは指定したmarkingとaction originを保つ相対同定の条件であり、自由なbase relabellingを許すfibrationの存在障害と同一視しない。
 
-**着手方法。** `ke:actual-global-fibration` の全域構成を出発点とし、保持cornerと変更component領域の間で距離近似写像を整合させる。距離側では既証明のsource中央全点径を入力とし、中央帯外の `ke:eq:source-moment-exit-input` の同一momentでの退出を扱う。Potential連続度の十分条件は未検証入力として保持する。全source fiberの径を既証明と扱わず、全曲面のno-shortcutと木上のfiber合併の費用を別に構成する。
+**着手方法。** `ke:actual-global-fibration` の全域構成を出発点とし、保持cornerと変更component領域の間で距離近似写像を整合させる。距離側では中央全点径と全intervalの `ke:source-all-moment-exit` を入力とする。Potential連続度の十分条件は未検証入力として保持する。同一momentの全fiber合併評価を基底の潰される木へ適用し、全曲面のno-shortcutとportal費用を別に構成する。
 
 
 ## 複素次元2：先行研究・singular fibersの確定事項（2026-11-20）
@@ -427,4 +445,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 
 ## 検証状態
 
-2026-11-21 / v3.0：中央sourceの体積anchorをsource-free slabへ取り、全点ambient径 $O(1)$ を主稿改訂20へ統合した。体積尺度・領域・非循環性とBishop–Gromov比較を別担当と点検した。現行改訂20の組版は未実施（直前の改訂19は211頁で組版・28頁の表示確認済み）。形式証明・外部査読・包括的新規性確認・旧整数検算suiteと他三稿の再組版は未実施。P0の距離条件は未解決。
+2026-11-21 / v3.0：中央全点径 $O(1)$、全moment source退出 $O(\sqrt{\log(R_t+2)})$、旧corner値に近い全域基底parameter化と内部木の共通momentを主稿改訂20へ統合し、追加証明を別担当と点検した。現行改訂20の組版は未実施（直前の改訂19は211頁で組版・28頁の表示確認済み）。形式証明・外部査読・包括的新規性確認・旧整数検算suiteと他三稿の再組版は未実施。P0の全曲面距離の統合は未完了。

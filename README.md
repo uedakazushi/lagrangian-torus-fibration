@@ -15,7 +15,7 @@
 
 ## Cloud Codexから再開する
 
-最新mainで [研究方針](00_research_plan.md) → [AGENTS.md](AGENTS.md) → [依存関係](research/ke-dependencies.md) → [研究ノート](research/notes.md) を読む。`ke:actual-global-fibration` により、既存neck/cornerの保持葉とsource近傍を保ってcoreへ相対接着し、全曲面上のactual KE–Lagrangian fibrationを構成した。各componentの変更領域の正規化ambient径も消せる。次は中央帯外のsource接続、木上のfiber合併、全曲面のno-shortcut/portal比較を進める。
+最新mainで [研究方針](00_research_plan.md) → [AGENTS.md](AGENTS.md) → [依存関係](research/ke-dependencies.md) → [研究ノート](research/notes.md) を読む。`ke:actual-global-fibration` により、既存neck/cornerの保持葉とsource近傍を保ってcoreへ相対接着し、全曲面上のactual KE–Lagrangian fibrationを構成した。各componentの変更領域の正規化ambient径も消せる。全interval source接続と旧corner値に近い基底parameter化を得た。次は全曲面の距離上下界と木上のfiber合併の評価を統合する。
 
 ```sh
 python3 scripts/research_check.py setup --require-tex
@@ -47,6 +47,7 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 - **全交わりで葉が一致する部分fibration：** 残余compact、normal cutoff、moment区間、parameter閾値の順に選び、全flowの共通開領域を構成する。Corner cut $m_t=6b_j$ とneckの葉でのtrim $B=7b_j$ を離して選び、first-exitと逆normal flowの自然性により、全intersectionが双方の全fibersで飽和することを証明した。Source・saddleの局所型を保って貼り合わせられる（`ke:neck-corner-saturated-union`）。
 - **Central sourceのactual経路評価：** 固定rescalingでdensityは $L_t^{-2}$、canonical potentialは有界、normal momentは $O(L_t^{-1})$。Traceと平均二乗距離は $O(1)$、全中央点からgateへの退出は $O(L_t^{-1/2})$、oriented arm断面へは $O(1)$ で接続できる（`ke_source_connectors.tex`）。Source-freeな $|\mu|\le A/M_t$ のcentral band全体もactual径 $O(1)$。Source側では正のpotentialの対数勾配でactual球を深部に閉じ込め、complex SobolevのGaussian積分とBishop–Gromov比較から、固定点を含む中央coreの全点径 $O(1)$ を証明した。固定基底のsource-inclusive中央帯と閉pinched torus全体も正規化ambient径で収縮する。Potentialの一様square-root-Dini modulusを仮定する十分条件も示し、そのmodulus自体は未検証と区別する。
+- **全momentのsource退出：** `ke:source-all-moment-exit` により、共通intervalの全点を同じcanonical momentの残余境界へ $O(\sqrt{\log(R_t+2)})=o(R_t)$ で結ぶ。Normal深度ごとのcover、Gaussian tailとslabの体積尺度の相殺、actual球の局在、出口のmoment補正を証明した。同一momentの全fiber合併も固定基底で収縮する。
 
 固定source chartのEuler場による明示的なresidual接続も保持する。成分coreではcanonical primitiveの差から固定領域のactual移送を構成し、境界を固定する相対flux条件とexactな平均化germを明示した（`ke_component_core_transfer.tex`）。`ke_component_core_geometry.tex` は任意固定compactと全collar上でKE形式・primitiveを保つsmooth正則化、正residueの有限型KE core、その小さい飽和近傍のmarked Lagrangian fillingを与える。全域への相対接着は下記四節で証明した。
 
@@ -54,7 +55,9 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 **Core cutのtarget像：** 固定成分のstrictly plurisubharmonic potentialへ最大原理を使い、切り取った各coreの二つの独立深度を $CN_j$ 以下に抑えた。各capの旧softmax像は成分頂点の $\sqrt2\log(CN_j)/R_t$ 近傍に入る（`ke:removed-corner-target-cap`）。保持cornerには旧protected距離の評価と全曲面距離の上界が残る。旧softmax値と $p_T\pi_t$ の相対parameterizationは次の課題である。
 
-**P0の距離条件は未解決。** 中央帯外のsource接続、六次以上で潰される木上の全fiber合併の径、全曲面のshortcutとportal費用が残る。各componentのcore径評価は、異なるcore全部の合併径やfiberの内在径の評価ではない。局所GH近似のtarget距離は非伸長retractionにより全cubical複体の距離の制限と等しいが、source側のprotected距離を全曲面ambient距離へ置換した下界は未証明。先行研究の仮定と新規性の未確認点は主原稿序論と[研究ノート](research/notes.md)を参照。
+**全域基底の整合：** `ke:global-base-parameterization` により、全保持cornerで旧softmax値との誤差は $O((1+\log N_j)/R_t)$。正則torusを持つ旧辺をtriangleの少し内側へ送り、core panelsとneck stripsを明示的に貼り合わせる。潰される内部木には全枝共通のcanonical momentを使う。
+
+**P0の距離条件は未解決。** 全interval source接続と基底parameter化を統合し、六次以上で潰される木上の全fiber合併の径、全曲面のshortcutとportal費用を検証する。各componentのcore径評価は、異なるcore全部の合併径やfiberの内在径の評価ではない。局所GH近似のtarget距離は非伸長retractionにより全cubical複体の距離の制限と等しいが、source側のprotected距離を全曲面ambient距離へ置換した下界は未証明。先行研究の仮定と新規性の未確認点は主原稿序論と[研究ノート](research/notes.md)を参照。
 
 ## 極限候補の有限距離幾何
 
@@ -66,4 +69,4 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-2026-11-21 / v3.0：中央sourceの体積anchorをsource-free slabへ取り、全点ambient径 $O(1)$ を主稿改訂20へ統合した。体積尺度・領域・非循環性とBishop–Gromov比較を別担当と点検した。現行改訂20の組版は未実施（直前の改訂19は211頁で組版・28頁の表示確認済み）。形式証明・外部査読・包括的新規性確認・旧整数検算suiteと他三稿の再組版は未実施。P0の距離条件は未解決。
+2026-11-21 / v3.0：中央全点径 $O(1)$、全moment source退出 $O(\sqrt{\log(R_t+2)})$、旧corner値に近い全域基底parameter化と内部木の共通momentを主稿改訂20へ統合し、追加証明を別担当と点検した。現行改訂20の組版は未実施（直前の改訂19は211頁で組版・28頁の表示確認済み）。形式証明・外部査読・包括的新規性確認・旧整数検算suiteと他三稿の再組版は未実施。P0の全曲面距離の統合は未完了。
