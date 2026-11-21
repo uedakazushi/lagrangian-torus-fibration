@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.0: 全域 co-Gram と同じ fibration の値の比較．
+% 2026-11-21 / v1.1: 全域 co-Gram と同一 moment の corner 参照点による基底値比較．
 \section{切り詰めた対数深度による全曲面の距離下界}
 \label{ke:global-scalar-lower-section}
 
@@ -247,12 +247,99 @@ Endpoints の rescaling は $O(\eta_{j,t})$ しか値を動かさず，
 中央の固定区間では恒等なので最後の式も保たれる．
 \end{proof}
 
+この補題は共通 profile の独立な定量的説明である．以下の全点比較には，
+normal 深度による中央帯の再分類に代えて，同一 moment の actual 接続を用いる．
+
+\begin{lemma}[同一 moment を持つ旧 corner 辺への参照点]
+\label{ke:same-moment-corner-reference}
+固定 stage $j$ の各 pair $ik$ について，元の K2 neck の全残余領域，source discs，
+および必要な全 end annuli を含む連結な固定 residual compact
+$P_{ik,j}\Subset P^+_{ik,j}$ を，component cut $N$ より先に選べる．
+Source discs を除いた部分も連結とする．ある有限な $N_{0,j}$ と
+$C_j^{\rm neck}$ があり，$N\ge N_{0,j}$，$\delta=4\pi/N$ とし，その後 $t$ を
+十分小さくすると次が成立する．
+
+Pair $ik$ の構成後の neck の点 $x$ が actual normal moment
+$\widehat\mu(x)=\mu\in[-\delta,\delta]$ を持つとする．任意の incident triple
+$J=\{i,k,a\}$ について，旧 softmax 辺 $w_a=0$ 上に同じ moment を持つ全 torus
+$\Lambda_{ik,J,t}(\mu)\subset A_{t,J}$ が存在し，その任意の点 $y$ に対して
+\begin{equation}\label{ke:eq:same-moment-corner-reference}
+ d_{g_t}(x,y)\le C_j^{\rm neck},\qquad
+ P^{\rm old}_{t,J}(y)=E_{ik}(u_{J,t}(\mu))
+\end{equation}
+が成立する．定数 $C_j^{\rm neck}$ は $t,\mu,N$ に依存しない．
+全 phase と $\mu=\pm\delta$ を含み，$x$ は source 又は saddle の特異 fiber 上に
+あってよい．ここで接続経路は一つの fiber 又は moment level の中に留まる必要はない．
+\end{lemma}
+
+\begin{proof}
+旧 cut を $m_{\rm old}=6b_j$ とする．
+式\eqref{ke:eq:hexagon-edge-profile}より，旧辺の全 source parameter 範囲で
+その residual 深度は
+\[
+ B=m_{\rm old}+r_a,\qquad
+ 0\le r_a=\max(r_i,r_k)/L<1
+\]
+である．従って，この全範囲を含む固定 end annuli と，marked tree 及び source
+discs を含む元の neck の全残余領域を先に合わせて $P_{ik,j}$ を選べる．
+End の moment-dependent な境界 graph の像も，K2 の固定 buffer によって
+あらかじめ用意した広い residual domain の内部に入っている．少し広い
+$P^+_{ik,j}$ も K2 で用意した residual domain 内に取れる．必要な annuli は
+旧 trim $B=7b_j$ より内側にあり，$Z_{a,t}/Z_{a,0}\to1$ と固定 frame の差を
+吸収する余裕を持たせる．この選択に $N$ 又は $[-\delta,\delta]$ は使わない．
+ここで全旧辺を projected neck chart と同一視しているのではなく，その source
+residual 範囲から annuli を先に固定している．
+
+補題\ref{ke:common-edge-moment-profile}によれば，$N$ が十分大きいと
+$|\mu|\le\delta$ に対応する旧辺の部分では両 normal 深度が $cN$ 以上となる．
+$N\gg n_j$ と固定 frame の全定数を $N_{0,j}$ に含め，最後に $t$ を小さくすれば，
+この必要な部分の全 tori は K2 の共通 plateau overlap に入る．そこでは
+source residual coordinate が上で選んだ annulus を与える．
+同補題の strict monotonicity が $\Lambda_{ik,J,t}(\mu)$ の存在と一意性を与え，
+補題\ref{ke:corner-cap-disk}の proper arc の端点が $\mu=\pm\delta$ であることから，
+両端を含めてこの torus は保持集合に属する．
+
+系\ref{ke:neck-corner-saturated-union}と定理\ref{ke:staged-neck-averaging}により，
+この全 torus 上の actual normal action と canonical moment は neck のものと
+厳密に同じである．すなわち同じ normal Moser map $\Phi^N_t$ の前では
+$\mu_N$，後では $\widehat\mu=\mu_N\circ(\Phi^N_t)^{-1}$ であり，
+corner source では $\mu_\alpha=\mu_N\circ G$ と書けば，
+式\eqref{ke:eq:staged-moment-identity}と K2 の flow 自然性により
+\[
+ \mu_\alpha\circ\psi_t=\mathcal A_2\mu_\alpha=\nu_J,
+ \qquad \widehat\mu\circ C_{t,J}=\nu_J
+\]
+となる．第二段階の前後で同じ関数 $\mu_\alpha$ が点ごとに不変という意味ではなく，
+この exact transport によって全平均 moment と actual moment を同定する．
+新たな加法定数又は phase の
+選択はない．相対葉族の補間も actual normal moment を保つので，構成後の $x$ と
+$\Lambda_{ik,J,t}(\mu)$ は同じ actual moment 集合に入る．
+
+固定基底に対する系\ref{ke:source-inclusive-same-moment-collapse}を適用する．
+そこで用いる定理\ref{ke:fixed-base-neck-moser}と
+命題\ref{ke:fixed-base-moment-connectors}は，固定基底の有限な下限以上の
+normal cut $m$ と $m\le\vartheta M_t$ に対し，$m,t$ に独立な定数を持つ．
+前者は固定 actual buffer と $C_P/m$ の短円評価，後者は固定した凸性の割線定数
+$c_0,C_0,\vartheta,m_0$ による．従って固定 stage でも適用でき，この使用に
+同じ stage 内で $m\to\infty$ とする仮定は要らない．必要な normal cut の下限は
+K2 の $n_j$ の選択に含め，元の共通 moment interval を固定した後に
+$[-\delta,\delta]$ をその内部へ入れる．Source からの全 moment 退出にも
+この interval 全体に共通な定数がある．
+
+以上の系は，$P_{ik,j}$ 上の同じ moment を持つ全点の合併に対して
+$C+C_{P_{ik,j}}$ の ambient 直径上界を与える．同じ Moser map の両端の短い
+trajectories の費用を加えれば，actual 像にも一つの $C_j^{\rm neck}$ を使える．
+これらの定数は $N$ より先に固定され，後から moment interval を狭めても変わらない．
+全 phase，異なる reduced 葉，source 固定点，saddle 葉も同じ集合評価に含まれる．
+旧辺の projection 値は定義通り表示された $E_{ik}(u_{J,t}(\mu))$ である．
+\end{proof}
+
 \begin{proposition}[Clipped depth と actual 基底値の全域比較]
 \label{ke:global-depth-base-comparison}
 Sharp normal 評価の下側 cut $\mathfrak m_j$ を，
 固定 stage の core と変更 collar の非成分深度の全上界，
 および保持 neck の残余 compact 上の非 pair 深度の全上界より
-大きく取る．また $K_j$ を下の proof の有限な中央帯定数より大きくしてよい．
+大きく取る．
 この選択は定理\ref{ke:sharp-global-one-active}のパラメータ順序と両立する．
 ある有限な固定 stage 定数 $C_j$ に対して
 \begin{equation}\label{ke:eq:global-depth-base-comparison}
@@ -279,9 +366,10 @@ Dominant coordinate は旧写像と $\Theta_t$ の双方で $1$ となり，
  d_\square(\Theta_t(y),w)
  \le C\frac{\log\mathfrak m_j+\log K_j}R.
 \]
-旧 corner map を与える Moser と相対 Hamiltonian patch の
+旧 corner map を与える座標補間 $G$，Moser と相対 Hamiltonian patch の
 actual ambient displacement は固定 stage で有界である
-（命題\ref{ke:relative-corner-patch}，
+（命題\ref{ke:three-arm-coordinate-interpolation}，
+定理\ref{ke:relative-corner-patch}，
 定理\ref{ke:slow-cut-closed-corner-gh}）．
 補正前後の点を式\eqref{ke:eq:global-depth-lipschitz}で比較すると，
 その追加誤差は $C_j/R$ 以下である．この順序により，
@@ -300,68 +388,48 @@ $K_j>2$，その後 $t$ を十分小さく取れば $\Theta_t=e_i$ が厳密に�
 同じ基底 parameter 化の cap 評価より
 $d_\square(f_{j,t},e_i)\le C\eta_{j,t}$ である．
 
-\emph{補正前の neck．}
-残る pair $ik$ の raw neck 上で projected holomorphic normal coordinates
-$x'_g,y'_g$ を用い，深度を $s_x,s_y$ とする．固定残余 compact は
-source を含んでよい．非 pair 深度は全て $D_j$ 以下であり，
-$\mathfrak m_j>D_j$ によって $\Theta_a=0$ ($a\notin\{i,k\}$) となる．
-補題\ref{ke:source-arm-moment-depth}と source-free の同じ convex secant 評価を
-有限 residual cover で用いる．十分大きい $A_j$ とある
-$\theta_j,\kappa_j>0$ に対して，$\mu>A_j/L$ では
+\emph{同一 moment の参照点による neck の比較．}
+共通 anchor interval 内の保持 neck の点 $x$ を取り，
+$\mu=\widehat\mu(x)\in[-\delta_j,\delta_j]$ とする．
+補題\ref{ke:same-moment-corner-reference}により，任意の incident triple $J$ の
+旧 corner 辺の torus から参照点 $y$ を選べる．既証の
+式\eqref{ke:eq:global-depth-lipschitz}と
+$S=R-\log\mathfrak m_j-\log K_j\ge R/2$ により
 \[
-  s_x<\theta_j L,\qquad s_x\asymp_j1/\mu,\qquad
-  s_y\ge(1-\theta_j)L-D_j .
+ d_\square(\Theta_t(x),\Theta_t(y))
+ \le\frac{\sqrt{1+\epsilon_{j,t}}}{S}C_j^{\rm neck}
+ \le\frac{C_j}R .
 \]
-$\theta_j<1/4$ とでき，$y'_g=0$ の軸もこの表示に含まれる．
-Physical normal coordinate との $O(t)$ 誤差は，
-$|x'_g|\ge e^{-\theta_jL/2}$ に比べ小さいので，
-$\ell_i=s_x+O_j(1)$，$\ell_k\ge(1-\theta_j)L-D_j$ である．
-従って $\Theta_t$ は同じ edge 上にあり，
+上の corner の議論は $y$ において
 \[
- \Theta_t=E_{ik}(2-q_x),\qquad
- q_x=\left[\frac{\log(\ell_i/\mathfrak m_j)}S\right]_0^1 .
+ d_\square(\Theta_t(y),P^{\rm old}_{t,J}(y))
+ \le C_j\frac{1+\log\mathfrak m_j+\log K_j}R
 \]
-$s_x\asymp_j1/\mu$ から
+を与える．さらに $P^{\rm old}_{t,J}(y)=E_{ik}(u_{J,t}(\mu))$ であり，
+系\ref{ke:common-neck-longitude}の endpoint rescaling を含めた比較から
 \[
- \left|q_x-\frac{\log(1/\mu)}R\right|
- \le C_j\frac{1+\log\mathfrak m_j+\log K_j}R .
+ d_\square(P^{\rm old}_{t,J}(y),E_{ik}(\sigma_t(\mu)))\le C\eta_{j,t}.
 \]
-この式は $q_x=0$ 又は $1$ の clipping 部分でも成立する．
-実際，clipping を $1$-Lipschitz に使い，
-clipping 前の $\log(1/\mu)/R$ の $[0,1]$ 外への超過は
-$C_j/R$ 以下であることを使えばよい．
-$\mu<-A_j/L$ は $x,y$ を交換して同様である．
+系\ref{ke:neck-base-value-control}を同じ actual moment $\mu$ に適用すると，
+$d_\square(f_{j,t}(x),E_{ik}(\sigma_t(\mu)))\le C\eta_{j,t}$ である．
+この四つの不等式を加えれば，neck 上で所要の比較が従う．Source 固定点，
+pinched fiber の全点，branch fiber も同一 moment 集合の評価で扱っており，
+それらの physical normal 深度を別に分類していない．
 
-一方，$|\mu|\le A_j/L$ では
-$s_x,s_y\ge\kappa_jL$ である．これは一方が
-$\theta_jL$ 以下なら同じ arm 下界 $|\mu|\ge c_j/s$ を用い，
-そうでなければ自明な下界を用いることで従う．
-Source 固定点では両深度を $+\infty$ と読む．
-$O(t)$ の座標差を含めても $\ell_i,\ell_k\ge\kappa_jL/2$ なので，
-$K_j>4/\kappa_j$ と選べば $\Theta_t=e_i+e_k$ である．
-前補題の中央式と合わせると，raw neck 全域で
-\[
- d_\square\bigl(\Theta_t(y),E_{ik}(\sigma_t(\mu(y)))\bigr)
- \le \frac{C_j\{1+\log\mathfrak m_j+\log K_j+\log(N_j+1)\}}R .
-\]
-
-\emph{Actual neck と全被覆．}
-保持 neck の actual point を $x=\Phi^N_t(y)$ とし，
-actual canonical moment を $\widehat\mu(x)=\mu(y)$ と書く．
-定理\ref{ke:fixed-stage-source-neck}の
-固定 stage の共通 source/image に対する短円 Moser 評価から
-$d_{g_t}(x,y)\le D_j$ である．
-再び式\eqref{ke:eq:global-depth-lipschitz}によって
-$d_\square(\Theta_t(x),\Theta_t(y))\le C_j/R$ を得る．
-系\ref{ke:neck-base-value-control}は同じ $\widehat\mu(x)$ に対して
-\[
- d_\square\bigl(f_{j,t}(x),
-            E_{ik}(\sigma_t(\widehat\mu(x)))\bigr)\le C\eta_{j,t}
-\]
-を与える．Corner との全交わりでは K2 の normal action と moment が
-同じであり，既に core と変更 collar は別に扱った．
-定理\ref{ke:actual-global-fibration}の全域被覆を用いれば，
-以上の三種類の領域で全 $X_t$ が尽くされる．
+\emph{全被覆と依存の順序．}
+命題\ref{ke:global-base-parameterization}と同じ共通 anchor で分割し，
+core と変更 collar，保持 corner，anchor interval 内の保持 neck を用いる．
+補題\ref{ke:anchor-trimmed-neck-domain}により，旧 neck の
+$|\widehat\mu|>\delta_j$ の部分は対応する component の core 側にあり，
+平行 link との差と補間支持は変更 collar に含められる．従って
+$\sigma_t$ をその定義区間の外へ延長して用いる必要はない．
+Corner との全交わりでは K2 の normal action と moment が同じである．
+定理\ref{ke:actual-global-fibration}の全域被覆により，これらの領域で全 $X_t$ が
+尽くされる．同一 moment の接続は
+系\ref{ke:source-inclusive-same-moment-collapse}から直接用いており，
+後節の全曲面距離上界又はその connector 予算は入力にしていない．
+また $\Theta_t$ の Lipschitz 評価は本命題に先立って証明済みなので，
+基底値比較と全域下界の間にも循環はない．
 有限個の定数を $C_j$ にまとめて結論を得る．
 \end{proof}
 

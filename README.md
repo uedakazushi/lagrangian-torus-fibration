@@ -1,5 +1,5 @@
 # Lagrangian torus fibrations on general-type surfaces
-2026-11-21 / v3.3 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
+2026-11-21 / v3.4 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
 
 **各固定次数 \(d\ge5\) の一般位置全平面退化について、actual負Kähler–Einstein形式の大域Lagrangian torus fibrationが、径の尺度のGH極限を実現する定理の証明を主稿に置いている。** 同じ写像 \(f_t=p_T\pi_t\) の全曲面ambient距離に関する一様distortionと、特異fiberを含む全fiber合併の収縮を扱う。今回の新証明と接続を複数担当で内部点検した。形式証明、全主稿・全外部入力の包括的再監査、外部査読、新規性の網羅的確認は未実施である。**このリポジトリは複素次元2専用**。三次元の研究は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とする。
 
@@ -15,7 +15,7 @@
 
 ## Cloud Codexから再開する
 
-最新mainで [研究方針](00_research_plan.md) → [AGENTS.md](AGENTS.md) → [依存関係](research/ke-dependencies.md) → [研究ノート](research/notes.md) を読む。次に `ke:global-metric-realization` から依存する接着・source・scalar・portalの証明をたどる。現在の優先課題は、公表に向けた一次文献と依存結果の包括的再点検、新規性の確認、主稿構成の整頓である。改訂23ではsourceの特異reductionと全段階に共通な標識付き木の補題を明示し、K2の全交わりの証明を補強した。追加証明は独立に内部点検済み。次は `ke:global-base-parameterization` と `ke:global-depth-base-comparison` の同じ基底値の整合を監査する。Componentの対数接続費用・全fiber予算・coreの弱い層別構造も保持する。組版・表示確認の現在の状態は末尾を参照。
+最新mainで [研究方針](00_research_plan.md) → [AGENTS.md](AGENTS.md) → [依存関係](research/ke-dependencies.md) → [研究ノート](research/notes.md) を読む。次に `ke:global-metric-realization` から依存する接着・source・scalar・portalの証明をたどる。現在の優先課題は、公表に向けた一次文献と依存結果の包括的再点検、新規性の確認、主稿構成の整頓である。改訂24では共通anchorでの保持neckの正確なmoment範囲と、同一momentのcorner参照torusによる全域値比較を明示した。固定残余基底のMoser被覆と接続は十分大きい有限cutに一様な形へ整理した。今回の追加箇所を独立点検し、全域実現へ至る同じ基底値の接続を確認している。組版・表示確認の現在の状態は末尾を参照。
 
 ```sh
 python3 scripts/research_check.py setup --require-tex
@@ -29,7 +29,7 @@ python3 scripts/research_check.py tex
 
 | 原稿 | 役割 | 組版の確認範囲 |
 | --- | --- | ---: |
-| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域fibrationによるGH実現定理（改訂23） | 改訂23：251頁、変更箇所を含む23頁を表示確認 |
+| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域fibrationによるGH実現定理（改訂24） | 改訂24は組版未実行。直近確認は改訂23：251頁・指定23頁 |
 | [五次整数接着](papers/quintic-integer-gluing.tex) | 指定K5データの整数条件・高分母支持・未解決の大域接着 | 201頁 |
 | [Meridian surgery](papers/meridian-surgery.tex) | 閉corner circuitsの局所置換の障害 | 18頁 |
 | [TeX研究ノート](papers/research-notes.tex) | 証明素材・残る条件の整理 | 現行65頁、第1・4頁を表示確認 |
@@ -58,7 +58,7 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 **全域基底の整合：** `ke:global-base-parameterization` により、全保持cornerで旧softmax値との誤差は $O((1+\log N_j)/R_t)$。正則torusを持つ旧辺をtriangleの少し内側へ送り、core panelsとneck stripsを明示的に貼り合わせる。潰される内部木には全枝共通のcanonical momentを使う。
 
-**全曲面の距離下界：** `ke:sharp-global-one-active` はsourceを含む正則normal frameに対する係数 $1+o(1)$ のscalar評価を与える。二active方向は既存full-triple比較で扱い、`ke:global-depth-lipschitz` で全曲線の長さを先に評価する。`ke:global-depth-base-comparison` により同じ $f_t$ と一様に比較し、`ke:global-ambient-lower` を得る。経路の領域間往復回数を仮定しない。
+**全曲面の距離下界：** `ke:sharp-global-one-active` はsourceを含む正則normal frameに対する係数 $1+o(1)$ のscalar評価を与える。二active方向は既存full-triple比較で扱い、`ke:global-depth-lipschitz` で全曲線の長さを先に評価する。`ke:anchor-trimmed-neck-domain` で保持neckのmoment範囲を閉じ、`ke:same-moment-corner-reference` の同じmomentのcorner境界torusへ比較を移す。これにより `ke:global-depth-base-comparison` で同じ $f_t$ と一様に比較し、`ke:global-ambient-lower` を得る。経路の領域間往復回数を仮定しない。
 
 **全曲面の距離上界とfiber合併：** `ke:global-ambient-upper` は、旧cornerの経路、全moment source退出、同じmomentのneck全体、各componentの対数費用と有限portal galleryを組み合わせる。Anchor interval外のneck尾部にも深度 $CN_j$ を証明し、残余基底の接続定数を先に選んで $1+\log(N_j+1)$ に吸収する。全接続予算は $H_{j,t}=C(1+\log(N_j+1))$、上界誤差は $C_d\{b_j^{-1}+(1+\log R_t+\log(N_j+1))/R_t\}$。このcut選択から最適収束速度は結論しない。`ke:collapsed-tree-full-fiber-collapse` は六次以上の内部木上の全fiber合併も評価する。各componentのcore径評価を、異なるcore全部の合併径やfiber内在径と取り違えない。これらを `ke:global-metric-realization` で同じ全射 $f_t=p_T\pi_t$ のdistortion消失へ統合した。
 
@@ -74,4 +74,4 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-2026-11-21 / v3.3：主稿改訂23にsourceの特異reduction・閉pinched torus・primitive消滅cycleと、全stage・全ての小さい複素parameterに共通なmarked treeの補題を統合した。K2の全intersection saturationを再点検し、inverse Morse領域と非incident近傍の分離を補強した。追加証明と主要接続は作成担当とは別の読み手が内部点検済み。静的構成検査は通過。改訂23はLuaLaTeXで251頁に組版し、第1・16・17・84–89・107–115・187・188・244・247・248頁の計23頁を実際に表示確認した。未解決参照・引用、重複ラベル、欠字、overfull警告はない。ZungとMaksymenkoの指定箇所、Vũ NgọcのTheorem 2.1を一次資料で確認した。整数検算suite・他論文・TeX研究ノートの組版は今回は再実行していない。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は未実施。
+2026-11-21 / v3.4：主稿改訂24では、共通anchorによる保持neckの正確なmoment範囲と、同一momentの旧corner辺参照torusによる全域基底値比較を明示した。固定残余基底のMoser被覆・同一moment接続・中央帯評価を、十分大きい有限cutにも一様に適用できる定理文へ整理した。追加証明と接続を内部点検中。現行改訂24の組版・表示確認は未実行で、直近に確認したPDFは改訂23の251頁・指定23頁である。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は未実施。

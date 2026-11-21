@@ -1,6 +1,6 @@
 {
   "date": "2026-11-21",
-  "version": "3.3",
+  "version": "3.4",
   "scope": "複素次元2の現行研究状態。旧三次元稿の組版・監査記録ではない。数学的な証明と、その再監査、組版、整数計算、GitHub保存、Cloudタスク起動を区別する。",
   "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。次の優先課題は公表前の包括的依存監査・一次文献比較・新規性確認・主稿構成整理。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
@@ -43,7 +43,7 @@
       "五次整数接着の一般分母剛性・三高係数の同時非負性・全支持型の大域実現分類。"
     ],
     "scope_warning": "原稿に証明があること、今回の新証明と接続を複数担当で内部点検したこと、形式証明・全主稿再監査・外部査読・組版・整数計算を区別する。包括的な全依存証明の再監査と網羅的新規性確認は未実施。",
-    "research_note_strategy": "証明全文は主稿を正本とする。現行ノートにはsourceの特異商とambientの滑らかさ、固定marked treeとparameter monodromyの区別、K2の非循環な領域選択、既存の対数接続・core層別構造・scalar/portal評価の入力と障害を保持する。全依存証明の包括的再監査と網羅的新規性確認は未了。",
+    "research_note_strategy": "証明全文は主稿を正本とする。現行ノートには共通anchorと保持neckの領域分解、同一momentの参照torusによる値比較、有限cutでのMoserと接続、source特異商とfixed tree、既存の対数費用・scalar/portal評価の入力と障害を保持する。",
     "documented_global_results": [
       "ke:actual-global-fibration: 全固定d>=5、既存一般性条件の族に対し、K2の保持corner葉/source近傍に相対的な全Xtのactual KE–Lagrangian fibrationを構成。",
       "ke:component-meridian-normalization: q_a=M_a+2πw_aを向き付きcanonical normal momentと整数winding・exact transportで厳密同定。",
@@ -91,51 +91,17 @@
     },
     "this_audit": {
       "date": "2026-11-21",
-      "scope": "改訂23: source中心のsmooth exact transport・零moment商・閉pinched torus・primitive消滅cycleとfocus二次型を独立点検。K2のfirst-exit→逆flow→moment→全fiberの非循環性、inverse Morse領域・非incident piecesの分離を再点検。固定marked treeの全stage/all-small-complex-t選択と統合定理への適用を独立点検。全旧証明・全外部入力の包括的再監査ではない。",
-      "reexecuted_build": true,
-      "reexecuted_static_checks": true,
+      "scope": "改訂24：共通anchorでの保持neck moment範囲、同一momentのcorner参照点、固定残余基底の有限cut版と同じf_tの値比較を内部点検中。全既存証明・全外部入力の包括的監査ではない。",
+      "reexecuted_build": false,
+      "reexecuted_static_checks": false,
       "reexecuted_python_suite": false,
       "six_label_finite_command": "python3 verification/verify_cubical_six_label_geometry.py",
-      "six_label_finite_result": "既存の有限検算PASSを維持。改訂23では計算箇所を変更せず再実行していない。",
-      "independent_internal_proof_review": [
-        "ke:circle-exact-transport (fixed-point extension)",
-        "ke:source-reduction-pinched-fiber",
-        "ke:source-diagonal-moser",
-        "ke:projected-source-neck",
-        "ke:fixed-stage-source-neck",
-        "ke:fixed-marked-tree-exhaustion",
-        "ke:neck-corner-diagonal-matching",
-        "ke:neck-corner-saturated-union",
-        "ke:global-metric-realization (fixed tree choice)"
-      ],
+      "six_label_finite_result": "既存の有限検算PASSを保持。改訂24では計算箇所を変更せず再実行していない。",
+      "independent_internal_proof_review": [],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
-      "visual_pages_reviewed": [
-        1,
-        16,
-        17,
-        84,
-        85,
-        86,
-        87,
-        88,
-        89,
-        107,
-        108,
-        109,
-        110,
-        111,
-        112,
-        113,
-        114,
-        115,
-        187,
-        188,
-        244,
-        247,
-        248
-      ],
-      "current_build_status": "revision22: LuaLaTeX and latexmk succeeded; 246 pages; PDF/SyncTeX verified; unresolved refs/citations, missing glyphs, duplicate labels and overfull boxes: none. Selected 23 changed and adjacent pages visually inspected."
+      "visual_pages_reviewed": [],
+      "current_build_status": "Revision 24 source is being reviewed; not yet built. The latest verified main PDF is revision 23 (251 pages)."
     }
   },
   "cloud_codex": {

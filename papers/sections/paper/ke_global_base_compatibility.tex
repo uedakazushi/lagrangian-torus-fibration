@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.0: 旧 corner 値に近い全域基底と共通 moment の parameter 化．
+% 2026-11-21 / v1.1: 共通 anchor の moment 範囲と明示的な marked quotient の自明化．
 \section{旧 softmax 値に適合する全域基底の parameter 化}
 \label{ke:global-base-compatibility-section}
 
@@ -19,6 +19,9 @@ Core filling を少し外まで延ばした場合にも，基底の分割には�
 実際の接着に平行 link を使った場合は，その間の共通 collar で旧 corner tori が
 保たれるので，基底の分割をこの anchor へ取り直す．変更領域は同じ固定 component
 compact 内にあり，既存の深度上界と費用評価は定数を増やすだけで保たれる．
+補題\ref{ke:anchor-trimmed-neck-domain}により，この分割後の保持 neck の
+moment 範囲は正確に $[-\delta,\delta]$ である．その外側の旧 neck 尾部は
+対応する component core に入り，平行 link との差は変更 collar に含める．
 既存の選択順序の中で $N$ を大きくし，最後に $t$ を小さくすることを許す．
 
 三重点 $J$ の旧 corner と旧 projection を $W_{t,J}$，$P^{\rm old}_{t,J}$ とし，
@@ -335,8 +338,20 @@ Core sector は core cone の link graph における該当 edge の cone であ
 $\mu\in[-\delta,\delta]$ に一様に $cN$ 以上である．
 $N\gg n_j$ なので，この graph の全 fibers は K2 の共通 plateau overlap 内にある．
 そこで normal moment は同じ $\mu$ で，reduced 葉は順序を保った同じ全 tori である．
-Marked Reeb continuation により，branch vertex からこの boundary graph までの
-arm は $[-\delta,\delta]\times[0,1]$ と parameter 化できる．
+この marked Reeb continuation は，既存の diffeomorphism 族から得られる．
+補題\ref{ke:fixed-marked-tree-exhaustion}の $D_{j,\mu,t}\circ S_t$ と，
+定理\ref{ke:saddle-moving-relative-interpolation}の $h_\mu^{\chi(\mu)}$
+（各補間 band の外では恒等）を合成し，固定した基準葉族
+$\mathcal F^0$ を構成後の $\mathcal F_\mu$ へ送る族 $\Xi_{\mu,t}$ を取る．
+系\ref{ke:actual-saddle-moving-neck-interpolation}はこの葉族の全逆像を使っている．
+従って商上の写像
+\[
+ (\mu,[p]_{\mathcal F_\mu})
+ \longmapsto(\mu,[\Xi_{\mu,t}^{-1}(p)]_{\mathcal F^0})
+\]
+は $\mu$ と labels を保つ graph の自明化である．
+各 leaf arm 上で branch vertex から boundary graph までの正の長さを
+再規格化すれば，arm は $[-\delta,\delta]\times[0,1]$ と parameter 化できる．
 最後の座標 $r$ は branch で $0$，旧 corner boundary で $1$ となる．
 各 $\mu$ で端の長さを再 parameter 化するだけであり，foliation の変更ではない．
 Source がこの rectangle 内にあっても quotient は同じ product であり，対応する

@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.2: Component の対数費用と残余基底の先行選択による全域上界．
+% 2026-11-21 / v1.3: 共通 anchor・参照 torus と同じ残余基底による全域上界．
 \section{全 fiber 合併の収縮と actual 全曲面距離の上界}
 \label{ke:global-ambient-upper-section}
 
@@ -23,17 +23,14 @@ $d_{g_t}$ である．保持 corner 自身の内在距離は用いない．
 
 \subsection{同一 moment の接続費用と全 fiber 合併}
 
-各 pair $ab$ について，neck の全 marked tree と全 source discs を含む連結な
-固定残余基底 $P_{ab,j}$ を取る．Source discs を除いた部分も連結に取れる．
-さらに，各 labelled end の旧 softmax boundary $w_c=0$ の residual image を
-その辺全体について含むようにする．\eqref{ke:eq:hexagon-edge-profile}より
-$B=m_j+r_c$，$0\le r_c<1$ なので，この選択は $N_j$ と
-$[-\delta,\delta]$ を決める前に行える．既存 K2 の trim $B=7b_j$ より内側にあり，
-既に用意した広い fixed-stage residual domain に
-$P_{ab,j}\Subset P^+_{ab,j}$ を選べる．
-相対葉族補間もこの固定基底の境界 collar を保つので，後から基底を拡大し直さない．
+各 pair $ab$ について，補題\ref{ke:same-moment-corner-reference}で $N_j$ より先に
+選んだ同じ固定残余基底 $P_{ab,j}\Subset P^+_{ab,j}$ を用いる．これは全 marked tree，
+source discs，および全 labelled ends の旧 softmax 辺の残余像を含み，source discs を
+除いても連結である．旧辺の残余深度は $B=m_j+r_c$，$0\le r_c<1$ なので，
+選択は $[-\delta,\delta]$ に依存しない．相対葉族補間もこの固定基底の境界 collar
+を保つため，上界のために後から基底を拡大し直さない．
 
-$C_j^{\rm neck}$ を，系\ref{ke:source-inclusive-same-moment-collapse}の
+$C_j^{\rm neck}$ を，同補題と系\ref{ke:source-inclusive-same-moment-collapse}の
 この有限個の固定基底に対する接続定数の最大とする．これは $N_j$ より先に固定できる．
 成分側に残る短い neck 尾部にも，次の深度評価がある．
 

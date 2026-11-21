@@ -795,9 +795,15 @@ Global clipped-depth map $\Theta_t$ は，高々三つの非零 coordinates と
 少なくとも一つの plateau を持つ．二つの active coordinates では全深部 triple comparison，
 一つの場合は上の scalar estimate を用いる．
 得られる長さ下界は全曲面の任意の経路に直接成立し，領域の出入りの回数に依存しない．
-その後で短い Moser 移送と moment profile を比較し，
-$\sup_{X_t}d_\square(\Theta_t,p_T\pi_t)=o(1)$ を示す．
-この順序により，移送後の点で raw depth の微分を別に仮定せずに済む．
+その後で，保持 corner では旧 softmax と短い Moser 移送を比較する．
+Neck の任意の点には，同じ canonical moment を持つ旧 corner 境界上の参照 torus がある．
+Source と branch を含む同一 moment 集合の接続評価と，既に証明した
+$\Theta_t$ の Lipschitz 評価により，その参照 torus での値比較を全 neck へ移す
+（補題\ref{ke:same-moment-corner-reference}）．
+Core の像の小ささと合わせて
+$\sup_{X_t}d_\square(\Theta_t,p_T\pi_t)=o(1)$ を得る．
+ここで用いる接続評価は局所解析から独立に証明してあり，全域の距離上界を先取りしない．
+Clipped depth が個々の Lagrangian fiber 上で一定であるとも仮定しない．
 
 \paragraph{基底の接着と全曲面での距離上界．}
 旧 corner の境界 torus と新しい cellular branch locus は同じ strata ではない．

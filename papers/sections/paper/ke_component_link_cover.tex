@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.1: 閉 link と全 fiber cut，後続の相対 filling・全域比較への接続．
+% 2026-11-21 / v1.2: 共通 anchor による全保持 neck の厳密な moment 範囲．
 % 前提：ke:neck-corner-saturated-union と本文中に明示する既存評価．
 \section{成分 link の moment cut と固定段階の全域被覆}
 \label{ke:component-link-cover-section}
@@ -436,6 +436,95 @@ $L\subset S_{i,j,t}$ でなければならず，内外に点があることと�
 を用意できる．相対 filling がその collar partition を実現すれば，有限 compact
 bases の閉じた同値関係による貼合せは Hausdorff であり，局所 fibration の記述も
 collar 上で一致する．これで条件付きの最後の主張を得る．
+\end{proof}
+
+\begin{lemma}[共通 anchor による保持 neck の moment 範囲]
+\label{ke:anchor-trimmed-neck-domain}
+系\ref{ke:neck-corner-saturated-union}の一つの旧 neck を
+$\mathcal N^{\rm old}_{t,D}$，$D=D_{ik}$ と書き，その共通 moment を
+$\widehat\mu$ とする．向きは component $i$ 側で
+$q_i=-\widehat\mu$，component $k$ 側で
+$q_k=\widehat\mu$ となるように取る．
+補題\ref{ke:closed-component-link}の link を共通 anchor
+$\delta=4\pi/N_j$ で取り，それが囲む domains を $K_i,K_k$ とする．
+既存の選択順序の中で $n_j,N_j$ の下限，最後の $t$ の閾値を強くすれば，
+\begin{align*}
+ S_i\cap\mathcal N^{\rm old}_{t,D}
+   &=\{\widehat\mu=-\delta\}\cap\mathcal N^{\rm old}_{t,D},\\
+ S_k\cap\mathcal N^{\rm old}_{t,D}
+   &=\{\widehat\mu=\delta\}\cap\mathcal N^{\rm old}_{t,D},\\
+ \operatorname{int}K_i\cap\mathcal N^{\rm old}_{t,D}
+   &=\{\widehat\mu<-\delta\}\cap\mathcal N^{\rm old}_{t,D},\\
+ \operatorname{int}K_k\cap\mathcal N^{\rm old}_{t,D}
+   &=\{\widehat\mu>\delta\}\cap\mathcal N^{\rm old}_{t,D}.
+\end{align*}
+他の component の core はこの neck と交わらない．従って共通 anchor で
+whole-fiber trim した neck の moment 範囲は正確に $[-\delta,\delta]$ である．
+
+実際の接着に小さい平行 link を用いた場合も，共通 collar 内で基底の分割を
+この anchor へ取り直す．平行 link と anchor の間，及び葉族の補間支持を
+当該 component の変更 collar に含めると，core と変更 collar の外に残る旧 neck
+には常に $|\widehat\mu|\le\delta$ が成り立つ．
+\end{lemma}
+
+\begin{proof}
+まず link と旧 neck の交わりを全域で確認する．Fixed residual body と各 end の
+$b_{\rm res}<6.5b_j$ の部分では，link は同じ actual normal moment の
+$q_i=\delta$ 又は $q_k=\delta$ そのものである．
+各 end で葉を source torus の残余深度 $B$ によって標識する．
+Neck は $B=7b_j$ の葉で切られており，reduced graph の評価と
+式\eqref{ke:eq:neck-residual-first-exit}を全 normal trajectory に積分した評価から
+\[
+ b_{\rm res}=B\bigl(1+O(b_j^{-2})\bigr)
+\]
+が成り立つ．従って $B\le6.4b_j$ の部分は上の normal-face 領域内にある．
+$6.4b_j\le B\le7b_j$ の部分では，K2 の共通 moment strip により二つの
+normal 深度は $4n_j$ より大きい．その全 torus は full softmax domain の内部に
+あり，共通 plateau の同じ全 corner torus である．ここでは対応する component
+の normal face と corner face の period functions が厳密に一致する．
+
+Component $i$ の境界をこの end で見ると，独立深度の一つは $N_j$ と固定比の間，
+残る独立深度は $B(1+O(b_j^{-2}))=O(b_j)$ である．後者の meridian moment を
+$q_c$ とすると，式\eqref{ke:eq:component-two-action-estimate}より
+$q_c\asymp b_j^{-1}$ である．$N_j/b_j$ を先に大きく取れば，
+$q_i=\delta$ の固定した小近傍で
+\[
+ q_c-q_i>\varepsilon,\qquad F_{ic}=q_i-\delta
+\]
+が厳密に成り立つ．従って rounding はこの全 overlap では normal face に退化する．
+別の face $q_c=\delta$ と rounding の変化領域では，対応する residual 深度は
+$N_j$ と固定比の間にあるため，$B\le7b_j$ の旧 neck に入らない．
+Component $k$ 側も同様である．これで最初の二つの等式が従う．
+
+この argument の coverage には余裕がある．実際，normal-face 領域の
+$b_{\rm res}<6.5b_j$ と corner 側の $B\ge6.4b_j$ は開帯上で重なる．
+異なる二重線の outer tubes は互いに素であり，三重点の非 incident charts も
+分離されているので，他の normal face がこの neck 内に現れることはない．
+さらに $P_j^+\Subset D\setminus Q$ は他の平面 $H_a$，$a\notin\{i,k\}$ と
+交わらない．その固定 outer tube の閉包もそれらの平面から離して選べる．
+各 $K_a$ は，$N_j$ を固定した後に $t$ を小さく取ると $H_a$ の任意に小さい
+近傍に入る固定 compact graph image なので，$K_a$ はこの neck と交わらない．
+
+最後に境界のどちら側が core に属するかを確認する．旧 neck の compact marked
+quotient は $[-\iota_j,\iota_j]\times T_{ik}$ であり，その fibers は連結である．
+この表示には，end の moment-dependent な cut を順序保存する collar 座標で
+自明化したものを用いる．従って
+$\widehat\mu< -\delta$ と $\widehat\mu> -\delta$ の各側は連結である．
+例えば，これらの各側を compact connected subintervals と $T_{ik}$ の積で
+exhaust すれば，proper な connected-fiber map の各逆像は連結である．
+この連結性は，逆像が二つの閉集合に分離されたなら，connected fibers と
+properness により基底も二つの閉集合に分離されることから直接従う．
+
+両側とも $S_i$ と交わらず，$q_i=\delta$ の直近では
+$q_i>\delta$ が core の内側である．従って連結性から
+$\widehat\mu<-\delta$ の側全体が $\operatorname{int}K_i$ に入り，反対側は
+$K_i$ の外にある．Component $k$ についても同じ議論を使えば残りの二式を得る．
+
+平行 link を用いた場合，anchor における葉族は元の葉族そのものであり，
+共通 Liouville collar で anchor へ基底分割を戻せる．この collar と相対補間支持は
+$q_a\in[\delta/2,2\delta]$ の一つの固定 component compact 内に含まれる．
+それらを変更 collar として扱えば，その外で保持する旧 neck は上で得た
+中央 moment 範囲だけである．
 \end{proof}
 
 \paragraph{本節の結論と後続の相対 filling．}

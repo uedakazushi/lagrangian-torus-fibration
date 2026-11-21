@@ -1,5 +1,5 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-21 / v3.3
+更新：2026-11-21 / v3.4
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
@@ -29,7 +29,18 @@ Capped volume下界の六型determinant、full-triple比較の固定境界面で
 \]
 には少なくとも一つのplateauがあり、active方向は高々二つ。二方向はfull-tripleのdominant-product比較、一方向は上のscalar評価で扱う。`ke:global-depth-lipschitz` は全曲線に対する長さ評価を先に与え、領域間の往復回数に依存しない。
 
-`ke:global-depth-base-comparison` は、cornerの旧softmax、coreの頂点値、neckの $s\asymp|\mu|^{-1}$ と共通moment profileを比較する。既証の $\Theta_t$ のLipschitz性でMoser前後の値を比較する順序なので、距離下界と基底値整合を循環させない。これから同じ $f_t$ の `ke:global-ambient-lower` を得る。CP/PBE/TCを証明したのではなく、本稿の下界に必要な入力を直接置き換えている。
+`ke:global-depth-base-comparison` は、cornerの旧softmaxとcoreの頂点値を比較し、neckでは `ke:same-moment-corner-reference` の参照torusへ値比較を移す。固定残余基底を全marked tree・source discs・旧corner辺の残余像を含むよう先に選ぶ。旧辺は $B=6b_j+r_c$, $0\le r_c<1$ なので、この選択はcomponent cut $N_j$ に依存しない。各保持neck点 $x$ には同じcanonical momentを持つ旧corner辺の任意の点 $y$ があり、既証のsource-inclusive同一moment接続から $d_{g_t}(x,y)\le C_j^{\rm neck}$。従って、$\Lambda_{j,t}=\sqrt{1+\epsilon_{j,t}}/S$ として
+\[
+ d_\square(\Theta_t(x),f_{j,t}(x))
+ \le \Lambda_{j,t}C_j^{\rm neck}
+   +d_\square(\Theta_t(y),f_{j,t}(y))
+   +C\eta_{j,t}.
+\]
+最後の項は両点で同じmoment profileを使うことによる。これは点の選択であり、torus bundleの大域sectionを仮定しない。経路はfiber又はmoment levelの内部に留まらなくてよい。Source固定点・軸・pinched fiber・saddle fiberも同じ集合に含まれる。
+
+依存順序は、局所的なsource退出と同一moment接続、全曲線での $\Theta_t$ のLipschitz評価、cornerでの値比較、全neckへの移送、同じ $f_t$ の距離下界である。全域上界やGH収束を参照点の存在・費用に使わない。`ke:fixed-base-neck-moser` と `ke:fixed-base-moment-connectors` は、固定残余近傍に依存する有限下限 $m_P$ 以上の全cutに一様であることを定理文に明示する。正の固定bufferと $C_P/m$ の短円評価を用いるので、固定stageを先に選んでから $t\to0$ とする用途に適用できる。
+
+`ke:common-profile-log-depth` の $\sigma_t(\mu)=\log(1/|\mu|)/R$（向きにより $2-$ を付ける）という解釈も保持する。直接の座標比較を要する用途では、`ke:source-arm-moment-depth` の $s\asymp_j|\mu|^{-1}$、中央帯の $s_x,s_y\ge\kappa_jL$、projected coordinatesの $O(t)$ 差を使える。全域値比較自体は上の参照torusによる移送で証明する。CP/PBE/TC全体を証明したのではなく、本稿の下界に必要な入力を直接与える。
 
 ## Portal上界と潰される木の全fiber合併
 
@@ -517,4 +528,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 ## 検証状態
 
 
-2026-11-21 / v3.3：主稿改訂23にsourceの特異reduction・閉pinched torus・primitive消滅cycleと、全stage・全ての小さい複素parameterに共通なmarked treeの補題を統合した。K2の全intersection saturationを再点検し、inverse Morse領域と非incident近傍の分離を補強した。追加証明と主要接続は作成担当とは別の読み手が内部点検済み。静的構成検査は通過。改訂23はLuaLaTeXで251頁に組版し、第1・16・17・84–89・107–115・187・188・244・247・248頁の計23頁を実際に表示確認した。未解決参照・引用、重複ラベル、欠字、overfull警告はない。ZungとMaksymenkoの指定箇所、Vũ NgọcのTheorem 2.1を一次資料で確認した。整数検算suite・他論文・TeX研究ノートの組版は今回は再実行していない。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は未実施。
+2026-11-21 / v3.4：主稿改訂24では、共通anchorによる保持neckの正確なmoment範囲と、同一momentの旧corner辺参照torusによる全域基底値比較を明示した。固定残余基底のMoser被覆・同一moment接続・中央帯評価を、十分大きい有限cutにも一様に適用できる定理文へ整理した。追加証明と接続を内部点検中。現行改訂24の組版・表示確認は未実行で、直近に確認したPDFは改訂23の251頁・指定23頁である。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は未実施。

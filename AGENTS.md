@@ -1,5 +1,5 @@
 # surface-lagrangian-torus-fibration — 研究・保存指示
-2026-11-21 / v1.4
+2026-11-21 / v1.5
 
 ## 入口と正本
 - 研究全体の入口は https://github.com/uedakazushi/research-hub 。再開時はhubの該当項目を確認し、最初にこのrepoの `00_research_plan.md`、次に本書、`research/notes.md` と必要な原稿を読む。
@@ -8,7 +8,7 @@
 
 ## この研究の最優先目標と自走指示
 
-最優先は `00_research_plan.md` のP0、すなわち**本研究のactual Lagrangian fibrationが負KE計量のGH極限を幾何学的に実現すること**である。精密な主張は主稿の `ke:global-realization`、統合証明は `ke:global-metric-realization`。任意の固定次数d≥5について、実際のKE形式に関する大域fibrationと、合成写像p_Tπ_tの全曲面ambient距離に対する一様distortionの消失を証明する。現行改訂22では全固定d≥5に対する証明を主稿へ統合し、新証明と接続に必要な箇所を内部点検した。Sourceの全moment退出は三境界Schwarzから得るarm tensor比較によりO(1)であり、中央点の直接退出もGaussian可積分性に依存せず証明した。Componentのcore・collarとneck尾部の費用をC(1+log(N_j+1))で評価し、残余基底の先行選択から全fiber合併・portalにも同じ予算を得た。Compact-relative Morse–Smale化でcore skeletonの閉isotropic filtrationを明示し、primitive・nontrapping・相対補間・全fiber trimも重点監査した。以後は全依存証明・一次文献の包括的監査と公表準備を優先し、形式証明・外部査読や新規性確認と混同しない。
+最優先は `00_research_plan.md` のP0、すなわち**本研究のactual Lagrangian fibrationが負KE計量のGH極限を幾何学的に実現すること**である。精密な主張は主稿の `ke:global-realization`、統合証明は `ke:global-metric-realization`。任意の固定次数d≥5について、実際のKE形式に関する大域fibrationと、合成写像p_Tπ_tの全曲面ambient距離に対する一様distortionの消失を証明する。現行主稿では全固定d≥5に対する証明を統合し、新証明と接続に必要な箇所を内部点検している。共通anchorでの保持neckのmoment範囲と、同一momentのcorner参照点による全域値比較を明示し、固定残余基底の有限cutに一様なMoser被覆・接続を用いる。Sourceの全moment退出は三境界Schwarzから得るarm tensor比較によりO(1)であり、中央点の直接退出もGaussian可積分性に依存せず証明した。Componentのcore・collarとneck尾部の費用をC(1+log(N_j+1))で評価し、残余基底の先行選択から全fiber合併・portalにも同じ予算を得た。Compact-relative Morse–Smale化でcore skeletonの閉isotropic filtrationを明示し、primitive・nontrapping・相対補間・全fiber trimも重点監査した。以後は全依存証明・一次文献の包括的監査と公表準備を優先し、形式証明・外部査読や新規性確認と混同しない。
 
 - 本目標の解決へ向けた証明、反例の探索、必要な計算、一次文献確認、現行文書と再現手順の更新は継続して実行する。通常の研究上の選択ごとに「続けてよいか」と確認せず、計画だけを作って終了しない。独立した五次整数接着分類・三次元研究へ、P0との依存理由なく優先対象を移さない。
 - 再開時は最新mainと作業ツリー・並行変更を確認し、研究方針 → 本書 → `research/ke-dependencies.md` → `research/notes.md` → 必要な原稿の順に読む。環境の具体的な入口は `research/cloud-codex.md`。会話履歴、旧bundle、前回の一時ディレクトリを前提にしない。

@@ -1,6 +1,6 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-21 / v2.3。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-21 / v2.4。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
 ## 確認した正本と規格化
 
@@ -89,7 +89,7 @@ Actual全域構成の追加証明は次を用いる。
 
 | 入力・結論 | 主稿の節・ラベル | 検証範囲 |
 | --- | --- | --- |
-| 正residue period、閉link、固定段階の被覆とtrim | `ke_component_link_cover.tex`、`ke:component-meridian-normalization`、`ke:closed-component-link`、`ke:fixed-stage-stratum-coverage`、`ke:whole-fiber-core-trim` | Cornerのdominant-productは全深度比に一様。Source基底点を含むfixed-shell上界はRZの通常component cusp上で証明。整数windingとexact transportでmoment定数も同定。 |
+| 正residue period、閉link、固定段階の被覆とtrim | `ke_component_link_cover.tex`、`ke:component-meridian-normalization`、`ke:closed-component-link`、`ke:fixed-stage-stratum-coverage`、`ke:whole-fiber-core-trim`, `ke:anchor-trimmed-neck-domain` | 共通anchorで保持neckは正確に $[-\delta,\delta]$、外側尾部は各coreへ入る。Cornerのdominant-productは全深度比に一様。Source基底点を含むfixed-shell上界はRZの通常component cusp上で証明。整数windingとexact transportでmoment定数も同定。 |
 | Actual invariant primitive | `ke_core_invariant_primitive.tex`、`ke:component-normal-generator-c1`、`ke:relative-corner-patch-c2`、`ke:component-shell-primitive-support` | RZの全cusp derivatives、triple全固定階比較、広いK2 construction domainsを使用。追加の全域tensor仮定なし。 |
 | Saddle-moving relative family | `ke_relative_reduced_foliations.tex`、`ke:saddle-moving-relative-interpolation` | 各connected critical leafに一つのsimple saddle、boundaryのleaf partition固定。Global vector fieldの直接証明。非零moment bandのactual Lagrangian lift。 |
 | 全域core接着 | `ke_actual_core_gluing.tex`、`ke:actual-global-fibration` | Evans–Mauri Lemma 2.16のcompact-domain版と上記入力。全曲面の連結fiberの全射とactual Lagrangian性、各componentごとの対数接続費用を与える。Uniform distortionは下の上下界と組み合わせて得る。 |
@@ -98,7 +98,7 @@ Actual全域構成の追加証明は次を用いる。
 | Core cutのtarget cap | `ke_actual_core_gluing.tex`、`ke:core-depth-upper`、`ke:removed-corner-target-cap` | 固定成分のstrict psh potential・graph convergence・旧softmax逆式。各capは成分頂点へ一様収縮。保持cornerの旧protected距離と全曲面距離の上界を維持。全域parameterizationとambient下界は含まない。 |
 | 全域基底parameter化と内部木の共通moment | `ke_global_base_compatibility.tex`, `ke:common-edge-moment-profile`, `ke:corner-cap-disk`, `ke:global-base-parameterization`, `ke:collapsed-tree-common-moment` | Weighted moment inverse、moment-cut capのproper arc、明示insetとstrip補間で全保持cornerの旧値へ $O((1+\log N_j)/R_t)$ 近接。内部木の中央部分では全枝共通momentを厳密に保つ。全曲面距離下界を含まない。 |
 | Sourceを含む係数一の法線評価 | [ke_sharp_normal.tex](../papers/sections/paper/ke_sharp_normal.tex), `ke:normal-harmonic-depth-barrier`, `ke:sharp-scalar-normal-barrier`, `ke:sharp-global-one-active` | 正則global normal frameで $\Delta s=0$、$U=\lvert d\log s\rvert^2$ に $\Delta U\ge U(U-1)$。固定shell・moving shell・残余境界の全てを評価し、$1+\varepsilon_j+A_j\mathfrak n_j/s+C_js/(\kappa L)$ の障壁を使う。Source軸、physical-depth補正、triple外のactive全被覆を含む。SharpなRZ漸近や全neck tensor比較を追加仮定しない。 |
-| 全域scalar mapとambient下界 | [ke_global_ambient_lower.tex](../papers/sections/paper/ke_global_ambient_lower.tex), `ke:global-depth-lipschitz`, `ke:global-depth-base-comparison`, `ke:global-ambient-lower` | 下側cut $\mathfrak m_j$ とplateau $L/K_j$ を用いる全域 $\Theta_t$。一方向はsharp normal、二方向はfull-tripleのco-Gramで評価し、任意の全曲面経路に沿って長さを抑える。同じ $f_t$ との全域値比較を証明。経路の領域往復回数を有限と仮定しない。 |
+| 全域scalar mapとambient下界 | [ke_global_ambient_lower.tex](../papers/sections/paper/ke_global_ambient_lower.tex), `ke:global-depth-lipschitz`, `ke:same-moment-corner-reference`, `ke:global-depth-base-comparison`, `ke:global-ambient-lower` | 下側cut $\mathfrak m_j$ とplateau $L/K_j$ を用いる全域 $\Theta_t$。一方向はsharp normal、二方向はfull-tripleのco-Gramで評価し、任意の全曲面経路に沿って長さを抑える。同じ $f_t$ との全域値比較を証明。経路の領域往復回数を有限と仮定しない。 |
 | 内部木の全fiber合併とambient上界 | [ke_global_ambient_upper.tex](../papers/sections/paper/ke_global_ambient_upper.tex), `ke:collapsed-tree-full-fiber-collapse`, `ke:coherent-corner-portals`, `ke:global-ambient-upper` | 残余基底を先に選び、許容cut条件の下で全 $f_t$-fiberのambient径を $C(1+\log(N_j+1))$ で評価。全endsで同じmomentのportalsを選び、旧full-cornerのendpoint上界を高々60本のsquare galleryで接続する。除去capを通る曲線もambient上界には使用できる。 |
 | 同じactual写像による大域実現 | [ke_global_metric_realization.tex](../papers/sections/paper/ke_global_metric_realization.tex), `ke:global-metric-realization` | 上記の同じ $\pi_t$ と $f_t=p_T\pi_t$ に、全固定段階の条件を満たす一つの遅い対角選択を適用。全射性、uniform ambient distortion消失、GH収束、全fiber合併の一様収縮を得る。外部CP/PBE/TCの結論を入力にしない。 |
 
@@ -154,7 +154,7 @@ Global Hermitian depthsを $\ell_i=-\log\|L_i\|^2$ とし、
  {R_t-\log\mathfrak m_j-\log K_j}\right]_0^1
 \]
 
-とする。少なくとも一座標が1、非零座標は高々三つなので、active covectorsは高々二本である。一active方向はsharp normal、二active方向はfull-tripleのdominant-product co-Gramで制御する。この全域微分評価を任意のrectifiable curveに積分するため、neck・corner・coreの往復回数に比例する誤差は生じない。先に $\Theta_t$ の全域Lipschitz評価を証明し、それをMoser前後の比較に使う。共通moment profileとcore cap制御により $\sup_xd_\square(\Theta_t(x),f_t(x))\to0$ を得て、同じ $f_t$ のambient下界へ移す。
+とする。少なくとも一座標が1、非零座標は高々三つなので、active covectorsは高々二本である。一active方向はsharp normal、二active方向はfull-tripleのdominant-product co-Gramで制御する。この全域微分評価を任意のrectifiable curveに積分するため、neck・corner・coreの往復回数に比例する誤差は生じない。先に $\Theta_t$ の全域Lipschitz評価を証明し、それをMoser前後の比較に使う。共通anchorの領域分解を確定し、保持neckの各点を同じmomentの旧corner辺torusへ接続する。既証のLipschitz評価でその参照点から値比較を移し、core cap制御と合わせて $\sup_xd_\square(\Theta_t(x),f_t(x))\to0$ を得る。参照点の費用は既証のsource-inclusive同一moment接続から取り、後続の全域上界を入力にしない。固定残余基底のMoser被覆・同一moment接続・中央帯は、有限下限以上のcutに一様な形で使用する。
 
 ### 4. 共通momentの全fiber合併と上界
 

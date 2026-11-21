@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.7: Source 固定点での exact transport，零 moment 商と閉 pinched fibre．
+% 2026-11-21 / v1.8: Source の特異 reduction と固定残余基底の有限 cut に一様な接続．
 \section{共通の normal circle に適合する二段階平均}
 \label{ke:staged-neck-section}
 
@@ -525,12 +525,15 @@ $\log T_t-A\varphi_t\le C'$ を全域に得る．
 source と三重点を避けた固定した $Q\Subset B$ 上で
 $uv=t$，$s=-\log(\|v\|^2/r^2)$，
 $M_t=-\log(|t|^2/r^4)$，$d(s)=\min(s,M_t-s)$ とする．
-$Q$ は compact とする．$m_t\to\infty$，$m_t\le M_t/2$ とし，
+$Q$ は compact とする．固定近傍に依存する有限な $m_Q$ がある．
+$|t|$ を十分小さくし，$m_Q\le m_t\le M_t/2$ に対して
 $K_t=\{p\in Q,\ d(s)\ge m_t\}$ とする．
 $K_t$ を source と像の双方に含む normal Moser map が存在し，
 その軌道像の actual ambient 直径は $O(m_t^{-1})$ である．
 さらに $K_t$ を含む深部開 strip 上で，局所積座標の complete
 annulus--disc 計量 $g_{\rm prod}$ と $g_t$ は一様に二側比較可能である．
+定数は $m_t,t$ に依存しない．従って固定した十分大きい cut にも使え，
+$m_t\to\infty$ と選べば軌道の変位は零へ収束する．
 \end{theorem}
 
 \begin{proof}
@@ -556,7 +559,7 @@ ordinary-pair capped density の比較である．同命題の体積上界から
 正則恒等写像に localized Chern--Lu 評価
 （関連 KE 主稿 \texttt{coarse:lem:localized-chern-lu}）を適用する．
 曲率 $-1$ の二曲面の積の holomorphic sectional curvature は
-$-1/2$ 以下なので，中心で $g_t\ge c,g_{\rm prod}$ を得る．
+$-1/2$ 以下なので，中心で $g_t\ge c g_{\rm prod}$ を得る．
 既存の体積上界と合わせれば複素次元 $2$ の行列の固有値比較により
 $g_t\le C g_{\rm prod}$ も従う．有限被覆で定数を一様にできる．
 固定 norm による $s$ は局所積座標の深度と有界な base-only 項だけ異なり，
@@ -576,8 +579,12 @@ $K_t$ から $U_t$ の境界へ向かう任意の経路は，最初の退出以�
 従って actual buffer は正の定数以上である．ここで局所比較のための有限被覆は
 $\overline{B'}$ 上に選んでいる．同じ議論で $B'$ と $m_t/2$ を少し内側へ
 縮めた比較的 compact な領域を $U_t$ 内に取れる．
-$U_t$ 上の $|V|_{g_t}=O(m_t^{-1})$ と
-系\ref{ke:short-circle-image-buffer} により求める Moser map を得る．
+$U_t$ 上の $|V|_{g_t}\le C_Q/m_t$ を用いる．上で得た正の buffer を
+$\beta_Q$ とし，$m_Q$ を
+$(2c_w+1/2)C_Q/m_Q<\beta_Q$ となるまで大きく取れば，
+全ての $m_t\ge m_Q$ について系\ref{ke:short-circle-image-buffer}を適用できる．
+この条件も有限被覆の tensor 比較も $m_t\to\infty$ 自体を必要としない．
+従って固定 cut を含めて求める Moser map を得る．
 直径は補題\ref{ke:short-circle-actual-buffer}の評価による．
 \end{proof}
 
@@ -596,14 +603,15 @@ Source は定理\ref{ke:projected-source-neck}，三重点の全 end との整�
 命題\ref{ke:neck-deep-moment-strip}と定理\ref{ke:fixed-base-neck-moser}の
 固定 source-free 基底で，$P$ を連結な compact 境界付き曲面とし，
 その少し大きい固定近傍上で両結果を用いる．
-$m_t\to\infty$，$m_t\le\vartheta M_t$ とし，
+固定近傍に依存する十分大きい有限な $m_P$ を取り，
+$m_P\le m_t\le\vartheta M_t$ とし，
 $I_t=[-c/(2m_t),c/(2m_t)]$ を共通 moment interval とする．
 円平均後の canonical moment を $\mu_t$，同じ normal Moser map を
 $\phi_t$ とし，$a\in I_t$ に対して
 \[
  E_t(a)=\{p\in P,\ m_t\le s\le M_t-m_t,\ \mu_t=a\}
 \]
-と置く．$t,a$ に依存しない $C_P$ が存在して
+と置く．$t,a,m_t$ に依存しない $C_P$ が存在して
 \begin{equation}\label{ke:eq:fixed-base-moment-connectors}
  \operatorname{diam}_{d_{g_t}}E_t(a)\le C_P,
  \qquad
@@ -643,6 +651,9 @@ $s(a,p)\ge c_0M_t/A$ となる．右端側も同様なので，
  \left|\int_{s(a,p)}^{s(a,q)}\frac{ds}{d(s)}\right|\le C_1
 \end{equation}
 が一様に成り立つ．この議論は $s(a,p)$ の残余微分を評価しない．
+用いた $c_0,C_0,\vartheta$ と深度の下限 $m_0$ は固定近傍だけに依存するので，
+$m_P$ を $m_0$ と前定理の Moser 下限以上に取れば，固定した有限 cut にも
+同じ証明が適用される．特に固定 stage を先に選び，その後 $t\to0$ とする用途に使える．
 
 固定した円束の smooth connection と $P$ 上の固定補助計量を取る．
 連結 compact 曲面 $P$ の任意の二点は，この補助計量で長さが一様に有界な
@@ -669,12 +680,16 @@ $d(s)^{-1}$ 倍される．同じ二側比較から，固定残余点・固定�
 \label{ke:fixed-base-central-band}
 命題\ref{ke:fixed-base-moment-connectors}と同じ固定連結 source-free 基底 $P$，
 canonical moment $\mu_t$，normal Moser map $\phi_t$ を用いる．
-$A>0$ を固定し，$m_t\to\infty$，$m_t=o(M_t)$ とする．
+$A>0$ を固定し，前命題の定数を用いて
+\[
+ m_P\le m_t\le\min\{\vartheta,c/(2A)\}M_t
+\]
+とする．これは固定した十分大きい cut を含み，$m_t=o(M_t)$ の選択でも満たされる．
 十分小さい $t$ について
 \[
  E_{t,A}=\{p\in P,\ m_t\le s\le M_t-m_t,\ |\mu_t|\le A/M_t\}
 \]
-と置くと，$t$ に依存しない $C_{P,A}$ が存在して
+と置くと，$t,m_t$ に依存しない $C_{P,A}$ が存在して
 \[
  \operatorname{diam}_{d_{g_t}}E_{t,A}\le C_{P,A},\qquad
  \operatorname{diam}_{d_{g_t}}\phi_t(E_{t,A})
@@ -685,9 +700,8 @@ $A>0$ を固定し，$m_t\to\infty$，$m_t=o(M_t)$ とする．
 \end{corollary}
 
 \begin{proof}
-$m_t\to\infty$ により，十分小さい $t$ では前命題の片側 moment 評価に
-必要な固定最小深度を超える．また $m_t=o(M_t)$ から
-$m_t\le\vartheta M_t$ および $A/M_t\le c/(2m_t)$ が最終的に成立するので，
+$m_t\ge m_P$ により，前命題の片側 moment 評価に必要な固定最小深度を超える．
+また仮定の上限から $m_t\le\vartheta M_t$ および $A/M_t\le c/(2m_t)$ となるので，
 中央帯の moment 値は同じ共通 interval に入る．
 $s\le\vartheta M_t$ での $\mu_t\ge c_0/s$ と
 $|\mu_t|\le A/M_t$ を合わせれば $s\ge c_0M_t/A$ を得る．
