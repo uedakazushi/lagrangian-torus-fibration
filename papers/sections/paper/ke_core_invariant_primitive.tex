@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.0: Actual invariant primitive の定量評価と nontrapping．
+% 2026-11-21 / v1.1: Actual invariant primitive の定量評価，nontrapping と全域接着への入力．
 \section{固定成分 end における actual invariant primitive の評価}
 \label{ke:core-invariant-primitive-section}
 
@@ -8,8 +8,9 @@ primitive の相対不変化が core 外に新しい trapping を作らないこ
 対象は，固定段階の後に選ぶ \emph{成分側の固定 compact collar} である．
 Source の critical moment を通る moving central neck 全体について
 同じ一階評価を主張するものではない．
-閉じた component link の被覆，その全 fiber による cut，および
-Liouville 葉族の大域接着は，本節の結論に含めない．
+閉じた component link の被覆と全 fiber による cut は
+節\ref{ke:component-link-cover-section}，Liouville 葉族の全域接着は
+定理\ref{ke:actual-global-fibration}で扱い，本節ではその primitive の条件を検証する．
 
 \subsection{重み付き cusp bounds と順序を固定した選択}
 
@@ -338,7 +339,7 @@ $\eta=\eta_0(\Psi/N)$ を使うことである．
 その外側の固定範囲で零にする．$\Psi\asymp H$，$|d\Psi|\le CH$ なので
 その cutoff の微分は一様に有界である．
 ただし \emph{支持する shell 全体が actual atlas の source と像の共通領域に
-入ること}を別途確かめる必要がある．
+入ること}は別の被覆評価であり，次の系で確認する．
 閉じた link の存在から，この buffer を省略してよいわけではない．
 Retained closed corner の境界 $6b_j$ だけを構成領域の境界とみなすと，
 上の補間支持は取れないので，既存の外側 construction domain を明示して使う．
@@ -463,17 +464,18 @@ Component 側の固定深い cut では $q_a\to0$ なので $M_a<0$ である．
 精密な $q_a\asymp s_a^{-1}$ 展開を用いる場合の $s_a$ は averaging source gauge
 の深度であり，別の image-depth coordinate へ無条件に移してはならない．
 
-\paragraph{この節で解消する条件と残る条件．}
+\paragraph{相対 primitive の結論と全域構成への適用．}
 Actual generator の $C^1$ smallness は，fixed component collar に限定すれば
 上の normal lemma と corner の高階化により，追加の解析仮定ではなくなる．
 Centered scalar average の exactness，weighted $C^1$ bound，
 適合 star cover 上の全 overlap の primitive gluing と nontrapping も証明される．
 補題\ref{ke:closed-component-link}の link については，
 系\ref{ke:component-shell-primitive-support}が零延長 cutoff の支持全体の
-source/image buffers も与える．一方，閉じた link 自体と
-新しい cuts が全 fiber の和であること，および
-相対 filling が全 $X_t$ を覆うことは独立に確認する必要がある．
-本節の定性的 fixed-stage 評価だけで大域距離歪みの消失も結論しない．
+source/image buffers も与える．閉じた link と新しい cuts の全 fiber 飽和性には，
+補題\ref{ke:closed-component-link}，\ref{ke:whole-fiber-core-trim}を用いる．
+相対 filling と全 $X_t$ の被覆は定理\ref{ke:actual-global-fibration}で得る．
+本節の定性的 fixed-stage 評価だけから大域距離歪みの消失を結論せず，
+そのための解析は定理\ref{ke:global-ambient-lower}，\ref{ke:global-ambient-upper}で行う．
 
 % Primary source checked: https://arxiv.org/pdf/1106.0873v2,
 % pp.38--39, (5.3)--(5.6) and the paragraph after (5.6), Theorem 5.1.

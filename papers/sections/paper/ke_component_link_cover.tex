@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.0
+% 2026-11-21 / v1.1: 閉 link と全 fiber cut，後続の相対 filling・全域比較への接続．
 % 前提：ke:neck-corner-saturated-union と本文中に明示する既存評価．
 \section{成分 link の moment cut と固定段階の全域被覆}
 \label{ke:component-link-cover-section}
@@ -414,8 +414,8 @@ saturation と既存の fiber partition を保つ．各 core との交わりは 
 小さい平行 moment levels を用いると，境界の両側に開いた共通 collars を取れる．
 従って各 core 側の fibration がこの collar 上で旧 fiber partition と一致するように
 構成されているならば，有限個の compact bases を貼り合わせて actual 曲面全体の
-Lagrangian fibration を得る．この最後の仮定は相対 filling の課題であり，本補題は
-それ自体の存在を主張しない．
+Lagrangian fibration を得る．本補題自体は最後の相対 filling の存在を主張せず，
+その構成は定理\ref{ke:actual-global-fibration}で与える．
 \end{lemma}
 
 \begin{proof}
@@ -438,10 +438,14 @@ bases の閉じた同値関係による貼合せは Hausdorff であり，局所
 collar 上で一致する．これで条件付きの最後の主張を得る．
 \end{proof}
 
-\paragraph{本節で閉じた部分と残る入力．}
+\paragraph{本節の結論と後続の相対 filling．}
 本節は，period の加法定数，共通整数基底，二つの moment cuts の丸め，固定段階の
 中央特異 locus の被覆，および core 外側への全 fiber 単位の切詰めを，既存 K2 の
-maps と quantitative buffers から導いた．Primitive の相対不変化と非捕捉性，
-その Liouville flow による相対 filling，および collar 上の葉族の補間は別に証明する
-必要がある．また全曲面の ambient metric に関する no-shortcut 比較や，標的への
-normalized distortion の消滅は，本節の固定段階被覆・接着だけからは従わない．
+maps と quantitative buffers から導いた．Primitive の相対不変化と非捕捉性は
+節\ref{ke:core-invariant-primitive-section}，collar 上の葉族の補間は
+命題\ref{ke:actual-saddle-moving-neck-interpolation}で証明する．
+これらを Liouville flow による相対 filling と合わせるのが
+定理\ref{ke:actual-global-fibration}である．
+全曲面の ambient metric に関する no-shortcut と normalized distortion は，
+本節の固定段階被覆だけからは従わず，
+定理\ref{ke:global-ambient-lower}，\ref{ke:global-ambient-upper}で別に評価する．

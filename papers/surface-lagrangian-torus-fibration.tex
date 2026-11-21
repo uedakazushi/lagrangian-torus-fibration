@@ -1,99 +1,54 @@
 \documentclass[11pt,a4paper]{article}
 \makeatletter\def\input@path{{sections/paper/}{sections/paper/}}\makeatother
 \input{sections/common.tex}
-\hypersetup{pdftitle={一般型射影曲面のLagrangian torus fibrationと作用適合matroidal atlas},pdfauthor={}}
-\title{一般型射影曲面の\\Lagrangian torus fibrationと\\作用適合matroidal atlas\\[0.5em]\large 相対SNC構成、次数分割と分岐底空間、大域作用座標の接着}
+\hypersetup{pdftitle={一般型射影曲面のLagrangian torus fibrationと負Kähler--Einstein極限},pdfauthor={}}
+\title{一般型射影曲面の\\Lagrangian torus fibrationと\\負Kähler--Einstein極限\\[0.5em]\large 相対SNC構成、分岐底空間、作用適合matroidal atlas}
 \author{}
 \date{2026年11月21日\quad 第25稿・現行改訂20}
 \begin{document}
 \maketitle
 \begin{abstract}
-次数 $d\ge5$ の滑らかな射影曲面 $X_d\subset\PP^3$ に対し，hyperplane Kähler class を保つ
-Lagrangian torus fibration を構成する．底空間は自由な辺のないコンパクトな三価分岐二次元複体であり，
-正則 fiber は $T^2$，分岐 fiber は $S^1\times(S^1\vee S^1)$ である．
-任意 genus の SNC divisor に対する有限相対 compactification を与え，
-$k\ge3$ の任意の次数分割 $d=\sum e_i$ から，$k$ 個の cores と
-$d\sum_{i<j}e_i e_j$ 個の nodes を持つ fibration を得る．
-その底空間の整数位相と，順序付き小解消における vertical Kähler slice も記述する．
-五次・六次の全平面分割では，focus affine singularities を許す大域作用適合 matroidal atlas を構成する．
-共有曲線の critical areas と normal framing を同時に合わせ，単一の neck primitive と
-parameter に相対的な Moser 法により，有限の平滑化 parameter でも作用の加法定数と直線性を保つ．
-五次では各 triangle に五つ，六次では各 triangle に三つ・各 bigon に二つの nodes が入り，
-全 branch の正規化された長さは $a/(\pi(d-1))$ となる．
-混合五次分割 $(1,1,1,2)$ では，各々の $K_4$ および $K_{3,3}$ core に作用適合 chart があるが，
-四 puncture neck の分母剛性と法円作用の分岐係数の総和により，任意の branch denominators を許しても大域接続は存在しない．
-三価 matroidal links の分類と合わせ，現在の比例曲率 SNC cores と branch graph を保ち，
-追加の branch singularities を入れない範囲で作用適合 matroidal atlas が可能な次数分割は，
-全平面の五次と六次に限られる．六次では全分母が一に強制される．
-さらに局所作用周期の条件と，標準 algebraic filling との相違を記述する．
-負 KE 退化との接続については，短い正則トーラス作用の平均化と定量的 Moser 法を用い，
-トーラス不変 Hermitian 計量との一様二側比較を仮定して，
-三重点の動く領域全体に小さい Lagrangian torus fibers を構成する．
-任意の固定次数 $d\ge5$ の開正方形の固定 compact 部分では，関連 KE 原稿の明示的な volume barriers と
-Savin の小摂動定理によって解析的比較を証明し，actual KE--Lagrangian torus fibration と，
-その領域の内在距離に関する平坦長方形への GH 収束を得る．
-Complete simplex KE 模型を用いる比較により，全深部三重点でも追加の tensor 仮定を外し，
-三枚の閉 square 全体を小さい actual Lagrangian tori で実現する．
-同じ fibration の射影は，三枚の square 自身の内在距離に対し
-$O((\log R_t)/R_t)$ の距離歪みを持つ GH 近似となる．
-この結論は構成領域の内在距離と，深度 $\min\ell_i>R_t/2$ の保護領域内の経路を許す距離に成立する．
-さらに，元の phase tori が既に Lagrangian な collar では，平均化の Moser flow が
-fiber 分割を保つことを示す．
-共通の normal circle を先に平均する二段階構成では，その actual circle と
-全 marked cycle の作用周期を厳密に保つ．一段階構成との Hamiltonian 比較を与え，
-指定した primitive normal subgroup に適合する closed-corner bundle にも同じ GH 誤差を得る．
-actual 計量で円生成場の長さが $\varepsilon$ 以下なら，
-作用不変背景を仮定せず Moser trajectory の長さを $c_w\varepsilon$ 以下に抑え，
-$(2c_w+1/2)\varepsilon$ より大きい actual buffer から，
-同じ compact 領域を覆う actual 円作用を得る．
-固定 source-free 基底では capped density と Chern--Lu 評価により
-moving normal strip の actual 二側比較と共通 Moser source・像を得る．
-さらに同じ normal moment 上の残余基底全体を，有界な actual 長さの経路で結ぶ．
-従ってその level に属する複数 fibres の合併の正規化 ambient 直径は $O(R_t^{-1})$ である．
-固定基底上では source を含む共通 neck と一重 pinched torus も構成する．
-三重点では固定した深度比で分離した三つの端を用い，射影 neck 座標との比の対数を
-全固定階で指数的に評価する．積を保つ滑らかな座標補間の後も平均の symplectic 性を保ち，
-比較 Hamiltonian の直接評価により，端ごとに指定した平均順序を一つの局所 bundle に統合する．
-また切断深度 $m_t\to\infty$，$\log m_t=o(R_t)$ の一般の選択に対しても，
-同じ閉 corner の局所 GH 評価を与える．遅い compact exhaustion と centered normal flow の
-自然性により，共通 moment strip と moment に依存する reduced 葉を同定し，
-全ての交わりが全 fibers で飽和した source-inclusive neck と closed corner の
-actual KE--Lagrangian 部分 fibration を構成する．
-Source の固定中央 rescaling では volume density は $L_t^{-2}$ と二側比較可能であり，
-有界な canonical potential と actual inradius $O(L_t^{-1/2})$ を得る．
-中央点から oriented arm への有界長の接続も得る．さらに固定 physical tube の
-正の canonical potential の対数勾配，complex Sobolev の Gaussian 積分と
-Bishop--Gromov 比較により，固定点を含む中央 source 全体の ambient 径を
-$O(1)$ に抑える．固定残余基底では中央 moment 帯と閉じた pinched torus
-全体も正規化 ambient 径で収縮する．
-さらに各 normal 深度を尺度とする logarithmic cover と同程度の深度の source-free slab を用い，
-共通 moment interval の全点から同じ canonical moment の残余境界へ
-$O(\sqrt{\log(R_t+2)})$ の費用で接続する．
-従って固定残余基底の同一 moment に属する全 fibers の合併も正規化 ambient 径で収縮する．
-成分極限の固定 core から actual KE 形式への
-小さい exact 移送と相対 flux 条件を明示する．極限 KE 形式について，固定 compact と
-全 collars 上で厳密に一致する smooth 正則化，正 residue の有限型 Weinstein core，
-その小さい飽和近傍の Lagrangian filling を得る．
-さらに，positive-residue primitive の meridian periods を canonical moments と厳密に同定し，
-actual moment cuts から閉じた component links を構成する．
-固定段階の全特異 strata の被覆，生成場の一階評価，exact な primitive の相対不変化と
-nontrapping，saddle を動かす reduced 葉族の補間を証明する．
-Link の既存葉を Liouville flow で内部へ延ばし，全 fibers による切詰めと接着を行うことで，
-全 $X_t$ 上の actual KE--Lagrangian fibration を得る．
-保持された corner tori と source の近傍は変えず，各 component の core と変更 collar の
-正規化 ambient 径は十分遅い対角選択で零にできる．
-Cubical target の任意の座標部分複体への非伸長 retraction を構成し，
-closed corner の内在 target 距離が全体距離の制限と等しいことを示す．
-最短路を六 label 以下へ還元し，六次以上の target の直径が $2\sqrt5$，
-その最大対が互いに素な三元 support の頂点対であることを厳密に決定する．
-全域基底の parameter 化を旧 softmax 値に $o(1)$ で整合させ，
-潰される内部木では一つの canonical moment を共通に用いる．
-六次以上で潰される木の上の全 fiber 合併の径の全域化，
-および全曲面の shortcut 制御は未証明である．
-これらを統合する問題として，actual 負 KE 形式に関する大域 fibration の射影と
-標識付き基底収縮の合成が，全曲面の正規化距離に対して一様に距離歪みを消す，
-という大域的な幾何学的実現を定式化する．この問題は未解決であり，
-局所収束や補助解析仮定の下の大域 GH 比較とは区別する．
+任意の固定次数 $d\ge5$ と本文の一般性条件を満たす全平面退化に対し，
+actual 負 Kähler--Einstein 形式 $\operatorname{Ric}(\omega_t)=-\omega_t$ に関する
+大域 Lagrangian torus fibration
+$\pi_t:X_t\to B_d(T)$ を構成する．
+底空間はコンパクトな三価分岐二次元複体で，正則 fiber は $T^2$，
+特異 fibers は nodal，branch，component core の模型を持つ．
+標識付き収縮 $p_T:B_d(T)\to\mathcal C_d$ と合成した同じ射影 $f_t=p_T\pi_t$ は，
+$R_t=\log(-\log|t|^2)$ に対して
+\[
+ \sup_{x,y\in X_t}
+ \left|R_t^{-1}d_{g_t}(x,y)-d_\square(f_t(x),f_t(y))\right|\longrightarrow0
+\]
+を満たす．ここで $\mathcal C_d=\{w\in[0,1]^d:\max w_i=1,\,
+|\operatorname{supp}w|\le3\}$ には unit-square 長さ距離を入れる．
+従って正規化 GH 極限を actual fibration の射影によって実現し，
+六次以上で $p_T$ が潰す各内部木上の全 fiber 合併も一様に収縮する．
+六次以上の極限直径は $2\sqrt5$ である．
+
+構成では，共通 normal moment と reduced 葉を保つ相対平均化により
+source を含む neck と closed triple corners を接着し，
+positive-residue primitive の compact core filling で全曲面を覆う．
+Source の中央全点径は actual 尺度で $O(1)$，全共通 moment での
+残余境界への退出費用は $O(\sqrt{\log(R_t+2)})$ である．
+距離下界は，source を除かない正則 normal frame 上の scalar Schwarz 障壁と
+全曲面上の clipped-depth map から導く．上界は，共通 moment の接続と
+高々 $60$ 本の square gallery から得る．
+関連 KE 原稿の未検証の大域比較仮説を用いず，明記した局所解析入力から
+同じ $f_t$ の全域評価を直接証明する．
+
+一般の symplectic 構成としては，任意 genus の SNC divisor に対する
+有限相対 compactification を与える．$k\ge3$ の次数分割 $d=\sum e_i$ から，
+$k$ 個の cores と $d\sum_{i<j}e_i e_j$ 個の nodes を持つ fibration を得て，
+基底の整数位相と順序付き小解消の vertical Kähler slice を記述する．
+全平面の五次・六次では，focus singularities を許す大域作用適合 matroidal atlas を構成する．
+五次では各 triangle に五 nodes，六次では各 triangle に三 nodes，各 bigon に二 nodes が入り，
+全 branch の正規化長さは $a/(\pi(d-1))$ である．
+混合五次分割 $(1,1,1,2)$ は局所作用適合 cores を持つが，
+四 puncture neck の分母剛性と法円作用の分岐係数により大域 atlas を持たない．
+比例曲率 SNC cores と branch graph を保ち追加の branch singularities を入れない範囲では，
+作用適合 matroidal atlas が可能な次数分割は全平面の五次・六次に限られる．
+この atlas の分類と，任意の固定 $d\ge5$ における上記の KE 計量実現は異なる結論である．
 \end{abstract}
 \tableofcontents
 \input{sections/paper/geometry_introduction_v25.tex}
@@ -123,6 +78,7 @@ closed corner の内在 target 距離が全体距離の制限と等しいこと�
 \input{sections/paper/ke_sharp_normal.tex}
 \input{sections/paper/ke_global_ambient_lower.tex}
 \input{sections/paper/ke_global_ambient_upper.tex}
+\input{sections/paper/ke_global_metric_realization.tex}
 \input{sections/paper/degree_partitions.tex}
 \input{sections/paper/partition_topology.tex}
 \input{sections/paper/tropical_obstructions.tex}

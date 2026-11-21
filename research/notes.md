@@ -3,9 +3,43 @@
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
-## 最優先目標への接続と最初の未解決補題
+## 全域実現定理と現在の点検範囲
 
-現在の目標は、主稿 `ke:global-realization` のactual KE–Lagrangian fibrationによる全曲面GH極限の実現である。対象・達成条件・K0–K5の着手順は [研究方針](../00_research_plan.md)、外部定理の正確なpath・label・確認commit・残る仮定は [KE依存表](ke-dependencies.md) を参照する。ここには証明を進めるための知識を残し、課題一覧を重複させない。`ke:actual-global-fibration` によりK3の全域actual構成を得たため、現在の核心はK4の全曲面距離比較である。
+主稿 `ke:global-realization` と統合証明 `ke:global-metric-realization` は、任意の固定 $d\ge5$ と既存一般性条件の全平面退化について、actual負KE形式の全域fibrationと、同じ $f_t=p_T\pi_t$ の全曲面ambient距離に関するdistortion消失を与える。潰される内部木上の全fiber合併も一様に収縮する。**原稿に証明があり、今回の新証明と接続を複数担当で内部点検した。** 形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的な新規性確認は未実施である。現在は公表に向けた一次文献・依存結果・主稿構成の点検を優先する。
+
+対象・結論の範囲と優先順位は [研究方針](../00_research_plan.md)、外部定理のpath・label・確認commitは [KE依存表](ke-dependencies.md) を参照する。ここには証明全文を複製せず、核心、入力の区別、有効な障害を残す。十分遅い対角選択と一つの許容された木系を使う結論であり、最適rate、任意の先指定木系への適合、全次数のmatroidal atlasは含まない。
+
+## Sourceを含むsharp scalar評価から全曲面の下界へ
+
+正本は `papers/sections/paper/ke_sharp_normal.tex` と `ke_global_ambient_lower.tex`。正則global normal frameで $s=-\log|x'_g|^2$、$U=|d\log s|_{g_t}^2$ とすると、$\Delta s=0$ とrank-one Bochner計算から $\Delta\log U\ge U-1$ を得る。Source-inclusive方程式 $x'_gy'_g=th_t(p)$ に対し、$\mathfrak n_j\le s\le\kappa L$ の比較領域は $h_t(p)=0$ でもannulusと固定残余compactの積であり、sourceを除く人工境界を必要としない。
+
+補助cut $\mathfrak n_j$ は、neck/corner構成の $n_j$ とは独立の記号とする。三種類の境界を分ける。残余境界は既存full-tripleの係数1評価、外側固定shellはsmooth component収束による有限上界 $A_j$、内側 $s=\kappa L$ はsourceのactual bufferとlocalized rank-one Chern–Luによる有限上界 $C_j$ を使う。明示的な障壁
+\[
+ B(s)=1+\varepsilon_j+A_j\mathfrak n_j/s+C_js/(\kappa L)
+\]
+が `ke:sharp-scalar-normal-barrier` の中心である。外側でsharp cusp漸近を仮定せず、下側clipを後から十分深くして $A_j\mathfrak n_j/s$ を吸収する。残余frameのbase-only差とMorse変換の $O(t)$ 誤差は、active上側cut $s\le L/K_j$ と $K_j>4$ の下でphysical depthへ転送する（`ke:sharp-global-one-active`）。
+
+旧corner cut $6b_j$ と独立に $\mathfrak m_j\gg A_j\mathfrak n_j/\varepsilon_j,N_j$、$K_j\gg C_j/(\kappa\varepsilon_j)$ を選び、最後に $\log\mathfrak m_j+\log K_j=o(R_t)$ とする。Global clipped map
+\[
+ \Theta_{i,t}=\left[\frac{\log(\ell_i/\mathfrak m_j)}{\log((L/K_j)/\mathfrak m_j)}\right]_0^1
+\]
+には少なくとも一つのplateauがあり、active方向は高々二つ。二方向はfull-tripleのdominant-product比較、一方向は上のscalar評価で扱う。`ke:global-depth-lipschitz` は全曲線に対する長さ評価を先に与え、領域間の往復回数に依存しない。
+
+`ke:global-depth-base-comparison` は、cornerの旧softmax、coreの頂点値、neckの $s\asymp|\mu|^{-1}$ と共通moment profileを比較する。既証の $\Theta_t$ のLipschitz性でMoser前後の値を比較する順序なので、距離下界と基底値整合を循環させない。これから同じ $f_t$ の `ke:global-ambient-lower` を得る。CP/PBE/TCを証明したのではなく、本稿の下界に必要な入力を直接置き換えている。
+
+## Portal上界と潰される木の全fiber合併
+
+正本は `papers/sections/paper/ke_global_ambient_upper.tex`。`ke:global-ambient-upper` は、保持corner内の旧経路を全曲面の経路として用い、同一momentのneck接続、source退出、各componentの固定stage費用を有限のtarget galleryでつなぐ。保持corner自体の新しい内在距離評価は要求しない。対象ごとに固定した有限定数は最後の遅い対角選択で $o(R_t)$ とする。
+
+`ke:collapsed-tree-common-moment` により、辺内点での $p_T$-fiberは同じcanonical moment上の内部木全体である。`ke:collapsed-tree-full-fiber-collapse` は一つのtorusだけでなく、その木上の全 $\pi_t$-fibersの合併を評価する。Sourceの中央帯・非中央armとcore側endpointを含めてこの評価を行い、全域上下界を `ke:global-metric-realization` へ統合する。経路がfiber又はmoment level内に留まるという主張ではない。
+
+## 有限の飽和全被覆でも局所加法誤差だけでは足りない
+
+有効な障害として `ke:full-cover-oscillating-bypass` を `ke_global_ambient_lower.tex` に保持する。Rectangle上の計量を $g_N=dy^2+a_N(x,y)^2dx^2$ とし、上下の薄い列で $a_\pm(x)=1\pm c\sin(2\pi Nx)$、中央帯の幅を $h_N=N^{-3}$、係数を $1+c$ とする。上下各半分ではprimitive $A_\pm(x)=\int_0^xa_\pm$ により局所intrinsic/protected distortionは $O(N^{-1})$、恒等写像のfibersは一点である。しかし安い側を周期ごとに選ぶ経路の長さは $1-2c/\pi+o(1)$ となり、全域下界の誤差は消えない。
+
+これはactual KE族の反例ではなく、有限の飽和全被覆・連結overlap・zero fiber diameterから局所加法誤差を有限回だけ足してよいとする推論への反例である。正しいbuffer原理には局所誤差とfirst-exit幅の比 $\epsilon/b\to0$ が必要（`ke:buffered-local-lower-globalization`）。本稿のP0では全曲線のscalar微分評価を使い、この往復回数の問題を回避した。
+
+## 固定残余基底のnormal比較と相対接着の入力
 
 固定 source-free compact 基底上の moving normal strip では、actual 計量で一定の buffer と $O(m_t^{-1})$ の短円を証明した（主稿 `ke:fixed-base-neck-moser`）。$\varphi_t=\log(\omega_t^2/\Omega_{t,d}^{\rm low})$ とし、大域の $\varphi_t\ge-C$ と $dd^c\log\Omega_{t,d}^{\rm low}\ge c\omega_{\rm FS}$ を、正則包含の Chern–Lu 不等式に組み合わせる。最大値原理から $\operatorname{tr}_{\omega_t}\omega_{\rm FS}\le C e^{A\varphi_t}$。固定 pair chart では体積包絡が $\varphi_t\le C$ を与える。入れ子座標間の固定射影幅から actual 球を確保し、局所 Chern–Lu を complete annulus–disc に適用して actual 二側比較を得る。法線深度を $m_t$ から $m_t/2$ に広げ、残余基底にも固定した余裕を取ることで、Moser map の source と像の両方が同じ内側 strip を覆う。
 
@@ -36,7 +70,7 @@ Moser 流では軌道全体の最大速度を軌道平均エネルギーの平�
 
 固定残余基底上で両側の moving cut $m_t$ における canonical moment は符号が逆で絶対値が $m_t^{-1}$ と一様比較可能である（`ke:neck-deep-moment-strip`）。よって同じ actual Moser map の下で、深部に共通の縮小 moment interval を置ける。K1の局所的な成功後も、第二periodとreduced葉の同時整合、source・branch・coreの被覆、全曲面のshortcutとportalを別々に検証する。任意のMoser移送による定性的存在と、\(p_T\pi_t\) の距離歪み消失も区別する。
 
-大域距離を得る経路は二つある。KE側の未解決解析入力を実証して既存近似写像 \(\Phi_t\) と \(p_T\pi_t\) を一様に比較するか、同じ \(p_T\pi_t\) に対して全域の距離下界・liftによる上界を直接証明する。前者の条件付き定理を無条件の入力にせず、後者では基底上の人工計量をactual全空間の距離で置き換える根拠が必要である。
+大域距離の証明には、関連KE側の条件付き近似写像を入力にする経路と、同じ $p_T\pi_t$ に対して全域上下界を直接示す経路を区別する。本稿では後者を実行した。CP/PBE/TCの対象族での検証自体は結論せず、人工的な基底計量をactual全空間の距離と同一視することもない。
 
 ## 共通の end collar での actual fiber の一致
 
@@ -110,7 +144,7 @@ Bishop下界は $cS^{-1}\rho_p^4e^{-C(D+1)}$、Gaussian上界は $CS^{-1}e^{-a(D
 
 ## Actual core の全域相対接着
 
-**主稿 `ke:actual-global-fibration` に証明を統合し、追加証明を別担当と内部点検した。** 任意の固定 $d\ge5$ と既存一般性条件の族について、K2の部分fibrationから全 $X_t$ 上のactual KE–Lagrangian fibrationを構成する。Markingの組合せ型を保ち、第二作用やcritical valuesの数値は先指定しない。全曲面の距離歪みは別の未解決条件である。
+**主稿 `ke:actual-global-fibration` に証明を統合し、追加証明を別担当と内部点検した。** 任意の固定 $d\ge5$ と既存一般性条件の族について、K2の部分fibrationから全 $X_t$ 上のactual KE–Lagrangian fibrationを構成する。Markingの組合せ型を保ち、第二作用やcritical valuesの数値は先指定しない。全曲面の距離歪みはこの構成定理の結論ではなく、`ke:global-ambient-lower` と `ke:global-ambient-upper` の別の証明で扱う。
 
 ### 正確な period と閉 link
 
@@ -144,7 +178,7 @@ Actual symplectic circleのcentered kernelについて
 
 外向きcollarのLiouville葉族は一般には旧neck葉族と異なるため、前節の相対補間を $q_a=\delta_j\ne0$ の小帯へ適用する。全corner葉とsource近傍を保ち、saddleは動かせる。全fiber trim後のclosed piecesでlocal fiber relationsの有限和は既に推移的なので、閉同値関係となりHausdorff基底を得る。基底は同じ $B_d(T)$。
 
-各componentのcore・変更collarは固定の少し広い連結compact内にあり、そこを通る選択した接続路とambient径は有限な $C_j$ で抑えられる。$R_t\ge j(1+C_j+\log(N_j+1))$ の対角選択で正規化費用を消す。**各componentごとの評価**であり、異なるcores全部の合併径や任意Liouville軌道の全長、fiber内在径は結論しない。同一moment source退出は得た。次は基底parameter化と木上のfiber合併、全曲面no-shortcut/portalを統合する。
+各componentのcore・変更collarは固定の少し広い連結compact内にあり、そこを通る選択した接続路とambient径は有限な $C_j$ で抑えられる。$R_t\ge j(1+C_j+\log(N_j+1))$ の対角選択で正規化費用を消す。**各componentごとの評価**であり、異なるcores全部の合併径や任意Liouville軌道の全長、fiber内在径は結論しない。同一moment source退出、基底parameter化、木上の全fiber合併、全曲面no-shortcut/portalは、それぞれの証明を経て `ke:global-metric-realization` へ統合した。
 
 ### 切り取った cap と旧 softmax 値
 
@@ -159,7 +193,7 @@ Actual symplectic circleのcentered kernelについて
 
 保持corner $A_{t,J}$ の旧projection像は $2\eta_{j,t}$-netであり、旧protected距離の制限を用いたGH誤差は $E_{j,t}/2+2\eta_{j,t}$ 以下。全曲面距離の上界にも旧cornerの経路を使える。一方、保持部分自身の新しい内在距離の上界にはcapを避けるdetourが必要で、全曲面距離の下界にはno-shortcut評価が必要である。
 
-全域基底が $B_d(T)$ と同相で、保持cornerのtorus partitionが一致しても、特定の基底parameterizationで $p_T\pi_t=P^{\rm old}$ とは限らない。次はcore側のcone sectorsを上のvertex capsへ送り、labelled cellsとneckの共通collarsで旧softmax値を連続に合わせる。小さいactual径だけから、任意のtarget parameterizationで像も小さいとはいえない。
+全域基底が $B_d(T)$ と同相で、保持cornerのtorus partitionが一致しても、特定の基底parameterizationで $p_T\pi_t=P^{\rm old}$ とは限らない。`ke:global-base-parameterization` はcore側のcone sectorsを上のvertex capsへ送り、全保持cornerで旧softmax値との一様に小さい誤差を実現する。小さいactual径だけから、任意のtarget parameterizationで像も小さいとはいえない。
 
 ## Source の residual cutoff と Euler 場
 
@@ -183,7 +217,7 @@ Actual symplectic circleのcentered kernelについて
 
 `ke:short-circle-actual-buffer` は不変背景を不要にする。g_a=ρ_a*g_ω、η=Aω、b=ε||w||₂とすると|β(X)|≤b|X|_{g_η}。Moser場は(1−s)|Y|²_η+s|Y|²_ω≤b|Y|_ηを満たし、平方完成で|Y|_ω≤b/(2√(s(1−s)))となる。両向きtrajectory長はc_w ε、通常kernelでc_w=π/(2√3)、centeredでπ/(4√3)。Exactnessは長さ評価に不要。`ke:short-circle-image-buffer` はδ>(2c_w+1/2)εから、同じcompact飽和集合Kを含むsource Oとimage φ(O)を得る。Backward c_w ε＋半orbit ε/2＋forward c_w εの予算であり、conjugated actionを元のK上で使うための像の条件を明示した。C¹制御やintrinsic径、全neckでの仮定検証とは別。
 
-遅いexhaustionでflow生存・共通bufferとtriple endsの葉の一致は実証した。全域被覆・core接着は `ke:actual-global-fibration` で証明した。残るactual入力は特異領域を含む全点の距離評価である。KE側 `neck:lem:rank-one-circle` はresidual rank-one下界とvolume上界だけでnormal circle長を抑えるが、その下界とactual bufferを証明する必要がある。固定residual境界の影響が消えないexact negative KE productの例があるため、normal深度だけからproduct asymptoticsを推論しない。
+遅いexhaustionでflow生存・共通bufferとtriple endsの葉の一致は実証した。全域被覆・core接着は `ke:actual-global-fibration` で証明した。特異領域を含む全点の距離評価は、sourceの全moment退出とscalar/portalの各節で別に証明した。KE側 `neck:lem:rank-one-circle` はresidual rank-one下界とvolume上界だけでnormal circle長を抑えるが、その下界とactual bufferを証明する必要がある。固定residual境界の影響が消えないexact negative KE productの例があるため、normal深度だけからproduct asymptoticsを推論しない。
 
 
 ## 全深部三重点の actual semi-flat 比較
@@ -234,15 +268,15 @@ C\bigl((b/\beta)^2+\beta/d_*\bigr)
 \[
 \operatorname{dis}(\pi_{t,J})\le C\frac{\log R}{R}
 \]
-を証明する。一つはW_{t,J}内の経路による内在距離、もう一つはV_t={min ell_a>R/2}内の全経路を許した距離をW_{t,J}へ制限したもの。標的d_Jは三枚のunit squares自身の内在距離として定義され、`topo:coordinate-retraction` により全C_dの距離の制限と等しい。Source側で全曲面の経路を許す下界は別の未解決問題である。
+を証明する。一つはW_{t,J}内の経路による内在距離、もう一つはV_t={min ell_a>R/2}内の全経路を許した距離をW_{t,J}へ制限したもの。標的d_Jは三枚のunit squares自身の内在距離として定義され、`topo:coordinate-retraction` により全C_dの距離の制限と等しい。Source側で全曲面の経路を許す下界は `ke:global-ambient-lower` で別に証明した。
 
 模型の証明はKE主稿 `simplex:thm:closed-corner-model`。S=R−2 log Rとし、Ψ_a=[log(ell_a/R)/S]_0^1とclipする。最大深度≥L/3からΨの像はC_Jに入り、微分がactiveなのは高々二方向である。一方向では係数1のSchwarz評価、二方向ではell_j+ell_k≤2L/Rからsharp product比較を使い、complete simplex全体の全経路の長さ下界を得る。上界ではC_Jのgeodesicを高々三枚の異なるsquares内の直線分で実現し、各線分を幅4 log R/Rだけ内部へ移す。Sharpな内部比較とcoarseな短いconnectorsを合わせて同じ率を得る。Seam collarが薄いことだけを下界の根拠にはしない。
 
 Actual/model比較O(1/R)に加え、Moser場のC1評価からmodel計量のLie derivativeを直接抑え、φ_t^*g_t=(1+O(1/R))g_L^sfを得る。保護領域内の全経路を扱うときは、Moser trajectoryのmodel長さO(1/R)とΨのLipschitz定数O(1/R)から、端点誤差d_J(Ψφ_t(z),Ψ(z))=O(R^−2)を用いる。これにより、閉cornerのfibrationの射影そのものがGH approximationになる。
 
-全fiberのintrinsic/ambient diameterはO(1/R)、正規化後はO(1/R²)、raw-map誤差はO(log R/R)。Squareの共通辺と共通頂点でも同じregular T² fiberである。これらを既存大域fibrationのsource・branch・coreのsingular fibersとは同定しない。全曲面の被覆・core接着は得たが、V_t外を通るshortcut評価は未解決。新規性の網羅的確認と外部査読・形式証明は未実施。
+全fiberのintrinsic/ambient diameterはO(1/R)、正規化後はO(1/R²)、raw-map誤差はO(log R/R)。Squareの共通辺と共通頂点でも同じregular T² fiberである。これらを既存大域fibrationのsource・branch・coreのsingular fibersとは同定しない。全曲面の被覆・core接着と、$V_t$ 外を通るshortcutの下界は、それぞれ別の証明で確保した。新規性の網羅的確認と外部査読・形式証明は未実施。
 
-一般のcut $m_t\to\infty,\ \log m_t=o(R_t)$ についても、同じsoftmaxとMoser mapの射影が局所GH近似になることを `ke:slow-cut-closed-corner-gh` で証明した。内在・protected距離のdistortionは $C[m_t^{-1}+(\log(m_t+1)+\log R_t)/R_t]$、fiberの元の尺度の内在径は $C/m_t$。内部squareを幅 $\delta=(\log(m+1)+4\log R)/R$ だけ縮め、pruningでは $S=R-\log m-\log R$ を使う。$m_t$のparameter微分を使わず、stepwiseな遅いexhaustionにも適用できる。この遅いcutを `ke:neck-corner-saturated-union` の対角選択へ用いて部分fibrationを構成した。全曲面への延長は別課題である。
+一般のcut $m_t\to\infty,\ \log m_t=o(R_t)$ についても、同じsoftmaxとMoser mapの射影が局所GH近似になることを `ke:slow-cut-closed-corner-gh` で証明した。内在・protected距離のdistortionは $C[m_t^{-1}+(\log(m_t+1)+\log R_t)/R_t]$、fiberの元の尺度の内在径は $C/m_t$。内部squareを幅 $\delta=(\log(m+1)+4\log R)/R$ だけ縮め、pruningでは $S=R-\log m-\log R$ を使う。$m_t$のparameter微分を使わず、stepwiseな遅いexhaustionにも適用できる。この遅いcutを `ke:neck-corner-saturated-union` の対角選択へ用い、actual core接着と全域距離評価へ組み込んだ。
 
 
 ## 開正方形上のactual KE–Lagrangian collapse
@@ -250,10 +284,10 @@ Actual/model比較O(1/R)に加え、Moser場のC1評価からmodel計量のLie d
 
 `ke:open-cell-moser-c1` はchain primitiveとMoser場のC1 normをO(L^−η)とし、flowのpullback metricを制御する。`ke:open-cell-collapse` はactual Lagrangian T² fibration、fiberのintrinsic/ambient diameter O(L^−η)、raw-map誤差O(1/R)を与える。Moser像領域に内在長さ距離を入れると、R^−2 g_tは平坦KηへGH収束し、projection distortionはO(L^−η+L^−η/R)=O(L^−η)。定数は固定ηに依存する。
 
-開正方形の局所結果と、前節の全閉cornerの局所結果を区別する。閉cornerの距離同定とsource・saddleを含むneckとの部分fibrationへの接着は証明したが、Coreへの相対延長・全域被覆は証明したが、全曲面のambient shortcutと距離歪みは残る。
+開正方形と全閉cornerの局所結果、source・saddleを含む部分fibration、coreへの全域接着、全曲面ambient距離の比較を区別する。現在は各段階の証明を `ke:global-metric-realization` に統合している。局所GH評価だけを全域distortionの根拠にはしない。
 
 
-## 負KE計量のGH極限とfiber収縮（2026-11-20）
+## 負KE計量のGH極限とfiber収縮
 
 ### 二つの尺度と先行定理
 全平面退化は $X_t=\{\prod_iL_i+tF_d=0\}\subset\mathbf P^3$、$d\ge5$ とし、$F_d$ は三重点で非零、二重線上では単純零点を持つとする。$\operatorname{Ric}(\omega_t)=-\omega_t$ の規約では $[\omega_t]=2\pi(d-4)H$、$\operatorname{Vol}(X_t,g_t)=2\pi^2d(d-4)^2$ である。複素構造を固定したままの負KE計量はこの規約で一意であり、ここで動かすのは複素構造である。
@@ -264,16 +298,16 @@ Zhang, *Collapsing of negative Kähler–Einstein metrics*, MRL 22 (2015), 1843�
 
 Mandel, *Degenerations of negative Kähler–Einstein surfaces*, JLMS 109 (2024), e12818, DOI 10.1112/jlms.12818, arXiv:2206.09792, Theorems 1.1–1.2は負KE neckとその尺度別模型を構成するが、我々のcompact family全体へのgluingを完了した定理として引用しない。K3での対照例はGross–Tosatti–Zhang, CAG 24 (2016), 93–113, DOI 10.4310/CAG.2016.v24.n1.a4, arXiv:1304.1820, Theorem 1.1。楕円K3の適切なRicci-flat metric族が底へ崩壊し、hyperkähler rotationでspecial Lagrangianの解釈を得る。負KEに同じ結論を移す証拠にはしない。
 
-### 我々のdiameter-scale候補と残る適合性
-KE研究の `papers/cubical-gh-limit.tex` では $R_t=\log(-\log|t|^2)$、$\mathcal C_d=\{w\in[0,1]^d:\max w_i=1,\ |\operatorname{supp}w|\le3\}$ とし、$(X_t,R_t^{-2}g_t)\to(\mathcal C_d,d_\square)$ を **(G)$_d$+(CP)$_d$+(PBE)$_d$の下**で述べる。関連repoの現行方針・Part IV–Vが解析入力の正本であり、無条件のactual GH収束は未証明。
+### Diameter-scale極限とactual fibrationによる実現
+KE研究の `papers/cubical-gh-limit.tex` では $R_t=\log(-\log|t|^2)$、$\mathcal C_d=\{w\in[0,1]^d:\max w_i=1,\ |\operatorname{supp}w|\le3\}$ とし、$(X_t,R_t^{-2}g_t)\to(\mathcal C_d,d_\square)$ を **(G)$_d$+(CP)$_d$+(PBE)$_d$の下**で述べる。これらの条件付き定理の正本は関連repoの現行方針・Part IV–Vである。本稿の `ke:global-metric-realization` はscalar下界とportal上界による別の直接証明を与え、CP/PBE/TCを検証したとはしない。
 
 局所plumbingのモデル $z_0z_1z_2=t$ で $u_i=-\log|z_i|$、$L=-\log|t|$ とすると $\sum u_i=L$。Cuspのradial model $\sum (du_i/u_i)^2$ を $(\log L)^2$ で割り、$r_i=\log u_i/\log L$ と置くと、制約は極限で $\max r_i=1$ となる。三重点では三枚のsquareが現れる。このradial計算は候補の説明である。Actual KE metricの一様漸近と全閉cornerの局所GH極限には、上記のcomplete模型比較と距離定理を別に用いる。
 
-望ましい写像は $f_t=p_T\circ\pi_t:X_t\to B_d(T)\to\mathcal C_d$。五次では $p_T$ は同相、六次以上では基底内の木も収縮する。**空間としてのGH収束**と**指定したLagrangian fibrationによる実現**を区別する。
+本稿で構成した写像は $f_t=p_T\circ\pi_t:X_t\to B_d(T)\to\mathcal C_d$。五次では $p_T$ は同相、六次以上では基底内の木も収縮する。**空間としてのGH収束**と**指定したLagrangian fibrationによる実現**を区別する。
 
-主稿 `base_topology.tex` の `topo:ke-map-compatibility` に、$\operatorname{dis}(\Phi_t)\le a_t$ と $\sup_xd_\square(\Phi_t(x),p_T\pi_t(x))\le b_t$ から $\operatorname{dis}(p_T\pi_t)\le a_t+2b_t$ を得る比較命題と証明を置いた。Ambient fiber diametersは同じ量以下、GH距離はその半分以下である。一般的新規性は主張しない。この初等比較の証明の点検と、actual $a_t,b_t\to0$ が未証明であることを区別する。
+主稿 `base_topology.tex` の `topo:ke-map-compatibility` に、$\operatorname{dis}(\Phi_t)\le a_t$ と $\sup_xd_\square(\Phi_t(x),p_T\pi_t(x))\le b_t$ から $\operatorname{dis}(p_T\pi_t)\le a_t+2b_t$ を得る比較命題と証明を置いた。Ambient fiber diametersは同じ量以下、GH距離はその半分以下である。一般的新規性は主張しない。この一般的な比較命題と、同じ $f_t$ に対して直接証明した全域distortionの消失は別の結果である。本稿の主定理は外部の条件付き近似写像 $\Phi_t$ を入力にしない。
 
-**具体的な次の課題：** `ke:actual-global-fibration` を入力として、証明した全interval source同一moment接続と、core近傍のtarget cap・基底parameter化を全曲面no-shortcut/portal比較へつなぐ。必要なのは全特異領域を含む一様評価と大域no-shortcutであり、regular fibersの点ごとの収縮では不足する。Action-affine structureだけからcanonicalなRiemannian基底計量は決まらない。
+**公表前の点検：** `ke:global-metric-realization` から依存する局所・全域証明を逆にたどり、文献の適用条件、固定stageの定数と最後のparameter閾値、同じ写像への上下界の適用を包括的に確認する。新証明と接続は内部点検済みだが、全主稿の再監査とは区別する。Action-affine structureだけからcanonicalなRiemannian基底計量は決まらない。
 
 
 ## 局所fibrationの証明と解析入力
@@ -285,7 +319,7 @@ KE研究の `papers/cubical-gh-limit.tex` では $R_t=\log(-\log|t|^2)$、$\math
 
 これらは原稿に条件と証明を保持する局所結果である。Averaging–Moserの基本方法はRuan, arXiv:math/0309177v2, §3に先行し、一般的新規性は未確認。H-minimal/special Lagrangian性、大域接着、singular fibersの計量評価は結論しない。
 
-**解析入力の区別：** 関連KE主稿の `coarse:prop:density-counterexample` により、負KE計量であってもbounded volume densityから一様tensor比較は導けない。五次coarse metric packageには独立な $(\mathrm{TC})_5$ が必要であり、その無条件な検証は未完成である。これは対象compact familyの反例ではない。全深部三重点のfull-orbit moving tensor比較は全固定d≥5で検証した。Source等を含むexterior全体への拡張は未解決である。
+**解析入力の区別：** 関連KE主稿の `coarse:prop:density-counterexample` により、負KE計量であってもbounded volume densityから一様tensor比較は導けない。五次coarse metric packageには独立な $(\mathrm{TC})_5$ が必要であり、その無条件な検証は未完成である。これは対象compact familyの反例ではない。全深部三重点のfull-orbit moving tensor比較は全固定d≥5で検証した。Source等を含むexterior全体への一様tensor二側比較の拡張は未解決である。本稿の全域距離比較は別のscalar/portal評価により得た。
 
 ### Averaging–Moserの先行研究
 W.-D. Ruan, *H-minimal Lagrangian fibrations in Kähler manifolds and minimal Lagrangian vanishing tori in Kähler–Einstein manifolds*, arXiv:math/0309177v2, https://arxiv.org/abs/math/0309177v2 。§3 Proposition 3.1はpotentialのtorus平均、Lemma 3.3はHamiltonian-gradient flowを扱い、Theorem 3.1はhomothetic toric potentialと一様 $C^\infty$ quasi-isometryの下でH-minimal fibrationを構成する。Theorem 4.2はsimple toroidal canonical degenerationの最大退化点へ消えるminimal torusの存在を示す。
@@ -380,10 +414,10 @@ d^c(AF-F)(\partial_{\theta_1})
 
 特にU=B×T²、Bは可縮なcorridor、N=N_-⊔N_+は両端のfull torus collarsとする。RestrictionはR²→R²⊕R²の対角写像なので、両端の二つのtorus period vectorsの一致が条件になる。その差は対応するS¹を運んだcylinder上のσ_sの積分である。これは指定したmarkingとaction originを保つ相対同定の条件であり、自由なbase relabellingを許すfibrationの存在障害と同一視しない。
 
-**着手方法。** `ke:actual-global-fibration` の全域構成を出発点とし、保持cornerと変更component領域の間で距離近似写像を整合させる。距離側では中央全点径と全intervalの `ke:source-all-moment-exit` を入力とする。Potential連続度の十分条件は未検証入力として保持する。同一momentの全fiber合併評価を基底の潰される木へ適用し、全曲面のno-shortcutとportal費用を別に構成する。
+**適用先。** 全域構成・基底値整合・全moment接続・全fiber合併・no-shortcut/portalの各証明は主稿に保持する。上の相対classの条件は点固定germを指定する別問題に有効であり、actual linkからの構成と混同しない。Potential連続度の十分条件も未検証入力として保持するが、P0の径評価には不要である。
 
 
-## 複素次元2：先行研究・singular fibersの確定事項（2026-11-20）
+## 複素次元2：先行研究・singular fibersの確定事項
 本研究の曲面X_d⊂P³, d≥5の一般SNC gluingと、全平面模型の明示的なsingular fiber型を区別する。主要な定理は papers/sections/paper/geometry_main_statements_v17.tex の main:global、nodeの線型monodromyは invariants_examples.tex、より詳しい先行比較は geometry_introduction_v25.tex。
 
 **一次資料の比較：**
@@ -415,7 +449,7 @@ d\binom{d-3}{2}+d\binom d2=d(d^2-4d+6)=c_2(X_d).
 
 
 ## KE退化との分岐基底の位相的比較
-曲面基底 \(B_d(T)\) の三価木 \(T_{ij}\) を収縮する既存の \(q:B_d(T)\to\operatorname{Sk}_2\Delta^{d-1}\) と、KE候補 \(\mathcal C_d\) の正規化同相の逆を合成すると、**labelを保ち点逆像が可縮な** \(p_T:B_d(T)\to\mathcal C_d\) を得る。一般次数の厳密な証明は `papers/sections/paper/base_topology.tex` の `topo:KE-cubical-comparison`。\(d=5\) では同相、\(d\ge6\) では両者は同相ではない（辺の局所分岐次数が異なる）。KEのGH極限や作用アフィン計量との一致は主張しない。
+曲面基底 \(B_d(T)\) の三価木 \(T_{ij}\) を収縮する既存の \(q:B_d(T)\to\operatorname{Sk}_2\Delta^{d-1}\) と、KE候補 \(\mathcal C_d\) の正規化同相の逆を合成すると、**labelを保ち点逆像が可縮な** \(p_T:B_d(T)\to\mathcal C_d\) を得る。一般次数の厳密な証明は `papers/sections/paper/base_topology.tex` の `topo:KE-cubical-comparison`。\(d=5\) では同相、\(d\ge6\) では両者は同相ではない（辺の局所分岐次数が異なる）。この位相的比較単独ではKEのGH極限や作用アフィン計量との一致を結論しない。Actual ambient距離でのGH実現には `ke:global-metric-realization` の解析と接着を用いる。
 
 整数鎖複体の主張を検査するため、\(d=5,\dots,8\) の \(B_d(T)\) と \(\operatorname{Sk}_2\Delta^{d-1}\) の \(\partial_1,\partial_2\) の階数を独立に計算して、\(b_1=0\)、\(b_2=\binom{d-1}{3}\) と一致した。再現コードは `verification/verify_ke_base_topology.py`。これは有限体 \(\mathbb F_{1000003}\) 上の有限検算であり、整数係数の一般定理の証明は本文のexplicit chain contractionが担当する。
 
@@ -428,7 +462,7 @@ d\binom{d-3}{2}+d\binom d2=d(d^2-4d+6)=c_2(X_d).
 
 六次以上の直径 $2\sqrt5$ の上界は、共通labelを持つ場合の二square展開と、disjointな三元supportの場合の3L+1Dの四shuffleで証明する。後者の下界は、二組の三labelの個数に応じた9頂点型の値を120個の三角形へaffineに延長するcalibration。四galleryの共有辺・全展開座標、全120三角形の勾配二乗を有理数演算で再実行した。`verification/verify_cubical_six_label_geometry.py` がその再現コードであり、retractionの解析的証明やKE推定の検証ではない。新規性の網羅的確認は未了。
 
-`ke:closed-corner-global-target` は既存closed-cornerのtarget距離を全 $\mathcal C_d$ のものへ置換する。Source側の全曲面ambient下界は依然残る。`topo:protected-thin-bypass` は、一般の二square長さ空間で局所の飽和したprotected距離と全域(S),(F)が誤差零でも、細い外側帯によるshortcutが起こる例である。Actual KE族や、十分な局所比較を持つ全域被覆の反例ではない。
+`ke:closed-corner-global-target` は既存closed-cornerのtarget距離を全 $\mathcal C_d$ のものへ置換する。Source側の全曲面ambient下界は `ke:global-ambient-lower` の別の証明で与える。`topo:protected-thin-bypass` は、一般の二square長さ空間で局所の飽和したprotected距離と全域(S),(F)が誤差零でも、細い外側帯によるshortcutが起こる例である。Actual KE族の反例ではない。有限の全被覆でも加法誤差だけでは不足することは、本ノート冒頭の `ke:full-cover-oscillating-bypass` が別に示す。
 
 ## 人工的基底計量の鋭い収束速度と幾何学的比較の核心
 $p_T:B_d(T)\to\mathcal C_d$ に補助piecewise Euclidean metric $h$ を固定し、$|v|_\varepsilon^2=|dp_T(v)|_\square^2+\varepsilon^2|v|_h^2$ の内在距離を考える。graph correspondenceのdistortion $\mathcal D_\varepsilon$ は、$d=5$ で $\Theta(\varepsilon^2)$、$d\ge6$ で $\Theta(\varepsilon)$ と鋭く決まる（主原稿に読み込む base_topology.tex の topo:metric-collapse-sharp）。$d\ge6$ の下界は同一fiber内の正の $h$-距離に由来するが、**GH距離の下界ではない**。
@@ -437,7 +471,7 @@ $p_T:B_d(T)\to\mathcal C_d$ に補助piecewise Euclidean metric $h$ を固定し
 \[
 \operatorname{dis}(p_T)\le\max\{\alpha_t,\ \sigma_tD_d+N_d\lambda_t+(N_d+1)\kappa_t\}.
 \]
-二枚のunit squareを一頂点で貼り、二枚を一枚に折る反例では(N),(S)が誤差零でも(F)が成立せず、$d_{\rm GH}\ge\sqrt2/2$（topo:portal-counterexample）。したがって局所模型だけでは大域収束は言えない。実際のLagrangian action metricの長さ完備化、枝・coreへの延長、および(N),(S),(F)の確認は未解決。新規性は未確認。
+二枚のunit squareを一頂点で貼り、二枚を一枚に折る反例では(N),(S)が誤差零でも(F)が成立せず、$d_{\rm GH}\ge\sqrt2/2$（topo:portal-counterexample）。したがって局所模型だけでは大域収束は言えない。独立のLagrangian action metricの長さ完備化と枝・coreへの延長は本稿の全域実現定理の結論外である。P0では全空間のactual ambient距離に直接no-shortcut・portal評価を証明した。新規性は未確認。
 
 
 ## 六次Petersen分岐基底の対称性
@@ -445,4 +479,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 
 ## 検証状態
 
-2026-11-21 / v3.0：中央全点径 $O(1)$、全moment source退出 $O(\sqrt{\log(R_t+2)})$、旧corner値に近い全域基底parameter化と内部木の共通momentを主稿改訂20へ統合し、追加証明を別担当と点検した。現行改訂20の組版は未実施（直前の改訂19は211頁で組版・28頁の表示確認済み）。形式証明・外部査読・包括的新規性確認・旧整数検算suiteと他三稿の再組版は未実施。P0の全曲面距離の統合は未完了。
+2026-11-21 / v3.0：主稿改訂20にP0の統合定理 `ke:global-metric-realization` と証明を保持する。今回の新証明と接続を複数担当で内部点検した。現行改訂20はLuaLaTeXで242頁に組版し、要約・導入・新証明・主定理の48頁を表示確認した。参照・引用・重複ラベル・欠字・overfull警告はない。TeX研究ノートも現状の記述を直して65頁に再組版し、変更した第1・4頁を表示確認した。形式証明、全主稿と全外部入力の包括的再監査、外部査読、網羅的新規性確認、旧整数検算suiteと他二論文の再組版は未実施。

@@ -2,8 +2,8 @@
   "date": "2026-11-21",
   "version": "3.0",
   "scope": "複素次元2の現行研究状態。旧三次元稿の組版・監査記録ではない。数学的な証明と、その再監査、組版、整数計算、GitHub保存、Cloudタスク起動を区別する。",
-  "priority": "P0: actual負Kähler–Einstein形式での大域Lagrangian torus fibrationの射影 p_T∘π_t が、各固定 d≥5 の全曲面ambient距離に関する正規化GH近似を与えること。",
-  "priority_status": "open",
+  "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。次の優先課題は公表前の包括的依存監査・一次文献比較・新規性確認・主稿構成整理。",
+  "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
   "mathematics": {
     "documented_local_results": [
@@ -31,12 +31,13 @@
       "ke:source-all-moment-exit, ke:source-inclusive-same-moment-collapse: 全共通intervalでsourceの同一canonical moment境界への退出 C sqrt(log(R+2))、固定基底の同一moment全fiber合併径 C sqrt(log(R+2))+C_P。"
     ],
     "not_proved": [
-      "中央帯に限られないmomentをまたぐ木上の複数fiberの合併の径、全曲面ambient距離でのno-shortcut、square lifts、portal connectorsとP0の一様distortion",
-      "KE側のCP/PBE（および必要時のTC5）の対象族での証明、またはそれらの直接評価による代替",
-      "一般次数のP0達成に必要な既存全証明と先行研究の独立点検"
+      "外部KE研究側のCP/PBE/TC自体の対象族での検証。本稿のP0ではこれらを仮定せず、直接のscalar下界とportal上界で必要な全域評価を代替した。",
+      "最適収束速度、次数一様の定数、任意に先指定した木系・作用・critical valuesへの適合、全次数のmatroidal atlas、special Lagrangian性は本定理の結論外。",
+      "独立のLagrangian action metricの長さ完備化と特異層への延長。本稿は全空間のactual ambient距離を直接扱う。",
+      "五次整数接着の一般分母剛性・三高係数の同時非負性・全支持型の大域実現分類。"
     ],
-    "scope_warning": "原稿に証明が書かれていることを、今回全定理を独立に再検証したことと混同しない。",
-    "research_note_strategy": "中央全点径O(1)、全moment source退出、全域基底parameter化を統合済み。Sharp scalar normal barrier、全曲面上下界と同一fとの比較の証明を追加し、別担当の数学的点検を完了。統合主定理・現行文書の整理と改訂20の組版は未完了。",
+    "scope_warning": "原稿に証明があること、今回の新証明と接続を複数担当で内部点検したこと、形式証明・全主稿再監査・外部査読・組版・整数計算を区別する。包括的な全依存証明の再監査と網羅的新規性確認は未実施。",
+    "research_note_strategy": "証明全文は主稿を正本とし、ノートにはscalar障壁、全域clipped mapの非循環な依存順、portalと内部木の全fiber合併、有限全被覆上のoscillating shortcut反例を簡潔に保持する。次は一次資料と依存結果の包括的点検、新規性確認、主稿構成整理。改訂20は242頁に組版し、変更箇所を含む48頁を表示確認済み。",
     "documented_global_results": [
       "ke:actual-global-fibration: 全固定d>=5、既存一般性条件の族に対し、K2の保持corner葉/source近傍に相対的な全Xtのactual KE–Lagrangian fibrationを構成。",
       "ke:component-meridian-normalization: q_a=M_a+2πw_aを向き付きcanonical normal momentと整数winding・exact transportで厳密同定。",
@@ -45,7 +46,20 @@
       "Saddle-moving relative familyとactual自由normal bandへのlift、Liouville compact cone fillingと全collar接着。",
       "各componentのcoreと変更collarのambient径・選んだ接続費用は固定stageで有界。遅い対角選択で正規化費用は零。異なるcore全体の合併径を主張しない。",
       "ke:core-depth-upper, ke:removed-corner-target-cap: strict psh最大原理で各coreの深度≤CN_j、各capの旧softmax像は成分頂点のsqrt(2)log(CN_j)/R_t近傍。保持cornerのprotected距離を制限したGH誤差≤E/2+2ηと、全曲面距離の上界を維持。",
-      "ke:global-base-parameterization, ke:collapsed-tree-common-moment, ke:neck-base-value-control: 全保持cornerの旧softmax値とのO((1+log N_j)/R)整合、各core/collarの小target像、内部木全体の共通moment、source valuesのedge midpoint近接。"
+      "ke:global-base-parameterization, ke:collapsed-tree-common-moment, ke:neck-base-value-control: 全保持cornerの旧softmax値とのO((1+log N_j)/R)整合、各core/collarの小target像、内部木全体の共通moment、source valuesのedge midpoint近接。",
+      "ke:sharp-scalar-normal-barrier, ke:sharp-global-one-active: sourceを除かない正則normal比較領域で三種類の境界を制御し、B=1+epsilon+A*n/s+C*s/(kappa*L)による係数1+o(1)のscalar上界を証明。",
+      "ke:global-depth-lipschitz: 一activeはnormal Schwarz障壁、二activeはfull-triple dominant-product比較で扱い、全曲面上のclipped-depth mapの全曲線Lipschitz評価を証明。",
+      "ke:global-depth-base-comparison, ke:global-ambient-lower: clipped-depthと同じactual基底値を全域で比較し、全曲面ambient距離のno-shortcut下界を証明。",
+      "ke:global-ambient-upper: 同一moment接続、source退出、各componentの固定stage費用と有限portal galleryにより、同じf_tの全曲面ambient距離上界を証明。",
+      "ke:collapsed-tree-full-fiber-collapse: d>=6でp_Tが潰す内部木上の全π_t-fibersの合併を含め、全f_t-fiberの正規化ambient径を一様に評価。",
+      "ke:global-realization, ke:global-metric-realization: 全固定d>=5・既存一般性条件、一つの許容marked treeと十分遅い対角選択の下で、actual全域π_tと同じf_t=p_Tπ_tの一様distortion消失を統合。"
+    ],
+    "publication_review_pending": [
+      "統合定理から逆にたどる外部KE結果・既存局所証明・一次文献の包括的な再点検",
+      "全主稿の論理・仮定・定数と領域・参照の再監査",
+      "関連研究との網羅的な比較と新規性確認",
+      "本文構成の整理と現行改訂20の組版・表示確認",
+      "外部査読。形式証明器による検証は未実施。"
     ]
   },
   "reproduction": {
@@ -56,25 +70,25 @@
     "arithmetic_command": "python3 scripts/research_check.py arithmetic",
     "latest_reported_main_build": {
       "date": "2026-11-21",
-      "revision": 19,
-      "pages": 211,
+      "revision": 20,
+      "pages": 242,
       "pdf_and_synctex": true,
       "refs_citations_checked": true,
       "overfull_box_warnings": 0,
       "missing_glyphs": false,
       "duplicate_labels": false,
-      "visual_review": "最終PDFの第1–2、16–17、127–150頁（28頁）を表示し、組版・数式・改頁を確認。全211頁の逐頁再点検ではない。",
-      "source": "K3の全域構成とcore capの評価を統合した現行改訂19をLuaLaTeXで組版。PDFはGitで追跡しない。",
-      "source_revision": "第25稿・現行改訂19。改訂20のsource更新前の組版記録。"
+      "visual_review": "改訂20の最終PDFについて、第1–2、14–21、52–54、119–129、158–181頁の48頁を表示確認。新しいsource・基底接着・scalar上下界・統合主定理を含む。全242頁の逐頁再点検ではない。",
+      "source": "全固定d≥5のactual fibrationによる全域distortion定理と証明を統合した改訂20をLuaLaTeXで組版。PDFはGitで追跡しない。",
+      "source_revision": "第25稿・現行改訂20（2026-11-21）"
     },
     "this_audit": {
       "date": "2026-11-21",
-      "scope": "中央sourceのslab体積c/L、source-free中央帯によるanchor接続、Gaussian/Bishop比較の係数相殺、全点O(1)と中央moment帯への帰結を独立に点検。DMV掲載版Theorem 1.2とW_* normを再確認。全旧証明の再監査ではない。 全momentのsource退出について可変S cover、周期因子、ρ≳1/Rのactual球局在、orientation、Bishop相殺と厳密moment補正を別担当と点検。 基底parameter化についてweighted inverse、moment cutのproper arc、inset、6panels、neck strip、core cone、内部木の共通momentをrootが点検。",
-      "reexecuted_build": false,
+      "scope": "中央sourceのvolume anchorとGaussian/Bishop比較、全moment source退出のscale・orientation・厳密moment補正、基底parameter化のweighted profile・proper cap arc・insetと全panels接着を複数担当で点検。Sharp scalar障壁の三境界・係数・global physical depthへの転送、全曲線clipped mapと基底値比較、portal上界と全内部木fiber合併まで、今回の新証明と接続を内部点検した。全主稿・全外部依存証明の包括的再監査ではない。 統合主定理の同じf、全小parameterの対角選択、GH correspondence、全fiber合併と直径の系を別担当と点検。",
+      "reexecuted_build": true,
       "reexecuted_static_checks": true,
       "reexecuted_python_suite": false,
       "six_label_finite_command": "python3 verification/verify_cubical_six_label_geometry.py",
-      "six_label_finite_result": "改訂18でPASSを確認。改訂19では有限計算箇所を変更せず再実行していない。",
+      "six_label_finite_result": "改訂18でPASSを確認。改訂20では有限計算箇所を変更せず再実行していない。",
       "independent_internal_proof_review": [
         "ke:source-central-volume-anchor",
         "ke:source-central-diameter",
@@ -93,12 +107,79 @@
         "ke:corner-cap-disk",
         "ke:global-base-parameterization",
         "ke:collapsed-tree-common-moment",
-        "ke:neck-base-value-control"
+        "ke:neck-base-value-control",
+        "ke:normal-harmonic-depth-barrier",
+        "ke:sharp-normal-boundary-inputs",
+        "ke:sharp-scalar-normal-barrier",
+        "ke:sharp-normal-physical-unit",
+        "ke:sharp-active-pair-cover",
+        "ke:sharp-global-one-active",
+        "ke:global-depth-lipschitz",
+        "ke:common-profile-log-depth",
+        "ke:global-depth-base-comparison",
+        "ke:global-ambient-lower",
+        "ke:global-ambient-upper",
+        "ke:collapsed-tree-full-fiber-collapse",
+        "ke:global-clipped-cogram-lower",
+        "ke:coherent-corner-portals",
+        "ke:point-to-corner-portal",
+        "ke:global-metric-realization",
+        "ke:global-gh-and-fibers",
+        "ke:global-diameter-limit"
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
-      "visual_pages_reviewed": [],
-      "current_build_status": "revision20: source, base, sharp normal, global lower and upper proofs included; combined theorem and current-document revision in progress; compilation pending. Latest verified build is revision19 (211 pages)."
+      "visual_pages_reviewed": [
+        1,
+        2,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        52,
+        53,
+        54,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181
+      ],
+      "current_build_status": "revision20: LuaLaTeX and latexmk succeeded; 242 pages; PDF/SyncTeX verified; unresolved refs/citations, missing glyphs, duplicate labels and overfull boxes: none. Selected 48 pages visually inspected."
     }
   },
   "cloud_codex": {
@@ -111,7 +192,7 @@
   "external_inputs": {
     "ke_repo": "uedakazushi/kaehler-einstein-degeneration",
     "verified_ke_main_commit": "74ba687f67e1f87a4d308bf868fcdef98db441df",
-    "status": "最新mainのコミットをGitHubで照合。必要箇所のラベル・仮定・規格化と本repoでの適用を点検したが、外部原稿全証明や引用一次文献の全再精読は行っていない。解析的な全域仮定は未解決。",
+    "status": "参照KE mainのcommitを照合し、今回用いた箇所のlabel・仮定・規格化と本repoでの適用を点検した。外部原稿全証明・全引用一次文献の包括的再精読は未実施。外部側CP/PBE/TCの検証は結論せず、本稿のP0では直接のscalar/portal評価で代替する。",
     "GGZ_local_diameter": {
       "source": "Guedj–Guenancia–Zeriahi, arXiv:2310.20482v1, Proposition 1.4 (p.5)",
       "url": "https://arxiv.org/abs/2310.20482v1",
@@ -136,12 +217,17 @@
       "source": "E. K. Babson, L. J. Billera, C. S. Chan, Neighborly cubical spheres and a cubical lower bound conjecture, Israel J. Math. 102 (1997), 297–315, DOI 10.1007/BF02773804. Text checked in the April 10, 1996 preprint, §2.3, Proposition 2.2 and Corollary 2.4.",
       "url": "https://www.math.ucdavis.edu/~deloera/MISC/LA-BIBLIO/trunk/Billera/BilleraEhrenborgcdindex.pdf",
       "verified": "連結scan PDF第24頁が該当本文p.6、第30頁が表題・著者・日付。刊行書誌は著者サイトと照合。C_dのcell=[A,B]という本稿の直接記述から既知細分との組合せ的同定を得る。unit-square距離のretractionとsqrt(20)定理の既知性は未確定。"
+    },
+    "Yau_rank_one_Schwarz": {
+      "source": "S.-T. Yau, A general Schwarz lemma for Kähler manifolds, Amer. J. Math. 100 (1978), 197–203, Theorem 2 and proof; DOI 10.2307/2373880",
+      "url": "https://archive.ymsc.tsinghua.edu.cn/pacm_download/59/11034-Shing-Tung_Yau_30.pdf",
+      "verified": "一次PDFのSchwarz不等式・最大値原理を確認。本稿ではs=-log|x|²と実計量/複素Laplacianの規約から係数1を直接計算し、全境界を別途評価する。"
     }
   },
   "other_papers": {
     "papers/quintic-integer-gluing.tex": "旧201頁の組版記録のみ。本監査では未再組版。",
     "papers/meridian-surgery.tex": "旧18頁の組版記録のみ。本監査では未再組版。",
-    "papers/research-notes.tex": "旧65頁の組版記録のみ。本監査では未再組版。"
+    "papers/research-notes.tex": "2026-11-21に現行のKE状態を反映してLuaLaTeX再組版。65頁、PDF/SyncTeX、参照・引用・重複label・欠字・overfull警告なし。変更した第1・4頁を表示確認。旧整数補題の証明・計算の再監査ではない。"
   },
   "formal_proof_assistant": false,
   "comprehensive_novelty_check": false

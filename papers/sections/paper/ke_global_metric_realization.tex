@@ -1,0 +1,155 @@
+% !TeX root = ../../surface-lagrangian-torus-fibration.tex
+% 2026-11-21 / v1.0: 同一の actual fibration による全域 GH 実現．
+\section{Actual Lagrangian fibration による負 KE 極限の実現}
+\label{ke:global-metric-realization-section}
+
+\begin{theorem}[全固定次数における大域的な計量実現]
+\label{ke:global-metric-realization}
+第\ref{ke:global-realization-section}節の一般性条件を満たす
+一つの全平面退化族を固定し，その次数を $d\ge5$ とする．
+実際の marked pants 分解から得られる一つの固定木系 $T$ と，
+全ての十分小さい $t\ne0$ に対する連続全射
+\[
+ \pi_t:(X_t,\omega_t)\longrightarrow B_d(T)
+\]
+であって，次を満たすものが存在する．
+\begin{enumerate}
+\item $\pi_t$ は定義\ref{def:fibration}の大域 Lagrangian fibration である．
+全 fibers は連結で，正則 fibers は actual $\omega_t$ に関する
+Lagrangian $T^2$ であり，特異 fibers と等方的 strata は
+定理\ref{ke:actual-global-fibration}の nodal，branch，core 模型を持つ．
+\item $f_t=p_T\circ\pi_t$ と置くと，
+\begin{equation}\label{ke:eq:global-metric-realization}
+ \operatorname{dis}(f_t):=
+ \sup_{x,y\in X_t}
+ \left|R_t^{-1}d_{g_t}(x,y)
+       -d_\square(f_t(x),f_t(y))\right|\longrightarrow0.
+\end{equation}
+ここで $\operatorname{Ric}(\omega_t)=-\omega_t$，
+$R_t=\log(-\log|t|^2)$ であり，$d_{g_t}$ は全曲面の ambient 距離である．
+\end{enumerate}
+従って定理\ref{ke:global-realization}の二条件が成立する．
+木系の組合せ型と成分 labels は固定し，critical values と基底の
+parameter 化には $t$ 依存を許す．定数の次数一様性又は族一様性は主張しない．
+\end{theorem}
+
+\begin{proof}
+\emph{構成と同じ写像の選択．}
+定理\ref{ke:actual-global-fibration}により，固定 stage $j$ の後で
+$|t|$ を十分小さくすれば，全 $X_t$ 上に actual fibration を得る．
+全被覆，連結 fibers，actual Lagrangian 性はこの定理で証明されている．
+各 piece の相対 marking と continuation により，木系の組合せ型 $T$ は
+stage と $t$ に依存せず固定できる．
+命題\ref{ke:global-base-parameterization}を用いて，その同じ fiber partition の
+基底を $B_d(T)$ と parameter 化し，$f_{j,t}=p_T\pi_{j,t}$ とする．
+これは距離比較のために別の fiber partition を採用する操作ではない．
+
+\emph{固定 stage の両側評価．}
+定理\ref{ke:global-ambient-upper}の記号で
+\[
+ U_{j,t}=M_dE_{j,t}+C(M_d+1)\eta_{j,t}
+          +(M_d+1)H_{j,t}/R_t,
+ \qquad M_d=3\binom{\min\{d,6\}}3\le60
+\]
+とする．下界の誤差を
+\begin{equation}\label{ke:eq:global-realization-lower-budget}
+ V_{j,t}=C_d\bigl(\varepsilon_j+b_j^{-1}+K_j^{-2}\bigr)
+ +\frac{C_j\{1+\log\mathfrak m_j+\log K_j+\log(N_j+1)\}}{R_t}
+\end{equation}
+と書く．定理\ref{ke:global-ambient-lower}と
+定理\ref{ke:global-ambient-upper}は，\emph{同じ} $f_{j,t}$ に対し
+全 $x,y\in X_t$ で
+\[
+ d_\square(f_{j,t}(x),f_{j,t}(y))-V_{j,t}
+ \le R_t^{-1}d_{g_t}(x,y)
+ \le d_\square(f_{j,t}(x),f_{j,t}(y))+U_{j,t}
+\]
+を与える．上界では全内部木の共通 moment，source の全 moment 退出，
+各 component compact の費用，および高々 $M_d$ 本の square gallery を使う．
+下界では global clipped-depth map の長さ評価を全ての経路に直接積分する．
+従って局所 protected 距離を ambient 距離に読み替える段階も，
+経路の領域出入りの回数を有限と仮定する段階もない．
+
+\emph{パラメータの選択順序と対角化．}
+まず $b_j\to\infty$，$\varepsilon_j\downarrow0$ を選び，旧 corner の cut を
+$m_j=6b_j$ とする．各 stage の residual domains，component core，
+相対 collars，$N_j$，および有限個の比較定数を先に固定する．
+定理\ref{ke:sharp-global-one-active}と
+命題\ref{ke:global-depth-base-comparison}の順序に従い，
+Scalar 障壁専用の補助 cut $\mathfrak n_j$ とその境界定数を決めてから，
+新しい lower cut $\mathfrak m_j$ と upper cut factor $K_j\to\infty$ を選ぶ．
+$\mathfrak n_j$ は既存 neck/corner 構成の $n_j$ とは独立の記号である．
+この $\mathfrak m_j$ は旧 corner cut $m_j$ と同じ量ではない．
+全固定 stage 定数を一つの $C_j\ge1$ に含め，
+構成・比較の有限個の条件に加えて
+\begin{equation}\label{ke:eq:global-realization-diagonal}
+ R_t\ge jC_j\{1+\log\mathfrak m_j+\log K_j+\log(N_j+1)\}
+\end{equation}
+を満たす閾値 $r_j>0$ を取る．$r_{j+1}<r_j/2$ としてよく，
+$0<|t|<r_j$ なら stage $j$ の全条件が成り立つようにする．
+$j(t)=\max\{j:|t|<r_j\}$ と置けば $j(t)\to\infty$ であり，
+\[
+ \frac{\log(m_{j(t)}+1)+\log R_t}{R_t}\to0,
+ \quad \frac{1+\log(N_{j(t)}+1)}{R_t}\to0,
+ \quad \frac{C_{j(t)}+C\sqrt{\log(R_t+2)}}{R_t}\to0.
+\]
+ここでは $N_j\ge m_j$ と，$\log R_t/R_t\to0$ を用いた．
+従って $U_{j(t),t},V_{j(t),t}\to0$ となる．
+$\pi_t=\pi_{j(t),t}$ と選び，両側評価から
+$\operatorname{dis}(f_t)\le\max\{U_{j(t),t},V_{j(t),t}\}\to0$ を得る．
+この定理は $t$ に関する fibration 族の滑らかさや，
+あらかじめ指定した速さの対角化を結論に含めない．
+\end{proof}
+
+\begin{corollary}[GH 収束と全特異 fiber 合併の収縮]
+\label{ke:global-gh-and-fibers}
+定理\ref{ke:global-metric-realization}の $f_t$ は全射であり，
+$\epsilon_t=\operatorname{dis}(f_t)$ と置くと
+\begin{align*}
+ d_{\mathrm{GH}}\bigl((X_t,R_t^{-1}d_{g_t}),
+                     (\mathcal C_d,d_\square)\bigr)&\le\epsilon_t/2,\\
+ \sup_{c\in\mathcal C_d}
+ \operatorname{diam}_{R_t^{-1}d_{g_t}}f_t^{-1}(c)&\le\epsilon_t,\\
+ \sup_{b\in B_d(T)}
+ \operatorname{diam}_{R_t^{-1}d_{g_t}}\pi_t^{-1}(b)&\le\epsilon_t.
+\end{align*}
+特に $d\ge6$ では，$p_T$ が潰す各内部木上の全ての
+$\pi_t$-fibers の合併が，一様に正規化 ambient 径を零にする．
+\end{corollary}
+
+\begin{proof}
+$p_T$ と $\pi_t$ は全射なので，$f_t$ の graph は両空間の correspondence である．
+その distortion が $\epsilon_t$ であることから第一式を得る．
+同一の $f_t$-fiber の二点を\eqref{ke:eq:global-metric-realization}に代入すると
+第二式を得る．各 $\pi_t$-fiber は一つの $f_t$-fiber に含まれるので第三式も従う．
+内部木の主張は命題\ref{ke:collapsed-tree-common-moment}と同じ fiber 合併であり，
+命題\ref{ke:collapsed-tree-full-fiber-collapse}はその非正規化費用も与えている．
+\end{proof}
+
+\begin{corollary}[直径と径一の規格化]
+\label{ke:global-diameter-limit}
+$D_d=\operatorname{diam}(\mathcal C_d,d_\square)$ と置くと
+\[
+ R_t^{-1}\operatorname{diam}(X_t,g_t)\longrightarrow D_d,
+ \qquad
+ \left(X_t,\frac{d_{g_t}}{\operatorname{diam}(X_t,g_t)}\right)
+ \xrightarrow{\mathrm{GH}}(\mathcal C_d,D_d^{-1}d_\square).
+\]
+$d\ge6$ では定理\ref{topo:diameter-six-labels}により $D_d=2\sqrt5$ である．
+五次の値 $D_5=\sqrt{13}$ には，
+\cite[\texttt{thm:intro-diameter-C5}]{KECubicalCurrent}の有限計量結果を用いる．
+\end{corollary}
+
+\begin{proof}
+全射性と distortion 評価から
+$|R_t^{-1}\operatorname{diam}(X_t,g_t)-D_d|\le\epsilon_t$ である．
+$D_d>0$ なので，同じ correspondence の距離を直径で割れば第二式も従う．
+\end{proof}
+
+\paragraph{結論の範囲．}
+証明は，関連 KE 原稿の未検証の大域入力
+$\mathrm{(CP)}_d,\mathrm{(PBE)}_d$ 又は $\mathrm{(TC)}_5$ を仮定していない．
+局所 density と全深部 triple comparison，固定 compact の収束という明記した入力から，
+本稿で直接 scalar bound，source exits，基底値の比較，portal 接続を証明した．
+任意に先指定した木系や critical values の実現，special Lagrangian 性，
+一般次数の大域 matroidal atlas，最適収束速度は本定理の結論に含めない．

@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-20: 現行の局所命題と条件付き KE 適用．
+% 2026-11-21 / v1.1: 局所 averaging と raw 値比較，actual 全域構成への依存関係．
 \section{三重点の短い Lagrangian tori と KE 近似写像}
 \label{ke:fiber-compatibility}
 
@@ -250,8 +250,10 @@ Fibration を接着するために fiber 分割を保つだけなら，より弱
 命題\ref{ke:relative-fiber-preserving}は，元の phase tori が既に $\omega$-Lagrangian な
 飽和 collar 上で，この centered primitive または元の chain primitive による flow が
 各 fiber を集合として保つことを示す．
-Actual neck と一致する orbit partition をそのような collar 上で選ぶことは，
-本稿の局所結果からは従わず，相対接着への課題として残る．
+Actual neck と一致する orbit partition の選択は，この局所結果だけからは従わない．
+本稿では，節\ref{ke:relative-corner-section}の平均順序の相対化と
+系\ref{ke:neck-corner-saturated-union}の全交わりの制御によって，
+開 collar 上で同じ全 fibers を実現する．
 \end{remark}
 
 \subsection{閉 cubical corner の単一 hexagon による実現}
@@ -563,15 +565,19 @@ $H_{L_t,m_t}\subset D_{L_t,m_t}$ なので定理\ref{ke:triple-moving-fibration}
 \begin{remark}[局所結論の論理的範囲]\label{ke:local-scope}
 この構成は三枚の閉 square の共通 face と support-drop face を含むが，
 異なる三重点 chart，neck，source との貼合せまでは与えない．
-特に本稿の大域的 fibration $\pi_t$ を $\pi_t^{\mathrm{loc}}$ に一致させる相対変形と，
-singular fibers を含む全域の一様評価は残る．
+保持した局所 fibers と整合する actual 全域 fibration は
+定理\ref{ke:actual-global-fibration}で構成し，singular fibers を含む全 fiber 合併の
+一様な ambient 径は命題\ref{ke:collapsed-tree-full-fiber-collapse}で評価する．
 \eqref{ke:eq:moving-tensor-comparison}は任意の固定次数 $d\ge5$ の actual family について，系\ref{ke:actual-closed-corner}で検証する．
 本節の局所構成自体には $\mathrm{(PBE)}_d$ や sharp coefficient-one theorem を使わないが，
-これによって大域解析仮定 $\mathrm{(CP)}_d+\mathrm{(PBE)}_d$ の検証や global GH convergence が済んだことにはならない．
+この局所構成だけで大域解析仮定 $\mathrm{(CP)}_d+\mathrm{(PBE)}_d$ の検証や
+global GH convergence を結論することはできない．後節ではこれらの解析仮定を用いず，
+定理\ref{ke:global-ambient-lower}，\ref{ke:global-ambient-upper}で直接の全曲面距離比較を得る．
 また $\operatorname{Im}(e^{-\sqrt{-1}\vartheta}\Omega_t)|_L=0$ という条件は課しておらず，
 special Lagrangian fibration は主張しない．
-Global な近似写像の distance distortion と本節型の適合性が全域で得られた場合に限り，
-命題\ref{topo:ke-map-compatibility}を用いて全 fibers の収縮へ進める．
+命題\ref{topo:ke-map-compatibility}は，既存の global GH 近似写像との適合性から
+全 fibers の収縮を導く一般的な比較原理である．本稿の actual 適用では，
+同じ $p_T\pi_t$ に対する上記の直接の二側距離評価を用いる．
 \end{remark}
 
 \subsection{固定 simplex の尺度と source critical values}
@@ -688,6 +694,8 @@ Core では $\|L_i\|^2,\|L_j\|^2\le C|t|$ なので
 未検証のまま同命題に付け加えてはならない．
 この必要条件は fibration の存在障害ではなく，KE 適合性を目指す場合に
 critical values の $t$-依存の再parameter化が必要となり得ることを示す．
+本稿で選ぶ全域 parameter 化では，系\ref{ke:neck-base-value-control}により，
+source critical values の像は対応する $e_i+e_j$ の $o(1)$ 近傍に入る．
 また $\Phi_t^{\mathrm{alg}}$ と一様距離 $o(1)$ の別の近似写像を使う場合にも，
 \eqref{ke:eq:source-marking-bound}の右辺にその $o(1)$ を加えれば同じ必要条件が成立する．
 \end{remark}

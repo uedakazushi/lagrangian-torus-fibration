@@ -1,16 +1,16 @@
 {
   "date": "2026-11-21",
-  "version": "2.5",
+  "version": "3.0",
   "scope": "GitHub mainだけから研究を再開するための現行主要ソース案内。完全なハッシュ台帳ではなく、実在するファイルの参照表。全ファイルの完全な一覧と現在のblob SHAはgit ls-filesおよびGitツリーを正本とする。",
   "primary_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
   "active_sources": [
     {
       "path": "papers/surface-lagrangian-torus-fibration.tex",
-      "role": "複素次元2の公表用主原稿・P0定式化"
+      "role": "複素次元2の公表用主原稿・actual KE fibrationによる全域GH実現"
     },
     {
       "path": "papers/sections/paper/ke_global_realization.tex",
-      "role": "P0の未解決問題と判定"
+      "role": "P0主定理の仮定・主張と証明の構成"
     },
     {
       "path": "papers/sections/paper/base_topology.tex",
@@ -110,7 +110,55 @@
     },
     {
       "path": "papers/sections/paper/ke_source_connectors.tex",
-      "role": "Central sourceのdensity・potential・moment・平均距離・短い退出、中央帯のcore還元と条件付き連続度評価"
+      "role": "Central sourceのdensity・potential・中央全点O(1)径と有効な補助評価"
+    },
+    {
+      "path": "papers/sections/paper/ke_source_all_moment_connectors.tex",
+      "role": "Sourceの全共通moment退出と同一momentの全fiber合併接続"
+    },
+    {
+      "path": "papers/sections/paper/ke_component_core_geometry.tex",
+      "role": "極限成分の正residue・有限型Weinstein core"
+    },
+    {
+      "path": "papers/sections/paper/ke_component_core_transfer.tex",
+      "role": "固定成分compactのactual exact移送と相対flux条件"
+    },
+    {
+      "path": "papers/sections/paper/ke_component_link_cover.tex",
+      "role": "Canonical moment normalization・閉component link・全strata被覆"
+    },
+    {
+      "path": "papers/sections/paper/ke_core_invariant_primitive.tex",
+      "role": "Actual作用に適合するprimitiveとnontrapping"
+    },
+    {
+      "path": "papers/sections/paper/ke_relative_reduced_foliations.tex",
+      "role": "Saddleを動かす相対葉族とactual lift"
+    },
+    {
+      "path": "papers/sections/paper/ke_actual_core_gluing.tex",
+      "role": "Actual全域fibration・全fiber trim・core capの評価"
+    },
+    {
+      "path": "papers/sections/paper/ke_global_base_compatibility.tex",
+      "role": "旧softmaxと全域基底の近似整合・内部木の共通moment"
+    },
+    {
+      "path": "papers/sections/paper/ke_sharp_normal.tex",
+      "role": "Sourceを含む正則normal frameのsharp scalar Schwarz障壁"
+    },
+    {
+      "path": "papers/sections/paper/ke_global_ambient_lower.tex",
+      "role": "Global clipped-depth map・同じfとの比較・全曲面ambient下界"
+    },
+    {
+      "path": "papers/sections/paper/ke_global_ambient_upper.tex",
+      "role": "全fiber合併の径・共通moment portals・全曲面ambient上界"
+    },
+    {
+      "path": "papers/sections/paper/ke_global_metric_realization.tex",
+      "role": "全固定d≥5の統合主定理・共通対角選択・GHと直径の系"
     }
   ],
   "source_roots": [

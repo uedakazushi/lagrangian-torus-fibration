@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.1: Source-inclusive neck と closed corner の全交わりの制御．
+% 2026-11-21 / v1.2: Source-inclusive neck と closed corner の全交わり，後続の全域構成への入力．
 \section{Source を含む neck と三重点 end の共通 exhaustion}
 \label{ke:neck-corner-exhaustion-section}
 
@@ -11,7 +11,9 @@ moving arm の命題\ref{ke:arm-common-moment-strip}を接続する．
 最初に source と saddle を含む neck の end germs を三重点 bundle と合わせ，
 さらに cut の位置を離して選ぶことで，closed corner と切詰めた neck の
 全ての実際の交わりで fiber partition を一致させる．
-Core への延長や，全曲面を通る経路の距離比較は含まない．
+本節の結論は部分 fibration の接着である．Core への延長と全域被覆は
+定理\ref{ke:actual-global-fibration}，全曲面を通る経路の距離比較は
+定理\ref{ke:global-ambient-lower}，\ref{ke:global-ambient-upper}で別に扱う．
 
 \subsection{残余基底と end 座標の区別}
 
@@ -283,9 +285,11 @@ Source の $\mu=0$ を含む全商では $(\mu_N,p)$ の位相同定を用い，
 残余 cut を共通にし，必要な $n_j$ の最大値，moment 幅と $t_j$ の最小値を取ればよい．
 各三重点での三 arm の座標は既に一つの共通 chart に合わせている．
 ただし，これで得るのは指定された end strips の相対的一致である．
-残る浅い normal 領域，component core，および曲面全体を覆う domain の選択は別の課題である．
-Source を含む全 fiber の径や全曲面の no-shortcut も，
-局所 flow の小さい変位と区別して検証する必要がある．
+浅い normal 領域と component core を含む全曲面の被覆は，
+補題\ref{ke:fixed-stage-stratum-coverage}と定理\ref{ke:actual-global-fibration}で確認する．
+Source を含む全 fiber 合併の径は命題\ref{ke:collapsed-tree-full-fiber-collapse}，
+全曲面の no-shortcut は定理\ref{ke:global-ambient-lower}で評価する．
+これらは局所 flow の小さい変位から直接従うものではない．
 
 \subsection{Closed corner と切詰めた neck の全交わり}
 

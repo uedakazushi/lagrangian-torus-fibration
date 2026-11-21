@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.0: Actual KE 形式上の相対 core 接着．
+% 2026-11-21 / v1.1: Actual KE 形式上の相対 core 接着，target caps と全域距離評価への接続．
 \section{Actual KE 形式上の全域 core 接着}
 \label{ke:actual-core-gluing-section}
 
@@ -140,7 +140,7 @@ Corner rounding 部分の collar では torus orbits をそのまま使える．
 
 \begin{theorem}[全平面退化の actual KE--Lagrangian 全域構成]
 \label{ke:actual-global-fibration}
-問題\ref{ke:global-realization}の任意の固定 $d\ge5$ と退化族を取る．
+節\ref{ke:global-realization-section}の設定で，任意の固定 $d\ge5$ と退化族を取る．
 十分大きい各固定 exhaustion stage $j$ について，$|t|$ を十分小さくすれば，
 一つの admissible marked tree system $T$ と connected-fiber continuous surjection
 \[
@@ -241,10 +241,13 @@ core と補間領域の正規化費用は $1/j$ 以下となる．
 この選択は各固定次数・固定族について行い，次数一様性は主張しない．
 \end{proof}
 
-本定理は問題\ref{ke:global-realization}の第一条件を満たす構成を与える．
-同一 moment の source 接続は定理\ref{ke:source-all-moment-exit}で扱う．
-第二条件には，基底値の整合と $d\ge6$ で潰される木の上の
-全 fiber 合併の径，および全曲面の経路を許す no-shortcut 下界がなお必要である．
+本定理は actual KE 形式上の全域 fibration と，各 component の固定段階の接続費用を与える．
+同一 moment の source 接続は定理\ref{ke:source-all-moment-exit}，
+基底値の整合は命題\ref{ke:global-base-parameterization}で扱う．
+これらを用いて，$d\ge6$ で潰される木上の全 fiber 合併径を
+命題\ref{ke:collapsed-tree-full-fiber-collapse}で評価し，
+全曲面の距離比較を定理\ref{ke:global-ambient-lower}，
+\ref{ke:global-ambient-upper}で証明する．
 閉 corner から core 側へ切り取った部分の intrinsic GH 評価を，
 新しい全曲面上の距離評価と同一視しない．
 
@@ -427,8 +430,10 @@ $A_{t,J}$ \emph{自身}の新しい内在距離については，下界
 保持境界上の短い経路へ置き換える追加の detour 評価が必要である．
 固定 compact の中を通る接続路の評価だけでは，その経路が $A_{t,J}$ の中に留まると
 まではいえない．ここではこの新しい内在上界を主張しない．
-同様に，$R_t^{-1}d_{g_t}$ の下界は protected domain の外を通る shortcut の問題として
-残る．
+後続の定理\ref{ke:global-ambient-upper}は旧 full corner 内の経路を使うため，
+この保持領域の内在 detour 評価を必要としない．
+一方，$R_t^{-1}d_{g_t}$ の下界には protected domain の外を通る全経路の制御が必要であり，
+定理\ref{ke:global-ambient-lower}で別に証明する．
 
 Projection の全射性の損失も小さい．補題\ref{ke:removed-corner-target-cap}より，
 $P_A(A_{t,J})$ に含まれない点は $e_i$ の $\eta_{j,t}$ 近傍のいずれかに属する．
@@ -450,7 +455,7 @@ $(x,w)$ を全て取った correspondence の distortion は
 $E_{j,t}+4\eta_{j,t}$ 以下である．左辺の source metric は protected distance の制限であり，
 $A_{t,J}$ の新しい内在距離でも，全曲面の距離でもない．
 
-\paragraph{全域の基底値との同定は別の作業である．}
+\paragraph{旧 softmax 値と全域基底値の比較．}
 以上は旧 softmax 値 $P^{\rm old}_{t,J}$ に対する主張である．
 全域 quotient の位相が $B_d(T)$ であることと，保持 corner の全 torus fibers が同じで
 あることだけから，特定の parameterization に対して
@@ -458,8 +463,11 @@ $p_T\circ\pi_{j,t}=P_A$，または両者の差が $o(1)$ であるとは結論�
 Core と変更 collar の actual 径が小さいことも，任意に再 parameter 化した target
 でのその像の径を小さくすることは保証しない．
 
-P0 へ進むには，旧 corner の値と整合するように各 labelled cell の parameterization
+命題\ref{ke:global-base-parameterization}では，各 labelled cell の parameterization
 を選び，core 側の cone sectors を上の小さい vertex caps へ対応させ，neck の共通
-collars でも値を連続に一致させる必要がある．木を潰す $p_T$ との同時整合もその選択に
-含まれる．本補題はそのための定量的な cap の位置を与えるが，この全域値の接着や
-ambient no-shortcut estimate を既証明に置き換えるものではない．
+collars でも値を連続に一致させる．保持 corner の旧値との一致は $O(\eta_{j,t})$ の
+近似であり，旧 softmax 辺の regular tori を branch locus に移す厳密一致は要求しない．
+木を潰す $p_T$ との整合には，命題\ref{ke:collapsed-tree-common-moment}の
+全枝共通 moment を用いる．本補題の cap の位置はこれらの構成への入力であり，
+全域の基底値比較や定理\ref{ke:global-ambient-lower}の no-shortcut 評価を
+単独で与えるものではない．

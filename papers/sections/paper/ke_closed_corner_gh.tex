@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.1: 全閉 corner の GH 極限，一般の遅い cut と相対 averaging．
+% 2026-11-21 / v1.2: 全閉 corner の GH 極限，遅い cut，相対 averaging と全域比較への接続．
 \section{全閉 triple corner の内在的 GH 極限}
 \label{ke:closed-corner-gh-section}
 
@@ -281,8 +281,11 @@ $X_t$ 内で $\mathcal V_t$ の外へ出る経路は，いずれにも含めて�
 したがって target の他の cells による短縮はなく，全体 target の距離で同じ評価を述べられる．
 この target 側の事実は，source 側の許される経路を全 $X_t$ に広げるものではない．
 
-従って異なる三重点 chart の接合，neck・source・branch・core を含む
-既存の大域 fibration への相対接着，および大域 shortcut の評価は残る．
+異なる三重点 chart と neck の接合は系\ref{ke:neck-corner-saturated-union}，
+source・branch・core を含む actual 全域接着は
+定理\ref{ke:actual-global-fibration}で別に行う．
+全曲面の shortcut は定理\ref{ke:global-ambient-lower}で制御し，
+定理\ref{ke:global-ambient-upper}と合わせて全域の距離比較を得る．
 本節の regular fibers と既存大域 fibration の singular fibers を同一視しない．
 解析入力の新規性の包括的確認も引き続き必要である．
 \end{remark}
@@ -306,12 +309,15 @@ $d_J=d_\square|_{\mathcal C_J\times\mathcal C_J}$ である．
 Source の許される経路の集合には変更を加えていない．
 \end{proof}
 
-\begin{remark}[残る actual shortcut の問題]
+\begin{remark}[Target retraction と actual shortcut の区別]
 この target 側の等長性により，異なる三重点を経由する target 経路が
 一つの $\mathcal C_J$ 内の距離をさらに短くする可能性は排除された．
 一方，actual $X_t$ の経路が対応する保護領域を出て短くなる可能性は，
 この retraction では制御されない．
-Actual の全域 no-shortcut，portal 接続，core の全域被覆は引き続き独立の課題である．
+Actual の全域 no-shortcut は定理\ref{ke:global-ambient-lower}，
+portal 接続は補題\ref{ke:coherent-corner-portals}，
+core を含む全域被覆は定理\ref{ke:actual-global-fibration}で，
+この retraction とは別の議論によって証明する．
 \end{remark}
 
 
@@ -480,15 +486,18 @@ raw 誤差には系\ref{ke:closed-corner-fibration}を用いればよい．
 この定理は，固定 compact 領域の列に応じた段階的な対角選択にも適用できる．
 従って neck 側の exhaustion と合わせるために，三重点の cut を任意に遅く
 発散させても，この closed corner の GH 近似は失われない．
-実際の開 overlap 上で作用・reduced 葉・fiber partition を合わせること，
-保護領域の外を通る経路，source・branch・core を含む全域の距離比較は，
-依然として別の証明課題である．
+実際の開 overlap 上で作用・reduced 葉・fiber partition を合わせることは，
+系\ref{ke:neck-corner-saturated-union}で別に証明する．
+保護領域の外を通る経路と source・branch・core を含む全域の距離比較には，
+定理\ref{ke:global-ambient-lower}，\ref{ke:global-ambient-upper}を用いる．
 
 \subsection{次の相対接着への条件}
 
 Fibration の接着に必要な collar の固定と，各点を固定することを区別する．
 以下の命題は，既存の averaging--Moser 構成に直接適用できる．
 Actual neck にその仮定を満たす collar が存在することを主張するものではない．
+本稿で使用する collar の存在と全交わりの飽和性は，
+系\ref{ke:neck-corner-saturated-union}で確認する．
 
 \begin{proposition}[既に Lagrangian な orbit collar を保つ averaging]
 \label{ke:relative-fiber-preserving}
@@ -576,8 +585,11 @@ phase tori の orbit partition は変わらない．
 $\zeta'=\zeta^A u(\zeta,t)$ という変更は，一般にその partition 自体を変える．
 曲面の同じ overlap に二つの torus actions が存在することだけでは，
 系\ref{ke:relative-neck-matching}の仮定は満たされない．
-本稿の actual neck と三重点領域の間で，必要な orbit partition，
-action periods，および quantitative buffer を同時に合わせることは残る課題である．
+本稿の actual neck と三重点領域の orbit partition，canonical normal moment，
+および quantitative buffer の同時整合は，
+系\ref{ke:neck-corner-saturated-union}で確認する．
+End の第二 cycle はそこで得た共通 torus の同定を使って移送して選び，
+独立に先指定した第二 period の一致を仮定しない．
 上の fiber-preserving 証明では chain homotopy primitive を用いた．
 同じ exterior derivative を持つ任意の別の primitive へ替えても，
 \eqref{ke:eq:relative-primitive-vertical}が自動的に保たれるわけではない．

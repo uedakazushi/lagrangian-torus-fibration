@@ -18,6 +18,21 @@ node 数，および底空間の homotopy type を変更できる．
 共有 branch に沿う大域的な算術制約は，companion 論文
 \cite{QuinticArithmetic}で扱う．
 
+さらに，固定した一般位置の全平面退化に対し，actual 負 Kähler--Einstein 形式で
+同じ相対構成を計量的に制御する．$R_t=\log(-\log|t|^2)$ とすると，
+標識付き基底収縮と fibration の合成 $f_t=p_T\pi_t$ が
+\[
+ \sup_{x,y\in X_t}
+ \left|R_t^{-1}d_{g_t}(x,y)-d_\square(f_t(x),f_t(y))\right|\to0
+\]
+を満たすことを，任意の固定 $d\ge5$ で証明する
+（定理\ref{ke:global-realization}，定理\ref{ke:global-metric-realization}）．
+これは全曲面の ambient 距離についての主張であり，nodal，branch，core fibers と，
+六次以上で基底収縮が潰す内部木上の全 fiber 合併を含む．
+一般の symplectic 存在構成と，この特定退化族に対する KE 計量実現は，
+仮定と証明を分けて記述する．関連する局所 KE 崩壊および
+Lagrangian 構成との比較は第\ref{intro:ke-collapse}節で行う．
+
 基底は，自由な辺を持たないコンパクトな分岐二次元複体である．
 「境界がない」とはこの自由辺の不存在を意味し，分岐辺の内点には三枚の sheets が接する．
 その fiber は $S^1\times(S^1\vee S^1)$ であり，
@@ -485,14 +500,15 @@ focus values 自体に matroidal chart を延長する主張ではない．
 
 \subsection{負 Kähler--Einstein 退化との計量的な比較}\label{intro:ke-collapse}
 
-本稿の構成と局所評価が向かう大域的な問題は，
-Lagrangian fibration の射影自体によって，負 KE 計量の径の尺度での
-Gromov--Hausdorff 極限を実現することである．
-第\ref{ke:global-realization-section}節では，actual KE 形式に関する
-fibration $\pi_t:X_t\to B_d(T)$ と標識付き収縮 $p_T$ の合成について，
-全曲面の ambient 距離に対する一様な距離歪みの消失として定式化する．
-問題\ref{ke:global-realization}は未解決であり，以下の存在結果と局所解析は
-その入力および部分的な実現を与える．
+定理\ref{ke:global-realization}は，Lagrangian fibration の射影自体によって，
+負 KE 計量の径の尺度での Gromov--Hausdorff 極限を実現する．
+Actual KE 形式に関する fibration $\pi_t:X_t\to B_d(T)$ と
+標識付き収縮 $p_T$ の合成について，全曲面の ambient 距離に対する
+一様な距離歪みが消えることを証明する．
+正規化は $\operatorname{Ric}(\omega_t)=-\omega_t$，
+$\bar g_t=R_t^{-2}g_t$，$R_t=\log(-\log|t|^2)$ である．
+以下では既存結果の範囲，本稿が明記して用いる局所入力，
+および全域化のために証明する評価を区別する．
 
 本稿の fibration の存在と，負 Kähler--Einstein 計量の崩壊は異なる主張である．
 全平面退化 $X_t=\{\prod_i L_i+tF_d=0\}$ に対し，
@@ -544,8 +560,11 @@ KE 側の近似写像 $\Phi_t$ が
 となることを追加で示すのが一つの十分条件である．
 命題\ref{topo:ke-map-compatibility}は，この条件から正則・特異 fibers の
 \emph{ambient} 直径収縮と距離歪みの評価を導く初等的な比較原理である．
-解析仮定の証明や上の適合性評価を本稿が完成したとは扱わない．
-$d=5$ では $p_T$ は同相だが，$d\ge6$ では基底内の木の収縮も必要である．
+本稿はこの条件付き定理を引用して収束を結論する経路を採らず，
+同じ $f_t=p_T\pi_t$ の全域上下界を直接証明する．
+従って $\mathrm{(CP)}_d,\mathrm{(PBE)}_d$ 自体の証明を主張しない．
+$d=5$ では $p_T$ は同相であり，$d\ge6$ で潰される内部木上の全 fiber 合併は
+命題\ref{ke:collapsed-tree-full-fiber-collapse}で制御する．
 
 三重点の積座標では，三枚の cubical squares を一つの toric hexagon によって
 全閉領域上で同時に実現できる（命題\ref{ke:triple-hexagon}）．
@@ -631,7 +650,8 @@ moment-dependent reduced foliation により，moving end の全軌道を共通�
 全ての実際の交わりで全 fiber が一致することを示し，それらの和集合上の
 actual KE--Lagrangian 部分 fibration を与える．
 後述の定理\ref{ke:actual-global-fibration}は，これを component cores へ相対接着して
-全曲面を覆う．全曲面の距離比較は引き続き別の問題である．
+全曲面を覆う．その同じ fibration の全曲面距離比較は，
+後述の global clipped-depth map と共通 moment の接続で証明する．
 
 Source の計量的な問題については，節\ref{ke:source-connectors-section}で
 固定中央 rescaling の volume density を $L_t^{-2}$ と両側から比較する．
@@ -651,6 +671,8 @@ $O(1)$ に抑える．固定残余基底では中央 moment 帯と閉じた pinc
 全体にも適用できる（系\ref{ke:fixed-base-source-central-band}）．
 用いた Moser--Trudinger 不等式自体は既存結果であり，ここで検証するのは
 退化する実計量の距離函数への一様な適用，周期因子と actual 球の領域条件である．
+積分測度には固定した補助 Euclidean potential を用い，actual potential の
+一様 Hölder 連続性は仮定しない．
 Potential の一様連続度による局所径評価\cite[Proposition~1.4]{GGZDiameter}は
 同じ $O(1)$ の径を与える別の十分条件だが，その連続度はまだ得ていない．
 本稿の全点径評価はその modulus を使わない．
@@ -722,8 +744,9 @@ actual link の既存葉，normal/corner overlaps，source を避けた相対補
 従って全 $X_t$ を覆う actual KE--Lagrangian fibration が得られる．
 各 component の変更領域は固定 compact の image 内にあるので，
 十分遅い対角選択でその正規化 ambient 径を消せる．
-これは保持する corner の局所構成を伴う全域の存在であり，
-全曲面の距離歪み消失までは含まない．この相対構成全体の一般的新規性は未確認である．
+この定理自体の結論は保持 corner の局所構成を伴う全域の存在であり，
+距離歪みの消失には次の追加評価を用いる．
+この相対構成全体の一般的新規性は未確認である．
 
 Target の組合せ型は既知の cubical barycentric subdivision\cite{BabsonBilleraChan}であり，
 その構成自体の新規性は主張しない．命題\ref{topo:coordinate-retraction}は，unit-square 長さ距離に対する座標部分複体の等長性を与え，
@@ -731,6 +754,44 @@ Target の組合せ型は既知の cubical barycentric subdivision\cite{BabsonBi
 定理\ref{topo:diameter-six-labels}は有限幾何のみで，六次以上の target の
 厳密直径 $2\sqrt5$ と全最大対を決定する．
 これらは actual 曲面の全域 shortcut を制御する結果とは区別する．
+
+\paragraph{全曲面での距離下界と同じ基底値．}
+Source を含む固定 residual domain 上に正則 normal frame $x$ を取り，
+$s=-\log|x|^2$，$U=|d\log s|_{g_t}^2$ とする．
+Bochner 計算から $\Delta\log U\ge U-1$ が得られる．
+これは Schwarz 型評価\cite{YauSchwarz}の rank-one 版であり，
+本稿では実計量と複素 Laplacian の規格化を含めて係数を直接計算する．
+固定外側 shell，残余基底の境界，moving central shell の三つの境界を検証し，
+\[
+ B=1+\varepsilon_j+A_j\mathfrak n_j/s+C_js/(\kappa L_t)
+\]
+を障壁として用いる．二つの cut を十分離すことで，source を除くことなく
+active な $|d\log\ell_i|_{g_t}$ を $1+o(1)$ に抑える
+（定理\ref{ke:sharp-global-one-active}）．
+体積密度の二側比較だけから sharp tensor bound を推論してはいない．
+
+Global clipped-depth map $\Theta_t$ は，高々三つの非零 coordinates と
+少なくとも一つの plateau を持つ．二つの active coordinates では全深部 triple comparison，
+一つの場合は上の scalar estimate を用いる．
+得られる長さ下界は全曲面の任意の経路に直接成立し，領域の出入りの回数に依存しない．
+その後で短い Moser 移送と moment profile を比較し，
+$\sup_{X_t}d_\square(\Theta_t,p_T\pi_t)=o(1)$ を示す．
+この順序により，移送後の点で raw depth の微分を別に仮定せずに済む．
+
+\paragraph{基底の接着と全曲面での距離上界．}
+旧 corner の境界 torus と新しい cellular branch locus は同じ strata ではない．
+命題\ref{ke:global-base-parameterization}は保持 corner を少し内側へ写し，
+その外周に neck strips と component sectors を配置する．
+旧 softmax 値との差を $o(1)$ に保ち，内部木の全枝に一つの canonical moment を使う．
+この同じ moment 上の source を含む接続は
+$C_j+C\sqrt{\log(R_t+2)}$ の費用を持ち，各 component core の費用は固定 stage で有界である．
+Target の最短路を高々 $60$ 本の square 線分に分け，共通 moment の portals で繋ぐと
+同じ $f_t$ の全曲面距離上界を得る．
+定理\ref{ke:global-metric-realization}では有限個の stage 定数を先に選び，
+共通の遅い対角化で上下両側の誤差を零にする．
+これらの source 評価，scalar 障壁，基底の相対 parameter 化と全域距離比較が，
+本稿で既存の局所理論に加えて証明する部分である．
+全体の先行研究に対する新規性の確定と包括的な独立検証は，公表前の課題である．
 
 \subsection{他の tropical 構造との比較と残る問題}
 
@@ -770,7 +831,7 @@ companion 論文\cite{QuinticArithmetic}で，整数データの必要条件と
 四 puncture の内部 cones の格子 index を $m^-,m^+$ に緩める場合も，
 $q_Aq_B\mid(m^-+m^+)$ という必要条件が残る．
 一般次数における非 matroidal links を，より広い tropical models で扱う可能性も残る．
-hyperplane class 以外の Kähler classes，special Lagrangian 条件，canonical metric の collapse は，
+hyperplane class 以外の Kähler classes，special Lagrangian 条件，本稿以外の退化族における canonical metric の collapse は，
 本稿の存在定理から独立した課題として扱う．
 Gross--Siebert\cite{GrossSiebert}の affine geometry からの退化再構成との比較にも，
 本稿で得た実際の作用周期に加えて，必要な追加データを明示する必要がある．

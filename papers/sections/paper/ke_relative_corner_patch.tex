@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.2: 平均順序の相対化，normal flow の自然性と moment 付き reduced 葉．
+% 2026-11-21 / v1.3: 平均順序の相対化，normal flow の自然性と全域接着への入力．
 \section{複数の三重点 end における平均順序の相対化}
 \label{ke:relative-corner-section}
 
@@ -11,7 +11,8 @@
 座標の滑らかな補間によって作用が非正則になる場合も，
 同じ toric 模型に対する小摂動という仮定の下で扱う．
 Neck 全体との接着に必要な moving domain と共通 moment interval は，
-本節の相対化だけからは得られない．
+本節の相対化だけからは得られず，
+定理\ref{ke:neck-corner-diagonal-matching}で exhaustion とともに選ぶ．
 
 \subsection{小摂動の平均と比較 Hamiltonian}
 
@@ -245,8 +246,12 @@ triple の canonical primitive の差は，残余基底のみに依存する閉�
 neck primitive への置換後にも同じ norm bound があるとは仮定しない．
 また各 end の正則作用が projected neck の作用と一致していても，
 normal trajectories が両側の共通開領域に留まることを確認する必要がある．
-固定残余基底の neck から三重点へ動く collar までの被覆，
-source-inclusive neck と共通の moment interval・開領域の確保と全曲面の距離比較は残る．
+固定残余基底の neck から三重点へ動く collar までの被覆と，
+source-inclusive neck に共通の moment interval・開領域は
+定理\ref{ke:neck-corner-diagonal-matching}で確保し，
+系\ref{ke:neck-corner-saturated-union}で全交わりの飽和性を確認する．
+全曲面の距離比較は，後続の定理\ref{ke:global-ambient-lower}，
+\ref{ke:global-ambient-upper}による．
 単一 arm の interval と reduced 葉については，以下で実際の評価を与える．
 
 \subsection{Reduced collar の graph による延長}
@@ -437,9 +442,12 @@ $b_0^{-2}(1+w_t^{-1})\to0$ と，trajectory を収める同じ幅の余裕を別
 
 本命題は，共通 $\kappa$-moment strip が既に与えられた単一 arm について，
 reduced 葉の小さい graph という入力を actual 解析から検証する．
-三つの end と source-inclusive neck を同時に覆う interval の存在，
-neck 全域の reduction の同定，所定の第二 period と critical actions の一致，
-全曲面の接着と距離比較は結論に含めない．
+三つの end と source-inclusive neck を同時に覆う interval と neck 全域の reduction は，
+定理\ref{ke:neck-corner-diagonal-matching}と
+系\ref{ke:neck-corner-saturated-union}で別に同定する．
+全曲面の接着と距離比較には，さらに定理\ref{ke:actual-global-fibration}と
+定理\ref{ke:global-ambient-lower}，\ref{ke:global-ambient-upper}を用いる．
+独立に先指定した第二 period と critical actions の数値の一致は，これらの結論にも含めない．
 
 \begin{proposition}[単一 arm の共通 canonical moment strip]
 \label{ke:arm-common-moment-strip}
@@ -539,7 +547,8 @@ $c_*=\pi/(KC_+)$ と固定すれば，十分大きい $b_0$，十分小さい $b
 
 この interval は三重点の一つの source-free arm に関するものである．
 Source-inclusive neck 側の interval と共通の開領域を選び，
-両側の normal trajectories をそこに収めることは別の接続課題である．
+両側の normal trajectories をそこに収めることは，
+定理\ref{ke:neck-corner-diagonal-matching}の exhaustion と buffer の評価によって行う．
 ここでの単一 arm の証明に exterior の $(\mathrm{TC})_d$ や
 global $(\mathrm{CP})_d+(\mathrm{PBE})_d$ は用いていない．
 

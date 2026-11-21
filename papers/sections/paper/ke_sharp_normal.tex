@@ -23,12 +23,14 @@ $\omega_t=\sqrt{-1}g_{a\bar b}\,dz^a\wedge d\bar z^b$ に対し，
 \]
 を用いる．非零正則関数 $x$ が $0<|x|<1$ を満たす領域で
 \[
- s=-\log|x|^2>0,\qquad
+\begin{aligned}
+ s&=-\log|x|^2>0,\qquad
  h_{\mathrm{cusp}}=dd^c(-2\log s)
- =\frac{2\sqrt{-1}\,dx\wedge d\bar x}{|x|^2s^2},
- \qquad U=\operatorname{tr}_{\omega_t}(x^*h_{\mathrm{cusp}})
+ =\frac{2\sqrt{-1}\,dx\wedge d\bar x}{|x|^2s^2},\\
+ U&=\operatorname{tr}_{\omega_t}(x^*h_{\mathrm{cusp}})
        =|d\log s|_{g_t}^2
-       =\frac{2|\partial s|_{\omega_t}^2}{s^2}
+       =\frac{2|\partial s|_{\omega_t}^2}{s^2}.
+\end{aligned}
 \]
 と置く．$h_{\mathrm{cusp}}$ は Ricci curvature $-1$ の
 punctured-disc 計量である．Rank-one Chern--Lu の計算\cite[Theorem~2およびその証明]{YauSchwarz}は
@@ -107,15 +109,17 @@ $-\log|Z_{a,0}|^2=b_j$ となる残余 compact $P_j$ を取る．
 少し広い $P_j^+$ も先に固定する．
 
 固定した $0<\kappa<1/4$ は，補題\ref{ke:source-arm-scale-buffer}の
-$\theta$ より十分小さく取る．$n_j$ を後に大きく選び，
+$\theta$ より十分小さく取る．以下の $\mathfrak n_j$ は scalar 障壁専用の
+補助 cut であり，neck/corner 構成の $n_j$ とは別に選ぶ．
+$\mathfrak n_j$ を後に大きく選び，
 \begin{equation}\label{ke:eq:sharp-normal-domain}
  \mathcal A^x_{j,t}
- =\{p\in P_j,\ n_j\le s=-\log|x'_g|^2\le\kappa L\},
+ =\{p\in P_j,\ \mathfrak n_j\le s=-\log|x'_g|^2\le\kappa L\},
  \qquad y'_g=\frac{t h_t(p)}{x'_g}
 \end{equation}
-とする．$n_j$ が十分大きく，その後 $|t|$ が十分小さければ，
+とする．$\mathfrak n_j$ が十分大きく，その後 $|t|$ が十分小さければ，
 これは全角度を含む annulus と $P_j$ の積である．
-実際，$|x'_g|\le e^{-n_j/2}$ であり，
+実際，$|x'_g|\le e^{-\mathfrak n_j/2}$ であり，
 \[
  |y'_g|\le\sup_{P_j}|h_t|\,e^{-(1-\kappa)L/2}\longrightarrow0.
 \]
@@ -127,10 +131,10 @@ $(x'_g,p)$ は正則座標であり，source の零点を $P_j$ から除く必�
 \begin{lemma}[比較領域の三種類の境界評価]
 \label{ke:sharp-normal-boundary-inputs}
 任意の $\varepsilon_j\downarrow0$ に対し，$b_j$ を十分大きく，
-次に $n_j$ を十分大きく選べる．その後に有限な定数 $A_j,C_j$ があり，
+次に $\mathfrak n_j$ を十分大きく選べる．その後に有限な定数 $A_j,C_j$ があり，
 $|t|$ が十分小さければ $\mathcal A^x_{j,t}$ 上の $U$ は
 \begin{equation}\label{ke:eq:sharp-normal-boundaries}
- U|_{s=n_j}\le A_j,\qquad
+ U|_{s=\mathfrak n_j}\le A_j,\qquad
  U|_{s=\kappa L}\le C_j,\qquad
  U|_{p\in\partial P_j}\le1+\varepsilon_j
 \end{equation}
@@ -139,11 +143,11 @@ $|t|$ が十分小さければ $\mathcal A^x_{j,t}$ 上の $U$ は
 
 \begin{proof}
 \emph{外側の固定 shell.}
-$P_j$ と $n_j$ を固定すると，$s=n_j$ は $t=0$ の成分の smooth locus
+$P_j$ と $\mathfrak n_j$ を固定すると，$s=\mathfrak n_j$ は $t=0$ の成分の smooth locus
 の compact 部分へ収束する．Source の基底点でも $x'_g\ne0$ なので同じである．
 固定 gauge における KE 計量の smooth convergence と
 Morse 座標の $O(t)$ 収束から有限な $A_j$ を得る．
-$A_j$ が $j$ 又は $n_j$ とともに有界である必要はない．
+$A_j$ が $j$ 又は $\mathfrak n_j$ とともに有界である必要はない．
 
 \emph{残余境界.}
 三重点 end の一つで，局所 normal frame と global frame の比を
@@ -159,13 +163,13 @@ $\partial P_j$ の固定した少し広い annuli 上で，
 $|f_{j,t}|+|df_{j,t}|_{g_t}\le D_j$ となる有限な $D_j$ を取れる．
 ここで関数自体の微分は固定 ambient coordinates で有界であり，
 定理\ref{ke:fixed-base-neck-moser}の証明の射影下界によって
-actual covector norm も一様に抑えられる．この定数は $n_j,L$ に依存しない．
+actual covector norm も一様に抑えられる．この定数は $\mathfrak n_j,L$ に依存しない．
 
-まず $n_j\gg b_j+D_j$ とする．固定 end annulus の frame 定数も $n_j$ に吸収すると，
+まず $\mathfrak n_j\gg b_j+D_j$ とする．固定 end annulus の frame 定数も $\mathfrak n_j$ に吸収すると，
 元の射影座標で $|x|+|y|\ll|p|$ となる．また $|t|\ll|p|^3$ は最後の $t$ 閾値で
 満たせるため，座標比の補題を arm の深度比較に先立って適用できる．$\partial P_j$ では
 $\ell_k^{\rm tr}=b_j+o_t(1)+O(e^{-c b_j})$ であり，
-$n_j\le s\le\kappa L$ から残りの二深度は
+$\mathfrak n_j\le s\le\kappa L$ から残りの二深度は
 $\ell_i^{\rm tr},\ell_k^{\rm tr}$ の関係を固定比で分離する．
 より正確には，端の残余添字を $k$ とし，他方の normal 添字を $i'$ とすると
 \[
@@ -189,11 +193,11 @@ $C^1(g_t)$ でも $O(e^{-c b_j})$ と評価できる．
 従って
 \[
  |d\log s|_{g_t}
- \le \left(1+\frac{D_j+Ce^{-c b_j}}{n_j}\right)
+ \le \left(1+\frac{D_j+Ce^{-c b_j}}{\mathfrak n_j}\right)
              (1+Cb_j^{-1})
-       +\frac{D_j+Ce^{-c b_j}}{n_j}.
+       +\frac{D_j+Ce^{-c b_j}}{\mathfrak n_j}.
 \]
-$b_j$，次に $n_j$ を選べば，この二乗を $1+\varepsilon_j$ 以下にできる．
+$b_j$，次に $\mathfrak n_j$ を選べば，この二乗を $1+\varepsilon_j$ 以下にできる．
 これは正則な座標間の比較であり，三つの arm の smooth 補間を用いていない．
 
 \emph{内側の moving shell.}
@@ -233,7 +237,8 @@ $\chi^2U$ の正の最大点で
  \chi^2U\le\chi^2-2\chi\Delta\chi+2|\partial\chi|^2
        \le C(1+\rho_j^{-2})
 \]
-となるので $U\le C(1+\rho_j^{-2})$ を得る．
+となる．最大値の上界を $\chi=1$ の中心へ戻すと，
+その中心でも $U\le C(1+\rho_j^{-2})$ を得る．
 Cut locus では同じ support-function argument
 を用いる．
 Source は有限個なので上界を一つの $C_j$ にまとめられる．
@@ -244,7 +249,7 @@ Source は有限個なので上界を一つの $C_j$ にまとめられる．
 上記の選択で，$|t|$ が十分小さければ
 \begin{equation}\label{ke:eq:sharp-scalar-normal-barrier}
  |d\log s|_{g_t}^2
- \le1+\varepsilon_j+A_j\frac{n_j}{s}
+ \le1+\varepsilon_j+A_j\frac{\mathfrak n_j}{s}
                   +C_j\frac{s}{\kappa L}
  \quad\text{on }\mathcal A^x_{j,t}.
 \end{equation}
@@ -345,13 +350,13 @@ $b_j/2$ と $b_j$ の余裕に吸収できる．
 \label{ke:sharp-global-one-active}
 任意の $\varepsilon_j\downarrow0$ に対し，固定段階の選択を
 \[
- b_j\ ,\ P_j\ ,\ n_j\ ,\ A_j,C_j,D'_j\ ,\
+ b_j\ ,\ P_j\ ,\ \mathfrak n_j\ ,\ A_j,C_j,D'_j\ ,\
  \mathfrak m_j\ ,\ K_j\ ,\ t_j
 \]
 の順に行える．ここで $\mathfrak m_j\to\infty$，$K_j\to\infty$ とし，
 例えば
 \begin{equation}\label{ke:eq:sharp-normal-parameter-order}
- \frac{A_jn_j+D'_j+n_j}{\mathfrak m_j}\le\varepsilon_j,
+ \frac{A_j\mathfrak n_j+D'_j+\mathfrak n_j}{\mathfrak m_j}\le\varepsilon_j,
  \qquad \frac{C_j}{\kappa K_j}\le\varepsilon_j,
  \qquad K_j>\max\{2d,4,4/\kappa\}
 \end{equation}
@@ -371,13 +376,13 @@ $\mathcal T_{j,t}$ の外では
 補題\ref{ke:sharp-active-pair-cover}により，対応する pair chart を取る．
 $t$ を最後に小さくすれば
 \[
- n_j\le s\le2L/K_j<\kappa L,
+ \mathfrak n_j\le s\le2L/K_j<\kappa L,
  \qquad s\ge\mathfrak m_j/2.
 \]
 命題\ref{ke:sharp-scalar-normal-barrier}から
 \[
  |d\log s|_{g_t}^2
- \le1+\varepsilon_j+\frac{2A_jn_j}{\mathfrak m_j}
+ \le1+\varepsilon_j+\frac{2A_j\mathfrak n_j}{\mathfrak m_j}
                     +\frac{2C_j}{\kappa K_j}
  \le1+5\varepsilon_j.
 \]

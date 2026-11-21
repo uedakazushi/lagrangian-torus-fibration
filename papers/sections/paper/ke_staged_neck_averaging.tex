@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.5: Centered 二段階平均，actual neck と同一 moment 上の残余接続．
+% 2026-11-21 / v1.6: Centered 二段階平均，actual neck，同一 moment 接続と全域定理への適用．
 \section{共通の normal circle に適合する二段階平均}
 \label{ke:staged-neck-section}
 
@@ -234,9 +234,14 @@ $x=\phi(y)$ だから $K\subset\phi(O)$ が従う．
 上記の二つの結果は，actual normal generator の一様な短さと
 actual 距離の buffer から normal averaging を実行する条件である．
 Rank-one 評価と volume 比較から短さを得る場合も，
-source-free neck 全体でこれらの入力が一様であることを別に証明する必要がある．
+source-free neck 全体でこれらの入力が一様であることは別の評価を要する．
+固定残余基底上では定理\ref{ke:fixed-base-neck-moser}で検証し，
+source を含む固定段階への拡張は補題\ref{ke:fixed-stage-source-neck}で扱う．
 複数の triple end における同一作用，reduced leaves，markings の同時整合，
-source・branch・core への接着や全曲面の GH 収束は，この補題の結論ではない．
+source・branch・core への接着や全曲面の GH 収束は，この補題だけの結論ではない．
+それぞれ系\ref{ke:neck-corner-saturated-union}，
+定理\ref{ke:actual-global-fibration}，および
+定理\ref{ke:global-ambient-lower}，\ref{ke:global-ambient-upper}で証明する．
 \end{remark}
 
 \subsection{固定残余領域上の法線作用の平均エネルギー}
@@ -335,6 +340,9 @@ $E_t/(16\pi^2)=\tfrac12\partial_s^2\bar F_t$ である．
 両端の円エネルギーも有界な場合は，正規化した法線接続費用が
 $R_t^{-1}\int_a^b ds/d(s)+O(R_t^{-1})$ 以下となる．
 この評価だけでは異なる残余点間の portal 接続費用や，全曲面を通る経路の下界は得られない．
+前者は命題\ref{ke:fixed-base-moment-connectors}と
+系\ref{ke:source-inclusive-same-moment-collapse}，
+後者は定理\ref{ke:global-ambient-lower}で別に評価する．
 
 \begin{proposition}[固定残余基底上の moving deep moment strip]
 \label{ke:neck-deep-moment-strip}
@@ -397,8 +405,10 @@ $\partial^2_s\bar F_t>0$ なので $\mu_t$ は各 annulus の深度に対し
 この interval は normal 深度を動かしつつ，すべての固定残余点で
 同じ canonical moment を使うためのものである．
 既存の固定 end の moment 漸近を moving cut に代入する必要はない．
-レベル上で点ごとの円エネルギーを抑える評価と actual Moser buffer，
-および基底を source や三重点へ動かす場合の一様性は別に必要である．
+レベル上で点ごとの円エネルギーを抑える評価と actual Moser buffer は，
+定理\ref{ke:fixed-base-neck-moser}で別に与える．
+Source を含む固定段階と三重点へ動く collars の同時選択には，
+補題\ref{ke:fixed-stage-source-neck}と定理\ref{ke:neck-corner-diagonal-matching}を用いる．
 
 \begin{corollary}[軌道平均エネルギーを用いる Moser 速度評価]
 \label{ke:neck-averaged-speed}
@@ -432,8 +442,10 @@ $g_a=\rho_a^*g_\omega$ とすると
 積分評価\eqref{ke:eq:normal-energy-mass}は所与の深度での点ごとの上界や，
 内側集合から小エネルギー領域の境界までの actual 距離下界を与えない．
 例えば残余方向を固定しても凸関数の二階微分は小さい区間に集中し得る．
-次に必要なのは，所要の開 collar を含む一様な $E$ の上界と actual buffer，
-または軌道ごとに速度評価を積分して同じ被覆を保証する変位評価である．
+被覆を得るには，所要の開 collar 上の一様な $E$ の上界と actual buffer，
+または軌道ごとに同じ被覆を保証する変位評価が必要となる．
+本稿では定理\ref{ke:fixed-base-neck-moser}で前者を固定残余基底上に構成し，
+補題\ref{ke:fixed-stage-source-neck}で source を含む場合へ拡張する．
 
 \begin{corollary}[縮小する actual buffer からの Moser 被覆]
 \label{ke:neck-shrinking-buffer}
@@ -571,11 +583,13 @@ $U_t$ 上の $|V|_{g_t}=O(m_t^{-1})$ と
 
 定理\ref{ke:fixed-base-neck-moser} は residual base が固定した場合を扱う．
 Source や三重点へ近付く residual collars では，射影計量で測った入れ子領域間の幅や
-capped density と complete envelopes の比較を別途調べる必要がある．
+capped density と complete envelopes の比較を別に用意する．
+Source は定理\ref{ke:projected-source-neck}，三重点の全 end との整合は
+定理\ref{ke:neck-corner-diagonal-matching}と系\ref{ke:neck-corner-saturated-union}で扱う．
 固定 compact の結論と命題\ref{ke:neck-deep-moment-strip} を合わせると，
 同じ固定基底上で moving canonical moment strip を actual form に移せる．
-複数 end を同時に接着するには，正則束作用と triple 作用との
-開 overlap 上での整合も必要である．
+複数 end の接着では，これに加えて上記の正則束作用と triple 作用との
+開 overlap 上での整合を用いる．
 
 \begin{proposition}[同一 normal moment 上の残余方向を含む有界な接続]
 \label{ke:fixed-base-moment-connectors}
@@ -694,10 +708,15 @@ $\kappa_A M_t\le s\le(1-\kappa_A)M_t$ である．
 両端に長さ $O(m_t^{-1})$ の Moser trajectories を加えれば像の評価も従う．
 \end{proof}
 
-以上の命題と系は，固定した source-free 基底上で異なる残余点を結ぶ
-portal 費用を扱う．Source を通る pinched fibre，三重点へ動く残余 collar，
-またはこの中央帯に限られない normal moment をまたぐ木全体の直径評価は含まない．
-従って全曲面の no-shortcut と大域 GH 実現はなお別の問題である．
+以上の命題と系は，固定した source-free 基底上で異なる残余点を結ぶ portal 費用を扱う．
+Source の pinched fibre を含む全共通 interval の同一 moment 集合は，
+系\ref{ke:source-inclusive-same-moment-collapse}で評価する．
+三重点へ動く残余 collars は固定段階の exhaustion として扱い，
+命題\ref{ke:collapsed-tree-common-moment}の共通 moment parameter 化と合わせて，
+命題\ref{ke:collapsed-tree-full-fiber-collapse}で潰される木上の全 fiber 合併径を得る．
+任意に異なる moments に属する neck 全体の径が消えるという主張ではない．
+全曲面の no-shortcut と距離上界は，定理\ref{ke:global-ambient-lower}，
+\ref{ke:global-ambient-upper}で別に証明する．
 
 \begin{corollary}[Central source を含む深部での短い円]
 \label{ke:source-short-circle}
@@ -746,8 +765,10 @@ $\Delta_{\omega_t}|W|^2=|\nabla^{1,0}W|^2-\operatorname{Ric}(W,\bar W)\ge0$
 \end{proof}
 
 この系は source の円作用そのものを評価し，固定点での作用の退化を許す．
-移動する normal 境界までの actual buffer，pinched torus の相対模型との
-接着，および source 全体の直径評価は別に必要である．
+移動する normal 境界までの actual buffer と閉じた pinched torus の構成は，
+次の系\ref{ke:source-diagonal-moser}および定理\ref{ke:projected-source-neck}で扱う．
+Source 中央帯の全点径は定理\ref{ke:source-central-diameter}，
+全共通 interval の同一 moment 退出は定理\ref{ke:source-all-moment-exit}で別に評価する．
 
 \begin{corollary}[Source を含む遅い exhaustion 上の actual 円作用]
 \label{ke:source-diagonal-moser}
@@ -805,8 +826,9 @@ Moser map でこの germ を actual form へ移す．
 \end{proof}
 
 この diagonal 選択は所定の $t$ 依存の速さを保証しない．
-大域 fibration の閉じた pinched torus や gate connector を得るには
-外側の foliation との相対接着と接続費用の評価が必要である．
+外側の foliation と接続する閉じた pinched torus は
+定理\ref{ke:projected-source-neck}で構成し，
+同一 moment の source-free 境界への接続費用は定理\ref{ke:source-all-moment-exit}で与える．
 
 \subsection{Source を含む一つの射影的 neck}
 
@@ -927,8 +949,10 @@ compactification は一重 pinched torus である．
 \end{proof}
 
 ここで構成した neck は三重点を除く固定残余基底に沿う．
-三重点 collar における同一の fiber partition と，
-特異ファイバー全体の正規化 ambient 直径評価は別に必要である．
+三重点 collar における同一の fiber partition は
+系\ref{ke:neck-corner-saturated-union}，
+特異 fibers を含む全 fiber 合併の正規化 ambient 直径評価は
+命題\ref{ke:collapsed-tree-full-fiber-collapse}で別に与える．
 
 \subsection{残る円の平均と同一 normal moment}
 
@@ -1277,7 +1301,7 @@ Raw map の評価は補題\ref{ke:raw-values}と
 同じ softmax torus の二つの像を対応させる actual Hamiltonian map を得る．
 \end{proof}
 
-\subsection{Reduced foliations による延長と残る幾何学的入力}
+\subsection{Reduced foliations による延長と actual 適用の条件}
 
 \begin{corollary}[共通 moment strip 上の条件付き neck 延長]
 \label{ke:staged-reduced-extension}
@@ -1325,17 +1349,24 @@ $\Omega=d\log v\wedge\tau$ と
 $\lambda_t=d^c\log(\omega_t^2/(\Omega\wedge\overline\Omega))$ を用い，
 $(\mathcal A_1\lambda_t)(V_1)$ が canonical normal moment と一致する．
 後者は固定した end radius の後で $t\to0$ とする評価である．
-従って，この actual 適用で残る条件は neck 全体の normal Moser flow の生存と buffer，
-triple の各 end における同一作用・reduced foliation の同時一致である．
+Actual 適用には，さらに neck 全体の normal Moser flow の生存と buffer，
+triple の各 end における同一作用・reduced foliation の同時一致を用いる．
+これらは補題\ref{ke:fixed-stage-source-neck}と
+系\ref{ke:neck-corner-saturated-union}で検証する．
 Critical actions の直線性を保つには，さらに節\ref{ng8:section}の
 relative area と marking の条件が必要である．
 
 系\ref{ke:staged-closed-corner-gh}は，三重点の標準 torus 内の任意の
 指定 primitive subgroup に適合できることを示す．
-別々に構成した neck action が，指定した開 collar でその subgroup と一致すること，
-一つの三重点に入る複数の neck でこの一致を同時に満たすこと，
-および source・branch・core の既存大域構成へ接着できることは含めない．
+別々に構成した neck action との開 collar 上の一致を，
+一つの三重点の複数の end で同時に満たすことは，同系だけの結論ではない．
+節\ref{ke:relative-corner-section}で平均順序を相対化し，
+系\ref{ke:neck-corner-saturated-union}で全交わりを同じ葉に揃える．
+その後の source・branch・core を含む全域接着は
+定理\ref{ke:actual-global-fibration}による．
 非定数 holomorphic unit による orbit partition の変更も，
 単なる整数基底変更の Hamiltonian 比較では処理されない．
-全曲面の距離と singular fibers の一様な計量評価は引き続き別の入力である．
+全曲面の距離と singular fibers の一様な ambient 径は，
+定理\ref{ke:global-ambient-lower}，\ref{ke:global-ambient-upper}および
+命題\ref{ke:collapsed-tree-full-fiber-collapse}で，別の解析入力を組み合わせて証明する．
 \end{remark}

@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-20 / v1.3: 開 square の改善された tensor 誤差と全閉 corner の actual Lagrangian tori．
+% 2026-11-21 / v1.4: 開 square と全閉 corner の局所収縮，後続の全域比較との区別．
 \section{三重点領域の actual KE--Lagrangian tori と局所収縮}
 \label{ke:open-cell-section}
 
@@ -17,7 +17,8 @@ actual 負 KE 計量の収縮を Lagrangian $T^2$ fibers の収縮として実�
 これにより三枚の閉 square を同時に覆う actual Lagrangian fibration を得る．
 閉 corner 全体の内在距離と保護領域内の経路に対する GH 極限は
 次節の定理\ref{ke:closed-corner-gh}と系\ref{ke:closed-corner-protected-gh}で扱う．
-全曲面の GH 収束は別の課題である．
+全曲面の GH 収束には，後続の定理\ref{ke:global-ambient-lower}，
+\ref{ke:global-ambient-upper}の ambient 距離比較を用いる．
 
 \subsection{解析入力と square の正確な parameter 化}
 
@@ -376,16 +377,18 @@ $\pi_{t,\eta}$ は全射であるからその graph は correspondence となり
 $\mathcal W_{t,\eta}$ に内在距離を入れた局所結果である．
 全体 $X_t$ の距離を $\mathcal W_{t,\eta}$ に制限した距離は，
 領域の外へ出る経路を許すため，これより小さくなり得る．
-その shortcut を排除する大域評価は本節では証明していない．
-従って本定理から，$X_t$ 全体の GH 極限，あるいは
-本稿の既存の大域 fibration の全 fibers による GH 収縮はまだ従わない．
+従って本定理だけから全曲面の GH 極限を結論することはできない．
+全曲面の経路に対する shortcut の制御と距離上界は，後続の
+定理\ref{ke:global-ambient-lower}，\ref{ke:global-ambient-upper}で別に証明する．
 
 また $\eta$ は固定であり，constants は $\eta\downarrow0$ に対して一様とは主張しない．
 三枚の square の共通 face を含む Lagrangian bundle の構成は，
 次の系\ref{ke:actual-closed-corner}で別の解析入力から得る．
 全閉 corner の距離の極限は定理\ref{ke:closed-corner-gh}で別に証明する．
-異なる三重点 chart の接合，source・branch・core の singular fibers の計量評価，
-および大域 fibration への相対接着は残る．
+異なる三重点 chart と neck の接合は系\ref{ke:neck-corner-saturated-union}，
+core を含む actual 全域接着は定理\ref{ke:actual-global-fibration}で行う．
+その構成後の source・branch・core を含む全 fibers の ambient 径は，
+命題\ref{ke:collapsed-tree-full-fiber-collapse}で評価する．
 本定理は $\omega_t$-Lagrangian 性を結論し，special Lagrangian 性や
 Hamiltonian-minimal 性を課していない．
 Averaging--Moser の先行研究は節\ref{ke:fiber-compatibility}のとおりであり，
@@ -539,12 +542,14 @@ moving tensor comparison を追加仮定として課す必要がなくなった�
 fiber diameter および raw target の評価である．
 全閉 corner の距離の distortion と GH 極限は，この同じ bundle を用いて
 定理\ref{ke:closed-corner-gh}と系\ref{ke:closed-corner-protected-gh}で導く．
-本稿の既存の大域 fibration への相対接着と，
-source・branch・core の singular fibers との同定および計量評価は含めない．
+本系自体は大域 fibration への相対接着と singular fibers の計量評価を含めない．
+これらは定理\ref{ke:actual-global-fibration}と
+命題\ref{ke:collapsed-tree-full-fiber-collapse}で，保持した corner の葉と整合する
+source・branch・core の構成を用いて扱う．
 特に三枚の square のセルの継目を，大域 fibration の singular locus と同一視しない．
 \end{remark}
 
-\begin{remark}[次数依存と残る大域問題]
+\begin{remark}[次数依存と全域定理への適用]
 \label{ke:open-cell-general-degree}
 KE 主稿\cite[Part~IV, \texttt{coarse:cor:degree-d-volume-lower}]{KELocalCurrent}は，
 六つの局所型の評価を各固定 $d\ge5$ の全平面退化に適用し，
@@ -556,9 +561,11 @@ $t$ に一様な global capped volume 下界を与える．
 ただし解析定数と十分小さい $|t|$ の閾値は $d$ と固定した族に依存し，
 $d\to\infty$ や族の parameter が動く場合の一様評価は含まない．
 
-残る問題は，異なる chart と大域 fibration への相対接着，
-source・branch・core の singular fibers の制御，
-および大域の距離 distortion と shortcut の評価である．
-全閉 corner の fiber diameter と raw target の収束から，
-これらの大域評価を結論することはできない．
+異なる chart の相対接着と singular fibers の制御は，
+定理\ref{ke:actual-global-fibration}と命題\ref{ke:collapsed-tree-full-fiber-collapse}で
+別に証明する．全曲面の距離 distortion は，基底値の比較を与える
+命題\ref{ke:global-depth-base-comparison}と
+定理\ref{ke:global-ambient-lower}，\ref{ke:global-ambient-upper}による．
+これらは全閉 corner の fiber diameter と raw target の収束だけから導くものではなく，
+source の接続と全曲線の長さ評価を加えた結論である．
 \end{remark}

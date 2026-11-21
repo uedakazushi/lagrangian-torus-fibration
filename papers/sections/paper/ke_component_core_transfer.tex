@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.0: 固定 component core の actual KE 移送と相対 flux の条件．
+% 2026-11-21 / v1.1: 固定 component core の actual KE 移送，相対 flux と実際の filling の区別．
 \section{固定成分 core の actual KE 移送}
 \label{ke:component-core-transfer-section}
 
@@ -9,6 +9,8 @@ closed corner の部分 fibration を与える．それを component core へ延
 本節では後者を actual KE 計量について定量化し，
 境界を相対的に扱うための条件を明示する．
 前者の存在を，定性的な compactification から無条件に結論するものではない．
+本稿で用いる相対 filling は，定理\ref{ke:actual-global-fibration}で
+actual link の既存葉から直接構成する．
 
 \subsection{正則 graph gauge と小さい primitive}
 
@@ -320,7 +322,7 @@ Core の normalized diameter は $2/j$ 以下となり，移送変位も消え�
 所定の速度で動く core 全体の一様比較は使っていない．
 \end{proof}
 
-\paragraph{既存 compactification と残る入力．}
+\paragraph{既存 compactification と actual 相対 filling の区別．}
 定理\ref{snc:main}と系\ref{comp:finite}は，compactifying pair 上の
 適切に選んだ smooth K\"ahler form と正の residues に対する有限相対構成である．
 一方，$\omega_i^\infty$ は divisor に cusp singularity を持つ complete KE form であり，
@@ -342,5 +344,8 @@ Liouville flow と非零 moment 帯の葉族補間を用いる．
 fixed-shell moment 上界と inverse-flow buffer を使う．
 固定した全空間の開近傍に対する補題\ref{glue:transport}と properness だけで
 動く cuts の被覆を推論してはいない．
-Component image の小さい径も，source/neck の全 fibers の径，標的の基底値との適合性，
-および全曲面を通る shortcut の下界とは別の入力である．
+Component image の小さい径から，source/neck の全 fibers の径や標的の基底値との
+適合性を直接結論することはできない．これらには
+命題\ref{ke:collapsed-tree-full-fiber-collapse}と
+命題\ref{ke:global-base-parameterization}の別の構成・評価を用いる．
+全曲面を通る shortcut の下界は定理\ref{ke:global-ambient-lower}による．

@@ -1,22 +1,21 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.0: 大域 KE--Lagrangian 実現の未解決目標と達成条件．
-\section{負 KE 極限を実現する大域 fibration の問題}
+% 2026-11-21 / v2.0: 大域 KE--Lagrangian 実現の主張と証明の構成．
+\section{負 KE 極限を実現する大域 fibration}
 \label{ke:global-realization-section}
 
-本節では，本稿の Lagrangian fibration と負 Kähler--Einstein 計量の
-Gromov--Hausdorff 極限との関係を，大域的な未解決問題として定式化する．
-以下の問題は，後続の節で証明する三重点の局所収束とは区別する．
-特に，候補極限複体の位相的同定や人工的な基底計量の構成だけをもって，
-actual KE 計量に対する解決とはしない．
+本節では，負 Kähler--Einstein 計量の Gromov--Hausdorff 極限を，
+actual Lagrangian fibration の射影によって実現する主定理を述べる．
+後続の節で全域 fibration を構成し，その同じ射影に対する全曲面の距離の上下界を証明する．
+最後の統合と対角選択は定理\ref{ke:global-metric-realization}に置く．
 
 \subsection{固定した退化族と計量の規格化}
 
 整数 $d\ge5$ を固定し，まず\eqref{deg:family}の全平面退化を考える．
-同じ問題は，一般位置の平面 $\{L_i=0\}$ と次数 $d$ の式 $F_d$ による
+具体的には，一般位置の平面 $\{L_i=0\}$ と次数 $d$ の式 $F_d$ による
 \[
  X_t=\left\{\prod_{i=1}^dL_i+tF_d=0\right\}\subset\PP^3
 \]
-についても定める．この場合は，$F_d$ が三重点で非零，二重線上での零点が
+を扱う．ここで，$F_d$ が三重点で非零，二重線上での零点が
 相異なる単純零点であり，十分小さい $t\ne0$ に対して $X_t$ が滑らかであることを仮定する．
 族とその幾何学的補助データは固定し，以下で定数の次数一様性や族一様性は要求しない．
 
@@ -32,7 +31,7 @@ $X_t$ 上の負 KE form とその実計量を $\omega_t,g_t$ と書き，
 \]
 を用いる．$\bar d_t$ は全 $X_t$ 内の経路を許した距離であり，
 三重点の内在距離や保護領域内の距離ではない．
-極限候補は系\ref{topo:KE-cubical-comparison}の
+極限複体は系\ref{topo:KE-cubical-comparison}の
 \[
  \mathcal C_d=
  \{w\in[0,1]^d:\max_i w_i=1,\ |\operatorname{supp}(w)|\le3\}
@@ -41,21 +40,21 @@ $X_t$ 上の負 KE form とその実計量を $\omega_t,g_t$ と書き，
 この規格化は，関連 KE 原稿\cite{KELocalCurrent,KECubicalCurrent}および
 定理\ref{ke:closed-corner-gh}の規格化と同じである．
 
-\subsection{大域的な幾何学的実現の達成条件}
+\subsection{大域的な幾何学的実現の主定理}
 
-\begin{problem}[負 KE 極限の Lagrangian fibration による実現]
+\begin{theorem}[負 KE 極限の Lagrangian fibration による実現]
 \label{ke:global-realization}
 上の各固定次数と退化族について，実際の marked pants 分解で実現できる
 一つの木系 $T$ と，すべての十分小さい $t\ne0$ に対する
 \[
  \pi_t:(X_t,\omega_t)\longrightarrow B_d(T)
 \]
-を，次の二条件を満たすように構成せよ．
+であって，次の二条件を満たすものが存在する．
 \begin{enumerate}
 \item $\pi_t$ は定義\ref{def:fibration}の大域 fibration である．
 すなわち全 $X_t$ を覆う連結 fiber の連続全射で，正則 fiber は
 \emph{actual form $\omega_t$ に関する} Lagrangian $T^2$ である．
-特異 fiber には定理\ref{main:global}の nodal，branch，core 模型と等方的 strata を用い，
+特異 fiber には定理\ref{ke:actual-global-fibration}の nodal，branch，core 模型と等方的 strata を用い，
 接着の際に whole fibers を失わない．
 \item 系\ref{topo:KE-cubical-comparison}の labelled map
 $p_T:B_d(T)\to\mathcal C_d$ に対し，$f_t=p_T\circ\pi_t$ と置くと，
@@ -72,17 +71,17 @@ $p_T:B_d(T)\to\mathcal C_d$ に対し，$f_t=p_T\circ\pi_t$ と置くと，
 木系の組合せ型と component labels は固定するが，nodal values，
 collar の位置，作用座標の表示，および基底の parameter 化には $t$ 依存を許す．
 任意に既定の $T$ や任意に固定した critical values に対する実現は，
-この問題の達成条件に含めない．
-\end{problem}
+この定理の結論に含めない．
+\end{theorem}
 
-問題\ref{ke:global-realization}の第一条件は，定理\ref{ke:actual-global-fibration}で
-既存 neck/corner に相対的な全域構成として実現する．
-第二条件の全曲面 uniform distortion は未解決であり，問題全体は未解決である．
-$d=5$ を最初に解くことは自然な中間目標であるが，最終的な次数範囲は各固定 $d\ge5$ とする．
-また，正則部分の action--angle structure を超えて全基底に matroidal atlas があることや，
-special Lagrangian 性はこの問題の仮定にも結論にも加えない．
+第一条件は定理\ref{ke:actual-global-fibration}，第二条件は
+定理\ref{ke:global-ambient-lower}と定理\ref{ke:global-ambient-upper}で証明する．
+命題\ref{ke:global-base-parameterization}が両評価を同じ $f_t$ に揃え，
+定理\ref{ke:global-metric-realization}が共通の遅い対角選択を与える．
+次数範囲は各固定 $d\ge5$ であり，正則部分の action--angle structure を超える
+全基底の matroidal atlas や special Lagrangian 性は結論に含めない．
 
-$f_t$ は全射なので，\eqref{ke:eq:global-realization-distortion}が得られれば，
+$f_t$ は全射なので，\eqref{ke:eq:global-realization-distortion}により，
 その graph correspondence，または命題\ref{topo:ke-map-compatibility}により
 \begin{align*}
  d_{\mathrm{GH}}\bigl((X_t,\bar d_t),(\mathcal C_d,d_\square)\bigr)
@@ -108,16 +107,17 @@ $D_d=\operatorname{diam}(\mathcal C_d,d_\square)>0$ とする．
  \left|R_t^{-1}\operatorname{diam}(X_t,g_t)-D_d\right|
  \le\varepsilon_t
 \]
-である．従って同問題が解ければ，径を一に規格化した計量の極限は
+である．従って径を一に規格化した計量の極限は
 $(\mathcal C_d,D_d^{-1}d_\square)$ となる．
 定理\ref{topo:diameter-six-labels}により $d\ge6$ では $D_d=2\sqrt5$ であり，
 五次では既存の有限計量計算\cite[\texttt{thm:intro-diameter-C5}]{KECubicalCurrent}から
-$D_5=\sqrt{13}$ である．これらは候補 target の無条件の直径であり，
-$R_t^{-1}\operatorname{diam}(X_t,g_t)$ の極限との同定は問題が解決したときの帰結である．
+$D_5=\sqrt{13}$ である．これらの有限計量結果と主定理から，
+$R_t^{-1}\operatorname{diam}(X_t,g_t)$ の極限も定まる
+（系\ref{ke:global-diameter-limit}）．
 元の負 KE 尺度の極限，$R_t$ による規格化，および径一の規格化は区別する．
 \end{remark}
 
-\subsection{既存の構成からなお必要となる大域評価}
+\subsection{大域評価の証明と既存結果との関係}
 \label{ke:global-realization-transfer}
 
 $[\omega_t]=2\pi(d-4)H$ は本稿の大域構成で扱う cohomology class の一つである．
@@ -140,12 +140,13 @@ $\pi_t=\widehat\pi_t\circ h_t^{-1}$ が Lagrangian となるという定性的�
 $\mathrm{(G)}_d+\mathrm{(CP)}_d+\mathrm{(PBE)}_d$ の下の条件付き結果である．
 この経路では，用いる全入力を対象族で検証することが $a_t\to0$ の証明に含まれる．
 条件付き GH 定理や未検証の tensor comparison を仮定したままで，
-問題\ref{ke:global-realization}を解決したとはしない．
-他方，特定の補助仮説が強すぎる場合は，
-actual $g_t$ に対する\eqref{ke:eq:global-realization-distortion}の両側評価を
-直接証明することでも目標を達成できる．
+定理\ref{ke:global-realization}の根拠とはしない．
+本稿は actual $g_t$ に対する\eqref{ke:eq:global-realization-distortion}の両側評価を
+直接証明する．下界には source を含む正則 normal frame 上の scalar Schwarz 障壁と
+global clipped-depth map，上界には共通 moment の接続と有限 square gallery を用いる．
+従って関連 KE 原稿の $\mathrm{(CP)}_d,\mathrm{(PBE)}_d$ 自体を検証したとは主張しない．
 
-局所的な解析入力と大域的な不足は次のように分かれる．
+用いる局所的な解析入力と大域的な構成は次のように分かれる．
 全閉 triple corner の actual Lagrangian bundle と局所 GH 評価は
 系\ref{ke:actual-closed-corner}，定理\ref{ke:closed-corner-gh}，
 系\ref{ke:closed-corner-protected-gh}に置く．
@@ -159,10 +160,10 @@ closed corner の和集合上に actual 部分 fibration を構成する．
 primitive の相対不変化と nontrapping，saddle を動かす葉族補間，および
 全 fiber 単位の切詰めにより，この部分 fibration を全 $X_t$ へ接着する．
 独立に先指定した第二 periods や critical values の数値を合わせることは
-問題の達成条件に含めず，continuation marking を保つ．
+定理の結論に含めず，continuation marking を保つ．
 Source の中央領域は定理\ref{ke:source-central-diameter}により
 actual ambient 径 $O(1)$ を持ち，固定残余基底の中央 moment 帯と
-閉じた pinched torus 全体も収縮する．
+閉じた pinched torus 全体も正規化 ambient 径で収縮する．
 定理\ref{ke:source-all-moment-exit}は，共通 interval 全体で同じ canonical moment の
 残余境界への $O(\sqrt{\log(R_t+2)})$ 接続を与える．
 系\ref{ke:source-inclusive-same-moment-collapse}により，
@@ -171,16 +172,22 @@ actual ambient 径 $O(1)$ を持ち，固定残余基底の中央 moment 帯と
 新しい全域構成では，各 component の core と補間 collar は固定 compact の image に入り，
 その正規化 ambient 径と選んだ接続経路の費用は十分遅い対角選択で零となる．
 異なる components の全 cores の合併径を小さいとする主張ではない．
-さらに，局所保護領域の外を通る全曲面の shortcut と，
-異なる pieces を結ぶ短い接続路を制御しなければならない．
-命題\ref{topo:finite-portal-criterion}の抽象的な距離条件は，
-実際の計量に対するこの検証を置き換えない．
+定理\ref{ke:sharp-global-one-active}は，source を除かない領域の最大値原理から
+active な $d\log\ell_i$ の norm を $1+o(1)$ に抑える．
+これと全深部 triple comparison を合わせた系\ref{ke:global-depth-lipschitz}は，
+全曲面の任意の経路に長さの下界を与える．
+命題\ref{ke:global-depth-base-comparison}で同じ actual 基底値と比較することにより，
+局所保護領域の外を通る shortcut も含めて距離下界を得る．
+上界では，補題\ref{ke:coherent-corner-portals}の共通 moment の portals を
+高々 $60$ 本の square gallery に沿って結ぶ．
+抽象的な条件だけを仮定するのではなく，各接続費用を actual 計量で評価している．
 
 Source の marking については命題\ref{ke:source-marking}も適用条件を持つ．
 指定した nodal fiber が actual source core と交わり，
 $\Phi_t$ が同命題の raw map と一様に $o(1)$ で近ければ，
 $b_t\to0$ のためには対応する critical value $b_{ij,t}$ が
 $p_T(b_{ij,t})\to e_i+e_j$ を満たす必要がある．
-問題\ref{ke:global-realization}で nodal markings の移動を許したのはこのためである．
+定理\ref{ke:global-realization}で nodal markings の移動を許したのはこのためである．
+系\ref{ke:neck-base-value-control}の構成はこの必要な位置条件も満たす．
 この incidence 自体や，異なる座標・Moser 同定による orbit partition の一致を，
 未検証のまま接着の仮定に加えてはならない．
