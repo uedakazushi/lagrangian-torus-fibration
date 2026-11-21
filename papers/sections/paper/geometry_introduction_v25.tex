@@ -677,13 +677,18 @@ Potential の一様連続度による局所径評価\cite[Proposition~1.4]{GGZDi
 同じ $O(1)$ の径を与える別の十分条件だが，その連続度はまだ得ていない．
 本稿の全点径評価はその modulus を使わない．
 
-中央帯外では，normal 深度 $S$ による logarithmic cover 上で有界 potential を取り，
-Gaussian tail と source-free slab の体積をともに $S^{-1}$ と評価する．
-正の potential の対数勾配は半径 $c/(R_t+1)$ の actual 球の深度と orientation を保つ．
-Bishop--Gromov 比較と最後の source-free 動径補正により，
-共通 interval の全ての canonical moment で残余境界への
-$O(\sqrt{\log(R_t+2)})$ 接続を得る
+Source の oriented arm では，normal covector の Schwarz 不等式に
+固定 normal 境界・source-free な残余境界・moving normal 境界の上界を与える．
+最後の境界では正の potential により orientation を保つ固定半径の actual 球を取り，
+局所 Schwarz 評価を用いる．最大値原理で normal covector を全 arm へ制御し，
+射影下界と体積上界を合わせて source 軸を含む二側 tensor 比較を得る
+（命題\ref{ke:source-arm-uniform-tensor}）．
+固定 normal 座標での残余水平経路と，最後の normal 深度補正により，
+全共通 moment で同じ moment の残余境界へ $O(1)$ で退出できる
 （定理\ref{ke:source-all-moment-exit}）．
+中央点には短い gate 退出を先に使うので，この直接証明は上記 Gaussian 評価にも
+依存しない（補題\ref{ke:source-direct-central-exit}）．
+Gaussian 体積評価は独立な補助結果として保持する．
 固定残余基底における同一 moment の全 fibers の合併も，
 系\ref{ke:source-inclusive-same-moment-collapse}により収縮する．
 
@@ -784,7 +789,7 @@ $\sup_{X_t}d_\square(\Theta_t,p_T\pi_t)=o(1)$ を示す．
 その外周に neck strips と component sectors を配置する．
 旧 softmax 値との差を $o(1)$ に保ち，内部木の全枝に一つの canonical moment を使う．
 この同じ moment 上の source を含む接続は
-$C_j+C\sqrt{\log(R_t+2)}$ の費用を持ち，各 component core の費用は固定 stage で有界である．
+固定 stage で $C_j$ の費用を持ち，各 component core の費用も同じ定数に含められる．
 Target の最短路を高々 $60$ 本の square 線分に分け，共通 moment の portals で繋ぐと
 同じ $f_t$ の全曲面距離上界を得る．
 定理\ref{ke:global-metric-realization}では有限個の stage 定数を先に選び，

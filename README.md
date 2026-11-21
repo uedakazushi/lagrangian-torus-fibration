@@ -1,5 +1,5 @@
 # Lagrangian torus fibrations on general-type surfaces
-2026-11-21 / v3.0 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
+2026-11-21 / v3.1 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
 
 **各固定次数 \(d\ge5\) の一般位置全平面退化について、actual負Kähler–Einstein形式の大域Lagrangian torus fibrationが、径の尺度のGH極限を実現する定理の証明を主稿に置いている。** 同じ写像 \(f_t=p_T\pi_t\) の全曲面ambient距離に関する一様distortionと、特異fiberを含む全fiber合併の収縮を扱う。今回の新証明と接続を複数担当で内部点検した。形式証明、全主稿・全外部入力の包括的再監査、外部査読、新規性の網羅的確認は未実施である。**このリポジトリは複素次元2専用**。三次元の研究は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とする。
 
@@ -15,7 +15,7 @@
 
 ## Cloud Codexから再開する
 
-最新mainで [研究方針](00_research_plan.md) → [AGENTS.md](AGENTS.md) → [依存関係](research/ke-dependencies.md) → [研究ノート](research/notes.md) を読む。次に `ke:global-metric-realization` から依存する接着・source・scalar・portalの証明をたどる。現在の優先課題は、公表に向けた一次文献と依存結果の包括的再点検、新規性の確認、主稿構成の整頓である。改訂20は242頁に組版・変更箇所の48頁表示確認済み。
+最新mainで [研究方針](00_research_plan.md) → [AGENTS.md](AGENTS.md) → [依存関係](research/ke-dependencies.md) → [研究ノート](research/notes.md) を読む。次に `ke:global-metric-realization` から依存する接着・source・scalar・portalの証明をたどる。現在の優先課題は、公表に向けた一次文献と依存結果の包括的再点検、新規性の確認、主稿構成の整頓である。改訂21は243頁に組版済みで、変更箇所の表示確認を進めている。
 
 ```sh
 python3 scripts/research_check.py setup --require-tex
@@ -29,7 +29,7 @@ python3 scripts/research_check.py tex
 
 | 原稿 | 役割 | 組版の確認範囲 |
 | --- | --- | ---: |
-| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域fibrationによるGH実現定理（改訂20） | 改訂20：242頁、変更箇所48頁を表示確認 |
+| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域fibrationによるGH実現定理（改訂21） | 改訂21：243頁、表示確認中 |
 | [五次整数接着](papers/quintic-integer-gluing.tex) | 指定K5データの整数条件・高分母支持・未解決の大域接着 | 201頁 |
 | [Meridian surgery](papers/meridian-surgery.tex) | 閉corner circuitsの局所置換の障害 | 18頁 |
 | [TeX研究ノート](papers/research-notes.tex) | 証明素材・残る条件の整理 | 現行65頁、第1・4頁を表示確認 |
@@ -48,7 +48,7 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 - **全交わりで葉が一致する部分fibration：** 残余compact、normal cutoff、moment区間、parameter閾値の順に選び、全flowの共通開領域を構成する。Corner cut $m_t=6b_j$ とneckの葉でのtrim $B=7b_j$ を離して選び、first-exitと逆normal flowの自然性により、全intersectionが双方の全fibersで飽和することを証明した。Source・saddleの局所型を保って貼り合わせられる（`ke:neck-corner-saturated-union`）。
 - **Central sourceのactual経路評価：** 固定rescalingでdensityは $L_t^{-2}$、canonical potentialは有界、normal momentは $O(L_t^{-1})$。Traceと平均二乗距離は $O(1)$、全中央点からgateへの退出は $O(L_t^{-1/2})$、oriented arm断面へは $O(1)$ で接続できる（`ke_source_connectors.tex`）。Source-freeな $|\mu|\le A/M_t$ のcentral band全体もactual径 $O(1)$。Source側では正のpotentialの対数勾配でactual球を深部に閉じ込め、complex SobolevのGaussian積分とBishop–Gromov比較から、固定点を含む中央coreの全点径 $O(1)$ を証明した。固定基底のsource-inclusive中央帯と閉pinched torus全体も正規化ambient径で収縮する。Potentialの一様square-root-Dini modulusを仮定する十分条件も示し、そのmodulus自体は未検証と区別する。
-- **全momentのsource退出：** `ke:source-all-moment-exit` により、共通intervalの全点を同じcanonical momentの残余境界へ $O(\sqrt{\log(R_t+2)})=o(R_t)$ で結ぶ。Normal深度ごとのcover、Gaussian tailとslabの体積尺度の相殺、actual球の局在、出口のmoment補正を証明した。同一momentの全fiber合併も固定基底で収縮する。
+- **全momentのsource退出：** `ke:source-arm-uniform-tensor` は、三種類の境界でnormal covectorを制御し、source軸を含むoriented armの二側tensor比較を与える。固定normal座標での水平経路と動径補正により、`ke:source-all-moment-exit` の費用は全共通intervalで $O(1)$。中央固定点も短いgate退出と同じarm比較で扱えるため、この接続定理はGaussian可積分性に依存しない。同一momentの全fiber合併は固定基底で非正規化径が有界となる。
 
 固定source chartのEuler場による明示的なresidual接続も保持する。成分coreではcanonical primitiveの差から固定領域のactual移送を構成し、境界を固定する相対flux条件とexactな平均化germを明示した（`ke_component_core_transfer.tex`）。`ke_component_core_geometry.tex` は任意固定compactと全collar上でKE形式・primitiveを保つsmooth正則化、正residueの有限型KE core、その小さい飽和近傍のmarked Lagrangian fillingを与える。全域への相対接着は下記四節で証明した。
 
@@ -74,4 +74,4 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-2026-11-21 / v3.0：主稿改訂20にP0の統合定理と証明を保持する。今回の新証明・接続は複数担当で内部点検済み。現行改訂20はLuaLaTeXで242頁に組版し、要約・導入・新証明・主定理の48頁を表示確認した。参照・引用・重複ラベル・欠字・overfull警告はない。TeX研究ノートも現状の記述を直して65頁に再組版し、変更した第1・4頁を表示確認した。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認・旧整数検算suiteと他二論文の再組版は未実施。
+2026-11-21 / v3.1：主稿改訂21にP0の統合定理と証明を保持する。今回の新証明・接続は複数担当で内部点検済み。改訂21では三境界Schwarzによるsource-arm tensor比較と全momentの $O(1)$ 退出を本文へ統合し、別担当が依存の非循環性とsource軸を点検した。改訂21はLuaLaTeXで243頁に組版済み。未解決参照・引用・重複ラベル・欠字・overfull警告はなく、変更箇所の表示確認を進めている。TeX研究ノートも現状の記述を直して65頁に再組版し、変更した第1・4頁を表示確認した。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認・旧整数検算suiteと他二論文の再組版は未実施。

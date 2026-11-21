@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.0: 共通 moment の全 fiber 合併と有限 gallery による全域上界．
+% 2026-11-21 / v1.1: 固定 stage で有界な共通 moment 費用による全域上界．
 \section{全 fiber 合併の収縮と actual 全曲面距離の上界}
 \label{ke:global-ambient-upper-section}
 
@@ -34,7 +34,7 @@ $B=m_j+O(1)$ にあり，既存 K2 の trim $B=7b_j$ より内側にあるので
 系\ref{ke:source-inclusive-same-moment-collapse}と
 定理\ref{ke:actual-global-fibration}を使い，$C_j$ を増大させれば
 \begin{equation}\label{ke:eq:global-connector-budget}
- H=H_{j,t}:=C_j+C\sqrt{\log(R_t+2)}
+ H=H_{j,t}:=C_j
 \end{equation}
 により次の費用を同時に抑えられる：同一 pair の同一 actual normal moment 上の
 任意の二点の接続，各 component の core と変更 collar 内の任意の二点の接続，
@@ -46,7 +46,7 @@ $B=m_j+O(1)$ にあり，既存 K2 の trim $B=7b_j$ より内側にあるので
 
 \begin{proposition}[潰される木上の全 fiber 合併を含む一様収縮]
 \label{ke:collapsed-tree-full-fiber-collapse}
-定数 $C_j,C$ を十分大きく選べば，全 $z\in\mathcal C_d$ に対し
+定数 $C_j$ を十分大きく選べば，全 $z\in\mathcal C_d$ に対し
 \begin{equation}\label{ke:eq:full-fiber-diameter-upper}
  \operatorname{diam}_{d_{g_t}} f_{j,t}^{-1}(z)\le H_{j,t}.
 \end{equation}
@@ -209,7 +209,7 @@ gallery の最初の square の label が元の corner の label と異なると
 \begin{equation}\label{ke:eq:global-ambient-upper-error}
  U_{j,t}=M_dE_{j,t}
        +C(M_d+1)\eta_{j,t}
-       +(M_d+1)\frac{C_j+C\sqrt{\log(R_t+2)}}{R_t}.
+       +(M_d+1)\frac{C_j}{R_t}.
 \end{equation}
 従って既存の遅い対角選択を十分小さくすれば，$j=j(t)\to\infty$ に沿って
 $U_{j(t),t}\to0$ である．同じ選択で，全 $f_t$-fibers の正規化 ambient 径も
@@ -271,7 +271,7 @@ $M\le M_d$ と合わせ，定数をまとめれば
  R_t\ge j\bigl(1+C_j+\log(N_j+1)\bigr)
 \]
 を課す．$m_j\to\infty$，$N_j\ge m_j$ であり，
-$\log R_t/R_t\to0$ と $\sqrt{\log(R_t+2)}/R_t\to0$ も成立するので
+$\log R_t/R_t\to0$ も成立するので
 $E_{j(t),t},\eta_{j(t),t},H_{j(t),t}/R_t\to0$ である．
 これは既存の有限個の stage 条件を強めるだけの遅い対角選択である．
 全 fiber 合併径については\eqref{ke:eq:full-fiber-diameter-upper}を使う．

@@ -1,6 +1,6 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-21 / v1.9。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-21 / v2.0。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
 ## 確認した正本と規格化
 
@@ -70,7 +70,7 @@ L_t=-\log|t|^2,\quad R_t=\log L_t.
 | Source-inclusive neckとcornerの全交わり | [ke_neck_corner_exhaustion.tex](../papers/sections/paper/ke_neck_corner_exhaustion.tex), `ke:fixed-stage-source-neck`, `ke:neck-corner-diagonal-matching`, `ke:neck-corner-saturated-union` | 残余compact→normal cutoff→moment区間→parameter閾値の順に選ぶ。Corner cut $6b_j$ とneckの葉でのtrim $7b_j$、first-exitと逆flow自然性により全交わりを同じ全fibersで飽和させる。Source・saddleを含む部分fibration。全曲面被覆・core・global GHは含まない。 |
 | Central sourceの体積・moment・経路 | [ke_source_connectors.tex](../papers/sections/paper/ke_source_connectors.tex), `ke:source-central-density`, `ke:source-central-moment`, `ke:source-central-mean-distance`, `ke:source-central-short-escape`, `ke:source-central-arm-connectors` | 固定rescalingでdensity $L^{-2}$、有界potential、moment $O(L^{-1})$、平均二乗距離 $O(1)$、inradius $O(L^{-1/2})$、arm断面への接続 $O(1)$。Capped volume下界・oriented pair-arm density・complete volume上界を使用。全点径は結論しない。 |
 | Source中央帯の全点径 | 同上 `ke:source-central-band-reduction`, `ke:source-potential-modulus` | $\lvert\mu\rvert\le A/L$ のsource中央帯を固定rescaled coreへ $O(1)$ で結ぶ。`ke:source-central-diameter` と `ke:fixed-base-source-central-band` により、固定点を含むcoreと固定基底中央帯・閉pinched torus全体のactual ambient径は $O(1)$。一様square-root-Dini modulusは**未証明**だが、この結論はGaussian体積評価とBishop比較により得られ、そのmodulusを用いない。全intervalには `ke:source-all-moment-exit` を用いる。 |
-| Source-inclusive全moment退出とlevel合併 | `ke_source_all_moment_connectors.tex`, `ke:source-arm-moment-depth`, `ke:source-scaled-arm-gaussian-tail`, `ke:source-arm-scale-buffer`, `ke:source-all-moment-exit` | Source軸を含む全intervalで同じmomentの残余境界へ $O(\sqrt{\log(R_t+2)})$。可変深度cover、同尺度slab、positive potential、Bishop比較、source-free tensorを使用。固定baseの同一moment全fiber合併も正規化径が消える。Target parameter化・全域下界は含まない。 |
+| Source-inclusive全moment退出とlevel合併 | `ke_source_all_moment_connectors.tex`, `ke:source-arm-uniform-tensor`, `ke:source-direct-central-exit`, `ke:source-all-moment-exit` | Source軸・固定点を含む全intervalで同じmomentの残余境界へ $O(1)$。三境界のrank-one Schwarz、射影下界、volume上界からarm tensor比較を導き、水平・動径経路で接続。中央点は短いgate退出を併用し、Gaussian可積分性を入力にしない。Target parameter化・全域下界は含まない。 |
 | 固定残余compactの法線エネルギーと接続 | [ke_staged_neck_averaging.tex](../papers/sections/paper/ke_staged_neck_averaging.tex), `ke:neck-integrated-normal-energy`, `ke:neck-axial-upper`, `ke:neck-averaged-speed`, `ke:neck-shrinking-buffer` | KE側 `neck:prop:volume-envelope` から積分短円と同一残余点の係数1の接続上界。実計量の境界距離（上限1） $\delta_t$ が $m_t\delta_t^2\to\infty$ なら共通source・像。この十分条件と、K1–K2の固定段階で実証したbuffer・遅いexhaustionを区別する。 |
 | Normal平均の双方向buffer | [ke_staged_neck_averaging.tex](../papers/sections/paper/ke_staged_neck_averaging.tex), `ke:short-circle-actual-buffer`, `ke:short-circle-image-buffer` | Actual短円とactual bufferを入力とする。像のambient直径を与えるが、$C^1$ 制御・intrinsic fiber径・base projection保存は与えない。 |
 | Endsとneckの接着 | 同上 `ke:staged-neck-averaging`, `ke:staged-reduced-extension`, `ke:staged-neck-scope`; `ke_closed_corner_gh.tex`, `ke:relative-neck-matching` | 共通primitive・marked periodsを追跡できる。Reduced foliation germsの同時延長、開overlapの同じfiber partition、actual flowの生存は別に確認する。 |
@@ -95,7 +95,7 @@ Actual全域構成の追加証明は次を用いる。
 | 全域基底parameter化と内部木の共通moment | `ke_global_base_compatibility.tex`, `ke:common-edge-moment-profile`, `ke:corner-cap-disk`, `ke:global-base-parameterization`, `ke:collapsed-tree-common-moment` | Weighted moment inverse、moment-cut capのproper arc、明示insetとstrip補間で全保持cornerの旧値へ $O((1+\log N_j)/R_t)$ 近接。内部木の中央部分では全枝共通momentを厳密に保つ。全曲面距離下界を含まない。 |
 | Sourceを含む係数一の法線評価 | [ke_sharp_normal.tex](../papers/sections/paper/ke_sharp_normal.tex), `ke:normal-harmonic-depth-barrier`, `ke:sharp-scalar-normal-barrier`, `ke:sharp-global-one-active` | 正則global normal frameで $\Delta s=0$、$U=\lvert d\log s\rvert^2$ に $\Delta U\ge U(U-1)$。固定shell・moving shell・残余境界の全てを評価し、$1+\varepsilon_j+A_j\mathfrak n_j/s+C_js/(\kappa L)$ の障壁を使う。Source軸、physical-depth補正、triple外のactive全被覆を含む。SharpなRZ漸近や全neck tensor比較を追加仮定しない。 |
 | 全域scalar mapとambient下界 | [ke_global_ambient_lower.tex](../papers/sections/paper/ke_global_ambient_lower.tex), `ke:global-depth-lipschitz`, `ke:global-depth-base-comparison`, `ke:global-ambient-lower` | 下側cut $\mathfrak m_j$ とplateau $L/K_j$ を用いる全域 $\Theta_t$。一方向はsharp normal、二方向はfull-tripleのco-Gramで評価し、任意の全曲面経路に沿って長さを抑える。同じ $f_t$ との全域値比較を証明。経路の領域往復回数を有限と仮定しない。 |
-| 内部木の全fiber合併とambient上界 | [ke_global_ambient_upper.tex](../papers/sections/paper/ke_global_ambient_upper.tex), `ke:collapsed-tree-full-fiber-collapse`, `ke:coherent-corner-portals`, `ke:global-ambient-upper` | 全 $f_t$-fiberのambient径を $C_j+C\sqrt{\log(R_t+2)}$ で評価。全endsで同じmomentのportalsを選び、旧full-cornerのendpoint上界を高々60本のsquare galleryで接続する。除去capを通る曲線もambient上界には使用できる。 |
+| 内部木の全fiber合併とambient上界 | [ke_global_ambient_upper.tex](../papers/sections/paper/ke_global_ambient_upper.tex), `ke:collapsed-tree-full-fiber-collapse`, `ke:coherent-corner-portals`, `ke:global-ambient-upper` | 全 $f_t$-fiberのambient径を $C_j$ で評価。全endsで同じmomentのportalsを選び、旧full-cornerのendpoint上界を高々60本のsquare galleryで接続する。除去capを通る曲線もambient上界には使用できる。 |
 | 同じactual写像による大域実現 | [ke_global_metric_realization.tex](../papers/sections/paper/ke_global_metric_realization.tex), `ke:global-metric-realization` | 上記の同じ $\pi_t$ と $f_t=p_T\pi_t$ に、全固定段階の条件を満たす一つの遅い対角選択を適用。全射性、uniform ambient distortion消失、GH収束、全fiber合併の一様収縮を得る。外部CP/PBE/TCの結論を入力にしない。 |
 
 ## 固定成分coreのcusp入力と有限target幾何
@@ -139,7 +139,7 @@ Global Hermitian depthsを $\ell_i=-\log\|L_i\|^2$ とし、
 
 保持cornerの旧softmaxと全域の $p_T\pi_t$ の値の整合は `ke:global-base-parameterization` による。Core capの位置だけでなく、moment profileとcap境界のproper arcを用いる。潰される内部木では全枝に同じlongitude $\sigma_t(\mu)$ を使うので、辺の中央値の逆像は厳密に同一moment上の全fiber合併である。
 
-Source側では中央全点径 $O(1)$ と、共通interval全体の同一moment退出 $O(\sqrt{\log(R_t+2)})$ を証明した。後者は `ke:source-all-moment-exit` であり、可変scaleのGaussian体積上界とgood-set体積の双方に現れる $1/S$ を相殺する。固定source-free基底の接続費用と合わせ、全 $f_t$-fiberのambient径は $H_{j,t}=C_j+C\sqrt{\log(R_t+2)}$ で抑えられる。各componentのcore・変更collarの費用も $C_j$ に含める。
+Source側では中央全点径と共通interval全体の同一moment退出がともに $O(1)$。`ke:source-arm-uniform-tensor` は三境界のnormal covector評価とvolume上界からsource軸を含むarmの二側比較を与え、`ke:source-all-moment-exit` は水平・動径の直接経路で証明する。中央固定点には短いgate退出を先に用いるため、この接続はDMV/Gaussianに依存しない。固定source-free基底の接続と各componentのcore・変更collarの費用を合わせ、全 $f_t$-fiberのambient径は $H_{j,t}=C_j$ で抑えられる。Gaussian体積定理は有効な独立補助結果として保持する。
 
 Target最短路は `topo:six-label-gallery` により高々60本のsquare線分で選べる。各junctionに同じnormal momentのcorner portalsを取り、旧full-cornerのambient endpoint上界と $H_{j,t}$ を有限回足す。これはtarget最短路に対する有限galleryの使用であり、sourceの任意の経路の出入り回数を制限する議論ではない。再parameter化後の $f_t$ に厳密に写るsquare liftsは要求しない。
 

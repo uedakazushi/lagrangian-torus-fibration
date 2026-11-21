@@ -1,5 +1,5 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-21 / v3.0
+更新：2026-11-21 / v3.1
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
@@ -112,11 +112,17 @@ Source側の `ke:source-central-band-reduction` は、固定residual disc、人�
 
 ## 全moment intervalのsource退出
 
-正本は `ke_source_all_moment_connectors.tex` の `ke:source-all-moment-exit` と `ke:source-inclusive-same-moment-collapse`。中央帯の外も含めて、同じcanonical momentを持つ指定残余境界への退出費用は $C\sqrt{\log(R_t+2)}=o(R_t)$。経路自体はlevelに留まらなくてよい。固定stageの同一moment集合全体の径はこの費用とsource-free基底の接続定数 $C_P$ の和で抑えられる。
+正本は `ke_source_all_moment_connectors.tex` の `ke:source-arm-uniform-tensor`、`ke:source-direct-central-exit`、`ke:source-all-moment-exit`。中央帯・source軸・固定点を含めて、同じcanonical momentを持つ指定残余境界への退出費用は **$O(1)$**。経路自体はlevelに留まらなくてよい。固定stageの同一moment集合全体の径も $C+C_P$ 以下となる。定数は固定source chart・族・次数に依存するが、source退出の定数を残余exhaustion stageに依存させる必要はない。
 
-非中央の正しいarmではnormal平均potentialの凸性と固定比の割線から $|\mu|\asymp s^{-1}$ を得る。$S=s(p)$ を尺度とする $x=e^{Sw}$ の固定coverで $F+2\log S$ は一様有界、volumeはEuclidean体積と比較可能。約 $S$ 周期を除したGaussian tailの係数は $S^{-1}$ で、source-free slab $S\le s\le2S$ の体積も同じ尺度になる。正のpotentialの対数勾配から半径 $\rho_p=c/(1+u(p))\gtrsim R^{-1}$ のactual球で $F$ の変動を固定幅以下に抑え、小さい深度を $S$ と比較する。Orientationの切替には両深度 $\ge L/2$ が必要なので、この球内で正しいarmが保たれる。
+核心は $xy=tz$、$s=-\log|x|^2$ の領域 $n_*\le s\le\kappa L$、$|z|\le\beta$ における $U=|d\log s|_g^2$ の制御である。Rank-one Bochner計算から $\Delta U\ge U(U-1)$。固定normal境界では射影下界から $U\le Ce^{n_*}/n_*^2$、残余境界ではsource-free tensor比較から有界、moving境界 $s=\kappa L$ では正のpotentialが有界なのでorientationを保つ固定半径のactual球を取り、localized Schwarzから有界となる。三境界の最大値原理で全armの $U$ が有界となる。
 
-Bishop下界は $cS^{-1}\rho_p^4e^{-C(D+1)}$、Gaussian上界は $CS^{-1}e^{-a(D-\rho_p)_+^2}$。尺度を相殺して $D^2\le C(D+1)+C\log(R+2)$ を得る。Shell上で元のmomentを持つ円の深度は元の深度と固定比内にあり、最後の動径補正は $O(1)$。Projected source座標のbase-only frame変更はmoment原点を変えず、actual Moser像には両端の短いtrajectoryだけを加える。中央momentでは前節の $O(1)$ を使う。可変scaleの定数、source軸、全actual球、出口の厳密なmoment一致を独立に点検済みであり、形式証明ではない。
+このnormal covectorの下支配と、射影下界による残余covectorの下支配を合わせ、cusp–disc積 $h$ に対して $h\le C\omega_t$ を得る。既存のvolume上界 $\omega_t^2\le Ch^2$ と複素次元2の固有値比較から $\omega_t\le C'h$。固定 $x$ で $z$ をshellへ動かす水平経路は有界長であり、momentとnormal深度の二側比較から最後の動径補正も有界長となる。
+
+中央点は `ke:source-central-short-escape` の $CL^{-1/2}$ 退出でgateへ運び、短円の上界を積分して $s=\kappa L$ へ接続し、上の水平経路へつなぐ。従って全moment退出にも中央全点径にも、Gaussian可積分性を入力にしない証明がある。これは中央のtensor二側比較を主張するものではない。
+
+**依存の順序。** Capped density・complete volume上界 → 射影下界・正のPoisson potential → orientationを保つactual球 → 境界Schwarz → arm tensor → 直接退出。固定normal境界の粗い上界にSong/Rochon–Zhangの成分収束は不要であり、full-triple比較・global sharp scalar評価・中央全点径をこの鎖の入力にしない。Source-free側面のtensor比較は、その独立なactual first-exit証明を使う。
+
+深度 $S$ ごとのGaussian tailとgood slabの体積 $S^{-1}$ の評価は独立の補助結果として保持する。Positive potentialだけによる一般のscale bufferは半径 $c/(1+u)\gtrsim R^{-1}$ であり、moving境界 $s=\kappa L$ では $u=2\log(1/\kappa)+O(1)$ によって固定半径となる。この区別が三境界証明を非循環にする。Actual Moser像には両端の既存の短いtrajectoryを加え、同じcanonical momentを移送する。
 
 ## 旧corner値と全域基底のparameter化
 
@@ -479,4 +485,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 
 ## 検証状態
 
-2026-11-21 / v3.0：主稿改訂20にP0の統合定理 `ke:global-metric-realization` と証明を保持する。今回の新証明と接続を複数担当で内部点検した。現行改訂20はLuaLaTeXで242頁に組版し、要約・導入・新証明・主定理の48頁を表示確認した。参照・引用・重複ラベル・欠字・overfull警告はない。TeX研究ノートも現状の記述を直して65頁に再組版し、変更した第1・4頁を表示確認した。形式証明、全主稿と全外部入力の包括的再監査、外部査読、網羅的新規性確認、旧整数検算suiteと他二論文の再組版は未実施。
+2026-11-21 / v3.1：主稿改訂21にP0の統合定理 `ke:global-metric-realization` と証明を保持する。今回の新証明と接続を複数担当で内部点検した。現行改訂21はLuaLaTeXで243頁に組版済み。未解決参照・引用・重複ラベル・欠字・overfull警告はなく、変更箇所の表示確認を進めている。三境界のsource-arm tensor比較と全momentの有界退出は複数担当で内部点検した。TeX研究ノートも現状の記述を直して65頁に再組版し、変更した第1・4頁を表示確認した。形式証明、全主稿と全外部入力の包括的再監査、外部査読、網羅的新規性確認、旧整数検算suiteと他二論文の再組版は未実施。

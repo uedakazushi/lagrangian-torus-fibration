@@ -1,17 +1,18 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.0: 共通 moment interval 全体の actual source 退出．
+% 2026-11-21 / v1.1: 三境界 Schwarz 評価と全 moment の有界な source 退出．
 \section{中央帯外の source から同一 moment の境界への接続}
 \label{ke:source-all-moment-connectors-section}
 
-本節では source の正しい oriented arm 上で，normal 深度そのものを
-logarithmic cover の尺度に用いる．これにより，深度 $S$ の source-free shell
-への Gaussian tail と，比較に用いる正体積集合の双方が $S^{-1}$ の係数を持つ．
-正の canonical potential の局所勾配評価は，半径 $O(R_t^{-1})$ の
-\emph{actual ambient 球}を同程度の深度へ閉じ込める．
-球の体積比較で $S^{-1}$ が相殺されるので，中央帯外の退出費用は
-$O(\sqrt{\log(R_t+2)})$ となる．
+本節では source の正しい oriented arm 上で，normal covector の
+Schwarz 不等式に三種類の境界評価を与える．その結果，source 軸を含む
+arm 全体で actual 計量と cusp--disc 積計量の二側比較が得られる．
+残余方向の水平経路と，normal 深度が固定比だけ変わる動径経路を合わせると，
+全共通 moment に対する source の退出費用は $O(1)$ となる．
 経路が moment level に留まることは要求せず，最後の source-free 動径経路で
 canonical moment を厳密に合わせる．
+深度 $S$ ごとの Gaussian 体積評価も独立な補助結果として保持するが，
+上の有界な退出には使わない．中央点についても，短い gate 退出と
+同じ arm 比較を用いる直接の証明を与える．
 
 \subsection{固定 source 座標と moment による arm の選択}
 
@@ -314,44 +315,163 @@ Actual 球は中心からの最短経路により連結であり，その経路�
 $1<u_t(p)\le2R+C$ であり，表示された $\rho_p$ の下界が従う．
 \end{proof}
 
+\subsection{三種類の境界から得る source arm の積比較}
+
+\begin{proposition}[Source 軸を含む oriented arm の二側 tensor 比較]
+\label{ke:source-arm-uniform-tensor}
+固定 source chart と，その内部に正の余裕を持つ残余半径 $\beta>0$ を取る．
+ある固定 $n_*>0$，$0<\kappa<1/4$，$C>1$ が存在し，十分小さい全ての $t$ に対し
+\[
+ \mathcal A^x_t
+ =\{n_*\le s_x\le\kappa L,\ |z|\le\beta,\ y=tz/x\}
+\]
+上で
+\begin{equation}\label{ke:eq:source-arm-uniform-tensor}
+ C^{-1}h_x\le\omega_t\le C h_x,\qquad
+ h_x=\frac{2\sqrt{-1}\,dx\wedge d\bar x}{|x|^2s_x^2}
+                   +\sqrt{-1}\,dz\wedge d\bar z
+\end{equation}
+が成り立つ．$y$-arm では $x,y$ を交換する．
+定数は固定 chart・族・次数に依存してよいが，$t$ と arm 内の深度には依存しない．
+$z=0$ の軸も含む．中心 $x=y=0$ の tensor 比較は主張しない．
+\end{proposition}
+
+\begin{proof}
+残余半径と normal 半径を少し広げた source tube を先に固定する．
+$n_*$ を大きく取ると $|x|\le e^{-n_*/2}$ であり，
+$s_x\le\kappa L$ から $|y|\le\beta|t|^{1-\kappa}\to0$ となる．
+従って $\mathcal A^x_t$ は $(x,z)$ 座標の閉 annulus と閉 disc の積であり，
+境界は $s_x=n_*$，$s_x=\kappa L$，$|z|=\beta$ の三種類だけである．
+$z=0$ でも $x\ne0$ なので新しい境界又は座標特異点はない．
+
+$s=s_x$，$U=2|\partial s|_{\omega_t}^2/s^2=|d\log s|_{g_t}^2$ と置く．
+$s$ は pluriharmonic である．正則 one-form $\partial s=-dx/x$ の
+Bochner 計算と $\operatorname{Ric}(\omega_t)=-\omega_t$ から
+\[
+ \Delta_{\omega_t}\log U\ge U-1,
+ \qquad \Delta_{\omega_t}U\ge U(U-1)
+\]
+を得る．これは式\eqref{ke:eq:sharp-normal-logistic}と同じ rank-one 計算であり，
+後の global scalar 障壁を入力にしていない．
+
+\emph{固定 normal 境界．}
+式\eqref{ke:eq:source-global-positive-u}の射影下界と，固定 source 座標
+$x$ の一様な ambient 微分上界により，$|dx|_{g_t}\le C$ である．
+$s=n_*$ では $|x|=e^{-n_*/2}$ なので
+$U\le C e^{n_*}/n_*^2=:A$ となる．$n_*$ は一度固定するため，
+この粗い定数で十分であり，固定成分への KE 収束をここに追加する必要はない．
+
+\emph{残余境界．}
+$|z|=\beta$ は固定 source-free annulus 内にある．
+定理\ref{ke:fixed-base-neck-moser}の証明の actual tensor 比較を，
+固定した outer radii の内部で用いる．この比較自体には moving Moser cut を要しない．
+Source-free 積座標の normal 深度は $s$ と有界な base-only 項だけ異なり，
+その微分も有界である．$n_*$ を大きく取れば，$n_*\le s\le\kappa L$ 上で
+annulus 計量は normal 方向に $|dx/x|^2/s^2$ と比較可能である．
+従って残余境界全体で $U\le B$ となる一様な $B$ がある．
+
+\emph{Moving normal 境界．}
+$s=\kappa L$ 上では式\eqref{ke:eq:source-min-depth-envelope}から
+\[
+ u_t=F_t+2R+C_*=2\log(1/\kappa)+O(1)
+\]
+である．補題\ref{ke:source-arm-scale-buffer}の証明を，
+$|z|\le\beta$ を内部に含む，少し大きい固定 nested radii で適用する．
+同補題の定数 $B_0$ に対し $B_0\kappa<1/8$ となるよう $\kappa$ を先に選ぶ．
+ある $\rho>0$ を $t$ と中心に依存せずに取り，全てのこの境界点 $p$ で
+\[
+ B_{g_t}(p,2\rho)\subset\{x\ne0,\ 0<|x|<1\}
+\]
+となる．具体的には $|F_t(q)-F_t(p)|\le1$ を保つ固定半径を選ぶと，
+$d_t(q)\asymp\kappa L<L/8$ となる．連続な経路で orientation が変わるには
+$s_x=s_y\ge L/2$ を横切る必要があるため，球全体が $x$-arm に留まる．
+単に両深度の下界を得るだけで，$x\ne0$ を結論しているのではない．
+
+この actual 球内で $U$ の rank-one 不等式に distance cutoff を用いる．
+$\chi=1$ on $B(p,\rho)$，$\operatorname{supp}\chi\Subset B(p,2\rho)$ とし，
+Ricci 下界による Laplacian comparison から
+$|\partial\chi|^2\le C\rho^{-2}$，
+$\Delta\chi\ge-C(\rho^{-2}+\rho^{-1})$ と取る．
+$\chi^2U$ の正の最大点で
+\[
+ 0\ge\Delta\log(\chi^2U)
+ \ge U-1+2\frac{\Delta\chi}{\chi}
+               -2\frac{|\partial\chi|^2}{\chi^2}
+\]
+を用いると，中心で $U(p)\le C(1+\rho^{-2})=:C_1$ となる．
+Cut locus では通常の support-function argument を用いる．
+
+三種類の境界を合わせ，$M=\max\{1,A,B,C_1\}$ とする．
+$U$ が $M$ より大きい最大値を内点で取れば，
+$\Delta U\ge U(U-1)>0$ に反する．従って全 $\mathcal A^x_t$ で $U\le M$ である．
+式\eqref{ke:eq:source-global-positive-u}の射影下界と固定座標 $z$ の微分上界から，
+$\sqrt{-1}\,dz\wedge d\bar z\le C\omega_t$ も成り立つ．
+よって $h_x\le C\omega_t$ を得る．
+
+この arm では $s_y\ge(1-\kappa)L-\log\beta^2$ なので $d_t=s_x$ であり，
+式\eqref{ke:eq:source-min-depth-envelope}は $\omega_t^2\le C h_x^2$ を与える．
+$h_x$ に対する $\omega_t$ の二つの固有値は下から固定正定数で抑えられ，
+その積は上から有界なので，各固有値も上から有界である．
+これで式\eqref{ke:eq:source-arm-uniform-tensor}を得る．
+体積比較だけから tensor 比較を推論した箇所はなく，
+中央の全点径，Gaussian tail，full-triple 比較もこの証明の入力ではない．
+\end{proof}
+
+以下では式\eqref{ke:eq:source-arm-scale-range}の $S_0$ を $n_*$ 以上に，
+$\theta$ を $8B\theta<\kappa$ となるように選び直す．
+これは既に証明した scale ごとの評価の範囲を狭めるだけである．
+
+\begin{lemma}[中央点からの直接の有界退出]
+\label{ke:source-direct-central-exit}
+$c_1^2<\beta$ とし，上の $\kappa$ を用いる．
+各 $p\in\overline{B_t(c_1)}$ は，固定 source-free shell 上の
+\[
+ \Sigma_{t,\kappa}
+ =\{|z|=\beta,\ \min(s_x,s_y)\ge\kappa L\}
+\]
+へ actual 長さ $C$ 以下で接続できる．この shell 自体の ambient 径も $C$ 以下である．
+この結論は Gaussian 可積分性又は中央全点径の定理を用いずに得られる．
+\end{lemma}
+
+\begin{proof}
+系\ref{ke:source-central-arm-connectors}により，$p$ を長さ $C_\kappa$ 以下で
+$s_x=\kappa L$ 又は $s_y=\kappa L$ の断面へ運ぶ．
+その証明は中央 volume 上界から得る短い gate 退出と，
+正しい arm の短円上界を使い，中央点の全点径を仮定しない．
+$x$-断面なら $x$ を固定し，残余 disc 内の線分で $z$ を $|z|=\beta$ へ動かす．
+前命題の tensor 上界によりこの経路の長さは $C\beta$ 以下である．
+全経路で $y=tz/x$ は source chart 内にあり，$z=0$ から始めても問題ない．
+終点では $s_x=\kappa L$，$s_y=(1-\kappa)L-\log\beta^2\ge\kappa L$ である．
+$y$-断面も対称である．
+
+固定 source-free annulus 上では，$\Sigma_{t,\kappa}$ の normal 深度は両側とも
+$L$ と比較可能である．系\ref{ke:fixed-base-central-band}，又はその証明の
+水平・動径・円弧の三経路により，shell 全体の径は $C_\kappa$ 以下である．
+\end{proof}
+
+この補題は定理\ref{ke:source-central-diameter}の直径結論の別証明を与える．
+命題\ref{ke:source-central-band-reduction}と合わせれば，固定 $A>0$ に対する
+source-inclusive な $|\mu_t|\le A/L$ の中央帯も $O_A(1)$ で同じ shell へ運べる．
+先の Gaussian 体積評価は，この直接経路とは独立な定量評価として有効である．
+
 \begin{theorem}[非中央 arm の全点から shell への接続]
 \label{ke:source-noncentral-shell-exit}
-前補題の範囲の全ての点について
+式\eqref{ke:eq:source-arm-scale-range}の範囲で，
+$|z(p)|\le b_0$，$S=s_x(p)$ を満たす全ての点について
 \begin{equation}\label{ke:eq:source-noncentral-shell-exit}
  d_{g_t}(p,\Sigma^x_{t,S})
- \le C\sqrt{\log(R+2)},\qquad S=s_x(p)
+ \le C,\qquad S=s_x(p)
 \end{equation}
 が成立する．定数は $p,S,t$ に依存しない．
 この主張は $z=0$ の $x$ 軸も含む．
 \end{theorem}
 
 \begin{proof}
-$D=d_{g_t}(p,\Sigma^x_{t,S})$，$\rho=\rho_p\le1$ と置く．
-球の局在と Gaussian tail により
-\[
- \operatorname{Vol}_{g_t}B(p,\rho)
- \le\frac CS\exp\bigl(-a(D-\rho)_+^2\bigr).
-\]
-一方，補題\ref{ke:source-scale-shell-good-set}により，
-$G^x_{t,S}$ の体積は $c/S$ 以上であり，
-shell の径と $G$ から shell への距離が有界なので
-$G^x_{t,S}\subset B(p,D+C)$ となる．
-Compact $X_t$ の $\operatorname{Ric}(g_t)=-g_t$ による Bishop--Gromov 比較から
-\[
- \operatorname{Vol}_{g_t}B(p,\rho)
- \ge\frac cS\rho^4\exp\bigl(-C(D+1)\bigr)
-\]
-を得る．二つの球はともに全曲面の ambient 距離によるものであり，
-大きい球が source chart に留まることは要求しない．
-
-$S^{-1}$ を相殺して対数を取ると
-\[
- a(D-\rho)_+^2\le C(D+1)+4\log(1/\rho)+C
-                  \le C(D+1)+C\log(R+2).
-\]
-二次不等式を解けば\eqref{ke:eq:source-noncentral-shell-exit}となる．
-全曲面の diameter 上界，volume density からの tensor 比較，
-又は無限時間の Euler flow は使用していない．
+$x$ を固定し，$z(p)$ から $|z|=\beta$ 上の一点へ残余 disc 内の線分で動く．
+$s_x=S\in[n_*,\kappa L]$ は不変であり，$y=tz/x$ も固定 source chart 内にある．
+命題\ref{ke:source-arm-uniform-tensor}からこの経路の actual 長さは $C\beta$ 以下である．
+終点は深度 $S$ のままなので $\Sigma^x_{t,S}$ に属する．
+経路は $z=0$ の軸からも同様に定義できる．
 \end{proof}
 
 \subsection{出口の canonical moment を厳密に合わせる}
@@ -360,12 +480,13 @@ $S^{-1}$ を相殺して対数を取ると
 \label{ke:source-noncentral-same-moment-exit}
 固定 source-free shell $|z|=\beta$ 上の共通深部 moment interval を取り，
 source-inclusive neck の interval $I_t$ をその内部に取る．
+対象の neck は $\min(s_x,s_y)\ge S_0$ の内側に取る．
 固定 $A>0$ を十分大きくすれば，$a\in I_t$，$|a|>A/L_t$ に対し，
 $|z(p)|\le b_0$，$\mu_t(p)=a$ を満たす全ての neck の点は
 \[
  \{q:|z(q)|=\beta,\ \mu_t(q)=a\}
 \]
-へ actual 長さ $C\sqrt{\log(R_t+2)}$ 以下で接続できる．
+へ actual 長さ $C$ 以下で接続できる．
 \end{proposition}
 
 \begin{proof}
@@ -399,7 +520,7 @@ $I_t$ を取る．Source の互いに素な固定 residual discs を $\Delta_\el
 \begin{equation}\label{ke:eq:source-all-moment-exit}
  \sup_{a\in I_t}\sup_{p\in E_t(a)\cap\pi_D^{-1}(\Delta_\ell)}
  d_{g_t}\bigl(p,E_t(a)\cap\pi_D^{-1}(\partial\Delta_\ell)\bigr)
- \le C\sqrt{\log(R_t+2)}=o(R_t).
+ \le C.
 \end{equation}
 有限個の source charts は固定してよく，$C$ は residual exhaustion stage に
 依存させる必要がない．Actual normal Moser 像にも，両端の短い trajectories の
@@ -415,8 +536,9 @@ Source-free な中間 shell と所定の $\partial\Delta_\ell$ が異なる場�
 両者を含む固定 residual annulus 上で同じ命題を用いれば，
 moment を変えずに所定の境界の全 moment 円へ $O(1)$ の費用で到達できる．
 
-$|a|\le A/L$ では系\ref{ke:source-central-band-collapse}により，
-固定 source-free central shell への $O_A(1)$ の接続を得る．
+$|a|\le A/L$ では命題\ref{ke:source-central-band-reduction}で固定 rescaled core へ運び，
+補題\ref{ke:source-direct-central-exit}により固定 source-free central shell への
+$O_A(1)$ の接続を得る．
 その shell と，$\partial\Delta_\ell$ 上の moment $a$ の円は，
 一つの固定 source-free compact base の $|\mu_t|\le A'/L$ の中央帯に入る．
 ここで $A'$ は固定して十分大きく取る．
@@ -446,7 +568,7 @@ Moment と residual labels は source の同じ quotient から運ぶため，
 除いた source-free 部分も連結とする．全共通 interval の $a$ に対し
 \[
  \operatorname{diam}_{d_{g_t}}E_t(a)
- \le C\sqrt{\log(R_t+2)}+C_P.
+ \le C+C_P.
 \]
 同じ評価は actual normal Moser 像に短い trajectory 費用を加えて成立する．
 従って同一 moment 上の regular，saddle，pinched fibres の合併全体の
@@ -466,7 +588,10 @@ Source 数とその固定 charts は有限である．経路は個々の fibre �
 本節は actual ambient 接続の上界を与える．
 全曲面の no-shortcut 下界，異なる moments をどの target 座標へ対応させるか，
 および全域の $p_T\pi_t$ と旧 softmax 値の整合を結論しない．
-中央帯に用いた $O(1)$ は，source-free な central slab の体積 $\asymp L_t^{-1}$
-を wide Gaussian の係数 $L_t^{-1}$ と合わせる
-定理\ref{ke:source-central-diameter}の証明による．
+全 moment での $O(1)$ は，三境界で制御した normal covector と
+volume 上界から得る oriented-arm tensor 比較を用いる．
+中央帯では短い gate 退出を組み合わせるので，この結論の証明には
+Gaussian 体積評価を必要としない．固定 stage の同一 moment 集合の
+正規化径は $O_P(R_t^{-1})$ であるが，exhaustion に伴う $C_P$ の
+増大率や全曲面 GH 収束の最適速度を主張しているのではない．
 
