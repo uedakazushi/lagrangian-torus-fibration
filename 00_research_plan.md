@@ -43,7 +43,7 @@ K1–K2では、遅い対角選択の下でsource-inclusive neckとclosed corner
 | K0：入力の監査 | `main:global`、`ke:global-realization` とKE依存表を読み、採用する族・木系・form・marked collarsを固定する。 | P0に実際に使う大域接着・外部定理の仮定と証明を照合。資料と入力の所在は整備済み、全証明の独立監査は未了。 |
 | K1：actual neckの短円とbuffer | `ke:fixed-stage-source-neck`、`ke:neck-corner-diagonal-matching` の残余compact→normal cutoff→moment区間→parameter閾値の選択を用いる。 | 固定source-free基底の二側比較、source中心を含む短円、共通source/像、source-inclusive neckを証明。十分遅い残余exhaustionでは全flow・全円orbitを含むtripleとの共通開領域も確保した。任意に指定した縮小速度や曲面全体の被覆への一様性は主張しない。 |
 | K2：複数endの同時整合 | `ke:neck-corner-saturated-union` の部分fibrationを全域構成への入力として使う。 | 三armの座標接続、normal period一致、相対Hamiltonian補正、共通moment区間とreduced graphにより、closed cornerと切詰めたneckの**全交わり**でfiber partition・向き付きnormal cycle・内部source/saddle markingを一致させた。Endの第二cycleは共通torus同定で移送して選ぶ。Source・saddleを含むactual部分fibrationを得た。独立に選んだ第二periodの一致は自動でなく、core接着と全曲面被覆は残る。 |
-| K3：component coreの相対接着 | `ke_component_core_geometry.tex` の小さい飽和core fillingを、既存の全collarへ相対延長する。 | 任意の固定compact・全collarでKE形式とprimitiveに厳密一致するsmooth正則化、正residueの有限型KE core、およびその小さい飽和近傍のLagrangian fillingを証明。固定compactのactual移送も既証明。既存neck/cornerの指定全葉への相対延長、全交わりの飽和と全曲面被覆は未解決。 |
+| K3：component coreの相対接着 | 小さい飽和core fillingを入力とし、研究ノートの四項目（閉link被覆、generator一階評価、saddleを動かす葉族、新normal cutの飽和）を固定段階で証明する。 | 任意の固定compact・全collarでKE形式とprimitiveに厳密一致するsmooth正則化、正residueの有限型KE core、およびその小さい飽和近傍のLagrangian fillingを証明。固定compactのactual移送も既証明。既存neck/cornerの指定全葉への相対延長、全交わりの飽和と全曲面被覆は未解決。 |
 | K4：全曲面の距離比較 | Source中央帯外の同一moment接続 `ke:eq:source-moment-exit-input` と、全曲面のno-shortcut下界を進める。 | Central sourceの固定点を含む全点径は $O(\sqrt{R_t})$（`ke:source-central-diameter`）。固定残余基底のsource-inclusive中央moment帯と閉pinched torus全体も正規化径が消える。固定source-free基底の同一moment径は $O(1)$。中央帯外のsource接続、異なるmomentをまたぐ木全体、全点対distortionは未証明。 |
 | K5：主定理と独立点検 | 五次の完結した証明を節目に、全固定 \(d\ge5\) へ一般化し、全ての入力と定数依存を追う。 | 主稿の問題を仮定未残の定理と十分な証明へ置換し、別の読み手による論理点検、一次文献比較、再現・組版を完了。現在未着手。 |
 
@@ -54,7 +54,7 @@ K1–K2の正本は `ke_neck_corner_exhaustion.tex`。残余compactの定数を�
 Source全体のEuler場 $W_+=x\partial_x+y\partial_y$ のactual normを固定chart上で一様に抑えた（`ke:source-euler-bound`）。中央sourceの $|z|\ge e^{-a_t}$、$a_t=o(R_t)$ の部分は、固定residual shellへ $O(a_t+1)$ で接続でき、正規化ambient径が消える（`ke:source-sublog-residual-connectors`）。Euler経路だけでは軸に届かないが、`ke:source-central-diameter` は別のGaussian体積比較で $z=0$ と極小residual点も含む全点径を $O(\sqrt{R_t})$ に抑える。`ke:fixed-base-source-central-band` により、固定基底の全中央帯と閉pinched torus全体も収縮する。
 
 ## 原稿・ノートの正本と公表単位
-- `papers/surface-lagrangian-torus-fibration.tex`：このrepoの主たる公表用本文。相対SNC構成、次数分割、分岐底、作用適合atlasとKE–fibrationの大域実現問題（現行改訂18。直近の組版確認は改訂16・167頁、現行追加証明は組版確認中）。
+- `papers/surface-lagrangian-torus-fibration.tex`：このrepoの主たる公表用本文。相対SNC構成、次数分割、分岐底、作用適合atlasとKE–fibrationの大域実現問題（現行改訂18。LuaLaTeXで188頁に組版し、変更頁を表示確認済み）。
 - `papers/quintic-integer-gluing.tex`：五次整数アフィン接着、高分母支持グラフの独立論文（第25稿、201頁の記録）。指定SNC cores・K5 graph・標準cones・marked puncturesを保つ候補が対象。必要支持3型26標識は**実現数ではない**。G5_14の中央matching、一般分母剛性、三高Dの同時非負性が未解決。
 - `papers/meridian-surgery.tex`：四pantsのmeridian局所置換と閉corner circuitsの障害（18頁の記録）。
 - `papers/research-notes.tex`：各種補題・証明素材のTeXノート（65頁の記録）。
@@ -71,7 +71,7 @@ Source全体のEuler場 $W_+=x\partial_x+y\partial_y$ のactual normを固定cha
 
 ## 成分coreの存在とtarget距離の確定部分
 
-`ke_component_core_geometry.tex` はRochon–ZhangのSNC cusp potential表示を用い、regularized maximumで任意の固定compact・full collars上のKE二形式とprimitiveを保つsmooth compactificationを構成する。正residue primitiveによるproper potentialはendでcritical pointを持たず、compact Morse perturbationをexact Moserで戻すことで、**極限KE形式そのもの**に有限型Weinstein coreを得る。既存SNC定理のend変更をcore外に置き、propernessを使うと、coreの小さい飽和近傍には所定のmarked graph型のLagrangian fillingがある。未解決は、その境界のactual葉を既存neck/cornerの全collarへ合わせる相対問題である。
+`ke_component_core_geometry.tex` はRochon–ZhangのSNC cusp potential表示を用い、regularized maximumで任意の固定compact・full collars上のKE二形式とprimitiveを保つsmooth compactificationを構成する。正residue primitiveによるproper potentialはendでcritical pointを持たず、compact Morse perturbationをexact Moserで戻すことで、**極限KE形式そのもの**に有限型Weinstein coreを得る。既存SNC定理のend変更をcore外に置き、propernessを使うと、coreの小さい飽和近傍には所定のmarked graph型のLagrangian fillingがある。未解決は、その境界のactual葉を既存neck/cornerの全collarへ合わせる相対問題である。研究ノートにはactual circleによるexactなprimitive平均とnontrappingの条件付き評価を保持した。最初にcomponent深度 $N_j\gg n_j$ のmoment cutを選び、neckとcornerが閉link全体を覆うことを確認する。既存のsaddle固定版補題では足りない相対葉族の補間も、別の未完成課題として明示する。
 
 `base_topology.tex` の非伸長座標retractionにより、任意の座標部分複体 $\mathcal C_I$ の内在距離は全 $\mathcal C_d$ の距離の制限に一致する。特にclosed-cornerのGH評価は同じ誤差で全target距離を使えるが、source側の全曲面shortcutを制御したとはしない。最短路には六label以下で十分で、portal比較のgallery数は五次30、六次以上60にできる。
 
@@ -149,7 +149,9 @@ Lagrangian主稿 `ke:actual-closed-corner` の同じ averaging–Moser flow と�
 現行のTeX分割節と検証スクリプトは `papers/sections/` を直接参照し、旧ルートsymlinkに依存しない。静的な構成検査は `python3 verification/verify_repository_layout.py`、現行の五主検算・五独立監査は `python3 verification/run_current_checks.py`。旧JSONやmanifestの相対パス・記録時点のSHA-256は出典情報として保持し、パス正規化後の現行実行パスと区別する。
 組版はrepo直下の `latexmk papers/surface-lagrangian-torus-fibration.tex`、整数接着は `latexmk papers/quintic-integer-gluing.tex`。LuaLaTeXとLuaTeX-ja／TikZ／日本語フォントが必要、PDFとSyncTeXはbuild/へ出力しGitで追跡しない。段階別の実行は `scripts/research_check.py` と [Cloud Codexの再開手順](research/cloud-codex.md) を参照する。元の計算コード、入力、証明書は保持する。
 
-2026-11-21 / v2.7：主稿改訂17に中央source全点径と固定component移送の証明を統合し、追加証明を別担当と内部点検した。Dinh–Marinescu–VuのTheorem 1.2とcomplex Sobolev normを掲載版の一次PDFで確認。改訂17の静的検査・LuaLaTeX組版・変更頁の表示確認は実行待ち。直近の完了済み組版は改訂16・167頁。形式証明・外部査読、包括的新規性確認、整数検算suiteや他三稿の再組版は今回未実施。P0は未解決。
+2026-11-21 / v2.8：固定compactのKE正則化、正residue coreと局所飽和filling、targetの非伸長retraction・六label最短路・六次以上の厳密直径を主稿改訂18へ統合し、追加証明を別担当と内部点検した。Rochon–ZhangのSNC cusp表示、Evans–Mauriのcone extension、Babson–Billera–Chanの既知cubical細分との関係を一次資料で確認した。主稿はLuaLaTeX/latexmkで188頁、PDF/SyncTeXを生成し、未解決の参照・引用、重複ラベル、欠落字形、overfull boxはない。序論・target距離・closed corner・core・文献の変更箇所を中心に18頁を表示確認した。四galleryと120三角形の有理数検算、静的構成検査も通過。形式証明・外部査読、包括的新規性確認、旧整数検算suiteや他三稿の再組版は今回未実施。P0と研究ノートの相対接着四課題は未解決。
 
 ## 共通研究原則と保存許可（研究固有方針から独立）
 数学的重要性・新規性・理解の深化・応用可能性・正確性・実現可能性を総合し方針を見直す。証明済み・仮定付き・未完成・予想・計算観察、既知成果と新規性、草稿の証明と今回の独立監査を区別する。重要な先行研究は一次資料の仮定と参照箇所を確認する。日本語LuaLaTeXで十分な証明を保ち、有効な着想・反例・障害は現行ノートへ整理する。再現資産を保持し、旧版ZIP/ログの集積を避ける。研究の区切りでは承諾なしで通常コミットを `main` へpushし、Cloud Codexの長時間作業は切りのよいところ、遅くとも前回成功pushから約15分を目安に現行の有効な成果と未解決箇所を保存する（詳細はAGENTS.md）。force push・GitHub Actions追加/起動をしない。Library旧資料を削除せず、GitHub管理後の定常二重保存は行わない。対象repo保存後にresearch-hubの到達点・核心・次の一手・依存と再開先を更新し、数学検証・組版・push・hub反映を区別する。
+
+GitHub管理前の研究では、区切りごとに現行方針・ノート・論文・必要な再現資産と組版済みPDFをbundleとして承諾なくLibraryへ保存する。移行後は対象repoのmainを正本とし、Libraryはpush不能時の緊急保存または別途指定に用いる。現在有効な内容から再開できる構成を保ち、旧版の復元用アーカイブ、組版中間物、重複実装を現行一式へ蓄積しない。元資料独自の有用内容は移行・検証前に失わず、削除を指示されていない既存Library資料は保持する。

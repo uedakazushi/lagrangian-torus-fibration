@@ -575,7 +575,7 @@ $O((\log R_t)/R_t)$ と評価する．
 全正深度の二重 cusp 漸近，および clipped depth map による全経路の長さ下界である．
 これに有限 square gallery の持ち上げを合わせ，model metric の Lie derivative 評価で
 actual Lagrangian bundle へ移す．
-標的の距離は閉 corner 自身のものであり，全複体 $\mathcal C_d$ の他の cells を通る距離ではない．
+標的の距離は閉 corner の内在距離として定義されるが，命題\ref{topo:coordinate-retraction}の非伸長 retraction により，全複体 $\mathcal C_d$ の距離の制限と等しい．
 この局所距離評価だけから全曲面の shortcut の制御は得られない．
 
 その相対接着に向け，命題\ref{ke:relative-fiber-preserving}は，
@@ -675,6 +675,19 @@ Projection distortion も $O(L_t^{-\eta})$ である．
 全曲面内の ambient distance は領域外の近道を許すため，この局所定理だけから
 大域 GH 収束や既存 fibration の全 fibers に関する収縮を結論しない．
 
+\paragraph{固定成分 core と target の距離．}
+節\ref{ke:component-core-geometry-section}では complete KE 形式に対し，
+任意の固定 compact 上で形式と primitive を保つ smooth 正則化と，
+正 residue の有限型 Weinstein core を構成する．既存の相対 SNC 定理を用い，
+その小さい飽和近傍を Lagrangian に filling するが，
+既存 neck/corner の全 collar 葉への相対延長は残る．
+Target の組合せ型は既知の cubical barycentric subdivision\cite{BabsonBilleraChan}であり，
+その構成自体の新規性は主張しない．命題\ref{topo:coordinate-retraction}は，unit-square 長さ距離に対する座標部分複体の等長性を与え，
+閉 corner の target 距離を全体距離へ同定する．
+定理\ref{topo:diameter-six-labels}は有限幾何のみで，六次以上の target の
+厳密直径 $2\sqrt5$ と全最大対を決定する．
+これらは actual 曲面の全域 shortcut を制御する結果とは区別する．
+
 \subsection{他の tropical 構造との比較と残る問題}
 
 Cartwright の tropical complex は，退化の dual complex に intersection numbers を加えて，
@@ -717,15 +730,3 @@ hyperplane class 以外の Kähler classes，special Lagrangian 条件，canonic
 本稿の存在定理から独立した課題として扱う．
 Gross--Siebert\cite{GrossSiebert}の affine geometry からの退化再構成との比較にも，
 本稿で得た実際の作用周期に加えて，必要な追加データを明示する必要がある．
-
-\paragraph{固定成分 core と target の距離．}
-節\ref{ke:component-core-geometry-section}では complete KE 形式に対し，
-任意の固定 compact 上で形式と primitive を保つ smooth 正則化と，
-正 residue の有限型 Weinstein core を構成する．既存の相対 SNC 定理を用い，
-その小さい飽和近傍を Lagrangian に filling するが，
-既存 neck/corner の全 collar 葉への相対延長は残る．
-また命題\ref{topo:coordinate-retraction}は座標部分複体の等長性を与え，
-閉 corner の target 距離を全体距離へ同定する．
-定理\ref{topo:diameter-six-labels}は有限幾何のみで，六次以上の target の
-厳密直径 $2\sqrt5$ と全最大対を決定する．
-これらは actual 曲面の全域 shortcut を制御する結果とは区別する．

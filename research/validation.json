@@ -29,13 +29,14 @@
       "六次以上のcubical targetの厳密直径2sqrt(5)、最大対の完全記述、直径近似対の線形安定性（後者のgapのみ既存C5定理に依存）"
     ],
     "not_proved": [
-      "局所KE core fillingから既存neck/cornerの全collar葉を指定した相対延長、全overlapの同時整合、および全曲面被覆",
+      "既存neck/cornerの全collar葉へのcore fillingの相対延長。特に閉link全被覆、actual generator一階評価と全overlap gauge、saddleを動かす相対葉族、新normal cutの全fiber飽和。全曲面被覆も未解決。",
       "Source中央帯を超える共通moment interval全体での同一moment接続と、moving残余領域への一様性",
       "中央帯に限られないmomentをまたぐ木上の複数fiberの合併の径、全曲面ambient距離でのno-shortcut、square lifts、portal connectorsとP0の一様distortion",
       "KE側のCP/PBE（および必要時のTC5）の対象族での証明、またはそれらの直接評価による代替",
       "一般次数のP0達成に必要な既存全証明と先行研究の独立点検"
     ],
-    "scope_warning": "原稿に証明が書かれていることを、今回全定理を独立に再検証したことと混同しない。"
+    "scope_warning": "原稿に証明が書かれていることを、今回全定理を独立に再検証したことと混同しない。",
+    "research_note_strategy": "Actual circleのcentered平均によるexact primitive補正、微分仮定付きnontrapping、Liouville moment facesとwhole-fiber trimを研究ノートへ整理。相対構成全体は証明未完成。"
   },
   "reproduction": {
     "repository_tree": "main（現行Gitツリーで旧ルートsymlinkなし、主要ソースと入力参照の存在を確認）",
@@ -45,21 +46,21 @@
     "arithmetic_command": "python3 scripts/research_check.py arithmetic",
     "latest_reported_main_build": {
       "date": "2026-11-21",
-      "revision": 16,
-      "pages": 167,
+      "revision": 18,
+      "pages": 188,
       "pdf_and_synctex": true,
       "refs_citations_checked": true,
       "overfull_box_warnings": 0,
       "missing_glyphs": false,
       "duplicate_labels": false,
-      "visual_review": "要旨・序論・大域課題・中央帯・normal flow・exhaustion・source節と追加文献の変更頁を表示確認（1–2,13–14,45,75,93–105,167頁）。全167頁の視覚的再監査ではない。",
-      "mathematical_source_commit": "5992d3085d5af3b04c38c9471ce7c39d3e1093d1",
-      "source": "この研究作業でLuaLaTeX/latexmkを実行し、出力PDF・SyncTeX・logを確認。PDFはGitで追跡しない。"
+      "visual_review": "最終188頁版の序論・target距離・closed corner・core・追加文献の変更箇所を中心に18頁を表示確認（16,40–47,69–70,120–124,187–188頁）。全188頁の視覚的再監査ではない。",
+      "mathematical_source_commit": "006b79a3ba152e6a997ba7fafe69bec7873ec38d",
+      "source": "新しい数学節を保存した上記commitに、序論・target距離記述の整合修正と既知cubical細分の先行研究比較を加えた改訂18をこの作業で組版。PDFはGitで追跡しない。"
     },
     "this_audit": {
       "date": "2026-11-21",
       "scope": "固定compactのcusp正則化、正residue core、局所飽和filling、target retraction・六label還元・厳密直径を論理点検。新四gallery・120三角形を有理数で独立検算。現行の全旧証明を再監査したものではない。",
-      "reexecuted_build": false,
+      "reexecuted_build": true,
       "reexecuted_static_checks": true,
       "reexecuted_python_suite": false,
       "six_label_finite_command": "python3 verification/verify_cubical_six_label_geometry.py",
@@ -77,9 +78,28 @@
         "ke:closed-corner-global-target"
       ],
       "all_existing_proofs_reaudited": false,
-      "external_referee_review": false
-    },
-    "current_revision_pending_build": 18
+      "external_referee_review": false,
+      "visual_pages_reviewed": [
+        16,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        69,
+        70,
+        120,
+        121,
+        122,
+        123,
+        124,
+        187,
+        188
+      ]
+    }
   },
   "cloud_codex": {
     "repository_instructions_present": true,
@@ -106,6 +126,16 @@
       "source": "Rochon–Zhang, Adv. Math. 231 (2012), 2892–2952, arXiv:1106.0873v2, §5 (5.3)–(5.6), Theorem 5.1",
       "url": "https://arxiv.org/abs/1106.0873v2",
       "verified": "一次PDFでSNCのampleness条件・bounded cusp potentialとd^c規約を照合。Smooth divisor専用のfull expansionは使用しない。"
+    },
+    "Evans_Mauri_cone_extension": {
+      "source": "Evans–Mauri, Ann. Henri Lebesgue 4 (2021), 537–570, Lemma 2.16 and Remark 2.18; arXiv:1905.09229v3, §2.3",
+      "url": "https://arxiv.org/abs/1905.09229v3",
+      "verified": "一次PDFでcompletionとcontact formの変更による時間座標shiftを確認。指定full collarのfiber partitionを保つ相対定理とは区別。"
+    },
+    "cubical_barycentric_subdivision": {
+      "source": "E. K. Babson, L. J. Billera, C. S. Chan, Neighborly cubical spheres and a cubical lower bound conjecture, Israel J. Math. 102 (1997), 297–315, DOI 10.1007/BF02773804. Text checked in the April 10, 1996 preprint, §2.3, Proposition 2.2 and Corollary 2.4.",
+      "url": "https://www.math.ucdavis.edu/~deloera/MISC/LA-BIBLIO/trunk/Billera/BilleraEhrenborgcdindex.pdf",
+      "verified": "連結scan PDF第24頁が該当本文p.6、第30頁が表題・著者・日付。刊行書誌は著者サイトと照合。C_dのcell=[A,B]という本稿の直接記述から既知細分との組合せ的同定を得る。unit-square距離のretractionとsqrt(20)定理の既知性は未確定。"
     }
   },
   "other_papers": {

@@ -28,7 +28,7 @@ python3 scripts/research_check.py tex
 ## 論文と役割
 | 原稿 | 役割 | 組版の確認範囲 |
 | --- | --- | ---: |
-| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、局所KE収束と大域実現問題（改訂18） | 直近の改訂16は167頁、改訂18を組版確認中 |
+| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、局所KE収束と大域実現問題（改訂18） | 改訂18・188頁、変更箇所を中心に18頁を表示確認 |
 | [五次整数接着](papers/quintic-integer-gluing.tex) | 指定K5データの整数条件・高分母支持・未解決の大域接着 | 201頁 |
 | [Meridian surgery](papers/meridian-surgery.tex) | 閉corner circuitsの局所置換の障害 | 18頁 |
 | [TeX研究ノート](papers/research-notes.tex) | 証明素材・残る条件の整理 | 65頁 |
@@ -62,6 +62,6 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-2026-11-21 / v2.8：固定compactのKE正則化と局所core filling、targetの非伸長retraction・六次以上の厳密直径を統合した。Rochon–ZhangのSNC cusp potentialを一次資料で確認し、新しい有限計算 `python3 verification/verify_cubical_six_label_geometry.py` と構成の静的検査を実行した。改訂18のLuaLaTeX組版・変更頁表示は確認中。直近の記録済み組版は改訂16・167頁。形式証明・外部査読、包括的新規性確認、旧整数検算suiteや他三稿の再組版は今回未実施。P0は未解決。
+2026-11-21 / v2.8：固定compactのKE正則化、正residue coreと局所飽和filling、targetの非伸長retraction・六label最短路・六次以上の厳密直径を主稿改訂18へ統合し、追加証明を別担当と内部点検した。Rochon–ZhangのSNC cusp表示、Evans–Mauriのcone extension、Babson–Billera–Chanの既知cubical細分との関係を一次資料で確認した。主稿はLuaLaTeX/latexmkで188頁、PDF/SyncTeXを生成し、未解決の参照・引用、重複ラベル、欠落字形、overfull boxはない。序論・target距離・closed corner・core・文献の変更箇所を中心に18頁を表示確認した。四galleryと120三角形の有理数検算、静的構成検査も通過。形式証明・外部査読、包括的新規性確認、旧整数検算suiteや他三稿の再組版は今回未実施。P0と研究ノートの相対接着四課題は未解決。
 
 **再現用パス：** 現行の分割TeXと検算入力は `papers/sections/` 以下を直接参照する。ルートの旧互換性symlink（`paper`, `paper_arithmetic`, `paper_surgery`, `notes`）は不要になり撤去した。構成の静的検査は `python3 verification/verify_repository_layout.py`、数学的な既定検算は `python3 verification/run_current_checks.py`。既存監査JSONの旧相対パスは出典記録として保持する。
