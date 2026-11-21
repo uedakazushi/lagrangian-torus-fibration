@@ -1,5 +1,5 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-21 / v3.1
+更新：2026-11-21 / v3.2
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
@@ -188,7 +188,9 @@ Actual symplectic circleのcentered kernelについて
 
 外向きcollarのLiouville葉族は一般には旧neck葉族と異なるため、前節の相対補間を $q_a=\delta_j\ne0$ の小帯へ適用する。全corner葉とsource近傍を保ち、saddleは動かせる。全fiber trim後のclosed piecesでlocal fiber relationsの有限和は既に推移的なので、閉同値関係となりHausdorff基底を得る。基底は同じ $B_d(T)$。
 
-各componentのcore・変更collarは固定の少し広い連結compact内にあり、そこを通る選択した接続路とambient径は有限な $C_j$ で抑えられる。$R_t\ge j(1+C_j+\log(N_j+1))$ の対角選択で正規化費用を消す。**各componentごとの評価**であり、異なるcores全部の合併径や任意Liouville軌道の全長、fiber内在径は結論しない。同一moment source退出、基底parameter化、木上の全fiber合併、全曲面no-shortcut/portalは、それぞれの証明を経て `ke:global-metric-realization` へ統合した。
+`ke:component-logarithmic-connectors` により、各componentのcore・変更collarの接続費用とambient径は $C(1+\log(N_j+1))$ で抑えられる。$C$ は固定した族・charts・weightsのみに依存する。全深度が $CN_j$ 以下であることと固定componentのcusp上比較を使い、normal動径の積分 $\int ds/s$ で固定compactへ結ぶ。全経路は $\{\Psi_i\le AN_j\}$ に入り、この拡大compactを先に固定してからactual metricを比較する。これは**各componentごとのambient評価**であり、異なるcores全部の合併径や任意Liouville軌道の全長、fiber内在径は結論しない。
+
+Skeletonの連結性は $\Sigma=\bigcap_{T\ge0}\varphi_{-T}(K)$ というnested compact connected setsの表示から直接従う。保持cornerのquotientがdiskであることとproper cap arcsは `ke:corner-cap-disk` を用い、$B_d(T)$ の同定との循環を避ける。対数接続補題は別担当も独立に導出・点検済み。この追加を含む組版と、全fiber予算への定量的統合は作業中であり、直近の確認済みPDFは改訂21である。
 
 ### 切り取った cap と旧 softmax 値
 

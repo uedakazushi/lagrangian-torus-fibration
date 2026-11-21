@@ -1,5 +1,5 @@
 % !TeX root = ../../surface-lagrangian-torus-fibration.tex
-% 2026-11-21 / v1.1: Actual KE 形式上の相対 core 接着，target caps と全域距離評価への接続．
+% 2026-11-21 / v1.2: Compact cone filling と component 接続費用の対数評価．
 \section{Actual KE 形式上の全域 core 接着}
 \label{ke:actual-core-gluing-section}
 
@@ -24,7 +24,7 @@ $(K,\omega=d\lambda)$ を compact connected Liouville domain とし，
 $Z$ を $\iota_Z\omega=\lambda$ によって定める．
 $Z$ は $S=\partial K$ に厳密に外向きであり，内側の固定 Weinstein subdomain
 $K_0\Subset\operatorname{int}K$ の外では proper Lyapunov function を厳密に増加させるとする．
-内側では有限型 Weinstein structure と一致するものとし，その connected skeleton を
+内側では有限型 Weinstein structure と一致するものとし，その skeleton を
 $\Sigma\subset\operatorname{int}K_0$ と書く．
 
 $S$ 上に compact graph $\Gamma$ への connected-fiber continuous surjection
@@ -69,7 +69,14 @@ $\{\varphi_s(y):-T\le s\le0,\ y\in S\}$ は $\Sigma$ と交わらない compact 
 従って $\Sigma$ へ近づく点列の退出時間は無限大に発散し，$e^s\to0$ となる．
 逆に compactness と上の表示から，radial coordinate が零に近づく点列の集積点は
 $\Sigma$ に含まれる．これで cone point における連続性が従う．
-Skeleton の連結性は connected Weinstein domain の deformation retraction による．
+Skeleton の連結性は flow から直接従う．実際，
+\[
+ K_T=\varphi_{-T}(K)\quad(T\ge0),\qquad
+ \Sigma=\bigcap_{T\ge0}K_T
+\]
+である．後者の等式は，$K_T$ が正時間 $T$ まで $K$ 内に留まる点全体であることと，
+上の有限退出の結論による．$K_T$ は非空な compact connected sets の減少族なので，
+その共通部分 $\Sigma$ も非空で連結である．
 最後に compact から Hausdorff 空間への連続全射なので proper である．
 \end{proof}
 
@@ -161,7 +168,8 @@ Normal bands 内の saddle positions と基底の parameterization は $t$ と�
 actual images に含められる．各 component ごとの領域の actual ambient diameter と，
 その少し広い固定された連結 compact domain の actual image 内で選ぶ接続経路，
 および小さい Moser 移送の費用は
-$t$ に一様な有限定数 $C_j$ で抑えられる．
+$C_j=C(1+\log(N_j+1))$ で抑えられる．ここで $C$ は固定した次数・族・weights
+のみに依存し，stage と $t$ に依存しない．
 従って十分遅い対角選択 $j=j(t)\to\infty$ により，それらの
 $R_t^{-1}$-正規化費用は零へ収束する．
 全曲面の uniform distance distortion は本定理の結論ではない．
@@ -216,6 +224,9 @@ compact Hausdorff 空間 $X_t$ の quotient も compact Hausdorff となる．
 interval times $T_{ij}$，triple point に regular two-dimensional block を置いたものとなる．
 Saddle tracks は対応する二つの core vertices を結び，
 $T_{ij}$ の内部辺は bigons，labelled ends は三重点の triangle に接続する．
+保持 corner の quotient が disk のままであり，core cut の境界が proper arcs で
+あることは補題\ref{ke:corner-cap-disk}による．同補題の証明は moment cuts と
+深度評価のみを用い，ここでの $B_d(T)$ との同定には依存しない．
 相対葉族補間は continuation marking を変えないので，この基底は
 定義\ref{topo:definition}の cellular $B_d(T)$ と同相である．
 Source の nodal values は，その二次元 cells の内部の標識点として残る．
@@ -223,17 +234,17 @@ Source の nodal values は，その二次元 cells の内部の標識点とし�
 
 固定 $j$ で用いた component 領域と全補間 supports は，
 一つの固定 $V_{i,j}\Subset W_i$ の中にある．
-必要なら連結な少し広い compact を取る．
-Fixed-gauge smooth convergence と命題\ref{ke:fixed-component-transfer}により，
-各 component image 内の任意の二点を結ぶ経路を，長さが有限な $C_j$ 以下となるよう選べる．
-従って各 component ごとの ambient diameter と接続費用も同じ定数で抑えられる．
-ここで用いるのは固定 compact 内で選んだ経路であり，任意の Liouville trajectory の
-全長の評価ではない．Reduced diffeomorphisms の moment 微分について
-$j$ 一様の bound を仮定する必要はない．
+補題\ref{ke:core-depth-upper}と命題\ref{ke:component-logarithmic-connectors}により，
+各 component image 内の二点は，少し広い固定 compact image 内の経路で
+長さ $C(1+\log(N_j+1))$ 以下で結べる．
+従って定理の $C_j$ はこの対数評価で取れる．
+ここで用いるのは cusp の動径経路であり，任意の Liouville trajectory の
+全長ではない．Reduced diffeomorphisms の moment 微分について
+$j$ 一様の bound を仮定する必要もない．
 
 最後に $t_j\downarrow0$ を取り，既存 K1--K2 の全条件とともに
 \[
- R_t\ge j\bigl(1+C_j+\log(N_j+1)\bigr)
+ R_t\ge jC\bigl(1+\log(N_j+1)\bigr)
  \qquad(0<|t|\le t_j)
 \]
 を課す．$t_{j+1}<|t|\le t_j$ では第 $j$ 段階を使えば，
@@ -251,7 +262,7 @@ core と補間領域の正規化費用は $1/j$ 以下となる．
 閉 corner から core 側へ切り取った部分の intrinsic GH 評価を，
 新しい全曲面上の距離評価と同一視しない．
 
-\subsection{Core cut で除いた corner 部分の旧 target 像}
+\subsection{Core の深度と対数接続費用，除いた corner の旧 target 像}
 \label{ke:core-target-caps-section}
 
 以下では十分大きい段階 $j$ を固定し，$m_j=6b_j$，$N=N_j$，
@@ -352,6 +363,59 @@ $K_{i,j,t}$ も，小さい $t$ に対して当該 corner と交わらない．
 いない．その不等式の別成分の不存在を示す必要はなく，dominant-product 評価を
 その適用範囲外に延長してもいない．固定 compact への包含だけでも，ある段階依存の
 $A_j<\infty$ による深度上界は得られる．上の最大原理はそれを $C N_j$ に整理する．
+
+\begin{proposition}[Component の対数接続費用]
+\label{ke:component-logarithmic-connectors}
+一つの component $W_i$ とその固定 KE 計量 $g_{\infty,i}$ を取る．
+固定した $C_0>0$ に対し，$N\ge2$ と
+\[
+ D_{i,N}=\{p\in W_i:\max_{a\ne i}s_a(p)\le C_0N\}
+\]
+の任意の二点を，長さ $C(1+\log N)$ 以下の経路で結べる．
+全経路は $\{\Psi_i\le AN\}$ に選べ，$C,A$ は固定した族・charts・weights と
+$C_0$ のみに依存する．従って $N=N_j$ を先に固定してから $t$ を小さくすれば，
+actual graph image 内でも同じ評価が成立する．特に，実際に構成した一つの
+component の core と変更 collar の全体の ambient 径と接続費用は
+\begin{equation}\label{ke:eq:component-logarithmic-budget}
+ C\bigl(1+\log(N_j+1)\bigr)
+\end{equation}
+以下である．経路を core 自身又は一つの fiber の内部に制限する主張ではない．
+\end{proposition}
+
+\begin{proof}
+固定した有限個の nested SNC coordinate polydiscs で divisor を覆う．
+一つの chart では，divisor の局所方程式を $z_1\cdots z_k=0$，$k=1,2$ とし，
+$\sigma_a=-\log|z_a|^2$ と置く．標準 cusp 比較
+\cite[\S5, (5.3)--(5.6), Theorem~5.1]{RochonZhang}により，固定した定数で
+\[
+ g_{\infty,i}\le C\left(
+   \sum_{a=1}^k\frac{|dz_a|^2}{|z_a|^2\sigma_a^2}
+   +\sum_{a=k+1}^2|dz_a|^2\right).
+\]
+Chart を予め小さく取れば，局所深度と対応する global depth の差は有界であり，
+他の divisors の defining functions は units である．
+内側の polydisc にある点から，各 normal coordinate の角度と接方向を固定し，
+その絶対値を外側 polydisc 内の固定した小半径まで一つずつ増やす．
+この経路の長さは
+\[
+ C\sum_{a=1}^k\int_{\sigma_*}^{\max\{\sigma_a,\sigma_*\}}\frac{du}{u}
+ \le C'(1+\log N)
+\]
+であり，途中の全 global depths も $C'N$ 以下に留まる．
+各 chart の出口集合は divisor から離れた固定 compact である．
+$W_i$ は連結なので，有限個の出口集合と charts 外の固定 compact を含む
+一つの連結な compact domain $K_*\Subset W_i$ を取り，その中で固定基点へ
+一様に有界な長さで結べる．二点をこの基点経由で結べば主張の長さ評価を得る．
+深度と $\Psi_i$ の比較から，固定した $A$ で全経路は
+$\{\Psi_i\le AN\}\Subset\{\Psi_i<2AN\}$ に含まれる．
+
+$N=N_j$ を固定した後，この拡大 compact 上の fixed-gauge smooth convergence により
+$E_{i,t}^*g_t\le2g_{\infty,i}$ を課す．小さい exact Moser 移送の変位も
+最後の $t$ の閾値で $1$ 以下にできる．
+補題\ref{ke:core-depth-upper}は actual core と平行 moment collars に適用され，
+葉族の補間はその collar の点集合を変えない．従ってそれらの全点に上の経路を適用できる．
+有限個の components について定数の最大を取れば，$C$ は stage に依存しない．
+\end{proof}
 
 \begin{lemma}[除いた corner 部分は旧 target の成分頂点へ近づく]
 \label{ke:removed-corner-target-cap}
