@@ -29,7 +29,7 @@ python3 scripts/research_check.py tex
 
 | 原稿 | 役割 | 組版の確認範囲 |
 | --- | --- | ---: |
-| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域fibrationによるGH実現定理（改訂26） | 改訂26：組版・表示確認は作業中 |
+| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域fibrationによるGH実現定理（改訂26） | 257頁、指定17頁を表示確認 |
 | [五次整数接着](papers/quintic-integer-gluing.tex) | 指定K5データの整数条件・高分母支持・未解決の大域接着 | 201頁 |
 | [Meridian surgery](papers/meridian-surgery.tex) | 閉corner circuitsの局所置換の障害 | 18頁 |
 | [TeX研究ノート](papers/research-notes.tex) | 証明素材・残る条件の整理 | 現行65頁、第1・4頁を表示確認 |
@@ -76,4 +76,4 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-2026-11-21 / v3.6：主稿改訂26では、core正則化・固定形式への移送・指定actual collar・全域fibrationの仮定と構成の同一性を、範囲を限定して複数担当で独立内部監査した。全K2交わりを含む恒等collar、補間後の葉族に対する全fiber trim、SNC側の閉isotropic filtrationを明示した。Contact rescalingによる固定葉の非保存例と、直線配置coreの相対flux空間・固定形式で延長不能な小さいcollar germを本文に統合した。改訂26は今回編集し、組版・表示確認は作業中。直前の改訂25の255頁・指定17頁の表示確認と静的検査の記録は research/validation.json に保持する。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は未実施。
+2026-11-21 / v3.6：主稿改訂26では、core正則化・固定形式への移送・指定actual collar・全域fibrationの仮定と構成の同一性を、範囲を限定して複数担当で独立内部点検した。全K2交わりを含む恒等collar、補間後の葉族に対する全fiber trim、SNC側の閉isotropic filtrationを明示した。Contact rescalingによる固定葉の非保存例と、直線配置coreの相対flux空間・固定形式で延長不能な小さいcollar germの証明も独立に点検した。Cohen–Suciuの既知の境界cohomologyを適用し、Evans–Mauriの掲載版の仮定・番号を一次資料で照合した。改訂26をLuaLaTeXで257頁に組版し、第1・9・13・17・18・27・140–143・162–166・252・253頁の計17頁を同じ最終PDFから個別画像で表示確認した。未解決参照・文献引用、重複label、欠字、overfull boxは0。静的構成検査も成功。整数検算suite・他論文・TeX研究ノートの組版は今回は未実行。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は未実施。

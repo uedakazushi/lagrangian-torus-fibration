@@ -37,7 +37,9 @@
       "ke:fixed-marked-tree-exhaustion: 単純sourceをt=0を含む円板上で一価に追跡し、共通compact外のend補正と相対core補間で、全stage・全ての小さい複素tに一つのlabelled pants木を保つ。全torus cycleのparameter monodromyの自明化は主張しない。",
       "ke:fixed-base-neck-moser, ke:fixed-base-moment-connectors, ke:fixed-base-central-band: 固定残余近傍の有限下限以上のcutに一様。固定actual bufferと短円C_P/m、convex secant定数で、固定stage後のt→0にも直接適用できる。",
       "ke:anchor-trimmed-neck-domain: 共通anchorで保持neckは正確に|mu|≤delta。全overlapのroundingは同じnormal faceに退化し、interval外の連結な各側は対応coreへ入る。",
-      "ke:same-moment-corner-reference: N前に固定したsource-inclusive residual compact上で、全phase・source・branchを含む任意のneck点と、同じmomentの旧corner辺torus全体のambient距離をC_j^neckで制御。"
+      "ke:same-moment-corner-reference: N前に固定したsource-inclusive residual compact上で、全phase・source・branchを含む任意のneck点と、同じmomentの旧corner辺torus全体のambient距離をC_j^neckで制御。",
+      "ke:component-flux-space: 一般位置m=d−1直線の十分高いcompact core K, S=∂Kについて、O(K,S)=H¹(S)/imH¹(K)≅H²(K,S)≅H₂(K)、dim O=binom(d−2,2)。Cohen–Suciuの既知cohomologyを相対Moserの全boundary period testへ適用。",
+      "ke:nonextendible-small-core-germ: 同じactual exact二形式を固定し、任意の非零相対flux方向を恒等写像へ収束するcollar symplectic flowで実現。指定したcore全体の近傍への延長不存在をclosed primitive差で直接証明。Fibrationの不存在ではない。"
     ],
     "not_proved": [
       "外部KE研究側のCP/PBE/TC自体の対象族での検証。本稿のP0ではこれらを仮定せず、直接のscalar下界とportal上界で必要な全域評価を代替した。",
@@ -79,23 +81,23 @@
     "arithmetic_command": "python3 scripts/research_check.py arithmetic",
     "latest_reported_main_build": {
       "date": "2026-11-21",
-      "revision": 25,
-      "pages": 255,
+      "revision": 26,
+      "pages": 257,
       "pdf_and_synctex": true,
       "refs_citations_checked": true,
       "overfull_box_warnings": 0,
       "missing_glyphs": false,
       "duplicate_labels": false,
-      "visual_review": "第1・10・14・15・47–49・73–75・187–192・255頁の計17頁を同じ最終PDFから個別画像で表示確認。有限cut・raw retraction・ambient端点比較・tailと全fiber分類・固定anchor portals・gallery・統合証明・Introductionと文献を含む。全255頁の逐頁再点検ではない。",
-      "source": "有限cutの一様corner評価、全端点portalとambient gallery、一次文献比較を統合した改訂25をLuaLaTeXで組版。PDFはGit追跡しない。",
-      "source_revision": "第25稿・現行改訂25（2026-11-21）",
-      "pdf_bytes": 2539713,
-      "pdf_sha256": "6e70391f01b7026127c94d6c38ba6307aceed54e1cf7813eb598c4fb96d915d3"
+      "visual_review": "第1・9・13・17・18・27・140–143・162–166・252・253頁の計17頁を同じ最終PDFから個別画像で表示確認。新flux命題と小さいgermの系、contact rescaling、全overlapと補間後trim、SNC閉filtration、IntroductionとCS/EM文献を含む。全257頁の逐頁再点検ではない。",
+      "source": "相対flux空間と固定形式の非延長collar germ、core接着の精密化、一次文献比較を統合した改訂26をLuaLaTeXで組版。PDFはGit追跡しない。",
+      "source_revision": "第26稿・現行改訂26（2026-11-21）",
+      "pdf_bytes": 2558418,
+      "pdf_sha256": "d1b07f0a4e4b4427b07585fe25bce40586322348f6b60b0196523cef0f1a13ac"
     },
     "this_audit": {
       "date": "2026-11-21",
       "scope": "改訂26：固定coreの正則化・小さいexact Moser・actual primitiveから指定collarと全域fillingへの接続を独立内部点検。直線配置の相対flux空間とfixed-form collar拡張障害を追加。Cohen–SuciuとEvans–Mauri掲載版の指定箇所を一次資料で確認。",
-      "reexecuted_build": false,
+      "reexecuted_build": true,
       "reexecuted_static_checks": true,
       "reexecuted_python_suite": false,
       "six_label_finite_command": "python3 verification/verify_cubical_six_label_geometry.py",
@@ -114,8 +116,26 @@
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
-      "visual_pages_reviewed": [],
-      "current_build_status": "Revision 26 first LuaLaTeX build passed (257 pages, no unresolved references or overfull boxes). Final header/bibliography rebuild and visual review in progress. Latest fully reviewed build record remains revision 25."
+      "visual_pages_reviewed": [
+        1,
+        9,
+        13,
+        17,
+        18,
+        27,
+        140,
+        141,
+        142,
+        143,
+        162,
+        163,
+        164,
+        165,
+        166,
+        252,
+        253
+      ],
+      "current_build_status": "Revision 26 final TeX sources compiled successfully to 257 pages; 17 selected pages from the same final PDF visually inspected. No unresolved references/citations, duplicate labels, missing glyphs, or overfull boxes. Static repository checks passed."
     }
   },
   "cloud_codex": {
