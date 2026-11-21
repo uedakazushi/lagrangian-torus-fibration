@@ -1,8 +1,8 @@
 {
   "date": "2026-11-21",
-  "version": "3.9",
+  "version": "3.10",
   "scope": "複素次元2の現行研究状態。旧三次元稿の組版・監査記録ではない。数学的な証明と、その再監査、組版、整数計算、GitHub保存、Cloudタスク起動を区別する。",
-  "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。次の重点は全域quotientのHausdorff性・全射性・連結fibersと、特異fiber数・Euler予算の公表前監査。包括的依存監査・新規性確認・主稿構成整理も継続する。",
+  "priority": "P0: 各固定d>=5と既存一般性条件の全平面退化に対し、actual負KE形式の大域Lagrangian fibrationと、同じf_t=p_T∘π_tの全曲面ambient距離に関するdistortion消失・全fiber合併収縮。原稿に証明あり。全域quotientと全fiber連結性・Euler予算を対象限定で内部点検した。次はIntroduction・主定理のscopeと既知結果比較を全域構成から逆向きに確認し、包括的依存監査・新規性確認・主稿構成整理を進める。",
   "priority_status": "proof_in_manuscript_internally_reviewed",
   "current_manuscript": "papers/surface-lagrangian-torus-fibration.tex",
   "mathematics": {
@@ -78,7 +78,11 @@
       "ke:global-depth-base-comparison, ke:global-ambient-lower: 共通anchorの領域分割と同一momentのcorner参照点により、同じactual基底値を全域比較。Corner移送の段階一様性とC_j^neck≤1+log(N_j+1)からprefactorを固定族Cに整理。",
       "ke:global-ambient-upper: 同一moment接続、source退出、各componentの固定stage費用と有限portal galleryにより、同じf_tの全曲面ambient距離上界を証明。",
       "ke:collapsed-tree-full-fiber-collapse: d>=6でp_Tが潰す内部木上の全π_t-fibersの合併を含め、残余基底の定数を先に固定した許容cut条件の下で、全f_t-fiberのambient径をC(1+log(N_j+1))と評価。",
-      "ke:global-realization, ke:global-metric-realization: 全固定d>=5・既存一般性条件、一つの許容marked treeと十分遅い対角選択の下で、actual全域π_tと同じf_t=p_Tπ_tの一様distortion消失を統合。 ke:eq:global-realization-explicit-cut-budget は上下両側の誤差をepsilon_j,b_j,mfrak_j,K_j,N_j,R_tの明示式と固定族C_dで評価。Cutの成長率・t閾値・最適rateは未評価。"
+      "ke:global-realization, ke:global-metric-realization: 全固定d>=5・既存一般性条件、一つの許容marked treeと十分遅い対角選択の下で、actual全域π_tと同じf_t=p_Tπ_tの一様distortion消失を統合。 ke:eq:global-realization-explicit-cut-budget は上下両側の誤差をepsilon_j,b_j,mfrak_j,K_j,N_j,R_tの明示式と固定族C_dで評価。Cutの成長率・t閾値・最適rateは未評価。",
+      "glue:closed-whole-fiber-quotient: compact Hausdorff空間の有限閉被覆、各local mapのcompact Hausdorff base、全overlapの双方のwhole-fiber飽和とpartition一致から、local fiber relationsの有限和が閉同値関係であると直接証明。各globalfiberはlocalfiberそのもので、各local baseはquotientへ閉埋込み。一般存在とactual全域構成に適用。",
+      "ke:global-base-parameterization: finite closed pieces上の写像をまずXt上で貼り、quotientの普遍性からhの連続性を得ると明示。QのHausdorff性、corner capのdisk判定、hの同相性は循環せず成立。",
+      "topo:connected-preimages / topo:cubical-composite-connected: compact Hausdorffからの連結fiber連続全射は全連結部分集合を連結な逆像へ送る。同じf_t=p_Tπ_tの全fibersも連結。内部木上の合併は三次元部分を含み得て、可縮性やLagrangian性は結論しない。",
+      "inv:euler-pushforward / inv:cubical-fiber-euler: 有理定数層のcompact-support Euler数、有限base cell分割と局所product、coreの閉stable-cell filtrationから、π_*1はnodesとcoresのみを支持に持つ。各node1、各coreC(d−3,2)、総数dC(d,2)とd。CoarsefiberのEuler数はそのcubical値へ写るnodesの重複度とcore寄与の和。Whitney/subanalytic性は追加しない。"
     ],
     "publication_review_pending": [
       "統合定理から逆にたどる外部KE結果・既存局所証明・一次文献の包括的な再点検",
@@ -96,64 +100,69 @@
     "arithmetic_command": "python3 scripts/research_check.py arithmetic",
     "latest_reported_main_build": {
       "date": "2026-11-21",
-      "revision": 29,
-      "pages": 267,
+      "revision": 30,
+      "pages": 269,
       "pdf_and_synctex": true,
       "refs_citations_checked": true,
       "overfull_box_warnings": 0,
       "missing_glyphs": false,
       "duplicate_labels": false,
-      "visual_review": "第1・10–13・41–45・92–99・261・262・264頁の計21頁を個別画像で表示確認。Fleming頁範囲のみ訂正して再組版した最終PDFでは、第262頁を再表示し、他20頁の同解像度renderが訂正前の確認画像とpixel単位で同一であることをSHA-256で確認。最終PDFの第43・96・97頁も再表示。全267頁の逐頁再点検ではない。",
-      "source": "Focus transversality、一残余periodのexactness、primitive定数とTaylor不変量、全飽和近傍移送、実面積で正規化した相対blow-upとCG支持範囲を統合した改訂29。PDFはGit追跡しない。",
-      "source_revision": "第29稿・現行改訂29（2026-11-21）",
-      "pdf_bytes": 2637379,
-      "pdf_sha256": "c974f4751b3ad4571a3fb62a55ba3083bb72f6ec9c3c23c44be07e2e66987341"
+      "visual_review": "第1・5–8・45・46・49・50・173–175・182–185・260–263・266頁の計21頁を個別画像で表示確認。最終のscope明確化と参照修正後は第1・50・262・263・266頁を再表示し、他16頁の同解像度renderが確認済み画像とpixel単位で同一であることをSHA-256で確認。全269頁の逐頁再点検ではない。",
+      "source": "有限閉whole-fiber quotient、全域商と基底同定の非循環性、cubical合成の全fiber連結性、Euler関数の有限支持とcoarse fiber公式を統合した改訂30。面別node配分の適用範囲を明示し、作用atlas下の六次剛性を保持。PDFはGit追跡しない。",
+      "source_revision": "第30稿・現行改訂30（2026-11-21）",
+      "pdf_bytes": 2659393,
+      "pdf_sha256": "c06af376df3ab0e74660b9ffc442a5171bae2d6f471ee8412ab2056cb0fcbcc9"
     },
     "this_audit": {
       "date": "2026-11-21",
-      "scope": "改訂29：source focus写像のtransversality、一重focus近傍のhomology・exactness・残余period、node germと外側正則fiberのprimitive固定、Taylor不変量とexact定数、全飽和近傍の移送を統合。Nodal blow-upの実面積と比較支持、全compact fiber近傍を保つ選択順を点検。",
+      "scope": "改訂30：有限閉whole-fiber quotient、一般/actual全域構成への適用、hの非循環な同相性、同じcubical合成の全fiber連結性を内部点検。Finite-support Euler関数とcoarsefiberのEuler数を証明し、一般node総数・面ごとの配置・作用atlas下の剛性を区別。",
       "reexecuted_build": true,
       "reexecuted_static_checks": true,
       "reexecuted_python_suite": false,
       "six_label_finite_command": "python3 verification/verify_cubical_six_label_geometry.py",
-      "six_label_finite_result": "既存の有限検算PASSを保持。改訂29では計算箇所を変更せず再実行していない。",
+      "six_label_finite_result": "既存の有限検算PASSを保持。改訂30では関連計算箇所を変更せず再実行していない。",
       "independent_internal_proof_review": [
-        "ke:source-focus-transversality: 二次型の独立性、d_p Aの条件、写像とfoliationの区別を独立内部点検。",
-        "ke:focus-neighborhood-period / ke:focus-local-primitive-shift: proper閉annulus blockの局所自明化、Mayer–Vietoris、vanishing/residual cycles、node collarの零延長と外側正則fiberの条件を独立内部点検。",
-        "ke:focus-whole-neighborhood-transport: Vũ Ngọcのregularized actionの符号・2pi規約、normal momentの原点、Eliasson座標とphysical残余座標の区別、push-forwardとexactnessの範囲を独立内部点検。",
-        "glue:area-normalized-blowup / glue:transport: radial potentialのpositivity、例外面積とcohomology class、ball radius、CGのsaturated patch外恒等、cut/uncutと全nodal近傍を保持する選択順を独立内部点検。"
+        "glue:closed-whole-fiber-quotient: finite relationの推移性、U#によるHausdorff分離、各local baseの閉埋込み、globalfiber=localfiberを独立内部点検。",
+        "ke:whole-fiber-core-trim / ke:actual-global-fibration: 補間後partition、共通Liouville collar、固定stage全被覆、compact closed neck/corner pieces、core skeleton連結性を点検。",
+        "ke:global-base-parameterization: Qの閉商、corner capのdisk証明、explicit hとfinite-pasting/quotientの依存に循環がないことを独立内部点検。",
+        "topo:connected-preimages / topo:cubical-composite-connected: 相対閉写像の証明と内部木の逆像への適用を独立内部点検。",
+        "inv:euler-pushforward / inv:cubical-fiber-euler: finite local products、constant sheaf χ_cの閉開加法性、c_k閉filtration/Morse handle、node counts、coarsefiberの重複度、面別配分とatlas剛性の適用範囲を独立内部点検。"
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
       "visual_pages_reviewed": [
         1,
-        10,
-        11,
-        12,
-        13,
-        41,
-        42,
-        43,
-        44,
+        5,
+        6,
+        7,
+        8,
         45,
-        92,
-        93,
-        94,
-        95,
-        96,
-        97,
-        98,
-        99,
+        46,
+        49,
+        50,
+        173,
+        174,
+        175,
+        182,
+        183,
+        184,
+        185,
+        260,
         261,
         262,
-        264
+        263,
+        266
       ],
-      "current_build_status": "Revision 29 final TeX sources compiled successfully to 267 pages; 21 selected pages visually inspected. Following the bibliography-only correction, page 262 was re-rendered and viewed, and the other 20 reviewed pages were confirmed pixel-identical at the same resolution; pages 43, 96, 97 were also viewed again from the final PDF. No unresolved references/citations, duplicate labels, missing glyphs, or overfull boxes. Preflight and static repository checks passed. Arithmetic suite and other manuscripts were not rerun.",
+      "current_build_status": "Revision 30 final PDF compiled to 269 pages with PDF/SyncTeX present; no unresolved references/citations, duplicate labels, missing glyphs or overfull boxes. All 21 selected pages reviewed: 5 changed pages re-viewed after final edits, 16 remaining renders pixel-identical to the reviewed build. Full-page visual audit not performed.",
       "source_nodal_focus_audit": {
         "status": "targeted_internal_review_completed",
         "scope": "Source quadratic and proper saturated focus neighborhood, residual primitive period, existing exact Moser application; area-normalized relative blow-up and whole nodal-neighborhood transport. No new P0 analytic hypothesis. Comprehensive proof and novelty audit remains pending."
       },
-      "reexecuted_preflight": true
+      "reexecuted_preflight": true,
+      "topology_euler_audit": {
+        "status": "targeted_internal_review_completed",
+        "scope": "No new P0 hypothesis or invalid global quotient found in the inspected construction. General closed-piece wording strengthened with explicit whole-fiber conditions. Previous note on uniform facewise node counts restricted to the chosen atlas recipes; the existing sextic atlas rigidity under its additional hypotheses is retained."
+      }
     }
   },
   "cloud_codex": {
@@ -261,6 +270,11 @@
       "Chakravarthy_Groman": "https://arxiv.org/html/2510.00994v1, Theorem1.1, Definition2.2, section2.4, Propositions3.1/3.6, Lemma3.7, section4。比較写像は所定のaffine-convex saturated patch外で恒等。Local cut/uncutには人工divisor chainの相対性を用いる。",
       "Fleming": "Kähler packings of projective complex manifolds, European J. Math.7 (2021), 1382–1400, https://doi.org/10.1007/s40879-021-00491-8. 掲載版Lemma4.4 p.1394–1395、Lemma4.5/Proposition4.6 p.1395、Construction4.7 p.1396を確認。",
       "scope": "容量記号を同一視せず、実面積eと球半径sqrt(e/pi)をradial potentialから本文で直接証明。固定patch→容量→全compact nodal近傍→collars/cuts→tの順に選ぶ。P0に外部の新解析仮定を追加しない。"
+    },
+    "arrangement_euler_source_audit": {
+      "Papadima_Suciu": "Higher homotopy groups of complements of complex hyperplane arrangements, Advances in Mathematics165 (2002), 71–100, DOI10.1006/aima.2001.2023. Published PDF https://pages.uoregon.edu/njp/PS02.pdf, section1.1 p.72 (PDF p.2) read directly: generic n hyperplanes in C^ell, n>ell, complement homotopy equivalent to the ell-skeleton of T^n. For m projective lines use ell=2,n=m−1.",
+      "Hattori": "Original record https://repository.dl.itc.u-tokyo.ac.jp/records/39761 returned HTTP429 during this audit; original proof not rechecked. Statement matched against the specified Papadima–Suciu passage.",
+      "scope": "Euler budget itself also follows directly from inclusion-exclusion, finite Morse handle decomposition, and the manuscript closed stable-cell filtration. The homotopy classification is known; no novelty claim is made for it or for Euler additivity."
     }
   },
   "other_papers": {

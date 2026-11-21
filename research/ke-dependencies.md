@@ -1,6 +1,6 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-21 / v2.9。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-21 / v3.0。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
 ## 確認した正本と規格化
 
@@ -100,6 +100,8 @@ Actual全域構成の追加証明は次を用いる。
 | Sourceを含む係数一の法線評価 | [ke_sharp_normal.tex](../papers/sections/paper/ke_sharp_normal.tex), `ke:normal-harmonic-depth-barrier`, `ke:sharp-scalar-normal-barrier`, `ke:sharp-global-one-active` | 正則global normal frameで $\Delta s=0$、$U=\lvert d\log s\rvert^2$ に $\Delta U\ge U(U-1)$。固定shell・moving shell・残余境界の全てを評価し、$1+\varepsilon_j+A_j\mathfrak n_j/s+C_js/(\kappa L)$ の障壁を使う。Source軸、physical-depth補正、triple外のactive全被覆を含む。SharpなRZ漸近や全neck tensor比較を追加仮定しない。 |
 | 全域scalar mapとambient下界 | [ke_global_ambient_lower.tex](../papers/sections/paper/ke_global_ambient_lower.tex), `ke:global-depth-lipschitz`, `ke:same-moment-corner-reference`, `ke:global-depth-base-comparison`, `ke:global-ambient-lower` | 下側cut $\mathfrak m_j$ とplateau $L/K_j$ を用いる全域 $\Theta_t$。一方向はsharp normal、二方向はfull-tripleのco-Gramで評価し、任意の全曲面経路に沿って長さを抑える。同一momentのcorner参照点で全域値比較を証明。Corner移送の段階一様性と既存の許容cut条件で係数は固定族の $C$ とできる。経路の領域往復回数を有限と仮定しない。 |
 | 内部木の全fiber合併とambient上界 | [ke_global_ambient_upper.tex](../papers/sections/paper/ke_global_ambient_upper.tex), `ke:collapsed-tree-full-fiber-collapse`, `ke:coherent-corner-portals`, `ke:global-ambient-upper` | 残余基底を先に選び、許容cut条件の下で全 $f_t$-fiberのambient径を $C(1+\log(N_j+1))$ で評価。全endsで同じmomentのportalsを選び、旧full-cornerのendpoint上界を高々60本のsquare galleryで接続する。除去capを通る曲線もambient上界には使用できる。 |
+| 全域quotientと合成fiberの連結性 | `global_gluing.tex`、`glue:closed-whole-fiber-quotient`；`base_topology.tex`、`topo:connected-preimages`、`topo:cubical-composite-connected` | 有限閉piecesのwhole-fiber飽和から閉同値関係を作る。後段の基底同定に依存せずHausdorff性を得て、閉写像の連結逆像により同じ $f_t=p_T\pi_t$ の全fibersも連結。内部木上の合併には三次元部分があり得る。 |
+| Fiber Euler関数とcoarse fiber | `invariants_examples.tex`、`inv:euler-pushforward`、`inv:cubical-fiber-euler` | 実際の有限層化・局所productと $\chi_c$ の加法性を用いる。非零寄与はnodesとcoresのみ。Cubical像でのnode衝突は重複度付きで数え、例示した面別node配分を一般存在の必然条件とせず、追加の作用atlas条件下での六次bigon剛性は保持する。数値一致をgluingの代用にしない。 |
 | 同じactual写像による大域実現 | [ke_global_metric_realization.tex](../papers/sections/paper/ke_global_metric_realization.tex), `ke:global-metric-realization` | 上記の同じ $\pi_t$ と $f_t=p_T\pi_t$ に、全固定段階の条件を満たす一つの遅い対角選択を適用。全射性、uniform ambient distortion消失、GH収束、全fiber合併の一様収縮を得る。許容cut下の上下両側の明示budgetを固定族の一つの係数で与える。Cutの成長と閾値は未評価。外部CP/PBE/TCの結論を入力にしない。 |
 | Focus写像の判定と全飽和近傍の作用 | `ke_staged_neck_averaging.tex`、`ke:source-focus-transversality`、`ke:focus-neighborhood-period`、`ke:focus-whole-neighborhood-transport` | 一つの残余periodでclosed primitive差のexactnessを判定。Symplectic push-forwardでTaylor不変量、exact transportで追加定数項も保存。任意先指定模型とのmatchingやparameter間の不変量一定は含まない。 |
 
@@ -233,8 +235,8 @@ Fernández de Bobadilla–Pełka, arXiv:2312.13248v4 の Theorem 6.14、Example 
 - YauのTheorems 1–2、Savinのsmall perturbation、Songのfixed-gauge収束、DMVの掲載版Theorem 1.2、Rochon–ZhangのSNCに関する指定箇所は一次資料で確認した。外部KE原稿の全証明や旧主稿全体の独立再監査、公表前の網羅的な先行研究・新規性調査、形式証明を完了したという意味ではない。
 - 解析証明の数学的点検、保存された有限有理数検算、その再実行、組版、GitHubへの反映は別の確認である。各実行状態は現行の検証資料を参照し、本書の「証明あり」を計算・組版による証明の検証と読み替えない。
 
-改訂29はLuaLaTeXで267頁に組版し、指定21頁の表示を確認した。未解決参照・引用、重複ラベル、欠字、overfull boxはない。実行状態は [検証状態](validation.json) を参照する。
+改訂30をLuaLaTeXで269頁に組版し、変更箇所を含む指定21頁を表示確認した。最終修正後は変更5頁を再表示し、残り16頁は確認済み画像とpixel単位で同一であることを確認した。未解決参照・引用、重複ラベル、欠字、overfull boxはない。全269頁の逐頁再点検ではない。実行状態は [検証状態](validation.json) を参照する。
 
 ## 再開時の確認
 
-Sourceのfocus判定・全飽和近傍の移送と、nodal blow-upの面積・支持・選択順序を本文に明示し、必要箇所を内部点検した。次は全域quotientのHausdorff性・全射性・連結fibersを、全intersectionの飽和とwhole-fiber trimから公表用に再点検する。特異fiberの種類・個数とEuler数の予算を同じ構成に照合し、無限個のbranch fibersと有限個のbranch strataを区別する。既存P0の範囲と優先順位を保ち、任意のfocus不変量への先指定を追加しない。外部repoの最新 `main`、AGENTSと方針を確認し、上表のラベルの存在と追加仮定を照合する。未取得・アクセス不能なら、確認済みコミットと未確認範囲を残し、利用可能な独立課題を進める。解析的結果を外部repoへ追加した場合は、そちらを先に保存してから、この表の参照版と本repoの依存箇所を更新する。外部入力の更新・本repoでの適用証明・組版・計算検証は別々に記録する。
+Sourceのfocus判定・全飽和近傍の移送と、nodal blow-upの面積・支持・選択順序を本文に明示し、必要箇所を内部点検した。有限閉whole-fiber quotient、同じ合成写像の連結fibers、fiber Euler関数の有限支持とcoarse fiberのEuler公式を本文に整理した。次はIntroductionと主定理のscopeを全域構成から逆向きに照合し、既知結果の適用範囲・独自の適用証明・未確認の新規性を公表用に点検する。無限個のbranch fibersと有限個のbranch strata、πのLagrangian fibersと合成写像のfiber合併を区別する。既存P0の範囲と優先順位を保ち、任意のfocus不変量への先指定を追加しない。外部repoの最新 `main`、AGENTSと方針を確認し、上表のラベルの存在と追加仮定を照合する。未取得・アクセス不能なら、確認済みコミットと未確認範囲を残し、利用可能な独立課題を進める。解析的結果を外部repoへ追加した場合は、そちらを先に保存してから、この表の参照版と本repoの依存箇所を更新する。外部入力の更新・本repoでの適用証明・組版・計算検証は別々に記録する。

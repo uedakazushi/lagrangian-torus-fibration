@@ -406,11 +406,16 @@ $p_T$ の定義で使う simplex-edge coordinate は
 各 triangle では，上で構成した写像は全 $\mathcal C_J$ への homeomorphism である．
 その後に $(p_T|_{\tau_J})^{-1}$ を合成し，bigons と branch edges では直前の
 product-coordinate map を用いる．全共通 boundaries で一致し，core vertices を
-正しく同定しているので，これらは $h_{j,t}:Q_{j,t}\to B_d(T)$ に貼り合わさる．
+正しく同定しているので，まず有限個の飽和閉片上で
+$X_t\to B_d(T)$ を連続に貼り合わせることができる．
+これは全 fiber 上で一定なので，quotient の普遍性により
+連続写像 $h_{j,t}:Q_{j,t}\to B_d(T)$ を誘導する．
 各 labelled cell の内部で一対一かつ全射であり，boundary の identifications も同じ
 だから，この写像は一対一の連続全射である．Compact から Hausdorff への写像なので
 homeomorphism である．これで $f_{j,t}=p_Th_{j,t}\pi^0_{j,t}$ が，構成中の値と
 厳密に同じであることが確認できた．
+系\ref{topo:cubical-composite-connected}により，この同じ $f_{j,t}$ の全 fiber は連結である．
+この結論は後の距離評価又は GH 収束を入力にしていない．
 
 Regular strata の座標には有限の piecewise smooth refinement を用いる．
 これは quotient の座標だけの変更であり，全 actual fibers とその isotropic strata

@@ -259,14 +259,15 @@ $\operatorname{int}K^-_{i,j,t}$ にも入り，全 $X_t$ の被覆が保たれ�
 元の anchor $S_{i,j,t}$ へ取り直せる．
 
 全 pieces の fibers は連結で，全 overlaps 上で同じ全 fiber として一致する．
-閉じた飽和 pieces を $K_\alpha$ とすると，その各 fiber relation
-$R_\alpha\subset K_\alpha\times K_\alpha$ は閉である．
-有限和 $R=\bigcup_\alpha R_\alpha\subset X_t\times X_t$ はすでに推移的である．
-実際，二つの local fibers が一つの点で交われば，overlap の全 fiber 飽和と葉の一致により，
-それらは同じ ambient subset である．従って $R$ は閉同値関係であり，
-compact Hausdorff 空間 $X_t$ の quotient も compact Hausdorff となる．
-開 collars 上の一致から一つの continuous fibration を得る．
-単に有限個の閉貼合せであることだけから Hausdorff 性を結論しているわけではない．
+Core 側は基底の compact cone 全体，保持 neck は閉 moment interval と compact Reeb domain，
+corner は閉 moment domain の全逆像として切る．全域被覆と全 fiber の保持を
+上で確認したので，これらは有限個の compact な飽和閉片を与える．
+各片の base は compact Hausdorff であり，
+補題\ref{glue:closed-whole-fiber-quotient}が適用できる．
+従って実際の fiber partition の商 $Q_{j,t}$ は compact Hausdorff で，
+$X_t\to Q_{j,t}$ は proper な連結 fiber の連続全射となる．
+各 base piece は $Q_{j,t}$ へ閉埋込みされ，global fiber は一つの local fiber と一致する．
+この段階では $B_d(T)$ との同定も，後の計量に適合する parameter 化も用いない．
 基底の combinatorics は，component に cone over $\Gamma_i$，double line に
 interval times $T_{ij}$，triple point に regular two-dimensional block を置いたものとなる．
 Saddle tracks は対応する二つの core vertices を結び，

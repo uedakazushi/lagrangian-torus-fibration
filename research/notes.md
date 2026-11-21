@@ -1,5 +1,5 @@
 # 現行研究ノート：一般型曲面のLagrangian torus fibration
-更新：2026-11-21 / v3.9
+更新：2026-11-21 / v3.10
 
 主稿 `papers/surface-lagrangian-torus-fibration.tex` と整数接着 `papers/quintic-integer-gluing.tex` を正本とする。以下は曲面・KE局所幾何・作用・アフィン接着に関する現在有効なノート。三次元の原稿と相対円板群・補集合の計算は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とし、こちらに重複保持しない。
 
@@ -8,6 +8,21 @@
 主稿 `ke:global-realization` と統合証明 `ke:global-metric-realization` は、任意の固定 $d\ge5$ と既存一般性条件の全平面退化について、actual負KE形式の全域fibrationと、同じ $f_t=p_T\pi_t$ の全曲面ambient距離に関するdistortion消失を与える。潰される内部木上の全fiber合併も一様に収縮する。**原稿に証明があり、必要な証明箇所と接続を複数担当で内部点検している。** 形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的な新規性確認は未実施である。現在は公表に向けた一次文献・依存結果・主稿構成の点検を優先する。
 
 対象・結論の範囲と優先順位は [研究方針](../00_research_plan.md)、外部定理のpath・label・確認commitは [KE依存表](ke-dependencies.md) を参照する。ここには証明全文を複製せず、核心、入力の区別、有効な障害を残す。十分遅い対角選択と一つの許容された木系を使う結論であり、最適rate、任意の先指定木系への適合、全次数のmatroidal atlasは含まない。
+
+## 閉whole-fiber quotientと合成写像のEuler関数
+
+`glue:closed-whole-fiber-quotient` では有限閉piecesのlocal fiber relationsの和が既に推移的である。交わるlocal fibersが同じ全ambient subsetだからであり、単なるgerm一致や有限閉貼合せだけでは足りない。閉同値関係からcompact Hausdorff quotientを先に得る。`ke:global-base-parameterization` のcell写像は有限閉pieces上で貼り合い、quotientの普遍性で連続写像に降りる。各labelled cellの内部と境界同定の全単射性から、compact-to-Hausdorffの同相判定を使える。この順序に循環はない。
+
+`topo:connected-preimages` はcompact Hausdorff間のconnected-fiber全射が閉写像であり、任意の連結部分集合の逆像も連結であることを直接示す。従って `topo:cubical-composite-connected` により $f=p_T\pi$ の全fibersは連結。$p_T^{-1}(w)$ が内部木の場合、その全逆像は三次元部分を含み得る。$p_T$ のcell-like性から合成fiberの可縮性は導かず、Lagrangian性は個々の $\pi$-fibersの主張として保持する。
+
+正本 `invariants_examples.tex` の `inv:euler-pushforward` と `inv:cubical-fiber-euler` は
+\[
+\pi_*\mathbf1=\sum_{\nu=1}^{d\binom d2}\mathbf1_{\{b_\nu\}}
++\binom{d-3}{2}\sum_{i=1}^d\mathbf1_{\{v_i\}},\qquad
+\chi(f^{-1}(w))=\#\{\nu:p_T(b_\nu)=w\}
++\binom{d-3}{2}\#\{i:p_T(v_i)=w\}
+\]
+を与える。Node値は $B_d(T)$ 上で相異なるが、cubical像では衝突し得るので重複度を数える。正則torusとbranch fiberのEuler数は零、pinched torusは1、coreは $\binom{d-3}{2}$。有限層化と局所productに対し $\chi_c$ の加法性・積性を用い、写像全体のsubanalytic性やskeletonのWhitney性を追加仮定しない。Euler総数の一致だけで幾何学的gluingや全空間同定を代用しない。閉写像とEuler積分の一般原理自体は既知であり、本稿では実際の構成への仮定照合を行う。
 
 ## SNCの固定coupling chartsと葉のperiod障害
 
@@ -70,7 +85,7 @@ Canonical primitiveの規格化にも独立の差がある。`ke:transition-resi
 
 Chakravarthy–Groman, *Almost toric fibrations on symplectic blow ups*, [arXiv:2510.00994v1](https://arxiv.org/abs/2510.00994v1), Theorem 1.1、Propositions 3.1・3.6、§4の相対比較は、選んだaffine-convex領域の全逆像の外で恒等とする。球の外全体で恒等という強い支持条件には置き換えない。固定Delzant rectangleの人工三辺をcutし、人工divisor chainの近傍を固定した比較を元patchへ戻す。全boundaryの和がanticanonicalであることを本稿全体に要求する適用ではない。
 
-選択順序は、互いに素な飽和patchとaffine-convex領域を固定し、容量triangleがその内部に収まるよう $\epsilon$ を選び、全compact nodal neighborhoodsを確保し、これらを避けてnormal-conjugacy collars・cutsを選び、最後に $t$ を小さくする。既知のradial blow-upと相対surgeryの本稿への適用であり、任意の独立primitiveのexact matchingを追加しない。次は全域quotientのHausdorff性・全射性・connected fibersと特異fiber数・Euler予算を同じ構成で公表用に再点検する。
+選択順序は、互いに素な飽和patchとaffine-convex領域を固定し、容量triangleがその内部に収まるよう $\epsilon$ を選び、全compact nodal neighborhoodsを確保し、これらを避けてnormal-conjugacy collars・cutsを選び、最後に $t$ を小さくする。既知のradial blow-upと相対surgeryの本稿への適用であり、任意の独立primitiveのexact matchingを追加しない。全域quotientとEuler予算への接続は本ノート冒頭と本文の対応する補題に整理し、次はIntroduction・主定理のscopeと既知結果比較を全域構成から逆向きに照合する。
 
 ## 主要解析入力の確認範囲
 
@@ -603,10 +618,12 @@ Leung–Wan (JDG **83** (2009))の一般型での漸近special性はMikhalkinが
 - Face interiorのisolated nodal value: 一重pinched T²、Euler数1、local focus monodromy [[1,1],[0,1]]。全部でd C(d,2)個。
 - 0D core vertex: P²からd−1本の一般位置直線を除いた補空間のlogarithmic Weinstein skeletonのsymplectic image。Homotopy typeは(T^{d−2})の2-skeleton、b₁=d−2、b₂=C(d−2,2)、Euler数C(d−3,2)。全部でd個。
 
-基底の開branch辺はC(d,2)(d−4)本、三角形C(d,3)枚、bigon C(d,2)(d−5)枚。d=5なら(core, branch-edge, node)=(5,10,50)、coreのχ=1、全Euler数55。d=6なら(6,30,90)、coreのχ=3、全Euler数108。内訳：五次は十triangleに各5 node、六次は二十triangleに各3 nodeと十五bigonに各2 node。一般dのEulerチェックは
+基底の開branch辺はC(d,2)(d−4)本、三角形C(d,3)枚、bigon C(d,2)(d−5)枚。d=5なら(core, branch-edge, node)=(5,10,50)、coreのχ=1、全Euler数55。d=6なら(6,30,90)、coreのχ=3、全Euler数108。面ごとの配分として、五次の十triangleに各5 node、六次の二十triangleに各3 nodeと十五bigonに各2 nodeという値は、各明示的recipeで選んだ配置に限る。抽象的なmarked tree、一般存在定理、P0のactual構成からその配分が強制されるとはしない。一般構成に共通するのはnode総数とfiber型であり、一般dのEulerチェックは
 \[
 d\binom{d-3}{2}+d\binom d2=d(d^2-4d+6)=c_2(X_d).
 \]
+現行SNC構成の大域作用適合atlasを仮定する六次では、`q9:sextic-rigidity` と `q9:node-budget` が各bigonの二nodesをweight recipeに依存せず強制する。この追加条件下の剛性は保持し、一般存在・P0の任意の配分へは拡張しない。
+
 **Singular fiberは一般にsmooth embedded Lagrangianではなく、各smooth stratumがisotropicなstratified fiber**として定義している。Core skeletonも一般のdで一つの固定したpants型ではない。この基本的なlocal topology、個数、Euler数の証明と先行研究との範囲比較は原稿に保持する。幾何学的gluing証明全体の独立監査はなお必要である。
 
 
@@ -647,4 +664,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 ## 検証状態
 
 
-2026-11-21 / v3.9：主稿改訂29は、sourceのtransversality判定、一つの残余periodによるexactness、Taylor不変量とprimitiveの定数項、全飽和近傍の移送、面積を規格化した相対Kähler blow-upを本文に統合した。新focus節と接続を独立に内部点検し、Vũ Ngọc・Zungの指定一次資料を照合した。**改訂29をLuaLaTeXで267頁に組版し、指定21頁の表示を確認した。未解決参照・引用、重複ラベル、欠字、overfull boxはない。** 実行範囲は [検証状態](validation.json) を参照する。数学的点検・組版・保存は別々に記録する。整数検算suite・他論文・TeX研究ノートの再組版は今回未実行。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。
+2026-11-21 / v3.10：主稿改訂30に、有限閉whole-fiber quotient、同じ合成写像の全fiber連結性、fiber Euler関数の有限支持とcoarse fiber公式を統合した。Quotientと基底同定の非循環性を重点点検し、例示した面ごとのnode配分と一般存在の総数公式を区別し、作用適合atlasの追加仮定下における六次bigonの剛性も保持した。**改訂30をLuaLaTeXで269頁に組版し、変更箇所を含む指定21頁を表示確認した。最終修正後は変更5頁を再表示し、残り16頁は確認済み画像とpixel単位で同一であることを確認した。未解決参照・引用、重複ラベル、欠字、overfull boxはない。全269頁の逐頁再点検ではない。** 実行範囲は [検証状態](validation.json) を参照する。数学的点検・組版・保存は別々に記録する。整数検算suite・他論文・TeX研究ノートの再組版は今回未実行。形式証明、全主稿・全外部入力の包括的再監査、外部査読、網羅的新規性確認は未実施。

@@ -236,6 +236,53 @@ $H$では$q_{\max}-q_{\min}\le L$であり、$q_{\min}\le(c|t|^2)^{1/3}$なの�
 equivariant transportは同じmomentsを保つので、component側のtorusもこの唯一のorbitへ移る。
 
 \subsection{大域性と元のKähler formへの復帰}
+
+\begin{lemma}[全ファイバーを保つ有限閉被覆の商]
+\label{glue:closed-whole-fiber-quotient}
+$X$ を compact Hausdorff 空間，$X=\bigcup_{a=1}^mK_a$ を有限閉被覆とする．
+各 $K_a$ 上に compact Hausdorff 空間 $B_a$ への連結 fiber を持つ連続全射
+$q_a:K_a\to B_a$ があるとする．各 $K_a\cap K_b$ は両方の写像について
+全 fiber の和であり，その上で二つの fiber partition が一致すると仮定する．
+このとき全 local fibers は $X$ の一つの partition を定め，その商
+$q:X\to Q$ は compact Hausdorff 空間への proper な連結 fiber の連続全射である．
+各 global fiber は一つの local fiber そのものであり，
+$B_a\to Q$ は閉埋込みである．
+\end{lemma}
+\begin{proof}
+Local fibers $F_a,F_b$ が交われば，交点を含むそれぞれの全 fiber が
+$K_a\cap K_b$ に入る．その上の partition の一致から $F_a=F_b$ である．
+従って
+\[
+ R_a=\{(x,y)\in K_a^2:q_a(x)=q_a(y)\},\qquad
+ R=\bigcup_{a=1}^mR_a
+\]
+は推移的閉包をさらに取る必要のない同値関係である．
+$B_a$ は Hausdorff なので $R_a$ は $K_a^2$ 内で閉，
+$K_a$ は $X$ 内で閉なので $R$ は $X^2$ 内で閉である．
+
+商の Hausdorff 性も直接確認できる．異なる二つの $R$-classes は
+互いに素な compact subsets なので，互いに素な開近傍 $U,V\subset X$ を持つ．
+$R[A]=\{x:\text{ある }y\in A\text{ に対し }(x,y)\in R\}$ と書く．
+閉集合 $A\subset X$ に対して $R[A]$ は compact，従って閉であるから，
+\[
+ U^\#=X\setminus R[X\setminus U],\qquad
+ V^\#=X\setminus R[X\setminus V]
+\]
+はそれぞれの class を含む，互いに素な飽和開集合である．
+その像が $Q$ 内で二点を分離する．$Q$ は $X$ の連続像なので compact でもある．
+$q$ は定義により連続全射で，compact から Hausdorff への写像なので proper である．
+全 fiber は上で同定した一つの local fiber であるため連結である．
+
+$q|_{K_a}$ は $q_a$ を通じて一意に因子化する．$q_a$ は compact から
+Hausdorff への連続全射なので quotient map であり，誘導写像 $B_a\to Q$ は連続である．
+Global class が local fiber と一致するのでこの写像は単射で，
+compactness により閉埋込みとなる．
+\end{proof}
+
+この補題で重要なのは全 fiber の飽和と partition の一致である．
+有限個の閉片を任意の同一視で貼るという記述だけでは，
+その同値関係が閉であることを代用できない．
+
 \begin{proof}[定理\ref{main:global}の存在部分の証明]
 前段までの構成は、成分のcore、double-curve necks、triple blocksの有限個のpiecesをactual $X_t$の中に与える。
 最初に固定したbuffersによって、それらの全空間内のopen neighborhoodsは中心fiber全体を覆う。
@@ -244,9 +291,12 @@ $f$はproperなので、十分小さい全ての$t$で$X_t$も覆う。
 
 最終的な切断を、成分ではnormal moment domains、necksではmoment intervalsとreduced Reeb domains、三重点では前項のmoment cutsで行う。
 全interfaceは飽和しており、open overlap上で葉層が一致する。
-従ってpiecesの連結fiberを同一のfiberとして貼り合わせることができる。
-基底piecesはclosed facesに沿って有限個貼り合わされ、Hausdorffな有限2複体を与える。
-全空間がcompactであるためquotient mapはproperである。
+各片は compact な閉 base domain の全逆像として取れ，
+その全 fiber を保ったまま有限閉被覆にできる．
+交わりでは双方の全 fiber が同じ ambient subset なので，
+補題\ref{glue:closed-whole-fiber-quotient}により
+compact Hausdorff な商への proper な連結 fiber の連続全射を得る．
+Global fiber は一つの local fiber そのものであり，
 新しい特異fiberや余分な連結成分は生じない。
 component core、simple saddle lifts、およびnodal surgeriesから得た特異strataは、各段階のsymplectomorphismとtransportによりisotropicのままである。
 
@@ -257,7 +307,10 @@ actual glued baseのcellsは次のように読み取れる。
 三つのcomponent sectorsと三つのneck stripsの間を前項のtoric hexagonで埋めると、境界が$ij,jk,ik$の三つの指定branch edgesである一枚のdiskを得る。
 これは三角形cellである。
 従って得られた基底は、次節のcellularな$B_d(T)$と同相である。
-この有限正則CW表示により、前段のclosed-face gluingのHausdorff性も具体的に確認できる。
+各閉 base piece は商へ閉埋込みされ，表示した cell の内部は一対一に対応する．
+従って同じ face identifications を持つ有限正則 CW 複体 $B_d(T)$ から
+この商への連続全単射を得る．Compact から Hausdorff への写像なので同相であり，
+商の Hausdorff 性をこの CW 同定から逆に仮定してはいない．
 各$i<j$で$d$個のnodal surgeriesがあるから、node総数は$d\binom d2$である。
 全てのexact modificationは元の$J$をtameするfixed-class pathで行ったので、compact $X_t$上のMoser同定によって、最後のfibrationを最初のKähler formへ移せる。
 

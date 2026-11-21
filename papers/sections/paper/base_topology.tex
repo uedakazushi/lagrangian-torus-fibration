@@ -198,8 +198,48 @@ $x/\max_i x_i\in\mathcal C_d$ を一意に定めるので $\rho_d$ は同相で�
 同相性の区別は命題\ref{topo:nonhomeomorphic}から従う．
 \end{proof}
 
+\begin{lemma}[連結 fiber を持つ閉写像の合成]
+\label{topo:connected-preimages}
+$X$ を compact Hausdorff 空間，$Y$ を Hausdorff 空間とし，
+$p:X\to Y$ を連結 fiber を持つ連続全射とする．
+任意の連結部分集合 $A\subset Y$ に対し，$p^{-1}(A)$ は連結である．
+従って compact Hausdorff 空間の間の連結 fiber の連続全射を合成しても，
+連結 fiber の連続全射となる．
+\end{lemma}
+\begin{proof}
+$p$ は閉写像である．$p^{-1}(A)$ 内の相対閉集合は
+$C\cap p^{-1}(A)$，$C\subset X$ 閉，と書け，その像は $p(C)\cap A$ である．
+従って制限 $p_A:p^{-1}(A)\to A$ も閉写像である．
+$p^{-1}(A)=U\sqcup V$ が非自明な分離なら，連結な各 fiber は
+$U,V$ の一方に全体として入る．よって $p(U),p(V)$ は
+$A$ を覆う非空な互いに素な相対閉集合となり，連結性に反する．
+合成の点逆像は，後の写像の連結な点逆像を前の写像で引き戻したものなので，
+最初の主張を適用すればよい．
+\end{proof}
+
+\begin{corollary}[Cubical 射の全 fiber の連結性]
+\label{topo:cubical-composite-connected}
+本稿で構成する $\pi:X\to B_d(T)$ に対し，$f=p_T\pi:X\to\mathcal C_d$ は
+proper な連結 fiber の連続全射である．特に
+\[
+ f^{-1}(w)=\pi^{-1}\bigl(p_T^{-1}(w)\bigr)
+\]
+は，$p_T^{-1}(w)$ が内部木である場合も連結である．
+\end{corollary}
+\begin{proof}
+$\pi$ の主張は補題\ref{glue:closed-whole-fiber-quotient}の適用，
+$p_T$ の主張は系\ref{topo:KE-cubical-comparison}による．
+前補題を用い，properness は compactness から従う．
+\end{proof}
+
+$p_T$ の点逆像が可縮であることから $f$ の点逆像の可縮性は結論しない．
+$d\ge6$ で内部木が辺を持つ場合，その開辺上の正則 torus の合併は
+局所的に interval と $T^2$ の積であり，$f$ の fiber は三次元部分を含み得る．
+Lagrangian torus fibration と呼ぶのは $\pi$ であり，
+$f$ はその全 fiber 合併を扱う計量比較写像である．
+
 \begin{remark}[比較の射程]
-この corollary は候補極限複体と Lagrangian 分岐基底の
+系\ref{topo:KE-cubical-comparison}は候補極限複体と Lagrangian 分岐基底の
 \emph{labelled topology} の比較である．
 $q$ は一般に距離を保存せず，$p_T$ から
 KE 計量の GH 収束，action-compatible integral-affine atlas，

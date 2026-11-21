@@ -1,11 +1,12 @@
 \section{数値不変量、局所模型の範囲、具体例}\label{sec:examples}
 
 \subsection{coreとEuler数}
-一般位置の$m$直線の補集合$W_m\subset\PP^2$について、inclusion-exclusionは
+一般位置の$m\ge4$直線の補集合$W_m\subset\PP^2$について、compact supports による inclusion-exclusion は
 \[
-\chi(W_m)=3-2m+\binom m2=\binom{m-2}{2}
+\chi_c(W_m)=3-2m+\binom m2=\binom{m-2}{2}
 \]
 を与える。
+一本を無限遠直線に取れば，$W_m$ は $\CC^2$ 内の一般位置の $m-1$ 本の affine lines の補集合である．
 Hattoriの定理\cite{Hattori,PapadimaSuciu}によれば
 \[
 W_m\simeq(T^{m-1})^{(2)},\qquad
@@ -13,11 +14,94 @@ W_m\simeq(T^{m-1})^{(2)},\qquad
 b_1=m-1,\quad b_2=\binom{m-1}{2},
 \]
 ここで右辺は積CW構造の2次骨格である。
+従って Betti 数は有限であり，実四次元の Poincar\'e duality から
+$\chi(W_m)=\chi_c(W_m)$ である．
 coreはこの補集合のhomotopy typeを持つ。
-$m=d-1$を代入し、regular fiberとbranch fiberのEuler数が0、nodal fiberのEuler数が1であることを使うと
+以下ではこの数値を，構成した写像の全 fiber に沿って確認する．
+
+\begin{proposition}[Fiber Euler 関数の有限支持]
+\label{inv:euler-pushforward}
+定理\ref{main:global}又は定理\ref{ke:actual-global-fibration}の
+全平面構成の $\pi:X_d\to B_d(T)$ を取る．
+Core values を $v_1,\ldots,v_d$，相異なる nodal values を
+$b_1,\ldots,b_N$ とする．このとき $N=d\binom d2$ であり，
+\begin{equation}\label{inv:eq:euler-pushforward}
+ (\pi_*\mathbf1)(b):=\chi\bigl(\pi^{-1}(b)\bigr)
+ =\sum_{\nu=1}^{N}\mathbf1_{\{b_\nu\}}(b)
+  +\binom{d-3}{2}\sum_{i=1}^d\mathbf1_{\{v_i\}}(b).
+\end{equation}
+ここで開集合の加法的計算には有理定数層の compact-support cohomology の
+$\chi_c$ を用い，compact fibers 上ではこれを $\chi$ と書く．
+基底を有限個の局所自明な層に分けて Euler 積分できるため，
 \begin{equation}\label{inv:euler}
 \chi(X_d)=d\binom{d-3}{2}+d\binom d2=d(d^2-4d+6).
 \end{equation}
+\end{proposition}
+\begin{proof}
+各二重線上で次数 $d$ の切断は相異なる単純零点を $d$ 個持つ．
+一般の構成では各零点に一つの nodal surgery を置き，
+actual KE 構成では各 source が一重 pinched torus を与える．
+Source は相異なる regular leaves 上に置かれ，
+全 fiber の移送と補題\ref{glue:closed-whole-fiber-quotient}は
+異なる fibers を同一視しない．従って $N=d\binom d2$ である．
+
+Regular $T^2$ と branch $S^1\times\figeight$ の Euler 数は零である．
+一重 pinched torus は $T^2$ の非分離 circle を一点に潰した空間なので，
+Euler 数は $\chi(T^2)-\chi(S^1)+1=1$ である．
+各 core は $m=d-1$ の直線補集合の有限型 skeleton である．
+定理\ref{snc:main}及び補題\ref{ke:positive-residue-finite-type}で，
+全 critical values より高い compact regular sublevel $K$ を取り，
+index $k$ の critical points の個数を $c_k$ とする．
+Critical set は compact 内にあり，Morse 非退化性により $c_k$ は有限である．
+補題\ref{ke:compact-relative-morse-smale}の閉 filtration の各差は
+$c_k$ 個の stable cells $\mathbb R^k$ の非交和なので，
+compact supports の加法性と $K$ の Morse handle 分解から
+\[
+ \chi_c(\Sigma)=\sum_{k=0}^2(-1)^k c_k
+ =\chi(K)=\chi(W_{d-1})=\binom{d-3}{2}.
+\]
+ここで $K$ より外には critical points がなく，proper exhaustion に沿って
+$W_{d-1}$ を $K$ へ deformation retract できる．
+この計算に skeleton の Whitney 性は必要ない．
+以上が\eqref{inv:eq:euler-pushforward}を与える．
+
+Euler 積分の適用範囲を確認する．Core points，node points，開 branch edges，
+および残りの regular two-dimensional regions で基底を有限に層化する．
+Regular locus では proper smooth submersion の局所自明性，
+branch locus では normal circle と full saddle leaf の product model がある．
+Actual 構成の相対葉族補間も全 saddle leaves を同定するので，この局所自明性を保つ．
+点層以外を有限個の contractible open cells にさらに分ければ，
+各 cell 上の逆像は fiber との積となる．
+有限閉 filtration の加法性と積の公式により
+\[
+ \chi(X_d)=\sum_{S}\chi_c(S)\chi\bigl(\pi^{-1}(b_S)\bigr)
+          =\int_{B_d(T)}\pi_*\mathbf1\,d\chi_c .
+\]
+Regular と branch の項は零，node と core は点層なので，
+\eqref{inv:euler}が従う．全写像の subanalytic 性を仮定するのではなく，
+構成中の上記の有限層化と局所 product を使っている．
+\end{proof}
+
+\begin{corollary}[Cubical 比較写像の fiber Euler 数]
+\label{inv:cubical-fiber-euler}
+$f=p_T\pi$ に対し，各 $w\in\mathcal C_d$ について
+\[
+ \chi\bigl(f^{-1}(w)\bigr)
+ =\#\{\nu:p_T(b_\nu)=w\}
+  +\binom{d-3}{2}\#\{i:p_T(v_i)=w\}.
+\]
+複数の nodal values が同じ $w$ に写る場合は，その個数を重複度として数える．
+これらの fibers は系\ref{topo:cubical-composite-connected}により連結である．
+\end{corollary}
+\begin{proof}
+$p_T^{-1}(w)$ は一点又は有限内部木である．
+後者を nodal values と木の頂点で細分すると，
+前命題と同じ有限層化の $\pi$ の制限を得る．
+Compact な全逆像に対して $\chi_c$ の加法性と積性を用いれば，
+regular と branch の項は零で，上式となる．
+これは内部木上の全 fiber 合併の計算であり，
+その合併の各 smooth part が Lagrangian であるとは主張しない．
+\end{proof}
 
 他方、adjunctionと$c(TX_d)=(1+H)^4/(1+dH)$より
 \[
@@ -111,6 +195,27 @@ exact formのcompact cycle上の積分は0なので結論を得る。
 六次では各二重曲線は四つ穴球面で、各$ij$に二本のbranch edgesと一枚のbigonが現れる。
 合計六個のcore、三十本のbranch edges、二十枚のtriangles、十五枚のbigons、九十個のnodesとなる。
 定理\ref{topo:petersen}により、六個のcore linksを同時にPetersenグラフへできる。
+
+面ごとの node 配分はこれらの総数とは別の選択である．
+得られた構成について，各 $T_{ij}$ の葉 $k$ に接する regular edge 上の source 数を
+$n_{ij;k}$，内部辺 $a\in A_{ij}$ 上の数を $n_{ij;a}$ と書く．いずれも非負整数で，
+\[
+ \sum_{k\ne i,j}n_{ij;k}+\sum_{a\in A_{ij}}n_{ij;a}=d.
+\]
+Triangle $ijk$ と bigon $(ij,a)$ の node 数はそれぞれ
+\[
+ N_{ijk}=n_{ij;k}+n_{jk;i}+n_{ik;j},\qquad N_{ij,a}=n_{ij;a}
+\]
+である．全 face について加えると，各 pair の各 source を一度ずつ数えるため
+$\sum_{i<j<k}N_{ijk}+\sum_{i<j}\sum_{a\in A_{ij}}N_{ij,a}=d\binom d2$ となる．
+従って一般の marked 構成に，各 triangle 又は bigon の同じ node 数を要求しない．
+後の五次の $(3,1,1)$ と六次の $(1,1,1,1;2)$ の指定配分では，
+それぞれ各 triangle に $5$ 個，及び各 triangle に $3$ 個・各 bigon に $2$ 個となる．
+これは作用接着用の選択であり，一般存在又は P0 の任意の source 配分の結論ではない．
+なお，現行 SNC 構成に大域作用適合 atlas の条件を課した六次では，
+系\ref{q9:sextic-rigidity}と注意\ref{q9:node-budget}が，
+各 bigon の二 nodes を weight recipe に依存せず強制する．
+この追加条件下の剛性は保持し，一般存在の数え上げとは適用範囲を分ける．
 
 \begin{figure}[ht]
 \centering
