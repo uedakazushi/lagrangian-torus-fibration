@@ -1,6 +1,6 @@
 # KE–fibration 大域実現の依存関係
 
-2026-11-21 / v2.2。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
+2026-11-21 / v2.3。目標・優先順位は [研究方針](../00_research_plan.md)、大域実現の定式化と結論は主原稿の `ke:global-realization-section` 節・定理 `ke:global-metric-realization` を正本とする。本書は外部入力の所在・適用範囲、本稿の直接評価による依存の接続、および確認範囲を保持する。
 
 ## 確認した正本と規格化
 
@@ -67,6 +67,8 @@ L_t=-\log|t|^2,\quad R_t=\log L_t.
 | 固定baseの同一moment上の接続 | [ke_staged_neck_averaging.tex](../papers/sections/paper/ke_staged_neck_averaging.tex), `ke:fixed-base-moment-connectors` | Source-freeな固定連結基底に限り、level全体とMoser像のactual ambient径 $O(1)$、正規化後 $O(R^{-1})$。異なる残余点を結ぶ。`ke:fixed-base-central-band` は固定 $A>0$ に対する $\lvert\mu\rvert\le A/M_t$ のband全体を、異なるmomentも含めactual径 $O(1)$ とする。Source・moving collar・全曲面の下界は含まない。 |
 | 三armの座標・normal period | [ke_neck_corner_transition.tex](../papers/sections/paper/ke_neck_corner_transition.tex), `ke:arm-log-derivatives`, `ke:three-arm-coordinate-interpolation`, `ke:transition-normal-primitive` | 共通の許容射影を選び、固定深度比で分離したarmに限る。全固定階で指数的小摂動、積保存smooth補間、canonical normal periodの厳密一致。非正則補間帯はtame symplecticでありKähler性を仮定しない。第二periodの一致は含まない。 |
 | 三端の平均順序の相対統合 | [ke_relative_corner_patch.tex](../papers/sections/paper/ke_relative_corner_patch.tex), `ke:quantitative-order-hamiltonian`, `ke:relative-corner-patch`, `ke:single-arm-reduced-graph`, `ke:arm-common-moment-strip` | 小さいprimitiveを固定し、centered平均の比較Hamiltonianを $O(m^{-2})$ で評価。Common source/imageとcutoff buffersの下で端ごとのstaged bundleを一つのactual corner bundleへ統合。単一moving armでは共通moment stripとactual reduced graphを証明。Source-inclusive neckとの共通flow領域と全交わりは、下のexhaustionの結果で別途確保する。 |
+| Source中心の特異reductionとclosed fibre | `ke_staged_neck_averaging.tex`, `ke:source-reduction-pinched-fiber` | 固定parameterのsmooth primitive・両normal cutsのmoment符号・共通Moser存在域を仮定として分離する。固定点でchain primitiveと場が零、canonical momentも零。位相商 $I\times P$、閉pinched torus、primitive vanishing cycleを直接証明する。零reductionの通常の滑らかさやparameter一様正規形を仮定しない。 |
+| 全stageと小さい複素parameterに共通な木 | `ke_neck_corner_exhaustion.tex`, `ke:fixed-marked-tree-exhaustion` | 一つのembedded pants foliation、単純sourceの一価bump isotopy、共通compact外のend graph補正を用いる。Core collar補間とwhole-fiber trimも同じ木を保つ。全 $H_1(T^2)$ markingの族全体の自明化は結論しない。 |
 | Source-inclusive neckとcornerの全交わり | [ke_neck_corner_exhaustion.tex](../papers/sections/paper/ke_neck_corner_exhaustion.tex), `ke:fixed-stage-source-neck`, `ke:neck-corner-diagonal-matching`, `ke:neck-corner-saturated-union` | 残余compact→normal cutoff→moment区間→parameter閾値の順に選ぶ。Corner cut $6b_j$ とneckの葉でのtrim $7b_j$、first-exitと逆flow自然性により全交わりを同じ全fibersで飽和させる。Source・saddleを含む部分fibration。全曲面被覆・core・global GHは含まない。 |
 | Central sourceの体積・moment・経路 | [ke_source_connectors.tex](../papers/sections/paper/ke_source_connectors.tex), `ke:source-central-density`, `ke:source-central-moment`, `ke:source-central-mean-distance`, `ke:source-central-short-escape`, `ke:source-central-arm-connectors` | 固定rescalingでdensity $L^{-2}$、有界potential、moment $O(L^{-1})$、平均二乗距離 $O(1)$、inradius $O(L^{-1/2})$、arm断面への接続 $O(1)$。Capped volume下界・oriented pair-arm density・complete volume上界を使用。全点径は結論しない。 |
 | Source中央帯の全点径 | 同上 `ke:source-central-band-reduction`, `ke:source-potential-modulus` | $\lvert\mu\rvert\le A/L$ のsource中央帯を固定rescaled coreへ $O(1)$ で結ぶ。`ke:source-central-diameter` と `ke:fixed-base-source-central-band` により、固定点を含むcoreと固定基底中央帯・閉pinched torus全体のactual ambient径は $O(1)$。一様square-root-Dini modulusは**未証明**だが、Gaussian体積評価とBishop比較による証明に加え、`ke:source-direct-central-exit` のgate・arm・水平経路による直接証明がある。いずれもそのmodulusを用いない。全intervalには `ke:source-all-moment-exit` を用いる。 |
@@ -99,6 +101,12 @@ Actual全域構成の追加証明は次を用いる。
 | 全域scalar mapとambient下界 | [ke_global_ambient_lower.tex](../papers/sections/paper/ke_global_ambient_lower.tex), `ke:global-depth-lipschitz`, `ke:global-depth-base-comparison`, `ke:global-ambient-lower` | 下側cut $\mathfrak m_j$ とplateau $L/K_j$ を用いる全域 $\Theta_t$。一方向はsharp normal、二方向はfull-tripleのco-Gramで評価し、任意の全曲面経路に沿って長さを抑える。同じ $f_t$ との全域値比較を証明。経路の領域往復回数を有限と仮定しない。 |
 | 内部木の全fiber合併とambient上界 | [ke_global_ambient_upper.tex](../papers/sections/paper/ke_global_ambient_upper.tex), `ke:collapsed-tree-full-fiber-collapse`, `ke:coherent-corner-portals`, `ke:global-ambient-upper` | 残余基底を先に選び、許容cut条件の下で全 $f_t$-fiberのambient径を $C(1+\log(N_j+1))$ で評価。全endsで同じmomentのportalsを選び、旧full-cornerのendpoint上界を高々60本のsquare galleryで接続する。除去capを通る曲線もambient上界には使用できる。 |
 | 同じactual写像による大域実現 | [ke_global_metric_realization.tex](../papers/sections/paper/ke_global_metric_realization.tex), `ke:global-metric-realization` | 上記の同じ $\pi_t$ と $f_t=p_T\pi_t$ に、全固定段階の条件を満たす一つの遅い対角選択を適用。全射性、uniform ambient distortion消失、GH収束、全fiber合併の一様収縮を得る。外部CP/PBE/TCの結論を入力にしない。 |
+
+## Sourceとmarked葉層の一次資料
+
+Zung, *A note on focus-focus singularities*, Differential Geometry and its Applications 7 (1997), 123–130, DOI [10.1016/S0926-2245(96)00042-3](https://doi.org/10.1016/S0926-2245(96)00042-3)、[一次原稿 math/0110147](https://arxiv.org/pdf/math/0110147) の§2、§3 Proposition 3・Corollary 1、§4を確認した。Focusの局所二次型・pinched fibre・monodromyは既知結果である。本稿では明示的なsymplectic線形変換と閉fibreのcompactificationを直接計算し、actual neckの固定点・canonical moment・Moser存在域との接続を確認する。既知の局所分類から退化族に一様な解析評価を推論しない。Vũ Ngọc, Topology 42 (2003), Theorem 2.1（[一次原稿](https://arxiv.org/pdf/math/0208245), PDF p.4）のsemi-global分類も照合し、単純nodeの同じ線形monodromyからformal power series不変量の一致を導かない。
+
+Maksymenko, Comment. Math. Helv. 80 (2005), 655–690, DOI [10.4171/CMH/30](https://doi.org/10.4171/CMH/30) の[掲載版](https://ems.press/content/serial-article-files/43060)で、Main Theorem p.658、Lemma 4.1 p.665、§6.1 Lemma 6.4 p.668を確認した。Path-component分類だけからfixed Reeb treeは従わず、本稿では支持を明示した葉層のdiffeomorphismsを使う。第二cycleのparameter monodromyと、abstract labelled treeの固定は区別する。
 
 ## Coreの層別構造と相対fillingの一次資料
 
@@ -178,8 +186,9 @@ Target最短路は `topo:six-label-gallery` により高々60本のsquare線分�
 
 Complete simplex模型の存在はZhang [arXiv:1505.04728v2](https://arxiv.org/abs/1505.04728v2) Theorem 2.1・Proposition 2.2を一次資料で確認した。同Theorem 2.1が引用するCheng–Yau (1982), Theorem 4.4の原論文の証明そのものは今回再精読していない。Zhangの退化族に関するTheorem 2.4のQ-factorial仮定をsourceを持つ本族に適用してはいない。DMVのTheorem 1.2についても、固定Euclidean補助測度、正閉current、$L^2$ 規格化、周期coverの個数とBishop比較の実次元4を照合した。ただし現行の有界source退出はこのGaussian経路から独立である。
 
-## 今回の内部点検と残る確認範囲
+## 内部点検済みの範囲と残る確認
 
+- Source中心のsmooth centered Moser、canonical momentの零、位相商、閉pinched torus、primitive cycleとfocus二次型を独立に点検した。K2のfirst-exit→逆flow→moment→全torusの順序、inverse Morse領域と非incident piecesの分離、全stageと全複素parameterでの固定marked treeも再点検した。
 - K2–K3の接続に必要な全intersection saturation、fixed-stage stratum coverage、whole-fiber trim、actual Lagrangian性、compact Hausdorff quotientへの全射とconnected fibers、固定 $d\ge5$ の範囲、core・変更collarの固定compact費用を点検した。
 - 新しい中央 $O(1)$ 径、全moment source退出、sharp scalar barrier、global physical-depth補正とactive cover、全域co-Gramと $\Theta_t$–$f_t$ 比較、共通moment portals、全fiber合併、有限gallery上下界を、作成担当以外の読み手が内部点検した。特に全境界、source軸、同じcanonical moment、依存の非循環性、固定段階から遅い対角選択への順序を照合した。
 - YauのTheorems 1–2、Savinのsmall perturbation、Songのfixed-gauge収束、DMVの掲載版Theorem 1.2、Rochon–ZhangのSNCに関する指定箇所は一次資料で確認した。外部KE原稿の全証明や旧主稿全体の独立再監査、公表前の網羅的な先行研究・新規性調査、形式証明を完了したという意味ではない。

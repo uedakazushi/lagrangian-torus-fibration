@@ -15,7 +15,7 @@
 
 ## Cloud Codexから再開する
 
-最新mainで [研究方針](00_research_plan.md) → [AGENTS.md](AGENTS.md) → [依存関係](research/ke-dependencies.md) → [研究ノート](research/notes.md) を読む。次に `ke:global-metric-realization` から依存する接着・source・scalar・portalの証明をたどる。現在の優先課題は、公表に向けた一次文献と依存結果の包括的再点検、新規性の確認、主稿構成の整頓である。改訂23ではsourceの特異reductionと全段階に共通な標識付き木の補題を明示し、K2の全交わりの証明を補強した。追加証明は独立点検中で、改訂23は未組版。改訂22ではcomponentの対数接続費用と全fiber予算を強め、coreの弱い層別構造を明示した。組版・表示確認の現在の状態は末尾を参照。
+最新mainで [研究方針](00_research_plan.md) → [AGENTS.md](AGENTS.md) → [依存関係](research/ke-dependencies.md) → [研究ノート](research/notes.md) を読む。次に `ke:global-metric-realization` から依存する接着・source・scalar・portalの証明をたどる。現在の優先課題は、公表に向けた一次文献と依存結果の包括的再点検、新規性の確認、主稿構成の整頓である。改訂23ではsourceの特異reductionと全段階に共通な標識付き木の補題を明示し、K2の全交わりの証明を補強した。追加証明は独立に内部点検済み。次は `ke:global-base-parameterization` と `ke:global-depth-base-comparison` の同じ基底値の整合を監査する。Componentの対数接続費用・全fiber予算・coreの弱い層別構造も保持する。組版・表示確認の現在の状態は末尾を参照。
 
 ```sh
 python3 scripts/research_check.py setup --require-tex
@@ -29,7 +29,7 @@ python3 scripts/research_check.py tex
 
 | 原稿 | 役割 | 組版の確認範囲 |
 | --- | --- | ---: |
-| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域fibrationによるGH実現定理（改訂22） | 改訂22：246頁、変更箇所を含む23頁を表示確認 |
+| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、actual KE全域fibrationによるGH実現定理（改訂23） | 改訂23：251頁、変更箇所を含む23頁を表示確認 |
 | [五次整数接着](papers/quintic-integer-gluing.tex) | 指定K5データの整数条件・高分母支持・未解決の大域接着 | 201頁 |
 | [Meridian surgery](papers/meridian-surgery.tex) | 閉corner circuitsの局所置換の障害 | 18頁 |
 | [TeX研究ノート](papers/research-notes.tex) | 証明素材・残る条件の整理 | 現行65頁、第1・4頁を表示確認 |
@@ -39,7 +39,7 @@ python3 scripts/research_check.py tex
 
 五次整数アフィン接着では、四rayの完全matching条件等を証明し、高分母の必要支持候補を \(G_{5,14},G_{5,16},G_{5,17}\) の3型・26標識まで絞った。ただし26は実現数ではなく、一般分母の剛性・三高係数の同時非負性や全支持型の大域接着は未解決。
 
-KE退化との関連では、全閉triple cornerのactual局所GH収束、定量的二段階平均、固定残余基底のactual neckとsourceのpinched torusを得ている。現行主稿の主要結果は次の通り。
+KE退化との関連では、全閉triple cornerのactual局所GH収束、定量的二段階平均、固定残余基底のactual neckとsourceのpinched torusを得ている。`ke:source-reduction-pinched-fiber` は固定点でのsmooth exact transportとprimitive消滅cycle、`ke:fixed-marked-tree-exhaustion` は全stage・全ての小さい複素parameterで一つの木を保つ選択を明示する。零momentの特異商を滑らかなsymplectic曲面とみなさず、parameter全体のtorus cycleのmonodromyを自明化しない。現行主稿の主要結果は次の通り。
 
 - **同じnormal moment上の接続：** 固定source-free基底の残余点全体をactual長さ $O(1)$ で結ぶ。Moser像と、同じlevel上の複数fiberの合併も、正規化ambient径 $O(R_t^{-1})$ を持つ（`ke:fixed-base-moment-connectors`）。
 - **三つの端の座標と作用：** 固定深度比で分離したarmで、射影neck座標との比の対数を全固定階で指数的に評価。積を保つsmooth補間で三端のnormal circlesを同時に合わせ、canonical normal periodの厳密な一致を示す。非正則な補間帯ではtame symplectic性を使う（`ke_neck_corner_transition.tex`）。
@@ -74,4 +74,4 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-2026-11-21 / v3.2：主稿改訂22に対数接続費用・全fiber予算・coreの弱い層別構造を統合し、追加証明と主要接着依存を複数担当で内部点検した。静的構成検査は通過。改訂22はLuaLaTeXで246頁に組版済み。第1・2・17・18・132–134・155–160・179–184・241–243・246頁の計23頁を表示確認した。未解決参照・引用、重複ラベル、欠字、overfull警告はない。TeX研究ノートは既存65頁の組版記録を維持する。今回、整数検算suite・他論文の組版は再実行していない。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は未実施。
+2026-11-21 / v3.3：主稿改訂23にsourceの特異reduction・閉pinched torus・primitive消滅cycleと、全stage・全ての小さい複素parameterに共通なmarked treeの補題を統合した。K2の全intersection saturationを再点検し、inverse Morse領域と非incident近傍の分離を補強した。追加証明と主要接続は作成担当とは別の読み手が内部点検済み。静的構成検査は通過。改訂23はLuaLaTeXで251頁に組版し、第1・16・17・84–89・107–115・187・188・244・247・248頁の計23頁を実際に表示確認した。未解決参照・引用、重複ラベル、欠字、overfull警告はない。ZungとMaksymenkoの指定箇所、Vũ NgọcのTheorem 2.1を一次資料で確認した。整数検算suite・他論文・TeX研究ノートの組版は今回は再実行していない。形式証明・全主稿と全外部入力の包括的再監査・外部査読・網羅的新規性確認は未実施。
