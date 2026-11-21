@@ -42,9 +42,9 @@ K1–K2では、遅い対角選択の下でsource-inclusive neckとclosed corner
 | --- | --- | --- |
 | K0：入力の監査 | `ke:actual-global-fibration`、`ke:global-realization` とKE依存表を読み、採用する族・木系・form・marked collarsを固定する。 | 新しいactual全域接着の追加証明は別担当と内部点検済み。外部KE入力と既存局所証明の全再監査、旧主定理全体の公表前監査は未了。新構成は旧 `main:global` の定性的Moser移送を入力にしない。 |
 | K1：actual neckの短円とbuffer | `ke:fixed-stage-source-neck`、`ke:neck-corner-diagonal-matching` の残余compact→normal cutoff→moment区間→parameter閾値の選択を用いる。 | 固定source-free基底の二側比較、source中心を含む短円、共通source/像、source-inclusive neckを証明。十分遅い残余exhaustionでは全flow・全円orbitを含むtripleとの共通開領域も確保した。任意に指定した縮小速度や曲面全体の被覆への一様性は主張しない。 |
-| K2：複数endの同時整合 | `ke:neck-corner-saturated-union` の部分fibrationを全域構成への入力として使う。 | 三armの座標接続、normal period一致、相対Hamiltonian補正、共通moment区間とreduced graphにより、closed cornerと切詰めたneckの**全交わり**でfiber partition・向き付きnormal cycle・内部source/saddle markingを一致させた。Endの第二cycleは共通torus同定で移送して選ぶ。Source・saddleを含むactual部分fibrationを得た。独立に選んだ第二periodの一致は自動でなく、core接着と全曲面被覆は残る。 |
+| K2：複数endの同時整合 | `ke:neck-corner-saturated-union` の部分fibrationを全域構成への入力として使う。 | 三armの座標接続、normal period一致、相対Hamiltonian補正、共通moment区間とreduced graphにより、closed cornerと切詰めたneckの**全交わり**でfiber partition・向き付きnormal cycle・内部source/saddle markingを一致させた。Endの第二cycleは共通torus同定で移送して選ぶ。Source・saddleを含むactual部分fibrationを得た。独立に選んだ第二periodの一致は自動ではない。Core接着と全曲面被覆はK3で別途証明した。 |
 | K3：component coreの相対接着 | `ke:actual-global-fibration` と四つの追加節を距離評価の入力とする。 | **固定段階の全域構成を証明。** 正residue periodの厳密同定、閉moment link、固定stageでの全特異層近傍の被覆とcompact complement、actual generator C1・adapted primitive/nontrapping、saddleを動かす相対葉族、全fiber単位のtrimを経て、全 $X_t$ をactual Lagrangian fibrationで覆った。各componentのcoreと変更collarのambient径は固定stageで有界、遅い対角選択で正規化径が消える。全曲面distortionは含まない。 |
-| K4：全曲面の距離比較 | Source中央帯外の同一moment接続 `ke:eq:source-moment-exit-input` と、全曲面のno-shortcut下界を進める。 | Central sourceの固定点を含む全点径は $O(\sqrt{R_t})$（`ke:source-central-diameter`）。固定残余基底のsource-inclusive中央moment帯と閉pinched torus全体も正規化径が消える。固定source-free基底の同一moment径は $O(1)$。中央帯外のsource接続、異なるmomentをまたぐ木全体、全点対distortionは未証明。 |
+| K4：全曲面の距離比較 | Source中央帯外の同一moment接続 `ke:eq:source-moment-exit-input`、旧softmaxと整合する基底の相対parameterization、全曲面のno-shortcut下界を進める。 | Central sourceの固定点を含む全点径は $O(\sqrt{R_t})$（`ke:source-central-diameter`）。固定残余基底のsource-inclusive中央moment帯と閉pinched torus全体も正規化径が消える。固定source-free基底の同一moment径は $O(1)$。中央帯外のsource接続、異なるmomentをまたぐ木全体、全点対distortionは未証明。 |
 | K5：主定理と独立点検 | 五次の完結した証明を節目に、全固定 \(d\ge5\) へ一般化し、全ての入力と定数依存を追う。 | 主稿の問題を仮定未残の定理と十分な証明へ置換し、別の読み手による論理点検、一次文献比較、再現・組版を完了。現在未着手。 |
 
 K1–K2の正本は `ke_neck_corner_exhaustion.tex`。残余compactの定数を先に固定し、それを支配するnormal cutoffと共通moment区間を選び、最後にparameter閾値を取る。`ke:normal-flow-naturality` とmoment依存のreduced葉により共通開collarを構成する。さらにcorner cut $m_t=6b_j$、neckの葉でのtrim $B=7b_j$、広いnormal-first patchを用い、first-exit評価で全intersectionを共通plateauへ閉じ込める。逆normal flowの自然性からmomentを同定した後に深いnormal下界を使う（`ke:neck-corner-saturated-union`）。
@@ -54,7 +54,7 @@ K1–K2の正本は `ke_neck_corner_exhaustion.tex`。残余compactの定数を�
 Source全体のEuler場 $W_+=x\partial_x+y\partial_y$ のactual normを固定chart上で一様に抑えた（`ke:source-euler-bound`）。中央sourceの $|z|\ge e^{-a_t}$、$a_t=o(R_t)$ の部分は、固定residual shellへ $O(a_t+1)$ で接続でき、正規化ambient径が消える（`ke:source-sublog-residual-connectors`）。Euler経路だけでは軸に届かないが、`ke:source-central-diameter` は別のGaussian体積比較で $z=0$ と極小residual点も含む全点径を $O(\sqrt{R_t})$ に抑える。`ke:fixed-base-source-central-band` により、固定基底の全中央帯と閉pinched torus全体も収縮する。
 
 ## 原稿・ノートの正本と公表単位
-- `papers/surface-lagrangian-torus-fibration.tex`：このrepoの主たる公表用本文。相対SNC構成、次数分割、分岐底、作用適合atlasとKE–fibrationの大域実現問題（現行改訂19。Actual core全域接着の四節を追加、LuaLaTeXで208頁。変更頁の表示確認前）。
+- `papers/surface-lagrangian-torus-fibration.tex`：このrepoの主たる公表用本文。相対SNC構成、次数分割、分岐底、作用適合atlasとKE–fibrationの大域実現問題（現行改訂19。Actual core全域接着の四節とtarget cap補題を追加、LuaLaTeXで211頁。追加節・要約・序論を中心に28頁を表示確認）。
 - `papers/quintic-integer-gluing.tex`：五次整数アフィン接着、高分母支持グラフの独立論文（第25稿、201頁の記録）。指定SNC cores・K5 graph・標準cones・marked puncturesを保つ候補が対象。必要支持3型26標識は**実現数ではない**。G5_14の中央matching、一般分母剛性、三高Dの同時非負性が未解決。
 - `papers/meridian-surgery.tex`：四pantsのmeridian局所置換と閉corner circuitsの障害（18頁の記録）。
 - `papers/research-notes.tex`：各種補題・証明素材のTeXノート（65頁の記録）。
@@ -76,6 +76,8 @@ Source全体のEuler場 $W_+=x\partial_x+y\partial_y$ のactual normを固定cha
 `ke_component_link_cover.tex` は $q_a=M_a+2\pi w_a=\pm\widehat\mu_N$ を整数windingとexact transportから同定し、$N_j\iota_j\gg1$ のmoment cutsを丸めて閉linkを作る。固定shellのmoment上界と同じMoser flowの逆像bufferにより、K2の部分fibrationが中央の全特異層の固定近傍を覆い、その補集合がcomponent compactsに入ることも証明する。`ke_core_invariant_primitive.tex` は生成場のC1 smallness、centered scalar平均によるexact補正、全overlapとcutoff shellの被覆、nontrappingを証明する。`ke_relative_reduced_foliations.tex` はfull critical leavesを保つ相対葉族を構成する。
 
 `ke_actual_core_gluing.tex` の `ke:actual-global-fibration` がこれらを統合し、全 $X_t$ 上のactual KE–Lagrangian fibrationを与える。全fiber単位のtrimと閉同値関係により連結fiber・Hausdorff基底を保ち、基底は同じ標識付き $B_d(T)$ となる。第二actionやcritical valuesの数値は先指定しない。各componentの変更領域に必要な有限定数を $C_j$ とし、$R_t\ge j(1+C_j+\log(N_j+1))$ によって正規化ambient径・選んだ接続費用を消す。異なるcomponent cores全部の合併径、任意のLiouville軌道長、core/fiberの内在径の評価とは区別する。
+
+`ke:core-depth-upper` と `ke:removed-corner-target-cap` は、実際に切り取った各component capの旧softmax像を $d_\square(P^{\rm old}(x),e_i)\le\sqrt2\log(CN_j)/R_t$ と評価する。閉link上の深度上界を固定strictly plurisubharmonic potentialの最大原理でcore全体へ延ばす。各capの径は一様に消え、保持cornerの旧protected距離と全曲面距離の上界は維持される。旧softmax値を $p_T\pi_t$ と整合させる全域parameterization、保持領域自身の内在距離の上界、全曲面距離の下界は別途必要である。
 
 `base_topology.tex` の非伸長座標retractionにより、任意の座標部分複体 $\mathcal C_I$ の内在距離は全 $\mathcal C_d$ の距離の制限に一致する。特にclosed-cornerのGH評価は同じ誤差で全target距離を使えるが、source側の全曲面shortcutを制御したとはしない。最短路には六label以下で十分で、portal比較のgallery数は五次30、六次以上60にできる。
 
@@ -147,11 +149,11 @@ Lagrangian主稿 `ke:actual-closed-corner` の同じ averaging–Moser flow と�
 - 六次同時Petersen分岐木系は6通り・\(S_6\)の一軌道で、各安定化群の位数は120。固定木系はfull \(S_6\)-equivariantではない。新規性は未確認。
 
 ## 優先する次の一手
-第一着手はK4。`ke:actual-global-fibration` の保持corner・source・各componentの小さい変更領域を入力に、中央帯外の同一moment source接続、木上の全fiber合併、全域no-shortcut/portal比較を進める。部分的に公表価値のある成果は主稿へ統合し、全問題の解決まで公表準備を一律に遅らせない。五次整数接着の \(G_{5,14}\) 中央matching・\(\{4,1,0\}\) 配分・分母三条件、\(G_{5,16}\)、\(G_{5,17}\)、三高係数の同時非負性と一般分母剛性は、P0に必要な場合以外は保留する。必要な26標識は実現数と読み替えない。有効な証明・証明書・未解決の障害は保持する。
+第一着手はK4。`ke:actual-global-fibration` の保持corner・source・各componentの小さい変更領域を入力に、中央帯外の同一moment source接続、保持cornerの旧softmax値とcore cone sectorsの相対parameterization、木上の全fiber合併、全域no-shortcut/portal比較を進める。部分的に公表価値のある成果は主稿へ統合し、全問題の解決まで公表準備を一律に遅らせない。五次整数接着の \(G_{5,14}\) 中央matching・\(\{4,1,0\}\) 配分・分母三条件、\(G_{5,16}\)、\(G_{5,17}\)、三高係数の同時非負性と一般分母剛性は、P0に必要な場合以外は保留する。必要な26標識は実現数と読み替えない。有効な証明・証明書・未解決の障害は保持する。
 
 ## 保存・再現と現在の検証状態
 
-現行改訂19には閉moment link・全域被覆、adapted primitive/nontrapping、相対葉族、actual全域core接着の証明を追加し、別担当と内部点検した。LuaLaTeXで208頁、参照・引用・overfull警告なし。変更頁の表示確認前。Rochon–ZhangのSNC cusp入力、Evans–Mauri Lemma 2.16を一次PDFで再確認し、外部KE主稿のdominant-productとfixed-end momentの適用を照合した。
+現行改訂19には閉moment link・全域被覆、adapted primitive/nontrapping、相対葉族、actual全域core接着とtarget capの証明を追加し、別担当と内部点検した。LuaLaTeXで211頁、参照・引用・overfull警告なし。追加節・要約・序論を中心に28頁を表示確認。Rochon–ZhangのSNC cusp入力、Evans–Mauri Lemma 2.16を一次PDFで再確認し、外部KE主稿のdominant-productとfixed-end momentの適用を照合した。
 
 現行のTeX分割節と検証スクリプトは `papers/sections/` を直接参照し、旧ルートsymlinkに依存しない。静的な構成検査は `python3 verification/verify_repository_layout.py`、現行の五主検算・五独立監査は `python3 verification/run_current_checks.py`。旧JSONやmanifestの相対パス・記録時点のSHA-256は出典情報として保持し、パス正規化後の現行実行パスと区別する。
 組版はrepo直下の `latexmk papers/surface-lagrangian-torus-fibration.tex`、整数接着は `latexmk papers/quintic-integer-gluing.tex`。LuaLaTeXとLuaTeX-ja／TikZ／日本語フォントが必要、PDFとSyncTeXはbuild/へ出力しGitで追跡しない。段階別の実行は `scripts/research_check.py` と [Cloud Codexの再開手順](research/cloud-codex.md) を参照する。元の計算コード、入力、証明書は保持する。

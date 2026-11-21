@@ -75,6 +75,7 @@ Actual全域構成の追加証明は次を用いる。
 | Actual invariant primitive | `ke_core_invariant_primitive.tex`、`ke:component-normal-generator-c1`、`ke:relative-corner-patch-c2`、`ke:component-shell-primitive-support` | RZの全cusp derivatives、triple全固定階比較、広いK2 construction domainsを使用。追加の全域tensor仮定なし。 |
 | Saddle-moving relative family | `ke_relative_reduced_foliations.tex`、`ke:saddle-moving-relative-interpolation` | 各connected critical leafに一つのsimple saddle、boundaryのleaf partition固定。Global vector fieldの直接証明。非零moment bandのactual Lagrangian lift。 |
 | 全域core接着 | `ke_actual_core_gluing.tex`、`ke:actual-global-fibration` | Evans–Mauri Lemma 2.16のcompact-domain版と上記入力。各componentごとの固定compact費用。全曲面uniform distortionは未証明。 |
+| Core cutのtarget cap | `ke_actual_core_gluing.tex`、`ke:core-depth-upper`、`ke:removed-corner-target-cap` | 固定成分のstrict psh potential・graph convergence・旧softmax逆式。各capは成分頂点へ一様収縮。保持cornerの旧protected距離と全曲面距離の上界を維持。全域parameterizationとambient下界は含まない。 |
 
 ## 固定成分coreのcusp入力と有限target幾何
 
@@ -102,6 +103,8 @@ Rochon–Zhang, *Adv. Math.* 231 (2012), 2892–2952, [arXiv:1106.0873v2](https:
 \]
 
 を証明する。二つの経路がある。(a) CP/PBEの未解決入力を対象族で証明し、Vの近似写像 $\Psi_{t,A(t)}$ に対する $\sup_xd_\square(\Psi_{t,A(t)}(x),f_t(x))\to0$ を示す。(b) $f_t$ へ直接、scalar no-shortcut下界とsquare lifts・portal connectorsによる上界を示す。後者が十分ならCP/PBEという強いpackage全体の証明を必須にしない。いずれも全source・singular fibersを含む。$d\ge6$ では $p_T^{-1}(c)$ に属する複数の $\pi_t$-fibersの**合併全体**の収縮が必要である。固定triple内の $O(\log R_t/R_t)$ をそのまま大域の率としない。
+
+保持cornerでは旧softmaxと全域の $p_T\pi_t$ を整合させるparameterizationが必要。Core capの定量的位置は上表の補題で得たが、この値の接着は位相同定だけからは従わない。
 
 Source側では中央coreの全点径とsource-free central shellへの $O(\sqrt{R_t})$ 接続を証明した。残る具体的入力は、中央帯を超える共通interval全体での `ke:eq:source-moment-exit-input`。中央の短いgate退出と平均距離だけで全点径を結論せず、potential bufferとGaussian/体積比較を用いる。外部のpotential連続度による十分条件と、その一様modulusの検証を区別する。
 

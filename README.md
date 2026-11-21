@@ -1,5 +1,5 @@
 # Lagrangian torus fibrations on general-type surfaces
-2026-11-21 / v2.8 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
+2026-11-21 / v2.9 — [研究方針](00_research_plan.md) · [研究ノート](research/notes.md) · [Cloud Codexの再開手順](research/cloud-codex.md) · [research-hub](https://github.com/uedakazushi/research-hub)
 
 **最優先目標は、本研究の大域Lagrangian torus fibrationが、負Kähler–Einstein計量のGromov–Hausdorff極限を幾何学的に実現すること。現時点では未解決である。** 対象は各固定次数 \(d\ge5\) の一般位置全平面退化 \(X_t\subset\mathbb P^3\)。**このリポジトリは複素次元2専用**。三次元の研究は [threefold-lagrangian-torus-fibration](https://github.com/uedakazushi/threefold-lagrangian-torus-fibration) を正本とする。
 
@@ -28,7 +28,7 @@ python3 scripts/research_check.py tex
 ## 論文と役割
 | 原稿 | 役割 | 組版の確認範囲 |
 | --- | --- | ---: |
-| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、局所KE収束と大域実現問題（改訂18） | 改訂18・188頁、変更箇所を中心に18頁を表示確認 |
+| [主原稿](papers/surface-lagrangian-torus-fibration.tex) | 相対SNC構成・次数分割・分岐底・作用適合atlas、局所KE収束・actual KE全域構成と大域実現問題（改訂19） | 改訂19・211頁、追加節・要約・序論を中心に28頁を表示確認 |
 | [五次整数接着](papers/quintic-integer-gluing.tex) | 指定K5データの整数条件・高分母支持・未解決の大域接着 | 201頁 |
 | [Meridian surgery](papers/meridian-surgery.tex) | 閉corner circuitsの局所置換の障害 | 18頁 |
 | [TeX研究ノート](papers/research-notes.tex) | 証明素材・残る条件の整理 | 65頁 |
@@ -38,7 +38,7 @@ python3 scripts/research_check.py tex
 
 五次整数アフィン接着では、四rayの完全matching条件等を証明し、高分母の必要支持候補を \(G_{5,14},G_{5,16},G_{5,17}\) の3型・26標識まで絞った。ただし26は実現数ではなく、一般分母の剛性・三高係数の同時非負性や全支持型の大域接着は未解決。
 
-KE退化との関連では、全閉triple cornerのactual局所GH収束、定量的二段階平均、固定残余基底のactual neckとsourceのpinched torusを得ている。現行改訂18の主要結果は次の通り。
+KE退化との関連では、全閉triple cornerのactual局所GH収束、定量的二段階平均、固定残余基底のactual neckとsourceのpinched torusを得ている。現行主稿の主要結果は次の通り。
 
 - **同じnormal moment上の接続：** 固定source-free基底の残余点全体をactual長さ $O(1)$ で結ぶ。Moser像と、同じlevel上の複数fiberの合併も、正規化ambient径 $O(R_t^{-1})$ を持つ（`ke:fixed-base-moment-connectors`）。
 - **三つの端の座標と作用：** 固定深度比で分離したarmで、射影neck座標との比の対数を全固定階で指数的に評価。積を保つsmooth補間で三端のnormal circlesを同時に合わせ、canonical normal periodの厳密な一致を示す。非正則な補間帯ではtame symplectic性を使う（`ke_neck_corner_transition.tex`）。
@@ -52,6 +52,8 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 **Actual KE形式上の全域接着：** `ke_component_link_cover.tex` で正residue periodを既存momentsと厳密に合わせ、閉linkと全特異層近傍の固定段階被覆を構成する。`ke_core_invariant_primitive.tex` はgeneratorのC1評価、exact scalar平均と全cutoff支持の被覆から、core外にtrappingを作らないadapted primitiveを得る。`ke_relative_reduced_foliations.tex` はsaddleを動かしてfull critical leavesを保つ。`ke_actual_core_gluing.tex` の `ke:actual-global-fibration` はLiouville cone fillingと全fiber単位のtrimにより、全 $X_t$ を覆うactual fibrationへ接着する。追加証明は別担当と内部点検済み。各componentのcoreと変更collarは固定stageでactual径が有界、十分遅い対角選択で正規化径が消える。
 
+**Core cutのtarget像：** 固定成分のstrictly plurisubharmonic potentialへ最大原理を使い、切り取った各coreの二つの独立深度を $CN_j$ 以下に抑えた。各capの旧softmax像は成分頂点の $\sqrt2\log(CN_j)/R_t$ 近傍に入る（`ke:removed-corner-target-cap`）。保持cornerには旧protected距離の評価と全曲面距離の上界が残る。旧softmax値と $p_T\pi_t$ の相対parameterizationは次の課題である。
+
 **P0の距離条件は未解決。** 中央帯外のsource接続、六次以上で潰される木上の全fiber合併の径、全曲面のshortcutとportal費用が残る。各componentのcore径評価は、異なるcore全部の合併径やfiberの内在径の評価ではない。局所GH近似のtarget距離は非伸長retractionにより全cubical複体の距離の制限と等しいが、source側のprotected距離を全曲面ambient距離へ置換した下界は未証明。先行研究の仮定と新規性の未確認点は主原稿序論と[研究ノート](research/notes.md)を参照。
 
 ## 極限候補の有限距離幾何
@@ -64,4 +66,4 @@ KE退化との関連では、全閉triple cornerのactual局所GH収束、定量
 
 repo直下で `latexmk papers/surface-lagrangian-torus-fibration.tex`、`latexmk papers/quintic-integer-gluing.tex`、`latexmk papers/meridian-surgery.tex`。LuaLaTeX、LuaTeX-ja、日本語フォント、TikZを使用し、PDF/SyncTeXは `build/`。計算の入口は `python3 verification/run_current_checks.py`。ソースと証明書は `papers/sections/` と `verification/`。PDFはGitで追跡しない。
 
-2026-11-21 / v2.9：K3の追加証明を主稿改訂19へ統合し、別担当と内部点検した。Rochon–Zhang §5とEvans–Mauri Lemma 2.16を一次PDFで再確認。LuaLaTeXで208頁、PDF/SyncTeXを生成し、参照・引用・overfull警告なし。変更頁の表示確認前。形式証明・外部査読・包括的新規性確認・旧整数検算suiteと他三稿の再組版は未実施。P0の距離条件は未解決。
+2026-11-21 / v2.9：K3の全域構成とcore capの評価を主稿改訂19へ統合し、追加証明を別担当と内部点検した。Rochon–Zhang §5とEvans–Mauri Lemma 2.16を一次PDFで再確認。LuaLaTeXで211頁、PDF/SyncTeXを生成し、参照・引用・overfull警告なし。追加節・要約・序論を中心に28頁を表示確認。形式証明・外部査読・包括的新規性確認・旧整数検算suiteと他三稿の再組版は未実施。P0の距離条件は未解決。

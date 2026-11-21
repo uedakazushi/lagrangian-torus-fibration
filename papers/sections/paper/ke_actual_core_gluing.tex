@@ -246,3 +246,219 @@ core と補間領域の正規化費用は $1/j$ 以下となる．
 全 fiber 合併の径，および全曲面の経路を許す no-shortcut 下界がなお必要である．
 閉 corner から core 側へ切り取った部分の intrinsic GH 評価を，
 新しい全曲面上の距離評価と同一視しない．
+
+\subsection{Core cut で除いた corner 部分の旧 target 像}
+\label{ke:core-target-caps-section}
+
+以下では十分大きい段階 $j$ を固定し，$m_j=6b_j$，$N=N_j$，
+$\delta_j=4\pi/N_j$，$L=L_t$，$R=\log L$ とする．
+相対化済みの旧 closed corner を
+\[
+ W_{t,J}=C_{t,J}(\mathcal H_{t,m_j}),\qquad
+ P^{\rm old}_{t,J}=P_{t,m_j}\circ C_{t,J}^{-1}
+\]
+と書く．$K_{i,j,t}$ は補題\ref{ke:closed-component-link}と
+定理\ref{ke:actual-global-fibration}で実際に作った compact core domain とする．
+小さい共通 collars を確保するため平行 moment levels へ動かした場合も含める．
+それらの levels は $q_a\in[\delta_j/2,2\delta_j]$ の範囲に取る．
+
+\begin{lemma}[固定 compact core の深度の上界]
+\label{ke:core-depth-upper}
+$N_j$ の下限を必要に応じて大きくすることで，固定した族・chart・正 weights のみに
+依存する $C>0$ に対し次を実現できる．固定 $j$ の後に $|t|$ を十分小さくすると，
+\[
+ \max_{a\ne i}s_a\le C N_j
+ \quad\text{on }E_{i,t}^{-1}(K_{i,j,t}),
+\]
+が成立する．ここで $s_a=-\log\|s_{D_{ia}}\|^2>1$ は成分 $W_i$ 上で固定した
+global depth functions である．従って $i\in J=\{i,a,c\}$ と
+$x\in K_{i,j,t}\cap W_{t,J}$ に対し，旧 corner source
+$z=C_{t,J}^{-1}(x)$ の二つの独立深度は
+\begin{equation}\label{ke:eq:removed-corner-depth-upper}
+ \ell_a(z),\ell_c(z)\le C N_j
+\end{equation}
+を満たす．$i\notin J$ ならば，十分小さい $t$ に対して
+$K_{i,j,t}\cap W_{t,J}=\varnothing$ である．
+\end{lemma}
+
+\begin{proof}
+まず link 上を調べる．Normal face の source level は fixed-end moment 評価と
+単調性により深度 $N_j$ と固定比の間にある．残余基底の compact は，三重点近傍の
+end 深度 $O(b_j)$ までを含むように固定されている．従って normal face 上では，
+切っている divisor の深度は $O(N_j)$，他の divisor の深度は $O(b_j)$ である．
+Corner face と丸め部分では，二つの独立深度がともに $O(N_j)$ 以下である．
+これは\eqref{ke:eq:component-two-action-estimate}と
+補題\ref{ke:closed-component-link}の moment-level graphs による．
+
+この評価を actual link の深度へ移す．Normal map は同じ centered flow をより深い
+固定 tube へ制限して用いられるので，その trajectory 長さは $C_{P_j}/N_j$ 以下に
+できる．固定 residual compact 上の cusp 比較と $N_j$ の下限を大きくする操作により，
+normal log-depth の変化を固定の小さい量以下にできる．Corner maps の log-depth
+変位は $O(b_j^{-2})$ である．Fixed frame 差も $N_j$ に吸収する．
+従って global depth functions は actual link 上で全て $C N_j$ 以下となる．
+同じ議論は $q_a\in[\delta_j/2,2\delta_j]$ の平行 levels とその小さい collars に
+適用できる．ここでは $N_j$ を $b_j,n_j,\iota_j$ および固定 residual compact の
+定数を決めた後に選ぶことを用いた．
+
+境界上の評価を domain 全体へ移すため，成分極限の固定 strictly plurisubharmonic
+potential を用いる：
+\[
+ \Psi_i=\sum_{a\ne i}w_as_a-2\sum_{a\ne i}\log s_a+h+v .
+\]
+$h,v$ は有界であり，$w_a>0$ なので，定数 $c,C_0,C_1>0$ に対して
+\[
+ c\sum_{a\ne i}s_a-C_0\le\Psi_i
+ \le C_1\sum_{a\ne i}s_a+C_0
+\]
+が成立する．$E_{i,t}^{-1}(K_{i,j,t})$ は $W_i$ 内の compact domain である．
+Strictly plurisubharmonic function はその内部で最大値を取れないから，
+\[
+ \sup_{E_{i,t}^{-1}(K_{i,j,t})}\Psi_i
+ \le\sup_{E_{i,t}^{-1}(\partial K_{i,j,t})}\Psi_i
+ \le C_2N_j .
+\]
+上の下界から domain 全体で $s_a\le C N_j$ を得る．
+これは Liouville trajectories の全長や，primitive 補正後の potential の存在を
+要求しない最大原理の議論である．
+
+Triple chart の non-dominant defining functions と global divisor norms の間の
+unit は成分極限の固定した chart 上で有界である．さらに，今得た固定 compact
+$D_{i,N}=\{\Psi_i\le C_2N_j\}$ を少し広げて graph gauge を取る．
+$t$ の最後の閾値を小さくすれば，この compact 上で
+$E_{i,t}^*\zeta_a/\zeta_{a,0}$ と $E_{i,t}^*\zeta_c/\zeta_{c,0}$ の絶対値は
+例えば $[1/2,2]$ に入る．これは固定 compact 上の graph convergence と，
+その上では defining functions が消えないことによる．従って actual physical depths と
+component depths の差は固定 chart の差を含めて $O(1)$ となり，
+$\ell_a(x),\ell_c(x)$ にも同じ $C N_j$ 上界がある．
+さらに $x=C_{t,J}(z)$ に対して
+\[
+ |\log\ell_q(x)-\log\ell_q(z)|\le Cb_j^{-2}
+ \quad(q=a,c)
+\]
+だから，$\ell_q(z)\le e^{Cb_j^{-2}}\ell_q(x)\le C'N_j$ となり，
+\eqref{ke:eq:removed-corner-depth-upper}が従う．
+最後に，$i\notin J$ の component は当該三重点を通らない．Triple chart を先に
+十分小さく固定すればその閉包は $H_i$ と交わらず，固定 compact の graph image
+$K_{i,j,t}$ も，小さい $t$ に対して当該 corner と交わらない．
+\end{proof}
+
+\paragraph{この証明が使わない主張．}
+切り取る部分は，実際に構成した $K_{i,j,t}\cap W_{t,J}$ である．
+それを full corner 全体での不等式 $q_a,q_c\ge\delta_j$ の全解集合と同一視して
+いない．その不等式の別成分の不存在を示す必要はなく，dominant-product 評価を
+その適用範囲外に延長してもいない．固定 compact への包含だけでも，ある段階依存の
+$A_j<\infty$ による深度上界は得られる．上の最大原理はそれを $C N_j$ に整理する．
+
+\begin{lemma}[除いた corner 部分は旧 target の成分頂点へ近づく]
+\label{ke:removed-corner-target-cap}
+補題\ref{ke:core-depth-upper}の設定で $L\ge C' N_j$ とする．
+定数を大きく取って
+\[
+ \eta_{j,t}=\frac{\sqrt2\log(C' N_j)}{R_t}
+\]
+と置けば，全ての $i\in J$ について
+\[
+ P^{\rm old}_{t,J}(K_{i,j,t}\cap W_{t,J})
+ \subset B_{d_\square}(e_i,\eta_{j,t}).
+\]
+特に，既存の slow diagonal で $\log N_{j(t)}=o(R_t)$ としたとき，
+\[
+ \max_{i\in J}\operatorname{diam}_{d_\square}
+ P^{\rm old}_{t,J}(K_{i,j,t}\cap W_{t,J})
+ \le2\eta_{j,t}\longrightarrow0 .
+\]
+従って各成分 cap の旧 target 径が一様に零へ収束する．異なる成分 caps の
+和集合の径が零へ収束するという主張ではない．
+\end{lemma}
+
+\begin{proof}
+$z=C_{t,J}^{-1}(x)$，$J=\{i,a,c\}$，$r_q=\ell_q(z)-m_j$ とする．
+\eqref{ke:eq:removed-corner-depth-upper}と $\sum\ell_q=L$ から，$L/N_j$ を大きく
+すれば $r_i=\max_qr_q\ge L/2$ である．Softmax の厳密な逆式は
+\[
+ w_q=1+\frac{\log(r_q/r_i)}R .
+\]
+従って
+\[
+ w_i=1,\qquad
+ 0\le w_a,w_c\le\frac{\log(2C N_j)}R .
+\]
+これらの点は $e_i$ と同じ unit square に入る．その square の線分の長さを使えば
+$d_\square(w,e_i)\le\sqrt{w_a^2+w_c^2}\le\eta_{j,t}$ となる．
+\end{proof}
+
+\subsubsection{保持した corner で維持される距離評価}
+
+旧 corner の保持部分を
+\[
+ A_{t,J}=W_{t,J}\setminus\bigcup_{i\in J}\operatorname{int}K_{i,j,t}
+\]
+とし，旧 projection の restriction を $P_A$ と書く．
+旧 closed-corner theorem の誤差を
+\[
+ E_{j,t}=C\left(\frac1{m_j}
+       +\frac{\log(m_j+1)+\log R_t}{R_t}\right)
+\]
+と置く．$d_W^{\rm int}$ は\emph{旧 full corner} 内の距離，
+$d^{\rm out}$ は旧 protected domain 内の距離であり，ともに $R_t^{-2}g_t$ で測る．
+これらの幾何学的な領域や距離は，その一部分の fiber partition を core filling へ
+置き換えても存在し続ける．したがって $x,y\in A_{t,J}$ に対して
+\begin{equation}\label{ke:eq:retained-protected-estimates}
+ d_\square(P_Ax,P_Ay)-E_{j,t}
+ \le d^{\rm out}(x,y)
+ \le d_W^{\rm int}(x,y)
+ \le d_\square(P_Ax,P_Ay)+E_{j,t}
+\end{equation}
+がそのまま成立する．ここでは $d_J=d_\square|_{\mathcal C_J}$ を用いた．
+また，actual 全曲面の距離には
+\[
+ R_t^{-1}d_{g_t}(x,y)
+ \le d_\square(P_Ax,P_Ay)+E_{j,t}
+\]
+という上界が維持される．旧 full-corner lift が除いた cap を通っても，それは
+依然として $X_t$ 内の許された経路だからである．
+
+$A_{t,J}$ \emph{自身}の新しい内在距離については，下界
+\[
+ d_A^{\rm int}(x,y)\ge d_\square(P_Ax,P_Ay)-E_{j,t}
+\]
+だけが，経路集合の包含から直ちに従う．その上界には，除いた cap を横切る旧 lift を
+保持境界上の短い経路へ置き換える追加の detour 評価が必要である．
+固定 compact の中を通る接続路の評価だけでは，その経路が $A_{t,J}$ の中に留まると
+まではいえない．ここではこの新しい内在上界を主張しない．
+同様に，$R_t^{-1}d_{g_t}$ の下界は protected domain の外を通る shortcut の問題として
+残る．
+
+Projection の全射性の損失も小さい．補題\ref{ke:removed-corner-target-cap}より，
+$P_A(A_{t,J})$ に含まれない点は $e_i$ の $\eta_{j,t}$ 近傍のいずれかに属する．
+各 $i\in J$ の link の corner rounding は，二つの moments が
+$\delta_j+O(\varepsilon)$ となる点を含み，その source は旧 full softmax domain の
+内部にある．従って
+$x_i\in S_{i,j,t}\cap W_{t,J}\subset A_{t,J}$ を選べ，
+$P_A(x_i)$ も $e_i$ の同じ近傍に属する．失われた任意の target 点は，対応する
+$P_A(x_i)$ から $2\eta_{j,t}$ 以下にある．
+従って $P_A(A_{t,J})$ は $\mathcal C_J$ の $2\eta_{j,t}$-net である．
+特に\eqref{ke:eq:retained-protected-estimates}から，
+\[
+ d_{\rm GH}\bigl((A_{t,J},d^{\rm out}|_{A_{t,J}}),
+                  (\mathcal C_J,d_\square)\bigr)
+ \le \tfrac12E_{j,t}+2\eta_{j,t}
+\]
+が得られる．実際，$d_\square(P_A(x),w)\le2\eta_{j,t}$ を満たす組
+$(x,w)$ を全て取った correspondence の distortion は
+$E_{j,t}+4\eta_{j,t}$ 以下である．左辺の source metric は protected distance の制限であり，
+$A_{t,J}$ の新しい内在距離でも，全曲面の距離でもない．
+
+\paragraph{全域の基底値との同定は別の作業である．}
+以上は旧 softmax 値 $P^{\rm old}_{t,J}$ に対する主張である．
+全域 quotient の位相が $B_d(T)$ であることと，保持 corner の全 torus fibers が同じで
+あることだけから，特定の parameterization に対して
+$p_T\circ\pi_{j,t}=P_A$，または両者の差が $o(1)$ であるとは結論できない．
+Core と変更 collar の actual 径が小さいことも，任意に再 parameter 化した target
+でのその像の径を小さくすることは保証しない．
+
+P0 へ進むには，旧 corner の値と整合するように各 labelled cell の parameterization
+を選び，core 側の cone sectors を上の小さい vertex caps へ対応させ，neck の共通
+collars でも値を連続に一致させる必要がある．木を潰す $p_T$ との同時整合もその選択に
+含まれる．本補題はそのための定量的な cap の位置を与えるが，この全域値の接着や
+ambient no-shortcut estimate を既証明に置き換えるものではない．

@@ -127,6 +127,21 @@ Actual symplectic circleのcentered kernelについて
 
 各componentのcore・変更collarは固定の少し広い連結compact内にあり、そこを通る選択した接続路とambient径は有限な $C_j$ で抑えられる。$R_t\ge j(1+C_j+\log(N_j+1))$ の対角選択で正規化費用を消す。**各componentごとの評価**であり、異なるcores全部の合併径や任意Liouville軌道の全長、fiber内在径は結論しない。次は中央帯外source、木上のfiber合併、全曲面no-shortcut/portalを扱う。
 
+### 切り取った cap と旧 softmax 値
+
+`ke:core-depth-upper` は、固定componentのstrictly plurisubharmonic potential $\Psi_i=\sum_aw_as_a-2\sum_a\log s_a+O(1)$ を使う。Link上の深度が $CN_j$ 以下なら、$E_{i,t}^{-1}(K_{i,j,t})$ における最大原理と $\Psi_i\ge c\sum_as_a-C$ からcore全体でも同じ上界が得られる。ここではLiouville補正後のpotentialを要求しない。Graph gaugeはこの固定compact上で最後に $t$ を小さく選び、corner逆写像のlog-depth変位から乗法的に比較する。
+
+`ke:removed-corner-target-cap` は、$x\in K_{i,j,t}\cap W_{t,J}$ に対して
+\[
+ d_\square(P^{\rm old}_{t,J}(x),e_i)
+ \le\eta_{j,t}:=\frac{\sqrt2\log(CN_j)}{R_t}
+\]
+を与える。各capの径は $2\eta_{j,t}$ 以下で一様に消えるが、異なる成分cap全体の合併径は消えない。実際に構成したcompact coreだけを扱い、full corner全体のmoment不等式の解集合を同じcoreと同一視しない。
+
+保持corner $A_{t,J}$ の旧projection像は $2\eta_{j,t}$-netであり、旧protected距離の制限を用いたGH誤差は $E_{j,t}/2+2\eta_{j,t}$ 以下。全曲面距離の上界にも旧cornerの経路を使える。一方、保持部分自身の新しい内在距離の上界にはcapを避けるdetourが必要で、全曲面距離の下界にはno-shortcut評価が必要である。
+
+全域基底が $B_d(T)$ と同相で、保持cornerのtorus partitionが一致しても、特定の基底parameterizationで $p_T\pi_t=P^{\rm old}$ とは限らない。次はcore側のcone sectorsを上のvertex capsへ送り、labelled cellsとneckの共通collarsで旧softmax値を連続に合わせる。小さいactual径だけから、任意のtarget parameterizationで像も小さいとはいえない。
+
 ## Source の residual cutoff と Euler 場
 
 `ke:source-euler-bound` は固定source tube上のEuler場 $W_+=x\partial_x+y\partial_y$ をactual norm $O(1)$ に抑える。固定normal境界はcomponent KE収束、固定residual境界はsource-free tensor比較で評価し、内部へBochner最大値原理で延ばす。中央点で $|z|\ge e^{-a_t}$、$a_t=o(R_t)$ なら正の同時scalingを $O(a_t+1)$ 時間で固定residual shellまで進められ、終点はcanonical central moment帯にある（`ke:source-sublog-residual-connectors`）。この経路だけでは $z=0$ と $|z|<e^{-a_t}$ を制御しない。以下の別の体積比較で全点評価へ進む。無限のscaling時間を有界な経路長に読み替えない。
@@ -411,4 +426,4 @@ $d=6$ で全ての頂点リンクをPetersenグラフとするラベル付き木
 
 ## 検証状態
 
-2026-11-21 / v2.9：K3の追加証明を主稿改訂19へ統合し、別担当と内部点検した。Rochon–Zhang §5とEvans–Mauri Lemma 2.16を一次PDFで再確認。LuaLaTeXで208頁、PDF/SyncTeXを生成し、参照・引用・overfull警告なし。変更頁の表示確認前。形式証明・外部査読・包括的新規性確認・旧整数検算suiteと他三稿の再組版は未実施。P0の距離条件は未解決。
+2026-11-21 / v2.9：K3の全域構成とcore capの評価を主稿改訂19へ統合し、追加証明を別担当と内部点検した。Rochon–Zhang §5とEvans–Mauri Lemma 2.16を一次PDFで再確認。LuaLaTeXで211頁、PDF/SyncTeXを生成し、参照・引用・overfull警告なし。追加節・要約・序論を中心に28頁を表示確認。形式証明・外部査読・包括的新規性確認・旧整数検算suiteと他三稿の再組版は未実施。P0の距離条件は未解決。

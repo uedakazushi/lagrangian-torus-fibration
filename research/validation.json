@@ -29,6 +29,7 @@
       "六次以上のcubical targetの厳密直径2sqrt(5)、最大対の完全記述、直径近似対の線形安定性（後者のgapのみ既存C5定理に依存）"
     ],
     "not_proved": [
+      "保持cornerの旧softmax値と p_T∘π_t を整合させる全域の相対parameterization。各core capの旧target像が小さいことは証明したが、任意の基底parameterizationの整合性を意味しない。",
       "Source中央帯を超える共通moment interval全体での同一moment接続と、moving残余領域への一様性",
       "中央帯に限られないmomentをまたぐ木上の複数fiberの合併の径、全曲面ambient距離でのno-shortcut、square lifts、portal connectorsとP0の一様distortion",
       "KE側のCP/PBE（および必要時のTC5）の対象族での証明、またはそれらの直接評価による代替",
@@ -42,7 +43,8 @@
       "ke:closed-component-link, ke:fixed-stage-stratum-coverage, ke:whole-fiber-core-trim: 閉moment link、固定stage全特異層近傍の被覆、compact complement、全fiber切詰め。",
       "Actual generator C1、centered scalar平均、whole cutoff shellのbuffer、relative invariant primitiveのnontrapping。",
       "Saddle-moving relative familyとactual自由normal bandへのlift、Liouville compact cone fillingと全collar接着。",
-      "各componentのcoreと変更collarのambient径・選んだ接続費用は固定stageで有界。遅い対角選択で正規化費用は零。異なるcore全体の合併径を主張しない。"
+      "各componentのcoreと変更collarのambient径・選んだ接続費用は固定stageで有界。遅い対角選択で正規化費用は零。異なるcore全体の合併径を主張しない。",
+      "ke:core-depth-upper, ke:removed-corner-target-cap: strict psh最大原理で各coreの深度≤CN_j、各capの旧softmax像は成分頂点のsqrt(2)log(CN_j)/R_t近傍。保持cornerのprotected距離を制限したGH誤差≤E/2+2ηと、全曲面距離の上界を維持。"
     ]
   },
   "reproduction": {
@@ -54,19 +56,19 @@
     "latest_reported_main_build": {
       "date": "2026-11-21",
       "revision": 19,
-      "pages": 208,
+      "pages": 211,
       "pdf_and_synctex": true,
       "refs_citations_checked": true,
       "overfull_box_warnings": 0,
       "missing_glyphs": false,
       "duplicate_labels": false,
-      "visual_review": "変更頁の表示確認前。",
-      "mathematical_source_commit": "current revision19 source tree",
-      "source": "K3の追加証明を統合した現行改訂19をLuaLaTeXで組版。PDFはGitで追跡しない。"
+      "visual_review": "最終PDFの第1–2、16–17、127–150頁（28頁）を表示し、組版・数式・改頁を確認。全211頁の逐頁再点検ではない。",
+      "source": "K3の全域構成とcore capの評価を統合した現行改訂19をLuaLaTeXで組版。PDFはGitで追跡しない。",
+      "source_revision": "第25稿・現行改訂19。この検証記録と同じGit commit内の主稿ソース。"
     },
     "this_audit": {
       "date": "2026-11-21",
-      "scope": "K3のclosed link・exact period・固定stage被覆・generator C1・adapted primitive/nontrapping・saddle-moving family・whole-fiber trim・actual全域接着を分担して証明し、追加証明を相互点検。外部KE入力の該当箇所とRZ/EMの一次PDFも再確認。全旧証明の再監査ではない。",
+      "scope": "K3のclosed link・exact period・固定stage被覆・generator C1・adapted primitive/nontrapping・saddle-moving family・whole-fiber trim・actual全域接着を分担して証明し、追加証明を相互点検。さらにstrict psh最大原理、乗法的深度比較、softmax cap、2η-netとprotected GH定数を独立に点検。外部KE入力の該当箇所とRZ/EMの一次PDFも再確認。全旧証明の再監査ではない。",
       "reexecuted_build": true,
       "reexecuted_static_checks": true,
       "reexecuted_python_suite": false,
@@ -87,12 +89,44 @@
         "ke:actual-saddle-moving-neck-interpolation",
         "ke:actual-link-cone-filling",
         "ke:link-relative-collar-gluing",
-        "ke:actual-global-fibration"
+        "ke:actual-global-fibration",
+        "ke:core-depth-upper",
+        "ke:removed-corner-target-cap",
+        "ke:eq:retained-protected-estimates"
       ],
       "all_existing_proofs_reaudited": false,
       "external_referee_review": false,
-      "visual_pages_reviewed": [],
-      "current_build_status": "revision19 built, 208 pages; visual review pending"
+      "visual_pages_reviewed": [
+        1,
+        2,
+        16,
+        17,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150
+      ],
+      "current_build_status": "revision19 built, 211 pages; 28 selected pages visually reviewed; static checks passed"
     }
   },
   "cloud_codex": {
